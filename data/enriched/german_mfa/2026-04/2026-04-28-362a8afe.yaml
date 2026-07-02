@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - rule_of_law
+  location: United Nations Security Council
+  position: Germany emphasizes that maritime security is the foundation of the global
+    economy and calls for Iran to cease attacks, ensuring the Strait of Hormuz remains
+    open for free and safe traffic.
+  positions:
+    rule_of_law: Germany stresses that maritime security is crucial for global stability
+      and economic resilience, citing violations of international law and the need
+      for adherence to the UN Convention on the Law of the Sea.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Such actions constitute clear violations of international law, including
+        the law of the sea, as reflected in the United Nations Convention on the Law
+        of the Sea.

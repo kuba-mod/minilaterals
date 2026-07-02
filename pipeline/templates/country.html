@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}{{ {"FR":"France","DE":"Germany","PL":"Poland"}[actor] }} — Weimar Triangle{% endblock %}
+
+{% block nav %}
+<div class="nav-wrap">
+  <nav>
+    <a href="{{ base_path }}/">Recent</a>
+    <a href="{{ base_path }}/france/" {% if actor == "FR" %}class="active"{% endif %}>France</a>
+    <a href="{{ base_path }}/germany/" {% if actor == "DE" %}class="active"{% endif %}>Germany</a>
+    <a href="{{ base_path }}/poland/" {% if actor == "PL" %}class="active"{% endif %}>Poland</a>
+    <a href="{{ base_path }}/meetings/">Meetings</a>
+    <a href="{{ base_path }}/sources/">Sources</a>
+  </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% set country_name = {"FR":"France","DE":"Germany","PL":"Poland"}[actor] %}
+{% set color = actor_colors[actor] %}
+
+{# ── Country hero ── #}
+<div style="display:flex; align-items:flex-start; gap:32px; margin-bottom:40px; flex-wrap:wrap">
+  <span class="swatch {{ fm.swatch }}" style="width:80px; height:52px; border-radius:6px; display:block; flex-shrink:0; box-shadow:0 0 0 1px rgba(0,0,0,0.07)"></span>
+  <div>
+    <div style="font-family:'IBM Plex Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:8px">Foreign ministry</div>
+    <h2 style="font-family:'Newsreader',Georgia,serif; font-size:clamp(36px,5vw,58px); font-weight:500; letter-spacing:-0.02em; line-height:1; color:{{ color }}; margin:0 0 10px">{{ country_name }}</h2>
+    <div style="font-family:'IBM Plex Sans',sans-serif; font-size:15px; color:var(--ink-soft)">
+      <strong style="font-weight:500; color:var(--ink)">{{ fm.name }}</strong>
+      &nbsp;·&nbsp; {{ fm.role }}
+    </div>
+  </div>
+</div>
+
+{# ── Hero stats ── #}
+<div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-bottom:48px">
+  <div style="background:var(--bg-card); padding:24px 28px">
+    <div style="font-family:'Newsreader',Georgia,serif; font-size:44px; font-weight:400; letter-spacing:-0.018em; line-height:1; color:var(--ink); margin-bottom:8px">{{ stats.weekly_count }}</div>
+    <div style="font-family:'IBM Plex Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted)">Statements this week</div>
+  </div>
+  {% for other_actor, score in stats.align.items() %}
+  {% set other_name = {"FR":"France","DE":"Germany","PL":"Poland"}[other_actor] %}
+  <div style="background:var(--bg-card); padding:24px 28px">
+    <div style="font-family:'Newsreader',Georgia,serif; font-size:44px; font-weight:400; letter-spacing:-0.018em; line-height:1; color:var(--ink); margin-bottom:8px">
+      {% if score == "—" %}—{% else %}{{ score }}%{% endif %}
+    </div>
+    <div style="font-family:'IBM Plex Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted)"
+         title="How closely the two capitals' stance ratings (−2 to +2 vs. shared Weimar goals) matched across topics both spoke on in the last 14 days. 100% = identical ratings.">Stance match · {{ other_name }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+{# ── Events table ── #}
+<div class="section-head" style="margin-top:0">{{ country_name }}'s full diary — last 90 days</div>
+
+{% if country_events %}
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+      <th>Topics</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for e in country_events %}
+    <tr>
+      <td class="mono" style="white-space:nowrap; color:var(--muted); font-size:11px">{{ e.date }}</td>
+      <td>
+        {% if e.source_url %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{% endif %}
+        {{ e.title | truncate(90) }}
+        {% if e.source_url %}</a>{% endif %}
+        {% if e.extracted and e.extracted.position %}
+        <div>{{ e.extracted.position | truncate(120) }}</div>
+        {% endif %}
+      </td>
+      <td>
+        {% for area in (e.issue_areas or []) %}
+        {% if area != "other" %}
+        <span class="tag" style="color:var(--muted); border-color:var(--rule); font-size:8px">{{ issue_labels.get(area, area) }}</span>
+        {% endif %}
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p style="color:var(--muted); font-family:'IBM Plex Sans',sans-serif; font-size:14px">No events in the last 90 days yet.</p>
+{% endif %}
+
+{# ── Compare with other capitals ── #}
+<div class="section-head">Compare with other capitals</div>
+<div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; margin-bottom:48px">
+  {% for other in others %}
+  {% set other_actor = {"france":"FR","germany":"DE","poland":"PL"}[other.path] %}
+  {% set other_name = {"FR":"France","DE":"Germany","PL":"Poland"}[other_actor] %}
+  {% set other_color = actor_colors[other_actor] %}
+  <a href="{{ base_path }}/{{ other.path }}/" class="country-card">
+    <div class="cc-flag">
+      <span class="swatch {{ other.swatch }}" style="width:56px; height:36px; border-radius:4px; display:block; box-shadow:0 0 0 1px rgba(0,0,0,0.06)"></span>
+    </div>
+    <div class="cc-body">
+      <div class="cc-name">{{ other_name }}</div>
+      <div class="cc-stat">
+        <strong>{{ other.weekly_count }}</strong> statements this week
+      </div>
+      <div class="cc-ministry">{{ other.ministry }}</div>
+    </div>
+    <div class="cc-arrow">→</div>
+  </a>
+  {% endfor %}
+</div>
+
+{% endblock %}

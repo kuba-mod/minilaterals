@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% set active_page = "sources" %}
+{% block title %}Weimar Triangle — Sources{% endblock %}
+
+{% block content %}
+
+<div class="section-head" style="margin-top:0">Data sources</div>
+
+<table style="margin-bottom:48px">
+  <thead>
+    <tr><th>Source</th><th>Actor</th><th>Method</th><th>Language</th><th>Last Run</th><th>Last Success</th><th>Fetched</th><th>New</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    {% set source_meta = [
+      ("german_mfa",       "DE", "RSS",          "EN"),
+      ("france_diplomatie","FR", "HTML scraper",  "EN"),
+      ("polish_mfa",       "PL", "HTML scraper",  "EN"),
+      ("council_eu",       "EU", "HTML scraper",  "EN"),
+      ("gdelt",            "—",  "API",           "EN"),
+    ] %}
+    {% for src, actor, method, lang in source_meta %}
+    {% set s = source_stats.get(src, {}) %}
+    <tr>
+      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ source_labels.get(src, src) }}</td>
+      <td>
+        {% if actor in actor_colors %}
+        <span class="tag" style="color:{{ actor_colors[actor] }}; border-color:{{ actor_colors[actor] }}44; background:{{ actor_colors[actor] }}18">{{ actor }}</span>
+        {% else %}
+        <span style="color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace">{{ actor }}</span>
+        {% endif %}
+      </td>
+      <td style="font-size:14px; color:var(--muted)">{{ method }}</td>
+      <td style="font-size:14px; color:var(--muted)">{{ lang }}</td>
+      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{% if run %}{{ run.date }}{% else %}—{% endif %}</td>
+      {% set h = source_health.get(src, {}) %}
+      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{{ h.last_ok or '—' }}</td>
+      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ s.fetched if s else '—' }}</td>
+      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ s.new if s else '—' }}</td>
+      <td>
+        {% if h.get('last_error') %}
+        <span class="tag" style="color:var(--red); border-color:var(--red)44; background:var(--red-faint)" title="{{ h.last_error }}">error</span>
+        {% elif s %}
+        <span class="tag" style="color:var(--green); border-color:var(--green)44; background:var(--green-faint)">ok</span>
+        {% else %}
+        <span style="color:var(--muted); font-size:13px">—</span>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="section-head">Methodology</div>
+
+<div class="sources-prose">
+
+  <p>
+    This tracker ingests press releases and official statements from the foreign ministries of
+    Germany, France, and Poland, plus the EU Council press office and GDELT supplementary signals.
+    Each item is classified for Weimar Triangle relevance and — where relevant — enriched by an
+    LLM to extract a one-sentence position summary.
+  </p>
+
+  <span class="label">Relevance classification</span>
+  <p>
+    An item is marked <em>weimar_relevant</em> when it touches a tracked issue area
+    (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law) AND comes from an MFA
+    source, or when two or more Weimar countries are explicitly mentioned together, or when
+    the text contains the phrase "Weimar Triangle" or "trilateral."
+    A stronger <em>trilateral_signal</em> flag is set when all three actors are present or the
+    Weimar/trilateral phrase appears explicitly.
+  </p>
+
+  <span class="label">Positional comparison</span>
+  <p>
+    The <a href="{{ base_path }}/">Recent</a> page groups weimar-relevant events into clusters where two or more
+    countries published on the same topic within a 14-day window. This surfaces cases where
+    Germany and Poland both speak about Ukraine in the same week — even without a joint statement —
+    enabling comparison of whether their positions converge or diverge.
+  </p>
+
+  <span class="label">Stance scoring</span>
+  <p>
+    Every statement is rated against the officially agreed Weimar Triangle goals
+    (from the joint declarations of February and May 2024) on a five-point scale,
+    the same way political scientists hand-code party manifestos:
+  </p>
+  <ul>
+    <li><strong>+2</strong> — actively advances the goal: concrete commitments, resources, initiatives</li>
+    <li><strong>+1</strong> — supports the goal rhetorically, without new commitments</li>
+    <li><strong>0</strong> — neutral: mentions the topic without taking a stance</li>
+    <li><strong>−1</strong> — hedges: partial support with significant caveats</li>
+    <li><strong>−2</strong> — opposes or undermines the goal</li>
+  </ul>
+  <p>
+    Each rating is stored with a verbatim quote from the statement that justifies it,
+    so every score on this site can be audited by reading the quote. Countries are
+    labelled <em>Aligned</em> when their average ratings on a topic sit within half a
+    point of each other, <em>Mixed</em> within one and a half points, and
+    <em>Divergent</em> beyond that. No black-box similarity math is involved in the
+    headline scores.
+  </p>
+
+  <span class="label">LLM enrichment</span>
+  <p>
+    Position extraction and stance rating run via Claude Haiku (in CI) or a local Ollama
+    model (gemma4, local dev). The prompt asks for a one-sentence position summary per topic
+    plus the stance rating and its supporting quote. The raw text and extraction are both
+    stored in YAML files committed to git.
+  </p>
+
+  <span class="label">Storage and provenance</span>
+  <p>
+    Every event is stored as a YAML file committed to git under
+    <code>data/events/{source}/{YYYY-MM}/</code>.
+    Files are named by a SHA-256 hash of the source URL and title, providing automatic
+    deduplication. Each file records <code>source_url</code>,
+    <code>source_published_at</code>, and <code>ingested_at</code> timestamps.
+    The full history is auditable via git log.
+  </p>
+
+  <span class="label">Caveats</span>
+  <ul>
+    <li>All sources currently target English-language pages; French/Polish language content may be missed.</li>
+    <li>EU Council RSS is blocked by Cloudflare from some networks; scraper uses browser-like headers.</li>
+    <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
+    <li>GDELT is a supplementary signal capped at a lower relevance score (noisier than MFA sources).</li>
+    <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
+  </ul>
+
+  <p style="font-size:14px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif">
+    Total events tracked: <span style="font-family:'IBM Plex Mono',monospace">{{ all_events_count }}</span> &nbsp;·&nbsp;
+    Weimar-relevant: <span style="font-family:'IBM Plex Mono',monospace">{{ weimar_events_count }}</span>
+  </p>
+
+</div>
+
+{% endblock %}

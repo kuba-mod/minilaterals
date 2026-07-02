@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ministers for Foreign Affairs of the Hellenic Republic
+  - Federal Republic of Germany
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany commits to upgrading the bilateral partnership with Greece to
+    a 'Partnership for Strategic Cooperation' across four pillars, focusing on geopolitical
+    coordination, security, economic resilience, and cultural exchange.
+  positions:
+    defence: Germany aims to strengthen capabilities to respond to conventional and
+      hybrid threats and expand efforts in defense procurement, logistics, and crisis
+      management.
+    hybrid: Germany commits to addressing hybrid threats through a dedicated pillar
+      focusing on law enforcement and security coordination.
+    rule_of_law: Germany and Greece affirm commitment to upholding the rules-based
+      international order, respecting sovereignty, and promoting democracy and human
+      rights.
+  stances:
+    defence:
+      score: 1
+      evidence: As EU partners and NATO allies, our shared interest is upholding a
+        strong, secure and competitive Europe in the current challenging context.
+    hybrid:
+      score: 1
+      evidence: II. Defence, Civil Protection & Hybrid Threats, Law Enforcement
+    rule_of_law:
+      score: 1
+      evidence: shared values of freedom and democracy, human rights and the respect
+        for the rule of law serving as a solid fundament even in difficult phases.

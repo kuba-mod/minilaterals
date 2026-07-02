@@ -1,0 +1,26 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - ukraine
+  location: null
+  position: Poland supports measures aimed at the permanent opening of the Strait
+    of Hormuz, emphasizing the need for de-escalation between Tehran and Washington
+    and continued dialogue.
+  positions:
+    ukraine: Poland stresses that continued pressure on Moscow is necessary to prevent
+      it from using global crises to fund its war against Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: engagement in the Middle East cannot lessen vigilance towards Russia’s
+        aggression against Ukraine.

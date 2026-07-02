@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - France
+  - United Nations Interim Force in Lebanon (UNIFIL)
+  - Lebanese State
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns the attack on UNIFIL, demands the identification and prosecution
+    of perpetrators, and reaffirms support for restoring Lebanese sovereignty and
+    maintaining the ceasefire.
+  positions:
+    rule_of_law: France reaffirms its commitment alongside the Lebanese State in efforts
+      to restore full sovereignty over Lebanese territory and consolidate its monopoly
+      on weapons, supporting the rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France reaffirms its commitment alongside the Lebanese State in its
+        efforts to restore full sovereignty over the whole of Lebanese territory and
+        consolidate its monopoly on weapons.

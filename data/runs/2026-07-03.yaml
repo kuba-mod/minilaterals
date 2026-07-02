@@ -1,0 +1,13 @@
+date: '2026-07-03'
+run_at: '2026-07-03T09:39:25Z'
+sources:
+- source: gdelt
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+totals:
+  fetched: 0
+  new: 0
+  skipped: 0
+  errors: 0

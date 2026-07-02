@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - top diplomats
+  - ministers
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Rome, Italy
+  position: Poland emphasized the need for reinforced support for Ukraine and coordinated
+    action to pressure Russia, while also stressing the importance of strengthening
+    EU cooperation and addressing regional stability in the Middle East and Africa.
+  positions:
+    ukraine: Poland stressed the need for unwavering military and financial support
+      for Ukraine and coordinated action to bring the war to an end, aligning with
+      the commitment to long-term support until a just and lasting peace is achieved.
+    defence: Poland highlighted the discussion of the security architecture in Europe
+      and the need for close coordination of EU and NATO response, supporting a stronger
+      EU defence capability complementary to NATO.
+    enlargement: Poland viewed the EU enlargement process as an important tool to
+      build the continent’s stability and security, supporting the goal of expanding
+      the continent.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We stressed the need for unwavering military and financial support
+        for Ukraine
+    defence:
+      score: 1
+      evidence: The ministers discussed the security architecture in Europe in the
+        light of Russia’s aggression.
+    enlargement:
+      score: 1
+      evidence: The ministers spoke about the EU enlargement process as an important
+        tool to build the continent’s stability and security.

@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Yulia Svyrydenko, Ukrainian Prime Minister
+  topics:
+  - ukraine
+  location: France
+  position: France is committed to supporting Ukraine's sovereignty and freedom through
+    active bilateral, European, and G7 efforts, while maintaining pressure on Russia.
+  positions:
+    ukraine: France is working actively, bilaterally, with its European partners and
+      as part of its G7 presidency, to support Ukraine as a matter of urgency and
+      over the long term, while maintaining pressure on Russia.
+  stances:
+    ukraine:
+      score: 2
+      evidence: France is working actively, bilaterally, with its European partners
+        and as part of its G7 presidency, to support Ukraine as a matter of urgency
+        and over the long term, while maintaining pressure on Russia.

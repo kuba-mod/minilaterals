@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Wang Yi
+  topics:
+  - rule_of_law
+  location: null
+  position: France emphasized the need for international institutions and international
+    law to resolve disagreements and achieve de-escalation in the Middle East.
+  positions:
+    rule_of_law: France stressed the importance of international law and UN Security
+      Council resolutions in resolving regional conflicts and maintaining collective
+      security.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: it was each country’s responsibility to prioritize international institutions
+        to resolve disagreement and, if necessary, resort to the use of force.

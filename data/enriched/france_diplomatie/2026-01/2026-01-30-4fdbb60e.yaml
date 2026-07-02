@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Syrian transitional government
+  - Syrian Democratic Forces (SDF)
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the signing of an agreement between the Syrian transitional
+    government and the Syrian Democratic Forces (SDF) to ensure a peaceful transition
+    to a united, pluralistic Syria.
+  positions:
+    rule_of_law: France emphasizes the need for the parties to fully implement the
+      agreement and respect the ceasefire, supporting the principles of a peaceful
+      and pluralistic transition.
+  stances:
+    rule_of_law:
+      score: 0
+      evidence: ''

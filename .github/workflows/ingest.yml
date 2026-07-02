@@ -1,0 +1,82 @@
+name: Daily pipeline
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC every day
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write           # needed to commit data/ and docs/ back to main
+
+env:
+  # Provider for enrichment + commentary. Set the ENRICH_PROVIDER repo variable
+  # to 'ollama' (with OLLAMA_API_KEY secret, host defaults below to Ollama Cloud)
+  # for consistency with the local gemma4 setup, or 'anthropic' (with
+  # ANTHROPIC_API_KEY secret). Auto-detects from key presence if unset.
+  ENRICH_PROVIDER: ${{ vars.ENRICH_PROVIDER || '' }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+  OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
+  OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:latest' }}
+  # Deployed under the minilaterals.com umbrella at this path, not the domain root.
+  SITE_BASE_PATH: /weimar-triangle
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install uv && uv sync
+
+      - name: Ingest
+        run: uv run python -m pipeline.ingest
+        # Ingest runs without any API key — enrichment is the separate step below.
+        # If a source returns 0 items it logs a warning but does not fail the job.
+
+      - name: Enrich
+        # --limit caps per-run spend: a misbehaving scraper flooding events
+        # cannot burn through the API budget in one run.
+        run: uv run python -m pipeline.enrich --limit 50
+        # Exit gracefully if no key configured — ingest + render still produce a useful site.
+        continue-on-error: true
+
+      - name: Backfill stances
+        run: uv run python -m pipeline.enrich --stances-only --limit 50
+        # Catches events enriched before stance scoring existed or whose
+        # stance block failed to parse on the first pass.
+        continue-on-error: true
+
+      - name: Comment
+        run: uv run python -m pipeline.comment
+        continue-on-error: true
+
+      - name: Render
+        run: uv run python -m pipeline.render --output docs/weimar-triangle
+
+      - name: Commit results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "data: daily pipeline run"
+          file_pattern: "data/** docs/**"
+          # Only commits if there are actual changes — no-op on a day with no new items.
+
+      - name: Healthcheck ping
+        # Dead-man switch: healthchecks.io alerts if this ping doesn't arrive on
+        # schedule — catching runs that never start, not just runs that fail.
+        # Optional; skipped when the HEALTHCHECK_URL secret is not configured.
+        if: ${{ always() }}
+        run: |
+          if [ -n "${{ secrets.HEALTHCHECK_URL }}" ]; then
+            if [ "${{ job.status }}" = "success" ]; then
+              curl -fsS -m 10 --retry 3 "${{ secrets.HEALTHCHECK_URL }}" > /dev/null
+            else
+              curl -fsS -m 10 --retry 3 "${{ secrets.HEALTHCHECK_URL }}/fail" > /dev/null
+            fi
+          fi

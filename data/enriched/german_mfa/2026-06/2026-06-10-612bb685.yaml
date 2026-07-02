@@ -1,0 +1,49 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Albania
+  - Australia
+  - Belgium
+  - Bulgaria
+  - Canada
+  - Czechia
+  - Denmark
+  - Estonia
+  - Finland
+  - France
+  - Germany
+  - Ireland
+  - Italy
+  - Latvia
+  - Lithuania
+  - Netherlands
+  - New Zealand
+  - North Macedonia
+  - Norway
+  - Portugal
+  - Spain
+  - Sweden
+  - United Kingdom
+  - United States of America
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany joins a coalition of nations condemning Iranian intelligence services
+    for malign actions and attacks against various communities in Europe and North
+    America.
+  positions:
+    rule_of_law: Germany strongly affirms the importance of international norms and
+      national sovereignty by condemning foreign state actors' destabilizing activities.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Attempts to kill, kidnap, harass, intimidate, or otherwise attack
+        people on our soil, undermines national sovereignty and international norms.

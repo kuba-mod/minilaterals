@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.95
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of France
+  - Foreign Ministers of Germany
+  - Foreign Ministers of Poland
+  topics:
+  - rule_of_law
+  - enlargement
+  location: null
+  position: Poland, as part of the Weimar Triangle, expressed deep concern over new
+    Georgian legislation, viewing it as a repressive measure that undermines democratic
+    freedoms and EU commitments.
+  positions:
+    rule_of_law: The statement condemns the new Georgian legislation as infringing
+      on freedoms of association and expression, weakening the rule of law, and putting
+      pressure on independent civil society.
+    enlargement: The statement criticizes Georgia's actions, noting that its course
+      since 2024 has brought the EU accession process to a de facto halt, aligning
+      with the goal of supporting EU accession processes.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We fully endorse the statement made by the High Representative of
+        the Union for Foreign Affairs and Security Policy on 6 March 2026.
+    enlargement:
+      score: 1
+      evidence: reaffirm our steadfast support for the Georgian people and civil society
+        organisations who have been steadily working for the democratic and European
+        future of Georgia.

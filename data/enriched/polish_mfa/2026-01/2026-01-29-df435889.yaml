@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - EU foreign affairs ministers
+  - Volker Türk
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland advocates for continued support for Ukraine, increased sanctions
+    against Russia's energy sector, and fulfilling NATO commitments, including resource
+    allocation for armaments.
+  positions:
+    ukraine: Poland calls for continued aid to Ukraine and reconstruction of its energy
+      infrastructure, while also urging the adoption of sanctions targeting refineries
+      processing Russian oil.
+    defence: Poland emphasizes the need to fulfill NATO commitments by allocating
+      adequate resources for armaments, positioning itself as a role model in defense
+      spending.
+    rule_of_law: Poland's focus on sanctions and security commitments implicitly supports
+      the foundational principles of democratic resilience and the rule of law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: continue to help Ukraine and put pressure on the aggressor
+    defence:
+      score: 2
+      evidence: Poland can act as a role model. We’re off to a good start with the
+        SAFE instrument.
+    rule_of_law:
+      score: 1
+      evidence: EU foreign affairs ministers also held an exchange of views with UN
+        High Commissioner for Human Rights Volker Türk about priorities set for this
+        year for the institution he heads

@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Radosław Sikorski
+  - Jakub Rutnicki
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland is actively coordinating a comprehensive rescue and repatriation
+    effort for its citizens across the Middle East and Asia, emphasizing the safety
+    and well-being of Polish nationals.
+  positions:
+    rule_of_law: The government emphasizes the safety of Polish citizens and the continuous
+      monitoring of the situation, reflecting a commitment to democratic resilience
+      and the rule of law in crisis management.
+  stances:
+    rule_of_law:
+      score: 0
+      evidence: ''

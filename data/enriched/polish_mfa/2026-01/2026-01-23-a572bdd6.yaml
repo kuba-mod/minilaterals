@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Pablo Quirno
+  - Ronald Lamola
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Davos, Switzerland
+  position: Poland advocates for Europe to strengthen its independent capacity while
+    maintaining international cooperation, with a continued focus on countering Russian
+    aggression and supporting Ukraine's territorial integrity.
+  positions:
+    ukraine: Poland stresses that Ukraine must achieve defensible borders as part
+      of any fair deal, warning that failure to do so risks igniting future conflict,
+      and calls for pressure to be applied to the aggressor, not the victim.
+    defence: Poland emphasizes the need for Europe to strengthen its capacity to act
+      independently, suggesting a focus on collective security and defense capabilities.
+    rule_of_law: Poland promotes the rule of law and democratic resilience by emphasizing
+      the need for international cooperation and addressing geopolitical threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: the threat from Russia and our continued support for Ukraine remain
+        in the focus
+    defence:
+      score: 1
+      evidence: Europe must strengthen its capacity to act independently while remaining
+        open to international cooperation.
+    rule_of_law:
+      score: 0
+      evidence: ''

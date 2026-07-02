@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Minister of State Serap Güler
+  topics:
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany aims to leverage the potential for a new Syria through an inclusive
+    transition process that supports stability, economic revival, and political representation.
+  positions:
+    enlargement: Germany strongly supports the prospect of a stable and peaceful future
+      for Syria, viewing it as a key opportunity for regional stability and German
+      business interests.
+    rule_of_law: Germany emphasizes the necessity of an inclusive transition process
+      that upholds democratic principles, equal rights, and legal certainty for all
+      groups within Syria.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Germany has a paramount interest in a stable Syria that lives in peace
+        with its neighbours
+    rule_of_law:
+      score: 2
+      evidence: In our view, an inclusive transition process is key to stabilising
+        the country and giving it a peaceful future.

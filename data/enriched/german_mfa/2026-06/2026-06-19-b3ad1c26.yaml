@@ -1,0 +1,52 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Kiel, Germany
+  position: Germany views Russia as a fundamental and escalating threat to European
+    security, emphasizing the strategic importance of NATO's presence in the Baltic
+    Sea and calling for continued collective defense efforts.
+  positions:
+    defence: Germany strongly supports strengthening collective defense capabilities,
+      particularly along the eastern flank, viewing NATO's presence as essential for
+      security.
+    hybrid: Germany calls for coordinated action against hybrid threats by highlighting
+      various Russian activities in the Baltic Sea that undermine stability and sovereignty.
+    enlargement: Germany supports the EU accession of Eastern partners like Sweden
+      and Finland, recognizing their reliance on Baltic Sea supply routes for defense.
+    rule_of_law: Germany affirms democratic resilience by condemning Russia's illegal
+      actions in Ukraine and emphasizing that its threat undermines freedom and security.
+  stances:
+    defence:
+      score: 2
+      evidence: Today, nobody would call it a weak spot anymore.
+    hybrid:
+      score: 2
+      evidence: We have witnessed acts of sabotage, espionage activities, GPS jamming,
+        incursions by drones and fighter jets into NATO airspace, the transit of Russia’s
+        shadow fleet, and the repeated appearance of Russian research vessels near
+        critical infrastructure.
+    enlargement:
+      score: 1
+      evidence: Sweden and Finland, our newest NATO members, heavily rely on these
+        supply-routes via the Baltic Sea.
+    rule_of_law:
+      score: 2
+      evidence: Russia’s illegal war against Ukraine, which began in 2014, has demonstrated
+        with complete clarity that Putin’s Russia poses a threat to freedom and security
+        in Europe and against NATO .

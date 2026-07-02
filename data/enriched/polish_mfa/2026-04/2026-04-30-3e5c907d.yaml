@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: joint_statement
+  participants:
+  - United States
+  - Poland
+  - two delegations
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasized its commitment to deepening transatlantic cooperation
+    across defense, energy, and technology sectors, while also advocating for its
+    role in global economic forums like the G20.
+  positions:
+    defence: Poland reaffirmed its commitment to enhancing security cooperation, including
+      mutual self-defense and deepening transatlantic defense industrial cooperation
+      to strengthen its military capabilities.
+    hybrid: Poland and the US agreed to deepen cooperation on technology security
+      to reduce dependency on high-risk vendors and protect critical infrastructure
+      from foreign interference.
+    enlargement: Poland was supported by the US in its ambition for G20 permanent
+      membership, demonstrating alignment with broader institutional integration goals.
+    rule_of_law: Both sides emphasized the need for streamlined regulatory environments
+      and strong government-business dialogue to support economic growth and technological
+      advancement.
+  stances:
+    defence:
+      score: 1
+      evidence: reaffirmed their commitment to enhance security cooperation, including
+        on mutual self-defense and deterrence
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 0
+      evidence: ''

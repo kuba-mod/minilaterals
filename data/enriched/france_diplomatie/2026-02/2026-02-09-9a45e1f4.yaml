@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Mohamad Hasan
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: France aims to expand bilateral relations with Malaysia across key areas
+    including business, defense, hybrid threats, and critical minerals.
+  positions:
+    defence: France intends to strengthen defense cooperation with Malaysia, aligning
+      with the goal of supporting a stronger EU defense capability complementary to
+      NATO.
+    hybrid: France and Malaysia plan to enhance cooperation to address hybrid threats,
+      such as disinformation and foreign political interference.
+  stances:
+    defence:
+      score: 0
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: discussed expanding bilateral relations, particularly in the areas
+        of business, defense, hybrid threats and critical minerals.

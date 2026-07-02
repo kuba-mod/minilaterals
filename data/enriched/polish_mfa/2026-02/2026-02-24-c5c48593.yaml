@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Volodymyr Zelenskyy
+  - Yulia Svyrydenko
+  - Denys Shmyhal
+  - Donald Tusk
+  - Andrii Sybiha
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Kyiv, Ukraine
+  position: Poland supports a peaceful resolution to the conflict through continued
+    unity, mutual aid, and leveraging European influence to provide greater defense
+    support and security guarantees for Ukraine.
+  positions:
+    ukraine: Poland supports all efforts for a peaceful resolution of the Russian–Ukrainian
+      conflict, emphasizing the need for unity and mutual help.
+    defence: Poland and its allies can offer greater defense support for Ukraine and
+      leverage European influence to strengthen security guarantees.
+    enlargement: Poland views Ukraine's future accession to the EU as an integral
+      part of the security guarantees and will continue efforts to open EU–Ukraine
+      accession negotiations.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Our compatriots immediately responded to the energy needs after Russian
+        attacks and provided assistance amounting to thousands of power generators.
+    defence:
+      score: 2
+      evidence: As the Coalition of the Willing, we can offer greater defence support
+        for Ukraine and work out security guarantees.
+    enlargement:
+      score: 2
+      evidence: Poland will continue its efforts to open the EU–Ukraine accession
+        negotiations based on the established criteria.

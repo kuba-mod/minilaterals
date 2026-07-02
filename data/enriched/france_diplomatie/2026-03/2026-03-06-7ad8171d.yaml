@@ -1,0 +1,40 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs (France)
+  - Tom Berendsen, Minister of Foreign Affairs (Netherlands)
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Paris, France
+  position: France reaffirmed its commitment with the Netherlands to strengthen the
+    EU, protect national interests, and support a resilient European defense and digital
+    economy.
+  positions:
+    ukraine: France reaffirmed its long-term support for Ukraine, particularly within
+      the Coalition of the Willing, against Russia's war of aggression.
+    defence: France and the Netherlands committed to strengthening the European defense
+      technological and industrial base, complementing NATO efforts.
+    enlargement: France and the Netherlands noted similar views regarding EU enlargement,
+      supporting the expansion of the Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: reaffirmed their long-term support for Ukraine
+    defence:
+      score: 1
+      evidence: determination to strengthen the European defence technological and
+        industrial base
+    enlargement:
+      score: 1
+      evidence: note similar views about EU enlargement

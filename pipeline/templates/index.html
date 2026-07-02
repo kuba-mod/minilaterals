@@ -1,0 +1,364 @@
+{% extends "base.html" %}
+{% set active_page = "index" %}
+{% block title %}Weimar Triangle — Recent Activity{% endblock %}
+
+{% block content %}
+
+{# ── Staleness banner ── #}
+{% if stale_days is not none and stale_days > 5 %}
+<div style="border:1px solid #8a632044; background:#8a632014; border-radius:8px; padding:12px 16px; margin-bottom:24px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:#8a6320">
+  <strong>Data may be stale.</strong> The most recent tracked statement is from {{ latest_event_date }}
+  ({{ stale_days }} days ago) — the ingest pipeline may not be running.
+  See <a href="{{ base_path }}/sources/" style="color:inherit">source status</a>.
+</div>
+{% endif %}
+
+{# ── Country cards ── #}
+{% if country_stats %}
+<div class="country-cards">
+  {% for actor in weimar_actors %}
+  {% set cs = country_stats[actor] %}
+  <a href="{{ base_path }}/{{ cs.path }}/" class="country-card">
+    <div class="cc-flag">
+      <span class="swatch {{ cs.swatch }}"></span>
+    </div>
+    <div class="cc-body">
+      <div class="cc-name">{{ {"FR":"France","DE":"Germany","PL":"Poland"}[actor] }}</div>
+      <div class="cc-stat"><strong>{{ cs.weekly_count }}</strong> statements this week</div>
+      <div class="cc-ministry">{{ cs.ministry }}</div>
+    </div>
+    <div class="cc-arrow">→</div>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{# ── Alignment timeline ── #}
+{% if timeline_svg %}
+<div class="section-head" style="margin-top:0">
+  {% if timeline_svg.stance_mode %}
+  How strongly are they backing shared goals?
+  <span>Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goals. The line is the three capitals' average; the shaded band spans the most and least supportive capital — a narrow band means they agree.</span>
+  {% else %}
+  How aligned were they this week?
+  <span>14-day rolling window. 100% = identical positions across all three capitals.</span>
+  {% endif %}
+</div>
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
+  <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This week — w/o {{ timeline_svg.recent.week }}</div>
+  <span id="timeline-current-label" style="font-size:22px; font-weight:600; font-family:'Courier New',monospace; color:{{ timeline_svg.recent.color }}">
+    {{ timeline_svg.recent.label }} · {{ timeline_svg.recent.display }}
+  </span>
+</div>
+<div style="width:100%; overflow:hidden; margin-bottom:4px">
+  <svg id="timeline-svg" viewBox="{{ timeline_svg.viewbox }}" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
+    {# Min–max band across capitals #}
+    <polygon id="timeline-band" points="{{ timeline_svg.band_points }}" fill="{{ timeline_svg.recent.color }}22" stroke="none"/>
+    {# Reference lines (stance rubric levels) #}
+    {% for rl in timeline_svg.ref_lines %}
+    <line x1="44" y1="{{ rl.y }}" x2="780" y2="{{ rl.y }}"
+          stroke="{{ rl.color }}" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+    <text x="782" y="{{ rl.y + 4 }}" font-size="9" fill="{{ rl.color }}" opacity="0.7" font-family="'IBM Plex Mono',monospace">{{ rl.label }}</text>
+    {% endfor %}
+    {# Score line through scored points #}
+    <polyline id="timeline-line" points="{{ timeline_svg.line_points }}" fill="none"
+              stroke="{{ timeline_svg.recent.color }}" stroke-width="1.5" stroke-linejoin="round"/>
+    {# Dots and labels #}
+    <g id="timeline-dots">
+    {% for pt in timeline_svg.points %}
+    {% if pt.has_data %}
+    <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="4" fill="{{ pt.color }}" stroke="var(--bg,#f4ecdb)" stroke-width="1.5">
+      <title>{{ pt.tooltip }}</title>
+    </circle>
+    <text x="{{ pt.x }}" y="{{ pt.y - 8 }}" text-anchor="middle" font-size="9"
+          fill="{{ pt.color }}" font-family="'IBM Plex Mono',monospace">{{ pt.display }}</text>
+    <text x="{{ pt.x }}" y="205" text-anchor="middle" font-size="8"
+          fill="#888" font-family="'IBM Plex Mono',monospace">{{ pt.week[5:] }}</text>
+    {% else %}
+    <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="3" fill="none" stroke="#b0a48a" stroke-width="1" opacity="0.5"/>
+    {% endif %}
+    {% endfor %}
+    </g>
+  </svg>
+</div>
+
+{# ── Topic pills — clicking switches the timeline view ── #}
+{% if heatmap %}
+<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px">
+  <span class="tag timeline-pill timeline-pill--active" data-series="overall"
+        style="font-size:10px; cursor:pointer"
+        onclick="selectTimelineSeries('overall')">
+    Overall
+  </span>
+  {% for area in issue_order %}
+  {% set h = heatmap[area] %}
+  {% if h %}
+  <span class="tag timeline-pill" data-series="{{ area }}"
+        style="color:{{ h.color }}; border-color:{{ h.color }}44; background:{{ h.color }}18; font-size:10px; cursor:pointer"
+        title="{{ h.label }} · avg stance {{ h.display }}"
+        onclick="selectTimelineSeries('{{ area }}')">
+    {{ issue_labels[area] }} {{ h.display }}
+  </span>
+  {% else %}
+  <span class="tag" style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px" title="No recent data">
+    {{ issue_labels[area] }}
+  </span>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
+<script>
+(function () {
+  const SERIES = {{ topic_series_json | safe }};
+  const PAD_L = 44, PAD_T = 15, CHART_W = 736, CHART_H = 170;
+
+  function xFor(i, n) { return n > 1 ? PAD_L + i * CHART_W / (n - 1) : PAD_L + CHART_W / 2; }
+  function yFor(s) { return PAD_T + CHART_H * (1.0 - s); }
+  function r1(v) { return Math.round(v * 10) / 10; }
+
+  var originalClusterOrder = null;
+
+  function reorderClusters(key) {
+    var container = document.getElementById('clusters-container');
+    if (!container) return;
+    var clusters = Array.from(container.querySelectorAll(':scope > .cluster'));
+    if (!originalClusterOrder) {
+      originalClusterOrder = clusters.map(function(c) { return c.id; });
+    }
+    if (key === 'overall') {
+      originalClusterOrder.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) container.appendChild(el);
+      });
+    } else {
+      var target = document.getElementById('cluster-' + key);
+      if (target && container.firstElementChild !== target) {
+        container.insertBefore(target, container.firstElementChild);
+      }
+    }
+  }
+
+  window.selectTimelineSeries = function(key) {
+    const series = SERIES[key];
+    if (!series) return;
+
+    document.querySelectorAll('.timeline-pill').forEach(function(el) {
+      el.classList.toggle('timeline-pill--active', el.dataset.series === key);
+    });
+
+    reorderClusters(key);
+
+    const scored = series.filter(function(w) { return w !== null; });
+    if (scored.length < 2) return;
+    const recent = scored[scored.length - 1];
+    const n = series.length;
+
+    const lbl = document.getElementById('timeline-current-label');
+    if (lbl) {
+      lbl.textContent = recent.label + ' · ' + recent.display;
+      lbl.style.color = recent.color;
+    }
+
+    const lineXY = [], dotsSVG = [];
+    series.forEach(function(w, i) {
+      const x = r1(xFor(i, n));
+      if (w === null) {
+        dotsSVG.push('<circle cx="' + x + '" cy="' + r1(yFor(0.5)) + '" r="3" fill="none" stroke="#b0a48a" stroke-width="1" opacity="0.5"/>');
+        return;
+      }
+      const y = r1(yFor(w.score));
+      lineXY.push(x + ',' + y);
+      dotsSVG.push(
+        '<circle cx="' + x + '" cy="' + y + '" r="4" fill="' + w.color + '" stroke="var(--bg,#f4ecdb)" stroke-width="1.5"/>',
+        '<text x="' + x + '" y="' + r1(y - 8) + '" text-anchor="middle" font-size="9" fill="' + w.color + '" font-family="\'IBM Plex Mono\',monospace">' + w.display + '</text>',
+        '<text x="' + x + '" y="205" text-anchor="middle" font-size="8" fill="#888" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + '</text>'
+      );
+    });
+
+    const line = document.getElementById('timeline-line');
+    if (line) { line.setAttribute('points', lineXY.join(' ')); line.setAttribute('stroke', recent.color); }
+    const band = document.getElementById('timeline-band');
+    if (band) band.setAttribute('points', '');
+    const dots = document.getElementById('timeline-dots');
+    if (dots) dots.innerHTML = dotsSVG.join('');
+  };
+})();
+</script>
+
+{% else %}
+{# spacer when no timeline data yet #}
+{% endif %}
+
+{# ── Convergence view ── #}
+<div class="section-head" style="margin-top:0">Where they line up — and where they don't</div>
+
+{% if clusters %}
+  <p style="font-size:14px; color:var(--muted); margin-bottom:18px; font-family:'IBM Plex Sans',sans-serif;">
+    When two or more capitals spoke on the same topic within 14 days, we placed their statements side by side.
+    Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goal for that topic,
+    with the quote that justifies the rating.
+  </p>
+
+  <div id="clusters-container">
+  {% for cluster in clusters %}
+  <div class="cluster" id="cluster-{{ cluster.area }}">
+    <div class="cluster-head">
+      <span class="tag" style="color:var(--accent); border-color: var(--accent-dim); background: var(--accent-faint)">
+        {{ cluster.area_label }}
+      </span>
+      {% if cluster.convergence %}
+      {% if cluster.convergence.scoring_mode == 'stance' %}
+      <span class="tag" style="color:{{ cluster.convergence.color }}; border-color:{{ cluster.convergence.color }}44; background:{{ cluster.convergence.color }}18; margin-left:4px"
+        title="Mean stance vs. the Weimar goal, −2 to +2, per capital. Spread {{ cluster.convergence.spread }} between the most and least supportive.">
+        {{ cluster.convergence.label }}
+        ·
+        {%- for a, pa in cluster.convergence.per_actor.items() %}
+        {{ a }} {{ "%+.1f"|format(pa.stance) }}{% if not loop.last %} ·{% endif %}
+        {%- endfor %}
+      </span>
+      {% else %}
+      <span class="tag" style="color:{{ cluster.convergence.color }}; border-color:{{ cluster.convergence.color }}44; background:{{ cluster.convergence.color }}18; margin-left:4px"
+        title="{% if cluster.convergence.scoring_mode == 'goal_anchored' %}Goal alignment — {% for p in cluster.convergence.pairs %}{{ p.actors }}: {{ (p.score * 100)|int }}%  {% endfor %}{% else %}Peer similarity — {% for p in cluster.convergence.pairs %}{{ p.actors }}: {{ (p.score * 100)|int }}%  {% endfor %}{% endif %}">
+        {{ cluster.convergence.label }} · {{ (cluster.convergence.overall * 100)|int }}%
+      </span>
+      {% endif %}
+      {% endif %}
+      <span class="date-range">
+        {% if cluster.date_from == cluster.date_to %}{{ cluster.date_to }}{% else %}{{ cluster.date_from }} – {{ cluster.date_to }}{% endif %}
+      </span>
+    </div>
+
+    {% if cluster.commentary %}
+    <p class="cluster-commentary">{{ cluster.commentary }}</p>
+    {% endif %}
+
+    {# Always render 3 columns in FR · DE · PL order #}
+    <div class="cluster-cols actors-3">
+      {% for actor in ["FR", "DE", "PL"] %}
+      {% set events_for_actor = cluster.by_actor.get(actor, []) %}
+      {% if events_for_actor %}
+      <div class="actor-col" data-actor="{{ actor }}">
+        <div class="actor-label" style="color:{{ actor_colors[actor] }}">{{ actor_labels[actor] }}</div>
+        {% for item in events_for_actor %}
+        <div class="actor-event">
+          <div class="actor-event-date">{{ item.event.date }}</div>
+          <div class="actor-event-title">
+            {% if item.event.source_url %}<a href="{{ item.event.source_url }}" target="_blank" rel="noopener">{% endif %}
+            {{ item.event.title | truncate(100) }}
+            {% if item.event.source_url %}</a>{% endif %}
+          </div>
+          {% set _positions = item.event.extracted.positions if item.event.extracted else none %}
+          {% set _pos = (_positions.get(cluster.area) if _positions else none) or (item.event.extracted.position if item.event.extracted else none) %}
+          {% set _stances = item.event.extracted.stances if item.event.extracted else none %}
+          {% set _stance = _stances.get(cluster.area) if _stances else none %}
+          {% if _pos %}
+          <div class="actor-event-pos" style="border-color:{{ actor_colors[actor] }}">
+            {{ _pos }}
+            {% if _stance %}
+            <div style="margin-top:6px; display:flex; align-items:baseline; gap:6px; flex-wrap:wrap">
+              <span class="tag" style="font-size:9px; color:{% if _stance.score > 0 %}#4d6b38{% elif _stance.score < 0 %}#a14132{% else %}#8a6320{% endif %}; border-color:currentColor"
+                    title="Stance vs. the Weimar {{ cluster.area_label }} goal: +2 actively advances · +1 supports · 0 neutral · −1 hedges · −2 opposes">
+                {{ "%+d"|format(_stance.score) }}
+                {{ {2: "advances", 1: "supports", 0: "neutral", -1: "hedges", -2: "opposes"}[_stance.score] }}
+              </span>
+              {% if _stance.evidence %}
+              <span style="font-size:11px; color:var(--muted); font-style:italic">“{{ _stance.evidence | truncate(140) }}”</span>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+          {% else %}
+          <div class="no-pos">position not yet extracted</div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="actor-col empty" data-actor="{{ actor }}">
+        <div class="actor-label" style="color:{{ actor_colors[actor] }}">{{ actor_labels[actor] }}</div>
+        <div class="empty-note">
+          <strong>No statements</strong>
+          {{ actor_labels[actor] }} did not publish on this topic in the comparison window.
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+  </div>{# /clusters-container #}
+
+{% else %}
+  <p style="color:var(--muted); font-family:'IBM Plex Sans',sans-serif; font-size:14px">
+    No convergence clusters found yet — more sources need to run.
+  </p>
+{% endif %}
+
+{# ── Continue reading card ── #}
+<div class="continue-card">
+  <div class="continue-eyebrow">That's everything</div>
+  <h2 class="continue-title">{{ coverage_from }}–{{ coverage_to }}: the full two-week diary</h2>
+  <p class="continue-body">
+    You've seen the highlights. The complete record of every tracked statement — all sources, all topics — is one click away.
+    Come back <strong>{{ next_tuesday_str }}</strong> for the next weekly update.
+  </p>
+  <div class="continue-actions">
+    <a href="{{ base_path }}/meetings/" class="cta-primary">All trilateral meetings <span>→</span></a>
+    <a href="{{ base_path }}/sources/" class="cta-secondary">How we track this</a>
+  </div>
+</div>
+
+{# ── About this tracker ── #}
+<div class="about-tracker">
+  <h3>About this tracker</h3>
+  <div class="about-stats">
+    <div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, mapped and annotated.</div>
+    <div><strong>{{ total_all }}</strong> total events ingested from three foreign ministry feeds.</div>
+    <div><strong>{{ clusters|length }}</strong> active topic clusters in the current 14-day window.</div>
+  </div>
+</div>
+
+{# ── Cluster collapse/expand JS ── #}
+<script>
+(function () {
+  const VISIBLE = 2;
+  document.querySelectorAll('.cluster').forEach(function (cluster) {
+    var cols = cluster.querySelectorAll('.actor-col:not(.empty)');
+    var maxExtra = 0;
+    cols.forEach(function (col) {
+      var evts = col.querySelectorAll('.actor-event');
+      var extra = evts.length - VISIBLE;
+      if (extra > maxExtra) maxExtra = extra;
+      for (var i = VISIBLE; i < evts.length; i++) evts[i].hidden = true;
+    });
+    if (maxExtra <= 0) return;
+    var btn = document.createElement('button');
+    btn.className = 'cluster-expand';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML =
+      '<span class="stack"><i></i><i></i><i></i></span>' +
+      '<span class="text">Show <strong>' + maxExtra + '</strong> more event' + (maxExtra === 1 ? '' : 's') + '</span>' +
+      '<span class="icon">▾</span>';
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      cols.forEach(function (col) {
+        col.querySelectorAll('.actor-event').forEach(function (e, i) {
+          if (i >= VISIBLE) e.hidden = expanded;
+        });
+      });
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      btn.querySelector('.text').innerHTML = expanded
+        ? 'Show <strong>' + maxExtra + '</strong> more event' + (maxExtra === 1 ? '' : 's')
+        : 'Show less';
+      if (expanded) {
+        var rect = cluster.getBoundingClientRect();
+        if (rect.top < 0) cluster.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+    cluster.appendChild(btn);
+  });
+})();
+</script>
+
+{% endblock %}

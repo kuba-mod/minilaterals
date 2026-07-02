@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign ministers of Poland
+  - Foreign ministers of Kuwait
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for de-escalation and dialogue to resolve the
+    problems in the Gulf region, while condemning Iran's actions as violations of
+    international law.
+  positions:
+    rule_of_law: Poland condemned Iran's retaliatory strikes targeting the Arab states
+      of the Persian Gulf, asserting that such measures violate international law
+      and undermining regional stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Poland and Kuwait take the view that the only appropriate way to solve
+        the problems of the Gulf region is through dialogue.

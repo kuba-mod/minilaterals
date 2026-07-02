@@ -1,0 +1,21 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Radosław Sikorski
+  - Janusz Reiter
+  - Knut Abraham
+  topics: []
+  location: Berlin, Germany
+  position: Germany is honoring German-Polish cooperation and reconciliation efforts
+    through the presentation of the German-Polish Prize.
+  positions: {}
+  stances: {}

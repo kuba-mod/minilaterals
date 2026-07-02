@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasizes the critical need for defending European values, the
+    rule of law, and cooperation against global geopolitical instability and the rise
+    of authoritarianism.
+  positions:
+    rule_of_law: Poland stressed the importance of defending European values—cooperation,
+      responsibility, and the rule of law—as foundational to European society and
+      stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: appealed to students to defend European values—cooperation, responsibility,
+        and the rule of law.

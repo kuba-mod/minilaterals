@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Lana Nusseibeh
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasized the importance of international law and cooperation
+    with the UAE to resolve regional and global conflicts peacefully.
+  positions:
+    ukraine: Poland discussed providing humanitarian aid to Ukraine and supported
+      the Emirati mediation efforts aimed at ending Russia’s aggression.
+    rule_of_law: Both sides emphasized their shared respect for the paramount role
+      of international law in relations between countries and readiness to cooperate
+      towards de-escalation and peaceful conflict resolution.
+  stances:
+    ukraine:
+      score: 1
+      evidence: providing humanitarian aid to Ukraine
+    rule_of_law:
+      score: 1
+      evidence: share their respect for the paramount role of international law in
+        relations between countries

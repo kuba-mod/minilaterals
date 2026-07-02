@@ -1,0 +1,27 @@
+# Reference sentences for officially agreed Weimar Triangle priorities.
+# Sources: FM joint declarations Feb 2024, May 2024; EU Affairs Ministers Dec 2024.
+# goal_embeddings.json is generated from this file by pipeline/embed.py — do not edit that file by hand.
+
+ukraine: >
+  The Weimar Triangle commits to long-term support for Ukraine across military,
+  economic, and diplomatic dimensions until a just and lasting peace is achieved.
+
+defence: >
+  The Weimar Triangle supports a stronger EU defence capability complementary to
+  NATO, with particular attention to eastern flank deterrence and collective security.
+
+hybrid: >
+  The Weimar Triangle calls for coordinated action against hybrid threats including
+  disinformation campaigns, cyber attacks, and foreign political interference.
+
+enlargement: >
+  The Weimar Triangle supports the EU accession of Ukraine and Western Balkans
+  countries and advocates for pre-enlargement institutional reforms within the EU.
+
+green_transition: >
+  The Weimar Triangle supports the Clean Industrial Deal and the path to climate
+  neutrality, aligning industrial and energy policy with European green objectives.
+
+rule_of_law: >
+  The Weimar Triangle affirms democratic resilience, the rule of law, and combating
+  disinformation as foundational to European unity and security.

@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - ministers
+  - Deputy Prime Minister Sikorski
+  - Minister Petr Macinka
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: null
+  position: Poland prioritizes pragmatic cooperation within the Visegrad Group, focusing
+    on issues significant to its citizens, while also addressing historical bilateral
+    issues with Czechia.
+  positions:
+    ukraine: Poland stresses the need for long-term support for Ukraine, emphasizing
+      that a just peace does not punish the victim and advocating for a stable Ukraine
+      within a strong EU.
+    defence: Poland and Czechia agreed to strengthen European defense efforts, complementing
+      NATO and focusing on collective security.
+    enlargement: Poland supports the EU accession of Ukraine and Western Balkans countries,
+      viewing the Visegrad Group as a format for closer integration between Poland
+      and Czechia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We have consistently stressed the need to ensure long-term support
+        for the country which is fighting for its own freedom and the security of
+        the whole Europe.
+    defence:
+      score: 1
+      evidence: They also noted the joint efforts to strengthen European defence.
+    enlargement:
+      score: 0
+      evidence: ''

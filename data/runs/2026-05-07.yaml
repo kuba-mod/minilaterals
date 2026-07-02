@@ -1,0 +1,13 @@
+date: '2026-05-07'
+run_at: '2026-05-07T22:09:26Z'
+sources:
+- source: polish_mfa
+  fetched: 10
+  new: 10
+  skipped: 0
+  error: null
+totals:
+  fetched: 10
+  new: 10
+  skipped: 0
+  errors: 0

@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - France
+  - European partners
+  - G7 members
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: France continues to support the rebuilding of Chernobyl's containment
+    dome and condemns Russian attacks on Ukrainian energy infrastructure as part of
+    a terror strategy.
+  positions:
+    ukraine: France condemns Russian strikes on Ukrainian civilian and energy infrastructure,
+      highlighting the risk of major radiological consequences.
+    hybrid: France characterizes Russian attacks, including a drone strike on the
+      Chernobyl dome, as part of a terror strategy increasing European insecurity
+      and posing a nuclear risk.
+  stances:
+    ukraine:
+      score: 2
+      evidence: France recalls that the Russian strikes on Ukrainian civilian and
+        energy infrastructure may have major radiological consequences
+    hybrid:
+      score: 2
+      evidence: the attack by a Russian drone on the Chernobyl dome in February 2025
+        is part of Russia’s terror strategy

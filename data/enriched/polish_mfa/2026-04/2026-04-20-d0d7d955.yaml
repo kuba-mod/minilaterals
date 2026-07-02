@@ -1,0 +1,42 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.3
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - Benjamin Haddad
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Gdańsk, Poland
+  position: Poland is committed to deepening cooperation with France across security,
+    EU policy, and cultural spheres, leveraging the Treaty of Nancy to strengthen
+    bilateral ties.
+  positions:
+    ukraine: Poland and France are ready for closer cooperation, most notably in security,
+      which includes support for Ukraine and deterrence of Russia.
+    defence: Poland and France are ready for closer cooperation, most notably in security,
+      which includes support for Ukraine and deterrence of Russia.
+    enlargement: Poland views closer cooperation with France as vital for EU policy,
+      specifically regarding the enlargement process and strengthening the common
+      market.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    defence:
+      score: 1
+      evidence: most notably in security, which includes support for Ukraine and deterrence
+        of Russia
+    enlargement:
+      score: 1
+      evidence: the enlargement process

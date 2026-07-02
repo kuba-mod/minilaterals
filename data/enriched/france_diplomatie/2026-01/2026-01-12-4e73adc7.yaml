@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Marco Rubio
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: France emphasized its commitment to international stability and sovereignty,
+    particularly regarding Greenland and the security of NATO members.
+  positions:
+    ukraine: France highlighted the momentum within the Coalition of the Willing regarding
+      security guarantees for a just and lasting peace in Ukraine.
+    enlargement: France stressed its commitment to the sovereignty and territorial
+      integrity of Denmark, a NATO member, in the context of Greenland.
+  stances:
+    ukraine:
+      score: 1
+      evidence: With regard to Ukraine, the Minister emphasized the momentum within
+        the Coalition of the Willing, which met last week in Paris to work on the
+        security guarantees that are necessary to a just and lasting peace.
+    enlargement:
+      score: 0
+      evidence: ''

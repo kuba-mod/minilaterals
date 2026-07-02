@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Jacek Karnowski
+  - Cristina Gherasimov
+  - Alexei Buzu
+  - Carolina Perebinos
+  topics:
+  - enlargement
+  - rule_of_law
+  location: Chișinău, Moldova
+  position: Poland reaffirmed its commitment to supporting Moldova's European integration
+    and deepening bilateral economic cooperation.
+  positions:
+    enlargement: Poland strongly supports Moldova's EU accession process by emphasizing
+      continued support for reforms and the negotiation stages.
+    rule_of_law: Poland and Moldova affirmed their shared commitment to democratic
+      values and stability concerning European safety and international issues.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Deputy Minister Marcin Bosacki emphasised Poland’s willingness to
+        further support Moldova in its European integration
+    rule_of_law:
+      score: 1
+      evidence: Both parties reaffirmed the very good state of bilateral relations,
+        as well as Poland’s and Moldova’s similar assessment of the most important
+        issues concerning European safety and the international situation.

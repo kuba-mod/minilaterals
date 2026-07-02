@@ -1,0 +1,321 @@
+- date: "1991-08-28"
+  type: FM
+  era: founding
+  location: "Weimar, Germany"
+  topic: "Founding declaration; 10-point joint communiqué on European integration"
+  ministers: ["Genscher (DE)", "Dumas (FR)", "Skubiszewski (PL)"]
+
+- date: "1992-04-23"
+  type: FM
+  era: founding
+  location: "Bergerac, France"
+  topic: "WEU associate status for Poland secured"
+  ministers: ["Genscher (DE)", "Dumas (FR)", "Skubiszewski (PL)"]
+
+- date: "1993-11-11"
+  type: FM
+  era: founding
+  location: "Warsaw, Poland"
+  topic: "NATO candidacy; EU accession framework; Czech/Slovak aftermath"
+  ministers: ["Kinkel (DE)", "Juppé (FR)", "Olechowski (PL)"]
+
+- date: "1994-09-14"
+  type: FM
+  era: founding
+  location: "Bamberg, Germany"
+  topic: "NATO enlargement framework; Partnership for Peace"
+  ministers: ["Kinkel (DE)", "Juppé (FR)", "Olechowski (PL)"]
+
+- date: "1995-10-26"
+  type: FM
+  era: founding
+  location: "Paris, France"
+  topic: "Partnership for Peace; Balkan crisis; Schengen"
+  ministers: ["Kinkel (DE)", "de Charette (FR)", "Bartoszewski (PL)"]
+
+- date: "1996-12-19"
+  type: FM
+  era: founding
+  location: "Warsaw, Poland"
+  topic: "NATO Study on Enlargement; IGC 1996 preparation"
+  ministers: ["Kinkel (DE)", "de Charette (FR)", "Rosati (PL)"]
+
+- date: "1997-11-19"
+  type: FM
+  era: founding
+  location: "Frankfurt/Oder, Germany"
+  topic: "Luxembourg European Council prep; enlargement criteria"
+  ministers: ["Kinkel (DE)", "Védrine (FR)", "Rosati (PL)"]
+
+- date: "1999-01-06"
+  type: FM
+  era: accession
+  location: "Paris, France"
+  topic: "Post-NATO accession agenda; Kosovo crisis"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Geremek (PL)"]
+
+- date: "1999-08-30"
+  type: FM
+  era: accession
+  location: "Weimar, Germany"
+  topic: "EU accession negotiations; Agenda 2000"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Geremek (PL)"]
+
+- date: "2000-06-07"
+  type: FM
+  era: accession
+  location: "Kraków, Poland"
+  topic: "Nice Treaty; enlargement timeline"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Bartoszewski (PL)"]
+
+- date: "2001-03-16"
+  type: FM
+  era: accession
+  location: "Paris, France"
+  topic: "Laeken agenda; CFSP development"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Cimoszewicz (PL)"]
+
+- date: "2001-09-06"
+  type: FM
+  era: accession
+  location: "Weimar, Germany"
+  topic: "Accession timeline; constitutional convention"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Cimoszewicz (PL)"]
+
+- date: "2002-06-28"
+  type: FM
+  era: accession
+  location: "Warsaw, Poland"
+  topic: "Iraq tensions emerging; Copenhagen criteria"
+  ministers: ["Fischer (DE)", "Védrine (FR)", "Cimoszewicz (PL)"]
+
+- date: "2003-05-09"
+  type: Summit
+  era: accession
+  location: "Wrocław, Poland"
+  topic: "Post-Iraq split repair; Constitutional Treaty; Poland days before EU accession vote"
+  ministers: ["Schröder (DE)", "Chirac (FR)", "Kwaśniewski (PL)"]
+
+- date: "2003-05-26"
+  type: FM
+  era: accession
+  location: "Warsaw, Poland"
+  topic: "Pre-accession final coordination"
+  ministers: ["Fischer (DE)", "de Villepin (FR)", "Cimoszewicz (PL)"]
+
+- date: "2004-10-22"
+  type: FM
+  era: accession
+  location: "Warsaw, Poland"
+  topic: "Post-accession agenda; Constitutional Treaty ratification"
+  ministers: ["Fischer (DE)", "Haigneré (FR)", "Pietras (PL)"]
+
+- date: "2006-08-28"
+  type: FM
+  era: dormancy
+  location: "Weimar (15th anniversary)"
+  topic: "Anniversary; EU reform Treaty"
+  ministers: ["Steinmeier (DE)", "Douste-Blazy (FR)", "Fotyga (PL)"]
+
+- date: "2008-11-07"
+  type: FM
+  era: dormancy
+  location: "Paris, France"
+  topic: "Georgia war aftermath; Eastern Partnership initiative"
+  ministers: ["Bury (DE)", "Lellouche (FR)", "Dowgielewicz (PL)"]
+
+- date: "2010-02-01"
+  type: FM
+  era: dormancy
+  location: "Warsaw, Poland"
+  topic: "Polish EU Council Presidency 2011 preparation"
+  ministers: ["Hoyer (DE)", "Jouyet (FR)", "Dowgielewicz (PL)"]
+
+- date: "2011-02-07"
+  type: Summit
+  era: dormancy
+  location: "Warsaw, Poland"
+  topic: "Eurozone crisis; Russia relations; Pact for Competitiveness"
+  ministers: ["Merkel (DE)", "Sarkozy (FR)", "Komorowski (PL)"]
+
+- date: "2011-07-05"
+  type: Defence
+  era: dormancy
+  location: "Brussels"
+  topic: "Weimar Battlegroup: 1,700 soldiers under Polish command signed"
+  ministers: ["Westerwelle (DE)", "Juppé (FR)", "Sikorski (PL)"]
+
+- date: "2011-09-22"
+  type: FM
+  era: dormancy
+  location: "Berlin, Germany"
+  topic: "EU enlargement; Libya aftermath"
+  ministers: ["Hoyer (DE)", "Leonetti (FR)", "Dowgielewicz (PL)"]
+
+- date: "2012-03-16"
+  type: FM
+  era: dormancy
+  location: "Antibes, France"
+  topic: "Syria; eurozone crisis"
+  ministers: ["Link (DE)", "Leonetti (FR)", "Dowgielewicz (PL)"]
+
+- date: "2012-10-01"
+  type: FM
+  era: dormancy
+  location: "Warsaw, Poland"
+  topic: "Deeper EU integration; Fiscal Compact"
+  ministers: ["Link (DE)", "Repentin (FR)", "Serafin (PL)"]
+
+- date: "2014-02-20"
+  type: FM
+  era: crisis1
+  location: "Kyiv (emergency)"
+  topic: "Yanukovych–Maidan mediation; brokered Feb 21 agreement (collapsed same day)"
+  ministers: ["Steinmeier (DE)", "Fabius (FR)", "Sikorski (PL)"]
+
+- date: "2014-03-01"
+  type: "Parl."
+  era: crisis1
+  location: "Kyiv"
+  topic: "First-ever joint parliamentary visit to third country; Crimea/territorial integrity"
+  ministers: ["Röttgen (DE)", "Guigou (FR)", "Schetyna (PL)"]
+
+- date: "2015-08-01"
+  type: FM
+  era: crisis1
+  location: "Weimar, Germany"
+  topic: "Minsk II implementation; migration crisis; refugee flows"
+  ministers: ["Steinmeier (DE)", "Fabius (FR)", "Schetyna (PL)"]
+
+- date: "2016-08-28"
+  type: FM
+  era: crisis1
+  location: "Weimar (25th anniversary)"
+  topic: "Post-Brexit; migration; 'reinvigoration' pledge by all three FMs"
+  ministers: ["Steinmeier (DE)", "Ayrault (FR)", "Waszczykowski (PL)"]
+
+- date: "2017-06-01"
+  type: Finance
+  era: limbo
+  location: "Berlin, Germany"
+  topic: "Capital markets union; fiscal rules (first Finance FM mtg since unknown)"
+  ministers: ["Gabriel (DE)", "Le Drian (FR)", "Waszczykowski (PL)"]
+
+- date: "2021-08-01"
+  type: FM
+  era: limbo
+  location: "Paris, France"
+  topic: "Afghanistan collapse; EU strategic autonomy post-US withdrawal"
+  ministers: ["Maas (DE)", "Le Drian (FR)", "Rau (PL)"]
+
+- date: "2022-02-08"
+  type: Summit
+  era: revival
+  location: "Berlin, Germany"
+  topic: "Pre-invasion: Ukraine sovereignty; NATO unity; first HoG trilateral in years"
+  ministers: ["Scholz (DE)", "Macron (FR)", "Duda (PL)"]
+
+- date: "2022-03-01"
+  type: FM
+  era: revival
+  location: "Łódź, Poland"
+  topic: "Days after invasion: refugee crisis; military aid; SWIFT sanctions"
+  ministers: ["Baerbock (DE)", "Le Drian (FR)", "Rau (PL)"]
+
+- date: "2023-06-12"
+  type: Summit
+  era: revival
+  location: "Paris, France"
+  topic: "Ukraine aid; NATO membership path; arms supply; 'unwavering support'"
+  ministers: ["Scholz (DE)", "Macron (FR)", "Duda (PL)"]
+
+- date: "2023-06-27"
+  type: Finance
+  era: revival
+  location: "Weimar, Germany"
+  topic: "Capital markets union; Ukraine reconstruction finance (first Finance mtg since 2017)"
+  ministers: ["Lindner (DE)", "Le Maire (FR)", "Rzeczkowska (PL)"]
+
+- date: "2024-02-12"
+  type: Summit
+  era: revival
+  location: "Berlin, Germany"
+  topic: "Avdiivka fall; European Sky Shield; Trump-NATO comments"
+  ministers: ["Scholz (DE)", "Macron (FR)", "Tusk (PL)"]
+
+- date: "2024-02-12"
+  type: FM
+  era: revival
+  location: "La Celle-Saint-Cloud"
+  topic: "'Weimar of citizens/youth/culture'; Ukraine coordination"
+  ministers: ["Baerbock (DE)", "Séjourné (FR)", "Sikorski (PL)"]
+
+- date: "2024-03-15"
+  type: Summit
+  era: revival
+  location: "Berlin, Germany"
+  topic: "Long-range artillery coalition for Ukraine announced"
+  ministers: ["Scholz (DE)", "Macron (FR)", "Tusk (PL)"]
+
+- date: "2024-11-07"
+  type: Statement
+  era: revival
+  location: "Joint statement"
+  topic: "Georgia 2024 election irregularities; democratic backsliding warning"
+  ministers: []
+
+- date: "2024-12-31"
+  type: Statement
+  era: revival
+  location: "Joint statement"
+  topic: "Georgia constitutional crisis; violence against protesters"
+  ministers: []
+
+- date: "2025-02-12"
+  type: FM
+  era: renaissance
+  location: "Paris, France"
+  topic: "Trump-Putin call; Ukraine excluded from negotiations; emergency response"
+  ministers: ["Wadephul (DE)", "Barrot (FR)", "Sikorski (PL)"]
+
+- date: "2025-03-31"
+  type: "FM+"
+  era: renaissance
+  location: "Madrid (Weimar+)"
+  topic: "European security architecture; ReArm Europe"
+  ministers: ["Wadephul (DE)", "Barrot (FR)", "Sikorski (PL) + UK/IT/ES"]
+
+- date: "2025-05-12"
+  type: "FM+"
+  era: renaissance
+  location: "Lancaster House, London"
+  topic: "Ukraine / Euro-Atlantic security"
+  ministers: ["Wadephul (DE)", "Barrot (FR)", "Sikorski (PL) + UK/IT/ES"]
+
+- date: "2025-06-12"
+  type: "FM+"
+  era: renaissance
+  location: "Rome (Weimar+)"
+  topic: "Ukraine sanctions; NATO SG Rutte and Kallas present"
+  ministers: ["Wadephul (DE)", "Barrot (FR)", "Sikorski (PL) + NATO/EU"]
+
+- date: "2025-08-06"
+  type: "FM+"
+  era: renaissance
+  location: "Warsaw (Weimar+)"
+  topic: "Nawrocki inauguration; ReArm Europe; trilateral communiqué"
+  ministers: ["Wadephul (DE)", "Barrot (FR)", "Sikorski (PL) + UK/IT/ES"]
+
+- date: "2025-08-28"
+  type: Summit
+  era: renaissance
+  location: "Chișinău, Moldova"
+  topic: "Ukraine EU accession; Moldova solidarity; Merz first summit"
+  ministers: ["Merz (DE)", "Macron (FR)", "Tusk (PL)"]
+
+- date: "2026-03-09"
+  type: Sectoral
+  era: renaissance
+  location: "Gniezno, Poland"
+  topic: "ETS-2; electrification; first env. ministers trilateral in 12 years"
+  ministers: ["(Environment ministers)"]

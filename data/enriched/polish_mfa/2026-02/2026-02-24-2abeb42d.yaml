@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: 'null'
+  position: Poland advocates for sustained Western support for Ukraine through targeted
+    measures like energy sector targeting, asset freezes, and travel bans, emphasizing
+    that accountability and unity are key to rebuilding Europe's security.
+  positions:
+    ukraine: Poland commits to continued Western support for Ukraine for as long as
+      necessary, demanding a just and lasting peace that deters future aggression.
+    hybrid: Poland calls for coordinated action against hybrid threats, including
+      sabotage and undermining security in OSCE states, and demands that non-compliance
+      with international obligations carries enforceable consequences.
+    rule_of_law: Poland stresses that European security and the rule of law must be
+      rebuilt through unity, resolve, and accountability, not just polite declarations.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We must continue to do so for as long as it takes
+    hybrid:
+      score: 1
+      evidence: By using hybrid warfare tools, including acts of sabotage, it strives
+        to undermine the security in many OSCE participating states.
+    rule_of_law:
+      score: 1
+      evidence: Non-compliance with international obligations must carry enforceable
+        consequences.

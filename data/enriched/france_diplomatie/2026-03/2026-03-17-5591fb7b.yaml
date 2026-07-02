@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - member states
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Brussels, Belgium
+  position: France is committed to using all available national and European levers
+    to combat cyber impunity and force adversaries to pay the price, in line with
+    international law and partnerships.
+  positions:
+    hybrid: France supports coordinated action against hybrid threats, specifically
+      targeting the private cyber offensive ecosystem and malicious actors.
+    rule_of_law: France emphasizes combating impunity and upholding international
+      norms by sanctioning malicious actors and working with partners to maintain
+      cyber stability.
+  stances:
+    hybrid:
+      score: 2
+      evidence: The EU is imposing these restrictive measures on the private cyber
+        offensive ecosystem that equips the malicious actors targeting France and
+        Europe.
+    rule_of_law:
+      score: 2
+      evidence: France will continue working with the UK to bolster efforts made through
+        the Pall Mall Process to combat the proliferation and irresponsible use of
+        tools developed by the cyber offensive industry.

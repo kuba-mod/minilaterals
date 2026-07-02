@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Ministry of Foreign Affairs
+  - United States
+  - United Kingdom
+  - Canada
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland prioritizes combating the clunker fleet's activities as a key foreign
+    policy objective, emphasizing the need for international cooperation to limit
+    its operations.
+  positions:
+    rule_of_law: Poland demonstrates commitment to the rule of law by actively sanctioning
+      vessels and entities that circumvent EU sanctions and threaten maritime norms
+      and safety.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Combating the activity of the clunker fleet is one of the priorities
+        of Polish and EU foreign policy.

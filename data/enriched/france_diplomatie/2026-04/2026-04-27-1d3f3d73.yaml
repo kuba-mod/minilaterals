@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Minister for Europe and Foreign Affairs
+  - António Guterres
+  topics:
+  - rule_of_law
+  location: New York, United States
+  position: France signaled support for UN efforts, emphasizing multilateralism, adherence
+    to international law, and the safety of UNIFIL personnel.
+  positions:
+    rule_of_law: France emphasized the importance of effective multilateralism and
+      adherence to international law and the United Nations Charter.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: adherence to international law and the United Nations Charter

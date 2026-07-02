@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Under Secretary DiNanno
+  topics:
+  - defence
+  location: null
+  position: Poland focused on enhancing NATO's deterrence capabilities, the Alliance’s
+    Eastern policy, and Polish–US cooperation in defense and defense industries.
+  positions:
+    defence: Poland emphasized enhancing NATO’s deterrence capabilities and discussed
+      Polish–US cooperation in defense, aligning with the goal of supporting a stronger
+      EU defence capability complementary to NATO and focusing on eastern flank deterrence.
+  stances:
+    defence:
+      score: 1
+      evidence: enhancing NATO’s deterrence capabilities

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Foreign Office
+  - Federal Ministry of Defence
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is mobilizing extensive resources and coordinating with international
+    partners to provide immediate and targeted humanitarian assistance following the
+    severe earthquake in Venezuela.
+  positions:
+    rule_of_law: Germany emphasizes the importance of international cooperation and
+      coordinated action through established mechanisms (like the EU civil protection
+      mechanism) to address a major humanitarian crisis, reinforcing principles of
+      global aid and stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Based on the concrete requirements specified in the request, we will
+        now – coordinated at European level – examine the ways in which we can provide
+        assistance.

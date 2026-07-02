@@ -1,0 +1,180 @@
+- year: 1991
+  meetings: 1
+  score: 0.82
+  era: founding
+  note: "Founding year; high ambition, genuine novelty"
+- year: 1992
+  meetings: 1
+  score: 0.78
+  era: founding
+  note: "WEU associate status secured; active"
+- year: 1993
+  meetings: 1
+  score: 0.72
+  era: founding
+  note: "NATO candidacy building; regular rhythm"
+- year: 1994
+  meetings: 1
+  score: 0.73
+  era: founding
+  note: "NATO framework; steady"
+- year: 1995
+  meetings: 1
+  score: 0.70
+  era: founding
+  note: "PfP; Balkan crisis adds urgency"
+- year: 1996
+  meetings: 1
+  score: 0.72
+  era: founding
+  note: "NATO Study on Enlargement"
+- year: 1997
+  meetings: 1
+  score: 0.82
+  era: founding
+  note: "Luxembourg EC prep; strongest founding year"
+- year: 1998
+  meetings: 0
+  score: 0.52
+  era: founding
+  note: "No FM meeting recorded; transition year"
+- year: 1999
+  meetings: 2
+  score: 0.88
+  era: accession
+  note: "NATO entry + Kosovo; 2 FM meetings"
+- year: 2000
+  meetings: 1
+  score: 0.74
+  era: accession
+  note: "Nice Treaty; steady"
+- year: 2001
+  meetings: 2
+  score: 0.75
+  era: accession
+  note: "9/11 disrupts but 2 meetings held"
+- year: 2002
+  meetings: 1
+  score: 0.68
+  era: accession
+  note: "Iraq tensions emerging"
+- year: 2003
+  meetings: 2
+  score: 0.62
+  era: accession
+  note: "Iraq split: New vs Old Europe"
+- year: 2004
+  meetings: 1
+  score: 0.64
+  era: accession
+  note: "EU accession achieved; format identity crisis begins"
+- year: 2005
+  meetings: 0
+  score: 0.36
+  era: dormancy
+  note: "No FM meeting; Constitutional Treaty failure"
+- year: 2006
+  meetings: 1
+  score: 0.44
+  era: dormancy
+  note: "15th anniversary; mainly symbolic"
+- year: 2007
+  meetings: 0
+  score: 0.38
+  era: dormancy
+  note: "No FM meeting; Tusk I replaces PiS"
+- year: 2008
+  meetings: 1
+  score: 0.50
+  era: dormancy
+  note: "Georgia war; Eastern Partnership impulse"
+- year: 2009
+  meetings: 0
+  score: 0.40
+  era: dormancy
+  note: "No trilateral meeting on record"
+- year: 2010
+  meetings: 1
+  score: 0.48
+  era: dormancy
+  note: "Polish EU presidency preparation"
+- year: 2011
+  meetings: 2
+  score: 0.62
+  era: dormancy
+  note: "Summit + Battlegroup signed; modest revival"
+- year: 2012
+  meetings: 2
+  score: 0.52
+  era: dormancy
+  note: "2 FM meetings; routine"
+- year: 2013
+  meetings: 0
+  score: 0.36
+  era: dormancy
+  note: "No meeting; Merkel re-election transition"
+- year: 2014
+  meetings: 2
+  score: 0.80
+  era: crisis1
+  note: "Kyiv mediation; Crimea response"
+- year: 2015
+  meetings: 1
+  score: 0.72
+  era: crisis1
+  note: "Minsk II; migration crisis; PiS wins Oct"
+- year: 2016
+  meetings: 1
+  score: 0.54
+  era: crisis1
+  note: "PiS: 'irrelevant'; reinvigoration pledge"
+- year: 2017
+  meetings: 1
+  score: 0.44
+  era: limbo
+  note: "Finance ministers only; rule-of-law tension"
+- year: 2018
+  meetings: 0
+  score: 0.30
+  era: limbo
+  note: "No FM meeting; PiS-EU conflict deepens"
+- year: 2019
+  meetings: 0
+  score: 0.28
+  era: limbo
+  note: "No meeting; PL-EU Article 7 procedure"
+- year: 2020
+  meetings: 0
+  score: 0.25
+  era: limbo
+  note: "COVID; no meetings; format at low ebb"
+- year: 2021
+  meetings: 1
+  score: 0.40
+  era: limbo
+  note: "FM Paris; Afghanistan; minimal output"
+- year: 2022
+  meetings: 2
+  score: 0.84
+  era: revival
+  note: "Invasion trigger; format reborn in days"
+- year: 2023
+  meetings: 3
+  score: 0.88
+  era: revival
+  note: "Summit + Finance + FM; Tusk wins Oct"
+- year: 2024
+  meetings: 4
+  score: 0.91
+  era: revival
+  note: "Most active since 1990s; Tusk effect clear"
+- year: 2025
+  meetings: 6
+  score: 0.94
+  era: renaissance
+  note: "All-time peak; Weimar+ launched; Chișinău"
+- year: 2026
+  meetings: 1
+  score: 0.76
+  era: renaissance
+  note: "Jan–Apr only; Gniezno env. ministers"

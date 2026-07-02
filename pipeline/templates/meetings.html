@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% set active_page = "meetings" %}
+{% block title %}Weimar Triangle — Meetings{% endblock %}
+
+{% block header_stats %}
+<div class="hdr-stats">
+  <div class="stat"><div class="stat-v">35</div><div class="stat-l">Years of history</div></div>
+  <div class="stat"><div class="stat-v">{{ meetings|length }}</div><div class="stat-l">Recorded meetings</div></div>
+  <div class="stat"><div class="stat-v">{{ meetings|selectattr("type","equalto","Summit")|list|length }}</div><div class="stat-l">HoG summits</div></div>
+  <div class="stat"><div class="stat-v">{{ milestones|length }}</div><div class="stat-l">Key milestones</div></div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{# ── Activity timeline ── #}
+<div class="section-head" style="margin-top:0">Activity score — 1991 to 2026</div>
+
+<div class="timeline-chart">
+  {% for y in annual %}
+  <div class="timeline-bar" title="{{ y.year }}: {{ y.note }} ({{ (y.score * 100)|int }}%)">
+    <div class="timeline-bar-fill" style="height:{{ [3, (y.score * 96)|int]|max }}px; background:{{ era_colors.get(y.era, '#a0906a') }}"></div>
+  </div>
+  {% endfor %}
+</div>
+<div class="timeline-axis">
+  {% for y in annual %}
+  <div class="timeline-tick">{% if y.year % 5 == 1 %}{{ y.year }}{% endif %}</div>
+  {% endfor %}
+</div>
+
+<div class="era-legend">
+  {% for era_id, color in era_colors.items() %}
+  <div class="era-chip">
+    <div class="era-dot" style="background:{{ color }}"></div>
+    {{ era_labels.get(era_id, era_id) }}
+  </div>
+  {% endfor %}
+</div>
+
+{# ── Key milestones ── #}
+<div class="section-head">Key milestones</div>
+<div style="margin-bottom: 28px">
+  {% for m in milestones %}
+  <div style="display:flex; gap:14px; padding:10px 0; border-bottom:1px solid var(--rule-soft); align-items:baseline">
+    <div style="font-family:'IBM Plex Mono',monospace; color:{{ era_colors.get(m.era,'#a0906a') }}; font-size:13px; min-width:40px">{{ m.year }}</div>
+    <div style="font-size:16px">{{ m.event }}</div>
+  </div>
+  {% endfor %}
+</div>
+
+{# ── Meetings table ── #}
+<div class="section-head">All meetings — chronological</div>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Location</th>
+      <th>Topic</th>
+      <th>Ministers</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for m in meetings | sort(attribute='date', reverse=True) %}
+    <tr>
+      <td class="mono" style="white-space:nowrap; color:var(--muted); font-size:11px">{{ m.date }}</td>
+      <td>
+        {% set tc = type_colors.get(m.type, '#7a7060') %}
+        <span class="tag" style="color:{{ tc }}; border-color:{{ tc }}44; background:{{ tc }}18">
+          {{ m.type }}
+        </span>
+      </td>
+      <td style="font-size:14px; color:var(--muted)">{{ m.location }}</td>
+      <td>{{ m.topic }}</td>
+      <td style="font-size:13px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif">
+        {{ m.ministers | join(', ') if m.ministers else '' }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Sikorski
+  - Minister Aghabeikan
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its commitment to a two-State solution for Palestine,
+    while also announcing continued humanitarian and development aid.
+  positions:
+    ukraine: Poland discussed Russia’s aggression against Ukraine, aligning with the
+      Weimar Triangle's commitment to long-term support for Ukraine until a just and
+      lasting peace is achieved.
+    rule_of_law: Poland emphasized the adoption of a two-State solution and the establishment
+      of an independent State of Palestine next to Israel, which is compliant with
+      international law and aligns with democratic principles.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The meeting’s agenda included Russia’s aggression against Ukraine,
+        security situation in the Middle East, and the coordination of positions taken
+        in international fora.
+    rule_of_law:
+      score: 2
+      evidence: Poland consistently opts for the adoption of a two-State solution
+        and the establishment of an independent State of Palestine next to the State
+        of Israel. That solution is compliant with international law.

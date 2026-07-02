@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Foreign Office Spokesperson
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany condemns Russian aggression against Ukraine and affirms continued
+    support for Kyiv's defense efforts.
+  positions:
+    ukraine: Germany commits to continuing its strong support for Ukraine in its fight
+      to defend itself, which will be a key agenda item at the upcoming NATO summit.
+    rule_of_law: Germany condemns Russia's illegal war of aggression and emphasizes
+      the need to increase international pressure on Moscow.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We are continuing our support for Ukraine in its fight to defend itself.
+    rule_of_law:
+      score: 1
+      evidence: The devastating images of last night’s destruction show once more
+        that Russia is continuing to wage its illegal war of aggression against Ukraine
+        with undiminished brutality.

@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Minister of State Serap Güler
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany aims to deepen political and economic ties with Latin America
+    and the Caribbean by promoting cooperation in democracy, trade, and global infrastructure.
+  positions:
+    rule_of_law: Germany affirms its commitment to democratic values and stability
+      in the region, emphasizing support for multilateral international order and
+      rule of law.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Latin America and the Caribbean is a greater region comprising more
+        than 30 states, most of which are committed to democracy and the rule of law,
+        to the market economy and the welfare state, to a multilateral, values-based
+        international order.

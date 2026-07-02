@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Armenia
+  - Moldova
+  - Ukraine
+  - United Kingdom
+  - EU institutions and member states
+  - think tanks
+  - civil society organisations
+  - media
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reiterated its commitment to supporting Armenia and reaffirmed
+    its position as a leader of international efforts to counter FIMI.
+  positions:
+    hybrid: Poland organized a war game focusing on identifying and defending against
+      information manipulation and foreign interference (FIMI), aligning with the
+      call for coordinated action against hybrid threats.
+    rule_of_law: The exercise focused on developing communication strategies and practicing
+      techniques to identify and defend against information manipulation, reinforcing
+      the commitment to democratic resilience and combating disinformation.
+  stances:
+    hybrid:
+      score: 2
+      evidence: jointly practice the techniques used to identify and defend against
+        information manipulation and foreign interference (FIMI)
+    rule_of_law:
+      score: 1
+      evidence: The participants learned how to respond to hostile campaigns by developing
+        communication strategies aimed to challenge hostile narratives

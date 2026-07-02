@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Poland
+  - Memorial
+  - Arseny Roginsky
+  - Nikita Petrov
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland strongly opposes all forms of human rights violations and calls
+    on Russian authorities to cease persecution of independent media and release political
+    prisoners.
+  positions:
+    rule_of_law: Poland affirms democratic resilience and the rule of law by condemning
+      politically motivated trials, the persecution of independent media, and the
+      violation of fundamental freedoms in Russia.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The Republic of Poland strongly opposes all forms of human rights
+        violations. We call on Russian authorities to drop the practice of politically
+        motivated trials, cease persecution of independent media, and immediately
+        release all political prisoners.

@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Johann Wadephul
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the importance of peacekeepers and strongly condemns
+    Russia's illegal war against Ukraine while committing to close EU coordination
+    in international forums.
+  positions:
+    ukraine: Germany affirms long-term support for Ukraine by highlighting its defense
+      efforts against Russian aggression and condemning Moscow’s actions.
+    rule_of_law: Germany stresses the importance of democratic resilience and international
+      law by criticizing Russia's threats to a NATO ally within the UN Security Council.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We have witnessed Russia’s illegal war against Ukraine for over four
+        years now.
+    rule_of_law:
+      score: 1
+      evidence: In the very body in which states should jointly strive for peace through
+        diplomacy, Russia is openly threatening a NATO ally with violence.

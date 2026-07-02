@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Stéphane Séjourné, Executive Vice-President of the European Commission
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: France committed to fully contributing to deepening European industrial
+    sovereignty and making rapid progress on the European competitiveness and economic
+    security agenda.
+  positions:
+    green_transition: France emphasized the importance of critical raw materials supplies
+      and the need for progress on European competitiveness, aligning with green objectives.
+    rule_of_law: France stressed the need for rapid progress on the European competitiveness
+      and economic security agenda, which is foundational to European stability.
+  stances:
+    green_transition:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 0
+      evidence: ''

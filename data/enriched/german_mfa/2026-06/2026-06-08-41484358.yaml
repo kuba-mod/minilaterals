@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Johann Wadephul
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes its commitment to multilateralism and international
+    cooperation as the core of its foreign policy.
+  positions:
+    rule_of_law: Germany affirms that upholding international law and promoting multilateral
+      solutions are essential for global stability and security.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Russia’s war of aggression is directed not only at Ukraine, but also
+        against the entire Euro-Atlantic security architecture, and against core tenets
+        of international law.

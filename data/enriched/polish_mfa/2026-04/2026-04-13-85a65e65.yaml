@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Anita Orbán
+  - Péter Magyar
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland aims to resume constructive dialogue with Hungary and enhance regional
+    security cooperation through bilateral and EU mechanisms.
+  positions:
+    ukraine: Poland prioritized continued financial support for Ukraine and unblocking
+      funds from the European Peace Facility, aligning with the commitment to long-term
+      support for Ukraine.
+    defence: Poland emphasized working towards enhanced regional security and cohesion
+      of European policies, supporting a stronger EU defence capability.
+    rule_of_law: Poland highlighted the symbolic importance of democratic principles
+      and the need to resume constructive dialogue, affirming democratic resilience.
+  stances:
+    ukraine:
+      score: 1
+      evidence: continued financial support for Ukraine
+    defence:
+      score: 1
+      evidence: enhanced regional security
+    rule_of_law:
+      score: 1
+      evidence: stand up for democratic principles

@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Ministers of Poland and Saudi Arabia
+  - Deputy Prime Minister Sikorski
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland condemned Tehran's military actions against Gulf Arab states, emphasizing
+    that regional problems must be solved through dialogue and respect for international
+    law.
+  positions:
+    rule_of_law: Poland stressed that the only appropriate way to solve regional problems
+      is through dialogue and respect for the rule of law, and strongly condemned
+      Tehran's military actions as a breach of international law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The diplomats agreed that the only appropriate way to solve the region’s
+        problems is through dialogue and respect for the rule of law.

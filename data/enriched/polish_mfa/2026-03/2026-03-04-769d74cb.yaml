@@ -1,0 +1,48 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.3
+extracted:
+  event_type: meeting
+  participants:
+  - Polish Presidency
+  - EU High Representative Kaja Kallas
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: null
+  position: Poland emphasized the need to strengthen the Baltic Sea region's political
+    dimension and ensure strong security guarantees for Ukraine to prevent Russian
+    aggression and facilitate economic growth.
+  positions:
+    ukraine: Poland stressed the Baltic Sea region's interest in achieving and implementing
+      strong security guarantees for Ukraine, ensuring its stability, and rebuilding
+      its military deterrence potential.
+    defence: The participants took stock of preparations for the NATO summit and discussed
+      the need to increase Europe's standing relative to the US to influence US-Russia
+      negotiations regarding Ukraine.
+    enlargement: Poland expressed support for Ukraine’s accession to the European
+      Union and emphasized the need for the country to align its legislation with
+      the EU acquis.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Baltic Sea region is particularly interested in achieving and
+        implementing strong security guarantees for Ukraine.
+    defence:
+      score: 1
+      evidence: They spoke about the progress of the commitments made at the previous
+        NATO summit in The Hague.
+    enlargement:
+      score: 2
+      evidence: They expressed support for Ukraine’s accession to the European Union
+        and emphasised the need for the country to align its legislation with the
+        EU acquis.

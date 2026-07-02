@@ -1,0 +1,9 @@
+{
+  "name": "minilaterals",
+  "compatibility_date": "2026-07-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "docs",
+    "not_found_handling": "404-page"
+  }
+}
