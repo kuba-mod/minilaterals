@@ -1,7 +1,19 @@
 {
   "name": "minilaterals",
   "compatibility_date": "2026-07-01",
+  // workers.dev stays on so non-production branch builds get a preview URL
+  // (`wrangler versions upload` publishes a versioned *-minilaterals.<subdomain>.workers.dev
+  // link without touching production traffic).
   "workers_dev": true,
+  // Production route. Only applied by `wrangler deploy` (the production-branch
+  // build); preview `versions upload` builds never bind it, so branch pushes
+  // can never take over the real domain.
+  "routes": [
+    {
+      "pattern": "minilaterals.com/weimar-triangle*",
+      "zone_name": "minilaterals.com"
+    }
+  ],
   "assets": {
     "directory": "docs",
     "not_found_handling": "404-page"
