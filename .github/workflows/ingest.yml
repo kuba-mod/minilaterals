@@ -43,12 +43,12 @@ jobs:
       - name: Enrich
         # --limit caps per-run spend: a misbehaving scraper flooding events
         # cannot burn through the API budget in one run.
-        run: uv run python -m pipeline.enrich --limit 50
+        run: uv run python -m pipeline.enrich --limit 200
         # Exit gracefully if no key configured — ingest + render still produce a useful site.
         continue-on-error: true
 
       - name: Backfill stances
-        run: uv run python -m pipeline.enrich --stances-only --limit 50
+        run: uv run python -m pipeline.enrich --stances-only --limit 200
         # Catches events enriched before stance scoring existed or whose
         # stance block failed to parse on the first pass.
         continue-on-error: true
