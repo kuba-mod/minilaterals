@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Maria Manuela dos Santos Lucas
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Poland seeks to revitalize bilateral relations with Mozambique through
+    cooperation in energy, technology, and security assistance.
+  positions:
+    ukraine: Poland discusses the consequences of Russia's war against Ukraine for
+      Europe and Africa.
+    defence: Poland supports the operational capabilities of Mozambique's security
+      forces and the EUMAM mission to stabilize the region.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The discussion also covered Russia’s war against Ukraine and its consequences
+        for both Europe and Africa.
+    defence:
+      score: 1
+      evidence: They also explored ways to strengthen the sustainable operational
+        capabilities of Mozambique’s quick reaction forces.

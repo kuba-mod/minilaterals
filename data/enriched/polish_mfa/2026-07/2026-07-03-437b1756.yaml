@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - ministers of Poland and Ukraine
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland reaffirms its strategic support for Ukraine through military cooperation
+    and economic partnerships while emphasizing the need for historical dialogue.
+  positions:
+    ukraine: Poland expresses a strong commitment to supporting Ukraine's struggle
+      and its future post-war reconstruction.
+    defence: Poland emphasizes the strategic necessity of deepening military cooperation
+      to ensure regional and continental stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Minister Radosław Sikorski reaffirmed Poland’s support for Ukraine’s
+        struggle against the aggressor
+    defence:
+      score: 1
+      evidence: underlined the strategic importance of deepening military cooperation
+        and ensuring the region’s stability

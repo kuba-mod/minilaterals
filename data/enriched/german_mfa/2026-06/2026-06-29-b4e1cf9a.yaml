@@ -30,9 +30,10 @@ extracted:
   stances:
     ukraine:
       score: 1
-      evidence: we Europeans are willing to provide all the support we can in this
-        regard.
+      evidence: stable, long-term support for Ukraine
     defence:
       score: 1
-      evidence: Our Euro-Atlantic security decisively depends on us retaining our
-        steadfast resolve within NATO in the future, too.
+      evidence: our collective defence is effective
+    rule_of_law:
+      score: 0
+      evidence: ''
