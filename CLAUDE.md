@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static tracker for Weimar Triangle (DE-FR-PL) diplomatic coordination. The core use case is **positional comparison**: even when no joint statement exists, when Germany and Poland both publish press releases about Ukraine in the same week the tracker surfaces them side-by-side with extracted one-sentence position summaries, and scores how semantically similar those positions are.
 
-No database. All events are YAML files committed to git. Cloudflare Pages serves `docs/`.
+No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/`.
 
 ## Commands
 
@@ -99,7 +99,7 @@ Grouping into topic clusters uses regex keyword matching (fast, deterministic, n
 The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly and more expensive to embed.
 
 **7. Static site, no backend.**
-`pipeline/render.py` writes plain HTML to `docs/`. Cloudflare Pages serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
+`pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
 **8. Enrichment and embedding are optional.**
 `pipeline.enrich` and `pipeline.embed` both run with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text or convergence scores). Rationale: the Anthropic API key is a secret that might not be configured; the HuggingFace model download might fail on a flaky CI run.
