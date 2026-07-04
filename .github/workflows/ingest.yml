@@ -4,9 +4,20 @@ on:
   schedule:
     - cron: '0 6 * * *'   # 06:00 UTC every day
   workflow_dispatch:        # allow manual trigger from GitHub UI
+  push:
+    branches: [main]        # rebuild + redeploy the site when a PR merges
+    # Ingest/enrich are skipped on push (see step `if:` guards) — a merge only
+    # re-renders from committed data + templates. The daily schedule does the
+    # full ingest. The auto-commit below uses GITHUB_TOKEN, which does not
+    # re-trigger this workflow, so there is no commit loop.
 
 permissions:
   contents: write           # needed to commit data/ and docs/ back to main
+
+concurrency:
+  # A merge-triggered build and the daily run must not clobber each other's commit.
+  group: pipeline
+  cancel-in-progress: false
 
 env:
   # Provider for enrichment + commentary. Set the ENRICH_PROVIDER repo variable
@@ -36,11 +47,14 @@ jobs:
         run: pip install uv && uv sync
 
       - name: Ingest
+        # Skipped on merge — a push only re-renders. The daily schedule ingests.
+        if: ${{ github.event_name != 'push' }}
         run: uv run python -m pipeline.ingest
         # Ingest runs without any API key — enrichment is the separate step below.
         # If a source returns 0 items it logs a warning but does not fail the job.
 
       - name: Enrich
+        if: ${{ github.event_name != 'push' }}
         # --limit caps per-run spend: a misbehaving scraper flooding events
         # cannot burn through the API budget in one run.
         run: uv run python -m pipeline.enrich --limit 200
@@ -48,12 +62,14 @@ jobs:
         continue-on-error: true
 
       - name: Backfill stances
+        if: ${{ github.event_name != 'push' }}
         run: uv run python -m pipeline.enrich --stances-only --limit 200
         # Catches events enriched before stance scoring existed or whose
         # stance block failed to parse on the first pass.
         continue-on-error: true
 
       - name: Comment
+        if: ${{ github.event_name != 'push' }}
         run: uv run python -m pipeline.comment
         continue-on-error: true
 
@@ -63,7 +79,7 @@ jobs:
       - name: Commit results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "data: daily pipeline run"
+          commit_message: "${{ github.event_name == 'push' && 'site: rebuild on merge' || 'data: daily pipeline run' }}"
           file_pattern: "data/** docs/**"
           # Only commits if there are actual changes — no-op on a day with no new items.
 
