@@ -12,3 +12,6 @@ __pycache__/
 
 # Wrangler local build/cache
 .wrangler/
+
+# Local-only launch strategy notes — not for the public repo
+LAUNCH.md

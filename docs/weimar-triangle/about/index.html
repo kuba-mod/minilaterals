@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Weimar Triangle{% endblock %}</title>
-  {% block meta_description %}
-  <meta name="description" content="A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.">
-  {% endblock %}
-  {% set og_title = self.title() %}
-  {% set og_description = "A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law." %}
-  {% block og_tags %}
+  <title>Weimar Triangle — About</title>
+  
+<meta name="description" content="Who's behind the Weimar Triangle tracker, why it exists, how stance ratings are scored, and how to get in touch.">
+
+  
+  
+  
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ og_title }}">
-  <meta property="og:description" content="{{ og_description }}">
-  <meta property="og:image" content="{{ base_path }}/og-image.svg">
+  <meta property="og:title" content="Weimar Triangle — About">
+  <meta property="og:description" content="A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.">
+  <meta property="og:image" content="/weimar-triangle/og-image.svg">
   <meta property="og:site_name" content="The Weimar Triangle">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ og_title }}">
-  <meta name="twitter:description" content="{{ og_description }}">
-  <meta name="twitter:image" content="{{ base_path }}/og-image.svg">
-  {% endblock %}
-  <link rel="icon" href="{{ base_path }}/favicon.svg" type="image/svg+xml">
+  <meta name="twitter:title" content="Weimar Triangle — About">
+  <meta name="twitter:description" content="A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.">
+  <meta name="twitter:image" content="/weimar-triangle/og-image.svg">
+  
+  <link rel="icon" href="/weimar-triangle/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -841,32 +841,99 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <div class="hdr-inner">
     <div class="hdr-eyebrow-row">
       <div class="site-eyebrow">A Coordination Tracker</div>
-      <div class="hdr-meta">Updated <strong>{{ now }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/">Methodology</a></div>
+      <div class="hdr-meta">Updated <strong>2026-07-06 18:25 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
     </div>
     <h1 class="site-title">The Weimar <em>Triangle</em></h1>
     <p class="site-tagline">A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.</p>
-    {% block header_stats %}{% endblock %}
+    
   </div>
 </header>
 
-{% block nav %}
+
 <div class="nav-wrap">
   <nav>
-    <a href="{{ base_path }}/" {% if active_page == 'index' %}class="active"{% endif %}>Recent</a>
-    <a href="{{ base_path }}/meetings/" {% if active_page == 'meetings' %}class="active"{% endif %}>Meetings</a>
-    <a href="{{ base_path }}/sources/" {% if active_page == 'sources' %}class="active"{% endif %}>Sources</a>
-    <a href="{{ base_path }}/about/" {% if active_page == 'about' %}class="active"{% endif %}>About</a>
+    <a href="/weimar-triangle/" >Recent</a>
+    <a href="/weimar-triangle/meetings/" >Meetings</a>
+    <a href="/weimar-triangle/sources/" >Sources</a>
+    <a href="/weimar-triangle/about/" class="active">About</a>
   </nav>
 </div>
-{% endblock %}
+
 
 <main>
-{% block content %}{% endblock %}
+
+
+<div class="section-head" style="margin-top:0">About this tracker</div>
+
+<div class="sources-prose">
+
+  <span class="label">Who's behind it</span>
+  <p>
+    This tracker is built and run by <strong>Kuba Modrzejewski</strong>. It started as a way to answer
+    a simple question mechanically instead of impressionistically: when Germany, France and Poland
+    each publish a foreign-ministry statement in the same week, are they actually saying the same thing?
+    Everything on this site — the ingestion pipeline, the enrichment prompts, the scoring — is one
+    person's project, run daily, with the full history committed to git.
+  </p>
+
+  <span class="label">Why it exists</span>
+  <p>
+    Weimar Triangle coordination between the three capitals is rarely captured by a single joint
+    statement — it shows up as three separate press releases in the same window, and whether they
+    converge or diverge is easy to miss if you're not reading all three every day. This tracker reads
+    them so you don't have to, and puts the positions side by side instead of leaving the comparison
+    to memory.
+  </p>
+
+  <span class="label">Methodology, in one paragraph</span>
+  <p>
+    Every tracked statement is rated by an LLM on a five-point scale (−2 to +2) against the officially
+    agreed Weimar Triangle goals, and every rating is stored with the verbatim quote that justifies it —
+    the same discipline political scientists use to hand-code party manifestos, applied at daily
+    cadence. There is no black-box similarity score behind the headline numbers: you can read the exact
+    sentence a rating is based on. All source data lives as YAML files committed to git, so the full
+    audit trail — what was published, when it was ingested, how it was scored — is diffable history,
+    not a database you have to trust. See the <a href="/weimar-triangle/sources/">full methodology</a>
+    for the scoring rubric and source list.
+  </p>
+
+  <span class="label">Corrections policy</span>
+  <p>
+    Stance ratings are model-assigned and always quote-backed, but models make mistakes. If a rating
+    looks wrong, if a quote is out of context, or if a statement was misclassified, please
+    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20correction">report it</a> —
+    corrections are reviewed and the underlying YAML is corrected in git, so the fix is itself part of
+    the public record.
+  </p>
+
+  <span class="label">Work with us</span>
+  <p>
+    Interested in custom coverage — a different minilateral format, a specific topic set, or
+    alerting when positions shift? Get in touch:
+    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20—%20working%20together">hello@minilaterals.com</a>.
+  </p>
+  <p style="margin-top:-4px">
+    <span class="label" style="margin-bottom:8px">Coming soon</span>
+  </p>
+  <ul>
+    <li><strong>Alerts &amp; monitoring</strong> — get notified when a topic's alignment shifts, instead of checking back.</li>
+    <li><strong>Full-history Excel export</strong> — every rated statement, every quote, since the pipeline started (the site currently offers a free current-month CSV).</li>
+    <li><strong>More minilateral formats</strong> — E3 (France–Germany–UK), Visegrád Four, Baltic Three, and other coordination formats tracked the same way.</li>
+  </ul>
+
+  <div class="continue-actions" style="margin-top:24px">
+    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20—%20get%20in%20touch" class="cta-primary">Get in touch <span>→</span></a>
+    <a href="/weimar-triangle/sources/" class="cta-secondary">Read the full methodology</a>
+  </div>
+
+</div>
+
+
 </main>
 
 <footer>
-  Updated {{ now }} &middot; <a href="{{ base_path }}/sources/">Methodology &amp; sources</a>
-  &middot; <a href="{{ base_path }}/about/">About &amp; contact</a>
+  Updated 2026-07-06 18:25 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
+  &middot; <a href="/weimar-triangle/about/">About &amp; contact</a>
   &middot; <a href="mailto:hello@minilaterals.com">hello@minilaterals.com</a>
 </footer>
 
