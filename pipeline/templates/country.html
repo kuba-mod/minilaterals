@@ -33,7 +33,7 @@
 </div>
 
 {# ── Hero stats ── #}
-<div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-bottom:48px">
+<div class="country-hero-stats" style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-bottom:48px">
   <div style="background:var(--bg-card); padding:24px 28px">
     <div style="font-family:'Newsreader',Georgia,serif; font-size:44px; font-weight:400; letter-spacing:-0.018em; line-height:1; color:var(--ink); margin-bottom:8px">{{ stats.weekly_count }}</div>
     <div style="font-family:'IBM Plex Sans',sans-serif; font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted)">Statements this week</div>
@@ -54,6 +54,7 @@
 <div class="section-head" style="margin-top:0">{{ country_name }}'s full diary — last 90 days</div>
 
 {% if country_events %}
+<div class="table-wrap">
 <table>
   <thead>
     <tr>
@@ -85,13 +86,14 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
 {% else %}
 <p style="color:var(--muted); font-family:'IBM Plex Sans',sans-serif; font-size:14px">No events in the last 90 days yet.</p>
 {% endif %}
 
 {# ── Compare with other capitals ── #}
 <div class="section-head">Compare with other capitals</div>
-<div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; margin-bottom:48px">
+<div class="country-compare" style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; margin-bottom:48px">
   {% for other in others %}
   {% set other_actor = {"france":"FR","germany":"DE","poland":"PL"}[other.path] %}
   {% set other_name = {"FR":"France","DE":"Germany","PL":"Poland"}[other_actor] %}
