@@ -899,6 +899,38 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
 
 
 # ---------------------------------------------------------------------------
+# Static shareability assets
+# ---------------------------------------------------------------------------
+
+FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="12" fill="#1c1812"/>
+<polygon points="32,12 52,48 12,48" fill="none" stroke="#f4ecdb" stroke-width="4" stroke-linejoin="round"/>
+</svg>
+"""
+
+OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f4ecdb"/>
+<rect x="0" y="0" width="1200" height="8" fill="#1f4279"/>
+<rect x="400" y="0" width="400" height="8" fill="#c8a648"/>
+<rect x="800" y="0" width="400" height="8" fill="#b22823"/>
+<text x="80" y="220" font-family="Georgia, serif" font-size="72" fill="#1c1812">The Weimar</text>
+<text x="80" y="310" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">Triangle</text>
+<text x="80" y="380" font-family="Georgia, serif" font-size="30" fill="#3f372b">
+  Are France, Germany and Poland pulling
+</text>
+<text x="80" y="420" font-family="Georgia, serif" font-size="30" fill="#3f372b">
+  in the same direction?
+</text>
+<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">weimar-triangle · a coordination tracker</text>
+</svg>
+"""
+
+ROBOTS_TXT = """User-agent: *
+Allow: /
+"""
+
+
+# ---------------------------------------------------------------------------
 # Render
 # ---------------------------------------------------------------------------
 
@@ -906,6 +938,9 @@ def render(output_dir: str = "docs") -> None:
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
+    (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
+    (out / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
+    (out / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
 
     # Set when this site is deployed under a path prefix on the minilaterals.com
     # umbrella (e.g. "/weimar-triangle") rather than at the domain root.

@@ -4,6 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Weimar Triangle{% endblock %}</title>
+  {% block meta_description %}
+  <meta name="description" content="A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.">
+  {% endblock %}
+  {% set og_title = self.title() %}
+  {% set og_description = "A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law." %}
+  {% block og_tags %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:image" content="{{ base_path }}/og-image.svg">
+  <meta property="og:site_name" content="The Weimar Triangle">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ og_title }}">
+  <meta name="twitter:description" content="{{ og_description }}">
+  <meta name="twitter:image" content="{{ base_path }}/og-image.svg">
+  {% endblock %}
+  <link rel="icon" href="{{ base_path }}/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
