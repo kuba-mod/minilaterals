@@ -898,6 +898,61 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
     return deduped
 
 
+CSV_HEADER = [
+    "date", "actor", "source", "title", "source_url", "issue_areas",
+    "trilateral_signal", "position", "stance_scores",
+]
+
+
+def _csv_escape(value: str) -> str:
+    value = value.replace('"', '""')
+    return f'"{value}"'
+
+
+def write_current_month_export(out: Path, events: list[dict]) -> str:
+    """
+    Write a free, current-calendar-month CSV of tracked events into
+    out/exports/weimar-YYYY-MM.csv. Full-history export is a premium teaser
+    (see index.html) — this is the always-free sample.
+    Returns the filename (not full path) for use in template links.
+    """
+    (out / "exports").mkdir(parents=True, exist_ok=True)
+    today = datetime.now(timezone.utc)
+    month_prefix = today.strftime("%Y-%m")
+    filename = f"weimar-{month_prefix}.csv"
+
+    rows = [e for e in events if (e.get("date") or "").startswith(month_prefix)]
+    rows.sort(key=lambda e: e.get("date", ""))
+
+    lines = [",".join(CSV_HEADER)]
+    for e in rows:
+        actor = SOURCE_ACTOR.get(e.get("source_name", "")) or ""
+        source = SOURCE_LABELS.get(e.get("source_name", ""), e.get("source_name", ""))
+        issue_areas = "; ".join(e.get("issue_areas") or [])
+        extracted = e.get("extracted") or {}
+        position = extracted.get("position", "") or ""
+        stances = extracted.get("stances") or {}
+        stance_str = "; ".join(
+            f"{topic}:{entry.get('score')}" for topic, entry in stances.items()
+            if isinstance(entry, dict) and entry.get("score") is not None
+        )
+        fields = [
+            e.get("date", ""),
+            actor,
+            source,
+            e.get("title", "") or "",
+            e.get("source_url", "") or "",
+            issue_areas,
+            "yes" if e.get("trilateral_signal") else "no",
+            position,
+            stance_str,
+        ]
+        lines.append(",".join(_csv_escape(str(f)) for f in fields))
+
+    (out / "exports" / filename).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return filename
+
+
 # ---------------------------------------------------------------------------
 # Render
 # ---------------------------------------------------------------------------
@@ -1066,6 +1121,8 @@ def render(output_dir: str = "docs") -> None:
     if latest_event_date:
         stale_days = (today_utc.date() - datetime.strptime(latest_event_date, "%Y-%m-%d").date()).days
 
+    export_filename = write_current_month_export(out, all_events)
+
     # docs/index.html
     tmpl = env.get_template("index.html")
     (out / "index.html").write_text(
@@ -1088,6 +1145,7 @@ def render(output_dir: str = "docs") -> None:
             topic_series_json=topic_series_json,
             latest_event_date=latest_event_date,
             stale_days=stale_days,
+            export_filename=export_filename,
         ),
         encoding="utf-8",
     )
