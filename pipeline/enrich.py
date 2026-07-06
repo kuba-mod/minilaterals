@@ -132,8 +132,6 @@ SOURCE_LABELS = {
     "german_mfa": "Germany",
     "france_diplomatie": "France",
     "polish_mfa": "Poland",
-    "council_eu": "EU Council",
-    "gdelt": "news source",
 }
 
 

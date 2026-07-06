@@ -73,8 +73,8 @@ Event YAML fields that matter for logic:
 ## Enrichment providers
 
 Controlled by `ENRICH_PROVIDER` env var (auto-detected from key presence):
-- **Anthropic** (`claude-haiku-4-5-20251001`): used in CI via `ANTHROPIC_API_KEY` secret
-- **Ollama** (`gemma4:latest` default): used locally; gemma4 preferred over qwen3/qwen3.5 for French/Polish/German coverage and because qwen's extended thinking mode is slow for extraction
+- **Ollama** (`gemma4:latest` default): used for all enrichment — locally in dev, and via Ollama Cloud (`OLLAMA_HOST=https://ollama.com`, `OLLAMA_API_KEY` secret) in GitHub Actions. gemma4 preferred over qwen3/qwen3.5 for French/Polish/German coverage and because qwen's extended thinking mode is slow for extraction
+- **Anthropic** (`AnthropicProvider`, `claude-haiku-4-5-20251001`): supported in code as an alternative provider but **not currently used** — set `ENRICH_PROVIDER=anthropic` with `ANTHROPIC_API_KEY` to switch to it
 
 ## Design principles
 
@@ -102,7 +102,7 @@ The LLM enrichment prompt asks for a single sentence: "what position does {count
 `pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
 **8. Enrichment and embedding are optional.**
-`pipeline.enrich` and `pipeline.embed` both run with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text or convergence scores). Rationale: the Anthropic API key is a secret that might not be configured; the HuggingFace model download might fail on a flaky CI run.
+`pipeline.enrich` and `pipeline.embed` both run with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text or convergence scores). Rationale: the enrichment provider credentials (e.g. the `OLLAMA_API_KEY` secret for Ollama Cloud) might not be configured; the HuggingFace model download might fail on a flaky CI run.
 
 ## Adding a new source
 
