@@ -824,7 +824,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <div class="hdr-inner">
     <div class="hdr-eyebrow-row">
       <div class="site-eyebrow">A Coordination Tracker</div>
-      <div class="hdr-meta">Updated <strong>2026-07-06 18:31 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
+      <div class="hdr-meta">Updated <strong>2026-07-06 20:47 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
     </div>
     <h1 class="site-title">The Weimar <em>Triangle</em></h1>
     <p class="site-tagline">A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.</p>
@@ -977,12 +977,11 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 
   <span class="label">LLM enrichment</span>
   <p>
-    Position extraction and stance rating run through the open-weight Gemma&nbsp;4 model,
-    served by Ollama — locally in development and via Ollama Cloud in the GitHub Actions
-    pipeline. The prompt asks for a one-sentence position summary per topic plus the stance
-    rating and its supporting quote. The LLM output is written to a sidecar file under
-    <code>data/enriched/</code> — separate from the raw scraped text — and both are committed
-    to git.
+    Position extraction and stance rating are done by Gemma 4, an open-weight language model,
+    run through Ollama — on a local machine during development and via Ollama Cloud in the
+    automated pipeline. The model is asked for a one-sentence position summary per topic, a
+    stance rating, and the quote that supports it. Its output is stored separately from the
+    raw scraped text (under <code>data/enriched/</code>), and both are committed to git.
   </p>
 
   <span class="label">Storage and provenance</span>
@@ -1015,7 +1014,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 </main>
 
 <footer>
-  Updated 2026-07-06 18:31 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
+  Updated 2026-07-06 20:47 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
 </footer>
 
 </body>

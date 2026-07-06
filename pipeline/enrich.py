@@ -15,9 +15,6 @@ Ollama settings (all optional):
   OLLAMA_HOST=http://localhost:11434   # default; https://ollama.com for Ollama Cloud
   OLLAMA_API_KEY=...                   # required for Ollama Cloud, unused locally
   OLLAMA_MODEL=gemma4:latest          # default; strong on French, German, Polish
-                                      # mistral:7b is also good for French-heavy content
-                                      # Avoid qwen3/qwen3.5: thinking mode is slow for
-                                      # extraction and its European language coverage is weaker
 
 Anthropic settings:
   ANTHROPIC_API_KEY=sk-ant-...
@@ -160,8 +157,8 @@ class OllamaProvider:
             max_tokens=2048,
             temperature=0,
             response_format={"type": "json_object"},
-            # Disable extended thinking for qwen3/qwen3.5 — thinking mode is
-            # slow and wasteful for structured extraction tasks.
+            # Disable extended thinking mode — it's slow and wasteful for
+            # structured extraction tasks.
             extra_body={"think": False},
         )
         return response.choices[0].message.content.strip()

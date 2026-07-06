@@ -102,12 +102,11 @@
 
   <span class="label">LLM enrichment</span>
   <p>
-    Position extraction and stance rating run through the open-weight Gemma&nbsp;4 model,
-    served by Ollama — locally in development and via Ollama Cloud in the GitHub Actions
-    pipeline. The prompt asks for a one-sentence position summary per topic plus the stance
-    rating and its supporting quote. The LLM output is written to a sidecar file under
-    <code>data/enriched/</code> — separate from the raw scraped text — and both are committed
-    to git.
+    Position extraction and stance rating are done by Gemma 4, an open-weight language model,
+    run through Ollama — on a local machine during development and via Ollama Cloud in the
+    automated pipeline. The model is asked for a one-sentence position summary per topic, a
+    stance rating, and the quote that supports it. Its output is stored separately from the
+    raw scraped text (under <code>data/enriched/</code>), and both are committed to git.
   </p>
 
   <span class="label">Storage and provenance</span>

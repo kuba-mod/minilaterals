@@ -73,7 +73,7 @@ Event YAML fields that matter for logic:
 ## Enrichment providers
 
 Controlled by `ENRICH_PROVIDER` env var (auto-detected from key presence):
-- **Ollama** (`gemma4:latest` default): used for all enrichment — locally in dev, and via Ollama Cloud (`OLLAMA_HOST=https://ollama.com`, `OLLAMA_API_KEY` secret) in GitHub Actions. gemma4 preferred over qwen3/qwen3.5 for French/Polish/German coverage and because qwen's extended thinking mode is slow for extraction
+- **Ollama** (`gemma4:latest` default): used for all enrichment — locally in dev, and via Ollama Cloud (`OLLAMA_HOST=https://ollama.com`, `OLLAMA_API_KEY` secret) in GitHub Actions. gemma4 chosen for its French/Polish/German coverage
 - **Anthropic** (`AnthropicProvider`, `claude-haiku-4-5-20251001`): supported in code as an alternative provider but **not currently used** — set `ENRICH_PROVIDER=anthropic` with `ANTHROPIC_API_KEY` to switch to it
 
 ## Design principles
