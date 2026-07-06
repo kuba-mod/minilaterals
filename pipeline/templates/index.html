@@ -44,7 +44,7 @@
   <span>14-day rolling window. 100% = identical positions across all three capitals.</span>
   {% endif %}
 </div>
-<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px; flex-wrap:wrap">
   <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This week — w/o {{ timeline_svg.recent.week }}</div>
   <span id="timeline-current-label" style="font-size:22px; font-weight:600; font-family:'Courier New',monospace; color:{{ timeline_svg.recent.color }}">
     {{ timeline_svg.recent.label }} · {{ timeline_svg.recent.display }}

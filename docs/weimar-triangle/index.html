@@ -446,6 +446,14 @@ div[style*="flex-wrap:wrap;gap:6px"] .tag {
 }
 
 /* ── Tables ── */
+/* Wide tables scroll inside their own container so the page body never does */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.table-wrap table { margin-top: 0; }
 table {
   width: 100%;
   border-collapse: collapse;
@@ -797,6 +805,16 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   .cluster-head, .cluster-commentary, .actor-col { padding-left: 22px !important; padding-right: 22px !important; }
   td, th { padding: 14px 16px !important; }
   footer { padding: 24px !important; }
+
+  /* Country cards stack full-width so the flag no longer crowds out the text */
+  .country-cards { grid-template-columns: 1fr; }
+  /* Country-page hero stats and "compare" grids stack too */
+  .country-hero-stats { grid-template-columns: 1fr !important; }
+  .country-compare { grid-template-columns: 1fr !important; }
+
+  /* Tables keep readable column widths and scroll horizontally within their wrap */
+  .table-wrap > table { min-width: 34rem; }
+  .table-wrap.table-wrap--wide > table { min-width: 46rem; }
 }
   </style>
 </head>
@@ -806,7 +824,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <div class="hdr-inner">
     <div class="hdr-eyebrow-row">
       <div class="site-eyebrow">A Coordination Tracker</div>
-      <div class="hdr-meta">Updated <strong>2026-07-06 17:45 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
+      <div class="hdr-meta">Updated <strong>2026-07-06 18:03 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
     </div>
     <h1 class="site-title">The Weimar <em>Triangle</em></h1>
     <p class="site-tagline">A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.</p>
@@ -884,7 +902,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <span>Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goals. The line is the three capitals' average; the shaded band spans the most and least supportive capital — a narrow band means they agree.</span>
   
 </div>
-<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
+<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px; flex-wrap:wrap">
   <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This week — w/o 2026-07-06</div>
   <span id="timeline-current-label" style="font-size:22px; font-weight:600; font-family:'Courier New',monospace; color:#8a6320">
     Mixed · +1.2
@@ -3635,7 +3653,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 </main>
 
 <footer>
-  Updated 2026-07-06 17:45 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
+  Updated 2026-07-06 18:03 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
 </footer>
 
 </body>

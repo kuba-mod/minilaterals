@@ -446,6 +446,14 @@ div[style*="flex-wrap:wrap;gap:6px"] .tag {
 }
 
 /* ── Tables ── */
+/* Wide tables scroll inside their own container so the page body never does */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.table-wrap table { margin-top: 0; }
 table {
   width: 100%;
   border-collapse: collapse;
@@ -797,6 +805,16 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   .cluster-head, .cluster-commentary, .actor-col { padding-left: 22px !important; padding-right: 22px !important; }
   td, th { padding: 14px 16px !important; }
   footer { padding: 24px !important; }
+
+  /* Country cards stack full-width so the flag no longer crowds out the text */
+  .country-cards { grid-template-columns: 1fr; }
+  /* Country-page hero stats and "compare" grids stack too */
+  .country-hero-stats { grid-template-columns: 1fr !important; }
+  .country-compare { grid-template-columns: 1fr !important; }
+
+  /* Tables keep readable column widths and scroll horizontally within their wrap */
+  .table-wrap > table { min-width: 34rem; }
+  .table-wrap.table-wrap--wide > table { min-width: 46rem; }
 }
   </style>
 </head>
