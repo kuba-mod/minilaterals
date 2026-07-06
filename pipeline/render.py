@@ -40,23 +40,18 @@ SOURCE_ACTOR = {
     "german_mfa": "DE",
     "france_diplomatie": "FR",
     "polish_mfa": "PL",
-    "council_eu": "EU",
-    "gdelt": None,
 }
 
 SOURCE_LABELS = {
     "german_mfa": "German MFA",
     "france_diplomatie": "France Diplomatie",
     "polish_mfa": "Polish MFA",
-    "council_eu": "EU Council",
-    "gdelt": "GDELT",
 }
 
 ACTOR_LABELS = {
     "DE": "Germany",
     "FR": "France",
     "PL": "Poland",
-    "EU": "EU Council",
 }
 
 WEIMAR_ACTORS = ["FR", "DE", "PL"]

@@ -824,7 +824,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <div class="hdr-inner">
     <div class="hdr-eyebrow-row">
       <div class="site-eyebrow">A Coordination Tracker</div>
-      <div class="hdr-meta">Updated <strong>2026-07-06 18:20 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
+      <div class="hdr-meta">Updated <strong>2026-07-06 20:47 UTC</strong> &nbsp;·&nbsp; <a href="/weimar-triangle/sources/">Methodology</a></div>
     </div>
     <h1 class="site-title">The Weimar <em>Triangle</em></h1>
     <p class="site-tagline">A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.</p>
@@ -921,50 +921,6 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
       </td>
     </tr>
     
-    
-    <tr>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">EU Council</td>
-      <td>
-        
-        <span class="tag" style="color:#6a7a9a; border-color:#6a7a9a44; background:#6a7a9a18">EU</span>
-        
-      </td>
-      <td style="font-size:14px; color:var(--muted)">HTML scraper</td>
-      <td style="font-size:14px; color:var(--muted)">EN</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">2026-07-06</td>
-      
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">2026-07-06</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">0</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">0</td>
-      <td>
-        
-        <span class="tag" style="color:var(--green); border-color:var(--green)44; background:var(--green-faint)">ok</span>
-        
-      </td>
-    </tr>
-    
-    
-    <tr>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">GDELT</td>
-      <td>
-        
-        <span style="color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace">—</span>
-        
-      </td>
-      <td style="font-size:14px; color:var(--muted)">API</td>
-      <td style="font-size:14px; color:var(--muted)">EN</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">2026-07-06</td>
-      
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">2026-07-06</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">0</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">0</td>
-      <td>
-        
-        <span class="tag" style="color:var(--green); border-color:var(--green)44; background:var(--green-faint)">ok</span>
-        
-      </td>
-    </tr>
-    
   </tbody>
 </table>
 </div>
@@ -975,17 +931,16 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 
   <p>
     This tracker ingests press releases and official statements from the foreign ministries of
-    Germany, France, and Poland, plus the EU Council press office and GDELT supplementary signals.
-    Each item is classified for Weimar Triangle relevance and — where relevant — enriched by an
-    LLM to extract a one-sentence position summary.
+    Germany, France, and Poland. Each item is classified for Weimar Triangle relevance and —
+    where relevant — enriched by an LLM to extract a one-sentence position summary.
   </p>
 
   <span class="label">Relevance classification</span>
   <p>
     An item is marked <em>weimar_relevant</em> when it touches a tracked issue area
     (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law) AND comes from an MFA
-    source, or when two or more Weimar countries are explicitly mentioned together, or when
-    the text contains the phrase "Weimar Triangle" or "trilateral."
+    source, or when two or more Weimar countries are mentioned together and a tracked issue area
+    is present, or when the text contains the phrase "Weimar Triangle" or "trilateral."
     A stronger <em>trilateral_signal</em> flag is set when all three actors are present or the
     Weimar/trilateral phrase appears explicitly.
   </p>
@@ -1022,28 +977,29 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 
   <span class="label">LLM enrichment</span>
   <p>
-    Position extraction and stance rating run via Claude Haiku (in CI) or a local Ollama
-    model (gemma4, local dev). The prompt asks for a one-sentence position summary per topic
-    plus the stance rating and its supporting quote. The raw text and extraction are both
-    stored in YAML files committed to git.
+    Position extraction and stance rating are done by Gemma 4, an open-weight language model,
+    run through Ollama — on a local machine during development and via Ollama Cloud in the
+    automated pipeline. The model is asked for a one-sentence position summary per topic, a
+    stance rating, and the quote that supports it. Its output is stored separately from the
+    raw scraped text (under <code>data/enriched/</code>), and both are committed to git.
   </p>
 
   <span class="label">Storage and provenance</span>
   <p>
-    Every event is stored as a YAML file committed to git under
-    <code>data/events/{source}/{YYYY-MM}/</code>.
-    Files are named by a SHA-256 hash of the source URL and title, providing automatic
-    deduplication. Each file records <code>source_url</code>,
-    <code>source_published_at</code>, and <code>ingested_at</code> timestamps.
+    Each event is split across two YAML files committed to git, both keyed by the same
+    relative path <code>{source}/{YYYY-MM}/{date}-{hash}.yaml</code>: the raw scraped fields
+    live under <code>data/events/</code> (title, text, <code>source_url</code>,
+    <code>source_published_at</code>, <code>ingested_at</code>), and the computed
+    classification plus the LLM <code>extracted</code> block live under
+    <code>data/enriched/</code>. The <code>{hash}</code> is the first eight hex characters of a
+    SHA-256 hash of the source URL and title, providing automatic deduplication.
     The full history is auditable via git log.
   </p>
 
   <span class="label">Caveats</span>
   <ul>
     <li>All sources currently target English-language pages; French/Polish language content may be missed.</li>
-    <li>EU Council RSS is blocked by Cloudflare from some networks; scraper uses browser-like headers.</li>
     <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
-    <li>GDELT is a supplementary signal capped at a lower relevance score (noisier than MFA sources).</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>
 
@@ -1058,7 +1014,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 </main>
 
 <footer>
-  Updated 2026-07-06 18:20 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
+  Updated 2026-07-06 20:47 UTC &middot; <a href="/weimar-triangle/sources/">Methodology &amp; sources</a>
 </footer>
 
 </body>
