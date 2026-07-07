@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland demands the respect of international standards for detainees and
+    is seeking an entry ban for Israel's Minister of National Security.
+  positions:
+    rule_of_law: Poland advances the principle of the rule of law by demanding adherence
+      to international standards for detainees and accountability for perpetrators.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: demanding that the rights and dignity of those detained be respected
+        and that they be treated in accordance with international standards

@@ -1,0 +1,24 @@
+actors: []
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Sviatlana Tsikhanouskaya
+  topics:
+  - rule_of_law
+  location: Gdańsk, Poland
+  position: Poland hosted the 2nd Kościuszko Forum to emphasize the role of culture
+    and identity as the essential foundation for democracy.
+  positions:
+    rule_of_law: Poland actively advances democratic resilience by linking cultural
+      identity to the stability of the democratic edifice.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Culture is not a supplement to politics, but a foundation without
+        which the democratic edifice cannot hold.

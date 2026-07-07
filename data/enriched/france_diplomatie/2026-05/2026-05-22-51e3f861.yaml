@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Maria Malmer Stenergard
+  topics:
+  - ukraine
+  - defence
+  location: Helsingborg, Sweden
+  position: France strengthens its strategic partnership with Sweden through naval
+    defense cooperation and shared priorities on European security.
+  positions:
+    ukraine: France reaffirms its commitment to supporting Ukraine as part of its
+      European agenda priorities.
+    defence: France actively advances European defense capabilities through the sale
+      of Naval Group frigates to Sweden to modernize its navy.
+  stances:
+    ukraine:
+      score: 1
+      evidence: took stock of the priorities on the European agenda, particularly
+        as regards support for Ukraine
+    defence:
+      score: 2
+      evidence: welcomed Sweden’s choice of Naval Group’s Defence and Intervention
+        Frigate for modernizing its navy

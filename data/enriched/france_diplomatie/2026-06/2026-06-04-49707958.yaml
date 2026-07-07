@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France congratulates the newly elected UN Security Council members and
+    reaffirms its commitment to a multilateralism based on international law.
+  positions:
+    rule_of_law: France rhetorically supports the foundational role of international
+      law in maintaining global security and multilateralism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France reaffirms its commitment to an open form of multilateralism
+        based on international law

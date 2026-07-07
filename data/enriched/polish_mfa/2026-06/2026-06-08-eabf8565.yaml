@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland warns of Russia's cognitive warfare and advocates for updated legal
+    frameworks and youth engagement to combat disinformation.
+  positions:
+    hybrid: Poland actively identifies Russia's cognitive warfare as a threat and
+      promotes initiatives like the Youth Resilience Council to build state resilience.
+    rule_of_law: Poland supports strengthening the law to effectively respond to digital
+      threats and the influence of artificial intelligence on democratic values.
+  stances:
+    hybrid:
+      score: 2
+      evidence: He gave a positive example of such cooperation, namely the Youth Resilience
+        Council at the MFA.
+    rule_of_law:
+      score: 1
+      evidence: The law cannot lag behind technology—it must provide a concrete response
+        to the full spectrum of contemporary digital threats.

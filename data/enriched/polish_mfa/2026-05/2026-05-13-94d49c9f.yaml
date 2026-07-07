@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  location: Szczecin, Poland
+  position: Poland is enhancing Baltic Sea security through naval modernization, energy
+    infrastructure development, and coordinated EU sanctions against Russian shipping.
+  positions:
+    defence: Poland is actively strengthening its maritime defense capabilities through
+      specific armaments programs and monitoring platforms.
+    hybrid: Poland advocates for stricter EU restrictions on Russian 'clunker fleet'
+      tankers to protect critical undersea infrastructure from hybrid threats.
+    green_transition: Poland is implementing a transition to renewable energy by constructing
+      wind farms in its exclusive economic zone.
+  stances:
+    defence:
+      score: 2
+      evidence: Poland’s security is being improved through armaments programmes,
+        which include the Orka (new-generation submarines), the Miecznik (multipurpose
+        frigates for the Polish Navy), and investments in the development of Polish
+        unmanned surface vehicles.
+    hybrid:
+      score: 2
+      evidence: More and more ships are successively covered by EU sanctions. Currently
+        the list includes 632 such vessels.
+    green_transition:
+      score: 2
+      evidence: Since 2026, the hub will also include wind farms currently under construction
+        in Poland’s exclusive economic zone.

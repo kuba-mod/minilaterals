@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Orbán
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: France seeks to revitalize relations with Hungary to advance a sovereign
+    and competitive Europe while coordinating on key regional security issues.
+  positions:
+    ukraine: France supports continuing assistance to Ukraine and maintaining pressure
+      on Russia.
+    enlargement: France addresses priorities regarding the Western Balkans in the
+      context of the European agenda.
+  stances:
+    ukraine:
+      score: 1
+      evidence: including support for Ukraine and stepped-up pressure on Russia
+    enlargement:
+      score: 1
+      evidence: addressed the priorities of the European agenda, including... the
+        Western Balkans

@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  - Minister Albares
+  topics:
+  - ukraine
+  - defence
+  location: Barcelona, Spain
+  position: Poland emphasizes the fundamental threat posed by Russian aggression and
+    advocates for enhanced security cooperation with Spain via the EU and NATO.
+  positions:
+    ukraine: Poland highlights the vulnerability of the eastern flank and assesses
+      that Russia is suffering significant losses in its aggression against Ukraine.
+    defence: Poland seeks to strengthen security cooperation with Spain through bilateral
+      channels, the EU, and NATO.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Minister Sikorski stressed that the Ukraine war poses a fundamental
+        threat, especially for eastern flank countries.
+    defence:
+      score: 1
+      evidence: They emphasised the need for Poland and Spain to enhance their cooperation,
+        not only bilaterally or within the European Union, but also within NATO.

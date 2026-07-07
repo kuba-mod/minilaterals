@@ -1,0 +1,48 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Penny Wong, Minister of Foreign Affairs of Australia
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs of France
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - rule_of_law
+  location: France
+  position: France is upgrading its strategic cooperation with Australia through a
+    new Roadmap focusing on security, climate action, and a stable Indo-Pacific.
+  positions:
+    defence: France is expanding strategic security and policing cooperation with
+      Australia.
+    hybrid: France is actively seeking increased collaboration to combat cyber crime.
+    green_transition: France is maintaining a concrete project for energy transition
+      and cooperation on critical minerals.
+    rule_of_law: France rhetorically supports an international system based on agreed
+      rules and norms.
+  stances:
+    defence:
+      score: 2
+      evidence: We have agreed to expand cooperation in fields such as national security
+        and policing.
+    hybrid:
+      score: 2
+      evidence: We will also seek to increase our collaboration to counter cyber crime
+        and drug trafficking
+    green_transition:
+      score: 2
+      evidence: the Franco-Australian Indo-Pacific Centre for Energy Transition, will
+        continue as well as our dialogue on critical minerals.
+    rule_of_law:
+      score: 1
+      evidence: mutual commitment to an international system underpinned by agreed
+        rules and norms.

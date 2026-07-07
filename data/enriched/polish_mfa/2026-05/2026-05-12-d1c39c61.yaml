@@ -1,0 +1,19 @@
+actors:
+- PL
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Wael Hamed
+  topics: []
+  location: Cairo, Egypt
+  position: Poland seeks to strengthen political and economic ties with Egypt, focusing
+    on agri-food exports, digital technology, and regional security stability.
+  positions: {}
+  stances: {}

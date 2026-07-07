@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - MFA
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland demands an explanation for the Israeli military operation in international
+    waters and calls for the protection of the rights and safety of Polish nationals
+    detained on the Global Sumud Flotilla.
+  positions:
+    rule_of_law: Poland emphasizes the necessity of adhering to international law,
+      the law of the sea, and humanitarian law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Respecting international law, including international law of the sea
+        and international humanitarian law is the duty of all states.

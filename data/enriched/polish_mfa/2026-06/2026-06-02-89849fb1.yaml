@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - María Teresa Mercado
+  - María Angélica Granados Trespalacios
+  topics:
+  - ukraine
+  - hybrid
+  location: Mexico
+  position: Poland seeks to strengthen bilateral ties with Mexico across technology,
+    trade, and security while coordinating on global conflicts and Russian aggression.
+  positions:
+    ukraine: Poland actively highlights Russian war crimes and the forced resettlement
+      of Ukrainian children to garner international attention.
+    hybrid: Poland discusses the enhancement of cybersecurity as a key area of bilateral
+      cooperation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: opened an exhibition titled Camas vacías (Empty beds) at the Senate
+        focusing on the issue of illegal deportations and forced resettlements of
+        Ukrainian children by Russia
+    hybrid:
+      score: 1
+      evidence: discussed prospects for bilateral cooperation in areas such as new
+        technologies and cybersecurity

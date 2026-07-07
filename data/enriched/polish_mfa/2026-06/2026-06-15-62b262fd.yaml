@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland advocates for increased sanctions against Russia, the acceleration
+    of Ukraine's EU integration, and coordinated EU action against Russian hybrid
+    threats.
+  positions:
+    ukraine: Poland actively pushes for increased economic pressure and sanctions
+      against Russia to support Ukraine.
+    hybrid: Poland is leading the initiative to combat Russian sabotage and subversion
+      through the development of a White Paper and proposed intelligence cooperation.
+    enlargement: Poland strongly supports and welcomes the start of EU accession negotiations
+      with Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: insisted on prompt adoption of the 21st round of economic sanctions
+    hybrid:
+      score: 2
+      evidence: Radosław Sikorski presented an essential document developed on MFA’s
+        initiative by the Polish Institute of International Affairs (PISM)
+    enlargement:
+      score: 1
+      evidence: Poland welcomed the opening of the first cluster in negotiations with
+        Ukraine

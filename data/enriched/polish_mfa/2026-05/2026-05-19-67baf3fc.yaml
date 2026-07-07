@@ -1,0 +1,23 @@
+actors: []
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Jerzy Buzek
+  - Lech Wałęsa
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland's representatives emphasize the importance of European solidarity,
+    integration, and the defense of treaty values.
+  positions:
+    rule_of_law: Poland supports the promotion and defense of the values enshrined
+      in EU Treaties.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: promotion and defence of the values enshrined in the Treaties

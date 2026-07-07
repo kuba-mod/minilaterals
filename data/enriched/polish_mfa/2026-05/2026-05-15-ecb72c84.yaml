@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - MFA Undersecretary of State
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland actively supports the Council of Europe's initiatives to hold Russia
+    accountable for its aggression against Ukraine and to strengthen democratic resilience
+    in Europe.
+  positions:
+    ukraine: Poland demonstrates concrete commitment to Ukrainian justice by signing
+      the resolution for a Special Tribunal for the Crime of Aggression.
+    hybrid: Poland rhetorically supports the Council's efforts to combat disinformation
+      and foreign interference.
+    rule_of_law: Poland emphasizes the importance of protecting human rights and democracy
+      against external assaults.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Poland has signed the Resolution establishing the Enlarged Partial
+        Agreement on the Management Committee of the Special Tribunal for the Crime
+        of Aggression against Ukraine
+    hybrid:
+      score: 1
+      evidence: The session also addressed combating disinformation and foreign information
+        manipulation and interference (FIMI).
+    rule_of_law:
+      score: 1
+      evidence: Human rights, democracy, and the rule of law are being undermined
+        or attacked.
