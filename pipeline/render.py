@@ -25,10 +25,10 @@ import hashlib
 import json
 import math
 import os
-from collections import defaultdict
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
 import sys
+from collections import defaultdict
+from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
@@ -56,8 +56,8 @@ def resolve_edition_date(as_of: str | None = None) -> datetime:
         cutoff = loaded.get("cutoff")
         as_of = str(cutoff) if cutoff else None
     if as_of:
-        return datetime.strptime(as_of, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-    return datetime.now(timezone.utc)
+        return datetime.strptime(as_of, "%Y-%m-%d").replace(tzinfo=UTC)
+    return datetime.now(UTC)
 
 SOURCE_ACTOR = {
     "german_mfa": "DE",
@@ -280,7 +280,7 @@ def cluster_key(cluster: dict) -> str:
 
 def _dot(a: list[float], b: list[float]) -> float:
     """Cosine similarity for pre-normalised vectors = dot product."""
-    return sum(x * y for x, y in zip(a, b))
+    return sum(x * y for x, y in zip(a, b, strict=True))
 
 
 def _mean_vec(vecs: list[list[float]]) -> list[float] | None:
@@ -479,7 +479,7 @@ def compute_weekly_alignment(
         if pos_emb_store:
             topic_vecs = [v for k, v in pos_emb_store.items() if k.startswith(fpath + "#")]
             if topic_vecs:
-                event_vecs[fpath] = [sum(col) / len(col) for col in zip(*topic_vecs)]
+                event_vecs[fpath] = [sum(col) / len(col) for col in zip(*topic_vecs, strict=True)]
                 continue
         if fpath in emb_store:
             event_vecs[fpath] = emb_store[fpath]
@@ -497,7 +497,7 @@ def compute_weekly_alignment(
         return []
 
     earliest = min(d for d, _, _ in embedded)
-    today = (today or datetime.now(timezone.utc)).date()
+    today = (today or datetime.now(UTC)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
     anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
 
@@ -557,7 +557,7 @@ def compute_latest_heatmap(
     clusters: list[dict], days: int = 7, today: datetime | None = None
 ) -> dict[str, dict | None]:
     """Per-topic convergence for the most recent scored cluster within the last `days` days."""
-    cutoff = ((today or datetime.now(timezone.utc)) - timedelta(days=days)).strftime("%Y-%m-%d")
+    cutoff = ((today or datetime.now(UTC)) - timedelta(days=days)).strftime("%Y-%m-%d")
     result: dict[str, dict | None] = {area: None for area in ISSUE_ORDER}
     for cluster in clusters:
         area = cluster["area"]
@@ -602,7 +602,7 @@ def compute_topic_weekly_stances(
         return {}
 
     earliest = min(d for d, _, _, _ in rows)
-    today = (today or datetime.now(timezone.utc)).date()
+    today = (today or datetime.now(UTC)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
     anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
     all_weeks = []
@@ -984,7 +984,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         "era_colors": ERA_COLORS,
         "era_labels": ERA_LABELS,
         "type_colors": TYPE_COLORS,
-        "now": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
         "edition_date_str": edition_dt.strftime("%A %-d %b"),
         "base_path": base_path,
     })

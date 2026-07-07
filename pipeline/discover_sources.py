@@ -14,8 +14,6 @@ It will:
 from __future__ import annotations
 
 import re
-import sys
-import textwrap
 
 import feedparser
 import requests
@@ -100,7 +98,7 @@ def fetch_page(url: str) -> BeautifulSoup | None:
 
 def find_rss_autodiscovery(soup: BeautifulSoup) -> list[str]:
     links = soup.find_all("link", attrs={"type": re.compile(r"rss|atom|xml", re.I)})
-    hrefs = [l.get("href", "") for l in links if l.get("href")]
+    hrefs = [link.get("href", "") for link in links if link.get("href")]
     return hrefs
 
 
@@ -166,7 +164,7 @@ def main() -> None:
         if soup:
             rss_links = find_rss_autodiscovery(soup)
             if rss_links:
-                print(f"\n  RSS autodiscovery links found in <head>:")
+                print("\n  RSS autodiscovery links found in <head>:")
                 for link in rss_links:
                     print(f"    {link}")
                     ok, count, err = try_rss(link)

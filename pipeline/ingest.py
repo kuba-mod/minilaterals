@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import argparse
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import yaml
@@ -20,7 +20,7 @@ import yaml
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.sources import ALL_INGESTERS
+from pipeline.sources import ALL_INGESTERS  # noqa: E402 (after sys.path shim above)
 
 DATA_DIR = ROOT / "data"
 
@@ -57,12 +57,12 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
 
 
 def write_run_log(results: list[dict]) -> None:
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
     log_path = DATA_DIR / "runs" / f"{today}.yaml"
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_data = {
         "date": today,
-        "run_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "run_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sources": results,
         "totals": {
             "fetched": sum(r["fetched"] for r in results),

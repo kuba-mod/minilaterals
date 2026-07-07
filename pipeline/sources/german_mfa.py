@@ -3,9 +3,9 @@ from __future__ import annotations
 import json
 import re
 import time
-from datetime import datetime, timezone
+from collections.abc import Iterator
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Iterator
 
 import feedparser
 import requests
@@ -33,7 +33,7 @@ _HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"
 def _parse_date(raw: str | None) -> tuple[str, str]:
     """Return (date_str 'YYYY-MM-DD', published_at 'YYYY-MM-DDTHH:MM:SSZ')."""
     if not raw:
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
     for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S%z",
                 "%d.%m.%Y", "%B %d, %Y"):
@@ -42,7 +42,7 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
             return dt.strftime("%Y-%m-%d"), dt.strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -65,7 +65,7 @@ def _strict_date(raw: str | None) -> str | None:
             continue
         date = dt.strftime("%Y-%m-%d")
         # Reject obviously wrong parses (far future / pre-web past).
-        if "1995-01-01" < date <= datetime.now(timezone.utc).strftime("%Y-%m-%d"):
+        if "1995-01-01" < date <= datetime.now(UTC).strftime("%Y-%m-%d"):
             return date
     return None
 

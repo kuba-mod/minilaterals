@@ -18,7 +18,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import glob
 import json
 import sys
 from pathlib import Path
@@ -71,7 +70,7 @@ def embed_goals(recompute: bool = False) -> dict[str, list[float]]:
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer(MODEL_NAME)
     vectors = model.encode([goals[k] for k in pending], show_progress_bar=False, normalize_embeddings=True)
-    for key, vec in zip(pending, vectors):
+    for key, vec in zip(pending, vectors, strict=True):
         existing[key] = vec.tolist()
     GOAL_EMBEDDINGS_FILE.write_text(json.dumps(existing, separators=(",", ":")), encoding="utf-8")
     print(f"Saved goal embeddings → {GOAL_EMBEDDINGS_FILE.relative_to(ROOT)}")
@@ -126,7 +125,7 @@ def embed_positions(recompute: bool = False) -> dict[str, list[float]]:
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer(MODEL_NAME)
     vectors = model.encode([t for _, t in pending], show_progress_bar=False, normalize_embeddings=True)
-    for (key, _), vec in zip(pending, vectors):
+    for (key, _), vec in zip(pending, vectors, strict=True):
         existing[key] = vec.tolist()
     POSITION_EMBEDDINGS_FILE.write_text(json.dumps(existing, separators=(",", ":")), encoding="utf-8")
     print(f"Saved position embeddings → {POSITION_EMBEDDINGS_FILE.relative_to(ROOT)}  (total: {len(existing)})")
@@ -193,7 +192,7 @@ def main() -> None:
     print(f"Embedding {len(texts)} announcements …")
     vectors = model.encode(texts, show_progress_bar=True, normalize_embeddings=True)
 
-    for (rel, _), vec in zip(pending, vectors):
+    for (rel, _), vec in zip(pending, vectors, strict=True):
         store[rel] = vec.tolist()
 
     _save_embeddings(store)

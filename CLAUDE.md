@@ -25,6 +25,8 @@ uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
 
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
+
+uv run ruff check .                          # lint (enforced in CI via .github/workflows/lint.yml)
 ```
 
 ## Architecture
@@ -39,7 +41,7 @@ Sources (RSS/HTML/API)
             → pipeline/render.py  Jinja2 + convergence scoring → docs/
 ```
 
-**CI:** two workflows, split by concern and serialized on a shared `pipeline` concurrency group so the paths that commit to `main` never clobber each other. `.github/workflows/collect.yml` is cron/dispatch-driven data collection: the daily cron at 06:00 UTC ingests → enriches and commits `data/**` only (silent collection — the deployed site does not change); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today, generates commentary, renders, and commits `data/** docs/**` — the weekly edition cut. `.github/workflows/render.yml` handles site rendering: it fires on every branch push, always builds the site and uploads it as a downloadable `site` artifact (preview a layout change before merging), and commits `docs/**` back only on `main` — redeploying the same frozen edition with the new layout. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). Both workflows commit with `GITHUB_TOKEN`, which does not re-trigger workflows, so there is no commit loop.
+**CI:** three workflows. `.github/workflows/collect.yml` and `.github/workflows/render.yml` are split by concern and serialized on a shared `pipeline` concurrency group so the paths that commit to `main` never clobber each other. `collect.yml` is cron/dispatch-driven data collection: the daily cron at 06:00 UTC ingests → enriches and commits `data/**` only (silent collection — the deployed site does not change); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today, generates commentary, renders, and commits `data/** docs/**` — the weekly edition cut. `render.yml` handles site rendering: it fires on every branch push, always builds the site and uploads it as a downloadable `site` artifact (preview a layout change before merging), and commits `docs/**` back only on `main` — redeploying the same frozen edition with the new layout. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). Both workflows commit with `GITHUB_TOKEN`, which does not re-trigger workflows, so there is no commit loop. `.github/workflows/lint.yml` runs `ruff check .` on every branch push; it's read-only (no commits), so it runs outside the `pipeline` concurrency group.
 
 ## Key files
 

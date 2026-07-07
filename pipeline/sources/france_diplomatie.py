@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import time
-from datetime import datetime, timezone
-from typing import Iterator
+from collections.abc import Iterator
+from datetime import UTC, datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -19,7 +19,7 @@ _HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; WeimTracker/1.0)"}
 
 def _parse_date(raw: str | None) -> tuple[str, str]:
     if not raw:
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Clean up ordinals, extra text, and punctuation (e.g. "On : May 13th 2026" → "May 13 2026")
@@ -43,7 +43,7 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
             return dt.strftime("%Y-%m-%d"), dt.strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 

@@ -15,7 +15,9 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = []
+dev = [
+    "ruff>=0.15.20",
+]
 # Embedding (pipeline.embed) is optional since stance scoring replaced cosine
 # similarity as the primary metric; install with `uv sync --group embed`.
 embed = [
@@ -26,3 +28,16 @@ analysis = [
     "altair>=5.0",
     "pandas>=2.0",
 ]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Long lines here are embedded content (SVG markup, LLM prompt text), not code
+# structure — wrapping mid-string would be noise or risk altering the prompt.
+"pipeline/render.py" = ["E501"]
+"pipeline/enrich.py" = ["E501"]
