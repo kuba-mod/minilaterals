@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: meeting
+  participants:
+  - Johann Wadephul
+  - Katherina Reiche
+  - Denys Shmyhal
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany is hosting an international conference to learn from Ukraine's
+    energy resilience and providing financial support via the Ukraine Energy Support
+    Fund.
+  positions:
+    ukraine: Germany is providing significant energy sector support and financial
+      aid to Ukraine to ensure its resilience against Russian aggression.
+    hybrid: Germany acknowledges the threat of hybrid warfare to critical infrastructure
+      and is organizing a multi-national conference to improve protection strategies.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We are actively supporting Ukraine via the international Ukraine Energy
+        Support Fund.
+    hybrid:
+      score: 2
+      evidence: the Federal Foreign Office is hosting the international conference,
+        Energy Security – Lessons from Ukraine , on 19 May 2026.
