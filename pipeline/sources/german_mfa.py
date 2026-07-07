@@ -3,10 +3,12 @@ from __future__ import annotations
 import re
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Iterator
 
 import feedparser
 import requests
+import yaml
 from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
@@ -61,6 +63,8 @@ class GermanMFAIngester(BaseIngester):
                     seen_urls.add(event.source_url)
                     yield event
             for event in self._fetch_wayback_rss(seen_urls):
+                yield event
+            for event in self._fetch_wayback_articles(seen_urls):
                 yield event
         else:
             items = list(self._fetch_rss())
@@ -174,6 +178,86 @@ class GermanMFAIngester(BaseIngester):
                 time.sleep(0.5)
                 probe.text = summary
                 yield probe.classify()
+
+    def _fetch_wayback_articles(self, seen_urls: set[str]) -> Iterator[Event]:
+        """Discover article URLs the Wayback Machine captured under the newsroom
+        path since `since`, and ingest them from the live site. Complements the
+        feed-snapshot replay: individual articles get crawled (e.g. via links
+        from other sites) even when the feed URL itself is never captured."""
+        try:
+            r = requests.get(WAYBACK_CDX_URL, params={
+                "url": f"{BASE_URL}/en/newsroom/news/*",
+                "from": self.since.replace("-", ""),
+                "output": "json",
+                "fl": "original",
+                "collapse": "urlkey",
+                "limit": "1000",
+            }, timeout=30, headers=_HEADERS)
+            r.raise_for_status()
+            rows = r.json()
+        except Exception as exc:
+            print(f"[{SOURCE_NAME}] wayback article CDX error: {exc}")
+            return
+        urls = [row[0] for row in rows[1:]]  # row 0 is the header
+        print(f"[{SOURCE_NAME}] wayback: {len(urls)} captured article URLs since {self.since}")
+
+        # Dedupe by URL against events already on disk: the page <h1> can differ
+        # from the RSS title of the same item, which would defeat the
+        # filename-hash dedup and store the event twice.
+        for path in Path("data/events").joinpath(SOURCE_NAME).glob("**/*.yaml"):
+            try:
+                stored = yaml.safe_load(path.read_text(encoding="utf-8"))
+                if stored and stored.get("source_url"):
+                    seen_urls.add(stored["source_url"])
+            except Exception:
+                continue
+
+        for url in urls:
+            url = url.split("?")[0].replace("http://", "https://")
+            if url in seen_urls or url.rstrip("/") == f"{BASE_URL}/en/newsroom/news":
+                continue
+            seen_urls.add(url)
+            try:
+                r = requests.get(url, timeout=15, headers=_HEADERS)
+                r.raise_for_status()
+            except Exception:
+                continue
+            time.sleep(0.5)
+            soup = BeautifulSoup(r.text, "lxml")
+
+            date_tag = soup.find("time")
+            raw_date = (date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
+            if not raw_date:
+                meta = soup.find("meta", attrs={"name": "date"}) or soup.find(attrs={"itemprop": "datePublished"})
+                raw_date = meta.get("content") or meta.get("datetime") if meta else None
+            if not raw_date:
+                # A press release without a recoverable date is worse than a skip —
+                # it would land in the wrong week on the timeline.
+                print(f"[{SOURCE_NAME}] wayback article without date, skipping: {url}")
+                continue
+            date, published_at = _parse_date(raw_date)
+            if date < self.since:
+                continue
+
+            title_tag = soup.find("h1") or soup.find("title")
+            title = title_tag.get_text(" ", strip=True) if title_tag else ""
+            if not title:
+                continue
+
+            probe = Event(
+                source_name=SOURCE_NAME, title=title, text="", source_url=url,
+                source_lang=self.source_lang, source_published_at=published_at,
+                date=date,
+            )
+            if probe.output_path().exists():
+                continue
+            article = soup.find(class_=re.compile(r"c-article__body|c-richtext|article-content"))
+            if not article:
+                article = soup.find("article") or soup.find("main")
+            paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
+                          if len(p.get_text(strip=True)) > 40] if article else []
+            probe.text = " ".join(paragraphs)
+            yield probe.classify()
 
     def _fetch_html_paginated(self) -> Iterator[Event]:
         # The news listing may be JS-rendered; pagination is attempted but may yield
