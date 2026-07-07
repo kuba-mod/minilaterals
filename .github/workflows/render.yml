@@ -1,0 +1,70 @@
+name: Render
+
+# Site render + deploy. Fires on every branch push so a layout change can be
+# verified from a downloadable artifact before it merges; only main actually
+# commits the rebuilt site.
+#   - Feature branch push → render, upload the built site as an artifact, no commit.
+#   - Push/merge to main   → render, commit docs/** (the live redeploy).
+# render.py excludes events dated after data/edition.yaml's cutoff, so a layout
+# push redeploys the same frozen edition rather than leaking newly-ingested data.
+# The deploy commit uses GITHUB_TOKEN, which does not re-trigger workflows, so
+# neither this commit nor collect.yml's edition-cut docs/** commit re-fires here.
+
+on:
+  push:
+    branches: ['**']        # any branch: previews everywhere, deploy only on main
+
+permissions:
+  contents: write           # needed for the main-branch deploy commit; harmless on branches
+
+concurrency:
+  # main shares the 'pipeline' group with collect.yml so the two paths that
+  # commit to main serialize. Feature-branch previews get an isolated per-ref
+  # group and supersede their own in-flight runs, so they never queue behind
+  # (or block) the daily collection pipeline.
+  group: ${{ github.ref == 'refs/heads/main' && 'pipeline' || format('render-{0}', github.ref) }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  # Deployed under the minilaterals.com umbrella at this path, not the domain root.
+  SITE_BASE_PATH: /weimar-triangle
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install uv && uv sync
+
+      - name: Render
+        run: uv run python -m pipeline.render --output docs/weimar-triangle
+
+      - name: Upload rendered site
+        # Preview build for every branch: download the zip from the run summary
+        # and open index.html locally to verify a render before merging.
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: docs/weimar-triangle
+
+      - name: Commit rendered site
+        # Deploy only from main. Plain git over the GITHUB_TOKEN credentials
+        # actions/checkout persists; only commits when docs/ actually changed.
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "site: rebuild on merge"
+            git push
+          fi
