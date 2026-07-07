@@ -38,7 +38,6 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-
 class PolishMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
     source_lang = "en"
@@ -51,8 +50,9 @@ class PolishMFAIngester(BaseIngester):
             soup = BeautifulSoup(r.text, "lxml")
             article = soup.find(class_="editor-content") or soup.find("article") or soup.find("main")
             if article:
-                paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                              if len(p.get_text(strip=True)) > 40]
+                paragraphs = [
+                    p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+                ]
                 if paragraphs:
                     return " ".join(paragraphs)
         except Exception:

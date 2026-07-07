@@ -17,6 +17,7 @@ This makes rendering a pure function of (templates, data, cutoff), so a
 layout-only merge redeploys the same frozen edition instead of leaking data
 ingested since the last cut.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -35,6 +36,7 @@ from jinja2 import Environment, FileSystemLoader
 
 try:
     import numpy as _np
+
     _HAS_NUMPY = True
 except ImportError:
     _HAS_NUMPY = False
@@ -58,6 +60,7 @@ def resolve_edition_date(as_of: str | None = None) -> datetime:
     if as_of:
         return datetime.strptime(as_of, "%Y-%m-%d").replace(tzinfo=UTC)
     return datetime.now(UTC)
+
 
 SOURCE_ACTOR = {
     "german_mfa": "DE",
@@ -114,46 +117,51 @@ ACTOR_COLORS = {
 }
 
 ISSUE_LABELS = {
-    "ukraine":          "Ukraine",
-    "defence":          "Defence",
-    "hybrid":           "Hybrid Threats",
-    "enlargement":      "Enlargement",
+    "ukraine": "Ukraine",
+    "defence": "Defence",
+    "hybrid": "Hybrid Threats",
+    "enlargement": "Enlargement",
     "green_transition": "Green Transition",
-    "rule_of_law":      "Rule of Law",
+    "rule_of_law": "Rule of Law",
 }
 
 ISSUE_ORDER = [
-    "ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law",
+    "ukraine",
+    "defence",
+    "hybrid",
+    "enlargement",
+    "green_transition",
+    "rule_of_law",
 ]
 
 ERA_COLORS = {
-    "founding":    "#5a8a5a",
-    "accession":   "#4a6a8a",
-    "dormancy":    "#7a6a3a",
-    "crisis1":     "#8a6030",
-    "limbo":       "#5a4a3a",
-    "revival":     "#5a6a4a",
+    "founding": "#5a8a5a",
+    "accession": "#4a6a8a",
+    "dormancy": "#7a6a3a",
+    "crisis1": "#8a6030",
+    "limbo": "#5a4a3a",
+    "revival": "#5a6a4a",
     "renaissance": "#9a8a28",
 }
 
 ERA_LABELS = {
-    "founding":    "Founding Era",
-    "accession":   "Accession Era",
-    "dormancy":    "Dormancy Era",
-    "crisis1":     "Crimea Response",
-    "limbo":       "Limbo Era",
-    "revival":     "Ukraine Revival",
+    "founding": "Founding Era",
+    "accession": "Accession Era",
+    "dormancy": "Dormancy Era",
+    "crisis1": "Crimea Response",
+    "limbo": "Limbo Era",
+    "revival": "Ukraine Revival",
     "renaissance": "Renaissance",
 }
 
 TYPE_COLORS = {
-    "FM":        "#c4b240",
-    "FM+":       "#9a8a28",
-    "Summit":    "#5a8a9a",
-    "Defence":   "#6a5a9a",
-    "Finance":   "#5a8a5a",
-    "Parl.":     "#666666",
-    "Sectoral":  "#6a7a5a",
+    "FM": "#c4b240",
+    "FM+": "#9a8a28",
+    "Summit": "#5a8a9a",
+    "Defence": "#6a5a9a",
+    "Finance": "#5a8a5a",
+    "Parl.": "#666666",
+    "Sectoral": "#6a7a5a",
     "Statement": "#7a5a3a",
 }
 
@@ -171,23 +179,23 @@ COMMENTARY_FILE = ROOT / "data" / "commentary.json"
 
 # Convergence score thresholds — legacy peer-to-peer mode (within-topic, so naturally elevated)
 CONVERGENCE_CONVERGING = 0.72
-CONVERGENCE_PARALLEL   = 0.50
+CONVERGENCE_PARALLEL = 0.50
 
 # Goal-anchored thresholds: cosine of full article text vs. short goal sentence is lower
 # than peer-to-peer. Calibrated against observed score range (0.25–0.55).
 CONVERGENCE_GOAL_CONVERGING = 0.42
-CONVERGENCE_GOAL_PARALLEL   = 0.28
+CONVERGENCE_GOAL_PARALLEL = 0.28
 
 # Stance-based alignment: each event×topic carries an LLM-judged stance in -2..+2
 # vs. the Weimar goal. Agreement label comes from the spread between per-country
 # mean stances (spread is in stance units, so the thresholds are self-explanatory:
 # ≤0.5 = same bucket, ≤1.5 = adjacent buckets).
 STANCE_ALIGNED_SPREAD = 0.5
-STANCE_MIXED_SPREAD   = 1.5
+STANCE_MIXED_SPREAD = 1.5
 
 COLOR_GREEN = "#4d6b38"
 COLOR_AMBER = "#8a6320"
-COLOR_RED   = "#a14132"
+COLOR_RED = "#a14132"
 
 
 def _stance_agreement(spread: float) -> tuple[str, str]:
@@ -206,8 +214,6 @@ def _stance_norm(s: float) -> float:
 
 def _fmt_stance(s: float) -> str:
     return f"{s:+.1f}"
-
-
 
 
 def _load_yaml(path: Path) -> list | dict | None:
@@ -306,7 +312,7 @@ def score_cluster_stances(cluster: dict) -> dict | None:
     per_actor_scores: dict[str, list[int]] = defaultdict(list)
     for actor, items in cluster["by_actor"].items():
         for item in items:
-            stances = ((item["event"].get("extracted") or {}).get("stances") or {})
+            stances = (item["event"].get("extracted") or {}).get("stances") or {}
             entry = stances.get(area)
             if entry and isinstance(entry.get("score"), int):
                 per_actor_scores[actor].append(entry["score"])
@@ -315,18 +321,13 @@ def score_cluster_stances(cluster: dict) -> dict | None:
     if len(actors_scored) < 2:
         return None
 
-    actor_means = {
-        a: sum(per_actor_scores[a]) / len(per_actor_scores[a]) for a in actors_scored
-    }
+    actor_means = {a: sum(per_actor_scores[a]) / len(per_actor_scores[a]) for a in actors_scored}
     spread = max(actor_means.values()) - min(actor_means.values())
     overall = sum(actor_means.values()) / len(actor_means)
     label, color = _stance_agreement(spread)
 
     return {
-        "per_actor": {
-            a: {"stance": round(actor_means[a], 1), "n": len(per_actor_scores[a])}
-            for a in actors_scored
-        },
+        "per_actor": {a: {"stance": round(actor_means[a], 1), "n": len(per_actor_scores[a])} for a in actors_scored},
         "spread": round(spread, 1),
         "overall": round(overall, 2),
         "display": _fmt_stance(overall),
@@ -388,10 +389,7 @@ def score_cluster_convergence(
     if goal_emb_store and area in goal_emb_store:
         goal_vec = goal_emb_store[area]
         actor_alignments = {a: _dot(means[a], goal_vec) for a in actors_with_emb}
-        pairs = [
-            {"actors": a, "score": round(actor_alignments[a], 3)}
-            for a in actors_with_emb
-        ]
+        pairs = [{"actors": a, "score": round(actor_alignments[a], 3)} for a in actors_with_emb]
         overall = sum(actor_alignments.values()) / len(actor_alignments)
         if overall >= CONVERGENCE_GOAL_CONVERGING:
             label, color = "Converging", "#4d6b38"
@@ -411,7 +409,7 @@ def score_cluster_convergence(
     # Legacy peer-to-peer scoring
     pairs = []
     for i, a1 in enumerate(actors_with_emb):
-        for a2 in actors_with_emb[i + 1:]:
+        for a2 in actors_with_emb[i + 1 :]:
             sim = _dot(means[a1], means[a2])
             pairs.append({"actors": f"{a1}_{a2}", "score": round(sim, 3)})
 
@@ -433,9 +431,7 @@ def score_cluster_convergence(
     }
 
 
-def _allpairs_median_score(
-    vecs_a: list[list[float]], vecs_b: list[list[float]]
-) -> tuple[float, float, float]:
+def _allpairs_median_score(vecs_a: list[list[float]], vecs_b: list[list[float]]) -> tuple[float, float, float]:
     """All-pairs cosine sim for pre-normalised vectors; returns (median, q25, q75)."""
     if _HAS_NUMPY:
         a = _np.array(vecs_a)
@@ -449,8 +445,11 @@ def _allpairs_median_score(
 
 
 def compute_weekly_alignment(
-    events: list[dict], emb_store: dict, pos_emb_store: dict | None = None,
-    window_days: int = 14, today: datetime | None = None,
+    events: list[dict],
+    emb_store: dict,
+    pos_emb_store: dict | None = None,
+    window_days: int = 14,
+    today: datetime | None = None,
 ) -> list[dict | None]:
     """
     Rolling window_days alignment score, one entry per calendar week (oldest first).
@@ -522,7 +521,7 @@ def compute_weekly_alignment(
         pair_medians: list[float] = []
         by_pair: dict[str, dict] = {}
         for i, a1 in enumerate(actors_with_data):
-            for a2 in actors_with_data[i + 1:]:
+            for a2 in actors_with_data[i + 1 :]:
                 med, q25, q75 = _allpairs_median_score(actor_vecs[a1], actor_vecs[a2])
                 by_pair[f"{a1}_{a2}"] = {
                     "median": round(med, 3),
@@ -539,15 +538,17 @@ def compute_weekly_alignment(
         else:
             label, color = "Diverging", "#a14132"
 
-        results.append({
-            "week": anchor.strftime("%Y-%m-%d"),
-            "overall": round(overall, 3),
-            "label": label,
-            "color": color,
-            "by_pair": by_pair,
-            "actors_scored": actors_with_data,
-            "n_events": n_events,
-        })
+        results.append(
+            {
+                "week": anchor.strftime("%Y-%m-%d"),
+                "overall": round(overall, 3),
+                "label": label,
+                "color": color,
+                "by_pair": by_pair,
+                "actors_scored": actors_with_data,
+                "n_events": n_events,
+            }
+        )
         anchor += timedelta(days=7)
 
     return results
@@ -593,7 +594,7 @@ def compute_topic_weekly_stances(
         src = e.get("source_name", "")
         if src not in mfa_sources:
             continue
-        stances = ((e.get("extracted") or {}).get("stances") or {})
+        stances = (e.get("extracted") or {}).get("stances") or {}
         for topic, entry in stances.items():
             if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
                 rows.append((e.get("date", ""), actor_map[src], topic, entry["score"]))
@@ -631,26 +632,26 @@ def compute_topic_weekly_stances(
                 series.append(None)
                 continue
 
-            actor_means = {
-                a: sum(actor_scores[a]) / len(actor_scores[a]) for a in actors_with_data
-            }
+            actor_means = {a: sum(actor_scores[a]) / len(actor_scores[a]) for a in actors_with_data}
             spread = max(actor_means.values()) - min(actor_means.values())
             stance_avg = sum(actor_means.values()) / len(actor_means)
             label, color = _stance_agreement(spread)
 
-            series.append({
-                "week": week_str,
-                "overall": round(_stance_norm(stance_avg), 3),   # 0..1 for plotting
-                "stance_avg": round(stance_avg, 2),
-                "display": _fmt_stance(stance_avg),
-                "band_lo": round(_stance_norm(min(actor_means.values())), 3),
-                "band_hi": round(_stance_norm(max(actor_means.values())), 3),
-                "label": label,
-                "color": color,
-                "per_actor": {a: round(m, 1) for a, m in actor_means.items()},
-                "actors_scored": actors_with_data,
-                "n_events": sum(len(v) for v in actor_scores.values()),
-            })
+            series.append(
+                {
+                    "week": week_str,
+                    "overall": round(_stance_norm(stance_avg), 3),  # 0..1 for plotting
+                    "stance_avg": round(stance_avg, 2),
+                    "display": _fmt_stance(stance_avg),
+                    "band_lo": round(_stance_norm(min(actor_means.values())), 3),
+                    "band_hi": round(_stance_norm(max(actor_means.values())), 3),
+                    "label": label,
+                    "color": color,
+                    "per_actor": {a: round(m, 1) for a, m in actor_means.items()},
+                    "actors_scored": actors_with_data,
+                    "n_events": sum(len(v) for v in actor_scores.values()),
+                }
+            )
 
         per_topic[area] = series
 
@@ -665,21 +666,21 @@ def compute_topic_weekly_stances(
             overall_series.append(None)
             continue
         stance_avg = sum(e["stance_avg"] for e in entries) / len(entries)
-        mean_spread = sum(
-            (e["band_hi"] - e["band_lo"]) * 4.0 for e in entries
-        ) / len(entries)
+        mean_spread = sum((e["band_hi"] - e["band_lo"]) * 4.0 for e in entries) / len(entries)
         label, color = _stance_agreement(mean_spread)
-        overall_series.append({
-            "week": week_str,
-            "overall": round(_stance_norm(stance_avg), 3),
-            "stance_avg": round(stance_avg, 2),
-            "display": _fmt_stance(stance_avg),
-            "band_lo": round(sum(e["band_lo"] for e in entries) / len(entries), 3),
-            "band_hi": round(sum(e["band_hi"] for e in entries) / len(entries), 3),
-            "label": label,
-            "color": color,
-            "n_events": sum(e.get("n_events", 0) for e in entries),
-        })
+        overall_series.append(
+            {
+                "week": week_str,
+                "overall": round(_stance_norm(stance_avg), 3),
+                "stance_avg": round(stance_avg, 2),
+                "display": _fmt_stance(stance_avg),
+                "band_lo": round(sum(e["band_lo"] for e in entries) / len(entries), 3),
+                "band_hi": round(sum(e["band_hi"] for e in entries) / len(entries), 3),
+                "label": label,
+                "color": color,
+                "n_events": sum(e.get("n_events", 0) for e in entries),
+            }
+        )
 
     return {"overall": overall_series, **per_topic}
 
@@ -727,9 +728,7 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
         if "band_lo" in w and "band_hi" in w:
             band_top.append(f"{x},{round(y_for(w['band_hi']), 1)}")
             band_bot.append(f"{x},{round(y_for(w['band_lo']), 1)}")
-            detail = "  ".join(
-                f"{a}: {m:+.1f}" for a, m in (w.get("per_actor") or {}).items()
-            )
+            detail = "  ".join(f"{a}: {m:+.1f}" for a, m in (w.get("per_actor") or {}).items())
         elif w.get("by_pair"):
             by_pair = w["by_pair"]
             q25_avg = sum(v["q25"] for v in by_pair.values()) / len(by_pair)
@@ -755,16 +754,18 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
             + (f"\nActors: {actors_str}  ·  " if actors_str else "\n")
             + f"{n_ev} rated statements  ·  14-day rolling window"
         )
-        points.append({
-            "x": x,
-            "y": y,
-            "has_data": True,
-            "week": w["week"],
-            "tooltip": tooltip,
-            "color": w["color"],
-            "label": w["label"],
-            "display": display,
-        })
+        points.append(
+            {
+                "x": x,
+                "y": y,
+                "has_data": True,
+                "week": w["week"],
+                "tooltip": tooltip,
+                "color": w["color"],
+                "label": w["label"],
+                "display": display,
+            }
+        )
         line_xy.append(f"{x},{y}")
 
     band_points = " ".join(band_top) + " " + " ".join(reversed(band_bot)) if band_top else ""
@@ -777,10 +778,16 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
         ]
     else:
         ref_lines = [
-            {"y": round(y_for(CONVERGENCE_GOAL_CONVERGING), 1), "color": COLOR_GREEN,
-             "label": f"{int(CONVERGENCE_GOAL_CONVERGING * 100)}%"},
-            {"y": round(y_for(CONVERGENCE_GOAL_PARALLEL), 1), "color": COLOR_AMBER,
-             "label": f"{int(CONVERGENCE_GOAL_PARALLEL * 100)}%"},
+            {
+                "y": round(y_for(CONVERGENCE_GOAL_CONVERGING), 1),
+                "color": COLOR_GREEN,
+                "label": f"{int(CONVERGENCE_GOAL_CONVERGING * 100)}%",
+            },
+            {
+                "y": round(y_for(CONVERGENCE_GOAL_PARALLEL), 1),
+                "color": COLOR_AMBER,
+                "label": f"{int(CONVERGENCE_GOAL_PARALLEL * 100)}%",
+            },
         ]
 
     return {
@@ -833,6 +840,7 @@ def compute_source_health() -> dict[str, dict]:
 # Convergence clustering
 # ---------------------------------------------------------------------------
 
+
 def build_convergence_clusters(events: list[dict], window_days: int = 14) -> list[dict]:
     """
     Group weimar_relevant events by topic into clusters where 2+ MFA actors
@@ -844,15 +852,17 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
         actor = SOURCE_ACTOR.get(e.get("source_name", ""))
         if actor not in ("DE", "FR", "PL"):
             continue
-        for area in (e.get("issue_areas") or []):
+        for area in e.get("issue_areas") or []:
             if area == "other":
                 continue
-            rows.append({
-                "date": e.get("date", ""),
-                "actor": actor,
-                "area": area,
-                "event": e,
-            })
+            rows.append(
+                {
+                    "date": e.get("date", ""),
+                    "actor": actor,
+                    "area": area,
+                    "event": e,
+                }
+            )
 
     # Group by area
     by_area: dict[str, list] = defaultdict(list)
@@ -899,14 +909,16 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
             for x in cluster_items:
                 by_actor[x["actor"]].append(x)
 
-            clusters.append({
-                "area": area,
-                "area_label": ISSUE_LABELS.get(area, area.title()),
-                "actors": sorted(actors_in_cluster),
-                "date_from": min(dates),
-                "date_to": max(dates),
-                "by_actor": dict(by_actor),
-            })
+            clusters.append(
+                {
+                    "area": area,
+                    "area_label": ISSUE_LABELS.get(area, area.title()),
+                    "actors": sorted(actors_in_cluster),
+                    "date_from": min(dates),
+                    "date_to": max(dates),
+                    "by_actor": dict(by_actor),
+                }
+            )
 
     # Sort by most recent activity, then keep only the most recent cluster per area
     sorted_clusters = sorted(clusters, key=lambda c: c["date_to"], reverse=True)
@@ -958,6 +970,7 @@ Allow: /
 # Render
 # ---------------------------------------------------------------------------
 
+
 def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -977,17 +990,19 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         autoescape=True,
     )
-    env.globals.update({
-        "actor_labels": ACTOR_LABELS,
-        "actor_colors": ACTOR_COLORS,
-        "issue_labels": ISSUE_LABELS,
-        "era_colors": ERA_COLORS,
-        "era_labels": ERA_LABELS,
-        "type_colors": TYPE_COLORS,
-        "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
-        "edition_date_str": edition_dt.strftime("%A %-d %b"),
-        "base_path": base_path,
-    })
+    env.globals.update(
+        {
+            "actor_labels": ACTOR_LABELS,
+            "actor_colors": ACTOR_COLORS,
+            "issue_labels": ISSUE_LABELS,
+            "era_colors": ERA_COLORS,
+            "era_labels": ERA_LABELS,
+            "type_colors": TYPE_COLORS,
+            "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
+            "edition_date_str": edition_dt.strftime("%A %-d %b"),
+            "base_path": base_path,
+        }
+    )
 
     # Events after the edition cutoff exist in data/ but are not published yet —
     # they belong to the next edition.
@@ -1005,9 +1020,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     for cluster in clusters:
         # Stance ratings are the primary scoring; embedding cosine is the fallback
         # for clusters whose events haven't been stance-rated yet.
-        cluster["convergence"] = (
-            score_cluster_stances(cluster)
-            or score_cluster_convergence(cluster, emb_store, goal_emb_store, pos_emb_store)
+        cluster["convergence"] = score_cluster_stances(cluster) or score_cluster_convergence(
+            cluster, emb_store, goal_emb_store, pos_emb_store
         )
         cluster["commentary"] = commentary.get(cluster_key(cluster))
 
@@ -1022,17 +1036,23 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         initial_weekly = weekly_alignment
         topic_weekly = {}
     timeline_svg = build_timeline_svg_data(initial_weekly)
-    topic_series_json = json.dumps({
-        k: [
-            None if w is None else {
-                "week": w["week"], "score": w["overall"],
-                "display": w.get("display") or f"{int(w['overall'] * 100)}%",
-                "label": w["label"], "color": w["color"],
-            }
-            for w in v
-        ]
-        for k, v in topic_weekly.items()
-    })
+    topic_series_json = json.dumps(
+        {
+            k: [
+                None
+                if w is None
+                else {
+                    "week": w["week"],
+                    "score": w["overall"],
+                    "display": w.get("display") or f"{int(w['overall'] * 100)}%",
+                    "label": w["label"],
+                    "color": w["color"],
+                }
+                for w in v
+            ]
+            for k, v in topic_weekly.items()
+        }
+    )
     # Pill state per topic: latest scored week of the stance series (survives
     # quiet weeks, unlike the old 7-day heatmap); cosine heatmap as fallback.
     heatmap = compute_latest_heatmap(clusters, today=edition_dt)
@@ -1076,7 +1096,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 actor_topic_scores[actor][topic].append(entry["score"])
 
     for i, a1 in enumerate(WEIMAR_ACTORS):
-        for a2 in WEIMAR_ACTORS[i + 1:]:
+        for a2 in WEIMAR_ACTORS[i + 1 :]:
             shared = set(actor_topic_scores[a1]) & set(actor_topic_scores[a2])
             if not shared:
                 continue
@@ -1103,10 +1123,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         actor: {
             **COUNTRY_FM[actor],
             "weekly_count": weekly_counts[actor],
-            "align": {
-                other: _pair_score(actor, other)
-                for other in WEIMAR_ACTORS if other != actor
-            },
+            "align": {other: _pair_score(actor, other) for other in WEIMAR_ACTORS if other != actor},
         }
         for actor in WEIMAR_ACTORS
     }
@@ -1184,10 +1201,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     tmpl = env.get_template("country.html")
     for actor in WEIMAR_ACTORS:
         fm = COUNTRY_FM[actor]
-        country_events = [
-            e for e in recent_events
-            if SOURCE_ACTOR.get(e.get("source_name", "")) == actor
-        ]
+        country_events = [e for e in recent_events if SOURCE_ACTOR.get(e.get("source_name", "")) == actor]
         others = [cs for a, cs in country_stats.items() if a != actor]
         (out / fm["path"]).mkdir(exist_ok=True)
         (out / fm["path"] / "index.html").write_text(
@@ -1212,7 +1226,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Weimar tracker renderer")
     parser.add_argument("--output", default="docs", help="Output directory (default: docs)")
     parser.add_argument(
-        "--as-of", default=None, metavar="YYYY-MM-DD",
+        "--as-of",
+        default=None,
+        metavar="YYYY-MM-DD",
         help="Edition cutoff override (default: data/edition.yaml, else today)",
     )
     args = parser.parse_args()

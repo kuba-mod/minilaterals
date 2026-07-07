@@ -24,10 +24,11 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
 
     # Clean up ordinals, extra text, and punctuation (e.g. "On : May 13th 2026" → "May 13 2026")
     import re
+
     cleaned = raw.strip()
-    cleaned = re.sub(r'^On\s*:\s*', '', cleaned)  # Remove "On : " prefix
-    cleaned = re.sub(r'(\d{1,2})(?:st|nd|rd|th)', r'\1', cleaned)  # Remove ordinals
-    cleaned = re.sub(r',', '', cleaned)  # Remove commas
+    cleaned = re.sub(r"^On\s*:\s*", "", cleaned)  # Remove "On : " prefix
+    cleaned = re.sub(r"(\d{1,2})(?:st|nd|rd|th)", r"\1", cleaned)  # Remove ordinals
+    cleaned = re.sub(r",", "", cleaned)  # Remove commas
 
     for fmt in (
         "%a, %d %b %Y %H:%M:%S %z",
@@ -35,8 +36,8 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
         "%Y-%m-%d",
         "%d/%m/%Y",
         "%d %B %Y",
-        "%B %d %Y",      # "May 13 2026" (after ordinal cleanup)
-        "%d %b %Y",      # "13 May 2026" or "13 May 2026" (3-letter month)
+        "%B %d %Y",  # "May 13 2026" (after ordinal cleanup)
+        "%d %b %Y",  # "13 May 2026" or "13 May 2026" (3-letter month)
     ):
         try:
             dt = datetime.strptime(cleaned.strip(), fmt)
@@ -129,8 +130,9 @@ class FranceDiplomatieIngester(BaseIngester):
 
             article = soup.find("article")
             if article:
-                paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                              if len(p.get_text(strip=True)) > 40]
+                paragraphs = [
+                    p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+                ]
                 return " ".join(paragraphs), date_str
         except Exception:
             pass

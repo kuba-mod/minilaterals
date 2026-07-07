@@ -20,6 +20,7 @@ Usage:
     python -m pipeline.comment --limit 5     # process at most 5 clusters
     python -m pipeline.comment --force       # regenerate even if cached
 """
+
 from __future__ import annotations
 
 import argparse
@@ -62,11 +63,13 @@ ACTOR_LABELS = {
 # Provider implementations — same interface as enrich.py
 # ---------------------------------------------------------------------------
 
+
 class OllamaProvider:
     def __init__(self, host: str, model: str, api_key: str = "ollama"):
         self.host = host.rstrip("/")
         self.model = model
         from openai import OpenAI
+
         # Set OLLAMA_API_KEY for Ollama Cloud (OLLAMA_HOST=https://ollama.com)
         self.client = OpenAI(base_url=f"{self.host}/v1", api_key=api_key)
         print(f"Provider: Ollama  host={self.host}  model={self.model}")
@@ -96,6 +99,7 @@ class OllamaProvider:
 class AnthropicProvider:
     def __init__(self, api_key: str, model: str):
         import anthropic
+
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         print(f"Provider: Anthropic  model={self.model}")
@@ -113,6 +117,7 @@ class AnthropicProvider:
 # ---------------------------------------------------------------------------
 # Core logic
 # ---------------------------------------------------------------------------
+
 
 def _load_env() -> None:
     env_file = ROOT / ".env"
@@ -198,14 +203,17 @@ def _build_prompt(cluster: dict) -> str | None:
     countries = " and ".join(ACTOR_LABELS.get(a, a) for a in sorted(cluster["actors"]))
     positions_text = "\n".join(positions)
 
-    return COMMENTARY_PROMPT.format(
-        countries=countries,
-        area=cluster["area_label"],
-        positions=positions_text,
-        score=score,
-        label=label,
-        alignment_verb=alignment_verb,
-    ) + f"\n\nNote: {scoring_note}"
+    return (
+        COMMENTARY_PROMPT.format(
+            countries=countries,
+            area=cluster["area_label"],
+            positions=positions_text,
+            score=score,
+            label=label,
+            alignment_verb=alignment_verb,
+        )
+        + f"\n\nNote: {scoring_note}"
+    )
 
 
 def main() -> None:
@@ -277,9 +285,7 @@ def main() -> None:
         processed += 1
 
     if updated and not args.dry_run:
-        COMMENTARY_FILE.write_text(
-            json.dumps(cache, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
+        COMMENTARY_FILE.write_text(json.dumps(cache, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"\nWrote {len(cache)} entries to {COMMENTARY_FILE}")
     elif processed == 0:
         print("No pending clusters (all cached or no positions/embeddings available).")

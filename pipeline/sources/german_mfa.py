@@ -35,8 +35,7 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
     if not raw:
         now = datetime.now(UTC)
         return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S%z",
-                "%d.%m.%Y", "%B %d, %Y"):
+    for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S%z", "%d.%m.%Y", "%B %d, %Y"):
         try:
             dt = datetime.strptime(raw.strip(), fmt)
             return dt.strftime("%Y-%m-%d"), dt.strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -47,8 +46,12 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
 
 
 _STRICT_DATE_FORMATS = (
-    "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d",
-    "%d.%m.%Y", "%d %B %Y", "%B %d, %Y",
+    "%Y-%m-%dT%H:%M:%S%z",
+    "%Y-%m-%dT%H:%M:%S",
+    "%Y-%m-%d",
+    "%d.%m.%Y",
+    "%d %B %Y",
+    "%B %d, %Y",
 )
 
 
@@ -78,8 +81,12 @@ def _extract_article_date(soup) -> str | None:
         date = _strict_date(tag.get("datetime") or tag.get_text(strip=True))
         if date:
             return date
-    for attrs in ({"name": "date"}, {"itemprop": "datePublished"},
-                  {"property": "article:published_time"}, {"name": "DC.date.issued"}):
+    for attrs in (
+        {"name": "date"},
+        {"itemprop": "datePublished"},
+        {"property": "article:published_time"},
+        {"name": "DC.date.issued"},
+    ):
         meta = soup.find("meta", attrs=attrs)
         if meta:
             date = _strict_date(meta.get("content"))
@@ -126,8 +133,10 @@ def _extract_article_title(soup, body_text: str = "") -> str | None:
     tag = soup.find("title")
     if tag:
         # Strip the " - Federal Foreign Office" style site suffix
-        raw = re.split(r"\s*[|–—-]\s*(?:Federal Foreign Office|German Federal Foreign Office|Auswärtiges Amt)\s*$",
-                       tag.get_text(" ", strip=True))[0]
+        raw = re.split(
+            r"\s*[|–—-]\s*(?:Federal Foreign Office|German Federal Foreign Office|Auswärtiges Amt)\s*$",
+            tag.get_text(" ", strip=True),
+        )[0]
         title = _usable_title(raw)
         if title:
             return title
@@ -183,8 +192,9 @@ class GermanMFAIngester(BaseIngester):
             if not article:
                 article = soup.find("article") or soup.find("main")
             if article:
-                paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                              if len(p.get_text(strip=True)) > 40]
+                paragraphs = [
+                    p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+                ]
                 if paragraphs:
                     return " ".join(paragraphs)
         except Exception:
@@ -224,14 +234,19 @@ class GermanMFAIngester(BaseIngester):
         entry links point at auswaertiges-amt.de, which keeps old articles up —
         only the listing/feed window moves)."""
         try:
-            r = requests.get(WAYBACK_CDX_URL, params={
-                "url": RSS_URL,
-                "from": self.since.replace("-", ""),
-                "output": "json",
-                "fl": "timestamp",
-                "filter": "statuscode:200",
-                "collapse": "timestamp:8",   # at most one snapshot per day
-            }, timeout=30, headers=_HEADERS)
+            r = requests.get(
+                WAYBACK_CDX_URL,
+                params={
+                    "url": RSS_URL,
+                    "from": self.since.replace("-", ""),
+                    "output": "json",
+                    "fl": "timestamp",
+                    "filter": "statuscode:200",
+                    "collapse": "timestamp:8",  # at most one snapshot per day
+                },
+                timeout=30,
+                headers=_HEADERS,
+            )
             r.raise_for_status()
             rows = r.json()
         except Exception as exc:
@@ -266,8 +281,12 @@ class GermanMFAIngester(BaseIngester):
                 # Skip the body fetch for events already on disk — every snapshot
                 # overlaps heavily with the previous one and with prior runs.
                 probe = Event(
-                    source_name=SOURCE_NAME, title=title, text="", source_url=url,
-                    source_lang=self.source_lang, source_published_at=published_at,
+                    source_name=SOURCE_NAME,
+                    title=title,
+                    text="",
+                    source_url=url,
+                    source_lang=self.source_lang,
+                    source_published_at=published_at,
                     date=date,
                 )
                 if probe.output_path().exists():
@@ -288,14 +307,19 @@ class GermanMFAIngester(BaseIngester):
         # over a minute or fail transiently — be patient and retry.
         for attempt in range(3):
             try:
-                r = requests.get(WAYBACK_CDX_URL, params={
-                    "url": f"{BASE_URL}/en/newsroom/news/*",
-                    "from": self.since.replace("-", ""),
-                    "output": "json",
-                    "fl": "original",
-                    "collapse": "urlkey",
-                    "limit": "5000",
-                }, timeout=180, headers=_HEADERS)
+                r = requests.get(
+                    WAYBACK_CDX_URL,
+                    params={
+                        "url": f"{BASE_URL}/en/newsroom/news/*",
+                        "from": self.since.replace("-", ""),
+                        "output": "json",
+                        "fl": "original",
+                        "collapse": "urlkey",
+                        "limit": "5000",
+                    },
+                    timeout=180,
+                    headers=_HEADERS,
+                )
                 r.raise_for_status()
                 rows = r.json()
                 break
@@ -356,8 +380,11 @@ class GermanMFAIngester(BaseIngester):
             article = soup.find(class_=re.compile(r"c-article__body|c-richtext|article-content"))
             if not article:
                 article = soup.find("article") or soup.find("main")
-            paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                          if len(p.get_text(strip=True)) > 40] if article else []
+            paragraphs = (
+                [p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40]
+                if article
+                else []
+            )
             text = " ".join(paragraphs)
 
             title = _extract_article_title(soup, text)
@@ -365,8 +392,12 @@ class GermanMFAIngester(BaseIngester):
                 continue
 
             probe = Event(
-                source_name=SOURCE_NAME, title=title, text=text, source_url=url,
-                source_lang=self.source_lang, source_published_at=published_at,
+                source_name=SOURCE_NAME,
+                title=title,
+                text=text,
+                source_url=url,
+                source_lang=self.source_lang,
+                source_published_at=published_at,
                 date=date,
             )
             if probe.output_path().exists():
