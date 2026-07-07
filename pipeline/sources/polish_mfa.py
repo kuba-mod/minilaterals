@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
-from typing import Iterator
-from urllib.parse import urljoin
-
 import time
+from collections.abc import Iterator
+from datetime import UTC, datetime
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -21,7 +20,7 @@ _HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"
 
 def _parse_date(raw: str | None) -> tuple[str, str]:
     if not raw:
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
     for fmt in (
         "%d.%m.%Y",
@@ -35,7 +34,7 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
             return dt.strftime("%Y-%m-%d"), dt.strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 

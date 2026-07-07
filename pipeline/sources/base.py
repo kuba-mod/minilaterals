@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import re
 from abc import ABC, abstractmethod
+from collections.abc import Iterator
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from hashlib import sha256
 from pathlib import Path
-from typing import Iterator
 
 import yaml
 
@@ -40,9 +40,11 @@ COUNTRY_TERMS: dict[str, list[str]] = {
 ISSUE_AREAS: dict[str, list[str]] = {
     "ukraine":          [r"\bUkraine\b", r"\bKyiv\b", r"\bZelensky\b"],
     "defence":          [r"\bdefence\b", r"\bdefense\b", r"\bNATO\b", r"\bmilitary\b", r"\bsecurity\b"],
-    "hybrid":           [r"\bhybrid\b", r"\bdisinformation\b", r"\bcyber\b", r"\binterference\b", r"\binfluence operation\b"],
+    "hybrid":           [r"\bhybrid\b", r"\bdisinformation\b", r"\bcyber\b", r"\binterference\b",
+                          r"\binfluence operation\b"],
     "enlargement":      [r"\benlargement\b", r"\baccession\b", r"\bcandidate\b", r"\bWestern Balkans\b"],
-    "green_transition": [r"\bClean Industrial Deal\b", r"\bclimate\b", r"\bgreen transition\b", r"\bnet.?zero\b", r"\brenewable\b"],
+    "green_transition": [r"\bClean Industrial Deal\b", r"\bclimate\b", r"\bgreen transition\b",
+                          r"\bnet.?zero\b", r"\brenewable\b"],
     "rule_of_law":      [r"\brule of law\b", r"\bdemocratic\b", r"\bdemocracy\b", r"\bjudiciary\b"],
 }
 
@@ -78,7 +80,7 @@ class Event:
     weimar_score: float = 0.0
     extracted: dict | None = None
 
-    def classify(self) -> "Event":
+    def classify(self) -> Event:
         """Set actors, issue_areas, weimar_relevant, trilateral_signal, weimar_score."""
         text = f"{self.title} {self.text}"
 
@@ -132,7 +134,7 @@ class Event:
             "source_url": self.source_url,
             "source_lang": self.source_lang,
             "source_published_at": self.source_published_at,
-            "ingested_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "ingested_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
         path.write_text(yaml.dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
         return True

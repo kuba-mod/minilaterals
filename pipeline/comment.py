@@ -216,12 +216,12 @@ def main() -> None:
     args = parser.parse_args()
 
     from pipeline.render import (
-        load_events,
         build_convergence_clusters,
-        score_cluster_convergence,
         load_embeddings,
+        load_events,
         load_goal_embeddings,
         load_position_embeddings,
+        score_cluster_convergence,
     )
 
     events = load_events(weimar_only=True)
