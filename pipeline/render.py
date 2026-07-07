@@ -920,6 +920,41 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
 
 
 # ---------------------------------------------------------------------------
+# Static shareability assets
+# ---------------------------------------------------------------------------
+
+FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="12" fill="#1c1812"/>
+<circle cx="32" cy="32" r="3" fill="#f4ecdb"/>
+<path d="M32 12 L32 21" stroke="#9a6a1f" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M13 45 L21 40" stroke="#1f4279" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M51 45 L43 40" stroke="#b22823" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
+"""
+
+OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f4ecdb"/>
+<rect x="0" y="0" width="1200" height="8" fill="#1f4279"/>
+<rect x="400" y="0" width="400" height="8" fill="#c8a648"/>
+<rect x="800" y="0" width="400" height="8" fill="#b22823"/>
+<text x="80" y="220" font-family="Georgia, serif" font-size="72" fill="#1c1812">The Weimar</text>
+<text x="80" y="310" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">Triangle</text>
+<text x="80" y="380" font-family="Georgia, serif" font-size="30" fill="#3f372b">
+  Are France, Germany and Poland pulling
+</text>
+<text x="80" y="420" font-family="Georgia, serif" font-size="30" fill="#3f372b">
+  in the same direction?
+</text>
+<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">weimar-triangle · a coordination tracker</text>
+</svg>
+"""
+
+ROBOTS_TXT = """User-agent: *
+Allow: /
+"""
+
+
+# ---------------------------------------------------------------------------
 # Render
 # ---------------------------------------------------------------------------
 
@@ -927,6 +962,9 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
+    (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
+    (out / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
+    (out / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
 
     edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
