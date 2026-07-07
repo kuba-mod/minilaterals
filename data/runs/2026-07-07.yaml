@@ -1,23 +1,23 @@
 date: '2026-07-07'
-run_at: '2026-07-07T00:23:06Z'
+run_at: '2026-07-07T00:36:48Z'
 sources:
 - source: german_mfa
   fetched: 20
-  new: 1
-  skipped: 19
+  new: 0
+  skipped: 20
   error: null
 - source: france_diplomatie
   fetched: 60
-  new: 43
-  skipped: 17
+  new: 0
+  skipped: 60
   error: null
 - source: polish_mfa
   fetched: 69
-  new: 44
-  skipped: 25
+  new: 0
+  skipped: 69
   error: null
 totals:
   fetched: 149
-  new: 88
-  skipped: 61
+  new: 0
+  skipped: 149
   errors: 0
