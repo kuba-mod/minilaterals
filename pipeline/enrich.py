@@ -135,6 +135,9 @@ SOURCE_LABELS = {
     "german_mfa": "Germany",
     "france_diplomatie": "France",
     "polish_mfa": "Poland",
+    "german_chancellery": "Germany",
+    "elysee": "France",
+    "polish_pm": "Poland",
 }
 
 
