@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import time
 from datetime import datetime, timezone
@@ -43,6 +44,63 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
             continue
     now = datetime.now(timezone.utc)
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+_STRICT_DATE_FORMATS = (
+    "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d",
+    "%d.%m.%Y", "%d %B %Y", "%B %d, %Y",
+)
+
+
+def _strict_date(raw: str | None) -> str | None:
+    """Parse to 'YYYY-MM-DD' or return None — unlike _parse_date, never falls
+    back to today, because a guessed date files an article in the wrong week."""
+    if not raw:
+        return None
+    raw = raw.strip()
+    for fmt in _STRICT_DATE_FORMATS:
+        try:
+            dt = datetime.strptime(raw, fmt)
+        except ValueError:
+            continue
+        date = dt.strftime("%Y-%m-%d")
+        # Reject obviously wrong parses (far future / pre-web past).
+        if "1995-01-01" < date <= datetime.now(timezone.utc).strftime("%Y-%m-%d"):
+            return date
+    return None
+
+
+def _extract_article_date(soup) -> str | None:
+    """Publication date from an article page, trying progressively looser
+    sources; returns 'YYYY-MM-DD' or None."""
+    tag = soup.find("time")
+    if tag:
+        date = _strict_date(tag.get("datetime") or tag.get_text(strip=True))
+        if date:
+            return date
+    for attrs in ({"name": "date"}, {"itemprop": "datePublished"},
+                  {"property": "article:published_time"}, {"name": "DC.date.issued"}):
+        meta = soup.find("meta", attrs=attrs)
+        if meta:
+            date = _strict_date(meta.get("content"))
+            if date:
+                return date
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            data = json.loads(script.string or "")
+        except ValueError:
+            continue
+        for obj in data if isinstance(data, list) else [data]:
+            if isinstance(obj, dict):
+                date = _strict_date(str(obj.get("datePublished", ""))[:19].rstrip("Z") or None)
+                if date:
+                    return date
+    # Last resort: a dd.mm.yyyy date printed near the top of the page
+    # (the site renders e.g. "04.07.2026 - Press release" in the header).
+    m = re.search(r"\b(\d{2}\.\d{2}\.\d{4})\b", soup.get_text(" ", strip=True)[:2000])
+    if m:
+        return _strict_date(m.group(1))
+    return None
 
 
 class GermanMFAIngester(BaseIngester):
@@ -195,7 +253,7 @@ class GermanMFAIngester(BaseIngester):
                     "output": "json",
                     "fl": "original",
                     "collapse": "urlkey",
-                    "limit": "1000",
+                    "limit": "5000",
                 }, timeout=180, headers=_HEADERS)
                 r.raise_for_status()
                 rows = r.json()
@@ -219,6 +277,18 @@ class GermanMFAIngester(BaseIngester):
             except Exception:
                 continue
 
+        # The trailing number in an article URL is a monotonically growing CMS
+        # content id, so descending id order = newest first. The capture window
+        # (`from`) filters on crawl date, not publication date — periodic deep
+        # crawls pull in decades-old articles — so process newest ids first and
+        # cap the fetches rather than trawling the whole list.
+        def content_id(u: str) -> int:
+            m = re.search(r"(\d+)/?$", u)
+            return int(m.group(1)) if m else 0
+
+        urls = sorted(urls, key=content_id, reverse=True)[:400]
+
+        dateless = 0
         for url in urls:
             url = url.split("?")[0].replace("http://", "https://")
             if url in seen_urls or url.rstrip("/") == f"{BASE_URL}/en/newsroom/news":
@@ -232,17 +302,13 @@ class GermanMFAIngester(BaseIngester):
             time.sleep(0.5)
             soup = BeautifulSoup(r.text, "lxml")
 
-            date_tag = soup.find("time")
-            raw_date = (date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
-            if not raw_date:
-                meta = soup.find("meta", attrs={"name": "date"}) or soup.find(attrs={"itemprop": "datePublished"})
-                raw_date = meta.get("content") or meta.get("datetime") if meta else None
-            if not raw_date:
+            date = _extract_article_date(soup)
+            if date is None:
                 # A press release without a recoverable date is worse than a skip —
                 # it would land in the wrong week on the timeline.
-                print(f"[{SOURCE_NAME}] wayback article without date, skipping: {url}")
+                dateless += 1
                 continue
-            date, published_at = _parse_date(raw_date)
+            published_at = date + "T00:00:00Z"
             if date < self.since:
                 continue
 
@@ -265,6 +331,8 @@ class GermanMFAIngester(BaseIngester):
                           if len(p.get_text(strip=True)) > 40] if article else []
             probe.text = " ".join(paragraphs)
             yield probe.classify()
+        if dateless:
+            print(f"[{SOURCE_NAME}] wayback: skipped {dateless} articles without a recoverable date")
 
     def _fetch_html_paginated(self) -> Iterator[Event]:
         # The news listing may be JS-rendered; pagination is attempted but may yield
