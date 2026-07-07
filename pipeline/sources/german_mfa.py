@@ -184,19 +184,26 @@ class GermanMFAIngester(BaseIngester):
         path since `since`, and ingest them from the live site. Complements the
         feed-snapshot replay: individual articles get crawled (e.g. via links
         from other sites) even when the feed URL itself is never captured."""
-        try:
-            r = requests.get(WAYBACK_CDX_URL, params={
-                "url": f"{BASE_URL}/en/newsroom/news/*",
-                "from": self.since.replace("-", ""),
-                "output": "json",
-                "fl": "original",
-                "collapse": "urlkey",
-                "limit": "1000",
-            }, timeout=30, headers=_HEADERS)
-            r.raise_for_status()
-            rows = r.json()
-        except Exception as exc:
-            print(f"[{SOURCE_NAME}] wayback article CDX error: {exc}")
+        rows = None
+        # Prefix queries scan a large slice of the CDX index and routinely take
+        # over a minute or fail transiently — be patient and retry.
+        for attempt in range(3):
+            try:
+                r = requests.get(WAYBACK_CDX_URL, params={
+                    "url": f"{BASE_URL}/en/newsroom/news/*",
+                    "from": self.since.replace("-", ""),
+                    "output": "json",
+                    "fl": "original",
+                    "collapse": "urlkey",
+                    "limit": "1000",
+                }, timeout=180, headers=_HEADERS)
+                r.raise_for_status()
+                rows = r.json()
+                break
+            except Exception as exc:
+                print(f"[{SOURCE_NAME}] wayback article CDX error (attempt {attempt + 1}/3): {exc}")
+                time.sleep(15)
+        if rows is None:
             return
         urls = [row[0] for row in rows[1:]]  # row 0 is the header
         print(f"[{SOURCE_NAME}] wayback: {len(urls)} captured article URLs since {self.since}")
