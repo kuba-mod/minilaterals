@@ -8,7 +8,7 @@
 {% if stale_days is not none and stale_days > 5 %}
 <div style="border:1px solid #8a632044; background:#8a632014; border-radius:8px; padding:12px 16px; margin-bottom:24px; font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:#8a6320">
   <strong>Data may be stale.</strong> The most recent tracked statement is from {{ latest_event_date }}
-  ({{ stale_days }} days ago) — the ingest pipeline may not be running.
+  ({{ stale_days }} days before this edition's cutoff) — the ingest pipeline may not be running.
   See <a href="{{ base_path }}/sources/" style="color:inherit">source status</a>.
 </div>
 {% endif %}

@@ -8,6 +8,14 @@ and renders HTML pages to docs/ (or --output DIR).
 Usage:
     python -m pipeline.render               # renders to docs/
     python -m pipeline.render --output /tmp/test
+    python -m pipeline.render --as-of 2026-06-24   # render a past edition
+
+The site is rendered "as of" an edition cutoff date: events dated after it are
+excluded and all rolling windows anchor to it. The cutoff comes from --as-of,
+else data/edition.yaml (written by the weekly CI edition cut), else today.
+This makes rendering a pure function of (templates, data, cutoff), so a
+layout-only merge redeploys the same frozen edition instead of leaking data
+ingested since the last cut.
 """
 from __future__ import annotations
 
@@ -35,6 +43,21 @@ ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
 TEMPLATES_DIR = ROOT / "pipeline" / "templates"
+EDITION_FILE = ROOT / "data" / "edition.yaml"
+
+
+def resolve_edition_date(as_of: str | None = None) -> datetime:
+    """
+    The date the site is rendered "as of". Resolution: --as-of flag →
+    data/edition.yaml cutoff → today (dev fallback).
+    """
+    if as_of is None and EDITION_FILE.exists():
+        loaded = yaml.safe_load(EDITION_FILE.read_text(encoding="utf-8")) or {}
+        cutoff = loaded.get("cutoff")
+        as_of = str(cutoff) if cutoff else None
+    if as_of:
+        return datetime.strptime(as_of, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc)
 
 SOURCE_ACTOR = {
     "german_mfa": "DE",
@@ -426,7 +449,8 @@ def _allpairs_median_score(
 
 
 def compute_weekly_alignment(
-    events: list[dict], emb_store: dict, pos_emb_store: dict | None = None, window_days: int = 14
+    events: list[dict], emb_store: dict, pos_emb_store: dict | None = None,
+    window_days: int = 14, today: datetime | None = None,
 ) -> list[dict | None]:
     """
     Rolling window_days alignment score, one entry per calendar week (oldest first).
@@ -473,7 +497,7 @@ def compute_weekly_alignment(
         return []
 
     earliest = min(d for d, _, _ in embedded)
-    today = datetime.now(timezone.utc).date()
+    today = (today or datetime.now(timezone.utc)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
     anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
 
@@ -529,9 +553,11 @@ def compute_weekly_alignment(
     return results
 
 
-def compute_latest_heatmap(clusters: list[dict], days: int = 7) -> dict[str, dict | None]:
+def compute_latest_heatmap(
+    clusters: list[dict], days: int = 7, today: datetime | None = None
+) -> dict[str, dict | None]:
     """Per-topic convergence for the most recent scored cluster within the last `days` days."""
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
+    cutoff = ((today or datetime.now(timezone.utc)) - timedelta(days=days)).strftime("%Y-%m-%d")
     result: dict[str, dict | None] = {area: None for area in ISSUE_ORDER}
     for cluster in clusters:
         area = cluster["area"]
@@ -547,7 +573,7 @@ def compute_latest_heatmap(clusters: list[dict], days: int = 7) -> dict[str, dic
 
 
 def compute_topic_weekly_stances(
-    events: list[dict], window_days: int = 14
+    events: list[dict], window_days: int = 14, today: datetime | None = None
 ) -> dict[str, list[dict | None]]:
     """
     Stance-based weekly series per topic, plus an 'overall' series.
@@ -576,7 +602,7 @@ def compute_topic_weekly_stances(
         return {}
 
     earliest = min(d for d, _, _, _ in rows)
-    today = datetime.now(timezone.utc).date()
+    today = (today or datetime.now(timezone.utc)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
     anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
     all_weeks = []
@@ -897,10 +923,13 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
 # Render
 # ---------------------------------------------------------------------------
 
-def render(output_dir: str = "docs") -> None:
+def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
+
+    edition_dt = resolve_edition_date(as_of)
+    edition_cutoff = edition_dt.strftime("%Y-%m-%d")
 
     # Set when this site is deployed under a path prefix on the minilaterals.com
     # umbrella (e.g. "/weimar-triangle") rather than at the domain root.
@@ -918,11 +947,14 @@ def render(output_dir: str = "docs") -> None:
         "era_labels": ERA_LABELS,
         "type_colors": TYPE_COLORS,
         "now": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+        "edition_date_str": edition_dt.strftime("%A %-d %b"),
         "base_path": base_path,
     })
 
-    events = load_events(weimar_only=True)
-    all_events = load_events(weimar_only=False)
+    # Events after the edition cutoff exist in data/ but are not published yet —
+    # they belong to the next edition.
+    events = [e for e in load_events(weimar_only=True) if (e.get("date") or "") <= edition_cutoff]
+    all_events = [e for e in load_events(weimar_only=False) if (e.get("date") or "") <= edition_cutoff]
     meetings = _load_yaml(ROOT / "data" / "meetings.yaml") or []
     milestones = _load_yaml(ROOT / "data" / "milestones.yaml") or []
     annual = _load_yaml(ROOT / "data" / "annual.yaml") or []
@@ -941,8 +973,8 @@ def render(output_dir: str = "docs") -> None:
         )
         cluster["commentary"] = commentary.get(cluster_key(cluster))
 
-    weekly_alignment = compute_weekly_alignment(events, emb_store, pos_emb_store)
-    topic_weekly = compute_topic_weekly_stances(events)
+    weekly_alignment = compute_weekly_alignment(events, emb_store, pos_emb_store, today=edition_dt)
+    topic_weekly = compute_topic_weekly_stances(events, today=edition_dt)
     stance_overall = topic_weekly.get("overall") or []
     # Use the stance series only once it has enough scored weeks to draw a line;
     # otherwise fall back to the embedding-based series (partial-backfill state).
@@ -965,7 +997,7 @@ def render(output_dir: str = "docs") -> None:
     })
     # Pill state per topic: latest scored week of the stance series (survives
     # quiet weeks, unlike the old 7-day heatmap); cosine heatmap as fallback.
-    heatmap = compute_latest_heatmap(clusters)
+    heatmap = compute_latest_heatmap(clusters, today=edition_dt)
     for area in ISSUE_ORDER:
         series = topic_weekly.get(area) or []
         latest = next((w for w in reversed(series) if w is not None), None)
@@ -977,12 +1009,12 @@ def render(output_dir: str = "docs") -> None:
                 "display": latest["display"],
             }
 
-    # Recent events: last 90 days
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=90)).strftime("%Y-%m-%d")
+    # Recent events: last 90 days before the edition cutoff
+    cutoff = (edition_dt - timedelta(days=90)).strftime("%Y-%m-%d")
     recent_events = [e for e in events if (e.get("date") or "") >= cutoff]
 
     # Per-country stats for country cards and country pages
-    cutoff_7 = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    cutoff_7 = (edition_dt - timedelta(days=7)).strftime("%Y-%m-%d")
     weekly_counts: dict[str, int] = {a: 0 for a in WEIMAR_ACTORS}
     for e in events:
         if (e.get("date") or "") >= cutoff_7:
@@ -995,7 +1027,7 @@ def render(output_dir: str = "docs") -> None:
     # pair score = mean across shared topics. Falls back to embedding medians
     # when no stance data exists.
     pair_scores: dict[str, int] = {}
-    cutoff_14 = (datetime.now(timezone.utc) - timedelta(days=14)).strftime("%Y-%m-%d")
+    cutoff_14 = (edition_dt - timedelta(days=14)).strftime("%Y-%m-%d")
     actor_topic_scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in WEIMAR_ACTORS}
     for e in events:
         actor = SOURCE_ACTOR.get(e.get("source_name", ""))
@@ -1041,8 +1073,8 @@ def render(output_dir: str = "docs") -> None:
         for actor in WEIMAR_ACTORS
     }
 
-    # Continue-card date range
-    today_utc = datetime.now(timezone.utc)
+    # Continue-card date range, anchored to the edition cutoff
+    today_utc = edition_dt
     coverage_from = (today_utc - timedelta(days=14)).strftime("%-d %b")
     coverage_to = today_utc.strftime("%-d %b")
     weekday = today_utc.weekday()
@@ -1141,8 +1173,12 @@ def render(output_dir: str = "docs") -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Weimar tracker renderer")
     parser.add_argument("--output", default="docs", help="Output directory (default: docs)")
+    parser.add_argument(
+        "--as-of", default=None, metavar="YYYY-MM-DD",
+        help="Edition cutoff override (default: data/edition.yaml, else today)",
+    )
     args = parser.parse_args()
-    render(args.output)
+    render(args.output, as_of=args.as_of)
 
 
 if __name__ == "__main__":
