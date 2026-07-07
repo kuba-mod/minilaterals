@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Mr Wadephul
+  - Chancellor
+  - Marco Rubio
+  topics:
+  - defence
+  location: null
+  position: Germany is prioritizing national security and economic interests, focusing
+    on strengthening defense capabilities and the US partnership.
+  positions:
+    defence: Germany is actively increasing its defense spending to 5% of GDP to enhance
+      deterrence and European security responsibility.
+  stances:
+    defence:
+      score: 2
+      evidence: With defence spending of five percent of GDP, which I firmly supported,
+        we are now finally putting this goal into practice.

@@ -1,0 +1,25 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is expanding its global cultural presence through joint institutes
+    with France to promote democratic values and intercultural dialogue.
+  positions:
+    rule_of_law: Germany actively advances democratic resilience and European unity
+      by establishing joint cultural institutes that promote humanistic values and
+      openness.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'three Franco-German cultural institutes have already been opened:
+        in Palermo in 2021 and in Ramallah and Atlanta in 2022.'
