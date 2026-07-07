@@ -8,6 +8,7 @@ Usage:
     python -m pipeline.ingest --dry-run           # fetch and classify, don't write files
     python -m pipeline.ingest --weimar-only       # print only Weimar-relevant new items
 """
+
 from __future__ import annotations
 
 import argparse
@@ -36,8 +37,7 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
             if dry_run:
                 label = "WEIMAR" if event.weimar_relevant else "     ·"
                 print(
-                    f"  {label} {event.date} score={event.weimar_score:.2f} "
-                    f"actors={event.actors} | {event.title[:80]}"
+                    f"  {label} {event.date} score={event.weimar_score:.2f} actors={event.actors} | {event.title[:80]}"
                 )
                 new += 1
             else:
@@ -78,12 +78,13 @@ def write_run_log(results: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Weimar tracker ingestion runner")
     parser.add_argument("--source", help="Run a single source by name")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Fetch and classify without writing files")
-    parser.add_argument("--weimar-only", action="store_true",
-                        help="Only print Weimar-relevant items (suppresses non-relevant output)")
-    parser.add_argument("--since", metavar="YYYY-MM-DD",
-                        help="Backfill: fetch events on or after this date (sources that support it)")
+    parser.add_argument("--dry-run", action="store_true", help="Fetch and classify without writing files")
+    parser.add_argument(
+        "--weimar-only", action="store_true", help="Only print Weimar-relevant items (suppresses non-relevant output)"
+    )
+    parser.add_argument(
+        "--since", metavar="YYYY-MM-DD", help="Backfill: fetch events on or after this date (sources that support it)"
+    )
     args = parser.parse_args()
 
     ingesters = [cls(since=args.since) for cls in ALL_INGESTERS]
@@ -100,8 +101,10 @@ def main() -> None:
     for ingester in ingesters:
         print(f"── {ingester.source_name}")
         r = run_ingester(ingester, dry_run=args.dry_run)
-        print(f"   fetched={r['fetched']}  new={r['new']}  skipped={r['skipped']}"
-              + (f"  ERROR: {r['error']}" if r["error"] else ""))
+        print(
+            f"   fetched={r['fetched']}  new={r['new']}  skipped={r['skipped']}"
+            + (f"  ERROR: {r['error']}" if r["error"] else "")
+        )
         results.append(r)
 
     totals_fetched = sum(r["fetched"] for r in results)

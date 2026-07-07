@@ -25,6 +25,7 @@ Usage:
     python -m pipeline.enrich --limit 10    # process at most 10 items
     python -m pipeline.enrich --dry-run     # print what would be extracted, no writes
 """
+
 from __future__ import annotations
 
 import argparse
@@ -136,11 +137,13 @@ SOURCE_LABELS = {
 # Provider implementations — both expose the same call(prompt) -> str interface
 # ---------------------------------------------------------------------------
 
+
 class OllamaProvider:
     def __init__(self, host: str, model: str, api_key: str = "ollama"):
         self.host = host.rstrip("/")
         self.model = model
         from openai import OpenAI
+
         # api_key is a placeholder for local Ollama; set OLLAMA_API_KEY for
         # Ollama Cloud (OLLAMA_HOST=https://ollama.com) — same model, same
         # ratings as the local setup.
@@ -167,6 +170,7 @@ class OllamaProvider:
 class AnthropicProvider:
     def __init__(self, api_key: str, model: str):
         import anthropic
+
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         print(f"Provider: Anthropic  model={self.model}")
@@ -184,6 +188,7 @@ class AnthropicProvider:
 # ---------------------------------------------------------------------------
 # Core logic
 # ---------------------------------------------------------------------------
+
 
 def _load_env() -> None:
     """Load .env file into os.environ (simple key=value only)."""
@@ -302,10 +307,7 @@ def _extract(provider, raw_path: Path) -> bool:
     source_name = data.get("source_name", "unknown")
     source_label = SOURCE_LABELS.get(source_name, source_name)
 
-    goals_block = "\n".join(
-        f"- {topic}: {text.strip()}"
-        for topic, text in WEIMAR_GOALS.items()
-    )
+    goals_block = "\n".join(f"- {topic}: {text.strip()}" for topic, text in WEIMAR_GOALS.items())
     prompt = EXTRACTION_PROMPT.format(
         source=source_label,
         title=data.get("title", "")[:300],
@@ -429,9 +431,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_label = SOURCE_LABELS.get(data.get("source_name", ""), "unknown")
 
-    goals_block = "\n".join(
-        f"- {t}: {WEIMAR_GOALS[t].strip()}" for t in topics
-    )
+    goals_block = "\n".join(f"- {t}: {WEIMAR_GOALS[t].strip()}" for t in topics)
     prompt = STANCE_BACKFILL_PROMPT.format(
         source=source_label,
         title=data.get("title", "")[:300],
@@ -491,7 +491,8 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="Max items to process")
     parser.add_argument("--dry-run", action="store_true", help="Print without calling API")
     parser.add_argument(
-        "--stances-only", action="store_true",
+        "--stances-only",
+        action="store_true",
         help="Backfill stance ratings for already-enriched events that lack them",
     )
     args = parser.parse_args()

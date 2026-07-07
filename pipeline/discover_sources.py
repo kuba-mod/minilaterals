@@ -11,6 +11,7 @@ It will:
   2. Fetch the press release listing page and extract RSS autodiscovery links
   3. Print enough of the HTML structure to fix the CSS selectors in the scrapers
 """
+
 from __future__ import annotations
 
 import re
@@ -108,9 +109,9 @@ def print_article_structure(soup: BeautifulSoup, max_items: int = 3) -> None:
     if not candidates:
         # Broader fallback: any element with 'article' or 'press' in class names
         candidates = [
-            el for el in soup.find_all(True)
-            if any(re.search(r"article|press|news|release|item", c, re.I)
-                   for c in el.get("class", []))
+            el
+            for el in soup.find_all(True)
+            if any(re.search(r"article|press|news|release|item", c, re.I) for c in el.get("class", []))
         ][:10]
 
     if not candidates:

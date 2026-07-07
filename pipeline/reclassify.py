@@ -22,6 +22,7 @@ Usage:
     python -m pipeline.reclassify --from-extracted   # sync issue_areas from LLM topics
     python -m pipeline.reclassify --from-extracted --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -136,8 +137,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Re-classify all event YAML files")
     parser.add_argument("--dry-run", action="store_true", help="Show changes without writing")
     parser.add_argument("--source", help="Limit to a single source name")
-    parser.add_argument("--from-extracted", action="store_true",
-                        help="Sync issue_areas from extracted.topics (LLM topics) instead of re-running classify()")
+    parser.add_argument(
+        "--from-extracted",
+        action="store_true",
+        help="Sync issue_areas from extracted.topics (LLM topics) instead of re-running classify()",
+    )
     args = parser.parse_args()
 
     if args.source:

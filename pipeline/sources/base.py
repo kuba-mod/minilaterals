@@ -23,29 +23,51 @@ WEIMAR_EXPLICIT = [
 
 COUNTRY_TERMS: dict[str, list[str]] = {
     "DE": [
-        r"\bGerman[y]?\b", r"\bBerlin\b", r"\bScholz\b", r"\bMerz\b",
-        r"\bBaerbock\b", r"\bWadephul\b", r"\bSteinmeier\b", r"\bAllemagne\b",
+        r"\bGerman[y]?\b",
+        r"\bBerlin\b",
+        r"\bScholz\b",
+        r"\bMerz\b",
+        r"\bBaerbock\b",
+        r"\bWadephul\b",
+        r"\bSteinmeier\b",
+        r"\bAllemagne\b",
         r"\bDeutschland\b",
     ],
     "FR": [
-        r"\bFrance\b", r"\bFrench\b", r"\bParis\b", r"\bMacron\b",
-        r"\bBarrot\b", r"\bSéjourné\b", r"\bfrançais\b", r"\bFrankreich\b",
+        r"\bFrance\b",
+        r"\bFrench\b",
+        r"\bParis\b",
+        r"\bMacron\b",
+        r"\bBarrot\b",
+        r"\bSéjourné\b",
+        r"\bfrançais\b",
+        r"\bFrankreich\b",
     ],
     "PL": [
-        r"\bPoland\b", r"\bPolish\b", r"\bWarsaw\b", r"\bTusk\b",
-        r"\bSikorski\b", r"\bDuda\b", r"\bPolen\b", r"\bPologne\b",
+        r"\bPoland\b",
+        r"\bPolish\b",
+        r"\bWarsaw\b",
+        r"\bTusk\b",
+        r"\bSikorski\b",
+        r"\bDuda\b",
+        r"\bPolen\b",
+        r"\bPologne\b",
     ],
 }
 
 ISSUE_AREAS: dict[str, list[str]] = {
-    "ukraine":          [r"\bUkraine\b", r"\bKyiv\b", r"\bZelensky\b"],
-    "defence":          [r"\bdefence\b", r"\bdefense\b", r"\bNATO\b", r"\bmilitary\b", r"\bsecurity\b"],
-    "hybrid":           [r"\bhybrid\b", r"\bdisinformation\b", r"\bcyber\b", r"\binterference\b",
-                          r"\binfluence operation\b"],
-    "enlargement":      [r"\benlargement\b", r"\baccession\b", r"\bcandidate\b", r"\bWestern Balkans\b"],
-    "green_transition": [r"\bClean Industrial Deal\b", r"\bclimate\b", r"\bgreen transition\b",
-                          r"\bnet.?zero\b", r"\brenewable\b"],
-    "rule_of_law":      [r"\brule of law\b", r"\bdemocratic\b", r"\bdemocracy\b", r"\bjudiciary\b"],
+    "ukraine": [r"\bUkraine\b", r"\bKyiv\b", r"\bZelensky\b"],
+    "defence": [r"\bdefence\b", r"\bdefense\b", r"\bNATO\b", r"\bmilitary\b", r"\bsecurity\b"],
+    "hybrid": [r"\bhybrid\b", r"\bdisinformation\b", r"\bcyber\b", r"\binterference\b", r"\binfluence operation\b"],
+    "enlargement": [r"\benlargement\b", r"\baccession\b", r"\bcandidate\b", r"\bWestern Balkans\b"],
+    "green_transition": [
+        r"\bClean Industrial Deal\b",
+        r"\bclimate\b",
+        r"\bgreen transition\b",
+        r"\bnet.?zero\b",
+        r"\brenewable\b",
+    ],
+    "rule_of_law": [r"\brule of law\b", r"\bdemocratic\b", r"\bdemocracy\b", r"\bjudiciary\b"],
 }
 
 # Sources where the actor (DE/FR/PL) is known from the source itself.
@@ -63,6 +85,7 @@ def _match_any(patterns: list[str], text: str) -> bool:
 # Data model
 # ---------------------------------------------------------------------------
 
+
 @dataclass
 class Event:
     source_name: str
@@ -70,12 +93,12 @@ class Event:
     text: str
     source_url: str
     source_lang: str
-    source_published_at: str            # ISO 8601 datetime string
+    source_published_at: str  # ISO 8601 datetime string
     type: str = "press_release"
-    date: str = ""                      # ISO date "YYYY-MM-DD"
+    date: str = ""  # ISO date "YYYY-MM-DD"
     actors: list[str] = field(default_factory=list)
     issue_areas: list[str] = field(default_factory=list)
-    weimar_relevant: bool = False    # any MFA item on a tracked issue area, or multilateral
+    weimar_relevant: bool = False  # any MFA item on a tracked issue area, or multilateral
     trilateral_signal: bool = False  # explicit Weimar/trilateral mention or all 3 actors present
     weimar_score: float = 0.0
     extracted: dict | None = None
@@ -98,7 +121,7 @@ class Event:
         self.weimar_relevant = (
             self.trilateral_signal
             or (len(actors) >= 2 and bool(issues))
-            or (from_mfa and bool(issues))   # single-country MFA item on a tracked topic
+            or (from_mfa and bool(issues))  # single-country MFA item on a tracked topic
         )
 
         score = 0.0
@@ -161,6 +184,7 @@ class Event:
 # ---------------------------------------------------------------------------
 # Base ingester
 # ---------------------------------------------------------------------------
+
 
 class BaseIngester(ABC):
     source_name: str = ""

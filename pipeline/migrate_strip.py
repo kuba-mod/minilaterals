@@ -13,6 +13,7 @@ Usage:
     python -m pipeline.migrate_strip --dry-run   # show what would change
     python -m pipeline.migrate_strip             # apply
 """
+
 from __future__ import annotations
 
 import argparse

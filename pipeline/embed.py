@@ -15,6 +15,7 @@ Usage:
     python -m pipeline.embed --recompute
     python -m pipeline.embed --dry-run
 """
+
 from __future__ import annotations
 
 import argparse
@@ -68,6 +69,7 @@ def embed_goals(recompute: bool = False) -> dict[str, list[float]]:
             return existing
     pending = [k for k in goals if k not in existing or recompute]
     from sentence_transformers import SentenceTransformer
+
     model = SentenceTransformer(MODEL_NAME)
     vectors = model.encode([goals[k] for k in pending], show_progress_bar=False, normalize_embeddings=True)
     for key, vec in zip(pending, vectors, strict=True):
@@ -123,6 +125,7 @@ def embed_positions(recompute: bool = False) -> dict[str, list[float]]:
 
     print(f"Embedding {len(pending)} per-topic positions …")
     from sentence_transformers import SentenceTransformer
+
     model = SentenceTransformer(MODEL_NAME)
     vectors = model.encode([t for _, t in pending], show_progress_bar=False, normalize_embeddings=True)
     for (key, _), vec in zip(pending, vectors, strict=True):
@@ -186,6 +189,7 @@ def main() -> None:
 
     print(f"Loading model {MODEL_NAME!r} …")
     from sentence_transformers import SentenceTransformer
+
     model = SentenceTransformer(MODEL_NAME)
 
     texts = [text for _, text in pending]
