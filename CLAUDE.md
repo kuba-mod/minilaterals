@@ -19,8 +19,9 @@ uv run python -m pipeline.ingest --source german_mfa --dry-run
 uv run python -m pipeline.enrich             # LLM position extraction
 uv run python -m pipeline.enrich --limit 5 --dry-run
 uv run python -m pipeline.embed              # sentence embeddings → data/embeddings.json
-uv run python -m pipeline.render             # Jinja2 → docs/
+uv run python -m pipeline.render             # Jinja2 → docs/ (as of data/edition.yaml cutoff)
 uv run python -m pipeline.render --output /tmp/test
+uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
 
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
@@ -38,7 +39,7 @@ Sources (RSS/HTML/API)
             → pipeline/render.py  Jinja2 + convergence scoring → docs/
 ```
 
-**CI:** `.github/workflows/ingest.yml` runs daily at 06:00 UTC: ingest → enrich → embed → render → `git-auto-commit-action` commits `data/**` and `docs/**` back to main.
+**CI:** `.github/workflows/ingest.yml` has three run modes. Daily cron at 06:00 UTC: ingest → enrich, commits `data/**` only (silent collection — the deployed site does not change). Tuesday cron (or `workflow_dispatch` with `cut_edition=true`): additionally bumps the cutoff in `data/edition.yaml` to today, generates commentary, renders, and commits `data/** docs/**` — the weekly edition cut. Push to main (e.g. a layout PR merges): render-only from the committed cutoff, commits `docs/**` — redeploys the same frozen edition with the new layout. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff).
 
 ## Key files
 
@@ -50,6 +51,7 @@ Sources (RSS/HTML/API)
 | `pipeline/embed.py` | Batch-encodes `extracted.position` with `all-MiniLM-L6-v2`; stores in `data/embeddings.json` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_convergence()`; renders 3 pages |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
+| `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |
 | `data/annual.yaml` | Activity scores 1991–2026 (drives the bar chart on `/meetings/`) |
 | `weimar-tracker.jsx` | Original React dashboard — reference only, not served |

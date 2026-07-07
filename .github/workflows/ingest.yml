@@ -1,15 +1,30 @@
-name: Daily pipeline
+name: Pipeline
+
+# Three run modes, all in this one workflow:
+#   1. Daily cron (not Tuesday) — silent data collection: ingest + enrich,
+#      commit data/** only. The site is not re-rendered, so nothing deploys.
+#   2. Tuesday cron, or manual dispatch with cut_edition=true — the weekly
+#      edition cut: ingest + enrich, bump data/edition.yaml to today, generate
+#      commentary, render, commit data/** and docs/**.
+#   3. Push to main (e.g. a layout PR merges) — re-render from the committed
+#      edition cutoff + data, commit docs/** only. Ingest/enrich are skipped,
+#      and because render.py excludes events after data/edition.yaml's cutoff,
+#      a layout merge redeploys the *same frozen edition* rather than leaking
+#      data ingested since the last cut.
+# The auto-commit uses GITHUB_TOKEN, which does not re-trigger this workflow,
+# so there is no commit loop.
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # 06:00 UTC every day
-  workflow_dispatch:        # allow manual trigger from GitHub UI
+    - cron: '0 6 * * *'   # 06:00 UTC every day; Tuesdays additionally cut the weekly edition
+  workflow_dispatch:        # manual trigger from GitHub UI
+    inputs:
+      cut_edition:
+        description: 'Cut a new edition (bump cutoff to today, render, deploy)'
+        type: boolean
+        default: false
   push:
-    branches: [main]        # rebuild + redeploy the site when a PR merges
-    # Ingest/enrich are skipped on push (see step `if:` guards) — a merge only
-    # re-renders from committed data + templates. The daily schedule does the
-    # full ingest. The auto-commit below uses GITHUB_TOKEN, which does not
-    # re-trigger this workflow, so there is no commit loop.
+    branches: [main]        # rebuild + redeploy the site (frozen edition) when a PR merges
 
 permissions:
   contents: write           # needed to commit data/ and docs/ back to main
@@ -38,6 +53,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Determine run mode
+        id: mode
+        # edition=true on the Tuesday schedule or an explicit dispatch — the
+        # only runs that move the published cutoff forward.
+        run: |
+          edition=false
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" = "2" ]; then
+            edition=true
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.cut_edition }}" = "true" ]; then
+            edition=true
+          fi
+          echo "edition=$edition" >> "$GITHUB_OUTPUT"
+          echo "today=$(date -u +%F)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v5
         with:
@@ -68,19 +97,36 @@ jobs:
         # stance block failed to parse on the first pass.
         continue-on-error: true
 
+      - name: Cut edition
+        # Move the published cutoff to today. Everything ingested up to now
+        # goes into this edition; later daily runs accumulate for the next one.
+        if: ${{ steps.mode.outputs.edition == 'true' }}
+        run: |
+          cat > data/edition.yaml <<EOF
+          # Edition cutoff: pipeline/render.py excludes events dated after this and
+          # anchors all rolling windows to it, so re-renders between edition cuts
+          # (e.g. layout-only merges) ship the same frozen data. Bumped by the weekly
+          # Tuesday CI run, or manually via workflow_dispatch with cut_edition=true.
+          cutoff: "${{ steps.mode.outputs.today }}"
+          EOF
+
       - name: Comment
-        if: ${{ github.event_name != 'push' }}
+        # Commentary is written once per edition so it matches the frozen data.
+        if: ${{ steps.mode.outputs.edition == 'true' }}
         run: uv run python -m pipeline.comment
         continue-on-error: true
 
       - name: Render
+        # Only edition cuts and merges touch docs/ — plain daily runs collect
+        # data silently and the deployed site stays on the current edition.
+        if: ${{ github.event_name == 'push' || steps.mode.outputs.edition == 'true' }}
         run: uv run python -m pipeline.render --output docs/weimar-triangle
 
       - name: Commit results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "${{ github.event_name == 'push' && 'site: rebuild on merge' || 'data: daily pipeline run' }}"
-          file_pattern: "data/** docs/**"
+          commit_message: "${{ github.event_name == 'push' && 'site: rebuild on merge' || (steps.mode.outputs.edition == 'true' && format('site: weekly edition {0}', steps.mode.outputs.today) || 'data: daily ingest') }}"
+          file_pattern: "${{ github.event_name == 'push' && 'docs/**' || (steps.mode.outputs.edition == 'true' && 'data/** docs/**' || 'data/**') }}"
           # Only commits if there are actual changes — no-op on a day with no new items.
 
       - name: Healthcheck ping
