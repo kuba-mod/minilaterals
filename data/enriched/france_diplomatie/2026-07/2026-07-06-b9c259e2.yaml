@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: France strongly condemns Russian strikes on Kyiv and reaffirms its long-term
+    support for Ukraine to achieve a just and lasting peace.
+  positions:
+    ukraine: France rhetorically supports the goal of long-term assistance for Ukraine
+      until a just peace is reached.
+  stances:
+    ukraine:
+      score: 1
+      evidence: France will continue to tirelessly support Ukraine until a just and
+        lasting peace is achieved.
