@@ -103,6 +103,47 @@ def _extract_article_date(soup) -> str | None:
     return None
 
 
+# Site-wide boilerplate that must not be mistaken for an article headline —
+# the global <h1> on auswaertiges-amt.de English pages is literally "Welcome".
+_BOILERPLATE_TITLES = {"welcome", "federal foreign office", "auswärtiges amt"}
+
+
+def _usable_title(candidate: str | None) -> str | None:
+    if not candidate:
+        return None
+    candidate = candidate.strip()
+    if not candidate or candidate.lower() in _BOILERPLATE_TITLES:
+        return None
+    return candidate
+
+
+def _extract_article_title(soup, body_text: str = "") -> str | None:
+    """Headline from an article page, skipping site-wide boilerplate."""
+    og = soup.find("meta", attrs={"property": "og:title"})
+    title = _usable_title(og.get("content") if og else None)
+    if title:
+        return title
+    tag = soup.find("title")
+    if tag:
+        # Strip the " - Federal Foreign Office" style site suffix
+        raw = re.split(r"\s*[|–—-]\s*(?:Federal Foreign Office|German Federal Foreign Office|Auswärtiges Amt)\s*$",
+                       tag.get_text(" ", strip=True))[0]
+        title = _usable_title(raw)
+        if title:
+            return title
+    scope = soup.find("article") or soup.find("main") or soup
+    for h in scope.find_all(["h1", "h2"], limit=5):
+        title = _usable_title(h.get_text(" ", strip=True))
+        if title:
+            return title
+    # Last resort: open with the first words of the body rather than dropping
+    # an otherwise fully recovered event.
+    words = body_text.split()
+    if len(words) >= 6:
+        return " ".join(words[:12]) + "…"
+    return None
+
+
 class GermanMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
     source_lang = "en"
@@ -312,24 +353,24 @@ class GermanMFAIngester(BaseIngester):
             if date < self.since:
                 continue
 
-            title_tag = soup.find("h1") or soup.find("title")
-            title = title_tag.get_text(" ", strip=True) if title_tag else ""
-            if not title:
-                continue
-
-            probe = Event(
-                source_name=SOURCE_NAME, title=title, text="", source_url=url,
-                source_lang=self.source_lang, source_published_at=published_at,
-                date=date,
-            )
-            if probe.output_path().exists():
-                continue
             article = soup.find(class_=re.compile(r"c-article__body|c-richtext|article-content"))
             if not article:
                 article = soup.find("article") or soup.find("main")
             paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
                           if len(p.get_text(strip=True)) > 40] if article else []
-            probe.text = " ".join(paragraphs)
+            text = " ".join(paragraphs)
+
+            title = _extract_article_title(soup, text)
+            if not title:
+                continue
+
+            probe = Event(
+                source_name=SOURCE_NAME, title=title, text=text, source_url=url,
+                source_lang=self.source_lang, source_published_at=published_at,
+                date=date,
+            )
+            if probe.output_path().exists():
+                continue
             yield probe.classify()
         if dateless:
             print(f"[{SOURCE_NAME}] wayback: skipped {dateless} articles without a recoverable date")
