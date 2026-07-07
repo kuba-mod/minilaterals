@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Ministry for Europe and Foreign Affairs of the French Republic
+  - Ministry of Foreign Affairs of the People’s Republic of China
+  - French Ministry for the Ecological Transition, Biodiversity and International
+    Climate and Nature Negotiations
+  topics:
+  - green_transition
+  location: Beijing, China
+  position: France established a formal working group with China to coordinate actions
+    on climate change, biodiversity, and environmental governance.
+  positions:
+    green_transition: France is actively advancing climate neutrality and green objectives
+      through the creation of a bilateral working group and commitments to the Paris
+      Agreement.
+  stances:
+    green_transition:
+      score: 2
+      evidence: the Working Group on Addressing Climate and Environmental Challenges
+        held its inaugural meeting in Beijing, China, on May 20, 2026

@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Anand
+  topics:
+  - defence
+  location: Helsingborg
+  position: France seeks to expand defense and security cooperation with Canada, specifically
+    highlighting joint NATO operations and military presence on the eastern flank.
+  positions:
+    defence: France actively advances collective security and eastern flank deterrence
+      through joint military operations and a stated desire to expand cooperation.
+  stances:
+    defence:
+      score: 2
+      evidence: expressed France’s wish to expand cooperation with Canada on defense
+        and security

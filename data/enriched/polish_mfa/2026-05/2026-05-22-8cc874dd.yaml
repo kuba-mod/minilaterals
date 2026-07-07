@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - Helene Budliger Artieda
+  - Patric Franzen
+  topics:
+  - ukraine
+  - defence
+  location: Bern, Switzerland
+  position: Poland seeks to strengthen economic and security cooperation with Switzerland,
+    specifically regarding support for Ukraine and EU defense initiatives.
+  positions:
+    ukraine: Poland aligns with Switzerland on the necessity of providing financial
+      and humanitarian aid to Ukraine.
+    defence: Poland supports and appreciates Switzerland's increasing involvement
+      in the European Union's defense activities.
+  stances:
+    ukraine:
+      score: 1
+      evidence: the need to provide financial and humanitarian aid to the victim of
+        aggression
+    defence:
+      score: 1
+      evidence: The officials appreciated Switzerland’s growing engagement in the
+        EU’s defence activity

@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - ministers from the Friends of Cohesion group
+  - Ministers for the Future
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Brussels
+  position: Poland advocated for intensified support for Ukraine, strengthened EU
+    eastern flank defense, and accelerated EU enlargement during the General Affairs
+    Council meeting.
+  positions:
+    ukraine: Poland actively pushes for concrete financial and security commitments
+      for Ukraine, including a 90 billion EUR loan and energy sector sanctions.
+    defence: Poland supports strengthening the EU's collective security with a specific
+      focus on the eastern flank.
+    enlargement: Poland supports the rapid acceleration of Ukraine's EU accession
+      process.
+  stances:
+    ukraine:
+      score: 2
+      evidence: the need for the swift implementation of the EUR 90 billion loan for
+        Ukraine, EU security guarantees, sanctions targeting the Russian energy sector
+        and third countries
+    defence:
+      score: 1
+      evidence: stressed the need for further work within EU defence policy, in particular
+        strengthening the EU’s eastern flank
+    enlargement:
+      score: 1
+      evidence: the rapid opening of accession negotiations in the “Fundamentals”
+        cluster

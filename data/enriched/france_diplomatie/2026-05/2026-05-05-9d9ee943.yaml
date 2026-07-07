@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Kim Aris
+  topics:
+  - rule_of_law
+  location: null
+  position: France advocates for the release of political prisoners in Myanmar and
+    supports EU sanctions against those violating human rights and the rule of law.
+  positions:
+    rule_of_law: France supports the rule of law and democratic resilience by calling
+      for the release of arbitrary detainees and imposing sanctions on human rights
+      violators.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: France supported the renewal for one year of the European Union’s
+        autonomous sanctions regime on Myanmar on 27 April 2026, which among other
+        things makes it possible to impose sanctions on those responsible for war
+        crimes, but also for serious attacks on human rights, democracy and the rule
+        of law.

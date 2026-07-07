@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Marcin Bosacki
+  - Ignacy Niemczycki
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland advocates for Ukraine's EU accession, emphasizes the need for a
+    stronger EU 'superpower' to handle security threats, and leverages its economic
+    ties to aid Ukraine's reconstruction.
+  positions:
+    ukraine: Poland provides strong diplomatic and economic support, highlighting
+      the presence of 3,000 Polish companies to assist in reconstruction.
+    defence: Poland supports strengthening EU defence capabilities and the use of
+      financial instruments like the European Peace Facility.
+    hybrid: Poland stresses the necessity of strengthening the EU to counter hybrid
+      threats.
+    enlargement: Poland strongly supports the right of Ukraine to accede to the European
+      Union.
+  stances:
+    ukraine:
+      score: 2
+      evidence: the Polish business community is already present in Ukraine, represented
+        by nearly three thousand Polish companies
+    defence:
+      score: 2
+      evidence: We have launched a peace budget (the European Peace Facility) to financially
+        support Ukraine’s efforts
+    hybrid:
+      score: 1
+      evidence: emphasised the need to strengthen the EU in the face of new threats,
+        including war, both conventional and hybrid
+    enlargement:
+      score: 1
+      evidence: The Ukrainian people are fighting for the right to self-determination
+        and accession to the European Union

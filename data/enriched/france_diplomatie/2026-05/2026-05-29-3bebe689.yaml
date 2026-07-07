@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France condemns Russian drone incursions into Romania and reaffirms its
+    commitment to Ukraine's support and NATO's collective defense.
+  positions:
+    ukraine: France rhetorically reaffirms its commitment to providing unwavering
+      support for Ukraine.
+    defence: France actively advances eastern flank deterrence by serving as a framework
+      nation for NATO's battlegroup in Romania.
+  stances:
+    ukraine:
+      score: 1
+      evidence: France will continue to provide Ukraine with unwavering support.
+    defence:
+      score: 2
+      evidence: As a framework nation of NATO’s multinational battlegroup deployed
+        in Romania, France will continue to play a full role in the efforts to strengthen
+        NATO’s deterrence and defense posture.

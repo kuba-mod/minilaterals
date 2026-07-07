@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France and 40 other OSCE states have invoked the Moscow Mechanism to investigate
+    and document Russia's human rights violations and the illegal deportation of Ukrainian
+    children.
+  positions:
+    ukraine: France actively advances long-term diplomatic support for Ukraine by
+      initiating an international mechanism to document war crimes.
+    rule_of_law: France affirms the rule of law by seeking to combat impunity and
+      ensure international justice for crimes committed in Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: France, along with 40 other participating States of the Organization
+        for Security and Cooperation in Europe (OSCE), invoked the OSCE’s Moscow Mechanism
+    rule_of_law:
+      score: 2
+      evidence: France solemnly reaffirms its determination to combat impunity.

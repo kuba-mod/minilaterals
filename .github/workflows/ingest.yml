@@ -23,6 +23,10 @@ on:
         description: 'Cut a new edition (bump cutoff to today, render, deploy)'
         type: boolean
         default: false
+      backfill_since:
+        description: 'Backfill: re-ingest from this date (YYYY-MM-DD). Paginates source archives instead of only the feed head; already-ingested items are skipped by filename dedup.'
+        type: string
+        default: ''
   push:
     branches: [main]        # rebuild + redeploy the site (frozen edition) when a PR merges
 
@@ -77,8 +81,18 @@ jobs:
 
       - name: Ingest
         # Skipped on merge — a push only re-renders. The daily schedule ingests.
+        # A dispatch with backfill_since walks the source archives back to that
+        # date — used to recover collection gaps (feeds only hold ~10-20 items,
+        # so a missed stretch falls out of reach of the plain daily fetch).
         if: ${{ github.event_name != 'push' }}
-        run: uv run python -m pipeline.ingest
+        env:
+          BACKFILL_SINCE: ${{ inputs.backfill_since }}
+        run: |
+          if [ -n "$BACKFILL_SINCE" ]; then
+            uv run python -m pipeline.ingest --since "$BACKFILL_SINCE"
+          else
+            uv run python -m pipeline.ingest
+          fi
         # Ingest runs without any API key — enrichment is the separate step below.
         # If a source returns 0 items it logs a warning but does not fail the job.
 

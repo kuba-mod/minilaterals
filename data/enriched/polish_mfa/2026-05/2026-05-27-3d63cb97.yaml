@@ -1,0 +1,36 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marek Woźniak
+  topics:
+  - defence
+  - hybrid
+  location: Poznań, Poland
+  position: Poland emphasizes the need for increased security, resilience against
+    hybrid threats, and infrastructure improvement in the context of the Odra Partnership
+    with Germany.
+  positions:
+    defence: Poland highlights the end of the peace dividend and the need for resilience
+      within the NATO alliance.
+    hybrid: Poland explicitly calls for local governments to prioritize countering
+      disinformation and hybrid threats to build social resilience.
+  stances:
+    defence:
+      score: 1
+      evidence: As allies within NATO and partners within the European Union, we are
+        being confronted with a new international situation.
+    hybrid:
+      score: 2
+      evidence: She also called on the representatives of Polish provinces and German
+        federal states to consider in their activities the security issue and building
+        social resilience, including countering hybrid threats and disinformation.

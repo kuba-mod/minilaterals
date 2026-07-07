@@ -1,0 +1,46 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.85
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reaffirms its strategic partnership with Germany to enhance European
+    security and resilience against Russian aggression.
+  positions:
+    ukraine: Poland seeks a just and lasting peace in Ukraine to secure the continent's
+      stability.
+    defence: Poland has concretely strengthened its security ties with Germany through
+      a new defence cooperation agreement focusing on the eastern flank.
+    hybrid: Poland commits to boosting societal resilience against Russian hybrid
+      and disinformation activities.
+    rule_of_law: Poland views the protection of the rule of law as an overarching
+      goal for European values.
+  stances:
+    ukraine:
+      score: 1
+      evidence: secure a just and lasting peace in Ukraine that would strengthen Europe’s
+        security
+    defence:
+      score: 2
+      evidence: conclusion on 17 June of a new Polish–German defence cooperation agreement
+    hybrid:
+      score: 1
+      evidence: We will effectively boost our resilience and educate our societies
+    rule_of_law:
+      score: 1
+      evidence: Our overarching goal is to protect European values, including the
+        rule of law

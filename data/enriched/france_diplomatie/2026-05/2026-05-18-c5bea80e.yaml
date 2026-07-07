@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - ambassador
+  topics:
+  - rule_of_law
+  location: null
+  position: France advocates for the global decriminalization of homosexuality and
+    the protection of fundamental rights for LGBT+ people through diplomatic initiatives
+    and financial support.
+  positions:
+    rule_of_law: France advances the promotion of fundamental rights and democratic
+      resilience by combating discrimination and supporting rights defenders.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: France appointed an ambassador who promotes these messages to States,
+        the European Union, international organizations and civil society.

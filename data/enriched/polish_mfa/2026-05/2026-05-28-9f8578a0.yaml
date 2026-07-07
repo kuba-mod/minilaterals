@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - foreign ministers of EU
+  - foreign minister of Ukraine
+  - foreign minister of Slovakia
+  - foreign minister of Saudi Arabia
+  - foreign minister of India
+  topics:
+  - ukraine
+  location: Cyprus
+  position: Poland participated in EU foreign ministers' discussions focused on supporting
+    Ukraine and increasing pressure on Russia.
+  positions:
+    ukraine: Poland supports the continued support of Ukraine and the application
+      of pressure on Russia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: supporting Ukraine, and ways of ramping up pressure on Russia

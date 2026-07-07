@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France condemns Iranian attacks on Kuwait and Bahrain and affirms its
+    commitment to the security and defense of its Middle Eastern partners.
+  positions:
+    defence: France supports collective security and the defense of partners, aligning
+      with the goal of enhancing security capabilities.
+  stances:
+    defence:
+      score: 1
+      evidence: its willingness to contribute to their defense if necessary

@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: Lebanon
+  position: France condemns the attack on UNIFIL personnel and calls for the perpetrators
+    to be brought to justice while urging adherence to the ceasefire and UN Resolution
+    1701.
+  positions:
+    rule_of_law: France advances the goal of the rule of law by demanding judicial
+      accountability for attacks on UN personnel.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: asks for the perpetrators to be arrested and brought to justice

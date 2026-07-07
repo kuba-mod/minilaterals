@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  location: Helsingborg, Sweden and Prague, Czech Republic
+  position: Germany aims to take a leading role in strengthening NATO and European
+    defence capabilities while continuing firm support for Ukraine.
+  positions:
+    ukraine: Germany intends to propose concrete measures to maintain firm support
+      for Ukraine's defense and leverage its defense industry.
+    defence: Germany is actively advancing a stronger European role in NATO by committing
+      to a five-percent spending goal and enhancing arms cooperation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: I intend to make concrete proposals on how we can continue to firmly
+        support Ukraine in defending freedom in Europe
+    defence:
+      score: 2
+      evidence: We were the first country to clearly commit to the five-percent goal

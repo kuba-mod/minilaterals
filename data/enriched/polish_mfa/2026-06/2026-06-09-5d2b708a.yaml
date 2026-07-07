@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - European External Action Service
+  - General Secretariat of the Council
+  topics:
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland emphasized the threat posed by Russia and the need for a collective
+    European response to hybrid operations during a meeting of EU State Secretaries.
+  positions:
+    hybrid: Poland rhetorically supports a coordinated European effort to build resilience
+      against Russian and Belarusian hybrid threats and disinformation.
+    enlargement: Poland participated in discussions regarding the EU enlargement policy.
+  stances:
+    hybrid:
+      score: 1
+      evidence: a joint effort of the whole European community is required to build
+        resilience to Russian and Belarusian disinformation-related and other hybrid
+        operations
+    enlargement:
+      score: 0
+      evidence: the meeting’s agenda included a presentation of the Irish presidency’s
+        priorities for the coming six months, matters concerning negotiations of the
+        2028–2034 Multiannual Financial Framework, the EU enlargement policy, competitiveness,
+        and the common market
