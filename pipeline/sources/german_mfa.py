@@ -17,6 +17,13 @@ FALLBACK_URL = "https://www.auswaertiges-amt.de/en/newsroom/news"
 BASE_URL = "https://www.auswaertiges-amt.de"
 SOURCE_NAME = "german_mfa"
 
+# Wayback Machine endpoints, used only in backfill mode. The newsroom listing is
+# JS-rendered so HTML pagination yields nothing, and the live RSS feed only holds
+# the newest ~20 items — but web.archive.org snapshots the feed regularly, so
+# replaying snapshots taken during a collection gap recovers the items that had
+# already rolled out of the live feed.
+WAYBACK_CDX_URL = "https://web.archive.org/cdx/search/cdx"
+
 _HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"}
 
 
@@ -42,14 +49,19 @@ class GermanMFAIngester(BaseIngester):
 
     def fetch(self) -> Iterator[Event]:
         if self.since:
-            # Backfill mode: paginate the HTML listing then supplement with RSS
+            # Backfill mode: paginate the HTML listing, supplement with RSS,
+            # then replay Wayback snapshots of the feed for anything older than
+            # the live feed window.
             seen_urls: set[str] = set()
             for event in self._fetch_html_paginated():
                 seen_urls.add(event.source_url)
                 yield event
             for event in self._fetch_rss():
                 if event.source_url not in seen_urls:
+                    seen_urls.add(event.source_url)
                     yield event
+            for event in self._fetch_wayback_rss(seen_urls):
+                yield event
         else:
             items = list(self._fetch_rss())
             if items:
@@ -102,6 +114,66 @@ class GermanMFAIngester(BaseIngester):
                 ).classify()
         except Exception as exc:
             print(f"[{SOURCE_NAME}] RSS error: {exc}")
+
+    def _fetch_wayback_rss(self, seen_urls: set[str]) -> Iterator[Event]:
+        """Yield events from Wayback Machine snapshots of the RSS feed taken on or
+        after `since`. Article bodies are fetched from the live site (the feed
+        entry links point at auswaertiges-amt.de, which keeps old articles up —
+        only the listing/feed window moves)."""
+        try:
+            r = requests.get(WAYBACK_CDX_URL, params={
+                "url": RSS_URL,
+                "from": self.since.replace("-", ""),
+                "output": "json",
+                "fl": "timestamp",
+                "filter": "statuscode:200",
+                "collapse": "timestamp:8",   # at most one snapshot per day
+            }, timeout=30, headers=_HEADERS)
+            r.raise_for_status()
+            rows = r.json()
+        except Exception as exc:
+            print(f"[{SOURCE_NAME}] wayback CDX error: {exc}")
+            return
+        timestamps = [row[0] for row in rows[1:]]  # row 0 is the header
+        print(f"[{SOURCE_NAME}] wayback: {len(timestamps)} feed snapshots since {self.since}")
+
+        for ts in timestamps:
+            # id_ returns the original feed bytes rather than the rewritten page
+            snap_url = f"https://web.archive.org/web/{ts}id_/{RSS_URL}"
+            try:
+                r = requests.get(snap_url, timeout=30, headers=_HEADERS)
+                r.raise_for_status()
+                feed = feedparser.parse(r.content)
+            except Exception as exc:
+                print(f"[{SOURCE_NAME}] wayback snapshot {ts} error: {exc}")
+                continue
+            time.sleep(1)
+
+            for entry in feed.entries:
+                url = entry.get("link", "")
+                if not url.startswith("http"):
+                    url = BASE_URL + url
+                if url in seen_urls:
+                    continue
+                seen_urls.add(url)
+                title = entry.get("title", "").strip()
+                date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
+                if date < self.since:
+                    continue
+                # Skip the body fetch for events already on disk — every snapshot
+                # overlaps heavily with the previous one and with prior runs.
+                probe = Event(
+                    source_name=SOURCE_NAME, title=title, text="", source_url=url,
+                    source_lang=self.source_lang, source_published_at=published_at,
+                    date=date,
+                )
+                if probe.output_path().exists():
+                    continue
+                body = self._fetch_body(url)
+                summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
+                time.sleep(0.5)
+                probe.text = summary
+                yield probe.classify()
 
     def _fetch_html_paginated(self) -> Iterator[Event]:
         # The news listing may be JS-rendered; pagination is attempted but may yield
