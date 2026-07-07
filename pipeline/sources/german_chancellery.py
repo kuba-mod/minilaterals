@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
-from typing import Iterator
-
 import time
+from collections.abc import Iterator
+from datetime import UTC, datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -24,15 +23,21 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
     """Return (date_str 'YYYY-MM-DD', published_at ISO). Falls back to today."""
     if raw:
         raw = raw.strip()
-        for fmt in ("%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d",
-                    "%d.%m.%Y", "%d %B %Y", "%B %d, %Y",
-                    "%a, %d %b %Y %H:%M:%S %z"):
+        for fmt in (
+            "%Y-%m-%dT%H:%M:%S%z",
+            "%Y-%m-%dT%H:%M:%S",
+            "%Y-%m-%d",
+            "%d.%m.%Y",
+            "%d %B %Y",
+            "%B %d, %Y",
+            "%a, %d %b %Y %H:%M:%S %z",
+        ):
             try:
                 dt = datetime.strptime(raw, fmt)
                 return dt.strftime("%Y-%m-%d"), dt.strftime("%Y-%m-%dT%H:%M:%SZ")
             except ValueError:
                 continue
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -54,6 +59,7 @@ class GermanChancelleryIngester(BaseIngester):
     """Federal Chancellery / Bundesregierung newsroom — Weimar summits are
     leader-level, and the MFA does not reliably cover what the Chancellor
     announces."""
+
     source_name = SOURCE_NAME
     source_lang = "en"
 
@@ -87,8 +93,7 @@ class GermanChancelleryIngester(BaseIngester):
                 if article_date:
                     date, published_at = article_date, article_date + "T00:00:00Z"
                 else:
-                    date_tag = card.find("time") or card.find(
-                        attrs={"class": re.compile(r"date|time|meta", re.I)})
+                    date_tag = card.find("time") or card.find(attrs={"class": re.compile(r"date|time|meta", re.I)})
                     raw = (date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
                     date, published_at = _parse_date(raw)
                 time.sleep(0.5)
@@ -129,8 +134,7 @@ class GermanChancelleryIngester(BaseIngester):
             if tag:
                 date_str = _strict_date(tag.get("datetime") or tag.get_text(strip=True))
             if not date_str:
-                for attrs in ({"property": "article:published_time"},
-                              {"itemprop": "datePublished"}, {"name": "date"}):
+                for attrs in ({"property": "article:published_time"}, {"itemprop": "datePublished"}, {"name": "date"}):
                     meta = soup.find("meta", attrs=attrs)
                     if meta and meta.get("content"):
                         date_str = _strict_date(meta["content"])
@@ -141,8 +145,9 @@ class GermanChancelleryIngester(BaseIngester):
             if not article:
                 article = soup.find("article") or soup.find("main")
             if article:
-                paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                              if len(p.get_text(strip=True)) > 40]
+                paragraphs = [
+                    p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+                ]
                 return " ".join(paragraphs), date_str
             return "", date_str
         except Exception:

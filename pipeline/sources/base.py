@@ -90,8 +90,12 @@ SOURCE_ACTOR: dict[str, str] = {
 # 2+-country / explicit-trilateral gate: sectoral newsrooms are dominated by
 # domestic policy that happens to match issue-area keywords.
 PRINCIPAL_SOURCES = {
-    "german_mfa", "france_diplomatie", "polish_mfa",
-    "german_chancellery", "elysee", "polish_pm",
+    "german_mfa",
+    "france_diplomatie",
+    "polish_mfa",
+    "german_chancellery",
+    "elysee",
+    "polish_pm",
 }
 
 

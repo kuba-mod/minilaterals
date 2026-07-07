@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import re
 import time
-from datetime import datetime, timezone
-from typing import Iterator
+from collections.abc import Iterator
+from datetime import UTC, datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -26,7 +26,7 @@ def _date_from_url(url: str) -> str | None:
     if not m:
         return None
     date = "-".join(m.groups())
-    if "1995-01-01" < date <= datetime.now(timezone.utc).strftime("%Y-%m-%d"):
+    if "1995-01-01" < date <= datetime.now(UTC).strftime("%Y-%m-%d"):
         return date
     return None
 
@@ -46,6 +46,7 @@ def _parse_date(raw: str | None) -> str | None:
 class ElyseeIngester(BaseIngester):
     """Présidence de la République — Weimar summits are leader-level, and the
     Quai d'Orsay does not reliably cover what the President announces."""
+
     source_name = SOURCE_NAME
     source_lang = "en"
 
@@ -132,8 +133,9 @@ class ElyseeIngester(BaseIngester):
 
             article = soup.find("article") or soup.find("main")
             if article:
-                paragraphs = [p.get_text(" ", strip=True) for p in article.find_all("p")
-                              if len(p.get_text(strip=True)) > 40]
+                paragraphs = [
+                    p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+                ]
                 return " ".join(paragraphs), date_str
             return "", date_str
         except Exception:
