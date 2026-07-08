@@ -16,3 +16,6 @@ __pycache__/
 # Rendered site — a build artifact. Cloudflare renders it from source on every
 # push (scripts/cf-build.sh) and serves it; it is never committed.
 /docs/
+
+# Local-only launch strategy notes — not for the public repo
+LAUNCH.md
