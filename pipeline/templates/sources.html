@@ -121,6 +121,20 @@
     The full history is auditable via git log.
   </p>
 
+  <span class="label">Silence signals</span>
+  <p>
+    Alongside comparing what capitals <em>do</em> say, the <a href="{{ base_path }}/">Recent</a> page tracks
+    when one goes quiet on a topic it normally comments on. For each (capital, issue area) pair with a
+    meaningful publishing history, we compare this week's statement count against that pair's trailing
+    12-week average; a drop to 20% or less of baseline fires a signal. Fired signals are rate-limited to
+    the three most severe per edition and deduplicated across editions — a persisting silence is shown as
+    "ongoing since" its first week rather than re-alerting every time. A separate
+    <a href="{{ base_path }}/signals.xml">RSS feed</a> carries only new or deepening signals. This detector
+    cannot distinguish a deliberate choice to stay quiet from a statement made somewhere this tracker
+    doesn't ingest (a press conference, a tweet, an interview) — treat it as a prompt to look closer, not
+    a policy claim.
+  </p>
+
   <span class="label">Corrections policy</span>
   <p>
     Stance ratings are model-assigned and always quote-backed, but models make mistakes. If a rating
@@ -139,7 +153,6 @@
 
   <span class="label">Coming next</span>
   <ul>
-    <li><strong>Alerts &amp; monitoring</strong> — get notified when a topic's alignment shifts, instead of checking back.</li>
     <li><strong>Full-history Excel export</strong> — every rated statement, every quote, since the pipeline started.</li>
     <li><strong>More minilateral formats</strong> — E3 (France–Germany–UK), Visegrád Four, Baltic Three, and other coordination formats tracked the same way.</li>
   </ul>

@@ -1,0 +1,56 @@
+[
+  {
+    "actor": "DE",
+    "issue_area": "hybrid",
+    "week": "2026-06-29",
+    "current_count": 0,
+    "baseline_mean": 0.75,
+    "baseline_weeks": 12,
+    "ratio": 0.0,
+    "severity": 75.0,
+    "others": {
+      "FR": 0,
+      "PL": 1
+    },
+    "status": "new",
+    "first_fired_week": "2026-06-29",
+    "evidence": "Berlin: 0 statements on hybrid threats this week vs. a 12-week average of 0.8/week, while Paris (0) and Warsaw (1) published.",
+    "methodology_version": "1.0"
+  },
+  {
+    "actor": "FR",
+    "issue_area": "green_transition",
+    "week": "2026-06-29",
+    "current_count": 0,
+    "baseline_mean": 0.67,
+    "baseline_weeks": 12,
+    "ratio": 0.0,
+    "severity": 66.67,
+    "others": {
+      "DE": 0,
+      "PL": 1
+    },
+    "status": "new",
+    "first_fired_week": "2026-06-29",
+    "evidence": "Paris: 0 statements on green transition this week vs. a 12-week average of 0.7/week, while Berlin (0) and Warsaw (1) published.",
+    "methodology_version": "1.0"
+  },
+  {
+    "actor": "FR",
+    "issue_area": "enlargement",
+    "week": "2026-06-29",
+    "current_count": 0,
+    "baseline_mean": 0.5,
+    "baseline_weeks": 12,
+    "ratio": 0.0,
+    "severity": 50.0,
+    "others": {
+      "DE": 1,
+      "PL": 2
+    },
+    "status": "new",
+    "first_fired_week": "2026-06-29",
+    "evidence": "Paris: 0 statements on enlargement this week vs. a 12-week average of 0.5/week, while Berlin (1) and Warsaw (2) published.",
+    "methodology_version": "1.0"
+  }
+]

@@ -47,6 +47,11 @@ env:
   OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
   OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
   OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:latest' }}
+  # Optional dogfood push for the daily live silence-signal check (issue #19).
+  # Either or both may be unset — the step just skips the push when so.
+  NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
 jobs:
   run:
@@ -121,6 +126,24 @@ jobs:
         # Commentary is written once per edition so it matches the frozen data.
         if: ${{ steps.mode.outputs.edition == 'true' }}
         run: uv run python -m pipeline.comment
+        continue-on-error: true
+
+      - name: Silence signals — edition
+        # Published half of issue #19: computed once per edition, anchored to
+        # the same frozen cutoff as everything else, so re-rendering never
+        # changes which signals are shown. Updates data/signals_history.json
+        # (cross-edition dedup/rate-limit state) and data/signals.json (what
+        # render.py shows this edition).
+        if: ${{ steps.mode.outputs.edition == 'true' }}
+        run: uv run python -m pipeline.signals
+        continue-on-error: true
+
+      - name: Silence signals — daily live check
+        # Dogfood-only half of issue #19: runs every day (not gated on
+        # edition), off current unfrozen data, and pushes a notification when
+        # a new silence appears. Never touches the published signals files
+        # above. Silently no-ops if no NTFY_TOPIC/TELEGRAM secrets are set.
+        run: uv run python -m pipeline.signals --live
         continue-on-error: true
 
       - name: Commit results

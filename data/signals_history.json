@@ -1,0 +1,29 @@
+{
+  "DE|hybrid": {
+    "actor": "DE",
+    "best_ratio": 0.0,
+    "first_fired_week": "2026-06-29",
+    "issue_area": "hybrid",
+    "last_fired_week": "2026-06-29",
+    "methodology_version": "1.0",
+    "status": "active"
+  },
+  "FR|enlargement": {
+    "actor": "FR",
+    "best_ratio": 0.0,
+    "first_fired_week": "2026-06-29",
+    "issue_area": "enlargement",
+    "last_fired_week": "2026-06-29",
+    "methodology_version": "1.0",
+    "status": "active"
+  },
+  "FR|green_transition": {
+    "actor": "FR",
+    "best_ratio": 0.0,
+    "first_fired_week": "2026-06-29",
+    "issue_area": "green_transition",
+    "last_fired_week": "2026-06-29",
+    "methodology_version": "1.0",
+    "status": "active"
+  }
+}
