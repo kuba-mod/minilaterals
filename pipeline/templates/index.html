@@ -190,6 +190,36 @@
 {# spacer when no timeline data yet #}
 {% endif %}
 
+{# ── Deforming triangle ── #}
+{% if triangle and triangle.current %}
+<div class="section-head" style="margin-top:0">
+  This week's triangle
+  <span>Edge length tracks how far apart two capitals' stances ran on shared topics over the last 14 days — a short edge means aligned, a stretched edge means a rift. Colored dots mark each capital.</span>
+</div>
+<div style="display:flex; gap:24px; flex-wrap:wrap; align-items:flex-start; margin-bottom:28px">
+  <div style="flex:1 1 220px; max-width:320px">
+    <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This edition — {{ edition_date_str }}</div>
+    <img src="{{ base_path }}/triangle-current.svg"
+         alt="Triangle for this edition: DE-FR gap {{ '%.2f'|format(triangle.current['DE-FR']) }}, FR-PL gap {{ '%.2f'|format(triangle.current['FR-PL']) }}, DE-PL gap {{ '%.2f'|format(triangle.current['DE-PL']) }}"
+         style="width:100%; height:auto; display:block">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-top:6px">
+      DE–FR {{ '%.2f'|format(triangle.current['DE-FR']) }} &middot; FR–PL {{ '%.2f'|format(triangle.current['FR-PL']) }} &middot; DE–PL {{ '%.2f'|format(triangle.current['DE-PL']) }}
+    </div>
+  </div>
+  {% if triangle.previous %}
+  <div style="flex:1 1 220px; max-width:320px; opacity:0.7">
+    <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">Previous edition</div>
+    <img src="{{ base_path }}/triangle-previous.svg"
+         alt="Triangle for the previous edition: DE-FR gap {{ '%.2f'|format(triangle.previous['DE-FR']) }}, FR-PL gap {{ '%.2f'|format(triangle.previous['FR-PL']) }}, DE-PL gap {{ '%.2f'|format(triangle.previous['DE-PL']) }}"
+         style="width:100%; height:auto; display:block">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-top:6px">
+      DE–FR {{ '%.2f'|format(triangle.previous['DE-FR']) }} &middot; FR–PL {{ '%.2f'|format(triangle.previous['FR-PL']) }} &middot; DE–PL {{ '%.2f'|format(triangle.previous['DE-PL']) }}
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
 {# ── Convergence view ── #}
 <div class="section-head" style="margin-top:0">Where they line up — and where they don't</div>
 

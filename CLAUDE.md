@@ -63,8 +63,10 @@ Sources (RSS/HTML/API)
 | `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/embed.py` | Batch-encodes `extracted.position` with `all-MiniLM-L6-v2`; stores in `data/embeddings.json` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_convergence()`; renders 3 pages |
+| `pipeline/triangle.py` | `compute_triangle_divergence()` + SSS geometry solve + SVG render for the deforming triangle visual |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
+| `data/triangle_history.json` | Per-edition DE-FR/FR-PL/DE-PL divergence, keyed by cutoff date; written only at edition-cut time |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |
 | `data/annual.yaml` | Activity scores 1991–2026 (drives the bar chart on `/meetings/`) |
 | `weimar-tracker.jsx` | Original React dashboard — reference only, not served |

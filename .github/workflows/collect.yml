@@ -6,7 +6,7 @@ name: Collect
 #      same published edition and nothing on the site changes.
 #   2. Tuesday cron, or manual dispatch with cut_edition=true — the weekly
 #      edition cut: ingest + enrich, bump data/edition.yaml to today, generate
-#      commentary, commit data/**.
+#      commentary, persist this edition's triangle divergence, commit data/**.
 # This workflow only ever commits data/** — it does not render. Every push to
 # main (including these commits) triggers Cloudflare's build, which renders from
 # source and deploys; an edition cut ships simply by moving the cutoff in
@@ -121,6 +121,15 @@ jobs:
         # Commentary is written once per edition so it matches the frozen data.
         if: ${{ steps.mode.outputs.edition == 'true' }}
         run: uv run python -m pipeline.comment
+        continue-on-error: true
+
+      - name: Triangle history
+        # Persists this edition's DE-FR/FR-PL/DE-PL divergence to
+        # data/triangle_history.json so the next edition can render "vs. last
+        # week's shape" without recomputing history. Written once per edition,
+        # same reasoning as the Comment step above.
+        if: ${{ steps.mode.outputs.edition == 'true' }}
+        run: uv run python -m pipeline.triangle
         continue-on-error: true
 
       - name: Commit results

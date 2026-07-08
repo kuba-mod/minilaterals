@@ -44,6 +44,13 @@ except ImportError:
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
+from pipeline.triangle import (  # noqa: E402
+    compute_triangle_divergence,
+    load_triangle_history,
+    previous_triangle_entry,
+    render_triangle_svg,
+)
+
 TEMPLATES_DIR = ROOT / "pipeline" / "templates"
 EDITION_FILE = ROOT / "data" / "edition.yaml"
 
@@ -1021,6 +1028,22 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     pos_emb_store = load_position_embeddings()
     clusters = build_convergence_clusters(events)
     commentary = load_commentary()
+
+    # Deforming triangle: edge lengths track pairwise stance divergence between
+    # the three capitals. "Previous" is read back from triangle_history.json
+    # (written only at edition-cut time, see pipeline.triangle) rather than
+    # recomputed, so the comparison is always "vs. the last published edition."
+    triangle_history = load_triangle_history()
+    triangle_previous = previous_triangle_entry(triangle_history, edition_cutoff)
+    triangle_current = compute_triangle_divergence(events, edition_dt, previous=triangle_previous or {})
+    (out / "triangle-current.svg").write_text(
+        render_triangle_svg(triangle_current, ACTOR_COLORS), encoding="utf-8"
+    )
+    if triangle_previous:
+        (out / "triangle-previous.svg").write_text(
+            render_triangle_svg(triangle_previous, ACTOR_COLORS), encoding="utf-8"
+        )
+    triangle = {"current": triangle_current, "previous": triangle_previous}
     for cluster in clusters:
         # Stance ratings are the primary scoring; embedding cosine is the fallback
         # for clusters whose events haven't been stance-rated yet.
@@ -1174,6 +1197,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             topic_series_json=topic_series_json,
             latest_event_date=latest_event_date,
             stale_days=stale_days,
+            triangle=triangle,
         ),
         encoding="utf-8",
     )
