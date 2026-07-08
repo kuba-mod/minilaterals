@@ -121,12 +121,32 @@
     The full history is auditable via git log.
   </p>
 
+  <span class="label">Corrections policy</span>
+  <p>
+    Stance ratings are model-assigned and always quote-backed, but models make mistakes. If a rating
+    looks wrong, if a quote is out of context, or if a statement was misclassified, please
+    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20correction">report it</a> —
+    corrections are reviewed and the underlying YAML is corrected in git, so the fix is itself part of
+    the public record.
+  </p>
+
   <span class="label">Caveats</span>
   <ul>
     <li>All sources currently target English-language pages; French/Polish language content may be missed.</li>
     <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>
+
+  <span class="label">Coming next</span>
+  <ul>
+    <li><strong>Alerts &amp; monitoring</strong> — get notified when a topic's alignment shifts, instead of checking back.</li>
+    <li><strong>Full-history Excel export</strong> — every rated statement, every quote, since the pipeline started.</li>
+    <li><strong>More minilateral formats</strong> — E3 (France–Germany–UK), Visegrád Four, Baltic Three, and other coordination formats tracked the same way.</li>
+  </ul>
+  <p>
+    Suggestions are welcome — if there's a feature or format you'd find useful, email
+    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20suggestion">hello@minilaterals.com</a>.
+  </p>
 
   <p style="font-size:14px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif">
     Total events tracked: <span style="font-family:'IBM Plex Mono',monospace">{{ all_events_count }}</span> &nbsp;·&nbsp;
