@@ -1,29 +1,24 @@
 name: Render
 
-# Site render + deploy. Fires on every branch push so a layout change can be
-# verified from a downloadable artifact before it merges; only main actually
-# commits the rebuilt site.
-#   - Feature branch push → render, upload the built site as an artifact, no commit.
-#   - Push/merge to main   → render, commit docs/** (the live redeploy).
-# render.py excludes events dated after data/edition.yaml's cutoff, so a layout
-# push redeploys the same frozen edition rather than leaking newly-ingested data.
-# The deploy commit uses GITHUB_TOKEN, which does not re-trigger workflows, so
-# neither this commit nor collect.yml's edition-cut docs/** commit re-fires here.
+# Render CI check. Cloudflare is the deploy path now — its Git-integration build
+# runs scripts/cf-build.sh (pipeline.render) on every push and serves the result,
+# so docs/ is a build artifact and is not committed to the repo. This workflow
+# does not deploy; it renders on every push purely to (a) fail fast if render.py
+# crashes and (b) upload the built tree as a downloadable artifact for previewing
+# a layout change without waiting on Cloudflare. render.py excludes events dated
+# after data/edition.yaml's cutoff, so a render is a pure function of
+# (templates, data, cutoff).
 
 on:
   push:
-    branches: ['**']        # any branch: previews everywhere, deploy only on main
+    branches: ['**']
 
 permissions:
-  contents: write           # needed for the main-branch deploy commit; harmless on branches
+  contents: read            # render-only CI check; nothing is committed
 
 concurrency:
-  # main shares the 'pipeline' group with collect.yml so the two paths that
-  # commit to main serialize. Feature-branch previews get an isolated per-ref
-  # group and supersede their own in-flight runs, so they never queue behind
-  # (or block) the daily collection pipeline.
-  group: ${{ github.ref == 'refs/heads/main' && 'pipeline' || format('render-{0}', github.ref) }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+  group: render-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   # Deployed under the minilaterals.com umbrella at this path, not the domain root.
@@ -44,27 +39,12 @@ jobs:
         run: pip install uv && uv sync
 
       - name: Render
-        run: uv run python -m pipeline.render --output docs/weimar-triangle
+        run: uv run python -m pipeline.render --output docs
 
       - name: Upload rendered site
-        # Preview build for every branch: download the zip from the run summary
-        # and open index.html locally to verify a render before merging.
+        # Download the zip from the run summary and open weimar-triangle/index.html
+        # locally to verify a render without waiting on the Cloudflare preview.
         uses: actions/upload-artifact@v4
         with:
           name: site
-          path: docs/weimar-triangle
-
-      - name: Commit rendered site
-        # Deploy only from main. Plain git over the GITHUB_TOKEN credentials
-        # actions/checkout persists; only commits when docs/ actually changed.
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "site: rebuild on merge"
-            git push
-          fi
+          path: docs

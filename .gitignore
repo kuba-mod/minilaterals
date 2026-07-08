@@ -12,3 +12,7 @@ __pycache__/
 
 # Wrangler local build/cache
 .wrangler/
+
+# Rendered site — a build artifact. Cloudflare renders it from source on every
+# push (scripts/cf-build.sh) and serves it; it is never committed.
+/docs/

@@ -972,7 +972,15 @@ Allow: /
 
 
 def render(output_dir: str = "docs", as_of: str | None = None) -> None:
-    out = Path(output_dir)
+    # Set when this site is deployed under a path prefix on the minilaterals.com
+    # umbrella (e.g. "/weimar-triangle") rather than at the domain root.
+    base_path = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
+
+    # render.py owns the whole deployable tree. `root` is the directory Cloudflare
+    # serves (docs/); the site itself lives in the base-path subdir beside the
+    # root-level deploy files (_redirects, 404.html) written near the end.
+    root = Path(output_dir)
+    out = root / base_path.lstrip("/") if base_path else root
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
     (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
@@ -981,10 +989,6 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
-
-    # Set when this site is deployed under a path prefix on the minilaterals.com
-    # umbrella (e.g. "/weimar-triangle") rather than at the domain root.
-    base_path = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
 
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
@@ -1217,7 +1221,15 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             encoding="utf-8",
         )
 
-    print(f"Rendered → {out.resolve()}")
+    # Root-level deploy files, beside (not inside) the base-path subdir.
+    # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
+    # not_found_handling); _redirects sends the bare root into the site and is
+    # only meaningful when the site sits under a path prefix.
+    (root / "404.html").write_text(env.get_template("404.html").render() + "\n", encoding="utf-8")
+    if base_path:
+        (root / "_redirects").write_text(f"/  {base_path}/  301\n", encoding="utf-8")
+
+    print(f"Rendered → {root.resolve()}")
     print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")
     print(f"  meetings: {len(meetings)}, milestones: {len(milestones)}")
 
