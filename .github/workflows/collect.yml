@@ -2,13 +2,16 @@ name: Collect
 
 # Data collection + weekly edition cut. Two run modes, both cron/dispatch driven:
 #   1. Daily cron (not Tuesday) — silent data collection: ingest + enrich,
-#      commit data/** only. The site is not re-rendered, so nothing deploys.
+#      commit data/** only. The cutoff is unchanged, so a rebuild renders the
+#      same published edition and nothing on the site changes.
 #   2. Tuesday cron, or manual dispatch with cut_edition=true — the weekly
 #      edition cut: ingest + enrich, bump data/edition.yaml to today, generate
-#      commentary, render, commit data/** and docs/**.
-# Merges to main redeploy the site via the separate render.yml workflow; this
-# workflow no longer listens to push. Commits use GITHUB_TOKEN, which does not
-# re-trigger any workflow, so there is no commit loop.
+#      commentary, commit data/**.
+# This workflow only ever commits data/** — it does not render. Every push to
+# main (including these commits) triggers Cloudflare's build, which renders from
+# source and deploys; an edition cut ships simply by moving the cutoff in
+# data/edition.yaml. Commits use GITHUB_TOKEN, which does not re-trigger GitHub
+# Actions workflows, so there is no commit loop.
 
 on:
   schedule:
@@ -28,9 +31,10 @@ permissions:
   contents: write           # needed to commit data/ and docs/ back to main
 
 concurrency:
-  # Serialize against the main-branch deploy in render.yml (same 'pipeline' group)
-  # so the two paths that commit to main never clobber each other.
-  group: pipeline
+  # Serialize collect runs against each other so an overlapping daily/weekly run
+  # can't race the git commit. render.yml no longer commits, so this is the only
+  # path that writes to main.
+  group: collect
   cancel-in-progress: false
 
 env:
@@ -43,8 +47,6 @@ env:
   OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
   OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
   OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:latest' }}
-  # Deployed under the minilaterals.com umbrella at this path, not the domain root.
-  SITE_BASE_PATH: /weimar-triangle
 
 jobs:
   run:
@@ -121,23 +123,17 @@ jobs:
         run: uv run python -m pipeline.comment
         continue-on-error: true
 
-      - name: Render
-        # Only edition cuts touch docs/ here — plain daily runs collect data
-        # silently. Merges to main redeploy separately via render.yml.
-        if: ${{ steps.mode.outputs.edition == 'true' }}
-        run: uv run python -m pipeline.render --output docs/weimar-triangle
-
       - name: Commit results
         # Plain git over the GITHUB_TOKEN credentials actions/checkout persists.
         # Only commits when something actually changed — no-op on an empty day.
+        # data/** only; Cloudflare renders + deploys from source on the push.
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
           if [ "${{ steps.mode.outputs.edition }}" = "true" ]; then
-            git add data docs
             msg="site: weekly edition ${{ steps.mode.outputs.today }}"
           else
-            git add data
             msg="data: daily ingest"
           fi
           if git diff --cached --quiet; then
