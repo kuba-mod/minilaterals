@@ -101,9 +101,7 @@ def compute_triangle_divergence(
     result: dict[str, float] = {}
     n_topics = 0
     for a1, a2 in PAIRS:
-        gaps = [
-            abs(means[a1] - means[a2]) for means in per_topic_means.values() if a1 in means and a2 in means
-        ]
+        gaps = [abs(means[a1] - means[a2]) for means in per_topic_means.values() if a1 in means and a2 in means]
         key = f"{a1}-{a2}"
         if gaps:
             result[key] = sum(gaps) / len(gaps)
@@ -197,9 +195,7 @@ def load_triangle_history() -> dict[str, dict]:
 
 
 def save_triangle_history(history: dict[str, dict]) -> None:
-    TRIANGLE_HISTORY_FILE.write_text(
-        json.dumps(history, indent=2, sort_keys=True) + "\n", encoding="utf-8"
-    )
+    TRIANGLE_HISTORY_FILE.write_text(json.dumps(history, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
 def previous_triangle_entry(history: dict[str, dict], edition_cutoff: str) -> dict | None:
