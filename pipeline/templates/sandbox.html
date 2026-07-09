@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+{% set active_page = "sandbox" %}
+{% block title %}The Minister's Desk — Weimar Triangle{% endblock %}
+{% block meta_description %}
+<meta name="description" content="Write a statement as a foreign minister and see how the tracker's methodology would assess it — same classifier, same judge, same rubric as the published scores.">
+{% endblock %}
+
+{% block content %}
+
+<div class="section-head" style="margin-top:0">The Minister's Desk
+  <span>Write a statement. We assess it exactly like the real ones.</span>
+</div>
+
+<p style="font-size:15px; color:var(--ink-soft); font-family:'Newsreader',Georgia,serif; max-width:640px; margin-bottom:32px">
+  Every week this tracker classifies foreign-ministry statements and has an LLM judge rate
+  each one −2 to +2 against the agreed Weimar Triangle goals. Here you can sit at the desk
+  yourself: draft a statement, and it goes through the <em>same classifier, same judge, same
+  rubric</em> — scored in transit, never stored, never added to the dataset.
+</p>
+
+{# ── Step 1: pick a desk ── #}
+<div class="sbx-step-label">1 · Take a desk</div>
+<div class="country-cards" id="sbx-desks" style="margin-bottom:28px">
+  {% for actor in weimar_actors %}
+  {% set fm = sandbox.countries[actor] %}
+  <button type="button" class="country-card sbx-desk" data-actor="{{ actor }}">
+    <div class="cc-flag"><span class="swatch {{ fm.swatch }}"></span></div>
+    <div class="cc-body">
+      <div class="cc-name">{{ sandbox.actor_labels[actor] }}</div>
+      <div class="cc-stat">{{ fm.name }}</div>
+      <div class="cc-ministry">{{ fm.ministry }} · {{ fm.role }}</div>
+    </div>
+    <div class="cc-arrow sbx-desk-check">✓</div>
+  </button>
+  {% endfor %}
+</div>
+
+{# ── Step 2: write ── #}
+<div class="sbx-step-label">2 · Draft this week's statement</div>
+<div class="sbx-editor">
+  <textarea id="sbx-text" rows="7" maxlength="1500" spellcheck="true"
+    placeholder="e.g. “Together with our partners, we will provide Ukraine with an additional package of air-defence systems and push for the swift opening of EU accession negotiations…”"></textarea>
+  <div class="sbx-editor-foot">
+    <div id="sbx-tags" class="sbx-tags">
+      <span class="sbx-tags-hint">As you type, the ingest classifier tags your statement the way it tags real press releases.</span>
+    </div>
+    <span id="sbx-count" class="sbx-count">0 / 1500</span>
+  </div>
+</div>
+
+{# ── Step 3: submit ── #}
+<div class="sbx-step-label">3 · Send it to the judge</div>
+<div class="sbx-submit-row">
+  <button type="button" id="sbx-submit" class="cta-primary" disabled>Assess my statement <span>→</span></button>
+  <span id="sbx-tries" class="sbx-tries"></span>
+</div>
+<div id="sbx-status" class="sbx-status" hidden></div>
+
+{# ── Email gate (shown when the free tries are spent) ── #}
+<div id="sbx-gate" class="sbx-gate" hidden>
+  <div class="sbx-gate-title">You've used today's three free assessments</div>
+  <p class="sbx-gate-body">
+    Leave an email to keep going (25 a day). We'll use it only for occasional updates
+    about this tracker — no sharing, no spam, and you can ask us to delete it any time
+    at <a href="mailto:hello@minilaterals.com">hello@minilaterals.com</a>.
+  </p>
+  <div class="sbx-gate-form">
+    <input type="email" id="sbx-email" placeholder="you@example.org" maxlength="254">
+    <button type="button" id="sbx-unlock" class="cta-primary">Unlock</button>
+  </div>
+  <label class="sbx-consent">
+    <input type="checkbox" id="sbx-consent">
+    I agree to receive occasional updates about the Weimar Triangle tracker.
+  </label>
+  <div id="sbx-gate-error" class="sbx-gate-error" hidden></div>
+</div>
+
+{# ── Results ── #}
+<div id="sbx-result" hidden>
+  <div class="section-head">The assessment</div>
+  <div id="sbx-result-body"></div>
+</div>
+
+{# ── Methodology note ── #}
+<div class="about-tracker" style="margin-top:56px">
+  <h3>How this works — and what it can't tell you</h3>
+  <p style="font-size:14px; color:var(--ink-soft); font-family:'IBM Plex Sans',sans-serif; margin:12px 0">
+    Your statement is rated by the same model, prompt, and rubric that rate the real statements
+    on the front page, against the same officially agreed Weimar goals, and compared with the
+    three capitals' average stances from the current edition's 14-day window. The text is sent
+    to the judge and discarded — it is never stored, logged, or added to the dataset. (Only your
+    email is stored, if you choose to leave one.) One honest caveat: a single LLM rating of a
+    single sentence is noisier than a week of rated statements — treat the result as indicative.
+  </p>
+  <details>
+    <summary style="cursor:pointer; font-family:'IBM Plex Sans',sans-serif; font-size:13px; color:var(--hl)">Show the judge's rubric</summary>
+    <pre class="sbx-rubric">{{ sandbox.prompts.rubric }}</pre>
+  </details>
+</div>
+
+<script>
+const SANDBOX = {{ sandbox_json | safe }};
+const BASE = "{{ base_path }}";
+
+(function () {
+  const STANCE_WORDS = { "2": "advances", "1": "supports", "0": "neutral", "-1": "hedges", "-2": "opposes" };
+  const el = (id) => document.getElementById(id);
+
+  // ── Classifier: JS port of Event.classify() in pipeline/sources/base.py ──
+  function compile(patterns) { return patterns.map((p) => new RegExp(p, "i")); }
+  const RX = {
+    explicit: compile(SANDBOX.classifier.weimar_explicit),
+    countries: Object.fromEntries(Object.entries(SANDBOX.classifier.country_terms).map(([k, v]) => [k, compile(v)])),
+    issues: Object.fromEntries(Object.entries(SANDBOX.classifier.issue_areas).map(([k, v]) => [k, compile(v)])),
+  };
+  const matchAny = (rxs, text) => rxs.some((r) => r.test(text));
+
+  function classify(text) {
+    const explicit = matchAny(RX.explicit, text);
+    const actors = Object.keys(RX.countries).filter((c) => matchAny(RX.countries[c], text));
+    const issues = SANDBOX.issue_order.filter((a) => RX.issues[a] && matchAny(RX.issues[a], text));
+    const trilateral = explicit || actors.length === 3;
+    // MFA sources are known-actor: any tracked issue area makes the item relevant.
+    const relevant = trilateral || issues.length > 0 || (actors.length >= 2 && issues.length > 0);
+    return { explicit, actors, issues, trilateral, relevant };
+  }
+
+  // ── State ──
+  let country = null;
+  let lastClassify = { issues: [] };
+  const token = () => localStorage.getItem("sbx_token") || null;
+
+  // ── Desk picker ──
+  document.querySelectorAll(".sbx-desk").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      country = btn.dataset.actor;
+      document.querySelectorAll(".sbx-desk").forEach((b) => b.classList.toggle("sbx-desk--active", b === btn));
+      refresh();
+    });
+  });
+
+  // ── Live classification ──
+  const tagHTML = (label, color) =>
+    '<span class="tag" style="color:' + color + '; border-color:' + color + '44; background:' + color + '18">' + label + "</span>";
+
+  function refresh() {
+    const text = el("sbx-text").value;
+    el("sbx-count").textContent = text.length + " / 1500";
+    const c = classify(text);
+    lastClassify = c;
+    const tags = [];
+    c.issues.forEach((a) => tags.push(tagHTML(SANDBOX.issue_labels[a] || a, "#8a3a23")));
+    c.actors.forEach((a) => tags.push(tagHTML(SANDBOX.actor_labels[a] || a, SANDBOX.actor_colors[a] || "#7a7060")));
+    if (c.trilateral) tags.push(tagHTML("trilateral signal", "#4d6b38"));
+    if (c.relevant) tags.push(tagHTML("weimar relevant", "#4d6b38"));
+    el("sbx-tags").innerHTML = tags.length
+      ? tags.join(" ")
+      : '<span class="sbx-tags-hint">' +
+        (text.trim()
+          ? "No tracked issue area detected yet — the pipeline would not rate this statement."
+          : "As you type, the ingest classifier tags your statement the way it tags real press releases.") +
+        "</span>";
+    el("sbx-submit").disabled = !(country && text.trim().length >= 40 && c.issues.length > 0);
+  }
+  el("sbx-text").addEventListener("input", refresh);
+
+  function setTries(n) {
+    el("sbx-tries").textContent = n === null || n === undefined ? "" : "assessments left today: " + n;
+  }
+
+  function status(msg) {
+    const s = el("sbx-status");
+    s.hidden = !msg;
+    s.textContent = msg || "";
+  }
+
+  // ── Result rendering ──
+  function scalePos(stance) { return ((stance + 2) / 4) * 100; }
+
+  function agreement(spread) {
+    if (spread <= SANDBOX.thresholds.aligned) return { label: "Aligned", color: "#4d6b38" };
+    if (spread <= SANDBOX.thresholds.mixed) return { label: "Mixed", color: "#8a6320" };
+    return { label: "Divergent", color: "#a14132" };
+  }
+
+  function stanceChip(score) {
+    const color = score > 0 ? "#4d6b38" : score < 0 ? "#a14132" : "#8a6320";
+    const sign = score > 0 ? "+" + score : String(score);
+    return '<span class="tag" style="color:' + color + '; border-color:currentColor">' + sign + " " + STANCE_WORDS[String(score)] + "</span>";
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+  }
+
+  function renderResult(stances) {
+    const rows = Object.keys(stances).map((topic) => {
+      const mine = stances[topic];
+      const capitals = SANDBOX.capital_stances[topic] || {};
+      const markers = [
+        '<span class="sbx-marker sbx-marker--you" style="left:' + scalePos(mine.score) + '%" title="You: ' + mine.score + '">You</span>',
+      ];
+      const chips = [];
+      ["FR", "DE", "PL"].forEach((a) => {
+        if (a === country) return;
+        const cap = capitals[a];
+        if (!cap) {
+          chips.push('<span class="tag" style="color:var(--muted); border-color:var(--rule)">' + SANDBOX.actor_labels[a] + ": no rated statements</span>");
+          return;
+        }
+        const agr = agreement(Math.abs(mine.score - cap.stance));
+        chips.push(
+          '<span class="tag" style="color:' + agr.color + "; border-color:" + agr.color + "44; background:" + agr.color + '18" title="' +
+            SANDBOX.actor_labels[a] + " mean stance " + (cap.stance > 0 ? "+" : "") + cap.stance + " across " + cap.n + " rated statement" + (cap.n === 1 ? "" : "s") + '">' +
+            agr.label + " with " + SANDBOX.actor_labels[a] + "</span>"
+        );
+      });
+      Object.keys(capitals).forEach((a) => {
+        markers.push(
+          '<span class="sbx-marker" style="left:' + scalePos(capitals[a].stance) + "%; background:" + SANDBOX.actor_colors[a] + '" title="' +
+            SANDBOX.actor_labels[a] + " mean: " + (capitals[a].stance > 0 ? "+" : "") + capitals[a].stance + '">' + a + "</span>"
+        );
+      });
+      return (
+        '<div class="sbx-topic">' +
+        '<div class="sbx-topic-head"><span class="sbx-topic-name">' + (SANDBOX.issue_labels[topic] || topic) + "</span>" + stanceChip(mine.score) + "</div>" +
+        (mine.evidence ? '<div class="sbx-evidence">The judge’s evidence from your text: “' + esc(mine.evidence) + "”</div>" : "") +
+        '<div class="sbx-scale"><div class="sbx-scale-track"></div>' + markers.join("") + "</div>" +
+        '<div class="sbx-scale-labels"><span>−2 opposes</span><span>0 neutral</span><span>+2 advances</span></div>' +
+        '<div class="sbx-agree">' + chips.join(" ") + "</div>" +
+        "</div>"
+      );
+    });
+    el("sbx-result-body").innerHTML =
+      '<p style="font-size:13px; color:var(--muted); font-family:\'IBM Plex Sans\',sans-serif; margin-bottom:16px">' +
+      "Your stance vs. each capital’s mean over the current edition’s 14-day window. " +
+      "Agreement uses the published spread thresholds (≤" + SANDBOX.thresholds.aligned + " aligned, ≤" + SANDBOX.thresholds.mixed + " mixed).</p>" +
+      rows.join("");
+    el("sbx-result").hidden = false;
+    el("sbx-result").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // ── Submit ──
+  el("sbx-submit").addEventListener("click", async () => {
+    const btn = el("sbx-submit");
+    btn.disabled = true;
+    status("The judge is reading your statement…");
+    el("sbx-gate").hidden = true;
+    try {
+      const res = await fetch(BASE + "/api/stance", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          statement: el("sbx-text").value.trim(),
+          country: country,
+          topics: lastClassify.issues,
+          token: token(),
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.status === 402) {
+        status("");
+        el("sbx-gate").hidden = false;
+        el("sbx-gate").scrollIntoView({ behavior: "smooth", block: "nearest" });
+        setTries(0);
+        return;
+      }
+      if (res.status === 429) {
+        status("You've hit today's limit — come back tomorrow.");
+        setTries(0);
+        return;
+      }
+      if (res.status === 503) {
+        status("The assessment service isn't configured on this deployment — the live classifier above still works.");
+        return;
+      }
+      if (!res.ok) {
+        status("Assessment failed (" + (data.error || res.status) + "). Try again in a moment.");
+        return;
+      }
+      status("");
+      setTries(data.remaining);
+      renderResult(data.stances);
+    } catch (e) {
+      status("Network error — try again in a moment.");
+    } finally {
+      btn.disabled = false;
+      refresh();
+    }
+  });
+
+  // ── Unlock ──
+  el("sbx-unlock").addEventListener("click", async () => {
+    const err = el("sbx-gate-error");
+    err.hidden = true;
+    if (!el("sbx-consent").checked) {
+      err.textContent = "Please tick the consent box — we only store your email with your explicit agreement.";
+      err.hidden = false;
+      return;
+    }
+    try {
+      const res = await fetch(BASE + "/api/unlock", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: el("sbx-email").value.trim(), consent: true }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        err.textContent = data.error === "bad_email" ? "That doesn't look like an email address." : "Unlock failed — try again in a moment.";
+        err.hidden = false;
+        return;
+      }
+      localStorage.setItem("sbx_token", data.token);
+      el("sbx-gate").hidden = true;
+      status("Unlocked — you have 25 assessments a day now. Send your statement again.");
+    } catch (e) {
+      err.textContent = "Network error — try again in a moment.";
+      err.hidden = false;
+    }
+  });
+
+  refresh();
+})();
+</script>
+
+{% endblock %}

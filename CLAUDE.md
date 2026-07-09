@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static tracker for Weimar Triangle (DE-FR-PL) diplomatic coordination. The core use case is **positional comparison**: even when no joint statement exists, when Germany and Poland both publish press releases about Ukraine in the same week the tracker surfaces them side-by-side with extracted one-sentence position summaries, and scores how semantically similar those positions are.
 
-No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` — see Deployment below for how that build actually gets triggered.
+No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` — see Deployment below for how that build actually gets triggered. The same worker (`worker/index.js`) also carries the site's only dynamic surface: the two sandbox API routes behind "The Minister's Desk" (`/sandbox/`), where a visitor drafts a statement and has it assessed by the same classifier + LLM judge that score the real ones (see The sandbox below).
 
 ## Commands
 
@@ -53,6 +53,15 @@ Sources (RSS/HTML/API)
 - **`docs/404.html`** (always generated): what Cloudflare serves for unknown paths, per `wrangler.jsonc`'s `not_found_handling: "404-page"`.
 - **Routing**: `wrangler.jsonc`'s `routes` binds `minilaterals.com/weimar-triangle*` to the worker, but that route only applies on `wrangler deploy` (the `main`/production build). Branch previews get a `workers_dev` subdomain instead (a per-commit URL and a per-branch alias), where the worker owns the whole subdomain root rather than a `/weimar-triangle` sub-path — so a branch preview lives at `<alias>.workers.dev/weimar-triangle/`, with the bare root redirecting there.
 - **Previewing without Cloudflare**: `render.yml` uploads the built tree as a `site` artifact on every branch push; download it to inspect a render locally.
+- **Worker script** (`wrangler.jsonc` `main`): `worker/index.js` only receives requests that match no static asset — in practice the sandbox API routes — and forwards everything else to the `ASSETS` binding. Two pieces of manual dashboard/CLI config gate the sandbox API (deploys stay green without them): the `OLLAMA_API_KEY` worker secret (`wrangler secret put OLLAMA_API_KEY`; without it `/api/stance` returns 503) and the `SANDBOX_KV` KV namespace (`wrangler kv namespace create SANDBOX_KV`, then uncomment `kv_namespaces` in `wrangler.jsonc` and paste the id; without it the try-gate is disabled and `/api/unlock` returns 503).
+
+## The sandbox ("The Minister's Desk", `/sandbox/`)
+
+An interactive methodology probe: pick a country, draft a statement, and it is assessed **exactly like a real press release** — the live classifier is a JS port of `Event.classify()` driven by the same regex tables, and the stance rating comes from the same Ollama model with the same `STANCE_BACKFILL_PROMPT` + rubric the pipeline uses. Nothing the visitor writes is stored or enters the dataset.
+
+- `render.py` writes `sandbox/data.json` next to the page: classifier tables (`sources/base.py`), goals + judge prompts (`enrich.py`), and the current edition's per-capital mean stances — the single source of truth stays in pipeline code. The page inlines the same payload; the worker fetches the JSON via the `ASSETS` binding, so prompt text is never duplicated in JS.
+- `worker/index.js` handles `POST …/api/stance` (validate → per-IP daily try counter in KV → format prompt → Ollama Cloud → clean stances like `enrich.py`) and `POST …/api/unlock` (email + explicit consent → KV, returns a token that raises the daily limit from 3 to 25). Routes are matched by path suffix so they work both under the production `/weimar-triangle` prefix and on workers.dev previews. `pyFormat()` in the worker replicates Python `str.format` for the prompt template — keep it byte-compatible if the prompt changes.
+- The email gate is deliberately soft (per-IP + localStorage): it is lead capture, not a paywall. Emails live in KV under `email:{addr}` (review via dashboard or `wrangler kv key list`); the consent copy and deletion contact are in `sandbox.html`.
 
 ## Key files
 
@@ -63,7 +72,8 @@ Sources (RSS/HTML/API)
 | `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/embed.py` | Batch-encodes `extracted.position` with `all-MiniLM-L6-v2`; stores in `data/embeddings.json` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_convergence()`; renders 3 pages |
-| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
+| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html`, `sandbox.html` |
+| `worker/index.js` | Sandbox API: `/api/stance` (judge a visitor statement) + `/api/unlock` (email gate) |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |
 | `data/annual.yaml` | Activity scores 1991–2026 (drives the bar chart on `/meetings/`) |
@@ -113,8 +123,8 @@ Grouping into topic clusters uses regex keyword matching (fast, deterministic, n
 **6. One-sentence position extraction.**
 The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly and more expensive to embed.
 
-**7. Static site, no backend.**
-`pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
+**7. Static site, (almost) no backend.**
+`pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No server-side search, no authentication, no per-user state. Rationale: zero hosting cost, near-zero attack surface, Cloudflare CDN globally. The one deliberate exception is the sandbox's two stateless API routes on the worker that already serves the site (see The sandbox above) — they hold no data beyond a KV try-counter and opted-in emails, and the published site works fully without them. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
 **8. Enrichment and embedding are optional.**
 `pipeline.enrich` and `pipeline.embed` both run with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text or convergence scores). Rationale: the enrichment provider credentials (e.g. the `OLLAMA_API_KEY` secret for Ollama Cloud) might not be configured; the HuggingFace model download might fail on a flaky CI run.
