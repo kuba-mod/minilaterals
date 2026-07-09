@@ -25,11 +25,11 @@
     "not_found_handling": "404-page",
     "binding": "ASSETS"
   }
-  // Email gate storage. Uncomment after creating the namespace
-  // (`wrangler kv namespace create SANDBOX_KV`) and paste its id — with the
-  // binding absent the API works ungated and /api/unlock returns 503, so
-  // deploys stay green before this manual step.
-  // ,"kv_namespaces": [
-  //   { "binding": "SANDBOX_KV", "id": "<paste-namespace-id>" }
-  // ]
+  // Email gate storage: per-IP daily try counters, unlock tokens, and
+  // opted-in emails (keys email:{addr} — review via dashboard or
+  // `wrangler kv key list`). If the binding is ever removed the API keeps
+  // working ungated and /api/unlock returns 503.
+  ,"kv_namespaces": [
+    { "binding": "SANDBOX_KV", "id": "59cf38506c0340eeaba6abed0fd552cb" }
+  ]
 }
