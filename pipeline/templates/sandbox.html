@@ -282,7 +282,7 @@ const BASE = "{{ base_path }}";
       setTries(data.remaining);
       renderResult(data.stances);
     } catch (e) {
-      status("Network error — try again in a moment.");
+      status("Couldn't reach the assessment service (" + e.message + ") — try again in a moment.");
     } finally {
       btn.disabled = false;
       refresh();

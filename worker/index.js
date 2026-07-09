@@ -29,11 +29,18 @@ const COUNTRIES = { FR: "France", DE: "Germany", PL: "Poland" };
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname.endsWith("/api/stance")) {
-      return request.method === "POST" ? handleStance(request, env, url) : methodNotAllowed();
-    }
-    if (url.pathname.endsWith("/api/unlock")) {
-      return request.method === "POST" ? handleUnlock(request, env) : methodNotAllowed();
+    try {
+      if (url.pathname.endsWith("/api/stance")) {
+        return request.method === "POST" ? await handleStance(request, env, url) : methodNotAllowed();
+      }
+      if (url.pathname.endsWith("/api/unlock")) {
+        return request.method === "POST" ? await handleUnlock(request, env) : methodNotAllowed();
+      }
+    } catch {
+      // Any unforeseen throw here would otherwise crash the isolate mid-response,
+      // which surfaces to the browser as a raw "Failed to fetch" rather than a
+      // readable error — always hand back valid JSON instead.
+      return json(500, { error: "internal_error" });
     }
     return env.ASSETS.fetch(request);
   },
@@ -105,7 +112,8 @@ async function loadSandboxData(env, url, apiSuffix) {
  * With no KV binding the gate is disabled (deploys stay green before the
  * namespace is created; the endpoint still needs the API key to do anything).
  */
-async function checkAndCountTry(env, request, token) {
+/** Check the daily limit without spending a try — a failed judge call must not cost the user one. */
+async function peekTries(env, request, token) {
   if (!env.SANDBOX_KV) return { allowed: true, remaining: null, unlockRequired: false };
   const kv = env.SANDBOX_KV;
 
@@ -122,8 +130,13 @@ async function checkAndCountTry(env, request, token) {
   if (used >= limit) {
     return { allowed: false, remaining: 0, unlockRequired: !unlocked };
   }
-  await kv.put(key, String(used + 1), { expirationTtl: 86400 });
-  return { allowed: true, remaining: limit - used - 1, unlockRequired: false };
+  return { allowed: true, remaining: limit - used - 1, unlockRequired: false, key, used };
+}
+
+/** Spend a try — call only once the judge has actually returned a usable rating. */
+async function commitTry(env, gate) {
+  if (!env.SANDBOX_KV || !gate.key) return;
+  await env.SANDBOX_KV.put(gate.key, String(gate.used + 1), { expirationTtl: 86400 });
 }
 
 async function handleStance(request, env, url) {
@@ -158,7 +171,7 @@ async function handleStance(request, env, url) {
     return json(400, { error: "no_tracked_topic" });
   }
 
-  const gate = await checkAndCountTry(env, request, body.token);
+  const gate = await peekTries(env, request, body.token);
   if (!gate.allowed) {
     return json(gate.unlockRequired ? 402 : 429, {
       error: gate.unlockRequired ? "unlock_required" : "rate_limited",
@@ -206,8 +219,17 @@ async function handleStance(request, env, url) {
       return json(502, { error: "judge_unreachable" });
     }
     if (!res.ok) return json(502, { error: "judge_error", status: res.status });
-    const completion = await res.json();
-    const content = completion?.choices?.[0]?.message?.content || "";
+    // Ollama Cloud occasionally returns a non-JSON body (HTML error page, empty
+    // body under load) with a 200 status — an unguarded res.json() here would
+    // throw uncaught and crash the isolate mid-response, which the browser sees
+    // as a raw connection failure ("Failed to fetch") rather than a clean error.
+    let content = "";
+    try {
+      const completion = await res.json();
+      content = completion?.choices?.[0]?.message?.content || "";
+    } catch {
+      return json(502, { error: "judge_bad_response" });
+    }
     try {
       ratings = parseModelJson(content);
     } catch {
@@ -226,6 +248,7 @@ async function handleStance(request, env, url) {
   }
   if (Object.keys(stances).length === 0) return json(502, { error: "judge_no_ratings" });
 
+  await commitTry(env, gate);
   return json(200, { stances, model, remaining: gate.remaining });
 }
 
