@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.4
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  - Kaja Kallas
+  - Þorgerður Katrín Gunnarsdóttir
+  - Sheikh Jarrah Jaber Al-Ahmad Al-Sabah
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Türkiye
+  position: Poland emphasizes the necessity of increased defense spending and strategic
+    European cooperation to deter Russian aggression.
+  positions:
+    ukraine: Poland continues its engagement with Ukraine through participation in
+      the NATO–Ukraine Council.
+    defence: Poland actively commits to increasing defense spending and strengthening
+      Allied capabilities to deter Russia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Deputy Prime Minister Radosław Sikorski attended... a session of the
+        NATO–Ukraine Council
+    defence:
+      score: 2
+      evidence: increasing the annual defence spending to 5% of GDP
