@@ -1,0 +1,34 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.75
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jean-Noël Barrot
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland seeks to deepen its strategic partnership with France to strengthen
+    European security and economic cooperation.
+  positions:
+    ukraine: Poland continues to discuss and address security risks concerning Ukraine
+      with its French counterpart.
+    defence: Poland aims to enhance defence cooperation with France as a core pillar
+      of European security architecture.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The ministers also discussed current security risks, including in
+        the Middle East and Ukraine.
+    defence:
+      score: 1
+      evidence: They pledged to continue a close political dialogue and enhance cooperation
+        in key areas, including economy, defence, and culture.
