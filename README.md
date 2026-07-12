@@ -36,7 +36,7 @@ uv run python -m pipeline.render          # build the static site into docs/
 uv run python -m http.server 8080 --directory docs   # → http://localhost:8080
 ```
 
-The enrichment step runs against either a local model (via Ollama) or a hosted API, auto-detected from whichever key is configured. Enrichment is optional — ingest and render always produce a working site, and the comparison view degrades gracefully when stance data is missing.
+The enrichment step runs on Ollama (a local model in dev, Ollama Cloud in CI; a hosted API is also supported, auto-detected from whichever key is configured). It's the step that turns raw press releases into the stance comparison — the point of the site — so it runs every cycle. It is kept fault-isolated rather than optional: if a run fails, ingest and render still produce a working site and the comparison view degrades gracefully (no scores) instead of breaking, and the failure is surfaced via the pipeline's healthcheck.
 
 ## A few design choices
 

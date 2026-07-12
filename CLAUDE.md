@@ -115,8 +115,8 @@ The LLM enrichment prompt asks for a single sentence: "what position does {count
 **7. Static site, no backend.**
 `pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
-**8. Enrichment is optional.**
-`pipeline.enrich` (position extraction and stance backfill) runs with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text, and score `None`/no badge when stance ratings are missing). Rationale: the enrichment provider credentials (e.g. the `OLLAMA_API_KEY` secret for Ollama Cloud) might not be configured.
+**8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
+The stance comparison *is* the product — without `pipeline.enrich` (position extraction + per-topic stance rating) there is only a data-collection pipeline and an empty convergence view. Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if un-scored) site — clusters show without position text and score `None`/no badge when stance ratings are missing. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
 
 ## Adding a new source
 
