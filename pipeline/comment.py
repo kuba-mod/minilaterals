@@ -30,8 +30,20 @@ import os
 import sys
 from pathlib import Path
 
+import anthropic
+from openai import OpenAI
+
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
+
+from pipeline.render import (  # noqa: E402
+    build_convergence_clusters,
+    load_embeddings,
+    load_events,
+    load_goal_embeddings,
+    load_position_embeddings,
+    score_cluster_convergence,
+)
 
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
 
@@ -68,7 +80,6 @@ class OllamaProvider:
     def __init__(self, host: str, model: str, api_key: str = "ollama"):
         self.host = host.rstrip("/")
         self.model = model
-        from openai import OpenAI
 
         # Set OLLAMA_API_KEY for Ollama Cloud (OLLAMA_HOST=https://ollama.com)
         self.client = OpenAI(base_url=f"{self.host}/v1", api_key=api_key)
@@ -98,8 +109,6 @@ class OllamaProvider:
 
 class AnthropicProvider:
     def __init__(self, api_key: str, model: str):
-        import anthropic
-
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         print(f"Provider: Anthropic  model={self.model}")
@@ -222,15 +231,6 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="Max clusters to process")
     parser.add_argument("--force", action="store_true", help="Regenerate even if cached")
     args = parser.parse_args()
-
-    from pipeline.render import (
-        build_convergence_clusters,
-        load_embeddings,
-        load_events,
-        load_goal_embeddings,
-        load_position_embeddings,
-        score_cluster_convergence,
-    )
 
     events = load_events(weimar_only=True)
     emb_store = load_embeddings()

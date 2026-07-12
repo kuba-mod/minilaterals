@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import time
 from collections.abc import Iterator
 from datetime import UTC, datetime
@@ -23,8 +24,6 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
         return now.strftime("%Y-%m-%d"), now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Clean up ordinals, extra text, and punctuation (e.g. "On : May 13th 2026" → "May 13 2026")
-    import re
-
     cleaned = raw.strip()
     cleaned = re.sub(r"^On\s*:\s*", "", cleaned)  # Remove "On : " prefix
     cleaned = re.sub(r"(\d{1,2})(?:st|nd|rd|th)", r"\1", cleaned)  # Remove ordinals
