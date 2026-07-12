@@ -285,9 +285,20 @@
       {% endif %}
       {% endfor %}
     </div>
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:14px 32px; background:var(--bg-paper); border-top:1px solid var(--rule); font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; color:var(--muted)">
+      <span>Get alerted when this shifts — <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20—%20alert%20me%20on%20{{ cluster.area }}">get in touch →</a></span>
+    </div>
   </div>
   {% endfor %}
   </div>{# /clusters-container #}
+
+  <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin:24px 0 40px; padding:18px 24px; background:var(--bg-card); border:1px solid var(--rule); border-radius:10px">
+    <a href="{{ base_path }}/exports/{{ export_filename }}" class="cta-secondary" download>Export this data (CSV) <span>→</span></a>
+    <span style="font-family:'IBM Plex Sans',sans-serif; font-size:12.5px; color:var(--muted)">
+      Free: current month, all tracked statements. Premium: full history with stance scores and quote evidence —
+      <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20—%20full-history%20export">ask about full-history export →</a>
+    </span>
+  </div>
 
 {% else %}
   <p style="color:var(--muted); font-family:'IBM Plex Sans',sans-serif; font-size:14px">
