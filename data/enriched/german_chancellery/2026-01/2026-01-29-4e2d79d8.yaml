@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Ministry of the Interior
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany passed a comprehensive law to strengthen critical infrastructure
+    protection across multiple sectors.
+  positions:
+    rule_of_law: Germany strengthens democratic resilience and security by passing
+      an Umbrella Act that mandates cross-sector minimum standards for the physical
+      and digital protection of essential national services.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The German Bundestag has passed the draft of an Umbrella Act for Critical
+        Infrastructure Protection (KRITIS).

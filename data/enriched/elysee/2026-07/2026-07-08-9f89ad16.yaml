@@ -1,0 +1,51 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Brigitte Macron
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Turkey
+  position: France reaffirmed its commitment to a more sovereign Europe within a strengthened
+    Alliance, emphasizing sustained support for Ukraine and increased European defense
+    contributions.
+  positions:
+    ukraine: France commits to providing sustained support for Ukraine's defense until
+      a just and lasting peace is achieved.
+    defence: France supports strengthening European defense capabilities and the Alliance's
+      European pillar.
+    enlargement: France supports the EU accession of Ukraine and Western Balkans countries.
+    rule_of_law: France emphasizes the importance of close cooperation among Allies
+      to maintain democratic resilience and security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: reiterated France’s commitment to a more sovereign Europe within a
+        strengthened Alliance. He reaffirmed the need for sustained support for Ukraine’s
+        defense
+    defence:
+      score: 1
+      evidence: Discussions focused in particular on strengthening European defense
+        and the Alliance’s European pillar
+    enlargement:
+      score: 1
+      evidence: Statement from France, Sweden and Finland regarding France's participation
+        in NATO's Forward Land Forces Finland (FLF Finland).
+    rule_of_law:
+      score: 1
+      evidence: He reaffirmed the need for sustained support for Ukraine’s defense,
+        for Europeans to contribute more to their own security, and for close cooperation
+        among Allies in the face of contemporary strategic challenges.

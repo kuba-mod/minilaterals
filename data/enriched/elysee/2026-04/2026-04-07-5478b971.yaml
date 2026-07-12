@@ -1,0 +1,57 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Cambodia
+  - Botswana
+  - Cyprus
+  - Kenya
+  - Armenia
+  - Egypt
+  - Brazil
+  - Singapore
+  - Thailand
+  - United Arab Emirates
+  - Democratic Republic of Congo
+  - Mexico
+  - Tunisia
+  - World Health Organization
+  - Africa CDC
+  - CGIAR
+  - FAO
+  - WOAH
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: France commits to advancing the integration of the One Health approach
+    across climate action by strengthening health resilience and aligning national
+    strategies with scientific evidence.
+  positions:
+    green_transition: France strongly supports integrating One Health considerations
+      into climate action plans, committing to strengthen this integration within
+      NDCs and NAPs.
+    rule_of_law: France emphasizes evidence-based policy and knowledge sharing to
+      enhance data collection on climate-related health risks, supporting scientific
+      rigor in policymaking.
+  stances:
+    green_transition:
+      score: 2
+      evidence: We will progressively strengthen the integration of One Health considerations,
+        as appropriate to national contexts, within Nationally Determined Contributions
+        (NDCs), National Adaptation Plans (NAPs) and relevant national climate, development
+        and sectoral strategies.
+    rule_of_law:
+      score: 2
+      evidence: Recognizing the importance of evidence-based policy and anticipatory
+        risk management, we will support voluntary efforts to enhance data collection
+        and knowledge-sharing on climate-related health, zoonotic and vector-borne
+        risks,

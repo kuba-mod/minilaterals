@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Prabowo Subianto
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Paris, France
+  position: France elevated its bilateral relationship with Indonesia to a comprehensive
+    strategic partnership while addressing key international issues like the Ukraine
+    crisis and global power politics.
+  positions:
+    ukraine: France and Indonesia committed to discussing efforts to support Ukraine
+      as part of their broader diplomatic engagement.
+    rule_of_law: France emphasized the need for consolidating sovereignties and addressing
+      power politics in a global context that impacts democratic resilience.
+  stances:
+    ukraine:
+      score: 1
+      evidence: address key international issues , notably efforts to support Ukraine
+    rule_of_law:
+      score: 1
+      evidence: exchange views on the need to consolidate our sovereignties in a context
+        where power politics are becoming increasingly prevalent

@@ -1,0 +1,55 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Marco Rubio
+  - Thorgerdur Gunnarsdóttir
+  - Antonio Guterres
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: 'null'
+  position: Germany emphasizes the critical need for a strong, dependable transatlantic
+    partnership and collective action within NATO to manage current global crises,
+    including Russia's aggression.
+  positions:
+    ukraine: Germany strongly supports continued collective security efforts in response
+      to Russia’s war of aggression against Ukraine.
+    defence: Germany commits to strengthening NATO's collective defense capabilities
+      and taking resolute action towards meeting the 5-percent defense spending goal.
+    hybrid: Germany calls for coordinated discussion within NATO regarding strategic
+      challenges in the Arctic, addressing rivalries from Russia and China.
+    rule_of_law: Germany affirms that adherence to international law and cooperation
+      is fundamental for maintaining security, trade, and investment.
+  stances:
+    ukraine:
+      score: 1
+      evidence: above all Russia’s war of aggression against Ukraine, which threatens
+        our security across the entire Euro-Atlantic area.
+    defence:
+      score: 2
+      evidence: We are therefore liaising closely within NATO and together ensuring
+        greater security – on both sides of the Atlantic. [...] Germany is taking
+        resolute action to progress towards this goal.
+    hybrid:
+      score: 1
+      evidence: With security in the Arctic becoming increasingly important, too,
+        I also want to discuss during my trip how we can best shoulder this responsibility
+        together within NATO , in light of old and new rivalries in the region due
+        to Russia and China.
+    rule_of_law:
+      score: 1
+      evidence: For Germany, dependability as an international partner thus very clearly
+        includes a commitment to international law and international cooperation.

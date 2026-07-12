@@ -1,0 +1,43 @@
+actors: []
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Premier
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Zielonka, Poland
+  position: Poland must urgently accelerate domestic defense production and leverage
+    its economic potential to enhance national security in the face of severe geopolitical
+    uncertainty.
+  positions:
+    defence: Poland strongly advocates for accelerating domestic arms production,
+      particularly drones and autonomous systems, viewing it as essential for national
+      security and positioning Poland as a European defense leader.
+    hybrid: Poland emphasizes the need for immediate action due to the highly uncertain
+      international situation, stressing that national security preparations cannot
+      be delayed by political conflicts.
+    rule_of_law: Poland affirms its commitment to democratic resilience and international
+      law by announcing its withdrawal from the Ottawa Convention on anti-personnel
+      mines.
+  stances:
+    defence:
+      score: 2
+      evidence: Przyspieszenie polskiej produkcji zbrojeniowej jest warunkiem koniecznym
+        naszego bezpieczeństwa.
+    hybrid:
+      score: 2
+      evidence: Polska musi używać nadzwyczajnych środków, ponieważ wymaga tego od
+        nas sytuacja geopolityczna.
+    rule_of_law:
+      score: 2
+      evidence: Jednocześnie poinformował, że Polska wychodzi dziś z Konwencji Ottawskiej,
+        która zakazuje użycia, składowania i produkcji min przeciwpiechotny.

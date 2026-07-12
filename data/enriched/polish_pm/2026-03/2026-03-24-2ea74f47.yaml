@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Karol Nawrocki
+  - Viktor Orban
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland strongly criticizes Hungary's actions and rhetoric, accusing Viktor
+    Orbán of undermining Polish and EU interests through anti-Ukrainian and pro-Russian
+    policies.
+  positions:
+    ukraine: Poland condemns Hungary for blocking crucial financial aid to Ukraine
+      and undermines regional security by supporting Russia.
+    hybrid: Poland accuses Hungarian officials of collaborating with Russian authorities
+      and undermining EU institutions by passing sensitive information to Moscow.
+    rule_of_law: Poland criticizes Hungary's actions as being contrary to both European
+      and Polish national interests, particularly regarding energy policy.
+  stances:
+    ukraine:
+      score: -2
+      evidence: To Premier Orban osobiście blokuje wypłatę tych pieniędzy dla Polski
+        Błyskawiczne akcja Polski... Innym przykładem działań węgierskiego rządu,
+        które są sprzeczne z polską racją stanu, jest blokada 90 mln euro pomocy dla
+        Ukrainy.
+    hybrid:
+      score: -2
+      evidence: dyplomaci węgierscy, najbliżsi pracownicy Victora Orbana, ściśle współpracują
+        z władzami rosyjskimi, przekazując im informacje z posiedzeń instytucji europejskich.
+    rule_of_law:
+      score: -2
+      evidence: Polityka prowadzona przez węgierskiego lidera jest krytycznie oceniana
+        przez polski rząd - jest sprzeczna zarówno z europejskimi interesami Polski,
+        jak i jej interesami narodowymi.

@@ -1,0 +1,18 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the French Republic
+  - Prime Minister of the United Kingdom
+  topics: []
+  location: null
+  position: France reaffirms its commitment to regional stability and freedom of navigation
+    in the Strait of Hormuz through cooperation with international partners.
+  positions: {}
+  stances: {}

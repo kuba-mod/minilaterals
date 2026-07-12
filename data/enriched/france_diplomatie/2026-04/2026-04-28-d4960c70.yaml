@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Palestinian Authority
+  - Palestinian Elections Commission
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the local elections in the West Bank and Deir al-Balah,
+    viewing them as evidence that democratic expression is possible in Palestine.
+  positions:
+    rule_of_law: France affirms the importance of democratic processes and the rule
+      of law by welcoming the successful holding of local elections in Palestine.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The very fact that the vote went ahead demonstrates that, with the
+        relevant stakeholders’ involvement, democratic expression is possible through
+        the ballot box in Palestine.

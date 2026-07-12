@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Brigitte Macron
+  - Donald Trump
+  - G7 heads of state and government
+  topics:
+  - rule_of_law
+  location: Évian, France
+  position: France hosted the G7 Summit with a focus on working together to address
+    major international challenges.
+  positions:
+    rule_of_law: France emphasized the importance of addressing major international
+      challenges during the summit.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The leaders gathered at the end of the day for a working dinner on
+        the theme of “working together to address major international challenges.”

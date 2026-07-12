@@ -1,0 +1,37 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - defence
+  - hybrid
+  location: Munich, Germany
+  position: Germany has concluded a comprehensive defence cooperation agreement with
+    Poland to deepen military ties and enhance collective security in the face of
+    geopolitical change.
+  positions:
+    defence: Germany strongly supports strengthening EU defense capabilities complementary
+      to NATO through a new bilateral agreement with Poland, focusing on joint training
+      and mutual assistance.
+    hybrid: Germany commits to enhancing cooperation with Poland specifically for
+      crisis management and responding to hybrid threats.
+  stances:
+    defence:
+      score: 2
+      evidence: The defence agreement emphasises the integration of both countries'
+        defence policies into NATO and the EU . It reaffirms the mutual obligation
+        to provide assistance in the event of an external attack in accordance with
+        Article 5 of the NATO Treaty and Article 42 (7) of the EU Treaty.
+    hybrid:
+      score: 2
+      evidence: Germany and Poland will also cooperate more closely in crisis management
+        and in responding to hybrid threats.

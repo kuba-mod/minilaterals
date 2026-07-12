@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Rząd
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes its commitment to social welfare improvements and the
+    effective utilization of EU recovery funds while improving healthcare system efficiency.
+  positions:
+    rule_of_law: Poland highlights efforts to improve public services, including childcare
+      access and healthcare efficiency through digital systems, demonstrating a focus
+      on citizen well-being and systemic improvement.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: To this day, the state ensures that parenting is not associated with
+        great sacrifice.

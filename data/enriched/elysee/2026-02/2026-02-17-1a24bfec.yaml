@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.7
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Narendra Modi
+  topics:
+  - defence
+  - rule_of_law
+  location: Mumbai, India
+  position: France and India agreed to elevate their relationship to a Special Global
+    Strategic Partnership, focusing on mutual prosperity, global stability, and cooperation
+    in defense and technology.
+  positions:
+    defence: France supports deepening the defense partnership with India through
+      co-design, co-development, and co-production of platforms.
+    rule_of_law: France supports building a stable rules-based international order
+      by working collectively with India to address global challenges.
+  stances:
+    defence:
+      score: 2
+      evidence: India and France have a long history of collaboration in defence and
+        security which has only deepened with a focus on co-design, co-development
+        and co-production of defence platforms
+    rule_of_law:
+      score: 2
+      evidence: help build a stable rules-based international order

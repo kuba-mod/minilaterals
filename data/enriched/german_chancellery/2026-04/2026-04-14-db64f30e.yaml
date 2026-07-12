@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Germany
+  - Ukraine
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany and Ukraine declared a strategic partnership focused on mutual
+    support across various dimensions.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine across military, economic,
+      and diplomatic dimensions until a just and lasting peace is achieved.
+    enlargement: Germany supports the EU accession of Ukraine and Western Balkans
+      countries.
+    rule_of_law: Germany affirms democratic resilience and the rule of law as foundational
+      to European unity and security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''

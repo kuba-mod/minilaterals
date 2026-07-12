@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  - Mark Rutte
+  - Marco Rubio
+  - Donald Trump
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Paris, France
+  position: Poland emphasizes the necessity of European and transatlantic solidarity
+    to achieve peace in Ukraine while advocating for adherence to NATO principles.
+  positions:
+    ukraine: Poland strongly supports international efforts to secure a lasting peace
+      for Ukraine through coordinated diplomatic pressure from Europe and the US.
+    rule_of_law: Poland stresses the fundamental importance of democratic resilience
+      and adherence to international law within NATO, demanding that all disputes
+      be resolved through dialogue.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Międzynarodowe gwarancje bezpieczeństwa dla Kijowa Państwa Koalicji
+        Chętnych pomagają Ukrainie zakończyć wojnę ukraińsko-rosyjską.
+    rule_of_law:
+      score: 2
+      evidence: Solidarność europejska i poszanowanie integralności państw Europy
+        są kwestiami elementarnymi.

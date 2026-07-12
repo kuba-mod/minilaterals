@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany reiterates commitment to regional stability and calls for negotiations
+    regarding Iran's nuclear and missile programs.
+  positions:
+    rule_of_law: Germany emphasizes the importance of democratic principles by calling
+      for the Iranian people to determine their own future.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Ultimately, the Iranian people must be allowed to determine their
+        future.

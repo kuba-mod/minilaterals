@@ -1,0 +1,50 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: press conference
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - Estonian Prime Minister Kristen Michal
+  - Latvian President Edgars Rinkēvičs
+  - Lithuanian President Gitanas Nausėda
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the close partnership with Baltic states and stresses
+    that collective security requires strong coordination among allies.
+  positions:
+    defence: Germany supports strengthening EU defense capabilities complementary
+      to NATO, particularly focusing on eastern flank deterrence and collective security.
+    hybrid: Germany calls for coordinated action against hybrid threats, including
+      disinformation campaigns and foreign political interference.
+    enlargement: Germany supports the EU accession process for Eastern partners, aligning
+      with the Baltic states' focus on institutional reform.
+    rule_of_law: Germany affirms democratic resilience and the rule of law as foundational
+      to European unity and security, urging its own government to improve clarity
+      of vision.
+  stances:
+    defence:
+      score: 1
+      evidence: The security of the Baltic States is also the security of Germany
+    hybrid:
+      score: 1
+      evidence: close coordination among the Allies is more important than ever against
+        the backdrop of the forthcoming NATO summit in Ankara
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: The Federal Government, he said, should follow the example of its
+        Baltic partners when it comes to their clarity of vision and determination.

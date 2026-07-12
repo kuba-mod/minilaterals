@@ -1,0 +1,43 @@
+actors: []
+issue_areas:
+- ukraine
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - ukraine
+  - rule_of_law
+  - enlargement
+  location: Munich, Germany
+  position: Poland strongly supports Ukraine's defense and sovereignty, emphasizing
+    the need for continued military aid and adherence to democratic principles.
+  positions:
+    ukraine: Poland expresses deep admiration for Ukrainian resilience and unwavering
+      commitment to defending its independence against aggression, stressing that
+      material support is crucial.
+    rule_of_law: Poland affirms the foundational importance of democratic principles,
+      rule of law, and freedom, warning that these values are under threat globally.
+    enlargement: Poland supports Ukraine's right to defend itself and its aspirations
+      for integration into the Western world, including NATO and the EU.
+  stances:
+    ukraine:
+      score: 1
+      evidence: 'Dziś mógłbyś powiedzieć: „Walka nadal jest tutaj. Nadal potrzebujemy
+        amunicji, a nie komplementów”.'
+    rule_of_law:
+      score: 1
+      evidence: Dziękujemy również za przypomnienie, że to, co dla Zachodu stało się
+        nudną codziennością – prawa i wolności, konstytucje i demokracje, dobrobyt
+        i przewidywalność, o które przestaliśmy dbać, które zaczęliśmy podważać i
+        kwestionować – jest czymś, o co Wy jesteście gotowi walczyć.
+    enlargement:
+      score: 1
+      evidence: Ich wyborem była obrona przed agresorem – obrona niepodległego państwa
+        i jego obywateli, obrona marzeń o lepszym świecie, o wolności i prawach człowieka,
+        o przystąpieniu do NATO i Unii Europejskiej.

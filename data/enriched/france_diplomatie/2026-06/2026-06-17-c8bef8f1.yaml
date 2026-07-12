@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 leaders
+  - Kenya
+  - Republic of Korea
+  topics:
+  - rule_of_law
+  location: null
+  position: France supports reforming the international development architecture to
+    create mutually beneficial partnerships that prioritize self-financing and strengthen
+    partner countries' ownership.
+  positions:
+    rule_of_law: France strongly affirms the importance of democratic resilience and
+      rule of law by emphasizing strengthening domestic resource mobilization and
+      accountability in partner countries.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We will continue to support partner countries, including through strengthening
+        domestic resource mobilization and developing capacities for tax administration.

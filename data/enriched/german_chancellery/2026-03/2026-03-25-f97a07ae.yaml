@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is significantly increasing its investment in infrastructure and
+    climate protection through a Special Fund to support future economic growth and
+    resilience.
+  positions:
+    green_transition: Germany strongly supports the transition to climate neutrality
+      by allocating substantial funds for climate-related projects and energy networks.
+    rule_of_law: Germany emphasizes maintaining democratic resilience and transparency
+      in its spending through dedicated monitoring tools and public reporting mechanisms.
+  stances:
+    green_transition:
+      score: 2
+      evidence: That includes payments to the Climate and Transformation Fund amounting
+        to 10 billion euros.
+    rule_of_law:
+      score: 2
+      evidence: To ensure transparency in terms of how the special loans will be used,
+        the Federal Ministry of Finance has launched an “Investment Hour” on its website,

@@ -1,0 +1,43 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Brigitte Macron
+  - Volodymyr Zelensky, President of Ukraine
+  - heads of state and government of the Arab Republic of Egypt
+  - United Arab Emirates
+  - State of Qatar
+  - Brazil
+  - India
+  - South Korea
+  - Kenya
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Évian, France
+  position: France hosted a multi-day G7 Summit focusing on peace and security for
+    Ukraine and Europe, while also addressing regional stability in the Middle East.
+  positions:
+    ukraine: France actively supports long-term support for Ukraine across military,
+      economic, and diplomatic dimensions until a just and lasting peace is achieved
+      by hosting dedicated working sessions.
+    rule_of_law: France emphasized international solidarity and partnerships to address
+      various global crises, including those related to stability and development.
+  stances:
+    ukraine:
+      score: 2
+      evidence: President Emmanuel Macron took part in a working session on the theme
+        “Building Peace and Security for Ukraine and Europe”
+    rule_of_law:
+      score: 1
+      evidence: The working session titled “Forging New Partnerships and Rebuilding
+        International Solidarity” then took place in the presence of the G7 countries,
+        partner countries, the World Bank, and the African Development Bank.

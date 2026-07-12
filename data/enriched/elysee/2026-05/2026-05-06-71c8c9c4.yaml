@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - President of the French Republic
+  - President of the Republic of Kenya
+  topics:
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France is promoting robust and balanced Africa-France partnerships focused
+    on economic development, inclusive global governance, and addressing common challenges.
+  positions:
+    rule_of_law: France emphasizes the need for global governance that rejects negative
+      tendencies like predation and new imperialism while supporting democratic resilience
+      through strong bilateral ties.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: These partnerships must also contribute to fairer and more inclusive
+        global governance, which rejects bloc mindsets, predation and new imperialist
+        tendencies

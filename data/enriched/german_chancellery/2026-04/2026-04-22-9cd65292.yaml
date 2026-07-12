@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - BM Carsten Schneider
+  - Minister Murat Kurum
+  - Fatih Birol
+  - Simon Stiell
+  - Gunnar Groebler
+  - Stephanie Pfaeifer
+  - José Antonio Cabrera
+  topics:
+  - green_transition
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the need for a multilateral, ambitious, and effective
+    climate policy that integrates economic, energy, and innovation strategies to
+    maintain global stability and competitiveness.
+  positions:
+    green_transition: Germany strongly commits to addressing climate change through
+      an integrated approach combining climate, economic, energy, and innovation policies,
+      reaffirming its commitment to the Paris Agreement.
+    rule_of_law: Germany stresses that maintaining a broader perspective in policymaking
+      and supporting democratic resilience are crucial for navigating rapid geopolitical
+      shifts.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Our commitment to the Paris Agreement and to our climate goals is
+        firm.
+    rule_of_law:
+      score: 1
+      evidence: Yet it is precisely in such times that responsible policymaking must
+        maintain a broader perspective.

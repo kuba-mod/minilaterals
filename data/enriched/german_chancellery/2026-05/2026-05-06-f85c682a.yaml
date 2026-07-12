@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany is concluding its armed participation in the UNIFIL mission in
+    Lebanon by 2026 while continuing support for training and stability efforts.
+  positions:
+    defence: Germany supports maintaining regional security through structured withdrawal
+      and continued military training support within a defined mandate.
+    rule_of_law: Germany emphasizes supporting local institutions, particularly the
+      Lebanese Navy, to ensure self-sufficiency and adherence to international mandates.
+  stances:
+    defence:
+      score: 1
+      evidence: The Federal Government has decided that armed German forces will take
+        part in the UNIFIL mission in Lebanon for the last time.
+    rule_of_law:
+      score: 2
+      evidence: These tasks will therefore continue to be trained and supported through
+        the end of the mandate in order to empower the Lebanese Navy as sustainably
+        as possible.

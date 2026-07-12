@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Évian-les-Bains, France
+  position: Germany views the G7 outcomes on foreign and security policy as a success,
+    emphasizing continued support for Ukraine and progress in geoeconomic areas.
+  positions:
+    ukraine: Germany strongly supports long-term international backing for Ukraine
+      following the G7 declaration.
+    rule_of_law: Germany notes progress in geoeconomic discussions and cooperation
+      on critical materials and AI, supporting broader European stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The common language reached on Ukraine is precisely what makes this
+        “message so abundantly clear”
+    rule_of_law:
+      score: 0
+      evidence: Finally, progress has also been made in the necessary discussions
+        on geoeconomic imbalances.

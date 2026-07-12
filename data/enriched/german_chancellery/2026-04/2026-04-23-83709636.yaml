@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany maintains a strong and comprehensive commitment to supporting
+    Ukraine through extensive military, financial, humanitarian, and reconstruction
+    aid.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine across multiple dimensions,
+      providing massive amounts of bilateral civilian, military, and developmental
+      aid.
+    defence: Germany actively supports strengthening EU defense capabilities by providing
+      significant military aid, including air defence systems and combat vehicles.
+    rule_of_law: Germany supports democratic resilience and stability by providing
+      humanitarian aid, clearing mines, and training citizens to deal with explosive
+      threats.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Since the Russian invasion of Ukraine on 24 February 2022, the Federal
+        Government has provided Ukraine with – or set aside for the coming years –<0xC2><0xA0>bilateral
+        civilian support amounting to some 41 billion euros, and military support
+        of around 55.5 billion euros.
+    defence:
+      score: 2
+      evidence: Ukraine has been given considerable support in its defence capabilities
+        with a 90-billion euro loan from the European Union.
+    rule_of_law:
+      score: 2
+      evidence: The widely scattered unexploded ordnance and mines are also particularly
+        dangerous for the civilian population in Ukraine.

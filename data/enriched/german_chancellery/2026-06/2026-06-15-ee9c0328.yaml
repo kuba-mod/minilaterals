@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.3
+extracted:
+  event_type: statement
+  participants:
+  - President Emmanuel Macron
+  - Chancellor Friedrich Merz
+  - Prime Minister Giorgia Meloni
+  - Prime Minister Keir Starmer
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany welcomes the US-Iran memorandum of understanding as a chance to
+    restore regional stability and supports efforts for comprehensive implementation
+    while emphasizing freedom of navigation and Iran's nuclear non-proliferation.
+  positions:
+    rule_of_law: Germany strongly affirms democratic principles by demanding that
+      Iran never acquire a nuclear weapon and supporting international cooperation
+      with the IAEA.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Iran must never acquire a nuclear weapon.

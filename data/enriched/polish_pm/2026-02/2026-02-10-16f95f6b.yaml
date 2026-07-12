@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Gdynia, Poland
+  position: Poland aims to become a dominant maritime power in the Baltic Sea through
+    major defense investments and cooperation with NATO allies.
+  positions:
+    defence: Poland is actively strengthening its military capabilities and regional
+      security by investing heavily in modern naval assets and participating in joint
+      NATO exercises.
+    enlargement: Poland supports the broader geopolitical goal of securing the Baltic
+      region through cooperation with neighboring countries and strengthening its
+      role within Western structures.
+    rule_of_law: Poland emphasizes its commitment to modern development and international
+      integration, positioning itself as a stable and ambitious member of the Western
+      community.
+  stances:
+    defence:
+      score: 2
+      evidence: Wartość programu „Miecznik” wynosi 15 mld zł.
+    enlargement:
+      score: 1
+      evidence: Nasza coraz ściślejsza współpraca ze Szwecją, ale także z Norwegią,
+        Finlandią i państwami bałtyckimi, staje się absolutnie kluczowa dla bezpieczeństwa
+        Europy i Polski
+    rule_of_law:
+      score: 1
+      evidence: Gdynia była symbolem naszych aspiracji przynależenia do wspólnoty
+        Zachodu.

@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Germany
+  - France
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany strongly condemns violence by Iranian security forces and urges
+    the Iranian authorities to uphold fundamental human rights.
+  positions:
+    rule_of_law: Germany affirms the importance of freedom of expression and peaceful
+      assembly as fundamental rights that must be protected.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: must allow freedom of expression and peaceful assembly without fear
+        of reprisal.

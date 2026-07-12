@@ -1,0 +1,44 @@
+actors:
+- FR
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: joint_statement
+  participants:
+  - Governments of Belgium
+  - Bulgaria
+  - Croatia
+  - Czechia
+  - Finland
+  - France
+  - Hungary
+  - Italy
+  - Netherlands
+  - Poland
+  - Romania
+  - Slovakia
+  - Slovenia
+  - Sweden
+  topics:
+  - green_transition
+  location: null
+  position: The participating nations reaffirm their commitment to nuclear energy
+    as a key pillar for decarbonization, energy security, and grid stability within
+    the EU.
+  positions:
+    green_transition: France strongly supports the green transition by advocating
+      for nuclear energy's role in achieving climate neutrality, emphasizing its low-carbon
+      nature and technological neutrality.
+  stances:
+    green_transition:
+      score: 2
+      evidence: We, the Governments of Belgium, Bulgaria, Croatia, Czechia, Finland,
+        France, Hungary, Italy, Netherlands, Poland, Romania, Slovakia, Slovenia,
+        Sweden, Members of the Nuclear Alliance REAFFIRM our strong commitment to
+        developing and deploying nuclear energy, in full respect of each Member States’
+        right to determine their own energy mixes, as a key component of our decarbonisation,
+        competitiveness and energy security strategies

@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France hosted a major international conference focused on combating terrorist
+    financing and financial crime.
+  positions:
+    rule_of_law: France emphasizes the importance of democratic resilience and fighting
+      financial crimes as foundational to European security.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: terrorist financing remains a major concern for France and its international
+        partners

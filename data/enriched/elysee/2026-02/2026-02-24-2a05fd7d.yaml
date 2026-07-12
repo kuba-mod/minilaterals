@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - President Emmanuel Macron
+  - Chancellor Friedrich Merz
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France supports Ukraine's sovereignty and territorial integrity through
+    sustained military, economic, and diplomatic support while advocating for a just
+    peace process.
+  positions:
+    ukraine: France strongly commits to providing long-term support to Ukraine across
+      all dimensions until its full restoration of sovereignty and territorial integrity
+      is achieved.
+    rule_of_law: France affirms the foundational importance of international law and
+      democratic principles, insisting that borders must not be changed by force.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The leaders offered their full and sustained support as Ukraine fights
+        for its sovereignty and territorial integrity
+    rule_of_law:
+      score: 1
+      evidence: They reaffirmed that international borders must not be changed by
+        force.

@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - Jonas Gahr Støre
+  - Mark Carney
+  topics:
+  - defence
+  - rule_of_law
+  location: Nordmela, Norway
+  position: Germany emphasizes the importance of strengthening NATO's northern flank
+    and maintaining strategic partnerships to ensure European sovereignty in both
+    military and space domains.
+  positions:
+    defence: Germany strongly supports collective defense by emphasizing Germany's
+      role in defending NATO’s northern flank through exercises like COLD RESPONSE.
+    rule_of_law: Germany stresses the need for European sovereignty in space travel
+      and highlights the importance of strategic partnerships to maintain stability.
+  stances:
+    defence:
+      score: 2
+      evidence: Here on the ground, Merz saw for himself how the Federal Armed Forces
+        perform their role professionally, resolutely defending Germany on NATO’s
+        northern flank.
+    rule_of_law:
+      score: 1
+      evidence: It is precisely this European sovereignty that we also need in space
+        travel.

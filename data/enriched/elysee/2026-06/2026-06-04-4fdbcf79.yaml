@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - President of Montenegro
+  - Emmanuel Macron
+  - Jakov Milatović
+  - Prime Minister Milojko Spajić
+  topics:
+  - enlargement
+  - rule_of_law
+  location: null
+  position: France reaffirmed its support for Montenegro's reforms and accession process
+    to the European Union during a bilateral visit.
+  positions:
+    enlargement: France supports the EU accession of Western Balkans countries by
+      expressing support for Montenegro’s reform process toward EU membership.
+    rule_of_law: France affirmed foundational democratic principles and institutional
+      stability through high-level diplomatic engagement.
+  stances:
+    enlargement:
+      score: 1
+      evidence: President Emmanuel Macron notably expressed France’s support for the
+        reforms undertaken by Montenegro as part of its process of accession to the
+        European Union.
+    rule_of_law:
+      score: 1
+      evidence: 'This visit provided an opportunity to strengthen our bilateral relationship
+        in several strategic sectors:'

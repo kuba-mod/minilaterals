@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Macron
+  - Chancellor Merz
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany commits to deepening defense cooperation with France and strengthening
+    collective security systems in line with existing treaties.
+  positions:
+    defence: Germany actively advances the goal of a stronger EU defence capability
+      by committing to high-level bilateral coordination on strategic capabilities
+      like conventional forces and missile defense, complementing NATO efforts.
+    rule_of_law: Germany supports the foundational principles of democratic resilience
+      and international law by reaffirming its commitment to existing treaties like
+      the NPT and Article 5.
+  stances:
+    defence:
+      score: 2
+      evidence: France and Germany have established a high-ranking nuclear steering
+        group that will act as a bilateral framework for doctrinal dialogue and the
+        coordination of strategic cooperation, including consultations regarding the
+        appropriate mix of conventional, missile defence and French nuclear capabilities.
+    rule_of_law:
+      score: 1
+      evidence: France and Germany will continue to comply with their obligations
+        under international law including the Treaty on the Non-Proliferation of Nuclear
+        Weapons.

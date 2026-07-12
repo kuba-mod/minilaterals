@@ -1,0 +1,46 @@
+actors: []
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Prezydent
+  - Prezes Rady Ministrów
+  - Ministra Obrony Narodowej
+  - Ministra Finansów i Gospodarki
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Despite the President's veto on the SAFE law, Poland will proceed with
+    the 'Polska Zbrojna' program and secure funding for military modernization through
+    alternative means.
+  positions:
+    defence: Poland strongly supports strengthening EU defense capabilities complementary
+      to NATO, focusing specifically on securing funds for its own national defense
+      programs.
+    hybrid: Poland advocates for coordinated action against external political interference
+      and emphasizes the importance of its national initiatives in securing European
+      stability.
+    rule_of_law: Poland affirms democratic resilience and challenges perceived attempts
+      to undermine its national security plans through institutional roadblocks.
+  stances:
+    defence:
+      score: 2
+      evidence: Rząd przyjął dziś uchwałę, która upoważnia Ministra Obrony Narodowej
+        oraz Ministra Finansów i Gospodarki do podpisania umowy dotyczącej SAFE i
+        zrealizowania programu Polska Zbrojna.
+    hybrid:
+      score: 2
+      evidence: Program SAFE powstał z inicjatywy Polski, która od miesięcy zabiegała
+        o jego uruchomienie w instytucjach europejskich.
+    rule_of_law:
+      score: 2
+      evidence: Historia oceni decyzję Prezydenta bardzo szybko, w bardzo negatywny
+        sposób.

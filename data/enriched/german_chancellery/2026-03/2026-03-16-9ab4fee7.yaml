@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Canada
+  - France
+  - Germany
+  - Italy
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany advocates for immediate de-escalation in Lebanon and calls for
+    all parties to adhere strictly to international humanitarian law and UNSC Resolution
+    1701.
+  positions:
+    rule_of_law: Germany strongly emphasizes adherence to international humanitarian
+      law and the full implementation of UN Security Council resolutions, reinforcing
+      democratic norms and legal frameworks.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We condemn attacks directed at civilians, civilian infrastructure,
+        health workers and infrastructure, as well as the United Nations Interim Force
+        in Lebanon. These actions are unacceptable, and we call on all parties to
+        act in accordance with international humanitarian law.

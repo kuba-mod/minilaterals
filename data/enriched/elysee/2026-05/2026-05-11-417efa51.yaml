@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - William Ruto
+  topics:
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France is actively participating in the Africa Forward Summit to boost
+    economic exchanges and strengthen joint responses to global challenges, with a
+    focus on youth engagement.
+  positions:
+    rule_of_law: France supports democratic resilience and institutional reform by
+      co-hosting an 'Africa Forward' summit that emphasizes business forums and youth
+      involvement over traditional state-centric summits.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: This Africa Forward Summit has been designed to put young people front
+        and centre.

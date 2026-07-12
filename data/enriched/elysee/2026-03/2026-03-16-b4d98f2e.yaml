@@ -1,0 +1,31 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Canada
+  - France
+  - Germany
+  - Italy
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: The leaders express grave concern over the escalating conflict in Lebanon
+    and call for immediate de-escalation, adherence to international humanitarian
+    law, and a sustainable political solution.
+  positions:
+    rule_of_law: France strongly emphasizes adherence to international humanitarian
+      law and calls for all parties to respect civilian safety and infrastructure.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We condemn attacks directed at civilians, civilian infrastructure,
+        health workers and infrastructure, as well as the United Nations Interim Force
+        in Lebanon.

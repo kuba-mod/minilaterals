@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Prince Faisal bin Farhan al Saud
+  topics:
+  - rule_of_law
+  location: Riyadh, Saudi Arabia
+  position: France reaffirmed its commitment to regional stability through diplomatic
+    efforts, condemning attacks on neighbors and advocating for the reopening of key
+    waterways.
+  positions:
+    rule_of_law: France strongly condemns destabilization activities in the Middle
+      East, particularly those involving Iran's nuclear ambitions and military programs,
+      emphasizing the need for a diplomatic solution to ensure regional peace.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The two ministers emphasized that a diplomatic solution was essential
+        in order to guarantee that Iran never acquires nuclear weapons and to address
+        the threats posed by its ballistic and drone programmes and its destabilization
+        activities.

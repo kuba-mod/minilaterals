@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Rafael Grossi, Director General of the International Atomic Energy Agency (IAEA)
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: New York
+  position: France reaffirmed its support for international non-proliferation efforts,
+    emphasizing the need for a strong IAEA verification regime and continued commitment
+    to nuclear safety in Ukraine.
+  positions:
+    ukraine: France commits to continuing international mobilization efforts to restore
+      Chernobyl’s New Safe Confinement under France’s presidency of the G7.
+    enlargement: France supports the goal of EU accession for Ukraine and Western
+      Balkans countries by reiterating its determination with E3 partners to reach
+      a diplomatic solution regarding Iran's nuclear program.
+    rule_of_law: France supports international law and non-proliferation by reaffirming
+      full support for the IAEA’s mandate to verify compliance with non-proliferation
+      obligations.
+  stances:
+    ukraine:
+      score: 2
+      evidence: underscored France’s commitment to continuing international mobilization
+        efforts to restore Chernobyl’s New Safe Confinement under France’s presidency
+        of the G7.
+    enlargement:
+      score: 1
+      evidence: reiterated the determination of France and its E3 partners to reach
+        this goal via diplomatic means.
+    rule_of_law:
+      score: 1
+      evidence: The Minister reaffirmed France’s full support of the IAEA in the execution
+        of its mandate to verify compliance with non-proliferation obligations

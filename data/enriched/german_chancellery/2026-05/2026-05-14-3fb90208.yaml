@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Armin Laschet
+  - Guillaume V, Grand Duke of Luxembourg
+  - Ursula von der Leyen
+  - Kyriakos Mitsotakis
+  - Christine Lagarde
+  - Hendrik Wüst
+  topics:
+  - rule_of_law
+  - enlargement
+  location: Aachen, Germany
+  position: The speech primarily praises Mario Draghi's role in stabilizing the euro
+    and acknowledges the importance of reform paths for eurozone countries.
+  positions:
+    rule_of_law: Germany supports democratic resilience and rule of law by praising
+      the successful stabilization of the euro, which required difficult reforms within
+      the eurozone.
+    enlargement: Germany supports EU enlargement by acknowledging the successful repayment
+      of loans from countries like Greece, suggesting a commitment to stable economic
+      integration.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: In unstable times, you devoted attention to the euro, and you stabilised
+        the euro and the monetary zone in ways that sparked controversy.
+    enlargement:
+      score: 1
+      evidence: Your country, Kyriakos, has long itself been in a position to repay
+        the loans that were needed at that time, and has even repaid them early.

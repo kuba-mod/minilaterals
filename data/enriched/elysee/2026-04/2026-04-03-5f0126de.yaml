@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Lee Jae Myung
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France and the Republic of Korea elevated their relationship to a Global
+    Strategic Partnership, focusing on deepening cooperation in defense, security,
+    and combating transnational crimes.
+  positions:
+    defence: France commits to strengthening bilateral defense relations through strategic
+      exchanges, improving interoperability, and enhancing industry cooperation.
+    hybrid: France supports coordinated efforts against transnational threats, including
+      online violence and deepfakes that affect women and girls.
+    rule_of_law: France emphasizes cooperation on safety matters, particularly port
+      safety capacity-building in the Indo-Pacific region.
+  stances:
+    defence:
+      score: 2
+      evidence: They are committed to deepening their defence relations by pursuing
+        regular strategic exchanges, improving interoperability between their armed
+        forces and strengthening information exchanges.
+    hybrid:
+      score: 2
+      evidence: They will strengthen the exchange of information in the fight against
+        crime, including online violence, in particular non-consensual sexual images
+        and deepfakes that disproportionately affect women and girls
+    rule_of_law:
+      score: 2
+      evidence: The French Republic welcomes the intention of the Republic of Korea
+        to explore avenues for cooperation on port safety capacity-building in the
+        Indo-Pacific region.

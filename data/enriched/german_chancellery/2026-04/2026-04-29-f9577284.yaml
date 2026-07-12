@@ -1,0 +1,18 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics: []
+  location: null
+  position: Germany supports and commits to the signing and provisional application
+    of a modernized Global Agreement with Mexico to deepen economic ties and diversify
+    European supply chains.
+  positions: {}
+  stances: {}

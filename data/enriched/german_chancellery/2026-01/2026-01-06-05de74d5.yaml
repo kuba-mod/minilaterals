@@ -1,0 +1,41 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Paris, France
+  position: Germany emphasizes the need for increased cooperation among Ukraine, European
+    partners, and the US to achieve a lasting and just peace in Europe.
+  positions:
+    ukraine: Germany commits to supporting Ukraine's security through enhanced cooperation
+      with European partners and the United States following a ceasefire.
+    enlargement: Germany supports the EU accession process for Ukraine and Western
+      Balkans countries as part of broader European stability goals.
+    rule_of_law: Germany stresses that maintaining democratic resilience and the rule
+      of law are foundational to achieving European unity and security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Federal Chancellor Friedrich Merz emphasised the increasing cooperation
+        between Ukraine, the European partners and the United States of America.
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: 'Europe and its partners share the same strategic goal: a stable ceasefire,
+        strong security guarantees and a peace that Europeans and Ukrainians shape
+        together.'

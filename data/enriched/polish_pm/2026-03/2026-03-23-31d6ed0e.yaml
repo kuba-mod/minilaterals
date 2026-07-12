@@ -1,0 +1,36 @@
+actors: []
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Władysław Kosiniak-Kamysz
+  - Krzysztof Kwiatkowski
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland is prioritizing its national security and interests by securing
+    major defense contracts through strong negotiations with allies.
+  positions:
+    defence: Poland is significantly strengthening its military capabilities by signing
+      a large offset program for Apache helicopters, ensuring local maintenance and
+      supply chain resilience.
+    rule_of_law: Poland emphasizes the importance of maintaining strong contractual
+      commitments and negotiating assertively to protect national interests, contrasting
+      this with past perceived failures.
+  stances:
+    defence:
+      score: 2
+      evidence: Dziś w Wojskowych Zakładach Lotniczych nr 1 w Łodzi zostały podpisane
+        umowy wykonawcze umów offsetowych programu AH-64E Apache Guardian między WZL
+        1 a amerykańskim koncernem zbrojeniowym Lockheed Martin
+    rule_of_law:
+      score: 2
+      evidence: Przyjąłem zasadę że Polska nie będzie zrywać kontraktów z żadnym z
+        sojuszników i będziemy twardo negocjować w interesie polskiego bezpieczeństwa,
+        polskich firm i obywateli

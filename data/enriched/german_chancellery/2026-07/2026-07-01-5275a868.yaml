@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.35
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Chancellor Merz
+  - Minister of Defence
+  - NATO Secretary General Mark Rutte
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany aims to strengthen NATO and enhance European security by taking
+    decisive responsibility for its freedom and prosperity.
+  positions:
+    defence: Germany supports strengthening EU defense capabilities complementary
+      to NATO through concrete actions taken at the Defence Cabinet meeting.
+    rule_of_law: Germany emphasizes that European nations must take responsibility
+      for their security and prosperity in a global context to ensure democratic resilience.
+  stances:
+    defence:
+      score: 2
+      evidence: The Cabinet adopted several decisions aimed at strengthening the Bundeswehr
+        and making society more resilient.
+    rule_of_law:
+      score: 1
+      evidence: This is what is needed in a global context in which we, as Europeans,
+        must and want to take responsibility quickly and decisively for ensuring our
+        freedom, our security and also our prosperity

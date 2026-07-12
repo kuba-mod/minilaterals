@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Jonas Gahr Støre
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland and Norway are strengthening their strategic and military partnership
+    through joint defense projects and continued support for Ukraine.
+  positions:
+    ukraine: Poland and Norway commit to coordinating ongoing support for Ukraine
+      against Russian aggression.
+    defence: Both countries are actively enhancing defense cooperation through joint
+      military projects, such as the development of an anti-aircraft system.
+    hybrid: The meeting did not specifically address coordinated action against hybrid
+      threats.
+    rule_of_law: Poland and Norway affirm the importance of defending democracy and
+      territorial integrity through cooperation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska i Norwegia wspólnie wspierają Ukrainę w obliczu rosyjskiej
+        napaści.
+    defence:
+      score: 2
+      evidence: Mówiliśmy ostatnio bardzo dużo polskim systemie obrony przeciwrakiestowej,
+        o [systemie antydronowym] SAN. Robimy to wspólnie z naszymi przyjaciółmi norweskimi.
+    hybrid:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: za udostępnienie ośrodka szkolenia poligonowego do szkolenia tych
+        żołnierzy, którzy bronią demokracji, wolności i integralności terytorialnej.

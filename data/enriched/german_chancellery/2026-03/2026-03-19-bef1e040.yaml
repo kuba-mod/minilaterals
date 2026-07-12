@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Merz
+  - European Council
+  - Hungarian Prime Minister Viktor Orbán
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Brussels, Belgium
+  position: Germany emphasizes the need for Europe to achieve economic strength and
+    self-defense capabilities while criticizing Hungary's obstruction of support for
+    Ukraine.
+  positions:
+    ukraine: Germany strongly supports long-term financial and diplomatic backing
+      for Ukraine, specifically condemning efforts that undermine EU consensus on
+      funding.
+    rule_of_law: Germany stresses that economic strength and adherence to market rules
+      are crucial for Europe's ability to assert itself globally.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Orbán has destroyed this consensus. He is thus violating one of the
+        fundamental principles of our European co-operation
+    rule_of_law:
+      score: 1
+      evidence: Europe will only be able to assert itself in this world if it becomes
+        economically strong and capable of defending itself.

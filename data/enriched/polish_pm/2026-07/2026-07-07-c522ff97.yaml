@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Ankara, Turkey
+  position: Poland commits to stable and national interest-driven support for Ukraine's
+    defense alongside NATO allies, while also prioritizing its own security and addressing
+    domestic governance issues.
+  positions:
+    ukraine: Poland views supporting Ukraine as a matter of Polish national interest
+      and stability, committing to continued support in coordination with NATO allies.
+    defence: Poland will strengthen its defense capabilities and cooperation with
+      allies to mitigate the threat from Russia for Poland, the region, and Europe.
+    rule_of_law: Poland emphasizes the continuation of legal control and adherence
+      to proper procedures, both in international relations and domestic healthcare
+      institutions.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska będzie wspierać Ukrainę w jej obronie przed rosyjską agresją
+        nie tylko z poczucia przyzwoitości i solidarności, lecz przede wszystkim w
+        trosce o własne bezpieczeństwo i w dobrze pojętym interesie narodowym.
+    defence:
+      score: 2
+      evidence: zapowiedział ścisłą współpracę w zakresie bezpieczeństwa i współpracy
+        wojskowej oraz dalsze wzmacnianie obrony przed zagrożeniem ze strony Rosji.
+    rule_of_law:
+      score: 1
+      evidence: zapowiedział, że proces kontroli oraz egzekwowania przepisów prawa
+        i zasad przyzwoitości będzie kontynuowany.

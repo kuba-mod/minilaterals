@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for a realistic EU financial framework, strengthened
+    competitiveness, new trade defense mechanisms, and coordinated action on Ukraine
+    and enlargement.
+  positions:
+    ukraine: Germany strongly supports long-term support for Ukraine across military,
+      economic, and diplomatic dimensions until a just and lasting peace is achieved.
+    enlargement: Germany supports EU enlargement by noting that discussions focused
+      on progress regarding EU-enlargement.
+    rule_of_law: Germany stresses the importance of maintaining European action and
+      stability in various geopolitical areas.
+  stances:
+    ukraine:
+      score: 2
+      evidence: a closely coordinated European approach to the war in Ukraine
+    enlargement:
+      score: 1
+      evidence: The discussions also focused on progress regarding EU - enlargement
+    rule_of_law:
+      score: 1
+      evidence: it is particularly important that Europe remains capable of taking
+        action

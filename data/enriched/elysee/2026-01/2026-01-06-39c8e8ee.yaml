@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.35
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Macron of France
+  - Chancellor Merz of Germany
+  - Prime Minister Meloni of Italy
+  - Prime Minister Tusk of Poland
+  - Prime Minister Sánchez of Spain
+  - Prime Minister Starmer of the United Kingdom
+  - Prime Minister Frederiksen of Denmark
+  topics:
+  - rule_of_law
+  location: null
+  position: France and its allies prioritize Arctic security as a collective NATO
+    effort, emphasizing adherence to international law and the sovereignty of Greenland.
+  positions:
+    rule_of_law: The statement strongly affirms democratic resilience and the rule
+      of law by committing to defending universal principles like sovereignty and
+      territorial integrity in the Arctic.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Security in the Arctic must therefore be achieved collectively, in
+        conjunction with NATO allies including the United States, by upholding the
+        principles of the UN Charter, including sovereignty, territorial integrity
+        and the inviolability of borders.

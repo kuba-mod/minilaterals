@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - European Council
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Cyprus
+  position: Poland emphasizes the need for collective European and NATO action to
+    deter Russian aggression, while also highlighting its own commitment to defense.
+  positions:
+    ukraine: Poland supports long-term support for Ukraine, noting that EU countries
+      agreed on a significant loan package and sanctions against Russia.
+    defence: Poland actively supports a stronger EU defense capability complementary
+      to NATO, positioning itself as an example for other European partners.
+    rule_of_law: Poland emphasizes the need for collective European and NATO action
+      to deter Russian aggression, while also highlighting its own commitment to defense.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Państwa unijne jednogłośnie zgodziły się na uwolnienie 90 mld euro
+        pożyczki dla Ukrainy i uchwalenie 20. pakietu sankcji wobec Rosji.
+    defence:
+      score: 2
+      evidence: Polska to robi i jest przykładem dla europejskich partnerów, ale chcę
+        mieć pewność, że wszyscy będziemy gotowi do reakcji w razie potrzeby

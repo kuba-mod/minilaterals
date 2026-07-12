@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Minister Zdrowia
+  - prezes NFZ
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the need for systemic reforms in public healthcare to
+    ensure equal access and transparency, while also addressing broader European security
+    responsibilities.
+  positions:
+    rule_of_law: Poland strongly advocates for strengthening the rule of law within
+      its public health system by eliminating corruption, ensuring equal access to
+      care, and increasing financial transparency.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'Dla Ministerstwa Zdrowia i NFZ zadanie jest proste: to zjawisko musi
+        zniknąć.'

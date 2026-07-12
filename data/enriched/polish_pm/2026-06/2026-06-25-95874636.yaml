@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Julia Swyrydenko
+  - Antonio Costa
+  - Ursula von der Leyen
+  topics:
+  - ukraine
+  - rule_of_law
+  - enlargement
+  location: Gdańsk, Poland
+  position: Poland emphasizes that rebuilding Ukraine is possible through international
+    solidarity and consistent support, linking it to the broader goal of European
+    unity based on historical truth.
+  positions:
+    ukraine: Poland strongly commits to long-term support for Ukraine's recovery across
+      economic and diplomatic dimensions, viewing it as essential for achieving a
+      just and lasting peace.
+    rule_of_law: Poland stresses that democratic resilience and historical truth are
+      foundational to European unity and the ability to build a shared future.
+    enlargement: Poland supports Ukraine's integration into a unified Europe, emphasizing
+      that understanding history is necessary for full accession.
+  stances:
+    ukraine:
+      score: 2
+      evidence: odbudowa Ukrainy będzie możliwa dzięki naszej solidarności
+    rule_of_law:
+      score: 1
+      evidence: Przyszłość możemy zbudować tylko na prawd
+    enlargement:
+      score: 2
+      evidence: Ukraina słusznie chce być częścią zjednoczonej Europy.

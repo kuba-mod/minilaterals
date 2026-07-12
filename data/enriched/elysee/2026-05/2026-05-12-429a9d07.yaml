@@ -1,0 +1,42 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government of France
+  - African countries
+  - International Monetary Fund (IMF)
+  - World Bank Group
+  - African Development Bank Group (AfDB)
+  - European Bank for Reconstruction and Development (EBRD)
+  - European Investment Bank (EIB)
+  - Green Climate Fund (GCF)
+  - West African Development Bank (BOAD)
+  - Agence Française de Développement group (AFD)
+  topics:
+  - green_transition
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France advocates for a renewed partnership with Africa based on mutual
+    respect, shared priorities, and co-creation to address development challenges.
+  positions:
+    green_transition: France supports climate action by emphasizing the need for sustainable
+      development financing and aligning cooperation with green objectives.
+    rule_of_law: France emphasizes upholding state sovereignty and democratic principles
+      in Africa's development process to ensure mutual benefit and stability.
+  stances:
+    green_transition:
+      score: 1
+      evidence: We welcome the French G7 presidency and its work on development financing
+        and international partnerships.
+    rule_of_law:
+      score: 2
+      evidence: This renewed partnership should be based on mutual respect, sovereignty
+        of states over their natural resources, and the principal of shared value
+        creation to the benefit of African people.

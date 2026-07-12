@@ -1,0 +1,54 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Chancellor Merz
+  - Prime Minister Bolojan
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany and Romania emphasized the mutual commitment to strengthening
+    European security and competitiveness in the face of great power politics.
+  positions:
+    ukraine: Germany supports long-term support for Ukraine's peace through joint
+      efforts with Romania.
+    defence: Germany stresses the urgent need to strengthen European security capabilities,
+      particularly on the eastern flank.
+    hybrid: Germany calls for working together to make Europe safer in difficult times,
+      implying a focus on threats like disinformation or interference.
+    enlargement: The text does not explicitly mention the EU accession of Ukraine
+      or Western Balkans countries.
+    rule_of_law: Germany emphasizes that freedom and security are no longer guaranteed,
+      underscoring the importance of democratic resilience.
+  stances:
+    ukraine:
+      score: 1
+      evidence: 'Peace for Ukraine and security for Europe: These goals are equally
+        crucial to both Germany and Romania'
+    defence:
+      score: 1
+      evidence: strengthening Europe’s security and competitiveness is an urgent matter
+    hybrid:
+      score: 1
+      evidence: How can we work together to make Europe safer in these difficult times?
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: in which freedom, security and Europe’s prosperity can no longer be
+        taken for granted

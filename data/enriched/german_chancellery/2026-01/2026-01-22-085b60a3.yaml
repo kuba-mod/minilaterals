@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - defence
+  - rule_of_law
+  - enlargement
+  location: Davos, Switzerland
+  position: Germany emphasizes that future international stability requires a balance
+    of power and cooperation built on mutual trust, while strengthening European security
+    and competitiveness.
+  positions:
+    defence: Germany advocates for massive investment in European defense capabilities
+      to ensure collective security and self-reliance.
+    rule_of_law: Germany stresses that the international order must be built on partnerships
+      based on mutual trust and respect, rejecting a purely power-based system.
+    enlargement: Germany supports the principle of strong alliances like NATO, which
+      was inspired by US post-war logic, while acknowledging geopolitical tensions
+      (e.g., Greenland).
+  stances:
+    defence:
+      score: 2
+      evidence: First, we must invest massively in our ability to defend ourselves.
+        And we are doing this.
+    rule_of_law:
+      score: 1
+      evidence: Our greatest strength remains the ability to build partnerships and
+        alliances amongst equals based on mutual trust and respect.
+    enlargement:
+      score: 1
+      evidence: I remind you, after 1945, the United States of America inspired us
+        Germans to embrace this logic.

@@ -1,0 +1,41 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Merz
+  - Development Minister Alabali Radovan
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Gdańsk, Poland
+  position: Germany affirms unwavering support for Ukraine's recovery and stability
+    while urging an end to the conflict through negotiations.
+  positions:
+    ukraine: Germany commits to comprehensive long-term support for Ukraine across
+      military, economic, and civilian dimensions until a just peace is achieved.
+    enlargement: Germany supports the EU accession process for Ukraine as part of
+      broader European security and stability goals.
+    rule_of_law: Germany emphasizes that democratic resilience and rule of law are
+      foundational elements necessary for Ukraine's recovery and future stability.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Together with its partners, he said, Germany is prepared to provide
+        concrete support to Ukraine in all four of these areas.
+    enlargement:
+      score: 1
+      evidence: Europe’s support to Kyiv is unwavering
+    rule_of_law:
+      score: 1
+      evidence: Security. Investment. Reforms. People. These are the building blocks
+        for Ukraine’s recovery.

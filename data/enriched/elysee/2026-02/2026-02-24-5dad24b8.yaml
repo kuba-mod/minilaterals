@@ -1,0 +1,40 @@
+actors: []
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 leaders
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: null
+  position: France reaffirms unwavering support for Ukraine's sovereignty and provides
+    concrete commitments of financial and material aid while emphasizing the need
+    for a negotiated peace.
+  positions:
+    ukraine: The Weimar Triangle strongly commits to long-term support for Ukraine
+      across military, economic, and diplomatic dimensions through substantial pledges
+      of aid and equipment.
+    enlargement: The Weimar Triangle supports the EU accession of Ukraine by reaffirming
+      support for its territorial integrity and right to exist.
+    rule_of_law: The Weimar Triangle affirms democratic resilience and the rule of
+      law by committing to ensuring nuclear safety and supporting humanitarian efforts.
+  stances:
+    ukraine:
+      score: 2
+      evidence: more than half a billion euros of new pledges were made to the Ukraine
+        Energy Support Fund
+    enlargement:
+      score: 1
+      evidence: reaffirm our unwavering support for Ukraine in defending its territorial
+        integrity and right to exist
+    rule_of_law:
+      score: 2
+      evidence: We commit to working closely in terms of ensuring nuclear safety

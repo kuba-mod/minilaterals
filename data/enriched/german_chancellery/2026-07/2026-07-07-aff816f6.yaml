@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Mark Carney (Prime Minister of Canada)
+  - Friedrich Merz (Chancellor of Germany)
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is engaging in negotiations for a Strategic Partnership Agreement
+    with Canada to advance cooperation across key strategic sectors.
+  positions:
+    defence: Germany supports strengthening defense capabilities through bilateral
+      cooperation and joint initiatives with Canada.
+    green_transition: Germany commits to advancing energy policy and investment in
+      alignment with strategic industrial goals with Canada.
+    rule_of_law: Germany emphasizes the importance of cooperation in key areas including
+      technology and supply chains, which supports broader democratic resilience.
+  stances:
+    defence:
+      score: 1
+      evidence: Security and Defence
+    green_transition:
+      score: 0
+      evidence: Energy
+    rule_of_law:
+      score: 1
+      evidence: Technology, Artificial Intelligence and Space

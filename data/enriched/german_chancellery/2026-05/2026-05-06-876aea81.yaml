@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany emphasizes strengthening deterrence and defense capabilities while
+    demanding international cooperation on nuclear non-proliferation and addressing
+    new technological risks.
+  positions:
+    defence: Germany supports a stronger EU defence capability complementary to NATO
+      by stressing the central importance of secure defense capabilities and credible
+      deterrence by NATO for European security.
+    rule_of_law: Germany affirms democratic resilience and international law by stressing
+      the necessity of upholding the Nuclear Non-Proliferation Treaty (NPT) and demanding
+      transparency from Iran.
+  stances:
+    defence:
+      score: 1
+      evidence: secure defence capabilities and credible deterrence by NATO are of
+        central importance for the security of Germany and Europe.
+    rule_of_law:
+      score: 1
+      evidence: For the Federal Government, the Nuclear Non-Proliferation Treaty (NPT)
+        is the cornerstone of the international nuclear order.

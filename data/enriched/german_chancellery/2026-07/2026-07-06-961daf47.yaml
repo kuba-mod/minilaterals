@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Finance Minister Klingbeil
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is implementing a comprehensive strategy combining investment,
+    structural reforms, and fiscal consolidation to ensure long-term economic prosperity,
+    security, and resilience.
+  positions:
+    defence: Germany commits to strengthening its defense capabilities and deterrence
+      through increased spending and investments.
+    green_transition: Germany supports the transition to climate neutrality by earmarking
+      significant funds for infrastructure and climate initiatives.
+    rule_of_law: Germany emphasizes strengthening democratic resilience and improving
+      everyday life through public investments in infrastructure.
+  stances:
+    defence:
+      score: 2
+      evidence: The Federal Government is also increasing defence spending in order
+        to improve Germany’s deterrence and defence capabilities.
+    green_transition:
+      score: 2
+      evidence: Over 36 billion euros has been earmarked for Federal investment in
+        2027. In addition, there is 10 billion euros for the Special Climate and Transformation
+        Fund
+    rule_of_law:
+      score: 2
+      evidence: 'Public investment in infrastructure benefits everyone: good schools
+        and free nurseries, well-maintained roads, rail connections, affordable housing,
+        modern hospitals and refurbished sports facilities'

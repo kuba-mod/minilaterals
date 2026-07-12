@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - defence
+  - rule_of_law
+  location: Brussels, Belgium
+  position: Germany advocates for comprehensive national and European reforms to enhance
+    resilience, security, and economic strength in the face of geopolitical challenges.
+  positions:
+    defence: Germany supports strengthening EU defense capabilities as essential for
+      long-term stability and countering new threats.
+    rule_of_law: Germany stresses the importance of democratic resilience, addressing
+      geopolitical tensions and international competition through comprehensive reform.
+  stances:
+    defence:
+      score: 2
+      evidence: he emphasised in his policy statement that the EU must become more
+        resilient militarily, economically and politically in order to counter challenges
+        such as Russia’s war of aggression.
+    rule_of_law:
+      score: 1
+      evidence: In a world of growing geopolitical tensions, he said, no European
+        country can stand alone. Only a united Europe can ensure long-term prosperity,
+        stability and security.

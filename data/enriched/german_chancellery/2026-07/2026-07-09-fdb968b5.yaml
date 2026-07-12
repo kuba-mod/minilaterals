@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Bundestag, Germany
+  position: Germany emphasizes internal reforms and economic modernization to strengthen
+    the country's political and social foundations.
+  positions:
+    rule_of_law: Germany stresses democratic resilience and institutional reform through
+      major packages addressing tax, pension, healthcare, and labor markets.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'We are embarking on fundamental reforms: tax reform, pension reform,
+        healthcare reform, the labour market.'

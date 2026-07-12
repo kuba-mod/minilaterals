@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Friedrich Merz
+  - Narendra Modi
+  topics:
+  - rule_of_law
+  location: Ahmedabad, India
+  position: Germany and India aim to deepen their comprehensive relationship by focusing
+    on security cooperation, economic expansion, and educational exchange.
+  positions:
+    rule_of_law: Germany emphasizes shared fundamental values and the importance of
+      humanistic principles like those taught by Mahatma Gandhi for global unity and
+      friendship.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: This legacy of humanity unites Indians and Germans as friends in a
+        world that perhaps needs Gandhi’s teachings more than ever

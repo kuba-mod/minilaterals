@@ -1,0 +1,53 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.5
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Donald [Trump]
+  - Svyrydenko
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Gdańsk, Poland
+  position: Germany reaffirms its unwavering commitment to Ukraine's sovereignty and
+    future European membership while emphasizing the necessity of collective security
+    and democratic resilience.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine across military, economic,
+      and diplomatic dimensions, highlighting its role as a major bilateral supporter.
+    defence: Germany supports strengthening EU defense capabilities and collective
+      security by commending Poland for prioritizing defense at the conference.
+    enlargement: Germany strongly supports Ukraine's path toward becoming a sovereign
+      and future member of the European family.
+    rule_of_law: Germany affirms democratic resilience and the rule of law as foundational
+      to Europe's security and prosperity.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Today, Germany is Ukraine’s biggest bilateral supporter. Since 2022,
+        we have provided Kyiv with 41 billion Euros in bilateral civilian support.
+    defence:
+      score: 1
+      evidence: I would like to commend Poland for giving security and defence a prominent
+        place at this year’s Conference here in Gdansk.
+    enlargement:
+      score: 2
+      evidence: Ukraine and its brave people will prevail as a strong and sovereign
+        nation and as a future member of the European family!
+    rule_of_law:
+      score: 1
+      evidence: As Europeans, we stand shoulder to shoulder not just to defend security
+        or defend prosperity on our continent.

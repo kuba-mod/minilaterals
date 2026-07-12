@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Macron
+  - Prime Minister Meloni
+  - Chancellor Merz
+  - Prime Minister Starmer
+  - Prime minister Albanese
+  - Prime Minister Carney
+  - President Dan
+  - acting Prime Minister Frederiksen
+  - Prime Minister Frostadóttir
+  - Prime Minister Jetten
+  - Prime Minister Kristersson
+  - Prime Minister Luxon
+  - Prime Minister Michal
+  - Prime Minister Mitsotakis
+  - Prime Minister Montenegro
+  - Prime Minister Sanchez
+  - prime minister Silina
+  - Prime Minister Støre
+  - President Stubb
+  - Prime Minister Takaichi
+  - President of the European Commission von der Leyen
+  - President of the European Council Costa
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the ceasefire between the US and Iran, emphasizing that
+    diplomatic efforts are crucial for a swift end to the war and regional stability.
+  positions:
+    rule_of_law: France supports democratic resilience and international law by calling
+      for adherence to the ceasefire agreement and promoting negotiated settlements.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We call upon all sides to implement the ceasefire, including in Lebanon.

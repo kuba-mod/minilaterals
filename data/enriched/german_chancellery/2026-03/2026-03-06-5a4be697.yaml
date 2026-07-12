@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Ursula von der Leyen
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany views the EU-MERCOSUR agreement as a significant milestone for
+    European trade policy and a symbol of rule-based international cooperation.
+  positions:
+    rule_of_law: Germany emphasizes that the MERCOSUR partnership agreement reinforces
+      democratic principles, human rights, and the rule of law as core shared values.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The MERCOSUR agreement enshrines respect for democratic principles,
+        human rights, fundamental freedoms and the principles of the rule of law and
+        supports the non-proliferation of weapons of mass destruction as its core
+        shared values.

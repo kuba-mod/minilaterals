@@ -1,0 +1,31 @@
+actors: []
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - heads of state and government of the European Union
+  - Western Balkan countries
+  topics:
+  - enlargement
+  - rule_of_law
+  location: Montenegro
+  position: France participated in a summit to assess progress toward European integration
+    and stability in the Western Balkans.
+  positions:
+    enlargement: France supports the goal of EU accession for the Western Balkan countries,
+      recognizing its importance for regional stability.
+    rule_of_law: France emphasizes that stability and shared prosperity are key to
+      the region's security, which aligns with foundational democratic principles.
+  stances:
+    enlargement:
+      score: 1
+      evidence: assess progress toward European integration
+    rule_of_law:
+      score: 1
+      evidence: stability and shared prosperity across the region

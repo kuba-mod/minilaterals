@@ -1,0 +1,61 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Coalition of the Willing
+  - Ukraine
+  - United States
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Paris, France
+  position: France and partners committed to ensuring Ukraine's sovereignty and security
+    through robust, legally binding guarantees as part of a lasting peace agreement.
+  positions:
+    ukraine: The Coalition commits to long-term support for Ukraine across military,
+      economic, and diplomatic dimensions by confirming that its sovereignty and security
+      must be integral parts of any peace settlement backed by robust guarantees.
+    defence: The Coalition supports strengthening collective security and defense
+      capabilities, recognizing Ukraine's ability to defend itself as critically important.
+    hybrid: The statement does not explicitly address coordinated action against hybrid
+      threats like disinformation or cyber attacks.
+    enlargement: The statement supports the general goal of a lasting peace and security
+      for Ukraine, which aligns with future EU enlargement goals, but does not specifically
+      mention Western Balkans or institutional reforms.
+    rule_of_law: The Coalition stresses the commitment to a just and lasting peace
+      in line with United Nations Charter principles, affirming democratic resilience
+      and international law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We confirmed that ensuring the sovereignty and lasting security of
+        Ukraine shall be an integral part of a peace agreement, and that any settlement
+        will have to be backed up by robust security guarantees for Ukraine.
+    defence:
+      score: 2
+      evidence: In particular, the Coalition was clear that Ukraine’s ability to defend
+        itself is critically important for ensuring the future of Ukraine’s and Euro-Atlantic
+        collective security.
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: We all stressed our commitment to a just and lasting peace in Ukraine
+        in line with the United Nations Charter principles

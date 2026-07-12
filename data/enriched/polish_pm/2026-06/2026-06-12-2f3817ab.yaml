@@ -1,0 +1,39 @@
+actors: []
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Funkcjonariusze Służby Ochrony Państwa
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland emphasizes strengthening national security institutions and modernizing
+    defense capabilities through advanced technology and international partnerships.
+  positions:
+    defence: Poland is actively enhancing its defense posture by integrating advanced
+      NATO technologies like the F-35 fighter jet to secure its eastern flank.
+    hybrid: Poland acknowledges the increasing threat of hybrid challenges, including
+      cyber and drone incidents, requiring enhanced institutional competence.
+    rule_of_law: Poland affirms the importance of state security institutions and
+      their professional capacity to protect national interests.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
+        samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
+    hybrid:
+      score: 2
+      evidence: Spotykacie się z nowymi zagrożeniami, czy to w cyberprzestrzeni, czy
+        w postaci incydentów dronowych.
+    rule_of_law:
+      score: 1
+      evidence: Funkcjonariusze Służby Ochrony Państwa dbają o codzienne bezpieczeństwo
+        instytucji oraz osób sprawujących władzę w Polsce.
