@@ -36,6 +36,7 @@ import time
 from pathlib import Path
 
 import yaml
+from tqdm import tqdm
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -509,7 +510,7 @@ def main() -> None:
             return
         provider = _build_provider()
         ok = failed = 0
-        for i, path in enumerate(pending):
+        for i, path in enumerate(tqdm(pending, desc="Stance backfill", unit="item")):
             if _backfill_stances(provider, path):
                 ok += 1
             else:
@@ -536,7 +537,7 @@ def main() -> None:
     provider = _build_provider()
 
     ok = failed = 0
-    for i, path in enumerate(pending):
+    for i, path in enumerate(tqdm(pending, desc="Enriching", unit="item")):
         if _extract(provider, path):
             ok += 1
         else:

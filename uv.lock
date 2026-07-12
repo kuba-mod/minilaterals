@@ -1813,6 +1813,7 @@ dependencies = [
     { name = "openai" },
     { name = "pyyaml" },
     { name = "requests" },
+    { name = "tqdm" },
 ]
 
 [package.dev-dependencies]
@@ -1837,6 +1838,7 @@ requires-dist = [
     { name = "openai", specifier = ">=1.0" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "requests", specifier = ">=2.31" },
+    { name = "tqdm", specifier = ">=4.66" },
 ]
 
 [package.metadata.requires-dev]
