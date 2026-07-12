@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from .base import BaseIngester, Event
 
 # No RSS feed on the English site; scrape the news listing directly.
-LISTING_URL = "https://www.elysee.fr/en/latest-news"
+LISTING_URL = "https://www.elysee.fr/en/all-actualities"
 BASE_URL = "https://www.elysee.fr"
 SOURCE_NAME = "elysee"
 
@@ -52,6 +52,7 @@ class ElyseeIngester(BaseIngester):
 
     def fetch(self) -> Iterator[Event]:
         page = 1
+        prev_urls: frozenset[str] = frozenset()
         while True:
             url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page}"
             try:
@@ -73,7 +74,13 @@ class ElyseeIngester(BaseIngester):
                     item_url = href if href.startswith("http") else BASE_URL + href
                     if not item_url.startswith(BASE_URL) or not _URL_DATE.search(item_url):
                         continue
-                    title = a_tag.get_text(" ", strip=True)
+                    # Listing cards concatenate a date badge + category badge + title
+                    # into one <a>; the title is the last <span>, others are dropped.
+                    spans = a_tag.find_all("span", recursive=False)
+                    if spans:
+                        title = spans[-1].get_text(" ", strip=True)
+                    else:
+                        title = a_tag.get_text(" ", strip=True)
                     if not title or item_url in seen:
                         continue
                     seen.add(item_url)
@@ -81,6 +88,13 @@ class ElyseeIngester(BaseIngester):
 
             if not links:
                 break
+
+            # The site ignores ?page= on this listing and always returns the
+            # same recent batch, so a repeated batch means we've hit the end
+            # of what's paginatable — stop instead of looping forever.
+            if seen == prev_urls:
+                break
+            prev_urls = frozenset(seen)
 
             all_before_since = True
             for title, item_url in links:

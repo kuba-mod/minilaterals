@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import time
 from collections.abc import Iterator
@@ -12,9 +13,14 @@ from .base import BaseIngester, Event
 
 # No stable English RSS endpoint verified for the Bundesregierung newsroom;
 # scrape the listing directly (same federal design system as auswaertiges-amt.de).
+# The listing page has no server-rendered teaser markup — results are embedded
+# as a JSON blob (`BPA.initialSearchResultsJson`) that the frontend hydrates
+# client-side, so we parse that blob instead of guessing teaser CSS classes.
 LISTING_URL = "https://www.bundesregierung.de/breg-en/news"
 BASE_URL = "https://www.bundesregierung.de"
 SOURCE_NAME = "german_chancellery"
+
+_RESULTS_JSON = re.compile(r"BPA\.initialSearchResultsJson\s*=\s*(\{.*?\});\s*\n", re.S)
 
 _HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"}
 
@@ -66,36 +72,41 @@ class GermanChancelleryIngester(BaseIngester):
     def fetch(self) -> Iterator[Event]:
         page = 1
         while True:
-            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page}"
+            # The search endpoint's ?page= param is 0-indexed from the *second*
+            # page: no param = page 1, ?page=1 = page 2, ?page=2 = page 3, etc.
+            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page - 1}"
             try:
                 r = requests.get(url, timeout=15, headers=_HEADERS)
                 r.raise_for_status()
             except Exception as exc:
                 print(f"[{SOURCE_NAME}] page {page} error: {exc}")
                 break
-            soup = BeautifulSoup(r.text, "lxml")
-            cards = soup.select(".bpa-teaser, .c-teaser, .news-card, article")
-            if not cards:
+
+            m = _RESULTS_JSON.search(r.text)
+            if not m:
+                break
+            try:
+                items = json.loads(m.group(1))["result"]["items"]
+            except (json.JSONDecodeError, KeyError):
+                break
+            if not items:
                 break
 
             all_before_since = True
-            for card in cards:
-                a_tag = card.find("a", href=True)
+            for item in items:
+                teaser = BeautifulSoup(item.get("payload", ""), "lxml")
+                a_tag = teaser.find("a", href=True)
                 if not a_tag:
-                    continue
-                title = a_tag.get_text(" ", strip=True)
-                if not title:
                     continue
                 href = a_tag["href"]
                 item_url = href if href.startswith("http") else BASE_URL + href
+                title = teaser.find(["h2", "h3"])
+                title = title.get_text(" ", strip=True) if title else a_tag.get_text(" ", strip=True)
+                if not title:
+                    continue
 
                 body, article_date = self._fetch_body(item_url)
-                if article_date:
-                    date, published_at = article_date, article_date + "T00:00:00Z"
-                else:
-                    date_tag = card.find("time") or card.find(attrs={"class": re.compile(r"date|time|meta", re.I)})
-                    raw = (date_tag.get("datetime") or date_tag.get_text(strip=True)) if date_tag else None
-                    date, published_at = _parse_date(raw)
+                date, published_at = _parse_date(article_date or item.get("sortDate"))
                 time.sleep(0.5)
 
                 if self.since and date >= self.since:
@@ -106,8 +117,7 @@ class GermanChancelleryIngester(BaseIngester):
                 if self.since and date < self.since:
                     continue
 
-                desc_tag = card.find("p")
-                summary = body or (desc_tag.get_text(" ", strip=True) if desc_tag else "")
+                summary = body or teaser.get_text(" ", strip=True)
                 yield Event(
                     source_name=SOURCE_NAME,
                     title=title,
@@ -141,9 +151,13 @@ class GermanChancelleryIngester(BaseIngester):
                         if date_str:
                             break
 
-            article = soup.find(class_=re.compile(r"bpa-richtext|c-article__body|c-richtext|article-content"))
+            # Scope to <main> first — the cookie-consent dialog also carries a
+            # "bpa-richtext" class and sits outside <main>, so searching the
+            # whole document picks up banner text instead of the article body.
+            container = soup.find("main") or soup.find("article") or soup
+            article = container.find(class_=re.compile(r"bpa-richtext|c-article__body|c-richtext|article-content"))
             if not article:
-                article = soup.find("article") or soup.find("main")
+                article = container
             if article:
                 paragraphs = [
                     p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
