@@ -93,10 +93,11 @@ def test_extract_writes_enriched_sidecar(data_tree):
     assert written["weimar_relevant"] is True
 
 
-def test_extract_old_format_string_position_has_no_stance(data_tree):
+def test_extract_fails_when_topic_has_no_dict_entry(data_tree):
     events_dir, enriched_dir = data_tree
     raw = _write_raw(events_dir)
-    # Older prompt shape: positions_by_topic maps topic -> plain string.
+    # positions_by_topic maps topic -> plain string instead of the required
+    # {position, stance, evidence} dict shape (e.g. an older prompt response).
     response = json.dumps(
         {
             "topics": ["ukraine"],
@@ -104,17 +105,16 @@ def test_extract_old_format_string_position_has_no_stance(data_tree):
             "positions_by_topic": {"ukraine": "A plain string position."},
         }
     )
-    assert enrich._extract(FakeProvider([response]), raw) is True
+    assert enrich._extract(FakeProvider([response]), raw) is False
     enriched_path = enriched_dir / raw.relative_to(events_dir)
-    extracted = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))["extracted"]
-    assert extracted["positions"]["ukraine"] == "A plain string position."
-    assert "ukraine" not in extracted["stances"]
+    assert not enriched_path.exists()
 
 
-def test_extract_position_falls_back_to_overall(data_tree):
+def test_extract_fails_when_position_text_empty(data_tree):
     events_dir, enriched_dir = data_tree
     raw = _write_raw(events_dir)
-    # Topic listed but no per-topic position text → falls back to overall position.
+    # Topic listed but its position text is empty — no silent fallback to the
+    # overall position sentence; the item is treated as a failed extraction.
     response = json.dumps(
         {
             "topics": ["ukraine"],
@@ -122,10 +122,9 @@ def test_extract_position_falls_back_to_overall(data_tree):
             "positions_by_topic": {"ukraine": {"position": "", "stance": 1, "evidence": "support"}},
         }
     )
-    assert enrich._extract(FakeProvider([response]), raw) is True
+    assert enrich._extract(FakeProvider([response]), raw) is False
     enriched_path = enriched_dir / raw.relative_to(events_dir)
-    extracted = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))["extracted"]
-    assert extracted["positions"]["ukraine"] == "Overall Germany position sentence."
+    assert not enriched_path.exists()
 
 
 def test_extract_retries_then_gives_up_on_bad_json(data_tree):
