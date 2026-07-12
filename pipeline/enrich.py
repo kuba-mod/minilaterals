@@ -375,7 +375,6 @@ def _extract(provider, raw_path: Path) -> bool:
             "issue_areas": llm_topics if llm_topics else event.issue_areas,
             "weimar_relevant": event.weimar_relevant,
             "trilateral_signal": event.trilateral_signal,
-            "weimar_score": event.weimar_score,
             "extracted": extracted,
         }
 

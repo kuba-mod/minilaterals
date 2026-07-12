@@ -36,9 +36,7 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
             fetched += 1
             if dry_run:
                 label = "WEIMAR" if event.weimar_relevant else "     ·"
-                print(
-                    f"  {label} {event.date} score={event.weimar_score:.2f} actors={event.actors} | {event.title[:80]}"
-                )
+                print(f"  {label} {event.date} actors={event.actors} | {event.title[:80]}")
                 new += 1
             else:
                 saved = event.save(str(DATA_DIR / "events"))
@@ -46,7 +44,7 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
                     event.save_enriched(str(DATA_DIR / "enriched"))
                     new += 1
                     if event.weimar_relevant:
-                        print(f"  + [{source}] {event.date} score={event.weimar_score:.2f} — {event.title[:70]}")
+                        print(f"  + [{source}] {event.date} — {event.title[:70]}")
                 else:
                     skipped += 1
     except Exception as exc:
