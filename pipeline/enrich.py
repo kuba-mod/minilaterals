@@ -333,28 +333,28 @@ def _extract(provider, raw_path: Path) -> bool:
                     return False
         assert extracted is not None
 
-        # Build per-topic positions + stances: topic-specific text (fallback to
-        # overall position sentence) and a -2..+2 stance rating with evidence quote.
+        # Build per-topic positions + stances: topic-specific text and a -2..+2
+        # stance rating with evidence quote. A topic listed in "topics" without a
+        # usable position entry is treated as an extraction failure (see below).
         positions_by_topic = extracted.get("positions_by_topic") or {}
-        overall_position = extracted.get("position", "")
         extracted["positions"] = {}
         extracted["stances"] = {}
 
         llm_topics = [t for t in (extracted.get("topics") or []) if t != "other"]
         for topic in llm_topics:
             entry = positions_by_topic.get(topic)
-            if isinstance(entry, dict):
-                pos_text = (entry.get("position") or "").strip()
-                stance = _clean_stance(entry.get("stance"))
-                if stance is not None:
-                    extracted["stances"][topic] = {
-                        "score": stance,
-                        "evidence": _clean_evidence(entry.get("evidence"), topic),
-                    }
-            else:
-                # Older prompt shape: plain string per topic, no stance
-                pos_text = (entry or "").strip() if isinstance(entry, str) else ""
-            extracted["positions"][topic] = pos_text if pos_text else overall_position
+            if not isinstance(entry, dict):
+                raise ValueError(f"missing positions_by_topic entry for topic {topic!r}")
+            pos_text = (entry.get("position") or "").strip()
+            stance = _clean_stance(entry.get("stance"))
+            if stance is not None:
+                extracted["stances"][topic] = {
+                    "score": stance,
+                    "evidence": _clean_evidence(entry.get("evidence"), topic),
+                }
+            if not pos_text:
+                raise ValueError(f"empty position for topic {topic!r}")
+            extracted["positions"][topic] = pos_text
 
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]
@@ -518,6 +518,8 @@ def main() -> None:
             if i < len(pending) - 1:
                 time.sleep(0.2)
         print(f"\nStance backfill complete: {ok} ok, {failed} failed")
+        if failed:
+            sys.exit(1)
         return
 
     pending = _find_pending(limit=args.limit)
@@ -546,6 +548,8 @@ def main() -> None:
             time.sleep(0.2)
 
     print(f"\nEnrichment complete: {ok} ok, {failed} failed")
+    if failed:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
