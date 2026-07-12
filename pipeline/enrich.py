@@ -273,12 +273,19 @@ def _find_pending(limit: int | None = None) -> list[Path]:
 
 
 def _clean_stance(value) -> int | None:
-    """Coerce an LLM stance value to an int in [-2, 2], or None if unusable."""
+    """Coerce an LLM stance value to an int in [-2, 2], or None if not provided.
+
+    A non-numeric/missing value is a normal "no stance given" case. A numeric
+    value outside [-2, 2] means the model ignored the rubric, which is worth
+    surfacing rather than silently clamping into range.
+    """
     try:
         s = int(value)
     except (TypeError, ValueError):
         return None
-    return max(-2, min(2, s))
+    if not -2 <= s <= 2:
+        raise ValueError(f"stance {s} out of range [-2, 2]")
+    return s
 
 
 def _clean_evidence(evidence, topic: str) -> str:

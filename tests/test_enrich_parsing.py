@@ -41,8 +41,6 @@ def test_parse_json_raises_on_garbage():
         (-2, -2),
         (0, 0),
         ("1", 1),
-        (3, 2),  # clamped high
-        (-5, -2),  # clamped low
         (1.9, 1),  # truncated toward zero by int()
         ("abc", None),
         (None, None),
@@ -50,6 +48,14 @@ def test_parse_json_raises_on_garbage():
 )
 def test_clean_stance(value, expected):
     assert _clean_stance(value) == expected
+
+
+@pytest.mark.parametrize("value", [3, -5, 4, -3])
+def test_clean_stance_raises_out_of_range(value):
+    # A numeric stance outside [-2, 2] means the model ignored the rubric —
+    # that's worth surfacing, not silently clamping into range.
+    with pytest.raises(ValueError):
+        _clean_stance(value)
 
 
 # --- _clean_evidence -------------------------------------------------------
