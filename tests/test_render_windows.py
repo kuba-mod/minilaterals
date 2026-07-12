@@ -8,54 +8,10 @@ from datetime import UTC, datetime
 from pipeline.render import (
     compute_latest_topic_pills,
     compute_topic_weekly_stances,
-    compute_weekly_alignment,
 )
 from tests.conftest import event_dict
 
 TODAY = datetime(2026, 6, 15, tzinfo=UTC)
-
-
-# --- compute_weekly_alignment ----------------------------------------------
-
-
-def test_weekly_alignment_scores_week_with_two_actors():
-    events = [
-        event_dict(source_name="german_mfa", date="2026-06-08", file_path="de.yaml"),
-        event_dict(source_name="france_diplomatie", date="2026-06-10", file_path="fr.yaml"),
-    ]
-    emb = {"de.yaml": [1.0, 0.0], "fr.yaml": [1.0, 0.0]}
-    series = compute_weekly_alignment(events, emb, today=TODAY)
-    scored = [w for w in series if w is not None]
-    assert scored, "expected at least one scored week"
-    latest = scored[-1]
-    assert latest["label"] == "Converging"  # identical vectors → cosine 1.0
-    assert set(latest["actors_scored"]) == {"DE", "FR"}
-
-
-def test_weekly_alignment_none_when_single_actor():
-    events = [
-        event_dict(source_name="german_mfa", date="2026-06-08", file_path="de.yaml"),
-        event_dict(source_name="german_mfa", date="2026-06-10", file_path="de2.yaml"),
-    ]
-    emb = {"de.yaml": [1.0, 0.0], "de2.yaml": [1.0, 0.0]}
-    series = compute_weekly_alignment(events, emb, today=TODAY)
-    assert all(w is None for w in series)
-
-
-def test_weekly_alignment_empty_without_embeddings():
-    events = [event_dict(source_name="german_mfa", date="2026-06-08", file_path="de.yaml")]
-    assert compute_weekly_alignment(events, {}, today=TODAY) == []
-
-
-def test_weekly_alignment_ignores_non_mfa_sources():
-    events = [
-        event_dict(source_name="some_blog", date="2026-06-08", file_path="x.yaml"),
-        event_dict(source_name="german_mfa", date="2026-06-09", file_path="de.yaml"),
-    ]
-    emb = {"x.yaml": [1.0, 0.0], "de.yaml": [1.0, 0.0]}
-    # Only DE is a tracked MFA actor → never 2 actors → all None.
-    series = compute_weekly_alignment(events, emb, today=TODAY)
-    assert all(w is None for w in series)
 
 
 # --- compute_topic_weekly_stances ------------------------------------------

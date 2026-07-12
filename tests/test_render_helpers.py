@@ -2,42 +2,15 @@
 
 from __future__ import annotations
 
-import math
-
 import pytest
 
-from pipeline import render
 from pipeline.render import (
-    _allpairs_median_score,
-    _dot,
     _fmt_stance,
-    _mean_vec,
     _stance_norm,
     build_timeline_svg_data,
     cluster_key,
 )
 from tests.conftest import cluster_from_events, event_dict
-
-
-def test_dot_product():
-    assert _dot([1.0, 0.0], [1.0, 0.0]) == pytest.approx(1.0)
-    assert _dot([1.0, 0.0], [0.0, 1.0]) == pytest.approx(0.0)
-    assert _dot([1.0, 2.0, 3.0], [4.0, 5.0, 6.0]) == pytest.approx(32.0)
-
-
-def test_mean_vec_normalises():
-    result = _mean_vec([[3.0, 0.0], [0.0, 0.0]])
-    # mean is (1.5, 0), normalised → (1, 0)
-    assert result == pytest.approx([1.0, 0.0])
-    assert math.isclose(math.sqrt(sum(x * x for x in result)), 1.0)
-
-
-def test_mean_vec_empty_returns_none():
-    assert _mean_vec([]) is None
-
-
-def test_mean_vec_zero_magnitude_returns_none():
-    assert _mean_vec([[0.0, 0.0], [0.0, 0.0]]) is None
 
 
 def test_stance_norm_maps_range():
@@ -50,18 +23,6 @@ def test_fmt_stance_shows_sign():
     assert _fmt_stance(1.3) == "+1.3"
     assert _fmt_stance(-0.5) == "-0.5"
     assert _fmt_stance(0.0) == "+0.0"
-
-
-def test_allpairs_median_pure_python_path():
-    # numpy is not installed in this environment, so this exercises the
-    # hand-rolled median/quartile fallback (_HAS_NUMPY is False).
-    assert render._HAS_NUMPY is False
-    vecs_a = [[1.0, 0.0], [0.0, 1.0]]
-    vecs_b = [[1.0, 0.0]]
-    med, q25, q75 = _allpairs_median_score(vecs_a, vecs_b)
-    # sims are [1.0, 0.0]; median of two = 0.5
-    assert med == pytest.approx(0.5)
-    assert q25 <= med <= q75
 
 
 def test_cluster_key_stable_and_order_independent():
@@ -86,7 +47,7 @@ def test_timeline_none_with_fewer_than_two_scored_weeks():
     assert build_timeline_svg_data([{"overall": 0.5, "week": "2026-06-01", "label": "Mixed", "color": "#000"}]) is None
 
 
-def test_timeline_stance_mode_detected():
+def test_timeline_builds_from_stance_series():
     weekly = [
         {
             "week": "2026-06-01",
@@ -117,6 +78,6 @@ def test_timeline_stance_mode_detected():
     ]
     svg = build_timeline_svg_data(weekly)
     assert svg is not None
-    assert svg["stance_mode"] is True
     assert len(svg["points"]) == 2
+    assert svg["band_points"]  # min–max band drawn from band_lo/band_hi
     assert svg["recent"]["week"] == "2026-06-08"

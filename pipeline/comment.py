@@ -3,7 +3,7 @@
 Weimar Triangle tracker — cluster commentary step.
 
 For each convergence cluster that has extracted positions and a computed
-similarity score, calls an LLM to write 1–2 sentences of plain-English
+stance score, calls an LLM to write 1–2 sentences of plain-English
 diplomatic commentary. Results are cached in data/commentary.json and
 injected into the rendered site by pipeline/render.py.
 
@@ -38,11 +38,8 @@ sys.path.insert(0, str(ROOT))
 
 from pipeline.render import (  # noqa: E402
     build_convergence_clusters,
-    load_embeddings,
     load_events,
-    load_goal_embeddings,
-    load_position_embeddings,
-    score_cluster_convergence,
+    score_cluster_stances,
 )
 
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
@@ -58,11 +55,13 @@ The following diplomatic positions were published by {countries} on the topic of
 
 {positions}
 
-Their semantic alignment score is {score}% ({label}).
+Each capital's stance toward the shared Weimar Triangle goal on this topic is rated \
+from −2 (opposes) to +2 (strongly backs). Across these capitals the mean stance is \
+{stance} and they are {label} (spread {spread} between the most and least supportive).
 
 Write 1–2 sentences explaining what this means in concrete diplomatic terms. \
-What specifically are they {alignment_verb}? Reference the actual policy content — \
-do not just rephrase the score number."""
+What specifically makes their positions {alignment_verb}? Reference the actual policy \
+content — do not just rephrase the numbers."""
 
 ACTOR_LABELS = {
     "DE": "Germany",
@@ -194,34 +193,24 @@ def _build_prompt(cluster: dict) -> str | None:
     if not conv:
         return None
 
-    score = int(conv["overall"] * 100)
     label = conv["label"]
     alignment_verb = {
-        "Converging": "converging",
-        "Parallel": "pursuing parallel but distinct tracks",
-        "Diverging": "diverging",
+        "Aligned": "aligned",
+        "Mixed": "partially aligned but differing in emphasis",
+        "Divergent": "diverging",
     }.get(label, "positioned differently")
-
-    scoring_note = (
-        "This score reflects how well each country aligns with the officially agreed "
-        "Weimar Triangle goal on this topic, not just similarity to each other."
-        if conv.get("scoring_mode") == "goal_anchored"
-        else "This score reflects the semantic similarity between the countries' positions."
-    )
 
     countries = " and ".join(ACTOR_LABELS.get(a, a) for a in sorted(cluster["actors"]))
     positions_text = "\n".join(positions)
 
-    return (
-        COMMENTARY_PROMPT.format(
-            countries=countries,
-            area=cluster["area_label"],
-            positions=positions_text,
-            score=score,
-            label=label,
-            alignment_verb=alignment_verb,
-        )
-        + f"\n\nNote: {scoring_note}"
+    return COMMENTARY_PROMPT.format(
+        countries=countries,
+        area=cluster["area_label"],
+        positions=positions_text,
+        stance=conv["display"],
+        label=label,
+        spread=conv.get("spread", 0),
+        alignment_verb=alignment_verb,
     )
 
 
@@ -233,12 +222,9 @@ def main() -> None:
     args = parser.parse_args()
 
     events = load_events(weimar_only=True)
-    emb_store = load_embeddings()
-    goal_emb_store = load_goal_embeddings()
-    pos_emb_store = load_position_embeddings()
     clusters = build_convergence_clusters(events)
     for c in clusters:
-        c["convergence"] = score_cluster_convergence(c, emb_store, goal_emb_store, pos_emb_store)
+        c["convergence"] = score_cluster_stances(c)
 
     cache: dict[str, str] = {}
     if COMMENTARY_FILE.exists() and not args.force:
@@ -288,7 +274,7 @@ def main() -> None:
         COMMENTARY_FILE.write_text(json.dumps(cache, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"\nWrote {len(cache)} entries to {COMMENTARY_FILE}")
     elif processed == 0:
-        print("No pending clusters (all cached or no positions/embeddings available).")
+        print("No pending clusters (all cached or no positions/stances available).")
 
 
 if __name__ == "__main__":

@@ -8,8 +8,7 @@
 # is a build artifact, gitignored and never committed, so every push (branch
 # preview or production) always reflects the current source and data.
 #
-# render.py depends on only PyYAML + Jinja2; numpy/embeddings are optional and
-# import-guarded, so the build stays lean and fast.
+# render.py depends on only PyYAML + Jinja2, so the build stays lean and fast.
 #
 # Wire-up (one-time, in the Cloudflare dashboard → Workers & Pages → minilaterals
 # → Settings → Builds):

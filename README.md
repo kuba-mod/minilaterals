@@ -12,8 +12,7 @@ There's no database. Every ingested event is a plain text file committed to the 
 Sources (RSS / HTML / API)
   → ingest    fetch each foreign-ministry source → one file per event
   → enrich    an LLM reads each event and rates the country's stance on each topic
-  → embed     positions are turned into vectors for similarity comparison
-  → render    templates + scoring produce the static site
+  → render    templates + stance scoring produce the static site
 ```
 
 A scheduled job runs the full pipeline daily and commits the new data and pages back to the repository.
@@ -22,7 +21,7 @@ A scheduled job runs the full pipeline daily and commits the new data and pages 
 
 Events are grouped by topic into rolling two-week windows in which two or more of the three ministries spoke. Within each window the tracker measures how close their positions are.
 
-The primary method is a **stance rating**: for each event, the LLM assigns an integer score from **−2 to +2** describing how strongly that country's statement advances a shared Weimar goal on the topic (−2 opposes it, +2 actively advances it with concrete commitments), always backed by a short verbatim quote from the source as evidence. A cluster is then labelled **Aligned**, **Mixed**, or **Diverging** based on how far the three countries' average stances spread apart.
+The primary method is a **stance rating**: for each event, the LLM assigns an integer score from **−2 to +2** describing how strongly that country's statement advances a shared Weimar goal on the topic (−2 opposes it, +2 actively advances it with concrete commitments), always backed by a short verbatim quote from the source as evidence. A cluster is then labelled **Aligned**, **Mixed**, or **Divergent** based on how far the three countries' average stances spread apart. This stance rating is the single scoring method — a cluster with no stance ratings simply shows no score rather than falling back to another metric.
 
 ## Running it locally
 
@@ -31,14 +30,13 @@ uv sync                                   # install deps (creates .venv)
 
 uv run python -m pipeline.ingest          # fetch all sources
 uv run python -m pipeline.enrich          # LLM stance + position extraction
-uv run python -m pipeline.embed           # sentence embeddings (fallback scoring)
 uv run python -m pipeline.render          # build the static site into docs/
 
 # Preview the result
 uv run python -m http.server 8080 --directory docs   # → http://localhost:8080
 ```
 
-The enrichment step runs against either a local model (via Ollama) or a hosted API, auto-detected from whichever key is configured. Enrichment and embedding are both optional — ingest and render always produce a working site, and the comparison view degrades gracefully when stance or similarity data is missing.
+The enrichment step runs against either a local model (via Ollama) or a hosted API, auto-detected from whichever key is configured. Enrichment is optional — ingest and render always produce a working site, and the comparison view degrades gracefully when stance data is missing.
 
 ## A few design choices
 

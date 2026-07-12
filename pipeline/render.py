@@ -24,7 +24,6 @@ import argparse
 import glob
 import hashlib
 import json
-import math
 import os
 import sys
 from collections import defaultdict
@@ -33,13 +32,6 @@ from pathlib import Path
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
-
-try:
-    import numpy as _np
-
-    _HAS_NUMPY = True
-except ImportError:
-    _HAS_NUMPY = False
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -172,19 +164,7 @@ TYPE_COLORS = {
 
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
-EMBEDDINGS_FILE = ROOT / "data" / "embeddings.json"
-POSITION_EMBEDDINGS_FILE = ROOT / "data" / "position_embeddings.json"
-GOAL_EMBEDDINGS_FILE = ROOT / "data" / "goal_embeddings.json"
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
-
-# Convergence score thresholds — legacy peer-to-peer mode (within-topic, so naturally elevated)
-CONVERGENCE_CONVERGING = 0.72
-CONVERGENCE_PARALLEL = 0.50
-
-# Goal-anchored thresholds: cosine of full article text vs. short goal sentence is lower
-# than peer-to-peer. Calibrated against observed score range (0.25–0.55).
-CONVERGENCE_GOAL_CONVERGING = 0.42
-CONVERGENCE_GOAL_PARALLEL = 0.28
 
 # Stance-based alignment: each event×topic carries an LLM-judged stance in -2..+2
 # vs. the Weimar goal. Agreement label comes from the spread between per-country
@@ -249,27 +229,9 @@ def load_events(weimar_only: bool = True) -> list[dict]:
     return sorted(events, key=lambda e: e.get("date", ""), reverse=True)
 
 
-def load_embeddings() -> dict[str, list[float]]:
-    if EMBEDDINGS_FILE.exists():
-        return json.loads(EMBEDDINGS_FILE.read_text(encoding="utf-8"))
-    return {}
-
-
 def load_commentary() -> dict[str, str]:
     if COMMENTARY_FILE.exists():
         return json.loads(COMMENTARY_FILE.read_text(encoding="utf-8"))
-    return {}
-
-
-def load_goal_embeddings() -> dict[str, list[float]]:
-    if GOAL_EMBEDDINGS_FILE.exists():
-        return json.loads(GOAL_EMBEDDINGS_FILE.read_text(encoding="utf-8"))
-    return {}
-
-
-def load_position_embeddings() -> dict[str, list[float]]:
-    if POSITION_EMBEDDINGS_FILE.exists():
-        return json.loads(POSITION_EMBEDDINGS_FILE.read_text(encoding="utf-8"))
     return {}
 
 
@@ -282,20 +244,6 @@ def cluster_key(cluster: dict) -> str:
         if item["event"].get("_file_path")
     )
     return hashlib.sha256(json.dumps(paths).encode()).hexdigest()[:12]
-
-
-def _dot(a: list[float], b: list[float]) -> float:
-    """Cosine similarity for pre-normalised vectors = dot product."""
-    return sum(x * y for x, y in zip(a, b, strict=True))
-
-
-def _mean_vec(vecs: list[list[float]]) -> list[float] | None:
-    if not vecs:
-        return None
-    n = len(vecs[0])
-    mean = [sum(v[i] for v in vecs) / len(vecs) for i in range(n)]
-    mag = math.sqrt(sum(x * x for x in mean))
-    return [x / mag for x in mean] if mag > 0 else None
 
 
 def score_cluster_stances(cluster: dict) -> dict | None:
@@ -336,222 +284,6 @@ def score_cluster_stances(cluster: dict) -> dict | None:
         "actors_scored": actors_scored,
         "scoring_mode": "stance",
     }
-
-
-def score_cluster_convergence(
-    cluster: dict,
-    emb_store: dict,
-    goal_emb_store: dict | None = None,
-    pos_emb_store: dict | None = None,
-) -> dict | None:
-    """
-    Score convergence for a cluster.
-
-    Goal-anchored mode (for officially agreed Weimar topics): measures how well
-    each actor's articles align with the shared Weimar goal for this topic.
-    Uses topic-specific position embeddings (pos_emb_store) when available — these
-    are focused one-sentence LLM summaries in English per topic — falling back to
-    full-text embeddings for events that haven't been enriched yet.
-    overall = mean(actor_goal_alignments).
-    Thresholds: ≥0.42 Converging, ≥0.28 Parallel, <0.28 Diverging.
-
-    Legacy peer-to-peer mode (for other topics): computes pairwise cosine
-    similarity between actor mean embeddings (unchanged behaviour).
-    Thresholds: ≥0.72 Converging, ≥0.50 Parallel.
-
-    Return dict shape is identical in both modes so all callers work unchanged.
-    """
-    actor_vecs: dict[str, list[list[float]]] = defaultdict(list)
-    area = cluster["area"]
-    for actor, items in cluster["by_actor"].items():
-        for item in items:
-            fpath = item["event"].get("_file_path")
-            if not fpath:
-                continue
-            # For goal-anchored scoring prefer the topic-specific position embedding
-            topic_key = f"{fpath}#{area}"
-            fallback_key = f"{fpath}#overall"
-            if pos_emb_store and topic_key in pos_emb_store:
-                actor_vecs[actor].append(pos_emb_store[topic_key])
-            elif pos_emb_store and fallback_key in pos_emb_store:
-                actor_vecs[actor].append(pos_emb_store[fallback_key])
-            elif fpath in emb_store:
-                actor_vecs[actor].append(emb_store[fpath])
-
-    actors_with_emb = [a for a in cluster["actors"] if actor_vecs.get(a)]
-    if len(actors_with_emb) < 2:
-        return None
-
-    means = {a: _mean_vec(actor_vecs[a]) for a in actors_with_emb}
-    area = cluster["area"]
-
-    # Goal-anchored scoring
-    if goal_emb_store and area in goal_emb_store:
-        goal_vec = goal_emb_store[area]
-        actor_alignments = {a: _dot(means[a], goal_vec) for a in actors_with_emb}
-        pairs = [{"actors": a, "score": round(actor_alignments[a], 3)} for a in actors_with_emb]
-        overall = sum(actor_alignments.values()) / len(actor_alignments)
-        if overall >= CONVERGENCE_GOAL_CONVERGING:
-            label, color = "Converging", "#4d6b38"
-        elif overall >= CONVERGENCE_GOAL_PARALLEL:
-            label, color = "Parallel", "#8a6320"
-        else:
-            label, color = "Diverging", "#a14132"
-        return {
-            "pairs": pairs,
-            "overall": round(overall, 3),
-            "label": label,
-            "color": color,
-            "actors_scored": actors_with_emb,
-            "scoring_mode": "goal_anchored",
-        }
-
-    # Legacy peer-to-peer scoring
-    pairs = []
-    for i, a1 in enumerate(actors_with_emb):
-        for a2 in actors_with_emb[i + 1 :]:
-            sim = _dot(means[a1], means[a2])
-            pairs.append({"actors": f"{a1}_{a2}", "score": round(sim, 3)})
-
-    overall = sum(p["score"] for p in pairs) / len(pairs)
-    if overall >= CONVERGENCE_CONVERGING:
-        label, color = "Converging", "#4d6b38"
-    elif overall >= CONVERGENCE_PARALLEL:
-        label, color = "Parallel", "#8a6320"
-    else:
-        label, color = "Diverging", "#a14132"
-
-    return {
-        "pairs": pairs,
-        "overall": round(overall, 3),
-        "label": label,
-        "color": color,
-        "actors_scored": actors_with_emb,
-        "scoring_mode": "peer_to_peer",
-    }
-
-
-def _allpairs_median_score(vecs_a: list[list[float]], vecs_b: list[list[float]]) -> tuple[float, float, float]:
-    """All-pairs cosine sim for pre-normalised vectors; returns (median, q25, q75)."""
-    if _HAS_NUMPY:
-        a = _np.array(vecs_a)
-        b = _np.array(vecs_b)
-        sims = (a @ b.T).flatten()
-        return float(_np.median(sims)), float(_np.percentile(sims, 25)), float(_np.percentile(sims, 75))
-    sims = sorted(_dot(va, vb) for va in vecs_a for vb in vecs_b)
-    n = len(sims)
-    med = sims[n // 2] if n % 2 else (sims[n // 2 - 1] + sims[n // 2]) / 2
-    return med, sims[max(0, n // 4)], sims[min(n - 1, 3 * n // 4)]
-
-
-def compute_weekly_alignment(
-    events: list[dict],
-    emb_store: dict,
-    pos_emb_store: dict | None = None,
-    window_days: int = 14,
-    today: datetime | None = None,
-) -> list[dict | None]:
-    """
-    Rolling window_days alignment score, one entry per calendar week (oldest first).
-    Returns None for weeks where <2 actors have embedded events.
-
-    Uses pos_emb_store (position embeddings, keyed filepath#topic) as primary source,
-    mean-pooling across topics per event. Falls back to emb_store (full-text) when no
-    position embedding exists for an event.
-    """
-    if not pos_emb_store and not emb_store:
-        return []
-
-    mfa_sources = {"german_mfa", "france_diplomatie", "polish_mfa"}
-    actor_map = {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"}
-
-    # Build per-event representative vector: mean of all topic position vectors,
-    # falling back to full-text embedding if no position embeddings exist.
-    event_vecs: dict[str, list[float]] = {}
-    for e in events:
-        src = e.get("source_name", "")
-        if src not in mfa_sources:
-            continue
-        fpath = e.get("_file_path", "")
-        if not fpath:
-            continue
-        if pos_emb_store:
-            topic_vecs = [v for k, v in pos_emb_store.items() if k.startswith(fpath + "#")]
-            if topic_vecs:
-                event_vecs[fpath] = [sum(col) / len(col) for col in zip(*topic_vecs, strict=True)]
-                continue
-        if fpath in emb_store:
-            event_vecs[fpath] = emb_store[fpath]
-
-    embedded: list[tuple[str, str, str]] = []
-    for e in events:
-        src = e.get("source_name", "")
-        if src not in mfa_sources:
-            continue
-        fpath = e.get("_file_path", "")
-        if fpath in event_vecs:
-            embedded.append((e.get("date", ""), actor_map[src], fpath))
-
-    if not embedded:
-        return []
-
-    earliest = min(d for d, _, _ in embedded)
-    today = (today or datetime.now(UTC)).date()
-    start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
-    anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
-
-    results: list[dict | None] = []
-    while anchor <= today:
-        window_start = (anchor - timedelta(days=window_days)).strftime("%Y-%m-%d")
-        window_end = anchor.strftime("%Y-%m-%d")
-
-        actor_vecs: dict[str, list[list[float]]] = defaultdict(list)
-        n_events = 0
-        for date_str, actor, fpath in embedded:
-            if window_start <= date_str <= window_end:
-                actor_vecs[actor].append(event_vecs[fpath])
-                n_events += 1
-
-        actors_with_data = [a for a in ("DE", "FR", "PL") if actor_vecs.get(a)]
-        if len(actors_with_data) < 2:
-            results.append(None)
-            anchor += timedelta(days=7)
-            continue
-
-        pair_medians: list[float] = []
-        by_pair: dict[str, dict] = {}
-        for i, a1 in enumerate(actors_with_data):
-            for a2 in actors_with_data[i + 1 :]:
-                med, q25, q75 = _allpairs_median_score(actor_vecs[a1], actor_vecs[a2])
-                by_pair[f"{a1}_{a2}"] = {
-                    "median": round(med, 3),
-                    "q25": round(q25, 3),
-                    "q75": round(q75, 3),
-                }
-                pair_medians.append(med)
-
-        overall = sum(pair_medians) / len(pair_medians)
-        if overall >= CONVERGENCE_CONVERGING:
-            label, color = "Converging", "#4d6b38"
-        elif overall >= CONVERGENCE_PARALLEL:
-            label, color = "Parallel", "#8a6320"
-        else:
-            label, color = "Diverging", "#a14132"
-
-        results.append(
-            {
-                "week": anchor.strftime("%Y-%m-%d"),
-                "overall": round(overall, 3),
-                "label": label,
-                "color": color,
-                "by_pair": by_pair,
-                "actors_scored": actors_with_data,
-                "n_events": n_events,
-            }
-        )
-        anchor += timedelta(days=7)
-
-    return results
 
 
 def compute_latest_topic_pills(
@@ -689,9 +421,9 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
     """
     Convert a weekly series into SVG-ready coordinate data for the template.
 
-    Entries carry `overall` as a 0..1 plot value. Stance entries additionally
-    carry `display` ("+1.3"), `band_lo`/`band_hi` (min/max country mean) and
-    `per_actor`; legacy cosine entries carry `by_pair` and display as percent.
+    Entries carry `overall` as a 0..1 plot value (stance −2..+2 mapped via
+    _stance_norm), plus `display` ("+1.3"), `band_lo`/`band_hi` (min/max country
+    mean) and `per_actor`.
     """
     scored = [w for w in weekly if w is not None]
     if len(scored) < 2:
@@ -709,8 +441,6 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
     def x_for(idx: int) -> float:
         return PAD_L + idx * chart_w / (n - 1) if n > 1 else PAD_L + chart_w / 2
 
-    stance_mode = any("stance_avg" in w for w in scored)
-
     points = []
     line_xy: list[str] = []
     band_top: list[str] = []
@@ -723,32 +453,17 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
             continue
 
         y = round(y_for(w["overall"]), 1)
-        display = w.get("display") or f"{int(w['overall'] * 100)}%"
+        display = w.get("display") or f"{w['overall']:+.1f}"
 
+        detail = ""
         if "band_lo" in w and "band_hi" in w:
             band_top.append(f"{x},{round(y_for(w['band_hi']), 1)}")
             band_bot.append(f"{x},{round(y_for(w['band_lo']), 1)}")
             detail = "  ".join(f"{a}: {m:+.1f}" for a, m in (w.get("per_actor") or {}).items())
-        elif w.get("by_pair"):
-            by_pair = w["by_pair"]
-            q25_avg = sum(v["q25"] for v in by_pair.values()) / len(by_pair)
-            q75_avg = sum(v["q75"] for v in by_pair.values()) / len(by_pair)
-            band_top.append(f"{x},{round(y_for(q75_avg), 1)}")
-            band_bot.append(f"{x},{round(y_for(q25_avg), 1)}")
-            detail = "  ".join(
-                f"{k}: {int(v['median'] * 100)}% (IQR {int(v['q25'] * 100)}–{int(v['q75'] * 100)}%)"
-                for k, v in by_pair.items()
-            )
-        else:
-            detail = ""
 
         actors_str = ", ".join(w.get("actors_scored") or [])
         n_ev = w.get("n_events", "?")
-        tooltip = (
-            f"Week of {w['week']}  ·  {w['label']} · avg stance {display}"
-            if stance_mode
-            else f"Week of {w['week']}  ·  {w['label']} {int(w['overall'] * 100)}%"
-        )
+        tooltip = f"Week of {w['week']}  ·  {w['label']} · avg stance {display}"
         tooltip += (
             (f"\n{detail}" if detail else "")
             + (f"\nActors: {actors_str}  ·  " if actors_str else "\n")
@@ -770,32 +485,17 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
 
     band_points = " ".join(band_top) + " " + " ".join(reversed(band_bot)) if band_top else ""
 
-    # Reference lines: stance mode gets the rubric levels; cosine mode the old thresholds
-    if stance_mode:
-        ref_lines = [
-            {"y": round(y_for(_stance_norm(1.0)), 1), "color": COLOR_GREEN, "label": "+1"},
-            {"y": round(y_for(_stance_norm(0.0)), 1), "color": COLOR_AMBER, "label": "0"},
-        ]
-    else:
-        ref_lines = [
-            {
-                "y": round(y_for(CONVERGENCE_GOAL_CONVERGING), 1),
-                "color": COLOR_GREEN,
-                "label": f"{int(CONVERGENCE_GOAL_CONVERGING * 100)}%",
-            },
-            {
-                "y": round(y_for(CONVERGENCE_GOAL_PARALLEL), 1),
-                "color": COLOR_AMBER,
-                "label": f"{int(CONVERGENCE_GOAL_PARALLEL * 100)}%",
-            },
-        ]
+    # Reference lines mark the stance rubric levels (+1 supportive, 0 neutral).
+    ref_lines = [
+        {"y": round(y_for(_stance_norm(1.0)), 1), "color": COLOR_GREEN, "label": "+1"},
+        {"y": round(y_for(_stance_norm(0.0)), 1), "color": COLOR_AMBER, "label": "0"},
+    ]
 
     return {
         "points": points,
         "line_points": " ".join(line_xy),
         "band_points": band_points,
         "ref_lines": ref_lines,
-        "stance_mode": stance_mode,
         "viewbox": f"0 0 {W} {H}",
         "recent": scored[-1],
     }
@@ -1016,28 +716,22 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     milestones = _load_yaml(ROOT / "data" / "milestones.yaml") or []
     annual = _load_yaml(ROOT / "data" / "annual.yaml") or []
     run = load_latest_run()
-    emb_store = load_embeddings()
-    goal_emb_store = load_goal_embeddings()
-    pos_emb_store = load_position_embeddings()
     clusters = build_convergence_clusters(events)
     commentary = load_commentary()
     for cluster in clusters:
-        # Stance ratings are the primary scoring; embedding cosine is the fallback
-        # for clusters whose events haven't been stance-rated yet.
-        cluster["convergence"] = score_cluster_stances(cluster) or score_cluster_convergence(
-            cluster, emb_store, goal_emb_store, pos_emb_store
-        )
+        # Convergence is scored purely from LLM-judged stance ratings. A cluster
+        # whose events lack stances scores None and renders without a badge.
+        cluster["convergence"] = score_cluster_stances(cluster)
         cluster["commentary"] = commentary.get(cluster_key(cluster))
 
-    weekly_alignment = compute_weekly_alignment(events, emb_store, pos_emb_store, today=edition_dt)
     topic_weekly = compute_topic_weekly_stances(events, today=edition_dt)
     stance_overall = topic_weekly.get("overall") or []
-    # Use the stance series only once it has enough scored weeks to draw a line;
-    # otherwise fall back to the embedding-based series (partial-backfill state).
+    # The timeline needs at least two scored weeks to draw a line; below that it
+    # renders empty rather than showing a single point.
     if sum(1 for w in stance_overall if w is not None) >= 2:
         initial_weekly = stance_overall
     else:
-        initial_weekly = weekly_alignment
+        initial_weekly = []
         topic_weekly = {}
     timeline_svg = build_timeline_svg_data(initial_weekly)
     topic_series_json = json.dumps(
@@ -1057,8 +751,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             for k, v in topic_weekly.items()
         }
     )
-    # Pill state per topic: latest scored week of the stance series (survives
-    # quiet weeks, unlike the old 7-day window); cosine convergence as fallback.
+    # Pill state per topic: the latest scored cluster, overridden below by the
+    # latest scored week of the stance series once it has ≥2 weeks.
     topic_pills = compute_latest_topic_pills(clusters, today=edition_dt)
     for area in ISSUE_ORDER:
         series = topic_weekly.get(area) or []
@@ -1086,8 +780,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     # Pairwise stance agreement over the last 14 days: for each topic both
     # countries rated, agreement = 1 - |meanA - meanB| / 4 (4 = full scale width);
-    # pair score = mean across shared topics. Falls back to embedding medians
-    # when no stance data exists.
+    # pair score = mean across shared topics. Pairs with no shared rated topic
+    # show "—".
     pair_scores: dict[str, int] = {}
     cutoff_14 = (edition_dt - timedelta(days=14)).strftime("%Y-%m-%d")
     actor_topic_scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in WEIMAR_ACTORS}
@@ -1110,12 +804,6 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 m2 = sum(actor_topic_scores[a2][t]) / len(actor_topic_scores[a2][t])
                 agreements.append(1.0 - abs(m1 - m2) / 4.0)
             pair_scores[f"{a1}_{a2}"] = int(round(sum(agreements) / len(agreements) * 100))
-
-    if not pair_scores:
-        latest_pw = next((w for w in reversed(weekly_alignment) if w is not None), None)
-        if latest_pw:
-            for pk, pv in (latest_pw.get("by_pair") or {}).items():
-                pair_scores[pk] = int((pv.get("median") or 0) * 100)
 
     def _pair_score(a1: str, a2: str) -> int | str:
         for k in (f"{a1}_{a2}", f"{a2}_{a1}"):

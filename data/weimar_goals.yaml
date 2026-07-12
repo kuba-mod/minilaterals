@@ -1,6 +1,6 @@
 # Reference sentences for officially agreed Weimar Triangle priorities.
 # Sources: FM joint declarations Feb 2024, May 2024; EU Affairs Ministers Dec 2024.
-# goal_embeddings.json is generated from this file by pipeline/embed.py — do not edit that file by hand.
+# pipeline/enrich.py reads these as the goal each country's stance is rated against.
 
 ukraine: >
   The Weimar Triangle commits to long-term support for Ukraine across military,
