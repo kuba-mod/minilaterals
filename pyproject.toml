@@ -20,11 +20,6 @@ dev = [
     "ruff>=0.15.20",
     "pytest>=8.0",
 ]
-# Embedding (pipeline.embed) is optional since stance scoring replaced cosine
-# similarity as the primary metric; install with `uv sync --group embed`.
-embed = [
-    "sentence-transformers>=3.0",
-]
 # Only used by exploratory notebooks/scripts, not the pipeline.
 analysis = [
     "altair>=5.0",
@@ -49,6 +44,3 @@ select = ["E", "F", "I", "UP", "B", "PLC0415"]
 # structure — wrapping mid-string would be noise or risk altering the prompt.
 "pipeline/render.py" = ["E501"]
 "pipeline/enrich.py" = ["E501"]
-# sentence-transformers is only installed via the optional `embed` dependency
-# group; importing it at module level would break every other pipeline step.
-"pipeline/embed.py" = ["PLC0415"]

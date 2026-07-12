@@ -36,13 +36,8 @@
 {# ── Alignment timeline ── #}
 {% if timeline_svg %}
 <div class="section-head" style="margin-top:0">
-  {% if timeline_svg.stance_mode %}
   How strongly are they backing shared goals?
   <span>Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goals. The line is the three capitals' average; the shaded band spans the most and least supportive capital — a narrow band means they agree.</span>
-  {% else %}
-  How aligned were they this week?
-  <span>14-day rolling window. 100% = identical positions across all three capitals.</span>
-  {% endif %}
 </div>
 <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px; flex-wrap:wrap">
   <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This week — w/o {{ timeline_svg.recent.week }}</div>
@@ -208,7 +203,6 @@
         {{ cluster.area_label }}
       </span>
       {% if cluster.convergence %}
-      {% if cluster.convergence.scoring_mode == 'stance' %}
       <span class="tag" style="color:{{ cluster.convergence.color }}; border-color:{{ cluster.convergence.color }}44; background:{{ cluster.convergence.color }}18; margin-left:4px"
         title="Mean stance vs. the Weimar goal, −2 to +2, per capital. Spread {{ cluster.convergence.spread }} between the most and least supportive.">
         {{ cluster.convergence.label }}
@@ -217,12 +211,6 @@
         {{ a }} {{ "%+.1f"|format(pa.stance) }}{% if not loop.last %} ·{% endif %}
         {%- endfor %}
       </span>
-      {% else %}
-      <span class="tag" style="color:{{ cluster.convergence.color }}; border-color:{{ cluster.convergence.color }}44; background:{{ cluster.convergence.color }}18; margin-left:4px"
-        title="{% if cluster.convergence.scoring_mode == 'goal_anchored' %}Goal alignment — {% for p in cluster.convergence.pairs %}{{ p.actors }}: {{ (p.score * 100)|int }}%  {% endfor %}{% else %}Peer similarity — {% for p in cluster.convergence.pairs %}{{ p.actors }}: {{ (p.score * 100)|int }}%  {% endfor %}{% endif %}">
-        {{ cluster.convergence.label }} · {{ (cluster.convergence.overall * 100)|int }}%
-      </span>
-      {% endif %}
       {% endif %}
       <span class="date-range">
         {% if cluster.date_from == cluster.date_to %}{{ cluster.date_to }}{% else %}{{ cluster.date_from }} – {{ cluster.date_to }}{% endif %}

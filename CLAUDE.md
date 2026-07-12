@@ -16,9 +16,9 @@ uv sync                                      # install deps (creates .venv)
 # Run pipeline steps individually
 uv run python -m pipeline.ingest             # fetch all sources → data/events/
 uv run python -m pipeline.ingest --source german_mfa --dry-run
-uv run python -m pipeline.enrich             # LLM position extraction
+uv run python -m pipeline.enrich             # LLM position extraction + stance rating
 uv run python -m pipeline.enrich --limit 5 --dry-run
-uv run python -m pipeline.embed              # sentence embeddings → data/embeddings.json
+uv run python -m pipeline.enrich --stances-only --limit 200   # backfill missing stance ratings
 uv run python -m pipeline.render             # Jinja2 → docs/ (as of data/edition.yaml cutoff)
 uv run python -m pipeline.render --output /tmp/test
 uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
@@ -36,9 +36,8 @@ Sources (RSS/HTML/API)
   → pipeline/ingest.py          orchestrator; writes data/runs/YYYY-MM-DD.yaml
     → pipeline/sources/*.py     one ingester per source; all extend BaseIngester
       → data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{hash8}.yaml
-        → pipeline/enrich.py    LLM extracts position summary into extracted: block
-          → pipeline/embed.py   sentence-transformers encodes positions → data/embeddings.json
-            → pipeline/render.py  Jinja2 + convergence scoring → docs/
+        → pipeline/enrich.py    LLM extracts position summary + per-topic stance ratings into extracted: block
+          → pipeline/render.py  Jinja2 + stance-based convergence scoring → docs/
 ```
 
 **CI:** three workflows. `.github/workflows/collect.yml` is cron/dispatch-driven data collection and the only workflow that commits to `main`: the daily cron at 06:00 UTC ingests → enriches and commits `data/**` (the cutoff is unchanged, so a rebuild ships the same published edition); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today and generates commentary — the weekly edition cut, which also commits only `data/**`. It never renders: every push to `main` (including these commits) triggers Cloudflare's build, which renders from source and deploys, so an edition ships simply by moving the cutoff. Its commit uses `GITHUB_TOKEN`, which does not re-trigger GitHub Actions workflows, so there is no commit loop. `render.yml` is a render **CI check**, not a deploy path: it renders on every branch push to fail fast if `render.py` crashes and to upload the built tree as a downloadable `site` artifact — it commits nothing. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). `.github/workflows/lint.yml` runs `ruff check .` on every branch push. See Deployment below for how the site actually gets built and served.
@@ -60,9 +59,8 @@ Sources (RSS/HTML/API)
 |---|---|
 | `pipeline/sources/base.py` | `Event` dataclass + `classify()` (regex scoring) + `save()` (dedup by filename) |
 | `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
-| `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
-| `pipeline/embed.py` | Batch-encodes `extracted.position` with `all-MiniLM-L6-v2`; stores in `data/embeddings.json` |
-| `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_convergence()`; renders 3 pages |
+| `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface; extracts positions and per-topic stance ratings |
+| `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders 3 pages |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |
@@ -74,8 +72,9 @@ Sources (RSS/HTML/API)
 Event YAML fields that matter for logic:
 - `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, russia, enlargement, energy, migration, trade), or any item with 2+ Weimar countries mentioned
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
-- `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view and embeddings
-- `_file_path` — added at load time by `render.py`; used to look up embeddings (not stored in YAML)
+- `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
+- `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
+- `_file_path` — added at load time by `render.py` (not stored in YAML)
 
 ## Relevance classification (`base.py`)
 
@@ -83,7 +82,7 @@ Event YAML fields that matter for logic:
 
 ## Convergence scoring (`render.py`)
 
-`build_convergence_clusters()` groups `weimar_relevant` events by issue area into 14-day windows where 2+ MFA actors published. `score_cluster_convergence()` mean-pools the per-actor embeddings and computes pairwise cosine similarity (vectors are L2-normalised so similarity = dot product). Thresholds: ≥ 0.72 → Converging, ≥ 0.50 → Parallel, < 0.50 → Diverging.
+`build_convergence_clusters()` groups `weimar_relevant` events by issue area into 14-day windows where 2+ MFA actors published. `score_cluster_stances()` is the **single** scoring method: for each actor it means that actor's per-event stance ratings (`extracted.stances[area].score`, −2..+2 vs. the agreed Weimar goal), then labels the cluster from the spread between the per-actor means — `Aligned` (spread ≤ 0.5), `Mixed` (≤ 1.5), or `Divergent`. `overall` is the mean stance across actors. A cluster whose events carry no stance ratings scores `None` and renders without a badge — there is no embedding/cosine fallback. Every score is auditable via the evidence quote stored on each stance. Backfill missing stances with `pipeline.enrich --stances-only`.
 
 ## Enrichment providers
 
@@ -107,17 +106,17 @@ German MFA, French MFA, and Polish MFA are in `MFA_SOURCES`. Any item from these
 **4. Two-tier relevance.**
 `weimar_relevant` (broad — enables the comparison view) vs `trilateral_signal` (strong — explicit Weimar/trilateral mention or all 3 actors present). The renderer currently treats both the same way. The `trilateral_signal` field is available for a future "strong signal" filter or separate section.
 
-**5. Keyword classification, then embeddings.**
-Grouping into topic clusters uses regex keyword matching (fast, deterministic, no API cost). Convergence *scoring within* a cluster uses sentence embeddings (semantic). These are two separate concerns: keywords decide what goes in a cluster, embeddings decide how aligned the positions are. Trade-off: keyword matching produces noisy clusters (items about the same keyword but different events); embedding scoring then reveals that divergence, which is itself informative.
+**5. Keyword classification, then LLM stance rating.**
+Grouping into topic clusters uses regex keyword matching (fast, deterministic, no API cost). Convergence *scoring within* a cluster uses the LLM's per-topic stance ratings (−2..+2 vs. the agreed Weimar goal). These are two separate concerns: keywords decide what goes in a cluster, stance ratings decide how aligned the positions are. Trade-off: keyword matching produces noisy clusters (items about the same keyword but different events); an item the LLM finds no goal-relevant stance in (`topics: []`) simply contributes no rating, so it drops out of the cluster's score rather than skewing it. There is deliberately **one** scoring method — the earlier sentence-embedding/cosine path was removed so the site tells a single, auditable story.
 
 **6. One-sentence position extraction.**
-The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly and more expensive to embed.
+The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly.
 
 **7. Static site, no backend.**
 `pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
-**8. Enrichment and embedding are optional.**
-`pipeline.enrich` and `pipeline.embed` both run with `continue-on-error: true` in CI. `pipeline.ingest` + `pipeline.render` always produce a working site; the convergence view degrades gracefully (clusters show without position text or convergence scores). Rationale: the enrichment provider credentials (e.g. the `OLLAMA_API_KEY` secret for Ollama Cloud) might not be configured; the HuggingFace model download might fail on a flaky CI run.
+**8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
+The stance comparison *is* the product — without `pipeline.enrich` (position extraction + per-topic stance rating) there is only a data-collection pipeline and an empty convergence view. Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if un-scored) site — clusters show without position text and score `None`/no badge when stance ratings are missing. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
 
 ## Adding a new source
 
