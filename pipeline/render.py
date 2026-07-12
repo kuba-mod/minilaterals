@@ -554,7 +554,7 @@ def compute_weekly_alignment(
     return results
 
 
-def compute_latest_heatmap(
+def compute_latest_topic_pills(
     clusters: list[dict], days: int = 7, today: datetime | None = None
 ) -> dict[str, dict | None]:
     """Per-topic convergence for the most recent scored cluster within the last `days` days."""
@@ -1058,13 +1058,13 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         }
     )
     # Pill state per topic: latest scored week of the stance series (survives
-    # quiet weeks, unlike the old 7-day heatmap); cosine heatmap as fallback.
-    heatmap = compute_latest_heatmap(clusters, today=edition_dt)
+    # quiet weeks, unlike the old 7-day window); cosine convergence as fallback.
+    topic_pills = compute_latest_topic_pills(clusters, today=edition_dt)
     for area in ISSUE_ORDER:
         series = topic_weekly.get(area) or []
         latest = next((w for w in reversed(series) if w is not None), None)
         if latest and sum(1 for w in series if w is not None) >= 2:
-            heatmap[area] = {
+            topic_pills[area] = {
                 "label": latest["label"],
                 "color": latest["color"],
                 "overall": latest["overall"],
@@ -1164,7 +1164,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             total_all=len(all_events),
             meetings_count=len(meetings),
             timeline_svg=timeline_svg,
-            heatmap=heatmap,
+            topic_pills=topic_pills,
             issue_order=ISSUE_ORDER,
             country_stats=country_stats,
             weimar_actors=WEIMAR_ACTORS,

@@ -83,7 +83,7 @@
 </div>
 
 {# ── Topic pills — clicking switches the timeline view ── #}
-{% if heatmap %}
+{% if topic_pills %}
 <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px">
   <span class="tag timeline-pill timeline-pill--active" data-series="overall"
         style="font-size:10px; cursor:pointer"
@@ -91,7 +91,7 @@
     Overall
   </span>
   {% for area in issue_order %}
-  {% set h = heatmap[area] %}
+  {% set h = topic_pills[area] %}
   {% if h %}
   <span class="tag timeline-pill" data-series="{{ area }}"
         style="color:{{ h.color }}; border-color:{{ h.color }}44; background:{{ h.color }}18; font-size:10px; cursor:pointer"
