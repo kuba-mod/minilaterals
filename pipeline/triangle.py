@@ -159,26 +159,49 @@ def _solve_vertices(divergence: dict[str, float]) -> dict[str, tuple[float, floa
     }
 
 
+def _blend_hex(c1: str, c2: str) -> str:
+    """Midpoint blend of two #rrggbb colors — used to tint an edge by its pair."""
+    r1, g1, b1 = int(c1[1:3], 16), int(c1[3:5], 16), int(c1[5:7], 16)
+    r2, g2, b2 = int(c2[1:3], 16), int(c2[3:5], 16), int(c2[5:7], 16)
+    return f"#{(r1 + r2) // 2:02x}{(g1 + g2) // 2:02x}{(b1 + b2) // 2:02x}"
+
+
+# Same dark card + cream center dot + rounded colored strokes as FAVICON_SVG
+# (pipeline/render.py), so the standalone triangle reads as the site's mark.
+BG_DARK = "#1c1812"
+CREAM = "#f4ecdb"
+
+
 def render_triangle_svg(divergence: dict[str, float], actor_colors: dict[str, str]) -> str:
-    """Standalone SVG string — solid neutral edges, colored vertex dots labeled DE/FR/PL."""
+    """Standalone SVG string, styled after the site's favicon: a dark rounded card with
+    thick rounded-cap edges tinted by each pair's blended colors, a cream center dot,
+    and colored vertex dots labeled DE/FR/PL."""
     vertices = _solve_vertices(divergence)
     de, fr, pl = vertices["DE"], vertices["FR"], vertices["PL"]
 
-    def label(actor: str, x: float, y: float, dy: float) -> str:
+    def edge(a1: str, p1: tuple[float, float], a2: str, p2: tuple[float, float]) -> str:
+        color = _blend_hex(actor_colors[a1], actor_colors[a2])
         return (
-            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="9" fill="{actor_colors[actor]}" '
-            f'stroke="#f4ecdb" stroke-width="2"/>'
-            f'<text x="{x:.1f}" y="{y + dy:.1f}" text-anchor="middle" font-size="20" '
-            f'font-family="Georgia, serif" fill="{actor_colors[actor]}">{actor}</text>'
+            f'<line x1="{p1[0]:.1f}" y1="{p1[1]:.1f}" x2="{p2[0]:.1f}" y2="{p2[1]:.1f}" '
+            f'stroke="{color}" stroke-width="8" stroke-linecap="round"/>'
         )
 
-    points = f"{de[0]:.1f},{de[1]:.1f} {fr[0]:.1f},{fr[1]:.1f} {pl[0]:.1f},{pl[1]:.1f}"
+    def vertex(actor: str, p: tuple[float, float], label_dy: float) -> str:
+        return (
+            f'<circle cx="{p[0]:.1f}" cy="{p[1]:.1f}" r="10" fill="{actor_colors[actor]}"/>'
+            f'<text x="{p[0]:.1f}" y="{p[1] + label_dy:.1f}" text-anchor="middle" font-size="20" '
+            f'font-weight="600" font-family="Georgia, serif" fill="{actor_colors[actor]}">{actor}</text>'
+        )
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {VIEWBOX} {VIEWBOX}">
-<polygon points="{points}" fill="#9a8a2818" stroke="#7a7060" stroke-width="2.5" stroke-linejoin="round"/>
-{label("DE", de[0], de[1], -18)}
-{label("FR", fr[0], fr[1], -18)}
-{label("PL", pl[0], pl[1], 32)}
+<rect width="{VIEWBOX}" height="{VIEWBOX}" rx="20" fill="{BG_DARK}"/>
+{edge("DE", de, "FR", fr)}
+{edge("FR", fr, "PL", pl)}
+{edge("DE", de, "PL", pl)}
+<circle cx="{CENTER}" cy="{CENTER}" r="4" fill="{CREAM}"/>
+{vertex("DE", de, -20)}
+{vertex("FR", fr, -20)}
+{vertex("PL", pl, 34)}
 </svg>
 """
 
