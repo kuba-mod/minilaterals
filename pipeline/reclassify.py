@@ -36,6 +36,8 @@ import yaml
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
+from pipeline.sources.base import Event  # noqa: E402
+
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
 
@@ -52,8 +54,6 @@ def _reclassify_file(raw_path: Path, dry_run: bool) -> str | None:
 
     if not raw:
         return None
-
-    from pipeline.sources.base import Event
 
     event = Event(
         source_name=raw.get("source_name", ""),

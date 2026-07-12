@@ -35,10 +35,13 @@ target-version = "py312"
 line-length = 120
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B"]
+select = ["E", "F", "I", "UP", "B", "PLC0415"]
 
 [tool.ruff.lint.per-file-ignores]
 # Long lines here are embedded content (SVG markup, LLM prompt text), not code
 # structure — wrapping mid-string would be noise or risk altering the prompt.
 "pipeline/render.py" = ["E501"]
 "pipeline/enrich.py" = ["E501"]
+# sentence-transformers is only installed via the optional `embed` dependency
+# group; importing it at module level would break every other pipeline step.
+"pipeline/embed.py" = ["PLC0415"]

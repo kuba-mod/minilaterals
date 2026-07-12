@@ -35,8 +35,12 @@ import sys
 import time
 from pathlib import Path
 
+import anthropic
 import yaml
+from openai import OpenAI
 from tqdm import tqdm
+
+from pipeline.sources.base import Event
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -143,7 +147,6 @@ class OllamaProvider:
     def __init__(self, host: str, model: str, api_key: str = "ollama"):
         self.host = host.rstrip("/")
         self.model = model
-        from openai import OpenAI
 
         # api_key is a placeholder for local Ollama; set OLLAMA_API_KEY for
         # Ollama Cloud (OLLAMA_HOST=https://ollama.com) — same model, same
@@ -170,8 +173,6 @@ class OllamaProvider:
 
 class AnthropicProvider:
     def __init__(self, api_key: str, model: str):
-        import anthropic
-
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         print(f"Provider: Anthropic  model={self.model}")
@@ -232,8 +233,6 @@ def _build_provider():
 
 
 def _find_pending(limit: int | None = None) -> list[Path]:
-    from pipeline.sources.base import Event
-
     pending = []
     for f in sorted(EVENTS_DIR.glob("**/*.yaml")):
         try:
@@ -302,8 +301,6 @@ def _parse_json(raw: str) -> dict:
 
 
 def _extract(provider, raw_path: Path) -> bool:
-    from pipeline.sources.base import Event
-
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_name = data.get("source_name", "unknown")
     source_label = SOURCE_LABELS.get(source_name, source_name)
