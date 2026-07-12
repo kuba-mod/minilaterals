@@ -16,6 +16,7 @@ from pipeline.render import (
     build_timeline_svg_data,
     cluster_key,
 )
+from tests.conftest import cluster_from_events, event_dict
 
 
 def test_dot_product():
@@ -64,8 +65,6 @@ def test_allpairs_median_pure_python_path():
 
 
 def test_cluster_key_stable_and_order_independent():
-    from tests.conftest import cluster_from_events, event_dict
-
     c1 = cluster_from_events(
         "ukraine",
         {"DE": [event_dict(file_path="a.yaml")], "FR": [event_dict(file_path="b.yaml")]},
