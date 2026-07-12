@@ -14,8 +14,22 @@
       "zone_name": "minilaterals.com"
     }
   ],
+  // The worker script only receives requests that match no static asset —
+  // in practice the sandbox API routes (…/api/stance, …/api/unlock); it
+  // forwards everything else to the ASSETS binding. /api/stance additionally
+  // needs the OLLAMA_API_KEY worker secret (wrangler secret put OLLAMA_API_KEY)
+  // and returns 503 until it is set.
+  "main": "worker/index.js",
   "assets": {
     "directory": "docs",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS"
   }
+  // Email gate storage: per-IP daily try counters, unlock tokens, and
+  // opted-in emails (keys email:{addr} — review via dashboard or
+  // `wrangler kv key list`). If the binding is ever removed the API keeps
+  // working ungated and /api/unlock returns 503.
+  ,"kv_namespaces": [
+    { "binding": "SANDBOX_KV", "id": "59cf38506c0340eeaba6abed0fd552cb" }
+  ]
 }

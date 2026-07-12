@@ -801,6 +801,63 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
     }
 
 
+def collect_actor_topic_scores(events: list[dict], date_from: str) -> dict[str, dict[str, list[int]]]:
+    """Per-actor, per-topic stance scores from events dated on/after date_from."""
+    scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in WEIMAR_ACTORS}
+    for e in events:
+        actor = SOURCE_ACTOR.get(e.get("source_name", ""))
+        if actor not in scores or (e.get("date") or "") < date_from:
+            continue
+        for topic, entry in (((e.get("extracted") or {}).get("stances")) or {}).items():
+            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
+                scores[actor][topic].append(entry["score"])
+    return scores
+
+
+def build_sandbox_payload(actor_topic_scores: dict[str, dict[str, list[int]]], edition_cutoff: str) -> dict:
+    """
+    Everything the sandbox page and the worker's /api/stance endpoint need,
+    sourced from the same pipeline constants that produce the published scores:
+    classifier tables (sources/base.py), goals + judge prompts (enrich.py), and
+    the current edition's per-capital mean stances.
+    """
+    from pipeline.enrich import STANCE_BACKFILL_PROMPT, STANCE_RUBRIC, SYSTEM_PROMPT, WEIMAR_GOALS
+    from pipeline.sources.base import COUNTRY_TERMS, ISSUE_AREAS, WEIMAR_EXPLICIT
+
+    capital_stances: dict[str, dict[str, dict]] = {}
+    for actor, topics in actor_topic_scores.items():
+        for topic, vals in topics.items():
+            if not vals:
+                continue
+            capital_stances.setdefault(topic, {})[actor] = {
+                "stance": round(sum(vals) / len(vals), 1),
+                "n": len(vals),
+            }
+
+    return {
+        "edition": edition_cutoff,
+        "window_days": 14,
+        "classifier": {
+            "weimar_explicit": WEIMAR_EXPLICIT,
+            "country_terms": COUNTRY_TERMS,
+            "issue_areas": ISSUE_AREAS,
+        },
+        "goals": {k: v.strip() for k, v in WEIMAR_GOALS.items()},
+        "prompts": {
+            "system": SYSTEM_PROMPT,
+            "rubric": STANCE_RUBRIC,
+            "template": STANCE_BACKFILL_PROMPT,
+        },
+        "issue_order": ISSUE_ORDER,
+        "issue_labels": ISSUE_LABELS,
+        "actor_labels": ACTOR_LABELS,
+        "actor_colors": {a: ACTOR_COLORS[a] for a in WEIMAR_ACTORS},
+        "countries": {a: {k: v for k, v in COUNTRY_FM[a].items() if k != "source"} for a in WEIMAR_ACTORS},
+        "capital_stances": capital_stances,
+        "thresholds": {"aligned": STANCE_ALIGNED_SPREAD, "mixed": STANCE_MIXED_SPREAD},
+    }
+
+
 def load_latest_run() -> dict | None:
     runs = sorted(glob.glob(str(ROOT / "data" / "runs" / "*.yaml")))
     if not runs:
@@ -1090,14 +1147,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # when no stance data exists.
     pair_scores: dict[str, int] = {}
     cutoff_14 = (edition_dt - timedelta(days=14)).strftime("%Y-%m-%d")
-    actor_topic_scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in WEIMAR_ACTORS}
-    for e in events:
-        actor = SOURCE_ACTOR.get(e.get("source_name", ""))
-        if actor not in actor_topic_scores or (e.get("date") or "") < cutoff_14:
-            continue
-        for topic, entry in (((e.get("extracted") or {}).get("stances")) or {}).items():
-            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
-                actor_topic_scores[actor][topic].append(entry["score"])
+    actor_topic_scores = collect_actor_topic_scores(events, cutoff_14)
 
     for i, a1 in enumerate(WEIMAR_ACTORS):
         for a2 in WEIMAR_ACTORS[i + 1 :]:
@@ -1220,6 +1270,28 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             ),
             encoding="utf-8",
         )
+
+    # docs/sandbox/ — "The Minister's Desk": write a statement, get it scored
+    # like the real ones. data.json feeds both the page's inline JS and the
+    # worker's /api/stance endpoint (via the ASSETS binding), so the classifier
+    # tables, judge prompts, and capital stances all come from pipeline source.
+    sandbox_payload = build_sandbox_payload(actor_topic_scores, edition_cutoff)
+    (out / "sandbox").mkdir(exist_ok=True)
+    (out / "sandbox" / "data.json").write_text(
+        json.dumps(sandbox_payload, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    tmpl = env.get_template("sandbox.html")
+    (out / "sandbox" / "index.html").write_text(
+        tmpl.render(
+            sandbox=sandbox_payload,
+            sandbox_json=json.dumps(sandbox_payload, ensure_ascii=False).replace("</", "<\\/"),
+            weimar_actors=WEIMAR_ACTORS,
+            country_fm=COUNTRY_FM,
+            issue_order=ISSUE_ORDER,
+        ),
+        encoding="utf-8",
+    )
 
     # Root-level deploy files, beside (not inside) the base-path subdir.
     # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
