@@ -998,7 +998,9 @@ def build_signals_rss(signals: list[dict], base_path: str, edition_dt: datetime)
     for s in signals:
         if s.get("status") not in ("new", "deepening"):
             continue
-        title = f"{ACTOR_LABELS.get(s['actor'], s['actor'])} silent on {ISSUE_LABELS.get(s['issue_area'], s['issue_area'])}"
+        title = (
+            f"{ACTOR_LABELS.get(s['actor'], s['actor'])} silent on {ISSUE_LABELS.get(s['issue_area'], s['issue_area'])}"
+        )
         guid = f"{s['actor']}-{s['issue_area']}-{s['week']}"
         pub_date = datetime.strptime(s["week"], "%Y-%m-%d").replace(tzinfo=UTC).strftime("%a, %d %b %Y 00:00:00 GMT")
         items.append(

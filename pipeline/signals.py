@@ -337,9 +337,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Silence-as-signal divergence alerts")
     parser.add_argument("--dry-run", action="store_true", help="Print without writing")
     parser.add_argument("--as-of", default=None, metavar="YYYY-MM-DD", help="Edition cutoff override")
-    parser.add_argument(
-        "--live", action="store_true", help="Daily dogfood check (unfrozen data, pushes notifications)"
-    )
+    parser.add_argument("--live", action="store_true", help="Daily dogfood check (unfrozen data, pushes notifications)")
     args = parser.parse_args()
 
     if args.live:
