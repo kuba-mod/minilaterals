@@ -6,7 +6,7 @@ Two modes:
 
 1. Default: re-runs Event.classify() on all event YAML files and writes back
    the classification fields (actors, issue_areas, weimar_relevant,
-   trilateral_signal, weimar_score). Use after updating ISSUE_AREAS or
+   trilateral_signal). Use after updating ISSUE_AREAS or
    COUNTRY_TERMS in pipeline/sources/base.py.
 
 2. --from-extracted: overwrites issue_areas from extracted.topics for all
@@ -39,7 +39,7 @@ sys.path.insert(0, str(ROOT))
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
 
-CLASSIFICATION_FIELDS = {"actors", "issue_areas", "weimar_relevant", "trilateral_signal", "weimar_score"}
+CLASSIFICATION_FIELDS = {"actors", "issue_areas", "weimar_relevant", "trilateral_signal"}
 
 
 def _reclassify_file(raw_path: Path, dry_run: bool) -> str | None:

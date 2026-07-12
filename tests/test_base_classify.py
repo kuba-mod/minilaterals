@@ -102,58 +102,6 @@ def test_mfa_item_without_issue_not_relevant():
     assert ev.weimar_relevant is False
 
 
-# --- weimar_score math -----------------------------------------------------
-
-
-def test_score_explicit_plus_issue():
-    # explicit (+0.5) + 1 issue (0.05) — single actor mentioned
-    ev = make_event(source_name="other_source", title="Weimar Triangle on Ukraine", text="Germany speaks")
-    assert ev.weimar_score == pytest.approx(0.55)
-
-
-def test_score_three_actors_two_issues():
-    # 3 actors (+0.3) + 2 issues (0.10), no explicit trilateral phrase
-    ev = make_event(
-        source_name="other_source",
-        title="Germany France Poland",
-        text="Ukraine and NATO defence discussed",
-    )
-    assert ev.weimar_score == pytest.approx(0.40)
-
-
-def test_score_two_actors_one_issue():
-    ev = make_event(source_name="other_source", title="Germany and France", text="Ukraine talks")
-    # 2 actors (+0.15) + 1 issue (0.05)
-    assert ev.weimar_score == pytest.approx(0.20)
-
-
-def test_score_issue_contribution_capped():
-    # Many issue areas — issue contribution caps at 0.2.
-    ev = make_event(
-        source_name="other_source",
-        title="Germany France Poland",
-        text="Ukraine NATO defence hybrid cyber enlargement accession climate rule of law democracy",
-    )
-    # explicit? no. 3 actors (0.3) + capped issues (0.2) = 0.5
-    assert ev.weimar_score == pytest.approx(0.5)
-
-
-def test_score_capped_at_one():
-    ev = make_event(
-        source_name="other_source",
-        title="Weimar Triangle: Germany France Poland",
-        text="Ukraine NATO defence hybrid cyber enlargement climate democracy rule of law",
-    )
-    # explicit 0.5 + 3 actors 0.3 + issues capped 0.2 = 1.0
-    assert ev.weimar_score == 1.0
-    assert ev.weimar_score <= 1.0
-
-
-def test_score_is_rounded_to_three_places():
-    ev = make_event(source_name="other_source", title="Germany and France", text="Ukraine")
-    assert ev.weimar_score == round(ev.weimar_score, 3)
-
-
 def test_classify_returns_self():
     ev = Event(
         source_name="german_mfa",

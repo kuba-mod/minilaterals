@@ -100,11 +100,10 @@ class Event:
     issue_areas: list[str] = field(default_factory=list)
     weimar_relevant: bool = False  # any MFA item on a tracked issue area, or multilateral
     trilateral_signal: bool = False  # explicit Weimar/trilateral mention or all 3 actors present
-    weimar_score: float = 0.0
     extracted: dict | None = None
 
     def classify(self) -> Event:
-        """Set actors, issue_areas, weimar_relevant, trilateral_signal, weimar_score."""
+        """Set actors, issue_areas, weimar_relevant, trilateral_signal."""
         text = f"{self.title} {self.text}"
 
         explicit = _match_any(WEIMAR_EXPLICIT, text)
@@ -123,16 +122,6 @@ class Event:
             or (len(actors) >= 2 and bool(issues))
             or (from_mfa and bool(issues))  # single-country MFA item on a tracked topic
         )
-
-        score = 0.0
-        if explicit:
-            score += 0.5
-        if len(actors) == 3:
-            score += 0.3
-        elif len(actors) == 2:
-            score += 0.15
-        score += min(len(issues) * 0.05, 0.2)
-        self.weimar_score = round(min(score, 1.0), 3)
         return self
 
     def content_hash(self) -> str:
@@ -175,7 +164,6 @@ class Event:
             "issue_areas": self.issue_areas,
             "weimar_relevant": self.weimar_relevant,
             "trilateral_signal": self.trilateral_signal,
-            "weimar_score": self.weimar_score,
             "extracted": self.extracted,
         }
         path.write_text(yaml.dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
