@@ -6,7 +6,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from pipeline.render import (
-    compute_latest_heatmap,
+    compute_latest_topic_pills,
     compute_topic_weekly_stances,
     compute_weekly_alignment,
 )
@@ -100,10 +100,10 @@ def test_topic_weekly_stances_single_actor_weeks_are_none():
     assert all(w is None for w in result.get("ukraine", []))
 
 
-# --- compute_latest_heatmap ------------------------------------------------
+# --- compute_latest_topic_pills ---------------------------------------------
 
 
-def test_latest_heatmap_picks_recent_scored_cluster():
+def test_latest_topic_pills_picks_recent_scored_cluster():
     clusters = [
         {
             "area": "ukraine",
@@ -111,12 +111,12 @@ def test_latest_heatmap_picks_recent_scored_cluster():
             "convergence": {"label": "Aligned", "color": "#4d6b38", "overall": 0.9, "display": "+1.8"},
         }
     ]
-    heatmap = compute_latest_heatmap(clusters, days=7, today=TODAY)
-    assert heatmap["ukraine"]["label"] == "Aligned"
-    assert heatmap["ukraine"]["display"] == "+1.8"
+    pills = compute_latest_topic_pills(clusters, days=7, today=TODAY)
+    assert pills["ukraine"]["label"] == "Aligned"
+    assert pills["ukraine"]["display"] == "+1.8"
 
 
-def test_latest_heatmap_ignores_stale_clusters():
+def test_latest_topic_pills_ignores_stale_clusters():
     clusters = [
         {
             "area": "ukraine",
@@ -124,12 +124,12 @@ def test_latest_heatmap_ignores_stale_clusters():
             "convergence": {"label": "Aligned", "color": "#4d6b38", "overall": 0.9},
         }
     ]
-    heatmap = compute_latest_heatmap(clusters, days=7, today=TODAY)
-    assert heatmap["ukraine"] is None
+    pills = compute_latest_topic_pills(clusters, days=7, today=TODAY)
+    assert pills["ukraine"] is None
 
 
-def test_latest_heatmap_all_areas_present():
-    heatmap = compute_latest_heatmap([], days=7, today=TODAY)
+def test_latest_topic_pills_all_areas_present():
+    pills = compute_latest_topic_pills([], days=7, today=TODAY)
     # Every tracked issue area is a key, defaulting to None.
-    assert "ukraine" in heatmap and "defence" in heatmap
-    assert all(v is None for v in heatmap.values())
+    assert "ukraine" in pills and "defence" in pills
+    assert all(v is None for v in pills.values())
