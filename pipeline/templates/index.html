@@ -13,6 +13,33 @@
 </div>
 {% endif %}
 
+{# ── Silence signals ── #}
+{% if signals %}
+<div class="section-head" style="margin-top:0">Where the silence is the story</div>
+<p style="font-size:13px; color:var(--muted); margin-bottom:14px; font-family:'IBM Plex Sans',sans-serif; max-width:70ch;">
+  A capital that normally comments on a topic went quiet this week, relative to its own recent baseline.
+  This can't distinguish "chose not to comment" from "commented somewhere this tracker doesn't ingest"
+  (a press conference, a tweet, an interview) — read it as a prompt to look closer, not a policy claim.
+</p>
+<div style="display:flex; flex-direction:column; gap:8px; margin-bottom:28px">
+  {% for s in signals %}
+  <div style="border:1px solid var(--rule); border-radius:8px; padding:10px 14px; font-family:'IBM Plex Sans',sans-serif; font-size:13px;">
+    <div style="display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; margin-bottom:4px">
+      <span class="tag" style="color:{{ actor_colors[s.actor] }}; border-color:{{ actor_colors[s.actor] }}44; background:{{ actor_colors[s.actor] }}18">
+        {{ issue_labels[s.issue_area] }}
+      </span>
+      <span style="font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:1px">
+        {% if s.status == 'new' %}new this week
+        {%- elif s.status == 'deepening' %}deepening
+        {%- else %}ongoing since {{ s.first_fired_week }}{% endif %}
+      </span>
+    </div>
+    <div>{{ s.evidence }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
 {# ── Country cards ── #}
 {% if country_stats %}
 <div class="country-cards">

@@ -63,6 +63,7 @@ Sources (RSS/HTML/API)
 | `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/embed.py` | Batch-encodes `extracted.position` with `all-MiniLM-L6-v2`; stores in `data/embeddings.json` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_convergence()`; renders 3 pages |
+| `pipeline/signals.py` | `compute_silence_signals()` — publication-frequency baseline per (actor, issue_area); reads/writes `data/signals.json` + `data/signals_history.json` |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |

@@ -176,6 +176,7 @@ EMBEDDINGS_FILE = ROOT / "data" / "embeddings.json"
 POSITION_EMBEDDINGS_FILE = ROOT / "data" / "position_embeddings.json"
 GOAL_EMBEDDINGS_FILE = ROOT / "data" / "goal_embeddings.json"
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
+SIGNALS_FILE = ROOT / "data" / "signals.json"
 
 # Convergence score thresholds — legacy peer-to-peer mode (within-topic, so naturally elevated)
 CONVERGENCE_CONVERGING = 0.72
@@ -259,6 +260,23 @@ def load_commentary() -> dict[str, str]:
     if COMMENTARY_FILE.exists():
         return json.loads(COMMENTARY_FILE.read_text(encoding="utf-8"))
     return {}
+
+
+def load_signals(edition_cutoff: str) -> list[dict]:
+    """
+    Signals published by pipeline/signals.py at the last edition cut. Filtered
+    to weeks at or before the cutoff so a historical --as-of re-render can't
+    pick up signals computed under a later edition. Degrades gracefully to []
+    if the signals step hasn't run yet (same optional-enrichment pattern as
+    commentary/embeddings).
+    """
+    if not SIGNALS_FILE.exists():
+        return []
+    try:
+        signals = json.loads(SIGNALS_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    return [s for s in signals if s.get("week", "") <= edition_cutoff]
 
 
 def load_goal_embeddings() -> dict[str, list[float]]:
@@ -966,6 +984,49 @@ Allow: /
 """
 
 
+def build_signals_rss(signals: list[dict], base_path: str, edition_dt: datetime) -> str:
+    """
+    RSS 2.0 feed of silence signals — one <item> per "new" or "deepening"
+    signal. "Ongoing" (unchanged from last edition) signals stay visible on
+    the HTML page but don't generate a fresh item, so a persisting silence
+    doesn't re-notify feed readers every edition.
+    """
+    from xml.sax.saxutils import escape
+
+    site_link = f"{base_path}/" if base_path else "/"
+    items = []
+    for s in signals:
+        if s.get("status") not in ("new", "deepening"):
+            continue
+        title = (
+            f"{ACTOR_LABELS.get(s['actor'], s['actor'])} silent on {ISSUE_LABELS.get(s['issue_area'], s['issue_area'])}"
+        )
+        guid = f"{s['actor']}-{s['issue_area']}-{s['week']}"
+        pub_date = datetime.strptime(s["week"], "%Y-%m-%d").replace(tzinfo=UTC).strftime("%a, %d %b %Y 00:00:00 GMT")
+        items.append(
+            f"""    <item>
+      <title>{escape(title)}</title>
+      <link>{escape(site_link)}</link>
+      <guid isPermaLink="false">{escape(guid)}</guid>
+      <pubDate>{pub_date}</pubDate>
+      <description>{escape(s.get("evidence", ""))}</description>
+    </item>"""
+        )
+
+    build_date = edition_dt.strftime("%a, %d %b %Y 00:00:00 GMT")
+    items_xml = ("\n" + "\n".join(items)) if items else ""
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Weimar Triangle — Silence Signals</title>
+    <link>{escape(site_link)}</link>
+    <description>Capitals that normally comment on a topic have gone quiet. Evidence-only: counts and the baseline they deviate from, no claim about why.</description>
+    <lastBuildDate>{build_date}</lastBuildDate>{items_xml}
+  </channel>
+</rss>
+"""
+
+
 # ---------------------------------------------------------------------------
 # Render
 # ---------------------------------------------------------------------------
@@ -1021,6 +1082,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     pos_emb_store = load_position_embeddings()
     clusters = build_convergence_clusters(events)
     commentary = load_commentary()
+    signals = load_signals(edition_cutoff)
     for cluster in clusters:
         # Stance ratings are the primary scoring; embedding cosine is the fallback
         # for clusters whose events haven't been stance-rated yet.
@@ -1174,7 +1236,16 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             topic_series_json=topic_series_json,
             latest_event_date=latest_event_date,
             stale_days=stale_days,
+            signals=signals,
         ),
+        encoding="utf-8",
+    )
+
+    # docs/signals.xml — RSS feed of silence signals. Only "new"/"deepening"
+    # entries get an item; an unchanged "ongoing" signal (still shown on the
+    # HTML page) doesn't re-notify feed readers every edition.
+    (out / "signals.xml").write_text(
+        build_signals_rss(signals, base_path, edition_dt),
         encoding="utf-8",
     )
 
