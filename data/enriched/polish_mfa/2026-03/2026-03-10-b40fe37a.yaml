@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of France
+  - Foreign Ministers of Germany
+  - Foreign Ministers of Poland
+  actors:
+  - FR
+  - DE
+  - PL
+  explicit_weimar: 'true'
+  topics:
+  - rule_of_law
+  - enlargement
+  location: null
+  position: The signatories express deep concern over Georgia's new legislation on
+    foreign funding and political activities, viewing it as a repressive measure that
+    undermines democratic principles and the EU accession process.
+  positions:
+    rule_of_law: Poland strongly affirms the importance of rule of law by criticizing
+      Georgian laws for infringing on civil liberties and weakening democratic standards.
+    enlargement: Poland supports the EU accession process by criticizing Georgia's
+      actions which have stalled its path toward European integration.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The new amendments extend state control over political and societal
+        activities in Georgia to an unprecedented level and infringe on the freedoms
+        of association and expression.
+    enlargement:
+      score: 1
+      evidence: Through those new regulations, the Georgian authorities consciously
+        breach the commitments undertaken by Georgia vis-à-vis the European Union,
+        in particular through the Association Agreement with the European Union.

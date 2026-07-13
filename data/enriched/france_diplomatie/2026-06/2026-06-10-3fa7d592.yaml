@@ -1,0 +1,50 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Albania
+  - Australia
+  - Belgium
+  - Bulgaria
+  - Canada
+  - Czechia
+  - Denmark
+  - Estonia
+  - France
+  - Finland
+  - Germany
+  - Ireland
+  - Italy
+  - Latvia
+  - Lithuania
+  - Netherlands
+  - New Zealand
+  - North Macedonia
+  - Norway
+  - Portugal
+  - Spain
+  - Sweden
+  - United Kingdom
+  - United States of America
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France and its allies condemn Iranian state threats and malign actions
+    in Europe and globally, demanding an immediate halt to these activities.
+  positions:
+    rule_of_law: The statement strongly affirms the importance of international norms
+      and national sovereignty by condemning attacks targeting various communities
+      and interests.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Attempts to kill, kidnap, harass, intimidate, or otherwise attack
+        people on our soil, undermines national sovereignty and international norms.

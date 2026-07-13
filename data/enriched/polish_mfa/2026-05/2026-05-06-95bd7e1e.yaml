@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - head of the Polish MFA
+  actors:
+  - PL
+  explicit_weimar: 'false'
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes its leading role in European security and defense spending
+    while advocating for increased US military presence on its eastern border.
+  positions:
+    defence: Poland strongly supports strengthening EU defense capabilities through
+      significant investment and leveraging international funding mechanisms like
+      SAFE to enhance deterrence.
+    enlargement: Poland supports the EU accession process by highlighting its role
+      as a beneficiary and participant in European security initiatives.
+    rule_of_law: Poland stresses that maintaining democratic resilience and strong
+      security measures are paramount for Europe's stability.
+  stances:
+    defence:
+      score: 2
+      evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
+        (approx. 4.7% of GDP) and the defence budget (including the Armed Forces Support
+        Fund) for 2026 is set at PLN 200 billion, that is approx. 4.8% of GDP.
+    enlargement:
+      score: 1
+      evidence: Poland was first to join the EU instrument and is its largest beneficiary.
+    rule_of_law:
+      score: 1
+      evidence: Deputy Prime Minister Sikorski stressed that Poland’s stance on security
+        is one of the most important voices in Europe.

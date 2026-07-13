@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Antonio Tajani
+  actors:
+  - FR
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - green_transition
+  - rule_of_law
+  location: Aosta Valley, Italy
+  position: France reaffirmed its commitment to bilateral cooperation with Italy across
+    multiple sectors while also coordinating joint foreign policy efforts on global
+    issues.
+  positions:
+    ukraine: France and Italy jointly support continued long-term assistance for Ukraine's
+      stability and peace.
+    green_transition: The ministers addressed environmental issues and coordinated
+      water management efforts with Italy.
+    rule_of_law: France and Italy jointly committed to regional stability and the
+      rule of law in the Western Balkans.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Among other things, they discussed France and Italy’s continued support
+        for Ukraine
+    green_transition:
+      score: 0
+      evidence: the ministers also made sure to discuss environmental and health issues,
+        as well as concerted water management
+    rule_of_law:
+      score: 1
+      evidence: The ministers finally reiterated their joint commitment to the stability
+        of the Western Balkans and their future in Europe.

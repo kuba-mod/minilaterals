@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - María Teresa Mercado
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Mexico
+  position: Poland engaged in bilateral and multilateral discussions covering economic
+    cooperation, cybersecurity, organized crime, and international issues like the
+    UN reform and Ukraine.
+  positions:
+    hybrid: Poland stressed the importance of strengthening cooperation against transnational
+      threats such as organized crime.
+    enlargement: Poland discussed multilateral issues including the reform of the
+      UN and the situation in Ukraine, which relates to enlargement goals.
+    rule_of_law: Poland highlighted democratic concerns through an exhibition focusing
+      on illegal deportations and forced resettlements.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Both diplomats also highlighted the need to strengthen cooperation
+        in the fight against organised crime.
+    enlargement:
+      score: 0
+      evidence: The second part of consultations was dominated by multilateral issues
+        such as the reform of the UN, the war in Ukraine, and the situation in the
+        Middle East and in the Caribbean.
+    rule_of_law:
+      score: 1
+      evidence: the deputy minister opened an exhibition titled Camas vacías (Empty
+        beds) at the Senate focusing on the issue of illegal deportations and forced
+        resettlements of Ukrainian children by Russia.

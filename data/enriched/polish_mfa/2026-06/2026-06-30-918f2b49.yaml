@@ -1,0 +1,45 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Deputy Minister Harazim
+  - Secretary-General Briens
+  actors:
+  - PL
+  - FR
+  explicit_weimar: false
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Warsaw
+  position: Poland is committed to enhancing its strategic partnership with France
+    across multiple sectors, including defense and energy, while also addressing major
+    EU topics like the Multiannual Financial Framework and enlargement.
+  positions:
+    defence: Poland actively promotes deepening cooperation in the defense sector
+      by encouraging French partners to learn about Poland's industry capabilities.
+    enlargement: Poland supports the general EU enlargement process and discusses
+      it alongside other major European Union topics.
+    rule_of_law: Poland emphasizes cooperation on broader EU governance issues, including
+      the Multiannual Financial Framework, which relates to institutional stability
+      and rule of law.
+  stances:
+    defence:
+      score: 2
+      evidence: encouraging the partners to learn about what Poland has to offer as
+        regards its defence industry
+    enlargement:
+      score: 1
+      evidence: the EU enlargement process
+    rule_of_law:
+      score: 1
+      evidence: ongoing work on the future Multiannual Financial Framework

@@ -1,0 +1,51 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for collective defense and justice regarding
+    Russian aggression in Ukraine while calling for coordinated action against hybrid
+    threats.
+  positions:
+    ukraine: Germany strongly commits to supporting Ukraine's sovereignty and ensuring
+      accountability for war crimes committed by Russia.
+    defence: Germany stresses the importance of collective defense and readiness on
+      NATO's eastern flank through multinational exercises.
+    hybrid: Germany calls for a unified deterrence strategy against Russia's multifaceted
+      hybrid threats, including disinformation and military provocations.
+    rule_of_law: Germany affirms the commitment to democratic resilience by supporting
+      international justice mechanisms for war crimes.
+  stances:
+    ukraine:
+      score: 2
+      evidence: But also to announce there that we will participate in a special tribunal
+        that will investigate and criminally prosecute the crimes committed by Russia.
+    defence:
+      score: 1
+      evidence: You exemplify the resolve with which we are prepared to defend our
+        Allies and friends in the Baltic.
+    hybrid:
+      score: 2
+      evidence: All this forms a cohesive Russian strategy that aims to weaken our
+        willpower.
+    rule_of_law:
+      score: 1
+      evidence: Because we are convinced that the perpetrators will one day have to
+        face justice for the crimes they committed against people in Ukraine.

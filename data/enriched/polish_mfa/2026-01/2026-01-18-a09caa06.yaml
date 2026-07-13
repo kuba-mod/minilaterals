@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - MFA
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland offers support to Venezuela in achieving a democratic and peaceful
+    resolution of its crisis.
+  positions:
+    rule_of_law: Poland supports the principles of democracy and rule of law by offering
+      assistance for national reconciliation.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Poland is ready to share its historical experience in the field of
+        national reconciliation and to support Venezuelans in achieving a negotiated,
+        democratic, inclusive, and peaceful resolution of the crisis.

@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland condemns Russia's actions against its diplomatic missions and calls
+    for an immediate end to the aggression.
+  positions:
+    rule_of_law: Poland emphasizes adherence to international law regarding military
+      operations and diplomatic immunity.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The actions of the Russian Federation carry serious consequences under
+        international law, once again undermining its role as a permanent member of
+        the UN Security Council.

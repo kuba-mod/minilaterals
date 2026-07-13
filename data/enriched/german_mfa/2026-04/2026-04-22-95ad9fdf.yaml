@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of State Hahn
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Kyiv, Ukraine
+  position: Germany reaffirms its unwavering support and solidarity for Ukraine's
+    defense against Russian aggression while emphasizing the need for deeper economic
+    cooperation.
+  positions:
+    ukraine: Germany commits to maintaining unwavering political, military, and economic
+      support for Ukraine until a just and lasting peace is achieved.
+    rule_of_law: Germany stresses that defending democratic resilience and combating
+      Russian aggression are crucial for European security, requiring increased international
+      pressure.
+  stances:
+    ukraine:
+      score: 2
+      evidence: the solidarity and full support of Germany and the EU , which we intend
+        to maintain unwaveringly and with firm resolve.
+    rule_of_law:
+      score: 2
+      evidence: We will therefore increase the pressure on Russia further and remain
+        firmly by Ukraine’s side.

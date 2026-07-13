@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - MFA Department of Strategy representatives
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland aims to strengthen transatlantic relations and coordinate its diplomatic
+    efforts across various European issues.
+  positions:
+    hybrid: Poland emphasizes the need for coordinated action on foreign policy matters.
+    enlargement: Poland supports broader regional cooperation and discussions regarding
+      Central, Eastern, and Southern Europe.
+    rule_of_law: Poland focuses on promoting its national interests and diplomatic
+      goals within the transatlantic framework.
+  stances:
+    hybrid:
+      score: 1
+      evidence: coordinating Polish diplomatic efforts.
+    enlargement:
+      score: 1
+      evidence: politics in Central, Eastern, and Southern Europe
+    rule_of_law:
+      score: 1
+      evidence: promoting Poland

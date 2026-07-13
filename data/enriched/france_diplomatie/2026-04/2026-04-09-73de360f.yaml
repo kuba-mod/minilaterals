@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lebanese authorities
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns Israeli strikes on Lebanon and calls for restraint to
+    maintain a regional ceasefire while supporting the Lebanese government's sovereignty.
+  positions:
+    rule_of_law: France emphasizes the importance of maintaining peace and stability
+      in Lebanon to ensure lasting regional peace and guarantee conditions for a solution
+      to the crisis.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: This ceasefire must include Lebanon in order to end hostilities at
+        regional level and pave the way for a solution to the crisis that guarantees
+        the conditions for a lasting regional peace.

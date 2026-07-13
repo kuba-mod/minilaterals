@@ -1,0 +1,19 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ishaq Dar
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: Poland reaffirmed its commitment to bilateral cooperation with Pakistan
+    and discussed global issues.
+  positions: {}
+  stances: {}

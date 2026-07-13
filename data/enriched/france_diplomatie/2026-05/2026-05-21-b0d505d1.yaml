@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ministry for Europe and Foreign Affairs of the French Republic
+  - Ministry of Foreign Affairs of the People’s Republic of China
+  actors:
+  - - FR
+  explicit_weimar: false
+  topics: []
+  location: Beijing, China
+  position: France co-convened a working group with China to discuss climate and environmental
+    challenges, reaffirming commitments to multilateralism and international cooperation.
+  positions: {}
+  stances: {}

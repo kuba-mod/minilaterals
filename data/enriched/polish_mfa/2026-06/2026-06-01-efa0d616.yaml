@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Władysław Teofil Bartoszewski
+  - Chinese side
+  - Stefan Krajewski
+  - Lu Shan
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Beijing, China
+  position: Poland emphasized the importance of international law and joint action
+    in response to global changes while advancing bilateral trade agreements with
+    China.
+  positions:
+    rule_of_law: Poland stresses the need for joint international action to protect
+      fundamental principles like sovereignty and territorial integrity.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Deputy Minister Bartoszewski stressed that the international community
+        has been experiencing changes which call for joint action on fundamental matters
+        such as the protection of the international law, insisting on the sovereignty
+        and territorial integrity of states, and the inviolability of their borders.

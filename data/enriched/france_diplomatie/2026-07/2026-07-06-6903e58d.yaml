@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - national authorities
+  - regional organizations
+  - law enforcement agencies
+  - judicial authorities
+  - port and airport operators
+  - international partners
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Fort-de-France (Martinique)
+  position: France emphasizes the need for comprehensive international cooperation
+    to dismantle transnational organized crime groups involved in illicit trafficking
+    and strengthen global security.
+  positions:
+    rule_of_law: France strongly affirms its commitment to upholding democratic governance,
+      the rule of law, and combating criminal activities through joint operations
+      and mutual legal assistance.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We are committed to working together in a comprehensive and rights-based
+        approach, in a manner that is consistent with international conventions, to
+        fight drug trafficking and illicit trafficking of firearms, ammunition and
+        explosives, which fuel violence and undermine the rule of law, economic development
+        and democracy.

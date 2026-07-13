@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - National Gendarmerie
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the partial reopening of the Rafah crossing and calls
+    for all parties to abide by their commitments toward a lasting peace.
+  positions:
+    rule_of_law: France emphasizes the importance of abiding by commitments and maintaining
+      democratic principles through international cooperation and aid delivery.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France calls on the parties to abide by their commitments in this
+        regard

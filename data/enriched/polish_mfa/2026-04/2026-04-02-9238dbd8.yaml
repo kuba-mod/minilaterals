@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Yvette Cooper
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the need for diplomatic solutions to Middle East crises
+    while maintaining focus on supporting Ukraine against Russian aggression.
+  positions:
+    ukraine: Poland strongly supports continued support for Ukraine's defense against
+      Russia's unprovoked aggression.
+    rule_of_law: Poland stresses the importance of maintaining democratic resilience
+      and rule of law by linking global stability issues (like the Middle East) back
+      to the conflict in Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: not to lose sight of Ukraine defending itself against Russia’s unprovoked
+        aggression
+    rule_of_law:
+      score: 1
+      evidence: Given that Moscow is benefitting from destabilisation in the Gulf
+        region, the pressure on the Kremlin must be increased, including through ever
+        harsher sanctions.

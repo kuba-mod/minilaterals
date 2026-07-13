@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Anita Anand, Canadian Minister of Foreign Affairs
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France engaged with Canada on regional security issues, particularly in
+    the Middle East, while also discussing broader G7 priorities.
+  positions: {}
+  stances: {}

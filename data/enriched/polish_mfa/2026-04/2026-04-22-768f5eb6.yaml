@@ -1,0 +1,52 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - top diplomats
+  - Deputy Prime Minister Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Rome, Italy
+  position: Poland reaffirmed its commitment to strengthening bilateral ties with
+    Italy and coordinating international responses on security, Ukraine, and EU enlargement.
+  positions:
+    ukraine: Poland strongly advocates for sustained military and financial support
+      for Ukraine and coordinated pressure on Russia to end the war.
+    defence: Poland stresses the importance of coordinating EU and NATO responses
+      regarding European security architecture.
+    enlargement: Poland views EU enlargement as a critical mechanism for enhancing
+      continental stability and security.
+    rule_of_law: Poland emphasizes that Russia's aggression poses a fundamental challenge
+      to the international order and requires coordinated action.
+  stances:
+    ukraine:
+      score: 2
+      evidence: I have emphasised the need for reinforced support for Ukraine as well
+        as coordinated action that would exert pressure on the Russian Federation
+        in order to bring the war to an end said Deputy Prime Minister Radosław Sikorski.
+    defence:
+      score: 1
+      evidence: They stressed the need for unwavering military and financial support
+        for Ukraine and close coordination of EU and NATO response.
+    enlargement:
+      score: 1
+      evidence: The ministers spoke about the EU enlargement process as an important
+        tool to build the continent’s stability and security.
+    rule_of_law:
+      score: 1
+      evidence: We agree that Russia’s full-scale aggression poses a fundamental challenge
+        to the international order.

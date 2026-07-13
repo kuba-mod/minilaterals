@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs (France)
+  - Ms Batmunkh Battsetseg, Minister of Foreign Affairs of Mongolia
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - green_transition
+  - rule_of_law
+  location: 'null'
+  position: France reaffirmed its commitment to bilateral partnerships with Mongolia
+    across energy and transport sectors while emphasizing sustainable development
+    goals.
+  positions:
+    green_transition: France supports climate action by reiterating a commitment to
+      sustainable and responsible development, particularly in the context of COP17.
+    rule_of_law: France supports democratic resilience and international cooperation
+      by discussing key partnerships and institutional agreements with Mongolia.
+  stances:
+    green_transition:
+      score: 1
+      evidence: They reiterated their commitment to sustainable and responsible development,
+        particularly in the run-up to COP17 on the fight against desertification
+    rule_of_law:
+      score: 0
+      evidence: The two ministers spoke about progress in the key partnerships underpinning
+        our bilateral relations, benefiting our respective sovereignties in the fields
+        of energy, transport and civil protection.

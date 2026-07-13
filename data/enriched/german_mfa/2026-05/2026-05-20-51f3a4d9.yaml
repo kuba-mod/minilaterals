@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes its commitment to humanitarian aid and peaceful resolution
+    in Sudan while linking regional stability to German interests.
+  positions:
+    rule_of_law: Germany stresses the importance of upholding democratic principles
+      and rule of law by supporting an agreement on principles for peaceful coexistence
+      among ethnic groups in Sudan.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: if they could reach agreement on principles for peaceful coexistence,
+        for balancing the interests of the various ethnic groups, communities and
+        religions.

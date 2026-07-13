@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Ministers of Poland and Saudi Arabia
+  - Deputy Prime Minister Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for dialogue and respect for international
+    law to resolve regional conflicts and ensured the security of its citizens in
+    at-risk areas.
+  positions:
+    rule_of_law: Poland strongly condemns military actions that violate international
+      law, advocating instead for resolution through dialogue and adherence to the
+      rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The diplomats agreed that the only appropriate way to solve the region’s
+        problems is through dialogue and respect for the rule of law.

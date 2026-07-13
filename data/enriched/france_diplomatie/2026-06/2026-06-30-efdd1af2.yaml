@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Volker Türk, United Nations High Commissioner for Human Rights
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Paris
+  position: France reaffirmed its commitment to human rights protection globally and
+    pledged support for international law.
+  positions:
+    rule_of_law: France affirms the importance of fundamental rights, human dignity,
+      and the rule of law in promoting concrete actions within global initiatives.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France will commit itself, within this initiative, to promoting concrete
+        actions in support of fundamental rights, human dignity and the rule of law.

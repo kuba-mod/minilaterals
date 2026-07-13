@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Martin Briens, Secretary-General of the French Ministry for Europe and Foreign
+    Affairs
+  - Mohamed Abou Bakr, Deputy Minister of Foreign Affairs, International Cooperation
+    and Egyptian Expatriates for African affairs
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - green_transition
+  - rule_of_law
+  location: Cairo, Egypt
+  position: France reaffirmed its commitment to the strategic partnership with Egypt,
+    focusing on economic cooperation and sustainable development projects.
+  positions:
+    green_transition: France supports green development through specific financing
+      mechanisms like the Green Sustainable Industry Project.
+    rule_of_law: France emphasizes strengthening bilateral relations and cooperation
+      in key sectors to support stability and development.
+  stances:
+    green_transition:
+      score: 2
+      evidence: through the Green Sustainable Industry (GSI) Project, financed at
+        EUR 45 million.
+    rule_of_law:
+      score: 1
+      evidence: The Secretary-General and the Deputy Minister of Foreign Affairs welcomed
+        the exceptional quality of the bilateral relationship

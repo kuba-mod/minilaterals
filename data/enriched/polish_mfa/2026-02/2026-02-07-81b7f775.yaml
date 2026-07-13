@@ -1,0 +1,62 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - United States authorities
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: Washington, US
+  position: Poland supports transatlantic cooperation on security and the economy,
+    emphasizing diversified critical mineral supply chains and continued support for
+    Ukraine.
+  positions:
+    defence: Poland emphasizes that transatlantic cooperation is vital for both security
+      and economic stability.
+    hybrid: Poland advocates for coordinated action against threats to economic security,
+      such as those related to critical minerals.
+    enlargement: Poland supports the broader goal of EU expansion by emphasizing cooperation
+      with allies on international initiatives.
+    green_transition: Poland supports strengthening supply chains for critical minerals
+      essential to technological development and energy transition.
+    rule_of_law: Poland stresses the importance of democratic resilience and economic
+      stability through international cooperation.
+  stances:
+    defence:
+      score: 1
+      evidence: He also expressed his belief that transatlantic cooperation on security
+        and the economy is evidence of the enduring bonds between the US and Europe.
+    hybrid:
+      score: 1
+      evidence: Critical minerals cannot be used for blackmail, and their production
+        should be geographically more diversified.
+    enlargement:
+      score: 0
+      evidence: The European Union already has a position on these challenges, and
+        now the United States has proposed a major international initiative whose
+        goals Poland and the rest of the European Union support - he added.
+    green_transition:
+      score: 1
+      evidence: These supply chains are essential to the functioning of modern economies,
+        as they underpin technological development, the energy transition, and the
+        industrial security of states.
+    rule_of_law:
+      score: 1
+      evidence: This is an element of our economic security - summarised Minister
+        Sikorski.

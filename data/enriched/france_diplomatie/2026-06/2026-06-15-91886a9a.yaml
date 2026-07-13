@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Anand
+  actors:
+  - FR
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - defence
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its partnership with Canada and agreed to deepen cooperation
+    in security and defense while emphasizing the need for a two-state solution.
+  positions:
+    defence: France committed to stepping up cooperation with Canada in the areas
+      of security and defense.
+    rule_of_law: France stressed that a political solution based on two states is
+      necessary for long-term stability and adherence to ceasefires.
+  stances:
+    defence:
+      score: 1
+      evidence: talked about stepping up French-Canadian cooperation in the areas
+        of security and defense
+    rule_of_law:
+      score: 1
+      evidence: only a political solution based on two states, Israel and Palestine,
+        is capable of meeting the legitimate aspirations of both peoples over the
+        long term.

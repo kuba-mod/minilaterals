@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany calls for an immediate cessation of hostilities and a return to
+    the agreed ceasefire while emphasizing that stabilizing Lebanon requires strengthening
+    the Lebanese state and pursuing diplomatic solutions.
+  positions:
+    rule_of_law: Germany stresses the importance of protecting civilians and upholding
+      democratic principles by calling for all parties to cease hostilities and strengthen
+      the Lebanese state's authority.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: All parties to the conflict have been urgently called upon to cease
+        all hostilities and return to the ceasefire that has been agreed upon.

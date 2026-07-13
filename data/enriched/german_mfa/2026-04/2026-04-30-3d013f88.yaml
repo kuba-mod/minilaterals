@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Italy
+  - Germany
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany and Italy express concern over international law violations regarding
+    the Global Sumud Flotilla and reaffirm their commitment to humanitarian aid in
+    Gaza.
+  positions:
+    rule_of_law: The statement emphasizes adherence to international applicable law
+      and standards concerning both maritime security and humanitarian aid efforts.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We call for a full respect of international applicable law and for
+        restraint from irresponsible actions.

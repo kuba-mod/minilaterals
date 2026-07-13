@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Prime Minister and Minister of Foreign Affairs Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland issued a strong diplomatic protest regarding the treatment of detained
+    individuals and took concrete action against an Israeli official.
+  positions:
+    rule_of_law: Poland strongly advocates for adherence to international standards
+      and human rights concerning detainees, demanding accountability and apologies.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: demanding that the rights and dignity of those detained be respected
+        and that they be treated in accordance with international standards

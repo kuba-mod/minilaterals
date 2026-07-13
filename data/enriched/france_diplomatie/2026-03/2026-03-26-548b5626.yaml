@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister for Europe and Foreign Affairs (France)
+  - Subrahmanyam Jaishankar (India)
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: Abbaye des Vaux-de-Cernay
+  position: France engaged in high-level discussions with India on international cooperation,
+    focusing particularly on the Middle East and macroeconomic stability.
+  positions: {}
+  stances: {}

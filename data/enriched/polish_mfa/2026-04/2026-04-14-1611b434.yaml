@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Foreign Minister Wojciech Zajączkowski
+  - secretary-general at the Ivorian Foreign Ministry
+  actors:
+  - PL
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland expressed interest in cooperation with Côte d’Ivoire across various
+    sectors while emphasizing shared concerns regarding security and hybrid threats.
+  positions:
+    hybrid: Poland stresses the importance of countering disinformation and addressing
+      foreign interference as major regional challenges.
+    rule_of_law: Poland emphasizes the need for cooperation in maintaining democratic
+      resilience by addressing organized crime and foreign interference.
+  stances:
+    hybrid:
+      score: 1
+      evidence: In addition to stressing the significance of bolstering cybersecurity
+        and fighting hybrid threats, the diplomats declared their willingness to cooperate
+        to counter disinformation.
+    rule_of_law:
+      score: 1
+      evidence: The deputy ministers highlighted the major challenges these regions
+        face, namely organised crime and foreign interference, including interference
+        in the information space.

@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski (Deputy Prime Minister and Foreign Minister of Poland)
+  - Espen Barth Eide (Foreign Minister of Norway)
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Oslo, Norway
+  position: Poland emphasizes strengthening bilateral cooperation with Norway and
+    advancing collective security measures in response to geopolitical threats.
+  positions:
+    defence: Poland strongly supports enhancing NATO's defense capabilities and expanding
+      the Alliance's military presence on its eastern and northern flanks.
+    hybrid: Poland advocates for coordinated action with Norway to counter threats
+      like disinformation and illegal maritime activities (the shadow fleet) that
+      destabilize regional security.
+    rule_of_law: Poland stresses the importance of upholding democratic values and
+      supporting Ukraine's sovereignty against Russian aggression.
+  stances:
+    defence:
+      score: 2
+      evidence: Norway, which is Poland’s strategic partner in Northern Europe, supports—just
+        as Poland does—strengthening NATO’s defence and deterrence capabilities and
+        expanding the Alliance’s military presence on its eastern and northern flanks.
+    hybrid:
+      score: 2
+      evidence: I encourage Norway to play a bigger role in holding off the shadow
+        fleet. The fleet does not consist of any shadows but clunkers posing a real
+        threat for the Baltic.
+    rule_of_law:
+      score: 2
+      evidence: During a joint press conference, the foreign ministers of Poland and
+        Norway expressed support for embattled Ukraine and stressed the importance
+        of combatting the shadow fleet and the threats it implies for regional security
+        and the Baltic Sea ecosystem.

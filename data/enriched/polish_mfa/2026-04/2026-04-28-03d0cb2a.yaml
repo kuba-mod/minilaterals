@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister Sikorski
+  - foreign minister of Lebanon
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland expressed solidarity with Lebanon and emphasized the importance
+    of maintaining security for UNIFIL peacekeepers.
+  positions:
+    rule_of_law: Poland affirms democratic resilience and stability by expressing
+      continued support and aid to Lebanon and emphasizing peacekeeping safety.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Poland’s top diplomat expressed solidarity with Lebanon and said that
+        Poland continues development assistance and humanitarian aid programmes for
+        the country.

@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Belgium
+  - Croatia
+  - Cyprus
+  - France
+  - Greece
+  - Italy
+  - Malta
+  - the Netherlands
+  - Portugal
+  - United Kingdom
+  - High Representative of the European Union
+  actors:
+  - []
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: The participating nations express full support for Lebanon's sovereignty
+    and call for international action to restore its institutions and end the conflict.
+  positions:
+    rule_of_law: France supports strengthening Lebanese state institutions and sovereignty
+      by calling for political negotiation between Lebanon and Israel and implementing
+      economic reforms.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: There is no other way to preserve Lebanon from foreign interference
+        than by strengthening its State, its institutions and sovereignty.

@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - NATO Allies
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany reaffirms its commitment to the NPT and global non-proliferation
+    efforts while maintaining NATO's nuclear deterrent capability.
+  positions:
+    rule_of_law: Germany strongly affirms democratic resilience and adherence to international
+      law by supporting the full implementation of the NPT and arms control regimes.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Allies remain firmly committed to arms control, disarmament, and non-proliferation
+        efforts, with a focus on promoting transparency, reducing risk, and enhancing
+        security.

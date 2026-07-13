@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland condemns attacks on non-combatant states and urges Iran to adhere
+    to international law and peaceful coexistence.
+  positions:
+    rule_of_law: Poland emphasizes the importance of adhering to the rule of law and
+      peaceful coexistence in regional stability efforts.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: take the path of the rule of law and peaceful coexistence.

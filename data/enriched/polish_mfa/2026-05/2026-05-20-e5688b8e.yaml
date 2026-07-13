@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Polish consular services
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes adherence to international law and expresses concern
+    over the safety of its nationals in the region.
+  positions:
+    rule_of_law: Poland stresses that all states must respect international law, including
+      the law of the sea and humanitarian law, while also advocating for freedom of
+      navigation.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Respecting international law, including international law of the sea
+        and international humanitarian law is the duty of all states.

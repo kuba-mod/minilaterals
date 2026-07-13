@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry for Europe and Foreign Affairs’ Crisis and Support Centre
+  - French Red Cross
+  - International Federation of the Red Cross
+  - NGO Caritas Venezuela
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France provided significant humanitarian aid to Venezuela following two
+    earthquakes and reiterated its solidarity with the affected people.
+  positions: {}
+  stances: {}

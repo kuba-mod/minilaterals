@@ -1,0 +1,21 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: seminar
+  participants:
+  - Radosław Sikorski
+  - experts from the SGH
+  - Center for Social and Economic Research
+  - representatives of Cuban organisations
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: Poland offered its experience in economic transition to support Cuba's
+    ongoing reforms.
+  positions: {}
+  stances: {}

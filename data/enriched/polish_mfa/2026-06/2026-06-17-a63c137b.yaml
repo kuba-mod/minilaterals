@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim (Deputy Minister)
+  - Þorgerður Katrín Gunnarsdóttir (Iceland’s Foreign Minister)
+  - Martin Eyjólfsson (Secretary of State at the Icelandic Ministry for Foreign Affairs)
+  - Paweł Bartoszek (Chair of Iceland’s Foreign Affairs Committee)
+  actors:
+  - PL
+  explicit_weimar: 'false'
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Iceland
+  position: Poland reaffirmed strong bilateral relations with Iceland and emphasized
+    cooperation on regional security challenges, particularly in the Baltic Sea.
+  positions:
+    hybrid: Poland stresses the need for collective action to counter modern threats,
+      including hybrid risks and attacks on critical infrastructure.
+    rule_of_law: Poland emphasizes upholding regional security and stability through
+      close cooperation among Baltic Sea member states.
+  stances:
+    hybrid:
+      score: 1
+      evidence: The participants of the seminar have also discussed the actions to
+        counteract the threats to critical infrastructure, combating the “clunker
+        fleet”, and strengthening the region’s states’ resilience to hybrid threats.
+    rule_of_law:
+      score: 1
+      evidence: Emphasis was also put on the importance of close cooperation among
+        the CBSS member states in order to uphold the security and stability in the
+        region.

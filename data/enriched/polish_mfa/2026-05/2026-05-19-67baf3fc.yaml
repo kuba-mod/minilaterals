@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Jerzy Buzek
+  - Lech Wałęsa
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the importance of European solidarity and belief in
+    a better future for the EU.
+  positions:
+    rule_of_law: The statement affirms the foundational role of democratic values
+      and the need to build Europe together through solidarity.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: People need to know that the EU offers security, jobs, and prosperity.
+        And people need to believe in Europe—and Europe has always been strong when
+        it has been able to imagine a better future—and to build it together in solidarity.

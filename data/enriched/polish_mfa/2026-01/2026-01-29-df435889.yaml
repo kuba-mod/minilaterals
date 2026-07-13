@@ -1,0 +1,62 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - EU foreign affairs ministers
+  - Volker Türk
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland advocates for continued strong support for Ukraine and increased
+    EU/NATO cooperation to counter Russian aggression and enhance European security.
+  positions:
+    ukraine: Poland strongly supports continuous aid and reconstruction efforts for
+      Ukraine while pushing for severe sanctions against Russia's energy sector.
+    defence: Poland emphasizes fulfilling NATO commitments by allocating adequate
+      resources for armaments, positioning itself as a model for increased defense
+      spending.
+    hybrid: Poland supports international cooperation on human rights and security
+      issues in the context of Russia's aggression against Ukraine and Belarus.
+    enlargement: Poland supports the broader EU accession process, particularly mentioning
+      the need to support Western Balkans countries.
+    rule_of_law: Poland stresses the importance of upholding democratic resilience
+      and international commitments through sanctions and aid.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Russian attacks on Ukraine’s energy infrastructure prove that Russia
+        is not interested in making peace. Therefore, we should continue to help Ukraine
+        and put pressure on the aggressor
+    defence:
+      score: 2
+      evidence: We need to fulfil our commitments to NATO, including by allocating
+        adequate resources for armaments. Poland can act as a role model.
+    hybrid:
+      score: 1
+      evidence: EU foreign affairs ministers also held an exchange of views with UN
+        High Commissioner for Human Rights Volker Türk about priorities set for this
+        year for the institution he heads, also in the context of Russia’s aggression
+        against Ukraine and the situation in Belarus.
+    enlargement:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''

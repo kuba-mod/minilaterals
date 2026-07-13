@@ -1,0 +1,59 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Volodymyr Zelenskyy
+  - Yulia Svyrydenko
+  - Denys Shmyhal
+  - Donald Tusk
+  - Andrii Sybiha
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Kyiv, Ukraine
+  position: Poland emphasizes the need for international unity and mutual support
+    to achieve a peaceful resolution in Ukraine, while strongly advocating for EU
+    accession as part of security guarantees.
+  positions:
+    ukraine: Poland commits to long-term support for Ukraine's recovery and stability
+      following Russian aggression.
+    defence: Poland supports strengthening EU defense capabilities by offering greater
+      support and security guarantees to Ukraine.
+    enlargement: Poland views Ukraine's accession to the EU as an integral part of
+      its security guarantees and will continue efforts to open negotiations.
+    rule_of_law: Poland supports democratic resilience and international cooperation,
+      evidenced by assistance provided to local communities.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Four years after Russia’s full-scale aggression against Ukraine, Deputy
+        Prime Minister Radosław Sikorski took part in a public commemorative service
+        in Kyiv
+    defence:
+      score: 2
+      evidence: As the Coalition of the Willing, we can offer greater defence support
+        for Ukraine and work out security guarantees.
+    enlargement:
+      score: 2
+      evidence: Deputy Prime Minister Sikorski underlined that Ukraine’s future accession
+        to the EU is an integral part of these security guarantees and that Poland
+        will continue its efforts to open the EU–Ukraine accession negotiations based
+        on the established criteria.
+    rule_of_law:
+      score: 1
+      evidence: Minister Sikorski highlighted that Poles are demonstrating genuine
+        solidarity with Ukraine.

@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Briens, Secretary General of the Ministry for Europe and Foreign Affairs
+  - Vikram Misri, Indian Foreign Secretary
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France emphasized the importance of diplomatic solutions to international
+    conflicts and multilateral cooperation on macroeconomic issues.
+  positions:
+    rule_of_law: France stresses the need for adherence to ceasefire agreements and
+      finding a lasting end to conflict through diplomacy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Minister and the Foreign Secretary emphasized the importance of
+        abiding by the ceasefire agreement reached by Iran and the United States,
+        and of finding a swift and lasting end to the war through diplomatic means.

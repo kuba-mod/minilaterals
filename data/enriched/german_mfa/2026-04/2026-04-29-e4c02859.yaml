@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Nasser Bourita
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  - green_transition
+  location: null
+  position: Germany views Morocco as a key partner for strengthening bilateral and
+    international cooperation in economic areas like renewable energy and critical
+    raw materials, while also emphasizing shared commitment to the rules-based international
+    order.
+  positions:
+    rule_of_law: Germany affirms its shared commitment with Morocco to the rules-based
+      international order, centered on the United Nations.
+    green_transition: Germany identifies significant potential for economic growth
+      with Morocco in key green sectors such as renewable energies and hydrogen.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Our countries share a commitment to the rules-based international
+        order, with the United Nations at its core.
+    green_transition:
+      score: 1
+      evidence: And there is significant further potential for growth in our economic
+        relations, particularly in the areas of renewable energies, critical raw materials
+        and hydrogen.

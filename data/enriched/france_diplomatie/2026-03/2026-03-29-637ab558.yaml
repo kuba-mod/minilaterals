@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Australia
+  - France
+  - Germany
+  - Italy
+  - New-Zealand
+  - United Kingdom
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses deep concern and opposition to a bill in Israel that
+    expands the death penalty, citing its discriminatory nature and risk of undermining
+    democratic principles.
+  positions:
+    rule_of_law: France strongly affirms the importance of fundamental values like
+      rejecting the death penalty as a core principle of democracy and human rights.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The rejection of the death penalty is a fundamental value that unites
+        us.

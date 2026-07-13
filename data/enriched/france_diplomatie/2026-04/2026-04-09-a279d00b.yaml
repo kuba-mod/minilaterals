@@ -1,0 +1,17 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Julien Février
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France welcomes the release of its national from Venezuela.
+  positions: {}
+  stances: {}

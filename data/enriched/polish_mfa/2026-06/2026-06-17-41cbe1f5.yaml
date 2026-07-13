@@ -1,0 +1,58 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Republic of Poland
+  - Federal Republic of Germany
+  actors:
+  - PL
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland and Germany affirm their close partnership as NATO allies committed
+    to enhancing European security and protecting democratic values against Russian
+    aggression.
+  positions:
+    ukraine: The statement commits to supporting a just and lasting peace in Ukraine,
+      recognizing the impact of Russia's full-scale aggression on the geopolitical
+      setting.
+    defence: Poland and Germany are strengthening their defense cooperation through
+      new agreements, particularly focusing on securing the eastern flank.
+    hybrid: The statement warns against Russia's hybrid and disinformation activities
+      and commits to boosting resilience and educating societies.
+    rule_of_law: The statement emphasizes protecting European values, including the
+      rule of law and transparent electoral processes, as a core security objective.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Our overarching goal is to protect European values, including the
+        rule of law and transparent electoral processes, and to secure a just and
+        lasting peace in Ukraine that would strengthen Europe’s security.
+    defence:
+      score: 2
+      evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
+        defence cooperation agreement.
+    hybrid:
+      score: 1
+      evidence: Russia’s aggressive actions, including in particular hybrid and disinformation
+        activities, are also aimed at us. They seek to sow social division, undermine
+        public order, and erode trust in the state and its institutions.
+    rule_of_law:
+      score: 1
+      evidence: Our overarching goal is to protect European values, including the
+        rule of law and transparent electoral processes, and to secure a just and
+        lasting peace in Ukraine that would strengthen Europe’s security.

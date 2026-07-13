@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Prime Minister Sikorski
+  - head of Polish diplomacy
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland stressed the need for de-escalation and stability in the region
+    through constructive dialogue while condemning external attacks on Oman.
+  positions:
+    rule_of_law: Poland emphasizes adherence to international law by condemning attacks
+      that breach it and advocating for diplomatic solutions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Poland strongly and unequivocally condemns Iran’s attacks on Oman
+        and other countries of the region not involved in the armed conflict between
+        Israel and the US, and Iran, which are in breach of international law.

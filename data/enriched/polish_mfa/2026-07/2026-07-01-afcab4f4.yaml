@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Selma Ashipala-Musavyi
+  - Foreign ministers of Poland and Namibia
+  actors:
+  - PL
+  explicit_weimar: 'false'
+  topics:
+  - rule_of_law
+  location: Namibia
+  position: Poland reaffirmed its commitment to enhancing bilateral relations with
+    Namibia across political, economic, and scientific fields while emphasizing adherence
+    to international law.
+  positions:
+    rule_of_law: Poland stresses the importance of respecting state sovereignty and
+      adhering to international legal norms in regional and global discussions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The interlocutors reaffirmed the importance of respecting the rule
+        of the sovereignty of states and international legal norms.

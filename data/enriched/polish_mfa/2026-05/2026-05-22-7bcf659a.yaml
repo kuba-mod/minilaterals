@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - US President Donald Trump
+  - foreign ministers
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Helsingborg
+  position: Poland emphasizes the necessity of strong transatlantic cooperation and
+    increased defense spending to deter Russia and support NATO's collective security.
+  positions:
+    defence: Poland strongly advocates for immediate military modernization, increased
+      defense spending, and drawing lessons from the war in Ukraine to strengthen
+      European deterrence capabilities.
+    enlargement: Poland supports the EU accession of Western Balkans countries and
+      stresses the importance of collective defense principles within NATO.
+    rule_of_law: Poland emphasizes the importance of close cooperation between the
+      US and Europe for maintaining democratic resilience and security.
+  stances:
+    defence:
+      score: 2
+      evidence: military modernisation in Europe must be stepped up because of continued
+        Russia threat.
+    enlargement:
+      score: 1
+      evidence: The minister stressed that they are ready to abide by the collective
+        defence principle laid down in Article 5 of the North Atlantic Treaty.
+    rule_of_law:
+      score: 1
+      evidence: close cooperation is as necessary between Poland and the US as it
+        is between the US and Europe, with greater engagement of European states in
+        NATO.

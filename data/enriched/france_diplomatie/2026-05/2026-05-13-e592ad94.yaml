@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Naoufel Gaied
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the appointment of Naoufel Gaied as Executive Secretary
+    of the International Institute for Justice and the Rule of Law.
+  positions:
+    rule_of_law: France supports a holistic approach to counter-terrorism that includes
+      capacity-building and developing criminal justice systems rooted in the rule
+      of law and respect for human rights.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: France supports a holistic approach to counter-terrorism, including
+        in particular capacity-building for States and the development of a criminal
+        justice system rooted in the rule of law and respect for human rights, which
+        are an integral part of preventing violent extremism.

@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - EU foreign ministers
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland participated in an EU meeting to discuss the Middle East situation,
+    emphasizing the need for a strong and unified diplomatic response.
+  positions:
+    rule_of_law: Poland supports maintaining democratic resilience and international
+      stability by advocating for a unified EU message regarding regional threats
+      and conflict resolution efforts.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The discussion highlighted the need for the EU to keep sending a strong
+        and unified message regarding the threat posed by the continuation of Iran's
+        nuclear programme as well as on de-escalation, solidarity with partners in
+        the region affected by Iranian attacks, and continued support for the democratic
+        aspirations of the Iranian people.

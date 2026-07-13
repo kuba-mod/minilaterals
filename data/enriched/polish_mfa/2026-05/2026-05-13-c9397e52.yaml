@@ -1,0 +1,61 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Monika Sus
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: 'null'
+  position: Poland emphasizes its historical and logistical advantages in supporting
+    Ukraine's EU accession while advocating for a stronger, superpower-level European
+    Union capable of handling modern threats.
+  positions:
+    ukraine: Poland strongly supports Ukraine's right to self-determination and EU
+      accession, viewing it as crucial for Europe's future security.
+    defence: Poland advocates for strengthening EU defense capabilities, suggesting
+      that the EU must take on more defensive roles similar to NATO.
+    hybrid: Poland stresses the need for the EU to strengthen itself against various
+      modern threats, including conventional war, security issues, and hybrid attacks.
+    enlargement: Poland supports Ukraine's path toward European integration, highlighting
+      its potential for accession and emphasizing Poland's role as a key partner.
+    rule_of_law: Poland emphasizes democratic resilience and cultural diplomacy as
+      foundational elements of its foreign policy and EU stability.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Ukrainian people are fighting for the right to self-determination
+        and accession to the European Union.
+    defence:
+      score: 1
+      evidence: Most Europeans wanted the EU to take care of our defence, and it did.
+    hybrid:
+      score: 1
+      evidence: Deputy Prime Minister Sikorski also emphasised the need to strengthen
+        the EU in the face of new threats, including war, both conventional and hybrid,
+        security, and migration.
+    enlargement:
+      score: 2
+      evidence: Ukraine exemplifies how important it is for people from outside Europe
+        to become part of it. Ukrainians are fighting and dying for the right to accede
+        to the European Union.
+    rule_of_law:
+      score: 1
+      evidence: The top diplomat stressed the importance of cultural diplomacy in
+        pursuing foreign policy.

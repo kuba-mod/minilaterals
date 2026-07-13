@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Minister Władysław Teofil Bartoszewski
+  - Sviatlana Tsikhanouskaya
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland supports the democratic aspirations of Belarus and provides support
+    to Belarusian citizens in Poland across various sectors.
+  positions:
+    rule_of_law: Poland affirms its commitment to democratic values and human rights,
+      as demonstrated by supporting the democratic opposition and providing aid to
+      Belarusian citizens.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: He emphasised that Belarusians residing in Poland can count on our
+        state’s support in areas such as education, healthcare, science, and culture.

@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Polish Ambassador to Denmark
+  - Vivian Motzfeldt (Minister of Foreign Affairs and Research)
+  - Peter Borg (Minister of Fisheries, Hunting, Agriculture, and Self-Sufficiency)
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  location: Nuuk, Greenland
+  position: Poland focused on strengthening bilateral cooperation with Greenland across
+    various sectors, including crisis management and polar studies.
+  positions:
+    hybrid: Poland emphasized the importance of working together to build resilience
+      and manage potential crises in the Arctic region.
+  stances:
+    hybrid:
+      score: 1
+      evidence: on the prospects of working together on building resilience to threats
+        and managing crisis situations.

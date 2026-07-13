@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Prince Faisal bin Farhan Al Saud
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Abbaye des Vaux-de-Cernay, France
+  position: France condemned Iran's attacks on its neighbors and reaffirmed its commitment
+    to de-escalation and diplomatic solutions in the Middle East.
+  positions:
+    rule_of_law: France stressed the importance of supporting state sovereignty against
+      external challenges and promoting stability through diplomacy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The two ministers also discussed the consequences of the war in the
+        region, especially in Lebanon, and the need to support the authorities in
+        the face of forces that challenge the sovereignty of the State.

@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland honors a figure who symbolizes courage and commitment to values,
+    emphasizing the importance of historical memory and dialogue.
+  positions:
+    rule_of_law: The statement emphasizes the importance of combating hatred and protecting
+      historical memory, aligning with the goal of affirming democratic resilience
+      and rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Stanisław Aronson has repeatedly warned against hatred and manipulation
+        of historical memory.

@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Ambassador Lamlé
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Buenos Aires, Argentina
+  position: Germany emphasizes the need for reliable international partners and adherence
+    to democratic principles amidst global challenges.
+  positions:
+    rule_of_law: Germany stresses that democracies are under pressure from both internal
+      and external sources, requiring long-term partnerships and commitment to rules.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: At a time when democracies are coming under pressure both from within
+        and from outside.

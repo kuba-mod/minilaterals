@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the release of prisoners in Belarus and calls for continued
+    momentum toward halting political imprisonments.
+  positions:
+    rule_of_law: France supports democratic principles by welcoming the release of
+      prisoners and calling for an end to arbitrary detentions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France welcomes the release of 250 prisoners in Belarus, thanks to
+        mediation by the United States.

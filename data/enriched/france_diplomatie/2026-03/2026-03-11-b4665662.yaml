@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Yulia Svyrydenko, Ukrainian Prime Minister
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: France
+  position: France reaffirmed its commitment to supporting Ukraine's sovereignty and
+    peace efforts through continued bilateral cooperation and multilateral engagement.
+  positions:
+    ukraine: France commits to providing urgent, long-term support to Ukraine while
+      maintaining pressure on Russia, including replenishing a dedicated support fund
+      for critical infrastructure.
+    enlargement: France supports the EU accession path for Ukraine.
+    rule_of_law: France emphasizes supporting democratic resilience and stability
+      by addressing regional crises without diverting focus from peace efforts.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Minister assured the Ukrainian Prime Minister that France is working
+        actively, bilaterally, with its European partners and as part of its G7 presidency,
+        to support Ukraine as a matter of urgency and over the long term, while maintaining
+        pressure on Russia.
+    enlargement:
+      score: 1
+      evidence: reiterated to the Ukrainian Prime Minister our determination to support
+        Ukraine in its fight for its freedom and sovereignty.
+    rule_of_law:
+      score: 1
+      evidence: the Middle East crisis would not divert us from our efforts to achieve
+        a just and lasting peace

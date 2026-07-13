@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Armenian journalists
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is expanding its multilingual news service to counter disinformation
+    and increase public resilience in Eastern Partnership countries.
+  positions:
+    hybrid: Poland actively supports coordinated action against hybrid threats by
+      launching a new Armenian-language service to combat disinformation targeting
+      Armenia and its partners.
+    rule_of_law: Poland supports democratic resilience and combating disinformation
+      by expanding a multilingual news service through TVP's International Media Centre.
+  stances:
+    hybrid:
+      score: 2
+      evidence: The project’s mission is also to increase the public’s resilience
+        to manipulation and information interference, and to counter disinformation
+        targeting Armenia and its partners.
+    rule_of_law:
+      score: 2
+      evidence: TVP’s International Media Centre expands its offering into other languages
+        in response to the growing information pressure on the countries which cooperate
+        with the EU under the Eastern Partnership.

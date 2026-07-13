@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministers
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Warsaw
+  position: Poland maintains a strong strategic partnership with the UK, focusing
+    on joint support for Ukraine and maintaining international pressure against Russia.
+  positions:
+    ukraine: Poland strongly supports Ukraine's sovereignty and territorial integrity,
+      coordinating political, military, and diplomatic measures with partners to end
+      the conflict according to international law.
+    rule_of_law: Poland emphasizes that any resolution to the Russia-Ukraine conflict
+      must strictly adhere to principles of international law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Both Poland and the United Kingdom unequivocally support Ukraine’s
+        sovereignty and territorial integrity.
+    rule_of_law:
+      score: 1
+      evidence: The two states agree that the terms of ending the war must be in line
+        with international law.

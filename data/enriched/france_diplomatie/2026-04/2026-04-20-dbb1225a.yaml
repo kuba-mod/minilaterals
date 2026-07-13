@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Alain Berset
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Strasbourg, France
+  position: France reaffirmed its support for the Council of Europe's work on human
+    rights and democracy, while also committing to combating foreign interference.
+  positions:
+    rule_of_law: France strongly supports the foundational principles of democratic
+      resilience, rule of law, and freedom of expression in Europe.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The Minister reaffirmed France’s support of the work done by the Council
+        of Europe, whose founding mission since 1949 has been to ensure respect for
+        human rights, democracy and the rule of law.

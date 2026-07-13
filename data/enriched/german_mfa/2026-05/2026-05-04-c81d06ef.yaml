@@ -1,0 +1,75 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+- defence
+- hybrid
+- enlargement
+- green_transition
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ministers for Foreign Affairs of the Hellenic Republic
+  - Federal Republic of Germany
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - ukraine
+  location: null
+  position: Germany commits to upgrading its bilateral partnership with Greece into
+    a Strategic Cooperation framework across multiple pillars, emphasizing shared
+    commitment to European security and stability.
+  positions:
+    rule_of_law: Germany strongly affirms the importance of democratic values, human
+      rights, and adherence to international law as foundational principles for the
+      relationship and global order.
+    defence: Germany supports strengthening defense capabilities through joint efforts
+      in procurement, logistics, and crisis management, aligning with broader European
+      security goals.
+    hybrid: Germany commits to coordinated action against various threats, including
+      hybrid ones, through enhanced cooperation in defense and law enforcement.
+    enlargement: Germany supports strengthening EU ties and regional stability, implicitly
+      supporting broader European integration efforts.
+    green_transition: The text does not explicitly mention climate change or green
+      energy transition goals.
+    ukraine: Germany commits to joint responsibility with Greece regarding peace and
+      security efforts in Europe, particularly given Russia's war of aggression against
+      Ukraine.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: As members of the United Nations we are fully committed to upholding
+        the rules based international order
+    defence:
+      score: 1
+      evidence: II. Defence, Civil Protection & Hybrid Threats, Law Enforcement ,
+        with the objective to strengthen our capabilities to respond to conventional
+        and hybrid threats
+    hybrid:
+      score: 1
+      evidence: II. Defence, Civil Protection & Hybrid Threats, Law Enforcement ,
+        with the objective to strengthen our capabilities to respond to conventional
+        and hybrid threats
+    enlargement:
+      score: 0
+      evidence: As EU partners and NATO allies, our shared interest is upholding a
+        strong, secure and competitive Europe in the current challenging context.
+    green_transition:
+      score: 0
+      evidence: ''
+    ukraine:
+      score: 1
+      evidence: Against the backdrop of fundamental geopolitical changes following
+        Russia’s war of aggression against Ukraine as well as instability arising
+        in the Near and Middle East, Greece and Germany are committed to jointly assume
+        responsibility and step up their efforts to contribute to peace and security
+        in Europe and beyond.

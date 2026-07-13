@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Kaja Kallas, EU High Representative for Foreign Affairs and Security Policy
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: 'null'
+  position: France signaled support for increased sanctions against Russia and emphasized
+    commitment to maritime security in the Middle East.
+  positions:
+    ukraine: France reiterates its strong support for Ukraine's defense and stability
+      amidst Russian aggression, including supporting new sanctions packages.
+    rule_of_law: France emphasizes the importance of maintaining maritime security
+      and freedom of navigation in the Middle East region.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Both also discussed the European Union’s support for Ukraine in the
+        face of Russian aggression.
+    rule_of_law:
+      score: 1
+      evidence: The meeting focused in particular on the situation in the Middle East,
+        its consequences for maritime security and freedom of navigation, and notably
+        on the situation in Lebanon.

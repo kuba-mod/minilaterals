@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France strongly condemns Russian attacks on civilian targets in Ukraine
+    and reaffirms its long-term support for the Ukrainian people.
+  positions:
+    ukraine: France expresses wholehearted solidarity with the Ukrainian people and
+      commits to continued efforts alongside partners to promote a just, lasting peace.
+    rule_of_law: France condemns Russian actions as deliberate breaches of international
+      humanitarian law and war crimes.
+  stances:
+    ukraine:
+      score: 1
+      evidence: France expresses its wholehearted solidarity with the Ukrainian people,
+        the victims’ families and the emergency services mobilized.
+    rule_of_law:
+      score: 1
+      evidence: No military aim can justify such atrocities, which constitute further
+        deliberate breaches by Russia of its obligation to respect international humanitarian
+        law.

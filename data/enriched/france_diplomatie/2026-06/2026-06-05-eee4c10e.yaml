@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Serbian Blue Helmet
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France expressed deep concern over the death of a UNIFIL soldier and called
+    for accountability and adherence to international law.
+  positions:
+    rule_of_law: France strongly advocates for upholding international law and ensuring
+      justice following attacks on UN personnel in Lebanon.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France once again calls on all the parties to comply with UN Security
+        Council Resolution 1701 and refrain, in all circumstances, from endangering
+        the safety of UN personnel, in accordance with international law and the Convention
+        on the Safety of United Nations and Associated Personnel.

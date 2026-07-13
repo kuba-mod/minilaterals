@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Sikorski
+  - ministers
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Sopot, Poland
+  position: Poland emphasized the need for a decisive regional response to Russia's
+    hybrid attacks and stressed closer cooperation with Ukraine as part of a new security
+    architecture.
+  positions:
+    hybrid: Poland strongly advocates for coordinated action against Russian hybrid
+      threats, including sabotage, cyberattacks, and interference in critical infrastructure.
+    enlargement: Poland supports closer cooperation between Baltic Sea region states
+      and Ukraine, viewing it as a key component of regional security development.
+    rule_of_law: Poland stresses the importance of upholding international law, particularly
+      concerning maritime activities and combating sabotage.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Belarus-backed Russia is responsible for dozens or more hostile hybrid
+        operations in the Council member states.
+    enlargement:
+      score: 1
+      evidence: The ministers agreed that closer cooperation between the Baltic Sea
+        region states and Ukraine, a CBSS observer state, is a key component of a
+        new security architecture.
+    rule_of_law:
+      score: 1
+      evidence: The ministers also spoke about cooperation in the field of the international
+        law of the sea and enhancing the Council’s political and expert dimension
+        for regional security.

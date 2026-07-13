@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministers
+  - Latvian partners
+  - Deputy Minister Kupiecki
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for strengthened NATO deterrence and cooperation
+    within regional and international frameworks.
+  positions:
+    defence: Poland supports strengthening NATO's eastern flank through combined national,
+      intergovernmental, and EU-coordinated measures to improve collective security.
+    rule_of_law: Poland views an efficient UN as crucial for maintaining a rules-based
+      international order and is ready to cooperate multilaterally with Latvia.
+  stances:
+    defence:
+      score: 1
+      evidence: The ministers discussed the prospects for the further strengthening
+        of NATO’s eastern flank
+    rule_of_law:
+      score: 1
+      evidence: Deputy head of Polish diplomacy stressed that Poland considers a well-organised
+        and efficient United Nations to be a key element of the rules-based international
+        order

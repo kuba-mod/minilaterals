@@ -1,0 +1,18 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Foreign Minister Wojciech Zajączkowski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: Eritrea
+  position: Poland sought to deepen bilateral relations with Eritrea by identifying
+    areas for future cooperation in science and economy.
+  positions: {}
+  stances: {}

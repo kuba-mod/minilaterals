@@ -1,0 +1,54 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - deputy head of Polish diplomacy
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the need for intensive efforts to enhance European security
+    through active approaches, strengthening alliances, and deepening bilateral cooperation
+    with Finland.
+  positions:
+    defence: Poland supports a stronger EU defence capability complementary to NATO
+      by highlighting the vital role of eastern flank projects and bilateral cooperation.
+    hybrid: Poland calls for coordinated action against hybrid threats by noting the
+      need to mobilize resources due to growing global instability.
+    enlargement: Poland supports EU enlargement by mentioning the need to support
+      Ukraine's fight against Russian aggression.
+    rule_of_law: Poland affirms democratic resilience and security by emphasizing
+      the need for active approaches due to Russia's aggressive acts.
+  stances:
+    defence:
+      score: 1
+      evidence: In this context, projects carried out by the Baltic countries and
+        NATO’s whole eastern flank play a vital role that is complementary to building
+        national resilience and allied deterrence capabilities.
+    hybrid:
+      score: 1
+      evidence: In the face of growing instability in other parts of the world, mobilising
+        national and European resources is necessary to increase Europe’s defence
+        potential
+    enlargement:
+      score: 1
+      evidence: mobilising national and European resources is necessary to increase
+        Europe’s defence potential and support Ukraine in its fight against Russian
+        aggression.
+    rule_of_law:
+      score: 1
+      evidence: They acknowledged that amid Russia’s aggressive acts only active approach
+        can enhance our security.

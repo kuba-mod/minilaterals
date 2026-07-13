@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Ignazio Cassis
+  actors:
+  - FR
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Geneva, Switzerland
+  position: France emphasized the importance of bilateral cooperation with Switzerland
+    across various domains, including cross-border issues and AI.
+  positions:
+    rule_of_law: France highlighted the general convergence of views on major international
+      crises and stressed the importance of democratic resilience through multilateral
+      forums.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: noting their broad convergence of views.

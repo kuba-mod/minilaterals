@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France reaffirms its commitment to strategic arms control and deepening
+    dialogue on risk reduction.
+  positions:
+    rule_of_law: France affirms the importance of maintaining strategic stability
+      through continued dialogue on nuclear doctrines.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France remains fully committed, particularly within the P5, to deepening
+        dialogue on risk reduction and doctrines, with a view to strengthening our
+        collective security.

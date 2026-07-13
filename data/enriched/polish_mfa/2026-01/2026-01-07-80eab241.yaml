@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jean-Noël Barrot
+  - Johann Wadephul
+  actors:
+  - PL
+  - FR
+  - DE
+  explicit_weimar: 'true'
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Paris, France
+  position: Poland advocates for sustained international pressure and sanctions against
+    Russia while promoting deepened security and trade ties with India.
+  positions:
+    ukraine: Poland supports the continuation of diplomatic efforts and increased
+      pressure on Russia through sanctions to achieve a just peace for Ukraine.
+    rule_of_law: Poland emphasizes adherence to international law as a core principle
+      guiding diplomatic action against Russian aggression.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The top diplomats concluded that Russia’s repeated attacks on people
+        living in Ukraine call for the pressure on Russia to be sustained through
+        another round of sanctions, including on the energy and the financial sectors.
+    rule_of_law:
+      score: 2
+      evidence: Europe, working closely with the US administration, should engage
+        actively in forging peace solutions that comply with the rules of international
+        law.

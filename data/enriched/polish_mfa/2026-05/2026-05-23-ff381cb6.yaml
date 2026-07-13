@@ -1,0 +1,61 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the strategic importance of Europe's role in global
+    transformation, particularly focusing on Ukraine's path to European integration
+    and strengthening democratic resilience.
+  positions:
+    ukraine: Poland strongly supports Ukraine's aspiration for full membership in
+      Europe as a cornerstone of stability and prosperity.
+    defence: Poland stresses the need for rethinking alliances and advancing cooperation
+      to address modern security challenges.
+    hybrid: Poland highlights the necessity of addressing geopolitical risks and maintaining
+      stability amid global uncertainty.
+    enlargement: Poland supports Ukraine's path toward Europe, aligning with the goal
+      of supporting EU accession for neighboring countries.
+    rule_of_law: Poland affirms the foundational importance of democratic principles
+      and the rule of law for European security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: It is about Ukraine's aspirations to join Europe - to live in a country
+        that is free from corruption, based on the rule of law, shifting from poverty
+        to prosperity.
+    defence:
+      score: 1
+      evidence: Discussions at the Forum explored Europe's strategic role in a rapidly
+        changing world, from rethinking alliances and shaping global governance
+    hybrid:
+      score: 1
+      evidence: The sessions addrssed security and defence in a new era, technology's
+        impact on geopolitics and innovation
+    enlargement:
+      score: 2
+      evidence: It is about Ukraine's aspirations to join Europe - to live in a country
+        that is free from corruption, based on the rule of law, shifting from poverty
+        to prosperity.
+    rule_of_law:
+      score: 2
+      evidence: to live in a country that is free from corruption, based on the rule
+        of law, shifting from poverty to prosperity.
