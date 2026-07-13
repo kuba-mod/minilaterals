@@ -20,6 +20,10 @@ Anthropic settings:
   ANTHROPIC_API_KEY=sk-ant-...
   ANTHROPIC_MODEL=claude-haiku-4-5-20251001   # default
 
+Only supported as a module (python -m pipeline.enrich) — not as a direct
+script (python pipeline/enrich.py) — so pipeline.sources.base resolves
+without a sys.path shim.
+
 Usage:
     python -m pipeline.enrich               # process all pending items
     python -m pipeline.enrich --limit 10    # process at most 10 items
@@ -43,8 +47,6 @@ from tqdm import tqdm
 from pipeline.sources.base import Event
 
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
 GOALS_PATH = ROOT / "data" / "weimar_goals.yaml"

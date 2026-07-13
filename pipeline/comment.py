@@ -14,6 +14,10 @@ Provider selection and env vars are identical to pipeline/enrich.py:
   OLLAMA_HOST=http://localhost:11434
   OLLAMA_MODEL=gemma4:latest
 
+Only supported as a module (python -m pipeline.comment) — not as a direct
+script (python pipeline/comment.py) — so pipeline.render resolves without a
+sys.path shim.
+
 Usage:
     python -m pipeline.comment               # generate for all pending clusters
     python -m pipeline.comment --dry-run     # print without writing
@@ -33,15 +37,13 @@ from pathlib import Path
 import anthropic
 from openai import OpenAI
 
-ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
-from pipeline.render import (  # noqa: E402
+from pipeline.render import (
     build_convergence_clusters,
     load_events,
     score_cluster_stances,
 )
 
+ROOT = Path(__file__).parent.parent
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
 
 SYSTEM_PROMPT = (
