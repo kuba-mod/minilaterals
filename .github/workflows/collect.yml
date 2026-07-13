@@ -109,6 +109,13 @@ jobs:
         # stance block failed to parse on the first pass.
         continue-on-error: true
 
+      - name: Validate YAML schemas
+        # Blocking (no continue-on-error): malformed ingest or enrichment output
+        # must not reach main. This fails the job before the commit step runs, so
+        # job.status below is already 'failure' and the healthcheck ping picks it
+        # up without needing to be folded into the ai_failed loop.
+        run: uv run python -m pipeline.validate
+
       - name: Cut edition
         # Move the published cutoff to today. Everything ingested up to now
         # goes into this edition; later daily runs accumulate for the next one.

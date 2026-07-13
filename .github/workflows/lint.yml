@@ -26,3 +26,6 @@ jobs:
 
       - name: Ruff format check
         run: uv run ruff format --check .
+
+      - name: Validate YAML schemas
+        run: uv run python -m pipeline.validate

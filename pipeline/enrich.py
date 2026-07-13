@@ -44,6 +44,7 @@ import yaml
 from openai import OpenAI
 from tqdm import tqdm
 
+from pipeline.schemas import EnrichedEventSchema, ExtractedSchema
 from pipeline.sources.base import Event
 
 ROOT = Path(__file__).parent.parent
@@ -365,6 +366,8 @@ def _extract(provider, raw_path: Path) -> bool:
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]
 
+        ExtractedSchema.model_validate(extracted)
+
         # Re-run classify() to get fresh classification fields, then let LLM topics override
         event = Event(
             source_name=source_name,
@@ -383,6 +386,7 @@ def _extract(provider, raw_path: Path) -> bool:
             "trilateral_signal": event.trilateral_signal,
             "extracted": extracted,
         }
+        EnrichedEventSchema.model_validate(enriched_data)
 
         rel = raw_path.relative_to(EVENTS_DIR)
         enriched_path = ENRICHED_DIR / rel
@@ -480,6 +484,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
 
         extracted["stances"] = stances
         enriched["extracted"] = extracted
+        EnrichedEventSchema.model_validate(enriched)
         enriched_path.write_text(
             yaml.dump(enriched, allow_unicode=True, sort_keys=False),
             encoding="utf-8",
