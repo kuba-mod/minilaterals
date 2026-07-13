@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - United States of America
+  - Belgium
+  - Canada
+  - Denmark
+  - France
+  - Germany
+  - the Netherlands
+  - Sweden
+  - Switzerland
+  - the United Kingdom
+  - European Union
+  - African Union (AU)
+  - East African Community (EAC)
+  - International Conference on the Great Lakes Region (ICGLR)
+  - Southern African Development Community (SADC)
+  - Faure Gnassingbé
+  - H.E. Mahmoud Ali Youssouf
+  - H.E. Bankole Adeoye
+  - H.E. Sahle-Work Zewde
+  - Liberata Mulamula
+  actors:
+  - '[]'
+  explicit_weimar: false
+  topics: []
+  location: Nairobi, Kenya; Addis Ababa, Ethiopia
+  position: Germany supports ongoing peace efforts in the Great Lakes Region through
+    multilateral engagement and emphasizes African-led mediation.
+  positions: {}
+  stances: {}

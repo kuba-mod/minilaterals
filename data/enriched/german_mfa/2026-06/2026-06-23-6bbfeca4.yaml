@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Bishop Jüsten
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany strongly condemns Russia's war of aggression against Ukraine,
+    emphasizing that the conflict is a war against Ukrainian identity and culture,
+    and reaffirms unwavering support for Ukraine's sovereignty.
+  positions:
+    ukraine: Germany maintains strong condemnation of Russian actions in Ukraine,
+      viewing the invasion as an attempt to obliterate Ukraine’s identity and culture,
+      thereby strengthening support for its freedom and sovereignty.
+    rule_of_law: Germany stresses the importance of defending democratic resilience
+      and combating disinformation by rejecting false narratives that suggest peace
+      can be achieved merely through talks without military action.
+  stances:
+    ukraine:
+      score: 2
+      evidence: it is all the more true that this war of aggression will only strengthen
+        our unwavering support for the freedom and sovereignty of Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: These false prophets try to convince us that we only need to silence
+        the weapons, to commence talks, for peace to descend almost automatically.

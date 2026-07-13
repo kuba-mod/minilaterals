@@ -1,0 +1,18 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - French Minister for Europe and Foreign Affairs
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: Beirut, Lebanon
+  position: France continues to provide extensive humanitarian aid and support to
+    Lebanon in partnership with international organizations.
+  positions: {}
+  stances: {}

@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Foreign Office Spokesperson
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany condemns Russian aggression against Ukraine and commits to increasing
+    pressure on Russia while continuing support for Ukraine's defense efforts.
+  positions:
+    ukraine: Germany strongly condemns the massive Russian airstrikes on Ukraine and
+      reaffirms its commitment to supporting Ukraine until a just and lasting peace
+      is achieved.
+    rule_of_law: Germany emphasizes the importance of defending democratic principles
+      against Russia's illegal war of aggression.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We condemn the massive Russian airstrikes on Kyiv and other parts
+        of Ukraine last night in the strongest terms.
+    rule_of_law:
+      score: 1
+      evidence: The devastating images of last night’s destruction show once more
+        that Russia is continuing to wage its illegal war of aggression against Ukraine
+        with undiminished brutality.

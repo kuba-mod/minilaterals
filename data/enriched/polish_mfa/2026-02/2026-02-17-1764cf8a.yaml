@@ -1,0 +1,40 @@
+actors:
+- FR
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Culture and National Heritage
+  - Ministry of Foreign Affairs
+  actors:
+  - PL
+  - FR
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland views the Cultural Season as a platform to reinforce strategic
+    bilateral cooperation with France while addressing key European challenges like
+    misinformation and human rights.
+  positions:
+    hybrid: Poland emphasizes coordinated action against hybrid threats such as disinformation
+      campaigns and foreign political interference.
+    rule_of_law: Poland stresses the importance of upholding democratic values, including
+      human rights and civil liberties, as foundational to European cooperation.
+  stances:
+    hybrid:
+      score: 1
+      evidence: 'Next year’s programme will address issues crucial for today’s Europe:
+        countering misinformation, opposing the revival of totalitarian ideas, and
+        defending human rights and civil liberties.'
+    rule_of_law:
+      score: 1
+      evidence: 'Next year’s programme will address issues crucial for today’s Europe:
+        countering misinformation, opposing the revival of totalitarian ideas, and
+        defending human rights and civil liberties.'

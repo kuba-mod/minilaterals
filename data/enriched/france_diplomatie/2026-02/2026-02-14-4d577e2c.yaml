@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Félix Tshisekedi
+  - Vivian van de Perre
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France welcomes peace efforts in the Great Lakes region and calls for
+    all parties to implement existing accords and humanitarian measures.
+  positions: {}
+  stances: {}

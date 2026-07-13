@@ -1,0 +1,57 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Radosław Sikorski
+  - Johann Wadephul
+  actors:
+  - PL
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Poland and Germany reaffirmed their strong bilateral ties while committing
+    to collective security measures, supporting Ukraine, and expanding cooperation
+    across various sectors.
+  positions:
+    ukraine: Poland strongly commits to continued support for Ukraine's defense against
+      Russian aggression alongside its partners.
+    defence: Poland advocates for strengthening both domestic and European defense
+      capabilities, particularly focusing on the entire security community.
+    hybrid: The discussion highlights the need for a coordinated response to long-term
+      threats posed by Russia, implying readiness against hybrid challenges.
+    enlargement: Poland supports the expansion of the European Union and its institutions.
+    rule_of_law: The discussions emphasize democratic resilience and open dialogue
+      to address difficult issues between neighbors.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We will continue to support Ukraine together
+    defence:
+      score: 1
+      evidence: We will continue to support Ukraine together and to boost the security
+        not only of the eastern flank but of the entire Community.
+    hybrid:
+      score: 1
+      evidence: adequate response to long-term threats posed by Russia
+    enlargement:
+      score: 1
+      evidence: the future and enlargement of the European Union
+    rule_of_law:
+      score: 1
+      evidence: What matters is that we are able to discuss them openly.

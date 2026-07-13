@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: interview
+  participants:
+  - Johann Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany aims to strengthen EU sovereignty and efficiency through trade
+    agreements and institutional reform while actively participating in global conflict
+    resolution efforts.
+  positions:
+    ukraine: Germany is actively involved in diplomatic efforts with allies like the
+      UK and France to help end the war in Ukraine.
+    rule_of_law: Germany emphasizes strengthening EU institutions and sovereignty
+      by reforming decision-making processes and reducing bureaucracy.
+  stances:
+    ukraine:
+      score: 2
+      evidence: One example would be the E3 format, where we are working with the
+        UK and France to try to bring about an end to the Ukraine war.
+    rule_of_law:
+      score: 2
+      evidence: I am in favour of doing away with the principle of unanimity and of
+        using qualified majority voting on foreign and security policy issues as well.

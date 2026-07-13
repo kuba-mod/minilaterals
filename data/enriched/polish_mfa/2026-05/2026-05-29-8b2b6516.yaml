@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy foreign ministers
+  - Prime Minister of Poland Donald Tusk
+  - Prime Minister of Italy Giorgia Meloni
+  - Deputy Prime Minister and Foreign Minister Radosław Sikorski
+  - Italian counterpart Antonio Tajani
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Warsaw
+  position: Poland engaged in bilateral consultations with Italy covering security,
+    economic ties, and institutional cooperation.
+  positions:
+    defence: Poland supports strengthening EU defense capabilities by discussing joint
+      work in sectors like armaments and space.
+    enlargement: Poland supports EU enlargement by confirming its willingness to join
+      the 'Rome Process' on migration.
+    rule_of_law: Poland affirms democratic resilience and cooperation through discussions
+      of bilateral ties and strategic agreements.
+  stances:
+    defence:
+      score: 1
+      evidence: The diplomats highlighted their countries’ similar views on security,
+        which led them to discussing the prospects of working together, for example
+        in the armaments and space sectors.
+    enlargement:
+      score: 1
+      evidence: At the meeting, Poland officially declared its willingness to join
+        the 'Rome Process' on migration as a participating state.
+    rule_of_law:
+      score: 0
+      evidence: Deputy foreign ministers discussed bilateral ties, economic and defence
+        cooperation, EU enlargement, migration, and the political situation in Europe’s
+        neighbourhood.

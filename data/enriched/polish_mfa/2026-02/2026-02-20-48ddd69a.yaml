@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Sikorski
+  - Minister Aghabeikan
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its commitment to a two-State solution for Palestine
+    and announced continued humanitarian aid.
+  positions:
+    enlargement: Poland strongly supports the establishment of an independent State
+      of Palestine next to Israel as part of a two-State solution, which aligns with
+      international law.
+    rule_of_law: Poland emphasizes adherence to international law regarding the Palestinian
+      statehood, referencing UN resolutions and declarations.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Poland consistently opts for the adoption of a two-State solution
+        and the establishment of an independent State of Palestine next to the State
+        of Israel.
+    rule_of_law:
+      score: 1
+      evidence: That solution is compliant with international law. It was also described
+        in the UN Security Council Resolution 2803

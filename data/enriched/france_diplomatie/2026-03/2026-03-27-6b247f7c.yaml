@@ -1,0 +1,47 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot (French Minister for Europe and Foreign Affairs)
+  - Counterparts from Canada
+  - Germany
+  - Italy
+  - Japan
+  - the United Kingdom
+  - United States of America
+  - European Union High Representative
+  - Ukrainian counterpart
+  - foreign ministers of India
+  - Brazil
+  - the Republic of Korea
+  - Saudi Arabia
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Yvelines Department (France)
+  position: France hosted the G7 meeting to guide international response to geopolitical
+    crises and advance multilateral cooperation.
+  positions:
+    ukraine: France prioritized supporting Ukraine against Russian aggression, including
+      welcoming a working session chaired by its Ukrainian counterpart.
+    rule_of_law: France emphasized the importance of maintaining a free and open Indo-Pacific
+      region based on the rule of law while addressing global governance reforms.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Minister also welcomed his Ukrainian counterpart to chair a working
+        session on the G7’s support for Ukraine in the face of Russia’s war of aggression,
+        which is a priority of the French Presidency.
+    rule_of_law:
+      score: 2
+      evidence: the importance of a free and open Indo-Pacific region based on the
+        rule of law.

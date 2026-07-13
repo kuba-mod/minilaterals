@@ -1,0 +1,60 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Marcin Bosacki (MFA Secretary of State)
+  - Ukrainian Ambassador to Poland
+  - Piotr Łukasiewicz (Polish chargé d’affaires in Kyiv)
+  - Olexandr Mischenko (Ukraine’s Deputy Foreign Minister)
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the necessity of continued joint security and dialogue
+    with Ukraine to counter Russia's aggression.
+  positions:
+    ukraine: Poland strongly supports long-term support for Ukraine in response to
+      Russian aggression and stresses that Polish-Ukrainian relations must continue
+      despite historical difficulties.
+    defence: Poland emphasizes the need for joint security cooperation in response
+      to Russia's aggression.
+    hybrid: The text does not explicitly address hybrid threats.
+    enlargement: The text does not explicitly address EU enlargement goals.
+    rule_of_law: Poland stresses the importance of dialogue and commitment to stability
+      for Europe's future.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polish–Ukrainian relations, so crucial for our states and nations,
+        should not become a hostage to a difficult history.
+    defence:
+      score: 1
+      evidence: Joint security, solidarity in response to Russia’s aggression, and
+        responsibility for the future of Europe require maturity and commitment to
+        dialogue on both sides.
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: Joint security, solidarity in response to Russia’s aggression, and
+        responsibility for the future of Europe require maturity and commitment to
+        dialogue on both sides.

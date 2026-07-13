@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Radosław Sikorski
+  - Jakub Rutnicki
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: MFA, Poland
+  position: Poland is actively coordinating a large-scale humanitarian and logistical
+    effort to repatriate its citizens from the Middle East and Asia.
+  positions:
+    rule_of_law: The government emphasizes the importance of safety and continuous
+      monitoring for its citizens, reflecting a commitment to national security and
+      democratic resilience.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Every decision is made with the safety of Polish citizens in mind,
+        which requires particular caution.

@@ -1,0 +1,30 @@
+actors:
+- FR
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Jean-Noël Barrot, ministre de l’Europe et des Affaires étrangères
+  actors:
+  - FR
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France emphasizes the deep historical and cultural bond with Poland, advocating
+    for a unified European future based on shared democratic values and sovereignty.
+  positions:
+    rule_of_law: France stresses that maintaining freedom, democracy, and the rule
+      of law is paramount to Europe's future, drawing parallels between Polish and
+      French resistance history.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: What binds France and Poland is more than history. It is a shared
+        refusal of fatality. The belief that freedom is always worth fighting for,
+        and that hope is never lost.

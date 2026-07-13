@@ -1,0 +1,56 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - foreign ministers
+  - Kaja Kallas
+  - President Volodymyr Zelenskyy of Ukraine
+  - Deputy Prime Minister Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: 'false'
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Kyiv, Ukraine
+  position: Poland reaffirmed its unwavering support for Ukraine's sovereignty and
+    defense, while also committing to institutional cooperation in the post-conflict
+    recovery.
+  positions:
+    ukraine: Poland strongly supports Ukraine's continued self-defense and stability,
+      condemning Russian aggression and demanding accountability for war crimes.
+    defence: Poland supports strengthening EU defense capabilities by committing to
+      continued military and security assistance for Ukraine.
+    enlargement: Poland actively supports Ukraine's integration into international
+      legal structures and the EU process by joining key related commissions.
+    rule_of_law: Poland strongly advocates for accountability for war crimes committed
+      in Ukraine, emphasizing that impunity for Russia is unacceptable.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Poland remains ready to support self-defending Ukraine, including
+        in military terms, for as long as needed
+    defence:
+      score: 2
+      evidence: Poland remains ready to support self-defending Ukraine, including
+        in military terms, for as long as needed
+    enlargement:
+      score: 2
+      evidence: Poland is going to accede to the Enlarged Partial Agreement on the
+        Management Committee of the Special Tribunal for the Crime of Aggression against
+        Ukraine and join the International Claims Commission for Ukraine as a founding
+        member.
+    rule_of_law:
+      score: 2
+      evidence: They agreed that Russia must be called to account for its crimes in
+        Ukraine and there is no room for any tolerance of its impunity.

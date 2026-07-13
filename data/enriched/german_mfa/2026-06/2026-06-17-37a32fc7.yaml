@@ -1,0 +1,56 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of the Federal Republic of Germany
+  - Foreign Ministers of the Republic of Poland
+  actors:
+  - DE
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany and Poland affirm their strong partnership as allies committed
+    to European security, particularly in response to Russian aggression.
+  positions:
+    ukraine: The declaration commits to supporting a lasting peace in Ukraine that
+      strengthens European security.
+    defence: Germany and Poland are actively strengthening their defense cooperation
+      to secure the eastern flank.
+    hybrid: The declaration warns against Russia's hybrid threats and commits to enhancing
+      societal resilience.
+    rule_of_law: The declaration emphasizes protecting European values, including
+      the rule of law and free elections.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Our overarching aim remains the protection of European values, including
+        the rule of law and free elections, and ultimately a lasting and just peace
+        in Ukraine that strengthens European security.
+    defence:
+      score: 2
+      evidence: We welcome the signing of the new German-Polish Agreement on Defence
+        Cooperation. It is testament to our determination to act together.
+    hybrid:
+      score: 1
+      evidence: Russia’s aggressive actions, in particular those of a hybrid nature
+        and in the field of disinformation, are also aimed at us. Their goal is to
+        divide our societies, to destroy public order and to undermine trust in the
+        state and its institutions.
+    rule_of_law:
+      score: 1
+      evidence: Our overarching aim remains the protection of European values, including
+        the rule of law and free elections,

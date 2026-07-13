@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France invoked the OSCE's Moscow Mechanism to investigate Russia's human
+    rights violations against Ukrainian children and reaffirmed its commitment to
+    international justice.
+  positions:
+    ukraine: France strongly supports Ukraine by invoking an international mechanism
+      to combat Russian crimes against Ukrainian children and supporting long-term
+      support until a just peace is achieved.
+    rule_of_law: France emphasizes the importance of international law and human rights,
+      committing to combat impunity for crimes committed in Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: With Russia continuing to abduct and deport Ukrainian children to
+        facilitate their adoption by Russian families
+    rule_of_law:
+      score: 2
+      evidence: France will continue to stand with the people of Ukraine and to lend
+        its support to the essential efforts of international justice

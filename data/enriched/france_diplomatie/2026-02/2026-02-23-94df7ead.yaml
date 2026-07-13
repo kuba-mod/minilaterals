@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Nicolas Forissier, Minister Delegate for Foreign Trade and Economic Attractiveness
+  - Minister for Europe and Foreign Affairs
+  - counterparts from Canada
+  - Germany
+  - Italy
+  - Japan
+  - the United Kingdom
+  - the United States
+  - European Trade Commissioner
+  actors:
+  - []
+  explicit_weimar: false
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France hosted a ministerial meeting with G7 partners to set the agenda
+    for 2026, focusing on critical supply chains and WTO preparations.
+  positions:
+    green_transition: The text does not provide specific information regarding France's
+      stance on the green transition goal.
+  stances:
+    green_transition:
+      score: 0
+      evidence: ''

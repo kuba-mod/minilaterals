@@ -1,0 +1,59 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for Europe to modernize its industrial base
+    and address geopolitical challenges from China and the US while maintaining support
+    for Ukraine's defense.
+  positions:
+    ukraine: Germany commits to continued substantial economic and military support
+      for Ukraine as it defends European freedom.
+    defence: Germany supports strengthening Europe's industrial base and addressing
+      security crises arising from global realignments.
+    hybrid: Germany calls for coordinated action against geopolitical distortions
+      caused by China and the US, which threaten European stability.
+    enlargement: Germany supports the principle of a changing world order that includes
+      geopolitical realignments affecting Europe's interests.
+    rule_of_law: Germany stresses the importance of defending European freedom and
+      democratic resilience against external threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We’re continuing to support Ukraine’s battle to defend itself with
+        substantial economic and military resources as it is also defending our freedom
+        at the end of the day.
+    defence:
+      score: 1
+      evidence: We’re currently not keeping pace with developments in AI and the digital
+        economy.
+    hybrid:
+      score: 1
+      evidence: China’s trade and industrial policy is distorting global markets to
+        a massive degree. And this approach is set to intensify.
+    enlargement:
+      score: 0
+      evidence: It is a reflection of a world order that is being realigned, that
+        is changing.
+    rule_of_law:
+      score: 1
+      evidence: The freedom of Europe.

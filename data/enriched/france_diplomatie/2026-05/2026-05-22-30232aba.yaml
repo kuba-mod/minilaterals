@@ -1,0 +1,49 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Andrii Sybiha
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Helsingborg
+  position: France reaffirmed its long-term support for Ukraine's sovereignty and
+    territorial integrity while emphasizing the need to maintain pressure on Russia
+    through diplomatic and legal means.
+  positions:
+    ukraine: France strongly supports Ukrainian resilience and condemns Russian aggression,
+      committing to continued efforts until a just and lasting peace is achieved.
+    enlargement: France supports Ukraine's path toward EU membership and stresses
+      the importance of continued institutional reforms within Ukraine.
+    rule_of_law: France actively supports international legal mechanisms and sanctions
+      to combat Russian impunity regarding war crimes.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Minister also emphasized France’s determination to stand with
+        Ukraine in the long term and to continue its efforts, alongside all of its
+        partners, until a just and lasting peace is achieved.
+    enlargement:
+      score: 1
+      evidence: the Minister also reiterated France’s support for Ukraine in the membership
+        process for joining the EU and emphasized the importance of continuing its
+        reform efforts in this regard.
+    rule_of_law:
+      score: 2
+      evidence: the fight against impunity; the EU’s adoption, on May 11, of a sanctions
+        package against several Russian individuals and entities involved in the deportation
+        and forcible transfer of Ukrainian children; and the May 15th launch, in Chisinau,
+        of the Management Committee of the Special Tribunal for the Crime of Aggression
+        against Ukraine – all measures that France supported.

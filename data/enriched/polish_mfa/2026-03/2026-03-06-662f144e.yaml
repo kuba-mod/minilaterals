@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for regional de-escalation and stability to
+    protect its citizens and global supply chains.
+  positions:
+    rule_of_law: Poland stressed the importance of restoring regional stability and
+      de-escalating tensions in the Gulf region to safeguard international trade and
+      citizen safety.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The ministers concurred as to the utmost importance of seeking de-escalation
+        and restoring stability in the region, which would contribute to the reopening
+        of shipping lanes and airspace.

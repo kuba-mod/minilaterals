@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: United Nations Security Council
+  position: Germany emphasizes that maritime security is foundational to the global
+    economy and calls for an end to destabilizing actions in the Gulf.
+  positions:
+    rule_of_law: Germany stresses the importance of international law, particularly
+      concerning maritime routes, and supports UN efforts to mitigate risks.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Such actions constitute clear violations of international law, including
+        the law of the sea, as reflected in the United Nations Convention on the Law
+        of the Sea.

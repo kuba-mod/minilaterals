@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - International Contact Group (ICG)
+  - Belgium
+  - Denmark
+  - European Union
+  - France
+  - Germany
+  - Netherlands
+  - Sweden
+  - Switzerland
+  - United Kingdom
+  - United States
+  actors: []
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Stockholm, Sweden
+  position: The ICG reiterates deep concern over the conflict in the DRC and calls
+    for all parties to build on diplomatic progress toward a peaceful resolution while
+    upholding international law.
+  positions:
+    rule_of_law: France supports maintaining democratic resilience and adherence to
+      international humanitarian law by urging all parties to respect agreements and
+      protect civilians.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The ICG condemns violations of international humanitarian law in the
+        strongest terms.

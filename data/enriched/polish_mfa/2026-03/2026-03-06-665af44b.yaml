@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - Ambassador of Cyprus to Poland Nicos Nicolaou
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasized the need for increased European support for Ukraine
+    and continued pressure on Russia through sanctions while reaffirming its commitment
+    to combating Russian hybrid operations.
+  positions:
+    hybrid: Poland strongly advocates for coordinated action against threats stemming
+      from Russia's actions and hybrid operations.
+    enlargement: Poland supports the EU accession of Ukraine and Western Balkans countries
+      by presenting objectives for a dedicated recovery conference.
+    rule_of_law: Poland condemns attacks on civilian infrastructure and stresses the
+      importance of upholding democratic resilience against foreign interference.
+  stances:
+    hybrid:
+      score: 2
+      evidence: The talks focused on threats to European security resulting from Russia’s
+        actions
+    enlargement:
+      score: 1
+      evidence: He also presented the objectives of the Ukraine Recovery Conference,
+        scheduled to take place in Gdańsk in June 2026.
+    rule_of_law:
+      score: 2
+      evidence: Deputy Prime Minister Radosław Sikorski strongly condemned Iran’s
+        attacks on states which are not parties to the conflict, including on civilian
+        infrastructure.

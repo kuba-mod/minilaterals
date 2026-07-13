@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Khalilur Rahman
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France congratulates Dr. Khalilur Rahman and reaffirms its commitment
+    to the UN Charter's principles while promoting effective multilateralism.
+  positions:
+    rule_of_law: France affirms its general support for the purposes and principles
+      of the UN Charter, which underpins democratic resilience and international law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: On this occasion, France reaffirms its commitment to the purposes
+        and principles of the UN Charter.

@@ -1,0 +1,55 @@
+actors:
+- PL
+issue_areas:
+- defence
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - top diplomats of Poland and Croatia
+  - Deputy Prime Minister Sikorski
+  - Minister Gordan Grlić Radman
+  - foreign ministers
+  actors:
+  - PL
+  explicit_weimar: 'false'
+  topics:
+  - defence
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasized the necessity of strengthening European defense capabilities
+    and maintaining strong support for Ukraine while also advocating for EU enlargement
+    and stability in the Western Balkans.
+  positions:
+    defence: Poland strongly supports increasing military spending and enhancing Europe's
+      overall defense capability, viewing it as a necessary response to Russian aggression.
+    ukraine: Poland reaffirms commitment to providing continued strong support for
+      Ukraine until a just and lasting peace is achieved.
+    enlargement: Poland supports EU enlargement by welcoming progress in Albania and
+      Montenegro and stressing the need to expand the zone of stability.
+    rule_of_law: Poland emphasizes the importance of upholding democratic principles
+      and stability in regions like Bosnia and Herzegovina.
+  stances:
+    defence:
+      score: 2
+      evidence: Europe must increase its military capabilities while using the European
+        defence industry’s potential to full advantage.
+    ukraine:
+      score: 2
+      evidence: we agreed on the undeniable importance of Europe's continued strong
+        support for Ukraine until a just and lasting peace is achieved
+    enlargement:
+      score: 2
+      evidence: The foreign ministers agreed that expanding the zone of stability
+        and consistently supporting countries aspiring to join the EU is currently
+        a geopolitical necessity.
+    rule_of_law:
+      score: 1
+      evidence: They elaborated on the situation in Bosnia and Herzegovina, particularly
+        in the context of the implementation of local Croatians’ electoral rights.

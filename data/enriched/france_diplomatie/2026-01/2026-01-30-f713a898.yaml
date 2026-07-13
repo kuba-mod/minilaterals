@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Syrian transitional government
+  - Syrian Democratic Forces (SDF)
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France welcomes the agreement between Damascus and the SDF, calling for
+    its full implementation to ensure a peaceful transition in Syria.
+  positions: {}
+  stances: {}

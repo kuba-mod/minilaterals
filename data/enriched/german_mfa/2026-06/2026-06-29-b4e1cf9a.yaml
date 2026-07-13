@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Marco Rubio
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Washington DC, Paraguay, Argentina and Brazil
+  position: Germany emphasizes strong partnerships across continents to maintain security,
+    economic resilience, and global influence while supporting NATO resolve and trade
+    agreements.
+  positions:
+    ukraine: Germany commits to providing long-term support for Ukraine's peace efforts,
+      urging Moscow to negotiate a halt to fighting.
+    defence: Germany stresses the importance of maintaining NATO resolve and achieving
+      new burden-sharing within the Alliance for collective defense.
+    rule_of_law: Germany advocates for democratic resilience and stability by promoting
+      free trade and economic strength to counter global crises and protectionism.
+  stances:
+    ukraine:
+      score: 1
+      evidence: we Europeans are willing to provide all the support we can in this
+        regard.
+    defence:
+      score: 1
+      evidence: Our Euro-Atlantic security decisively depends on us retaining our
+        steadfast resolve within NATO in the future, too.
+    rule_of_law:
+      score: 1
+      evidence: The EU -Mercosur free trade agreement is a milestone for trade and
+        presents tremendous growth potential for Germany and Europe.

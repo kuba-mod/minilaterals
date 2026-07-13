@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ministers of Foreign Affairs
+  actors:
+  - []
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France and other signatories call for de-escalation in Lebanon, support
+    the Lebanese state's sovereignty, and reaffirm adherence to international law.
+  positions:
+    rule_of_law: The statement strongly affirms democratic resilience and the rule
+      of law by condemning attacks on civilians and infrastructure and reiterating
+      commitment to UN resolutions.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Civilians and civilian infrastructure must be protected in accordance
+        with international humanitarian law.

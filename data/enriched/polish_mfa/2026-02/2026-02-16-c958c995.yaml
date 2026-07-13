@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - family of Alexei Navalny
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland and signatories condemn the treatment of Alexei Navalny by Russian
+    authorities and demand compliance with international law and release of political
+    prisoners.
+  positions:
+    ukraine: The statement strongly condemns Russia's aggression against Ukraine and
+      highlights that repression inside Russia enables its foreign aggression.
+    rule_of_law: Poland advocates for adherence to international law by demanding
+      a thorough investigation into Navalny's death and calling for the release of
+      all political prisoners.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Within Ukraine, the Russian state has intensified its violence and
+        aggression against the Ukrainian people.
+    rule_of_law:
+      score: 1
+      evidence: 'We remain steadfast: The Russian authorities must fully comply with
+        all their international obligations and release all political prisoners.'

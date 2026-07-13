@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ales Bialatski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Gdańsk, Poland
+  position: Poland expressed strong support for human rights and civil liberties through
+    its engagement with Ales Bialatski.
+  positions:
+    rule_of_law: Poland strongly supports the defense of democratic resilience and
+      civil liberties, as demonstrated by its praise for Ales Bialatski's work.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We in Poland are impressed by your steadfast stance and modesty, and
+        above all, we are deeply grateful for your determination in the struggle for
+        human rights.

@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France expressed deep concern over the execution of a French compatriot
+    in China and reiterated its opposition to the death penalty.
+  positions:
+    rule_of_law: France strongly advocates for fundamental human rights, specifically
+      opposing the death penalty and noting violations of due process rights.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: France reiterates its opposition to the death penalty everywhere and
+        in all circumstances, and calls for its universal abolition.

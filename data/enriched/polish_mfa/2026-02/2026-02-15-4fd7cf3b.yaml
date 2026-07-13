@@ -1,0 +1,57 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  - UN High Commissioner for Refugees Barham Salih
+  - General Alexus G. Grynkewich
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Munich, Germany
+  position: Poland emphasized its central role in European security and peace efforts,
+    advocating for Europe's greater responsibility in defense and negotiations.
+  positions:
+    ukraine: Poland strongly advocates for continued international support for Ukraine's
+      path to a just peace, emphasizing that Europe must participate in the negotiation
+      process.
+    defence: Poland supports strengthening European defense capabilities and believes
+      that the EU's SAFE program can restore Europe's arms production capacity.
+    hybrid: Poland highlights the threat of hybrid challenges, including illegal migration
+      attempts, and discusses security in the Baltic Sea region.
+    rule_of_law: Poland stresses the importance of democratic resilience and addressing
+      global crises like refugee flows caused by aggression.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Europe is paying for this war. We are buying American weapons to be
+        delivered to Ukraine. Additional US aid package expired last year. We are
+        paying for our security, therefore we deserve the seat at the negotiation
+        table.
+    defence:
+      score: 2
+      evidence: I can say with full responsibility that the European SAFE programme
+        is exactly what the United States need from Europe— to restore its capabilities
+        for producing arms and ammunition, and to replace some US capabilities.
+    hybrid:
+      score: 1
+      evidence: Deputy Prime Minister Sikorski also pointed to the problem of the
+        instrumentalisation of migration.
+    rule_of_law:
+      score: 1
+      evidence: Russia's aggression against Ukraine is weakening UNHCR's ability to
+        respond to crises in other parts of the world.

@@ -1,0 +1,54 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Foreign Ministers of Poland and Greece
+  actors:
+  - PL
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: Athens, Greece
+  position: Poland emphasized the strategic importance of cooperation with Greece
+    on security and EU integration issues, while also addressing internal market concerns
+    regarding green legislation.
+  positions:
+    ukraine: Poland stresses that continued pressure on the aggressor is necessary
+      for Ukraine's path to EU membership.
+    enlargement: Poland supports the goal of EU enlargement, specifically mentioning
+      the Western Balkans and Ukraine's path to joining the EU.
+    green_transition: Poland supports climate objectives but cautions that industrial
+      legislation must not create divisions within the EU internal market.
+    rule_of_law: Poland and Greece affirm shared approaches on security and stability,
+      supporting democratic resilience through cooperation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Deputy Minister Niemczycki stressed that it is necessary to exercise
+        further pressure on the aggressor, including by means of sanctions.
+    enlargement:
+      score: 1
+      evidence: The two countries share similar approach to security, stability of
+        the Western Balkans, EU enlargement, and the protection of the EU’s external
+        borders.
+    green_transition:
+      score: -1
+      evidence: Poland finds it necessary to ensure that the document’s emissions
+        criterion does not provoke divisions in the EU’s internal market.
+    rule_of_law:
+      score: 1
+      evidence: The two countries share similar approach to security, stability of
+        the Western Balkans, EU enlargement, and the protection of the EU’s external
+        borders.

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Foreign Office
+  - Federal Ministry of Defence
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is coordinating a comprehensive international relief effort to
+    Venezuela following severe earthquakes.
+  positions:
+    rule_of_law: The statement emphasizes the need for international assistance and
+      coordination in response to a natural disaster, aligning with general principles
+      of democratic resilience and humanitarian aid.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Our thoughts are with the affected Venezuelans; they need international
+        assistance now.

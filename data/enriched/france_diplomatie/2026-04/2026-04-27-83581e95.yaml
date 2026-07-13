@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses deep concern over the safety of UN personnel in Lebanon
+    and calls for all parties to respect international law and cease hostilities.
+  positions:
+    rule_of_law: France strongly advocates for adherence to international law, specifically
+      calling on all parties to respect UNSC Resolution 1701 and comply with the ceasefire.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France once again calls on all of the parties to respect UN Security
+        Council Resolution 1701 and refrain from endangering UN personnel in all circumstances,
+        in accordance with international law

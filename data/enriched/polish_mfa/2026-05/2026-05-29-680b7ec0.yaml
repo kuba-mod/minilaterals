@@ -1,0 +1,22 @@
+actors:
+- FR
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Jolanta Kawa
+  - Paweł Bliźniuk
+  actors:
+  - PL
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: Gdańsk, Poland
+  position: Poland is actively promoting bilateral relations with France across cultural
+    and social dialogue initiatives.
+  positions: {}
+  stances: {}

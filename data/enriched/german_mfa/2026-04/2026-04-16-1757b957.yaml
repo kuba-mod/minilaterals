@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - US President Trump
+  actors:
+  - DE
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: Germany welcomes the ceasefire and calls for direct talks between Israel
+    and Lebanon to achieve long-term security through disarmament.
+  positions: {}
+  stances: {}

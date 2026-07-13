@@ -1,0 +1,20 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Artur Harazim
+  - Dariusz Standerski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: Poland launched an updated Odyseusz system integrated with mObywatel to
+    simplify travel registration and improve consular communication for Polish citizens
+    abroad.
+  positions: {}
+  stances: {}

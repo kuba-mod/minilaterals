@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President al-Sharaa
+  - General Mazloum
+  actors:
+  - FR
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: France welcomes the ceasefire agreement in Syria and commits to supporting
+    a transition toward a united and stable Syrian state.
+  positions: {}
+  stances: {}

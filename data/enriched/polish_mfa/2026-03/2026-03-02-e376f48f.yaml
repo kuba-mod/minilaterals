@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - foreign ministers of Poland and United Arab Emirates
+  actors:
+  - PL
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland expressed solidarity with regional partners and emphasized the
+    need for dialogue and adherence to international law to ensure stability.
+  positions:
+    rule_of_law: Poland strongly supports the foundational principles of international
+      law and democratic resilience by condemning attacks that violate these principles.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Poland unequivocally condemned Iran’s attacks on the territory of
+        the UAE and other countries in the region.

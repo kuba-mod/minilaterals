@@ -1,0 +1,54 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki (Deputy Minister)
+  - Mehmet Kemal Bozay (Turkish Deputy Foreign Minister)
+  - Polish Sejm representatives
+  - Polish Senate representatives
+  - Andrzej Dycha (Polish Investment and Trade Agency)
+  - Bartłomiej Babuśka (Industrial Development Agency)
+  - Ministry of Foreign Affairs of the Republic of Türkiye
+  - Grand National Assembly of Türkiye
+  - Burhan Kayatürk (Chairman of the EU Harmonization Committee)
+  - Ferhat Nasıroğlu (Chairman of the Türkiye–Poland Parliamentary Friendship Group)
+  - Andrzej Szewiński (MP)
+  - Krzysztof Bieńkowski (Senator)
+  - Michał Nitka (board member of Asseco South Eastern Europe S.A.)
+  - Nail Olpak (President of the Foreign Economic Relations Board)
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Türkiye
+  position: Poland emphasized its support for Türkiye's efforts to achieve peace in
+    Ukraine and reaffirmed Poland’s commitment to bilateral cooperation across political,
+    economic, and security dimensions.
+  positions:
+    ukraine: Poland strongly supports international efforts to end the war in Ukraine
+      and views Russia's aggression as requiring a united response.
+    enlargement: Poland consistently supports Türkiye's European integration process
+      through diplomatic and parliamentary channels.
+    rule_of_law: Poland emphasizes the importance of democratic resilience and stability
+      in international relations, particularly concerning Russia's actions.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
+        and united response
+    enlargement:
+      score: 1
+      evidence: The visit also reaffirmed Poland’s support for Turkey’s European integration.
+    rule_of_law:
+      score: 0
+      evidence: ''

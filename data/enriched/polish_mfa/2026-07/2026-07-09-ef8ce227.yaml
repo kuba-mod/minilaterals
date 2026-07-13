@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Resilience Council
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland warns against reacting to Russian disinformation regarding the
+    Volhynian crime and calls for restraint from both Ukrainian and international
+    sources.
+  positions:
+    hybrid: Poland views Russia's actions concerning historical events as a propaganda
+      effort designed to undermine Polish-Ukrainian relations and destabilize regional
+      security.
+    rule_of_law: Poland emphasizes the importance of historical memory while advocating
+      for critical assessment and caution regarding unverified information to maintain
+      democratic resilience.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Russia's actions also form part of a broader attempt to exploit the
+        FSB materials to undermine the credibility of Ukrainian institutions countering
+        disinformation
+    rule_of_law:
+      score: 1
+      evidence: The Council calls on the public not to react to information concerning
+        the Volhynian crime originating from Russian or otherwise unverified sources
+        until it has been examined by Polish historians.

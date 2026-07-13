@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of State Hahn
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Brunei
+  position: Germany emphasizes the shared values and economic cooperation between
+    ASEAN and the EU to strengthen global trade and stability.
+  positions:
+    rule_of_law: Germany stresses the importance of a rules-based international order,
+      international law, and multilateralism in global partnerships.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We are both committed to a rules-based international order, to international
+        law and to multilateralism.

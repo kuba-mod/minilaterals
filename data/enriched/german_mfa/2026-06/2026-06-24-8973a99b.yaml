@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Ms Fehrs
+  actors:
+  - DE
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the importance of social cohesion and trust in times
+    of accumulating crises.
+  positions:
+    rule_of_law: Germany stresses that maintaining social cohesion and democratic
+      resilience is crucial for navigating current societal pressures and crises.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: the real crisis is the one endangering our social cohesion.

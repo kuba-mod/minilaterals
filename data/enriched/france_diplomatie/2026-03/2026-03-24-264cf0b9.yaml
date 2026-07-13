@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Cho Hyun
+  actors:
+  - FR
+  - '[]'
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France reaffirmed its commitment to multilateralism and support for Ukraine
+    during discussions with the Korean Foreign Minister.
+  positions:
+    ukraine: France reiterated its strong support for Ukraine's continued security
+      and stability.
+    rule_of_law: France emphasized the importance of upholding democratic principles
+      and international order.
+  stances:
+    ukraine:
+      score: 1
+      evidence: reaffirmed their support for Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: reiterated their commitment to multilateralism and the rules-based
+        international order.

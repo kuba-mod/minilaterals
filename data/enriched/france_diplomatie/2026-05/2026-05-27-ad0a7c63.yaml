@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry for Europe and Foreign Affairs
+  - Russian Federation’s Ambassador to France
+  - Minister
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France strongly condemns Russia's actions and reiterates its call for
+    an end to the illegal war of aggression in Ukraine.
+  positions:
+    ukraine: France maintains a strong commitment to supporting Ukraine until it ends
+      the Russian war of aggression.
+    rule_of_law: France condemns Russia's actions as violations of international law
+      and acts of intimidation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: reiterates its call for Russia to end its illegal war of aggression
+        in Ukraine.
+    rule_of_law:
+      score: 2
+      evidence: Each day, Russia’s actions demonstrate its cynicism and contempt for
+        international law.

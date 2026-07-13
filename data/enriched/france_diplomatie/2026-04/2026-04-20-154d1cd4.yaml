@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Petra Bayr
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: Strasbourg, France
+  position: France reaffirmed its commitment to European democracy and cooperation
+    through institutions like the Parliamentary Assembly of the Council of Europe.
+  positions:
+    rule_of_law: France supports democratic resilience and combating foreign interference
+      by acknowledging the work done at the Council of Europe.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Minister applauded the Parliamentary Assembly’s contributions
+        to the Council of Europe’s work on combatting foreign interference and information
+        manipulation.

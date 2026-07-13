@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland advocates for sustained Western support for Ukraine and calls for
+    accountability mechanisms within the OSCE to deter future Russian aggression.
+  positions:
+    ukraine: Poland strongly supports long-term military, economic, and diplomatic
+      aid to Ukraine until a just and lasting peace is achieved.
+    hybrid: Poland calls for coordinated action within the OSCE to expose and track
+      those who enable hybrid threats and aggression.
+    rule_of_law: Poland emphasizes that European security requires adherence to international
+      law and accountability rather than mere declarations.
+  stances:
+    ukraine:
+      score: 2
+      evidence: 'We must continue to do so for as long as it takes – by consistently
+        implementing appropriate measures: targeting energy sector, asset freezes
+        and travel bans.'
+    hybrid:
+      score: 1
+      evidence: We should expose obstruction and track those who enable the aggression.
+    rule_of_law:
+      score: 1
+      evidence: Europe’s security will not be restored through polite declarations.
+        It will be rebuilt by unity, resolve and accountability.

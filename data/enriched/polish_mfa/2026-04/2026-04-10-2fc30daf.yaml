@@ -1,0 +1,20 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Minister Władysław Teofil Bartoszewski
+  - Deputy Minister Robert Kupiecki
+  - Polish Ambassador Krzysztof Krajewski
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: null
+  position: Poland paid tribute to the victims of the Smolensk plane crash on its
+    16th anniversary, remembering both Polish and foreign service employees who died.
+  positions: {}
+  stances: {}

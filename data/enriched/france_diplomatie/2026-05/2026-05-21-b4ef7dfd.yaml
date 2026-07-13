@@ -1,0 +1,53 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - France
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: France emphasized the importance of maritime cooperation and reiterated
+    support for EU integration goals while focusing on security challenges.
+  positions:
+    defence: France supports strengthening EU defense capabilities in coordination
+      with NATO to enhance collective security.
+    hybrid: France stresses the need for coordinated action against various hybrid
+      threats, including disinformation and cyber attacks.
+    enlargement: France supports the EU accession of Western Balkans countries while
+      advocating for necessary institutional reforms within the Union.
+    green_transition: France backs the Clean Industrial Deal and the path to climate
+      neutrality by aligning industrial and energy policies with European green objectives.
+    rule_of_law: France affirms that democratic resilience and adherence to the rule
+      of law are fundamental pillars for European unity and security.
+  stances:
+    defence:
+      score: 1
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    green_transition:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''

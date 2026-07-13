@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Mr Kim Aris
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - rule_of_law
+  location: null
+  position: France reiterated its commitment to supporting democracy, human rights,
+    and the rule of law in Myanmar while calling for an immediate political resolution.
+  positions:
+    rule_of_law: France strongly affirms democratic principles by demanding the unconditional
+      release of detained individuals and upholding fundamental rights.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: He emphasized that France would continue to work for Ms Aung San Suu
+        Kyi’s immediate and unconditional release and paid special attention to her
+        health conditions, as well as the need for her to be allowed access to treatment
+        and contact with her lawyers and loved ones.

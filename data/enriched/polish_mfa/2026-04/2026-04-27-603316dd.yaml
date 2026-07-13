@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Vot Tak team
+  actors:
+  - PL
+  explicit_weimar: false
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland supports international media projects aimed at countering disinformation
+    and supporting democratic development in Eastern Partnership countries.
+  positions:
+    hybrid: Poland actively works to counter disinformation and foreign interference
+      targeting Georgia and its partners.
+    enlargement: Poland supports the EU's expansion efforts across Eastern Partnership
+      countries through media initiatives.
+    rule_of_law: Poland promotes democratic resilience and reliable information regarding
+      political and social events in Georgia.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Its mission also involves strengthening of the public’s resilience
+        to manipulation and countering disinformation targeted at Georgia and its
+        international partners, most importantly the European Union.
+    enlargement:
+      score: 2
+      evidence: The project, supported by the MFA, is planned to cover all the EU’s
+        Eastern Partnership countries and more.
+    rule_of_law:
+      score: 1
+      evidence: The project aims to present reliable information on political, social,
+        and economic events from the European perspective and support the process
+        of democratisation.

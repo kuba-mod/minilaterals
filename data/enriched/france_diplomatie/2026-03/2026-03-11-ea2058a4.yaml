@@ -1,0 +1,59 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Mark Rutte
+  actors:
+  - FR
+  explicit_weimar: false
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Brussels
+  position: France reaffirmed its commitment to strengthening NATO's European pillar
+    through increased defense cooperation and continued support for Ukraine.
+  positions:
+    ukraine: France strongly supports the long-term military, economic, and diplomatic
+      support for Ukraine until a lasting peace is achieved.
+    defence: France advocates for strengthening European defenses and increasing burden-sharing
+      with the US to bolster NATO's collective defense posture.
+    hybrid: France emphasizes the need for coordinated action regarding advanced deterrence
+      to complement NATO’s global security mission.
+    enlargement: France supports the EU's role in strengthening its pillar and implicitly
+      supports enlargement through discussions on European defense integration.
+    rule_of_law: France stresses the importance of maintaining democratic resilience
+      and stability within the region to support the Alliance's credibility.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The Minister also stressed the importance of continuing our support
+        for Ukraine
+    defence:
+      score: 1
+      evidence: the Minister underscored the European commitment to strengthen its
+        own defenses and engage in burden-sharing with the United States.
+    hybrid:
+      score: 0
+      evidence: addressed the main announcements that were made with regard to advanced
+        deterrence
+    enlargement:
+      score: 0
+      evidence: He noted the key role played by the European Union in this regard.
+    rule_of_law:
+      score: 1
+      evidence: All of these efforts serve to shore up the Alliance’s European pillar,
+        whose development is inextricably linked to the credibility of our deterrence
+        and defense posture.

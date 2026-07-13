@@ -1,0 +1,19 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Irena Lichnerowicz
+  - Anna Godlewska
+  actors:
+  - PL
+  explicit_weimar: false
+  topics: []
+  location: Warsaw, Poland
+  position: The statement focuses on cultural diplomacy and the promotion of Polish
+    arts rather than geopolitical issues related to the Weimar Triangle goals.
+  positions: {}
+  stances: {}
