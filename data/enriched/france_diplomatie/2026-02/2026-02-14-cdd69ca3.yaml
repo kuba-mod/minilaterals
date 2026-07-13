@@ -13,10 +13,6 @@ extracted:
   - France
   - Germany
   - The Netherlands
-  actors:
-  - FR
-  - DE
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

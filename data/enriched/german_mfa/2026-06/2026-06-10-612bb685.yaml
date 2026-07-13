@@ -32,10 +32,6 @@ extracted:
   - Sweden
   - United Kingdom
   - United States of America
-  actors:
-  - DE
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

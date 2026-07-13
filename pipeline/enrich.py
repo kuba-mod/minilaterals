@@ -408,16 +408,17 @@ def _extract(provider, raw_path: Path) -> bool:
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]
 
-        ExtractedSchema.model_validate(extracted)
-
         # Classify from the model's own reading of the item: which Weimar
         # countries are involved, whether it explicitly invokes the trilateral
         # format, and which issue areas it touches. Relevance is then a fixed
         # rule over those signals — mirroring the previous policy (a trilateral
         # signal, two-plus actors on a tracked topic, or a known-actor MFA item
         # on a tracked topic), but with LLM-perceived signals instead of regex.
-        actors = _normalize_actors(extracted.get("actors"), source_name)
-        explicit_weimar = _as_bool(extracted.get("explicit_weimar"))
+        # Pulled out of `extracted` (not part of ExtractedSchema) since they're
+        # promoted to top-level enriched fields instead.
+        actors = _normalize_actors(extracted.pop("actors", None), source_name)
+        explicit_weimar = _as_bool(extracted.pop("explicit_weimar", None))
+        ExtractedSchema.model_validate(extracted)
         from_mfa = source_name in MFA_SOURCES
         trilateral_signal = explicit_weimar or len(actors) == 3
         weimar_relevant = (

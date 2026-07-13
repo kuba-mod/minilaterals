@@ -8,9 +8,6 @@ extracted:
   event_type: statement
   participants:
   - Narges Mohammadi
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

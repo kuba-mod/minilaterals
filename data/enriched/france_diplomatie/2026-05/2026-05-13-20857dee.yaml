@@ -8,9 +8,6 @@ extracted:
   event_type: communique
   participants:
   - Trade Ministers of the Group of Seven (G7)
-  actors:
-  - []
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Paris, France

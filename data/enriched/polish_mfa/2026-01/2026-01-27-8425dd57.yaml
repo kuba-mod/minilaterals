@@ -10,9 +10,6 @@ extracted:
   event_type: meeting
   participants:
   - Deputy Foreign Minister Ignacy Niemczycki
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - enlargement

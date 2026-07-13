@@ -9,9 +9,6 @@ extracted:
   event_type: interview
   participants:
   - Foreign Minister Wadephul
-  actors:
-  - DE
-  explicit_weimar: false
   topics:
   - defence
   - rule_of_law

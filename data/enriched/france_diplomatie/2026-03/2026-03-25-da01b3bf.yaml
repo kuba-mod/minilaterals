@@ -8,9 +8,6 @@ extracted:
   event_type: meeting
   participants:
   - G7 Foreign Ministers
-  actors:
-  - []
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Vaux-de-Cernay, France

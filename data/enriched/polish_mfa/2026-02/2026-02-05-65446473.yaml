@@ -8,9 +8,6 @@ extracted:
   event_type: meeting
   participants:
   - Deputy Foreign Minister Kupiecki
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Cairo, Egypt

@@ -9,10 +9,6 @@ extracted:
   event_type: statement
   participants:
   - Deputy Prime Minister and Foreign Minister Radosław Sikorski
-  actors:
-  - PL
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

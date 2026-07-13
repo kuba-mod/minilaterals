@@ -11,9 +11,6 @@ extracted:
   event_type: meeting
   participants:
   - foreign ministers of Poland and Ireland
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

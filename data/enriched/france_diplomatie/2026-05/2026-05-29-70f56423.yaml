@@ -11,10 +11,6 @@ extracted:
   - Olivier Schmitt
   - Zachary Parolin
   - Cornelia Woll
-  actors:
-  - FR
-  - DE
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Berlin/Paris

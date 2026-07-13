@@ -10,9 +10,6 @@ extracted:
   event_type: meeting
   participants:
   - Head of the Foreign Service and Director-General Henryka Mościcka-Dendys
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - hybrid
   - enlargement

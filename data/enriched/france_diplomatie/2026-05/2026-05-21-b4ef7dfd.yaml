@@ -12,9 +12,6 @@ extracted:
   event_type: communique
   participants:
   - France
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

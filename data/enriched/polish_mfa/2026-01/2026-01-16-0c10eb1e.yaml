@@ -10,9 +10,6 @@ extracted:
   event_type: meeting
   participants:
   - Adam Bugajski, Political Director and Director of the Security Policy Department
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - ukraine
   - hybrid

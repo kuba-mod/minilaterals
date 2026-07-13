@@ -9,9 +9,6 @@ extracted:
   event_type: statement
   participants:
   - Economic Department of the MFA
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - enlargement
   - rule_of_law

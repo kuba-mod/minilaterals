@@ -12,9 +12,6 @@ extracted:
   event_type: joint_statement
   participants:
   - The two delegations
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

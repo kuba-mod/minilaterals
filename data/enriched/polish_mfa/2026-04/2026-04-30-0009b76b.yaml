@@ -9,9 +9,6 @@ extracted:
   participants:
   - Ministry of Foreign Affairs
   - Crisis Management Team
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

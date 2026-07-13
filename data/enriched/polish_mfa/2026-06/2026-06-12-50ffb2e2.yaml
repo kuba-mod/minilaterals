@@ -10,9 +10,6 @@ extracted:
   event_type: speech
   participants:
   - Radosław Sikorski
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

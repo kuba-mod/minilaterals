@@ -9,10 +9,6 @@ extracted:
   participants:
   - Minister Sikorski
   - Deputy Prime Minister Xavier Bettel
-  actors:
-  - PL
-  - '[]'
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

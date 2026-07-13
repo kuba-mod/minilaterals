@@ -13,9 +13,6 @@ extracted:
   event_type: communique
   participants:
   - The Council
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - ukraine
   - defence

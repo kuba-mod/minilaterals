@@ -9,9 +9,6 @@ extracted:
   event_type: speech
   participants:
   - Foreign Minister Johann Wadephul
-  actors:
-  - DE
-  explicit_weimar: false
   topics:
   - ukraine
   - rule_of_law

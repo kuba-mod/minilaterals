@@ -9,10 +9,6 @@ extracted:
   event_type: statement
   participants:
   - President Macron
-  actors:
-  - FR
-  - PL
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

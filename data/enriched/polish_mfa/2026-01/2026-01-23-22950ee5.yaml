@@ -12,10 +12,6 @@ extracted:
   event_type: meeting
   participants:
   - Deputy Minister Henryka Mościcka-Dendys
-  actors:
-  - PL
-  - FR
-  explicit_weimar: 'false'
   topics:
   - defence
   - hybrid

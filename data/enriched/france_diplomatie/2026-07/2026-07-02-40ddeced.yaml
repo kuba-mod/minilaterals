@@ -8,9 +8,6 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants: []
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - ukraine
   - rule_of_law

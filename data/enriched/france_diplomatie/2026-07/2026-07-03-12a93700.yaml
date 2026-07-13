@@ -7,9 +7,6 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants: []
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Damascus, Syria

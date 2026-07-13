@@ -11,9 +11,6 @@ extracted:
   event_type: meeting
   participants:
   - deputy head of Polish diplomacy
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

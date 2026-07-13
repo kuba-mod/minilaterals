@@ -7,9 +7,6 @@ extracted:
   event_type: statement
   participants:
   - MFA
-  actors:
-  - PL
-  explicit_weimar: false
   topics: []
   location: null
   position: Poland issues a strong condemnation of perceived provocations regarding

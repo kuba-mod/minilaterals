@@ -6,9 +6,6 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants: []
-  actors:
-  - FR
-  explicit_weimar: false
   topics: []
   location: null
   position: France remains highly mobilized and actively supports global health initiatives

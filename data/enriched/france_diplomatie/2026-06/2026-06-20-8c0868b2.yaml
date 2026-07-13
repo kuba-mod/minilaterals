@@ -8,9 +8,6 @@ extracted:
   event_type: statement
   participants:
   - Office of the United Nations High Commissioner for Refugees (UNHCR)
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

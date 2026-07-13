@@ -6,9 +6,6 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants: []
-  actors:
-  - FR
-  explicit_weimar: false
   topics: []
   location: null
   position: France expressed condolences and solidarity following the gas explosion

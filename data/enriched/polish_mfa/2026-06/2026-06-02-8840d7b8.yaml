@@ -11,10 +11,6 @@ extracted:
   event_type: meeting
   participants:
   - Deputy Foreign Ministers of Poland and Greece
-  actors:
-  - PL
-  - '[]'
-  explicit_weimar: false
   topics:
   - ukraine
   - enlargement

@@ -12,9 +12,6 @@ extracted:
   event_type: statement
   participants:
   - Poland
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - defence
   - hybrid

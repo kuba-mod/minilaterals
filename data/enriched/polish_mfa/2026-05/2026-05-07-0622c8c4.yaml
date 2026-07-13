@@ -8,9 +8,6 @@ extracted:
   event_type: statement
   participants:
   - Ministry of Foreign Affairs of the Republic of Poland
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

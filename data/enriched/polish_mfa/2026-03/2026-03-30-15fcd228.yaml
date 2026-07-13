@@ -9,9 +9,6 @@ extracted:
   event_type: statement
   participants:
   - Armenian journalists
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - hybrid
   - rule_of_law

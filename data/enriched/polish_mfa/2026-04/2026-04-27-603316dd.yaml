@@ -10,9 +10,6 @@ extracted:
   event_type: statement
   participants:
   - Vot Tak team
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - hybrid
   - enlargement

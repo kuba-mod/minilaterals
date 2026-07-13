@@ -9,9 +9,6 @@ extracted:
   event_type: joint_statement
   participants:
   - Foreign Ministers of the Weimar Triangle
-  actors:
-  - FR
-  explicit_weimar: true
   topics:
   - rule_of_law
   - enlargement

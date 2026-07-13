@@ -10,10 +10,6 @@ extracted:
   participants:
   - France
   - Germany
-  actors:
-  - FR
-  - DE
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null

@@ -13,11 +13,6 @@ extracted:
   - Foreign Ministers of France
   - Foreign Ministers of Germany
   - Foreign Ministers of Poland
-  actors:
-  - FR
-  - DE
-  - PL
-  explicit_weimar: 'true'
   topics:
   - rule_of_law
   - enlargement

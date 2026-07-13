@@ -9,9 +9,6 @@ extracted:
   event_type: joint_statement
   participants:
   - family of Alexei Navalny
-  actors:
-  - PL
-  explicit_weimar: false
   topics:
   - ukraine
   - rule_of_law

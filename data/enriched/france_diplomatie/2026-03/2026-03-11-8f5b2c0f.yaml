@@ -8,9 +8,6 @@ extracted:
   event_type: statement
   participants:
   - UNICEF
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: Goma, Democratic Republic of the Congo

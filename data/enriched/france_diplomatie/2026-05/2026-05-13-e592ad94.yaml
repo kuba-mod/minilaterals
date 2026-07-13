@@ -8,9 +8,6 @@ extracted:
   event_type: statement
   participants:
   - Naoufel Gaied
-  actors:
-  - FR
-  explicit_weimar: false
   topics:
   - rule_of_law
   location: null
