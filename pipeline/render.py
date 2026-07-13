@@ -634,10 +634,10 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
 
 FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 <rect width="64" height="64" rx="12" fill="#1c1812"/>
-<circle cx="32" cy="32" r="3" fill="#f4ecdb"/>
-<path d="M32 12 L32 21" stroke="#9a6a1f" stroke-width="3.5" stroke-linecap="round"/>
-<path d="M13 45 L21 40" stroke="#1f4279" stroke-width="3.5" stroke-linecap="round"/>
-<path d="M51 45 L43 40" stroke="#b22823" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="32" cy="32" r="3.5" fill="#f4ecdb"/>
+<path d="M32 12 L32 21" stroke="#cf9530" stroke-width="5" stroke-linecap="round"/>
+<path d="M13 45 L21 40" stroke="#3a6bb0" stroke-width="5" stroke-linecap="round"/>
+<path d="M51 45 L43 40" stroke="#c23a30" stroke-width="5" stroke-linecap="round"/>
 </svg>
 """
 
