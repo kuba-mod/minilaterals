@@ -14,23 +14,36 @@ from tests.conftest import cluster_from_events, event_dict
 
 
 @pytest.mark.parametrize(
-    "spread,label",
+    "spread,overall,label",
     [
-        (0.0, "Aligned"),
-        (0.5, "Aligned"),
-        (0.51, "Mixed"),
-        (1.5, "Mixed"),
-        (1.51, "Divergent"),
-        (4.0, "Divergent"),
+        # low spread (consensus): label depends on overall goal-alignment
+        (0.0, 2.0, "Aligned"),
+        (0.5, 0.5, "Aligned"),
+        (0.0, 0.49, "Noncommittal"),
+        (0.0, -0.49, "Noncommittal"),
+        (0.5, -0.5, "Aligned against goal"),
+        (0.0, -2.0, "Aligned against goal"),
+        # spread alone drives the label once it's above the consensus threshold
+        (0.51, 2.0, "Mixed"),
+        (0.51, -2.0, "Mixed"),
+        (1.5, 0.0, "Mixed"),
+        (1.51, 0.0, "Divergent"),
+        (4.0, 0.0, "Divergent"),
     ],
 )
-def test_stance_agreement_thresholds(spread, label):
-    assert _stance_agreement(spread)[0] == label
+def test_stance_agreement_thresholds(spread, overall, label):
+    assert _stance_agreement(spread, overall)[0] == label
 
 
 def test_stance_agreement_returns_color():
-    label, color = _stance_agreement(0.0)
+    label, color = _stance_agreement(0.0, 2.0)
     assert color.startswith("#")
+
+
+def test_stance_agreement_aligned_against_goal_is_red():
+    label, color = _stance_agreement(0.0, -2.0)
+    assert label == "Aligned against goal"
+    assert color == "#a14132"
 
 
 # --- score_cluster_stances -------------------------------------------------
@@ -55,6 +68,35 @@ def test_stance_scoring_aligned():
     assert result["spread"] == pytest.approx(0.0)
     assert result["scoring_mode"] == "stance"
     assert result["per_actor"]["DE"]["stance"] == pytest.approx(2.0)
+
+
+def test_stance_scoring_aligned_against_goal():
+    """Both actors at -2 agree with each other but oppose the Weimar goal —
+    this must not read as a green 'Aligned'."""
+    cluster = cluster_from_events(
+        "ukraine",
+        {
+            "DE": [_stance_event("ukraine", -2, "a.yaml")],
+            "FR": [_stance_event("ukraine", -2, "b.yaml")],
+        },
+    )
+    result = score_cluster_stances(cluster)
+    assert result is not None
+    assert result["label"] == "Aligned against goal"
+    assert result["overall"] == pytest.approx(-2.0)
+    assert result["spread"] == pytest.approx(0.0)
+
+
+def test_stance_scoring_noncommittal():
+    cluster = cluster_from_events(
+        "ukraine",
+        {
+            "DE": [_stance_event("ukraine", 0, "a.yaml")],
+            "FR": [_stance_event("ukraine", 0, "b.yaml")],
+        },
+    )
+    result = score_cluster_stances(cluster)
+    assert result["label"] == "Noncommittal"
 
 
 def test_stance_scoring_divergent():
