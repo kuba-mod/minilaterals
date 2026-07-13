@@ -7,6 +7,10 @@ shape (raw event, enriched sidecar, meetings, annual, milestones, edition,
 weimar goals, ingest run log). Run in CI to catch malformed ingest output,
 broken LLM enrichment, or bad hand-edits before they reach the renderer.
 
+Only supported as a module (python -m pipeline.validate) — not as a direct
+script (python pipeline/validate.py) — so pipeline.schemas and
+pipeline.sources.base resolve without a sys.path shim.
+
 Usage:
     python -m pipeline.validate
     python -m pipeline.validate --path data/enriched
@@ -22,10 +26,7 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel, ValidationError
 
-ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
-from pipeline.schemas import (  # noqa: E402 (after sys.path shim above)
+from pipeline.schemas import (
     AnnualSchema,
     EditionSchema,
     EnrichedEventSchema,
@@ -34,8 +35,9 @@ from pipeline.schemas import (  # noqa: E402 (after sys.path shim above)
     RawEventSchema,
     RunLogSchema,
 )
-from pipeline.sources.base import COUNTRY_TERMS, ISSUE_AREAS  # noqa: E402 (after sys.path shim above)
+from pipeline.sources.base import COUNTRY_TERMS, ISSUE_AREAS
 
+ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 
 KNOWN_ACTORS = set(COUNTRY_TERMS)
