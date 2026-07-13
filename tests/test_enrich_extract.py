@@ -88,8 +88,10 @@ def test_extract_writes_enriched_sidecar(data_tree):
     assert extracted["stances"]["ukraine"]["evidence"] == "announced further aid"
     # positions_by_topic is reshaped away.
     assert "positions_by_topic" not in extracted
-    # Classification fields come from a fresh classify(), topics override issue_areas.
+    # Classification is LLM-derived: issue_areas come from topics, and the MFA
+    # source country is folded into actors even though the response omitted it.
     assert written["issue_areas"] == ["ukraine"]
+    assert written["actors"] == ["DE"]
     assert written["weimar_relevant"] is True
 
 
