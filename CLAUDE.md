@@ -35,8 +35,8 @@ uv run ruff check .                          # lint (enforced in CI via .github/
 Sources (RSS/HTML/API)
   → pipeline/ingest.py          orchestrator; writes data/runs/YYYY-MM-DD.yaml
     → pipeline/sources/*.py     one ingester per source; all extend BaseIngester
-      → data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{hash8}.yaml
-        → pipeline/enrich.py    LLM extracts position summary + per-topic stance ratings into extracted: block
+      → data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{hash8}.yaml   (raw scraped fields only)
+        → pipeline/enrich.py    LLM classifies (actors/topics/relevance) + extracts positions & per-topic stances → data/enriched/
           → pipeline/render.py  Jinja2 + stance-based convergence scoring → docs/
 ```
 
@@ -57,9 +57,9 @@ Sources (RSS/HTML/API)
 
 | File | Purpose |
 |---|---|
-| `pipeline/sources/base.py` | `Event` dataclass + `classify()` (regex scoring) + `save()` (dedup by filename) |
+| `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `MFA_SOURCES` known-actor set |
 | `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
-| `pipeline/enrich.py` | `OllamaProvider` / `AnthropicProvider` with identical `call()` interface; extracts positions and per-topic stance ratings |
+| `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders 3 pages |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
@@ -69,16 +69,16 @@ Sources (RSS/HTML/API)
 
 ## Data model
 
-Event YAML fields that matter for logic:
-- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, russia, enlargement, energy, migration, trade), or any item with 2+ Weimar countries mentioned
+Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` sidecar, not the raw event YAML):
+- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar countries and a tracked issue area
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
 - `_file_path` — added at load time by `render.py` (not stored in YAML)
 
-## Relevance classification (`base.py`)
+## Relevance classification (`enrich.py`)
 
-`Event.classify()` sets `actors`, `issue_areas`, `weimar_relevant`, `trilateral_signal`, `weimar_score` from regex matching `COUNTRY_TERMS` and `ISSUE_AREAS` against title+summary. Sources in `MFA_SOURCES` are treated as known-actor: any MFA item touching an issue area is `weimar_relevant` even without cross-country mentions.
+Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor MFA item on a tracked topic. Sources in `MFA_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country MFA item on a tracked topic still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
 
 ## Convergence scoring (`render.py`)
 
@@ -101,13 +101,13 @@ Every ingested event is a file at `data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{
 `hash8 = sha256(source_url + title)[:8]`. File existence = already ingested. No database lookup, no `UNIQUE` constraint. Trade-off: 8 hex chars gives ~1-in-4-billion collision probability, acceptable for this volume. If the same event is published by two sources, both files are kept (different source_name → different path).
 
 **3. MFA sources are known-actor.**
-German MFA, French MFA, and Polish MFA are in `MFA_SOURCES`. Any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across MFAs *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement. Trade-off: this produces false positives (e.g. Germany hosting a Sudan conference gets tagged as relevant because the body mentions "security").
+German MFA, French MFA, and Polish MFA are in `MFA_SOURCES`. During enrichment their source country is folded into `actors`, so any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across MFAs *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement. Trade-off: this produces false positives (an item that only touches a tracked topic in passing still counts).
 
 **4. Two-tier relevance.**
 `weimar_relevant` (broad — enables the comparison view) vs `trilateral_signal` (strong — explicit Weimar/trilateral mention or all 3 actors present). The renderer currently treats both the same way. The `trilateral_signal` field is available for a future "strong signal" filter or separate section.
 
-**5. Keyword classification, then LLM stance rating.**
-Grouping into topic clusters uses regex keyword matching (fast, deterministic, no API cost). Convergence *scoring within* a cluster uses the LLM's per-topic stance ratings (−2..+2 vs. the agreed Weimar goal). These are two separate concerns: keywords decide what goes in a cluster, stance ratings decide how aligned the positions are. Trade-off: keyword matching produces noisy clusters (items about the same keyword but different events); an item the LLM finds no goal-relevant stance in (`topics: []`) simply contributes no rating, so it drops out of the cluster's score rather than skewing it. There is deliberately **one** scoring method — the earlier sentence-embedding/cosine path was removed so the site tells a single, auditable story.
+**5. LLM classification, then LLM stance rating.**
+Two separate concerns, both the model's. Which countries/topics an event covers — and whether it is relevant at all — is decided by the LLM in `pipeline.enrich`; how aligned the positions within a cluster are is decided by the LLM's per-topic stance ratings (−2..+2 vs. the agreed Weimar goal). Classification replaced an earlier regex keyword classifier (`COUNTRY_TERMS`/`ISSUE_AREAS` in `base.py`), which missed inflections, synonyms, and the German/French/Polish sources and could not read paraphrase; there is deliberately **no keyword fallback** (see #8). Scoring likewise has deliberately **one** method — the earlier sentence-embedding/cosine path was removed so the site tells a single, auditable story. Trade-off: classification is now non-deterministic and provider-dependent, and every ingested event costs one model call; an item the LLM finds no goal-relevant stance in (`topics: []`) contributes no rating, so it drops out of the cluster's score rather than skewing it.
 
 **6. One-sentence position extraction.**
 The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly.
@@ -116,11 +116,11 @@ The LLM enrichment prompt asks for a single sentence: "what position does {count
 `pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
 
 **8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
-The stance comparison *is* the product — without `pipeline.enrich` (position extraction + per-topic stance rating) there is only a data-collection pipeline and an empty convergence view. Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if un-scored) site — clusters show without position text and score `None`/no badge when stance ratings are missing. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
+The stance comparison *is* the product, and `pipeline.enrich` now owns both halves of it: in one call it classifies an event (actors/topics/relevance) *and* rates its per-topic stances. Without enrichment there is only a data-collection pipeline — a raw event carries no classification, so `render.py` omits it entirely (it isn't `weimar_relevant`) rather than showing it mis-tagged. There is no keyword fallback: an event the model hasn't processed simply waits, un-categorised, and is retried next run (or recovered by re-running `pipeline.enrich` locally against gemma4). Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if sparser) site. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
 
 ## Adding a new source
 
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]`; call `event.classify()` before yielding
+1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`)
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`
+3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is a foreign ministry (known-actor), also add it to `MFA_SOURCES` in `base.py`
 4. Add a row to the sources table in `pipeline/templates/sources.html`

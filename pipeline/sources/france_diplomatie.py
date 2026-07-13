@@ -100,7 +100,7 @@ class FranceDiplomatieIngester(BaseIngester):
                     source_lang=self.source_lang,
                     source_published_at=published_at,
                     date=date,
-                ).classify()
+                )
 
             # In backfill mode: stop only when an entire page had no items on or after `since`.
             # In normal mode: fetch only the first page.

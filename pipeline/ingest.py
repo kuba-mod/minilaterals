@@ -9,8 +9,10 @@ sys.path shim.
 Usage:
     python -m pipeline.ingest                     # run all sources
     python -m pipeline.ingest --source german_mfa
-    python -m pipeline.ingest --dry-run           # fetch and classify, don't write files
-    python -m pipeline.ingest --weimar-only       # print only Weimar-relevant new items
+    python -m pipeline.ingest --dry-run           # fetch and preview, don't write files
+
+Ingestion only saves raw events; classification (actors, issue areas,
+relevance) happens later in pipeline.enrich.
 """
 
 from __future__ import annotations
@@ -37,16 +39,13 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
         for event in ingester.fetch():
             fetched += 1
             if dry_run:
-                label = "WEIMAR" if event.weimar_relevant else "     ·"
-                print(f"  {label} {event.date} actors={event.actors} | {event.title[:80]}")
+                print(f"  {event.date} | {event.title[:80]}")
                 new += 1
             else:
                 saved = event.save(str(DATA_DIR / "events"))
                 if saved:
-                    event.save_enriched(str(DATA_DIR / "enriched"))
                     new += 1
-                    if event.weimar_relevant:
-                        print(f"  + [{source}] {event.date} — {event.title[:70]}")
+                    print(f"  + [{source}] {event.date} — {event.title[:70]}")
                 else:
                     skipped += 1
     except Exception as exc:
@@ -78,10 +77,7 @@ def write_run_log(results: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Weimar tracker ingestion runner")
     parser.add_argument("--source", help="Run a single source by name")
-    parser.add_argument("--dry-run", action="store_true", help="Fetch and classify without writing files")
-    parser.add_argument(
-        "--weimar-only", action="store_true", help="Only print Weimar-relevant items (suppresses non-relevant output)"
-    )
+    parser.add_argument("--dry-run", action="store_true", help="Fetch and preview without writing files")
     parser.add_argument(
         "--since", metavar="YYYY-MM-DD", help="Backfill: fetch events on or after this date (sources that support it)"
     )

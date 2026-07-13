@@ -56,18 +56,26 @@
 
   <p>
     This tracker ingests press releases and official statements from the foreign ministries of
-    Germany, France, and Poland. Each item is classified for Weimar Triangle relevance and —
-    where relevant — enriched by an LLM to extract a one-sentence position summary.
+    Germany, France, and Poland. Each item is read by a language model, which classifies it for
+    Weimar Triangle relevance and, for relevant items, extracts a one-sentence position summary.
   </p>
 
   <span class="label">Relevance classification</span>
   <p>
-    An item is marked <em>weimar_relevant</em> when it touches a tracked issue area
-    (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law) AND comes from an MFA
-    source, or when two or more Weimar countries are mentioned together and a tracked issue area
-    is present, or when the text contains the phrase "Weimar Triangle" or "trilateral."
-    A stronger <em>trilateral_signal</em> flag is set when all three actors are present or the
-    Weimar/trilateral phrase appears explicitly.
+    Because every source is a specific foreign ministry, the source country always counts as an
+    actor — a Polish statement about Ukraine counts Poland even when the text never names it.
+    On top of that, the same language model that reads each item identifies which other Weimar
+    countries it concerns, which tracked issue areas it touches (Ukraine, defence, hybrid threats,
+    enlargement, green transition, rule of law), and whether it explicitly invokes the Weimar
+    Triangle or trilateral format.
+  </p>
+  <p>
+    An item is marked <em>weimar_relevant</em> when it is a ministry item touching a tracked issue
+    area, when two or more Weimar countries are involved on a tracked issue area, or when it carries
+    an explicit trilateral reference. A stronger <em>trilateral_signal</em> flag is set when all
+    three actors are present or the Weimar/trilateral reference appears explicitly. (Earlier editions
+    matched keywords for this; that missed the German, French, and Polish wording and could not read
+    paraphrase, so the reading is now done by the model.)
   </p>
 
   <span class="label">Positional comparison</span>
@@ -102,11 +110,12 @@
 
   <span class="label">LLM enrichment</span>
   <p>
-    Position extraction and stance rating are done by Gemma 4, an open-weight language model,
-    run through Ollama — on a local machine during development and via Ollama Cloud in the
-    automated pipeline. The model is asked for a one-sentence position summary per topic, a
-    stance rating, and the quote that supports it. Its output is stored separately from the
-    raw scraped text (under <code>data/enriched/</code>), and both are committed to git.
+    Relevance classification, position extraction, and stance rating are all done by Gemma 4,
+    an open-weight language model, run through Ollama — on a local machine during development and
+    via Ollama Cloud in the automated pipeline. The model is asked which countries and issue areas
+    each item concerns, for a one-sentence position summary per topic, a stance rating, and the
+    quote that supports it. Its output is stored separately from the raw scraped text (under
+    <code>data/enriched/</code>), and both are committed to git.
   </p>
 
   <span class="label">Storage and provenance</span>
