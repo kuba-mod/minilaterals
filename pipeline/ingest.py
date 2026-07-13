@@ -2,6 +2,10 @@
 """
 Weimar Triangle tracker — ingestion runner.
 
+Only supported as a module (python -m pipeline.ingest) — not as a direct
+script (python pipeline/ingest.py) — so pipeline.sources resolves without a
+sys.path shim.
+
 Usage:
     python -m pipeline.ingest                     # run all sources
     python -m pipeline.ingest --source german_mfa
@@ -18,11 +22,9 @@ from pathlib import Path
 
 import yaml
 
+from pipeline.sources import ALL_INGESTERS
+
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
-from pipeline.sources import ALL_INGESTERS  # noqa: E402 (after sys.path shim above)
-
 DATA_DIR = ROOT / "data"
 
 
