@@ -7,7 +7,7 @@ import json
 import pytest
 
 from pipeline import enrich
-from pipeline.enrich import _clean_evidence, _clean_stance, _parse_json
+from pipeline.enrich import _clean_evidence, _clean_stance, _parse_json, _validate_llm_shape
 
 # --- _parse_json -----------------------------------------------------------
 
@@ -29,6 +29,37 @@ def test_parse_json_strips_json_tagged_fence():
 def test_parse_json_raises_on_garbage():
     with pytest.raises(json.JSONDecodeError):
         _parse_json("not json at all")
+
+
+# --- _validate_llm_shape -----------------------------------------------------
+
+
+def test_validate_llm_shape_accepts_flat_actors_and_bool():
+    _validate_llm_shape({"actors": ["FR", "DE"], "explicit_weimar": True})
+    _validate_llm_shape({"actors": [], "explicit_weimar": "false"})
+
+
+def test_validate_llm_shape_accepts_missing_fields():
+    _validate_llm_shape({})
+
+
+@pytest.mark.parametrize(
+    "actors",
+    [
+        [["FR"]],
+        ["FR", []],
+        ["FR", 1],
+        "FR",
+    ],
+)
+def test_validate_llm_shape_rejects_nested_or_non_string_actors(actors):
+    with pytest.raises(ValueError, match="actors"):
+        _validate_llm_shape({"actors": actors})
+
+
+def test_validate_llm_shape_rejects_unrecognizable_explicit_weimar():
+    with pytest.raises(ValueError, match="explicit_weimar"):
+        _validate_llm_shape({"explicit_weimar": "maybe"})
 
 
 # --- _clean_stance ---------------------------------------------------------

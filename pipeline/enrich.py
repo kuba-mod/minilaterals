@@ -103,8 +103,8 @@ Return JSON with exactly these fields:
 {{
   "event_type": "one of: joint_statement, speech, meeting, communique, statement",
   "participants": ["list of named officials or roles mentioned"],
-  "actors": ["which Weimar Triangle countries this item represents or discusses, as codes from: DE (Germany), FR (France), PL (Poland); [] if none of the three"],
-  "explicit_weimar": "true if the text explicitly refers to the Weimar Triangle, the Weimar format, or trilateral Germany-France-Poland cooperation, else false",
+  "actors": ["a flat array of zero to three of the strings DE, FR, PL — one entry per Weimar Triangle country (Germany/France/Poland) this item represents or discusses; [] if none of the three; never nest arrays or add other values"],
+  "explicit_weimar": "a JSON boolean, true or false — never a quoted string; true only if the text explicitly refers to the Weimar Triangle, the Weimar format, or trilateral Germany-France-Poland cooperation",
   "topics": ["list from: ukraine, defence, hybrid, enlargement, green_transition, rule_of_law"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
@@ -352,6 +352,19 @@ def _parse_json(raw: str) -> dict:
     return json.loads(raw.strip())
 
 
+def _validate_llm_shape(extracted: dict) -> None:
+    """Reject actors/explicit_weimar shapes the prompt didn't ask for, instead of
+    letting _normalize_actors/_as_bool silently mis-parse them (observed: gemma4
+    occasionally nests "actors", e.g. [["FR"]] or ["FR", []], which a naive
+    str()-based parse just drops with no error)."""
+    actors = extracted.get("actors")
+    if actors is not None and (not isinstance(actors, list) or any(not isinstance(a, str) for a in actors)):
+        raise ValueError(f"actors must be a flat array of strings, got {actors!r}")
+    explicit_weimar = extracted.get("explicit_weimar")
+    if isinstance(explicit_weimar, str) and explicit_weimar.strip().lower() not in {"true", "false"}:
+        raise ValueError(f"explicit_weimar must be a boolean, got {explicit_weimar!r}")
+
+
 def _extract(provider, raw_path: Path) -> bool:
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_name = data.get("source_name", "unknown")
@@ -373,12 +386,13 @@ def _extract(provider, raw_path: Path) -> bool:
             raw = provider.call(prompt)
             try:
                 extracted = _parse_json(raw)
+                _validate_llm_shape(extracted)
                 break
-            except json.JSONDecodeError as exc:
+            except (json.JSONDecodeError, ValueError) as exc:
                 if attempt == 0:
                     print(f"  ~ retry {raw_path.name}: {exc}")
                 else:
-                    print(f"  ! JSON error for {raw_path.name}: {exc} — raw: {raw[:120]}")
+                    print(f"  ! invalid LLM output for {raw_path.name}: {exc} — raw: {raw[:120]}")
                     return False
         assert extracted is not None
 
