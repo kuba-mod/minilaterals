@@ -9,14 +9,14 @@ import pytest
 import yaml
 from pydantic import ValidationError
 
-from pipeline.validate import (
+from pipeline.schemas import (
     AnnualSchema,
     EnrichedEventSchema,
     MeetingSchema,
     RawEventSchema,
     StanceSchema,
-    validate_all,
 )
+from pipeline.validate import validate_all
 
 VALID_RAW_EVENT = {
     "date": "2026-06-01",

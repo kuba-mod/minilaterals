@@ -148,7 +148,7 @@ def test_backfill_stances_adds_ratings(data_tree):
                 "actors": ["DE"],
                 "issue_areas": ["ukraine"],
                 "weimar_relevant": True,
-                "extracted": {"topics": ["ukraine"], "positions": {"ukraine": "x"}, "stances": {}},
+                "extracted": {"topics": ["ukraine"], "position": "x", "positions": {"ukraine": "x"}, "stances": {}},
             },
             allow_unicode=True,
             sort_keys=False,

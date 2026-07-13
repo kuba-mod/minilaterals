@@ -10,6 +10,8 @@ from pathlib import Path
 
 import yaml
 
+from pipeline.schemas import EnrichedEventSchema, RawEventSchema
+
 # ---------------------------------------------------------------------------
 # Relevance signals
 # ---------------------------------------------------------------------------
@@ -148,6 +150,7 @@ class Event:
             "source_published_at": self.source_published_at,
             "ingested_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
+        RawEventSchema.model_validate(data)
         path.write_text(yaml.dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
         return True
 
@@ -166,6 +169,7 @@ class Event:
             "trilateral_signal": self.trilateral_signal,
             "extracted": self.extracted,
         }
+        EnrichedEventSchema.model_validate(data)
         path.write_text(yaml.dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
 
 
