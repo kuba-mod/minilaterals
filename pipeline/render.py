@@ -25,7 +25,6 @@ import glob
 import hashlib
 import json
 import os
-import sys
 from collections import defaultdict
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -34,8 +33,6 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
 TEMPLATES_DIR = ROOT / "pipeline" / "templates"
 EDITION_FILE = ROOT / "data" / "edition.yaml"
 

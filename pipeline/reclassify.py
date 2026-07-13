@@ -15,6 +15,10 @@ Two modes:
 
 Does NOT touch any other fields (title, summary, extracted, etc.).
 
+Only supported as a module (python -m pipeline.reclassify) — not as a direct
+script (python pipeline/reclassify.py) — so pipeline.sources.base resolves
+without a sys.path shim.
+
 Usage:
     python -m pipeline.reclassify
     python -m pipeline.reclassify --dry-run          # show changes without writing
@@ -27,17 +31,14 @@ from __future__ import annotations
 
 import argparse
 import glob
-import sys
 from collections import Counter
 from pathlib import Path
 
 import yaml
 
+from pipeline.sources.base import Event
+
 ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
-
-from pipeline.sources.base import Event  # noqa: E402
-
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
 
