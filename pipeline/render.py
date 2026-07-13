@@ -204,6 +204,11 @@ STANCE_MIXED_SPREAD = 1.5
 GOAL_BACKING_OVERALL = 0.5
 GOAL_AGAINST_OVERALL = -0.5
 
+# A weekly point resting on fewer rated statements than this is low-confidence:
+# it renders as a hollow ring so a spike on 2–3 statements can't masquerade as a
+# strong signal. Kept in sync with the JS constant in templates/index.html.
+LOW_CONFIDENCE_N = 4
+
 COLOR_GREEN = "#4d6b38"
 COLOR_AMBER = "#8a6320"
 COLOR_RED = "#a14132"
@@ -468,26 +473,54 @@ def compute_topic_weekly_stances(
     return {"overall": overall_series, **per_topic}
 
 
+def _timeline_domain(scored: list[dict]) -> tuple[float, float]:
+    """
+    Fit-to-data vertical domain (in 0..1 plot units) for a scored weekly series.
+
+    Support barely leaves the +1.0…+1.5 band, so a fixed −2..+2 axis crushes all
+    week-to-week movement into a sliver. Instead we frame the actual band range
+    (min country-low → max country-high) with padding, and never zoom so far in
+    that a flat series looks jittery. Mirrored by the JS `domainFor` in
+    templates/index.html so client-side redraws match.
+    """
+    lo = min(w.get("band_lo", w["overall"]) for w in scored)
+    hi = max(w.get("band_hi", w["overall"]) for w in scored)
+    rng = hi - lo
+    pad = max(0.05, rng * 0.18)
+    dom_lo = max(0.0, lo - pad)
+    dom_hi = min(1.0, hi + pad)
+    if dom_hi - dom_lo < 0.25:  # don't over-magnify a nearly-flat topic
+        mid = (dom_lo + dom_hi) / 2
+        dom_lo, dom_hi = max(0.0, mid - 0.125), min(1.0, mid + 0.125)
+    return dom_lo, dom_hi
+
+
 def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
     """
     Convert a weekly series into SVG-ready coordinate data for the template.
 
     Entries carry `overall` as a 0..1 plot value (stance −2..+2 mapped via
     _stance_norm), plus `display` ("+1.3"), `band_lo`/`band_hi` (min/max country
-    mean) and `per_actor`.
+    mean) and `per_actor`. The vertical axis is fit to the data (see
+    `_timeline_domain`); the line is a single stable ink stroke and each dot is
+    colored by that week's agreement bucket, so height and color read as two
+    independent axes.
     """
     scored = [w for w in weekly if w is not None]
     if len(scored) < 2:
         return None
 
-    PAD_L, PAD_R, PAD_T, PAD_B = 44, 20, 15, 35
+    PAD_L, PAD_R, PAD_T, PAD_B = 44, 26, 15, 35
     W, H = 800, 220
     chart_w = W - PAD_L - PAD_R
     chart_h = H - PAD_T - PAD_B
     n = len(weekly)
 
+    dom_lo, dom_hi = _timeline_domain(scored)
+
     def y_for(score: float) -> float:
-        return PAD_T + chart_h * (1.0 - score)
+        frac = (score - dom_lo) / (dom_hi - dom_lo)
+        return PAD_T + chart_h * (1.0 - frac)
 
     def x_for(idx: int) -> float:
         return PAD_L + idx * chart_w / (n - 1) if n > 1 else PAD_L + chart_w / 2
@@ -500,7 +533,7 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
     for i, w in enumerate(weekly):
         x = round(x_for(i), 1)
         if w is None:
-            points.append({"x": x, "y": round(y_for(0.5), 1), "has_data": False})
+            points.append({"x": x, "y": round(y_for((dom_lo + dom_hi) / 2), 1), "has_data": False})
             continue
 
         y = round(y_for(w["overall"]), 1)
@@ -514,11 +547,13 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
 
         actors_str = ", ".join(w.get("actors_scored") or [])
         n_ev = w.get("n_events", "?")
+        low = isinstance(n_ev, int) and n_ev < LOW_CONFIDENCE_N
         tooltip = f"Week of {w['week']}  ·  {w['label']} · avg stance {display}"
         tooltip += (
             (f"\n{detail}" if detail else "")
             + (f"\nActors: {actors_str}  ·  " if actors_str else "\n")
             + f"{n_ev} rated statements  ·  14-day rolling window"
+            + ("  ·  low confidence" if low else "")
         )
         points.append(
             {
@@ -530,17 +565,20 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
                 "color": w["color"],
                 "label": w["label"],
                 "display": display,
+                "low": low,
             }
         )
         line_xy.append(f"{x},{y}")
 
     band_points = " ".join(band_top) + " " + " ".join(reversed(band_bot)) if band_top else ""
 
-    # Reference lines mark the stance rubric levels (+1 supportive, 0 neutral).
-    ref_lines = [
-        {"y": round(y_for(_stance_norm(1.0)), 1), "color": COLOR_GREEN, "label": "+1"},
-        {"y": round(y_for(_stance_norm(0.0)), 1), "color": COLOR_AMBER, "label": "0"},
-    ]
+    # Reference lines at the integer stance levels that fall inside the fitted
+    # domain, drawn neutral — the rubric colours now live on the dots + legend.
+    ref_lines = []
+    for s in (-2, -1, 0, 1, 2):
+        norm = _stance_norm(float(s))
+        if dom_lo - 1e-6 <= norm <= dom_hi + 1e-6:
+            ref_lines.append({"y": round(y_for(norm), 1), "label": f"{s:+d}" if s else "0"})
 
     return {
         "points": points,
@@ -550,6 +588,105 @@ def build_timeline_svg_data(weekly: list[dict | None]) -> dict | None:
         "viewbox": f"0 0 {W} {H}",
         "recent": scored[-1],
     }
+
+
+def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> list[dict]:
+    """
+    Rank topics by how far apart the three capitals were in the current week.
+
+    The current week is the latest week any topic has scored. Topics scored that
+    week are ranked by spread (most contested first); topics that were quiet that
+    week fall to the bottom flagged `quiet`. This is what makes the "most
+    relevant story" re-order on its own each week rather than sit in a fixed list.
+    """
+    topic_series = {a: s for a, s in topic_weekly.items() if a != "overall"}
+    if not topic_series:
+        return []
+
+    # Current week = the latest week label present anywhere in the topic series.
+    weeks = {w["week"] for s in topic_series.values() for w in (s or []) if w}
+    if not weeks:
+        return []
+    current = max(weeks)
+
+    rows = []
+    for area in ISSUE_ORDER:
+        series = topic_series.get(area) or []
+        entry = next((w for w in series if w and w["week"] == current), None)
+        latest = next((w for w in reversed(series) if w), None)
+        if entry:
+            n = entry.get("n_events", 0)
+            rows.append(
+                {
+                    "area": area,
+                    "quiet": False,
+                    "spread": round((entry["band_hi"] - entry["band_lo"]) * 4.0, 2),
+                    "label": entry["label"],
+                    "color": entry["color"],
+                    "stance_avg": entry.get("stance_avg"),
+                    "display": entry.get("display"),
+                    "n": n,
+                    "low": isinstance(n, int) and n < LOW_CONFIDENCE_N,
+                }
+            )
+        elif latest:
+            # Topic exists but published nothing rateable in the current window.
+            rows.append({"area": area, "quiet": True, "spread": -1.0, "label": None, "color": None})
+
+    rows.sort(key=lambda r: (r["quiet"], -r["spread"]))
+    return rows
+
+
+def build_topic_drilldown(
+    topic_weekly: dict[str, list[dict | None]], events: list[dict], window_days: int = 14
+) -> dict[str, dict[str, list[dict]]]:
+    """
+    Per-topic, per-week list of the actual MFA statements behind each dot.
+
+    Keyed {topic: {week: [statement, …]}} using the same 14-day rolling window as
+    the score, so clicking a dot surfaces exactly the position + evidence quote +
+    source that produced that week's rating. Written to `data/{topic}.json` and
+    fetched on demand by the client.
+    """
+    actor_map = {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"}
+    recs_by_topic: dict[str, list[dict]] = defaultdict(list)
+    for e in events:
+        src = e.get("source_name", "")
+        if src not in actor_map:
+            continue
+        ex = e.get("extracted") or {}
+        position = (ex.get("position") or "")[:280]
+        for topic, entry in (ex.get("stances") or {}).items():
+            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
+                recs_by_topic[topic].append(
+                    {
+                        "date": e.get("date", ""),
+                        "actor": actor_map[src],
+                        "score": entry["score"],
+                        "evidence": (entry.get("evidence") or "")[:240],
+                        "position": position,
+                        "title": (e.get("title") or "")[:160],
+                        "url": e.get("source_url", ""),
+                    }
+                )
+
+    out: dict[str, dict[str, list[dict]]] = {}
+    for area, series in topic_weekly.items():
+        if area == "overall":
+            continue
+        weeks: dict[str, list[dict]] = {}
+        for w in series or []:
+            if not w:
+                continue
+            wk = w["week"]
+            window_start = (
+                datetime.strptime(wk, "%Y-%m-%d").date() - timedelta(days=window_days)
+            ).strftime("%Y-%m-%d")
+            items = [r for r in recs_by_topic.get(area, []) if window_start <= r["date"] <= wk]
+            items.sort(key=lambda r: (r["actor"], r["date"]))
+            weeks[wk] = items
+        out[area] = weeks
+    return out
 
 
 def load_latest_run() -> dict | None:
@@ -785,6 +922,9 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         initial_weekly = []
         topic_weekly = {}
     timeline_svg = build_timeline_svg_data(initial_weekly)
+    # Each week carries both plot axes the client redraws from: `score`/`blo`/`bhi`
+    # are 0..1 plot units (line + fit-to-data band), `spread` is stance units
+    # (drives the agreement colour + low-confidence flag).
     topic_series_json = json.dumps(
         {
             k: [
@@ -793,28 +933,34 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 else {
                     "week": w["week"],
                     "score": w["overall"],
+                    "blo": w.get("band_lo"),
+                    "bhi": w.get("band_hi"),
+                    "spread": round((w["band_hi"] - w["band_lo"]) * 4.0, 2),
                     "display": w.get("display") or f"{int(w['overall'] * 100)}%",
                     "label": w["label"],
                     "color": w["color"],
+                    "n": w.get("n_events"),
+                    "low": isinstance(w.get("n_events"), int) and w["n_events"] < LOW_CONFIDENCE_N,
+                    "per_actor": w.get("per_actor") or {},
                 }
                 for w in v
             ]
             for k, v in topic_weekly.items()
         }
     )
-    # Pill state per topic: the latest scored cluster, overridden below by the
-    # latest scored week of the stance series once it has ≥2 weeks.
-    topic_pills = compute_latest_topic_pills(clusters, today=edition_dt)
-    for area in ISSUE_ORDER:
-        series = topic_weekly.get(area) or []
-        latest = next((w for w in reversed(series) if w is not None), None)
-        if latest and sum(1 for w in series if w is not None) >= 2:
-            topic_pills[area] = {
-                "label": latest["label"],
-                "color": latest["color"],
-                "overall": latest["overall"],
-                "display": latest["display"],
-            }
+    # Divergence leaderboard: topics ranked by this week's DE·FR·PL spread, so the
+    # most contested story leads and re-orders itself each week.
+    leaderboard = build_divergence_leaderboard(topic_weekly)
+
+    # Per-topic drill-down: the statements behind each dot, written as one JSON
+    # file per topic under data/ and fetched on demand when a dot is clicked.
+    drilldown = build_topic_drilldown(topic_weekly, events)
+    if drilldown:
+        (out / "data").mkdir(exist_ok=True)
+        for area, weeks in drilldown.items():
+            (out / "data" / f"{area}.json").write_text(
+                json.dumps(weeks, ensure_ascii=False), encoding="utf-8"
+            )
 
     # Recent events: last 90 days before the edition cutoff
     cutoff = (edition_dt - timedelta(days=90)).strftime("%Y-%m-%d")
@@ -915,7 +1061,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             total_all=len(all_events),
             meetings_count=len(meetings),
             timeline_svg=timeline_svg,
-            topic_pills=topic_pills,
+            leaderboard=leaderboard,
             issue_order=ISSUE_ORDER,
             country_stats=country_stats,
             weimar_actors=WEIMAR_ACTORS,
