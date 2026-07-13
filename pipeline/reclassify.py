@@ -1,26 +1,19 @@
 #!/usr/bin/env python3
 """
-Weimar Triangle tracker — re-classification step.
+Weimar Triangle tracker — issue-area re-sync.
 
-Two modes:
+Overwrites each enriched event's issue_areas from its extracted.topics (the
+LLM-assigned topics). pipeline.enrich already sets issue_areas this way when it
+writes an event, so this is a repair/backfill tool: use it to re-apply topic
+tags to older events after editing the enrichment prompt, without re-calling
+the model.
 
-1. Default: re-runs Event.classify() on all event YAML files and writes back
-   the classification fields (actors, issue_areas, weimar_relevant,
-   trilateral_signal). Use after updating ISSUE_AREAS or
-   COUNTRY_TERMS in pipeline/sources/base.py.
-
-2. --from-extracted: overwrites issue_areas from extracted.topics for all
-   already-enriched events. Use this to apply LLM-sourced topic tags to
-   events that were enriched before this mode existed.
-
-Does NOT touch any other fields (title, summary, extracted, etc.).
+Does NOT touch any other fields (title, text, extracted, stances, etc.).
 
 Usage:
     python -m pipeline.reclassify
     python -m pipeline.reclassify --dry-run          # show changes without writing
     python -m pipeline.reclassify --source polish_mfa
-    python -m pipeline.reclassify --from-extracted   # sync issue_areas from LLM topics
-    python -m pipeline.reclassify --from-extracted --dry-run
 """
 
 from __future__ import annotations
@@ -36,67 +29,8 @@ import yaml
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from pipeline.sources.base import Event  # noqa: E402
-
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
-
-CLASSIFICATION_FIELDS = {"actors", "issue_areas", "weimar_relevant", "trilateral_signal"}
-
-
-def _reclassify_file(raw_path: Path, dry_run: bool) -> str | None:
-    """Re-classify one event. Reads raw file, writes classification to enriched sidecar."""
-    try:
-        raw = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
-    except Exception as exc:
-        print(f"  SKIP {raw_path}: {exc}")
-        return None
-
-    if not raw:
-        return None
-
-    event = Event(
-        source_name=raw.get("source_name", ""),
-        title=raw.get("title", ""),
-        text=raw.get("text", "") or "",
-        source_url=raw.get("source_url", ""),
-        source_lang=raw.get("source_lang", "en"),
-        source_published_at=raw.get("source_published_at", ""),
-        date=raw.get("date", ""),
-    ).classify()
-
-    rel = raw_path.relative_to(EVENTS_DIR)
-    enriched_path = ENRICHED_DIR / rel
-
-    # Load existing enriched data (or start fresh)
-    enriched: dict = {}
-    if enriched_path.exists():
-        try:
-            enriched = yaml.safe_load(enriched_path.read_text(encoding="utf-8")) or {}
-        except Exception:
-            pass
-
-    changed = {}
-    for field in CLASSIFICATION_FIELDS:
-        old = enriched.get(field)
-        new = getattr(event, field)
-        if old != new:
-            changed[field] = (old, new)
-
-    if not changed:
-        return None
-
-    summary = "  " + raw_path.name
-    for field, (old, new) in changed.items():
-        summary += f"\n    {field}: {old!r} → {new!r}"
-
-    if not dry_run:
-        for field in CLASSIFICATION_FIELDS:
-            enriched[field] = getattr(event, field)
-        enriched_path.parent.mkdir(parents=True, exist_ok=True)
-        enriched_path.write_text(yaml.dump(enriched, allow_unicode=True, sort_keys=False), encoding="utf-8")
-
-    return summary
 
 
 def _sync_from_extracted(raw_path: Path, dry_run: bool) -> str | None:
@@ -134,32 +68,22 @@ def _sync_from_extracted(raw_path: Path, dry_run: bool) -> str | None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Re-classify all event YAML files")
+    parser = argparse.ArgumentParser(description="Re-sync issue_areas from LLM topics")
     parser.add_argument("--dry-run", action="store_true", help="Show changes without writing")
     parser.add_argument("--source", help="Limit to a single source name")
-    parser.add_argument(
-        "--from-extracted",
-        action="store_true",
-        help="Sync issue_areas from extracted.topics (LLM topics) instead of re-running classify()",
-    )
     args = parser.parse_args()
 
     if args.source:
         pattern = str(EVENTS_DIR / args.source / "*" / "*.yaml")
-        files = sorted(glob.glob(pattern))
     else:
         pattern = str(EVENTS_DIR / "*" / "*" / "*.yaml")
-        files = sorted(glob.glob(pattern))
+    files = sorted(glob.glob(pattern))
 
-    mode = "from-extracted" if args.from_extracted else "regex classify()"
-    print(f"{'DRY RUN — ' if args.dry_run else ''}Re-classifying {len(files)} event files (mode: {mode}) …")
+    print(f"{'DRY RUN — ' if args.dry_run else ''}Re-syncing issue_areas for {len(files)} event files …")
 
     counts: Counter = Counter()
     for f in files:
-        if args.from_extracted:
-            result = _sync_from_extracted(Path(f), args.dry_run)
-        else:
-            result = _reclassify_file(Path(f), args.dry_run)
+        result = _sync_from_extracted(Path(f), args.dry_run)
         if result:
             print(result)
             counts["changed"] += 1

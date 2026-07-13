@@ -119,7 +119,7 @@ class PolishMFAIngester(BaseIngester):
                     source_lang=self.source_lang,
                     source_published_at=published_at,
                     date=date,
-                ).classify()
+                )
 
             if all_before_since or not self.since:
                 break
