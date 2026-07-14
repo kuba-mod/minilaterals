@@ -121,15 +121,65 @@
     if (!originalClusterOrder) {
       originalClusterOrder = clusters.map(function(c) { return c.id; });
     }
+
+    // FLIP: record first positions before reordering.
+    var firstRects = {};
+    clusters.forEach(function(c) { firstRects[c.id] = c.getBoundingClientRect(); });
+
+    var target = null;
     if (key === 'overall') {
       originalClusterOrder.forEach(function(id) {
         var el = document.getElementById(id);
         if (el) container.appendChild(el);
       });
     } else {
-      var target = document.getElementById('cluster-' + key);
+      target = document.getElementById('cluster-' + key);
       if (target && container.firstElementChild !== target) {
         container.insertBefore(target, container.firstElementChild);
+      }
+    }
+
+    // FLIP: invert (jump to old position with no transition), then play on
+    // the next frame so the browser actually paints the inverted state
+    // before we clear it — clearing in the same tick lets browsers coalesce
+    // both style writes into one paint and skip the transition entirely.
+    var toAnimate = [];
+    clusters.forEach(function(c) {
+      var first = firstRects[c.id];
+      var last = c.getBoundingClientRect();
+      var dy = first.top - last.top;
+      if (!dy) return;
+      c.style.transition = 'none';
+      c.style.transform = 'translateY(' + dy + 'px)';
+      c.classList.remove('cluster--flip');
+      toAnimate.push(c);
+    });
+    if (toAnimate.length) {
+      // Force layout so the inverted transform is committed before the rAF flip.
+      toAnimate.forEach(function(c) { c.offsetHeight; });
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          toAnimate.forEach(function(c) {
+            c.classList.add('cluster--flip');
+            c.style.transform = '';
+            c.addEventListener('transitionend', function handler() {
+              c.classList.remove('cluster--flip');
+              c.style.transition = '';
+              c.removeEventListener('transitionend', handler);
+            });
+          });
+        });
+      });
+    }
+
+    if (target && key !== 'overall') {
+      target.classList.remove('cluster--highlight');
+      // eslint-disable-next-line no-unused-expressions
+      target.offsetHeight; // force reflow so the animation restarts on repeat clicks
+      target.classList.add('cluster--highlight');
+      var rect = target.getBoundingClientRect();
+      if (rect.top < 60 || rect.bottom > window.innerHeight) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }
