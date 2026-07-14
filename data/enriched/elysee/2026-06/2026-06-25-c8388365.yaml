@@ -1,0 +1,42 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Italy
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: null
+  position: France and Italy reaffirm their deep bilateral cooperation while committing
+    to strengthening European resilience and providing comprehensive support to Ukraine
+    against Russian aggression.
+  positions:
+    ukraine: The joint statement commits to continued comprehensive political, financial,
+      economic, humanitarian, diplomatic, and military support for Ukraine's independence
+      and territorial integrity.
+    defence: The nations commit to deepening cooperation on foreign, security, and
+      defence policy at multiple levels (bilateral, European, multilateral).
+    rule_of_law: The statement emphasizes commitment to the rules-based international
+      order and democratic resilience in the face of geopolitical challenges.
+  stances:
+    ukraine:
+      score: 2
+      evidence: we will continue to provide comprehensive political, financial, economic,
+        humanitarian, diplomatic and military support to Ukraine and its people
+    defence:
+      score: 1
+      evidence: we reaffirm our will to further deepen Franco-Italian cooperation
+        on foreign, security and defence policy across all fields
+    rule_of_law:
+      score: 1
+      evidence: we reaffirm our commitment to the rules-based international order

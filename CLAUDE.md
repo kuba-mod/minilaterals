@@ -70,7 +70,7 @@ Sources (RSS/HTML/API)
 ## Data model
 
 Event YAML fields that matter for logic:
-- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, russia, enlargement, energy, migration, trade), or any item with 2+ Weimar countries mentioned
+- `weimar_relevant: true` — any item from a principal source (MFA or head-of-government office) touching a tracked issue area (ukraine, defence, russia, enlargement, energy, migration, trade), or any item with 2+ Weimar countries mentioned
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
@@ -78,7 +78,7 @@ Event YAML fields that matter for logic:
 
 ## Relevance classification (`base.py`)
 
-`Event.classify()` sets `actors`, `issue_areas`, `weimar_relevant`, `trilateral_signal`, `weimar_score` from regex matching `COUNTRY_TERMS` and `ISSUE_AREAS` against title+summary. Sources in `MFA_SOURCES` are treated as known-actor: any MFA item touching an issue area is `weimar_relevant` even without cross-country mentions.
+`Event.classify()` sets `actors`, `issue_areas`, `weimar_relevant`, `trilateral_signal`, `weimar_score` from regex matching `COUNTRY_TERMS` and `ISSUE_AREAS` against title+summary. Sources in `PRINCIPAL_SOURCES` (MFAs + heads-of-government offices) are treated as known-actor: any item from them touching an issue area is `weimar_relevant` even without cross-country mentions. `SOURCE_ACTOR` (also in `base.py`) maps every source to its country code and is imported by `render.py` for per-country pooling.
 
 ## Convergence scoring (`render.py`)
 
@@ -100,8 +100,8 @@ Every ingested event is a file at `data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{
 **2. Deduplication by filename.**
 `hash8 = sha256(source_url + title)[:8]`. File existence = already ingested. No database lookup, no `UNIQUE` constraint. Trade-off: 8 hex chars gives ~1-in-4-billion collision probability, acceptable for this volume. If the same event is published by two sources, both files are kept (different source_name → different path).
 
-**3. MFA sources are known-actor.**
-German MFA, French MFA, and Polish MFA are in `MFA_SOURCES`. Any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across MFAs *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement. Trade-off: this produces false positives (e.g. Germany hosting a Sudan conference gets tagged as relevant because the body mentions "security").
+**3. Principal sources are known-actor.**
+The three MFAs and the three heads-of-government offices (Chancellery, Élysée, KPRM) are in `PRINCIPAL_SOURCES`. Any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across countries *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement; and Weimar summits are leader-level, so chancellery output is as much the country position as MFA output. Trade-off: this produces false positives (e.g. Germany hosting a Sudan conference gets tagged as relevant because the body mentions "security"). Future *sectoral* sources (environment, defence ministries) should get a `SOURCE_ACTOR` entry but stay out of `PRINCIPAL_SOURCES`: their newsrooms are dominated by domestic policy, so they keep the stricter 2+-country / explicit-trilateral gate.
 
 **4. Two-tier relevance.**
 `weimar_relevant` (broad — enables the comparison view) vs `trilateral_signal` (strong — explicit Weimar/trilateral mention or all 3 actors present). The renderer currently treats both the same way. The `trilateral_signal` field is available for a future "strong signal" filter or separate section.
@@ -120,7 +120,7 @@ The stance comparison *is* the product — without `pipeline.enrich` (position e
 
 ## Adding a new source
 
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]`; call `event.classify()` before yielding
+1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]`; call `event.classify()` before yielding. gov.pl ministries can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and only set `source_name` + `news_url`
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`
+3. Add to `SOURCE_ACTOR` in `base.py` (and to `PRINCIPAL_SOURCES` only if it's an MFA/head-of-government source — sectoral ministries stay out), plus `SOURCE_LABELS` in both `render.py` and `enrich.py`
 4. Add a row to the sources table in `pipeline/templates/sources.html`

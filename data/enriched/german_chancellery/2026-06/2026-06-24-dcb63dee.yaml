@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.4
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emanuel Macron
+  - Keir Starmer
+  - Georgia Meloni
+  - Donald Tusk
+  - Mark Rutte
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany hosted an E5 meeting focused on preparing for the NATO summit
+    and discussing support for Ukraine, Iran, and Lebanon.
+  positions:
+    ukraine: Germany committed to providing additional support for Ukraine in the
+      face of Russia’s war of aggression.
+    hybrid: The meeting agenda included discussions on various geopolitical issues
+      but did not specify a stance on hybrid threats.
+    rule_of_law: Germany's focus was on high-level security and defense cooperation
+      among E5 members rather than explicitly detailing rule of law principles.
+  stances:
+    ukraine:
+      score: 1
+      evidence: discussed additional support for Ukraine in the face of Russia’s war
+        of aggression
+    hybrid:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 0
+      evidence: ''

@@ -1,0 +1,19 @@
+actors: []
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor
+  - Other members of the Federal Government
+  - representatives of the Federal States
+  topics: []
+  location: null
+  position: The National Security Council serves as a central coordinating body for
+    national security issues, pooling expertise across internal, external, economic,
+    digital, civil, and military defense domains.
+  positions: {}
+  stances: {}

@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Lithuania
+  position: Germany emphasizes the need for strong European cohesion and resolute
+    action, alongside Lithuania and NATO partners, to counter Russian threats and
+    defend freedom.
+  positions:
+    ukraine: Germany commits to continued support for Ukraine's efforts to end Russia’s
+      war of aggression, viewing a strong Ukraine as essential for lasting peace in
+      Europe.
+    defence: Germany supports strengthening its defense capabilities and collective
+      security by increasing vigilance, investing in infrastructure, and deploying
+      military assets abroad.
+    hybrid: Germany calls for coordinated action with partners to ward off diverse
+      Russian threats, including those that undermine security and stability.
+    rule_of_law: Germany stresses that maintaining democratic resilience and European
+      unity requires countering external threats and ensuring self-defense capabilities.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Another thing that unites us with our Lithuanian friends is our firm
+        support for Ukraine – especially now, in this perhaps crucial phase of the
+        international efforts to end Russia’s war of aggression.
+    defence:
+      score: 2
+      evidence: The fact that Germany is stationing such a brigade abroad for the
+        first time is an indication of how serious the situation is, but also of the
+        strength of our resolve to stand by our friends and allies.
+    hybrid:
+      score: 2
+      evidence: My talks in Lithuania will address, among other things, ways to cooperate
+        even more closely to ward off the diverse Russian threats – for Vilnius and
+        for Berlin.
+    rule_of_law:
+      score: 1
+      evidence: We must counter the threat from Russia with strong European cohesion.

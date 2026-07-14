@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  topics:
+  - defence
+  location: null
+  position: France and Germany have reached an agreement to strengthen their common
+    sovereignty in land defence through a joint venture.
+  positions:
+    defence: France and Germany are strengthening European defense capabilities by
+      establishing a joint ownership structure for KNDS, aiming to boost industrial
+      and military sovereignty.
+  stances:
+    defence:
+      score: 2
+      evidence: By setting out this Franco-German framework, the two States have taken
+        a decisive step towards strengthening their common sovereignty in land defence.

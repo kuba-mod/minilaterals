@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany reaffirmed its commitment to a strategic partnership with Ukraine
+    through joint declarations and agreements on security and reconstruction.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine across multiple dimensions
+      by signing agreements on industrial reconstruction and general cooperation.
+    defence: Germany supports strengthening defense capabilities through bilateral
+      agreements focused on weapons systems development and security cooperation.
+    enlargement: While the text focuses on bilateral partnership, it supports Ukraine's
+      long-term integration and status through comprehensive agreements.
+    rule_of_law: Germany supports democratic resilience and stability in Ukraine through
+      agreements on security cooperation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Ukraine and Germany also signed agreements on security cooperation
+        and on industrial reconstruction in Ukraine.
+    defence:
+      score: 2
+      evidence: Germany and Ukraine want to intensify their cooperation in areas such
+        as the development of weapons systems.
+    enlargement:
+      score: 1
+      evidence: The first consultations in over 20 years set the course for a strategic
+        partnership.
+    rule_of_law:
+      score: 1
+      evidence: Both governments agreed on a joint declaration that further strengthens
+        this partnership.

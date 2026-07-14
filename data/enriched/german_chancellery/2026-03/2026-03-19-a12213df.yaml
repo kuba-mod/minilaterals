@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  - United Kingdom
+  - Italy
+  - Netherlands
+  - Japan
+  - Canada
+  topics:
+  - rule_of_law
+  location: null
+  position: The participating nations strongly condemn Iran's actions in the Strait
+    of Hormuz and call for an immediate cessation of threats to international shipping
+    and compliance with UN resolutions.
+  positions:
+    rule_of_law: Germany supports upholding international law by condemning attacks
+      on commercial vessels and demanding adherence to UN Security Council Resolutions
+      regarding freedom of navigation.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We condemn in the strongest terms recent attacks by Iran on unarmed
+        commercial vessels in the Gulf, attacks on civilian infrastructure including
+        oil and gas installations, and the de facto closure of the Straits of Hormuz
+        by Iranian forces.

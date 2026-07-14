@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany prioritizes strengthening critical infrastructure protection and
+    economic resilience by restricting public access to sensitive information and
+    focusing on key reforms.
+  positions:
+    hybrid: Germany calls for increased protection of critical infrastructure against
+      hybrid threats, including sabotage and cyberattacks.
+    rule_of_law: Germany emphasizes that protecting society and strengthening the
+      political order requires prioritizing security over public transparency regarding
+      critical infrastructure.
+  stances:
+    hybrid:
+      score: 2
+      evidence: In order to better protect selected critical infrastructure against
+        sabotage, hybrid threats and cyberattacks, the level of protection is to be
+        increased.
+    rule_of_law:
+      score: 2
+      evidence: From the Chancellor’s point of view, the protection of critical infrastructure
+        takes precedence over the desire for transparency.

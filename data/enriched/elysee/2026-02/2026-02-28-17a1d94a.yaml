@@ -1,0 +1,21 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  - United Kingdom
+  topics: []
+  location: null
+  position: The leaders of France, Germany, and the United Kingdom jointly condemn
+    Iran's activities, calling for it to cease its nuclear program, curb missile development,
+    stop destabilizing actions in the region, and end violence against its own people.
+  positions: {}
+  stances: {}

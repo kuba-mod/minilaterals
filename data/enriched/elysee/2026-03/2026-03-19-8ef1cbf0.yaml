@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  - Italy
+  - Japan
+  - the Netherlands
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: The participating nations strongly condemn Iran's actions in the Gulf
+    and call for immediate cessation of threats to ensure freedom of navigation.
+  positions:
+    rule_of_law: The statement emphasizes adherence to international law and global
+      security principles regarding maritime passage.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Freedom of navigation is a fundamental principle of international
+        law, including under the United Nations Convention on the Law of the Sea.

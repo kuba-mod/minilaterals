@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - His Highness Sheikh Abdullah bin Zayed Al Nahyan
+  topics:
+  - rule_of_law
+  location: Abu Dhabi, United Arab Emirates
+  position: France reaffirmed its commitment to regional stability through diplomatic
+    efforts, condemning attacks on the UAE and calling for de-escalation.
+  positions:
+    rule_of_law: France strongly condemns external aggression against the UAE and
+      calls for a diplomatic solution to ensure Iran does not acquire nuclear weapons
+      or destabilize the region.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The Minister reiterated France’s very strong condemnation of the unacceptable
+        attacks that Iran has carried out on its neighbours, and first and foremost,
+        on the United Arab Emirates.

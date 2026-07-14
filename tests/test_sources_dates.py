@@ -6,7 +6,7 @@ from datetime import UTC, datetime
 
 import pytest
 
-from pipeline.sources import france_diplomatie, german_mfa, polish_mfa
+from pipeline.sources import france_diplomatie, german_mfa, govpl
 
 
 def _today() -> str:
@@ -77,7 +77,7 @@ def test_france_parse_date_fallback():
     assert france_diplomatie._parse_date("???")[0] == _today()
 
 
-# --- polish_mfa._parse_date ------------------------------------------------
+# --- govpl._parse_date (shared by polish_mfa, polish_pm) -------------------
 
 
 @pytest.mark.parametrize(
@@ -89,8 +89,8 @@ def test_france_parse_date_fallback():
     ],
 )
 def test_polish_parse_date_success(raw, expected):
-    assert polish_mfa._parse_date(raw)[0] == expected
+    assert govpl._parse_date(raw)[0] == expected
 
 
 def test_polish_parse_date_fallback():
-    assert polish_mfa._parse_date("")[0] == _today()
+    assert govpl._parse_date("")[0] == _today()

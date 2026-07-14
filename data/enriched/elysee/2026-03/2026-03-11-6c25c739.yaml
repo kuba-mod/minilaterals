@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - G7 Leaders
+  topics:
+  - rule_of_law
+  - green_transition
+  location: null
+  position: France, as part of the G7 Presidency, emphasized international cooperation
+    on energy security and maintaining sanctions against Russia while promoting energy
+    independence.
+  positions:
+    rule_of_law: The leaders reaffirmed commitment to democratic principles by maintaining
+      sanctions against Russia and monitoring geopolitical tensions affecting key
+      commodities.
+    green_transition: France supported the transition towards energy independence
+      and electrification to reduce reliance on volatile global markets.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: G7 Leaders reaffirmed their unity and their determination to maintain
+        sanctions against Russia.
+    green_transition:
+      score: 1
+      evidence: This situation also underlines the relevance of pursuing an agenda
+        of energy independence and electrification, in order to reduce dependence
+        on geopolitical shocks.

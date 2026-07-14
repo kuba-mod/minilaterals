@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany emphasizes that its national interests—including maintaining the
+    welfare state and economic strength—can only be secured through a strong European
+    Union and NATO.
+  positions:
+    defence: Germany supports strengthening EU defense capabilities as complementary
+      to NATO, emphasizing the need for self-defense capacity.
+    hybrid: Germany calls for internal consensus and action to address domestic problems,
+      implying a focus on managing internal threats and challenges.
+    enlargement: The text does not explicitly mention the EU accession of Ukraine
+      or Western Balkans countries.
+    rule_of_law: Germany stresses the importance of maintaining democratic resilience
+      and internal stability to secure its future interests.
+  stances:
+    defence:
+      score: 1
+      evidence: being capable of defence
+    hybrid:
+      score: 1
+      evidence: a society that finds a new basic consensus internally
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: the freedom, peace, prosperity and also the welfare state of the Federal
+        Republic of Germany

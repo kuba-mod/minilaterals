@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Minister Obrony Narodowej
+  - Premier Władysław Kosiniak-Kamysz
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland prioritizes national security through strengthening NATO cooperation
+    with the US and boosting domestic economic resilience via local content requirements.
+  positions:
+    defence: Poland actively strengthens its defense capabilities by facilitating
+      a permanent US military base, enhancing both national and NATO eastern flank
+      security.
+    rule_of_law: Poland supports strengthening the rule of law and public services
+      by implementing measures to improve data collection on medical personnel wages.
+  stances:
+    defence:
+      score: 2
+      evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia działań
+        na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy USA.
+    rule_of_law:
+      score: 2
+      evidence: projekt ustawy, który umożliwi Ministrowi Zdrowia, Narodowemu Funduszowi
+        Zdrowia oraz Agencji Oceny Technologii Medycznych i Taryfikacji pozyskiwanie
+        dokładniejszych danych o wynagrodzeniach pracowników medycznych.

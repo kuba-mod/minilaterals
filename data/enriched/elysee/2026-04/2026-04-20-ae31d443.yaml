@@ -1,0 +1,50 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.85
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Poland
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Gdansk, Poland
+  position: France and Poland reaffirmed their commitment to a secure, sovereign,
+    democratic, and united Europe by strengthening bilateral cooperation and coordinating
+    efforts on defense and sanctions against Russia.
+  positions:
+    ukraine: France strongly commits to long-term support for Ukraine's independence
+      and territorial integrity until a just and lasting peace is achieved, viewing
+      it as a common security interest.
+    defence: France supports building a robust EU defense capability complementary
+      to NATO by increasing investment, developing industrial bases, and reducing
+      strategic dependencies.
+    rule_of_law: France affirms democratic resilience and the rule of law as foundational
+      to European security by upholding international rules-based order and supporting
+      democracy.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We reiterate that remaining united in supporting Ukraine as long as
+        it takes is a common security interest for the European continent and Euro-Atlantic
+        community as a whole.
+    defence:
+      score: 2
+      evidence: We intend to accelerate of our joint efforts to swiftly achieve European
+        defence readiness and to the development of a robust European defence technological
+        and industrial base, including by increasing investment in defence capability
+        development.
+    rule_of_law:
+      score: 2
+      evidence: to protect our democratic values which are at the core of the European
+        Union, to uphold the rule of law and to defend and promote a rules-based international
+        order.

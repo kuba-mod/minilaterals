@@ -1,0 +1,27 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  topics:
+  - defence
+  location: Paris, France
+  position: France is actively strengthening its security cooperation with partners
+    like Poland through strategic dialogues and joint roadmaps to enhance European
+    defense capabilities.
+  positions:
+    defence: France supports a stronger EU defence capability complementary to NATO
+      by holding nuclear steering group meetings and agreeing on a joint roadmap for
+      enhanced European security.
+  stances:
+    defence:
+      score: 2
+      evidence: They agreed a joint roadmap, and raised the ambition of bilateral
+        cooperation to work towards a safer and better defended Europe.

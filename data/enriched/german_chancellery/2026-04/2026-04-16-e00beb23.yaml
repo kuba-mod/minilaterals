@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - Irish Taoiseach Micheál Martin
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany emphasized its partnership with Ireland and focused discussions
+    on European policy priorities, including the EU budget and international crises.
+  positions:
+    ukraine: Germany highlighted the importance of discussing the situation in Ukraine
+      alongside other major global issues.
+    rule_of_law: Germany stressed the focus on European policy generally, which includes
+      maintaining democratic resilience and addressing global security concerns.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The Federal Chancellor also spoke with his Irish guest about the situation
+        in the Middle East and the Russian war of aggression in Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: In this way, he underlined the talks’ focus on European policy.

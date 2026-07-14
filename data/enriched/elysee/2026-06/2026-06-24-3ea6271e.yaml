@@ -1,0 +1,52 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.4
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - Germany
+  - Italy
+  - Poland
+  - United Kingdom
+  - Secretary General of NATO
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Berlin, Germany
+  position: France affirmed its commitment to Euro-Atlantic security and the transatlantic
+    bond, focusing on strengthening European defense capabilities and supporting Ukraine's
+    resilience.
+  positions:
+    ukraine: France commits to substantial long-term support for Ukraine through sanctions,
+      economic pressure, and military aid pledges.
+    defence: France supports strengthening collective security and defense capabilities
+      by increasing European responsibility and cooperation in industrial development.
+    hybrid: France emphasizes the need to strengthen deterrence against both Russian
+      aggression and asymmetric threats like terrorism.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Leaders are committed to further substantially support Ukraine in
+        its defence against Russian aggression, including through sanctions and economic
+        pressure on Russia
+    defence:
+      score: 2
+      evidence: Leaders are committed to a stronger European role within NATO with
+        Europe taking greater responsibility for our shared transatlantic security
+    hybrid:
+      score: 1
+      evidence: Leaders agree to proactively strengthen the Alliance’s deterrence
+        and defence posture and increase contributions to NATO’s deterrence activities
+        in order to respond to and deter the most significant and direct threat from
+        Russia and the most direct asymmetric threat of terrorism to Euro-Atlantic
+        security

@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Chancellor Merz
+  - Emmanuel Macron
+  - Keir Starmer
+  - Giorgia Meloni
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: Germany advocates for stability in the Middle East and a secure energy
+    supply for Europe, emphasizing that any opening of the Strait of Hormuz must comply
+    fully with international maritime law.
+  positions:
+    rule_of_law: Germany affirms the importance of adhering to international maritime
+      law regarding the Strait of Hormuz's opening.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The opening of the Strait of Hormuz announced by Iran is “good news”
+        and must be take place in full compliance with international maritime law
+        and without imposing any restrictions.

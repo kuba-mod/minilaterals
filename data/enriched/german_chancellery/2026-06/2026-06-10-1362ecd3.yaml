@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  - Federal Government
+  topics:
+  - green_transition
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany is implementing a new aviation strategy focused on economic relief
+    and technological innovation to ensure sustainable, safe, and competitive air
+    transport.
+  positions:
+    green_transition: Germany supports the green transition in aviation by improving
+      conditions for renewable fuels and promoting climate-neutral operations.
+    defence: Germany supports defense capabilities by ensuring that the Bundeswehr
+      remains ready for deployment and maintaining a resilient air transport network.
+    rule_of_law: Germany strengthens regulatory frameworks by developing a national
+      Unmanned Aviation Space Act, promoting planning security in aviation.
+  stances:
+    green_transition:
+      score: 2
+      evidence: 'The strategy also aims to improve the conditions for the use of renewable
+        fuels for aviation: this includes strengthening supply and production in Germany
+        and taking better account of them in emissions trading, for example.'
+    defence:
+      score: 2
+      evidence: Industry makes an important contribution to a strong and efficient
+        location for industry in Germany and also to ensuring that the Bundeswehr
+        can fulfil its tasks and is ready for deployment.
+    rule_of_law:
+      score: 2
+      evidence: To this end, for example, it wants to develop a national Unmanned
+        Aviation Space Act for unmanned aviation by the end of 2026.

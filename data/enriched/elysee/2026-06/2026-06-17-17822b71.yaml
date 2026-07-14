@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Brigitte Macron
+  - G7 countries
+  - International Monetary Fund
+  - OECD
+  topics:
+  - rule_of_law
+  location: Évian, France
+  position: France emphasized the success and unity achieved at the G7 Summit despite
+    a difficult global backdrop.
+  positions:
+    rule_of_law: France stressed the importance of unity and cooperation to address
+      major challenges and crises facing the world.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: a moment of unity, with high-quality discussions and genuine cooperation
+        between the leaders who met here.

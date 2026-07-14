@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Wojciech Balczun
+  - Władysław Kosiniak-Kamysz
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Bydgoszcz, Poland
+  position: Poland is strengthening its defense capabilities and industrial base through
+    a major cooperation agreement with the US, positioning itself as a key strategic
+    partner for NATO.
+  positions:
+    defence: Poland actively advances its defense goals by signing an agreement to
+      manufacture advanced long-range missiles (Barracuda-500) domestically, enhancing
+      its role on the Eastern Flank of NATO.
+    hybrid: Poland emphasizes the importance of maintaining political consensus and
+      consistent state policy regarding security, particularly in relation to Ukraine.
+    rule_of_law: Poland stresses the necessity of a unified and consistent state policy
+      in security matters, warning against political instability.
+  stances:
+    defence:
+      score: 2
+      evidence: Umowa przewiduje ulokowanie w Polsce montażu, a następnie produkcję
+        autonomicznych rakietowych pocisków manewrujących dalekiego zasięgu Barracuda-500
+        (o zasięgu nawet do 900 km).
+    hybrid:
+      score: 1
+      evidence: Nasze bezpieczeństwo opiera się nie tylko na nowoczesnym wyposażeniu
+        i obecności wojsk sojuszniczych w Polsce, zwłaszcza amerykańskich, lecz także
+        na jednolitej i konsekwentnej polityce państwa w zakresie bezpieczeństwa.
+    rule_of_law:
+      score: 1
+      evidence: 'Ponawiam swój apel do wszystkich, począwszy od Prezydenta do wszystkich
+        polityków: nie igrajcie z ogniem.'

@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.35
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Macron
+  - Prime Minister Starmer
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: France and the UK committed to supporting freedom of navigation through
+    the Strait of Hormuz by establishing a multinational defensive mission and coordinating
+    economic responses.
+  positions:
+    defence: France supports strengthening collective security and defense capabilities
+      by participating in an independent, strictly defensive multinational mission
+      for protecting merchant vessels.
+    rule_of_law: France strongly advocates for adherence to international law and
+      diplomatic solutions to global conflicts, particularly concerning freedom of
+      navigation.
+  stances:
+    defence:
+      score: 2
+      evidence: France and the United Kingdom confirmed that they are establishing
+        an independent and strictly defensive multinational mission to protect merchant
+        vessels
+    rule_of_law:
+      score: 2
+      evidence: The meeting underlined the determination of the international community
+        to support freedom of navigation, to stand up for international law, and to
+        protect global economic stability

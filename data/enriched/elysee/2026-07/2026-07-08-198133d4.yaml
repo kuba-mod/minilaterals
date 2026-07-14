@@ -1,0 +1,43 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - France
+  - Sweden
+  - Finland
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France commits to enhancing NATO's deterrence and defense in the High
+    North through participation in FLF Finland.
+  positions:
+    defence: France actively contributes to strengthening collective security by deploying
+      ground forces and training within NATO's forward battlegroup in Finland.
+    hybrid: France supports coordinated action against hybrid threats by committing
+      to joint training exercises with the FLF battlegroup.
+    rule_of_law: France affirms its commitment to European unity and security through
+      participation in NATO's enhanced defense structures.
+  stances:
+    defence:
+      score: 2
+      evidence: France will contribute with ground forces deployments to rotations
+        of FLF Finland, including a battle unit which will be integrated into the
+        FLF formation and deployed to the Area of Operations (AOO).
+    hybrid:
+      score: 1
+      evidence: France will also train critical enablers together with the FLF Finland
+        battlegroup on a temporary basis, depending on the needs of the FLF.
+    rule_of_law:
+      score: 1
+      evidence: France's participation in FLF Finland is a clear manifestation of
+        our joint commitment to a stronger Europe in a stronger NATO.

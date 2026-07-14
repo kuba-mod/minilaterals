@@ -1,0 +1,47 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Chancellor Merz
+  - Czech Prime Minister Babiš
+  topics:
+  - ukraine
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the close link between Czech and German interests in
+    supporting a stable Europe through collective security and democratic resilience.
+  positions:
+    ukraine: Germany strongly commits to continued long-term support for Ukraine across
+      all dimensions until peace is achieved.
+    hybrid: Germany advocates for coordinated action against various hybrid threats
+      such as disinformation and cyber attacks.
+    enlargement: Germany supports the EU accession of Ukraine and Western Balkans
+      countries while advocating for internal reforms within the EU.
+    rule_of_law: Germany affirms that democratic resilience and adherence to the rule
+      of law are fundamental pillars for European unity and security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The West must not let up in its support for Kyiv
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: The Weimar Triangle commits to long-term support for Ukraine across
+        military, economic, and diplomatic dimensions until a just and lasting peace
+        is achieved.

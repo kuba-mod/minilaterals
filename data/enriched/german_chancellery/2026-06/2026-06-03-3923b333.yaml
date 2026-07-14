@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Environment Minister Carsten Schneider
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is advancing its National Circular Economy Strategy to enhance
+    resource conservation, economic independence, and environmental protection.
+  positions:
+    green_transition: Germany strongly supports the green transition by implementing
+      a comprehensive circular economy strategy aimed at resource efficiency and climate
+      neutrality.
+    rule_of_law: Germany emphasizes strengthening its domestic economic resilience
+      and data sovereignty through digital initiatives and legal reforms related to
+      circularity.
+  stances:
+    green_transition:
+      score: 2
+      evidence: The Cabinet has approved a draft action programme for the implementation
+        of the National Circular Economy Strategy
+    rule_of_law:
+      score: 1
+      evidence: The key is to further develop so-called circular industrial data spaces,
+        which should enable the sovereign, secure and dialogue-capable exchange of
+        data along the entire industrial value chain.

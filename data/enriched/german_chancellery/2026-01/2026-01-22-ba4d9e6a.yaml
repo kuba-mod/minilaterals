@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Merz
+  - Chairman of the World Economic Forum, Børge Brende
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Davos, Switzerland
+  position: Germany emphasizes transatlantic solidarity and national strength to secure
+    the High North while continuing support for Ukraine and strengthening its defense
+    capabilities.
+  positions:
+    ukraine: Germany commits to continued support for Ukraine's fight for a just peace,
+      emphasizing this as a common transatlantic interest.
+    defence: Germany advocates for increased collective security and defense spending
+      among European NATO partners to secure the High North.
+    rule_of_law: Germany affirms democratic values and resilience against autocracies,
+      stressing that democracies have reliable partners.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ukraine also had to continue to be supported in its fight for a just
+        peace.
+    defence:
+      score: 2
+      evidence: Defence spending had also been increased to up to five percent of
+        GDP.
+    rule_of_law:
+      score: 1
+      evidence: Autocracies may have subjects, democracies have partners and reliable
+        friends.

@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Premier Donald Tusk
+  - Morawiecki
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland maintains focus on its own security and economic interests by strengthening
+    defense capabilities, developing independent energy sources (OZE/nuclear), and
+    advocating for favorable terms within EU systems like ETS.
+  positions:
+    defence: Poland commits to enhancing its defensive potential through NATO cooperation
+      and national programs while prioritizing the security of the Baltic Sea region.
+    green_transition: Poland strongly supports the transition to sustainable energy
+      by developing domestic renewables (OZE) and nuclear power as alternatives to
+      imported fossil fuels.
+    rule_of_law: Poland seeks to protect its economic interests within the EU framework
+      by advocating for special provisions regarding the ETS system.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska będzie dalej rozwijać odnawialne źródła energii, w tym energię
+        wiatrową i słoneczną, które są bezpieczne, rozproszone i tanie.
+    green_transition:
+      score: 2
+      evidence: Polska będzie dalej rozwijać odnawialne źródła energii, w tym energię
+        wiatrową i słoneczną, które są bezpieczne, rozproszone i tanie.
+    rule_of_law:
+      score: 1
+      evidence: Podczas Rady Europejskiej, Polska będzie domagała się szczególnych
+        rozwiązań, tak aby uwzględnić naszą sytuację, w której ETS negatywnie wpływa
+        na ceny energii.

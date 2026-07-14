@@ -1,0 +1,22 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government
+  - leaders of regional and international organizations
+  - global health actors
+  - representatives of civil society
+  topics: []
+  location: Lyon, France
+  position: France reaffirms commitment to multilateralism while advocating for a
+    comprehensive reform of the global health architecture focused on country self-reliance
+    and primary care.
+  positions: {}
+  stances: {}

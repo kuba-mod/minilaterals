@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Andrzej Domański
+  - Andrius Kubilius
+  - Piotr Serafin
+  topics:
+  - defence
+  - rule_of_law
+  location: Poland
+  position: Poland successfully launched the SAFE program, securing significant funding
+    to bolster its military capabilities and domestic defense industry, thereby increasing
+    its influence within the EU.
+  positions:
+    defence: Poland actively advances stronger EU defence capabilities by initiating
+      the SAFE program, dedicating a large portion of funds to modernize its own army
+      and boost the national defense industrial base.
+    rule_of_law: Poland emphasizes the importance of national strength and readiness
+      for defense, suggesting that robust domestic capabilities are foundational to
+      maintaining security within the EU framework.
+  stances:
+    defence:
+      score: 2
+      evidence: Dlatego przeznaczymy ok. 43,7 mld euro, czyli ponad 180 mld zł z unijnego
+        programu SAFE, na rozwój i modernizację polskiej armii.
+    rule_of_law:
+      score: 1
+      evidence: Nasz kraj jest częścią NATO i posiada licznych sojuszników, jednak
+        ich wsparcie będzie realne tylko wtedy, gdy sami będziemy silni i gotowi do
+        obrony.

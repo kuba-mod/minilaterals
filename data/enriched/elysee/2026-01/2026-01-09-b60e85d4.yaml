@@ -1,0 +1,20 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - France
+  - United Kingdom
+  - Germany
+  topics: []
+  location: null
+  position: The participating nations expressed deep concern over violence by Iranian
+    security forces and called for the upholding of fundamental rights in Iran.
+  positions: {}
+  stances: {}

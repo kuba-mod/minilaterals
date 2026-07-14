@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Minister of Finance Lars Klingbeil
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is implementing significant energy price relief measures for households
+    and businesses to ease financial burdens and secure economic growth.
+  positions:
+    green_transition: Germany supports the green transition by reducing energy costs
+      through subsidies and reforms, aiming to stabilize the economy while transitioning
+      away from high energy prices.
+    rule_of_law: Germany emphasizes economic stability and responsible spending as
+      foundational elements of its current policy actions, ensuring financial prudence
+      in implementing relief measures.
+  stances:
+    green_transition:
+      score: 2
+      evidence: The Federal Government wants to significantly reduce energy prices
+        for private households and businesses.
+    rule_of_law:
+      score: 1
+      evidence: “We can only spend the money we have”

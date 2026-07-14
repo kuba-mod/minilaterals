@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.3
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - French President Emmanuel Macron
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Évian-les-Bains, France
+  position: Germany emphasizes continued strong support for Ukraine and calls for
+    the implementation of agreements in the Middle East to stabilize the global economy.
+  positions:
+    ukraine: Germany strongly commits to providing sustained international support
+      for Ukraine's stability and recovery.
+    rule_of_law: Germany stresses the importance of democratic resilience and international
+      cooperation to address global challenges.
+  stances:
+    ukraine:
+      score: 2
+      evidence: 'The common ground reached on Ukraine is precisely what makes this
+        “message so abundantly clear”: namely that support from the G7 countries is
+        stronger than almost ever before.'
+    rule_of_law:
+      score: 1
+      evidence: The Federal Government was keen to play an active role in shaping
+        the process and jointly developing solutions for global challenges among the
+        partners.

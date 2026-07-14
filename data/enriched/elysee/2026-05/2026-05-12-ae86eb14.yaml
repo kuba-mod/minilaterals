@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Heads of State and Government
+  - Secretary-General
+  - Secretary-General of [the Pan-African] Parliament
+  - African Union Commission
+  - Secretary-General of [La] Francophonie
+  topics:
+  - rule_of_law
+  location: Kenya, Kenya
+  position: France advocates for a forward-looking partnership with Africa based on
+    shared goals of peace, prosperity, and sovereignty, emphasizing mutual respect
+    and economic reinvention.
+  positions:
+    rule_of_law: France affirms the importance of belief in the rule of law as foundational
+      to Europe's current agenda and global stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: It involves belief in the rule of law.

@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - representatives of African nations
+  - French Republic
+  topics:
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France supports a strengthened Africa-France partnership focused on advancing
+    inclusive growth and innovation within the framework of international cooperation.
+  positions:
+    rule_of_law: France strongly affirms commitment to democratic principles, good
+      governance, and adherence to the UN Charter while advocating for institutional
+      reform in global bodies like the UNSC.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Affirming our shared commitment to a peaceful and fair, rules-based
+        international order grounded in the principles of the United Nations Charter;

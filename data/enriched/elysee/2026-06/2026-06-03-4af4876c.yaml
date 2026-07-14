@@ -1,0 +1,38 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Péter Magyar, Prime Minister of Hungary
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: null
+  position: France engaged in discussions with Hungary on key European issues, including
+    support for Ukraine and strengthening bilateral cooperation in defense and energy.
+  positions:
+    ukraine: France reiterated its commitment to supporting Ukraine through continued
+      sanctions against Russia and general support for the country.
+    defence: France emphasized strengthening European security and defense capabilities
+      during discussions with Hungary.
+    enlargement: The press release does not provide specific information regarding
+      the EU enlargement process.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    defence:
+      score: 1
+      evidence: European security and defense
+    enlargement:
+      score: 0
+      evidence: ''

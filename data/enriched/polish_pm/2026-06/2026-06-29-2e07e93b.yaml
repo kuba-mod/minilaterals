@@ -1,0 +1,49 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Ulf Kristersson
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland views the acquisition of submarines and cooperation with Sweden
+    as a major step in strengthening regional security and defense capabilities.
+  positions:
+    defence: Poland actively advances its defense goals by securing a major contract
+      for advanced military hardware and deepening industrial partnership with Sweden.
+    hybrid: Poland emphasizes the need for regional stability and security in the
+      Baltic Sea area against threats of unrest and danger.
+    enlargement: Poland supports the broader regional security architecture and implicitly
+      supports enlargement through cooperation with NATO members like Sweden.
+    rule_of_law: Poland stresses that its cooperation with Sweden is based on democratic
+      trust and mutual benefit for regional stability.
+  stances:
+    defence:
+      score: 2
+      evidence: Jest to najważniejszy kontrakt w historii polskiej Marynarki Wojennej.
+    hybrid:
+      score: 1
+      evidence: aby nasz region, nasze państwa, Morze Bałtyckie były obszarem pokoju,
+        bezpieczeństwa, a nie tak jak bywa dzisiaj, obszarem niepokoju i zagrożeń
+    enlargement:
+      score: 1
+      evidence: Przystąpienie Szwecji do NATO dodatkowo wzmocniło bezpieczeństwo całego
+        regionu.
+    rule_of_law:
+      score: 1
+      evidence: Podpisane porozumienia stanowią dowód zaufania i partnerskich relacji
+        między oboma państwami.

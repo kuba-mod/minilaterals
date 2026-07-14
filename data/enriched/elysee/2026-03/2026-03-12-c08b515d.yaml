@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - ABN AMRO
+  - BNP Paribas
+  - Citi
+  - Crédit Agricole CIB
+  - Meridiam
+  - RBC Capital Markets
+  - SFIL
+  - Societe Generale
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France supports the expansion of nuclear energy as a key component of
+    a diversified low-carbon mix to accelerate the energy transition, provided strict
+    safety and regulatory criteria are met.
+  positions:
+    green_transition: France strongly supports expanding nuclear electricity generation
+      and its broader industry as part of a diversified low carbon mix that accelerates
+      the energy transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: We support long‑term objectives to expand nuclear electricity generation
+        and the broader industry where national policy supports it and strict ESG,
+        safety, waste, and regulatory criteria are met, as part of a diversified low
+        carbon mix that accelerates the energy transition.

@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Macron
+  - Chancellor Merz
+  topics:
+  - defence
+  location: null
+  position: France and Germany are deepening their strategic cooperation in defense
+    and deterrence through a high-ranking nuclear steering group.
+  positions:
+    defence: France actively advances the goal of stronger EU defence capabilities
+      by committing to joint exercises, developing conventional capabilities with
+      European partners, and enhancing collective security systems.
+  stances:
+    defence:
+      score: 2
+      evidence: including German conventional participation in French nuclear exercises
+        and joint visits to strategic sites as well as development of conventional
+        capabilities with European partners.

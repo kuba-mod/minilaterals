@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Merz
+  - Peter Leibinger
+  topics:
+  - defence
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes focusing on the younger generation's prosperity and
+    identifies key areas for future action including high-tech development, computing
+    capacity, and improved defense capabilities.
+  positions:
+    defence: Germany supports strengthening its defense capabilities as a crucial
+      area for ensuring prosperity for young people.
+    rule_of_law: Germany stresses the importance of stability and predictability in
+      international relations to ensure future prosperity.
+  stances:
+    defence:
+      score: 1
+      evidence: improved defence capabilities
+    rule_of_law:
+      score: 1
+      evidence: Progress on international trade agreements, the unity of the G7 countries
+        and new economic partnerships are important signs of greater stability, reliability
+        and predictability.

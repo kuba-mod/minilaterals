@@ -1,0 +1,53 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Poland
+  - France
+  - Emmanuel Macron
+  - Donald Tusk
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: 'null'
+  position: Poland and France are strengthening their bilateral cooperation across
+    security, energy, and technology sectors while maintaining a unified stance on
+    European sovereignty and support for Ukraine.
+  positions:
+    ukraine: Poland strongly commits to continued support for Ukraine's defense against
+      aggression as part of broader European unity efforts.
+    defence: Both countries emphasize the need for strengthening European self-defense
+      capabilities and maintaining strong transatlantic ties.
+    hybrid: The nations recognize the threat of hybrid challenges and commit to cooperation
+      in areas like cyber security and AI.
+    rule_of_law: The countries affirm the importance of democratic resilience and
+      cooperation on issues like protecting youth from internet addiction.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Chcemy konsekwentnie wspierać Ukrainę w jej oporze przeciwko agresji
+    defence:
+      score: 2
+      evidence: Wolność Europy polega na zdolności do własnej obrony i niezależności
+        krajów europejskich
+    hybrid:
+      score: 1
+      evidence: Pomoc Ukrainie, bezpieczeństwo wschodniej flanki, współpraca na rzecz
+        cyberbezpieczeństwa, sztucznej inteligencji i nowoczesnych technologii – we
+        wszystkich tych dziedzinach Europa musi uwierzyć we własne siły i możliwości.
+    rule_of_law:
+      score: 1
+      evidence: Istotnym obszarem współpracy polsko-francuskiej jest także ochrona
+        dzieci i młodzieży przed uzależnieniem od internetu.

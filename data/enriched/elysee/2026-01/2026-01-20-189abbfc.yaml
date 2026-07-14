@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.35
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  topics:
+  - rule_of_law
+  location: Davos, Switzerland
+  position: France advocates for effective multilateralism and national sovereignty
+    while urging Europe to assert itself as a commercial power.
+  positions:
+    rule_of_law: France strongly affirms the importance of international law and collective
+      governance, criticizing the current trend towards autocracy and rule-of-law
+      erosion.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: It's as well a shift towards a world without rules, where international
+        law is trampled underfoot, and where the only law that seems to matter is
+        that of the strongest, and imperial ambitions are resurfacing.

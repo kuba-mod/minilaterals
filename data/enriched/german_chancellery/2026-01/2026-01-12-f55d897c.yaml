@@ -1,0 +1,18 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Chancellor Merz
+  - Prime Minister Narendra Modi
+  topics: []
+  location: Gujarat, India
+  position: Germany emphasizes the fundamental and deepening strategic partnership
+    with India based on shared values and mutual economic interests.
+  positions: {}
+  stances: {}

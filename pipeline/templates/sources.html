@@ -13,9 +13,12 @@
   </thead>
   <tbody>
     {% set source_meta = [
-      ("german_mfa",       "DE", "RSS",          "EN"),
-      ("france_diplomatie","FR", "HTML scraper",  "EN"),
-      ("polish_mfa",       "PL", "HTML scraper",  "EN"),
+      ("german_mfa",         "DE", "RSS",           "EN"),
+      ("france_diplomatie",  "FR", "HTML scraper",  "EN"),
+      ("polish_mfa",         "PL", "HTML scraper",  "EN"),
+      ("german_chancellery", "DE", "HTML scraper",  "EN"),
+      ("elysee",             "FR", "HTML scraper",  "EN"),
+      ("polish_pm",          "PL", "HTML scraper",  "EN"),
     ] %}
     {% for src, actor, method, lang in source_meta %}
     {% set s = source_stats.get(src, {}) %}
@@ -55,8 +58,9 @@
 <div class="sources-prose">
 
   <p>
-    This tracker ingests press releases and official statements from the foreign ministries of
-    Germany, France, and Poland. Each item is classified for Weimar Triangle relevance and —
+    This tracker ingests press releases and official statements from the foreign ministries and
+    heads-of-government offices (chancelleries, the Élysée) of Germany, France, and Poland.
+    Each item is classified for Weimar Triangle relevance and —
     where relevant — enriched by an LLM to extract a one-sentence position summary.
   </p>
 
@@ -64,7 +68,7 @@
   <p>
     An item is marked <em>weimar_relevant</em> when it touches a tracked issue area
     (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law) AND comes from an MFA
-    source, or when two or more Weimar countries are mentioned together and a tracked issue area
+    or head-of-government source, or when two or more Weimar countries are mentioned together and a tracked issue area
     is present, or when the text contains the phrase "Weimar Triangle" or "trilateral."
     A stronger <em>trilateral_signal</em> flag is set when all three actors are present or the
     Weimar/trilateral phrase appears explicitly.
@@ -133,7 +137,7 @@
   <span class="label">Caveats</span>
   <ul>
     <li>All sources currently target English-language pages; French/Polish language content may be missed.</li>
-    <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
+    <li>Only the German MFA offers RSS — the other sources are HTML scrapers that may break if site structures change.</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>
 

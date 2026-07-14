@@ -1,0 +1,22 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Keir Starmer
+  - Italian Prime Minister
+  - German Chancellor
+  topics: []
+  location: Élysée Palace, France
+  position: France remains committed to achieving a robust and lasting resolution
+    to the conflict in the Middle East through diplomatic means, ensuring peace and
+    security for all in the region.
+  positions: {}
+  stances: {}

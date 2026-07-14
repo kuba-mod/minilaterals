@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Chinese leadership
+  - Party Secretary of Zhejiang Province, Wang Hao
+  - China's Prime Minister Li Qiang
+  topics:
+  - rule_of_law
+  location: Beijing and Hangzhou, China
+  position: Germany seeks to strengthen its comprehensive strategic partnership with
+    China through close economic and political cooperation while openly addressing
+    challenges like competition.
+  positions:
+    rule_of_law: Germany emphasizes the importance of open dialogue and strengthening
+      bilateral ties, including addressing competitive issues, as foundational to
+      a strong partnership.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The two countries are seeking a good cooperation and so also openly
+        address difficult issues, said Merz.

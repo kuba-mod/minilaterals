@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Prabowo Subianto
+  topics:
+  - rule_of_law
+  location: null
+  position: France and Indonesia are establishing a joint strategy to deepen cooperation
+    in education, research, and mobility, focusing on knowledge sharing and human
+    development.
+  positions:
+    rule_of_law: The declaration strongly affirms the importance of inclusive, equitable,
+      and quality education, open scientific research, and promoting information integrity
+      as responses to global challenges.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'France and Indonesia recognize the central role of inclusive, equitable
+        and quality education and diversity of knowledge, as well as open and ethical
+        scientific research based on academic excellence and the promotion of information
+        integrity, in responding to major contemporary challenges:'

@@ -1,0 +1,52 @@
+actors:
+- PL
+issue_areas:
+- defence
+- green_transition
+- hybrid
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Premier Włoch Giorgia Meloni
+  topics:
+  - defence
+  - green_transition
+  - hybrid
+  - ukraine
+  location: Brussels, Belgium
+  position: Poland successfully advocated for flexible climate policies (ETS) and
+    secured financial support while maintaining the eastern flank as a key security
+    priority.
+  positions:
+    defence: Poland successfully advocated for maintaining the eastern flank as a
+      core priority and securing additional financial resources for regions bordering
+      Russia and Belarus.
+    green_transition: Poland achieved a breakthrough in the ETS system, securing financial
+      support and an extension for free allowances for energy-intensive industries.
+    hybrid: Poland pushed for the EU to avoid repeating the mistakes of the 2015 migration
+      crisis and strongly defend its borders against illegal migration.
+    ukraine: Poland emphasizes that keeping Ukraine's situation in focus is crucial
+      due to its direct impact on Poland's national security.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska nie powinna angażować się w wojnę w Iranie. My, jako Polacy,
+        dźwigamy na naszych barkach poważny ciężar i odpowiedzialność – to ochrona
+        granicy wschodniej Polski, Europy i NATO
+    green_transition:
+      score: 2
+      evidence: Polska znajdzie się wśród państw objętych wsparciem z ETS, finansowanym
+        ze środków uwolnionych z części uprawnień do emisji, które trafią do krajów
+        najbardziej obciążonych wysokimi cenami energii.
+    hybrid:
+      score: 2
+      evidence: Udało się przekonać Komisję Europejską i innych partnerów do jednoznacznego
+        stwierdzenia, że UE nie powtórzy błędów z kryzysu migracyjnego z 2015 roku.
+    ukraine:
+      score: 1
+      evidence: W interesie Polski jest utrzymanie uwagi świata na sytuacji w Ukrainie,
+        ze względu na jej bezpośredni wpływ na bezpieczeństwo naszego kraju.

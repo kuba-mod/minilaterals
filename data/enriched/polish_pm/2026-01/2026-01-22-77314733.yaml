@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Premier w Brukseli
+  - Prezes Rady Ministrów
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Bruxelles, Belgium
+  position: Poland emphasizes the necessity of European political unity and unwavering
+    focus on Ukraine's security while advocating for strong transatlantic relations
+    and increased defense spending.
+  positions:
+    ukraine: Poland stresses that the situation in Ukraine must remain a top priority,
+      as it is crucial for the safety of all of Europe and the West.
+    defence: Poland commits to strengthening its defense capabilities and contributing
+      significantly to collective security within NATO.
+    rule_of_law: Poland advocates for democratic principles and the rule of law in
+      international relations, rejecting coercion or threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Szef rządu wyraźnie zaznaczył, że sytuacja w Ukrainie nie może schodzić
+        na dalszy plan, ponieważ to od niej zależy bezpieczeństwo całej Europy i Zachodu.
+    defence:
+      score: 2
+      evidence: W tym roku na ten cel przeznaczymy ponad 200 mld zł, czyli prawie
+        5 proc. PKB.
+    rule_of_law:
+      score: 1
+      evidence: Wszelkie spory powinny być rozwiązywane metodami cywilizowanymi, bez
+        przymusu i gróźb.

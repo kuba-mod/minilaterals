@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Denmark
+  - Finland
+  - France
+  - Germany
+  - the Netherlands
+  - Norway
+  - Sweden
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: The participating nations affirm their commitment to strengthening Arctic
+    security and upholding sovereignty while warning against tariff threats.
+  positions:
+    rule_of_law: The statement emphasizes the importance of sovereignty and territorial
+      integrity as foundational principles for transatlantic relations.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We stand ready to engage in a dialogue based on the principles of
+        sovereignty and territorial integrity that we stand firmly behind.

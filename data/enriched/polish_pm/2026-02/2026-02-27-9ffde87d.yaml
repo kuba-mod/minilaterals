@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Kobyłce, Poland
+  position: Poland advocates for a rapid and decisive strengthening of national security
+    through the SAFE program, emphasizing its role in EU defense capability and combating
+    disinformation.
+  positions:
+    defence: Poland strongly supports enhancing EU defense capabilities and achieving
+      self-sufficiency through major funding initiatives like SAFE.
+    hybrid: Poland calls for coordinated action against disinformation and political
+      interference, viewing the SAFE program as crucial for national security.
+    rule_of_law: Poland supports mechanisms that ensure financial accountability and
+      prevent misuse of funds within EU programs like SAFE.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska dobrze uzbrojona, w możliwie dużym stopniu samowystarczalna
+        i równocześnie w nowoczesny sposób kooperująca z sojusznikami – to jest potrzeba
+        absolutnie numer jeden.
+    hybrid:
+      score: 1
+      evidence: Na ocenę projektu wpływają także spory polityczne, które nie powinny
+        dotyczyć kwestii bezpieczeństwa państwa.
+    rule_of_law:
+      score: 1
+      evidence: Tylko tam, gdzie mamy jasne prawo i zabezpieczenia antykorupcyjne
+        jest pewność, że środki nie zostaną zmarnowane.

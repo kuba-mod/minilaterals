@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Premier Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  location: Zagrzeb, Croatia
+  position: Poland is leading the development of the advanced SAN anti-drone system
+    to secure its eastern and northern borders, positioning this effort as a strategic
+    contribution to European and NATO security.
+  positions:
+    defence: Poland actively advances EU defense capabilities by spearheading the
+      massive SAN system, which is designed to be an integrated, modern defensive
+      shield for the Eastern flank.
+    hybrid: Poland addresses hybrid threats by developing advanced defense systems
+      (SAN) in response to real-world dangers posed by unmanned aerial vehicles and
+      geopolitical instability.
+    enlargement: Poland frames its national defense project (SAN) as having strategic
+      significance for the entire continent and NATO's eastern flank, linking it to
+      broader European security concerns.
+  stances:
+    defence:
+      score: 2
+      evidence: Program SAN to największy i najnowocześniejszy w Europie zintegrowany
+        system przeciwdronowy.
+    hybrid:
+      score: 2
+      evidence: Program SAN to polska odpowiedź na rosnące zagrożenia wynikające z
+        masowego użycia bezzałogowych statków powietrznych
+    enlargement:
+      score: 1
+      evidence: Zabezpieczenie wschodniej granicy Polski, kluczowe dla bezpieczeństwa
+        naszego kraju, jest jednocześnie zadaniem o znaczeniu strategicznym dla Europy
+        i całego NATO.

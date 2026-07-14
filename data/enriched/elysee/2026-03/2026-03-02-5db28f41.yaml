@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.45
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: France reaffirmed its commitment to nuclear deterrence and announced an
+    increase in its arsenal while expanding its strategic doctrine to include 'forward
+    deterrence' with allied nations.
+  positions:
+    defence: France strongly supports enhancing its defense capabilities by increasing
+      its nuclear deterrent force and developing a new 'forward deterrence' doctrine
+      that involves allies.
+    rule_of_law: France emphasizes the foundational importance of its sovereignty
+      and democratic resilience, asserting that its national security remains paramount
+      amidst geopolitical ruptures.
+  stances:
+    defence:
+      score: 2
+      evidence: The President of the Republic announced an increase in the number
+        of nuclear warheads within France’s arsenal
+    rule_of_law:
+      score: 1
+      evidence: The current international context is marked by a period of profound
+        geopolitical rupture

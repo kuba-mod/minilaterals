@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany advocates for strengthening European competitiveness and defense
+    capabilities while maintaining strong transatlantic alliances and promoting free
+    trade.
+  positions:
+    defence: Germany supports strengthening EU defence capabilities and preserving
+      NATO as the primary guarantee of security through internal and external cooperation.
+    rule_of_law: Germany emphasizes that democratic resilience, free trade, and adherence
+      to rules-based commerce are essential for European prosperity and global stability.
+  stances:
+    defence:
+      score: 1
+      evidence: NATO is still “the best guarantee of freedom, peace and security”.
+    rule_of_law:
+      score: 1
+      evidence: Rules-based trading and commerce are not dead, he said.

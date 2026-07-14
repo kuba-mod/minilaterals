@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: meeting
+  participants:
+  - Chancellor Merz
+  - Prime Minister Péter Magyar
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the necessity of close cooperation with allies to maintain
+    European freedom and peace in light of Russian threats.
+  positions:
+    ukraine: Germany strongly commits to supporting Ukraine's cause for a just and
+      lasting peace due to the threat posed by Russia.
+    rule_of_law: Germany stresses that maintaining democratic resilience and unity
+      requires allies to align with a united Europe.
+  stances:
+    ukraine:
+      score: 1
+      evidence: In view of the threat posed to the NATO--North Atlantic Treaty Organisation
+        by Russia and Moscow’s war against Ukraine, close cooperation is essential.
+    rule_of_law:
+      score: 1
+      evidence: If Hungary is once again plainly on the side of a united Europe, this
+        will bolster “the cause of freedom and peace” in Europe.

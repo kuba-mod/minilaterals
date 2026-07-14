@@ -1,0 +1,26 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Merz
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany supports international diplomatic efforts and stability through
+    adherence to law and multilateral cooperation.
+  positions:
+    rule_of_law: Germany affirms the importance of maintaining free navigation in
+      critical waterways and upholding regional stability through diplomacy and legal
+      frameworks.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Strait of Hormuz must remain permanently and unconditionally open
+        to free navigation.

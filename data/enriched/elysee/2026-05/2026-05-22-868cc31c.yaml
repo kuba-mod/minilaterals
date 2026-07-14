@@ -1,0 +1,25 @@
+actors: []
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: joint_statement
+  participants:
+  - Government of Israel
+  topics:
+  - rule_of_law
+  location: null
+  position: France calls for an end to Israeli settlement expansion and administrative
+    overreach in the West Bank while reaffirming commitment to a negotiated two-state
+    solution.
+  positions:
+    rule_of_law: France strongly asserts that international law is being violated
+      by Israeli settlements and demands accountability for human rights abuses, emphasizing
+      adherence to international legal norms.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'International law is clear: Israeli settlements in the West Bank
+        are illegal.'

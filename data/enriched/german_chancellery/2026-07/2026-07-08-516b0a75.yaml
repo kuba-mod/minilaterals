@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Merz
+  - heads of state and government of the NATO member states
+  - Ukrainian President Volodymyr Zelenskyy
+  - Canadian Prime Minister Mark Carney
+  - Norwegian Prime Minister Jonas Gahr Støre
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Ankara, Turkey
+  position: Germany advocates for a more European and unified NATO that translates
+    agreements into concrete action, particularly regarding defense spending and support
+    for Ukraine.
+  positions:
+    ukraine: Germany commits to continued military and diplomatic support for Ukraine
+      in the face of Russia's aggression.
+    defence: Germany supports strengthening European defense capabilities and increasing
+      collective security through increased spending and joint projects.
+    enlargement: Germany supports the broader European integration of allies by emphasizing
+      making NATO more European while maintaining its transatlantic link.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The main topic was continued military support for Ukraine in the face
+        of Russia’s war of aggression.
+    defence:
+      score: 2
+      evidence: This applies in particular to the increase in defence spending, which
+        had been agreed at the NATO summit in The Hague in 2025.
+    enlargement:
+      score: 1
+      evidence: We will make NATO more European so that it can remain transatlantic.

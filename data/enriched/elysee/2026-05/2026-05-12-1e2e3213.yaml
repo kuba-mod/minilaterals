@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Heads of State and Government of African countries
+  - Heads of State of France
+  topics: []
+  location: Nairobi, Kenya
+  position: France participated in a high-level meeting with African leaders to discuss
+    global economic imbalances and their adverse consequences for the continent's
+    development.
+  positions: {}
+  stances: {}

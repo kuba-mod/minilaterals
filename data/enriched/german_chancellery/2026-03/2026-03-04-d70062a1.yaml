@@ -1,0 +1,51 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - US President Donald Trump
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Washington, D.C.
+  position: Germany emphasized shared concerns with the US regarding Iran's threat
+    to regional stability and discussed cooperation on NATO, trade, and Ukraine.
+  positions:
+    ukraine: Germany commits to continued support for Ukraine in light of Russia's
+      aggression.
+    defence: Germany discussed strengthening transatlantic defense cooperation at
+      the upcoming NATO summit.
+    hybrid: No specific stance on hybrid threats was mentioned.
+    enlargement: Germany did not explicitly address EU enlargement goals.
+    rule_of_law: Germany stressed the importance of democratic resilience and stability
+      by addressing Iran's threat to regional peace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: and the Russian war of aggression against Ukraine
+    defence:
+      score: 0
+      evidence: discussed the upcoming NATO summit in Ankara
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: Iran’s nuclear and missile programme was a threat to peace and security
+        in the entire region.

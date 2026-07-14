@@ -72,11 +72,33 @@ ISSUE_AREAS: dict[str, list[str]] = {
     "rule_of_law": [r"\brule of law\b", r"\bdemocratic\b", r"\bdemocracy\b", r"\bjudiciary\b"],
 }
 
-# Sources where the actor (DE/FR/PL) is known from the source itself.
+# Actor attribution for sources where the country is known from the source itself.
+# render.py imports this to pool events into per-country position vectors.
+SOURCE_ACTOR: dict[str, str] = {
+    "german_mfa": "DE",
+    "france_diplomatie": "FR",
+    "polish_mfa": "PL",
+    "german_chancellery": "DE",
+    "elysee": "FR",
+    "polish_pm": "PL",
+}
+
+# Principal foreign-policy voices (MFAs and heads-of-government offices).
 # For these, any item touching a tracked issue area is worth keeping regardless of
 # whether the text explicitly mentions the other countries — the comparison across
-# MFA sources IS the analysis, even when no joint statement exists.
-MFA_SOURCES = {"german_mfa", "france_diplomatie", "polish_mfa"}
+# these sources IS the analysis, even when no joint statement exists.
+# Future sectoral sources (environment, defence ministries) should get a
+# SOURCE_ACTOR entry but stay OUT of this set, so they keep the stricter
+# 2+-country / explicit-trilateral gate: sectoral newsrooms are dominated by
+# domestic policy that happens to match issue-area keywords.
+PRINCIPAL_SOURCES = {
+    "german_mfa",
+    "france_diplomatie",
+    "polish_mfa",
+    "german_chancellery",
+    "elysee",
+    "polish_pm",
+}
 
 
 def _match_any(patterns: list[str], text: str) -> bool:
@@ -100,7 +122,7 @@ class Event:
     date: str = ""  # ISO date "YYYY-MM-DD"
     actors: list[str] = field(default_factory=list)
     issue_areas: list[str] = field(default_factory=list)
-    weimar_relevant: bool = False  # any MFA item on a tracked issue area, or multilateral
+    weimar_relevant: bool = False  # any principal-source item on a tracked issue area, or multilateral
     trilateral_signal: bool = False  # explicit Weimar/trilateral mention or all 3 actors present
     extracted: dict | None = None
 
@@ -115,14 +137,15 @@ class Event:
         self.actors = actors
         self.issue_areas = issues
 
-        # For MFA sources the actor country is known from the source, so a single-country
-        # press release about Ukraine is just as trackable as a joint statement.
-        from_mfa = self.source_name in MFA_SOURCES
+        # For principal sources (MFAs, heads of government) the actor country is known
+        # from the source, so a single-country press release about Ukraine is just as
+        # trackable as a joint statement.
+        from_principal = self.source_name in PRINCIPAL_SOURCES
         self.trilateral_signal = explicit or len(actors) == 3
         self.weimar_relevant = (
             self.trilateral_signal
             or (len(actors) >= 2 and bool(issues))
-            or (from_mfa and bool(issues))  # single-country MFA item on a tracked topic
+            or (from_principal and bool(issues))  # single-country principal item on a tracked topic
         )
         return self
 

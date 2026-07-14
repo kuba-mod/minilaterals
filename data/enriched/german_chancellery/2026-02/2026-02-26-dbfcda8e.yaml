@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  - Federal Police
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is strengthening its critical infrastructure protection and expanding
+    police powers to combat illegal drone flights and unauthorized entry onto airport
+    premises.
+  positions:
+    defence: Germany supports enhancing EU defense capabilities by improving national
+      defenses against modern threats like drones and establishing stricter security
+      protocols for critical infrastructure.
+    hybrid: Germany addresses hybrid threats by taking concrete action against illegal
+      drone flights suspected of being used for espionage and sabotage by foreign
+      state actors.
+    rule_of_law: Germany reinforces the rule of law by making unauthorized entry onto
+      airport premises a punishable offense, moving beyond mere fines.
+  stances:
+    defence:
+      score: 2
+      evidence: Amendments made to the Second Act Amending the German Aviation Security
+        Act are intended to further improve drone defence.
+    hybrid:
+      score: 2
+      evidence: Illegal drone flights over critical infrastructure in Germany have
+        increased significantly since the beginning of Russia’s war of aggression
+        against Ukraine. It is suspected that they are also being piloted by foreign
+        state actors for espionage and sabotage purposes in Germany.
+    rule_of_law:
+      score: 2
+      evidence: In addition, intentional, unauthorised entry onto airport premises
+        will be a punishable offence in the future.

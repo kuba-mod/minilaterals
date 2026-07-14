@@ -1,0 +1,62 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.25
+extracted:
+  event_type: joint_statement
+  participants:
+  - Keir Starmer of the United Kingdom
+  - Emmanuel Macron of France
+  - Friedrich Merz of Germany
+  - Volodymyr Zelenskyy of Ukraine
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: France reiterated unwavering support for Ukraine's defense and stressed
+    the need for coordinated international action to achieve a just and lasting peace.
+  positions:
+    ukraine: The leaders commit to providing long-term military, economic, and diplomatic
+      support to Ukraine until a just and lasting peace is achieved.
+    defence: France supports strengthening European defense capabilities through increased
+      industrial cooperation and joint development of advanced military systems with
+      Ukraine.
+    hybrid: The leaders condemn Russia's aggressive actions, including missile attacks
+      on civilians and dangerous drone incursions into NATO territory.
+    enlargement: The leaders support Ukraine's path toward stability by emphasizing
+      its inextricable link to wider Euro-Atlantic security.
+    rule_of_law: The leaders support diplomatic efforts for peace, including a direct
+      dialogue between Ukraine and Russia with international participation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: reiterate their unwavering support for Ukraine in its defence against
+        Russia’s illegal invasion
+    defence:
+      score: 2
+      evidence: increase long-term industrial cooperation with Ukraine to strengthen
+        Europe’s own defence
+    hybrid:
+      score: 1
+      evidence: condemned Russia’s large-scale missile and drone attacks - including
+        the repeated use of the Oreshnik missiles - on Ukrainian cities with a tragic
+        toll on civilians
+    enlargement:
+      score: 1
+      evidence: emphasized the inextricable link between Ukraine’s security, prosperity
+        and sovereignty and wider Euro-Atlantic security
+    rule_of_law:
+      score: 2
+      evidence: supported the proposal for a direct dialogue between Ukraine and Russia
+        - with active US and European participation - to bring about a ceasefire

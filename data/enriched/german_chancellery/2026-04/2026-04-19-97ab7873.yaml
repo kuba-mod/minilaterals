@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor Merz
+  - Brazilian President Luiz Inácio Lula da Silva
+  topics:
+  - enlargement
+  - rule_of_law
+  location: Hannover, Germany
+  position: Germany emphasizes technological progress and the strengthening of economic
+    ties with Brazil and the EU-MERCOSUR bloc.
+  positions:
+    enlargement: Germany supports the expansion of cooperation through the provisional
+      application of the EU-MERCOSUR agreement to form a large single market.
+    rule_of_law: Germany stresses the importance of maintaining democratic resilience
+      and combating disinformation as foundational elements for European unity.
+  stances:
+    enlargement:
+      score: 1
+      evidence: The Federal Government welcomes the provisional application of the
+        EU-MERCOSUR agreement , thus allowing the economy on both sides to benefit
+        sooner.
+    rule_of_law:
+      score: 1
+      evidence: The Federal Government welcomes the provisional application of the
+        EU-MERCOSUR agreement , thus allowing the economy on both sides to benefit
+        sooner.

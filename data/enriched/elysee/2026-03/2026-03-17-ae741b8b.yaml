@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Ministers
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: France maintains a defensive and supportive stance in the Middle East
+    while prioritizing national security, allied commitments, and freedom of navigation.
+  positions:
+    defence: France supports strengthening regional defense capabilities and maintaining
+      its commitment to allies through existing defense agreements.
+    rule_of_law: France emphasizes defending democratic principles and sovereignty
+      in the region, particularly concerning Lebanon's territorial integrity.
+  stances:
+    defence:
+      score: 1
+      evidence: we are loyal partners and we have provided them with clear support
+        from the outset
+    rule_of_law:
+      score: 1
+      evidence: working alongside the Lebanese authorities to, there too, preserve
+        its sovereignty and territorial integrity

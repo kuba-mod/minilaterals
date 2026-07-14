@@ -1,0 +1,34 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.3
+extracted:
+  event_type: summit
+  participants:
+  - Federal Chancellor Merz
+  - Prime Minister of Belgium, Bart De Wever
+  - Danish Prime Minister Mette Frederiksen
+  - Luxembourgian Prime Minister Luc Frieden
+  - Dutch Prime Minister Dick Schoof
+  - Prime Minister of Norway, Jonas Gahr Støre
+  - NATO representative, Jean-Charles Ellermann-Kingombe
+  - Federal Minister for Economic Affairs and Energy Katherina Reiche
+  topics:
+  - green_transition
+  location: Hamburg, Germany
+  position: Germany spearheaded the North Sea Summit to advance cross-border cooperation
+    in offshore wind energy, aiming to create a strong, independent, and secure clean
+    energy supply for Europe.
+  positions:
+    green_transition: Germany actively promotes the green transition by facilitating
+      large-scale, cross-border investments in offshore wind power, exemplified by
+      the Bornholm Energy Island project.
+  stances:
+    green_transition:
+      score: 2
+      evidence: The energy ministers agreed to integrate up to 100 GW of generation
+        capacity across borders.

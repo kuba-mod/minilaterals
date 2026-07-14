@@ -1,0 +1,41 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Chancellor Friedrich Merz
+  - President Zelensky
+  - heads of state and leading representatives of the Gulf region
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Cyprus
+  position: Germany emphasized continued support for Ukraine, addressed regional stability
+    in the Middle East, and discussed EU financial frameworks and competitiveness.
+  positions:
+    ukraine: Germany commits to providing further support for Ukraine following discussions
+      with President Zelensky.
+    enlargement: Germany supports the broader goal of EU enlargement by mentioning
+      the discussion on the situation in Ukraine and the need for institutional reform.
+    rule_of_law: Germany stresses the importance of foundational European principles
+      while discussing the overall stability and competitiveness of the EU.
+  stances:
+    ukraine:
+      score: 1
+      evidence: further support for Ukraine
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: The Weimar Triangle commits to long-term support for Ukraine across
+        military, economic, and diplomatic dimensions until a just and lasting peace
+        is achieved.

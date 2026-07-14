@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - Crown Prince Mohammad bin Salman
+  - Emir of Qatar, Sheikh Tamim bin Hamad Al-Thani
+  - President of the UAE--United Arab Emirates, Mohammed bin Zayed
+  topics:
+  - rule_of_law
+  location: Abu Dhabi, United Arab Emirates
+  position: Germany aims to strengthen strategic partnerships with Gulf states to
+    ensure stability and reliability in the Near and Middle East.
+  positions:
+    rule_of_law: Germany emphasizes the importance of reliable bilateral relations
+      and cooperation on foreign trade policy to maintain stability in the region.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: In a world of great uncertainty, what is needed above all else is
+        reliability in bilateral relations.

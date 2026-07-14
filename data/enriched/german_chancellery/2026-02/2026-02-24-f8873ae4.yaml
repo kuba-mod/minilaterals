@@ -1,0 +1,61 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - G7 states
+  - US President Donald Trump
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany strongly supports Ukraine's sovereignty and independence, viewing
+    its fate as intrinsically linked to Europe's security and advocating for a peace
+    process that includes a free and sovereign Ukraine.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine across military, economic,
+      and diplomatic dimensions until a just and lasting peace is achieved by supporting
+      its sovereignty and independence.
+    defence: Germany supports strengthening European defense capabilities by emphasizing
+      collective security and the need for self-protection against external threats.
+    hybrid: Germany calls for coordinated action against hybrid threats by highlighting
+      the ongoing dangers of violence, lack of freedom, and revisionism.
+    enlargement: Germany supports the EU accession of Ukraine by stating that a free
+      and sovereign Ukraine is necessary for sustainable peace in Europe.
+    rule_of_law: Germany affirms democratic resilience and the rule of law by contrasting
+      the fight for freedom with the dangers posed by revisionism.
+  stances:
+    ukraine:
+      score: 2
+      evidence: We will only be able to create sustainable peace in Europe together
+        with a free and sovereign Ukraine, a strong Ukraine that can continue to protect
+        itself against Russian attacks now and in the future.
+    defence:
+      score: 1
+      evidence: For four years, Ukraine has been defending its freedom – and our common
+        security in Europe.
+    hybrid:
+      score: 1
+      evidence: The Chancellor made it clear that since then we have been reminded
+        daily of "what violence, lack of freedom and revisionism look like".
+    enlargement:
+      score: 1
+      evidence: '"The fate of Ukraine is the fate of the whole of Europe," said Chancellor
+        Merz.'
+    rule_of_law:
+      score: 1
+      evidence: At the same time, the Ukrainians' fight for defence reminds us of
+        what just resistance looks like.

@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany welcomes the US-Iran agreement as a potential catalyst for global
+    economic recovery and regional stabilization, while emphasizing the need for further
+    diplomatic action on nuclear disarmament and regional security.
+  positions:
+    rule_of_law: Germany affirms its commitment to promoting democratic stability
+      and rule of law through continued diplomatic engagement with international partners.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The German Government continues to support and promote all diplomatic
+        endeavours to this end.

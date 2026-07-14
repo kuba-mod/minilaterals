@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - gen. Robert Bagan
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is significantly strengthening its eastern border defenses and
+    security infrastructure through massive investments and enhanced cooperation to
+    ensure regional stability and protect democratic values.
+  positions:
+    defence: Poland is actively enhancing its defense capabilities by investing nearly
+      3 billion PLN in modernizing the eastern border, including physical and electronic
+      barriers, and increasing personnel capacity.
+    hybrid: Poland emphasizes that border security efforts are integral to defending
+      democracy and civil liberties against external threats.
+    rule_of_law: The government stresses that maintaining a secure border is crucial
+      for restoring the sense of safety and belief in democratic institutions for
+      both Polish and European citizens.
+  stances:
+    defence:
+      score: 2
+      evidence: Minister Spraw Wewnętrznych i Administracji Marcin Kierwiński zaznaczył,
+        że rząd nie szczędzi środków na wzmacnianie bezpieczeństwa wschodniej granicy
+        Polski. To prawie 3 mld zł inwestycji w uszczelnienie naszej granicy.
+    hybrid:
+      score: 2
+      evidence: stanowi także obronę demokracji, praw obywatelskich i wolności w kraju
+        oraz Europie.
+    rule_of_law:
+      score: 2
+      evidence: Dzięki skutecznej pracy funkcjonariuszy Polacy i Europejczycy odzyskali
+        poczucie bezpieczeństwa oraz wiarę w państwo demokratyczne, które potrafi
+        chronić swoich obywateli.

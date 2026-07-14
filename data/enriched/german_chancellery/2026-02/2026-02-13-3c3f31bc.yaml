@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: true
+weimar_score: 0.5
+extracted:
+  event_type: speech
+  participants:
+  - Federal Chancellor
+  topics:
+  - ukraine
+  - rule_of_law
+  - enlargement
+  location: Munich, Germany
+  position: Germany acknowledges the profound shift in the international order towards
+    great power politics and calls for urgent dialogue among global powers.
+  positions:
+    ukraine: Germany strongly supports long-term support for Ukraine following Russia's
+      war of aggression, recognizing it as a primary threat to the existing political
+      order.
+    rule_of_law: Germany emphasizes that the international rules-based order is currently
+      defunct, necessitating urgent dialogue to restore democratic resilience.
+    enlargement: Germany supports the broader geopolitical challenge posed by rising
+      powers like China and Russia, which undermine established international norms.
+  stances:
+    ukraine:
+      score: 2
+      evidence: At the latest since Russia’s war of aggression against Ukraine four
+        years ago, we entered a new phase of open warfare and conflict
+    rule_of_law:
+      score: 1
+      evidence: this order, as imperfect as it was even at the best of times, no longer
+        exists.
+    enlargement:
+      score: 1
+      evidence: China has the ambition to shape global affairs, laying the foundations
+        for this over many years with strategic patience.

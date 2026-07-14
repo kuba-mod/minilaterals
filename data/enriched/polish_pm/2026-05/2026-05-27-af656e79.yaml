@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Donald Tusk
+  - Keir Starmer
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Northolt, UK
+  position: Poland and the UK have signed a treaty to strengthen bilateral security
+    cooperation, focusing on defense, cyber protection, and upholding shared democratic
+    values.
+  positions:
+    defence: The agreement commits both Poland and the UK to enhance mutual defense
+      capabilities and collective security through practical cooperation.
+    hybrid: The partnership emphasizes joint action to protect against modern threats
+      in the cyber domain, recognizing its critical importance for security.
+    rule_of_law: Poland and the UK affirm their commitment to shared democratic values,
+      including the rule of law, democracy, and human rights.
+  stances:
+    defence:
+      score: 2
+      evidence: Traktat polsko-brytyjski wzmacnia bezpieczeństwo obu państw oraz służy
+        skutecznemu odstraszaniu potencjalnych zagrożeń jeszcze przed wystąpieniem
+        konfliktu.
+    hybrid:
+      score: 2
+      evidence: Szczególnie ważnym obszarem współpracy między Warszawą a Londynem
+        będzie ochrona cyberprzestrzeni.
+    rule_of_law:
+      score: 2
+      evidence: Polska i Wielka Brytania zadeklarowały także ochronę wspólnych wartości,
+        takich jak rządy prawa, demokracja i prawa człowieka.

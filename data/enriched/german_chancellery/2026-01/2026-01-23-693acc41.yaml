@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor Friedrich Merz
+  - Prime Minister Giorgia Meloni
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany emphasized a close and cooperative partnership with Italy, discussing
+    European security, defense capabilities, and economic policy.
+  positions:
+    defence: Germany supports strengthening EU defence capabilities complementary
+      to NATO by discussing Europe's security and defence capabilities with Italy.
+    hybrid: The press release does not provide specific information regarding Germany's
+      stance on hybrid threats.
+    enlargement: Germany supports the EU accession of Ukraine and Western Balkans
+      countries by discussing European policy issues with Italy.
+    green_transition: Germany supports climate neutrality and green objectives by
+      mentioning European economic policy issues with Italy.
+    rule_of_law: Germany affirms democratic resilience and rule of law as foundational
+      to European unity and security through discussions on general European policy.
+  stances:
+    defence:
+      score: 1
+      evidence: In addition to European and economic policy issues, they also discussed
+        Europe’s security and defence capabilities.
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    green_transition:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''

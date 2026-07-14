@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is passing a draft bill to ease the financial burden on federal
+    states and local authorities to ensure that essential public services and infrastructure
+    can be maintained.
+  positions:
+    rule_of_law: Germany emphasizes democratic resilience by ensuring local authorities
+      have sufficient financial resources to maintain essential public services like
+      schools, roads, and childcare facilities.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'One thing is clear: local authorities with sufficient financial resources
+        and a well-functioning community strengthen our democracy.'

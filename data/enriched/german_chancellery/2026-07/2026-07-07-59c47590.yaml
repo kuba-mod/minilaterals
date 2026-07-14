@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: statement
+  participants:
+  - Prime Minister Mark Carney
+  - Chancellor Friedrich Merz
+  - Prime Minister Jonas Gahr Støre
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany is committed to building a strategic, long-term security partnership
+    with Canada and Norway across multiple sectors including defense, energy, AI,
+    and critical minerals.
+  positions:
+    defence: Germany supports strengthening EU defence capabilities complementary
+      to NATO through increased cooperation in military areas.
+    hybrid: Germany calls for coordinated action against hybrid threats such as disinformation
+      campaigns and foreign political interference.
+    enlargement: The text does not mention the EU accession of Ukraine or Western
+      Balkans countries.
+    rule_of_law: Germany emphasizes the importance of shared values and democratic
+      resilience for transatlantic security.
+  stances:
+    defence:
+      score: 2
+      evidence: Yesterday’s Canadian decision to join the German-Norwegian Type 212CD
+        submarine cooperation creates a unique opportunity to boost our defence industrial
+        and military cooperation.
+    hybrid:
+      score: 1
+      evidence: Our commitment extends beyond security and defence, encompassing strategic
+        areas such as investment, energy, artificial intelligence, space and critical
+        minerals.
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: In times of profound geopolitical change, Canada, Germany and Norway
+        are determined to build a strategic, long-term security partnership built
+        on shared values and interests.

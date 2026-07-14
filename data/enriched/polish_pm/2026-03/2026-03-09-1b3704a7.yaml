@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: joint_statement
+  participants:
+  - Donald Tusk
+  - Rob Jetten
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasizes the strengthening of bilateral defense cooperation with
+    the Netherlands and maintaining a united front in support of Ukraine and NATO's
+    eastern flank.
+  positions:
+    ukraine: Poland strongly supports long-term commitment to Ukraine, viewing its
+      stability as crucial for European security and demonstrating Polish determination
+      against external aggression.
+    defence: Poland is actively deepening its defense cooperation with the Netherlands
+      through a memorandum focusing on equipment, technology, logistics, and joint
+      training.
+    rule_of_law: Poland stresses the importance of democratic resilience and adherence
+      to international law by highlighting its own historical role in defending freedom.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska odgrywa kluczową rolę w niesieniu pomocy Ukrainie.
+    defence:
+      score: 2
+      evidence: Lipcowe memorandum dotyczy pogłębienia współpracy między Polską a
+        Holandią w sektorze bezpieczeństwa i obronności, w tym sprzętu, technologii,
+        logistyki oraz szkoleń personelu wojskowego.
+    rule_of_law:
+      score: 1
+      evidence: Polska odgrywa kluczową rolę w niesieniu pomocy Ukrainie.

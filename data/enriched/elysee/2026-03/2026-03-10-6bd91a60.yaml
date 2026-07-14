@@ -1,0 +1,34 @@
+actors:
+- FR
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.35
+extracted:
+  event_type: joint_statement
+  participants:
+  - countries operating nuclear power plants
+  - Director General of the International Atomic Energy Agency (IAEA)
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France supports nuclear energy as a crucial and reliable component for
+    achieving global decarbonization goals and ensuring energy security.
+  positions:
+    green_transition: France strongly advocates for nuclear energy's role in meeting
+      global demand for electricity and reducing greenhouse gas emissions, supporting
+      the goal of climate neutrality.
+  stances:
+    green_transition:
+      score: 2
+      evidence: We, the countries operating nuclear power plants, or expanding or
+        embarking on or exploring the option of nuclear energy, and the Director General
+        of the International Atomic Energy Agency (IAEA), gathered in Paris for the
+        2nd Nuclear Energy Summit to reaffirm our strong commitment to nuclear energy
+        as a strategic asset to meet the increasing global demand for electricity,
+        as well as a key component of our global strategy to reduce greenhouse gas
+        emissions from both power and industrial sectors, to ensure energy security
+        and diversification and promote long-term sustainable development and clean,
+        just and equitable energy transition and diversification.

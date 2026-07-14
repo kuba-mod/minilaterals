@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Minister of Finance Lars Klingbeil
+  - Federal Minister of the Interior Alexander Dobrindt
+  - Federal Minister of Justice Stefanie Hubig
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has adopted a joint action plan to significantly strengthen law
+    enforcement and security agencies to combat organized crime and protect domestic
+    security.
+  positions:
+    rule_of_law: Germany strongly affirms the rule of law by implementing comprehensive
+      measures to fight criminal structures, improve data exchange, and secure assets.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Crime must not pay in our country. Perpetrators must be identified
+        quickly, brought to justice and punished consistently

@@ -1,0 +1,60 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - E5 Group leaders
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Berlin, Germany
+  position: Poland emphasizes that the future of Europe and the West depends on maintaining
+    European and transatlantic unity, while also advocating for stronger defense capabilities
+    and support for Ukraine's reconstruction.
+  positions:
+    ukraine: Poland commits to long-term support for Ukraine through both military
+      aid and active participation in its reconstruction efforts.
+    defence: Poland strongly advocates for strengthening European defense capabilities
+      and calling on NATO leaders to fulfill their commitments regarding defense spending.
+    hybrid: Poland stresses the importance of maintaining European and transatlantic
+      unity to protect against external threats.
+    enlargement: Poland highlights the crucial role of Eastern Flank states for European
+      security and advocates for their full representation in cooperation formats.
+    rule_of_law: Poland emphasizes that the future of the West depends on maintaining
+      European and transatlantic unity to protect democratic values.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Będzie to kolejny wkład Polski i Europy w odbudowę Ukrainy, pomoc
+        Ukrainie dzisiaj i w odbudowę Ukrainy po wojnie
+    defence:
+      score: 2
+      evidence: Premier zaapelował do liderów NATO, by włożyli więcej wysiłku w budowę
+        zdolności obronnych Europy i własnych krajów
+    hybrid:
+      score: 1
+      evidence: Będziemy chronić europejską jedność zarówno w trakcie wojny na rzecz
+        Ukrainy, w jej konfrontacji z Rosją.
+    enlargement:
+      score: 2
+      evidence: Premier podkreślił również znaczenie państw flanki wschodniej dla
+        zachowania bezpieczeństwa Europy.
+    rule_of_law:
+      score: 1
+      evidence: przyszłość Europy, zachodniego świata, Ukrainy w tym dramatycznym
+        dla niej momencie, będzie zależała od tego, na ile zachowamy jedność europejską
+        i transatlantycką

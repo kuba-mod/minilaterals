@@ -1,0 +1,44 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.35
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - defence
+  - rule_of_law
+  - green_transition
+  location: null
+  position: Germany is focusing on significant investments and reforms across infrastructure,
+    energy, and industry to boost its economic competitiveness and modernize its state
+    functions.
+  positions:
+    defence: Germany supports strengthening defense capabilities through direct investment
+      in the sector.
+    rule_of_law: Germany emphasizes maintaining democratic resilience and efficiency
+      by modernizing state services and reducing bureaucratic burdens.
+    green_transition: Germany supports the green transition by launching major funds
+      for infrastructure and implementing measures to reduce energy costs.
+  stances:
+    defence:
+      score: 2
+      evidence: The focus is on investments in defence, roads, schools, digitalisation,
+        security authorities and modern administration.
+    rule_of_law:
+      score: 1
+      evidence: At the same time, it must continue to expand its innovative strength.
+        ... For example, the child benefit is paid out from birth without the need
+        of an application and the driving licence is digital.
+    green_transition:
+      score: 2
+      evidence: The 500 billion euro Special Fund for Infrastructure and Climate Neutrality
+        has now been launched. ... The Federal Government is reducing energy costs
+        noticeably and permanently.

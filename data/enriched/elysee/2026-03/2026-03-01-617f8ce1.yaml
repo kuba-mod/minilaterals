@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of France
+  - Germany
+  - United Kingdom
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France, Germany, and the United Kingdom jointly condemn Iran's attacks
+    and warn they will take defensive action to protect their interests and allies.
+  positions:
+    defence: The leaders support strengthening regional defense capabilities by potentially
+      taking proportionate defensive action against missile threats.
+    hybrid: The statement does not specifically address hybrid threats like disinformation
+      or cyber attacks.
+    rule_of_law: The leaders affirm the importance of defending regional interests
+      and allies against destabilizing actions.
+  stances:
+    defence:
+      score: 2
+      evidence: potentially through enabling necessary and proportionate defensive
+        action to destroy Iran’s capability to fire missiles and drones at their source.
+    hybrid:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: We will take steps to defend our interests and those of our allies
+        in the region,

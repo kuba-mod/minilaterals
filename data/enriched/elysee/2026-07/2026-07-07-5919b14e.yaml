@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Ahmed al-Charaa
+  topics:
+  - rule_of_law
+  location: Damascus, Syria
+  position: France reaffirmed its commitment to supporting a sovereign, stable, and
+    inclusive political transition in Syria.
+  positions:
+    rule_of_law: France supports the foundational principles of democratic resilience
+      and rule of law by committing to an inclusive and pluralistic political transition
+      that guarantees rights and representation for all Syrian segments.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The President of the Republic reaffirmed France’s commitment to Syria’s
+        unity and to an inclusive and pluralistic political transition that guarantees
+        the rights, security, and representation of all segments of Syrian society.

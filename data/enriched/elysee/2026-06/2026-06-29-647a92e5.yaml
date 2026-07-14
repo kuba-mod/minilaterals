@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.2
+extracted:
+  event_type: joint_statement
+  participants:
+  - His Majesty Sultan Haitham bin Tarik, Sultan of Oman
+  - Emmanuel Macron, President of the French Republic
+  topics: []
+  location: France
+  position: France and Oman reaffirmed their comprehensive bilateral partnership across
+    economic, defense, and strategic sectors, focusing on mutual investment and trade
+    expansion.
+  positions: {}
+  stances: {}

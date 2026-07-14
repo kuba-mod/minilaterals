@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.15
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Friedrich Merz
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany advocates for a united Europe focused on competitiveness and free
+    trade while maintaining high pressure on Russia regarding Ukraine.
+  positions:
+    ukraine: Germany supports long-term support for Ukraine's peace efforts by demanding
+      increased pressure on Russia through sanctions and EU involvement in negotiations,
+      but rejects military participation in current operations.
+    rule_of_law: Germany emphasizes that a united Europe is crucial for safeguarding
+      global rules, fairness, and stability by strengthening the single market and
+      reducing bureaucracy.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The US and Europe must “join forces” to work towards a just peace
+        in Ukraine, the Federal Chancellor demanded.
+    rule_of_law:
+      score: 1
+      evidence: Under these conditions, “a united Europe is the most important guarantee
+        ” for our own future, said the Federal Chancellor.

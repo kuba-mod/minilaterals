@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Dęblin, Poland
+  position: Poland strengthens its defense cooperation with the USA through a major
+    investment in Abrams tank engine servicing capabilities, emphasizing transatlantic
+    unity and reliable partnership.
+  positions:
+    defence: Poland is actively strengthening its defense industrial base and alliance
+      security by establishing an authorized service center for Abrams tanks engines,
+      enhancing collective security and deterrence.
+    hybrid: Poland stresses the importance of maintaining strong transatlantic ties
+      and mutual trust as foundational guarantees against current global risks.
+    rule_of_law: Poland affirms the importance of democratic resilience and stable
+      alliances as key components of its national security strategy.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska będzie pierwszym państwem w Europie i trzecim na świecie, który
+        posiada autoryzowane centrum serwisowe silników do czołgów Abrams.
+    hybrid:
+      score: 1
+      evidence: Jedność transatlantycka, w tym współpraca polsko-amerykańska, jest
+        gwarancją bezpieczeństwa i stabilności ładu międzynarodowego
+    rule_of_law:
+      score: 1
+      evidence: Warto o tym pamiętać, bo lepszego sojusznika Ameryka nigdzie nie znajdzie.

@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.05
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Dariusz Klimczak
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the successful completion of major infrastructure projects
+    and its strong commitment to maintaining high standards in public services and
+    state security.
+  positions:
+    rule_of_law: Poland affirms its democratic resilience and commitment to upholding
+      the rule of law by promising thorough investigations into alleged misconduct
+      at local institutions.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Niezależnie od tego czy to się komuś opłaca czy nie - będziemy wyjaśniali
+        każdy element sprawy Szpitala Południowego i tam, gdzie jest potrzebna prokuratura,
+        ona jest i działa

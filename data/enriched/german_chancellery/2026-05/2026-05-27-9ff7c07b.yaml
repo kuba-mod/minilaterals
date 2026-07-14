@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+weimar_score: 0.1
+extracted:
+  event_type: statement
+  participants:
+  - Federal Minister of the Interior Alexander Dobrindt
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is strengthening its cyber security framework by passing a new
+    law to improve detection and defense against increasingly sophisticated cyber
+    attacks.
+  positions:
+    hybrid: Germany recognizes the increasing threat of hybrid threats and aims to
+      strengthen defenses through legal and technical means.
+    rule_of_law: Germany is enhancing its rule of law framework by passing a bill
+      that provides legally secure foundations for cyber defense operations.
+  stances:
+    hybrid:
+      score: 2
+      evidence: In view of the geopolitical situation, hybrid threats are also becoming
+        more and more significant.
+    rule_of_law:
+      score: 2
+      evidence: Appropriate and legally secure legal foundations are to be created
+        for the detection of and defence against cyber attacks.
