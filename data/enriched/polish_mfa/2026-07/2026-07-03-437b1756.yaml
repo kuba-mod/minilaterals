@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministers
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes deepening military and economic cooperation with Ukraine
+    while stressing the importance of historical truth and regional stability.
+  positions:
+    ukraine: Poland supports long-term support for Ukraine across multiple dimensions,
+      focusing on reconstruction and strengthening bilateral ties.
+    defence: Poland strongly advocates for deepening military cooperation to ensure
+      regional stability and continental security.
+    enlargement: The discussion on economic ties suggests support for Ukraine's integration
+      and post-war reconstruction efforts.
+    rule_of_law: Poland stresses that historical truth, mutual respect, and responsible
+      memory are foundational for stable bilateral relations.
+  stances:
+    ukraine:
+      score: 1
+      evidence: reaffirmed Poland’s support for Ukraine’s struggle against the aggressor
+    defence:
+      score: 1
+      evidence: underlined the strategic importance of deepening military cooperation
+        and ensuring the region’s stability for the security of the entire continent
+    enlargement:
+      score: 0
+      evidence: interlocutors looked at it through the lens of the positive outcomes
+        of the recent Ukraine Recovery Conference in Gdańsk
+    rule_of_law:
+      score: 1
+      evidence: the ministers stressed their shared willingness to develop tools that
+        foster historical dialogue based on truth and mutual respect for the past

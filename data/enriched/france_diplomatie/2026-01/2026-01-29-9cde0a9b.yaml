@@ -1,0 +1,43 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Helen McEntee, Minister for Foreign Affairs and Trade and Minister for Defence
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its commitment to strengthening the bilateral relationship
+    with Ireland through a Joint Strategic Framework until 2030, while also coordinating
+    closely on EU resilience and global issues.
+  positions:
+    ukraine: France strongly supports Ukraine's long-term security and calls for continued
+      international pressure on Russia to achieve a ceasefire.
+    defence: France supports enhancing EU defense capabilities by coordinating closely
+      with Ireland to make the Union more sovereign and resilient.
+    rule_of_law: France emphasizes the importance of democratic resilience and coordinating
+      efforts within the EU to maintain stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The two ministers reaffirmed their resolute and lasting support for
+        Ukraine, particularly within the Coalition of the Willing, and called for
+        pressure to be maintained on Russia with a view to a ceasefire being reached.
+    defence:
+      score: 1
+      evidence: the ministers reaffirmed their desire to coordinate closely to make
+        the EU more competitive, sovereign and resilient, committed to its values
+        and its security.
+    rule_of_law:
+      score: 1
+      evidence: reaffirmed their desire to coordinate closely to make the EU more
+        competitive, sovereign and resilient, committed to its values and its security.

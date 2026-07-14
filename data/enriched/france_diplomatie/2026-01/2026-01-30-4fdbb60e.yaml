@@ -1,0 +1,15 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  topics: []
+  location: null
+  position: France welcomes the signing of an agreement in Syria and calls for its
+    full implementation to ensure a peaceful transition.
+  positions: {}
+  stances: {}

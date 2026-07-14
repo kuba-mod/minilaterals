@@ -1,0 +1,46 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Australia
+  - Canada
+  - Denmark
+  - Estonia
+  - Finland
+  - Germany
+  - Latvia
+  - Lithuania
+  - the Czech Republic
+  - the Netherlands
+  - New Zealand
+  - Norway
+  - Poland
+  - Sweden
+  - the United Kingdom
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: The statement strongly condemns Russia's actions regarding Alexei Navalny
+    and demands compliance with international law while supporting human rights defenders
+    and Ukraine.
+  positions:
+    ukraine: Poland supports long-term support for Ukraine by condemning Russian aggression
+      and demanding the release of political prisoners.
+    rule_of_law: Poland strongly advocates for adherence to international law, citing
+      ECHR judgments and demanding investigations into Navalny's death.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The repression inside Russia furthermore enables its aggression abroad.
+    rule_of_law:
+      score: 2
+      evidence: We underline that the Russian authorities remain solely responsible.

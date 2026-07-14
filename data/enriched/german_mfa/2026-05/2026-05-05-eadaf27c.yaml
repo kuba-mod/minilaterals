@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Chancellor Merz
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes its commitment to Africa's global importance and international
+    cooperation while advocating for stability in conflict zones like Sudan.
+  positions:
+    rule_of_law: Germany stresses the importance of international cooperation and
+      adherence to principles to address global crises and conflicts, particularly
+      concerning maritime security and war consequences.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We are convinced that we now need the cooperation of the international
+        community to alleviate the war’s consequences more than ever before.

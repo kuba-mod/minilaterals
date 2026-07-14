@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Pablo Quirno, Minister of Foreign Affairs, International Trade and Worship
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its support for Argentina's OECD membership and deepened
+    bilateral cooperation across various strategic sectors while addressing global
+    challenges.
+  positions:
+    rule_of_law: France highlighted the importance of combating anti-Semitism as a
+      shared international concern.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: the common fight against anti-Semitism

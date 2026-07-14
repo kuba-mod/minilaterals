@@ -1,0 +1,18 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hezbollah
+  - Lebanese Armed Forces
+  - Israeli army
+  topics: []
+  location: null
+  position: France calls for all parties to implement the ceasefire agreement and
+    reach a comprehensive political settlement respecting Lebanese sovereignty and
+    Israeli security.
+  positions: {}
+  stances: {}

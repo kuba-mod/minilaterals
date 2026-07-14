@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Ian Borg, Malta’s Deputy Prime Minister and Minister for Foreign Affairs and Tourism
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Paris, France
+  position: France signaled its desire to deepen relations with Malta across several
+    sectors while reaffirming support for Ukraine and expressing concern over the
+    Middle East.
+  positions:
+    ukraine: France reaffirmed unwavering support for Ukraine against Russian aggression.
+    rule_of_law: France emphasized democratic resilience and stability concerns related
+      to geopolitical hotspots like Lebanon.
+  stances:
+    ukraine:
+      score: 1
+      evidence: reaffirmed their unwavering support for Ukraine in the face of the
+        war of aggression being waged by Russia
+    rule_of_law:
+      score: 1
+      evidence: expressed their concern over developments in the Middle East, particularly
+        in Lebanon

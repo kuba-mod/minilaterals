@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  topics:
+  - defence
+  - rule_of_law
+  location: Warsaw
+  position: Poland reaffirmed its commitment to deepening cooperation with the US
+    across strategic areas including security and defense.
+  positions:
+    defence: Poland supports strengthening defense capabilities through continued
+      cooperation with the United States, particularly in the context of the Poland-US
+      Strategic Dialogue.
+    rule_of_law: Poland emphasizes its commitment to supporting political prisoners'
+      release and maintaining democratic resilience through continued US-Polish cooperation.
+  stances:
+    defence:
+      score: 1
+      evidence: Minister Sikorski and Secretary Rubio confirmed willingness to deepen
+        the Polish–American cooperation in such strategic areas as security, defence,
+        economy, and energy.
+    rule_of_law:
+      score: 1
+      evidence: Poland had supported the previous prisoner swaps and will continue
+        to work with the United States to secure the release of all political prisoners,
+        not only in Belarus.

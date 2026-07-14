@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - defence
+  location: null
+  position: Germany expresses satisfaction that Canada's choice of a German-Norwegian
+    supplier strengthens the transatlantic defense partnership.
+  positions:
+    defence: Germany supports strengthening EU and NATO defense capabilities through
+      cooperation with partners like Norway and Canada.
+  stances:
+    defence:
+      score: 1
+      evidence: This step will strengthen and deepen our partnership in the transatlantic
+        alliance for the long term.

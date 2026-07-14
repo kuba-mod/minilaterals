@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Foreign Office Spokesperson
+  - Johann Wadephul
+  - Gideon Sa’ar
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany significantly increases its financial support for Yad Vashem to
+    bolster Holocaust remembrance and counter denial.
+  positions:
+    rule_of_law: Germany strongly supports the preservation of democratic values and
+      historical truth by increasing funding for Holocaust documentation and education.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: 'Foreign Minister Wadephul stated the following in this regard: Yad
+        Vashem plays a crucial role in ensuring that eyewitness accounts and written
+        testimonies are found, secured, compiled scientifically and conserved in line
+        with the latest standards, as well as digitised and made accessible to a broad
+        general public, including online. Contributing to this effort and thereby
+        resolutely countering the growing trend of Holocaust trivialisation and even
+        denial remains a duty and a commitment for my country.'

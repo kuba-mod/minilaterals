@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Prince Faisal bin Farhan Al Saud
+  topics:
+  - rule_of_law
+  location: Davos, Switzerland
+  position: France emphasized the importance of bilateral relations with Saudi Arabia
+    while stressing regional stability and adherence to international resolutions
+    in conflict zones.
+  positions:
+    rule_of_law: France stressed the need for reforms within the Palestinian Authority
+      and the full implementation of UN Security Council resolutions regarding humanitarian
+      aid.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: reiterated the importance of fully implementing UNSC Resolution 2803,
+        and particularly the delivery of humanitarian aid – vital to the people of
+        Gaza – in cooperation with the UN.

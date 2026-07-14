@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - foreign ministers of Poland and Ireland
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Warsaw
+  position: Poland emphasized the importance of strengthening EU defense capabilities,
+    supporting Ukraine's path to membership, and fostering economic cooperation with
+    Ireland.
+  positions:
+    defence: Poland supports increasing EU defence investment and building a stronger
+      collective security framework at the EU level.
+    hybrid: Poland highlights the need to address new challenges, including hybrid
+      threats, as part of ensuring Europe's security and economic stability.
+    enlargement: Poland strongly supports Ukraine's path to EU membership and actively
+      assists in its institutional reforms.
+    rule_of_law: Poland stresses the importance of safeguarding the EU's security
+      by supporting Ukraine, which is foundational to European stability.
+  stances:
+    defence:
+      score: 1
+      evidence: Minister McEntee emphasised that EU member states should increase
+        their defence investment.
+    hybrid:
+      score: 1
+      evidence: whether hybrid threats or maritime security, which has come to the
+        forefront - said Minister Helen McEntee.
+    enlargement:
+      score: 2
+      evidence: Poland advises Ukrainian public administration institutions in their
+        efforts to conduct EU-related reforms and align legislation with EU acquis.
+    rule_of_law:
+      score: 1
+      evidence: The foreign ministers of Poland and Ireland also discussed opportunities
+        to develop economic cooperation.

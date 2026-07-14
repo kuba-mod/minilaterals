@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Foreign Ministers of France, Canada, Italy, Japan, Germany, the United Kingdom
+    and the United States of America
+  - High Representative of the European Union
+  - Ukraine’s Foreign Minister
+  - Indian Foreign Minister
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Munich, Germany
+  position: France aims to use the G7 forum to strengthen multilateralism and address
+    global macroeconomic imbalances while reaffirming support for Ukraine's sovereignty.
+  positions:
+    ukraine: France strongly supports Ukraine's defense of its freedom and territorial
+      integrity, particularly regarding continued energy sector support.
+    rule_of_law: France emphasizes that the G7 must remain a key forum for dialogue
+      to settle major crises in accordance with international law.
+  stances:
+    ukraine:
+      score: 1
+      evidence: the G7’s members to reaffirm their unwavering support to the country
+        as it defends its freedom, its sovereignty and its territorial integrity.
+    rule_of_law:
+      score: 1
+      evidence: Jean-Noël Barrot reiterated his desire for the G7 to continue being
+        a key forum for dialogue and concertation to settle major crises in accordance
+        with international law.

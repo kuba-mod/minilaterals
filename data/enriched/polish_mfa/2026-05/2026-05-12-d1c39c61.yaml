@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Foreign Minister Wojciech Zajączkowski
+  - Assistant to Foreign Minister for European Affairs Wael Hamed
+  - representatives of the Egyptian Ministry of Foreign Affairs
+  topics:
+  - rule_of_law
+  location: Cairo, Egypt
+  position: Poland emphasized strengthening bilateral economic and cultural ties with
+    Egypt while also addressing regional security concerns.
+  positions:
+    rule_of_law: Poland stressed the importance of international law and dialogue
+      in managing regional conflicts.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: the diplomats emphasised the need to de-escalate tensions and the
+        importance of dialogue and respect for international law.

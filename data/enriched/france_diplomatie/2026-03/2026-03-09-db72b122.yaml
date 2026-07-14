@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Belgium
+  - Denmark
+  - European Union
+  - France
+  - Germany
+  - Netherlands
+  - Sweden
+  - Switzerland
+  - United Kingdom
+  - United States of America
+  topics:
+  - rule_of_law
+  location: null
+  position: The ICG expresses profound concern over ceasefire violations in eastern
+    DRC and urges all parties to recommit to negotiations and respect international
+    law.
+  positions:
+    rule_of_law: France supports the general adherence to international humanitarian
+      law and commitments made under various accords for peace in the DRC.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The ICG calls on all parties to honour their obligations to respect
+        international humanitarian law

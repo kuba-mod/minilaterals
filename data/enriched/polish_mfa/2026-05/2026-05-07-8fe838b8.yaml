@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - José Daniel Ferrer
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland supports democratic reform and shares its political transition
+    experience with Cuba.
+  positions:
+    rule_of_law: Poland strongly supports the democratic aspirations of the Cuban
+      people and advocates for their right to self-determination.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We support the democratic aspirations of the people of Cuba

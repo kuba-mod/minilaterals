@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministers
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Warsaw
+  position: Poland maintains a strategic partnership with the UK and jointly supports
+    Ukraine's sovereignty and territorial integrity while advocating for continued
+    international pressure on Russia.
+  positions:
+    ukraine: Poland strongly supports Ukraine's sovereignty and territorial integrity,
+      coordinating measures within NATO and the coalition of the willing to end the
+      conflict in line with international law.
+    defence: While not explicitly detailing a Weimar goal for defense, Poland emphasizes
+      cooperation in security and defense spheres through high-level consultations.
+    rule_of_law: Poland supports that any resolution to the conflict must adhere strictly
+      to international law principles.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Both Poland and the United Kingdom unequivocally support Ukraine’s
+        sovereignty and territorial integrity.
+    defence:
+      score: 1
+      evidence: The two countries cooperate closely in political terms as well as
+        in the spheres of security, defence, economy, and culture.
+    rule_of_law:
+      score: 1
+      evidence: The two states agree that the terms of ending the war must be in line
+        with international law.

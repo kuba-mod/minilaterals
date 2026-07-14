@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is strengthening its public diplomacy and support for democratic
+    values through media initiatives aimed at countering disinformation in Moldova.
+  positions:
+    hybrid: Poland actively addresses hybrid threats by launching a Romanian-language
+      media program to counter Russian disinformation in Moldova.
+    rule_of_law: Poland emphasizes the importance of independent media and democratic
+      processes as crucial defenses against foreign influence.
+  stances:
+    hybrid:
+      score: 2
+      evidence: The purpose of the new programme is to reach out to the Romanian-speaking
+        part of Moldovan society and to strengthen the region’s resilience to disinformation,
+        in particular inspired by the Russian Federation.
+    rule_of_law:
+      score: 2
+      evidence: Access to independent media is crucial in the face of Russia’s attempts
+        at influencing the democratic processes in Moldova, as evidenced during the
+        2024 presidential vote and the 2025 parliamentary election in the country.

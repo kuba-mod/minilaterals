@@ -1,0 +1,47 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Berlin
+  position: Poland emphasized continued support for Ukraine and expanded bilateral
+    cooperation with Germany across security, economic, and infrastructure domains.
+  positions:
+    ukraine: Poland strongly commits to long-term support for Ukraine's defense against
+      Russian aggression.
+    defence: Poland supports strengthening EU and collective security capabilities,
+      particularly focusing on the eastern flank.
+    enlargement: Poland supports the future and enlargement of the European Union.
+    rule_of_law: Poland stresses the importance of open dialogue to resolve difficult
+      bilateral issues.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Russian aggression against Ukraine is a test of our responsibility
+        and far-sightedness. We will continue to support Ukraine together
+    defence:
+      score: 1
+      evidence: We will continue to support Ukraine together and to boost the security
+        not only of the eastern flank but of the entire Community.
+    enlargement:
+      score: 1
+      evidence: They also discussed transatlantic relations, cooperation in NATO,
+        the future and enlargement of the European Union
+    rule_of_law:
+      score: 1
+      evidence: What matters is that we are able to discuss them openly.

@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Athens, Greece
+  position: Germany emphasizes the need for closer cooperation with Greece to strengthen
+    European security, economic resilience, and democratic values in a turbulent global
+    environment.
+  positions:
+    defence: Germany supports building stronger EU defense capabilities through joint
+      procurement and funding mechanisms, complementing NATO efforts.
+    hybrid: Germany stresses that global challenges like power politics, the war in
+      Ukraine, and Middle East tensions require Europe to protect its values and open
+      trade routes.
+    enlargement: Germany strongly advocates for tangible progress toward EU enlargement,
+      calling for credible accession prospects for countries like Albania and Ukraine.
+    rule_of_law: Germany views the defense of democratic values and established global
+      rules as foundational to Europe's future stability and security.
+  stances:
+    defence:
+      score: 1
+      evidence: 'Fortunately, new options are now available to us in this regard:
+        in joint procurement, in European funding and in building a robust defence
+        industry.'
+    hybrid:
+      score: 1
+      evidence: Russia’s war of aggression against Ukraine, the situation in the Middle
+        East and Iran’s blockade of the Strait of Hormuz show that our security, economic
+        stability and open trade routes are inextricably linked.
+    enlargement:
+      score: 1
+      evidence: From Albania to Ukraine, we must offer credible prospects for accession.
+    rule_of_law:
+      score: 1
+      evidence: Greece is the cradle of essential values that shape Europe today.

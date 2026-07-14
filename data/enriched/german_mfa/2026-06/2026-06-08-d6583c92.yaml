@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - United States of America
+  - Belgium
+  - France
+  - Germany
+  - Greece
+  - Italy
+  - Norway
+  - the United Kingdom
+  - African Union ( AU )
+  - European Union ( EU )
+  - Intergovernmental Authority on Development ( IGAD )
+  - League of Arab States (LAS)
+  - United Nations ( UN )
+  topics: []
+  location: null
+  position: Germany reaffirms commitment to a peaceful, democratic, and civilian-led
+    transition for Sudan while expressing deep concern over the humanitarian crisis.
+  positions: {}
+  stances: {}

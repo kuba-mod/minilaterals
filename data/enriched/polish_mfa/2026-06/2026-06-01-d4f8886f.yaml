@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - foreign ministers
+  - Minister Sikorski
+  - Minister Albares
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Barcelona, Spain
+  position: Poland stressed the fundamental threat posed by the war in Ukraine and
+    advocated for enhanced cooperation among NATO members to support European strategic
+    autonomy.
+  positions:
+    ukraine: Poland strongly emphasizes that the war in Ukraine is a fundamental threat
+      requiring continued international focus and support.
+    defence: Poland advocates for enhanced cooperation among NATO members to strengthen
+      European security and defense capabilities.
+    rule_of_law: Poland supports adherence to international law and democratic principles
+      while cautioning against external interference in national interests.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Minister Sikorski stressed that the Ukraine war poses a fundamental
+        threat, especially for eastern flank countries.
+    defence:
+      score: 1
+      evidence: They emphasised the need for Poland and Spain to enhance their cooperation,
+        not only bilaterally or within the European Union, but also within NATO.
+    rule_of_law:
+      score: 1
+      evidence: The head of Spanish diplomacy emphasised that peace and respect for
+        international law are the principles to abide by in Ukraine as well as the
+        Gaza Strip, Lebanon, and Iran.

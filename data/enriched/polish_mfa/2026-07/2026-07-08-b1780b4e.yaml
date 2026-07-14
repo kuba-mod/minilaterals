@@ -1,0 +1,56 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Kaja Kallas
+  - Marco Rubio
+  - Þorgerður Katrín Gunnarsdóttir
+  - Sheikh Jarrah Jaber Al-Ahmad Al-Sabah
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Ankara, Turkey
+  position: Poland emphasized the necessity of increased defense spending and cooperation
+    among allies to deter Russia and maintain European security.
+  positions:
+    defence: Poland strongly advocates for NATO allies to increase defense spending
+      significantly to ensure deterrence capabilities against Russia.
+    hybrid: Poland stresses that maintaining civil life requires robust security measures
+      due to external threats.
+    enlargement: Poland supports the EU's commitment to expanding its influence and
+      cooperation through various international forums.
+    rule_of_law: Poland highlights the importance of democratic resilience and cooperation
+      among key European partners.
+  stances:
+    defence:
+      score: 2
+      evidence: It involves increasing the annual defence spending to 5% of GDP, allocating
+        at least 3.5% of GDP to resourcing core defence requirements and 1.5% of GDP
+        to broader defence- and security-related investments.
+    hybrid:
+      score: 1
+      evidence: Obviously, we would have preferred to earmark these funds for something
+        else, but if security is lacking, it is impossible to enjoy other aspects
+        of civilised life said Deputy Prime Minister Radosław Sikorski.
+    enlargement:
+      score: 1
+      evidence: We are determined to make sure everyone understands that today it
+        is not feasible for two countries to run the European Union. This is why we
+        are committed to the E5 format
+    rule_of_law:
+      score: 1
+      evidence: Polish top diplomat also met with his counterparts from the European
+        Group of Five (E5), that is France, Germany, Italy, and the United Kingdom,
+        as well as with the EU and Türkiye’s representatives, to discuss further cooperation
+        centred on European security.

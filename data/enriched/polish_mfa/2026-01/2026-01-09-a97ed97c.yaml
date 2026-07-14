@@ -1,0 +1,28 @@
+actors:
+- DE
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister Mościcka-Dendys
+  - Coordinator Knut Abraham
+  - Deputy Marek Krząkała
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasized the need for joint efforts to strengthen security and
+    deepen dialogue with Germany while also pressing issues of historical justice
+    and cultural restitution.
+  positions:
+    rule_of_law: Poland strongly advocates for upholding democratic values and addressing
+      historical injustices through memorialization and education in Germany.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Deputy Minister Mościcka-Dendys referred to the Bundestag resolution
+        from December last year to establish a permanent memorial in Berlin commemorating
+        the Polish victims of World War II and German occupation.

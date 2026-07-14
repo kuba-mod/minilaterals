@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Königswinter, Germany
+  position: Germany emphasizes the need for deep cooperation with the UK to address
+    shared security threats from Russia and the Middle East, while also stressing
+    the importance of transatlantic partnership in technological adaptation.
+  positions:
+    ukraine: Germany strongly supports a diplomatic process towards an end to the
+      war in Ukraine, viewing it as a key area for cooperation with the UK.
+    defence: Germany stresses that collective security and defending Europe requires
+      strong partnership with the UK, which is viewed as indispensable for European
+      defense.
+    hybrid: Germany calls for coordinated action to address eroding international
+      order, including threats from Russia and technological challenges like AI.
+    rule_of_law: Germany affirms the importance of protecting democracy, free trade,
+      and multilateral cooperation through its partnership with the UK.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The objective now must be to pursue a diplomatic process towards a
+        lasting end to the war.
+    defence:
+      score: 1
+      evidence: Because – for us – the UK is a key partner in defending our European
+        security
+    hybrid:
+      score: 1
+      evidence: We see an international order that is eroding – economically, politically,
+        and militarily.
+    rule_of_law:
+      score: 1
+      evidence: The UK is a key partner in protecting our freedom and democracy, as
+        well as the prosperity and growth of our economies.

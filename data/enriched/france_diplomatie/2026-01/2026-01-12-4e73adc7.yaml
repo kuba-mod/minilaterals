@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Marco Rubio
+  topics:
+  - ukraine
+  location: null
+  position: France maintained close dialogue with the US on international issues including
+    Ukraine and Greenland.
+  positions:
+    ukraine: France emphasized ongoing momentum for security guarantees necessary
+      for a just and lasting peace in Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: the Minister emphasized the momentum within the Coalition of the Willing,
+        which met last week in Paris to work on the security guarantees that are necessary
+        to a just and lasting peace.

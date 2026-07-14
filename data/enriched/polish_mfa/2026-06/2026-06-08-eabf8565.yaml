@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Deputy Prime Minister
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Sejm
+  position: Poland views Russia as waging a full-scale cognitive war against the West
+    and advocates for Western legal amendments to counter modern digital threats.
+  positions:
+    hybrid: Poland characterizes Russia's actions as a full-scale cognitive war aimed
+      at undermining regional stability and democratic foundations.
+    rule_of_law: Poland stresses the need for Western legal frameworks to adapt effectively
+      to contemporary digital threats, including those posed by AI.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Russia wages a full-scale cognitive war against Poland.
+    rule_of_law:
+      score: 2
+      evidence: The law cannot lag behind technology—it must provide a concrete response
+        to the full spectrum of contemporary digital threats.

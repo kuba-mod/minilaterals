@@ -1,0 +1,58 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: 'null'
+  position: Germany aims to take a leading role in strengthening NATO and Europe's
+    defense capabilities while ensuring global supply chain security.
+  positions:
+    ukraine: Germany commits to supporting Ukraine's defense efforts and leveraging
+      its industrial achievements within the European context.
+    defence: Germany advocates for a stronger NATO with greater European involvement,
+      committing to achieving the five-percent defense spending goal and redistributing
+      burdens across Europe.
+    hybrid: Germany emphasizes the need for coordinated international efforts to secure
+      global supply chains, particularly in critical maritime passages like the Strait
+      of Hormuz.
+    enlargement: Germany supports the broader goal of European security through increased
+      cooperation with neighboring regions and partners.
+    rule_of_law: Germany stresses the importance of maintaining free trade routes
+      and ensuring secure supply chains globally.
+  stances:
+    ukraine:
+      score: 2
+      evidence: I intend to make concrete proposals on how we can continue to firmly
+        support Ukraine in defending freedom in Europe
+    defence:
+      score: 2
+      evidence: We were the first country to clearly commit to the five-percent goal,
+        and we want to achieve this goal
+    hybrid:
+      score: 1
+      evidence: With the countries in the region, we are focusing our efforts on ensuring
+        free and safe passage without charge for all ships
+    enlargement:
+      score: 1
+      evidence: At the GLOBSEC Forum 2026 in Prague my goal is likewise to discuss
+        with our friends and partners the greater responsibility Europe needs to assume
+        in a new global security order.
+    rule_of_law:
+      score: 1
+      evidence: With the countries in the region, we are focusing our efforts on ensuring
+        free and safe passage without charge for all ships

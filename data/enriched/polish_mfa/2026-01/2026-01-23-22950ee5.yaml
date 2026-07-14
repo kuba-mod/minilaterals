@@ -1,0 +1,51 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland is committed to fully implementing the Treaty of Nancy and deepening
+    cooperation with France across political, economic, security, and cultural dimensions.
+  positions:
+    defence: Poland supports strengthening EU defense capabilities through joint projects
+      and strategic partnerships with France.
+    hybrid: Poland stresses the need for close cooperation with European countries
+      to mitigate various types of pressure, including hybrid threats.
+    enlargement: Poland discussed the topic of EU enlargement as part of broader European
+      affairs discussions.
+    rule_of_law: Poland emphasizes the importance of a deeper dialogue to maintain
+      democratic resilience and stability in the international environment.
+  stances:
+    defence:
+      score: 1
+      evidence: The interlocutors emphasised the potential of joint defence projects
+        (including those under the Security Action for Europe programme adopted in
+        2025), as well as energy and social projects.
+    hybrid:
+      score: 1
+      evidence: 'She highlighted that close cooperation between European countries
+        sharing views on international policy will be crucial in avoiding or mitigating
+        various types of pressure: economic, social, or related to hybrid threats.'
+    enlargement:
+      score: 0
+      evidence: They also discussed European affairs, including the developments in
+        Ukraine, EU enlargement, the agreement with Mercosur countries, and global
+        issues.
+    rule_of_law:
+      score: 1
+      evidence: She noted the enormous importance of a deeper and closer Polish-French
+        dialogue in the context of growing instability in the international environment.

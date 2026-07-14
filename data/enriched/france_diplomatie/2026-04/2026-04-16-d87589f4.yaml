@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Rosa Yolanda Villavicencio, Minister
+  topics:
+  - rule_of_law
+  location: null
+  position: France reaffirmed its commitment to deepening cooperation with Colombia
+    on combating organized crime and coordinating on international crises.
+  positions:
+    rule_of_law: France supports the rule of law by committing to continued deep cooperation
+      with Colombia on tackling drug trafficking and organized crime.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The two ministers agreed to continue deepening their cooperation in
+        this field.

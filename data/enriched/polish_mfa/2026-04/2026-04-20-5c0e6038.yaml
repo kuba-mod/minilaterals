@@ -1,0 +1,17 @@
+actors:
+- FR
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ignacy Niemczycki
+  - Benjamin Haddad
+  topics: []
+  location: Gdańsk, Poland
+  position: The press release focuses on celebrating cultural and diplomatic cooperation
+    between Poland and France rather than outlining a specific geopolitical position.
+  positions: {}
+  stances: {}

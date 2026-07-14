@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasizes the need for EU solidarity to protect its market and
+    develop a strong defense identity in coordination with NATO and the US.
+  positions:
+    defence: Poland supports developing a stronger EU defense capability that complements
+      NATO through initiatives like the European Democracy Shield.
+    hybrid: Poland highlights the threat of foreign interference and disinformation
+      campaigns, particularly from Russia, necessitating tools to protect the information
+      space.
+    rule_of_law: Poland stresses the importance of democratic resilience and combating
+      disinformation as key elements for European stability and cooperation.
+  stances:
+    defence:
+      score: 2
+      evidence: The European Union should develop its defence identity in harmony
+        with both NATO and the United States - minister Radosław Sikorski said.
+    hybrid:
+      score: 2
+      evidence: The foreign minister stressed that Russian information campaigns are
+        supposed to undermine citizens’ trust in public institutions, the media, and
+        international cooperation.
+    rule_of_law:
+      score: 2
+      evidence: It will aim to protect the integrity of public debate, support free
+        and fair elections, and develop citizens’ media literacy.

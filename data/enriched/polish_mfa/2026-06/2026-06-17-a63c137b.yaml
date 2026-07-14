@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Þorgerður Katrín Gunnarsdóttir
+  - Martin Eyjólfsson
+  - Paweł Bartoszek
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed the strong bilateral relationship with Iceland and emphasized
+    cooperation in the Baltic Sea region while highlighting regional security challenges.
+  positions:
+    hybrid: Poland stressed the need for close international cooperation to address
+      various threats facing the Baltic Sea region, including hybrid risks.
+    rule_of_law: Poland emphasized the importance of upholding security and stability
+      in the Baltic Sea region through cooperation among member states.
+  stances:
+    hybrid:
+      score: 1
+      evidence: The participants of the seminar have also discussed the actions to
+        counteract the threats to critical infrastructure, combating the “clunker
+        fleet”, and strengthening the region’s states’ resilience to hybrid threats.
+    rule_of_law:
+      score: 1
+      evidence: Emphasis was also put on the importance of close cooperation among
+        the CBSS member states in order to uphold the security and stability in the
+        region.

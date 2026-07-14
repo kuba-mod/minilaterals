@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for global partnerships and shared rules to
+    ensure economic stability and security in a fragmented world.
+  positions:
+    rule_of_law: Germany stresses that adherence to shared rules is essential for
+      maintaining a secure foundation for action and ensuring national interests are
+      protected globally.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We must invest, produce, carry out research and training together
+        with partners around the world. This means, among other things, playing by
+        shared rules.

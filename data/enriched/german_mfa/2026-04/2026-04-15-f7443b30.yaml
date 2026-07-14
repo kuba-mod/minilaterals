@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the urgent need for international action and humanitarian
+    assistance to address the catastrophic crisis in Sudan.
+  positions:
+    rule_of_law: Germany stresses the importance of upholding human rights and democratic
+      principles by calling for an end to conflict and providing significant humanitarian
+      aid to Sudan.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: In this spirit, Germany pledges 212 million euro of humanitarian assistance
+        to Sudan and the neighbouring countries.

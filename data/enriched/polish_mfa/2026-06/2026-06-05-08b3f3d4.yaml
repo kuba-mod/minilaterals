@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Michał Broniatowski
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland is expanding its broadcasting reach to provide independent news
+    and information about Poland and Central and Eastern Europe.
+  positions:
+    hybrid: Poland supports combating disinformation by providing access to trustworthy
+      and exclusive international news content.
+    enlargement: The initiative indirectly supports EU enlargement goals by increasing
+      visibility for Ukrainian and Belarusian communities through expanded broadcasting
+      coverage.
+    rule_of_law: Poland contributes to the rule of law by promoting independent media
+      access in regions with limited freedom.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Access to trustworthy and exclusive information materials is particularly
+        important in the current international situation and amid omnipresent disinformation
+        and propaganda.
+    enlargement:
+      score: 1
+      evidence: translates into a significant improvement of their availability to
+        West European audiences, including to multiple Belarusian, Ukrainian, and
+        Russian communities.
+    rule_of_law:
+      score: 2
+      evidence: The initiative aims to ensure that audience has access to independent
+        news in regions with limited media freedom.

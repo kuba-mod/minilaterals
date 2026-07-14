@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Australia
+  - Canada
+  - France
+  - Germany
+  - Italy
+  - Japan
+  - New Zealand
+  - Republic of Korea
+  - United Kingdom
+  - United States
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany supports international cooperation and swift action through the
+    UN Security Council to enforce sanctions against DPRK maritime violations.
+  positions:
+    rule_of_law: Germany supports upholding international law and multilateral mechanisms
+      like the UNSC to maintain global security standards.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Governments of Australia, Canada, France, Germany, Italy, Japan,
+        New Zealand, the Republic of Korea, the United Kingdom, and the United States
+        and the European External Action Service welcomed the April 30 Open Source
+        Centre briefing to the United Nations Security Council on continuing maritime
+        sanctions evasion by the Democratic People’s Republic of Korea (DPRK).

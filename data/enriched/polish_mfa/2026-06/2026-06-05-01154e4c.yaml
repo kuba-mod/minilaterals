@@ -1,0 +1,49 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Kyrylo Budanov
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasized the importance of historical truth and dialogue in relations
+    with Ukraine while confirming continued strategic cooperation.
+  positions:
+    ukraine: Poland strongly supports Ukraine's fight against Russian aggression and
+      stresses that mutual relations must be built on respect for victims and historical
+      truth.
+    defence: Poland reaffirmed the strategic importance of cooperation with Ukraine
+      regarding regional security challenges.
+    enlargement: The text does not provide specific information on EU enlargement
+      goals.
+    rule_of_law: Poland stresses that bilateral relations must be built upon historical
+      truth and respect for victims, foundational elements of the rule of law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: emphasising that the Ukrainian president’s decision caused pain and
+        indignation in the Polish society, which has been supporting Ukraine in its
+        fight since the onset of the Russian aggression.
+    defence:
+      score: 1
+      evidence: confirmed the strategic character of Poland–Ukraine cooperation and
+        its significance in the face of regional security challenges
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: mutual relations must be built on historical truth, respect for the
+        victims, and dialogue.

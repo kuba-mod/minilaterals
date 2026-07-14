@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Konończuk, Director of the Centre for Eastern Studies
+  - Marek Menkiszak, Head of Russian Department
+  - Tadeusz Iwański, Head of Department for Belarus, Ukraine and Moldova
+  - Deputy Foreign Minister Wojciech Zajączkowski
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the importance of expert analysis and cooperation between
+    public institutions to navigate complex security challenges in Central and Eastern
+    Europe.
+  positions:
+    ukraine: Poland acknowledges the ongoing conflict in Ukraine and stresses the
+      need for comprehensive analyses regarding its international position and peace
+      negotiations.
+    rule_of_law: Poland supports democratic resilience and stability by promoting
+      access to expert analyses concerning the complex security landscape.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Tadeusz Iwański, the Head of Department for Belarus, Ukraine and Moldova,
+        discussed the internal situation in Ukraine and its international position
+        against the backdrop of the prolonged war.
+    rule_of_law:
+      score: 1
+      evidence: provide significant insights into the complex security landscape of
+        Central and Eastern Europe

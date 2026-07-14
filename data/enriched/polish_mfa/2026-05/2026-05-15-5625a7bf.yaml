@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marta A. Urbańska
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasizes the role of architecture and diplomacy in promoting
+    its national brand and soft power on the international stage.
+  positions:
+    rule_of_law: Poland stresses that maintaining strong diplomatic ties and investing
+      in infrastructure are crucial for regional stability and connecting neighbors,
+      which aligns with foundational European security principles.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: our neighbourhood requires investments even in difficult times, and
+        architecture can be the thread that connects us.

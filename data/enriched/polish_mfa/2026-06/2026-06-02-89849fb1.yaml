@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - María Teresa Mercado
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Mexico
+  position: Poland engaged in bilateral and multilateral discussions with Mexico on
+    cooperation areas including technology, cybersecurity, economic ties, and global
+    issues like the war in Ukraine.
+  positions:
+    ukraine: Poland highlighted the ongoing conflict in Ukraine as a key multilateral
+      issue for discussion.
+    rule_of_law: Poland addressed issues related to human rights and rule of law by
+      opening an exhibition on illegal deportations of Ukrainian children.
+  stances:
+    ukraine:
+      score: 0
+      evidence: the war in Ukraine
+    rule_of_law:
+      score: 0
+      evidence: opening an exhibition titled Camas vacías (Empty beds) at the Senate
+        focusing on the issue of illegal deportations and forced resettlements of
+        Ukrainian children by Russia.

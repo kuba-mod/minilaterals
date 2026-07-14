@@ -1,0 +1,44 @@
+actors:
+- DE
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Johann Wadephul
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Krzyżowa, Poland
+  position: Poland and Germany emphasized bilateral friendship and cooperation to
+    strengthen European understanding and dialogue.
+  positions:
+    hybrid: The Polish representative highlighted the need for vigilance against modern
+      global threats, specifically disinformation and militarization of international
+      relations.
+    enlargement: The meeting focused on fostering Polish-German cooperation and dialogue,
+      which supports broader European integration efforts.
+    rule_of_law: The ministers stressed the importance of reconciliation and peace
+      in bilateral relations, reinforcing democratic values and historical ties.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Minister Radosław Sikorski talked about the challenges of the modern
+        world, including the growing militarisation of international relations as
+        well as the threats related to disinformation
+    enlargement:
+      score: 1
+      evidence: Your work inspires further Polish–German cooperation for the sake
+        of the Europe we share
+    rule_of_law:
+      score: 1
+      evidence: At a time when relations between Warsaw and Berlin face new animosity,
+        this visit aims to send a clear message about the friendship and ties between
+        our countries

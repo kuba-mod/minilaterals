@@ -1,0 +1,44 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Espen Barth Eide
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: null
+  position: France reaffirmed its commitment to strengthening bilateral cooperation
+    with Norway across several key areas and expressed agreement on major international
+    issues.
+  positions:
+    defence: France supports enhancing defense capabilities through close partnership
+      discussions with Norway and emphasizing NATO's role in Arctic security.
+    green_transition: France highlights its dedication to maintaining a close partnership
+      between the EU and Norway, which supports green industrial goals.
+    rule_of_law: France strongly supports international law principles by advocating
+      for restoring freedom of navigation in key waterways and supporting democratic
+      stability through ceasefire agreements.
+  stances:
+    defence:
+      score: 1
+      evidence: They discussed the prospects for strengthening bilateral cooperation,
+        particularly in green industries, defense and the space industry, as well
+        as NATO’s commitment to Arctic security.
+    green_transition:
+      score: 1
+      evidence: The Minister highlighted France’s commitment to the close partnership
+        between the EU and Norway.
+    rule_of_law:
+      score: 1
+      evidence: They also agreed on the need to restore the freedom of navigation
+        in the Strait of Hormuz, in accordance with the Law of the Sea, and to include
+        Lebanon in the terms of the U.S.-Iran ceasefire.

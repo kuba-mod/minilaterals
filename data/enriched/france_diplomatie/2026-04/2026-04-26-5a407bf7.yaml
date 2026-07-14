@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France reiterates support for Ukraine and warns that Russian strikes on
+    Ukrainian energy infrastructure pose major radiological risks.
+  positions:
+    ukraine: France commits to long-term support for Ukraine's rebuilding efforts,
+      particularly concerning the Chernobyl containment dome.
+    rule_of_law: France emphasizes that industrial accidents require a mutually-supportive
+      international response and warns against Russia's destabilizing actions.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Following the attack, France is working actively under its G7 presidency
+        in 2026 to support and take part in fundraising for the rebuilding of Chernobyl’s
+        containment dome.
+    rule_of_law:
+      score: 1
+      evidence: The event is a reminder of the transnational nature of industrial
+        accidents, which require a mutually-supportive response.

@@ -1,0 +1,47 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Antonio Tajani
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: Aosta Valley, Italy
+  position: France reaffirmed its commitment to bilateral cooperation with Italy across
+    multiple sectors while jointly supporting international stability efforts in Ukraine
+    and the Middle East.
+  positions:
+    ukraine: France supports continued joint support for Ukraine's long-term security
+      and peace objectives alongside Italy.
+    enlargement: France reiterates its commitment to the stability of the Western
+      Balkans and their future within Europe.
+    green_transition: France and Italy are coordinating efforts on environmental issues
+      and water management.
+    rule_of_law: The ministers discussed general cooperation areas including educational,
+      linguistic, and cultural matters, which contribute to democratic resilience.
+  stances:
+    ukraine:
+      score: 1
+      evidence: discussed France and Italy’s continued support for Ukraine
+    enlargement:
+      score: 1
+      evidence: reiterated their joint commitment to the stability of the Western
+        Balkans and their future in Europe
+    green_transition:
+      score: 0
+      evidence: discuss environmental and health issues, as well as concerted water
+        management
+    rule_of_law:
+      score: 0
+      evidence: educational, linguistic and cultural cooperation

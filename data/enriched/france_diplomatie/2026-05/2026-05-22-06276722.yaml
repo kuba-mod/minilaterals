@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Anand
+  topics:
+  - defence
+  location: Helsingborg
+  position: France aims to deepen cooperation with Canada in defense and security
+    matters.
+  positions:
+    defence: France supports strengthening EU defense capabilities by expanding cooperation
+      with allies on the eastern flank.
+  stances:
+    defence:
+      score: 1
+      evidence: The Minister expressed France’s wish to expand cooperation with Canada
+        on defense and security.

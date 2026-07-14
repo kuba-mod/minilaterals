@@ -1,0 +1,16 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Italy
+  - Germany
+  topics: []
+  location: null
+  position: Germany and Italy expressed concern over the seizure of the Global Sumud
+    Flotilla and reaffirmed their commitment to humanitarian aid in Gaza.
+  positions: {}
+  stances: {}

@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister Wojciech Zajączkowski
+  - Senegalese delegation
+  - Secretary General Khare Diouf
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland emphasized bilateral cooperation and showcased its offers in areas
+    like cybersecurity and mining while supporting Senegal's economic transition.
+  positions:
+    hybrid: Poland stressed the importance of countering disinformation and external
+      interference in information environments.
+    rule_of_law: Poland supported general cooperation areas including combating smuggling
+      and preventing illegal migration, which aligns with rule of law principles.
+  stances:
+    hybrid:
+      score: 1
+      evidence: The officials emphasised the need to counter disinformation and external
+        interference in states’ information environments (FIMI, or Foreign Information
+        Manipulation and Interference).
+    rule_of_law:
+      score: 1
+      evidence: Potential areas of cooperation included border‑control mechanisms,
+        counterterrorism, combating smuggling, and preventing illegal migration.

@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Orbán
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France aims to strengthen bilateral cooperation with Hungary and advance
+    the European agenda by focusing on support for Ukraine and pressure on Russia.
+  positions:
+    ukraine: France supports long-term commitment to Ukraine's security and stability
+      alongside its partner.
+    rule_of_law: France emphasizes the importance of democratic values and addressing
+      geopolitical challenges like Russia's actions.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: stepped-up pressure on Russia

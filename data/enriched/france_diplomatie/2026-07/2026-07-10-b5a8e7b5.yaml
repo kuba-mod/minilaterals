@@ -1,0 +1,25 @@
+actors:
+- FR
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Jean-Noël Barrot
+  topics:
+  - rule_of_law
+  location: null
+  position: France emphasizes the deep historical and cultural bond with Poland, advocating
+    for a unified European future based on shared democratic values and sovereignty.
+  positions:
+    rule_of_law: France stresses that maintaining freedom, democracy, and the rule
+      of law is paramount to Europe's future stability against external threats.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The story of Solidarnosc. An ideal that some in the Kremlin still
+        seek to extinguish, but which continues to inspire Europeans determined to
+        remain free and masters of their own destiny.

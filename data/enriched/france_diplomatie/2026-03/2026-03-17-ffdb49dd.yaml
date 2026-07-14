@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Subrahmanyam Jaishankar
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Brussels, Belgium
+  position: France reaffirmed its commitment to supporting Ukraine and maintaining
+    pressure on Russia while addressing regional crises in the Middle East.
+  positions:
+    ukraine: France strongly commits to providing long-term military and financial
+      support to Ukraine until a just and lasting peace is achieved.
+    rule_of_law: France emphasizes upholding democratic resilience and combating war
+      crimes through sanctions against perpetrators.
+  stances:
+    ukraine:
+      score: 2
+      evidence: He assured [the Ukrainian President] that we are continuing our efforts
+        to ensure that Ukraine has everything it needs, both militarily and financially,
+        to continue resisting the Russian aggression.
+    rule_of_law:
+      score: 2
+      evidence: The Council also adopted 19 new individual sanctions against Iranians
+        responsible for State violence in January 2026.

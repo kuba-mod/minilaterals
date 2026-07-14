@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Belgium
+  - Croatia
+  - Cyprus
+  - France
+  - Greece
+  - Italy
+  - Malta
+  - the Netherlands
+  - Portugal
+  - United Kingdom
+  - High Representative of the European Union
+  topics:
+  - rule_of_law
+  location: null
+  position: France supports strengthening Lebanon's state institutions and sovereignty
+    while calling for direct political negotiations between Lebanon and Israel to
+    end the conflict.
+  positions:
+    rule_of_law: The statement strongly emphasizes upholding international law, respecting
+      territorial integrity, and supporting democratic governance structures in Lebanon.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We call on all parties to immediately deescalate and to revert to
+        the cessation of hostilities agreement and UN Security Council resolution
+        1701 (2006).

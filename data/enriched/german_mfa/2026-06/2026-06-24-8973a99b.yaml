@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany acknowledges the accumulation of various crises—including geopolitical
+    conflicts and technological changes—and emphasizes the need to uphold social cohesion
+    and democratic principles.
+  positions:
+    hybrid: Germany highlights that accumulating crises, such as Russia's war in Ukraine
+      and AI-driven technical revolutions, build pressure on society and require attention
+      to internal social cohesion.
+    rule_of_law: Germany stresses that maintaining social cohesion, democratic resilience,
+      and trust is paramount for a stable society facing multiple modern challenges.
+  stances:
+    hybrid:
+      score: 1
+      evidence: I don’t need to go into the many crises that my colleagues in the
+        Diplomatic Service and myself are dealing with day in day out. Russia’s war
+        of aggression against Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: And indeed, we are seeing how when crises accumulate and interweave,
+        the pressure builds even in affluent societies.

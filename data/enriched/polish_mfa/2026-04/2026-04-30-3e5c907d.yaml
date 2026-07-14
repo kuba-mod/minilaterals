@@ -1,0 +1,61 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - The two delegations
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its commitment to strengthening security and energy
+    cooperation with the United States while advancing economic integration and global
+    institutional participation.
+  positions:
+    defence: Poland strongly supports enhancing transatlantic defense capabilities
+      through mutual self-defense and industrial cooperation.
+    hybrid: Poland emphasizes the need for deep technological cooperation to secure
+      supply chains and protect critical infrastructure from foreign interference.
+    enlargement: Poland actively promotes its own institutional growth and global
+      participation, specifically seeking G20 permanent membership.
+    green_transition: Poland seeks reliable energy security by expanding cooperation
+      on LNG delivery and civil nuclear projects with U.S. involvement.
+    rule_of_law: Poland supports fostering a predictable investment environment by
+      promoting streamlined regulatory frameworks and strong government-business dialogue.
+  stances:
+    defence:
+      score: 2
+      evidence: Both sides reaffirmed their commitment to enhance security cooperation,
+        including on mutual self-defense and deterrence
+    hybrid:
+      score: 2
+      evidence: The United States and Poland also agreed on the importance of deepening
+        cooperation on technology security, including by reducing dependency on high-risk
+        vendors in sensitive sectors and protecting critical technology infrastructure
+        from foreign interference
+    enlargement:
+      score: 1
+      evidence: In turn, the United States expressed its strong support for Poland’s
+        accession to the G20 as a permanent member.
+    green_transition:
+      score: 2
+      evidence: The United States and Poland discussed opportunities to reinforce
+        their strong partnership on energy security, including through the secure
+        delivery of liquefied natural gas (LNG) to the region and support for civil
+        nuclear energy projects with U.S. companies to increase power generation in
+        Poland.
+    rule_of_law:
+      score: 2
+      evidence: Both sides emphasized the need for streamlined regulatory environments
+        that support economic growth, entrepreneurship, and technological advancement.

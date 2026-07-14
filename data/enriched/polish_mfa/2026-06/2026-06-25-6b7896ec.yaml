@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Radosław Sikorski
+  - Orysia Lutsevych
+  - Taras Kachka
+  - Marta Kos
+  - Jeyhun Bayramov
+  - Reem Al-Hashimy
+  - Yvette Cooper
+  - Feridun Sinirlioğlu
+  - Mathias Cormann
+  topics:
+  - ukraine
+  - rule_of_law
+  - enlargement
+  location: Gdańsk, Poland
+  position: Poland actively supports Ukraine's recovery and integration into the EU
+    while emphasizing adherence to European standards and maintaining international
+    solidarity.
+  positions:
+    ukraine: Poland strongly commits to supporting Ukraine's long-term recovery across
+      military, economic, and diplomatic dimensions until a lasting peace is achieved.
+    rule_of_law: Poland stresses that Ukraine must undertake necessary reforms, particularly
+      regarding the rule of law and fighting corruption, as part of its integration
+      path.
+    enlargement: Poland advocates for Ukraine's EU accession by emphasizing that negotiations
+      require genuine compliance with the Union’s laws and standards.
+  stances:
+    ukraine:
+      score: 2
+      evidence: underscoring the need to maintain European solidarity in supporting
+        Ukraine in its war with Russia.
+    rule_of_law:
+      score: 2
+      evidence: The panel addressed the necessary reforms that Ukraine must undertake
+        on its path to integration, particularly as regards the rule of law and the
+        fight against corruption
+    enlargement:
+      score: 2
+      evidence: pointing out that the historic opening of formal EU accession negotiations
+        with Ukraine on 15 June must be followed by genuine efforts towards compliance
+        with the Union’s law, principles, and standards

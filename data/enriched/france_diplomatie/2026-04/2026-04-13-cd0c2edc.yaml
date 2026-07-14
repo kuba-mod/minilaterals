@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Mahmoud Ali Youssouf, Chairperson of the African Union Commission
+  topics:
+  - rule_of_law
+  - green_transition
+  location: Paris, France
+  position: France reaffirmed its commitment to global governance reform and supporting
+    Africa's economic transformation through international cooperation.
+  positions:
+    rule_of_law: France supports strengthening global governance based on adherence
+      to international law and accountability.
+    green_transition: France advocates for reforming the international financial architecture
+      to support Africa's ecological transition alongside industrialization.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: emphasized the need to ensure sustained, strengthened global governance
+        based on strict adherence to international law with a view to universality,
+        accountability and solidarity.
+    green_transition:
+      score: 1
+      evidence: reform the international financial architecture for Africa by putting
+        emphasis on issues to do with access to funding, debt processing and the mobilization
+        of resources to promote the continent’s industrialization and economic transformation
+        as well as the ecological transition

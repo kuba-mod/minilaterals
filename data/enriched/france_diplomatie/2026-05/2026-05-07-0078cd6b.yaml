@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Narges Mohammadi
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses deep concern over the deteriorating health of Narges
+    Mohammadi and calls for her release and the freedom of all people in Iran.
+  positions:
+    rule_of_law: France strongly supports fundamental rights and democratic resilience
+      by calling for the release of political prisoners and emphasizing the right
+      to freely choose one's destiny.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: France stands by the Iranian people, who must be able to exercise
+        their fundamental rights and freely choose their destiny.

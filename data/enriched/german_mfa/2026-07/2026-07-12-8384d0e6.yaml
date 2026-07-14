@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - United States of America
+  - Australia
+  - Canada
+  - Estonia
+  - Germany
+  - Italy
+  - Japan
+  - Latvia
+  - Lithuania
+  - New Zealand
+  - Republic of the Philippines
+  - Romania
+  - Slovenia
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany reaffirms commitment to a free and open Indo-Pacific based on
+    international law and urges adherence to the 2016 Arbitral Award.
+  positions:
+    rule_of_law: Germany strongly supports upholding international law, particularly
+      regarding maritime disputes and freedom of navigation in the South China Sea.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We reaffirm that maritime disputes must be resolved peacefully and
+        in accordance with UNCLOS .

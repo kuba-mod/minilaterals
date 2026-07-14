@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Abdelmadjid Tebboune
+  - Ahmed Attaf
+  topics:
+  - rule_of_law
+  location: Algeria
+  position: Poland aims to strengthen bilateral economic and strategic cooperation
+    with Algeria while reaffirming commitment to international law and regional stability.
+  positions:
+    rule_of_law: Poland emphasizes the importance of respecting international law
+      and maintaining security in the region.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The interlocutors reaffirmed their commitment to the principles of
+        international law as well as the significance of stability and security.

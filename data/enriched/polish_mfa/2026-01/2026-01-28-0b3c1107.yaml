@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Vivian Motzfeldt (Minister of Foreign Affairs and Research)
+  - Peter Borg (Minister of Fisheries, Hunting, Agriculture, and Self-Sufficiency)
+  topics:
+  - rule_of_law
+  location: Nuuk, Greenland
+  position: Poland focused on strengthening bilateral cooperation with Greenland across
+    various sectors, particularly polar studies and cultural exchange.
+  positions:
+    rule_of_law: The visit emphasized building resilience to threats and managing
+      crisis situations, aligning with the goal of democratic resilience and security.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: on the prospects of working together on building resilience to threats
+        and managing crisis situations.

@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: London, United Kingdom
+  position: Poland reaffirmed its strong strategic cooperation with the UK across
+    security and defense while emphasizing support for Ukraine's sovereignty and adherence
+    to international law.
+  positions:
+    ukraine: Poland strongly supports Ukraine’s sovereignty and territorial integrity,
+      demanding that the war end based on international law.
+    defence: Poland views military power as crucial for its security and has deepened
+      defense cooperation with the UK through new treaties.
+    rule_of_law: Poland supports maintaining international pressure on Russia until
+      its aggression ends, emphasizing adherence to international law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Warsaw and London unequivocally support Ukraine’s sovereignty and
+        territorial integrity.
+    defence:
+      score: 2
+      evidence: By signing the Northolt Treaty last month, Brits and Poles have opened
+        a<0xC2><0xA0>new chapter in our relationship – one defined by closer cooperation
+        in areas of security and defence.
+    rule_of_law:
+      score: 2
+      evidence: The ministers agreed that the war must end on terms grounded in international
+        law.

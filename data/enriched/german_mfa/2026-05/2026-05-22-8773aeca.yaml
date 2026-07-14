@@ -1,0 +1,34 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - International Contact Group (ICG)
+  - Belgium
+  - Denmark
+  - European Union
+  - France
+  - Germany
+  - Netherlands
+  - Sweden
+  - Switzerland
+  - United Kingdom
+  - United States
+  topics:
+  - rule_of_law
+  location: Stockholm, Sweden
+  position: The ICG reiterates deep concern over the conflict in eastern DRC and urges
+    all parties to fulfill commitments for a peaceful resolution.
+  positions:
+    rule_of_law: Germany supports upholding international humanitarian law and democratic
+      principles by urging adherence to agreements and protecting civilians.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The ICG condemns violations of international humanitarian law in the
+        strongest terms.

@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - representatives of Armenia
+  - Moldova
+  - Ukraine
+  - the United Kingdom
+  - EU institutions and member states
+  - experts from think tanks
+  - civil society organisations
+  - media
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reiterated its commitment to supporting Armenia and affirmed its
+    role in countering information manipulation and foreign interference.
+  positions:
+    hybrid: Poland actively supports strengthening resilience against threats like
+      disinformation and foreign interference through practical exercises.
+    rule_of_law: Poland supports democratic resilience by organizing joint exercises
+      focused on countering hostile narratives and information manipulation.
+  stances:
+    hybrid:
+      score: 2
+      evidence: As part of the war game, the participants could jointly practice the
+        techniques used to identify and defend against information manipulation and
+        foreign interference (FIMI).
+    rule_of_law:
+      score: 1
+      evidence: The participants learned how to respond to hostile campaigns by developing
+        communication strategies aimed to challenge hostile narratives, and how to
+        cooperate with partners from public administration and the third sector.

@@ -1,0 +1,34 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Deputy Minister Harazim
+  - Secretary-General Briens
+  topics:
+  - ukraine
+  - enlargement
+  location: Warsaw
+  position: Poland aims to enhance its strategic partnership with France by developing
+    joint projects in economic, defense, energy, and culture, while also addressing
+    major EU topics like Ukraine's recovery and enlargement.
+  positions:
+    ukraine: Poland supports the crucial arrangements made for Ukraine during the
+      Recovery Conference.
+    enlargement: Poland is engaged in discussions regarding the EU enlargement process.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The interlocutors agreed that arrangements made during the event are
+        crucial for Ukraine.
+    enlargement:
+      score: 0
+      evidence: The talks also focused on major European Union topics, including the
+        ongoing work on the future Multiannual Financial Framework and the EU enlargement
+        process.

@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President Macron
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses deep concern over the violence in Lebanon and calls for
+    all parties to return to previous ceasefires while respecting international law.
+  positions:
+    rule_of_law: France strongly emphasizes adherence to international humanitarian
+      law and principles like distinction and proportionality during hostilities.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Compliance with the rules governing the conduct of hostilities, and
+        particularly the principles of distinction, proportionality and precaution,
+        is vital to ensuring the protection of civilian populations and civilian infrastructure
+        in all circumstances.

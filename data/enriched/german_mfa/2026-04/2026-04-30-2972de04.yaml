@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Nasser Bourita, Minister of Foreign Affairs, African Cooperation and Moroccans
+    Living Abroad of the Kingdom of Morocco
+  - Dr. Johann David Wadephul, Minister of Foreign Affairs of the Federal Republic
+    of Germany
+  topics:
+  - rule_of_law
+  location: Rabat, Morocco
+  position: Germany reaffirmed its commitment to strengthening the multidimensional
+    partnership with Morocco across political, economic, and security fields.
+  positions:
+    rule_of_law: Germany stressed the importance of continuing cooperation on human
+      rights issues, specifically mentioning the EU-Moroccan Human Rights Dialogue.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: They stressed the importance of the EU -Moroccan Human Rights Dialogue.

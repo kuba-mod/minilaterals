@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Artur Harazim
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland strongly supports the establishment of a Special Tribunal for the
+    Crime of Aggression against Ukraine and advocates for reconstruction efforts while
+    emphasizing the importance of human rights and democratic resilience.
+  positions:
+    ukraine: Poland actively supports long-term support for Ukraine's recovery, including
+      establishing a Special Tribunal for the Crime of Aggression.
+    hybrid: Poland advocates for coordinated action to combat disinformation and foreign
+      information manipulation and interference (FIMI).
+    rule_of_law: Poland stresses that human rights, democracy, and the rule of law
+      are foundational values that must be protected against aggression.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska strongly supports the establishment of the Special Tribunal
+        for the Crime of Aggression against Ukraine
+    hybrid:
+      score: 1
+      evidence: The session also addressed combating disinformation and foreign information
+        manipulation and interference (FIMI).
+    rule_of_law:
+      score: 1
+      evidence: Human rights, democracy, and the rule of law are being undermined
+        or attacked.

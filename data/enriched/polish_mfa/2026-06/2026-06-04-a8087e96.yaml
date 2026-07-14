@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - deputy ministers
+  - Deputy Minister Zajączkowski
+  - Polish delegation
+  - Guatemalan side
+  - Deputy head of Polish diplomacy
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the importance of bilateral cooperation across various
+    sectors while also addressing regional and global security issues.
+  positions:
+    rule_of_law: Poland stressed the necessity of international law adherence to counter
+      contemporary challenges like revisionism and power politics.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: underlined the importance of cooperating to protect the principles
+        of international law in the face of contemporary challenges, such as revisionism
+        and power politics.

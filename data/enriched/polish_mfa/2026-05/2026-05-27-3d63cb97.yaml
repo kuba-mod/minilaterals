@@ -1,0 +1,35 @@
+actors:
+- DE
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marek Woźniak
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Poznań, Poland
+  position: Poland emphasized the need for regional cooperation to address security
+    challenges and strengthen economic ties with Germany amidst a changing international
+    environment.
+  positions:
+    hybrid: Poland calls on both Polish provinces and German federal states to prioritize
+      building social resilience by countering hybrid threats and disinformation.
+    rule_of_law: Poland stresses that maintaining democratic resilience and addressing
+      international challenges are crucial for continued cooperation.
+  stances:
+    hybrid:
+      score: 1
+      evidence: She also called on the representatives of Polish provinces and German
+        federal states to consider in their activities the security issue and building
+        social resilience, including countering hybrid threats and disinformation.
+    rule_of_law:
+      score: 1
+      evidence: As allies within NATO and partners within the European Union, we are
+        being confronted with a new international situation.

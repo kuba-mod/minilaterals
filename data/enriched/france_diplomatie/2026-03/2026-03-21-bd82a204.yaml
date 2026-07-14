@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 Foreign Ministers of Canada
+  - France
+  - Germany
+  - Italy
+  - Japan
+  - the United Kingdom
+  - the United States of America
+  - High Representative of the European Union
+  topics:
+  - rule_of_law
+  location: null
+  position: France supports regional stability and condemns attacks by Iran and its
+    proxies against multiple states in the Middle East.
+  positions:
+    rule_of_law: The statement strongly affirms democratic resilience and international
+      law by condemning attacks on sovereign nations' infrastructure and civilians.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We condemn in the strongest terms the regime’s reckless attacks against
+        civilians and civilian infrastructure, including energy infrastructure, in
+        Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, the United Arab Emirates, Jordan,
+        and Iraq, in line with UNSC Resolution 2817.

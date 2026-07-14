@@ -1,0 +1,46 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Olivier Schmitt
+  - Zachary Parolin
+  - Cornelia Woll
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Berlin/Paris
+  position: France emphasizes the shared commitment of France and Germany to intellectual
+    excellence and democratic dialogue to strengthen a more united and resilient Europe.
+  positions:
+    defence: The text supports strengthening EU defense capabilities by emphasizing
+      the need for advancing the security, freedom, and prosperity of the continent.
+    hybrid: France calls for coordinated action against hybrid threats by stressing
+      that research and critical thinking on international cooperation are more essential
+      than ever in times of profound uncertainty.
+    rule_of_law: France affirms democratic resilience and the rule of law by highlighting
+      that the prize reflects shared commitment to intellectual excellence and democratic
+      dialogue.
+  stances:
+    defence:
+      score: 1
+      evidence: It is our common duty to advance the security, freedom and prosperity
+        of our continent.
+    hybrid:
+      score: 1
+      evidence: research and critical thinking on security, defence and international
+        cooperation are more essential than ever to renew and deepen the European
+        public debate.
+    rule_of_law:
+      score: 1
+      evidence: the Henrik Enderlein Prize is an expression of France’s and Germany’s
+        shared commitment to intellectual excellence, democratic dialogue and the
+        strengthening of a more united and resilient Europe.

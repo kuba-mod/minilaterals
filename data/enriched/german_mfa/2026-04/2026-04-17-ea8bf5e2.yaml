@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for collective defense and justice against
+    Russian aggression in Ukraine while calling for coordinated action against hybrid
+    threats.
+  positions:
+    ukraine: Germany strongly commits to supporting Ukraine's sovereignty and ensuring
+      accountability for war crimes committed by Russia.
+    defence: Germany stresses the importance of NATO's resolve and readiness, particularly
+      on the eastern flank, to deter open attacks from Russia.
+    hybrid: Germany highlights that Russia employs a cohesive strategy of hybrid threats—including
+      disinformation and provocations—to weaken Western resolve.
+    rule_of_law: Germany affirms its commitment to democratic resilience and justice
+      by participating in international tribunals for war crimes.
+  stances:
+    ukraine:
+      score: 2
+      evidence: I went not only for an act of remembrance. Not only to bring back
+        into our nations’ collective memory the unspeakable horror that Russian soldiers
+        perpetrated there. But also to announce there that we will participate in
+        a special tribunal that will investigate and criminally prosecute the crimes
+        committed by Russia.
+    defence:
+      score: 2
+      evidence: The opponent must be deterred, to make sure he will refrain from an
+        open attack on NATO .
+    hybrid:
+      score: 2
+      evidence: 'Be it through drones and aircraft incursions into Baltic airspace,
+        through provocations by the Russian navy in the Baltic, or through disinformation
+        campaigns that are designed to undermine trust: All this forms a cohesive
+        Russian strategy that aims to weaken our willpower.'
+    rule_of_law:
+      score: 2
+      evidence: But also to announce there that we will participate in a special tribunal
+        that will investigate and criminally prosecute the crimes committed by Russia.

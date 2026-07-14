@@ -1,0 +1,25 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Johann Wadephul
+  topics:
+  - ukraine
+  location: Berlin, Germany
+  position: France and Germany emphasized the need to strengthen EU sovereignty through
+    joint initiatives and reviewed their economic cooperation agenda.
+  positions:
+    ukraine: France supports long-term support for Ukraine alongside Germany, focusing
+      on the international situation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Discussions focused on the international situation, particularly support
+        for Ukraine and the situation in the Middle East.

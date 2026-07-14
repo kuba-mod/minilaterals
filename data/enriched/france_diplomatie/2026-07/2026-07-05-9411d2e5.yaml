@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister for Europe and Foreign Affairs
+  - Minister for Overseas France
+  - Minister Delegate attached to the Minister of the Interior
+  topics:
+  - rule_of_law
+  location: Fort-de-France, Caribbean
+  position: France demonstrated strong commitment through regional cooperation and
+    declarations to combat organized crime and illicit trafficking in the Caribbean.
+  positions:
+    rule_of_law: France emphasizes maintaining security and combating transnational
+      threats like organized crime and drug trafficking, which supports foundational
+      elements of rule of law.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The conference was a highlight in the mobilization of all state actors
+        and all the regional organizations responsible for combating illicit trafficking.

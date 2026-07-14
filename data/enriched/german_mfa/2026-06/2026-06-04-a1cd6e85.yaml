@@ -1,0 +1,26 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Germany
+  - France
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany and France are strengthening their bilateral cultural cooperation
+    to promote mutual understanding and democratic values.
+  positions:
+    rule_of_law: The joint initiative emphasizes that culture and language play a
+      crucial role in promoting mutual understanding and defending democratic values.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Germany and France share the conviction that culture and language
+        play a crucial role in promoting mutual understanding, strengthening democratic
+        values and defending freedom in the service of peace.

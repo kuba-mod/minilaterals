@@ -1,0 +1,56 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Deputy Prime Minister and Foreign Minister
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland supports transatlantic cooperation on security and the economy,
+    emphasizing diversified critical mineral supply chains and continued support for
+    Ukraine.
+  positions:
+    defence: Poland emphasizes that transatlantic cooperation is vital for both security
+      and economic stability.
+    hybrid: Poland advocates for coordinated international action to ensure critical
+      minerals cannot be used as tools of coercion.
+    enlargement: Poland supports the broader European goal of strengthening EU institutions
+      through cooperation with its neighbors.
+    green_transition: Poland supports international efforts to strengthen supply chains
+      for critical minerals essential for technological and energy development.
+    rule_of_law: Poland stresses the importance of democratic resilience and economic
+      security through diversified resource sourcing.
+  stances:
+    defence:
+      score: 1
+      evidence: He also expressed his belief that transatlantic cooperation on security
+        and the economy is evidence of the enduring bonds between the US and Europe.
+    hybrid:
+      score: 1
+      evidence: Critical minerals cannot be used for blackmail, and their production
+        should be geographically more diversified.
+    enlargement:
+      score: 0
+      evidence: ''
+    green_transition:
+      score: 1
+      evidence: The United States, in cooperation with its closest allies, is taking
+        action to strengthen supply chains for critical minerals.
+    rule_of_law:
+      score: 1
+      evidence: This is an element of our economic security - summarised Minister
+        Sikorski.

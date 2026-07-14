@@ -1,0 +1,52 @@
+actors:
+- PL
+issue_areas:
+- defence
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - top diplomats of Poland and Croatia
+  - Deputy Prime Minister Sikorski
+  - Minister Gordan Grlić Radman
+  topics:
+  - defence
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland and Croatia emphasized the need for increased defense spending,
+    continued support for Ukraine, and stable enlargement processes in the Western
+    Balkans.
+  positions:
+    defence: Poland strongly advocates for increasing military capabilities and boosting
+      defense spending to address serious security threats from Russia.
+    ukraine: Poland reaffirmed commitment with Croatia to providing strong, continued
+      support for Ukraine until a just and lasting peace is achieved.
+    enlargement: Poland supports EU enlargement by welcoming progress in Albania and
+      Montenegro and advocating for stability in Bosnia and Herzegovina.
+    rule_of_law: Poland highlighted the importance of cooperation in security and
+      trade while emphasizing democratic resilience through support for neighboring
+      states.
+  stances:
+    defence:
+      score: 2
+      evidence: Europe must increase its military capabilities while using the European
+        defence industry’s potential to full advantage.
+    ukraine:
+      score: 2
+      evidence: we agreed on the undeniable importance of Europe's continued strong
+        support for Ukraine until a just and lasting peace is achieved
+    enlargement:
+      score: 2
+      evidence: The foreign ministers agreed that expanding the zone of stability
+        and consistently supporting countries aspiring to join the EU is currently
+        a geopolitical necessity.
+    rule_of_law:
+      score: 1
+      evidence: The foreign ministers also highlighted the key role of the European
+        Union in the peace process.

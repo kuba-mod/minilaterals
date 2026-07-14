@@ -1,0 +1,31 @@
+actors:
+- DE
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Foreign Office
+  - Federal Government Commissioner for Culture and the Media
+  - Prussian Cultural Heritage Foundation
+  - Federal Ministry of Transport
+  - City of Pforzheim
+  topics:
+  - rule_of_law
+  location: Pforzheim, Germany
+  position: Germany emphasizes its historical responsibility and commitment to reconciliation
+    through the return of cultural property and strengthening bilateral ties with
+    Poland.
+  positions:
+    rule_of_law: Germany affirms its commitment to confronting historical injustice
+      and promoting mutual respect through tangible actions like returning stolen
+      cultural artifacts.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: These returns reflect the close cooperation between Germany and Poland
+        on confronting historical injustice and are an expression of Germany’s responsibility
+        towards Poland.

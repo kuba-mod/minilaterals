@@ -1,0 +1,66 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+- defence
+- hybrid
+- enlargement
+- green_transition
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ministers for Foreign Affairs of the Hellenic Republic
+  - Federal Republic of Germany
+  topics:
+  - rule_of_law
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - ukraine
+  location: null
+  position: Germany and Greece are upgrading their partnership to a new level by establishing
+    an agenda for Strategic Cooperation across multiple pillars including foreign
+    policy, defense, economy, and culture.
+  positions:
+    rule_of_law: The statement affirms commitment to democratic values and the international
+      rules-based order as foundational principles of cooperation.
+    defence: Germany supports strengthening defense capabilities by committing to
+      joint efforts in procurement, logistics, and crisis management.
+    hybrid: The statement calls for coordinated action against hybrid threats as part
+      of strengthening defense and security cooperation.
+    enlargement: The statement does not explicitly address the EU enlargement process
+      or Western Balkans accession.
+    green_transition: The statement focuses on economic resilience and digital transformation
+      but does not specifically mention climate neutrality or green industrial policy.
+    ukraine: Germany commits to joint responsibility with Greece in contributing to
+      peace and security in Europe following Russia's war of aggression against Ukraine.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: As members of the United Nations we are fully committed to upholding
+        the rules based international order
+    defence:
+      score: 1
+      evidence: with the objective to strengthen our capabilities to respond to conventional
+        and hybrid threats and expand our efforts in defence procurement, logistics,
+        and crisis management.
+    hybrid:
+      score: 1
+      evidence: Defence, Civil Protection & Hybrid Threats
+    enlargement:
+      score: 0
+      evidence: ''
+    green_transition:
+      score: 0
+      evidence: ''
+    ukraine:
+      score: 1
+      evidence: Against the backdrop of fundamental geopolitical changes following
+        Russia’s war of aggression against Ukraine as well as instability arising
+        in the Near and Middle East, Greece and Germany are committed to jointly assume
+        responsibility and step up their efforts to contribute to peace and security
+        in Europe and beyond.

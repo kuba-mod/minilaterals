@@ -1,0 +1,41 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+- rule_of_law
+- ukraine
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jean-Noël Barrot
+  topics:
+  - defence
+  - rule_of_law
+  - ukraine
+  location: null
+  position: Poland emphasizes its strategic partnership with France and seeks coordinated
+    cooperation on security, economy, and international issues.
+  positions:
+    defence: Poland supports building a stronger European security architecture with
+      France as a core pillar.
+    rule_of_law: Poland stresses the importance of maintaining unity among European
+      countries regarding fundamental values and democratic resilience.
+    ukraine: Poland highlights current security risks in Ukraine as a key area for
+      discussion with its strategic partner France.
+  stances:
+    defence:
+      score: 1
+      evidence: We’ll have to build a stronger European security architecture with
+        France and Poland as core pillars.
+    rule_of_law:
+      score: 1
+      evidence: the head of French diplomacy spoke about security and pointed out
+        that European countries must stay united.
+    ukraine:
+      score: 0
+      evidence: The ministers also discussed current security risks, including in
+        the Middle East and Ukraine.

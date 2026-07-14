@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Péter Magyar
+  topics:
+  - rule_of_law
+  location: Warsaw
+  position: Poland reaffirmed support for Hungary's efforts to secure European funds
+    while emphasizing the necessity of upholding the rule of law and rebuilding trust
+    in public institutions.
+  positions:
+    rule_of_law: Poland stressed that adherence to the rule of law and restoring confidence
+      in public institutions are crucial elements for Hungary's economic recovery.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: reaffirmed our support for Péter Magyar’s government’s efforts to
+        unlock European funds for Hungary and stressed the importance of the rule
+        of law and restoring trust in public institutions in this context.

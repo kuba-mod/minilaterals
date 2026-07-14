@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister Władysław Teofil Bartoszewski
+  topics:
+  - defence
+  - rule_of_law
+  location: Ulaanbaatar, Mongolia
+  position: Poland emphasized the importance of national security due to regional
+    threats and promoted economic cooperation across multiple sectors with Mongolia.
+  positions:
+    defence: Poland highlighted that national security is a top priority, citing external
+      threats from Russia's imperialist policy.
+    rule_of_law: Poland engaged in bilateral cooperation and signed agreements aimed
+      at strengthening institutional ties and addressing historical truth.
+  stances:
+    defence:
+      score: 1
+      evidence: the top priority for Poland—which, like Mongolia, also enjoys a unique
+        geographical location—is national security, which is currently threatened
+        by the war raging just beyond our eastern border
+    rule_of_law:
+      score: 1
+      evidence: A delegation from the Institute of National Remembrance... signed
+        a Memorandum of Understanding with the State Commission for the Management
+        of Political Rehabilitation of Mongolia.

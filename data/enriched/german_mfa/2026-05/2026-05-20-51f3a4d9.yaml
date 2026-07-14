@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Johann Wadephul
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the importance of sustained diplomatic efforts and
+    humanitarian aid in resolving complex conflicts like the one in Sudan.
+  positions:
+    rule_of_law: Germany stresses that maintaining democratic resilience and supporting
+      people's basic needs are crucial for both regional stability and German interests.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: In ensuring that people in the region don’t go hungry and aren’t forced
+        to flee their homes, in providing for them there, we’re indeed serving German
+        interests.

@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs of the French Republic
+  - Christine Razanamahasoa, Minister of Foreign Affairs of the Refoundation of the
+    Republic of Madagascar
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirms its commitment to supporting a renewed partnership with
+    Madagascar and supports the refoundation process while focusing on development
+    cooperation.
+  positions:
+    rule_of_law: France strongly supports democratic resilience and institutional
+      reform in Madagascar, affirming support for free and transparent elections.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: it reaffirms its full support for continuing the process with a view
+        to holding free and transparent elections according to the established timetable.

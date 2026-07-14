@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - MFA Department of Strategy representatives
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Jagiellonian University
+  position: Poland aims to strengthen transatlantic relations and coordinate its diplomatic
+    efforts across various European issues.
+  positions:
+    hybrid: Poland emphasizes the need for coordinated action on foreign policy, which
+      implicitly addresses hybrid threats like disinformation.
+    rule_of_law: Poland's focus on general foreign policy strategy suggests an alignment
+      with the foundational principles of democratic resilience and rule of law.
+  stances:
+    hybrid:
+      score: 1
+      evidence: The Q&A session focused on various aspects of Polish foreign policy,
+        including promoting Poland, politics in Central, Eastern, and Southern Europe,
+        and coordinating Polish diplomatic efforts.
+    rule_of_law:
+      score: 1
+      evidence: They emphasised the need to forge positive transatlantic relations
+        that benefit Poland’s national and strategic interest.

@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ronald Lamola
+  topics:
+  - rule_of_law
+  location: 'null'
+  position: Poland emphasized its commitment to multilateral cooperation and international
+    dialogue while seeking to strengthen bilateral economic ties with South Africa.
+  positions:
+    rule_of_law: Poland affirms support for multilateral cooperation and international
+      dialogue, aligning with the foundational principles of European unity and security.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Our support for multilateral cooperation and international dialogue
+        is steadfast and solid, we share this approach with South African partners.

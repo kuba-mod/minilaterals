@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Adam Bugajski, Political Director and Director of the Security Policy Department
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Vihula (Estonia)
+  position: Poland emphasized the need for the Council to respond effectively to new
+    regional security challenges and maintain pressure on Russia while supporting
+    Ukraine's defense.
+  positions:
+    ukraine: Poland supports continued support for Ukraine in its defense, advocating
+      for achieving a just and lasting peace with strong security guarantees.
+    defence: Poland supports strengthening regional security cooperation through the
+      Council of the Baltic Sea States to enhance collective defense capabilities.
+    hybrid: Poland actively proposes addressing hybrid threats from Russia in the
+      Baltic Sea by framing solutions within international law.
+    rule_of_law: Poland contributes to upholding democratic resilience and security
+      through its focus on international legal frameworks when discussing regional
+      threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The participants agreed about the need to maintain continued pressure—including
+        sanctions—on Russia, to sustain support for Ukraine in its defence, and to
+        work towards achieving a just and lasting peace that provides strong security
+        guarantees for Kyiv.
+    defence:
+      score: 1
+      evidence: During the meeting, we emphasised that the Council should be able
+        to respond more effectively to new regional security challenges.
+    hybrid:
+      score: 2
+      evidence: Poland’s contribution consisted of proposals addressing these challenges
+        from the perspective of international law.
+    rule_of_law:
+      score: 1
+      evidence: Poland’s contribution consisted of proposals addressing these challenges
+        from the perspective of international law.

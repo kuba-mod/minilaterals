@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Waldemar Żurek
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland is actively strengthening its commitment to democratic standards
+    and the rule of law by nominating highly qualified Polish experts to key international
+    bodies like the Venice Commission.
+  positions:
+    rule_of_law: Poland strongly affirms the importance of the rule of law as a foundational
+      element for European stability, demonstrated by sending representatives to the
+      Venice Commission.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: I believe that the new Polish representatives as members of the Venice
+        Commission will make a real contribution to strengthening these walls, democratic
+        standards, the rule of law, and the protection of human rights throughout
+        Europe

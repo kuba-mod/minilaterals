@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Trade Ministers of the Group of Seven (G7)
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France's position is focused on strengthening global economic resilience
+    and security by addressing non-market policies and countering economic coercion.
+  positions:
+    rule_of_law: The communique strongly emphasizes the importance of market integrity
+      and democratic principles by calling out harmful non-market practices and economic
+      coercion.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We reaffirm our shared concerns regarding non-market policies and
+        practices (NMPPs), and their adverse impacts, including persistent market
+        distortions, global structural excess capacity, harmful spillovers in global
+        and domestic markets, and growing economic dependencies.

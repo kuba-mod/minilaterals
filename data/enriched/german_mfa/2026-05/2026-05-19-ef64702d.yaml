@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Johann Wadephul
+  - Katherina Reiche
+  - Denys Shmyhal
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need to protect critical energy infrastructure
+    by learning from Ukraine's resilience and hosting an international conference
+    on the topic.
+  positions:
+    ukraine: Germany commits to long-term support for Ukraine by organizing a major
+      international conference focused on energy security lessons learned from the
+      country.
+    hybrid: Germany calls for coordinated action against hybrid threats and sabotage
+      targeting critical infrastructure, citing Russian actions as evidence of vulnerability.
+    rule_of_law: Germany stresses the importance of democratic resilience and security
+      by highlighting the necessity of protecting energy systems from deliberate attacks.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Germany is Ukraine’s largest supporter in the energy sector.
+    hybrid:
+      score: 2
+      evidence: Sightings of Russian drones, acts of sabotage and hybrid warfare leave
+        us in no doubt that we need to protect our critical infrastructure more than
+        ever today.
+    rule_of_law:
+      score: 1
+      evidence: When we talk about energy, we are talking about security.

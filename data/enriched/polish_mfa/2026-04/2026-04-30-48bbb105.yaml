@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister of Climate and Environment Krzysztof Galos
+  - Undersecretary of State Allison Hooker
+  - EU Commissioner for Trade and Economic Security Maroš Šefčovič
+  topics:
+  - green_transition
+  location: null
+  position: Poland reaffirmed its strong partnership with the US through strategic
+    dialogues and advanced cooperation in critical minerals supply chains.
+  positions:
+    green_transition: Poland actively advances green objectives by securing a framework
+      agreement on critical minerals necessary for the clean energy transition.
+  stances:
+    green_transition:
+      score: 2
+      evidence: It concerns securing critical minerals supply chains, including rare
+        earth metals, at the stages of extraction, processing, and recycling.

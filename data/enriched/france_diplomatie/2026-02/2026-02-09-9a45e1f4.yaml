@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Mohamad Hasan
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  location: null
+  position: France discussed expanding bilateral relations with Malaysia across several
+    key areas including business, defense, hybrid threats, and critical minerals.
+  positions:
+    defence: France supports strengthening defense cooperation through discussions
+      on the topic of defense with Malaysia.
+    hybrid: France emphasizes coordinated action against hybrid threats as part of
+      its expanded bilateral cooperation goals with Malaysia.
+    green_transition: Green transition is not explicitly mentioned as a topic of discussion
+      between France and Malaysia.
+  stances:
+    defence:
+      score: 1
+      evidence: The two Ministers also discussed expanding bilateral relations, particularly
+        in the areas of business, defense, hybrid threats and critical minerals.
+    hybrid:
+      score: 1
+      evidence: The two Ministers also discussed expanding bilateral relations, particularly
+        in the areas of business, defense, hybrid threats and critical minerals.
+    green_transition:
+      score: 0
+      evidence: ''

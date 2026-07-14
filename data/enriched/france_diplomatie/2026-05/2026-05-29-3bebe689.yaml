@@ -1,0 +1,46 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France strongly condemns the drone incursions into Romanian airspace and
+    reaffirms its commitment to supporting allies' security and NATO deterrence.
+  positions:
+    ukraine: France commits to providing unwavering support for Ukraine until a just
+      and lasting peace is achieved.
+    defence: France emphasizes its role in strengthening NATO's defense posture and
+      collective security on the eastern flank.
+    hybrid: France views external aggression and violations of international law as
+      hybrid threats undermining EU/NATO security.
+    rule_of_law: France stresses that the rule of law must be upheld to guarantee
+      the security of its allies and the stability of the region.
+  stances:
+    ukraine:
+      score: 1
+      evidence: France will continue to provide Ukraine with unwavering support.
+    defence:
+      score: 2
+      evidence: As a framework nation of NATO’s multinational battlegroup deployed
+        in Romania, France will continue to play a full role in the efforts to strengthen
+        NATO’s deterrence and defense posture.
+    hybrid:
+      score: 1
+      evidence: This latest irresponsible escalation is a flagrant violation of international
+        law.
+    rule_of_law:
+      score: 1
+      evidence: The security of our allies is our priority and must be guaranteed.

@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President Laurent Saint-Cyr
+  - Prime Minister Alix Didier Fils-Aimé
+  topics:
+  - rule_of_law
+  location: null
+  position: France acknowledges the end of Haiti's transitional mandate and commits
+    to supporting stability, security, and a return to democratic order through continued
+    aid and support for Haitian institutions.
+  positions:
+    rule_of_law: France supports promoting stability and returning to constitutional
+      and democratic order in Haiti by calling on all actors to work together with
+      interim authorities.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: It calls on all political actors and all components of civil society
+        to work together with the interim authorities to promote stability, security
+        and a return to constitutional and democratic order in Haiti through free,
+        inclusive elections.

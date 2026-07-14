@@ -1,0 +1,53 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Polish foreign ministers
+  - North Macedonian foreign ministers
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its strong bilateral relations with North Macedonia
+    and emphasized a shared approach to key European challenges, including security
+    and EU enlargement.
+  positions:
+    defence: Poland supports strengthening Europe's defense capabilities by encouraging
+      increased defense spending and cooperation on modernizing armed forces.
+    hybrid: Poland advocates for coordinated action against hybrid threats, including
+      disinformation campaigns, in the regional context of Russian actions.
+    enlargement: Poland strongly supports North Macedonia's European aspirations and
+      is ready to share its experience and expertise on accession negotiations.
+    rule_of_law: Poland views supporting EU membership aspirants in both the south
+      and east as a geopolitical necessity for stability and prosperity.
+  stances:
+    defence:
+      score: 1
+      evidence: In this context, the ministers jointly emphasised the need to further
+        increase defence spending to bolster Europe’s security.
+    hybrid:
+      score: 1
+      evidence: The talks also covered the prospects for EU enlargement, including
+        into Western Balkan countries, as well as the regional situation in the context
+        of the Russian Federation’s actions, including disinformation.
+    enlargement:
+      score: 2
+      evidence: ‘Poland fully supports North Macedonia’s European aspirations. We
+        are ready to share our experience of the pre-accession period and our expert
+        knowledge on accession negotiations—to the extent that this is desired by
+        our partners,’ emphasised Deputy Prime Minister Radosław Sikorski.
+    rule_of_law:
+      score: 1
+      evidence: The ministers agreed that expanding the area of security, stability,
+        and prosperity by supporting countries aspiring to EU membership—in both the
+        south and the east—is nowadays a geopolitical necessity.

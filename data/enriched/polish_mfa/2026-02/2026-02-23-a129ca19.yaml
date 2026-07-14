@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - Foreign Minister Radosław Sikorski
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland strongly advocates for continued and expanded support for Ukraine
+    through sanctions, military aid, and diplomatic pressure on Russia, while also
+    addressing regional issues like the Middle East.
+  positions:
+    ukraine: Poland commits to providing extensive material and financial support
+      to Ukraine, including paying for terminals and contributing various military
+      assets.
+    hybrid: Poland supports coordinated EU action against hybrid threats, specifically
+      advocating for stricter entry bans and limiting visas to prevent Russian citizens
+      from participating in aggression.
+    rule_of_law: Poland supports maintaining international legal standards by advocating
+      for sanctions on Russia and noting concerns over illegal activities in the West
+      Bank.
+  stances:
+    ukraine:
+      score: 2
+      evidence: It is Poland that has been paying for 30,000 terminals that are being
+        used in Ukraine, including by the Ukrainian Armed Forces.
+    hybrid:
+      score: 2
+      evidence: Minister Sikorski backed the Estonian proposal to introduce an EU
+        entry ban for Russian citizens who participated in the aggression against
+        Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: The MFA head also urged Hungary to stop blocking a loan for Ukraine.

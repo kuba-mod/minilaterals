@@ -1,0 +1,58 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Oana Ţoju
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its commitment to regional security and EU cooperation
+    while stressing the need for strong support for Ukraine and Moldova.
+  positions:
+    ukraine: Poland strongly supports Kyiv's defense and stability by advocating for
+      immediate sanctions against Russia and reiterating its special role as a key
+      neighbor.
+    defence: Poland supports strengthening regional security by focusing on NATO's
+      eastern flank and deepening bilateral defense cooperation with Romania.
+    hybrid: Poland advocates for coordinated action against disinformation and enhancing
+      institutional resilience in neighboring countries like Moldova.
+    enlargement: Poland supports the EU accession process for neighboring countries
+      like Moldova.
+    rule_of_law: Poland emphasizes adherence to international law and democratic principles
+      in conflict zones while supporting EU unity.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The ministers stressed the need to immediately adopt the 20th sanctions
+        package to curb Russia’s ability to finance warfare.
+    defence:
+      score: 1
+      evidence: In the context of regional security, special attention was paid to
+        NATO’s eastern flank
+    hybrid:
+      score: 1
+      evidence: Ministers Sikorski and Țoiu declared that close coordination of actions
+        taken to enhance Moldova’s security and resilience will continue, including
+        measures to support its democratic institutions and counter disinformation.
+    enlargement:
+      score: 1
+      evidence: We want to further support Moldova through enhancing its security
+        and resilience as well as work on institutional reforms and, obviously, the
+        EU accession process.
+    rule_of_law:
+      score: 1
+      evidence: In this context, they called on all parties to exercise restraint,
+        observe international law, and ensure the protection of civilians.

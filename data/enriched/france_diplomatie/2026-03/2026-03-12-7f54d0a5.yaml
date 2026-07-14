@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry for Europe and Foreign Affairs (MEAE)
+  - Minister Delegate for Foreign Trade
+  - Minister for Transport
+  - President of the CMA CGM Foundation
+  topics:
+  - rule_of_law
+  location: null
+  position: France is actively responding to the crisis in Lebanon by delivering significant
+    humanitarian aid and continuing diplomatic efforts with international partners.
+  positions:
+    rule_of_law: France supports democratic resilience and stability by providing
+      substantial emergency humanitarian assistance to address a major civil crisis
+      in Lebanon.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: In addition, there is medical equipment to support the medical teams
+        mobilized on the ground.

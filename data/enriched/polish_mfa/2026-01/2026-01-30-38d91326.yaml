@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  - Deputy Prime Minister Xavier Bettel
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the importance of transatlantic cooperation and bilateral
+    relations with Luxembourg while affirming commitment to European values.
+  positions:
+    rule_of_law: Poland supports foundational European values such as democracy, equality,
+      and human dignity through its engagement with partners like Luxembourg.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Minister Sikorski thanked Minister Bettel for his engagement in promoting
+        European values, including measures against discrimination and initiatives
+        fostering respect for the principles of equality and human dignity.

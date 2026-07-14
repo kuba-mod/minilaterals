@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Undersecretary of State Robert Kupiecki
+  - David Morrison
+  - Dominic Rochon
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland and Canada established a High-Level Steering Group to enhance bilateral
+    cooperation across multiple strategic areas.
+  positions:
+    defence: Poland supports strengthening defense capabilities through enhanced military
+      procurement and partnerships with Canada.
+    hybrid: Poland emphasizes joint efforts with Canada to combat foreign information
+      manipulation, interference, and cyber threats.
+    green_transition: Poland is focused on enhancing energy security through cooperation
+      in clean energy.
+    rule_of_law: Poland highlights the importance of addressing international security
+      challenges and combating cyber threats as foundational to stability.
+  stances:
+    defence:
+      score: 1
+      evidence: concerned defence cooperation, military procurement and partnerships
+    hybrid:
+      score: 2
+      evidence: countering foreign information manipulation and interference
+    green_transition:
+      score: 1
+      evidence: energy security, clean energy cooperation
+    rule_of_law:
+      score: 1
+      evidence: current challenges to international security, and the opportunities
+        to jointly combat cyber threats

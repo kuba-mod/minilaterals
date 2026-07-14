@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Elmedin Konaković, Minister of Foreign Affairs
+  topics:
+  - enlargement
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its commitment to Bosnia and Herzegovina's stability
+    and signaled support for its future integration into Europe.
+  positions:
+    enlargement: France supports the prospect of Bosnia and Herzegovina joining the
+      European Union and encourages necessary reforms.
+    rule_of_law: France reaffirmed its commitment to Bosnia and Herzegovina's independence,
+      sovereignty, and territorial integrity.
+  stances:
+    enlargement:
+      score: 1
+      evidence: The Minister signalled his support for the prospect of Bosnia and
+        Herzegovina’s future in Europe
+    rule_of_law:
+      score: 1
+      evidence: the Minister reaffirmed France’s commitment to Bosnia and Herzegovina’s
+        independence, sovereignty and territorial integrity

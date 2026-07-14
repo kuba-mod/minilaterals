@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - rule_of_law
+  location: Warsaw
+  position: Poland affirms its commitment to human rights and democratic transformation
+    by financing the ODIHR premises in Warsaw.
+  positions:
+    rule_of_law: Poland supports the promotion of human rights and democracy, which
+      is central to Poland's diplomatic position regarding the ODIHR.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The fact that ODIHR has its premises in Warsaw consolidates Poland’s
+        central position in a debate on human rights and democratic transformation.

@@ -1,0 +1,56 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Tom Berendsen, Minister of Foreign Affairs
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its commitment to strengthening the EU and coordinating
+    with the Netherlands on security, defense, and economic cooperation.
+  positions:
+    ukraine: France strongly supports long-term support for Ukraine in the face of
+      Russian aggression.
+    defence: France and the Netherlands are committed to strengthening the European
+      defense technological and industrial base.
+    hybrid: France and its partner expressed concern over regional destabilization
+      and emphasized cooperation on border security issues.
+    enlargement: France noted similar views with the Netherlands regarding EU enlargement.
+    rule_of_law: France emphasized working towards a more resilient and sovereign
+      European Union, particularly concerning digital technology.
+  stances:
+    ukraine:
+      score: 1
+      evidence: reaffirmed their long-term support for Ukraine, particularly in the
+        Coalition of the Willing, in the face of the war of aggression being waged
+        by Russia
+    defence:
+      score: 1
+      evidence: determination to strengthen the European defence technological and
+        industrial base
+    hybrid:
+      score: 0
+      evidence: signalled their concern over developments in the Middle East and the
+        risk of destabilization in the region
+    enlargement:
+      score: 1
+      evidence: opportunity to note similar views about EU enlargement
+    rule_of_law:
+      score: 1
+      evidence: The visit also confirmed the two countries’ commitment to work for
+        a more competitive, sovereign and resilient European Union, particularly as
+        far as digital technology and supply chains are concerned.

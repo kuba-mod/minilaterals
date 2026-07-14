@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Marco Rubio, United States Secretary of State
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France emphasized its commitment to diplomatic solutions in international
+    crises, particularly regarding Iran's nuclear program and the stability of Lebanon.
+  positions:
+    ukraine: France reiterates steadfast support for Ukraine’s sovereignty and territorial
+      integrity following discussions with US officials.
+    rule_of_law: France stresses the importance of diplomatic solutions to regional
+      crises, including ensuring freedom of navigation and supporting Lebanese sovereignty.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The Minister reiterated France’s steadfast support for Ukraine’s sovereignty
+        and territorial integrity.
+    rule_of_law:
+      score: 1
+      evidence: The two ministers talked about the main international crises, in particular
+        the situations in the Middle East and Ukraine.

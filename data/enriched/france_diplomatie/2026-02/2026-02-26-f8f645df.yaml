@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Prak Sokhonn, Minister of Foreign Affairs and International Cooperation
+  topics:
+  - rule_of_law
+  location: null
+  position: France aims to deepen bilateral relations with Cambodia across economic
+    sectors while supporting regional stability efforts.
+  positions:
+    rule_of_law: France supports the rule of law and international commitments by
+      emphasizing the importance of implementing a ceasefire agreement and facilitating
+      border demarcation discussions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: It reiterates its readiness to facilitate the two parties’ access
+        to the archives in its possession, linked to the demarcation of the border.

@@ -1,0 +1,55 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland advocates for continued strong support for Ukraine and increased
+    EU/NATO pressure on Russia through sanctions and defense commitments.
+  positions:
+    ukraine: Poland strongly supports Ukraine's reconstruction and calls for intensified
+      aid and military assistance to counter Russian aggression.
+    defence: Poland emphasizes fulfilling NATO commitments by allocating adequate
+      resources for armaments and highlights its role as a model contributor.
+    hybrid: The text mentions the context of Russia’s aggression against Ukraine and
+      Belarus in relation to human rights discussions.
+    enlargement: Poland supports the EU accession process for countries like Ukraine,
+      aligning with broader European security goals.
+    rule_of_law: The Polish representative emphasizes upholding democratic resilience
+      through adherence to NATO commitments and sanctions enforcement.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Russian attacks on Ukraine’s energy infrastructure prove that Russia
+        is not interested in making peace. Therefore, we should continue to help Ukraine
+        and put pressure on the aggressor
+    defence:
+      score: 2
+      evidence: We need to fulfil our commitments to NATO, including by allocating
+        adequate resources for armaments. Poland can act as a role model.
+    hybrid:
+      score: 1
+      evidence: also in the context of Russia’s aggression against Ukraine and the
+        situation in Belarus.
+    enlargement:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: We need to impose sanctions on refineries that process Russian oil.
+        This would supplement the sanctions we have on the clunker fleet

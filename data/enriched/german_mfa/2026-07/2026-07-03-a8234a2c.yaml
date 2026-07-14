@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  - green_transition
+  location: Brasilia, Brazil
+  position: Germany aims to build a resilient and sustainable raw materials supply
+    chain with Brazil by deepening industrial cooperation across the entire value
+    chain while upholding high ESG standards.
+  positions:
+    rule_of_law: Germany emphasizes shared values including reliable partnerships
+      built on trust and promoting high environmental, social, and governance standards.
+    green_transition: Germany supports sustainable development by committing to high
+      environmental, social, and governance standards across the entire raw materials
+      value chain.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: 'What makes Brazil such an important partner for Germany is that we
+        share the same interests and values: First, diversified and resilient trade
+        relationships. And second, reliable, long-term partnerships built on trust.'
+    green_transition:
+      score: 1
+      evidence: We are also committed to promoting high environmental, social, and
+        governance standards – across the entire value chain.

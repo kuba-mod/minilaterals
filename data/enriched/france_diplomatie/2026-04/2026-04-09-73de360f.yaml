@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lebanese authorities
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns Israeli strikes on Lebanon and calls for restraint among
+    all parties to ensure a lasting regional peace.
+  positions:
+    rule_of_law: France emphasizes the importance of international law and stability
+      by condemning military actions that jeopardize ceasefires and calling for adherence
+      to diplomatic agreements.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: These strikes are especially unacceptable because they jeopardize
+        the temporary ceasefire between the United States and Iran the day after it
+        was concluded.

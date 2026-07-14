@@ -1,0 +1,53 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of the Federal Republic of Germany
+  - Foreign Ministers of the Republic of Poland
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany and Poland affirm their commitment to strengthening European security
+    through joint action, particularly in response to Russian aggression.
+  positions:
+    ukraine: The declaration commits to supporting a just and lasting peace in Ukraine
+      while acknowledging the need for regional responsibility.
+    defence: Germany strongly supports enhancing collective defense capabilities,
+      exemplified by the new German-Polish Defence Cooperation Agreement.
+    hybrid: The declaration calls for enhanced resilience and coordinated action against
+      Russia's hybrid threats, including disinformation campaigns.
+    rule_of_law: Germany emphasizes protecting European values, including the rule
+      of law and free elections, as foundational to security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Our overarching aim remains the protection of European values, including
+        the rule of law and free elections, and ultimately a lasting and just peace
+        in Ukraine that strengthens European security.
+    defence:
+      score: 2
+      evidence: We welcome the signing of the new German-Polish Agreement on Defence
+        Cooperation. It is testament to our determination to act together.
+    hybrid:
+      score: 1
+      evidence: Russia’s aggressive actions, in particular those of a hybrid nature
+        and in the field of disinformation, are also aimed at us. Their goal is to
+        divide our societies, to destroy public order and to undermine trust in the
+        state and its institutions.
+    rule_of_law:
+      score: 1
+      evidence: Our overarching aim remains the protection of European values, including
+        the rule of law and free elections, and ultimately a lasting and just peace
+        in Ukraine that strengthens European security.

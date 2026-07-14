@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: interview
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany prioritizes its national and European security interests through
+    strong economic ties with partners like the US while advocating for increased
+    EU defense capabilities.
+  positions:
+    defence: Germany supports strengthening its own defense capability and increasing
+      collective security by working towards a 5% GDP spending goal, complementing
+      NATO efforts.
+    rule_of_law: Germany emphasizes stating its national interests clearly rather
+      than adopting a 'normative surplus' approach in foreign policy.
+  stances:
+    defence:
+      score: 1
+      evidence: With defence spending of five percent of GDP, which I firmly supported,
+        we are now finally putting this goal into practice.
+    rule_of_law:
+      score: 1
+      evidence: On the contrary – we state what is in our interests and what isn’t.

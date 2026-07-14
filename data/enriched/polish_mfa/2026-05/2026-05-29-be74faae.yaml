@@ -1,0 +1,73 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - The Council
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland strongly condemns Russia's aggression against Ukraine and calls
+    for increased international pressure, sanctions, and support for Kyiv's sovereignty.
+  positions:
+    ukraine: The Council reaffirms unwavering support for Ukraine’s independence and
+      territorial integrity while demanding accountability for Russian war crimes
+      and ensuring Ukraine is central to all decisions concerning its future.
+    defence: Poland supports strengthening regional defense measures in the Baltic
+      Sea region against Russia's aggressive actions, including cyber operations and
+      sabotage.
+    hybrid: Poland calls for reinforced action against various hybrid threats emanating
+      from Russia, such as disinformation, election interference, and illegal migration.
+    enlargement: Poland supports Ukraine's sovereignty and territorial integrity within
+      its internationally recognized borders, aligning with broader goals of EU enlargement.
+    green_transition: Poland supports ending dependency on Russian energy imports
+      in line with REPowerEU objectives.
+    rule_of_law: Poland emphasizes upholding international law and accountability
+      for crimes committed during the war against Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Council reaffirmed its strong and unwavering support for Ukraine’s
+        independence, sovereignty and territorial integrity within its internationally
+        recognised borders
+    defence:
+      score: 2
+      evidence: The Council expressed the need to reinforce response measures in the
+        Baltic Sea region against Russia’s aggressive actions that the CBSS Member
+        States have faced
+    hybrid:
+      score: 2
+      evidence: 'The Council expressed the need to reinforce response measures in
+        the Baltic Sea region against Russia’s aggressive actions that the CBSS Member
+        States have faced, such as: cyber operations, sabotage, including across European
+        supply chains; Foreign Information Manipulation and Interference (FIMI); election
+        interference; instrumentalization of migration including through the actions
+        of Belarus'
+    enlargement:
+      score: 1
+      evidence: The Council reaffirmed its strong and unwavering support for Ukraine’s
+        independence, sovereignty and territorial integrity within its internationally
+        recognised borders
+    green_transition:
+      score: 2
+      evidence: The Council also emphasized the importance of swift efforts towards
+        ending the dependency on energy imports from Russia, in line with REPowerEU
+    rule_of_law:
+      score: 2
+      evidence: The Council emphasized that Russia supported by Belarus, and the individuals
+        responsible, must be held accountable for their crimes and provide full compensation
+        for the damages caused to Ukraine.

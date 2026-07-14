@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Anita Orbán
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland aims to resume constructive dialogue with Hungary and enhance regional
+    security cooperation through key policy areas.
+  positions:
+    defence: Poland supports enhancing EU defense capabilities and working towards
+      enhanced regional security.
+    hybrid: Poland advocates for coordinated action on key security issues, including
+      those related to hybrid threats.
+    enlargement: Poland supports the EU accession of Ukraine and Western Balkans countries.
+    rule_of_law: Poland emphasizes democratic principles and the rule of law as foundational
+      for renewed bilateral relations.
+  stances:
+    defence:
+      score: 1
+      evidence: The two officials affirmed readiness to work closely towards enhanced
+        regional security
+    hybrid:
+      score: 1
+      evidence: The meeting will focus on giving new energy to cooperation in Central
+        Europe and working out shared positions on key security issues.
+    enlargement:
+      score: 1
+      evidence: namely to resume constructive dialogue, both bilaterally and in the
+        European Union
+    rule_of_law:
+      score: 1
+      evidence: carries a symbolic meaning for the states that stand up for democratic
+        principles.

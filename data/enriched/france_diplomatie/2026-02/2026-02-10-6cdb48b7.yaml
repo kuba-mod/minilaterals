@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Mattias Guyomar
+  topics:
+  - rule_of_law
+  location: Strasbourg
+  position: France reaffirmed its strong support for the European Court of Human Rights's
+    independence and role in upholding democracy and the rule of law.
+  positions:
+    rule_of_law: France strongly supports the court’s fundamental role in protecting
+      democracy and the rule of law, emphasizing the importance of executing its judgments.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: He stressed the Court’s fundamental role in protecting democracy and
+        the rule of law.

@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Naoufel Gaied
+  topics:
+  - rule_of_law
+  location: null
+  position: France affirms its commitment to supporting international justice and
+    rule of law through the appointment of a French candidate to the International
+    Institute for Justice and the Rule of Law.
+  positions:
+    rule_of_law: France supports strengthening judicial capacities and promoting a
+      criminal justice system rooted in the rule of law and human rights as part of
+      counter-terrorism efforts.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France supports a holistic approach to counter-terrorism, including
+        in particular capacity-building for States and the development of a criminal
+        justice system rooted in the rule of law and respect for human rights, which
+        are an integral part of preventing violent extremism.

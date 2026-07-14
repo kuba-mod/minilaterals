@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Robert Kupiecki
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: Poland reaffirmed its commitment to the NPT principles while criticizing
+    Russia's nuclear intimidation policy.
+  positions:
+    rule_of_law: Poland emphasizes democratic resilience and adherence to international
+      treaties by criticizing Russia’s destabilizing actions regarding nuclear weapons.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: He pointed out that Russia’s actions are destabilising the security
+        environment and run counter to the spirit of the NPT.

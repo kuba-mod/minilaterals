@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Armenian journalists
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is expanding its multilingual news service to counter disinformation
+    and information interference targeting Armenia and Eastern Partnership countries.
+  positions:
+    hybrid: Poland supports coordinated action against hybrid threats by launching
+      a new Armenian-language news service to counter disinformation.
+    rule_of_law: Poland supports democratic resilience and combating disinformation
+      by establishing a multilingual news service for Eastern Partnership countries.
+  stances:
+    hybrid:
+      score: 2
+      evidence: The project’s mission is also to increase the public’s resilience
+        to manipulation and information interference, and to counter disinformation
+        targeting Armenia and its partners.
+    rule_of_law:
+      score: 2
+      evidence: The launch of the service marks an expansion of VT (formerly “Vot
+        Tak”), which, following the addition of a Romanian-language programming for
+        Moldova in February 2026, now broadcasts content in three languages.

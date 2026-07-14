@@ -1,0 +1,63 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - foreign ministers
+  - Kaja Kallas
+  - Volodymyr Zelenskyy
+  - Radosław Sikorski
+  - Mykhailo Fedorov
+  - Kyrylo Budanov
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Kyiv, Ukraine
+  position: Poland reaffirms its strong and sustained support for Ukraine's sovereignty,
+    defense, and recovery while maintaining pressure on Russia.
+  positions:
+    ukraine: Poland strongly supports Ukraine’s continued political and military stability,
+      emphasizing the need to hold Russia accountable for war crimes and providing
+      ongoing aid.
+    defence: Poland commits to supporting Ukraine's defense capabilities and is actively
+      involved in international mechanisms related to aggression crimes.
+    hybrid: Poland views the Middle East crisis as a strategic opportunity for Russia
+      and stresses the necessity of continued international pressure on Moscow.
+    enlargement: Poland supports Ukraine's integration into international justice
+      mechanisms and invites partners to participate in recovery efforts.
+    rule_of_law: Poland strongly condemns Russia's aggression and commits to ensuring
+      accountability for war crimes committed in Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Poland remains ready to support self-defending Ukraine, including
+        in military terms, for as long as needed
+    defence:
+      score: 2
+      evidence: Poland is going to accede to the Enlarged Partial Agreement on the
+        Management Committee of the Special Tribunal for the Crime of Aggression against
+        Ukraine
+    hybrid:
+      score: 2
+      evidence: We must continue to put pressure on Russia in order to change its
+        calculations
+    enlargement:
+      score: 2
+      evidence: Poland’s top diplomat invited partners to take part in the Ukraine
+        Recovery Conference in Gdańsk on 25–26 June
+    rule_of_law:
+      score: 2
+      evidence: They agreed that Russia must be called to account for its crimes in
+        Ukraine and there is no room for any tolerance of its impunity

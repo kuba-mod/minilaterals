@@ -1,0 +1,56 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Maria Malmer Stenergard
+  - Artur Harazim
+  - Jessica Rosencrantz
+  - Donald Tusk
+  - Ulf Kristersson
+  - Robert Kupiecki
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Gdynia
+  position: Poland and Sweden committed to deepening their strategic partnership across
+    security, defense, and EU cooperation.
+  positions:
+    defence: Poland supports strengthening European defense capabilities through bilateral
+      military agreements and joint statements on the Baltic Sea.
+    hybrid: Poland and Sweden discussed top challenges to international security,
+      including hybrid threats like disinformation and foreign interference.
+    enlargement: Poland supports EU enlargement by emphasizing the importance of understanding
+      each other's perspectives for future institutional reforms.
+    rule_of_law: Poland and Sweden reaffirmed their commitment to democratic values
+      and cooperation within the EU framework.
+  stances:
+    defence:
+      score: 2
+      evidence: One of the most important points of the intergovernmental consultations
+        was the signing of a contract for the purchase of three A26 submarines under
+        the Orka programme
+    hybrid:
+      score: 1
+      evidence: The chiefs of Polish and Swedish diplomacies also discussed top challenges
+        to international security, including European defence, Russia’s aggression
+        against Ukraine, the Middle East conflict, and cooperation on the Korean Peninsula.
+    enlargement:
+      score: 1
+      evidence: As demonstrated by the historically significant Polish–Swedish initiative
+        of the Eastern Partnership
+    rule_of_law:
+      score: 1
+      evidence: Our relations have flourished based on our shared values and our exceptionally
+        close, almost identical, perception of the challenges we are now facing in
+        the region, Europe, and the world.

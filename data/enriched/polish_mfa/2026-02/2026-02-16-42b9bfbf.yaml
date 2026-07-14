@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Undersecretary of State Wojciech Zajączkowski
+  - Minister Lana Nusseibeh
+  - Deputy Prime Minister Radosław Sikorski
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasized strengthening bilateral ties with the UAE while coordinating
+    positions on global issues like humanitarian aid and international law.
+  positions:
+    ukraine: Poland supports providing humanitarian aid to Ukraine and is involved
+      in discussions regarding mediation efforts concerning Russia's aggression.
+    rule_of_law: Poland stressed that both it and the UAE respect international law
+      and are ready to cooperate for peaceful conflict resolution.
+  stances:
+    ukraine:
+      score: 1
+      evidence: including providing humanitarian aid to Ukraine
+    rule_of_law:
+      score: 1
+      evidence: Both sides emphasised that Poland and the UAE share their respect
+        for the paramount role of international law in relations between countries

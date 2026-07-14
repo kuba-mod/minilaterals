@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Germany
+  - France
+  - United Kingdom
+  - United States of America
+  - African Union
+  - European Union
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany co-hosted the International Sudan Conference to call for an immediate
+    end to hostilities and a political resolution in Sudan.
+  positions:
+    rule_of_law: Germany emphasizes upholding international humanitarian law and protecting
+      civilians during the crisis in Sudan.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: calling on the warring parties to put an end to the hostilities, to
+        immediately comply with international humanitarian law

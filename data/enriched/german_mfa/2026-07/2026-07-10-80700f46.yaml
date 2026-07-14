@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - High Representative on behalf of the European Union
+  topics:
+  - rule_of_law
+  location: null
+  position: The EU is deeply concerned by the violence in El Obeid and calls for an
+    immediate cessation of hostilities, adherence to international law, and a return
+    to negotiations for a civilian-led transition.
+  positions:
+    rule_of_law: The EU strongly emphasizes the necessity of respecting international
+      humanitarian and human rights laws by all parties involved in the conflict.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: International humanitarian and human rights laws, including the protection
+        of civilians in particular women and girls and civilian infrastructure, must
+        be fully respected by all parties to the conflict.

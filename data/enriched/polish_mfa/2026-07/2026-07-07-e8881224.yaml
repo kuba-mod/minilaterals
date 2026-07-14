@@ -1,0 +1,53 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Undersecretary of State Artur Harazim
+  - Head of the Foreign Service and Director-General Henryka Mościcka-Dendys
+  - Minister of Finance Andrzej Domański
+  - Vice-Rector for Research Professor Mariusz Malinowski
+  - Deputy Prime Minister Radosław Sikorski
+  - Jean-Noël Barrot
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes its economic recovery and the urgent need for increased
+    defense spending to match Russia's military capabilities.
+  positions:
+    defence: Poland strongly supports enhancing its defense capabilities through external
+      funding to build an army capable of matching Russia's strength.
+    hybrid: Poland highlights the ongoing technological race between Ukraine and Russia
+      as a key security concern requiring vigilance against advanced threats.
+    enlargement: Poland supports broader European integration by noting its own dynamic
+      development and potential for greater influence within Europe.
+    rule_of_law: Poland stresses the importance of learning from conflicts like the
+      Russo-Ukrainian war to build a resilient defense structure.
+  stances:
+    defence:
+      score: 2
+      evidence: It’s only the SAFE loan that provides us with the means to invest
+        in drones and anti-drone systems.
+    hybrid:
+      score: 1
+      evidence: 'The race is on: every few months either Ukraine or Russia gains the
+        upper hand in new technologies'
+    enlargement:
+      score: 0
+      evidence: The imbalance of power between us and the western Europe is much smaller
+        today than in the past.
+    rule_of_law:
+      score: 1
+      evidence: I think that the next war will be won by those who will learn the
+        lesson from the Russo–Ukrainian war.

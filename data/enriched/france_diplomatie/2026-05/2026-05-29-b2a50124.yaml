@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - His Highness Prince Faisal bin Farhan Al Saud, Minister of Foreign Affairs of
+    the Kingdom of Saudi Arabia
+  topics:
+  - rule_of_law
+  location: Cyprus
+  position: France reaffirmed its commitment to regional security in the Gulf and
+    stressed the need for diplomatic solutions to conflicts.
+  positions:
+    rule_of_law: France supports maintaining peace through negotiation, specifically
+      calling for adherence to a ceasefire between Israel and Lebanon.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The two ministers also stressed the need for the ceasefire between
+        Israel and Lebanon that came into force on 17 April to be fully observed,
+        in order to enable a definitive political solution to the conflict through
+        negotiation.

@@ -1,0 +1,70 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Olexandr Mischenko
+  - Sergiy Kyslytsya
+  - Iryna Vereshchuk
+  - Taras Kachka
+  - Denis Bashlyk
+  - Alona Shkrum
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed its comprehensive support for Ukraine's security, economic
+    recovery, and integration with the EU, while also coordinating joint efforts against
+    disinformation.
+  positions:
+    ukraine: Poland commits to long-term support for Ukraine across military, economic,
+      and diplomatic dimensions until a just and lasting peace is achieved.
+    defence: Poland supports a stronger EU defence capability complementary to NATO
+      by discussing defense cooperation and Polish companies' involvement in post-war
+      reconstruction.
+    hybrid: Poland actively advances coordinated action against hybrid threats by
+      enhancing bilateral cooperation to counter Russian disinformation.
+    enlargement: Poland strongly supports the EU accession of Ukraine and Western
+      Balkans countries by offering its experience to align national legislation with
+      EU law.
+    rule_of_law: Poland affirms democratic resilience and combating disinformation
+      as foundational to European unity and security by jointly responding to false
+      information.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The agenda of the meeting with representatives of the Office of the
+        President of Ukraine, Sergiy Kyslytsya and Iryna Vereshchuk, included the
+        peace process and Poland's participation in international consultations.
+    defence:
+      score: 2
+      evidence: They talked about the participation of Polish companies in the post-war
+        reconstruction of Ukraine and the cooperation between the two countries’ defence
+        industries.
+    hybrid:
+      score: 2
+      evidence: We have been enhancing bilateral cooperation in countering Russian
+        disinformation—Russia's false narrative will not cause the withdrawal of support
+        for Ukraine
+    enlargement:
+      score: 2
+      evidence: Deputy Minister Bosacki emphasised that Poland continues to support
+        Ukraine's integration with the European Union and wants to share with Kyiv
+        its experience of the EU accession process, including the alignment of national
+        legislation with EU law.
+    rule_of_law:
+      score: 2
+      evidence: Deputy Minister Bosacki underlined that Warsaw and Kyiv jointly respond
+        to false information spread across the public space.

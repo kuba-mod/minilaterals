@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Belgium
+  - Canada
+  - Denmark
+  - France
+  - Iceland
+  - Ireland
+  - Japan
+  - Norway
+  - Portugal
+  - Spain
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: France strongly condemns the demolitions of UNRWA headquarters and calls
+    on Israel to respect international law regarding UN premises and humanitarian
+    aid delivery.
+  positions:
+    rule_of_law: France supports the rule of law by condemning Israeli actions against
+      a UN agency and demanding adherence to international obligations concerning
+      UN premises and humanitarian aid.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We urge the Government of Israel to abide by its international obligations
+        to ensure the protection and inviolability of United Nations premises in accordance
+        with the provisions of the UN General Convention (1946) and the Charter.

@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Australia
+  - Foreign Ministers of Canada
+  - France
+  - Norway
+  - United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: France and its partners have taken coordinated action to impose sanctions
+    and hold extremist settlers accountable for violence in the West Bank, while also
+    recognizing the State of Palestine.
+  positions:
+    rule_of_law: France strongly supports the rule of law by calling for accountability
+      for settler violence and demanding that Israel investigate all attacks and curb
+      illegal settlements.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We continue to urge the Government of Israel to take action to ensure
+        meaningful accountability for violence in the West Bank.

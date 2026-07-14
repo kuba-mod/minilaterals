@@ -1,0 +1,26 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Polish delegation
+  - French delegation
+  topics:
+  - defence
+  location: null
+  position: Poland engaged in discussions with France to reinforce security across
+    Poland, France, and Europe.
+  positions:
+    defence: Poland is focused on strengthening collective security and defense capabilities
+      for the region.
+  stances:
+    defence:
+      score: 1
+      evidence: The Group also outlined the scope of further detailed talks and bilateral
+        cooperation aimed at reinforcing security in Poland, France, and the whole
+        of Europe.

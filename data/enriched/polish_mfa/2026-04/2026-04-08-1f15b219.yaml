@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Pakistan
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland welcomes the US-Iran ceasefire agreement while emphasizing that
+    regional peace requires stabilizing Lebanon's territory and addressing Iran's
+    nuclear and militant activities.
+  positions:
+    rule_of_law: Poland stresses the importance of democratic resilience and rule
+      of law by calling for guarantees of Lebanon's territorial integrity as a condition
+      for Middle East peace.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The agreement should also include stabilization and the guarantees
+        of Lebanon's territorial integrity, as one of the conditions for achieving
+        peace in the Middle East.

@@ -1,0 +1,55 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the need for Europe to modernize its economy and address
+    geopolitical challenges, including dependence on China and maintaining transatlantic
+    alignment.
+  positions:
+    ukraine: Germany commits to continued support for Ukraine's defense against Russia
+      while framing it as a defense of European freedom.
+    defence: Germany supports strengthening Europe's security posture by acknowledging
+      external threats and geopolitical realignments.
+    hybrid: Germany calls for coordinated action against global economic distortions
+      and geopolitical challenges posed by China and other powers.
+    enlargement: Germany supports the broader European project but does not explicitly
+      address enlargement goals for Western Balkans or Ukraine beyond general support.
+    rule_of_law: Germany stresses the importance of democratic resilience and rule
+      of law by linking it to defending Europe's freedom against external threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: We’re continuing to support Ukraine’s battle to defend itself with
+        substantial economic and military resources as it is also defending our freedom
+        at the end of the day.
+    defence:
+      score: 1
+      evidence: We’re currently not keeping pace with developments in AI and the digital
+        economy.
+    hybrid:
+      score: 1
+      evidence: China’s trade and industrial policy is distorting global markets to
+        a massive degree. And this approach is set to intensify.
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: The freedom of Europe.

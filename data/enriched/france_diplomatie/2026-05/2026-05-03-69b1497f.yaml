@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France condemns violence against journalists globally and advocates for
+    the protection of media freedom and information integrity.
+  positions:
+    hybrid: France actively promotes coordinated action to safeguard information integrity
+      and combat disinformation campaigns.
+    rule_of_law: France strongly emphasizes that freedom of expression and press freedom
+      are essential components of democracy and international law.
+  stances:
+    hybrid:
+      score: 2
+      evidence: In October 2025, at the Paris Peace Forum, 34 States committed to
+        multilateral action to safeguard information integrity and media independence.
+    rule_of_law:
+      score: 2
+      evidence: The deliberate targeting of journalists, where established, constitutes
+        a war crime.

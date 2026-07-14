@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Byrne
+  - Minister Niemczycki
+  topics:
+  - ukraine
+  - rule_of_law
+  - enlargement
+  location: null
+  position: Poland expressed support for EU cooperation and initiatives related to
+    economic resilience, Ukraine's security, and democratic institutions.
+  positions:
+    ukraine: Poland strongly supports continued European involvement in the peace
+      process and views Ukraine's security as vital for the continent's future.
+    rule_of_law: Poland advocates for strengthening democratic institutions and combating
+      disinformation through dedicated European initiatives.
+    enlargement: Poland supports the EU's enlargement process alongside other legislative
+      reforms aimed at boosting competitiveness.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Minister Niemczycki reiterated the need for European countries to
+        take part in the current negotiations.
+    rule_of_law:
+      score: 1
+      evidence: Poland and Ireland support the establishment of the Centre dedicated
+        to safeguarding democratic institutions, strengthening civil society, and
+        combating disinformation.
+    enlargement:
+      score: 1
+      evidence: Discussed were, among other issues, support for the EU enlargement
+        process, and the EU legislation simplification package,

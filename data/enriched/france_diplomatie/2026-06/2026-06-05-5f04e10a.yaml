@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Anita Anand, Canada’s Minister of Foreign Affairs
+  - Penny Wong, Australia’s Minister for Foreign Affairs
+  - Lars Løkke Rasmussen, Denmark’s Minister for Foreign Affairs
+  - Margus Tsahkna, Estonia's Minister of Foreign Affairs
+  - Kaja Kallas, High Representative of the European Union for Foreign Affairs and
+    Security Policy
+  - Elina Valtonen, Finland’s Minister for Foreign Affairs
+  - Jean-Noël Barrot, France’s Minister for Europe and Foreign Affairs
+  - Þorgerður Katrín Gunnarsdóttir, Iceland’s Minister for Foreign Affairs
+  - Baiba Braže, Latvia’s Minister for Foreign Affairs
+  - Kęstutis Budrys, Lithuania’s Minister of Foreign Affairs
+  - Espen Barth Eide, Norway’s Minister of Foreign Affairs
+  - Maria Malmer Stenergard, Sweden’s Minister for Foreign Affairs
+  topics: []
+  location: null
+  position: France supports de-escalation in Lebanon and calls on all parties to respect
+    international law and the sovereignty of Lebanon.
+  positions: {}
+  stances: {}

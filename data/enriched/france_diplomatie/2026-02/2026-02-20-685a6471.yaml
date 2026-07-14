@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Denys Shmyhal, First Deputy Prime Minister and Minister of Energy of Ukraine
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Paris
+  position: France reaffirms its long-term support for Ukraine's sovereignty and independence
+    while coordinating with partners on sanctions and future European security discussions.
+  positions:
+    ukraine: France strongly supports Ukraine's defense efforts, emphasizing continued
+      bilateral and multilateral assistance until a just and lasting peace is achieved.
+    enlargement: France supports the involvement of Europeans in discussions regarding
+      parameters affecting European security, aligning with the goal of EU accession
+      for neighboring countries.
+    rule_of_law: France commits to promoting a just and lasting peace through continued
+      diplomatic efforts alongside its partners.
+  stances:
+    ukraine:
+      score: 2
+      evidence: The Minister reiterated France’s full support for Ukraine in its fight
+        to defend its sovereignty, independence and territorial integrity
+    enlargement:
+      score: 1
+      evidence: the importance of involving the Europeans in discussions on the parameters
+        directly affecting European security
+    rule_of_law:
+      score: 1
+      evidence: He said that France will continue its efforts alongside all its partners
+        to promote a just, lasting peace

@@ -1,0 +1,44 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Foreign Minister of France
+  - Fatih Birol
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Paris, France
+  position: Poland is actively strengthening its strategic partnership with France
+    across security, economic, and cultural dimensions while emphasizing its role
+    in European stability.
+  positions:
+    ukraine: Poland strongly supports Ukraine's defense against Russia and highlights
+      its special role within Europe's regional security efforts.
+    defence: Poland emphasizes collective security concerns ahead of major NATO summits,
+      aligning with broader European defense goals.
+    rule_of_law: Poland stresses the importance of democratic resilience and stability
+      through energy diversification and cooperation to safeguard its national interests.
+  stances:
+    ukraine:
+      score: 2
+      evidence: They stressed Poland’s special role in the actions taken by Europe
+        for the sake of regional security.
+    defence:
+      score: 1
+      evidence: They also discussed expectations ahead of the upcoming NATO summit
+        in Ankara.
+    rule_of_law:
+      score: 1
+      evidence: Minister Sikorski made a point about the stability of the Polish energy
+        sector, obtained through diversification, departure from Russian energy sources,
+        and the safeguarding of reserves.

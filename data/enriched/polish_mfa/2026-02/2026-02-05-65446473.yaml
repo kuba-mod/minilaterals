@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Foreign Minister Kupiecki
+  topics:
+  - rule_of_law
+  location: Cairo, Egypt
+  position: Poland emphasized its commitment to the UN Charter and highlighted global
+    concerns arising from Russia's war against Ukraine.
+  positions:
+    rule_of_law: Poland stresses the fundamental importance of the UN Charter for
+      the international community.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The deputy head of the Polish MFA reiterated Poland’s commitment to
+        the UN Charter and emphasised its fundamental importance to the entire international
+        community.

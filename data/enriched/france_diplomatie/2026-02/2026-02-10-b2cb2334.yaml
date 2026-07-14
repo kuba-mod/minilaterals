@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France expressed deep concern over the sentencing of Narges Mohammadi
+    by Iran, criticizing the regime's use of repression and intimidation.
+  positions:
+    rule_of_law: France affirms fundamental human rights and democratic principles
+      by condemning the Iranian regime's actions against Narges Mohammadi.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: in defiance of the Iranian people’s fundamental rights

@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Radosław Sikorski
+  - Foreign Ministers Radosław Sikorski and Maria Manuela dos Santos Lucas
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for improved security and effective governance
+    in Mozambique to support regional stabilization efforts.
+  positions:
+    rule_of_law: Poland stressed that improved security and effective governance are
+      essential for successful operations and regional stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The head of Polish diplomacy emphasised that improved security and
+        effective governance are essential for the successful implementation of EUMAM’s
+        objectives and for the region’s stabilisation by the Mozambican authorities.

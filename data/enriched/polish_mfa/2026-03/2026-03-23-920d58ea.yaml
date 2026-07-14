@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  - Ambassador of the Philippines Alan Lazaro Deniega
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland views ASEAN as a vital partner for strengthening strategic resilience
+    and is committed to deepening cooperation in security and economic areas.
+  positions:
+    rule_of_law: Poland emphasizes the importance of shared values and democratic
+      principles with ASEAN countries while promoting academic and scientific exchange.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The participants also stressed the importance of building people-to-people
+        contacts using academic cooperation and science diplomacy.

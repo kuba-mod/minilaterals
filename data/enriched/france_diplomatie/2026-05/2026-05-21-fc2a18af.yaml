@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - 41 Members of the Inter-Regional Task Force
+  topics:
+  - rule_of_law
+  location: null
+  position: France and its partners strongly oppose the death penalty in all cases,
+    calling for universal abolition and supporting international efforts to uphold
+    human dignity.
+  positions:
+    rule_of_law: The statement affirms a commitment to fundamental human rights by
+      opposing capital punishment, which is considered contrary to human dignity and
+      the right to life.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: The death penalty is inhumane and degrading, contrary to human dignity,
+        without any deterring effect.

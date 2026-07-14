@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: Baghdad, Iraq
+  position: France condemned the murder of Yanar Mohammed and expressed solidarity
+    with those defending women's rights in Iraq.
+  positions:
+    rule_of_law: France strongly supports the rule of law by condemning a crime and
+      demanding justice for the victim.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: We condemn this crime in the strongest possible terms.

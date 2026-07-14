@@ -1,0 +1,61 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Andrii Sybiha
+  - EU foreign ministers
+  - India’s top diplomat
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland stressed that maintaining support for Ukraine must remain Europe's
+    priority and called on Hungary to unblock EU loans and adopt sanctions against
+    Russia.
+  positions:
+    ukraine: Poland strongly advocates for continued long-term support for Ukraine
+      across all dimensions and urges key members to take immediate action regarding
+      financial aid and sanctions.
+    defence: Poland supports enhancing European defense capabilities considerably
+      as a core assumption for the new European Security Strategy.
+    hybrid: While not explicitly addressing hybrid threats, Poland advocates for recognizing
+      Russia as the main threat to the EU in both short- and long-term perspective,
+      which underpins resilience against external interference.
+    enlargement: Poland supports strengthening European security by advocating for
+      a new European Security Strategy that addresses geopolitical threats.
+    rule_of_law: Poland emphasizes upholding democratic principles and stability by
+      calling for coordinated efforts to stabilize energy prices and addressing Russia's
+      threat.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Maintaining support for Ukraine must remain Europe’s priority underlined
+        Deputy Prime Minister Radosław Sikorski.
+    defence:
+      score: 1
+      evidence: enhancing European defence capabilities considerably.
+    hybrid:
+      score: 1
+      evidence: recognising Russia as the main threat to the EU in both short- and
+        long-term perspective
+    enlargement:
+      score: 0
+      evidence: Deputy Prime Minister Sikorski also took part in an informal discussion
+        regarding the work on a new European Security Strategy.
+    rule_of_law:
+      score: 1
+      evidence: The Council discussed minimising the negative impact of the conflict
+        in the Middle East on Ukraine as it fights the Russian aggressor.

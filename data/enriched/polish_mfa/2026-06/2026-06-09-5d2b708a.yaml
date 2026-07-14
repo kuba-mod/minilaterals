@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Head of the Foreign Service and Director-General Henryka Mościcka-Dendys
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasized that Russia is the primary threat to Europe and stressed
+    the need for a joint European effort to build resilience against hybrid operations.
+  positions:
+    hybrid: Poland strongly advocates for coordinated action across the EU to counter
+      disinformation and other hybrid threats originating from Russia and Belarus.
+    enlargement: Poland's delegate was present at discussions concerning EU enlargement
+      policy.
+    rule_of_law: Poland stressed the importance of a joint European effort to build
+      resilience against disinformation and hybrid operations, aligning with foundational
+      principles of democratic security.
+  stances:
+    hybrid:
+      score: 1
+      evidence: she emphasised that Russia remains the principal threat for Europe,
+        and a joint effort of the whole European community is required to build resilience
+        to Russian and Belarusian disinformation-related and other hybrid operations.
+    enlargement:
+      score: 0
+      evidence: the meeting’s agenda included... the EU enlargement policy
+    rule_of_law:
+      score: 1
+      evidence: a joint effort of the whole European community is required to build
+        resilience to Russian and Belarusian disinformation-related and other hybrid
+        operations.

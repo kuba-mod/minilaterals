@@ -1,0 +1,41 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Marco Rubio
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: 'null'
+  position: Germany emphasizes strong partnerships and economic resilience to achieve
+    security goals, particularly through transatlantic cooperation and leveraging
+    trade agreements in South America.
+  positions:
+    ukraine: Germany supports long-term support for Ukraine, urging Russia to negotiate
+      peace while providing maximum European assistance.
+    defence: Germany stresses the importance of maintaining NATO's collective defense
+      capability and achieving new burden-sharing within the Alliance.
+    rule_of_law: Germany affirms democratic resilience by emphasizing free trade over
+      protectionism and promoting economic strength to counter global crises.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Support that will make Moscow realise that the time has finally come
+        to stop the killing in Ukraine and sit down at the negotiating table.
+    defence:
+      score: 1
+      evidence: Our Euro-Atlantic security decisively depends on us retaining our
+        steadfast resolve within NATO in the future, too.
+    rule_of_law:
+      score: 1
+      evidence: The more that global supply chains are impacted by trade conflicts
+        and crises, the more economically strong, diverse and resilient we must become.

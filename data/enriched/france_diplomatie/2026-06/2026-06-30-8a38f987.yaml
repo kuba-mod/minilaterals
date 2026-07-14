@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Jean-Noël Barrot
+  - Robert Badinter
+  topics:
+  - rule_of_law
+  location: Paris
+  position: France strongly advocates for the global abolition of the death penalty
+    as a matter of human dignity and international justice.
+  positions:
+    rule_of_law: France emphasizes that the death penalty is fundamentally unjust,
+      discriminatory, and has no legal or moral justification, advocating for its
+      universal abolition.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: In the name of human dignity, France stopped inflicting in its territory
+        this inhuman suffering, which is devoid of any moral or legal justification.

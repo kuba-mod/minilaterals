@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Sylvie Notefe, Minister of Foreign Affairs, Francophonie and Central African Nationals
+    Abroad
+  topics:
+  - rule_of_law
+  location: Bangui, Central African Republic
+  position: France reaffirmed its commitment to supporting the CAR's efforts toward
+    peace, development, and strengthening bilateral cooperation while emphasizing
+    multilateralism.
+  positions:
+    rule_of_law: France supports democratic resilience and stability by promoting
+      adherence to international law and multilateral principles in Central Africa.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: They urged compliance with the values and principles of multilateralism,
+        and respect for national sovereignty and international cooperation with the
+        aim of ensuring peace and security.

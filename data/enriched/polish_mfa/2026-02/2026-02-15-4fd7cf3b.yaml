@@ -1,0 +1,55 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  - Barham Salih
+  - General Alexus G. Grynkewich
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Munich, Germany
+  position: Poland advocates for Europe's central role in Ukraine's peace negotiations
+    and emphasizes strengthening European defense capabilities alongside NATO.
+  positions:
+    ukraine: Poland strongly supports long-term support for Ukraine, asserting that
+      Europe must participate in the peace negotiations because it is bearing the
+      financial burden of the war.
+    defence: Poland advocates for a stronger EU defense capability complementary to
+      NATO and highlights the European SAFE programme as crucial for restoring continental
+      arms production capacity.
+    hybrid: Poland calls for coordinated action against hybrid threats by discussing
+      security issues in the Baltic Sea region and addressing the instrumentalization
+      of migration.
+    rule_of_law: Poland stresses the importance of democratic resilience and rule
+      of law by discussing security issues and the need for a mature transatlantic
+      conversation on NATO's future.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Europe is paying for this war. We are buying American weapons to be
+        delivered to Ukraine.
+    defence:
+      score: 2
+      evidence: I can say with full responsibility that the European SAFE programme
+        is exactly what the United States need from Europe— to restore its capabilities
+        for producing arms and ammunition, and to replace some US capabilities.
+    hybrid:
+      score: 1
+      evidence: Deputy Prime Minister Sikorski also pointed to the problem of the
+        instrumentalisation of migration.
+    rule_of_law:
+      score: 1
+      evidence: We have started a mature transatlantic conversation about the future
+        shape of NATO, about the future distribution of rights and responsibilities,

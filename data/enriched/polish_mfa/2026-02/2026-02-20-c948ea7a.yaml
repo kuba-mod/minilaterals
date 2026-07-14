@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ministry of Foreign Affairs
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland is prioritizing international cooperation to combat the illegal
+    activities of the 'clunker fleet' and strengthen EU sanctions.
+  positions:
+    rule_of_law: Poland emphasizes that combating illicit maritime activity and strengthening
+      sanctions are key components of maintaining European security and rule of law.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Combating the activity of the clunker fleet is one of the priorities
+        of Polish and EU foreign policy.

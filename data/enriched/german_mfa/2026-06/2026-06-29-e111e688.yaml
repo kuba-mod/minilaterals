@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany aims to strengthen EU sovereignty and efficiency by pursuing international
+    trade agreements and reforming institutional processes.
+  positions:
+    ukraine: Germany is actively involved in diplomatic efforts to end the war in
+      Ukraine through multilateral formats.
+    rule_of_law: Germany emphasizes strengthening EU institutions and sovereignty
+      to combat external pressures and improve internal efficiency.
+  stances:
+    ukraine:
+      score: 2
+      evidence: One example would be the E3 format, where we are working with the
+        UK and France to try to bring about an end to the Ukraine war.
+    rule_of_law:
+      score: 2
+      evidence: We Europeans absolutely must become more independent, and for that
+        it is important for us in the EU to stick together.

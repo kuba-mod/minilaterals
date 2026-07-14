@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Jean-Noël Barrot
+  topics:
+  - rule_of_law
+  location: Columbia
+  position: France emphasizes that Europe must act as the unknown variable to shape
+    a stable and just 21st century geopolitical order.
+  positions:
+    rule_of_law: France stresses the foundational importance of justice alongside
+      force in international relations, referencing historical failures and successes
+      in maintaining global order.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Justice without force is powerless. Force without justice is tyranny.

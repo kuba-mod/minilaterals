@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Anita Orbán
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France reaffirmed its commitment to deepening bilateral cooperation with
+    Hungary while emphasizing shared support for Ukraine and a more democratic Europe.
+  positions:
+    ukraine: France strongly supports long-term assistance to Ukraine across multiple
+      dimensions.
+    rule_of_law: France emphasizes the importance of promoting democracy and rule
+      of law in Europe.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: together promoting a more sovereign, competitive and democratic Europe.

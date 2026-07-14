@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: Germany advocates for increased use and reform of the United Nations to
+    maintain global peace, security, and international order.
+  positions:
+    rule_of_law: Germany stresses the importance of upholding democratic resilience
+      and the rule of law by advocating for the universal application of the Non-Proliferation
+      Treaty and UN reforms.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We want to ensure that the Non-Proliferation Treaty is universally
+        applied – even though this is becoming increasingly difficult.

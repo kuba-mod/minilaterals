@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - diplomats
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland utilized the training to emphasize its commitment to international
+    cooperation and dialogue, particularly with Asia-Pacific partners.
+  positions:
+    hybrid: Poland highlighted the importance of countering disinformation as a key
+      element of modern diplomacy.
+    rule_of_law: The training covered general diplomatic challenges, suggesting an
+      emphasis on international norms and cooperation.
+  stances:
+    hybrid:
+      score: 1
+      evidence: as well as the role of strategic communication and countering disinformation
+        in today’s diplomacy.
+    rule_of_law:
+      score: 0
+      evidence: ''

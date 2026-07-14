@@ -1,0 +1,22 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland strongly condemned Iran's attacks on Gulf countries and reiterated
+    support for dialogue to resolve the regional crisis.
+  positions:
+    rule_of_law: Poland supports maintaining democratic resilience and stability by
+      condemning aggression and calling for diplomatic solutions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The ministers strongly condemned Iran’s attacks on the Gulf countries.

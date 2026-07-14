@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - France
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France strongly condemns Russian cyber activities and emphasizes the need
+    for international adherence to norms of responsible state behavior in cyberspace.
+  positions:
+    hybrid: France highlights that Russia's malicious cyber activities are part of
+      broader hybrid threats targeting EU Member States, including information manipulation
+      and interference.
+    rule_of_law: France reaffirms its commitment to international norms and urges
+      Russia to respect its commitments regarding responsible state behavior in cyberspace.
+  stances:
+    hybrid:
+      score: 1
+      evidence: 'These cyber activities are one aspect of the growing hybrid threats
+        targeting EU Member States in the context of Russia’s war of aggression against
+        Ukraine: information manipulation campaigns, interference in democratic processes,
+        airspace violations, and other destabilizing actions.'
+    rule_of_law:
+      score: 1
+      evidence: France reaffirms its commitment to the United Nations normative framework
+        and urges Russia to respect its commitments in this regard.

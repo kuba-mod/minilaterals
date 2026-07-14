@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  location: São Paulo, Brazil
+  position: Germany emphasizes the importance of open, rules-based trade and democratic
+    values as demonstrated by the EU-Mercosur agreement.
+  positions:
+    rule_of_law: Germany stresses that maintaining adherence to international law
+      and democratic principles is crucial for global economic stability and cooperation.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: it demonstrates that we will stand together as democracies committed
+        to the rule of law and unite our societies that are built on the same values.

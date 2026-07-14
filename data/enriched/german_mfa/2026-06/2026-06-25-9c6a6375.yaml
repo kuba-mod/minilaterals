@@ -1,0 +1,16 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Federal Foreign Office
+  - Federal Ministry of Defence
+  topics: []
+  location: null
+  position: Germany is coordinating a rapid and targeted international assistance
+    effort for Venezuela following the severe earthquake.
+  positions: {}
+  stances: {}

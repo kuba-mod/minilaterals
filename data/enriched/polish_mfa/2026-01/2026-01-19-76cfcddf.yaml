@@ -1,0 +1,49 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jaishankar
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland emphasized the importance of multilateral cooperation and strongly
+    condemned terrorism while highlighting Europe's commitment to Ukraine.
+  positions:
+    ukraine: Poland stresses the critical need for continued European support for
+      Ukraine against Russia’s aggression.
+    defence: The text does not provide specific information regarding Poland's stance
+      on strengthening EU defence capabilities complementary to NATO.
+    hybrid: Poland advocates for coordinated action against hybrid threats, including
+      attacks on critical infrastructure and terrorism.
+    rule_of_law: Poland strongly condemns transnational terrorism and the crossing
+      of international borders by any hostile force.
+  stances:
+    ukraine:
+      score: 1
+      evidence: He also reported on the current state of Russia’s war against Ukraine
+        and underlined the importance of Europe’s commitment to this cause.
+    defence:
+      score: 0
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: Poland has been faced with Russia-inspired attacks on critical infrastructure,
+        including railway tracks, among other threats - said Deputy Prime Minister
+        Radosław Sikorski.
+    rule_of_law:
+      score: 1
+      evidence: Both India and Poland are victims of transnational terrorism, and
+        therefore we condemn the crossing of international borders, either by tanks
+        or by terrorists, in the strongest terms.

@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Minister of Poland
+  - Foreign Minister of Andorra
+  topics:
+  - rule_of_law
+  - ukraine
+  location: Warsaw, Poland
+  position: Poland reaffirmed its support for Andorra's ties with the EU and commended
+    Andorra's clear stance on Russia's aggression against Ukraine.
+  positions:
+    rule_of_law: Poland emphasized that Andorra’s close relations with the EU are
+      based not only on geography but also on shared democratic values and respect
+      for the rule of law.
+    ukraine: Poland commended Andorra's clear condemnation of Russia's actions and
+      support for Ukrainian citizens.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Minister Radosław Sikorski pointed out that Andorra’s close relations
+        with the EU result not only from its geographical location but also from shared
+        democratic values, respect for the rule of law and fundamental freedoms.
+    ukraine:
+      score: 1
+      evidence: Minister Sikorski commended Andorra on its clear stance condemning
+        Russia’s actions and its support for Ukrainian citizens forced to leave their
+        country.

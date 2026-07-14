@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Ewa Ośniecka-Tamecka
+  topics:
+  - rule_of_law
+  location: Natolin, Poland
+  position: Poland emphasizes the critical need for defending European values and
+    democratic institutions against global instability and authoritarianism.
+  positions:
+    rule_of_law: Poland strongly advocates for upholding core European values such
+      as cooperation, responsibility, and the rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: In his address, the foreign minister also appealed to students to
+        defend European values—cooperation, responsibility, and the rule of law.
