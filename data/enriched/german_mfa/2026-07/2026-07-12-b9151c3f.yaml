@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Castellucci
+  topics:
+  - rule_of_law
+  location: Tripoli, Libya
+  position: Germany is visiting Libya to address the humanitarian and migration crises
+    while advocating for human rights and the successful completion of a democratic
+    transitional period through elections.
+  positions:
+    rule_of_law: Germany actively advances democratic resilience and the rule of law
+      by supporting inclusive elections and providing financial aid for vulnerable
+      populations and civil society.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Germany is working to ensure that a democratic transitional period
+        comes to a successful conclusion with the holding of free, transparent and
+        inclusive parliamentary and presidential elections.

@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: null
+  position: Poland supports EU restrictive measures and cyber-sanctions against Russian
+    malicious cyber activities and remains committed to enhancing its national cyber
+    defense.
+  positions:
+    hybrid: Poland actively supports coordinated sanctions and the strengthening of
+      cyber defenses to counter Russian hybrid threats.
+  stances:
+    hybrid:
+      score: 2
+      evidence: We fully support the European Union's decision to adopt, in response
+        to Russia’s malicious cyber activities, restrictive measures in the form of
+        cybersanctions.

@@ -1,0 +1,47 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: Bodø, Norway
+  position: Germany is strengthening its security and strategic cooperation with Norway
+    and NATO to counter Russian and Chinese influence in the High North.
+  positions:
+    ukraine: Germany links the need for realignment of security and deterrence in
+      the North Atlantic to Russia's aggression against Ukraine.
+    defence: Germany is actively advancing NATO's northern flank security through
+      joint submarine development and military exercises.
+    hybrid: Germany acknowledges the threat of Russian hybrid attacks in the strategic
+      High North region.
+    green_transition: Germany views the High North's energy potential and climate-driven
+      changes as intrinsically linked to its own security and supply chains.
+  stances:
+    ukraine:
+      score: 1
+      evidence: following Russia’s war of aggression against Ukraine, we need to realign
+        our security, defence and deterrence vis-à-vis Russia
+    defence:
+      score: 2
+      evidence: The 212CD class submarine co-developed by Germany and Norway... will
+        bring about the largest, most powerful and most modern conventional submarine
+        fleet in NATO
+    hybrid:
+      score: 1
+      evidence: it has no qualms about using provocation and hybrid attacks
+    green_transition:
+      score: 1
+      evidence: Be it for the future of our energy supply, such as hydrogen production,
+        safeguarding critical supply chains and the supply of raw materials

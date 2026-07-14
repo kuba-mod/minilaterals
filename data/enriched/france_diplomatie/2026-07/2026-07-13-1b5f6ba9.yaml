@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noel Barrot
+  - Msgr Paul Richard Gallagher
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its commitment to peace, international law, and stability
+    in Ukraine and the Middle East during a meeting with the Holy See.
+  positions:
+    ukraine: France rhetorically supports peace and stability in the region amidst
+      the Russian war of aggression.
+    rule_of_law: France recognizes and advances the importance of international law
+      and multilateralism.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The Minister and Msgr Gallagher talked about the main international
+        issues, in particular the Russian war of aggression against Ukraine
+    rule_of_law:
+      score: 1
+      evidence: signalling the French Republic’s recognition of his commitment to
+        peace, respect for international law and multilateralism
