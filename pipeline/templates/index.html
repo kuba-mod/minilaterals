@@ -177,10 +177,6 @@
       // eslint-disable-next-line no-unused-expressions
       target.offsetHeight; // force reflow so the animation restarts on repeat clicks
       target.classList.add('cluster--highlight');
-      var rect = target.getBoundingClientRect();
-      if (rect.top < 60 || rect.bottom > window.innerHeight) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
     }
   }
 
