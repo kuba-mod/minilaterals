@@ -15,7 +15,7 @@ name: Collect
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # 06:00 UTC every day; Tuesdays additionally cut the weekly edition
+    - cron: '0 1 * * *'   # 01:00 UTC every day (03:00 CET/CEST); Tuesdays additionally cut the weekly edition. Early start absorbs GitHub's scheduler lag so a delayed run still lands Tuesday morning.
   workflow_dispatch:        # manual trigger from GitHub UI
     inputs:
       cut_edition:
