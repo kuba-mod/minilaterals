@@ -1,0 +1,53 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Kaja Kallas
+  - Andrii Sybiha
+  - Oleksandra Matviichuk
+  - Maksym Butkevych
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Brussels
+  position: Poland advocates for increased sanctions against Russia, urgent military
+    and energy support for Ukraine, and a coordinated EU response to hybrid threats
+    and human rights violations.
+  positions:
+    ukraine: Poland actively pushes for a new sanctions package and urgent funding
+      for Ukraine's energy reconstruction.
+    defence: Poland emphasizes the immediate need for air defence systems for Ukraine.
+    hybrid: Poland supports the attribution of malicious cyber activities to Russian
+      intelligence services.
+    rule_of_law: Poland demands accountability and punishment for Russian violations
+      of international humanitarian law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Minister Sikorski also urged the EU to adopt the 21st package of sanctions
+        against Russia
+    defence:
+      score: 1
+      evidence: he noted the need to immediately provide Ukraine with air defence
+        systems
+    hybrid:
+      score: 1
+      evidence: Deputy Prime Minister Sikorski welcomed the Statement by the High
+        Representative Kaja Kallas on Russia’s malicious cyber activities targeting
+        the EU member states, including Poland
+    rule_of_law:
+      score: 1
+      evidence: The perpetrators—who include, among others, members of the Russian
+        secret service, prison governors, and judges who pass unjust sentences—must
+        be punished
