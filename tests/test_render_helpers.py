@@ -101,12 +101,32 @@ def test_timeline_builds_from_stance_series():
 
 def test_timeline_flags_low_confidence_and_fits_domain():
     weekly = [
-        {"week": "2026-06-01", "overall": 0.80, "stance_avg": 1.2, "display": "+1.2",
-         "band_lo": 0.75, "band_hi": 0.85, "label": "Aligned", "color": "#4d6b38",
-         "per_actor": {"DE": 1.2, "FR": 1.2}, "actors_scored": ["DE", "FR"], "n_events": 2},
-        {"week": "2026-06-08", "overall": 0.78, "stance_avg": 1.1, "display": "+1.1",
-         "band_lo": 0.70, "band_hi": 0.86, "label": "Aligned", "color": "#4d6b38",
-         "per_actor": {"DE": 1.2, "FR": 1.0}, "actors_scored": ["DE", "FR"], "n_events": 12},
+        {
+            "week": "2026-06-01",
+            "overall": 0.80,
+            "stance_avg": 1.2,
+            "display": "+1.2",
+            "band_lo": 0.75,
+            "band_hi": 0.85,
+            "label": "Aligned",
+            "color": "#4d6b38",
+            "per_actor": {"DE": 1.2, "FR": 1.2},
+            "actors_scored": ["DE", "FR"],
+            "n_events": 2,
+        },
+        {
+            "week": "2026-06-08",
+            "overall": 0.78,
+            "stance_avg": 1.1,
+            "display": "+1.1",
+            "band_lo": 0.70,
+            "band_hi": 0.86,
+            "label": "Aligned",
+            "color": "#4d6b38",
+            "per_actor": {"DE": 1.2, "FR": 1.0},
+            "actors_scored": ["DE", "FR"],
+            "n_events": 12,
+        },
     ]
     svg = build_timeline_svg_data(weekly)
     # n_events below LOW_CONFIDENCE_N (4) flags the point as low-confidence.
@@ -140,10 +160,12 @@ def test_leaderboard_ranks_by_current_week_spread():
 
 def test_drilldown_lists_statements_behind_each_week():
     events = [
-        _stance_event("german_mfa", "2026-06-29", 2, "enlargement",
-                      title="DE title", position="DE pos", evidence="DE ev"),
-        _stance_event("polish_mfa", "2026-06-29", 0, "enlargement",
-                      title="PL title", position="PL pos", evidence="PL ev"),
+        _stance_event(
+            "german_mfa", "2026-06-29", 2, "enlargement", title="DE title", position="DE pos", evidence="DE ev"
+        ),
+        _stance_event(
+            "polish_mfa", "2026-06-29", 0, "enlargement", title="PL title", position="PL pos", evidence="PL ev"
+        ),
     ]
     topic_weekly = compute_topic_weekly_stances(events, today=datetime(2026, 6, 29, tzinfo=UTC))
     drill = build_topic_drilldown(topic_weekly, events)

@@ -679,9 +679,7 @@ def build_topic_drilldown(
             if not w:
                 continue
             wk = w["week"]
-            window_start = (
-                datetime.strptime(wk, "%Y-%m-%d").date() - timedelta(days=window_days)
-            ).strftime("%Y-%m-%d")
+            window_start = (datetime.strptime(wk, "%Y-%m-%d").date() - timedelta(days=window_days)).strftime("%Y-%m-%d")
             items = [r for r in recs_by_topic.get(area, []) if window_start <= r["date"] <= wk]
             items.sort(key=lambda r: (r["actor"], r["date"]))
             weeks[wk] = items
@@ -958,9 +956,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     if drilldown:
         (out / "data").mkdir(exist_ok=True)
         for area, weeks in drilldown.items():
-            (out / "data" / f"{area}.json").write_text(
-                json.dumps(weeks, ensure_ascii=False), encoding="utf-8"
-            )
+            (out / "data" / f"{area}.json").write_text(json.dumps(weeks, ensure_ascii=False), encoding="utf-8")
 
     # Recent events: last 90 days before the edition cutoff
     cutoff = (edition_dt - timedelta(days=90)).strftime("%Y-%m-%d")
