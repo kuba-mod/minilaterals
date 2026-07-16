@@ -7,7 +7,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: speech
   participants:
@@ -18,34 +17,32 @@ extracted:
   - hybrid
   - rule_of_law
   location: Königswinter, Germany
-  position: Germany emphasizes that facing monumental international challenges—including
-    Russian aggression, Middle East instability, and technological revolution—requires
-    a strengthened, structured partnership with the United Kingdom to protect European
-    interests and democratic values.
+  position: Germany emphasizes the need for deep cooperation with the UK to address
+    shared security threats from Russia and the Middle East, while also stressing
+    the importance of transatlantic partnership in technological adaptation.
   positions:
-    ukraine: Germany views the UK as a key partner in supporting Ukraine and achieving
-      a lasting end to the war.
-    defence: Germany advocates for a collective defense effort, stressing the need
-      to resolutely defend security and peace in Europe through bilateral agreements
-      like the Kensington Treaty.
-    hybrid: Germany calls for coordinated action to address the erosion of the international
-      order, which includes countering threats from Russia and managing technological
-      revolutions.
-    rule_of_law: Germany stresses the importance of protecting freedom, democracy,
-      and the rule of law, viewing the UK as indispensable in preserving multilateral
-      cooperation.
+    ukraine: Germany strongly supports a diplomatic process towards an end to the
+      war in Ukraine, viewing it as a key area for cooperation with the UK.
+    defence: Germany stresses that collective security and defending Europe requires
+      strong partnership with the UK, which is viewed as indispensable for European
+      defense.
+    hybrid: Germany calls for coordinated action to address eroding international
+      order, including threats from Russia and technological challenges like AI.
+    rule_of_law: Germany affirms the importance of protecting democracy, free trade,
+      and multilateral cooperation through its partnership with the UK.
   stances:
     ukraine:
       score: 1
-      evidence: Russia’s brutal war of aggression against Ukraine has shattered the
-        illusion that peace in Europe can be taken for granted.
+      evidence: The objective now must be to pursue a diplomatic process towards a
+        lasting end to the war.
     defence:
       score: 1
-      evidence: To resolutely defend security and peace in Europe.
+      evidence: Because – for us – the UK is a key partner in defending our European
+        security
     hybrid:
       score: 1
-      evidence: Germany and the United Kingdom have already coordinated their efforts
-        closely and intensively.
+      evidence: We see an international order that is eroding – economically, politically,
+        and militarily.
     rule_of_law:
       score: 1
       evidence: The UK is a key partner in protecting our freedom and democracy, as

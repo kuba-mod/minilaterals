@@ -1,37 +1,24 @@
 actors:
 - FR
 issue_areas:
-- ukraine
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - G7 Foreign Ministers
-  - Saudi Arabia
-  - Brazil
-  - South Korea
-  - India
-  - Ukraine
   topics:
-  - ukraine
   - rule_of_law
-  location: Les Vaux-de-Cernay, France
-  position: France aims to use its G7 Presidency to promote dialogue, crisis-response,
-    and renewed multilateralism, advocating for a new, fairer international order.
+  location: Vaux-de-Cernay, France
+  position: France aims to use its G7 Presidency to promote dialogue, crisis response,
+    and renewed multilateralism to achieve global security and prosperity.
   positions:
-    ukraine: France will mobilize partners on major crises and address regional situations,
-      indicating continued focus on the conflict zone.
-    rule_of_law: France stresses the need for a new international order underpinned
-      by renewed multilateralism and collective responsibility to ensure global prosperity
-      and stability.
+    rule_of_law: France emphasizes the need for a new international order based on
+      renewed multilateralism and reform of global governance to ensure fairness and
+      stability.
   stances:
-    ukraine:
-      score: 0
-      evidence: ''
     rule_of_law:
-      score: 1
+      score: 2
       evidence: A new international order must emerge to produce a fairer and more
         balanced system, underpinned by a renewed multilateralism.

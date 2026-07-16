@@ -4,9 +4,9 @@ issue_areas:
 - ukraine
 - defence
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -17,19 +17,21 @@ extracted:
   - ukraine
   - defence
   - enlargement
+  - rule_of_law
   location: null
-  position: Poland prioritizes pragmatic cooperation within the Visegrad Group, focusing
-    on issues significant to its citizens, while also addressing historical bilateral
-    issues with Czechia.
+  position: Poland emphasized the need for long-term support for Ukraine and stressed
+    that bilateral cooperation within formats like Visegrad is key to advancing shared
+    European goals.
   positions:
-    ukraine: Poland stresses the need for long-term support for Ukraine, emphasizing
-      that a just peace does not punish the victim and advocating for a stable Ukraine
-      within a strong EU.
-    defence: Poland and Czechia agreed to strengthen European defense efforts, complementing
-      NATO and focusing on collective security.
-    enlargement: Poland supports the EU accession of Ukraine and Western Balkans countries,
-      viewing the Visegrad Group as a format for closer integration between Poland
-      and Czechia.
+    ukraine: Poland strongly advocates for sustained, long-term international support
+      for Ukraine's freedom and security in Europe.
+    defence: Poland supports strengthening European defense capabilities as part of
+      broader regional cooperation efforts.
+    enlargement: Poland supports the EU accession process for Ukraine and Western
+      Balkans while advocating for pre-enlargement institutional reforms within the
+      EU.
+    rule_of_law: Poland emphasizes that maintaining democratic resilience and addressing
+      historical issues are foundational to regional stability and cooperation.
   stances:
     ukraine:
       score: 1
@@ -40,5 +42,9 @@ extracted:
       score: 1
       evidence: They also noted the joint efforts to strengthen European defence.
     enlargement:
-      score: 0
+      score: 1
       evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: The issue can be resolved by way of a joint flood control or other
+        project carried out to the benefit of people living in Poland and Czechia.

@@ -2,52 +2,31 @@ actors:
 - DE
 issue_areas:
 - ukraine
-- hybrid
-- enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
-  - Bishop Jüsten
   topics:
   - ukraine
-  - hybrid
-  - enlargement
   - rule_of_law
   location: null
-  position: Germany strongly condemns Russia's war of aggression against Ukraine,
-    emphasizing that the conflict is a war against Ukrainian identity and culture,
-    while advocating for continued support for Ukraine's sovereignty and freedom.
+  position: Germany maintains unwavering support for Ukraine's sovereignty and identity
+    against Russian aggression while advocating for diplomatic paths to peace.
   positions:
-    ukraine: Germany maintains unwavering support for Ukraine’s freedom and sovereignty,
-      viewing Russia's actions as an attempt to obliterate Ukraine's identity and
-      culture.
-    hybrid: Germany stresses the need for coordinated action against false narratives
-      and propaganda that attempt to exploit a longing for peace without addressing
-      Russia's military actions.
-    enlargement: Germany supports the EU accession of Ukraine and Western Balkans
-      countries by recognizing the connection between defending Ukrainian freedom
-      and European security.
-    rule_of_law: Germany affirms democratic resilience and the rule of law by condemning
-      Russia's systematic attacks on civilian infrastructure and cultural sites in
-      Ukraine.
+    ukraine: Germany strongly supports the sovereignty and freedom of Ukraine, condemning
+      Russia's war as an attack on its culture and identity.
+    rule_of_law: Germany emphasizes the importance of defending democratic resilience
+      and combating disinformation against false narratives promoting premature peace
+      talks.
   stances:
     ukraine:
       score: 2
       evidence: it is all the more true that this war of aggression will only strengthen
         our unwavering support for the freedom and sovereignty of Ukraine.
-    hybrid:
-      score: 1
-      evidence: That is because false prophets are attempting to exploit for their
-        own despicable ends the longing that so many people in Germany have for peace.
-    enlargement:
-      score: 1
-      evidence: our unwavering support for the freedom and sovereignty of Ukraine.
     rule_of_law:
-      score: 2
-      evidence: Putin is conducting more than a war to acquire territory, he is waging
-        a war against Ukraine’s identity, freedom and dignity
+      score: 1
+      evidence: These false prophets try to convince us that we only need to silence
+        the weapons, to commence talks, for peace to descend almost automatically.

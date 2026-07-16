@@ -3,5 +3,14 @@ actors:
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: meeting
+  participants:
+  - Undersecretary of State Wojciech Zajączkowski
+  - minister from Honduras
+  topics: []
+  location: null
+  position: Poland confirmed mutual interest in developing political and economic
+    cooperation with Honduras.
+  positions: {}
+  stances: {}

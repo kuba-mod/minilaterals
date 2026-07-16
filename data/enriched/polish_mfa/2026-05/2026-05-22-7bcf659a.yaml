@@ -1,37 +1,51 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - defence
+- ukraine
+- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
-  - Radosław Sikorski
-  - Donald Trump
+  - Deputy Prime Minister Radosław Sikorski
   topics:
-  - ukraine
   - defence
+  - ukraine
+  - enlargement
+  - rule_of_law
   location: Helsingborg
-  position: Poland emphasizes the criticality of transatlantic relations, significant
-    increases in defense spending, and the need for military modernization to deter
-    Russian aggression.
+  position: Poland emphasizes the necessity of strengthening transatlantic cooperation
+    and increasing defense spending to deter Russia while supporting NATO's collective
+    defense principles.
   positions:
-    ukraine: Poland supports drawing military and operational lessons from the defense
-      of Ukraine against Russian aggression.
-    defence: Poland actively advances collective security by maintaining high defense
-      spending as a percentage of GDP and supporting the presence of US troops.
+    defence: Poland strongly advocates for increased European defense spending and
+      military modernization to enhance deterrence capabilities.
+    ukraine: Poland supports long-term military support for Ukraine, viewing the conflict
+      as a revolution in military matters that requires drawing lessons for European
+      defense planning.
+    enlargement: Poland supports the EU accession process by stressing the need for
+      greater engagement from European states within NATO's framework.
+    rule_of_law: Poland emphasizes the importance of drawing lessons from current
+      conflicts to improve military readiness and effective deterrence.
   stances:
+    defence:
+      score: 2
+      evidence: Deputy Prime Minister Sikorski observed that military modernisation
+        in Europe must be stepped up because of continued Russia threat.
     ukraine:
       score: 1
       evidence: We are all aware that we must draw lessons for the purchasing policy,
         for the operational art, for troop trainings in the light of defence against
         the Russian aggression, where things are looking up for Ukraine.
-    defence:
-      score: 2
-      evidence: In 2025 the total spending exceeded pln 186.5 billion (about 4.7%
-        GDP), and in 2026 the defence budget (inclusive of the Armed Forces Support
-        Fund) will go beyond PLN 200 billion (EUR 46.5 billion), an equivalent of
-        about 4.8% GDP.
+    enlargement:
+      score: 1
+      evidence: The minister added that close cooperation is as necessary between
+        Poland and the US as it is between the US and Europe, with greater engagement
+        of European states in NATO.
+    rule_of_law:
+      score: 1
+      evidence: drawing on lessons learned and a swift adjustment are the key aspects
+        of effective deterrence.

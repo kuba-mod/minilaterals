@@ -1,17 +1,16 @@
 actors:
 - DE
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: joint_statement
   participants:
   - Ministers of Foreign Affairs
-  - African Union (AU)
-  - European Union (EU)
+  - high representatives of the States and international and regional organizations
+  - African Union ( AU )
+  - European Union ( EU )
   - France
   - Germany
   - United Kingdom
@@ -28,20 +27,13 @@ extracted:
   - Tchad
   - Türkiye
   - Uganda
-  - United Arab Emirates
-  - United Nations (UN)
-  - Intergovernmental Authority on Development (IGAD)
+  - the United Arab Emirates
+  - the United Nations ( UN )
+  - Intergovernmental Authority on Development ( IGAD )
   - League of Arab States (LAS)
-  topics:
-  - rule_of_law
+  topics: []
   location: Berlin, Germany
-  position: The participants reaffirmed guiding principles for a peaceful and durable
-    resolution of the conflict in Sudan, committing to uphold these principles.
-  positions:
-    rule_of_law: The participants reaffirmed guiding principles for a peaceful and
-      durable resolution of the conflict in Sudan, emphasizing the need for stability
-      and adherence to international law.
-  stances:
-    rule_of_law:
-      score: 0
-      evidence: ''
+  position: Germany participated in a multi-stakeholder conference to reaffirm guiding
+    principles for a peaceful and durable resolution to the conflict in Sudan.
+  positions: {}
+  stances: {}

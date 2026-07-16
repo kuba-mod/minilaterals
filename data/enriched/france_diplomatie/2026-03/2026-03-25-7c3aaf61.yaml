@@ -1,0 +1,17 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - European Parliament
+  - Council
+  topics: []
+  location: Lille, France
+  position: France welcomes the decision to host the EU Customs Authority in Lille
+    and reaffirms its commitment to consumer protection and monitoring goods within
+    the EU.
+  positions: {}
+  stances: {}

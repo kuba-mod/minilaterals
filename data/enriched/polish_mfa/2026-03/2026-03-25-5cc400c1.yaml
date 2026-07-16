@@ -5,37 +5,36 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
-  - Armenia
+  - representatives of Armenia
   - Moldova
   - Ukraine
-  - United Kingdom
+  - the United Kingdom
   - EU institutions and member states
-  - think tanks
+  - experts from think tanks
   - civil society organisations
   - media
   topics:
   - hybrid
   - rule_of_law
   location: null
-  position: Poland reiterated its commitment to supporting Armenia and reaffirmed
-    its position as a leader of international efforts to counter FIMI.
+  position: Poland reiterated its commitment to supporting Armenia and affirmed its
+    role in countering information manipulation and foreign interference.
   positions:
-    hybrid: Poland organized a war game focusing on identifying and defending against
-      information manipulation and foreign interference (FIMI), aligning with the
-      call for coordinated action against hybrid threats.
-    rule_of_law: The exercise focused on developing communication strategies and practicing
-      techniques to identify and defend against information manipulation, reinforcing
-      the commitment to democratic resilience and combating disinformation.
+    hybrid: Poland actively supports strengthening resilience against threats like
+      disinformation and foreign interference through practical exercises.
+    rule_of_law: Poland supports democratic resilience by organizing joint exercises
+      focused on countering hostile narratives and information manipulation.
   stances:
     hybrid:
       score: 2
-      evidence: jointly practice the techniques used to identify and defend against
-        information manipulation and foreign interference (FIMI)
+      evidence: As part of the war game, the participants could jointly practice the
+        techniques used to identify and defend against information manipulation and
+        foreign interference (FIMI).
     rule_of_law:
       score: 1
       evidence: The participants learned how to respond to hostile campaigns by developing
-        communication strategies aimed to challenge hostile narratives
+        communication strategies aimed to challenge hostile narratives, and how to
+        cooperate with partners from public administration and the third sector.

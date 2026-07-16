@@ -2,24 +2,29 @@ actors:
 - PL
 issue_areas:
 - hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Ambassador Beata Stoczyńska
-  - Twenty four diplomats from 12 countries
+  - diplomats
   topics:
   - hybrid
+  - rule_of_law
   location: Warsaw, Poland
-  position: Poland hosted an ASEF pilot diplomatic training to enhance negotiation
-    competencies and strengthen relations between Europe and Asia.
+  position: Poland utilized the training to emphasize its commitment to international
+    cooperation and dialogue, particularly with Asia-Pacific partners.
   positions:
-    hybrid: Poland is actively addressing hybrid threats by integrating strategic
-      communication and the countering of disinformation into diplomatic training.
+    hybrid: Poland highlighted the importance of countering disinformation as a key
+      element of modern diplomacy.
+    rule_of_law: The training covered general diplomatic challenges, suggesting an
+      emphasis on international norms and cooperation.
   stances:
     hybrid:
-      score: 2
-      evidence: the role of strategic communication and countering disinformation
-        in today’s diplomacy
+      score: 1
+      evidence: as well as the role of strategic communication and countering disinformation
+        in today’s diplomacy.
+    rule_of_law:
+      score: 0
+      evidence: ''

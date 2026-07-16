@@ -3,39 +3,30 @@ actors:
 - FR
 issue_areas:
 - ukraine
-- defence
-- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
   topics:
   - ukraine
-  - defence
-  - enlargement
+  - rule_of_law
   location: null
-  position: Germany advocates for greater European strategic autonomy through trade
-    agreements, institutional reform of the EU, and active diplomatic engagement in
-    global conflicts.
+  position: Germany aims to strengthen EU sovereignty and efficiency by pursuing international
+    trade agreements and reforming institutional processes.
   positions:
-    ukraine: Germany is actively working through the E3 format to bring the war in
-      Ukraine to an end.
-    defence: Germany supports increasing European sovereignty and security capabilities.
-    enlargement: Germany advocates for institutional reforms, specifically moving
-      away from unanimity toward qualified majority voting in foreign and security
-      policy, to make the EU more efficient.
+    ukraine: Germany is actively involved in diplomatic efforts to end the war in
+      Ukraine through multilateral formats.
+    rule_of_law: Germany emphasizes strengthening EU institutions and sovereignty
+      to combat external pressures and improve internal efficiency.
   stances:
     ukraine:
       score: 2
-      evidence: we are working with the UK and France to try to bring about an end
-        to the Ukraine war
-    defence:
-      score: 1
-      evidence: We are concluding trade agreements and doing more for our own security
-    enlargement:
+      evidence: One example would be the E3 format, where we are working with the
+        UK and France to try to bring about an end to the Ukraine war.
+    rule_of_law:
       score: 2
-      evidence: I am in favour of doing away with the principle of unanimity and of
-        using qualified majority voting on foreign and security policy issues as well
+      evidence: We Europeans absolutely must become more independent, and for that
+        it is important for us in the EU to stick together.

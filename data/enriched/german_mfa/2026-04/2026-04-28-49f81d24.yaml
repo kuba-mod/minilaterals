@@ -1,34 +1,33 @@
 actors:
 - DE
 issue_areas:
-- green_transition
 - rule_of_law
+- green_transition
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
   topics:
-  - green_transition
   - rule_of_law
-  location: New York City, USA
-  position: Germany is ready to take on more responsibility in the UN, emphasizing
-    its commitment to the UN Charter, international law, and diplomacy to address
-    global crises.
+  - green_transition
+  location: New York City
+  position: Germany is positioning itself as a strong, reliable, and independent voice
+    in the UN to address global crises, emphasizing its commitment to international
+    law and climate action.
   positions:
-    green_transition: Germany acknowledges the devastating effects of rising sea levels
-      and commits to supporting small island states affected by climate change.
     rule_of_law: Germany emphasizes unwavering commitment to the UN Charter and international
-      law, viewing adherence to international law and diplomacy as foundational to
-      global stability.
+      law as foundational principles for its candidacy and diplomatic efforts.
+    green_transition: Germany highlights its awareness of climate change impacts,
+      particularly rising sea levels, and commits to supporting vulnerable island
+      states in their fight against environmental threats.
   stances:
-    green_transition:
-      score: 1
-      evidence: I travelled to the Pacific region and saw the devastating effects
-        of rising sea levels for small island states.
     rule_of_law:
       score: 2
       evidence: Above all, unwavering commitment to the UN Charter and international
         law.
+    green_transition:
+      score: 2
+      evidence: 'And I can assure those whose safety and livelihoods are endangered
+        by climate change: We are, and we remain, at your side.'

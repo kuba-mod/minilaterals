@@ -2,11 +2,9 @@ actors:
 - PL
 issue_areas:
 - defence
-- hybrid
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -15,28 +13,22 @@ extracted:
   - Deputy Minister Kupiecki
   topics:
   - defence
-  - hybrid
   - rule_of_law
   location: null
-  position: Poland emphasizes a multi-pronged approach combining national efforts,
-    intergovernmental projects, and NATO/EU coordination to strengthen security in
-    the Baltic Sea region.
+  position: Poland emphasized the need for strengthened NATO deterrence and cooperation
+    within regional and international frameworks.
   positions:
-    defence: Poland supports strengthening NATO’s eastern flank through combined national,
-      intergovernmental, and NATO/EU measures to improve deterrence and defense capabilities.
-    hybrid: The focus on threats posed by Russia and Belarus implicitly addresses
-      the need for coordinated action against hybrid threats.
-    rule_of_law: Poland considers a well-organized and efficient United Nations to
-      be a key element of the rules-based international order.
+    defence: Poland supports strengthening NATO's eastern flank through combined national,
+      intergovernmental, and EU-coordinated measures to improve collective security.
+    rule_of_law: Poland views an efficient UN as crucial for maintaining a rules-based
+      international order and is ready to cooperate multilaterally with Latvia.
   stances:
     defence:
-      score: 2
-      evidence: prospects for the further strengthening of NATO’s eastern flank
-    hybrid:
       score: 1
-      evidence: Threats posed by Russia and Belarus as well as the current situation
-        in Ukraine were also high on the agenda.
+      evidence: The ministers discussed the prospects for the further strengthening
+        of NATO’s eastern flank
     rule_of_law:
-      score: 2
-      evidence: Poland considers a well-organised and efficient United Nations to
-        be a key element of the rules-based international order.
+      score: 1
+      evidence: Deputy head of Polish diplomacy stressed that Poland considers a well-organised
+        and efficient United Nations to be a key element of the rules-based international
+        order

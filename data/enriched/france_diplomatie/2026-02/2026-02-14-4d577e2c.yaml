@@ -1,30 +1,16 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
   - Félix Tshisekedi
-  - Angola
-  - UN Secretary-General’s Deputy Special Representative and Interim Head of the United
-    Nations Organization Stabilization Mission in the Democratic Republic of the Congo
-    (MONUSCO)
-  topics:
-  - rule_of_law
-  location: Goma, DRC
+  - Vivian van de Perre
+  topics: []
+  location: null
   position: France supports peace efforts in the Great Lakes region by emphasizing
-    the implementation of ceasefires, honoring international accords, and facilitating
-    humanitarian aid.
-  positions:
-    rule_of_law: France emphasizes the importance of implementing the Washington Accords
-      and calls on all parties to honor their commitments to ensure democratic resilience
-      and stability in the eastern DRC.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: France also emphasizes the importance of implementing the Washington
-        Accords of 4 December 2025 in every aspect
+    adherence to existing accords and humanitarian aid.
+  positions: {}
+  stances: {}

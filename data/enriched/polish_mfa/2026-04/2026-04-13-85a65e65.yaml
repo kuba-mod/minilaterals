@@ -1,40 +1,47 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - defence
+- hybrid
+- enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
   - Radosław Sikorski
   - Anita Orbán
-  - Péter Magyar
   topics:
-  - ukraine
   - defence
+  - hybrid
+  - enlargement
   - rule_of_law
   location: Warsaw, Poland
   position: Poland aims to resume constructive dialogue with Hungary and enhance regional
-    security cooperation through bilateral and EU mechanisms.
+    security cooperation through key policy areas.
   positions:
-    ukraine: Poland prioritized continued financial support for Ukraine and unblocking
-      funds from the European Peace Facility, aligning with the commitment to long-term
-      support for Ukraine.
-    defence: Poland emphasized working towards enhanced regional security and cohesion
-      of European policies, supporting a stronger EU defence capability.
-    rule_of_law: Poland highlighted the symbolic importance of democratic principles
-      and the need to resume constructive dialogue, affirming democratic resilience.
+    defence: Poland supports enhancing EU defense capabilities and working towards
+      enhanced regional security.
+    hybrid: Poland advocates for coordinated action on key security issues, including
+      those related to hybrid threats.
+    enlargement: Poland supports the EU accession of Ukraine and Western Balkans countries.
+    rule_of_law: Poland emphasizes democratic principles and the rule of law as foundational
+      for renewed bilateral relations.
   stances:
-    ukraine:
-      score: 1
-      evidence: continued financial support for Ukraine
     defence:
       score: 1
-      evidence: enhanced regional security
+      evidence: The two officials affirmed readiness to work closely towards enhanced
+        regional security
+    hybrid:
+      score: 1
+      evidence: The meeting will focus on giving new energy to cooperation in Central
+        Europe and working out shared positions on key security issues.
+    enlargement:
+      score: 1
+      evidence: namely to resume constructive dialogue, both bilaterally and in the
+        European Union
     rule_of_law:
       score: 1
-      evidence: stand up for democratic principles
+      evidence: carries a symbolic meaning for the states that stand up for democratic
+        principles.

@@ -88,8 +88,10 @@ def test_extract_writes_enriched_sidecar(data_tree):
     assert extracted["stances"]["ukraine"]["evidence"] == "announced further aid"
     # positions_by_topic is reshaped away.
     assert "positions_by_topic" not in extracted
-    # Classification fields come from a fresh classify(), topics override issue_areas.
+    # Classification is LLM-derived: issue_areas come from topics, and the MFA
+    # source country is folded into actors even though the response omitted it.
     assert written["issue_areas"] == ["ukraine"]
+    assert written["actors"] == ["DE"]
     assert written["weimar_relevant"] is True
 
 
@@ -134,6 +136,52 @@ def test_extract_retries_then_gives_up_on_bad_json(data_tree):
     assert enrich._extract(provider, raw) is False
     # Two attempts consumed (retry loop range(2)).
     assert len(provider.prompts) == 2
+
+
+def test_extract_retries_on_malformed_actors_then_succeeds(data_tree):
+    """gemma4 has been observed to nest actors (e.g. [["FR"]]) instead of
+    returning a flat list — that shape should trigger a retry, not a silent
+    mis-parse that drops the actor."""
+    events_dir, enriched_dir = data_tree
+    raw = _write_raw(events_dir, source_name="france_diplomatie")
+    bad_response = json.dumps(
+        {
+            "topics": ["ukraine"],
+            "actors": [["FR"]],
+            "position": "France reaffirms support for Ukraine.",
+            "positions_by_topic": {
+                "ukraine": {"position": "France backs Ukraine.", "stance": 1, "evidence": "reaffirmed support"}
+            },
+        }
+    )
+    good_response = json.dumps(
+        {
+            "topics": ["ukraine"],
+            "actors": ["FR"],
+            "position": "France reaffirms support for Ukraine.",
+            "positions_by_topic": {
+                "ukraine": {"position": "France backs Ukraine.", "stance": 1, "evidence": "reaffirmed support"}
+            },
+        }
+    )
+    provider = FakeProvider([bad_response, good_response])
+
+    assert enrich._extract(provider, raw) is True
+    assert len(provider.prompts) == 2
+
+    enriched_path = enriched_dir / raw.relative_to(events_dir)
+    written = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
+    assert written["actors"] == ["FR"]
+    assert "actors" not in written["extracted"]
+
+
+def test_extract_gives_up_when_actors_stay_malformed(data_tree):
+    events_dir, enriched_dir = data_tree
+    raw = _write_raw(events_dir)
+    response = json.dumps({"topics": [], "actors": ["FR", []], "position": "Statement."})
+    assert enrich._extract(FakeProvider([response, response]), raw) is False
+    enriched_path = enriched_dir / raw.relative_to(events_dir)
+    assert not enriched_path.exists()
 
 
 def test_backfill_stances_adds_ratings(data_tree):

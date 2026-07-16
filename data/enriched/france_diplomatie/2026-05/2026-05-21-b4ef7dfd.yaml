@@ -1,7 +1,56 @@
 actors:
 - FR
-issue_areas: []
-weimar_relevant: false
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: communique
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: The communique outlines France's commitment to cooperation across multiple
+    strategic domains with India.
+  positions:
+    ukraine: France commits to long-term support for Ukraine in all dimensions until
+      a just and lasting peace is achieved.
+    defence: France supports strengthening EU defense capabilities as complementary
+      to NATO, focusing on eastern flank deterrence.
+    hybrid: France calls for coordinated action against various hybrid threats, including
+      disinformation and cyber attacks.
+    enlargement: France supports the EU accession of Ukraine and Western Balkans countries
+      while advocating for internal institutional reforms within the EU.
+    green_transition: France backs the Clean Industrial Deal and the path to climate
+      neutrality by aligning industrial and energy policies with European green objectives.
+    rule_of_law: France affirms that democratic resilience and the rule of law are
+      foundational elements for European unity and security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    defence:
+      score: 1
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    green_transition:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''

@@ -224,7 +224,7 @@ class GermanMFAIngester(BaseIngester):
                     source_lang=self.source_lang,
                     source_published_at=published_at,
                     date=date,
-                ).classify()
+                )
         except Exception as exc:
             print(f"[{SOURCE_NAME}] RSS error: {exc}")
 
@@ -295,7 +295,7 @@ class GermanMFAIngester(BaseIngester):
                 summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
                 time.sleep(0.5)
                 probe.text = summary
-                yield probe.classify()
+                yield probe
 
     def _fetch_wayback_articles(self, seen_urls: set[str]) -> Iterator[Event]:
         """Discover article URLs the Wayback Machine captured under the newsroom
@@ -402,7 +402,7 @@ class GermanMFAIngester(BaseIngester):
             )
             if probe.output_path().exists():
                 continue
-            yield probe.classify()
+            yield probe
         if dateless:
             print(f"[{SOURCE_NAME}] wayback: skipped {dateless} articles without a recoverable date")
 
@@ -456,7 +456,7 @@ class GermanMFAIngester(BaseIngester):
                     source_lang=self.source_lang,
                     source_published_at=published_at,
                     date=date,
-                ).classify()
+                )
 
             if all_before_since or not self.since:
                 break

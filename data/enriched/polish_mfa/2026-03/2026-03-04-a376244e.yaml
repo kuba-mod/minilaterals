@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Head of the Foreign Service
+  - Professor Krzysztof Kania
+  topics:
+  - rule_of_law
+  location: Toruń, Poland
+  position: Poland emphasizes the importance of diplomatic service and professional
+    commitment to the state's interests.
+  positions:
+    rule_of_law: The text stresses the foundational role of professionalism and moral
+      courage in serving the Polish state.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: the namesake of the training programme was portrayed as a symbol of
+        unwavering service to the Polish state, an exemplary high-ranking diplomat,
+        and a statesman embodying both professionalism and moral courage.

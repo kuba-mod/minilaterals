@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -16,19 +15,17 @@ extracted:
   - hybrid
   - rule_of_law
   location: null
-  position: Poland sought to deepen bilateral relations with Paraguay through political
-    consultations, focusing on cybersecurity, countering hybrid threats, and improving
-    border protection.
+  position: Poland engaged in bilateral consultations with Paraguay on enhancing cooperation
+    across political and economic spheres while also discussing regional security
+    issues like disinformation and cybersecurity.
   positions:
-    hybrid: Poland and Paraguay acknowledged the problem of disinformation and discussed
-      countering hybrid threats, including the instrumentalization of migration as
-      a destabilization strategy.
-    rule_of_law: The meeting highlighted the importance of democratic resilience and
-      combating disinformation in public space, aligning with the foundational principles
-      of the rule of law.
+    hybrid: Poland emphasized the need for coordinated action against hybrid threats,
+      including cyber attacks and the use of migration as a destabilization strategy.
+    rule_of_law: Poland highlighted the shared concern regarding disinformation in
+      public spaces, recognizing it as a pressing issue for both countries.
   stances:
     hybrid:
-      score: 2
+      score: 1
       evidence: Their talks focused on cooperation in cybersecurity and countering
         hybrid threats, including the instrumentalisation of migration as a destabilisation
         strategy.

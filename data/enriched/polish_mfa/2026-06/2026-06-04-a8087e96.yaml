@@ -1,51 +1,28 @@
 actors:
 - PL
 issue_areas:
-- ukraine
-- hybrid
-- green_transition
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
+  - deputy ministers
   - Deputy Minister Zajączkowski
-  - representatives of the National Sectretariat of Science and Technology
-  - Presidential Commission for Open and Electronic Government
+  - Polish delegation
+  - Guatemalan side
+  - Deputy head of Polish diplomacy
   topics:
-  - ukraine
-  - hybrid
-  - green_transition
   - rule_of_law
-  location: Guatemala
-  position: Poland sought to expand bilateral cooperation with Guatemala in technology,
-    cybersecurity, and trade while emphasizing the protection of international law.
+  location: null
+  position: Poland emphasized the importance of bilateral cooperation across various
+    sectors while also addressing regional and global security issues.
   positions:
-    ukraine: Poland exchanged views on the war in Ukraine, aligning with the general
-      commitment to address the conflict.
-    hybrid: Poland actively promotes its cybersecurity expertise and solutions to
-      strengthen digital defenses.
-    green_transition: Poland identifies green technologies as a priority for expanding
-      bilateral cooperation.
-    rule_of_law: Poland emphasizes the importance of adhering to international law
-      to counter revisionism and power politics.
+    rule_of_law: Poland stressed the necessity of international law adherence to counter
+      contemporary challenges like revisionism and power politics.
   stances:
-    ukraine:
-      score: 1
-      evidence: They also exchanged views on the most important regional and global
-        issues, including the war in Ukraine
-    hybrid:
-      score: 2
-      evidence: The talks focused on sharing Polish experiences of digitalising the
-        public administration and strengthening cybersecurity.
-    green_transition:
-      score: 1
-      evidence: prospects of expanding bilateral cooperation to cover such areas as
-        green technologies
     rule_of_law:
       score: 1
       evidence: underlined the importance of cooperating to protect the principles
         of international law in the face of contemporary challenges, such as revisionism
-        and power politics
+        and power politics.

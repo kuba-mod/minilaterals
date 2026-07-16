@@ -4,23 +4,18 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Wojciech Zajączkowski
-  - Chad authorities
   topics:
   - rule_of_law
   location: Chad
   position: Poland aims to strengthen bilateral relations with Chad through concrete
-    actions, including establishing a Polish Honorary Consulate, while emphasizing
-    the importance of international order based on multilateralism and international
-    law.
+    actions and emphasizes the importance of international law and multilateralism.
   positions:
-    rule_of_law: Poland emphasized the importance of international order based on
-      multilateralism and respect for international law, highlighting the role of
-      multilateral organizations in addressing contemporary challenges.
+    rule_of_law: Poland stresses the global importance of maintaining an international
+      order based on multilateralism and respect for international law.
   stances:
     rule_of_law:
       score: 1

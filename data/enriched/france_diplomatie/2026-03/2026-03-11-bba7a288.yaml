@@ -1,25 +1,17 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Thomas G. DiNanno
   - Claire Raulin
-  topics:
-  - defence
+  topics: []
   location: Paris, France
   position: France and the United States agreed to regularize an annual bilateral
     dialogue and establish a working group to strengthen cooperation on strategic
     issues.
-  positions:
-    defence: The dialogue focused on strategic stability and deterrence, supporting
-      the goal of stronger EU defence capability complementary to NATO.
-  stances:
-    defence:
-      score: 0
-      evidence: ''
+  positions: {}
+  stances: {}

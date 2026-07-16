@@ -1,18 +1,15 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - Lebanon
-  - Israel
+  - governments of Lebanon and Israel
   topics: []
   location: null
-  position: France welcomes and stands ready to contribute to the implementation of
-    a framework agreement between Lebanon and Israel.
+  position: France welcomes the framework agreement between Lebanon and Israel and
+    stands ready to contribute to its implementation.
   positions: {}
   stances: {}

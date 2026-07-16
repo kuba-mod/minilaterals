@@ -1,44 +1,35 @@
 actors:
 - FR
 issue_areas:
-- enlargement
-- green_transition
 - rule_of_law
+- green_transition
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Mahmoud Ali Youssouf, Chairperson of the African Union Commission
   topics:
-  - enlargement
-  - green_transition
   - rule_of_law
+  - green_transition
   location: Paris, France
-  position: France reaffirmed its commitment to strengthening global governance based
-    on international law, advocating for multilateral reform and supporting Africa's
-    economic and ecological transformation.
+  position: France reaffirmed its commitment to global governance reform and supporting
+    Africa's economic transformation through international cooperation.
   positions:
-    enlargement: France supported the reform of the UN Security Council and the importance
-      of Africa's role in global forums, aligning with the goal of supporting EU accession
-      and reform.
-    green_transition: France emphasized reforming the international financial architecture
-      for Africa to promote industrialization and ecological transition, aligning
-      with the goal of supporting climate neutrality and green objectives.
-    rule_of_law: France stressed the need for global governance based on strict adherence
-      to international law, accountability, and solidarity, affirming democratic resilience
-      and the rule of law.
+    rule_of_law: France supports strengthening global governance based on adherence
+      to international law and accountability.
+    green_transition: France advocates for reforming the international financial architecture
+      to support Africa's ecological transition alongside industrialization.
   stances:
-    enlargement:
-      score: 0
-      evidence: ''
-    green_transition:
-      score: 1
-      evidence: mobilization of resources to promote the continent’s industrialization
-        and economic transformation as well as the ecological transition
     rule_of_law:
       score: 1
-      evidence: based on strict adherence to international law with a view to universality,
-        accountability and solidarity
+      evidence: emphasized the need to ensure sustained, strengthened global governance
+        based on strict adherence to international law with a view to universality,
+        accountability and solidarity.
+    green_transition:
+      score: 1
+      evidence: reform the international financial architecture for Africa by putting
+        emphasis on issues to do with access to funding, debt processing and the mobilization
+        of resources to promote the continent’s industrialization and economic transformation
+        as well as the ecological transition

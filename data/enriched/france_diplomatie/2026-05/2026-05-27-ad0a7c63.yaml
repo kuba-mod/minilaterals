@@ -5,29 +5,27 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
-  - Russian Federation’s Ambassador to France
-  - Minister for Europe and Foreign Affairs
+  - Ministry for Europe and Foreign Affairs
   topics:
   - ukraine
   - rule_of_law
   location: null
-  position: France summoned the Russian Ambassador to condemn airstrikes in Ukraine
-    and reiterate its support for Ukrainian security and international law.
+  position: France strongly condemns Russia's actions against Ukraine and reiterates
+    its commitment to defending European security.
   positions:
-    ukraine: France rhetorically reaffirms its long-term commitment to supporting
-      Ukraine and calls for an end to the war.
-    rule_of_law: France condemns Russia's disregard for international legal norms
-      and diplomatic conduct.
+    ukraine: France maintains a strong stance in support of Ukraine, calling for an
+      end to Russia's illegal war of aggression.
+    rule_of_law: France condemns Russia's actions as violations of international law
+      and acts of intimidation.
   stances:
     ukraine:
-      score: 1
-      evidence: We maintain our commitment to defending European security and supporting
-        Ukraine.
+      score: 2
+      evidence: France reiterates its call for Russia to end its illegal war of aggression
+        in Ukraine.
     rule_of_law:
       score: 1
-      evidence: Russia’s actions demonstrate its cynicism and contempt for international
-        law.
+      evidence: Each day, Russia’s actions demonstrate its cynicism and contempt for
+        international law.

@@ -4,28 +4,22 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - United Nations Security Council
-  - Hezbollah
-  - Lebanese authorities
-  - Israel
-  - High Commissioner for Refugees
-  - Ghana
-  - UNIFIL personnel
+  - President Macron
   topics:
   - rule_of_law
-  location: New York, United States
-  position: France demands restraint from all parties in Lebanon, calling for a return
-    to the 2024 ceasefire and adherence to international law and UN Resolution 1701.
+  location: null
+  position: France expresses deep concern over the violence in Lebanon and calls for
+    all parties to return to previous ceasefires while respecting international law.
   positions:
-    rule_of_law: France emphasizes adherence to international law, international humanitarian
-      law, and the principles of distinction, proportionality, and precaution to protect
-      civilians and infrastructure.
+    rule_of_law: France strongly emphasizes adherence to international humanitarian
+      law and principles like distinction and proportionality during hostilities.
   stances:
     rule_of_law:
-      score: 1
-      evidence: France calls on all the parties to abide by international law and
-        international humanitarian law.
+      score: 2
+      evidence: Compliance with the rules governing the conduct of hostilities, and
+        particularly the principles of distinction, proportionality and precaution,
+        is vital to ensuring the protection of civilian populations and civilian infrastructure
+        in all circumstances.

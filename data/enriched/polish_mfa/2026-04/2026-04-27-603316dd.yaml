@@ -6,29 +6,24 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - TVP’s International Media Centre
   - Vot Tak team
-  - MFA
   topics:
   - hybrid
   - enlargement
   - rule_of_law
   location: null
-  position: Poland supports strengthening regional media presence and democratic resilience
-    in Eastern Partnership countries through international media projects.
+  position: Poland supports regional media projects aimed at promoting democracy and
+    countering disinformation in Eastern Partnership countries.
   positions:
-    hybrid: The project aims to strengthen public resilience to manipulation and counter
-      disinformation targeted at Georgia and its international partners, aligning
-      with the call for coordinated action against hybrid threats.
-    enlargement: The project is planned to cover all the EU’s Eastern Partnership
-      countries and more, supporting the goal of EU accession for neighboring countries.
-    rule_of_law: The project aims to present reliable information and support the
-      process of democratisation, affirming democratic resilience and the rule of
-      law.
+    hybrid: The project aims to strengthen public resilience against manipulation
+      and counter disinformation targeting Georgia and its international partners.
+    enlargement: Poland supports expanding cooperation and media presence across all
+      EU Eastern Partnership countries.
+    rule_of_law: The initiative promotes democratic values and reliable information
+      regarding political, social, and economic events from a European perspective.
   stances:
     hybrid:
       score: 2
@@ -40,7 +35,7 @@ extracted:
       evidence: The project, supported by the MFA, is planned to cover all the EU’s
         Eastern Partnership countries and more.
     rule_of_law:
-      score: 2
+      score: 1
       evidence: The project aims to present reliable information on political, social,
         and economic events from the European perspective and support the process
         of democratisation.

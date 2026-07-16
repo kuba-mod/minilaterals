@@ -1,25 +1,15 @@
 actors:
-- DE
 - PL
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: statement
   participants:
-  - Polish people
-  topics:
-  - rule_of_law
+  - Economic Department of the MFA
+  topics: []
   location: null
-  position: Poland emphasizes that its economic success and development within the
-    EU are primarily due to the sound policies and initiative of its own people, while
-    highlighting the EU's market potential as a key driver of growth.
-  positions:
-    rule_of_law: Poland implicitly affirms democratic resilience and economic stability
-      by detailing its strong economic performance and adherence to EU market rules.
-  stances:
-    rule_of_law:
-      score: 0
-      evidence: ''
+  position: Poland emphasizes its successful economic integration and growth within
+    the European Union, highlighting the single market's role in its prosperity.
+  positions: {}
+  stances: {}

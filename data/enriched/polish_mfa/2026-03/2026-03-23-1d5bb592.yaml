@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -13,13 +12,12 @@ extracted:
   topics:
   - rule_of_law
   location: null
-  position: Poland highlighted the negative global security and economic consequences
-    of the current Middle East situation and deplored the impact of aggression on
-    civilians.
+  position: Poland's top diplomat addressed the consequences of the Middle East situation
+    for global security and international relations.
   positions:
-    rule_of_law: Poland emphasized the importance of global security and international
-      relations in the face of regional instability and condemned attacks targeting
-      non-party sites.
+    rule_of_law: Poland stressed that the current geopolitical situation in the Middle
+      East has significant negative impacts on global stability, economy, and international
+      law.
   stances:
     rule_of_law:
       score: 1

@@ -8,11 +8,9 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
-  - foreign ministers
   - Minister Oana Ţoju
   topics:
   - ukraine
@@ -21,39 +19,31 @@ extracted:
   - enlargement
   - rule_of_law
   location: null
-  position: Poland reaffirmed its commitment to the strategic Polish-Romanian partnership,
-    focusing on deepening cooperation in security, economic growth, and EU/NATO alignment,
-    while coordinating support for Ukraine and Moldova.
+  position: Poland reaffirmed its commitment to regional security and EU cooperation
+    while stressing the need for strong support for Ukraine and Moldova.
   positions:
-    ukraine: Poland stressed the need to immediately adopt the 20th sanctions package
-      to curb Russia’s ability to finance warfare and reiterated its continued multidimensional
-      support for Kyiv, emphasizing its role as a key neighbor.
-    defence: Poland highlighted the importance of NATO’s eastern flank and the cooperation
-      of the Bucharest Nine, underscoring the strategic character of the Polish-Romanian
-      partnership for regional security.
-    hybrid: The ministers called on all parties in the Middle East to exercise restraint,
-      observe international law, and ensure the protection of civilians, while also
-      discussing countering disinformation in Moldova.
-    enlargement: Poland and Romania committed to close coordination of actions to
-      enhance Moldova’s security and resilience, supporting its democratic institutions
-      and EU accession process.
-    rule_of_law: The ministers emphasized the importance of the European Union’s unity
-      and the protection of civilians in conflict zones, alongside supporting institutional
-      reforms and countering disinformation in Moldova.
+    ukraine: Poland strongly supports Kyiv's defense and stability by advocating for
+      immediate sanctions against Russia and reiterating its special role as a key
+      neighbor.
+    defence: Poland supports strengthening regional security by focusing on NATO's
+      eastern flank and deepening bilateral defense cooperation with Romania.
+    hybrid: Poland advocates for coordinated action against disinformation and enhancing
+      institutional resilience in neighboring countries like Moldova.
+    enlargement: Poland supports the EU accession process for neighboring countries
+      like Moldova.
+    rule_of_law: Poland emphasizes adherence to international law and democratic principles
+      in conflict zones while supporting EU unity.
   stances:
     ukraine:
       score: 2
       evidence: The ministers stressed the need to immediately adopt the 20th sanctions
-        package to curb Russia’s ability to finance warfare. They reiterated the two
-        countries’ continued multidimensional support for Kyiv and stressed Poland’s
-        and Romania’s special role as the largest neighbours of Ukraine and key partners
-        in the region.
+        package to curb Russia’s ability to finance warfare.
     defence:
       score: 1
       evidence: In the context of regional security, special attention was paid to
         NATO’s eastern flank
     hybrid:
-      score: 2
+      score: 1
       evidence: Ministers Sikorski and Țoiu declared that close coordination of actions
         taken to enhance Moldova’s security and resilience will continue, including
         measures to support its democratic institutions and counter disinformation.
@@ -63,6 +53,6 @@ extracted:
         and resilience as well as work on institutional reforms and, obviously, the
         EU accession process.
     rule_of_law:
-      score: 2
+      score: 1
       evidence: In this context, they called on all parties to exercise restraint,
         observe international law, and ensure the protection of civilians.

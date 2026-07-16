@@ -4,7 +4,6 @@ issue_areas:
 - defence
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
@@ -12,14 +11,13 @@ extracted:
   topics:
   - defence
   location: null
-  position: Germany welcomes Canada's decision to join the German-Norwegian submarine
-    cooperation with TKMS as the preferred supplier to strengthen transatlantic defence
-    ties.
+  position: Germany expresses satisfaction that Canada's choice of a German-Norwegian
+    supplier strengthens the transatlantic defense partnership.
   positions:
-    defence: Germany is actively advancing collective security and industrial cooperation
-      within the transatlantic alliance through a joint submarine program.
+    defence: Germany supports strengthening EU and NATO defense capabilities through
+      cooperation with partners like Norway and Canada.
   stances:
     defence:
-      score: 2
-      evidence: Canada, Norway and Germany are thus also starting a new chapter in
-        defence and industry policy.
+      score: 1
+      evidence: This step will strengthen and deepen our partnership in the transatlantic
+        alliance for the long term.

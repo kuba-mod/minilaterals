@@ -1,34 +1,47 @@
 actors:
-- DE
 - FR
 issue_areas:
-- hybrid
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: joint_statement
-  participants: []
+  participants:
+  - Albania
+  - Australia
+  - Belgium
+  - Bulgaria
+  - Canada
+  - Czechia
+  - Denmark
+  - Estonia
+  - France
+  - Finland
+  - Germany
+  - Ireland
+  - Italy
+  - Latvia
+  - Lithuania
+  - Netherlands
+  - New Zealand
+  - North Macedonia
+  - Norway
+  - Portugal
+  - Spain
+  - Sweden
+  - United Kingdom
+  - United States of America
   topics:
-  - hybrid
   - rule_of_law
   location: null
-  position: France and its partners condemn Iranian state-sponsored malign actions
-    and attacks by HAYI, calling for an immediate halt to these threats to national
-    sovereignty.
+  position: France and its partners condemn Iranian state threats and malign actions
+    in Europe and globally, demanding an immediate halt to these activities.
   positions:
-    hybrid: France supports coordinated action against hybrid threats by condemning
-      Iranian state-sponsored malign actions and the use of criminal groups for attacks.
-    rule_of_law: France affirms the importance of international norms and national
-      sovereignty against foreign attempts to attack individuals on their soil.
+    rule_of_law: The statement strongly affirms the importance of international norms
+      and national sovereignty by condemning attacks targeting Jewish communities
+      and US interests.
   stances:
-    hybrid:
-      score: 1
-      evidence: condemn the lethal plotting and other malign actions in Europe, North
-        America and Australia by Iran’s Islamic Revolutionary Guard Corps-Intelligence
-        Organisation, Quds Force and Ministry of Intelligence and Security
     rule_of_law:
-      score: 1
+      score: 2
       evidence: Attempts to kill, kidnap, harass, intimidate, or otherwise attack
         people on our soil, undermines national sovereignty and international norms.

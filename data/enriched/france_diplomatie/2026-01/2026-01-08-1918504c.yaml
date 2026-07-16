@@ -1,36 +1,17 @@
 actors:
 - FR
-issue_areas:
-- enlargement
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot
   - Asaad al-Shaibani
-  topics:
-  - enlargement
-  - rule_of_law
+  topics: []
   location: Paris, France
-  position: France supports the stabilization, economic recovery, and unified sovereignty
-    of Syria, while emphasizing respect for all components of Syrian society and security
-    arrangements with Israel.
-  positions:
-    enlargement: France supports the restoration of a stabilized, unified, and sovereign
-      Syria, discussing progress in negotiations between transitional authorities
-      and the Syrian Democratic Forces.
-    rule_of_law: France supports the Syrian transitional authorities' efforts to shed
-      light on atrocities and advocates for a transition that respects the rule of
-      law and all components of Syrian society.
-  stances:
-    enlargement:
-      score: 0
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: The Minister expressed France’s wholehearted support for the Syrian
-        transitional authorities’ efforts to shed full light on the atrocities targeting
-        civilians which occurred on the coast and in Sweida in March and July 2025.
+  position: France aims to deepen bilateral ties with Syria to support its stabilization
+    and economic recovery while emphasizing respect for Syrian society and security
+    arrangements.
+  positions: {}
+  stances: {}

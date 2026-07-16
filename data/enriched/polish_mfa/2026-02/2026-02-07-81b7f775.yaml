@@ -3,49 +3,54 @@ actors:
 issue_areas:
 - defence
 - hybrid
+- enlargement
 - green_transition
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
   - Radosław Sikorski
-  - United States
-  - European Union
+  - Deputy Prime Minister and Foreign Minister
   topics:
   - defence
   - hybrid
+  - enlargement
   - green_transition
   - rule_of_law
-  location: United States
+  location: null
   position: Poland supports transatlantic cooperation on security and the economy,
-    advocating for diversified critical mineral supply chains and continued support
-    for Ukraine.
+    emphasizing diversified critical mineral supply chains and continued support for
+    Ukraine.
   positions:
-    defence: Poland highlighted the importance of transatlantic cooperation on security
-      and defense.
-    hybrid: Poland stressed that critical minerals cannot be used for blackmail, advocating
-      for diversified production as an element of economic security.
-    green_transition: Poland supports the US and EU initiatives to strengthen supply
-      chains for critical minerals, which are essential for the energy transition.
-    rule_of_law: Poland emphasized the importance of transatlantic cooperation on
-      security and the economy, which is seen as evidence of enduring bonds.
+    defence: Poland emphasizes that transatlantic cooperation is vital for both security
+      and economic stability.
+    hybrid: Poland advocates for coordinated international action to ensure critical
+      minerals cannot be used as tools of coercion.
+    enlargement: Poland supports the broader European goal of strengthening EU institutions
+      through cooperation with its neighbors.
+    green_transition: Poland supports international efforts to strengthen supply chains
+      for critical minerals essential for technological and energy development.
+    rule_of_law: Poland stresses the importance of democratic resilience and economic
+      security through diversified resource sourcing.
   stances:
     defence:
       score: 1
-      evidence: transatlantic cooperation on security and the economy is evidence
-        of the enduring bonds between the US and Europe.
+      evidence: He also expressed his belief that transatlantic cooperation on security
+        and the economy is evidence of the enduring bonds between the US and Europe.
     hybrid:
       score: 1
-      evidence: Also emphasised was the need to continue supporting Ukraine in its
-        armed struggle.
+      evidence: Critical minerals cannot be used for blackmail, and their production
+        should be geographically more diversified.
+    enlargement:
+      score: 0
+      evidence: ''
     green_transition:
       score: 1
-      evidence: These supply chains are essential to the functioning of modern economies,
-        as they underpin technological development, the energy transition, and the
-        industrial security of states.
+      evidence: The United States, in cooperation with its closest allies, is taking
+        action to strengthen supply chains for critical minerals.
     rule_of_law:
       score: 1
-      evidence: This is an important issue for the entire West.
+      evidence: This is an element of our economic security - summarised Minister
+        Sikorski.

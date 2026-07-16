@@ -4,23 +4,19 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - Gulf Cooperation Council states' heads of diplomacy
   topics:
   - rule_of_law
   location: null
-  position: Poland strongly condemned Iran's attacks on Gulf countries, calling for
-    an immediate cessation of aggressive activity and emphasizing the need for dialogue
-    and diplomacy to resolve the regional crisis.
+  position: Poland strongly condemned Iran's attacks on Gulf countries and reiterated
+    support for dialogue to resolve the regional crisis.
   positions:
-    rule_of_law: Poland emphasized the importance of dialogue and diplomacy as the
-      primary means to resolve the regional crisis and maintain democratic resilience.
+    rule_of_law: Poland supports maintaining democratic resilience and stability by
+      condemning aggression and calling for diplomatic solutions.
   stances:
     rule_of_law:
       score: 1
-      evidence: The participants reiterated their support for dialogue and diplomacy
-        as means to resolve the crisis
+      evidence: The ministers strongly condemned Iran’s attacks on the Gulf countries.

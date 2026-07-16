@@ -1,34 +1,33 @@
 actors:
-- DE
 - FR
 issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: statement
   participants:
-  - representatives of Belgium
-  - representatives of Denmark
-  - representatives of the European Union
-  - representatives of France
-  - representatives of Germany
-  - representatives of the Netherlands
-  - representatives of Sweden
-  - representatives of Switzerland
-  - representatives of the United Kingdom
-  - representatives of the United States
-  - Faure Gnassingbé
+  - International Contact Group (ICG)
+  - Belgium
+  - Denmark
+  - European Union
+  - France
+  - Germany
+  - Netherlands
+  - Sweden
+  - Switzerland
+  - United Kingdom
+  - United States
   topics:
   - rule_of_law
   location: Stockholm, Sweden
-  position: France, as part of the ICG, advocates for a negotiated peace in the Democratic
-    Republic of the Congo and condemns violations of international humanitarian law.
+  position: The ICG reiterates deep concern over the conflict in the DRC and urges
+    all parties to build on diplomatic momentum while upholding international humanitarian
+    law.
   positions:
-    rule_of_law: France supports the adherence to international humanitarian law and
-      the protection of civilians, aligning with the broader goal of democratic resilience
-      and legal standards.
+    rule_of_law: France supports maintaining democratic resilience and the rule of
+      law by condemning violations of international humanitarian law and stressing
+      the need for political solutions.
   stances:
     rule_of_law:
       score: 1

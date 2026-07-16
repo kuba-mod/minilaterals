@@ -6,28 +6,25 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Deputy Prime Minister Radosław Sikorski
-  - Polish diaspora
-  - Poles living in the United Kingdom
   topics:
   - ukraine
   - defence
   - rule_of_law
   location: London, United Kingdom
-  position: Poland reaffirmed its strategic cooperation with the UK across security
-    and defense, emphasizing joint support for Ukraine's sovereignty and adherence
+  position: Poland reaffirmed its strong strategic cooperation with the UK across
+    security and defense while emphasizing support for Ukraine's sovereignty and adherence
     to international law.
   positions:
     ukraine: Poland strongly supports Ukraine’s sovereignty and territorial integrity,
-      advocating that the war must end based on international law.
-    defence: Poland views military power as crucial for its bilateral relationship
-      with the UK, deepening cooperation in security and defense areas.
-    rule_of_law: Poland supports the principle that the war must end on terms grounded
-      in international law and maintaining pressure against Russia's aggression.
+      demanding that the war end based on international law.
+    defence: Poland views military power as crucial for its security and has deepened
+      defense cooperation with the UK through new treaties.
+    rule_of_law: Poland supports maintaining international pressure on Russia until
+      its aggression ends, emphasizing adherence to international law.
   stances:
     ukraine:
       score: 2
@@ -36,8 +33,8 @@ extracted:
     defence:
       score: 2
       evidence: By signing the Northolt Treaty last month, Brits and Poles have opened
-        a new chapter in our relationship – one defined by closer cooperation in areas
-        of security and defence.
+        a<0xC2><0xA0>new chapter in our relationship – one defined by closer cooperation
+        in areas of security and defence.
     rule_of_law:
       score: 2
       evidence: The ministers agreed that the war must end on terms grounded in international

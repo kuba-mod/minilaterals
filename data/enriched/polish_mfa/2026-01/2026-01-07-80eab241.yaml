@@ -4,48 +4,34 @@ actors:
 - PL
 issue_areas:
 - ukraine
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: true
-weimar_score: 0.9
 extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
   - Jean-Noël Barrot
   - Johann Wadephul
-  - India foreign ministers
   topics:
   - ukraine
-  - defence
   - rule_of_law
-  location: Paris, France
-  position: Poland reiterated that the European Union remains India’s largest trade
-    partner, while advocating for joint action with India on security and defense
-    matters and the reduction of Russian oil imports.
+  location: Paris
+  position: Poland emphasized the need for sustained international pressure on Russia
+    through sanctions and highlighted the potential alignment between the EU and India
+    on issues concerning Russian aggression.
   positions:
-    ukraine: The ministers stressed that Europe, working closely with the US administration,
-      must actively engage in forging peace solutions that comply with international
-      law, and called for sustained sanctions against Russia, including targeting
-      its energy and financial sectors.
-    defence: The ministers discussed bringing the sphere of security and defence under
-      the EU–India Partnership, suggesting alignment between Brussels and New Delhi
-      on Russia’s aggression.
-    rule_of_law: The top diplomats concluded that Russia’s attacks and disregard for
-      international law necessitate sustained pressure through sanctions, and India
-      was urged to reduce Russian oil imports to prevent financing of the war machine.
+    ukraine: The Weimar Triangle commits to sustaining diplomatic, economic, and military
+      pressure on Russia through further sanctions until a just peace is achieved.
+    rule_of_law: Poland stresses that peace solutions must adhere strictly to international
+      law and that India's actions should prevent Russia from disregarding universal
+      standards.
   stances:
     ukraine:
       score: 2
-      evidence: The top diplomats concluded that Russia’s repeated attacks on people
+      evidence: the top diplomats concluded that Russia’s repeated attacks on people
         living in Ukraine call for the pressure on Russia to be sustained through
         another round of sanctions, including on the energy and the financial sectors.
-    defence:
-      score: 1
-      evidence: Also discussed were the relations between the European Union and India,
-        including a plan to bring the sphere of security and defence under the EU–India
-        Partnership.
     rule_of_law:
       score: 2
       evidence: Europe, working closely with the US administration, should engage

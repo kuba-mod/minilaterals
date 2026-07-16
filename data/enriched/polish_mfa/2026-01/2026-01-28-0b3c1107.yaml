@@ -1,26 +1,24 @@
 actors:
 - PL
 issue_areas:
-- hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Polish Ambassador to Denmark
   - Vivian Motzfeldt (Minister of Foreign Affairs and Research)
   - Peter Borg (Minister of Fisheries, Hunting, Agriculture, and Self-Sufficiency)
   topics:
-  - hybrid
+  - rule_of_law
   location: Nuuk, Greenland
-  position: Poland seeks to strengthen bilateral cooperation with Greenland, focusing
-    on resilience building, crisis management, and expanding academic and cultural
-    ties.
+  position: Poland focused on strengthening bilateral cooperation with Greenland across
+    various sectors, particularly polar studies and cultural exchange.
   positions:
-    hybrid: Poland and Greenland discussed working together on building resilience
-      to threats and managing crisis situations.
+    rule_of_law: The visit emphasized building resilience to threats and managing
+      crisis situations, aligning with the goal of democratic resilience and security.
   stances:
-    hybrid:
-      score: 0
-      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: on the prospects of working together on building resilience to threats
+        and managing crisis situations.

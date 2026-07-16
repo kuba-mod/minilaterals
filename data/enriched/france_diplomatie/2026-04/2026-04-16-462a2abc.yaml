@@ -1,30 +1,15 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - United States President
-  - Lebanese Government
-  - Israel
-  - Hezbollah
-  topics:
-  - rule_of_law
+  - US President
+  topics: []
   location: null
-  position: France welcomes the temporary ceasefire and calls for all parties to abide
-    by it while continuing discussions toward a political solution that respects Lebanon's
-    sovereignty and territorial integrity.
-  positions:
-    rule_of_law: France reaffirms its commitment to full respect for Lebanon’s sovereignty
-      and territorial integrity, in accordance with United Nations Security Council
-      Resolution 1701, affirming the rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: reaffirms its full support for the Lebanese Government’s brave decision
-        to embark on these historic discussions with Israel, in the primary interest
-        of the Lebanese people.
+  position: France welcomes the temporary ceasefire and calls for continued diplomatic
+    discussions leading to a political solution that respects Lebanon's sovereignty.
+  positions: {}
+  stances: {}

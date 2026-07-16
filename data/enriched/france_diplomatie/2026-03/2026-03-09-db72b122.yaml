@@ -1,13 +1,11 @@
 actors:
-- DE
 - FR
 issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
-  event_type: joint_statement
+  event_type: statement
   participants:
   - Belgium
   - Denmark
@@ -19,29 +17,17 @@ extracted:
   - Switzerland
   - United Kingdom
   - United States of America
-  - ICG
-  - Faure Gnassingbé
-  - Panel of Facilitators
-  - Qatar
-  - ICGLR
-  - MONUSCO
-  - EU Commissioner Lahbib
-  - van de Perre
   topics:
   - rule_of_law
   location: null
-  position: The ICG urges all parties to fully implement their obligations and commitments
-    made under the Washington Accords and the Doha process, emphasizing that there
-    can be no military solution to the conflict.
+  position: The ICG expresses profound concern over ceasefire violations in eastern
+    DRC and urges all parties to recommit to negotiations and respect international
+    law.
   positions:
-    rule_of_law: The ICG calls on all parties to honour international humanitarian
-      law, respect territorial integrity, and stop incitement to hatred, discrimination,
-      or violence, affirming the importance of democratic resilience and the rule
-      of law.
+    rule_of_law: France supports the general adherence to international humanitarian
+      law and commitments made under various accords for peace in the DRC.
   stances:
     rule_of_law:
       score: 1
-      evidence: We urge all parties to fully implement their obligations and commitments
-        made under the Washington Accords and the Doha process and to comply with
-        the relevant UN Security Council resolutions, including resolutions 2773 and
-        2808, and the full respect of territorial integrity.
+      evidence: The ICG calls on all parties to honour their obligations to respect
+        international humanitarian law

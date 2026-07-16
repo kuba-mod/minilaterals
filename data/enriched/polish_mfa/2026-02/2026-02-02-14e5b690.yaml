@@ -4,11 +4,11 @@ issue_areas:
 - ukraine
 - defence
 - hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
-  event_type: speech
+  event_type: meeting
   participants:
   - Radosław Sikorski
   - Espen Barth Eide
@@ -16,28 +16,35 @@ extracted:
   - ukraine
   - defence
   - hybrid
+  - rule_of_law
   location: Oslo, Norway
-  position: Poland emphasizes its strategic focus on the North, committing to deepening
-    bilateral cooperation with Norway to strengthen NATO's defense and deter threats
-    in the Baltic Sea region.
+  position: Poland emphasizes strengthening bilateral cooperation with Norway and
+    advancing collective security measures in response to Russian aggression.
   positions:
-    ukraine: Poland and Norway expressed joint support for Ukraine and stressed the
-      importance of combating the shadow fleet, which poses a real threat to regional
-      security and the Baltic Sea ecosystem.
-    defence: Poland and Norway support strengthening NATO’s defense and deterrence
-      capabilities and expanding the Alliance’s military presence on its eastern and
-      northern flanks.
-    hybrid: Poland highlighted the need for coordinated action against the 'shadow
-      fleet,' emphasizing that it poses a real threat to the Baltic Sea, which requires
-      Norway's increased role in containing it.
+    ukraine: Poland strongly supports Ukraine's defense and stability, calling for
+      immediate action against threats like the shadow fleet.
+    defence: Poland advocates for strengthening NATO's collective defense capabilities
+      and expanding military presence on its flanks through cooperation with partners
+      like Norway.
+    hybrid: Poland stresses the need for coordinated action against regional threats,
+      particularly focusing on the shadow fleet's implications for Baltic security.
+    rule_of_law: Poland emphasizes maintaining democratic resilience and high-level
+      political cooperation with partners on security and economic issues.
   stances:
     ukraine:
-      score: 1
-      evidence: expressed support for embattled Ukraine
+      score: 2
+      evidence: During a joint press conference, the foreign ministers of Poland and
+        Norway expressed support for embattled Ukraine
     defence:
       score: 2
-      evidence: strengthening NATO’s defence and deterrence capabilities and expanding
-        the Alliance’s military presence on its eastern and northern flanks
+      evidence: Norway, which is Poland’s strategic partner in Northern Europe, supports—just
+        as Poland does—strengthening NATO’s defence and deterrence capabilities
     hybrid:
+      score: 2
+      evidence: I encourage Norway to play a bigger role in holding off the shadow
+        fleet. The fleet does not consist of any shadows but clunkers posing a real
+        threat for the Baltic
+    rule_of_law:
       score: 1
-      evidence: Russia’s aggression against Ukraine, geopolitical instability
+      evidence: The two countries share strong political cooperation—including in
+        the fields of security, defence, the economy, and culture.

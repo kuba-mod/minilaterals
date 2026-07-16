@@ -5,35 +5,31 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: joint_statement
   participants:
-  - Dr. Johann Wadephul (Federal Minister for Foreign Affairs of Germany)
-  - Boris Pistorius (Federal Minister of Defence of Germany)
-  - Hon Richard Marles MP (Deputy Prime Minister and Minister for Defence of Australia)
-  - Senator the Hon Penny Wong (Minister for Foreign Affairs of Australia)
+  - Dr. Johann Wadephul, Federal Minister for Foreign Affairs of Germany
+  - Boris Pistorius, Federal Minister of Defence of Germany
+  - Hon Richard Marles MP, Deputy Prime Minister and Minister for Defence of Australia
+  - Senator the Hon Penny Wong, Minister for Foreign Affairs of Australia
   topics:
   - ukraine
   - rule_of_law
-  location: Berlin, Germany
-  position: Germany reaffirms its commitment to international law, condemning aggression
-    against Ukraine and Iran while promoting economic resilience through cooperation
-    between Europe and the Indo-Pacific.
+  location: Berlin
+  position: Germany reaffirms its commitment to international law and stability by
+    coordinating with Australia on security challenges, condemning aggression against
+    Ukraine and Iran.
   positions:
-    ukraine: Germany strongly supports a just and lasting peace for Ukraine, demanding
-      Russia's unconditional withdrawal and maintaining steadfast support via NATO
-      and international pressure.
-    rule_of_law: Germany emphasizes the foundational role of international law in
-      global order, calling for adherence to international law regarding conflicts
-      in the Middle East and trade.
+    ukraine: Germany strongly supports long-term support for Ukraine across military,
+      economic, and diplomatic dimensions until a just and lasting peace is achieved.
+    rule_of_law: Germany emphasizes the foundational importance of international law
+      and rules-based order in addressing global security challenges.
   stances:
     ukraine:
-      score: 2
+      score: 1
       evidence: Ministers unequivocally condemned Russia’s illegal war of aggression
         against Ukraine and demanded its complete and unconditional withdrawal.
     rule_of_law:
-      score: 2
-      evidence: Ministers unequivocally condemned Iran’s dangerous escalations, particularly
-        in and around the Strait of Hormuz, its attacks against merchant vessels,
-        and threats of further attacks.
+      score: 1
+      evidence: Underlined the pivotal role of international law as the foundation
+        of the international order

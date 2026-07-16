@@ -1,26 +1,34 @@
 actors:
-- FR
 - PL
 issue_areas:
 - ukraine
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
   - Deputy Prime Minister Radosław Sikorski
   topics:
   - ukraine
+  - rule_of_law
   location: null
-  position: Poland supports measures aimed at the permanent opening of the Strait
-    of Hormuz, emphasizing the need for de-escalation between Tehran and Washington
-    and continued dialogue.
+  position: Poland supports measures for the permanent opening of the Strait of Hormuz
+    and stresses that continued dialogue and a prolonged truce are necessary to de-escalate
+    tensions.
   positions:
-    ukraine: Poland stresses that continued pressure on Moscow is necessary to prevent
-      it from using global crises to fund its war against Ukraine.
+    ukraine: Poland emphasizes that pressure on Russia is necessary to prevent it
+      from using global crises to fund its war against Ukraine, aligning with long-term
+      support for Ukraine's security.
+    rule_of_law: Poland supports the principle of freedom of navigation and international
+      law by advocating for the clearing of the Strait of Hormuz.
   stances:
     ukraine:
       score: 1
-      evidence: engagement in the Middle East cannot lessen vigilance towards Russia’s
-        aggression against Ukraine.
+      evidence: A continued pressure on Moscow is necessary to prevent it from using
+        global crises to fund its war against Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: The gathering prioritised freedom of navigation without further restrictions
+        and charges, particularly in regard to the shipment of energy supplies, food,
+        and fertilisers.

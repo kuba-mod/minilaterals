@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: speech
   participants:
@@ -13,12 +12,14 @@ extracted:
   - rule_of_law
   location: null
   position: Germany emphasizes the need for global partnerships and shared rules to
-    ensure economic stability and maintain its status as a leading industrial nation.
+    ensure economic stability and security in a fragmented world.
   positions:
-    rule_of_law: Germany stresses the necessity of establishing and adhering to 'shared
-      rules' that apply universally to create a secure foundation for global action.
+    rule_of_law: Germany stresses that adherence to shared rules is essential for
+      maintaining a secure foundation for action and ensuring national interests are
+      protected globally.
   stances:
     rule_of_law:
       score: 2
-      evidence: Shared rules that apply to everyone and create a secure foundation
-        for action.
+      evidence: We must invest, produce, carry out research and training together
+        with partners around the world. This means, among other things, playing by
+        shared rules.

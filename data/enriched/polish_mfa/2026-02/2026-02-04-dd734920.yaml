@@ -3,30 +3,22 @@ actors:
 issue_areas:
 - hybrid
 - rule_of_law
-- enlargement
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
-  participants:
-  - TVP’s Foreign Media Center
+  participants: []
   topics:
   - hybrid
   - rule_of_law
-  - enlargement
   location: null
-  position: Poland supports democratic values and freedom of speech through media
-    initiatives aimed at countering foreign disinformation and promoting EU integration.
+  position: Poland is strengthening its public diplomacy and support for democratic
+    values through media initiatives aimed at countering disinformation in Moldova.
   positions:
-    hybrid: Poland is actively countering hybrid threats, specifically disinformation
-      campaigns inspired by the Russian Federation, to strengthen democratic processes
-      in Moldova.
-    rule_of_law: Poland emphasizes the importance of independent media and access
-      to reliable knowledge to uphold democratic resilience and the rule of law in
-      the region.
-    enlargement: Poland supports Moldova's integration with the European Union and
-      cooperation with EU member states through independent media content.
+    hybrid: Poland actively addresses hybrid threats by launching a Romanian-language
+      media program to counter Russian disinformation in Moldova.
+    rule_of_law: Poland emphasizes the importance of independent media and democratic
+      processes as crucial defenses against foreign influence.
   stances:
     hybrid:
       score: 2
@@ -36,8 +28,5 @@ extracted:
     rule_of_law:
       score: 2
       evidence: Access to independent media is crucial in the face of Russia’s attempts
-        at influencing the democratic processes in Moldova
-    enlargement:
-      score: 1
-      evidence: content devoted to Moldova’s integration with the European Union and
-        cooperation with EU member states.
+        at influencing the democratic processes in Moldova, as evidenced during the
+        2024 presidential vote and the 2025 parliamentary election in the country.

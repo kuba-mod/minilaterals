@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -13,15 +12,14 @@ extracted:
   - Jakub Rutnicki
   topics:
   - rule_of_law
-  location: Warsaw, Poland
-  position: Poland is actively coordinating a comprehensive rescue and repatriation
-    effort for its citizens across the Middle East and Asia, emphasizing the safety
-    and well-being of Polish nationals.
+  location: 'null'
+  position: Poland is actively coordinating a large-scale humanitarian and logistical
+    effort to repatriate its citizens from the Middle East and Asia.
   positions:
-    rule_of_law: The government emphasizes the safety of Polish citizens and the continuous
-      monitoring of the situation, reflecting a commitment to democratic resilience
-      and the rule of law in crisis management.
+    rule_of_law: The government emphasizes the importance of safety, caution, and
+      continuous monitoring in all actions taken for its citizens.
   stances:
     rule_of_law:
-      score: 0
-      evidence: ''
+      score: 1
+      evidence: Every decision is made with the safety of Polish citizens in mind,
+        which requires particular caution.

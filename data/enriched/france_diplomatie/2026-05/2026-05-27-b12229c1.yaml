@@ -4,17 +4,18 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - Kem Sokha
   topics:
   - rule_of_law
   location: null
-  position: France welcomes the partial pardon of Kem Sokha and reaffirms its commitment
-    to the rule of law and democratic pluralism in Cambodia.
+  position: France welcomed the partial pardon granted to Kem Sokha and reiterated
+    its commitment to democratic principles in Cambodia.
   positions:
-    rule_of_law: France rhetorically supports the rule of law and democratic pluralism.
+    rule_of_law: France affirms its support for the rule of law and democratic pluralism
+      globally by welcoming the pardon and reiterating its commitment to these values.
   stances:
     rule_of_law:
       score: 1

@@ -3,34 +3,39 @@ actors:
 issue_areas:
 - hybrid
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
-  - Henryka Mościcka-Dendys
-  - European External Action Service
-  - General Secretariat of the Council
+  - Head of the Foreign Service and Director-General Henryka Mościcka-Dendys
   topics:
   - hybrid
   - enlargement
+  - rule_of_law
   location: null
-  position: Poland emphasized the threat posed by Russia and the need for a collective
-    European response to hybrid operations during a meeting of EU State Secretaries.
+  position: Poland emphasized that Russia is the primary threat to Europe and stressed
+    the need for a joint European effort to build resilience against hybrid operations.
   positions:
-    hybrid: Poland rhetorically supports a coordinated European effort to build resilience
-      against Russian and Belarusian hybrid threats and disinformation.
-    enlargement: Poland participated in discussions regarding the EU enlargement policy.
+    hybrid: Poland strongly advocates for coordinated action across the EU to counter
+      disinformation and other hybrid threats originating from Russia and Belarus.
+    enlargement: Poland's delegate was present at discussions concerning EU enlargement
+      policy.
+    rule_of_law: Poland stressed the importance of a joint European effort to build
+      resilience against disinformation and hybrid operations, aligning with foundational
+      principles of democratic security.
   stances:
     hybrid:
       score: 1
-      evidence: a joint effort of the whole European community is required to build
-        resilience to Russian and Belarusian disinformation-related and other hybrid
-        operations
+      evidence: she emphasised that Russia remains the principal threat for Europe,
+        and a joint effort of the whole European community is required to build resilience
+        to Russian and Belarusian disinformation-related and other hybrid operations.
     enlargement:
       score: 0
-      evidence: the meeting’s agenda included a presentation of the Irish presidency’s
-        priorities for the coming six months, matters concerning negotiations of the
-        2028–2034 Multiannual Financial Framework, the EU enlargement policy, competitiveness,
-        and the common market
+      evidence: the meeting’s agenda included... the EU enlargement policy
+    rule_of_law:
+      score: 1
+      evidence: a joint effort of the whole European community is required to build
+        resilience to Russian and Belarusian disinformation-related and other hybrid
+        operations.

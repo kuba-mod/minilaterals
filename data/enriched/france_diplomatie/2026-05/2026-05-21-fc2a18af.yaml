@@ -1,28 +1,25 @@
 actors:
-- DE
 - FR
-- PL
 issue_areas:
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: true
-weimar_score: 0.3
+trilateral_signal: false
 extracted:
   event_type: joint_statement
   participants:
-  - Inter-Regional Task Force
-  - United Nations Member States
+  - 41 Members of the Inter-Regional Task Force
   topics:
   - rule_of_law
-  location: Paris, France
-  position: France and 40 other nations call for the universal abolition of the death
-    penalty, citing it as a violation of human dignity and international human rights
-    law.
+  location: null
+  position: France and its partners strongly oppose the death penalty in all cases,
+    calling for universal abolition and supporting international efforts to uphold
+    human dignity.
   positions:
-    rule_of_law: France advances the rule of law and human rights by advocating for
-      the universal abolition of the death penalty and opposing its use in all circumstances.
+    rule_of_law: The statement affirms a commitment to fundamental human rights by
+      opposing capital punishment, which is considered contrary to human dignity and
+      the right to life.
   stances:
     rule_of_law:
       score: 2
-      evidence: We call for the universal abolition of the death penalty and commend
-        the efforts undertaken worldwide towards this objective.
+      evidence: The death penalty is inhumane and degrading, contrary to human dignity,
+        without any deterring effect.

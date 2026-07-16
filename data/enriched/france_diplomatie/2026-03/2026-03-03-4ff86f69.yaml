@@ -1,25 +1,15 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot
   - Nawaf Salam
-  topics:
-  - rule_of_law
+  topics: []
   location: null
   position: France expressed solidarity with Lebanon and called for Lebanese authorities
-    to implement decisions to protect sovereignty and stability.
-  positions:
-    rule_of_law: France emphasized the need to protect Lebanon's sovereignty, stability,
-      and territorial integrity, aligning with the foundational principles of democratic
-      resilience and the rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: protect Lebanon’s sovereignty and stability
+    to implement decisions aimed at protecting sovereignty and stability.
+  positions: {}
+  stances: {}

@@ -4,20 +4,17 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants:
-  - France
+  participants: []
   topics:
   - rule_of_law
   location: null
   position: France strongly condemns the air strike on a Kabul hospital and emphasizes
-    that international humanitarian law must ensure the protection of civilian populations.
+    adherence to international humanitarian law.
   positions:
-    rule_of_law: France affirms the importance of international humanitarian law and
-      the protection of civilian populations, aligning with the foundational principles
-      of democratic resilience and the rule of law.
+    rule_of_law: France stresses that international humanitarian law must be upheld
+      to ensure the protection of civilian populations.
   stances:
     rule_of_law:
       score: 1

@@ -1,7 +1,26 @@
 actors:
 - FR
-issue_areas: []
-weimar_relevant: false
+issue_areas:
+- rule_of_law
+weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Sayyid Badr Albusaidi
+  topics:
+  - rule_of_law
+  location: Muscat, Oman
+  position: France emphasized the need for de-escalation, a diplomatic solution to
+    regional conflicts, and guaranteed freedom of navigation in the Strait of Hormuz.
+  positions:
+    rule_of_law: France stresses the importance of addressing threats posed by Iran's
+      nuclear ambitions and destabilization activities through diplomacy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Minister emphasized that a diplomatic solution was essential in
+        order to guarantee that Iran never acquires nuclear weapons and to address
+        the threats posed by its ballistic and drone programmes and its destabilization
+        activities.

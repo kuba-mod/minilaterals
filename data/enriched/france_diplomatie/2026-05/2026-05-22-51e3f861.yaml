@@ -3,31 +3,58 @@ actors:
 issue_areas:
 - ukraine
 - defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Maria Malmer Stenergard
   topics:
   - ukraine
   - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
   location: Helsingborg, Sweden
-  position: France strengthens its strategic partnership with Sweden through naval
-    defense cooperation and shared priorities on European security.
+  position: France reaffirmed its strategic partnership with Sweden and emphasized
+    joint efforts on European security, the Ukraine crisis, and the broader European
+    agenda.
   positions:
-    ukraine: France reaffirms its commitment to supporting Ukraine as part of its
-      European agenda priorities.
-    defence: France actively advances European defense capabilities through the sale
-      of Naval Group frigates to Sweden to modernize its navy.
+    ukraine: France stresses continued support for Ukraine as a key priority in the
+      European agenda.
+    defence: France highlights mutual trust and cooperation through defense industry
+      choices between France and Sweden.
+    hybrid: France does not explicitly address hybrid threats in the provided text.
+    enlargement: France does not explicitly address EU enlargement in the provided
+      text.
+    green_transition: France does not explicitly address green transition goals in
+      the provided text.
+    rule_of_law: France does not explicitly address rule of law or democratic resilience
+      in the provided text.
   stances:
     ukraine:
       score: 1
       evidence: took stock of the priorities on the European agenda, particularly
         as regards support for Ukraine
     defence:
-      score: 2
-      evidence: welcomed Sweden’s choice of Naval Group’s Defence and Intervention
-        Frigate for modernizing its navy
+      score: 1
+      evidence: The Minister welcomed Sweden’s choice of Naval Group’s Defence and
+        Intervention Frigate for modernizing its navy.
+    hybrid:
+      score: 0
+      evidence: ''
+    enlargement:
+      score: 0
+      evidence: ''
+    green_transition:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 0
+      evidence: ''

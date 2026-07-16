@@ -3,9 +3,11 @@ actors:
 issue_areas:
 - ukraine
 - defence
+- hybrid
+- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -14,22 +16,38 @@ extracted:
   topics:
   - ukraine
   - defence
-  location: Brussels, Belgium
-  position: France supports strengthening the European pillar of NATO through increased
-    European defense capabilities and burden-sharing with the US, while maintaining
-    support for Ukraine and advanced deterrence.
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Brussels
+  position: France reaffirmed its commitment to strengthening NATO's European pillar
+    through increased defense cooperation and continued support for Ukraine.
   positions:
-    ukraine: France stressed the importance of continuing support for Ukraine and
-      the progress made by the Coalition of the Willing, aligning with the goal of
-      long-term support until a just and lasting peace is achieved.
-    defence: France underscored the European commitment to strengthen its own defenses
-      and engage in burden-sharing with the United States, thereby shoring up the
-      Alliance’s European pillar and complementing NATO's mission.
+    ukraine: France strongly supports the long-term military, economic, and diplomatic
+      support for Ukraine until a lasting peace is achieved.
+    defence: France advocates for strengthening European defenses and increasing burden-sharing
+      with the US to bolster NATO's collective defense posture.
+    hybrid: France emphasizes the need for coordinated action regarding global deterrence
+      and advanced military capabilities complementary to NATO’s nuclear mission.
+    enlargement: France supports the EU's broader goals by emphasizing the role of
+      the European Union in strengthening its own defenses and global pillar.
+    rule_of_law: France stresses the importance of maintaining democratic resilience
+      and stability through robust defense mechanisms.
   stances:
     ukraine:
       score: 1
       evidence: stressed the importance of continuing our support for Ukraine
     defence:
-      score: 2
+      score: 1
       evidence: underscored the European commitment to strengthen its own defenses
         and engage in burden-sharing with the United States
+    hybrid:
+      score: 0
+      evidence: addressed the main announcements that were made with regard to advanced
+        deterrence
+    enlargement:
+      score: 0
+      evidence: noted the key role played by the European Union in this regard
+    rule_of_law:
+      score: 1
+      evidence: All of these efforts serve to shore up the Alliance’s European pillar

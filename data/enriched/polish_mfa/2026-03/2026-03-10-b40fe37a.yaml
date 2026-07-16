@@ -7,7 +7,6 @@ issue_areas:
 - enlargement
 weimar_relevant: true
 trilateral_signal: true
-weimar_score: 0.95
 extracted:
   event_type: joint_statement
   participants:
@@ -18,23 +17,22 @@ extracted:
   - rule_of_law
   - enlargement
   location: null
-  position: Poland, as part of the Weimar Triangle, expressed deep concern over new
-    Georgian legislation, viewing it as a repressive measure that undermines democratic
-    freedoms and EU commitments.
+  position: The three ministers expressed deep concern over Georgia's new legislation
+    on foreign funding and political activities, viewing it as a repressive measure
+    that undermines democratic principles and the EU accession process.
   positions:
-    rule_of_law: The statement condemns the new Georgian legislation as infringing
-      on freedoms of association and expression, weakening the rule of law, and putting
-      pressure on independent civil society.
-    enlargement: The statement criticizes Georgia's actions, noting that its course
-      since 2024 has brought the EU accession process to a de facto halt, aligning
-      with the goal of supporting EU accession processes.
+    rule_of_law: Poland strongly affirms the importance of rule of law by criticizing
+      Georgian laws for infringing on civil liberties and weakening democratic standards.
+    enlargement: Poland supports the EU's commitment to enlargement by criticizing
+      Georgia for actions that have stalled its path toward European integration.
   stances:
     rule_of_law:
       score: 1
-      evidence: We fully endorse the statement made by the High Representative of
-        the Union for Foreign Affairs and Security Policy on 6 March 2026.
+      evidence: The new amendments extend state control over political and societal
+        activities in Georgia to an unprecedented level and infringe on the freedoms
+        of association and expression.
     enlargement:
       score: 1
-      evidence: reaffirm our steadfast support for the Georgian people and civil society
-        organisations who have been steadily working for the democratic and European
-        future of Georgia.
+      evidence: Through those new regulations, the Georgian authorities consciously
+        breach the commitments undertaken by Georgia vis-à-vis the European Union,
+        in particular through the Association Agreement with the European Union.

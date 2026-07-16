@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France strongly condemns the Iranian drone strike against Azerbaijan and
+    affirms its support for Azerbaijan's sovereignty.
+  positions:
+    rule_of_law: France emphasizes adherence to international law in condemning the
+      attack on Azerbaijan.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: "which is a flagrant violation of Azerbaijan’s sovereignty and of\t\
+        international law."

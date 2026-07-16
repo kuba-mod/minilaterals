@@ -5,21 +5,22 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - France
+  - Germany
   topics:
   - rule_of_law
   location: null
-  position: France is expanding its joint cultural diplomacy with Germany through
-    the opening of new cultural institutes to promote democratic and humanist values.
+  position: France and Germany are strengthening their bilateral cultural cooperation
+    to promote mutual understanding, democratic values, and European openness.
   positions:
-    rule_of_law: France actively advances democratic resilience and the rule of law
-      by establishing joint cultural venues dedicated to sustaining humanist values
-      and open debate.
+    rule_of_law: The joint initiative emphasizes the importance of culture and language
+      as essential tools for affirming democratic values and promoting freedom.
   stances:
     rule_of_law:
-      score: 2
-      evidence: foster intercultural dialogue and sustain the democratic and humanist
-        values underpinning our partnership
+      score: 1
+      evidence: France and Germany share the strong belief that culture and language
+        are essential levers of mutual understanding, the affirmation of democratic
+        values and the defence of freedom in the service of peace.

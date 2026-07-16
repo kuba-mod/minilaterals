@@ -1,35 +1,23 @@
 actors:
 - PL
 issue_areas:
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Minister Sikorski
   - Deputy Prime Minister Xavier Bettel
   topics:
-  - defence
   - rule_of_law
   location: null
-  position: Poland emphasizes the importance of NATO's role and transatlantic cooperation
-    while strengthening bilateral ties with Luxembourg to build a common position
-    in wider cooperation fora.
+  position: Poland emphasized the importance of transatlantic cooperation and bilateral
+    relations with Luxembourg while affirming commitment to European values.
   positions:
-    defence: Poland supports a strong EU defence capability complementary to NATO,
-      emphasizing collective security and the strengthening of Central Europe's security.
-    rule_of_law: Poland and Luxembourg affirm democratic resilience and European values,
-      including measures against discrimination and respect for equality and human
-      dignity.
+    rule_of_law: Poland supports foundational European values such as democracy, equality,
+      and human dignity through its engagement with partners like Luxembourg.
   stances:
-    defence:
-      score: 1
-      evidence: Minister Sikorski said that decisions made by Deputy Prime Minister
-        Bettel helped strengthen the security of Central Europe and confirmed solidarity
-        with countries in the region.
     rule_of_law:
       score: 1
       evidence: Minister Sikorski thanked Minister Bettel for his engagement in promoting

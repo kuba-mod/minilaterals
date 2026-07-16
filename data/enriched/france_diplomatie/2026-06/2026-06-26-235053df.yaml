@@ -3,5 +3,13 @@ actors:
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: statement
+  participants:
+  - French authorities
+  topics: []
+  location: null
+  position: France regrets Burkina Faso's decision to break off diplomatic relations
+    and is considering reciprocal measures while prioritizing the safety of its citizens.
+  positions: {}
+  stances: {}

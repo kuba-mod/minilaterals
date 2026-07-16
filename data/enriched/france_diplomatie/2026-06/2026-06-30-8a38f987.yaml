@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: speech
   participants:
@@ -12,13 +11,13 @@ extracted:
   - Robert Badinter
   topics:
   - rule_of_law
-  location: Paris, France
+  location: Paris
   position: France strongly advocates for the global abolition of the death penalty
-    and supports international efforts to uphold human dignity.
+    as a matter of human dignity and international justice.
   positions:
-    rule_of_law: France affirms the importance of human rights and the rule of law
-      by advocating for the universal abolition of capital punishment, which is deemed
-      devoid of moral or legal justification.
+    rule_of_law: France emphasizes that the death penalty is fundamentally unjust,
+      discriminatory, and has no legal or moral justification, advocating for its
+      universal abolition.
   stances:
     rule_of_law:
       score: 2

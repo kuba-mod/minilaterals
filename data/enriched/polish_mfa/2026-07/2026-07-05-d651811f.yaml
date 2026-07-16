@@ -1,8 +1,17 @@
 actors:
-- FR
 - PL
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.15
-extracted: null
+extracted:
+  event_type: meeting
+  participants:
+  - honorary consuls
+  - Małgorzata Kidawa-Błońska
+  - Władysław Teofil Bartoszewski
+  topics: []
+  location: null
+  position: The meeting focused on enhancing Poland's global brand and the vital role
+    of honorary consuls in supporting Polish diplomatic and economic interests abroad.
+  positions: {}
+  stances: {}

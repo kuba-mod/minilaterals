@@ -5,31 +5,22 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: statement
   participants:
-  - Poland
   - G7 leaders
-  - Australia
-  - New Zealand
-  - NATO
-  - the Netherlands
-  - Sweden
   topics:
   - hybrid
   - rule_of_law
   location: null
-  position: Poland's accession to the G7 RRM strengthens collective resilience by
-    bringing unique expertise in countering foreign interference, particularly in
-    informational and cyber domains.
+  position: Poland strengthens international cooperation by joining the G7 Rapid Response
+    Mechanism to enhance collective resilience against hybrid threats and disinformation.
   positions:
-    hybrid: Poland's membership will enable better information sharing and coordinated
-      actions to counter hybrid threats, including disinformation campaigns and foreign
-      interference.
-    rule_of_law: Poland's participation reflects the international community's confidence
-      in its democratic security experience and commitment to upholding a rules-based
-      international order.
+    hybrid: Poland actively contributes to countering hybrid threats through its expertise
+      in informational and cyber domains, strengthening collective security efforts.
+    rule_of_law: Poland's participation reflects confidence in its democratic security
+      experience and supports the foundational principles of democracy and rule of
+      law.
   stances:
     hybrid:
       score: 2

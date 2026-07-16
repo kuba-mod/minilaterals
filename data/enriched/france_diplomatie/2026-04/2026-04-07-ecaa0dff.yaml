@@ -4,21 +4,18 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - France
+  - World Health Organization
   topics:
   - rule_of_law
   location: null
   position: France demands the immediate resumption and scaling up of WHO medical
-    evacuations from Gaza, while condemning attacks on humanitarian workers and reaffirming
-    adherence to international law.
+    evacuations from Gaza while condemning attacks on humanitarian workers.
   positions:
-    rule_of_law: France emphasizes that all parties must guarantee the protection
-      of humanitarian workers and act in compliance with international humanitarian
-      law, affirming the rule of law.
+    rule_of_law: France emphasizes adherence to international law regarding humanitarian
+      operations and worker protection.
   stances:
     rule_of_law:
       score: 1

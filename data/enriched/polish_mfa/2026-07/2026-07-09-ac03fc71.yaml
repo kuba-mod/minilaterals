@@ -2,33 +2,40 @@ actors:
 - FR
 - PL
 issue_areas:
-- ukraine
 - defence
+- rule_of_law
+- ukraine
 weimar_relevant: true
 trilateral_signal: true
-weimar_score: 0.75
 extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
   - Jean-Noël Barrot
   topics:
-  - ukraine
   - defence
+  - rule_of_law
+  - ukraine
   location: null
-  position: Poland seeks to deepen its strategic partnership with France to strengthen
-    European security and economic cooperation.
+  position: Poland emphasizes its strategic partnership with France and seeks coordinated
+    cooperation on security, economy, and international issues.
   positions:
-    ukraine: Poland continues to discuss and address security risks concerning Ukraine
-      with its French counterpart.
-    defence: Poland aims to enhance defence cooperation with France as a core pillar
-      of European security architecture.
+    defence: Poland supports building a stronger European security architecture with
+      France as a core pillar.
+    rule_of_law: Poland stresses the importance of maintaining unity among European
+      countries regarding fundamental values and democratic resilience.
+    ukraine: Poland highlights current security risks in Ukraine as a key area for
+      discussion with its strategic partner France.
   stances:
-    ukraine:
-      score: 1
-      evidence: The ministers also discussed current security risks, including in
-        the Middle East and Ukraine.
     defence:
       score: 1
-      evidence: They pledged to continue a close political dialogue and enhance cooperation
-        in key areas, including economy, defence, and culture.
+      evidence: We’ll have to build a stronger European security architecture with
+        France and Poland as core pillars.
+    rule_of_law:
+      score: 1
+      evidence: the head of French diplomacy spoke about security and pointed out
+        that European countries must stay united.
+    ukraine:
+      score: 0
+      evidence: The ministers also discussed current security risks, including in
+        the Middle East and Ukraine.

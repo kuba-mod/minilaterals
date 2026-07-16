@@ -1,23 +1,22 @@
 actors:
 - FR
 issue_areas:
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants: []
   topics:
-  - defence
+  - rule_of_law
   location: null
-  position: France strongly condemns drone attacks on the UAE's Barakah nuclear plant
-    and reaffirms its commitment to the security and territorial integrity of its
-    Middle Eastern partners.
+  position: France condemns drone attacks on civilian nuclear facilities and reaffirms
+    its commitment to diplomatic solutions for regional crises.
   positions:
-    defence: France aligns with collective security goals by committing to contribute
-      to the defense of a strategic partner's territory.
+    rule_of_law: France emphasizes adherence to international law regarding civilian
+      infrastructure and supports democratic resilience through condemnation of attacks.
   stances:
-    defence:
-      score: 2
-      evidence: remains fully committed to contributing to the defense of its territory
+    rule_of_law:
+      score: 1
+      evidence: calls on all nations to abide by their obligations in this regard,
+        particularly with respect to humanitarian law

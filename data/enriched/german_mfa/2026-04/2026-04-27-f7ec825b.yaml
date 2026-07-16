@@ -2,34 +2,22 @@ actors:
 - DE
 issue_areas:
 - rule_of_law
-- green_transition
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Minister of State Hahn
-  - ASEAN
-  - EU
   topics:
   - rule_of_law
-  - green_transition
   location: Brunei
-  position: Germany emphasizes the need for resilient, long-term partnerships and
-    stable supply chains to advance the EU-ASEAN relationship toward a comprehensive
-    strategic partnership.
+  position: Germany emphasizes the importance of shared values, trade expansion, and
+    resilient partnerships between ASEAN and the EU.
   positions:
-    rule_of_law: Germany stresses commitment to a rules-based international order,
-      international law, and multilateralism, ensuring legal certainty and reliable
-      investment conditions.
-    green_transition: Germany highlights the importance of expanding renewable energies
-      and the ongoing EU support for the ASEAN energy grid.
+    rule_of_law: Germany stresses commitment to a rules-based international order
+      and multilateralism as foundational principles for cooperation.
   stances:
     rule_of_law:
       score: 1
-      evidence: committed to a rules-based international order, to international law
-        and to multilateralism
-    green_transition:
-      score: 1
-      evidence: other measures to expand renewable energies
+      evidence: We are both committed to a rules-based international order, to international
+        law and to multilateralism.

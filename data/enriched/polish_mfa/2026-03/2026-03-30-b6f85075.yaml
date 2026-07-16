@@ -2,33 +2,49 @@ actors:
 - PL
 issue_areas:
 - defence
-- ukraine
+- hybrid
+- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - deputy head of Polish diplomacy
   topics:
   - defence
-  - ukraine
+  - hybrid
+  - enlargement
+  - rule_of_law
   location: null
-  position: Poland emphasizes that active approaches, enhanced by NATO and Baltic
-    cooperation, are vital to increasing Europe's defense potential and supporting
-    Ukraine against Russian aggression.
+  position: Poland emphasizes the need for intensive efforts and active approaches
+    to enhance European security through cooperation with allies and partners.
   positions:
-    defence: Poland supports a stronger EU defense capability complementary to NATO,
-      highlighting the vital role of projects like the Eastern Flank Watch and bilateral
-      cooperation for collective security.
-    ukraine: Poland supports Ukraine's fight against Russian aggression, emphasizing
-      the need to mobilize national and European resources to increase Europe's defense
-      potential.
+    defence: Poland supports strengthening EU defense capabilities complementary to
+      NATO, particularly focusing on eastern flank deterrence and collective security.
+    hybrid: Poland stresses the necessity of mobilizing resources to increase Europe's
+      defense potential in the face of global instability.
+    enlargement: Poland supports strengthening bilateral cooperation with Finland
+      for future political and military partnership.
+    rule_of_law: Poland emphasizes the importance of active approaches to enhance
+      security in response to aggressive acts.
   stances:
     defence:
-      score: 2
-      evidence: projects carried out by the Baltic countries and NATO’s whole eastern
-        flank play a vital role
-    ukraine:
-      score: 2
-      evidence: support Ukraine in its fight against Russian aggression
+      score: 1
+      evidence: In this context, projects carried out by the Baltic countries and
+        NATO’s whole eastern flank play a vital role that is complementary to building
+        national resilience and allied deterrence capabilities.
+    hybrid:
+      score: 1
+      evidence: In the face of growing instability in other parts of the world, mobilising
+        national and European resources is necessary to increase Europe’s defence
+        potential
+    enlargement:
+      score: 0
+      evidence: The officials also pointed out that bilateral cooperation may contribute
+        to the strengthening of European defence potential of Poland and Finland and
+        holds promising prospects for the future.
+    rule_of_law:
+      score: 1
+      evidence: They acknowledged that amid Russia’s aggressive acts only active approach
+        can enhance our security.

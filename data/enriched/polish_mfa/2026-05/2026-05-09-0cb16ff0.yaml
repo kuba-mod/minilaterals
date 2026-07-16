@@ -2,50 +2,56 @@ actors:
 - PL
 issue_areas:
 - defence
-- ukraine
+- hybrid
+- enlargement
 - green_transition
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
   - Poland
   topics:
   - defence
-  - ukraine
+  - hybrid
+  - enlargement
   - green_transition
   - rule_of_law
-  location: 'null'
-  position: Poland emphasizes that EU membership is crucial for economic prosperity,
-    security, and global standing, highlighting its active role in strengthening the
-    Union's resilience and development.
+  location: null
+  position: Poland emphasizes its crucial role in the EU's economic and security stability,
+    highlighting both its contributions to defense and its commitment to European
+    integration.
   positions:
-    defence: Poland supports a stronger EU defence capability by allocating PLN 200
-      billion to defence and hosting the headquarters of Frontex to protect external
-      borders.
-    ukraine: Poland has played a key role in responding to crises by welcoming a million
-      refugees from Ukraine and protecting the EU’s eastern border.
-    green_transition: Poland supports the development of renewable energy sources
-      that are not reliant on fuel imports from abroad.
-    rule_of_law: Poland benefits from common regulations and uniform standards, which
-      protect consumers and ensure a predictable environment for businesses.
+    defence: Poland actively supports strengthening EU defense capabilities by allocating
+      significant national resources and hosting key border protection agencies.
+    hybrid: Poland advocates for collective security and resilience against crises
+      by citing its role in border protection and energy diversification.
+    enlargement: Poland supports the broader integration and stability of the region
+      by emphasizing its role as a key beneficiary and contributor to the EU market.
+    green_transition: Poland supports the transition to sustainable energy sources
+      by promoting renewable energy that reduces reliance on foreign fuel imports.
+    rule_of_law: Poland highlights the benefits of common EU regulations and standards
+      for protecting consumers and ensuring predictable business environments.
   stances:
     defence:
       score: 2
       evidence: Poland has allocated PLN 200 billion to defence, and Warsaw is home
         to the headquarters of Frontex, the agency responsible for protecting the
         EU’s external borders.
-    ukraine:
+    hybrid:
       score: 2
-      evidence: Poland has played a key role in responding to crises by welcoming
-        a million refugees from Ukraine, protecting the EU’s eastern border
-    green_transition:
+      evidence: Experience of the recent years has shown that the EU offers not only
+        long-term development benefits, but also effective measures for responding
+        to crises—from the pandemic and the energy crisis to the war in Ukraine.
+    enlargement:
       score: 1
+      evidence: EU membership is about much more than just European funds.
+    green_transition:
+      score: 2
       evidence: We support the development of renewable energy sources that are not
         reliant on fuel imports from abroad.
     rule_of_law:
-      score: 1
+      score: 2
       evidence: Thanks to common regulations, consumers in Europe are better protected
         and businesses operate in a predictable environment.

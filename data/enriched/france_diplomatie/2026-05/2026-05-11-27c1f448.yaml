@@ -1,17 +1,15 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - French Minister for Europe and Foreign Affairs
   topics: []
   location: Beirut, Lebanon
-  position: France has provided €17 million in humanitarian assistance and nearly
-    100 tons of medical equipment to support displaced populations in Lebanon.
+  position: France continues to provide extensive humanitarian assistance to Lebanon
+    in partnership with international organizations and NGOs.
   positions: {}
   stances: {}

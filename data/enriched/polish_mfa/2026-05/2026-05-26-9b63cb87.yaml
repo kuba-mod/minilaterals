@@ -6,28 +6,25 @@ issue_areas:
 - enlargement
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
   - Ignacy Niemczycki
-  - ministers from the Friends of Cohesion group
-  - Ministers for the Future
+  - Deputy Minister Ignacy Niemczycki
   topics:
   - ukraine
   - defence
   - enlargement
   location: Brussels
-  position: Poland advocated for intensified support for Ukraine, strengthened EU
-    eastern flank defense, and accelerated EU enlargement during the General Affairs
-    Council meeting.
+  position: Poland emphasized the need for comprehensive support for Ukraine, strengthening
+    EU defense policy on its eastern flank, and advancing accession negotiations.
   positions:
-    ukraine: Poland actively pushes for concrete financial and security commitments
-      for Ukraine, including a 90 billion EUR loan and energy sector sanctions.
-    defence: Poland supports strengthening the EU's collective security with a specific
-      focus on the eastern flank.
-    enlargement: Poland supports the rapid acceleration of Ukraine's EU accession
-      process.
+    ukraine: Poland strongly advocates for continued and immediate financial and security
+      support for Ukraine, including specific loans and sanctions against Russia.
+    defence: Poland stresses the necessity of further development within EU defense
+      policy, specifically focusing on strengthening the eastern flank.
+    enlargement: Poland supports the rapid advancement of Ukraine's accession process
+      by pushing for the opening of negotiations in the 'Fundamentals' cluster.
   stances:
     ukraine:
       score: 2
@@ -36,9 +33,9 @@ extracted:
         and third countries
     defence:
       score: 1
-      evidence: stressed the need for further work within EU defence policy, in particular
-        strengthening the EU’s eastern flank
+      evidence: He also stressed the need for further work within EU defence policy,
+        in particular strengthening the EU’s eastern flank.
     enlargement:
       score: 1
-      evidence: the rapid opening of accession negotiations in the “Fundamentals”
-        cluster
+      evidence: as well as the rapid opening of accession negotiations in the “Fundamentals”
+        cluster.

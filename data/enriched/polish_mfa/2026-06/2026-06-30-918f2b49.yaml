@@ -4,10 +4,8 @@ actors:
 issue_areas:
 - ukraine
 - enlargement
-- defence
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: communique
   participants:
@@ -16,29 +14,21 @@ extracted:
   topics:
   - ukraine
   - enlargement
-  - defence
-  location: Warsaw, Poland
-  position: Poland aims to deepen its strategic partnership with France across economic,
-    defense, energy, and cultural sectors while supporting EU enlargement and Ukraine's
-    recovery.
+  location: Warsaw
+  position: Poland aims to enhance its strategic partnership with France by developing
+    joint projects in economic, defense, energy, and culture, while also addressing
+    major EU topics like Ukraine's recovery and enlargement.
   positions:
-    ukraine: Poland affirms the importance of arrangements made during the Ukraine
-      Recovery Conference for Ukraine's future.
-    enlargement: Poland supports discussions on the EU enlargement process.
-    defence: Poland encourages French partners to explore Polish defense industry
-      capabilities and participate in planned infrastructural investments.
+    ukraine: Poland supports the crucial arrangements made for Ukraine during the
+      Recovery Conference.
+    enlargement: Poland is engaged in discussions regarding the EU enlargement process.
   stances:
     ukraine:
       score: 1
       evidence: The interlocutors agreed that arrangements made during the event are
         crucial for Ukraine.
     enlargement:
-      score: 1
+      score: 0
       evidence: The talks also focused on major European Union topics, including the
         ongoing work on the future Multiannual Financial Framework and the EU enlargement
         process.
-    defence:
-      score: 2
-      evidence: encouraging the partners to learn about what Poland has to offer as
-        regards its defence industry and digital transition solutions, and to take
-        part in planned investments, including infrastructural ones.

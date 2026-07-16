@@ -4,22 +4,21 @@ issue_areas:
 - ukraine
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs (France)
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Marco Rubio, United States Secretary of State
   topics:
   - ukraine
   location: null
-  position: France reviewed regional security issues with the US, reaffirming its
-    commitment to Lebanese sovereignty and discussing preparations for the NATO summit.
+  position: France reaffirmed its commitment to supporting Lebanese sovereignty and
+    security while discussing the situation in Ukraine with the US.
   positions:
-    ukraine: France discussed the situation in Ukraine following constructive talks
-      at the G7 summit, indicating continued diplomatic engagement on the issue.
+    ukraine: France discussed the ongoing situation in Ukraine following constructive
+      talks at the G7 summit.
   stances:
     ukraine:
-      score: 1
+      score: 0
       evidence: Together they discussed the situation in Ukraine in the wake of the
         constructive talks held at the G7 summit in Evian.

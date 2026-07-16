@@ -3,33 +3,44 @@ actors:
 - FR
 issue_areas:
 - defence
+- hybrid
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: statement
   participants:
-  - Cornelia Woll
   - Olivier Schmitt
+  - Zachary Parolin
+  - Cornelia Woll
   topics:
   - defence
+  - hybrid
   - rule_of_law
   location: Berlin/Paris
-  position: France emphasizes the importance of intellectual research and Franco-German
-    cooperation to strengthen European security and democratic resilience.
+  position: France emphasizes the shared commitment of France and Germany to intellectual
+    excellence and democratic dialogue to strengthen a more united and resilient Europe.
   positions:
-    defence: France rhetorically supports the necessity of research into security
-      and defence to renew the European public debate during geopolitical upheaval.
-    rule_of_law: France expresses a shared commitment to democratic dialogue and the
-      preservation of democratic values as a foundation for a resilient Europe.
+    defence: The text supports strengthening EU defense capabilities by emphasizing
+      the need for advancing the security, freedom, and prosperity of the continent.
+    hybrid: France calls for coordinated action against hybrid threats by stressing
+      that research and critical thinking on international cooperation are more essential
+      than ever in times of profound uncertainty.
+    rule_of_law: France affirms democratic resilience and the rule of law by highlighting
+      that the prize reflects shared commitment to intellectual excellence and democratic
+      dialogue.
   stances:
     defence:
       score: 1
+      evidence: It is our common duty to advance the security, freedom and prosperity
+        of our continent.
+    hybrid:
+      score: 1
       evidence: research and critical thinking on security, defence and international
         cooperation are more essential than ever to renew and deepen the European
-        public debate
+        public debate.
     rule_of_law:
       score: 1
-      evidence: the commitment to our European and democratic values is more needed
-        than ever
+      evidence: the Henrik Enderlein Prize is an expression of France’s and Germany’s
+        shared commitment to intellectual excellence, democratic dialogue and the
+        strengthening of a more united and resilient Europe.

@@ -1,31 +1,22 @@
 actors:
 - DE
 issue_areas:
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
   topics:
-  - defence
   - rule_of_law
   location: São Paulo, Brazil
-  position: Germany emphasizes the strategic importance of the EU-Mercosur agreement
-    as a milestone for rules-based trade and democratic cooperation.
+  position: Germany emphasizes the importance of open, rules-based trade and democratic
+    values as demonstrated by the EU-Mercosur agreement.
   positions:
-    defence: Germany is actively pursuing industrial and economic ties in the defence
-      sector with Brazil.
-    rule_of_law: Germany rhetorically supports the alliance of democracies committed
-      to the rule of law through the EU-Mercosur partnership.
+    rule_of_law: Germany stresses that maintaining adherence to international law
+      and democratic principles is crucial for global economic stability and cooperation.
   stances:
-    defence:
-      score: 1
-      evidence: I’m accompanied on this trip by a sizeable business delegation – from
-        important sectors of German industry, such as energy, commodities and defence.
     rule_of_law:
       score: 1
       evidence: it demonstrates that we will stand together as democracies committed

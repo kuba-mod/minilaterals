@@ -7,13 +7,12 @@ issue_areas:
 - hybrid
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: true
-weimar_score: 0.85
+trilateral_signal: false
 extracted:
   event_type: joint_statement
   participants:
   - Foreign Ministers of the Federal Republic of Germany
-  - Republic of Poland
+  - Foreign Ministers of the Republic of Poland
   topics:
   - ukraine
   - defence
@@ -21,18 +20,16 @@ extracted:
   - rule_of_law
   location: null
   position: Germany and Poland affirm their commitment to strengthening European security
-    through cooperation, particularly in response to Russian aggression, while emphasizing
-    adherence to democratic values.
+    through joint action, particularly in response to Russian aggression.
   positions:
-    ukraine: The declaration commits to supporting a just and lasting peace for Ukraine,
-      viewing it as essential for strengthening European security.
+    ukraine: The declaration commits to supporting a just and lasting peace in Ukraine
+      while acknowledging the need for regional responsibility.
     defence: Germany strongly supports enhancing collective defense capabilities,
-      exemplified by the new German-Polish Agreement on Defence Cooperation to secure
-      the eastern flank.
-    hybrid: Germany calls for coordinated resilience and action against hybrid threats,
-      including disinformation campaigns aimed at undermining public order.
-    rule_of_law: Germany affirms that protecting European values, including the rule
-      of law and free elections, remains a core priority for regional stability.
+      exemplified by the new German-Polish Defence Cooperation Agreement.
+    hybrid: The declaration calls for enhanced resilience and coordinated action against
+      Russia's hybrid threats, including disinformation campaigns.
+    rule_of_law: Germany emphasizes protecting European values, including the rule
+      of law and free elections, as foundational to security.
   stances:
     ukraine:
       score: 1

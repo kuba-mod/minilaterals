@@ -2,34 +2,31 @@ actors:
 - FR
 issue_areas:
 - ukraine
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: joint_statement
   participants:
-  - Leaders of the G7
-  - President Trump
+  - G7 leaders
   topics:
   - ukraine
-  - defence
+  - rule_of_law
   location: null
-  position: France, as part of the G7, commits to increasing military support for
-    Ukraine and leading a maritime security initiative in the Strait of Hormuz.
+  position: France supports a strong international response to geopolitical crises
+    by reaffirming support for Ukraine and advocating for diplomatic solutions in
+    the Middle East.
   positions:
-    ukraine: France actively advances long-term support for Ukraine through commitments
-      to increase air defence, long-range capabilities, and economic pressure on Russia.
-    defence: France is taking a concrete leadership role in collective security by
-      heading a multinational initiative to protect merchant vessels in the Strait
-      of Hormuz.
+    ukraine: France strongly commits to supporting Ukraine's sovereignty and accelerating
+      military aid while increasing pressure on Russia's economy.
+    rule_of_law: France emphasizes the importance of international law and diplomatic
+      processes, particularly regarding maritime passage and nuclear non-proliferation.
   stances:
     ukraine:
       score: 2
-      evidence: we agree to increase the delivery of air defence capacities, additional
-        systems and interceptors, and long-range capabilities
-    defence:
+      evidence: We agree to increase the delivery of air defence capacities, additional
+        systems and interceptors, and long-range capabilities.
+    rule_of_law:
       score: 2
-      evidence: the multinational, independent, and defensive initiative led by France
-        and the UK can play an important role to facilitate the resumption of maritime
-        traffic in the Strait of Hormuz
+      evidence: We reaffirm that the right of transit passage without restrictions
+        or tolls is the bedrock of international trade.

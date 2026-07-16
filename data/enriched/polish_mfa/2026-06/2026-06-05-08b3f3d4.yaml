@@ -1,40 +1,41 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - hybrid
+- enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
-  - Michał Broniatowski, Director of the TVP’s International Media Centre
+  - Michał Broniatowski
   topics:
-  - ukraine
   - hybrid
+  - enlargement
   - rule_of_law
   location: null
-  position: Poland is expanding the reach of its international broadcasting services
-    to provide independent news and combat disinformation in Eastern Europe.
+  position: Poland is expanding its broadcasting reach to provide independent news
+    and information about Poland and Central and Eastern Europe.
   positions:
-    ukraine: Poland provides information support to Ukrainian communities and regions
-      through the inclusion of independent channels in the Svoboda package.
-    hybrid: Poland is actively countering foreign disinformation and propaganda by
-      increasing the availability of trustworthy news sources.
-    rule_of_law: Poland supports the freedom of speech and the right to access independent
-      information in regions with restricted media freedom.
+    hybrid: Poland supports combating disinformation by providing access to trustworthy
+      and exclusive international news content.
+    enlargement: The initiative indirectly supports EU enlargement goals by increasing
+      visibility for Ukrainian and Belarusian communities through expanded broadcasting
+      coverage.
+    rule_of_law: Poland contributes to the rule of law by promoting independent media
+      access in regions with limited freedom.
   stances:
-    ukraine:
-      score: 2
-      evidence: The package consists of TV channels and radio stations created by
-        independent journalists from Ukraine, Belarus, and Russia.
     hybrid:
       score: 2
       evidence: Access to trustworthy and exclusive information materials is particularly
         important in the current international situation and amid omnipresent disinformation
         and propaganda.
+    enlargement:
+      score: 1
+      evidence: translates into a significant improvement of their availability to
+        West European audiences, including to multiple Belarusian, Ukrainian, and
+        Russian communities.
     rule_of_law:
       score: 2
       evidence: The initiative aims to ensure that audience has access to independent

@@ -5,25 +5,21 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
   - Johann Wadephul
-  - Germany
-  - Ireland
   topics:
   - ukraine
   - rule_of_law
-  location: 'null'
-  position: Germany aims to support the Irish EU Council Presidency to drive decisive
-    structural reforms and strengthen Europe's ability to respond to crises.
+  location: null
+  position: Germany advocates for strengthening and modernizing Europe through structural
+    reforms, particularly by supporting the Irish EU Council Presidency.
   positions:
-    ukraine: Germany commits to maintaining decisive support for Ukraine as it defends
-      itself against Russia’s illegal war of aggression.
-    rule_of_law: Germany seeks to strengthen institutions by overcoming individual
-      countries' attempts to block processes and by setting in motion vital reforms
-      in the sphere of competition.
+    ukraine: Germany commits to maintaining decisive support for Ukraine's defense
+      against Russia’s aggression.
+    rule_of_law: Germany emphasizes the need to strengthen institutions and uphold
+      democratic resilience within the EU.
   stances:
     ukraine:
       score: 1

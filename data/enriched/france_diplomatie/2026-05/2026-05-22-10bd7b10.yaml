@@ -3,9 +3,10 @@ actors:
 issue_areas:
 - ukraine
 - enlargement
+- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
@@ -14,16 +15,29 @@ extracted:
   topics:
   - ukraine
   - enlargement
+  - defence
+  - rule_of_law
   location: Sweden
-  position: France seeks to revitalize bilateral relations with Bulgaria to strengthen
-    EU sovereignty and address key strategic priorities.
+  position: France aims to strengthen bilateral relations with Bulgaria and enhance
+    EU cooperation on key strategic issues.
   positions:
-    ukraine: France supports the EU policy priority of providing support to Ukraine.
-    enlargement: France supports EU policy priorities regarding the Western Balkans.
+    ukraine: France supports long-term support for Ukraine as an EU policy priority.
+    enlargement: France views the Western Balkans as a key area for cooperation and
+      stability within the EU framework.
+    defence: France considers strengthening security cooperation in areas like the
+      North Sea to be a priority.
+    rule_of_law: The discussion covered general EU policy priorities related to sovereignty
+      and strategic autonomy, which encompass rule of law principles.
   stances:
     ukraine:
       score: 1
       evidence: ''
     enlargement:
       score: 1
-      evidence: the Western Balkans
+      evidence: ''
+    defence:
+      score: 0
+      evidence: security challenges in the North Sea
+    rule_of_law:
+      score: 0
+      evidence: ''

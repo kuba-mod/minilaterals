@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
@@ -12,15 +11,14 @@ extracted:
   - Sviatlana Tsikhanouskaya
   topics:
   - rule_of_law
-  location: Poland
-  position: Poland supports the democratic aspirations of the Belarusian community
-    and provides support to Belarusian citizens residing in Poland across multiple
-    sectors.
+  location: null
+  position: Poland supports the democratic aspirations of Belarus and provides support
+    to Belarusian citizens in Poland across various sectors.
   positions:
-    rule_of_law: Poland affirms democratic resilience and the rule of law by supporting
-      the democratic opposition and providing support to Belarusian citizens, emphasizing
-      the importance of freedom and human rights.
+    rule_of_law: Poland affirms the importance of democratic solidarity and the rule
+      of law by supporting the democratic community in Belarus.
   stances:
     rule_of_law:
       score: 1
-      evidence: ''
+      evidence: Deputy Minister Władysław Teofil Bartoszewski noted that the “No freedom
+        without Solidarity” slogan is still relevant

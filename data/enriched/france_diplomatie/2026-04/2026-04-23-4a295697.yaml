@@ -5,28 +5,26 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
-  event_type: meeting
+  event_type: communique
   participants:
-  - Jean-Noël Barrot
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Anita Orbán
   topics:
   - ukraine
   - rule_of_law
   location: null
   position: France reaffirmed its commitment to deepening bilateral cooperation with
-    Hungary and promoting a more sovereign, competitive, and democratic Europe.
+    Hungary while emphasizing shared support for Ukraine and a more democratic Europe.
   positions:
-    ukraine: France emphasized support for Ukraine, aligning with the Weimar Triangle's
-      commitment to long-term support across military, economic, and diplomatic dimensions.
-    rule_of_law: France stressed the importance of promoting a more democratic Europe,
-      aligning with the Weimar Triangle's focus on democratic resilience and the rule
-      of law.
+    ukraine: France strongly supports long-term assistance to Ukraine across multiple
+      dimensions.
+    rule_of_law: France emphasizes the importance of promoting democracy and rule
+      of law in Europe.
   stances:
     ukraine:
       score: 1
       evidence: ''
     rule_of_law:
       score: 1
-      evidence: democratic Europe
+      evidence: together promoting a more sovereign, competitive and democratic Europe.

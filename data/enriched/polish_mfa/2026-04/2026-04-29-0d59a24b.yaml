@@ -4,22 +4,20 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
   - Robert Kupiecki
-  - Thi Thu Hang
   topics:
   - rule_of_law
   location: New York, USA
   position: Poland reaffirmed its commitment to the NPT principles while criticizing
-    Russia's nuclear intimidation policy and maintaining that nuclear deterrence remains
-    a key tool for European peace.
+    Russia's nuclear intimidation policy.
   positions:
-    rule_of_law: Poland emphasized the importance of the NPT and criticized destabilizing
-      actions that run counter to the spirit of international law.
+    rule_of_law: Poland emphasizes democratic resilience and adherence to international
+      treaties by criticizing Russia’s destabilizing actions regarding nuclear weapons.
   stances:
     rule_of_law:
       score: 1
-      evidence: reaffirmed Poland’s commitment to the principles of NPT.
+      evidence: He pointed out that Russia’s actions are destabilising the security
+        environment and run counter to the spirit of the NPT.

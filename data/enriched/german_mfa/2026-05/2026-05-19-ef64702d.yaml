@@ -3,11 +3,11 @@ actors:
 issue_areas:
 - ukraine
 - hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
-  event_type: meeting
+  event_type: joint_statement
   participants:
   - Johann Wadephul
   - Katherina Reiche
@@ -15,21 +15,28 @@ extracted:
   topics:
   - ukraine
   - hybrid
+  - rule_of_law
   location: null
-  position: Germany is hosting an international conference to learn from Ukraine's
-    energy resilience and providing financial support via the Ukraine Energy Support
-    Fund.
+  position: Germany emphasizes the need to protect critical energy infrastructure
+    by learning from Ukraine's resilience and hosting an international conference
+    on the topic.
   positions:
-    ukraine: Germany is providing significant energy sector support and financial
-      aid to Ukraine to ensure its resilience against Russian aggression.
-    hybrid: Germany acknowledges the threat of hybrid warfare to critical infrastructure
-      and is organizing a multi-national conference to improve protection strategies.
+    ukraine: Germany commits to long-term support for Ukraine by organizing a major
+      international conference focused on energy security lessons learned from the
+      country.
+    hybrid: Germany calls for coordinated action against hybrid threats and sabotage
+      targeting critical infrastructure, citing Russian actions as evidence of vulnerability.
+    rule_of_law: Germany stresses the importance of democratic resilience and security
+      by highlighting the necessity of protecting energy systems from deliberate attacks.
   stances:
     ukraine:
       score: 2
-      evidence: We are actively supporting Ukraine via the international Ukraine Energy
-        Support Fund.
+      evidence: Germany is Ukraine’s largest supporter in the energy sector.
     hybrid:
       score: 2
-      evidence: the Federal Foreign Office is hosting the international conference,
-        Energy Security – Lessons from Ukraine , on 19 May 2026.
+      evidence: Sightings of Russian drones, acts of sabotage and hybrid warfare leave
+        us in no doubt that we need to protect our critical infrastructure more than
+        ever today.
+    rule_of_law:
+      score: 1
+      evidence: When we talk about energy, we are talking about security.

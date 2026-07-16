@@ -2,37 +2,56 @@ actors:
 - PL
 issue_areas:
 - ukraine
+- defence
+- hybrid
 - enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
-  - Radosław Sikorski
+  - Deputy Prime Minister Radosław Sikorski
   - Petr Pavel
   topics:
   - ukraine
+  - defence
+  - hybrid
   - enlargement
   - rule_of_law
   location: null
-  position: Poland emphasizes that the war in Ukraine is fundamentally about the country's
-    aspirations for European integration, prosperity, and the rule of law.
+  position: Poland emphasizes the strategic importance of Europe's role in global
+    transformation, focusing on Ukraine's aspirations for European integration and
+    adherence to democratic principles.
   positions:
-    ukraine: Poland supports Ukraine's aspirations for a free and prosperous future.
-    enlargement: Poland rhetorically supports Ukraine's integration into Europe.
-    rule_of_law: Poland highlights the rule of law and the fight against corruption
-      as essential components of Ukraine's European aspirations.
+    ukraine: Poland strongly supports Ukraine's path toward full European membership
+      and stability.
+    defence: Poland highlights the need for advanced security discussions, including
+      rethinking alliances and strengthening defense capabilities.
+    hybrid: Poland stresses the importance of addressing global risks and geopolitical
+      challenges that threaten stability.
+    enlargement: Poland supports Ukraine's integration into Europe as central to its
+      security and stability.
+    rule_of_law: Poland emphasizes that European development must be founded on democratic
+      principles and the rule of law.
   stances:
     ukraine:
       score: 1
+      evidence: It is about Ukraine's aspirations to join Europe - to live in a country
+        that is free from corruption, based on the rule of law, shifting from poverty
+        to prosperity.
+    defence:
+      score: 1
+      evidence: The sessions addrssed security and defence in a new era
+    hybrid:
+      score: 0
       evidence: This war is not about NATO. It is about Ukraine's aspirations to join
-        Europe
+        Europe - to live in a country that is free from corruption, based on the rule
+        of law, shifting from poverty to prosperity.
     enlargement:
       score: 1
-      evidence: Ukraine's aspirations to join Europe
+      evidence: It is about Ukraine's aspirations to join Europe
     rule_of_law:
       score: 1
       evidence: to live in a country that is free from corruption, based on the rule
-        of law
+        of law, shifting from poverty to prosperity.

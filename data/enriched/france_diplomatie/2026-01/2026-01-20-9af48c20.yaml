@@ -1,11 +1,9 @@
 actors:
 - FR
 issue_areas:
-- enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: communique
   participants:
@@ -13,24 +11,16 @@ extracted:
   - Christine Razanamahasoa, Minister of Foreign Affairs of the Refoundation of the
     Republic of Madagascar
   topics:
-  - enlargement
   - rule_of_law
   location: Paris, France
-  position: France reaffirmed its commitment to Madagascar and agreed to lay the groundwork
-    for a renewed partnership agreement, while supporting the refoundation process
-    and free elections.
+  position: France reaffirms its commitment to supporting a renewed partnership with
+    Madagascar and supports the refoundation process while focusing on development
+    cooperation.
   positions:
-    enlargement: France supports the refoundation process in Madagascar, which aligns
-      with the broader goal of supporting state stability and democratic development
-      in partner nations.
-    rule_of_law: France reaffirms its full support for the refoundation process in
-      Madagascar, aiming to restore trust in institutions and ensure free and transparent
-      elections.
+    rule_of_law: France strongly supports democratic resilience and institutional
+      reform in Madagascar, affirming support for free and transparent elections.
   stances:
-    enlargement:
-      score: 0
-      evidence: ''
     rule_of_law:
-      score: 1
-      evidence: reaffirms its full support for continuing the process with a view
+      score: 2
+      evidence: it reaffirms its full support for continuing the process with a view
         to holding free and transparent elections according to the established timetable.

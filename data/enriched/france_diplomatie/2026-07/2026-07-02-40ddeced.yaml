@@ -5,28 +5,26 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants:
-  - France
+  participants: []
   topics:
   - ukraine
   - rule_of_law
   location: null
-  position: France strongly condemns Russia's missile strikes on Kyiv and reaffirms
-    its continued support for Ukraine to achieve a just and lasting peace.
+  position: France strongly condemns the missile strikes on Kyiv and reaffirms its
+    continued support for Ukraine's path to a just and lasting peace.
   positions:
     ukraine: France commits to long-term support for Ukraine across military, economic,
       and diplomatic dimensions until a just and lasting peace is achieved.
-    rule_of_law: France affirms the importance of international humanitarian law and
-      democratic resilience in condemning Russia's actions against Ukraine.
+    rule_of_law: France condemns the attacks as evidence of Russia's disregard for
+      international humanitarian law and democratic principles.
   stances:
     ukraine:
-      score: 2
+      score: 1
       evidence: will continue to lend it its support, together with all its partners,
         with a view to a just and lasting peace.
     rule_of_law:
       score: 1
-      evidence: These attacks on civilian infrastructure once again demonstrate Russia’s
-        contempt for international humanitarian law
+      evidence: once again demonstrate Russia’s contempt for international humanitarian
+        law

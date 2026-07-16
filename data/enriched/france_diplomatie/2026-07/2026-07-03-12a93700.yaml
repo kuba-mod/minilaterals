@@ -3,5 +3,13 @@ actors:
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: statement
+  participants:
+  - Syrian authorities
+  topics: []
+  location: Damascus, Syria
+  position: France condemned the terrorist attack in Damascus and reiterated its support
+    for Syrian stabilization efforts against terrorism.
+  positions: {}
+  stances: {}

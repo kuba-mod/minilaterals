@@ -4,25 +4,20 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - France
-  - United Nations Interim Force in Lebanon (UNIFIL)
-  - Lebanese authorities
+  - Staff Sergeant Florian Montorio
   topics:
   - rule_of_law
   location: null
-  position: France condemns the attack on UNIFIL, demanding that Lebanese authorities
-    identify and hold the perpetrators accountable to ensure UNIFIL can fulfill its
-    mandate.
+  position: France condemns the attack on UNIFIL and demands that Lebanese authorities
+    hold those responsible accountable while reaffirming support for Lebanon's sovereignty.
   positions:
-    rule_of_law: France demands that Lebanese authorities shed full light on the attack
-      and hold the culprits accountable in the courts, affirming the importance of
-      the rule of law.
+    rule_of_law: France emphasizes the importance of respecting international mandates
+      and upholding state sovereignty in Lebanon.
   stances:
     rule_of_law:
       score: 1
-      evidence: It expects the Lebanese authorities to shed full light on the attack
-        and the culprits to be identified and held accountable in the courts.
+      evidence: The protection of Blue Helmets and the safety and security of United
+        Nations personnel, assets and premises must be respected by all parties.

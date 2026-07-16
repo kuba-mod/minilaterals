@@ -4,40 +4,40 @@ actors:
 issue_areas:
 - ukraine
 - defence
-- green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - Minister Barrot
+  - Foreign Minister of France
   - Fatih Birol
   topics:
   - ukraine
   - defence
-  - green_transition
+  - rule_of_law
   location: Paris, France
-  position: Poland is strengthening its strategic partnership with France through
-    cooperation on security, energy stability, and cultural diplomacy.
+  position: Poland is actively strengthening its strategic partnership with France
+    across security, economic, and cultural dimensions while emphasizing its role
+    in European stability.
   positions:
-    ukraine: Poland reiterates its commitment to supporting Ukraine's fight against
-      the Russian invasion.
-    defence: Poland emphasizes its central role in European regional security and
-      coordinates expectations for the NATO summit.
-    green_transition: Poland promotes energy security through diversification and
-      the use of nuclear energy while opposing returns to Russian hydrocarbons.
+    ukraine: Poland strongly supports Ukraine's defense against Russia and highlights
+      its special role within Europe's regional security efforts.
+    defence: Poland emphasizes collective security concerns ahead of major NATO summits,
+      aligning with broader European defense goals.
+    rule_of_law: Poland stresses the importance of democratic resilience and stability
+      through energy diversification and cooperation to safeguard its national interests.
   stances:
     ukraine:
-      score: 1
-      evidence: The foreign ministers of Poland and France spoke about support for
-        Ukraine as it fights the Russian invasion.
-    defence:
-      score: 1
+      score: 2
       evidence: They stressed Poland’s special role in the actions taken by Europe
         for the sake of regional security.
-    green_transition:
+    defence:
+      score: 1
+      evidence: They also discussed expectations ahead of the upcoming NATO summit
+        in Ankara.
+    rule_of_law:
       score: 1
       evidence: Minister Sikorski made a point about the stability of the Polish energy
         sector, obtained through diversification, departure from Russian energy sources,

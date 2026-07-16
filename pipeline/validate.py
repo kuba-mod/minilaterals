@@ -35,13 +35,15 @@ from pipeline.schemas import (
     RawEventSchema,
     RunLogSchema,
 )
-from pipeline.sources.base import COUNTRY_TERMS, ISSUE_AREAS
 
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 
-KNOWN_ACTORS = set(COUNTRY_TERMS)
-KNOWN_ISSUE_AREAS = set(ISSUE_AREAS)
+# Mirrors the canonical actor codes (pipeline/enrich.py's _ACTOR_ORDER) and the
+# issue-area enum the LLM categoriser is prompted with — both now live only as
+# LLM-facing values since classify() and its keyword lists were removed.
+KNOWN_ACTORS = {"DE", "FR", "PL"}
+KNOWN_ISSUE_AREAS = {"ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law"}
 
 # ---------------------------------------------------------------------------
 # Validation

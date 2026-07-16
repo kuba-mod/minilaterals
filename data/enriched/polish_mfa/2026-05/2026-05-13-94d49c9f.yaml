@@ -3,28 +3,32 @@ actors:
 issue_areas:
 - defence
 - hybrid
+- rule_of_law
 - green_transition
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
-  - Radosław Sikorski
+  - Deputy Prime Minister Radosław Sikorski
   topics:
   - defence
   - hybrid
+  - rule_of_law
   - green_transition
   location: Szczecin, Poland
-  position: Poland is enhancing Baltic Sea security through naval modernization, energy
-    infrastructure development, and coordinated EU sanctions against Russian shipping.
+  position: Poland emphasizes its enhanced security and economic role in the Baltic
+    Sea region through military modernization, energy hub development, and international
+    cooperation.
   positions:
-    defence: Poland is actively strengthening its maritime defense capabilities through
-      specific armaments programs and monitoring platforms.
-    hybrid: Poland advocates for stricter EU restrictions on Russian 'clunker fleet'
-      tankers to protect critical undersea infrastructure from hybrid threats.
-    green_transition: Poland is implementing a transition to renewable energy by constructing
-      wind farms in its exclusive economic zone.
+    defence: Poland advocates for strengthening regional defense capabilities by modernizing
+      its navy and developing monitoring platforms to secure the Baltic Sea.
+    hybrid: Poland highlights the threat posed by illicit maritime activities, such
+      as unseaworthy tankers carrying Russian oil, to regional stability.
+    rule_of_law: Poland stresses the need for international adherence to safety standards,
+      comparing maritime regulations to those applied to aviation and road transport.
+    green_transition: Poland is developing its 'Baltic energy hub' to integrate renewable
+      sources, including offshore wind farms, into its energy supply.
   stances:
     defence:
       score: 2
@@ -34,9 +38,17 @@ extracted:
         unmanned surface vehicles.
     hybrid:
       score: 2
-      evidence: More and more ships are successively covered by EU sanctions. Currently
-        the list includes 632 such vessels.
+      evidence: The head of Polish diplomacy opined that the basin requires protection
+        from the clunker fleet of the often unseaworthy, uninsured, and stateless
+        tankers carrying Russian oil through its waters.
+    rule_of_law:
+      score: 2
+      evidence: I don’t understand why we ban dubious aircraft from our airports and
+        demand that cars be insured and certified roadworthy but refrain from putting
+        such restrictions on the clunker fleet - said Deputy Prime Minister Sikorski
     green_transition:
       score: 2
-      evidence: Since 2026, the hub will also include wind farms currently under construction
+      evidence: The Polish “Baltic energy hub” consists of LNG and LPG terminals,
+        the Naftoport oil terminal, as well as offshore platforms and gas pipelines.
+        Since 2026, the hub will also include wind farms currently under construction
         in Poland’s exclusive economic zone.

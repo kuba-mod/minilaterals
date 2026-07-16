@@ -1,7 +1,24 @@
 actors:
 - FR
-issue_areas: []
-weimar_relevant: false
+issue_areas:
+- rule_of_law
+weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: statement
+  participants:
+  - Clara Chappaz (France's Ambassador for Digital Affairs and Artificial Intelligence)
+  topics:
+  - rule_of_law
+  location: 'null'
+  position: France co-chaired the launch of a major international coalition focused
+    on ensuring safe and rights-respecting AI systems for children.
+  positions:
+    rule_of_law: France actively promotes strengthening global standards and cooperation
+      to protect children's digital rights in the age of AI, aligning with democratic
+      resilience and rule of law principles.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: aims to ensure safe, secure and rights-respecting AI systems for children,
+        in line with the Convention on the Rights of the Child.

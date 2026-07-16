@@ -3,34 +3,42 @@ actors:
 issue_areas:
 - defence
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Deputy foreign ministers
-  - Donald Tusk
-  - Giorgia Meloni
-  - Radosław Sikorski
-  - Antonio Tajani
+  - Prime Minister of Poland Donald Tusk
+  - Prime Minister of Italy Giorgia Meloni
+  - Deputy Prime Minister and Foreign Minister Radosław Sikorski
+  - Italian counterpart Antonio Tajani
   topics:
   - defence
   - enlargement
-  location: Warsaw, Poland
-  position: Poland is strengthening strategic ties with Italy through increased defense
-    cooperation, a new Treaty of Friendship, and alignment on EU enlargement and migration.
+  - rule_of_law
+  location: Warsaw
+  position: Poland engaged in bilateral consultations with Italy covering security,
+    economic ties, and institutional cooperation.
   positions:
-    defence: Poland is actively advancing defense capabilities through specific cooperation
-      in armaments and space sectors with Italy.
-    enlargement: Poland supports the goal of EU enlargement as a point of discussion
-      with Italy.
+    defence: Poland supports strengthening EU defense capabilities by discussing potential
+      joint work in specific sectors like armaments.
+    enlargement: Poland supports EU enlargement by expressing willingness to participate
+      in migration processes related to accession.
+    rule_of_law: Poland affirms commitment to broader European cooperation and institutional
+      strengthening through new treaties and memoranda of understanding.
   stances:
     defence:
-      score: 2
-      evidence: discussing the prospects of working together, for example in the armaments
-        and space sectors
+      score: 1
+      evidence: The diplomats highlighted their countries’ similar views on security,
+        which led them to discussing the prospects of working together, for example
+        in the armaments and space sectors.
     enlargement:
       score: 1
-      evidence: Deputy foreign ministers discussed bilateral ties, economic and defence
-        cooperation, EU enlargement
+      evidence: At the meeting, Poland officially declared its willingness to join
+        the 'Rome Process' on migration as a participating state.
+    rule_of_law:
+      score: 1
+      evidence: Both sides also confirmed the inauguration of works on a new Treaty
+        of Friendship and Cooperation,

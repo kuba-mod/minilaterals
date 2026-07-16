@@ -3,32 +3,38 @@ actors:
 issue_areas:
 - ukraine
 - defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
-  - Ignacy Niemczycki
-  - Helene Budliger Artieda
-  - Patric Franzen
+  - Deputy Minister Ignacy Niemczycki
+  - Director Helene Budliger Artieda
+  - Deputy State Secretary Patric Franzen
   topics:
   - ukraine
   - defence
+  - rule_of_law
   location: Bern, Switzerland
-  position: Poland seeks to strengthen economic and security cooperation with Switzerland,
-    specifically regarding support for Ukraine and EU defense initiatives.
+  position: Poland emphasized the importance of strengthening bilateral relations
+    with Switzerland while coordinating positions on security and supporting EU defense
+    activities.
   positions:
-    ukraine: Poland aligns with Switzerland on the necessity of providing financial
-      and humanitarian aid to Ukraine.
-    defence: Poland supports and appreciates Switzerland's increasing involvement
-      in the European Union's defense activities.
+    ukraine: Poland supports long-term support for Ukraine by recognizing the need
+      to provide financial and humanitarian aid to victims of aggression.
+    defence: Poland supports strengthening EU defense capabilities through cooperation
+      with Switzerland during its OSCE chairmanship.
+    rule_of_law: Poland and Switzerland share a similar view on security issues, including
+      the perception of the war in Ukraine.
   stances:
     ukraine:
       score: 1
-      evidence: the need to provide financial and humanitarian aid to the victim of
-        aggression
+      evidence: need to provide financial and humanitarian aid to the victim of aggression
     defence:
       score: 1
-      evidence: The officials appreciated Switzerland’s growing engagement in the
-        EU’s defence activity
+      evidence: appreciated Switzerland’s growing engagement in the EU’s defence activity
+    rule_of_law:
+      score: 0
+      evidence: Poland and Switzerland take a similar position on this issue, including
+        the perception of the war in Ukraine

@@ -4,27 +4,22 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
   - Chancellor Merz
-  - Minister of State Serap Güler
-  - African Union Commission Chairperson
   topics:
   - rule_of_law
   location: Berlin, Germany
-  position: Germany commits to strengthening its foreign policy focus on Africa through
-    both overarching 'Africa policy' and tailored 'Africa policies' for individual
-    nations, while also advocating for international cooperation to address global
-    crises.
+  position: Germany emphasizes its commitment to Africa's global importance and international
+    cooperation while advocating for stability in conflict zones like Sudan.
   positions:
-    rule_of_law: Germany emphasized the importance of supporting the Sudanese people
-      and finalizing the 'Berlin Principles' to help end the war in Sudan, demonstrating
-      commitment to regional stability and the rule of law.
+    rule_of_law: Germany stresses the importance of international cooperation and
+      adherence to principles to address global crises and conflicts, particularly
+      concerning maritime security and war consequences.
   stances:
     rule_of_law:
       score: 1
-      evidence: Germany will continue to speak up for African interests on the international
-        stage.
+      evidence: We are convinced that we now need the cooperation of the international
+        community to alleviate the war’s consequences more than ever before.

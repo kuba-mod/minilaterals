@@ -4,43 +4,20 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: joint_statement
   participants:
-  - Ministers of Foreign Affairs of Australia
-  - Belgium
-  - Croatia
-  - Cyprus
-  - Denmark
-  - Finland
-  - France
-  - Greece
-  - Iceland
-  - Ireland
-  - Latvia
-  - Luxembourg
-  - Malta
-  - Netherlands
-  - Norway
-  - Portugal
-  - Slovenia
-  - Spain
-  - Sweden
-  - United Kingdom
+  - Ministers of Foreign Affairs
   topics:
   - rule_of_law
   location: null
-  position: France calls for the inclusion of Lebanon in regional de-escalation efforts
-    and urges all parties to work toward a lasting political solution while condemning
-    attacks by Hezbollah and Israeli strikes on Lebanon.
+  position: France supports the de-escalation in Lebanon and reaffirms commitment
+    to international law and Lebanese sovereignty.
   positions:
-    rule_of_law: France emphasizes the importance of respecting Lebanon’s territorial
-      integrity and sovereignty and the full implementation of UN Security Council
-      resolution 1701 (2006), supporting the Lebanese state's full authority.
+    rule_of_law: The statement strongly emphasizes adherence to international humanitarian
+      law and respect for national sovereignty.
   stances:
     rule_of_law:
-      score: 1
-      evidence: We reaffirm the importance of respecting for Lebanon’s territorial
-        integrity and sovereignty and for the full implementation of United Nations
-        Security Council resolution 1701 (2006).
+      score: 2
+      evidence: Civilians and civilian infrastructure must be protected in accordance
+        with international humanitarian law.

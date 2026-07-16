@@ -2,29 +2,36 @@ actors:
 - FR
 issue_areas:
 - green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: communique
   participants:
-  - Martin Briens
-  - Mohamed Abou Bakr
-  - President of the French Republic
-  - President of the Arab Republic of Egypt
+  - Martin Briens, Secretary-General of the French Ministry for Europe and Foreign
+    Affairs
+  - Mohamed Abou Bakr, Deputy Minister of Foreign Affairs, International Cooperation
+    and Egyptian Expatriates for African affairs
   topics:
   - green_transition
+  - rule_of_law
   location: Cairo, Egypt
-  position: France reaffirmed its commitment to elevating the bilateral relationship
-    with Egypt to a strategic partnership, focusing on economic cooperation and sustainable
-    development projects.
+  position: France reaffirmed its commitment to the strategic partnership with Egypt,
+    focusing on economic cooperation and green development initiatives.
   positions:
-    green_transition: France highlighted ongoing cooperation in sustainability and
-      green development, notably through the Green Sustainable Industry (GSI) Project,
-      supporting climate-aligned industrial goals.
+    green_transition: France supports sustainable development goals through financing
+      for green projects like the Green Sustainable Industry Project.
+    rule_of_law: France emphasizes strengthening bilateral relations and economic
+      stability through financial cooperation programs.
   stances:
     green_transition:
       score: 2
-      evidence: Both sides further highlighted ongoing cooperation in sustainability
-        and green development, particularly through the Green Sustainable Industry
-        (GSI) Project, financed at EUR 45 million.
+      evidence: nine financing agreements were signed with AFD, amounting to EUR 262.2
+        million, to support development projects in the transport, energy, and housing
+        sectors.
+    rule_of_law:
+      score: 1
+      evidence: The Egyptian side reiterated its increasing prioritization of budget
+        support programs as a key financing modality to enhance macroeconomic stability
+        and ensure the efficient allocation of resources in line with national development
+        objectives.

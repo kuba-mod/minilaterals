@@ -4,12 +4,10 @@ issue_areas:
 - ukraine
 - rule_of_law
 - enlargement
-- defence
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
-  event_type: conference
+  event_type: communique
   participants:
   - Radosław Sikorski
   - Orysia Lutsevych
@@ -24,36 +22,30 @@ extracted:
   - ukraine
   - rule_of_law
   - enlargement
-  - defence
   location: Gdańsk, Poland
   position: Poland actively supports Ukraine's recovery and integration into the EU
-    while emphasizing necessary reforms in law and governance.
+    while emphasizing adherence to European standards and maintaining international
+    solidarity.
   positions:
-    ukraine: Poland commits to long-term support for Ukraine’s recovery across economic
-      and diplomatic dimensions.
+    ukraine: Poland strongly commits to supporting Ukraine's long-term recovery across
+      military, economic, and diplomatic dimensions until a lasting peace is achieved.
     rule_of_law: Poland stresses that Ukraine must undertake necessary reforms, particularly
       regarding the rule of law and fighting corruption, as part of its integration
       path.
-    enlargement: Poland supports Ukraine's EU accession process but emphasizes that
-      it requires genuine compliance with EU standards and adopting the acquis.
-    defence: Poland advocates for maintaining European solidarity to support Ukraine's
-      defense needs.
+    enlargement: Poland advocates for Ukraine's EU accession by emphasizing that negotiations
+      require genuine compliance with the Union’s laws and standards.
   stances:
     ukraine:
-      score: 1
+      score: 2
       evidence: underscoring the need to maintain European solidarity in supporting
         Ukraine in its war with Russia.
     rule_of_law:
-      score: 1
+      score: 2
       evidence: The panel addressed the necessary reforms that Ukraine must undertake
         on its path to integration, particularly as regards the rule of law and the
         fight against corruption
     enlargement:
-      score: 1
+      score: 2
       evidence: pointing out that the historic opening of formal EU accession negotiations
         with Ukraine on 15 June must be followed by genuine efforts towards compliance
-        with the Union’s law, principles, and standards.
-    defence:
-      score: 1
-      evidence: underscoring the need to maintain European solidarity in supporting
-        Ukraine in its war with Russia.
+        with the Union’s law, principles, and standards

@@ -2,26 +2,34 @@ actors:
 - FR
 issue_areas:
 - green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Roberto Velasco Alvarez
   topics:
   - green_transition
+  - rule_of_law
   location: null
-  position: France and Mexico reaffirmed their strategic partnership and agreed to
-    continue joint efforts on international issues, including regulating the UN veto
-    and developing bilateral trade.
+  position: France reaffirmed its commitment to strengthening the bilateral strategic
+    partnership with Mexico across various domains, including environmental protection
+    and trade.
   positions:
-    green_transition: France and Mexico shared priorities in protecting the environment,
-      particularly the oceans, aligning with the goal of supporting climate neutrality
-      and green objectives.
+    green_transition: France shared priorities with Mexico regarding environmental
+      protection, specifically focusing on the oceans.
+    rule_of_law: France and Mexico jointly advanced an initiative to regulate the
+      use of the veto at the United Nations Security Council concerning mass atrocities.
   stances:
     green_transition:
       score: 1
-      evidence: discussed our two countries’ shared priorities in terms of protecting
-        the environment, in particular the oceans.
+      evidence: The ministers discussed our two countries’ shared priorities in terms
+        of protecting the environment, in particular the oceans.
+    rule_of_law:
+      score: 2
+      evidence: Convinced of the appropriateness of the Franco-Mexican initiative
+        to regulate the use of the veto at the United Nations Security Council in
+        the case of mass atrocities, the ministers agreed to continue their joint
+        efforts with a view to garnering further support.

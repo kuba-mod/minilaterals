@@ -2,34 +2,40 @@ actors:
 - DE
 issue_areas:
 - ukraine
+- hybrid
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
   - Minister of State Hahn
-  - German Government
   topics:
   - ukraine
+  - hybrid
   - rule_of_law
   location: Kyiv, Ukraine
-  position: Germany reaffirms its unwavering support and solidarity with Ukraine,
-    committing to increased cooperation and pressure on Russia to achieve a just and
-    lasting peace.
+  position: Germany reaffirms its unwavering support for Ukraine's defense and recovery,
+    emphasizing increased cooperation with Kyiv in economic and political spheres.
   positions:
-    ukraine: Germany commits to maintaining unwavering support and full solidarity
-      with Ukraine, increasing engagement to help achieve a just and lasting peace.
-    rule_of_law: Germany emphasizes the importance of democratic resilience and the
-      rule of law, noting that Russia's actions are a threat to European security.
+    ukraine: Germany commits to maintaining unwavering support for Ukraine's fight
+      for a just and lasting peace through continued diplomatic, military, and economic
+      engagement.
+    hybrid: Germany views Russia's actions as an imperial revisionism that poses a
+      direct threat not only to Ukraine but also to German and EU security.
+    rule_of_law: Germany supports democratic resilience and the rule of law by condemning
+      Russia's war crimes and emphasizing Ukraine's capacity for innovation.
   stances:
     ukraine:
       score: 2
-      evidence: We will therefore increase the pressure on Russia further and remain
-        firmly by Ukraine’s side.
+      evidence: the solidarity and full support of Germany and the EU , which we intend
+        to maintain unwaveringly and with firm resolve.
+    hybrid:
+      score: 1
+      evidence: Russia’s aggressive, imperial revisionism has an impact beyond Ukraine
+        and also poses a direct threat to us in Germany and in the EU .
     rule_of_law:
       score: 1
-      evidence: it is once again very clear that amid all the horrors that Putin’s
+      evidence: it was once again very clear that amid all the horrors that Putin’s
         Russia is inflicting on Ukraine, the Ukrainian people continue to demonstrate
         unbelievable resilience

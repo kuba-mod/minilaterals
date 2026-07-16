@@ -1,10 +1,9 @@
 actors:
 - FR
 issue_areas:
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -12,16 +11,17 @@ extracted:
   - His Highness Prince Faisal bin Farhan Al Saud, Minister of Foreign Affairs of
     the Kingdom of Saudi Arabia
   topics:
-  - defence
+  - rule_of_law
   location: Cyprus
-  position: France reaffirmed its commitment to Gulf security and proposed a defensive
-    maritime mission to protect traffic in the Strait of Hormuz.
+  position: France reaffirmed its commitment to regional security in the Gulf and
+    stressed the need for diplomatic solutions to conflicts.
   positions:
-    defence: France is actively pursuing the deployment of a defensive maritime mission
-      to ensure collective security and traffic stability in the Strait of Hormuz.
+    rule_of_law: France supports maintaining peace through negotiation, specifically
+      calling for adherence to a ceasefire between Israel and Lebanon.
   stances:
-    defence:
-      score: 2
-      evidence: the efforts being made by France to enable, once conditions allow,
-        the deployment of a strictly defensive mission to facilitate the resumption
-        of maritime traffic in the Strait of Hormuz
+    rule_of_law:
+      score: 1
+      evidence: The two ministers also stressed the need for the ceasefire between
+        Israel and Lebanon that came into force on 17 April to be fully observed,
+        in order to enable a definitive political solution to the conflict through
+        negotiation.

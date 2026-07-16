@@ -4,23 +4,23 @@ issue_areas:
 - defence
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Wojciech Zajączkowski
-  - José Antonio Kast
   - Patricio Torres
   - Álvaro González
   topics:
   - defence
   location: Valparaíso, Chile
-  position: Poland views Chile as a key partner in South America, seeking to expand
-    bilateral cooperation in defense, copper mining, and cybersecurity.
+  position: Poland emphasized the growing importance of Chile as a key partner in
+    South America and identified potential for expanding cooperation in defense, mining,
+    and cybersecurity.
   positions:
-    defence: Poland sees potential for expanding cooperation in the defense sector
-      with Chile.
+    defence: Poland supports strengthening bilateral defense cooperation with Chile,
+      aligning with broader goals of enhancing security capabilities.
   stances:
     defence:
-      score: 0
-      evidence: ''
+      score: 1
+      evidence: The interlocutors saw a great potential in expanding cooperation in
+        the defence, copper mining and mining technologies, and cybersecurity sectors.

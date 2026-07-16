@@ -2,22 +2,30 @@ actors:
 - FR
 issue_areas:
 - ukraine
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - France
   topics:
   - ukraine
+  - rule_of_law
   location: null
-  position: France strongly condemns Russian strikes on Kyiv and reaffirms its long-term
-    support for Ukraine to achieve a just and lasting peace.
+  position: France strongly condemns Russia's strikes on Kyiv and reaffirms its continued
+    support for Ukraine until a just and lasting peace is achieved.
   positions:
-    ukraine: France rhetorically supports the goal of long-term assistance for Ukraine
-      until a just peace is reached.
+    ukraine: France commits to long-term support for Ukraine across military, economic,
+      and diplomatic dimensions until a just and lasting peace is achieved.
+    rule_of_law: France condemns Russia's actions as violations of international humanitarian
+      law.
   stances:
     ukraine:
       score: 1
       evidence: France will continue to tirelessly support Ukraine until a just and
         lasting peace is achieved.
+    rule_of_law:
+      score: 1
+      evidence: Russia is once again guilty of violating international humanitarian
+        law,

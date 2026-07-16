@@ -3,32 +3,40 @@ actors:
 issue_areas:
 - ukraine
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Deputy Minister Ignacy Niemczycki
-  - top diplomats
-  - ministers
   topics:
   - ukraine
   - enlargement
-  location: Luxembourg, Luxembourg
-  position: Poland advocates for urgent EU financial and political support for Ukraine,
-    including sanctions against Russia and opening accession pathways.
+  - rule_of_law
+  location: Luxembourg
+  position: Poland advocates for urgent EU action to support Ukraine's recovery and
+    integration while also addressing regional security concerns.
   positions:
-    ukraine: Poland stressed the urgent need for the EU to approve a EUR 90 billion
-      loan for Ukraine and adopt the 20th package of sanctions against Russia.
-    enlargement: Poland urged the EU to open the “Fundamentals” cluster in its accession
-      negotiations with Ukraine as soon as possible.
+    ukraine: Poland strongly urges the EU to provide immediate financial aid, adopt
+      further sanctions against Russia, and accelerate Ukraine’s institutional integration
+      into the EU.
+    enlargement: Poland supports accelerating Ukraine's path toward EU membership
+      by opening key negotiation clusters and providing practical support for reintegration.
+    rule_of_law: Poland emphasizes the importance of democratic resilience and international
+      law by criticizing illegal settlements and supporting diplomatic processes like
+      those in the Middle East.
   stances:
     ukraine:
       score: 2
-      evidence: stressed that the European Union should urgently approve a EUR 90
-        billion loan for Ukraine
+      evidence: Deputy Minister Ignacy Niemczycki stressed that the European Union
+        should urgently approve a EUR 90 billion loan for Ukraine.
     enlargement:
-      score: 1
+      score: 2
       evidence: open the “Fundamentals” cluster in the EU’s accession negotiations
-        with Ukraine as soon as possible
+        with Ukraine as soon as possible.
+    rule_of_law:
+      score: 1
+      evidence: The vast majority of participants criticised the continued establishment
+        of illegal Israeli settlements in the West Bank and endorsed the EU’s firm
+        response.

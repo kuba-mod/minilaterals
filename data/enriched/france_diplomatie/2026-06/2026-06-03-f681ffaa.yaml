@@ -1,31 +1,24 @@
 actors:
 - FR
 issue_areas:
-- defence
-- green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Pablo Quirno, Minister of Foreign Affairs, International Trade and Worship
   topics:
-  - defence
-  - green_transition
+  - rule_of_law
   location: Paris, France
-  position: France aims to strengthen strategic and economic partnerships with Argentina,
-    specifically in Antarctica, energy, and mining.
+  position: France reaffirmed its support for Argentina's OECD membership and deepened
+    bilateral cooperation across various strategic sectors while addressing global
+    challenges.
   positions:
-    defence: France seeks to deepen security partnerships to enhance strategic autonomy.
-    green_transition: France is pursuing deeper partnerships in energy and nuclear
-      power, aligning with energy transition goals.
+    rule_of_law: France highlighted the importance of combating anti-Semitism as a
+      shared international concern.
   stances:
-    defence:
+    rule_of_law:
       score: 1
-      evidence: deepening our partnerships in mining, energy, nuclear power and security,
-        to benefit our countries’ strategic autonomy
-    green_transition:
-      score: 1
-      evidence: deepening our partnerships in mining, energy, nuclear power
+      evidence: the common fight against anti-Semitism

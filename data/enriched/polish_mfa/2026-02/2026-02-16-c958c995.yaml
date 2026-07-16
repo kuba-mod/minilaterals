@@ -3,11 +3,10 @@ actors:
 - FR
 - PL
 issue_areas:
-- rule_of_law
 - ukraine
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: true
-weimar_score: 0.4
 extracted:
   event_type: joint_statement
   participants:
@@ -27,25 +26,21 @@ extracted:
   - Sweden
   - the United Kingdom
   topics:
-  - rule_of_law
   - ukraine
+  - rule_of_law
   location: null
-  position: The signatories demand a thorough investigation into the circumstances
-    surrounding Alexei Navalny's death and insist that Russian authorities comply
-    with international obligations and release all political prisoners.
+  position: The statement strongly condemns Russia's actions regarding Alexei Navalny
+    and demands compliance with international law while supporting human rights defenders
+    and Ukraine.
   positions:
-    rule_of_law: The statement condemns the deterioration of the human rights situation
-      in Russia, citing the ECHR and UN reports, and demands accountability for the
-      treatment and death of Alexei Navalny.
-    ukraine: The statement notes that the repression inside Russia enables its aggression
-      abroad and highlights the detention of Ukrainian political prisoners in Russia,
-      demanding the release of all political prisoners.
+    ukraine: Poland supports long-term support for Ukraine by condemning Russian aggression
+      and demanding the release of political prisoners.
+    rule_of_law: Poland strongly advocates for adherence to international law, citing
+      ECHR judgments and demanding investigations into Navalny's death.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The human rights situation in Russia has rapidly deteriorated before
-        and ever since this tragic event
     ukraine:
       score: 1
-      evidence: many of them for speaking up and acting against Russia’s illegal invasion
-        of Ukraine.
+      evidence: The repression inside Russia furthermore enables its aggression abroad.
+    rule_of_law:
+      score: 2
+      evidence: We underline that the Russian authorities remain solely responsible.

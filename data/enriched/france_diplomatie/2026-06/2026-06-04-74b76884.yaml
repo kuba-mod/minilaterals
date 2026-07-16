@@ -1,18 +1,18 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - Lebanese government
-  - Israeli government
+  - Hezbollah
+  - Lebanese Armed Forces
+  - Israeli army
   topics: []
   location: null
-  position: France supports the ceasefire agreement between Lebanon and Israel and
-    calls for its immediate implementation by all parties.
+  position: France calls for all parties to implement the ceasefire agreement and
+    reach a comprehensive political settlement respecting Lebanese sovereignty and
+    Israeli security.
   positions: {}
   stances: {}

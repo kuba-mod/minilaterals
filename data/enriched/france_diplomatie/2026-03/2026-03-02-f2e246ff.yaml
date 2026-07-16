@@ -4,21 +4,21 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot
-  - Wang Yi
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Wang Yi, Director of the Office of the Central Foreign Affairs Commission of the
+    Chinese Communist Party and Minister of Foreign Affairs of the People’s Republic
+    of China
   topics:
   - rule_of_law
   location: null
-  position: France emphasized the need for international institutions and international
-    law to resolve disagreements and achieve de-escalation in the Middle East.
+  position: France engaged in dialogue with China on regional security issues, emphasizing
+    international law and de-escalation.
   positions:
-    rule_of_law: France stressed the importance of international law and UN Security
-      Council resolutions in resolving regional conflicts and maintaining collective
-      security.
+    rule_of_law: France stresses the importance of adhering to international institutions
+      and law for resolving disagreements.
   stances:
     rule_of_law:
       score: 1

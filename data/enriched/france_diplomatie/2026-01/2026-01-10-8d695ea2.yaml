@@ -1,28 +1,15 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - France
-  - United States
   - Syrian Government
-  topics:
-  - rule_of_law
-  location: Aleppo, Syria
-  position: France deplores the renewed clashes in Aleppo and calls for an immediate
-    return to the ceasefire, humanitarian access, and protection of civilians to secure
-    stability in a united, sovereign, and plural Syria.
-  positions:
-    rule_of_law: France supports the protection of all civilians and the establishment
-      of security and stability in Aleppo, aligning with the foundational principles
-      of democratic resilience and the rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: calls on the parties to return immediately to the ceasefire, facilitate
-        access to humanitarian aid and protect the population.
+  topics: []
+  location: null
+  position: France deplores the clashes in Aleppo and calls for an immediate return
+    to a ceasefire while supporting efforts to ensure civilian protection and stability.
+  positions: {}
+  stances: {}

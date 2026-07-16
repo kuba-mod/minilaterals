@@ -6,19 +6,31 @@ weimar_relevant: true
 trilateral_signal: false
 extracted:
   event_type: joint_statement
-  participants: []
+  participants:
+  - United States of America
+  - Australia
+  - Canada
+  - Estonia
+  - Germany
+  - Italy
+  - Japan
+  - Latvia
+  - Lithuania
+  - New Zealand
+  - Republic of the Philippines
+  - Romania
+  - Slovenia
+  - United Kingdom
   topics:
   - rule_of_law
   location: null
-  position: Germany, as part of a multilateral group, reaffirms that the 2016 Arbitral
-    Tribunal award on the South China Sea is final and legally binding, emphasizing
-    the importance of international law and UNCLOS.
+  position: Germany reaffirms commitment to a free and open Indo-Pacific based on
+    international law and urges adherence to the 2016 Arbitral Award.
   positions:
-    rule_of_law: Germany supports the rule of law by advocating for the peaceful resolution
-      of maritime disputes in accordance with international law and the binding nature
-      of the 2016 Arbitral Award.
+    rule_of_law: Germany strongly supports upholding international law, particularly
+      regarding maritime disputes and freedom of navigation in the South China Sea.
   stances:
     rule_of_law:
       score: 1
-      evidence: We reaffirm that the Award rendered ten years ago by the Arbitral
-        Tribunal is a significant milestone and is final, legally binding, and definitive
+      evidence: We reaffirm that maritime disputes must be resolved peacefully and
+        in accordance with UNCLOS .

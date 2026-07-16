@@ -1,11 +1,9 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
@@ -13,22 +11,15 @@ extracted:
   - Abdelmadjid Tebboune
   - Ahmed Attaf
   topics:
-  - ukraine
   - rule_of_law
   location: Algeria
-  position: Poland aims to deepen bilateral relations with Algeria, focusing on economic
-    cooperation, energy partnership, and regional stability in the MENA region.
+  position: Poland aims to strengthen bilateral economic and strategic cooperation
+    with Algeria while reaffirming commitment to international law and regional stability.
   positions:
-    ukraine: Poland emphasized the need to discuss international issues, including
-      the Ukraine war, while reaffirming commitment to international law.
-    rule_of_law: Both sides reaffirmed their commitment to the principles of international
-      law and the significance of stability and security.
+    rule_of_law: Poland emphasizes the importance of respecting international law
+      and maintaining security in the region.
   stances:
-    ukraine:
-      score: 1
-      evidence: in the context of both the Ukraine war and the situation in the Middle
-        East and the Sahel
     rule_of_law:
       score: 1
-      evidence: Our talks concerned international issues, with an emphasis on security,
-        stability, and respect for international law
+      evidence: The interlocutors reaffirmed their commitment to the principles of
+        international law as well as the significance of stability and security.

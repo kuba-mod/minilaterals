@@ -1,26 +1,32 @@
 actors:
 - DE
-- FR
 issue_areas:
 - defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
-  event_type: statement
+  event_type: interview
   participants:
-  - Wadephul
-  - Marco Rubio
+  - Foreign Minister Wadephul
   topics:
   - defence
+  - rule_of_law
   location: null
-  position: Germany is prioritizing national security and economic interests by increasing
-    defense spending and strengthening the US partnership to enhance NATO deterrence.
+  position: Germany prioritizes its national and European security interests through
+    strong economic ties with partners like the US while advocating for increased
+    EU defense capabilities.
   positions:
-    defence: Germany is actively increasing its defense spending to 5% of GDP to assume
-      greater responsibility for European security and maintain NATO deterrence.
+    defence: Germany supports strengthening its own defense capability and increasing
+      collective security by working towards a 5% GDP spending goal, complementing
+      NATO efforts.
+    rule_of_law: Germany emphasizes stating its national interests clearly rather
+      than adopting a 'normative surplus' approach in foreign policy.
   stances:
     defence:
-      score: 2
+      score: 1
       evidence: With defence spending of five percent of GDP, which I firmly supported,
         we are now finally putting this goal into practice.
+    rule_of_law:
+      score: 1
+      evidence: On the contrary – we state what is in our interests and what isn’t.

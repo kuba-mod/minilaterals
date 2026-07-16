@@ -1,45 +1,33 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - defence
-- green_transition
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
-  - Władysław Teofil Bartoszewski
-  - Karol Polejowski
+  - Deputy Minister Władysław Teofil Bartoszewski
   topics:
-  - ukraine
   - defence
-  - green_transition
+  - rule_of_law
   location: Ulaanbaatar, Mongolia
-  position: Poland is strengthening bilateral relations with Mongolia through strategic
-    partnerships, financial aid for development, and a shared focus on national security
-    against Russian aggression.
+  position: Poland emphasized the importance of national security due to regional
+    threats and promoted economic cooperation across multiple sectors with Mongolia.
   positions:
-    ukraine: Poland identifies the war caused by Russia's imperialist policy as a
-      direct threat to its own national security.
-    defence: Poland is actively pursuing the development of bilateral relations in
-      the defence industry with Mongolia.
-    green_transition: Poland is committed to collaborating with Mongolia on green
-      technologies and renewable energy.
+    defence: Poland highlighted that national security is a top priority, citing external
+      threats from Russia's imperialist policy.
+    rule_of_law: Poland engaged in bilateral cooperation and signed agreements aimed
+      at strengthening institutional ties and addressing historical truth.
   stances:
-    ukraine:
-      score: 2
-      evidence: national security, which is currently threatened by the war raging
-        just beyond our eastern border, the responsibility for the outbreak of which
-        and the associated casualties lies with Russia
     defence:
-      score: 2
-      evidence: underlined their respective governments’ engagement in the development
-        of bilateral relations in all sectors, especially in the food and defence
-        industries
-    green_transition:
       score: 1
-      evidence: engagement in the development of bilateral relations in all sectors,
-        especially in... green technologies, healthcare, pharmaceuticals, renewable
-        energy
+      evidence: the top priority for Poland—which, like Mongolia, also enjoys a unique
+        geographical location—is national security, which is currently threatened
+        by the war raging just beyond our eastern border
+    rule_of_law:
+      score: 1
+      evidence: A delegation from the Institute of National Remembrance... signed
+        a Memorandum of Understanding with the State Commission for the Management
+        of Political Rehabilitation of Mongolia.

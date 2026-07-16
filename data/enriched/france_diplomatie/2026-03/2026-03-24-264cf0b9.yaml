@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -16,15 +15,16 @@ extracted:
   - rule_of_law
   location: null
   position: France reaffirmed its commitment to multilateralism and the rules-based
-    international order during discussions with Korea.
+    international order while supporting Ukraine's interests.
   positions:
-    ukraine: France reaffirmed its support for Ukraine during discussions with Korea.
-    rule_of_law: France reiterated its commitment to multilateralism and the rules-based
-      international order.
+    ukraine: France reiterated its support for Ukraine's cause during discussions
+      with Korean officials.
+    rule_of_law: France emphasized the importance of democratic resilience and adherence
+      to international rules in global affairs.
   stances:
     ukraine:
       score: 1
-      evidence: reaffirmed their support for Ukraine
+      evidence: reaffirmed their support for Ukraine.
     rule_of_law:
       score: 1
       evidence: reiterated their commitment to multilateralism and the rules-based

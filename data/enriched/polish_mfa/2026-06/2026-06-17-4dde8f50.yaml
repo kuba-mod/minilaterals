@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -19,12 +18,12 @@ extracted:
   - rule_of_law
   location: Chișinău, Moldova
   position: Poland reaffirmed its commitment to supporting Moldova's European integration
-    and deepening bilateral economic cooperation.
+    and deepening economic cooperation.
   positions:
     enlargement: Poland strongly supports Moldova's EU accession process by emphasizing
       continued support for reforms and the negotiation stages.
-    rule_of_law: Poland and Moldova affirmed their shared commitment to democratic
-      values and stability concerning European safety and international issues.
+    rule_of_law: Poland affirms shared commitment with Moldova regarding key international
+      issues concerning safety and stability.
   stances:
     enlargement:
       score: 2

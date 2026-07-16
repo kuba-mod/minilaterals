@@ -3,29 +3,31 @@ actors:
 issue_areas:
 - ukraine
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
-  event_type: meeting
+  event_type: communique
   participants:
   - Deputy Minister Bosacki
   - foreign ministers of Western Balkan countries
-  - Anita Anand
+  - Canada’s Foreign Minister Anita Anand
   topics:
   - ukraine
   - enlargement
+  - rule_of_law
   location: Brussels
-  position: Poland emphasized the need for continued sanctions pressure on Russia,
-    urgent financial support for Ukraine, and that EU enlargement must be based on
-    substantive grounds.
+  position: Poland advocated for continued strong sanctions against Russia and called
+    for urgent support for Ukraine while emphasizing that EU enlargement must be based
+    on substantive criteria.
   positions:
-    ukraine: Poland called for the prompt launching of the EUR 90 billion loan for
-      Ukraine and stressed the importance of maintaining sanctions pressure on Russia
-      to counter its aggression.
-    enlargement: Poland advocated for the urgent opening of the first negotiating
-      cluster with Ukraine while emphasizing that enlargement must remain a process
-      based on substantive grounds and considering member state vulnerabilities.
+    ukraine: Poland strongly supports long-term military and economic aid to Ukraine,
+      calling for the immediate launch of a major loan and maintaining sanctions pressure
+      on Russia.
+    enlargement: Poland supports EU enlargement but insists that it must be a measured
+      process based on substantive grounds and considering member state vulnerabilities.
+    rule_of_law: Poland supports upholding international law by maintaining sanctions
+      against Russia and condemning violations of ceasefires in other regions.
   stances:
     ukraine:
       score: 2
@@ -37,3 +39,10 @@ extracted:
       evidence: whilst emphasising that enlargement must remain a process based on
         substantive grounds and taking into account the vulnerabilities of the member
         states (including those relating to agriculture and transport).
+    rule_of_law:
+      score: 1
+      evidence: The deputy head of Polish diplomacy called for the urgent opening
+        of the first negotiating cluster with Ukraine (Fundamentals), whilst emphasising
+        that enlargement must remain a process based on substantive grounds and taking
+        into account the vulnerabilities of the member states (including those relating
+        to agriculture and transport).

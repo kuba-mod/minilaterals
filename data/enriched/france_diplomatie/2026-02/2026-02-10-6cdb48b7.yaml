@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -12,15 +11,14 @@ extracted:
   - Mattias Guyomar
   topics:
   - rule_of_law
-  location: Strasbourg, France
-  position: France reaffirmed its full support for the European Court of Human Rights's
-    independence and its fundamental role in protecting democracy and the rule of
-    law.
+  location: Strasbourg
+  position: France reaffirmed its strong support for the European Court of Human Rights's
+    independence and role in upholding democracy and the rule of law.
   positions:
-    rule_of_law: France stressed the Court’s fundamental role in protecting democracy
-      and the rule of law, and committed to ensuring the full execution of its judgments.
+    rule_of_law: France strongly supports the court’s fundamental role in protecting
+      democracy and the rule of law, emphasizing the importance of executing its judgments.
   stances:
     rule_of_law:
-      score: 1
+      score: 2
       evidence: He stressed the Court’s fundamental role in protecting democracy and
         the rule of law.

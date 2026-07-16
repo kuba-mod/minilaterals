@@ -1,22 +1,24 @@
 actors:
 - FR
 issue_areas:
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants: []
   topics:
-  - defence
+  - rule_of_law
   location: null
-  position: France condemns Iranian attacks on Kuwait and Bahrain and affirms its
-    commitment to the security and defense of its Middle Eastern partners.
+  position: France strongly condemns Iranian attacks on its neighbors and calls for
+    adherence to a ceasefire while prioritizing diplomatic solutions.
   positions:
-    defence: France supports collective security and the defense of partners, aligning
-      with the goal of enhancing security capabilities.
+    rule_of_law: France emphasizes the importance of maintaining regional security,
+      sovereignty, and adhering to international law by calling for an end to military
+      escalation.
   stances:
-    defence:
+    rule_of_law:
       score: 1
-      evidence: its willingness to contribute to their defense if necessary
+      evidence: France calls on all the parties to strictly abide by the current ceasefire
+        and to refrain from any actions that would be liable to spark a new military
+        escalation

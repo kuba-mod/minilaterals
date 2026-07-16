@@ -3,5 +3,12 @@ actors:
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.0
-extracted: null
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: France expressed condolences and solidarity following the gas explosion
+    in China.
+  positions: {}
+  stances: {}

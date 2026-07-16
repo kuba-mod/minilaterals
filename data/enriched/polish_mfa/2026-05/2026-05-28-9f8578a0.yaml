@@ -2,27 +2,41 @@ actors:
 - PL
 issue_areas:
 - ukraine
+- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Radosław Sikorski
-  - foreign ministers of EU
-  - foreign minister of Ukraine
-  - foreign minister of Slovakia
-  - foreign minister of Saudi Arabia
-  - foreign minister of India
+  - EU foreign ministers
+  - foreign ministers of Saudi Arabia
+  - foreign ministers of India
+  - Minister Radosław Sikorski
+  - foreign ministers of Ukraine
+  - foreign ministers of Slovakia
   topics:
   - ukraine
+  - enlargement
+  - rule_of_law
   location: Cyprus
-  position: Poland participated in EU foreign ministers' discussions focused on supporting
-    Ukraine and increasing pressure on Russia.
+  position: Poland participated in discussions on key EU foreign policy issues, focusing
+    heavily on Russia's aggression against Ukraine and the Middle East.
   positions:
-    ukraine: Poland supports the continued support of Ukraine and the application
-      of pressure on Russia.
+    ukraine: Poland is actively involved in discussing support for Ukraine and increasing
+      pressure on Russia.
+    enlargement: The text mentions the general EU foreign policy agenda but does not
+      provide a specific stance or commitment regarding enlargement.
+    rule_of_law: Poland's participation in discussions implies an adherence to democratic
+      principles and international law, though no explicit statement is made.
   stances:
     ukraine:
       score: 1
-      evidence: supporting Ukraine, and ways of ramping up pressure on Russia
+      evidence: Russia’s aggression against Ukraine, supporting Ukraine, and ways
+        of ramping up pressure on Russia.
+    enlargement:
+      score: 0
+      evidence: ''
+    rule_of_law:
+      score: 0
+      evidence: ''

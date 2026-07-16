@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -13,15 +12,15 @@ extracted:
   topics:
   - rule_of_law
   location: Davos, Switzerland
-  position: France emphasized the need for de-escalation in Syria, protection of civilians,
-    and the importance of fighting Daesh, while also discussing the political situation
-    in Iraq.
+  position: France reaffirmed its commitment to regional stability and security in
+    Syria and Iraq while emphasizing the fight against Daesh.
   positions:
-    rule_of_law: France called for a global ceasefire in Syria, protection of all
-      civilians, and the integration of the Syrian Democratic Forces (SDF) to uphold
-      regional stability and rule of law.
+    rule_of_law: France stressed the importance of protecting civilians and implementing
+      a global ceasefire in Syria.
   stances:
     rule_of_law:
       score: 1
       evidence: They called on all the parties to de-escalate immediately, to protect
-        all civilians, and to implement a global ceasefire
+        all civilians, and to implement a global ceasefire that allows for the integration
+        of the Syrian Democratic Forces (SDF) and provides guarantees to Kurds in
+        Syria.

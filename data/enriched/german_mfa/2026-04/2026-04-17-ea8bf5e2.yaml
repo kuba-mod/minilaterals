@@ -1,6 +1,5 @@
 actors:
 - DE
-- PL
 issue_areas:
 - ukraine
 - defence
@@ -8,49 +7,46 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: speech
   participants:
   - Johann Wadephul
-  - EU counterparts
-  - Brigadier-General Hammerstein
   topics:
   - ukraine
   - defence
   - hybrid
   - rule_of_law
   location: null
-  position: Germany is committed to deterring Russia from open attacks on NATO and
-    supporting allies through collective defense, while also committing to prosecuting
-    war crimes in Ukraine.
+  position: Germany emphasizes the need for collective defense and justice against
+    Russian aggression in Ukraine while calling for coordinated action against hybrid
+    threats.
   positions:
-    ukraine: Germany commits to participating in a special tribunal to investigate
-      and criminally prosecute the crimes committed by Russia in Ukraine, emphasizing
-      the unspeakable horror experienced in Bucha.
-    defence: Germany emphasizes the necessity of performing defense missions, such
-      as those in Lithuania, to deter Russia and ensure NATO's collective security.
-    hybrid: Germany recognizes Russia's cohesive strategy of testing NATO's resolve
-      through actions below the threshold of armed attack, including drone incursions,
-      naval provocations, and disinformation campaigns.
-    rule_of_law: Germany affirms the importance of democratic resilience and the rule
-      of law by committing to holding perpetrators of war crimes accountable through
-      international tribunals.
+    ukraine: Germany strongly commits to supporting Ukraine's sovereignty and ensuring
+      accountability for war crimes committed by Russia.
+    defence: Germany stresses the importance of NATO's resolve and readiness, particularly
+      on the eastern flank, to deter open attacks from Russia.
+    hybrid: Germany highlights that Russia employs a cohesive strategy of hybrid threats—including
+      disinformation and provocations—to weaken Western resolve.
+    rule_of_law: Germany affirms its commitment to democratic resilience and justice
+      by participating in international tribunals for war crimes.
   stances:
     ukraine:
       score: 2
-      evidence: I visited it a few weeks ago, together with some of my EU counterparts,
-        in order to mark the fourth anniversary of the liberation of Bucha. [...]
-        But also to announce there that we will participate in a special tribunal
-        that will investigate and criminally prosecute the crimes committed by Russia.
+      evidence: I went not only for an act of remembrance. Not only to bring back
+        into our nations’ collective memory the unspeakable horror that Russian soldiers
+        perpetrated there. But also to announce there that we will participate in
+        a special tribunal that will investigate and criminally prosecute the crimes
+        committed by Russia.
     defence:
       score: 2
-      evidence: You exemplify the resolve with which we are prepared to defend our
-        Allies and friends in the Baltic.
+      evidence: The opponent must be deterred, to make sure he will refrain from an
+        open attack on NATO .
     hybrid:
       score: 2
-      evidence: All this forms a cohesive Russian strategy that aims to weaken our
-        willpower. Putin is testing our resolve to deter him.
+      evidence: 'Be it through drones and aircraft incursions into Baltic airspace,
+        through provocations by the Russian navy in the Baltic, or through disinformation
+        campaigns that are designed to undermine trust: All this forms a cohesive
+        Russian strategy that aims to weaken our willpower.'
     rule_of_law:
       score: 2
       evidence: But also to announce there that we will participate in a special tribunal

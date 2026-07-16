@@ -1,9 +1,9 @@
-actors: []
+actors:
+- FR
 issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: joint_statement
   participants:
@@ -15,15 +15,15 @@ extracted:
   topics:
   - rule_of_law
   location: null
-  position: France supports a coordinated global response to the Ebola outbreak in
-    the DRC and Uganda, emphasizing prevention and resource mobilization.
+  position: France supports a coordinated global response to the Ebola outbreak by
+    emphasizing prevention and mobilizing resources for vaccines and diagnostics.
   positions:
-    rule_of_law: The statement emphasizes international cooperation and public health
-      measures (contact tracing, border surveillance) necessary for maintaining stability
-      and combating disease outbreaks.
+    rule_of_law: The statement emphasizes democratic resilience and rule of law principles
+      through calls for effective public health measures like contact tracing and
+      border surveillance.
   stances:
     rule_of_law:
-      score: 2
+      score: 1
       evidence: Containing and ending the outbreak will depend on effective contact
         tracing, infection prevention and control, quarantine and isolation practices,
         laboratory testing, cross-border preparedness, border surveillance and community

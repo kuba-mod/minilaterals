@@ -6,7 +6,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -15,26 +14,28 @@ extracted:
   - ukraine
   - defence
   - rule_of_law
-  location: Warsaw, Poland
-  position: Poland maintains a strategic partnership with the UK, coordinating efforts
-    on security, defense, and economy, while jointly supporting Ukraine's sovereignty
-    and maintaining sanctions against Russia.
+  location: Warsaw
+  position: Poland maintains a strategic partnership with the UK and jointly supports
+    Ukraine's sovereignty and territorial integrity while advocating for continued
+    international pressure on Russia.
   positions:
-    ukraine: Poland and the UK unequivocally support Ukraine’s sovereignty and territorial
-      integrity, agreeing that the end of the war must align with international law
-      and jointly supporting Ukraine politically, militarily, and diplomatically.
-    defence: Poland and the UK cooperate closely in the spheres of security and defense,
-      coordinating measures within the coalition of the willing and NATO.
-    rule_of_law: Poland and the UK jointly support the rule of law by demanding that
-      the terms of ending the war must be in line with international law.
+    ukraine: Poland strongly supports Ukraine's sovereignty and territorial integrity,
+      coordinating measures within NATO and the coalition of the willing to end the
+      conflict in line with international law.
+    defence: While not explicitly detailing a Weimar goal for defense, Poland emphasizes
+      cooperation in security and defense spheres through high-level consultations.
+    rule_of_law: Poland supports that any resolution to the conflict must adhere strictly
+      to international law principles.
   stances:
     ukraine:
       score: 2
-      evidence: jointly support Ukraine in political, military, and diplomatic terms
+      evidence: Both Poland and the United Kingdom unequivocally support Ukraine’s
+        sovereignty and territorial integrity.
     defence:
       score: 1
-      evidence: cooperating closely in... security, defence
+      evidence: The two countries cooperate closely in political terms as well as
+        in the spheres of security, defence, economy, and culture.
     rule_of_law:
       score: 1
-      evidence: the two states agree that the terms of ending the war must be in line
-        with international law
+      evidence: The two states agree that the terms of ending the war must be in line
+        with international law.

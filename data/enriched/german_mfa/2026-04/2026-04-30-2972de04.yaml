@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
@@ -15,15 +14,12 @@ extracted:
   topics:
   - rule_of_law
   location: Rabat, Morocco
-  position: Germany expressed satisfaction with the depth of bilateral relations and
-    emphasized continued cooperation in political, economic, social, cultural, and
-    security fields.
+  position: Germany reaffirmed its commitment to strengthening the multidimensional
+    partnership with Morocco across political, economic, and security fields.
   positions:
-    rule_of_law: The two ministers agreed on the importance of continuing work in
-      the UN Human Rights Council and stressed the importance of the EU-Moroccan Human
-      Rights Dialogue, affirming commitment to human rights.
+    rule_of_law: Germany stressed the importance of continuing cooperation on human
+      rights issues, specifically mentioning the EU-Moroccan Human Rights Dialogue.
   stances:
     rule_of_law:
       score: 1
-      evidence: The two Ministers agreed on the importance of continuing the work
-        in the UN Human Rights Council in support of human rights.
+      evidence: They stressed the importance of the EU -Moroccan Human Rights Dialogue.

@@ -1,26 +1,16 @@
 actors:
 - PL
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Radosław Sikorski
-  - Stanisław Aronson
-  topics:
-  - rule_of_law
+  topics: []
   location: null
-  position: Poland honors individuals who contribute to strengthening its international
-    status and uphold democratic values.
-  positions:
-    rule_of_law: Poland emphasizes the importance of historical memory, combating
-      hatred, and upholding democratic values, aligning with the affirmation of the
-      rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: Stanisław Aronson has repeatedly warned against hatred and manipulation
-        of historical memory.
+  position: The statement focuses on honoring a historical figure and promoting Polish-Jewish
+    dialogue rather than outlining current foreign policy positions related to the
+    Weimar Triangle goals.
+  positions: {}
+  stances: {}

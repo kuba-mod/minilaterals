@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: speech
   participants:
@@ -14,14 +13,13 @@ extracted:
   - ukraine
   - rule_of_law
   location: null
-  position: Germany emphasizes the importance of peacekeepers and strongly condemns
-    Russia's illegal war against Ukraine while committing to close EU coordination
-    in international forums.
+  position: Germany emphasizes the importance of international law and peacekeepers
+    while strongly condemning Russia's aggression against Ukraine and NATO allies.
   positions:
-    ukraine: Germany affirms long-term support for Ukraine by highlighting its defense
-      efforts against Russian aggression and condemning Moscow’s actions.
-    rule_of_law: Germany stresses the importance of democratic resilience and international
-      law by criticizing Russia's threats to a NATO ally within the UN Security Council.
+    ukraine: Germany supports long-term support for Ukraine by highlighting its defense
+      efforts and condemning Russian war crimes and threats.
+    rule_of_law: Germany affirms the importance of international law and democratic
+      resilience by criticizing Russia's actions in the UN Security Council.
   stances:
     ukraine:
       score: 1

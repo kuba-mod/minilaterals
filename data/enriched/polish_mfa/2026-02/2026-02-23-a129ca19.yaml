@@ -2,38 +2,43 @@ actors:
 - PL
 issue_areas:
 - ukraine
+- hybrid
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
   - Deputy Prime Minister Radosław Sikorski
   - Foreign Minister Radosław Sikorski
-  - EU foreign ministers
-  - Board of Peace’s High Representative for Gaza Nickolay Mladenov
   topics:
   - ukraine
+  - hybrid
   - rule_of_law
   location: null
-  position: Poland emphasized continued support for Ukraine through sanctions, military
-    aid, and advocating for restrictive measures against Russia, while also addressing
-    regional issues like the Middle East and EU internal cooperation.
+  position: Poland strongly advocates for continued and expanded support for Ukraine
+    through sanctions, military aid, and diplomatic pressure on Russia, while also
+    addressing regional issues like the Middle East.
   positions:
-    ukraine: Poland reaffirmed its commitment to Ukraine, highlighting its extensive
-      support—including financial aid, military equipment, and sanctions—to ensure
-      Russia cannot finance its war machine until a just and lasting peace is achieved.
-    rule_of_law: Poland backed the introduction of an EU entry ban for Russian citizens
-      involved in the aggression against Ukraine, advocating for limiting visas to
-      a humanitarian minimum to enforce the rule of law.
+    ukraine: Poland commits to providing extensive material and financial support
+      to Ukraine, including paying for terminals and contributing various military
+      assets.
+    hybrid: Poland supports coordinated EU action against hybrid threats, specifically
+      advocating for stricter entry bans and limiting visas to prevent Russian citizens
+      from participating in aggression.
+    rule_of_law: Poland supports maintaining international legal standards by advocating
+      for sanctions on Russia and noting concerns over illegal activities in the West
+      Bank.
   stances:
     ukraine:
       score: 2
-      evidence: Poland is among the countries that have done the most [for Ukraine].
-        It is Poland that has been paying for 30,000 terminals that are being used
-        in Ukraine, including by the Ukrainian Armed Forces.
-    rule_of_law:
+      evidence: It is Poland that has been paying for 30,000 terminals that are being
+        used in Ukraine, including by the Ukrainian Armed Forces.
+    hybrid:
       score: 2
-      evidence: Deputy Prime Minister Sikorski also took part in an informal exchange
-        on foreign information manipulatio
+      evidence: Minister Sikorski backed the Estonian proposal to introduce an EU
+        entry ban for Russian citizens who participated in the aggression against
+        Ukraine.
+    rule_of_law:
+      score: 1
+      evidence: The MFA head also urged Hungary to stop blocking a loan for Ukraine.

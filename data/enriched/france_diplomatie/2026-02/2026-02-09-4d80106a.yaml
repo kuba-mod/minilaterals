@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
@@ -13,17 +12,17 @@ extracted:
   topics:
   - rule_of_law
   location: null
-  position: France acknowledges the end of the Transitional Presidential Council's
-    mandate and commits to supporting the Haitian government's efforts to restore
-    constitutional and democratic order.
+  position: France acknowledges the end of Haiti's transitional mandate and commits
+    to supporting stability, security, and a return to democratic order through continued
+    aid and support for Haitian institutions.
   positions:
-    rule_of_law: France calls on all political actors and civil society to work with
-      interim authorities to promote stability, security, and a return to constitutional
-      and democratic order through free, inclusive elections.
+    rule_of_law: France supports promoting stability and returning to constitutional
+      and democratic order in Haiti by calling on all actors to work together with
+      interim authorities.
   stances:
     rule_of_law:
       score: 1
-      evidence: calls on all political actors and all components of civil society
+      evidence: It calls on all political actors and all components of civil society
         to work together with the interim authorities to promote stability, security
         and a return to constitutional and democratic order in Haiti through free,
         inclusive elections.

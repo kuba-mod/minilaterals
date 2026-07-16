@@ -2,36 +2,52 @@ actors:
 - FR
 - PL
 issue_areas:
-- ukraine
 - defence
+- hybrid
+- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: meeting
   participants:
-  - Radosław Sikorski
-  - Artur Harazim
-  - Henryka Mościcka-Dendys
-  - Andrzej Domański
-  - Mariusz Malinowski
+  - Undersecretary of State Artur Harazim
+  - Head of the Foreign Service and Director-General Henryka Mościcka-Dendys
+  - Minister of Finance Andrzej Domański
+  - Vice-Rector for Research Professor Mariusz Malinowski
+  - Deputy Prime Minister Radosław Sikorski
   - Jean-Noël Barrot
   topics:
-  - ukraine
   - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
   location: null
-  position: Poland emphasizes the necessity of investing in advanced defense technologies
-    and drones to counter Russian aggression and ensure future security.
+  position: Poland emphasizes its economic recovery and the urgent need for increased
+    defense spending to match Russia's military capabilities.
   positions:
-    ukraine: Poland highlights the ongoing Russian aggression against Ukraine as a
-      primary driver for security adjustments.
-    defence: Poland is actively investing in drones and anti-drone systems via the
-      SAFE loan to match Russia's military capabilities.
+    defence: Poland strongly supports enhancing its defense capabilities through external
+      funding to build an army capable of matching Russia's strength.
+    hybrid: Poland highlights the ongoing technological race between Ukraine and Russia
+      as a key security concern requiring vigilance against advanced threats.
+    enlargement: Poland supports broader European integration by noting its own dynamic
+      development and potential for greater influence within Europe.
+    rule_of_law: Poland stresses the importance of learning from conflicts like the
+      Russo-Ukrainian war to build a resilient defense structure.
   stances:
-    ukraine:
-      score: 1
-      evidence: Poland’s top diplomat also spoke on Russia’s aggression against Ukraine
     defence:
       score: 2
-      evidence: It is only the SAFE loan that provides us with the means to invest
+      evidence: It’s only the SAFE loan that provides us with the means to invest
         in drones and anti-drone systems.
+    hybrid:
+      score: 1
+      evidence: 'The race is on: every few months either Ukraine or Russia gains the
+        upper hand in new technologies'
+    enlargement:
+      score: 0
+      evidence: The imbalance of power between us and the western Europe is much smaller
+        today than in the past.
+    rule_of_law:
+      score: 1
+      evidence: I think that the next war will be won by those who will learn the
+        lesson from the Russo–Ukrainian war.

@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-Weimar Triangle tracker — enrichment step.
+Weimar Triangle tracker — enrichment + classification step.
 
-Finds weimar_relevant YAML events without an 'extracted' block and calls
-an LLM to extract a structured position summary. Writes the result back to
-the YAML file in-place.
+This is the sole categoriser: it processes EVERY raw event that lacks an
+enriched sidecar and asks the LLM to decide, in one call, which Weimar
+countries are involved, which issue areas the item touches, whether it is
+relevant at all, and a structured position summary. The result is written to
+data/enriched/. There is no keyword fallback — if the model is unreachable or
+its output is unparseable, the event simply stays un-categorised and is retried
+on the next run (or recovered by re-running this step against a local model).
 
 Provider is selected via env var (or .env file):
 
@@ -45,7 +49,7 @@ from openai import OpenAI
 from tqdm import tqdm
 
 from pipeline.schemas import EnrichedEventSchema, ExtractedSchema
-from pipeline.sources.base import Event
+from pipeline.sources.base import MFA_SOURCES
 
 ROOT = Path(__file__).parent.parent
 EVENTS_DIR = ROOT / "data" / "events"
@@ -99,6 +103,8 @@ Return JSON with exactly these fields:
 {{
   "event_type": "one of: joint_statement, speech, meeting, communique, statement",
   "participants": ["list of named officials or roles mentioned"],
+  "actors": ["a flat array of zero to three of the strings DE, FR, PL — one entry per Weimar Triangle country (Germany/France/Poland) this item represents or discusses; [] if none of the three; never nest arrays or add other values"],
+  "explicit_weimar": "a JSON boolean, true or false — never a quoted string; true only if the text explicitly refers to the Weimar Triangle, the Weimar format, or trilateral Germany-France-Poland cooperation",
   "topics": ["list from: ukraine, defence, hybrid, enlargement, green_transition, rule_of_law"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
@@ -139,6 +145,52 @@ SOURCE_LABELS = {
     "france_diplomatie": "France",
     "polish_mfa": "Poland",
 }
+
+# Country code for each known-actor source. The source country is always folded
+# into the actor list for these sources (see MFA_SOURCES), so a single-country
+# MFA press release still counts its own country as an actor.
+SOURCE_ACTOR = {
+    "german_mfa": "DE",
+    "france_diplomatie": "FR",
+    "polish_mfa": "PL",
+}
+
+# Canonical order for actor codes, and the aliases the model might return.
+_ACTOR_ORDER = ["DE", "FR", "PL"]
+_ACTOR_ALIASES = {
+    "DE": "DE",
+    "GERMANY": "DE",
+    "GERMAN": "DE",
+    "FR": "FR",
+    "FRANCE": "FR",
+    "FRENCH": "FR",
+    "PL": "PL",
+    "POLAND": "PL",
+    "POLISH": "PL",
+}
+
+
+def _normalize_actors(raw_actors, source_name: str) -> list[str]:
+    """Map the model's actor list to canonical DE/FR/PL codes, folding in the
+    source country for MFA sources, returned in canonical order."""
+    codes = set()
+    for a in raw_actors or []:
+        code = _ACTOR_ALIASES.get(str(a).strip().upper())
+        if code:
+            codes.add(code)
+    if source_name in MFA_SOURCES:
+        codes.add(SOURCE_ACTOR[source_name])
+    return [c for c in _ACTOR_ORDER if c in codes]
+
+
+def _as_bool(value) -> bool:
+    """Coerce a model-returned flag to bool. Guards against the string "false",
+    which is truthy under a plain bool() cast."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"true", "yes", "1"}
+    return bool(value)
 
 
 # ---------------------------------------------------------------------------
@@ -236,26 +288,16 @@ def _build_provider():
 
 
 def _find_pending(limit: int | None = None) -> list[Path]:
+    """Every raw event without an enriched sidecar is pending — the LLM sees
+    everything and decides relevance itself. Newest first, so the events that
+    drive the current edition's clusters and timeline are categorised soonest."""
     pending = []
-    for f in sorted(EVENTS_DIR.glob("**/*.yaml")):
+    for f in sorted(EVENTS_DIR.glob("**/*.yaml"), key=lambda p: p.name, reverse=True):
         try:
             d = yaml.safe_load(f.read_text(encoding="utf-8"))
         except Exception:
             continue
         if not d:
-            continue
-
-        event = Event(
-            source_name=d.get("source_name", ""),
-            title=d.get("title", ""),
-            text=d.get("text", "") or "",
-            source_url=d.get("source_url", ""),
-            source_lang=d.get("source_lang", "en"),
-            source_published_at=d.get("source_published_at", ""),
-            date=d.get("date", ""),
-        ).classify()
-
-        if not event.weimar_relevant:
             continue
 
         rel = f.relative_to(EVENTS_DIR)
@@ -310,6 +352,19 @@ def _parse_json(raw: str) -> dict:
     return json.loads(raw.strip())
 
 
+def _validate_llm_shape(extracted: dict) -> None:
+    """Reject actors/explicit_weimar shapes the prompt didn't ask for, instead of
+    letting _normalize_actors/_as_bool silently mis-parse them (observed: gemma4
+    occasionally nests "actors", e.g. [["FR"]] or ["FR", []], which a naive
+    str()-based parse just drops with no error)."""
+    actors = extracted.get("actors")
+    if actors is not None and (not isinstance(actors, list) or any(not isinstance(a, str) for a in actors)):
+        raise ValueError(f"actors must be a flat array of strings, got {actors!r}")
+    explicit_weimar = extracted.get("explicit_weimar")
+    if isinstance(explicit_weimar, str) and explicit_weimar.strip().lower() not in {"true", "false"}:
+        raise ValueError(f"explicit_weimar must be a boolean, got {explicit_weimar!r}")
+
+
 def _extract(provider, raw_path: Path) -> bool:
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_name = data.get("source_name", "unknown")
@@ -331,12 +386,13 @@ def _extract(provider, raw_path: Path) -> bool:
             raw = provider.call(prompt)
             try:
                 extracted = _parse_json(raw)
+                _validate_llm_shape(extracted)
                 break
-            except json.JSONDecodeError as exc:
+            except (json.JSONDecodeError, ValueError) as exc:
                 if attempt == 0:
                     print(f"  ~ retry {raw_path.name}: {exc}")
                 else:
-                    print(f"  ! JSON error for {raw_path.name}: {exc} — raw: {raw[:120]}")
+                    print(f"  ! invalid LLM output for {raw_path.name}: {exc} — raw: {raw[:120]}")
                     return False
         assert extracted is not None
 
@@ -366,24 +422,28 @@ def _extract(provider, raw_path: Path) -> bool:
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]
 
+        # Classify from the model's own reading of the item: which Weimar
+        # countries are involved, whether it explicitly invokes the trilateral
+        # format, and which issue areas it touches. Relevance is then a fixed
+        # rule over those signals — mirroring the previous policy (a trilateral
+        # signal, two-plus actors on a tracked topic, or a known-actor MFA item
+        # on a tracked topic), but with LLM-perceived signals instead of regex.
+        # Pulled out of `extracted` (not part of ExtractedSchema) since they're
+        # promoted to top-level enriched fields instead.
+        actors = _normalize_actors(extracted.pop("actors", None), source_name)
+        explicit_weimar = _as_bool(extracted.pop("explicit_weimar", None))
         ExtractedSchema.model_validate(extracted)
-
-        # Re-run classify() to get fresh classification fields, then let LLM topics override
-        event = Event(
-            source_name=source_name,
-            title=data.get("title", ""),
-            text=data.get("text", "") or "",
-            source_url=data.get("source_url", ""),
-            source_lang=data.get("source_lang", "en"),
-            source_published_at=data.get("source_published_at", ""),
-            date=data.get("date", ""),
-        ).classify()
+        from_mfa = source_name in MFA_SOURCES
+        trilateral_signal = explicit_weimar or len(actors) == 3
+        weimar_relevant = (
+            trilateral_signal or (len(actors) >= 2 and bool(llm_topics)) or (from_mfa and bool(llm_topics))
+        )
 
         enriched_data = {
-            "actors": event.actors,
-            "issue_areas": llm_topics if llm_topics else event.issue_areas,
-            "weimar_relevant": event.weimar_relevant,
-            "trilateral_signal": event.trilateral_signal,
+            "actors": actors,
+            "issue_areas": llm_topics,
+            "weimar_relevant": weimar_relevant,
+            "trilateral_signal": trilateral_signal,
             "extracted": extracted,
         }
         EnrichedEventSchema.model_validate(enriched_data)
@@ -395,11 +455,8 @@ def _extract(provider, raw_path: Path) -> bool:
             yaml.dump(enriched_data, allow_unicode=True, sort_keys=False),
             encoding="utf-8",
         )
-        print(
-            f"  + [{source_name}] {data.get('date')} "
-            f"topics={extracted.get('topics', [])} | "
-            f"positions={list(extracted.get('positions', {}).keys())}"
-        )
+        flag = "WEIMAR" if weimar_relevant else "  ·   "
+        print(f"  + {flag} [{source_name}] {data.get('date')} actors={actors} topics={llm_topics}")
         return True
     except Exception as exc:
         print(f"  ! Error for {raw_path.name}: {exc}")

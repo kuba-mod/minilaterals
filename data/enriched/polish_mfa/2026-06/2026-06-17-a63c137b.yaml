@@ -1,12 +1,10 @@
 actors:
-- DE
 - PL
 issue_areas:
-- defence
 - hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: meeting
   participants:
@@ -14,27 +12,25 @@ extracted:
   - Þorgerður Katrín Gunnarsdóttir
   - Martin Eyjólfsson
   - Paweł Bartoszek
-  - Anna Hjartardóttir
-  - Gustav Lindström
   topics:
-  - defence
   - hybrid
-  location: Reykjavík, Iceland
-  position: Poland strengthened bilateral ties with Iceland and emphasized regional
-    security cooperation within the framework of the Council of the Baltic Sea States.
+  - rule_of_law
+  location: null
+  position: Poland reaffirmed the strong bilateral relationship with Iceland and emphasized
+    cooperation in the Baltic Sea region while highlighting regional security challenges.
   positions:
-    defence: Poland emphasizes the need for close cooperation among Baltic Sea states
-      to maintain regional security and stability.
-    hybrid: Poland is actively working to increase regional resilience against hybrid
-      threats and infrastructure vulnerabilities.
+    hybrid: Poland stressed the need for close international cooperation to address
+      various threats facing the Baltic Sea region, including hybrid risks.
+    rule_of_law: Poland emphasized the importance of upholding security and stability
+      in the Baltic Sea region through cooperation among member states.
   stances:
-    defence:
+    hybrid:
+      score: 1
+      evidence: The participants of the seminar have also discussed the actions to
+        counteract the threats to critical infrastructure, combating the “clunker
+        fleet”, and strengthening the region’s states’ resilience to hybrid threats.
+    rule_of_law:
       score: 1
       evidence: Emphasis was also put on the importance of close cooperation among
         the CBSS member states in order to uphold the security and stability in the
         region.
-    hybrid:
-      score: 2
-      evidence: the participants of the seminar have also discussed the actions to
-        counteract the threats to critical infrastructure, combating the “clunker
-        fleet”, and strengthening the region’s states’ resilience to hybrid threats.

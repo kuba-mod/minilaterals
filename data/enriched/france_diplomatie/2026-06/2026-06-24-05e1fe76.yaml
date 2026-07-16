@@ -1,26 +1,25 @@
 actors:
-- DE
 - FR
 issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: joint_statement
   participants:
-  - Foreign Ministers of like-minded partners (France, Germany, Ireland, Italy, Netherlands,
-    Norway, UK)
+  - Foreign Ministers of like-minded partners
   topics:
   - rule_of_law
   location: null
-  position: The signatories express deep concern over the ongoing violence in El Obeid
-    and call for an immediate halt to attacks, safe humanitarian access, and adherence
-    to international law.
+  position: France and its partners express deep concern over the continued assault
+    on El Obeid in Sudan, calling for an immediate halt to violence, protection of
+    civilians, and adherence to international humanitarian law.
   positions:
-    rule_of_law: France strongly emphasizes upholding international humanitarian law
-      and accountability for atrocities committed in conflict zones.
+    rule_of_law: The statement emphasizes upholding international humanitarian law
+      and holding those responsible accountable for atrocities, aligning with the
+      foundational principles of democratic resilience and rule of law.
   stances:
     rule_of_law:
-      score: 2
-      evidence: all parties must ensure rapid, safe and unhindered humanitarian access.
+      score: 1
+      evidence: uphold international humanitarian law, and honour their commitments
+        under the Jeddah Declaration.

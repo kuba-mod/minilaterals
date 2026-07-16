@@ -1,18 +1,24 @@
 actors:
 - DE
 issue_areas:
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Foreign Minister Wadephul
-  topics: []
-  location: Israel
-  position: Germany reaffirms its commitment to Israel's security, supports a diplomatic
-    resolution to the Israel-Lebanon conflict, and emphasizes the necessity of humanitarian
-    aid in Gaza.
-  positions: {}
-  stances: {}
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany aims to foster understanding and lasting peace in the Middle East
+    while supporting Israel's security and advocating for humanitarian access in Gaza.
+  positions:
+    rule_of_law: Germany emphasizes upholding historical truth regarding the Holocaust
+      and maintaining democratic resilience through cooperation with memorial institutions.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Our relations with Israel can never be seen independently of the responsibility
+        that Germany bears for the security of the only Jewish state in light of the
+        Shoah – that most atrocious crime against humanity committed by Germans.

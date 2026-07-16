@@ -1,35 +1,27 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: joint_statement
   participants:
-  - Anita Anand
-  - Penny Wong
-  - Lars Løkke Rasmussen
-  - Margus Tsahkna
-  - Kaja Kallas
-  - Elina Valtonen
-  - Jean-Noël Barrot
-  - Þorgerður Katrín Gunnarsdóttir
-  - Baiba Braže
-  - Kęstutis Budrys
-  - Espen Barth Eide
-  - Maria Malmer Stenergard
-  topics:
-  - rule_of_law
+  - Anita Anand, Canada’s Minister of Foreign Affairs
+  - Penny Wong, Australia’s Minister for Foreign Affairs
+  - Lars Løkke Rasmussen, Denmark’s Minister for Foreign Affairs
+  - Margus Tsahkna, Estonia's Minister of Foreign Affairs
+  - Kaja Kallas, High Representative of the European Union for Foreign Affairs and
+    Security Policy
+  - Elina Valtonen, Finland’s Minister for Foreign Affairs
+  - Jean-Noël Barrot, France’s Minister for Europe and Foreign Affairs
+  - Þorgerður Katrín Gunnarsdóttir, Iceland’s Minister for Foreign Affairs
+  - Baiba Braže, Latvia’s Minister for Foreign Affairs
+  - Kęstutis Budrys, Lithuania’s Minister of Foreign Affairs
+  - Espen Barth Eide, Norway’s Minister of Foreign Affairs
+  - Maria Malmer Stenergard, Sweden’s Minister for Foreign Affairs
+  topics: []
   location: null
-  position: France joins a multilateral call for a ceasefire in Lebanon, the disarmament
-    of Hezbollah, and the respect of international law and Lebanese sovereignty.
-  positions:
-    rule_of_law: France rhetorically supports the adherence to international and humanitarian
-      law as a foundation for security.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: All parties must respect international law, including international
-        humanitarian law.
+  position: France supports de-escalation in Lebanon and calls on all parties to respect
+    international law and the sovereignty of Lebanon.
+  positions: {}
+  stances: {}

@@ -5,38 +5,47 @@ issue_areas:
 - ukraine
 - defence
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: meeting
   participants:
-  - Ignacy Niemczycki
-  - Benjamin Haddad
+  - Ignacy Niemczycki, Secretary of State at the Polish Ministry of Foreign Affairs
+  - Benjamin Haddad, France’s Minister Delegate for European Affairs
   topics:
   - ukraine
   - defence
   - enlargement
+  - rule_of_law
   location: Gdańsk, Poland
-  position: Poland is committed to deepening cooperation with France across security,
-    EU policy, and cultural spheres, leveraging the Treaty of Nancy to strengthen
-    bilateral ties.
+  position: Poland and France are committed to deepening cooperation across security,
+    EU policy, and cultural spheres, leveraging existing treaties for future collaboration.
   positions:
-    ukraine: Poland and France are ready for closer cooperation, most notably in security,
-      which includes support for Ukraine and deterrence of Russia.
-    defence: Poland and France are ready for closer cooperation, most notably in security,
-      which includes support for Ukraine and deterrence of Russia.
-    enlargement: Poland views closer cooperation with France as vital for EU policy,
-      specifically regarding the enlargement process and strengthening the common
-      market.
+    ukraine: Poland actively supports long-term support for Ukraine in the context
+      of shared security goals with France.
+    defence: Poland emphasizes strengthening collective security and defense capabilities
+      alongside France to deter Russia.
+    enlargement: Poland supports the EU enlargement process as a key area for closer
+      cooperation with France.
+    rule_of_law: Poland stresses the importance of general EU policy cooperation to
+      strengthen democratic resilience and institutional frameworks.
   stances:
     ukraine:
-      score: 1
-      evidence: ''
+      score: 2
+      evidence: most notably in security, which includes support for Ukraine and deterrence
+        of Russia
     defence:
-      score: 1
+      score: 2
       evidence: most notably in security, which includes support for Ukraine and deterrence
         of Russia
     enlargement:
       score: 1
-      evidence: the enlargement process
+      evidence: in EU policy, in such fields as the future Multiannual Financial Framework,
+        the enlargement process as well as strengthening the common market and EU’s
+        competitiveness
+    rule_of_law:
+      score: 1
+      evidence: in EU policy, in such fields as the future Multiannual Financial Framework,
+        the enlargement process as well as strengthening the common market and EU’s
+        competitiveness

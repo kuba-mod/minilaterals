@@ -1,34 +1,15 @@
 actors:
 - FR
-issue_areas:
-- enlargement
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Office of the United Nations High Commissioner for Refugees (UNHCR)
-  topics:
-  - enlargement
-  - rule_of_law
+  topics: []
   location: null
-  position: France reaffirms its commitment to supporting refugees and displaced populations
-    globally, emphasizing solidarity and institutional support through UNHCR.
-  positions:
-    enlargement: France supports the EU accession of Ukraine and Western Balkans countries
-      by highlighting its general support for refugee solutions and international
-      cooperation.
-    rule_of_law: France affirms democratic resilience and rule of law by supporting
-      international humanitarian efforts and refugee protection mechanisms.
-  stances:
-    enlargement:
-      score: 1
-      evidence: reiterates its support to the Office of the United Nations High Commissioner
-        for Refugees (UNHCR) in implementing its mandate to protect and defend refugees’
-        rights.
-    rule_of_law:
-      score: 1
-      evidence: reaffirms its solidarity with those forced to flee their country to
-        escape conflict and persecution.
+  position: France reaffirms its solidarity with refugees and supports UNHCR's mandate
+    and reforms to ensure dignity and lasting solutions.
+  positions: {}
+  stances: {}

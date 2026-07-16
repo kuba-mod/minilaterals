@@ -1,8 +1,18 @@
 actors:
-- DE
 - PL
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.15
-extracted: null
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marek Krawczyk
+  - Karol Polejowski
+  - Michał Syska
+  topics: []
+  location: null
+  position: Poland emphasized the need for improved historical cooperation and better
+    representation of Polish victims in German memorial sites.
+  positions: {}
+  stances: {}

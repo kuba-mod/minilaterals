@@ -4,37 +4,47 @@ issue_areas:
 - ukraine
 - hybrid
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
   - Radosław Sikorski
   topics:
   - ukraine
   - hybrid
   - enlargement
+  - rule_of_law
   location: null
-  position: Poland advocates for increased sanctions against Russia, the acceleration
-    of Ukraine's EU integration, and coordinated EU action against Russian hybrid
-    threats.
+  position: Poland advocates for increased pressure on Russia and supports Ukraine's
+    EU accession while calling for stronger cooperation against hybrid threats.
   positions:
-    ukraine: Poland actively pushes for increased economic pressure and sanctions
-      against Russia to support Ukraine.
-    hybrid: Poland is leading the initiative to combat Russian sabotage and subversion
-      through the development of a White Paper and proposed intelligence cooperation.
-    enlargement: Poland strongly supports and welcomes the start of EU accession negotiations
-      with Ukraine.
+    ukraine: Poland strongly supports long-term support for Ukraine, demanding further
+      sanctions and welcoming its path toward EU membership.
+    hybrid: Poland actively pushes for coordinated European action by proposing a
+      White Paper on Russian sabotage and demanding strengthened intelligence cooperation
+      against hybrid threats.
+    enlargement: Poland strongly supports the EU accession of Ukraine by welcoming
+      the opening of negotiations and viewing it as key for modernization.
+    rule_of_law: Poland condemns Russian attacks on cultural heritage and calls for
+      adherence to human rights standards within the context of international law.
   stances:
     ukraine:
       score: 2
-      evidence: insisted on prompt adoption of the 21st round of economic sanctions
+      evidence: Minister Sikorski called for a firm stance towards Russia as it fails
+        to display good will to enter meaningful peace talks.
     hybrid:
       score: 2
-      evidence: Radosław Sikorski presented an essential document developed on MFA’s
-        initiative by the Polish Institute of International Affairs (PISM)
+      evidence: The minister emphasised that in order to stop Russia’s hybrid aggression
+        the EU member states must strengthen their intelligence cooperation, set up
+        a common data exchange system, and clearly identify the perpetrators.
     enlargement:
+      score: 2
+      evidence: At the same time, Poland welcomed the opening of the first cluster
+        in negotiations with Ukraine, a milestone on its path to the EU.
+    rule_of_law:
       score: 1
-      evidence: Poland welcomed the opening of the first cluster in negotiations with
-        Ukraine
+      evidence: In particular, he condemned the destruction of the Kyiv Pechersk Lavra,
+        an Eastern Orthodox monastery complex from 11th century, listed as UNESCO
+        World Heritage Site.

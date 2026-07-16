@@ -1,4 +1,5 @@
-actors: []
+actors:
+- DE
 issue_areas:
 - rule_of_law
 weimar_relevant: true
@@ -10,16 +11,16 @@ extracted:
   topics:
   - rule_of_law
   location: null
-  position: Germany, via the EU, advocates for the adherence to international law
-    and the 2016 Arbitral Award to ensure stability and freedom of navigation in the
-    South China Sea.
+  position: The EU reaffirms its commitment to international law and peaceful dispute
+    resolution in the South China Sea.
   positions:
-    rule_of_law: Germany supports the rule of law by emphasizing that the 2016 Arbitral
-      Award is legally binding and that international law must be the core of dispute
-      resolution.
+    rule_of_law: Germany supports upholding international law and the rule of law
+      as foundational principles for regional stability and global security.
   stances:
     rule_of_law:
       score: 1
-      evidence: firmly opposes any unilateral actions that threaten to undermine regional
-        stability and the international order based on international law and the rule
-        of law
+      evidence: The EU underlines the critical importance of upholding the freedoms,
+        rights and duties set out in UNCLOS, in particular the freedom of navigation
+        and overflight, including the right of transit passage, as essential to regional
+        stability, global security, and the maintenance of safe, free and open sea
+        routes.

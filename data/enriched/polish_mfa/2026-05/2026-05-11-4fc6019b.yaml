@@ -2,23 +2,29 @@ actors:
 - PL
 issue_areas:
 - defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Under Secretary DiNanno
   topics:
   - defence
+  - rule_of_law
   location: null
-  position: Poland focused on enhancing NATO's deterrence capabilities, the Alliance’s
-    Eastern policy, and Polish–US cooperation in defense and defense industries.
+  position: Poland held consultations with the US focusing on enhancing NATO's deterrence
+    capabilities and strengthening bilateral defense cooperation.
   positions:
-    defence: Poland emphasized enhancing NATO’s deterrence capabilities and discussed
-      Polish–US cooperation in defense, aligning with the goal of supporting a stronger
-      EU defence capability complementary to NATO and focusing on eastern flank deterrence.
+    defence: Poland supports a stronger collective security framework by discussing
+      enhanced NATO deterrence and defense industry cooperation with the US.
+    rule_of_law: Poland emphasizes maintaining democratic resilience and stability
+      through discussions on arms control and disarmament regimes.
   stances:
     defence:
       score: 1
-      evidence: enhancing NATO’s deterrence capabilities
+      evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
+        capabilities
+    rule_of_law:
+      score: 0
+      evidence: the future of the arms control and disarmament regime

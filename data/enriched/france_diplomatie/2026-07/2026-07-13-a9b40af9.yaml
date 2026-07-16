@@ -1,40 +1,34 @@
 actors:
 - FR
-- PL
 issue_areas:
-- ukraine
-- defence
 - hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - France
   topics:
-  - ukraine
-  - defence
   - hybrid
+  - rule_of_law
   location: null
-  position: France condemns Russian malicious cyber activities targeting its strategic
-    interests and supports EU-wide sanctions and solidarity efforts to counter these
-    hybrid threats.
+  position: France strongly condemns Russian cyber activities and emphasizes the need
+    for international adherence to norms of responsible state behavior in cyberspace.
   positions:
-    ukraine: France acknowledges the intensification of Russian cyber activities targeting
-      Ukraine and its allies.
-    defence: France highlights the targeting of its defence industry and the need
-      for European solidarity to respond to cyber incidents.
-    hybrid: France actively coordinates with the EU to attribute and sanction Russian
-      cyberattacks and other destabilizing hybrid threats.
+    hybrid: France highlights that Russia's malicious cyber activities are part of
+      broader hybrid threats targeting EU Member States, including information manipulation
+      and interference.
+    rule_of_law: France reaffirms its commitment to international norms and urges
+      Russia to respect its commitments regarding responsible state behavior in cyberspace.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russia has continuously intensified its malicious cyber activities,
-        particularly targeting Ukraine and its allies.
-    defence:
-      score: 2
-      evidence: France is directly involved in European solidarity efforts to prevent
-        or respond to cyber incidents
     hybrid:
-      score: 2
-      evidence: the European Union adopted a new package of sanctions on 13 July,
-        under the EU‘s cyber regime, targeting 9 individuals and 4 entities
+      score: 1
+      evidence: 'These cyber activities are one aspect of the growing hybrid threats
+        targeting EU Member States in the context of Russia’s war of aggression against
+        Ukraine: information manipulation campaigns, interference in democratic processes,
+        airspace violations, and other destabilizing actions.'
+    rule_of_law:
+      score: 1
+      evidence: France reaffirms its commitment to the United Nations normative framework
+        and urges Russia to respect its commitments in this regard.

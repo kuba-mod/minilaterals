@@ -4,11 +4,9 @@ issue_areas:
 - defence
 - hybrid
 - enlargement
-- green_transition
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -23,29 +21,25 @@ extracted:
   - defence
   - hybrid
   - enlargement
-  - green_transition
   - rule_of_law
-  location: Gdynia, null
-  position: Poland and Sweden reaffirmed their strategic partnership by committing
-    to deepen cooperation on security, defense, and EU integration.
+  location: Gdynia
+  position: Poland and Sweden committed to deepening their strategic partnership across
+    security, defense, and EU cooperation.
   positions:
-    defence: Poland and Sweden are deepening military cooperation through the purchase
-      of A26 submarines and adopting a joint statement on Baltic Sea security.
+    defence: Poland supports strengthening European defense capabilities through bilateral
+      military agreements and joint statements on the Baltic Sea.
     hybrid: Poland and Sweden discussed top challenges to international security,
-      including Russia’s aggression against Ukraine.
-    enlargement: Poland and Sweden support EU enlargement by emphasizing the importance
-      of the EU as a key dimension of their strategic partnership.
-    green_transition: Poland and Sweden committed to working towards an EU that is
-      economically competitive and aligned with green objectives.
-    rule_of_law: Poland emphasized the importance of mutual understanding as a dimension
-      of the strategic partnership, supporting democratic resilience.
+      including hybrid threats like disinformation and foreign interference.
+    enlargement: Poland supports EU enlargement by emphasizing the importance of understanding
+      each other's perspectives for future institutional reforms.
+    rule_of_law: Poland and Sweden reaffirmed their commitment to democratic values
+      and cooperation within the EU framework.
   stances:
     defence:
       score: 2
       evidence: One of the most important points of the intergovernmental consultations
         was the signing of a contract for the purchase of three A26 submarines under
-        the Orka programme, which opens a new chapter in military cooperation with
-        Sweden.
+        the Orka programme
     hybrid:
       score: 1
       evidence: The chiefs of Polish and Swedish diplomacies also discussed top challenges
@@ -53,15 +47,10 @@ extracted:
         against Ukraine, the Middle East conflict, and cooperation on the Korean Peninsula.
     enlargement:
       score: 1
-      evidence: The European Union is one of the key dimensions of the Polish–Swedish
-        strategic partnership.
-    green_transition:
-      score: 2
-      evidence: They reaffirmed that Poland and Sweden will work hard towards a European
-        Union that is economically competitive, open to innovation, and on a par with
-        global market players.
+      evidence: As demonstrated by the historically significant Polish–Swedish initiative
+        of the Eastern Partnership
     rule_of_law:
       score: 1
-      evidence: The deputy head of Polish diplomacy emphasised that the willingness
-        to understand each other’s perspectives is also an important dimension of
-        the Strategic Partnership.
+      evidence: Our relations have flourished based on our shared values and our exceptionally
+        close, almost identical, perception of the challenges we are now facing in
+        the region, Europe, and the world.

@@ -1,26 +1,15 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
   - Monica Kathina Juma
-  - UN Secretary-General
-  topics:
-  - rule_of_law
+  topics: []
   location: null
-  position: France reaffirms its commitment to supporting UNODC's efforts to combat
-    transnational criminal threats and organized crime, particularly drug trafficking.
-  positions:
-    rule_of_law: France supports UNODC's role in defining international policies on
-      preventing and combating illicit drugs and organized crime, aligning with the
-      foundational commitment to the rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: France is committed to ensuring that this effort is consistent with
-        its own effort to combat organized crime, and particularly drug trafficking.
+  position: France welcomes the UNODC appointment and commits to continued support
+    for its efforts against transnational criminal threats.
+  positions: {}
+  stances: {}

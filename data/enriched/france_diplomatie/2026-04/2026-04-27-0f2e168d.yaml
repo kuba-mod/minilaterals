@@ -1,11 +1,9 @@
 actors:
-- DE
 - FR
 issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.35
 extracted:
   event_type: speech
   participants:
@@ -13,14 +11,13 @@ extracted:
   topics:
   - rule_of_law
   location: Columbia
-  position: France emphasizes that Europe is the unknown variable capable of dramatically
-    changing the current geopolitical equation, advocating for a balance where strength
-    is guided by justice.
+  position: France emphasizes that Europe must act as the unknown variable to shape
+    a stable and just 21st century geopolitical order.
   positions:
-    rule_of_law: France stresses the historical importance of balancing force and
-      justice in international relations, noting that the UN and Bretton Woods institutions
-      structured power for stability.
+    rule_of_law: France stresses the foundational importance of justice alongside
+      force in international relations, referencing historical failures and successes
+      in maintaining global order.
   stances:
     rule_of_law:
       score: 1
-      evidence: make sure that what is strong is just, and strengthen what is just
+      evidence: Justice without force is powerless. Force without justice is tyranny.

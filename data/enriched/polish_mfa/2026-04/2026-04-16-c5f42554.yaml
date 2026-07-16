@@ -1,28 +1,17 @@
 actors:
 - PL
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Brigadier General M. Bieniek
-  - Joanna Dopierała-Konkołowicz
-  - Konrad Pawlik
-  - Władysław Teofil Bartoszewski
-  topics:
-  - rule_of_law
-  location: Poland
-  position: Poland reaffirmed its long-term commitment to contributing to a permanent
-    peace solution on the Korean Peninsula through the NNSC.
-  positions:
-    rule_of_law: Poland emphasized the crucial role of the NNSC in maintaining the
-      military armistice and promoting transparency and confidence, aligning with
-      the foundational principles of the rule of law.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: reaffirmed their long-term commitment to contribute to a permanent
-        peace solution on the Korean Peninsula.
+  - Brigadier General M. Bieniek, Head of the Polish Military Mission to the NNSC
+  - MRs Joanna Dopierała-Konkołowicz and Mr. Konrad Pawlik, Deputy Director of the
+    Asia and Pacific Department at the Ministry of Foreign Affairs
+  topics: []
+  location: null
+  position: Poland participated in consultations regarding the Korean Peninsula's
+    peace efforts, reaffirming its commitment to maintaining military armistice transparency.
+  positions: {}
+  stances: {}

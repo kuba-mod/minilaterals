@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: joint_statement
   participants:
@@ -31,14 +30,12 @@ extracted:
   - Liberata Mulamula
   topics:
   - rule_of_law
-  location: Nairobi, Kenya; Addis Ababa, Ethiopia
+  location: Nairobi, Kenya
   position: Germany supports ongoing peace efforts in the Great Lakes Region through
-    multilateral cooperation and emphasizes African-led mediation while considering
-    civil society perspectives.
+    multilateral cooperation and emphasizes African-led mediation.
   positions:
     rule_of_law: Germany stresses the importance of democratic resilience and rule
-      of law by highlighting the need for sustainable peace and security frameworks
-      in the Great Lakes region.
+      of law by underlining the need to consider civil society perspectives.
   stances:
     rule_of_law:
       score: 1

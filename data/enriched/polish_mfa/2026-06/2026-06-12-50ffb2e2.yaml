@@ -1,5 +1,4 @@
 actors:
-- FR
 - PL
 issue_areas:
 - defence
@@ -7,7 +6,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: speech
   participants:
@@ -17,27 +15,27 @@ extracted:
   - hybrid
   - rule_of_law
   location: Warsaw, Poland
-  position: Poland advocates for a stronger European industrial and defence identity,
-    coordinated action against foreign interference, and enhanced bilateral cooperation
-    within the EU.
+  position: Poland emphasizes the need for EU solidarity to protect its market and
+    develop a strong defense identity in coordination with NATO and the US.
   positions:
-    defence: Poland supports the development of an EU defence identity that complements
-      NATO and US efforts.
-    hybrid: Poland is actively pursuing the creation of the European Democracy Shield
-      to counter Russian disinformation and foreign interference.
-    rule_of_law: Poland emphasizes the need to protect democratic processes and public
-      trust against foreign information campaigns.
+    defence: Poland supports developing a stronger EU defense capability that complements
+      NATO through initiatives like the European Democracy Shield.
+    hybrid: Poland highlights the threat of foreign interference and disinformation
+      campaigns, particularly from Russia, necessitating tools to protect the information
+      space.
+    rule_of_law: Poland stresses the importance of democratic resilience and combating
+      disinformation as key elements for European stability and cooperation.
   stances:
     defence:
-      score: 1
+      score: 2
       evidence: The European Union should develop its defence identity in harmony
-        with both NATO and the United States
+        with both NATO and the United States - minister Radosław Sikorski said.
     hybrid:
       score: 2
-      evidence: we are preparing the European Democracy Shield. It will aim to protect
-        the integrity of public debate, support free and fair elections, and develop
-        citizens’ media literacy.
+      evidence: The foreign minister stressed that Russian information campaigns are
+        supposed to undermine citizens’ trust in public institutions, the media, and
+        international cooperation.
     rule_of_law:
-      score: 1
-      evidence: Russian information campaigns are supposed to undermine citizens’
-        trust in public institutions, the media, and international cooperation.
+      score: 2
+      evidence: It will aim to protect the integrity of public debate, support free
+        and fair elections, and develop citizens’ media literacy.

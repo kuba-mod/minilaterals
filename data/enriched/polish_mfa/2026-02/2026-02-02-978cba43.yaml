@@ -4,10 +4,10 @@ issue_areas:
 - ukraine
 - defence
 - hybrid
+- enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -17,33 +17,43 @@ extracted:
   - ukraine
   - defence
   - hybrid
+  - enlargement
   - rule_of_law
   location: null
-  position: Poland affirmed its strategic importance as a key ally to Ukraine, providing
-    comprehensive support across security, humanitarian, and military sectors.
+  position: Poland reaffirmed its strategic partnership with Ukraine and committed
+    to providing comprehensive support across military, humanitarian, and economic
+    sectors.
   positions:
-    ukraine: Poland confirmed concrete support for Kyiv, including aid and mitigating
-      consequences of Russian attacks, aligning with the commitment to long-term support
-      for Ukraine until a just and lasting peace is achieved.
-    defence: Poland emphasized enhancing military cooperation with Ukraine, specifically
-      mentioning cooperation in the unmanned aerial systems (drones) sector.
-    hybrid: The ministers stressed the need to continuously put international pressure
-      on Russia and discussed mitigating consequences of mass Russian attacks on Ukraine’s
-      critical infrastructure.
-    rule_of_law: The discussion highlighted the importance of bilateral political,
-      economic, and social cooperation and people-to-people contacts for building
-      mutual understanding and democratic resilience.
+    ukraine: Poland commits concrete support for Kyiv, particularly in mitigating
+      the consequences of Russian attacks on critical infrastructure.
+    defence: Poland is enhancing military cooperation with Ukraine, specifically focusing
+      on advanced technologies like unmanned aerial systems.
+    hybrid: Poland stresses the need for continuous international pressure against
+      Russia and addressing regional challenges.
+    enlargement: The text supports the general idea of cooperation but does not explicitly
+      address EU enlargement goals.
+    rule_of_law: Poland emphasizes that maintaining democratic understanding and stability
+      is vital through people-to-people contacts and humanitarian aid.
   stances:
     ukraine:
       score: 2
-      evidence: Poland can offer concrete support for Kyiv
+      evidence: Deputy Foreign Minister Bosacki confirmed that Poland can offer concrete
+        support for Kyiv, referring to recent actions of the Government Agency for
+        Strategic Reserves, and the “Warmth from Poland for Kyiv” campaign.
     defence:
-      score: 1
-      evidence: enhancing the Polish–Ukrainian military cooperation
+      score: 2
+      evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
+        military cooperation, including cooperation in the unmanned aerial systems
+        (drones) sector.
     hybrid:
       score: 1
-      evidence: need to continuously put international pressure on Russia
+      evidence: Deputy foreign ministers discussed current regional challenges and
+        the need to continuously put international pressure on Russia.
+    enlargement:
+      score: 0
+      evidence: ''
     rule_of_law:
       score: 1
-      evidence: people-to-people contacts and humanitarian aid are vital for building
-        mutual understanding
+      evidence: The ministers stressed the strategic importance of Polish–Ukrainian
+        partnership and Poland’s role as a key ally of Ukraine—both in the security
+        context and as a provider of humanitarian, military, and logistical support.

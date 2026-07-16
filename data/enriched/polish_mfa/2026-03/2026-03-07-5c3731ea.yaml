@@ -4,25 +4,22 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Deputy prime ministers
-  - Foreign ministers of Poland
-  - Foreign ministers of United Arab Emirates
+  - foreign ministers of Poland and United Arab Emirates
   topics:
   - rule_of_law
   location: null
-  position: Poland emphasized the need for a peaceful resolution and swiftest deescalation
-    of the conflict in the Middle East, while also addressing energy security and
-    bilateral cooperation.
+  position: Poland emphasized its solidarity with non-conflict parties in the region
+    targeted by strikes and called for a peaceful deescalation of the conflict.
   positions:
-    rule_of_law: Poland expressed solidarity with countries targeted by Iranian strikes,
-      calling for a peaceful resolution and stressing that regional chaos poses a
-      serious global risk.
+    rule_of_law: Poland stresses the importance of maintaining regional stability
+      and calling for peace to prevent global consequences, aligning with foundational
+      European security principles.
   stances:
     rule_of_law:
       score: 1
-      evidence: called for a peaceful resolution of the conflict and its swiftest
-        possible deescalation
+      evidence: At the same time, the ministers called for a peaceful resolution of
+        the conflict and its swiftest possible deescalation.

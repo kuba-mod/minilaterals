@@ -2,10 +2,9 @@ actors:
 - FR
 issue_areas:
 - ukraine
-- enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
@@ -13,20 +12,19 @@ extracted:
   - Anita Orbán
   topics:
   - ukraine
-  - enlargement
+  - rule_of_law
   location: null
-  position: France seeks to revitalize relations with Hungary to advance a sovereign
-    and competitive Europe while coordinating on key regional security issues.
+  position: France aims to strengthen bilateral cooperation with Hungary and advance
+    the European agenda by focusing on support for Ukraine and pressure on Russia.
   positions:
-    ukraine: France supports continuing assistance to Ukraine and maintaining pressure
-      on Russia.
-    enlargement: France addresses priorities regarding the Western Balkans in the
-      context of the European agenda.
+    ukraine: France supports long-term commitment to Ukraine's security and stability
+      alongside its partner.
+    rule_of_law: France emphasizes the importance of democratic values and addressing
+      geopolitical challenges like Russia's actions.
   stances:
     ukraine:
       score: 1
-      evidence: including support for Ukraine and stepped-up pressure on Russia
-    enlargement:
+      evidence: ''
+    rule_of_law:
       score: 1
-      evidence: addressed the priorities of the European agenda, including... the
-        Western Balkans
+      evidence: stepped-up pressure on Russia

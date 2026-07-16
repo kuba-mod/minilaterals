@@ -1,0 +1,36 @@
+actors:
+- FR
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Adam Mickiewicz Institute
+  - Polish Institute in Paris
+  - French Institute
+  - French Embassy in Poland
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland views the Cultural Season as a platform to reinforce strategic
+    bilateral cooperation with France and address shared European challenges.
+  positions:
+    hybrid: Poland emphasizes addressing hybrid threats such as misinformation and
+      totalitarian revival during the cultural season.
+    rule_of_law: Poland highlights that European values, including human rights and
+      civil liberties, are central to the bilateral cooperation with France.
+  stances:
+    hybrid:
+      score: 2
+      evidence: 'Next year’s programme will address issues crucial for today’s Europe:
+        countering misinformation, opposing the revival of totalitarian ideas, and
+        defending human rights and civil liberties.'
+    rule_of_law:
+      score: 2
+      evidence: In the Poland–France Cultural Season 2027, European values are not
+        merely declared but experienced and co-created.

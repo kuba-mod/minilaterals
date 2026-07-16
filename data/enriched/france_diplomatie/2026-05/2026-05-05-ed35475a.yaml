@@ -4,22 +4,20 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - France
   - United Arab Emirates
   topics:
   - rule_of_law
   location: null
-  position: France strongly condemns Iran's attacks on the UAE and reaffirms its total
-    solidarity and commitment to helping the UAE defend its territory.
+  position: France strongly condemns Iran's attacks on the UAE and reaffirms its commitment
+    to supporting the UAE's security and sovereignty while advocating for a diplomatic
+    solution to regional tensions.
   positions:
-    rule_of_law: France emphasizes the need for a diplomatic solution to the conflict,
-      addressing nuclear and ballistic threats and ensuring free movement through
-      the Strait of Hormuz, thereby supporting regional stability and the rule of
-      law.
+    rule_of_law: France supports the foundational principles of democratic resilience
+      and rule of law by emphasizing the need for stability and addressing threats
+      posed by Iran in the region.
   stances:
     rule_of_law:
       score: 1

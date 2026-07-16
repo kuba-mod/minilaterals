@@ -4,20 +4,18 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
   participants:
-  - MFA
+  - Polish consular services
   topics:
   - rule_of_law
   location: null
-  position: Poland demands an explanation for the Israeli military operation in international
-    waters and calls for the protection of the rights and safety of Polish nationals
-    detained on the Global Sumud Flotilla.
+  position: Poland emphasizes adherence to international law and expresses concern
+    over the safety of its nationals in the region.
   positions:
-    rule_of_law: Poland emphasizes the necessity of adhering to international law,
-      the law of the sea, and humanitarian law.
+    rule_of_law: Poland stresses the fundamental importance of respecting international
+      law, including the law of the sea and humanitarian principles.
   stances:
     rule_of_law:
       score: 1

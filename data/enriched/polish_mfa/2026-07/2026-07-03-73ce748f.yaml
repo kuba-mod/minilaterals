@@ -1,33 +1,25 @@
 actors:
 - PL
 issue_areas:
-- ukraine
-- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
-  - Radosław Sikorski
-  - Maria Manuela dos Santos Lucas
+  - Deputy Prime Minister Radosław Sikorski
+  - Foreign Ministers Radosław Sikorski and Maria Manuela dos Santos Lucas
   topics:
-  - ukraine
-  - defence
-  location: Warsaw, Poland
-  position: Poland seeks to revitalize bilateral relations with Mozambique through
-    cooperation in energy, technology, and security assistance.
+  - rule_of_law
+  location: null
+  position: Poland emphasized the need for improved security and effective governance
+    in Mozambique to support regional stabilization efforts.
   positions:
-    ukraine: Poland discusses the consequences of Russia's war against Ukraine for
-      Europe and Africa.
-    defence: Poland supports the operational capabilities of Mozambique's security
-      forces and the EUMAM mission to stabilize the region.
+    rule_of_law: Poland stressed that improved security and effective governance are
+      essential for successful operations and regional stability.
   stances:
-    ukraine:
+    rule_of_law:
       score: 1
-      evidence: The discussion also covered Russia’s war against Ukraine and its consequences
-        for both Europe and Africa.
-    defence:
-      score: 1
-      evidence: They also explored ways to strengthen the sustainable operational
-        capabilities of Mozambique’s quick reaction forces.
+      evidence: The head of Polish diplomacy emphasised that improved security and
+        effective governance are essential for the successful implementation of EUMAM’s
+        objectives and for the region’s stabilisation by the Mozambican authorities.

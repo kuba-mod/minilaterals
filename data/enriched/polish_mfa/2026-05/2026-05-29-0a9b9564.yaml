@@ -2,9 +2,11 @@ actors:
 - PL
 issue_areas:
 - ukraine
+- enlargement
+- defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
@@ -14,15 +16,36 @@ extracted:
   - Olexandr Mischenko
   topics:
   - ukraine
+  - enlargement
+  - defence
+  - rule_of_law
   location: null
-  position: Poland expresses dissatisfaction over a specific decision while emphasizing
-    the necessity of maintaining strong Polish-Ukrainian relations and solidarity
-    against Russian aggression.
+  position: Poland emphasizes the necessity of continued joint security and dialogue
+    with Ukraine to counter Russia's aggression.
   positions:
-    ukraine: Poland rhetorically supports the necessity of solidarity and joint security
-      in response to Russia's aggression against Ukraine.
+    ukraine: Poland strongly supports long-term support for Ukraine in response to
+      Russian aggression.
+    enlargement: Poland supports the broader goal of EU enlargement by mentioning
+      the importance of Polish-Ukrainian relations for future stability.
+    defence: Poland stresses the importance of joint security cooperation as part
+      of responding to Russia's aggression.
+    rule_of_law: Poland emphasizes the need for maturity and commitment to dialogue
+      on both sides to ensure European stability.
   stances:
     ukraine:
+      score: 1
+      evidence: Polish–Ukrainian relations, so crucial for our states and nations,
+        should not become a hostage to a difficult history.
+    enlargement:
+      score: 1
+      evidence: Polish–Ukrainian relations, so crucial for our states and nations,
+        should not become a hostage to a difficult history.
+    defence:
+      score: 1
+      evidence: Joint security, solidarity in response to Russia’s aggression, and
+        responsibility for the future of Europe require maturity and commitment to
+        dialogue on both sides.
+    rule_of_law:
       score: 1
       evidence: Joint security, solidarity in response to Russia’s aggression, and
         responsibility for the future of Europe require maturity and commitment to

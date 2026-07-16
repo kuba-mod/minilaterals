@@ -1,24 +1,14 @@
 actors:
 - FR
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants:
-  - France
-  topics:
-  - rule_of_law
+  participants: []
+  topics: []
   location: null
-  position: France remains fully mobilized in the fight against malaria, contributing
-    significantly to global health initiatives and strengthening health systems in
-    endemic regions.
-  positions:
-    rule_of_law: France supports global health security and the strengthening of health
-      systems, which is foundational to the rule of law and democratic resilience.
-  stances:
-    rule_of_law:
-      score: 0
-      evidence: ''
+  position: France is actively combating malaria through financial contributions and
+    on-the-ground health initiatives in various countries.
+  positions: {}
+  stances: {}

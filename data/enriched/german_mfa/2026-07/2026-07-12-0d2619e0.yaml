@@ -1,5 +1,15 @@
-actors: []
+actors:
+- DE
 issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
-extracted: null
+extracted:
+  event_type: statement
+  participants:
+  - E3 Foreign Ministers
+  topics: []
+  location: null
+  position: Germany condemns Iran's attacks on shipping and calls for the resumption
+    of international navigation and negotiations.
+  positions: {}
+  stances: {}

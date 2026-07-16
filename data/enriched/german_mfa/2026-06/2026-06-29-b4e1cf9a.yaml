@@ -6,7 +6,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: statement
   participants:
@@ -17,23 +16,26 @@ extracted:
   - defence
   - rule_of_law
   location: 'null'
-  position: Germany emphasizes strong partnerships, particularly with the US and South
-    America, to ensure security, economic resilience, and support for democratic values.
+  position: Germany emphasizes strong partnerships and economic resilience to achieve
+    security goals, particularly through transatlantic cooperation and leveraging
+    trade agreements in South America.
   positions:
-    ukraine: Germany commits to providing long-term support for Ukraine's peace efforts,
-      urging Moscow to negotiate and cease hostilities.
-    defence: Germany stresses the necessity of maintaining collective defense through
-      NATO and achieving new burden-sharing agreements within the Alliance.
-    rule_of_law: Germany emphasizes strong partnerships, particularly with the US
-      and South America, to ensure security, economic resilience, and support for
-      democratic values.
+    ukraine: Germany supports long-term support for Ukraine, urging Russia to negotiate
+      peace while providing maximum European assistance.
+    defence: Germany stresses the importance of maintaining NATO's collective defense
+      capability and achieving new burden-sharing within the Alliance.
+    rule_of_law: Germany affirms democratic resilience by emphasizing free trade over
+      protectionism and promoting economic strength to counter global crises.
   stances:
     ukraine:
       score: 1
-      evidence: stable, long-term support for Ukraine
+      evidence: Support that will make Moscow realise that the time has finally come
+        to stop the killing in Ukraine and sit down at the negotiating table.
     defence:
       score: 1
-      evidence: our collective defence is effective
+      evidence: Our Euro-Atlantic security decisively depends on us retaining our
+        steadfast resolve within NATO in the future, too.
     rule_of_law:
-      score: 0
-      evidence: ''
+      score: 1
+      evidence: The more that global supply chains are impacted by trade conflicts
+        and crises, the more economically strong, diverse and resilient we must become.

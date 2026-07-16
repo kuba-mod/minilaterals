@@ -4,23 +4,21 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
   - deputy minister
   - Professor Aleksandra Mężykowska
-  - judges from international courts
-  - representatives of the academia
   topics:
   - rule_of_law
   location: Warsaw, Poland
-  position: Poland views the draft convention on Crimes against Humanity as a sound
-    basis for further negotiations, prioritizing enhanced protection for children
-    as victims and witnesses.
+  position: Poland views the draft convention on Crimes against Humanity as a strong
+    basis for future negotiations, prioritizing enhanced protection for children and
+    establishing mechanisms for prevention and criminal liability.
   positions:
-    rule_of_law: Poland emphasizes the need for the new convention to establish effective
-      prevention and criminal liability mechanisms, reinforcing the rule of law.
+    rule_of_law: Poland supports strengthening international law by viewing the ILC's
+      draft convention as a sound foundation for enhancing criminal liability and
+      prevention mechanisms related to crimes against humanity.
   stances:
     rule_of_law:
       score: 1

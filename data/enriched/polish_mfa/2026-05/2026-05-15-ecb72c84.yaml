@@ -6,33 +6,30 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
   - Artur Harazim
-  - MFA Undersecretary of State
   topics:
   - ukraine
   - hybrid
   - rule_of_law
   location: null
-  position: Poland actively supports the Council of Europe's initiatives to hold Russia
-    accountable for its aggression against Ukraine and to strengthen democratic resilience
-    in Europe.
+  position: Poland strongly supports the establishment of a Special Tribunal for the
+    Crime of Aggression against Ukraine and advocates for reconstruction efforts while
+    emphasizing the importance of human rights and democratic resilience.
   positions:
-    ukraine: Poland demonstrates concrete commitment to Ukrainian justice by signing
-      the resolution for a Special Tribunal for the Crime of Aggression.
-    hybrid: Poland rhetorically supports the Council's efforts to combat disinformation
-      and foreign interference.
-    rule_of_law: Poland emphasizes the importance of protecting human rights and democracy
-      against external assaults.
+    ukraine: Poland actively supports long-term support for Ukraine's recovery, including
+      establishing a Special Tribunal for the Crime of Aggression.
+    hybrid: Poland advocates for coordinated action to combat disinformation and foreign
+      information manipulation and interference (FIMI).
+    rule_of_law: Poland stresses that human rights, democracy, and the rule of law
+      are foundational values that must be protected against aggression.
   stances:
     ukraine:
       score: 2
-      evidence: Poland has signed the Resolution establishing the Enlarged Partial
-        Agreement on the Management Committee of the Special Tribunal for the Crime
-        of Aggression against Ukraine
+      evidence: Polska strongly supports the establishment of the Special Tribunal
+        for the Crime of Aggression against Ukraine
     hybrid:
       score: 1
       evidence: The session also addressed combating disinformation and foreign information

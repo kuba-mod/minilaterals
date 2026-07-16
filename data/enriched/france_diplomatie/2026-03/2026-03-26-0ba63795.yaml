@@ -1,39 +1,29 @@
 actors:
-- DE
 - FR
 issue_areas:
 - ukraine
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.35
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot
-  - Canada
-  - Germany
-  - Italy
-  - Japan
-  - United Kingdom
-  - United States of America
   - European Union High Representative
-  - India
-  - Brazil
-  - Republic of Korea
-  - Saudi Arabia
   topics:
   - ukraine
   - rule_of_law
-  location: Yvelines, France
-  position: France aimed to use the G7 platform to foster dialogue and consultation
-    on global geopolitical issues, emphasizing multilateralism and concrete projects.
+  location: Yvelines Department (78), France
+  position: France used its G7 Presidency to convene discussions on global governance
+    and international crises, prioritizing support for Ukraine and the defense of
+    a free Indo-Pacific order.
   positions:
-    ukraine: France prioritized G7 support for Ukraine, welcoming the Ukrainian counterpart
-      to chair a working session on the matter.
-    rule_of_law: France emphasized the importance of a free and open Indo-Pacific
-      region based on the rule of law and discussed global governance initiatives
-      to foster effective multilateralism.
+    ukraine: France strongly commits to supporting Ukraine's recovery and security
+      following Russia's aggression through dedicated working sessions and reconstruction
+      efforts.
+    rule_of_law: France emphasizes the importance of upholding international law and
+      democratic principles across global hotspots, particularly advocating for civilian
+      protection.
   stances:
     ukraine:
       score: 2
@@ -42,5 +32,5 @@ extracted:
         which is a priority of the French Presidency.
     rule_of_law:
       score: 2
-      evidence: the importance of a free and open Indo-Pacific region based on the
-        rule of law.
+      evidence: A statement on Iran calling, in particular, for the protection of
+        civilians and civilian energy infrastructures was adopted.

@@ -1,24 +1,16 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Sean Sobers, Minister of Foreign and CARICOM Affairs
-  topics:
-  - defence
-  location: Martinique
-  position: France reaffirmed its commitment to security cooperation and fighting
-    illicit trafficking with Trinidad and Tobago.
-  positions:
-    defence: France is actively pursuing collective security through increased security
-      cooperation and coordinated responses to illicit trafficking.
-  stances:
-    defence:
-      score: 2
-      evidence: increase security cooperation between France and Trinidad and Tobago
+  topics: []
+  location: Martinique, France
+  position: France engaged in bilateral discussions with Trinidad and Tobago focusing
+    on regional security cooperation and deepening political ties.
+  positions: {}
+  stances: {}

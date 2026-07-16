@@ -2,52 +2,39 @@ actors:
 - PL
 issue_areas:
 - defence
-- ukraine
-- hybrid
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Deputy Foreign Minister Ignacy Niemczycki
-  - Poland
-  - Finland
   topics:
   - defence
-  - ukraine
-  - hybrid
   - enlargement
+  - rule_of_law
   location: Warsaw, Poland
-  position: Poland emphasized the critical need for enhanced bilateral and regional
-    cooperation with Finland to improve security, particularly concerning the Eastern
-    flank and transatlantic relations.
+  position: Poland stressed the importance of cooperation with Finland across bilateral
+    and regional dimensions to improve security in Europe and support Ukraine's integration.
   positions:
-    defence: Poland stressed that close political cooperation with Finland is crucial
-      for improving regional security and boosting defense cooperation, especially
-      regarding the Eastern flank.
-    ukraine: Poland backed continued military, political, and economic support for
-      Ukraine and advocated for its integration with the European Union.
-    hybrid: The discussion highlighted the need for coordinated action on security,
-      implicitly covering the need to address threats to stability.
-    enlargement: Poland supported the Ukrainian integration with the European Union,
-      aligning with the goal of supporting EU accession.
+    defence: Poland supports strengthening EU defense capabilities complementary to
+      NATO, particularly focusing on eastern flank deterrence and collective security.
+    enlargement: Poland strongly supports Ukraine's continued integration with the
+      European Union.
+    rule_of_law: Poland emphasizes the need for cooperation to improve overall security
+      and democratic resilience in Europe.
   stances:
     defence:
       score: 1
       evidence: Our relations are crucial for improving the security in the region
         and in Europe as a whole, especially in the context of protecting the EU’s
         and NATO’s Eastern flank.
-    ukraine:
-      score: 2
-      evidence: interlocutors backed staying the course of Ukrainian integration with
-        the European Union and advocated continued military, political, and economic
-        support for the country.
-    hybrid:
-      score: 0
-      evidence: ''
     enlargement:
       score: 1
-      evidence: advocated continued military, political, and economic support for
-        the country.
+      evidence: interlocutors backed staying the course of Ukrainian integration with
+        the European Union
+    rule_of_law:
+      score: 1
+      evidence: Our relations are crucial for improving the security in the region
+        and in Europe as a whole

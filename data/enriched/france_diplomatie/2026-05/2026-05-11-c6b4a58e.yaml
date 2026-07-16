@@ -4,7 +4,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -12,17 +11,14 @@ extracted:
   - Musalia Mudavadi
   topics:
   - rule_of_law
-  location: Nairobi, Kenya
-  position: France is committed to supporting a fairer, more representative, and more
-    effective multilateralism, with a focus on concrete solutions for shared challenges
-    like healthcare and digital competitiveness.
+  location: null
+  position: France engaged in discussions with Kenya regarding cooperation on shared
+    challenges and the reform of multilateral institutions.
   positions:
-    rule_of_law: France and Kenya agreed on the need to reform the Security Council
-      to ensure it is fully capable of taking action, supporting the goal of democratic
-      resilience and effective international governance.
+    rule_of_law: France supports strengthening global governance by advocating for
+      the reform of the Security Council to ensure it is fully capable of taking action.
   stances:
     rule_of_law:
       score: 1
-      evidence: This summit will once again illustrate our support for a fairer, more
-        representative and more effective type of multilateralism, in which Africa
-        is fully represented.
+      evidence: Ministers agreed on the need to reform the Security Council and ensure
+        that it is fully capable of taking action

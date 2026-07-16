@@ -5,7 +5,6 @@ issue_areas:
 - ukraine
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
@@ -14,11 +13,11 @@ extracted:
   topics:
   - ukraine
   location: Berlin, Germany
-  position: France emphasized the need to implement Franco-German initiatives to strengthen
-    the EU’s sovereignty and competitiveness agendas.
+  position: France and Germany emphasized the need to strengthen EU sovereignty through
+    joint initiatives and reviewed their economic cooperation agenda.
   positions:
-    ukraine: France and Germany focused discussions on international issues, particularly
-      support for Ukraine and the situation in the Middle East.
+    ukraine: France supports long-term support for Ukraine alongside Germany, focusing
+      on the international situation.
   stances:
     ukraine:
       score: 1

@@ -1,29 +1,24 @@
 actors:
 - PL
 issue_areas:
-- ukraine
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - MFA
   topics:
-  - ukraine
   - rule_of_law
   location: null
-  position: Poland condemns Russian aggression and warns that attacks on its diplomatic
-    missions will be treated as intentional hostile acts under international law.
+  position: Poland condemns Russia's actions against its diplomatic missions and calls
+    for an immediate end to the aggression.
   positions:
-    ukraine: Poland calls for an end to Russia's unlawful aggression against Ukraine.
-    rule_of_law: Poland emphasizes the necessity of Russia complying with international
-      law and treaties.
+    rule_of_law: Poland emphasizes adherence to international law regarding military
+      operations and diplomatic immunity.
   stances:
-    ukraine:
-      score: 1
-      evidence: We call on Russia to immediately cease its unjustified and unlawful
-        aggression
     rule_of_law:
       score: 1
-      evidence: comply with its international commitments and treaties
+      evidence: The actions of the Russian Federation carry serious consequences under
+        international law, once again undermining its role as a permanent member of
+        the UN Security Council.

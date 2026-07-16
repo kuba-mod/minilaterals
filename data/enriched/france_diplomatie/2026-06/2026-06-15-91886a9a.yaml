@@ -1,32 +1,33 @@
 actors:
 - FR
 issue_areas:
-- ukraine
 - defence
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
   - Jean-Noël Barrot
   - Anita Anand
   topics:
-  - ukraine
   - defence
-  location: Paris, France
-  position: France reaffirmed its partnership with Canada, focusing on support for
-    Ukraine and strengthening security and defense cooperation.
+  - rule_of_law
+  location: Paris
+  position: France and Canada reaffirmed their partnership while agreeing to deepen
+    cooperation in security and defense areas.
   positions:
-    ukraine: France rhetorically supports the effort against Russia's aggression in
-      Ukraine.
-    defence: France actively seeks to increase bilateral cooperation in security and
-      defense.
+    defence: France plans to enhance its cooperative efforts with Canada in the area
+      of defense.
+    rule_of_law: France emphasizes the need for a political solution based on two
+      states for Israel and Palestine to meet legitimate aspirations.
   stances:
-    ukraine:
-      score: 1
-      evidence: They discussed Russia’s war of aggression against Ukraine
     defence:
-      score: 2
-      evidence: the Ministers talked about stepping up French-Canadian cooperation
-        in the areas of security and defense
+      score: 1
+      evidence: talked about stepping up French-Canadian cooperation in the areas
+        of security and defense
+    rule_of_law:
+      score: 1
+      evidence: only a political solution based on two states, Israel and Palestine,
+        is capable of meeting the legitimate aspirations of both peoples over the
+        long term

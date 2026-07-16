@@ -1,45 +1,24 @@
 actors:
 - PL
 issue_areas:
-- hybrid
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Minister Sikorski
   - Ambassador of the Philippines Alan Lazaro Deniega
-  - Deputy Prime Minister Radosław Sikorski
   topics:
-  - hybrid
-  - defence
   - rule_of_law
-  location: 'null'
+  location: null
   position: Poland views ASEAN as a vital partner for strengthening strategic resilience
-    and is committed to deepening cooperation through institutional engagement, including
-    acceding to the Treaty of Amity and Cooperation in Southeast Asia.
+    and is committed to deepening cooperation in security and economic areas.
   positions:
-    hybrid: Poland emphasizes the need for coordinated action against global uncertainties,
-      including promoting academic cooperation and science diplomacy to build resilience.
-    defence: Poland supports strengthening security cooperation and regional stability,
-      recognizing the importance of the Treaty of Amity and Cooperation in Southeast
-      Asia for maintaining regional security.
-    rule_of_law: Poland stresses the importance of identifying reliable partners and
-      community of interests to ensure safe development and uphold shared values in
-      the international environment.
+    rule_of_law: Poland emphasizes the importance of shared values and democratic
+      principles with ASEAN countries while promoting academic and scientific exchange.
   stances:
-    hybrid:
-      score: 0
-      evidence: ''
-    defence:
-      score: 1
-      evidence: Panel discussions attended by the ASEAN countries experts offered
-        room to debate security and economic cooperation in conditions of global uncertainty.
     rule_of_law:
       score: 1
-      evidence: The event confirmed that Poland considers ASEAN an important area
-        of its foreign policy – not only in terms of bilateral relations, but also
-        as an element of EU’s wider involvement in the Indo-Pacific region.
+      evidence: The participants also stressed the importance of building people-to-people
+        contacts using academic cooperation and science diplomacy.

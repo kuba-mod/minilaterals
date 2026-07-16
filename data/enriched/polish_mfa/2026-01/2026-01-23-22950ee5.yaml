@@ -2,61 +2,49 @@ actors:
 - FR
 - PL
 issue_areas:
-- ukraine
 - defence
 - hybrid
 - enlargement
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.35
 extracted:
   event_type: meeting
   participants:
-  - Deputy Minister Henryka Mościcka-Dendys
-  - France
-  - Poland
+  - Henryka Mościcka-Dendys
   topics:
-  - ukraine
   - defence
   - hybrid
   - enlargement
   - rule_of_law
   location: null
-  position: Poland is committed to fully implementing the Treaty of Nancy to strengthen
-    the strategic partnership with France and deepen cooperation across political,
-    economic, and security sectors.
+  position: Poland is committed to fully implementing the Treaty of Nancy and deepening
+    cooperation with France across political, economic, security, and cultural dimensions.
   positions:
-    ukraine: Poland emphasized discussing developments in Ukraine as part of broader
-      European affairs.
-    defence: Poland highlighted the potential of joint defence projects, including
-      those under the Security Action for Europe programme, to strengthen security
-      cooperation.
-    hybrid: Poland stressed that close cooperation between European countries is crucial
-      for avoiding or mitigating various types of pressure, including hybrid threats.
-    enlargement: Poland discussed European affairs, including the developments related
-      to EU enlargement.
-    rule_of_law: Poland emphasized the importance of close cooperation to maintain
-      democratic resilience and address international instability.
+    defence: Poland supports strengthening EU defense capabilities through joint projects
+      and strategic partnerships with France.
+    hybrid: Poland stresses the need for close cooperation with European countries
+      to mitigate various types of pressure, including hybrid threats.
+    enlargement: Poland discussed the topic of EU enlargement as part of broader European
+      affairs discussions.
+    rule_of_law: Poland emphasizes the importance of a deeper dialogue to maintain
+      democratic resilience and stability in the international environment.
   stances:
-    ukraine:
-      score: 1
-      evidence: They also discussed European affairs, including the developments in
-        Ukraine
     defence:
-      score: 2
+      score: 1
       evidence: The interlocutors emphasised the potential of joint defence projects
         (including those under the Security Action for Europe programme adopted in
-        2025)
+        2025), as well as energy and social projects.
     hybrid:
       score: 1
       evidence: 'She highlighted that close cooperation between European countries
         sharing views on international policy will be crucial in avoiding or mitigating
         various types of pressure: economic, social, or related to hybrid threats.'
     enlargement:
-      score: 1
+      score: 0
       evidence: They also discussed European affairs, including the developments in
-        Ukraine, EU enlargement
+        Ukraine, EU enlargement, the agreement with Mercosur countries, and global
+        issues.
     rule_of_law:
       score: 1
       evidence: She noted the enormous importance of a deeper and closer Polish-French

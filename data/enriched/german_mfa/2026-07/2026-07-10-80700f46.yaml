@@ -10,15 +10,16 @@ extracted:
   - High Representative on behalf of the European Union
   topics:
   - rule_of_law
-  location: El Obeid, Sudan
-  position: Germany, as part of the EU, condemns the military escalation in El Obeid
-    and demands respect for international law and a return to civilian governance
-    in Sudan.
+  location: null
+  position: The EU is deeply concerned by the violence in El Obeid and calls for an
+    immediate cessation of hostilities, adherence to international law, and a return
+    to negotiations for a civilian-led transition.
   positions:
-    rule_of_law: Germany supports the promotion of justice, accountability, and the
-      upholding of international law in Sudan.
+    rule_of_law: The EU strongly emphasizes the necessity of respecting international
+      humanitarian and human rights laws by all parties involved in the conflict.
   stances:
     rule_of_law:
       score: 1
-      evidence: promote justice and accountability, and restore peace in a Sudanese-led
-        transition to civilian rule
+      evidence: International humanitarian and human rights laws, including the protection
+        of civilians in particular women and girls and civilian infrastructure, must
+        be fully respected by all parties to the conflict.

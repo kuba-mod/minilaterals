@@ -5,29 +5,29 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
   - Yvette Cooper
-  - UK’s Foreign Secretary
   topics:
   - ukraine
   - rule_of_law
   location: null
-  position: Poland emphasizes that addressing the Middle East crisis must not distract
-    from the need to support Ukraine against Russian aggression and increase pressure
-    on the Kremlin.
+  position: Poland emphasizes that amid the Middle East crisis, attention must not
+    be diverted from Ukraine's defense against Russian aggression.
   positions:
-    ukraine: Poland maintains that amid the Middle East conflict, it is crucial not
-      to lose sight of Ukraine defending itself against Russia’s unprovoked aggression.
-    rule_of_law: Poland advocates for increasing pressure on the Kremlin, including
-      through harsher sanctions, to counter destabilization efforts.
+    ukraine: Poland strongly supports long-term support for Ukraine, linking its security
+      to the need to counter Russia's unprovoked aggression.
+    rule_of_law: Poland advocates for increased pressure on Russia through sanctions,
+      viewing Moscow's actions as benefiting from regional destabilization.
   stances:
     ukraine:
       score: 1
-      evidence: not to lose sight of Ukraine defending itself against Russia’s unprovoked
-        aggression
+      evidence: Poland has been consistent in maintaining that it is important amid
+        the Middle East conflict not to lose sight of Ukraine defending itself against
+        Russia’s unprovoked aggression.
     rule_of_law:
-      score: 0
-      evidence: ''
+      score: 1
+      evidence: Given that Moscow is benefitting from destabilisation in the Gulf
+        region, the pressure on the Kremlin must be increased, including through ever
+        harsher sanctions.

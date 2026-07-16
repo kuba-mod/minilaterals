@@ -3,38 +3,51 @@ actors:
 issue_areas:
 - enlargement
 - green_transition
+- hybrid
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: joint_statement
   participants:
-  - Jean-Noël Barrot
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Marko Đjurić
   - Siniša Mali
-  - Aleksandar Vučić
-  - Nemanja Starović
-  - Ana Brnabić
   topics:
   - enlargement
   - green_transition
+  - hybrid
+  - rule_of_law
   location: Belgrade, Serbia
-  position: France reaffirmed its deep support for Serbia's EU membership and emphasized
-    practical bilateral cooperation in infrastructure and security projects.
+  position: France reaffirmed its deep support for Serbia's EU accession path while
+    advancing major infrastructure and security cooperation projects with Belgrade.
   positions:
-    enlargement: France expressed deep support for Serbia's prospective EU membership
-      and stressed the importance of accelerating reforms towards accession, aligning
-      with the goal of supporting Western Balkans accession.
-    green_transition: France supported Belgrade's development by signing an MoU for
-      a wastewater treatment plant and funding the metro project, highlighting the
-      metro as an environmentally friendly transport solution.
+    enlargement: France strongly supports the EU membership of Western Balkans countries,
+      advocating for accelerated reforms towards accession.
+    green_transition: France is supporting sustainable urban development by funding
+      major infrastructure projects like the Belgrade metro and wastewater treatment
+      plant.
+    hybrid: France actively contributes to regional security by funding a program
+      aimed at combating synthetic drug trafficking in the Western Balkans.
+    rule_of_law: France emphasizes the importance of democratic resilience and stability
+      by supporting security cooperation and institutional development in the region.
   stances:
     enlargement:
       score: 2
-      evidence: France is funding a regional programme to combat trafficking in synthetic
-        drugs, their precursors, and explosives in the Western Balkans, since the
-        security of the region and of the European Union are inseparable.
+      evidence: Minister was keen to express to his interlocutors France’s deep support
+        for Serbia’s prospective EU membership
     green_transition:
       score: 2
       evidence: The Minister also signed a Memorandum of Understanding on the construction
         of a wastewater treatment plant for the city of Belgrade.
+    hybrid:
+      score: 2
+      evidence: Finally, the Minister announced that France is funding a regional
+        programme to combat trafficking in synthetic drugs, their precursors, and
+        explosives in the Western Balkans
+    rule_of_law:
+      score: 1
+      evidence: The two ministers emphasized the goal shared by our two countries
+        of providing the more than 1.4 million inhabitants of the capital, Belgrade,
+        with an efficient, modern, reliable metro system that guarantees residents
+        a better quality of life

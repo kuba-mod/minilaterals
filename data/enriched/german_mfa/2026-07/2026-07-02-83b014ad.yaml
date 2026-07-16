@@ -5,7 +5,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: statement
   participants:
@@ -14,17 +13,18 @@ extracted:
   - ukraine
   - rule_of_law
   location: null
-  position: Germany condemns Russian aggression against Ukraine and affirms continued
+  position: Germany condemns Russian aggression against Ukraine and reaffirms continued
     support for Kyiv's defense efforts.
   positions:
-    ukraine: Germany commits to continuing its strong support for Ukraine in its fight
-      to defend itself, which will be a key agenda item at the upcoming NATO summit.
-    rule_of_law: Germany condemns Russia's illegal war of aggression and emphasizes
-      the need to increase international pressure on Moscow.
+    ukraine: Germany strongly condemns Russia's illegal war of aggression and commits
+      to continuing high levels of support for Ukraine's self-defense.
+    rule_of_law: Germany emphasizes that Russia's actions violate international law
+      by continuing its illegal war of aggression against a sovereign nation.
   stances:
     ukraine:
       score: 1
-      evidence: We are continuing our support for Ukraine in its fight to defend itself.
+      evidence: We condemn the massive Russian airstrikes on Kyiv and other parts
+        of Ukraine last night in the strongest terms.
     rule_of_law:
       score: 1
       evidence: The devastating images of last night’s destruction show once more

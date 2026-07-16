@@ -1,10 +1,8 @@
 actors:
 - FR
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
@@ -13,6 +11,7 @@ extracted:
   topics: []
   location: null
   position: France aims to develop a renewed bilateral partnership with Vanuatu focusing
-    on economic development, Francophonie, connectivity, and security.
+    on economic development, Francophonie, connectivity, and security, while reaffirming
+    its sovereignty over the Matthew and Hunter Islands.
   positions: {}
   stances: {}

@@ -1,41 +1,35 @@
 actors:
-- DE
 - PL
 issue_areas:
 - ukraine
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.25
 extracted:
   event_type: statement
   participants:
   - Radosław Sikorski
-  - Nujeen Mustafa
   topics:
   - ukraine
   - rule_of_law
   location: null
-  position: Poland remains steadfast in its support for Ukraine, providing political,
-    military, and humanitarian assistance, including specialized care for people with
-    disabilities.
+  position: Poland emphasizes its continued support for Ukraine and advocates for
+    the inclusion of people with disabilities in peace processes.
   positions:
-    ukraine: Poland remains steadfast in its support for Ukraine, providing political,
-      military, and humanitarian assistance, including specialized care for the most
-      vulnerable, including people with disabilities.
-    rule_of_law: Poland's initiative led to the adoption of Resolution 2475 (2019)
-      on the protection of persons with disabilities in armed conflicts, affirming
-      the rule of law and human rights.
+    ukraine: Poland reaffirms its steadfast support for Ukraine through political,
+      military, and humanitarian assistance, specifically mentioning care for people
+      with disabilities.
+    rule_of_law: Poland's historical initiative on disability rights at the UN Security
+      Council demonstrates a commitment to international law and human rights principles.
   stances:
     ukraine:
       score: 2
-      evidence: Poland remains steadfast in its support for Ukraine, not only through
-        political and military assistance, but also by providing shelter and specialist
-        care to the most vulnerable, including people with disabilities fleeing the
-        atrocities of war.
-    rule_of_law:
-      score: 1
       evidence: In the spirit of Nujeen Mustafa’s values, Poland remains steadfast
         in its support for Ukraine, not only through political and military assistance,
         but also by providing shelter and specialist care to the most vulnerable,
         including people with disabilities fleeing the atrocities of war.
+    rule_of_law:
+      score: 2
+      evidence: Her address was in regard to Resolution 2475 (2019) on the protection
+        of persons with disabilities in armed conflicts and related humanitarian crises,
+        which was adopted on the initiative of Poland.

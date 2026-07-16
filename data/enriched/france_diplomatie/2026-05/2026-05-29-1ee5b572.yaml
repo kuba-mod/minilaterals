@@ -2,42 +2,35 @@ actors:
 - FR
 issue_areas:
 - ukraine
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
-  - Russian Ambassador to France
-  - Ministry’s Director General for Political Affairs
+  - Ministry for Europe and Foreign Affairs
+  - Director General for Political Affairs
   topics:
   - ukraine
-  - defence
   - rule_of_law
-  location: France
-  position: France summoned the Russian Ambassador to strongly condemn Russian threats
-    to civilians, airstrikes on Ukraine, and violations of international law and sovereign
-    airspace.
+  location: null
+  position: France strongly condemned Russia's actions against Ukraine and reiterated
+    its commitment to supporting Kyiv until a just and lasting peace is achieved.
   positions:
-    ukraine: France reaffirms its long-term commitment to support Ukraine's sovereignty
-      and territorial integrity.
-    defence: France supports Ukraine's inherent right to defend itself against Russian
-      aggression.
-    rule_of_law: France condemns Russia's contempt for international law, humanitarian
-      law, and diplomatic agreements.
+    ukraine: France commits to long-term support for Ukraine across all dimensions
+      and calls for an end to Russia's illegal war of aggression.
+    rule_of_law: France strongly condemns Russia's violations of international law,
+      including threats to civilians and attacks on journalists.
   stances:
     ukraine:
-      score: 1
-      evidence: France would continue to stand with Ukraine and to support it on every
-        level to preserve its sovereignty and territorial integrity
-    defence:
-      score: 1
+      score: 2
       evidence: The Director General reiterated Ukraine’s right to defend itself against
-        Russian aggression
+        Russian aggression and stressed that France would continue to stand with Ukraine
+        and to support it on every level to preserve its sovereignty and territorial
+        integrity.
     rule_of_law:
-      score: 1
-      evidence: these unacceptable threats to civilians and the diplomatic corps illustrate
-        yet again Russia’s contempt for the law, particularly humanitarian law, as
-        well as diplomatic agreements
+      score: 2
+      evidence: The Director General stressed that these unacceptable threats to civilians
+        and the diplomatic corps illustrate yet again Russia’s contempt for the law,
+        particularly humanitarian law, as well as diplomatic agreements, and that
+        France will not give in to them.

@@ -2,10 +2,11 @@ actors:
 - PL
 issue_areas:
 - ukraine
+- defence
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: meeting
   participants:
@@ -13,29 +14,36 @@ extracted:
   - Mehmet Kemal Bozay
   - Andrzej Dycha
   - Bartłomiej Babuśka
-  - Burhan Kayatürk
-  - Ferhat Nasıroğlu
-  - Michał Nitka
-  - Nail Olpak
   topics:
   - ukraine
+  - defence
   - enlargement
+  - rule_of_law
   location: Türkiye
-  position: Poland emphasized the importance of bilateral cooperation across political,
-    economic, and security dimensions while reaffirming support for Turkey's European
-    integration and peace efforts in Ukraine.
+  position: Poland emphasized the importance of bilateral cooperation with Türkiye
+    on political, economic, and security matters while reaffirming support for Turkey's
+    European integration and peace efforts in Ukraine.
   positions:
-    ukraine: Poland highly values Türkiye’s efforts to achieve peace in Ukraine and
-      protect its territorial integrity, emphasizing that Russia’s illegal and aggressive
-      war requires a strong and united response.
-    enlargement: The visit reaffirmed Poland’s support for Turkey’s European integration,
-      and meetings with Turkish parliamentarians focused on supporting the country’s
-      European integration.
+    ukraine: Poland strongly supports international efforts to achieve peace in Ukraine
+      and views Russia's war as requiring a united response.
+    defence: Poland discussed cooperation on security and defence with Turkish counterparts
+      during bilateral talks.
+    enlargement: Poland reaffirmed its support for Türkiye's European integration
+      through various high-level meetings.
+    rule_of_law: Poland stressed the importance of democratic resilience and rule
+      of law by emphasizing the need for a united response to Russia's aggression.
   stances:
     ukraine:
       score: 1
-      evidence: Poland highly values Türkiye’s efforts to achieve peace in Ukraine
-        and protect its territorial integrity.
-    enlargement:
+      evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
+        and united response
+    defence:
       score: 0
-      evidence: ''
+      evidence: as well as cooperation on security and defence.
+    enlargement:
+      score: 1
+      evidence: The visit also reaffirmed Poland’s support for Turkey’s European integration.
+    rule_of_law:
+      score: 0
+      evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
+        and united response

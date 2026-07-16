@@ -2,46 +2,47 @@ actors:
 - PL
 issue_areas:
 - defence
-- ukraine
+- hybrid
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
-  - foreign ministers of Poland
-  - foreign ministers of Ireland
-  - Minister McEntee
-  - Deputy Prime Minister Sikorski
+  - foreign ministers of Poland and Ireland
   topics:
   - defence
-  - ukraine
+  - hybrid
   - enlargement
-  location: Warsaw, Poland
-  position: Poland emphasizes economic cooperation, particularly highlighting the
-    value of Polish construction companies and the positive role of the Polish diaspora
-    in strengthening ties with Ireland.
+  - rule_of_law
+  location: Warsaw
+  position: Poland emphasized the importance of strengthening EU defense capabilities,
+    supporting Ukraine's path to membership, and fostering economic cooperation with
+    Ireland.
   positions:
-    defence: Poland supports increasing EU defence investment and building a strong
-      EU defence capability to address emerging challenges, including hybrid and maritime
-      threats.
-    ukraine: Poland unequivocally condemns Russian aggression and supports continued
-      assistance for Kyiv, viewing it as essential for safeguarding EU security and
-      supporting Ukraine's path to EU membership.
-    enlargement: Poland supports the EU accession of Ukraine and Western Balkan countries,
-      advising Ukrainian public administration institutions on EU-related reforms
-      and aligning legislation with the EU acquis.
+    defence: Poland supports increasing EU defence investment and building a stronger
+      collective security framework at the EU level.
+    hybrid: Poland highlights the need to address new challenges, including hybrid
+      threats, as part of ensuring Europe's security and economic stability.
+    enlargement: Poland strongly supports Ukraine's path to EU membership and actively
+      assists in its institutional reforms.
+    rule_of_law: Poland stresses the importance of safeguarding the EU's security
+      by supporting Ukraine, which is foundational to European stability.
   stances:
     defence:
       score: 1
       evidence: Minister McEntee emphasised that EU member states should increase
         their defence investment.
-    ukraine:
+    hybrid:
       score: 1
-      evidence: Both stressed that they unequivocally condemn Russian aggression and
-        agree that continued assistance for Kyiv is necessary.
+      evidence: whether hybrid threats or maritime security, which has come to the
+        forefront - said Minister Helen McEntee.
     enlargement:
       score: 2
       evidence: Poland advises Ukrainian public administration institutions in their
         efforts to conduct EU-related reforms and align legislation with EU acquis.
+    rule_of_law:
+      score: 1
+      evidence: The foreign ministers of Poland and Ireland also discussed opportunities
+        to develop economic cooperation.

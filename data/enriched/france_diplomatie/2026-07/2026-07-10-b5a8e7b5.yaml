@@ -1,37 +1,25 @@
 actors:
-- DE
 - FR
 - PL
 issue_areas:
-- defence
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: true
-weimar_score: 0.5
+trilateral_signal: false
 extracted:
   event_type: speech
   participants:
   - Jean-Noël Barrot
-  - President Macron
-  - Prime Minister Tusk
   topics:
-  - defence
   - rule_of_law
   location: null
-  position: France emphasizes a deep historical and strategic partnership with Poland
-    to build a more sovereign and democratic Europe.
+  position: France emphasizes the deep historical and cultural bond with Poland, advocating
+    for a unified European future based on shared democratic values and sovereignty.
   positions:
-    defence: France commits to a safer and more sovereign Europe through the Treaty
-      of Nancy.
-    rule_of_law: France supports the preservation of democratic ideals and freedom
-      against external influence.
+    rule_of_law: France stresses that maintaining freedom, democracy, and the rule
+      of law is paramount to Europe's future stability against external threats.
   stances:
-    defence:
-      score: 2
-      evidence: President Macron and Prime Minister Tusk signed the Treaty of Nancy.
-        It pledges to build “a safer, more sovereign, more democratic and more united
-        Europe,”
     rule_of_law:
       score: 1
-      evidence: inspire Europeans determined to remain free and masters of their own
-        destiny
+      evidence: The story of Solidarnosc. An ideal that some in the Kremlin still
+        seek to extinguish, but which continues to inspire Europeans determined to
+        remain free and masters of their own destiny.

@@ -7,7 +7,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.15
 extracted:
   event_type: meeting
   participants:
@@ -19,30 +18,36 @@ extracted:
   - green_transition
   - rule_of_law
   location: France
-  position: France is upgrading its strategic cooperation with Australia through a
-    new Roadmap focusing on security, climate action, and a stable Indo-Pacific.
+  position: France reaffirmed the strong bilateral partnership with Australia, committing
+    to an upgraded strategic roadmap that expands cooperation across defense, security,
+    and climate action.
   positions:
-    defence: France is expanding strategic security and policing cooperation with
-      Australia.
-    hybrid: France is actively seeking increased collaboration to combat cyber crime.
-    green_transition: France is maintaining a concrete project for energy transition
-      and cooperation on critical minerals.
-    rule_of_law: France rhetorically supports an international system based on agreed
-      rules and norms.
+    defence: France supports strengthening defense capabilities through enhanced bilateral
+      cooperation in areas like national security and policing.
+    hybrid: France commits to increasing collaboration with Australia to counter transnational
+      threats such as cyber crime and drug trafficking while reinforcing global rules
+      and norms.
+    green_transition: France continues its commitment to climate action through the
+      flagship Franco-Australian Indo-Pacific Centre for Energy Transition.
+    rule_of_law: France emphasizes upholding international rules and norms through
+      its partnership with Australia to ensure a stable and inclusive Indo-Pacific
+      region.
   stances:
     defence:
-      score: 2
+      score: 1
       evidence: We have agreed to expand cooperation in fields such as national security
         and policing.
     hybrid:
       score: 2
       evidence: We will also seek to increase our collaboration to counter cyber crime
-        and drug trafficking
+        and drug trafficking, while reinforcing global rules and norms.
     green_transition:
-      score: 2
-      evidence: the Franco-Australian Indo-Pacific Centre for Energy Transition, will
-        continue as well as our dialogue on critical minerals.
+      score: 1
+      evidence: The flagship 2023 Roadmap project, the Franco-Australian Indo-Pacific
+        Centre for Energy Transition, will continue as well as our dialogue on critical
+        minerals.
     rule_of_law:
       score: 1
-      evidence: mutual commitment to an international system underpinned by agreed
-        rules and norms.
+      evidence: The Ministers reaffirmed the dynamism of the France-Australian partnership,
+        which is based on shared values and a mutual commitment to an international
+        system underpinned by agreed rules and norms.

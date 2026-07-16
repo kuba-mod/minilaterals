@@ -1,37 +1,41 @@
 actors:
-- DE
 - PL
 issue_areas:
 - ukraine
 - defence
+- hybrid
 - enlargement
+- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.3
 extracted:
   event_type: meeting
   participants:
-  - Polish Presidency
-  - EU High Representative Kaja Kallas
-  - Deputy Prime Minister Radosław Sikorski
+  - foreign ministers
   topics:
   - ukraine
   - defence
+  - hybrid
   - enlargement
+  - rule_of_law
   location: null
   position: Poland emphasized the need to strengthen the Baltic Sea region's political
-    dimension and ensure strong security guarantees for Ukraine to prevent Russian
-    aggression and facilitate economic growth.
+    dimension and secure strong guarantees for Ukraine while coordinating efforts
+    with NATO and the EU.
   positions:
-    ukraine: Poland stressed the Baltic Sea region's interest in achieving and implementing
-      strong security guarantees for Ukraine, ensuring its stability, and rebuilding
-      its military deterrence potential.
-    defence: The participants took stock of preparations for the NATO summit and discussed
-      the need to increase Europe's standing relative to the US to influence US-Russia
-      negotiations regarding Ukraine.
-    enlargement: Poland expressed support for Ukraine’s accession to the European
-      Union and emphasized the need for the country to align its legislation with
-      the EU acquis.
+    ukraine: Poland strongly advocates for long-term support for Ukraine across all
+      dimensions, emphasizing security guarantees and stability to prevent Russian
+      aggression.
+    defence: Poland supports strengthening the overall security architecture of the
+      region by participating in discussions about NATO commitments and deterrence
+      potential.
+    hybrid: Poland calls for coordinated action against external threats and emphasizes
+      that Ukraine must remain a priority despite geopolitical difficulties.
+    enlargement: Poland supports Ukraine's accession to the EU and stresses the necessity
+      of aligning its legislation with EU standards.
+    rule_of_law: Poland supports maintaining democratic resilience and stability in
+      the region by ensuring that future security arrangements prevent further Russian
+      aggression.
   stances:
     ukraine:
       score: 2
@@ -41,8 +45,15 @@ extracted:
       score: 1
       evidence: They spoke about the progress of the commitments made at the previous
         NATO summit in The Hague.
+    hybrid:
+      score: 1
+      evidence: Ukraine must not slip off the agenda.
     enlargement:
       score: 2
       evidence: They expressed support for Ukraine’s accession to the European Union
         and emphasised the need for the country to align its legislation with the
         EU acquis.
+    rule_of_law:
+      score: 1
+      evidence: The process must let both Ukraine and all of us rest assured that
+        Russia will not be capable of another aggression.

@@ -25,14 +25,13 @@ def make_event(
     source_lang: str = "en",
     source_published_at: str = "2026-06-01T00:00:00Z",
     date: str = "2026-06-01",
-    classify: bool = True,
 ) -> Event:
-    """Build a real Event, classified by default.
+    """Build a real, raw Event (classification now happens in pipeline.enrich).
 
     Prefer this over hand-rolled dicts so tests exercise the same dataclass the
     pipeline uses.
     """
-    event = Event(
+    return Event(
         source_name=source_name,
         title=title,
         text=text,
@@ -41,9 +40,6 @@ def make_event(
         source_published_at=source_published_at,
         date=date,
     )
-    if classify:
-        event.classify()
-    return event
 
 
 def event_dict(

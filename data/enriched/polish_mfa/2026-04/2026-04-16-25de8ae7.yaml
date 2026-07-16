@@ -2,31 +2,24 @@ actors:
 - FR
 - PL
 issue_areas:
-- defence
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: statement
   participants:
   - Deputy Prime Minister and Foreign Minister Radosław Sikorski
   topics:
-  - defence
   - rule_of_law
-  location: 'null'
-  position: Poland views the strong alliance with France as a pillar of EU stability,
-    aiming to define policy directions through regular intergovernmental summits to
-    build a secure and competitive Europe.
+  location: null
+  position: Poland views the strong alliance with France as a key pillar for developing
+    a secure Europe capable of protecting its values and competing internationally.
   positions:
-    defence: Poland and France are coordinating policies to build a strong, competitive,
-      and secure Europe, serving as a pillar for EU stability and development.
-    rule_of_law: The partnership aims to protect European values and is focused on
-      laying the groundwork for a secure Europe capable of protecting its values.
+    rule_of_law: Poland emphasizes that the partnership with France is crucial for
+      maintaining democratic resilience and stability within the EU.
   stances:
-    defence:
-      score: 1
-      evidence: building a strong, competitive, and secure Europe
     rule_of_law:
       score: 1
-      evidence: protecting its values
+      evidence: The strong alliance between Warsaw and Paris is now one of the pillars
+        of entire European Union’s stability and development insisted Deputy Prime
+        Minister and Foreign Minister Radosław Sikorski.

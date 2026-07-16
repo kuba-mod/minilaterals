@@ -6,7 +6,6 @@ issue_areas:
 - enlargement
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.2
 extracted:
   event_type: meeting
   participants:
@@ -17,22 +16,20 @@ extracted:
   - rule_of_law
   - enlargement
   location: null
-  position: Poland expressed support for EU initiatives focusing on economic resilience,
-    the establishment of a European Centre for Democratic Resilience, and continued
-    support for Ukraine.
+  position: Poland expressed support for EU cooperation and initiatives related to
+    economic resilience, Ukraine's security, and democratic institutions.
   positions:
-    ukraine: Poland reiterated the need for European countries to participate in the
-      peace process in Ukraine, emphasizing that Ukraine’s security is crucial for
-      the continent's future.
-    rule_of_law: Poland supports the establishment of a European Centre for Democratic
-      Resilience, affirming democratic resilience and combating disinformation as
-      foundational to European unity.
-    enlargement: Poland supports the EU enlargement process and the simplification
-      of EU legislation to enhance global competitiveness.
+    ukraine: Poland strongly supports continued European involvement in the peace
+      process and views Ukraine's security as vital for the continent's future.
+    rule_of_law: Poland advocates for strengthening democratic institutions and combating
+      disinformation through dedicated European initiatives.
+    enlargement: Poland supports the EU's enlargement process alongside other legislative
+      reforms aimed at boosting competitiveness.
   stances:
     ukraine:
       score: 1
-      evidence: continued support for the struggling Ukraine
+      evidence: Minister Niemczycki reiterated the need for European countries to
+        take part in the current negotiations.
     rule_of_law:
       score: 1
       evidence: Poland and Ireland support the establishment of the Centre dedicated
@@ -40,4 +37,5 @@ extracted:
         combating disinformation.
     enlargement:
       score: 1
-      evidence: support for the EU enlargement process
+      evidence: Discussed were, among other issues, support for the EU enlargement
+        process, and the EU legislation simplification package,

@@ -4,25 +4,21 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.05
 extracted:
   event_type: meeting
   participants:
-  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs (France)
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
   - Ararat Mirzoyan, Armenian Minister of Foreign Affairs
   topics:
   - rule_of_law
   location: France
-  position: France reiterated its full support for the normalization of relations
-    between Armenia and Azerbaijan and signaled its unwavering commitment to Armenia’s
-    sovereignty and democratic resilience.
+  position: France reaffirmed its support for Armenia's sovereignty and the normalization
+    of relations between Armenia and Azerbaijan.
   positions:
-    rule_of_law: France affirmed its commitment to Armenia’s sovereignty and democratic
-      resilience, aligning with the foundational principles of democratic resilience
-      and the rule of law.
+    rule_of_law: France supports democratic resilience and sovereignty by reiterating
+      commitment to Armenia’s sovereignty and supporting regional stability.
   stances:
     rule_of_law:
       score: 1
-      evidence: France’s full support for the normalization of relations between Armenia
-        and Azerbaijan and for the development of regional connectivity, with due
-        respect for States’ territorial integrity and sovereignty.
+      evidence: The Minister signalled France’s unwavering commitment to Armenia’s
+        sovereignty and democratic resilience.

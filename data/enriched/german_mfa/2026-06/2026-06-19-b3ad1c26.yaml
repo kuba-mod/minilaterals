@@ -7,7 +7,6 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
-weimar_score: 0.1
 extracted:
   event_type: speech
   participants:
@@ -17,24 +16,25 @@ extracted:
   - hybrid
   - enlargement
   - rule_of_law
-  location: Kiel, Germany
-  position: Germany views Russia as a fundamental and escalating threat to European
-    security, emphasizing the strategic importance of NATO's presence in the Baltic
-    Sea and calling for continued collective defense efforts.
+  location: Kiel
+  position: Germany emphasizes that Russia poses a comprehensive threat to European
+    security and NATO's interests, particularly in the Baltic Sea region.
   positions:
-    defence: Germany strongly supports strengthening collective defense capabilities,
-      particularly along the eastern flank, viewing NATO's presence as essential for
-      security.
-    hybrid: Germany calls for coordinated action against hybrid threats by highlighting
-      various Russian activities in the Baltic Sea that undermine stability and sovereignty.
-    enlargement: Germany supports the EU accession of Eastern partners like Sweden
-      and Finland, recognizing their reliance on Baltic Sea supply routes for defense.
-    rule_of_law: Germany affirms democratic resilience by condemning Russia's illegal
-      actions in Ukraine and emphasizing that its threat undermines freedom and security.
+    defence: Germany stresses the critical importance of collective defense structures,
+      noting that NATO's presence has evolved into a 'transatlantic stronghold' and
+      that the Baltic Sea is central to alliance defense.
+    hybrid: Germany highlights the multifaceted nature of Russia's threat, citing
+      various acts of aggression and interference that undermine stability.
+    enlargement: Germany supports the strategic importance of Baltic Allies and new
+      members like Sweden and Finland, recognizing their reliance on secure supply
+      routes.
+    rule_of_law: Germany frames Russia's actions as a direct challenge to freedom
+      and security in Europe, particularly citing its illegal war against Ukraine.
   stances:
     defence:
       score: 2
-      evidence: Today, nobody would call it a weak spot anymore.
+      evidence: Today, nobody would call it a weak spot anymore. NATO ’s presence
+        has developed from the “tripwire” into a transatlantic stronghold.
     hybrid:
       score: 2
       evidence: We have witnessed acts of sabotage, espionage activities, GPS jamming,
