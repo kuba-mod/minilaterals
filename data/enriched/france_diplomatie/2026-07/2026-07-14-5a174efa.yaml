@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 Foreign Ministers
+  - High Representative of the European Union
+  - United Nations Secretary-General’s Personal Envoy, Mr. Pekka Haavisto
+  topics:
+  - rule_of_law
+  location: El-Obeid, Sudan
+  position: France, as part of the G7, calls for an immediate ceasefire in Sudan,
+    the protection of civilians, and accountability for violations of international
+    humanitarian law.
+  positions:
+    rule_of_law: France promotes democratic resilience and the rule of law by demanding
+      accountability for human rights violations and supporting the democratic aspirations
+      of the Sudanese people.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: We are united in our determination to promote accountability for all
+        violations of international humanitarian law and international human rights
+        law committed by all parties to the conflict.

@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ali al-Zaidi
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the appointment of Iraq's new Prime Minister and pledges
+    continued support for the strengthening of Iraqi institutions.
+  positions:
+    rule_of_law: France supports the establishment of executive authorities and the
+      strengthening of institutions to address national challenges.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France will continue standing alongside Iraq to support it in the
+        strengthening of its institutions

@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - State Secretary von Geyr
+  - Bankole Adeoye, AU Commissioner for Political Affairs, Peace and Security
+  topics:
+  - ukraine
+  - hybrid
+  - green_transition
+  location: null
+  position: Germany is strengthening its strategic partnership with the African Union
+    to address global security challenges, multilateralism, and the war in Ukraine.
+  positions:
+    ukraine: Germany maintains a firm stance that Russia is responsible for the war
+      and must show willingness for negotiations to end it.
+    hybrid: Germany identifies cyber and AI as key areas for joint cooperation to
+      tackle global challenges.
+    green_transition: Germany recognizes climate change as a global challenge requiring
+      joint action.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Russia started this war 4 1/2 years ago without any acceptable justification.
+        And it´s on Russia to end this war by showing willingness for meaningful negotiations.
+    hybrid:
+      score: 1
+      evidence: This holds true for peace and security, but also for climate change,
+        health, AI, cyber, trade and many other areas of our cooperation.
+    green_transition:
+      score: 1
+      evidence: We can best tackle them together. This holds true for peace and security,
+        but also for climate change

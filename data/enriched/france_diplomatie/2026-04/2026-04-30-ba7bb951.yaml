@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Prince Faisal bin Farhan al Saud
+  topics:
+  - defence
+  location: Riyadh, Saudi Arabia
+  position: France seeks to maintain regional stability in the Middle East through
+    diplomatic solutions, de-escalation, and a commitment to Saudi Arabian security.
+  positions:
+    defence: France demonstrates a concrete commitment to collective security by offering
+      its readiness to contribute to the defense of Saudi Arabia.
+  stances:
+    defence:
+      score: 2
+      evidence: reaffirmed France’s solidarity with the Kingdom of Saudi Arabia in
+        this context and its readiness to contribute to its defence

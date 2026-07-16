@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Palestinian Authority
+  - Palestinian Elections Commission
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the local elections in the West Bank and Gaza and advocates
+    for further presidential and legislative elections to ensure Palestinian democratic
+    expression.
+  positions:
+    rule_of_law: France supports the promotion of democratic expression and the rule
+      of law in Palestine through the electoral process.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: democratic expression is possible through the ballot box in Palestine

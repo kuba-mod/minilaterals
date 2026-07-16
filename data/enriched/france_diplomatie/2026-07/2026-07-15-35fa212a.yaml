@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Benjamin Haddad, Minister Delegate for Europe
+  - Kristen Michal, Estonian Prime Minister
+  - Andris Kulbergs, Latvian Prime Minister
+  - Rasa Budbergytė, Lithuania’s Deputy Speaker of the Seimas
+  - Mayor of Paris
+  topics:
+  - defence
+  location: Paris, France
+  position: France reaffirmed its solidarity with the Baltic States and its commitment
+    to their security through military presence and NATO missions.
+  positions:
+    defence: France actively supports the security of the eastern flank through concrete
+      military presence and participation in NATO Air Policing.
+  stances:
+    defence:
+      score: 2
+      evidence: France is fully committed to the Baltic States’ security, particularly
+        through its military presence in Estonia and its regular participation in
+        the NATO Air Policing mission

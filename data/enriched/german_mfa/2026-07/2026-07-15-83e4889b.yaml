@@ -1,0 +1,48 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: Helsinki, Finland
+  position: Germany emphasizes strengthening European security and deterrence against
+    Russia through NATO cooperation, support for Ukraine, and resilience against hybrid
+    threats.
+  positions:
+    ukraine: Germany actively supports Ukraine with significant financial commitments
+      to force Russia into negotiations.
+    defence: Germany advocates for enhanced deterrent and defence capabilities to
+      counter Russian provocations.
+    hybrid: Germany seeks to learn from Finnish resilience to better combat sabotage,
+      cyberattacks, and disinformation.
+    green_transition: Germany aims to drive the expansion of a European hydrogen economy
+      to ensure secure value creation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: At the summit in Ankara, we NATO partners pledged 140 billion euro
+        to Ukraine for defence
+    defence:
+      score: 1
+      evidence: counter Russia’s constant provocations with an enhanced deterrent
+        and defence capability
+    hybrid:
+      score: 1
+      evidence: We can learn from this in Europe, so as to equip ourselves better
+        to fight sabotage, cyberattacks and disinformation.
+    green_transition:
+      score: 1
+      evidence: resolutely drive forward the rapid expansion of key future sectors,
+        such as a productive European hydrogen economy

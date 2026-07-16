@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Rafael Grossi, Director General of the International Atomic Energy Agency (IAEA)
+  topics:
+  - ukraine
+  - green_transition
+  location: New York, USA
+  position: France reaffirmed its support for the IAEA's non-proliferation mandate,
+    its commitment to preventing Iran from obtaining nuclear weapons, and its support
+    for nuclear safety in Ukraine.
+  positions:
+    ukraine: France supports the IAEA's work on nuclear safety in Ukraine and is mobilizing
+      efforts to restore the Chernobyl New Safe Confinement.
+    green_transition: France promotes nuclear energy as a safe and affordable energy
+      source to support energy goals.
+  stances:
+    ukraine:
+      score: 2
+      evidence: underscored France’s commitment to continuing international mobilization
+        efforts to restore Chernobyl’s New Safe Confinement under France’s presidency
+        of the G7
+    green_transition:
+      score: 1
+      evidence: adoption of two statements on the development of nuclear energy as
+        a safe, affordable energy source and the financing of nuclear energy

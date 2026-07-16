@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Latin American and Caribbean ambassadors accredited to Poland
+  - Ministry of Climate and Environment representatives
+  topics:
+  - green_transition
+  location: null
+  position: Poland is promoting the international transfer of its green technologies
+    and exploring green hydrogen cooperation with Latin American and Caribbean partners.
+  positions:
+    green_transition: Poland actively advances climate neutrality and industrial green
+      objectives by exporting SME-led green technologies and pursuing hydrogen cooperation.
+  stances:
+    green_transition:
+      score: 2
+      evidence: The programme aims to support the international transfer of green
+        technologies supplied by Polish small and medium-sized enterprises.

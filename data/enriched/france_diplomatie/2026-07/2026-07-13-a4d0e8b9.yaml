@@ -1,7 +1,27 @@
 actors:
 - FR
 - PL
-issue_areas: []
-weimar_relevant: false
+issue_areas:
+- ukraine
+weimar_relevant: true
 trilateral_signal: false
-extracted: null
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  location: Warsaw, Poland
+  position: France reaffirms its unwavering support for Ukraine and its determination
+    to act in coordination with Poland against Russian aggression.
+  positions:
+    ukraine: France expresses unwavering support for Ukraine in the face of Russian
+      aggression and is organizing a meeting of the Coalition of the Willing.
+  stances:
+    ukraine:
+      score: 2
+      evidence: unwavering support of France, Poland and the European Union in the
+        face of the war of aggression being waged by Russia, with a view to the meeting
+        of Coalition of the Willing heads of State and government, which will be held
+        in Paris on 13 July at President Macron’s invitation

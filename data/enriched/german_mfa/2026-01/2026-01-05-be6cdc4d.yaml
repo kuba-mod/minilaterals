@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  location: Lithuania
+  position: Germany is strengthening its security cooperation with Lithuania and NATO
+    to counter Russian threats, notably through the stationing of a permanent brigade.
+  positions:
+    ukraine: Germany reaffirms its firm support for Ukraine to ensure a lasting peace
+      on the continent.
+    defence: Germany is actively advancing eastern flank deterrence by establishing
+      its first-ever permanent brigade abroad in Lithuania.
+  stances:
+    ukraine:
+      score: 1
+      evidence: our firm support for Ukraine
+    defence:
+      score: 2
+      evidence: Germany is stationing such a brigade abroad for the first time

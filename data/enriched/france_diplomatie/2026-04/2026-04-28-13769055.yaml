@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns attacks by Israeli settlers on Palestinian infrastructure
+    and calls for accountability and an end to settlement expansion.
+  positions:
+    rule_of_law: France advocates for the rule of law by calling for the prosecution
+      of those responsible for attacks on civilian infrastructure.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: France calls on the Israeli authorities to expel and prosecute those
+        responsible.

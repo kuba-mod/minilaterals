@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Marco Rubio
+  - Thorgerdur Gunnarsdóttir
+  - Antonio Guterres
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Reykjavík, Washington, D.C. and New York
+  position: Germany seeks to strengthen the transatlantic partnership and NATO security,
+    specifically regarding the war in Ukraine and strategic challenges in the North
+    Atlantic and Arctic.
+  positions:
+    ukraine: Germany recognizes the existential threat posed by Russia's war of aggression
+      against Ukraine to Euro-Atlantic security.
+    defence: Germany is actively working towards a collective NATO spending goal of
+      5 percent to ensure shared security.
+    rule_of_law: Germany affirms its commitment to the rules-based international order
+      and international law as the foundation for security and prosperity.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russia’s war of aggression against Ukraine, which threatens our security
+        across the entire Euro-Atlantic area.
+    defence:
+      score: 2
+      evidence: Germany is taking resolute action to progress towards this goal.
+    rule_of_law:
+      score: 1
+      evidence: For Germany, dependability as an international partner thus very clearly
+        includes a commitment to international law and international cooperation.

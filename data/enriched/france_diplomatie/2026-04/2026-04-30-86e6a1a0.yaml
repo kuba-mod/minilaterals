@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Sheikh Abdullah bin Zayed Al Nahyan
+  topics:
+  - defence
+  location: Abu Dhabi, United Arab Emirates
+  position: France reaffirmed its commitment to UAE security and diplomatic efforts
+    to stabilize the Middle East and ensure freedom of navigation.
+  positions:
+    defence: France actively supports collective security through a bilateral defence
+      agreement and readiness to participate in the UAE's defence.
+  stances:
+    defence:
+      score: 2
+      evidence: reaffirmed France’s unwavering solidarity with the United Arab Emirates
+        under our bilateral defence agreement, and our willingness to participate
+        in their defence

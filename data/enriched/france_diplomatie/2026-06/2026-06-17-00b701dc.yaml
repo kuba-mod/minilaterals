@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of the G7
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France, as part of the G7, commits to intensifying the fight against global
+    drug trafficking through coordinated law enforcement, anti-money laundering measures,
+    and the creation of a G7+ Ports Network.
+  positions:
+    hybrid: France coordinates with G7 partners to disrupt sophisticated illegal networks
+      that exploit international vulnerabilities and threaten national security.
+    rule_of_law: France emphasizes the importance of democratic institutions and the
+      global financial architecture in combating transnational organized crime.
+  stances:
+    hybrid:
+      score: 2
+      evidence: we will create a G7+ Ports Network to Combat Drug Trafficking to reinforce
+        cooperation between G7 members and their partners’ main maritime ports
+    rule_of_law:
+      score: 2
+      evidence: emphasize the continued need to strengthen the global anti-money laundering
+        architecture to prevent financial crime and improve enforcement and asset
+        recovery outcomes
