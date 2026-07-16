@@ -35,53 +35,42 @@
 
 {# ── Alignment timeline ── #}
 {% if has_timeline %}
-<style>
-  .tl-panel { border:1px solid var(--rule); border-radius:10px; background:var(--bg-card); padding:14px 16px 10px; margin-bottom:24px; }
-  .tl-legend { display:flex; gap:16px; flex-wrap:wrap; font-size:12.5px; margin:2px 2px 8px; align-items:center; }
-  .tl-legend .ln { display:inline-block; width:20px; height:0; border-top:3px solid; margin-right:6px; vertical-align:4px; border-radius:2px; }
-  .tl-legend b { font-weight:600; }
-  .tl-hint { font-size:11.5px; color:var(--muted); text-align:center; margin:4px 0 0; }
-</style>
-
 <div class="section-head" style="margin-top:0">
-  How close are Berlin, Paris &amp; Warsaw?
-  <span>Each capital is drawn as its own line — its average stance (−2 opposes … +2 actively advances) against the agreed Weimar goals over a 14-day rolling window. When the three lines run together they agree; where they fan apart, they diverge. <b>Overall</b> blends every topic; pick a topic to see just that debate. A lone dot marks a fortnight only one capital spoke.</span>
+  How strongly are they backing shared goals?
+  <span>Each capital is drawn as its own line — its average stance (−2 opposes to +2 actively advances) against the agreed Weimar goals over a 14-day window. When the three lines run together they agree; where they fan apart, they diverge. Pick a topic to see just that debate.</span>
 </div>
-
-{# ── Topic switcher — ordered by this week's divergence (most contested first) ── #}
-<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px">
-  {% for key in pill_order %}
-  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-series="{{ key }}"
-        style="font-size:10px; cursor:pointer" onclick="selectTimelineSeries('{{ key }}')">
-    {% if key == 'overall' %}Overall{% else %}{{ issue_labels[key] }}{% endif %}
+<div style="display:flex; align-items:center; gap:16px; margin-bottom:8px; flex-wrap:wrap; font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600">
+  {% for a in ["DE", "FR", "PL"] %}
+  <span style="display:inline-flex; align-items:center; gap:6px">
+    <span style="display:inline-block; width:20px; border-top:3px solid {{ actor_colors[a] }}; border-radius:2px"></span>{{ actor_labels[a] }}
   </span>
   {% endfor %}
 </div>
+<div style="width:100%; overflow:hidden; margin-bottom:4px">
+  <svg id="timeline-svg" viewBox="0 0 800 220" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
+    <g id="timeline-grid"></g>
+    <g id="timeline-lines"></g>
+  </svg>
+</div>
 
-<div class="tl-panel">
-  <div class="tl-legend">
-    <span><span class="ln" style="border-color:{{ actor_colors.DE }}"></span><b>Germany</b></span>
-    <span><span class="ln" style="border-color:{{ actor_colors.FR }}"></span><b>France</b></span>
-    <span><span class="ln" style="border-color:{{ actor_colors.PL }}"></span><b>Poland</b></span>
-  </div>
-  <div style="width:100%; overflow:hidden">
-    <svg id="timeline-svg" viewBox="0 0 800 240" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
-      <g id="timeline-grid"></g>
-      <g id="timeline-lines"></g>
-    </svg>
-  </div>
-  <p class="tl-hint">Hover a point for that capital's mean and statement count. Full statements are in the topic sections below.</p>
+{# ── Topic pills — clicking switches the timeline view (ordered by this week's divergence) ── #}
+<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px">
+  {% for key in pill_order %}
+  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-series="{{ key }}"
+        style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px; cursor:pointer"
+        onclick="selectTimelineSeries('{{ key }}')">
+    {% if key == 'overall' %}Overall{% else %}{{ issue_labels[key] }}{% endif %}
+  </span>
+  {% endfor %}
 </div>
 
 <script>
 (function () {
   const SERIES = {{ country_series_json | safe }};
   const COLORS = {{ actor_colors | tojson }};
-  const LABELS = {{ issue_labels | tojson }};
   const ACTORS = ["DE", "FR", "PL"];
-  const W = 800, H = 240, PAD_L = 34, PAD_R = 52, PAD_T = 16, PAD_B = 34;
+  const PAD_L = 44, PAD_R = 26, PAD_T = 15, PAD_B = 35, W = 800, H = 220;
   const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B;
-  let currentKey = "overall";
 
   function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
   function r1(v){ return Math.round(v * 10) / 10; }
@@ -94,20 +83,20 @@
     const pad = Math.max(0.2, (hi - lo) * 0.15);
     lo = Math.max(-2, Math.floor((lo - pad) * 2) / 2);
     hi = Math.min(2, Math.ceil((hi + pad) * 2) / 2);
-    if (hi - lo < 0.5) { hi = Math.min(2, lo + 0.5); }
+    if (hi - lo < 0.5) hi = Math.min(2, lo + 0.5);
     return [lo, hi];
   }
 
   var originalClusterOrder = null;
   function reorderClusters(key){
-    var container = document.getElementById("clusters-container");
+    var container = document.getElementById('clusters-container');
     if (!container) return;
-    var clusters = Array.from(container.querySelectorAll(":scope > .cluster"));
-    if (!originalClusterOrder) originalClusterOrder = clusters.map(c => c.id);
-    if (key === "overall") {
-      originalClusterOrder.forEach(id => { var el = document.getElementById(id); if (el) container.appendChild(el); });
+    var clusters = Array.from(container.querySelectorAll(':scope > .cluster'));
+    if (!originalClusterOrder) originalClusterOrder = clusters.map(function(c){ return c.id; });
+    if (key === 'overall') {
+      originalClusterOrder.forEach(function(id){ var el = document.getElementById(id); if (el) container.appendChild(el); });
     } else {
-      var target = document.getElementById("cluster-" + key);
+      var target = document.getElementById('cluster-' + key);
       if (target && container.firstElementChild !== target) container.insertBefore(target, container.firstElementChild);
     }
   }
@@ -115,49 +104,44 @@
   window.selectTimelineSeries = function(key){
     const series = SERIES[key];
     if (!series) return;
-    currentKey = key;
-    document.querySelectorAll(".timeline-pill").forEach(el => el.classList.toggle("timeline-pill--active", el.dataset.series === key));
+    document.querySelectorAll('.timeline-pill').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.series === key); });
     reorderClusters(key);
 
     const n = series.length;
     const dom = domainFor(series), lo = dom[0], hi = dom[1];
     const yFor = v => PAD_T + CHART_H * (1 - (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo));
 
-    // gridlines at 0.5 steps
-    let grid = "";
+    let grid = '';
     for (let t = Math.ceil(lo * 2) / 2; t <= hi + 1e-9; t += 0.5) {
       const y = r1(yFor(t)), zero = Math.abs(t) < 1e-9;
-      grid += '<line x1="' + PAD_L + '" y1="' + y + '" x2="' + (W - PAD_R) + '" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? "" : ' stroke-dasharray="3 4"') + "/>";
-      grid += '<text x="' + (PAD_L - 7) + '" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + (t > 0 ? "+" + t : t) + "</text>";
+      grid += '<line x1="44" y1="' + y + '" x2="774" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? '' : ' stroke-dasharray="4 4"') + ' opacity="0.6"/>';
+      grid += '<text x="36" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="var(--muted)" opacity="0.8" font-family="\'IBM Plex Mono\',monospace">' + (t > 0 ? '+' + t : t) + '</text>';
     }
-    document.getElementById("timeline-grid").innerHTML = grid;
+    document.getElementById('timeline-grid').innerHTML = grid;
 
-    // x-axis labels every 3rd week + last
-    let out = "";
-    series.forEach((w, i) => { if (!w || (i % 3 !== 0 && i !== n - 1)) return;
-      out += '<text x="' + r1(xFor(i, n)) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + "</text>";
+    let out = '';
+    series.forEach(function(w, i){ if (!w || (i % 3 !== 0 && i !== n - 1)) return;
+      out += '<text x="' + r1(xFor(i, n)) + '" y="205" text-anchor="middle" font-size="8" fill="#888" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + '</text>';
     });
 
-    // one line per capital, broken on gaps; isolated points draw as a dot only
-    ACTORS.forEach(a => {
-      let run = [];
-      const flush = () => {
-        if (run.length >= 2) out += '<polyline points="' + run.map(r => r1(xFor(r.i, n)) + "," + r1(yFor(r.v))).join(" ") + '" fill="none" stroke="' + COLORS[a] + '" stroke-width="2.25" stroke-linejoin="round"/>';
-        run.forEach(r => { out += '<circle cx="' + r1(xFor(r.i, n)) + '" cy="' + r1(yFor(r.v)) + '" r="' + (run.length >= 2 ? 2.6 : 3.4) + '" fill="' + COLORS[a] + '"><title>' + esc(a + " " + r.week + ": " + (r.v >= 0 ? "+" : "") + r.v + " (" + r.n + " statements)") + "</title></circle>"; });
+    ACTORS.forEach(function(a){
+      var run = [];
+      var flush = function(){
+        if (run.length >= 2) out += '<polyline points="' + run.map(function(r){ return r1(xFor(r.i, n)) + ',' + r1(yFor(r.v)); }).join(' ') + '" fill="none" stroke="' + COLORS[a] + '" stroke-width="2" stroke-linejoin="round"/>';
+        run.forEach(function(r){ out += '<circle cx="' + r1(xFor(r.i, n)) + '" cy="' + r1(yFor(r.v)) + '" r="' + (run.length >= 2 ? 2.5 : 3.4) + '" fill="' + COLORS[a] + '"><title>' + esc(a + ' ' + r.week + ': ' + (r.v >= 0 ? '+' : '') + r.v + ' (' + r.n + ' statements)') + '</title></circle>'; });
         run = [];
       };
-      series.forEach((w, i) => { if (w && a in w.pa) run.push({ i: i, v: w.pa[a], week: w.week, n: (w.n || {})[a] }); else flush(); });
+      series.forEach(function(w, i){ if (w && a in w.pa) run.push({ i: i, v: w.pa[a], week: w.week, n: (w.n || {})[a] }); else flush(); });
       flush();
-      // end label
-      for (let i = n - 1; i >= 0; i--) { const w = series[i]; if (w && a in w.pa) {
-        out += '<text x="' + (W - PAD_R + 6) + '" y="' + (r1(yFor(w.pa[a])) + 3) + '" font-size="10" font-weight="600" fill="' + COLORS[a] + '" font-family="\'IBM Plex Sans\',sans-serif">' + a + "</text>";
+      for (var i = n - 1; i >= 0; i--) { var w = series[i]; if (w && a in w.pa) {
+        out += '<text x="778" y="' + (r1(yFor(w.pa[a])) + 3) + '" font-size="9" font-weight="600" fill="' + COLORS[a] + '" font-family="\'IBM Plex Sans\',sans-serif">' + a + '</text>';
         break;
       } }
     });
-    document.getElementById("timeline-lines").innerHTML = out;
+    document.getElementById('timeline-lines').innerHTML = out;
   };
 
-  selectTimelineSeries("overall");
+  selectTimelineSeries('overall');
 })();
 </script>
 
