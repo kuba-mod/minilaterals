@@ -11,18 +11,21 @@ from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
 
-# No stable English RSS endpoint verified for the Bundesregierung newsroom;
-# scrape the listing directly (same federal design system as auswaertiges-amt.de).
-# The listing page has no server-rendered teaser markup — results are embedded
-# as a JSON blob (`BPA.initialSearchResultsJson`) that the frontend hydrates
-# client-side, so we parse that blob instead of guessing teaser CSS classes.
-LISTING_URL = "https://www.bundesregierung.de/breg-en/news"
+# No stable RSS endpoint verified for the Bundesregierung newsroom; scrape the
+# listing directly (same federal design system as auswaertiges-amt.de). The
+# German listing has fuller coverage than the English translation, consistent
+# with polish_pm scraping gov.pl's Polish listing rather than a thinner
+# English one. The listing page has no server-rendered teaser markup —
+# results are embedded as a JSON blob (`BPA.initialSearchResultsJson`) that
+# the frontend hydrates client-side, so we parse that blob instead of
+# guessing teaser CSS classes.
+LISTING_URL = "https://www.bundesregierung.de/breg-de/aktuelles"
 BASE_URL = "https://www.bundesregierung.de"
 SOURCE_NAME = "german_chancellery"
 
 _RESULTS_JSON = re.compile(r"BPA\.initialSearchResultsJson\s*=\s*(\{.*?\});\s*\n", re.S)
 
-_HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"}
+_HEADERS = {"User-Agent": "minilaterals.com Weimar Triangle tracker (+https://minilaterals.com/weimar-triangle)"}
 
 
 def _parse_date(raw: str | None) -> tuple[str, str]:
@@ -67,7 +70,7 @@ class GermanChancelleryIngester(BaseIngester):
     announces."""
 
     source_name = SOURCE_NAME
-    source_lang = "en"
+    source_lang = "de"
 
     def fetch(self) -> Iterator[Event]:
         page = 1

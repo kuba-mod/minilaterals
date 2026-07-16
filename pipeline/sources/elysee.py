@@ -10,14 +10,18 @@ from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
 
-# No RSS feed on the English site; scrape the news listing directly.
-LISTING_URL = "https://www.elysee.fr/en/all-actualities"
+# No RSS feed; scrape the news listing directly. The French site has fuller
+# coverage than the English translation, consistent with polish_pm scraping
+# gov.pl's Polish listing rather than a thinner English one.
+LISTING_URL = "https://www.elysee.fr/actualites"
 BASE_URL = "https://www.elysee.fr"
 SOURCE_NAME = "elysee"
 
-_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; WeimTracker/1.0)"}
+_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; minilaterals.com Weimar Triangle tracker; +https://minilaterals.com/weimar-triangle)"
+}
 
-# Élysée article URLs embed the publication date: /en/emmanuel-macron/2026/03/09/slug
+# Élysée article URLs embed the publication date: /emmanuel-macron/2026/03/09/slug
 _URL_DATE = re.compile(r"/(\d{4})/(\d{2})/(\d{2})/")
 
 
@@ -48,7 +52,7 @@ class ElyseeIngester(BaseIngester):
     Quai d'Orsay does not reliably cover what the President announces."""
 
     source_name = SOURCE_NAME
-    source_lang = "en"
+    source_lang = "fr"
 
     def fetch(self) -> Iterator[Event]:
         page = 1

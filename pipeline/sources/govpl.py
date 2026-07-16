@@ -15,7 +15,7 @@ from .base import BaseIngester, Event
 # subclasses only set source_name and news_url.
 BASE_URL = "https://www.gov.pl"
 
-_HEADERS = {"User-Agent": "WeimTracker/1.0 (+https://github.com/weimar-tracker)"}
+_HEADERS = {"User-Agent": "minilaterals.com Weimar Triangle tracker (+https://minilaterals.com/weimar-triangle)"}
 
 
 def _parse_date(raw: str | None) -> tuple[str, str]:
