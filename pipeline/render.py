@@ -55,12 +55,18 @@ SOURCE_ACTOR = {
     "german_mfa": "DE",
     "france_diplomatie": "FR",
     "polish_mfa": "PL",
+    "german_chancellery": "DE",
+    "elysee": "FR",
+    "polish_pm": "PL",
 }
 
 SOURCE_LABELS = {
     "german_mfa": "German MFA",
     "france_diplomatie": "France Diplomatie",
     "polish_mfa": "Polish MFA",
+    "german_chancellery": "German Chancellery",
+    "elysee": "Élysée",
+    "polish_pm": "Polish PM Chancellery",
 }
 
 ACTOR_LABELS = {
@@ -325,19 +331,16 @@ def compute_topic_weekly_stances(
     published rated statements are None.
     Returns: {'overall': [...], 'ukraine': [...], ...}
     """
-    mfa_sources = {"german_mfa", "france_diplomatie", "polish_mfa"}
-    actor_map = {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"}
-
     # (date, actor, topic, stance) rows from all stance-rated events
     rows: list[tuple[str, str, str, int]] = []
     for e in events:
         src = e.get("source_name", "")
-        if src not in mfa_sources:
+        if src not in SOURCE_ACTOR:
             continue
         stances = (e.get("extracted") or {}).get("stances") or {}
         for topic, entry in stances.items():
             if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
-                rows.append((e.get("date", ""), actor_map[src], topic, entry["score"]))
+                rows.append((e.get("date", ""), SOURCE_ACTOR[src], topic, entry["score"]))
 
     if not rows:
         return {}
