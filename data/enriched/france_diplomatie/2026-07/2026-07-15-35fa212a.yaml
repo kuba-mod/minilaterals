@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Benjamin Haddad
+  - Kristen Michal
+  - Andris Kulbergs
+  - Rasa Budbergytė
+  - Mayor of Paris
+  topics:
+  - defence
+  location: Paris, France
+  position: France reaffirmed its historical and current solidarity with the Baltic
+    States, emphasizing its commitment to their security and sovereignty.
+  positions:
+    defence: France actively supports the security of the Baltic States through concrete
+      military presence and NATO air policing operations.
+  stances:
+    defence:
+      score: 2
+      evidence: France is fully committed to the Baltic States’ security, particularly
+        through its military presence in Estonia and its regular participation in
+        the NATO Air Policing mission
