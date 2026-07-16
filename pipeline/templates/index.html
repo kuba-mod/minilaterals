@@ -34,252 +34,130 @@
 {% endif %}
 
 {# ── Alignment timeline ── #}
-{% if timeline_svg %}
+{% if has_timeline %}
 <style>
-  .tl-board { border:1px solid var(--rule); border-radius:10px; overflow:hidden; margin-bottom:18px; background:var(--bg-card); }
-  .tl-row { display:grid; grid-template-columns:26px 1fr 130px auto; align-items:center; gap:12px;
-            width:100%; text-align:left; padding:10px 14px; border:none; border-top:1px solid var(--rule);
-            background:transparent; cursor:pointer; font-family:'IBM Plex Sans',sans-serif; color:var(--ink); }
-  .tl-row:first-child { border-top:none; }
-  .tl-row:hover { background:var(--bg-soft); }
-  .tl-row--active { background:var(--bg-soft); box-shadow:inset 3px 0 0 var(--ink); }
-  .tl-row--overall { border-bottom:2px solid var(--rule); }
-  .tl-row--low, .tl-row--quiet { opacity:.62; }
-  .tl-rank { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); text-align:right; }
-  .tl-name { font-weight:600; font-size:14px; }
-  .tl-sub { display:block; font-weight:400; font-size:11px; color:var(--muted); margin-top:1px; }
-  .tl-lowtag { font-size:9.5px; border:1px solid var(--rule); border-radius:4px; padding:0 4px; color:var(--muted); margin-left:6px; font-weight:400; }
-  .tl-spread { height:8px; border-radius:5px; background:var(--bg-soft); overflow:hidden; position:relative; }
-  .tl-spread > i { position:absolute; left:0; top:0; bottom:0; border-radius:5px; }
-  .tl-badge { font-size:10.5px; font-weight:600; padding:2px 9px; border-radius:20px; white-space:nowrap; font-family:'IBM Plex Mono',monospace; }
-  .tl-badge--quiet { color:var(--muted); background:var(--bg-soft); }
-  .tl-panel { border:1px solid var(--rule); border-radius:10px; background:var(--bg-card); padding:14px 16px 8px; margin-bottom:24px; }
-  .tl-phead { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
-  .tl-phead .nm { font-size:16px; font-weight:600; }
-  .tl-legend { display:flex; gap:14px; flex-wrap:wrap; font-size:11.5px; color:var(--muted); margin:8px 2px 2px; align-items:center; }
-  .tl-legend .sw { display:inline-block; width:10px; height:10px; border-radius:3px; margin-right:5px; vertical-align:-1px; }
-  .tl-legend .sw-band { width:22px; border-radius:2px; background:var(--ink-soft); opacity:.14; border:1px solid var(--rule); }
-  .tl-legend .sw-low { background:var(--bg-card); border:1.5px solid var(--muted); }
-  .tl-hint { font-size:11.5px; color:var(--muted); text-align:center; margin:2px 0 0; }
-  .tl-drill { margin-top:12px; border-top:1px solid var(--rule); padding-top:12px; min-height:36px; }
-  .tl-drill-head { font-size:13px; margin:0 0 10px; color:var(--ink); }
-  .tl-drill-head b { font-weight:600; }
-  .tl-drill-empty { font-size:12.5px; color:var(--muted); margin:2px 0; }
-  .tl-stmt { border:1px solid var(--rule); border-radius:8px; padding:10px 12px; margin-bottom:8px; background:var(--bg-paper); }
-  .tl-stmt .top { display:flex; align-items:center; gap:8px; margin-bottom:3px; }
-  .tl-flag { font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; color:#fff; font-family:'IBM Plex Mono',monospace; }
-  .tl-sc { font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; }
-  .tl-stmt .ti { font-size:12px; color:var(--muted); }
-  .tl-stmt .pos { font-size:13px; margin:4px 0; color:var(--ink); }
-  .tl-stmt .ev { font-size:12px; color:var(--muted); border-left:2px solid var(--rule); padding-left:8px; font-style:italic; margin:4px 0; }
-  .tl-stmt a { color:var(--ink); font-size:11px; border-bottom:1px solid var(--rule); }
-  @media (max-width:560px){ .tl-row { grid-template-columns:22px 1fr auto; } .tl-spread { display:none; } }
+  .tl-panel { border:1px solid var(--rule); border-radius:10px; background:var(--bg-card); padding:14px 16px 10px; margin-bottom:24px; }
+  .tl-legend { display:flex; gap:16px; flex-wrap:wrap; font-size:12.5px; margin:2px 2px 8px; align-items:center; }
+  .tl-legend .ln { display:inline-block; width:20px; height:0; border-top:3px solid; margin-right:6px; vertical-align:4px; border-radius:2px; }
+  .tl-legend b { font-weight:600; }
+  .tl-hint { font-size:11.5px; color:var(--muted); text-align:center; margin:4px 0 0; }
 </style>
 
 <div class="section-head" style="margin-top:0">
-  Where do Berlin, Paris &amp; Warsaw diverge — this week?
-  <span>Every MFA statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goals. Topics are ranked by this week's spread between the three capitals — the widest gap leads. Click a topic to load its timeline, then click any dot to read exactly what each capital published.</span>
+  How close are Berlin, Paris &amp; Warsaw?
+  <span>Each capital is drawn as its own line — its average stance (−2 opposes … +2 actively advances) against the agreed Weimar goals over a 14-day rolling window. When the three lines run together they agree; where they fan apart, they diverge. <b>Overall</b> blends every topic; pick a topic to see just that debate. A lone dot marks a fortnight only one capital spoke.</span>
 </div>
 
-{# ── Divergence leaderboard — ranks topics by this week's spread; clicking loads the chart ── #}
-<div class="tl-board" id="tl-board">
-  <button type="button" class="tl-row tl-row--overall tl-row--active" data-series="overall" onclick="selectTimelineSeries('overall')">
-    <span class="tl-rank">◆</span>
-    <span class="tl-name">Overall<span class="tl-sub">all topics blended · w/o {{ timeline_svg.recent.week }}</span></span>
-    <span class="tl-spread"></span>
-    <span class="tl-badge" style="color:{{ timeline_svg.recent.color }}; background:{{ timeline_svg.recent.color }}1e">{{ timeline_svg.recent.label }} · {{ timeline_svg.recent.display }}</span>
-  </button>
-  {% for row in leaderboard %}
-  {% if row.quiet %}
-  <button type="button" class="tl-row tl-row--quiet" data-series="{{ row.area }}" onclick="selectTimelineSeries('{{ row.area }}')">
-    <span class="tl-rank">–</span>
-    <span class="tl-name">{{ issue_labels[row.area] }}<span class="tl-sub">quiet this week</span></span>
-    <span class="tl-spread"></span>
-    <span class="tl-badge tl-badge--quiet">no new statements</span>
-  </button>
-  {% else %}
-  <button type="button" class="tl-row {% if row.low %}tl-row--low{% endif %}" data-series="{{ row.area }}" onclick="selectTimelineSeries('{{ row.area }}')">
-    <span class="tl-rank">{{ loop.index }}</span>
-    <span class="tl-name">{{ issue_labels[row.area] }}{% if row.low %}<span class="tl-lowtag">only {{ row.n }}</span>{% endif %}<span class="tl-sub">support {{ row.display }} · {{ row.n }} statements</span></span>
-    <span class="tl-spread"><i style="width:{{ (row.spread / 2 * 100) | round | int }}%; background:{{ row.color }}"></i></span>
-    <span class="tl-badge" style="color:{{ row.color }}; background:{{ row.color }}1e">{{ row.label }} · {{ '%.2f' % row.spread }}</span>
-  </button>
-  {% endif %}
+{# ── Topic switcher — ordered by this week's divergence (most contested first) ── #}
+<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px">
+  {% for key in pill_order %}
+  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-series="{{ key }}"
+        style="font-size:10px; cursor:pointer" onclick="selectTimelineSeries('{{ key }}')">
+    {% if key == 'overall' %}Overall{% else %}{{ issue_labels[key] }}{% endif %}
+  </span>
   {% endfor %}
 </div>
 
-{# ── Detail chart for the selected topic — dots are clickable ── #}
 <div class="tl-panel">
-  <div class="tl-phead">
-    <span class="nm" id="tl-title">Overall — all topics</span>
-    <span id="timeline-current-label" style="font-size:15px; font-weight:600; font-family:'IBM Plex Mono',monospace; color:{{ timeline_svg.recent.color }}">{{ timeline_svg.recent.label }} · {{ timeline_svg.recent.display }}</span>
-  </div>
   <div class="tl-legend">
-    <span><i class="sw" style="background:#4d6b38"></i>Aligned</span>
-    <span><i class="sw" style="background:#8a6320"></i>Mixed</span>
-    <span><i class="sw" style="background:#a14132"></i>Divergent</span>
-    <span><i class="sw sw-band"></i>spread between capitals</span>
-    <span><i class="sw sw-low"></i>few statements</span>
+    <span><span class="ln" style="border-color:{{ actor_colors.DE }}"></span><b>Germany</b></span>
+    <span><span class="ln" style="border-color:{{ actor_colors.FR }}"></span><b>France</b></span>
+    <span><span class="ln" style="border-color:{{ actor_colors.PL }}"></span><b>Poland</b></span>
   </div>
   <div style="width:100%; overflow:hidden">
-    <svg id="timeline-svg" viewBox="{{ timeline_svg.viewbox }}" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
-      <g id="timeline-grid">
-      {% for rl in timeline_svg.ref_lines %}
-        <line x1="44" y1="{{ rl.y }}" x2="774" y2="{{ rl.y }}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4" opacity="0.35"/>
-        <text x="778" y="{{ rl.y + 3 }}" font-size="9" fill="var(--muted)" opacity="0.8" font-family="'IBM Plex Mono',monospace">{{ rl.label }}</text>
-      {% endfor %}
-      </g>
-      <polygon id="timeline-band" points="{{ timeline_svg.band_points }}" fill="var(--ink-soft)" fill-opacity="0.09" stroke="none"/>
-      <polyline id="timeline-line" points="{{ timeline_svg.line_points }}" fill="none" stroke="var(--ink-soft)" stroke-width="1.5" stroke-linejoin="round"/>
-      <g id="timeline-dots">
-      {% for pt in timeline_svg.points %}
-        {% if pt.has_data %}
-        <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="5" fill="{% if pt.low %}var(--bg-card){% else %}{{ pt.color }}{% endif %}" stroke="{% if pt.low %}{{ pt.color }}{% else %}var(--bg-card){% endif %}" stroke-width="1.5"><title>{{ pt.tooltip }}</title></circle>
-        <text x="{{ pt.x }}" y="205" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="'IBM Plex Mono',monospace">{{ pt.week[5:] }}</text>
-        {% else %}
-        <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="3" fill="none" stroke="var(--rule)" stroke-width="1" opacity="0.6"/>
-        {% endif %}
-      {% endfor %}
-      </g>
+    <svg id="timeline-svg" viewBox="0 0 800 240" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
+      <g id="timeline-grid"></g>
+      <g id="timeline-lines"></g>
     </svg>
   </div>
-  <p class="tl-hint">Click a dot to read the statements behind that week. Hollow dots rest on very few statements.</p>
-  <div class="tl-drill" id="tl-drill"><p class="tl-drill-empty">Pick a topic above to read the statements behind each week.</p></div>
+  <p class="tl-hint">Hover a point for that capital's mean and statement count. Full statements are in the topic sections below.</p>
 </div>
 
 <script>
 (function () {
-  const SERIES = {{ topic_series_json | safe }};
+  const SERIES = {{ country_series_json | safe }};
+  const COLORS = {{ actor_colors | tojson }};
   const LABELS = {{ issue_labels | tojson }};
-  const BASE = {{ base_path | tojson }};
-  const FLAG = { DE:'#9a6a1f', FR:'#1f4279', PL:'#b22823' };
-  const GREEN='#4d6b38', AMBER='#8a6320', RED='#a14132';
-  const PAD_L=44, PAD_R=26, PAD_T=15, PAD_B=35, W=800, H=220;
-  const CHART_W=W-PAD_L-PAD_R, CHART_H=H-PAD_T-PAD_B;
-  const drillCache = {};
-  let currentKey = 'overall';
+  const ACTORS = ["DE", "FR", "PL"];
+  const W = 800, H = 240, PAD_L = 34, PAD_R = 52, PAD_T = 16, PAD_B = 34;
+  const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B;
+  let currentKey = "overall";
 
-  function xFor(i,n){ return n>1 ? PAD_L + i*CHART_W/(n-1) : PAD_L + CHART_W/2; }
-  function r1(v){ return Math.round(v*10)/10; }
-  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+  function r1(v){ return Math.round(v * 10) / 10; }
+  function xFor(i, n){ return n > 1 ? PAD_L + i * CHART_W / (n - 1) : PAD_L + CHART_W / 2; }
 
-  function domainFor(scored){
-    let lo=Math.min.apply(null, scored.map(w=>w.blo));
-    let hi=Math.max.apply(null, scored.map(w=>w.bhi));
-    const rng=hi-lo, pad=Math.max(0.05, rng*0.18);
-    let dlo=Math.max(0, lo-pad), dhi=Math.min(1, hi+pad);
-    if(dhi-dlo < 0.25){ const mid=(dlo+dhi)/2; dlo=Math.max(0,mid-0.125); dhi=Math.min(1,mid+0.125); }
-    return [dlo,dhi];
-  }
-
-  function tooltipFor(w){
-    const pa=Object.keys(w.per_actor||{}).map(a=>a+': '+(w.per_actor[a]>=0?'+':'')+w.per_actor[a]).join('  ');
-    return 'Week of '+w.week+'  ·  '+w.label+' · avg stance '+w.display
-      + (pa?'\n'+pa:'') + '\n'+w.n+' rated statements'+(w.low?'  ·  low confidence':'');
+  function domainFor(series){
+    const vals = [];
+    series.forEach(w => { if (w) ACTORS.forEach(a => { if (a in w.pa) vals.push(w.pa[a]); }); });
+    let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    const pad = Math.max(0.2, (hi - lo) * 0.15);
+    lo = Math.max(-2, Math.floor((lo - pad) * 2) / 2);
+    hi = Math.min(2, Math.ceil((hi + pad) * 2) / 2);
+    if (hi - lo < 0.5) { hi = Math.min(2, lo + 0.5); }
+    return [lo, hi];
   }
 
   var originalClusterOrder = null;
   function reorderClusters(key){
-    var container = document.getElementById('clusters-container');
-    if(!container) return;
-    var clusters = Array.from(container.querySelectorAll(':scope > .cluster'));
-    if(!originalClusterOrder){ originalClusterOrder = clusters.map(c=>c.id); }
-    if(key==='overall'){
-      originalClusterOrder.forEach(id=>{ var el=document.getElementById(id); if(el) container.appendChild(el); });
+    var container = document.getElementById("clusters-container");
+    if (!container) return;
+    var clusters = Array.from(container.querySelectorAll(":scope > .cluster"));
+    if (!originalClusterOrder) originalClusterOrder = clusters.map(c => c.id);
+    if (key === "overall") {
+      originalClusterOrder.forEach(id => { var el = document.getElementById(id); if (el) container.appendChild(el); });
     } else {
-      var target=document.getElementById('cluster-'+key);
-      if(target && container.firstElementChild!==target) container.insertBefore(target, container.firstElementChild);
+      var target = document.getElementById("cluster-" + key);
+      if (target && container.firstElementChild !== target) container.insertBefore(target, container.firstElementChild);
     }
   }
 
   window.selectTimelineSeries = function(key){
     const series = SERIES[key];
-    if(!series) return;
+    if (!series) return;
     currentKey = key;
-    document.querySelectorAll('.tl-row').forEach(el=> el.classList.toggle('tl-row--active', el.dataset.series===key));
+    document.querySelectorAll(".timeline-pill").forEach(el => el.classList.toggle("timeline-pill--active", el.dataset.series === key));
     reorderClusters(key);
 
-    const scored = series.filter(w=>w);
-    if(scored.length < 2) return;
-    const recent = scored[scored.length-1], n = series.length;
-    const dom = domainFor(scored), dlo=dom[0], dhi=dom[1];
-    const yFor = v => PAD_T + CHART_H*(1-(v-dlo)/(dhi-dlo));
+    const n = series.length;
+    const dom = domainFor(series), lo = dom[0], hi = dom[1];
+    const yFor = v => PAD_T + CHART_H * (1 - (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo));
 
-    document.getElementById('tl-title').textContent = key==='overall' ? 'Overall — all topics' : LABELS[key];
-    const lbl = document.getElementById('timeline-current-label');
-    lbl.textContent = recent.label+' · '+recent.display; lbl.style.color = recent.color;
+    // gridlines at 0.5 steps
+    let grid = "";
+    for (let t = Math.ceil(lo * 2) / 2; t <= hi + 1e-9; t += 0.5) {
+      const y = r1(yFor(t)), zero = Math.abs(t) < 1e-9;
+      grid += '<line x1="' + PAD_L + '" y1="' + y + '" x2="' + (W - PAD_R) + '" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? "" : ' stroke-dasharray="3 4"') + "/>";
+      grid += '<text x="' + (PAD_L - 7) + '" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + (t > 0 ? "+" + t : t) + "</text>";
+    }
+    document.getElementById("timeline-grid").innerHTML = grid;
 
-    let grid='';
-    [-2,-1,0,1,2].forEach(s=>{ const norm=(s+2)/4; if(norm<dlo-1e-6||norm>dhi+1e-6) return;
-      const y=r1(yFor(norm));
-      grid += '<line x1="44" y1="'+y+'" x2="774" y2="'+y+'" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4" opacity="0.35"/>';
-      grid += '<text x="778" y="'+(y+3)+'" font-size="9" fill="var(--muted)" opacity="0.8" font-family="\'IBM Plex Mono\',monospace">'+(s>0?'+'+s:s)+'</text>';
+    // x-axis labels every 3rd week + last
+    let out = "";
+    series.forEach((w, i) => { if (!w || (i % 3 !== 0 && i !== n - 1)) return;
+      out += '<text x="' + r1(xFor(i, n)) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + "</text>";
     });
-    document.getElementById('timeline-grid').innerHTML = grid;
 
-    const bandTop=[], bandBot=[];
-    series.forEach((w,i)=>{ if(!w) return; const x=r1(xFor(i,n)); bandTop.push(x+','+r1(yFor(w.bhi))); bandBot.unshift(x+','+r1(yFor(w.blo))); });
-    document.getElementById('timeline-band').setAttribute('points', bandTop.concat(bandBot).join(' '));
-
-    const lineXY=[], dots=[];
-    series.forEach((w,i)=>{ const x=r1(xFor(i,n));
-      if(!w){ dots.push('<circle cx="'+x+'" cy="'+r1(yFor((dlo+dhi)/2))+'" r="3" fill="none" stroke="var(--rule)" stroke-width="1" opacity="0.6"/>'); return; }
-      const y=r1(yFor(w.score)); lineXY.push(x+','+y);
-      dots.push('<circle class="tl-dot" data-week="'+w.week+'" cx="'+x+'" cy="'+y+'" r="5" fill="'+(w.low?'var(--bg-card)':w.color)+'" stroke="'+(w.low?w.color:'var(--bg-card)')+'" stroke-width="1.5" style="cursor:pointer"><title>'+esc(tooltipFor(w))+'</title></circle>');
-      dots.push('<text x="'+x+'" y="205" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">'+w.week.slice(5)+'</text>');
+    // one line per capital, broken on gaps; isolated points draw as a dot only
+    ACTORS.forEach(a => {
+      let run = [];
+      const flush = () => {
+        if (run.length >= 2) out += '<polyline points="' + run.map(r => r1(xFor(r.i, n)) + "," + r1(yFor(r.v))).join(" ") + '" fill="none" stroke="' + COLORS[a] + '" stroke-width="2.25" stroke-linejoin="round"/>';
+        run.forEach(r => { out += '<circle cx="' + r1(xFor(r.i, n)) + '" cy="' + r1(yFor(r.v)) + '" r="' + (run.length >= 2 ? 2.6 : 3.4) + '" fill="' + COLORS[a] + '"><title>' + esc(a + " " + r.week + ": " + (r.v >= 0 ? "+" : "") + r.v + " (" + r.n + " statements)") + "</title></circle>"; });
+        run = [];
+      };
+      series.forEach((w, i) => { if (w && a in w.pa) run.push({ i: i, v: w.pa[a], week: w.week, n: (w.n || {})[a] }); else flush(); });
+      flush();
+      // end label
+      for (let i = n - 1; i >= 0; i--) { const w = series[i]; if (w && a in w.pa) {
+        out += '<text x="' + (W - PAD_R + 6) + '" y="' + (r1(yFor(w.pa[a])) + 3) + '" font-size="10" font-weight="600" fill="' + COLORS[a] + '" font-family="\'IBM Plex Sans\',sans-serif">' + a + "</text>";
+        break;
+      } }
     });
-    const line=document.getElementById('timeline-line');
-    line.setAttribute('points', lineXY.join(' ')); line.setAttribute('stroke','var(--ink-soft)');
-    const dotsG=document.getElementById('timeline-dots'); dotsG.innerHTML=dots.join('');
-    dotsG.querySelectorAll('.tl-dot').forEach(d=> d.onclick=()=>showDrill(key, d.getAttribute('data-week')) );
-
-    showDrill(key, recent.week);
+    document.getElementById("timeline-lines").innerHTML = out;
   };
 
-  function highlightDot(week){
-    document.querySelectorAll('#timeline-dots .tl-dot').forEach(d=>{
-      const on = d.getAttribute('data-week')===week;
-      d.setAttribute('r', on ? 7 : 5);
-    });
-  }
-
-  function renderDrill(key, week, data){
-    const el=document.getElementById('tl-drill');
-    const w=(SERIES[key]||[]).find(x=>x&&x.week===week);
-    if(!w){ el.innerHTML='<p class="tl-drill-empty">No scored window that week.</p>'; return; }
-    const items=(data&&data[week])||[];
-    const pa=Object.keys(w.per_actor||{}).map(a=>a+' '+(w.per_actor[a]>=0?'+':'')+w.per_actor[a]).join('  ·  ');
-    let html='<p class="tl-drill-head">Week of <b>'+week+'</b> — '+esc(w.label)+' · spread '+w.spread.toFixed(2)
-      +' · per-capital means: '+esc(pa)+'</p>';
-    if(!items.length){ html+='<p class="tl-drill-empty">No individual statements cached for this window.</p>'; el.innerHTML=html; return; }
-    items.forEach(it=>{
-      const sc = it.score>=1?GREEN : it.score<=-1?RED : AMBER;
-      html+='<div class="tl-stmt"><div class="top">'
-        +'<span class="tl-flag" style="background:'+(FLAG[it.actor]||'#555')+'">'+esc(it.actor)+'</span>'
-        +'<span class="tl-sc" style="color:'+sc+'">stance '+(it.score>0?'+':'')+it.score+'</span>'
-        +'<span class="ti" style="font-family:\'IBM Plex Mono\',monospace">'+esc(it.date)+'</span></div>'
-        +'<div class="ti">'+esc(it.title)+'</div>'
-        +(it.position?'<div class="pos">'+esc(it.position)+'</div>':'')
-        +(it.evidence?'<div class="ev">“'+esc(it.evidence)+'”</div>':'')
-        +(it.url?'<a href="'+esc(it.url)+'" target="_blank" rel="noopener">source ↗</a>':'')
-        +'</div>';
-    });
-    el.innerHTML=html;
-  }
-
-  function showDrill(key, week){
-    const el=document.getElementById('tl-drill');
-    highlightDot(week);
-    if(key==='overall'){ el.innerHTML='<p class="tl-drill-empty">Pick a topic above to read the statements behind each week — the overall view blends all topics.</p>'; return; }
-    if(drillCache[key]){ renderDrill(key, week, drillCache[key]); return; }
-    el.innerHTML='<p class="tl-drill-empty">Loading statements…</p>';
-    fetch(BASE+'/data/'+key+'.json').then(r=> r.ok?r.json():{}).then(d=>{
-      drillCache[key]=d; if(currentKey===key) renderDrill(key, week, d);
-    }).catch(()=>{ if(currentKey===key) el.innerHTML='<p class="tl-drill-empty">Could not load statements.</p>'; });
-  }
-
-  // Make the server-rendered overall chart interactive on load.
-  selectTimelineSeries('overall');
+  selectTimelineSeries("overall");
 })();
 </script>
 
