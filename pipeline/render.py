@@ -164,20 +164,30 @@ ENRICHED_DIR = ROOT / "data" / "enriched"
 COMMENTARY_FILE = ROOT / "data" / "commentary.json"
 
 # Stance-based alignment: each event×topic carries an LLM-judged stance in -2..+2
-# vs. the Weimar goal. Agreement label comes from the spread between per-country
-# mean stances (spread is in stance units, so the thresholds are self-explanatory:
-# ≤0.5 = same bucket, ≤1.5 = adjacent buckets).
+# vs. the Weimar goal. The label is a function of two independent axes:
+#   - spread: how far apart the per-country mean stances are from each other
+#     (≤0.5 = same bucket, ≤1.5 = adjacent buckets) — "do the capitals agree?"
+#   - overall: the cross-country mean stance itself — "do they back the goal?"
+# A low spread alone is not good news: three capitals in lockstep at -2 are in
+# full agreement, but agreement *against* the goal, not for it. Only a low
+# spread AND a goal-backing overall earns the green "Aligned" label.
 STANCE_ALIGNED_SPREAD = 0.5
 STANCE_MIXED_SPREAD = 1.5
+GOAL_BACKING_OVERALL = 0.5
+GOAL_AGAINST_OVERALL = -0.5
 
 COLOR_GREEN = "#4d6b38"
 COLOR_AMBER = "#8a6320"
 COLOR_RED = "#a14132"
 
 
-def _stance_agreement(spread: float) -> tuple[str, str]:
-    """Map spread between per-country mean stances to (label, color)."""
+def _stance_agreement(spread: float, overall: float) -> tuple[str, str]:
+    """Map spread + goal-alignment between per-country mean stances to (label, color)."""
     if spread <= STANCE_ALIGNED_SPREAD:
+        if overall <= GOAL_AGAINST_OVERALL:
+            return "Aligned against goal", COLOR_RED
+        if overall < GOAL_BACKING_OVERALL:
+            return "Noncommittal", COLOR_AMBER
         return "Aligned", COLOR_GREEN
     if spread <= STANCE_MIXED_SPREAD:
         return "Mixed", COLOR_AMBER
@@ -248,10 +258,11 @@ def score_cluster_stances(cluster: dict) -> dict | None:
     Score a cluster from LLM-judged stance ratings (-2..+2 vs. the Weimar goal).
 
     Per actor: mean of that actor's event stances for the cluster topic.
-    Agreement label from the spread between actor means (see _stance_agreement).
     `overall` is the mean stance across actors — how strongly the capitals
-    collectively back the goal — and is fully auditable via the evidence quotes
-    stored on each event.
+    collectively back the goal. Agreement label comes from both the spread
+    between actor means and `overall` (see _stance_agreement) — low spread
+    alone isn't "Aligned" if the capitals agree while opposing the goal.
+    Fully auditable via the evidence quotes stored on each event.
     """
     area = cluster["area"]
     per_actor_scores: dict[str, list[int]] = defaultdict(list)
@@ -269,7 +280,7 @@ def score_cluster_stances(cluster: dict) -> dict | None:
     actor_means = {a: sum(per_actor_scores[a]) / len(per_actor_scores[a]) for a in actors_scored}
     spread = max(actor_means.values()) - min(actor_means.values())
     overall = sum(actor_means.values()) / len(actor_means)
-    label, color = _stance_agreement(spread)
+    label, color = _stance_agreement(spread, overall)
 
     return {
         "per_actor": {a: {"stance": round(actor_means[a], 1), "n": len(per_actor_scores[a])} for a in actors_scored},
@@ -364,7 +375,7 @@ def compute_topic_weekly_stances(
             actor_means = {a: sum(actor_scores[a]) / len(actor_scores[a]) for a in actors_with_data}
             spread = max(actor_means.values()) - min(actor_means.values())
             stance_avg = sum(actor_means.values()) / len(actor_means)
-            label, color = _stance_agreement(spread)
+            label, color = _stance_agreement(spread, stance_avg)
 
             series.append(
                 {
@@ -396,7 +407,7 @@ def compute_topic_weekly_stances(
             continue
         stance_avg = sum(e["stance_avg"] for e in entries) / len(entries)
         mean_spread = sum((e["band_hi"] - e["band_lo"]) * 4.0 for e in entries) / len(entries)
-        label, color = _stance_agreement(mean_spread)
+        label, color = _stance_agreement(mean_spread, stance_avg)
         overall_series.append(
             {
                 "week": week_str,
