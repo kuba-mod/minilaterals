@@ -58,9 +58,7 @@ LEGACY_PROMPT_VERSION = "1"
 
 
 def _git(*args: str) -> str:
-    return subprocess.run(
-        ["git", *args], cwd=ROOT, capture_output=True, text=True
-    ).stdout.strip()
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True).stdout.strip()
 
 
 def _adding_commit(path: Path) -> str:
