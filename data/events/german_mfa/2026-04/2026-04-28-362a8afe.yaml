@@ -33,5 +33,7 @@ text: 'Germany aligns itself with the EU Statement to be delivered later. Kitche
   of Hormuz must be open to free and safe maritime traffic .'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2769678-2769678
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-28T08:08:09Z'
 ingested_at: '2026-05-13T21:15:26Z'

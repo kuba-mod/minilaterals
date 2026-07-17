@@ -33,3 +33,7 @@ extracted:
       evidence: there is significant further potential for growth in our economic
         relations, particularly in the areas of renewable energies, critical raw materials
         and hydrogen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

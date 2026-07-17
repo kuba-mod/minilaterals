@@ -60,5 +60,7 @@ text: 'The cooperation between Poland and France is gaining momentum. That’s g
   for 100 people, a concert hall, and an exhibition space.'
 source_url: https://www.gov.pl/web/diplomacy/polands-and-frances-top-diplomats-meet-for-consultations-and-attend-polish-institute-opening-event
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-18T00:00:00Z'
 ingested_at: '2026-07-07T00:22:51Z'

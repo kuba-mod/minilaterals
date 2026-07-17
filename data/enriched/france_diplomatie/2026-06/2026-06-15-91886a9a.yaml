@@ -31,3 +31,7 @@ extracted:
       evidence: only a political solution based on two states, Israel and Palestine,
         is capable of meeting the legitimate aspirations of both peoples over the
         long term
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

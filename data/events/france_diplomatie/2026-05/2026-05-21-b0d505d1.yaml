@@ -49,5 +49,7 @@ text: Building on the Joint Statement between the French Republic and the People
   Group on Addressing Climate and Environmental Challenges in Paris, France in 2027.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/premiere-reunion-du-groupe-de-travail-france-chine-sur-les-defis-climatiques-et-environnementaux
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-21T00:00:00Z'
 ingested_at: '2026-07-07T00:21:01Z'

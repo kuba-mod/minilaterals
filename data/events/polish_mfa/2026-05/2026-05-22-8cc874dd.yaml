@@ -17,5 +17,7 @@ text: Also discussed were the reconstruction of Ukraine, relations with the US, 
   their readiness to further cooperate during the country’s OSCE chairmanship.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-ignacy-niemczycki-visits-bern
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-22T00:00:00Z'
 ingested_at: '2026-07-07T00:22:44Z'

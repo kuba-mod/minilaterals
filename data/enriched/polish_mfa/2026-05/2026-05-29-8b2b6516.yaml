@@ -42,3 +42,7 @@ extracted:
       score: 1
       evidence: Both sides also confirmed the inauguration of works on a new Treaty
         of Friendship and Cooperation,
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

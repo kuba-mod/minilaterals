@@ -24,5 +24,7 @@ text: 'The foreign ministers of Poland and Ukraine talked about possible ways of
   the context of further Polish investments in Ukraine.'
 source_url: https://www.gov.pl/web/diplomacy/top-diplomats-of-poland-and-ukraine-meet
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-12T00:00:00Z'
 ingested_at: '2026-05-13T21:18:37Z'

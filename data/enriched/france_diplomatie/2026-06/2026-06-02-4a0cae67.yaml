@@ -30,3 +30,7 @@ extracted:
       score: 2
       evidence: France will continue to support Ukrainian and international courts
         to ensure that these crimes do not go unpunished.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

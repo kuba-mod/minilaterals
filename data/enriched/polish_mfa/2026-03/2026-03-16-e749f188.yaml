@@ -59,3 +59,7 @@ extracted:
       score: 1
       evidence: The Council discussed minimising the negative impact of the conflict
         in the Middle East on Ukraine as it fights the Russian aggressor.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -15,5 +15,7 @@ text: 'The event was attended by members of the MFA leadership, representatives 
   programme here: https://ecs.gda.pl/wydarzenia/forum-kosciuszkowskie-kultura-sila-demokracji/'
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-artur-harazim-launches-2nd-kosciuszko-forum
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-02T00:00:00Z'
 ingested_at: '2026-07-07T00:22:25Z'

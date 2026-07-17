@@ -46,5 +46,7 @@ text: 'External action of local government bodies Making daily life easier for t
   and political bodies involved in these issues of territorial proximity.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/faciliter-le-quotidien-des-frontaliers-a-l-initiative-des-ministres-allemand-et-francais-charges-de
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-23T00:00:00Z'
 ingested_at: '2026-05-14T21:11:29Z'

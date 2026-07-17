@@ -44,5 +44,7 @@ text: 'Hosted by Professor Monika Sus of the Institute of Political Studies at t
   culture, and sport.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-sikorski-takes-part-in-impact-cee-2026
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T00:00:00Z'
 ingested_at: '2026-07-07T00:22:54Z'

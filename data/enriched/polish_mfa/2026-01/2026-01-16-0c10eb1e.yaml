@@ -49,3 +49,7 @@ extracted:
       score: 1
       evidence: Poland’s contribution consisted of proposals addressing these challenges
         from the perspective of international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -20,5 +20,7 @@ text: Poland’s top diplomat Radosław Sikorski reaffirmed our support for Pét
   and trust.
 source_url: https://www.gov.pl/web/diplomacy/polishhungarian-consultations-in-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-20T00:00:00Z'
 ingested_at: '2026-07-07T00:22:49Z'

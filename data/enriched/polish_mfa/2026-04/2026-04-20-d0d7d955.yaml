@@ -49,3 +49,7 @@ extracted:
       evidence: in EU policy, in such fields as the future Multiannual Financial Framework,
         the enlargement process as well as strengthening the common market and EU’s
         competitiveness
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

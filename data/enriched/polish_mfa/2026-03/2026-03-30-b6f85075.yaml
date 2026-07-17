@@ -48,3 +48,7 @@ extracted:
       score: 1
       evidence: They acknowledged that amid Russia’s aggressive acts only active approach
         can enhance our security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

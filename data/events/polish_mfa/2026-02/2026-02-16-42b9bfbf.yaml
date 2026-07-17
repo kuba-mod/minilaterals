@@ -25,5 +25,7 @@ text: Participants discussed the future development of Polish–Emirati cooperat
   visit to Warsaw.
 source_url: https://www.gov.pl/web/diplomacy/undersecretary-of-state-wojciech-zajaczkowski-hosts-polishemirati-political-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:46Z'

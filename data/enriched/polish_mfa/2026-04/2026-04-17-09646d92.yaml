@@ -32,3 +32,7 @@ extracted:
       evidence: The gathering prioritised freedom of navigation without further restrictions
         and charges, particularly in regard to the shipment of energy supplies, food,
         and fertilisers.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

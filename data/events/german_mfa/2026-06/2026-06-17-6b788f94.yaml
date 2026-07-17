@@ -91,5 +91,7 @@ text: 'Today, at the German-Polish Forum, various cultural objects that were rem
   levels.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775336-2775336
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-17T10:25:01Z'
 ingested_at: '2026-07-03T09:26:23Z'

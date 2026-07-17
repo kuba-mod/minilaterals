@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: Ministers agreed on the need to reform the Security Council and ensure
         that it is fully capable of taking action
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

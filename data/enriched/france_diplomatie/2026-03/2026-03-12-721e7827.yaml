@@ -36,3 +36,7 @@ extracted:
       evidence: Jean-Noël Barrot reiterated his desire for the G7 to continue being
         a key forum for dialogue and concertation to settle major crises in accordance
         with international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

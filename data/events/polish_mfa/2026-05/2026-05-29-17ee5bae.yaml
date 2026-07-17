@@ -16,5 +16,7 @@ text: Deputy Minister Zajączkowski stressed Ghana’s ever-greater role as a st
   relations, a potential source of new opportunities for both countries.
 source_url: https://www.gov.pl/web/diplomacy/asante-king-visits-poland
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T00:22:35Z'

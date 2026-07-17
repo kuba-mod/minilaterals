@@ -32,5 +32,7 @@ text: 'La situation des centaines de milliers de personnes déplacées au Liban 
   28 February.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-livraison-de-60-tonnes-de-fret-humanitaire-au-liban
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-12T00:00:00Z'
 ingested_at: '2026-05-14T21:10:40Z'

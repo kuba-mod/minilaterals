@@ -30,5 +30,7 @@ text: Competitiveness, values, and security are the three pillars of Ireland’s
   Irish economy, and openness to integration.
 source_url: https://www.gov.pl/web/diplomacy/polishirish-consultations-in-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-27T00:00:00Z'
 ingested_at: '2026-05-14T22:26:52Z'

@@ -28,3 +28,7 @@ extracted:
       score: 1
       evidence: once again demonstrate Russia’s contempt for international humanitarian
         law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -42,5 +42,7 @@ text: 'During the four days of the Conference, Deputy Prime Minister Radosław S
   taking part.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-sikorski-attends-62nd-munich-security-conference
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-15T00:00:00Z'
 ingested_at: '2026-05-14T22:27:46Z'

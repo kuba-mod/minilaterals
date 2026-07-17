@@ -25,5 +25,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeti
   it is for Denmark and Greenland to decide on issues concerning Denmark and Greenland.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/irlande-entretien-de-jean-noel-barrot-avec-helen-mcentee-ministre-des-affaires-etrangeres-du
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-29T00:00:00Z'
 ingested_at: '2026-05-14T21:11:27Z'

@@ -29,5 +29,7 @@ text: 'The Honourable Anita Anand, Canada’s Minister of Foreign Affairs; Penny
   live in peace, security and dignity, free from the threat of renewed conflict.”'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-declaration-commune-sur-la-situation-entre-le-hezbollah-et-israel
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-05T00:00:00Z'
 ingested_at: '2026-07-07T00:19:54Z'

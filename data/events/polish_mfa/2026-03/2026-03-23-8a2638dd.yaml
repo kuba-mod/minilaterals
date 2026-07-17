@@ -13,5 +13,7 @@ text: ODIHR was established in Warsaw by the Charter of Paris for a New Europe (
   rights.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-signs-agreement-on-financing-odihr-premises-in-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-23T00:00:00Z'
 ingested_at: '2026-05-14T22:27:17Z'

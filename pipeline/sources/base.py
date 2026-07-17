@@ -22,6 +22,22 @@ from pipeline.schemas import RawEventSchema
 # MFA sources IS the analysis, even when no joint statement exists.
 MFA_SOURCES = {"german_mfa", "france_diplomatie", "polish_mfa"}
 
+# Each MFA's native-language section (see design principle #9). An event whose
+# source_lang matches this is `collection: native`; anything else (the English
+# fallback section) is `collection: fallback`. Kept beside MFA_SOURCES so the
+# native/fallback tier is derivable from source_lang alone.
+NATIVE_LANG = {"german_mfa": "de", "france_diplomatie": "fr", "polish_mfa": "pl"}
+
+
+def collection_tier(source_name: str, source_lang: str) -> str | None:
+    """`native` when the event came from the ministry's native-language section,
+    `fallback` when it came from the English section, or None for sources with
+    no native concept."""
+    native = NATIVE_LANG.get(source_name)
+    if native is None:
+        return None
+    return "native" if source_lang == native else "fallback"
+
 
 # ---------------------------------------------------------------------------
 # Data model
@@ -38,6 +54,12 @@ class Event:
     source_published_at: str  # ISO 8601 datetime string
     type: str = "press_release"
     date: str = ""  # ISO date "YYYY-MM-DD"
+    # Provenance — set by the ingester (see design principle #9). `collection` is
+    # auto-derived from source_lang in save() when left None; `collection_method`
+    # names the fetch mechanism ("rss" | "html" | "wayback"; legacy seed data
+    # carries "backfill" where the exact mechanism was not recorded per-event).
+    collection: str | None = None
+    collection_method: str | None = None
 
     def content_hash(self) -> str:
         return sha256((self.source_url + self.title).encode()).hexdigest()[:8]
@@ -60,6 +82,8 @@ class Event:
             "text": self.text or "",
             "source_url": self.source_url,
             "source_lang": self.source_lang,
+            "collection": self.collection or collection_tier(self.source_name, self.source_lang),
+            "collection_method": self.collection_method,
             "source_published_at": self.source_published_at,
             "ingested_at": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }

@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: In his address, the foreign minister also appealed to students to
         defend European values—cooperation, responsibility, and the rule of law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -28,5 +28,7 @@ text: The Council discussed minimising the negative impact of the conflict in th
   and establishes international partnerships.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-on-support-for-ukraine-at-the-foreign-affairs-council
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:18Z'

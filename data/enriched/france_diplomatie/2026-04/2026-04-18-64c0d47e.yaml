@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: The protection of Blue Helmets and the safety and security of United
         Nations personnel, assets and premises must be respected by all parties.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

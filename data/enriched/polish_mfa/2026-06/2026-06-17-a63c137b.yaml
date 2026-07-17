@@ -34,3 +34,7 @@ extracted:
       evidence: Emphasis was also put on the importance of close cooperation among
         the CBSS member states in order to uphold the security and stability in the
         region.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

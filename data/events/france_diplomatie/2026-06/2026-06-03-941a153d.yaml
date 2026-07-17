@@ -11,5 +11,7 @@ text: On June 3, Minister for Europe and Foreign Affairs Jean-Noël Barrot hoste
   Balkans and the situation in the Middle East.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/hongrie-entretien-de-jean-noel-barrot-avec-mme-anita-orban-vice-premiere-ministre-ministre-des
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-03T00:00:00Z'
 ingested_at: '2026-07-07T00:20:25Z'

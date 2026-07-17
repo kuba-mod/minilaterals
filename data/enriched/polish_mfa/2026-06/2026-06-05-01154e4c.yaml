@@ -47,3 +47,7 @@ extracted:
       score: 1
       evidence: mutual relations must be built on historical truth, respect for the
         victims, and dialogue.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

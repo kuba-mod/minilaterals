@@ -40,5 +40,7 @@ text: 'Foreign Minister Wadephul issued the following statement today (15 July 2
   value creation for all Baltic partners.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2778210-2778210
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-15T08:33:13Z'
 ingested_at: '2026-07-16T03:59:14Z'

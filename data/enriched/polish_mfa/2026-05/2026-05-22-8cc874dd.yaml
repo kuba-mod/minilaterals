@@ -38,3 +38,7 @@ extracted:
       score: 0
       evidence: Poland and Switzerland take a similar position on this issue, including
         the perception of the war in Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

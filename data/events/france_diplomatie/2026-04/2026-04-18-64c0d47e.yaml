@@ -20,5 +20,7 @@ text: France was shocked to learn of the death of Staff Sergeant Florian Montori
   weapons.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/deces-d-un-soldat-francais-dans-une-attaque-contre-la-finul
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-18T00:00:00Z'
 ingested_at: '2026-05-14T21:09:49Z'

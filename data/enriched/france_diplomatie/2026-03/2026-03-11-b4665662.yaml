@@ -39,3 +39,7 @@ extracted:
       score: 1
       evidence: the Middle East crisis would not divert us from our efforts to achieve
         a just and lasting peace
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -26,5 +26,7 @@ text: 'France, Germany, Ireland, Italy, Netherlands, Norway and the United Kingd
   through the Quintet-led process and call on all parties to engage in good faith.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775848-2775848
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-23T19:42:06Z'
 ingested_at: '2026-07-03T09:26:23Z'

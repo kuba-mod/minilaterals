@@ -15,3 +15,7 @@ extracted:
     while discussing regional stability issues like the conflict in the Great Lakes.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

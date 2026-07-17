@@ -16,5 +16,7 @@ text: Economic cooperation is an important part of Polish–US relations. At the
   and the United States are discussed.
 source_url: https://www.gov.pl/web/diplomacy/16th-round-of-polandus-strategic-dialogue
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-30T00:00:00Z'
 ingested_at: '2026-05-14T22:26:48Z'

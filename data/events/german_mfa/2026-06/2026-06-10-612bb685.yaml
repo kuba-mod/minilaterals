@@ -22,5 +22,7 @@ text: Albania, Australia, Belgium, Bulgaria, Canada, Czechia, Denmark, Estonia, 
   halt them.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2774702-2774702
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-10T09:29:04Z'
 ingested_at: '2026-07-03T09:26:23Z'

@@ -16,5 +16,7 @@ text: The participants of the meeting discussed the GreenEvo Programme, which ha
   that is aware of global climate challenges.
 source_url: https://www.gov.pl/web/diplomacy/meeting-of-latin-american-and-caribbean-ambassadors-accredited-to-poland-with-ministry-of-climate-and-environment-representatives
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-15T00:00:00Z'
 ingested_at: '2026-07-16T22:52:57Z'

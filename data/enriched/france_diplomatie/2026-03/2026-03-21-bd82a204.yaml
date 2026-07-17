@@ -30,3 +30,7 @@ extracted:
         civilians and civilian infrastructure, including energy infrastructure, in
         Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, the United Arab Emirates, Jordan,
         and Iraq, in line with UNSC Resolution 2817.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

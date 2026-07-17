@@ -47,5 +47,7 @@ text: 'Deputy Prime Minister Radosław Sikorski emphasised the awardee’s resol
   or solidarity.'
 source_url: https://www.gov.pl/web/diplomacy/syrian-activist-decorated-by-deputy-prime-minister-radoslaw-sikorski
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-20T00:00:00Z'
 ingested_at: '2026-05-14T22:27:39Z'

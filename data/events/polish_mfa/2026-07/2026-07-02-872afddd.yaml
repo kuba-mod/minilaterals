@@ -32,5 +32,7 @@ text: 'During his meeting with Minister Ronald Lamola , Deputy Prime Minister Ra
   the Polish community in South Africa and laid flowers at the Katyn Memorial in Johannesburg.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-and-foreign-minister-radoslaw-sikorski-visits-republic-of-south-africa
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-02T00:00:00Z'
 ingested_at: '2026-07-04T10:53:47Z'

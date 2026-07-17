@@ -13,3 +13,7 @@ extracted:
     of the Congo in response to the Ebola epidemic.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

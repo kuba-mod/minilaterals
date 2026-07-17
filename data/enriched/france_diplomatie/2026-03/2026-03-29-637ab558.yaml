@@ -26,3 +26,7 @@ extracted:
       score: 1
       evidence: The adoption of this bill would risk undermining Israel’s commitments
         with regards to democratic principles.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

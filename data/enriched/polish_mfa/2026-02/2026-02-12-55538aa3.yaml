@@ -35,3 +35,7 @@ extracted:
       score: 1
       evidence: provide significant insights into the complex security landscape of
         Central and Eastern Europe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

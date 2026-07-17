@@ -22,5 +22,7 @@ text: France welcomes the partial reopening of the Rafah border crossing in both
   to increase our contribution through an additional deployment.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/reouverture-partielle-du-point-de-passage-de-rafah
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-03T00:00:00Z'
 ingested_at: '2026-05-14T21:11:22Z'

@@ -23,3 +23,7 @@ extracted:
       evidence: These strikes are especially unacceptable because they jeopardize
         the temporary ceasefire between the United States and Iran the day after it
         was concluded.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

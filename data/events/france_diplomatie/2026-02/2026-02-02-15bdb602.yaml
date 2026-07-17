@@ -22,5 +22,7 @@ text: France strongly condemns the increasing number of Russian attacks on civil
   peace and reaffirms its determination to support Ukraine over the long term.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/ukraine-frappes-russes-sur-un-bus-et-une-maternite
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-02T00:00:00Z'
 ingested_at: '2026-05-14T21:11:23Z'

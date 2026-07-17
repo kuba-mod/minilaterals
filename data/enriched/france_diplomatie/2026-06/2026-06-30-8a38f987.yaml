@@ -23,3 +23,7 @@ extracted:
       score: 2
       evidence: In the name of human dignity, France stopped inflicting in its territory
         this inhuman suffering, which is devoid of any moral or legal justification.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

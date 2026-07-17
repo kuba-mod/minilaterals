@@ -45,3 +45,7 @@ extracted:
       score: 2
       evidence: Attempts to kill, kidnap, harass, intimidate, or otherwise attack
         people on our soil, undermines national sovereignty and international norms.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

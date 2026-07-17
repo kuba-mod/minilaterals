@@ -44,3 +44,7 @@ extracted:
     rule_of_law:
       score: 2
       evidence: We underline that the Russian authorities remain solely responsible.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

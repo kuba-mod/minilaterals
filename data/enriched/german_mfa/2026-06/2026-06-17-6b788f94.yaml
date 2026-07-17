@@ -29,3 +29,7 @@ extracted:
       evidence: These returns reflect the close cooperation between Germany and Poland
         on confronting historical injustice and are an expression of Germany’s responsibility
         towards Poland.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

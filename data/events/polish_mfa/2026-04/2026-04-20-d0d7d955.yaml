@@ -31,5 +31,7 @@ text: 'The agenda focused on security, energy, building a strong, competitive, a
   of Foreign Affairs Republic of Poland - Gov.pl website'
 source_url: https://www.gov.pl/web/diplomacy/gdansk-intergovernmental-summit-deputy-minister-niemczycki-talks-international-affairs
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-20T00:00:00Z'
 ingested_at: '2026-05-14T22:26:58Z'

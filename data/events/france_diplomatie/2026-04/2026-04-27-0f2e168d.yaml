@@ -239,5 +239,7 @@ text: 'Thank you very much for this warm welcome. It’s good to be back at Colu
   to come. A French translation of the speech is available here.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/l-europe-faconnera-le-21eme-siecle-discours-de-jean-noel-barrot-ministre-de-l-europe-et-des-affaires
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-27T00:00:00Z'
 ingested_at: '2026-05-14T21:09:30Z'

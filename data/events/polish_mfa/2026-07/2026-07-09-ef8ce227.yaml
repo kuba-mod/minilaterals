@@ -47,5 +47,7 @@ text: In recent days, Russia has intensified these efforts through the Federal S
   impartial, credible, and fact-based account of the situation.
 source_url: https://www.gov.pl/web/diplomacy/statement-of-the-resilience-council-on-russian-disinformation-concerning-the-volhynian-crime
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-09T00:00:00Z'
 ingested_at: '2026-07-10T09:49:13Z'

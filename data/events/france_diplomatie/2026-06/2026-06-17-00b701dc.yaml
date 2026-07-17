@@ -83,5 +83,7 @@ text: We, the Leaders of the G7, are committed to intensifying our fight against
   with partner countries.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-des-chefs-d-etat-et-de-gouvernement-sur-la-lutte-contre-le-trafic-de-drogues
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-16T22:47:41Z'

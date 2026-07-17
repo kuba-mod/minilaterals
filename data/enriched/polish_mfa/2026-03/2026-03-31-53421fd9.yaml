@@ -61,3 +61,7 @@ extracted:
       score: 2
       evidence: They agreed that Russia must be called to account for its crimes in
         Ukraine and there is no room for any tolerance of its impunity
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -24,5 +24,7 @@ text: 'Since the beginning of the war in Lebanon, France, a friend of Lebanon, h
   Electricians Without Borders, the CMA CGM Foundation and Nutriset.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/4e-operation-d-aide-humanitaire-au-liban-pres-de-100-tonnes-d-aide-acheminees-en-2026
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-11T00:00:00Z'
 ingested_at: '2026-07-07T00:21:21Z'

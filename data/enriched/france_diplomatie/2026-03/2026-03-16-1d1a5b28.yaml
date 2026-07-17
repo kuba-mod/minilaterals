@@ -25,3 +25,7 @@ extracted:
       evidence: They urged compliance with the values and principles of multilateralism,
         and respect for national sovereignty and international cooperation with the
         aim of ensuring peace and security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -51,3 +51,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: All of these efforts serve to shore up the Alliance’s European pillar
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

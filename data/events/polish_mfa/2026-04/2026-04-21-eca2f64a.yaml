@@ -23,5 +23,7 @@ text: During a discussion on Russia’s aggression against Ukraine, Deputy Minis
   upcoming, first ever EU–Armenia summit in Yerevan scheduled for 4–5 May this year.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-niemczycki-takes-part-in-foreign-affairs-council-fac-in-luxembourg
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-21T00:00:00Z'
 ingested_at: '2026-05-14T22:26:57Z'

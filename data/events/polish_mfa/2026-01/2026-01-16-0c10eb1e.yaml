@@ -35,5 +35,7 @@ text: 'Poland currently holds the one‑year presidency of the Council of the Ba
   in Human Beings, and the Civil Protection Network.'
 source_url: https://www.gov.pl/web/diplomacy/council-of-the-baltic-sea-states-debates-security
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-16T00:00:00Z'
 ingested_at: '2026-05-14T22:28:00Z'

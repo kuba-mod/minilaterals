@@ -13,9 +13,9 @@
   </thead>
   <tbody>
     {% set source_meta = [
-      ("german_mfa",       "DE", "RSS",          "EN"),
-      ("france_diplomatie","FR", "HTML scraper",  "EN"),
-      ("polish_mfa",       "PL", "HTML scraper",  "EN"),
+      ("german_mfa",       "DE", "RSS",          "DE"),
+      ("france_diplomatie","FR", "RSS",          "FR"),
+      ("polish_mfa",       "PL", "HTML scraper", "PL"),
     ] %}
     {% for src, actor, method, lang in source_meta %}
     {% set s = source_stats.get(src, {}) %}
@@ -56,8 +56,11 @@
 
   <p>
     This tracker ingests press releases and official statements from the foreign ministries of
-    Germany, France, and Poland. Each item is read by a language model, which classifies it for
-    Weimar Triangle relevance and, for relevant items, extracts a one-sentence position summary.
+    Germany, France, and Poland — in German, French, and Polish, straight from each ministry's
+    native-language newsroom rather than the thinner English-translation sections. Each item is
+    read by a language model, which classifies it for Weimar Triangle relevance and, for relevant
+    items, extracts a one-sentence position summary in English. Following three ministries in
+    three languages is exactly the work this site exists to save you.
   </p>
 
   <span class="label">Relevance classification</span>
@@ -132,6 +135,15 @@
     SHA-256 hash of the source URL and title, providing automatic deduplication.
     The full history is auditable via git log.
   </p>
+  <p>
+    Every file also records <em>how</em> it was produced, so a native-language item is never
+    mistaken for an English fallback. Each raw event carries <code>collection</code>
+    (<code>native</code> or <code>fallback</code>) and <code>collection_method</code>
+    (<code>rss</code>, <code>html</code>, or a Wayback backfill); each enriched sidecar carries
+    <code>enriched_by</code> — the <code>model_id</code>, the <code>prompt_version</code> that
+    produced its ratings, and whether it was enriched locally or in GitHub Actions. Values on
+    data collected before this tracking was added are reconstructed from git history.
+  </p>
 
   <span class="label">Corrections policy</span>
   <p>
@@ -144,7 +156,11 @@
 
   <span class="label">Caveats</span>
   <ul>
-    <li>All sources currently target English-language pages; French/Polish language content may be missed.</li>
+    <li>Sources are ingested in their native language (German, French, Polish) — the full output of each
+      ministry, not the thinner English-translation sections. Position summaries are extracted in English;
+      stance evidence quotes stay in the original language.</li>
+    <li>If a native-language feed or listing becomes unreachable, ingestion falls back to that ministry's
+      English section until it recovers, so a few events may carry English text.</li>
     <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>

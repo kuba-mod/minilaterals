@@ -16,5 +16,7 @@ text: Consultations, held in specialised groups, concerned defence cooperation, 
   of mutually determined areas of enhanced cooperation.
 source_url: https://www.gov.pl/web/diplomacy/inaugural-meeting-of-polandcanada-high-level-steering-group-on-bilateral-cooperation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-21T00:00:00Z'
 ingested_at: '2026-05-14T22:26:56Z'

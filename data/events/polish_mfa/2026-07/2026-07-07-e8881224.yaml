@@ -33,5 +33,7 @@ text: 'This year’s Heads of Missions Conference has gathered around 170 people
   for heads of missions on team management and working with the media.'
 source_url: https://www.gov.pl/web/diplomacy/heads-of-missions-conference-2026
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-07T00:00:00Z'
 ingested_at: '2026-07-09T09:58:28Z'

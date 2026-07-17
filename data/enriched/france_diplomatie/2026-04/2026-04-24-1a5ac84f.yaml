@@ -22,3 +22,7 @@ extracted:
       evidence: We reaffirm that full compliance with the NPT and relevant safeguards
         obligations is essential to ensuring international confidence in the peaceful
         nature of nuclear activities.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

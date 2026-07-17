@@ -11,5 +11,7 @@ text: France welcomes the signing of an agreement by the Syrian transitional gov
   particularly the complete respect of the ceasefire.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/partenariat-strategique-entre-l-union-europeenne-et-le-vietnam
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-30T00:00:00Z'
 ingested_at: '2026-05-14T21:11:25Z'

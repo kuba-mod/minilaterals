@@ -12,5 +12,7 @@ text: 'France is true to its allies and its positions. It resolutely supports Sy
   to a united, stable Syria that is richly diverse in all its constituent parts.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/syrie-accord-de-cessez-le-feu-du-18-janvier-2026
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-19T00:00:00Z'
 ingested_at: '2026-05-14T21:11:37Z'

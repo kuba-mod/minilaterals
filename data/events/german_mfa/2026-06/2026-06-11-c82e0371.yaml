@@ -126,5 +126,7 @@ text: 'Hello, “Moin”, and a warm welcome to the Federal Foreign Office. And,
   with this award for your commitment.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775072-2775072
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-11T15:34:39Z'
 ingested_at: '2026-07-03T09:26:23Z'

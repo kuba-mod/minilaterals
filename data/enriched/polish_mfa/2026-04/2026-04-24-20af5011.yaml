@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: They emphasised the need to forge positive transatlantic relations
         that benefit Poland’s national and strategic interest.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

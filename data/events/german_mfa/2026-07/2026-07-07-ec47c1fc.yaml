@@ -34,5 +34,7 @@ text: 'A Federal Foreign Office Spokesperson issued the following statement (7 J
   his trip to Israel together with his Israeli counterpart Gideon Sa’ar.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2777190-2777190
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-07T10:56:23Z'
 ingested_at: '2026-07-09T09:57:53Z'

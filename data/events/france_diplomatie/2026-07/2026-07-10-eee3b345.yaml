@@ -21,5 +21,7 @@ text: 'On the margins of the first United Nations dialogue on AI governance, Fra
   (Kingdom of the), Republic of Korea, Spain'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/lancement-de-la-coalition-pour-les-droits-et-la-protection-de-l-enfance-a-l-ere-de-l-intelligence
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-10T00:00:00Z'
 ingested_at: '2026-07-10T09:48:47Z'

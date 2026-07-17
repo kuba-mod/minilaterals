@@ -15,5 +15,7 @@ text: The ministers strongly condemned Iran’s attacks on the Gulf countries. T
   and expressed this view in a joint statement .
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-sikorski-takes-part-in-informal-fac-meeting-with-gulf-cooperation-council-states-heads-of-diplomacy
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-05T00:00:00Z'
 ingested_at: '2026-05-14T22:27:25Z'

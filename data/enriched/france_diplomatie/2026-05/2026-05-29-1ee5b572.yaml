@@ -34,3 +34,7 @@ extracted:
         and the diplomatic corps illustrate yet again Russia’s contempt for the law,
         particularly humanitarian law, as well as diplomatic agreements, and that
         France will not give in to them.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

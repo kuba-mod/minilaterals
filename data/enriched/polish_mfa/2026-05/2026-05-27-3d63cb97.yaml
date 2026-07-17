@@ -33,3 +33,7 @@ extracted:
       score: 1
       evidence: As allies within NATO and partners within the European Union, we are
         being confronted with a new international situation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -108,5 +108,7 @@ text: 'The Black Sea, the Baltic Sea and the North Atlantic differ fundamentally
   now, draw the right conclusions.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775542-2775542
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-19T10:26:25Z'
 ingested_at: '2026-07-03T09:26:23Z'

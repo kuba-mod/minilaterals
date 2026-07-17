@@ -22,5 +22,7 @@ text: In particular, the foreign ministers talked about the impact of the armed 
   law, against the Gulf Arab states in response to the Israeli–American operation.
 source_url: https://www.gov.pl/web/diplomacy/heads-of-diplomacy-of-poland-and-saudi-arabia-discuss-security-in-middle-east
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-05T00:00:00Z'
 ingested_at: '2026-05-14T22:27:25Z'

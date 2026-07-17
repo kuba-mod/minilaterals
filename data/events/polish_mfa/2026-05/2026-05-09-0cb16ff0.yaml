@@ -44,5 +44,7 @@ text: 'Poland co-shapes the decisions of the European Union. We are the fifth-la
   Foreign Affairs Republic of Poland - Gov.pl website'
 source_url: https://www.gov.pl/web/diplomacy/in-the-best-place-to-live-poland-celebrates-europe-day
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-09T00:00:00Z'
 ingested_at: '2026-05-13T21:18:40Z'

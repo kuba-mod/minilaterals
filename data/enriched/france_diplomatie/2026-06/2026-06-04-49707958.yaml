@@ -22,3 +22,7 @@ extracted:
       evidence: At a time marked by multiple crises and the temptations of unilateralism,
         France reaffirms its commitment to an open form of multilateralism based on
         international law and oriented toward concrete action that benefits the people.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

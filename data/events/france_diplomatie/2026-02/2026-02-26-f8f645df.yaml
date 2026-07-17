@@ -22,5 +22,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meet
   of the border.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/cambodge-entretien-de-jean-noel-barrot-avec-prak-sokhonn-ministre-des-affaires-etrangeres-et-de-la
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-26T00:00:00Z'
 ingested_at: '2026-05-14T21:11:08Z'

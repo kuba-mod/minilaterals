@@ -22,3 +22,7 @@ extracted:
       evidence: In ensuring that people in the region don’t go hungry and aren’t forced
         to flee their homes, in providing for them there, we’re indeed serving German
         interests.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

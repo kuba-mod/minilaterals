@@ -18,5 +18,7 @@ text: 'For over two decades, the Forum has established itself as one of Europe''
   climate security and building resilience amid global uncertainty.'
 source_url: https://www.gov.pl/web/diplomacy/21st-edition-of-globsec-forum-featuring-deputy-prime-minister-radoslaw-sikorski
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-23T00:00:00Z'
 ingested_at: '2026-07-07T00:22:41Z'

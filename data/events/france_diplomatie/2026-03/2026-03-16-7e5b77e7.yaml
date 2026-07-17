@@ -14,5 +14,7 @@ text: France strongly condemns the shots fired several times at soldiers of the 
   be ensured, in accordance with international law and Resolution 1701.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-attaque-contre-la-finul
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-16T00:00:00Z'
 ingested_at: '2026-05-14T21:10:39Z'

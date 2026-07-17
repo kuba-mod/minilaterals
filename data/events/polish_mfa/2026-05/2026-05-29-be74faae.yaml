@@ -104,5 +104,7 @@ text: 'The Council reiterated in the strongest terms its condemnation of Russiaâ
   Council welcomed Iceland as the incoming Presidency from July 2026.'
 source_url: https://www.gov.pl/web/diplomacy/sopot-declaration
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T00:22:30Z'

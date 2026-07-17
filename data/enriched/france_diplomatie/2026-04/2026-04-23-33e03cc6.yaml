@@ -23,3 +23,7 @@ extracted:
       evidence: France reiterates its utmost condemnation of this attack, carried
         out in all probability by Hezbollah fighters, and its demand that its perpetrators
         be identified, arrested and brought before the courts.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: France calls on the Israeli authorities to expel and prosecute those
         responsible.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

@@ -26,5 +26,7 @@ text: During the consultations held on 1â€“2 June, Deputy Minister Wojciech ZajÄ
   and the largest market for Polish exports (USD 1.87 billion) in the region.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-wojciech-zajaczkowski-visits-mexico
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-02T00:00:00Z'
 ingested_at: '2026-07-07T00:22:27Z'

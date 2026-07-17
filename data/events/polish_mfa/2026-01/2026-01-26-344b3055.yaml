@@ -36,5 +36,7 @@ text: 'Saudi Arabia is Poland’s strategically important partner in the Gulf an
   MFA'
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-top-diplomats-of-poland-and-saudi-arabia
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-26T00:00:00Z'
 ingested_at: '2026-05-14T22:27:56Z'

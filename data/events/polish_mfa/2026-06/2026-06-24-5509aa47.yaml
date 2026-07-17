@@ -13,5 +13,7 @@ text: The MFA expresses deep satisfaction that the case has reached a positive r
   Affairs of the Republic of Poland
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement29
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-24T00:00:00Z'
 ingested_at: '2026-07-03T09:26:45Z'

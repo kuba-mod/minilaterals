@@ -37,5 +37,7 @@ text: 'Minister of State Serap Güler prior to her visit to the Dominican Republ
   we are seeing.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776252-2776252
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-28T07:48:54Z'
 ingested_at: '2026-07-03T09:26:23Z'

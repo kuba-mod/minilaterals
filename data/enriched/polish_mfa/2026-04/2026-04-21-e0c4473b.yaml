@@ -24,3 +24,7 @@ extracted:
       score: 1
       evidence: Poland regards the draft convention prepared by the International
         Law Commission as a sound basis for further negotiations.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

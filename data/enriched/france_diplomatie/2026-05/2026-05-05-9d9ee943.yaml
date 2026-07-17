@@ -24,3 +24,7 @@ extracted:
       score: 2
       evidence: France continues to call for the release of all people detained arbitrarily
         and for full respect for fundamental rights.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

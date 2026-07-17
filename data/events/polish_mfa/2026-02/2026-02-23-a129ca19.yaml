@@ -50,5 +50,7 @@ text: The date of the meeting, 23 February, was symbolic as it fell on the eve o
   concludes trade agreements, and establishes international partnerships.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-takes-part-in-foreign-affairs-council-ahead-of-4th-anniversary-of-full-scale-invasion-of-ukraine
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-23T00:00:00Z'
 ingested_at: '2026-05-14T22:27:38Z'

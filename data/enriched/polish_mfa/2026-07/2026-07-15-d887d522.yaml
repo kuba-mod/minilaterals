@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: The programme aims to support the international transfer of green
         technologies supplied by Polish small and medium-sized enterprises.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

@@ -17,5 +17,7 @@ text: Minister for Europe and Foreign Affairs Jean-Noël Barrot spoke with Unite
   to the Status of Refugees and in the leadup to the 2027 Global Refugee Forum.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nations-unies-entretien-de-jean-noel-barrot-avec-barham-salih-haut-commissaire-des-nations-unies
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T21:18:26Z'
 ingested_at: '2026-05-13T21:18:27Z'

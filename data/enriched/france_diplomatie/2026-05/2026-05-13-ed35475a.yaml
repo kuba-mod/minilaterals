@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: We reaffirm our unwavering support for the security, sovereignty and
         territorial integrity of our partners in the Middle East.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

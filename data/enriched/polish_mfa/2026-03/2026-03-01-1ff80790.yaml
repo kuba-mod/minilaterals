@@ -26,3 +26,7 @@ extracted:
         nuclear programme as well as on de-escalation, solidarity with partners in
         the region affected by Iranian attacks, and continued support for the democratic
         aspirations of the Iranian people.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

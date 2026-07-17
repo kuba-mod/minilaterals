@@ -17,5 +17,7 @@ text: The officials agreed that the threats Europe is currently faced with are s
   cooperation as well as industrial partnership, including in high-tech.
 source_url: https://www.gov.pl/web/diplomacy/polandfinland-security-talks
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-30T00:00:00Z'
 ingested_at: '2026-05-14T22:27:12Z'

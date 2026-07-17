@@ -23,3 +23,7 @@ extracted:
         obligations as regards guaranteeing fundamental freedoms and rights, release
         all persons held for political reasons and immediately, unconditionally abandon
         the legal proceedings begun against them.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

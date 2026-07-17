@@ -33,3 +33,7 @@ extracted:
       evidence: Her address was in regard to Resolution 2475 (2019) on the protection
         of persons with disabilities in armed conflicts and related humanitarian crises,
         which was adopted on the initiative of Poland.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

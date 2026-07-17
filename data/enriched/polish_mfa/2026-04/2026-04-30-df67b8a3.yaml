@@ -33,3 +33,7 @@ extracted:
       evidence: Poland had supported the previous prisoner swaps and will continue
         to work with the United States to secure the release of all political prisoners,
         not only in Belarus.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

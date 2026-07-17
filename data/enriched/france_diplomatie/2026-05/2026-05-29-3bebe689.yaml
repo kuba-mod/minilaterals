@@ -44,3 +44,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: The security of our allies is our priority and must be guaranteed.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -25,5 +25,7 @@ text: 'We, the Foreign Ministers of like-minded partners (France, Germany, Irela
   through the Quintet-led process and call on all parties to engage in good faith.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-conjointe-sur-la-situation-a-el-obeid
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-24T00:00:00Z'
 ingested_at: '2026-07-03T09:26:38Z'

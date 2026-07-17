@@ -31,3 +31,7 @@ extracted:
       evidence: The two ministers spoke about progress in the key partnerships underpinning
         our bilateral relations, benefiting our respective sovereignties in the fields
         of energy, transport and civil protection.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

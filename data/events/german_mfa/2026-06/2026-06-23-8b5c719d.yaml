@@ -85,5 +85,7 @@ text: In April, a journalist described the Strait of Hormuz as “Schrödinger�
   theme, I am on the pitch, open and ready to assist, and hope that you are too.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/wadephul-day-of-industry-2775836
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-23T13:48:23Z'
 ingested_at: '2026-07-03T09:26:23Z'

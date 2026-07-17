@@ -49,3 +49,7 @@ extracted:
       score: 1
       evidence: drawing on lessons learned and a swift adjustment are the key aspects
         of effective deterrence.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: These false prophets try to convince us that we only need to silence
         the weapons, to commence talks, for peace to descend almost automatically.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

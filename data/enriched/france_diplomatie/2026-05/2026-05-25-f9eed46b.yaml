@@ -33,3 +33,7 @@ extracted:
       score: 1
       evidence: The ICG condemns violations of international humanitarian law in the
         strongest terms.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -51,3 +51,7 @@ extracted:
       evidence: The ministers agreed that expanding the area of security, stability,
         and prosperity by supporting countries aspiring to EU membership—in both the
         south and the east—is nowadays a geopolitical necessity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

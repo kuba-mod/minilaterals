@@ -15,5 +15,7 @@ text: France condemns in the strongest possible terms the May 17th drone attacks
   be capable of restoring peace and avoiding another regional escalation.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/emirats-arabes-unis-frappes-de-drones-contre-la-centrale-nucleaire-de-barakah
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-19T00:00:00Z'
 ingested_at: '2026-07-07T00:21:04Z'

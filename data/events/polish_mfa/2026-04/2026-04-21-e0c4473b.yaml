@@ -22,5 +22,7 @@ text: The deputy minister noted that Poland regards the draft convention prepare
   field.
 source_url: https://www.gov.pl/web/diplomacy/warsaw-as-centre-of-global-debate-on-convention-on-crimes-against-humanity
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-21T00:00:00Z'
 ingested_at: '2026-05-14T22:26:58Z'

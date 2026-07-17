@@ -7,8 +7,10 @@ fetched/new/skipped/error tallying and the save/dedup path against tmp_path.
 from __future__ import annotations
 
 import pytest
+import yaml
 
 from pipeline import ingest
+from pipeline.sources.base import collection_tier
 from tests.conftest import make_event
 
 
@@ -65,3 +67,29 @@ def test_run_ingester_dry_run_writes_nothing(tmp_data_dir):
     assert result["skipped"] == 0
     # Nothing was written to disk in dry-run mode.
     assert not (tmp_data_dir / "events").exists()
+
+
+def test_collection_tier_native_vs_fallback():
+    # source_lang matching the ministry's native language ⇒ native; English ⇒ fallback.
+    assert collection_tier("german_mfa", "de") == "native"
+    assert collection_tier("german_mfa", "en") == "fallback"
+    assert collection_tier("france_diplomatie", "fr") == "native"
+    assert collection_tier("polish_mfa", "en") == "fallback"
+    # Unknown source has no native concept.
+    assert collection_tier("some_thinktank", "en") is None
+
+
+def test_save_stamps_collection_provenance(tmp_path):
+    # A native-language event stamps collection=native and the given method.
+    ev = make_event(source_name="german_mfa", title="Native", source_lang="de", source_url="https://x/de/1")
+    ev.collection_method = "rss"
+    ev.save(str(tmp_path / "events"))
+    data = yaml.safe_load(ev.output_path(str(tmp_path / "events")).read_text(encoding="utf-8"))
+    assert data["collection"] == "native"
+    assert data["collection_method"] == "rss"
+
+    # An English fallback event derives collection=fallback automatically.
+    fb = make_event(source_name="german_mfa", title="Fallback", source_lang="en", source_url="https://x/en/1")
+    fb.save(str(tmp_path / "events"))
+    fb_data = yaml.safe_load(fb.output_path(str(tmp_path / "events")).read_text(encoding="utf-8"))
+    assert fb_data["collection"] == "fallback"

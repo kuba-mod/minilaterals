@@ -32,3 +32,7 @@ extracted:
       evidence: The talks also focused on major European Union topics, including the
         ongoing work on the future Multiannual Financial Framework and the EU enlargement
         process.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -42,5 +42,7 @@ text: Jean-Noël Barrot, Minister for Europe and Foreign Affairs, was in Serbia 
   a symbol of the historic friendship between France and Serbia.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/serbie-deplacement-de-jean-noel-barrot-ministre-de-l-europe-et-des-affaires-etrangeres
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-16T00:00:00Z'
 ingested_at: '2026-05-14T21:11:39Z'

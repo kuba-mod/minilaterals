@@ -17,5 +17,7 @@ text: 'Following the Sudan Conference in Berlin on April 15, 2026, marking three
   uphold these principles and to act accordingly.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2770024-2770024
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-30T11:08:00Z'
 ingested_at: '2026-05-13T21:15:26Z'

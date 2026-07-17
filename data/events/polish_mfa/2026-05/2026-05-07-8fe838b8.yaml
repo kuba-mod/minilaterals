@@ -18,5 +18,7 @@ text: During the meeting with José Daniel Ferrer, Deputy Prime Minister Sikorsk
   the Netherlands, France, and the United Kingdom, among other countries.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-meets-with-cuban-opposition-leader-jos-daniel-ferrer
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-07T00:00:00Z'
 ingested_at: '2026-05-13T21:18:41Z'

@@ -40,5 +40,7 @@ text: 'Minister of State Hahn issued the following statement on his arrival in K
   Ukraine and the Ukrainian people to all my dialogue partners.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/minister-of-state-hahn-kyiv-2768468
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-22T11:07:49Z'
 ingested_at: '2026-05-13T21:15:26Z'

@@ -26,3 +26,7 @@ extracted:
       evidence: underlined the importance of cooperating to protect the principles
         of international law in the face of contemporary challenges, such as revisionism
         and power politics.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

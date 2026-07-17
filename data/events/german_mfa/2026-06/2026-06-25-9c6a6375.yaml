@@ -36,5 +36,7 @@ text: 'The two strongest earthquakes of the year have struck Venezuela. Hour by 
   region without delay to provide the urgently needed assistance as quickly as possible.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/earthquake-venezuela-2776204
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-25T17:30:00Z'
 ingested_at: '2026-07-03T09:26:23Z'

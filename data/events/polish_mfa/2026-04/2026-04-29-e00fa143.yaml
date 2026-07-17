@@ -17,5 +17,7 @@ text: The ministers discussed the possibilities of resuming negotiations between
   security.
 source_url: https://www.gov.pl/web/diplomacy/foreign-ministers-call-with-head-of-iranian-diplomacy
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-29T00:00:00Z'
 ingested_at: '2026-05-14T22:26:50Z'

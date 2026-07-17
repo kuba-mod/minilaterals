@@ -50,5 +50,7 @@ text: 'Before departing for a visit to the United Nations in New York, Foreign M
   security architecture – for peace and security, with respect and justice.a'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2769416-2769416
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-27T08:36:56Z'
 ingested_at: '2026-05-13T21:15:26Z'

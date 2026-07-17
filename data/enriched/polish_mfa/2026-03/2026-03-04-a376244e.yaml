@@ -23,3 +23,7 @@ extracted:
       evidence: the namesake of the training programme was portrayed as a symbol of
         unwavering service to the Polish state, an exemplary high-ranking diplomat,
         and a statesman embodying both professionalism and moral courage.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

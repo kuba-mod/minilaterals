@@ -23,3 +23,7 @@ extracted:
         has been experiencing changes which call for joint action on fundamental matters
         such as the protection of the international law, insisting on the sovereignty
         and territorial integrity of states, and the inviolability of their borders.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

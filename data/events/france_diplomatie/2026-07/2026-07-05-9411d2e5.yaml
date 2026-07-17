@@ -21,5 +21,7 @@ text: The Regional Security Conference in the Caribbean, organized in the framew
   on the Fight against Drug Trafficking of 17 June.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/conclusions-de-la-conference-regionale-de-securite-dans-la-caraibe
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-05T00:00:00Z'
 ingested_at: '2026-07-07T00:19:10Z'

@@ -17,5 +17,7 @@ text: Hosted by the Asia and Pacific Museum in Warsaw on 16 February, the event 
   challenges.
 source_url: https://www.gov.pl/web/diplomacy/minister-radoslaw-sikorski-holds-annual-meeting-with-diplomatic-corps-of-asia-pacific-states
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-17T00:00:00Z'
 ingested_at: '2026-05-14T22:27:41Z'

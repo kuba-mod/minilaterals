@@ -13,5 +13,7 @@ text: 'The Minister spoke to his Israeli counterpart, Gideon Sa’ar. The two mi
   and regional destabilization activities.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/israel-entretien-de-jean-noel-barrot-avec-son-homologue-israelien
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-04T00:00:00Z'
 ingested_at: '2026-05-14T21:11:04Z'

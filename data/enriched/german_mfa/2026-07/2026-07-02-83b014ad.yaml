@@ -30,3 +30,7 @@ extracted:
       evidence: The devastating images of last night’s destruction show once more
         that Russia is continuing to wage its illegal war of aggression against Ukraine
         with undiminished brutality.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

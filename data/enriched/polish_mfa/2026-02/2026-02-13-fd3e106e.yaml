@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: represents another step toward enhancing transatlantic and European
         cooperation in countering hybrid threats and disinformation campaigns.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

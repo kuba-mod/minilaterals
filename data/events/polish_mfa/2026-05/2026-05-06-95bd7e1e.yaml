@@ -23,5 +23,7 @@ text: Deputy Prime Minister Radosław Sikorski stressed that Poland’s stance o
   and businesspeople from the defence sector.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-takes-part-in-defence24-days
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-06T00:00:00Z'
 ingested_at: '2026-05-13T21:18:43Z'

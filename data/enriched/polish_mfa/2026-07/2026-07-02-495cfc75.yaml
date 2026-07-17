@@ -15,3 +15,7 @@ extracted:
     citizens abroad.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -35,5 +35,7 @@ text: During his visit, Deputy Foreign Minister Wojciech Zajączkowski talked wi
   showcase the potential of Polish and Egyptian companies.
 source_url: https://www.gov.pl/web/diplomacy/strengthening-polishegyptian-ties
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-12T00:00:00Z'
 ingested_at: '2026-07-07T00:22:56Z'

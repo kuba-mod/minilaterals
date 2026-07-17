@@ -54,3 +54,7 @@ extracted:
       evidence: Our relations have flourished based on our shared values and our exceptionally
         close, almost identical, perception of the challenges we are now facing in
         the region, Europe, and the world.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

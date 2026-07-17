@@ -22,3 +22,7 @@ extracted:
         Council Resolution 1701 and refrain from endangering UN personnel in all circumstances,
         in accordance with international law and the Convention on the Safety of United
         Nations and Associated Personnel.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

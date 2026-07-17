@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: Our support for multilateral cooperation and international dialogue
         is steadfast and solid, we share this approach with South African partners.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -24,3 +24,7 @@ extracted:
       evidence: reaffirmed our support for Péter Magyar’s government’s efforts to
         unlock European funds for Hungary and stressed the importance of the rule
         of law and restoring trust in public institutions in this context.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

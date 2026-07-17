@@ -24,3 +24,7 @@ extracted:
         order to guarantee that Iran never acquires nuclear weapons and to address
         the threats posed by its ballistic and drone programmes and its destabilization
         activities.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

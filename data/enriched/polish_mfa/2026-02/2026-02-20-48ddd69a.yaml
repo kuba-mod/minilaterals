@@ -23,3 +23,7 @@ extracted:
       evidence: Poland consistently opts for the adoption of a two-State solution
         and the establishment of an independent State of Palestine next to the State
         of Israel. That solution is compliant with international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

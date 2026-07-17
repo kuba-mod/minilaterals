@@ -47,5 +47,7 @@ text: I am very happy with today’s talks with Minister Oana Ţoju, marking thi
   further strengthen and develop their lasting and comprehensive strategic partnership.
 source_url: https://www.gov.pl/web/diplomacy/polishromanian-solidarity-day-marked-by-foreign-ministers-meeting
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-03T00:00:00Z'
 ingested_at: '2026-05-14T22:27:30Z'

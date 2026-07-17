@@ -27,3 +27,7 @@ extracted:
       evidence: Our Permanent Representatives to the Organisation for the Prohibition
         of Chemical Weapons have written today to the Director General to inform him
         of this Russian breach of the Chemical Weapons Convention.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

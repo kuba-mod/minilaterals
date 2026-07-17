@@ -23,3 +23,7 @@ extracted:
       evidence: International humanitarian and human rights laws, including the protection
         of civilians in particular women and girls and civilian infrastructure, must
         be fully respected by all parties to the conflict.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

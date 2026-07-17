@@ -44,3 +44,7 @@ extracted:
       evidence: the EU’s adoption, on May 11, of a sanctions package against several
         Russian individuals and entities involved in the deportation and forcible
         transfer of Ukrainian children
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

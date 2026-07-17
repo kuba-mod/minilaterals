@@ -67,5 +67,7 @@ text: 'Today, Poland and Germany are not only neighbours and friends but also cl
   of Europe.'
 source_url: https://www.gov.pl/web/diplomacy/joint-statement-by-the-republic-of-poland-and-the-federal-republic-of-germany-on-the-35th-signing-anniversary-on-good-neighbourly-relations-and-friendly-cooperation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-07T00:22:14Z'

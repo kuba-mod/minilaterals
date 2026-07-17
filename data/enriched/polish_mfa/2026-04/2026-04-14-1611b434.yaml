@@ -33,3 +33,7 @@ extracted:
       evidence: The deputy ministers highlighted the major challenges these regions
         face, namely organised crime and foreign interference, including interference
         in the information space.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

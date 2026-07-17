@@ -27,5 +27,7 @@ text: 'The programme will translate strategic partnership into real meetings of 
   National Heritage and Ministry of Foreign Affairs in Poland.'
 source_url: https://www.gov.pl/web/diplomacy/polandfrance-cultural-season-2027-announced
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-17T00:00:00Z'
 ingested_at: '2026-05-14T22:27:43Z'

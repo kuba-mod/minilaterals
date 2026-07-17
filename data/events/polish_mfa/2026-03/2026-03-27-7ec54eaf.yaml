@@ -23,5 +23,7 @@ text: Belarus Freedom Day commemorates the proclamation of the Belarusian People
   resident in Poland and Polish supporters of the Belarussian nation.
 source_url: https://www.gov.pl/web/diplomacy/concert-to-mark-belarus-freedom-day-at-chopin-university-of-music
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-27T00:00:00Z'
 ingested_at: '2026-05-14T22:27:13Z'

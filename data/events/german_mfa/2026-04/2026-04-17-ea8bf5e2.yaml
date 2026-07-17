@@ -121,5 +121,7 @@ text: 'For some places, merely mentioning their name will bring an image to mind
   an officer of the reserves!'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2768366-2768366
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-17T18:00:00Z'
 ingested_at: '2026-05-13T21:15:26Z'

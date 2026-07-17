@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: Discussions focused on the international situation, particularly support
         for Ukraine and the situation in the Middle East.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

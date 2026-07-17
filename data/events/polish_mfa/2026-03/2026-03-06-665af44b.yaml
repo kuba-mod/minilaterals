@@ -23,5 +23,7 @@ text: The meeting was held on the initiative of Ambassador of Cyprus to Poland N
   of the Ukraine Recovery Conference, scheduled to take place in Gdańsk in June 2026.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-meets-with-eu-ambassadors-accredited-to-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-06T00:00:00Z'
 ingested_at: '2026-05-14T22:27:24Z'

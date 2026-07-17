@@ -50,3 +50,7 @@ extracted:
       score: 1
       evidence: The foreign ministers also highlighted the key role of the European
         Union in the peace process.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

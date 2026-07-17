@@ -16,5 +16,7 @@ text: The gathering was part the “Jagiellonian Diplomatic Encounters” series
   2026–2030 here .
 source_url: https://www.gov.pl/web/diplomacy/polish-foreign-policy-strategy-discussed-at-jagiellonian-university
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-24T00:00:00Z'
 ingested_at: '2026-05-14T22:26:55Z'

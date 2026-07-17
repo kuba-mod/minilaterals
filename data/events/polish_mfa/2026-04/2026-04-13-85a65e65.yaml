@@ -19,5 +19,7 @@ text: Minister Sikorski said that the voting outcome paves the way for a renewed
   to work closely towards enhanced regional security and cohesion of European policies.
 source_url: https://www.gov.pl/web/diplomacy/minister-radoslaw-sikorski-congratulates-tisza-on-election-win-and-invites-hungarys-future-top-diplomat-to-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-13T00:00:00Z'
 ingested_at: '2026-05-14T22:27:06Z'

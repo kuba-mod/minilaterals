@@ -41,5 +41,7 @@ text: 'During his visit, Deputy Prime Minister Radosław Sikorski met with Alger
   Economics and its Algerian counterpart ESAA (Ecole Supérieure Algérienne des Affaires).'
 source_url: https://www.gov.pl/web/diplomacy/chief-of-polish-diplomacy-visits-algeria
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-30T00:00:00Z'
 ingested_at: '2026-05-14T22:26:46Z'

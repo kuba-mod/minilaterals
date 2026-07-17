@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: A new international order must emerge to produce a fairer and more
         balanced system, underpinned by a renewed multilateralism.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -45,5 +45,7 @@ text: The deputy ministers reviewed the Action Plan for Comprehensive Partnershi
   in Mongolia in the early 1990s.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-wladyslaw-teofil-bartoszewski-visits-mongolia
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-05T00:00:00Z'
 ingested_at: '2026-07-07T00:22:23Z'

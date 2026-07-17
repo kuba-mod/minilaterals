@@ -24,3 +24,7 @@ extracted:
       evidence: Poland’s chief diplomat spoke about the consequences of the current
         situation in the Middle East for global security, economy, and multidimensional
         international relations.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

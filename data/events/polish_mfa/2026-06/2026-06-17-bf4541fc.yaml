@@ -36,5 +36,7 @@ text: Building lasting ties between the young generation of the Polish diaspora 
   academia, culture, and civil society.
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-wladyslaw-teofil-bartoszewski-meets-americans-of-polish-descent
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-03T09:26:49Z'

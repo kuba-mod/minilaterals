@@ -29,5 +29,7 @@ text: 'Foreign Minister Wadephul issued the following statement today (29 April)
   Secretary Rouenhoff from the Federal Ministry for Economic Affairs and Energy.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2769852-2769852
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-29T08:57:07Z'
 ingested_at: '2026-05-13T21:15:26Z'

@@ -36,5 +36,7 @@ text: Poland continues to value the group’s contribution to uncovering and pro
   resembling the 1930s.
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement23
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-10T00:00:00Z'
 ingested_at: '2026-05-14T22:27:07Z'

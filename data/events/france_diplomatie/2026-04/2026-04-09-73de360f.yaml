@@ -21,5 +21,7 @@ text: France condemns in the strongest terms the massive strikes carried out on 
   displaced people.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-frappes-israeliennes
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-09T00:00:00Z'
 ingested_at: '2026-05-14T21:10:04Z'

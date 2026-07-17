@@ -32,3 +32,7 @@ extracted:
       evidence: Through those new regulations, the Georgian authorities consciously
         breach the commitments undertaken by Georgia vis-à-vis the European Union,
         in particular through the Association Agreement with the European Union.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

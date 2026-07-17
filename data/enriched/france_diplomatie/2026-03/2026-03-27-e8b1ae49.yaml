@@ -29,3 +29,7 @@ extracted:
       score: 1
       evidence: We call upon an immediate cessation of attacks against civilians and
         civilian infrastructure.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

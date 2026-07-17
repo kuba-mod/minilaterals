@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: France reiterates its call for the global decriminalization of homosexuality
         and for full respect for all LGBT+ people’s fundamental rights.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

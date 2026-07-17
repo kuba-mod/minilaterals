@@ -45,5 +45,7 @@ text: 'Germans and Brazilians are often associated with very different strengths
   actors; about bringing together the best of both worlds.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776976-2776976
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-03T08:25:58Z'
 ingested_at: '2026-07-06T10:23:25Z'

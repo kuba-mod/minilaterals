@@ -14,3 +14,7 @@ extracted:
     and energy, and presented the goals of the Africa Forward Summit.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

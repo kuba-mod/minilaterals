@@ -21,5 +21,7 @@ text: 'The European Union''s statement indicates that the 16th Centre of Russiaâ
   The full text of the EU and NATO statements can be found here:'
 source_url: https://www.gov.pl/web/diplomacy/statement-on-russian-malicious-activities-in-cyberspace
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-13T00:00:00Z'
 ingested_at: '2026-07-14T08:16:09Z'

@@ -28,5 +28,7 @@ text: This year, 18 new trainees were welcomed. Over half of them graduated in t
   exam. Passing it is the condition for being awarded the lowest diplomatic rank.
 source_url: https://www.gov.pl/web/diplomacy/edward-raczynski-promotion-of-diplomatic-and-consular-training-officially-begins
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-04T00:00:00Z'
 ingested_at: '2026-05-14T22:27:27Z'

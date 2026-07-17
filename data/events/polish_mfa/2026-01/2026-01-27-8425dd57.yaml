@@ -19,5 +19,7 @@ text: During the meeting, held in Warsaw on 27 January, both sides stressed the 
   military, political, and economic support for the country.
 source_url: https://www.gov.pl/web/diplomacy/deputy-foreign-minister-ignacy-niemczycki-attends-polishfinnish-political-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-27T00:00:00Z'
 ingested_at: '2026-05-14T22:27:55Z'

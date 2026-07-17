@@ -23,3 +23,7 @@ extracted:
       evidence: An ideal that some in the Kremlin still seek to extinguish, but which
         continues to inspire Europeans determined to remain free and masters of their
         own destiny.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

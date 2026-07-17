@@ -24,3 +24,7 @@ extracted:
       evidence: Allies remain firmly committed to arms control, disarmament, and non-proliferation
         efforts, with a focus on promoting transparency, reducing risk, and enhancing
         security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

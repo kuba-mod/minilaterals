@@ -12,5 +12,7 @@ text: France congratulates Bangladeshi Foreign Minister Khalilur Rahman on his J
   and principles of the UN Charter.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/election-de-m-khalilur-rahman-a-la-presidence-de-la-81e-session-de-l-assemblee-generale-des-nations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-03T00:00:00Z'
 ingested_at: '2026-07-07T00:20:17Z'

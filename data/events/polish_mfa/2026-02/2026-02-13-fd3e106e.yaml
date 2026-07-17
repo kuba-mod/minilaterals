@@ -17,5 +17,7 @@ text: The G7 RRM was established by G7 leaders at the 2018 Charlevoix Summit as 
   better information sharing, coordinated actions, and more effective real-time responses.
 source_url: https://www.gov.pl/web/diplomacy/poland-joins-the-g7-rapid-response-mechanism
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-13T00:00:00Z'
 ingested_at: '2026-05-14T22:27:47Z'

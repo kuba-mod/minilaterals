@@ -24,5 +24,7 @@ text: 'The Governments of Australia, Canada, France, Germany, Italy, Japan, New 
   preserving the credibility and effectiveness of the UN sanctions regime.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2773498-2773498
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T08:03:06Z'

@@ -33,3 +33,7 @@ extracted:
       evidence: Minister Sikorski commended Andorra on its clear stance condemning
         Russia’s actions and its support for Ukrainian citizens forced to leave their
         country.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

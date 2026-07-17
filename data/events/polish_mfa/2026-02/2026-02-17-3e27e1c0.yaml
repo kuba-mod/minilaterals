@@ -44,5 +44,7 @@ text: 'During his two-day visit to Türkiye (16–17 February), the deputy minis
   Şekib Avdagiç, President of the Istanbul Chamber of Commerce.'
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-marcin-bosacki-visits-trkiye
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-17T00:00:00Z'
 ingested_at: '2026-05-14T22:27:42Z'

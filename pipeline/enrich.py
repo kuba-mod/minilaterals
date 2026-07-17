@@ -37,6 +37,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -66,6 +67,40 @@ def _load_goals() -> dict[str, str]:
 
 WEIMAR_GOALS = _load_goals()
 
+# Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
+# score can be traced to the exact prompt that produced it. The lineage is keyed
+# by the sha256[:8] of the prompt surface (the *_PROMPT / *_RUBRIC constants
+# below), reconstructed from git history:
+#   "1"  612a65fa  original — regex classification, LLM for positions/stances
+#   "2"  da8777de  PR #35 — classification moved into the LLM prompt (actors)
+#   "3"  c2cfff1e  actors/explicit_weimar shape hardening + retry
+#   "4"  434962fe  native-language inputs (de/fr/pl); output English, evidence verbatim
+# BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
+# changes — test_prompt_surface_in_sync fails until you do, so ratings never get
+# mislabelled with a stale version. pipeline.migrate_provenance holds the full
+# hash→version map for backfilling historical sidecars.
+PROMPT_VERSION = "4"
+PROMPT_SURFACE_SHA = "434962fe"
+
+
+def prompt_surface_sha() -> str:
+    """sha256[:8] over the prompt strings sent to the model — the identity behind
+    PROMPT_VERSION. Stable across runs; changes iff a prompt string changes."""
+    parts = {
+        "EXTRACTION_PROMPT": EXTRACTION_PROMPT,
+        "STANCE_BACKFILL_PROMPT": STANCE_BACKFILL_PROMPT,
+        "STANCE_RUBRIC": STANCE_RUBRIC,
+        "SYSTEM_PROMPT": SYSTEM_PROMPT,
+    }
+    blob = "".join(f"{k}={parts[k]}" for k in sorted(parts))
+    return hashlib.sha256(blob.encode()).hexdigest()[:8]
+
+
+def _environment() -> str:
+    """Where this enrichment ran — GitHub Actions sets GITHUB_ACTIONS=true."""
+    return "github_actions" if os.environ.get("GITHUB_ACTIONS") == "true" else "local"
+
+
 SYSTEM_PROMPT = (
     "You extract structured diplomatic position summaries from government press releases. "
     "Return ONLY valid JSON — no markdown, no explanation, no wrapper text."
@@ -89,6 +124,10 @@ a stance on a topic, use stance 0 and evidence null."""
 
 EXTRACTION_PROMPT = """\
 Extract a structured summary from this press release.
+
+The press release may be written in German, French, Polish, or English. Write
+every output field in English, EXCEPT "evidence" fields, which must stay
+verbatim quotes in the original language of the text.
 
 Source country: {source}
 Title: {title}
@@ -120,6 +159,9 @@ Include in positions_by_topic ONLY the topics listed in "topics". Omit topics no
 
 STANCE_BACKFILL_PROMPT = """\
 Rate this government press release against shared Weimar Triangle policy goals.
+
+The press release may be written in German, French, Polish, or English. The
+"evidence" fields must stay verbatim quotes in the original language of the text.
 
 Source country: {source}
 Title: {title}
@@ -445,6 +487,11 @@ def _extract(provider, raw_path: Path) -> bool:
             "weimar_relevant": weimar_relevant,
             "trilateral_signal": trilateral_signal,
             "extracted": extracted,
+            "enriched_by": {
+                "model_id": provider.model,
+                "prompt_version": PROMPT_VERSION,
+                "environment": _environment(),
+            },
         }
         EnrichedEventSchema.model_validate(enriched_data)
 
@@ -541,6 +588,12 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
 
         extracted["stances"] = stances
         enriched["extracted"] = extracted
+        # This run re-produced the stance ratings, so it owns the provenance.
+        enriched["enriched_by"] = {
+            "model_id": provider.model,
+            "prompt_version": PROMPT_VERSION,
+            "environment": _environment(),
+        }
         EnrichedEventSchema.model_validate(enriched)
         enriched_path.write_text(
             yaml.dump(enriched, allow_unicode=True, sort_keys=False),

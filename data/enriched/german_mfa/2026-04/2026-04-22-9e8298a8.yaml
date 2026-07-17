@@ -30,3 +30,7 @@ extracted:
       evidence: We want to strengthen the institutions by overcoming the manoeuvring
         of recent years by individual countries to block processes out of a lack of
         solidarity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

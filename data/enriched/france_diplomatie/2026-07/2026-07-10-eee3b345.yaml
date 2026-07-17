@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: aims to ensure safe, secure and rights-respecting AI systems for children,
         in line with the Convention on the Rights of the Child.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

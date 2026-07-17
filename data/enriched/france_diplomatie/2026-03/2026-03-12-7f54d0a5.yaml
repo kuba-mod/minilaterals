@@ -25,3 +25,7 @@ extracted:
       score: 2
       evidence: In addition, there is medical equipment to support the medical teams
         mobilized on the ground.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

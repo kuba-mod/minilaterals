@@ -36,5 +36,7 @@ text: Deputy Prime Minister Radosław Sikorski and Minister Maria Malmer Stenerg
   on the Baltic Sea Pact Polish–Swedish Intergovernmental Consultations— Joint Declaration
 source_url: https://www.gov.pl/web/diplomacy/first-ever-polishswedish-intergovernmental-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-29T00:00:00Z'
 ingested_at: '2026-07-03T09:26:44Z'

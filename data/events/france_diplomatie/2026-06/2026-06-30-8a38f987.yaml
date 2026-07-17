@@ -99,5 +99,7 @@ text: 'Representatives of international and non-governmental organizations, Mini
   and let us work relentlessly to achieve universal abolition.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/9e-congres-mondial-pour-l-abolition-universelle-de-la-peine-de-mort-discours-de-jean-noel-barrot
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-30T00:00:00Z'
 ingested_at: '2026-07-03T09:26:31Z'

@@ -52,3 +52,7 @@ extracted:
         the Naftoport oil terminal, as well as offshore platforms and gas pipelines.
         Since 2026, the hub will also include wind farms currently under construction
         in Poland’s exclusive economic zone.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

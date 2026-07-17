@@ -13,5 +13,7 @@ text: France welcomes the framework agreement between the governments of Lebanon
   of this framework agreement and the achievement of all these objectives.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/accord-cadre-entre-le-liban-et-israel
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-27T00:00:00Z'
 ingested_at: '2026-07-03T09:26:35Z'

@@ -31,3 +31,7 @@ extracted:
       evidence: emphasize the continued need to strengthen the global anti-money laundering
         architecture to prevent financial crime and improve enforcement and asset
         recovery outcomes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

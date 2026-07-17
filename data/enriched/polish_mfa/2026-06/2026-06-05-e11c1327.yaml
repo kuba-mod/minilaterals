@@ -31,3 +31,7 @@ extracted:
       evidence: A delegation from the Institute of National Remembrance... signed
         a Memorandum of Understanding with the State Commission for the Management
         of Political Rehabilitation of Mongolia.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

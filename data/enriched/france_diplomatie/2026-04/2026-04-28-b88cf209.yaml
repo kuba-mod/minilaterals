@@ -32,3 +32,7 @@ extracted:
       score: 1
       evidence: adoption of two statements on the development of nuclear energy as
         a safe, affordable energy source and the financing of nuclear energy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

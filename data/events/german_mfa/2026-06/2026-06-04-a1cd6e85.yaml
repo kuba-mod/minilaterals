@@ -32,5 +32,7 @@ text: 'Establishing Franco-German cultural institutes is one of the 15 priority 
   our Franco-German cooperation, which is now closer than ever.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2773956-2773956
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-06-04T00:00:00Z'
 ingested_at: '2026-07-07T08:03:04Z'

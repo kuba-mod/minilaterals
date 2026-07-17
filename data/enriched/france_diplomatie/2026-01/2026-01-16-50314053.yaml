@@ -51,3 +51,7 @@ extracted:
         of providing the more than 1.4 million inhabitants of the capital, Belgrade,
         with an efficient, modern, reliable metro system that guarantees residents
         a better quality of life
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

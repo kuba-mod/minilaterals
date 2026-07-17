@@ -12,5 +12,7 @@ text: During the meeting, he received an official note demanding that the rights
   of the Republic of Poland due to his activity.
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement26
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-21T00:00:00Z'
 ingested_at: '2026-07-07T00:22:46Z'

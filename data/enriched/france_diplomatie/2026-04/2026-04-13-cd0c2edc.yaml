@@ -33,3 +33,7 @@ extracted:
         emphasis on issues to do with access to funding, debt processing and the mobilization
         of resources to promote the continent’s industrialization and economic transformation
         as well as the ecological transition
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

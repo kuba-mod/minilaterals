@@ -52,5 +52,7 @@ text: 'Further pressure on the Kremlin and opening accession negotiations with K
   to build Armenia’s resilience to Russian hybrid operations.'
 source_url: https://www.gov.pl/web/diplomacy/mfa-head-radoslaw-sikorski-at-eu-council-pressure-on-russia-must-go-up
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-15T00:00:00Z'
 ingested_at: '2026-07-07T00:22:15Z'

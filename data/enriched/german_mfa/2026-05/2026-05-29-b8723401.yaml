@@ -34,3 +34,7 @@ extracted:
         and the European External Action Service welcomed the April 30 Open Source
         Centre briefing to the United Nations Security Council on continuing maritime
         sanctions evasion by the Democratic People’s Republic of Korea (DPRK).
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

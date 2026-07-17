@@ -15,5 +15,7 @@ text: France congratulates Austria, Kirghizstan, Portugal, Trinidad and Tobago, 
   – retains its full authority and legitimacy.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nations-unies-nouveaux-membres-elus-au-conseil-de-securite-des-nations-unies-pour-le-mandat-2027
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-04T00:00:00Z'
 ingested_at: '2026-07-07T00:20:12Z'

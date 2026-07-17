@@ -133,5 +133,7 @@ text: 'In 2004, Vladimir Putin stood in Kyiv and described the Pechersk Lavra as
   indeed churches, to provide orientation.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775734-2775734
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-23T10:27:36Z'
 ingested_at: '2026-07-03T09:26:23Z'

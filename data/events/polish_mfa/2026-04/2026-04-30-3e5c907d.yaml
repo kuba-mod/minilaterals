@@ -38,5 +38,7 @@ text: Bolstering the Security and Defense Partnership The two delegations celebr
   bilateral trade and investment, create jobs, and drive prosperity in both countries.
 source_url: https://www.gov.pl/web/diplomacy/joint-statement-on-the-strategic-dialogue-between-poland-and-the-united-states2
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-30T00:00:00Z'
 ingested_at: '2026-05-14T22:26:48Z'

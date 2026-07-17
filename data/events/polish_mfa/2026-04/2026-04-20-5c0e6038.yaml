@@ -25,5 +25,7 @@ text: 'The actor received the prize by MFA Secretary of State Ignacy Niemczycki 
   - Ministry of Foreign Affairs Republic of Poland - Gov.pl website'
 source_url: https://www.gov.pl/web/diplomacy/andrzej-seweryn-first-to-receive-bronislaw-geremek-prize
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-20T00:00:00Z'
 ingested_at: '2026-05-14T22:26:59Z'

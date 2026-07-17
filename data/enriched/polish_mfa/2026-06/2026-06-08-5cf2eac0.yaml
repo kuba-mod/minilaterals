@@ -23,3 +23,7 @@ extracted:
       evidence: We in Poland are impressed by your steadfast stance and modesty, and
         above all, we are deeply grateful for your determination in the struggle for
         human rights.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

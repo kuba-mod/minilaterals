@@ -43,3 +43,7 @@ extracted:
       evidence: calling on the warring parties to put an end to the hostilities, to
         immediately comply with international humanitarian law, to guarantee full,
         safe and unhindered humanitarian access to the whole Sudanese territory
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

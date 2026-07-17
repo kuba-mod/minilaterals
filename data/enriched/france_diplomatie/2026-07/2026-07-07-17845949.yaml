@@ -15,3 +15,7 @@ extracted:
     earthquakes and reiterated its solidarity with the affected people.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -11,5 +11,7 @@ text: France strongly condemns the new waves of strikes that pelted the Ukrainia
   support Ukraine until a just and lasting peace is achieved.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/ukraine-vagues-de-frappes-sur-kyiv
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-06T00:00:00Z'
 ingested_at: '2026-07-07T07:35:42Z'

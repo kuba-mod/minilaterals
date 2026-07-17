@@ -59,3 +59,7 @@ extracted:
       score: 2
       evidence: Both sides emphasized the need for streamlined regulatory environments
         that support economic growth, entrepreneurship, and technological advancement.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

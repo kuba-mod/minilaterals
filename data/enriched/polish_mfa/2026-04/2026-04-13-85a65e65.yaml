@@ -45,3 +45,7 @@ extracted:
       score: 1
       evidence: carries a symbolic meaning for the states that stand up for democratic
         principles.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

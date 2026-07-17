@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: He pointed out that Russia’s actions are destabilising the security
         environment and run counter to the spirit of the NPT.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

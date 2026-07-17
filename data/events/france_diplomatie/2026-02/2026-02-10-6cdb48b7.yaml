@@ -15,5 +15,7 @@ text: On February 10, Minister for Europe and Foreign Affairs Jean-Noël Barrot 
   set forth in the European Convention on Human Rights.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/entretien-de-jean-noel-barrot-avec-le-president-de-la-cour-europeenne-des-droits-de-l-homme
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-10T00:00:00Z'
 ingested_at: '2026-05-14T21:11:15Z'

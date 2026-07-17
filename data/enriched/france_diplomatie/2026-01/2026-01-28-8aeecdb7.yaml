@@ -34,3 +34,7 @@ extracted:
       evidence: We urge the Government of Israel to abide by its international obligations
         to ensure the protection and inviolability of United Nations premises in accordance
         with the provisions of the UN General Convention (1946) and the Charter.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

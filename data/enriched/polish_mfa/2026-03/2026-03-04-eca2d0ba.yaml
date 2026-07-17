@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: Every decision is made with the safety of Polish citizens in mind,
         which requires particular caution.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

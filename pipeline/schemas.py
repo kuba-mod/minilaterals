@@ -27,6 +27,12 @@ class RawEventSchema(BaseModel):
     text: str
     source_url: str
     source_lang: str
+    # Provenance. Optional/defaulted so events written before provenance
+    # tracking (and any not-yet-backfilled file) still validate; new events
+    # always carry both. collection: "native" | "fallback"; collection_method:
+    # "rss" | "html" | "wayback" | "backfill" (legacy seed).
+    collection: str | None = None
+    collection_method: str | None = None
     source_published_at: str
     ingested_at: str
 
@@ -54,6 +60,17 @@ class ExtractedSchema(BaseModel):
     stances: dict[str, StanceSchema] = Field(default_factory=dict)
 
 
+class EnrichedBySchema(BaseModel):
+    """Enrichment provenance: which model, prompt revision, and environment
+    produced the sidecar's current content."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    model_id: str
+    prompt_version: str
+    environment: str  # "local" | "github_actions"
+
+
 class EnrichedEventSchema(BaseModel):
     """data/enriched/{source}/{YYYY-MM}/{date}-{hash8}.yaml — written by Event.save_enriched().
 
@@ -67,6 +84,9 @@ class EnrichedEventSchema(BaseModel):
     weimar_relevant: bool = False
     trilateral_signal: bool = False
     extracted: ExtractedSchema | None = None
+    # Optional so sidecars written before provenance tracking still validate;
+    # new/backfilled sidecars always carry it.
+    enriched_by: EnrichedBySchema | None = None
 
 
 class EditionSchema(BaseModel):

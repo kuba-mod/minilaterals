@@ -24,5 +24,7 @@ text: At the March 16th Foreign Affairs Council meeting held in Brussels, member
   by the cyber offensive industry.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/cybersecurite-l-union-europeenne-sanctionne-plusieurs-acteurs-de-l-ecosysteme-cyber-offensif-prive
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-17T00:00:00Z'
 ingested_at: '2026-05-14T21:10:36Z'

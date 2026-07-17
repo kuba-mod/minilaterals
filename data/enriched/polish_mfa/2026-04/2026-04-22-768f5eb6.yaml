@@ -47,3 +47,7 @@ extracted:
       score: 1
       evidence: We agree that Russia’s full-scale aggression poses a fundamental challenge
         to the international order.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

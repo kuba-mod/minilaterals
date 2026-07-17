@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: France will continue standing alongside Iraq to support it in the
         strengthening of its institutions
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

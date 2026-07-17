@@ -41,3 +41,7 @@ extracted:
       score: 1
       evidence: The ICG underlines the importance of considering the perspectives
         of the civil society and communities of the region.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

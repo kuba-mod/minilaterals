@@ -39,3 +39,7 @@ extracted:
       score: 2
       evidence: The ministers agreed that the war must end on terms grounded in international
         law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

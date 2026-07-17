@@ -74,7 +74,14 @@ Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` side
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
+- `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py`; the prompt has a real lineage (`"1"` regex-classification → `"2"` LLM classification at PR #35 → `"3"` shape hardening → `"4"` multilingual), keyed by `sha256[:8]` of the prompt surface. **Bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together when a prompt changes** — `test_prompt_surface_in_sync` fails until you do, so ratings can't be stamped with a stale version
 - `_file_path` — added at load time by `render.py` (not stored in YAML)
+
+Provenance fields on the **raw** event YAML (set by the ingester in `base.py`, not LLM-derived):
+- `collection` — `native` or `fallback`; auto-derived in `Event.save()` from `source_lang` vs the source's `NATIVE_LANG` (so an English item from an MFA is `fallback`; see design principle #9)
+- `collection_method` — the fetch mechanism: `rss`, `html`, `wayback` (and `backfill` on legacy seed data whose per-item mechanism wasn't recorded)
+
+Both raw and enriched provenance fields are Optional in the schemas so pre-provenance data still validates; the one-off `pipeline.migrate_provenance` backfilled the existing tree by reconstructing values from git history (adding-commit → method; and, reading blame as of the branch base so its own commits don't interfere, writer-commit → local/CI and → prompt_version via the hashed prompt surface at that commit).
 
 ## Relevance classification (`enrich.py`)
 
@@ -118,9 +125,12 @@ The LLM enrichment prompt asks for a single sentence: "what position does {count
 **8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
 The stance comparison *is* the product, and `pipeline.enrich` now owns both halves of it: in one call it classifies an event (actors/topics/relevance) *and* rates its per-topic stances. Without enrichment there is only a data-collection pipeline — a raw event carries no classification, so `render.py` omits it entirely (it isn't `weimar_relevant`) rather than showing it mis-tagged. There is no keyword fallback: an event the model hasn't processed simply waits, un-categorised, and is retried next run (or recovered by re-running `pipeline.enrich` locally against gemma4). Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if sparser) site. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
 
+**9. Native-language sources, English fallback.**
+Each MFA is ingested from its native-language newsroom (`source_lang` de/fr/pl): the German RSS feed, the French SPIP `backend-fd` feed, the Polish `gov.pl/web/dyplomacja/aktualnosci` listing. Rationale: the native sections carry the ministry's full output — the English-translation sections are thinner, lag, and (for FR/PL) have no feed at all, which is what originally forced HTML scraping; gemma4 was picked for exactly this (see Enrichment providers). Enrichment writes positions in English but keeps stance evidence quotes verbatim in the original language, so scores stay auditable against the primary source. Trade-off: if a native feed/listing goes dark, ingesters log a warning and fall back to the English section, so occasional English-text events can appear; and a fallback item duplicating a native item gets a separate file (different URL → different hash), slightly inflating that actor's event count in a cluster window (per-actor stance *means* are barely affected).
+
 ## Adding a new source
 
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`)
+1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the ministry's native language — see design principle #9)
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
 3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is a foreign ministry (known-actor), also add it to `MFA_SOURCES` in `base.py`
 4. Add a row to the sources table in `pipeline/templates/sources.html`

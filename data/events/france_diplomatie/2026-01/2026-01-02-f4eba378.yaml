@@ -10,5 +10,7 @@ text: France extends its condolences to the families and close friends of the vi
   Swiss authorities in case other French nationals are affected.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/suisse-incendie-a-crans-montana
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-02T00:00:00Z'
 ingested_at: '2026-05-14T21:11:44Z'

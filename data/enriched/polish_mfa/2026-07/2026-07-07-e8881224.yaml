@@ -51,3 +51,7 @@ extracted:
       score: 1
       evidence: I think that the next war will be won by those who will learn the
         lesson from the Russo–Ukrainian war.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

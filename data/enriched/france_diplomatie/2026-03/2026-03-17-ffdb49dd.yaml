@@ -31,3 +31,7 @@ extracted:
       score: 2
       evidence: The Council also adopted 19 new individual sanctions against Iranians
         responsible for State violence in January 2026.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

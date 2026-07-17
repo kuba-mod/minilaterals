@@ -23,5 +23,7 @@ text: The talks focused on a joint British and French initiative to unblock that
   Ukraine.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-takes-part-in-meeting-of-leaders-on-situation-in-strait-of-hormuz
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-17T00:00:00Z'
 ingested_at: '2026-05-14T22:27:01Z'

@@ -27,5 +27,7 @@ text: The deputy ministers underlined the importance of cooperating to protect t
   of a model-making club.
 source_url: https://www.gov.pl/web/diplomacy/third-round-of-polishguatemalan-political-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-04T00:00:00Z'
 ingested_at: '2026-07-07T00:22:24Z'

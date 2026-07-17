@@ -29,3 +29,7 @@ extracted:
       score: 1
       evidence: reiterated their commitment to multilateralism and the rules-based
         international order
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

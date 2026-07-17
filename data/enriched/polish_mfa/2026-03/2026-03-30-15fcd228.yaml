@@ -31,3 +31,7 @@ extracted:
       evidence: The launch of the service marks an expansion of VT (formerly “Vot
         Tak”), which, following the addition of a Romanian-language programming for
         Moldova in February 2026, now broadcasts content in three languages.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

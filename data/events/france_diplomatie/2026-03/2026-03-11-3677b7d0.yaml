@@ -15,5 +15,7 @@ text: France welcomes the UN Secretary-General’s appointment of Monica Kathina
   role.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nations-unies-nomination-de-la-directrice-executive-de-l-office-des-nations-unies-contre-la-drogue
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-11T00:00:00Z'
 ingested_at: '2026-05-14T21:10:50Z'

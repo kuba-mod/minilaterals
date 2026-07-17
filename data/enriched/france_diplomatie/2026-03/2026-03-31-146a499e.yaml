@@ -24,3 +24,7 @@ extracted:
       evidence: the discussion focused on the absolute need to make rapid progress
         on the European competitiveness and economic security agenda, building on
         the Draghi report.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

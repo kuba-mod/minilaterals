@@ -13,5 +13,7 @@ text: The French authorities note Burkina Faso’s unilateral decision to break 
   increase their vigilance.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/decision-unilaterale-du-burkina-faso-de-rompre-ses-relations-diplomatiques-avec-la-france
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-26T00:00:00Z'
 ingested_at: '2026-07-03T09:26:36Z'

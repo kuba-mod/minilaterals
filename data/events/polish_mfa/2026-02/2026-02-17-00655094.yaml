@@ -28,5 +28,7 @@ text: 'In her opening address, the Council’s Chair Henryka Mościcka-Dendys hi
   Parliamentary Group also take part in the Council’s work.'
 source_url: https://www.gov.pl/web/diplomacy/council-for-cooperation-with-the-federal-republic-of-germany-inaugurated
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-17T00:00:00Z'
 ingested_at: '2026-05-14T22:27:43Z'

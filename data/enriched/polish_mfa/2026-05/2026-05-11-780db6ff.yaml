@@ -46,3 +46,7 @@ extracted:
         that enlargement must remain a process based on substantive grounds and taking
         into account the vulnerabilities of the member states (including those relating
         to agriculture and transport).
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

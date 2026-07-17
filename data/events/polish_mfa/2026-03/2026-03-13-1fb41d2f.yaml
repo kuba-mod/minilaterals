@@ -21,5 +21,7 @@ text: During the meeting, both sides expressed satisfaction with the close coope
   deep concern with the situation in the Middle East.
 source_url: https://www.gov.pl/web/diplomacy/polish-irish-consultations-on-european-affairs
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-13T00:00:00Z'
 ingested_at: '2026-05-14T22:27:19Z'

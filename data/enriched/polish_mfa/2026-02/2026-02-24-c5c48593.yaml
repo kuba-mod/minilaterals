@@ -57,3 +57,7 @@ extracted:
         excellent cooperation within the framework of historical dialogue, which resulted
         in the recent decision by the Ukrainian side to grant permission for exhumation
         in Huta Pieniacka.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

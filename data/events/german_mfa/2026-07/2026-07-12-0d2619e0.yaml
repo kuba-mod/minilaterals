@@ -11,5 +11,7 @@ text: We condemn Iran’s reckless attacks on commercial shipping in the Strait 
   of the ceasefire and of negotiations.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/e3-iran-2777572
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-12T08:17:53Z'
 ingested_at: '2026-07-13T09:41:16Z'

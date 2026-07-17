@@ -14,5 +14,7 @@ text: Minister for Europe and Foreign Affairs Jean-Noël Barrot spoke by telepho
   the bilateral roadmap signed in 2023. They plan to speak in the near future.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/pakistan-entretien-du-ministre-de-l-europe-et-des-affaires-etrangeres-avec-ishaq-dar-vice-premier
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-10T00:00:00Z'
 ingested_at: '2026-05-14T21:10:01Z'

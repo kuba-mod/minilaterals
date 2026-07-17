@@ -29,5 +29,7 @@ text: 'Foreign Minister Johann Wadephul and his Polish counterpart Radosław Sik
   German-Polish relations.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775464-2775464
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-17T10:39:59Z'
 ingested_at: '2026-07-03T09:26:23Z'

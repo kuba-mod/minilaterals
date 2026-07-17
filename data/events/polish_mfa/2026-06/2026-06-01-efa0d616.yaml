@@ -33,5 +33,7 @@ text: While in Beijing, Deputy Minister Władysław Teofil Bartoszewski underlin
   by heads of state, relevant institutions, and diplomatic services.
 source_url: https://www.gov.pl/web/diplomacy/polandchina-strategic-dialogue
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-01T00:00:00Z'
 ingested_at: '2026-07-07T00:22:29Z'

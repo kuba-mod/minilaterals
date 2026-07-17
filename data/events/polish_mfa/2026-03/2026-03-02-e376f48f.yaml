@@ -23,5 +23,7 @@ text: During the talks, Deputy Prime Minister Radosław Sikorski underlined his 
   the Middle East.
 source_url: https://www.gov.pl/web/diplomacy/talks-of-foreign-ministers-of-poland-and-united-arab-emirates
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-02T00:00:00Z'
 ingested_at: '2026-05-14T22:27:33Z'

@@ -23,3 +23,7 @@ extracted:
       score: 2
       evidence: It concerns securing critical minerals supply chains, including rare
         earth metals, at the stages of extraction, processing, and recycling.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

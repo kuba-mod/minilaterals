@@ -88,5 +88,7 @@ text: '1. In Berlin today, we, Germany, France, the United Kingdom, the United S
   we urge all our partners to step up their efforts to bring the conflict to an end.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/troisieme-conference-internationale-sur-le-soudan
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-17T00:00:00Z'
 ingested_at: '2026-05-14T21:09:50Z'

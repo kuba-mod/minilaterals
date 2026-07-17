@@ -24,3 +24,7 @@ extracted:
       score: 2
       evidence: it reaffirms its full support for continuing the process with a view
         to holding free and transparent elections according to the established timetable.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

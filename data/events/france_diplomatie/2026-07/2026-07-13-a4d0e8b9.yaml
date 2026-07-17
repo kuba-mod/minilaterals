@@ -20,5 +20,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, went to War
   to whom he set out France’s foreign and European policy priorities.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/pologne-entretien-de-jean-noel-barrot-avec-son-homologue-radoslaw-sikorski
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-13T00:00:00Z'
 ingested_at: '2026-07-14T08:15:50Z'

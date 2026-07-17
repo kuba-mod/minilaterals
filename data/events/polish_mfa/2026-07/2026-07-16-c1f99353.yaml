@@ -18,5 +18,7 @@ text: The deputy head of Polish diplomacy participated in a panel discussion “
   to counter them.
 source_url: https://www.gov.pl/web/diplomacy/Secretary-of-State-Marcin-Bosacki-visits-Budapest
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-16T00:00:00Z'
 ingested_at: '2026-07-16T22:52:55Z'

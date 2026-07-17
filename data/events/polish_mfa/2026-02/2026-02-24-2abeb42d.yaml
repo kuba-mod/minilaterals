@@ -26,5 +26,7 @@ text: 'Four years into the Russian aggression – the Kremlin’s forces still o
   by unity, resolve and accountability.'
 source_url: https://www.gov.pl/web/diplomacy/statement-by-deputy-prime-minister-radoslaw-sikorski-during-a-meeting-of-the-osce-permanent-council-on-the-fourth-anniversary-of-the-outbreak-of-the-ukraine-war
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-24T00:00:00Z'
 ingested_at: '2026-05-14T22:27:37Z'

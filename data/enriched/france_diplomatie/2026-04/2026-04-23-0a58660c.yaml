@@ -33,3 +33,7 @@ extracted:
         to regulate the use of the veto at the United Nations Security Council in
         the case of mass atrocities, the ministers agreed to continue their joint
         efforts with a view to garnering further support.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -22,3 +22,7 @@ extracted:
       evidence: Russia’s war of aggression is directed not only at Ukraine, but also
         against the entire Euro-Atlantic security architecture, and against core tenets
         of international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

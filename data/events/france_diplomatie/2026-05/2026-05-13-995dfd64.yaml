@@ -11,5 +11,7 @@ text: Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeting 
   the organization of elections long awaited by the Libyan people.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/libye-entretien-du-ministre-de-l-europe-et-des-affaires-etrangeres-m-jean-noel-barrot-avec-la
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T21:18:30Z'
 ingested_at: '2026-05-13T21:18:31Z'

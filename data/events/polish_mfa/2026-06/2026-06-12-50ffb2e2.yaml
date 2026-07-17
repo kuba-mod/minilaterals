@@ -39,5 +39,7 @@ text: “Europe, that’s for sure” is a series of debates on the continent’
   and the new Bronisław Geremek Prize for fostering Polish–French relations.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-takes-part-in-debate-europe-thats-for-sure
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-12T00:00:00Z'
 ingested_at: '2026-07-07T00:22:16Z'

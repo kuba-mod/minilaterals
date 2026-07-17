@@ -12,5 +12,7 @@ text: Poland’s top diplomat expressed solidarity with Lebanon and said that Po
   peacekeeping mission, including the Polish Military Contingent, remains top priority.
 source_url: https://www.gov.pl/web/diplomacy/minister-sikorskis-call-with-foreign-minister-of-lebanon
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-28T00:00:00Z'
 ingested_at: '2026-05-14T22:26:51Z'

@@ -24,3 +24,7 @@ extracted:
       score: 1
       evidence: Migrant smuggling and human trafficking constitute serious transnational
         crimes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

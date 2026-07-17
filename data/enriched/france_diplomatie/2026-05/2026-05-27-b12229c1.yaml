@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: France reiterates its commitment to the rule of law and democratic
         pluralism in Cambodia and around the world.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

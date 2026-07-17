@@ -27,5 +27,7 @@ text: Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeting 
   and the ongoing diplomatic efforts.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/emirats-arabes-unis-entretien-de-jean-noel-barrot-avec-son-altesse-abdallah-ben-zayed-al-nahyane
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-30T00:00:00Z'
 ingested_at: '2026-07-16T22:49:11Z'

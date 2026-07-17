@@ -24,3 +24,7 @@ extracted:
       evidence: France and Germany share the strong belief that culture and language
         are essential levers of mutual understanding, the affirmation of democratic
         values and the defence of freedom in the service of peace.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

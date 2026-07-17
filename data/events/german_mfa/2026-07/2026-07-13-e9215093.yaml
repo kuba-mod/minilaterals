@@ -38,5 +38,7 @@ text: 'Foreign Minister Wadephul issued the following statement today (13 July 2
   – as of the utmost importance. That is why I will travel on to Finland on Wednesday.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/wadephul-reise-norwegen-2778030
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-13T09:11:19Z'
 ingested_at: '2026-07-14T08:15:39Z'

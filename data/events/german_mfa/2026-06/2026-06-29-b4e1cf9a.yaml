@@ -57,5 +57,7 @@ text: 'Before departing for Washington DC, the Mercosur Summit in Paraguay, as w
   human and cultural connections that already tie our countries together.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776168-2776168
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-29T07:35:49Z'
 ingested_at: '2026-07-03T09:26:23Z'

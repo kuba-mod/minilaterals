@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: in accordance with international humanitarian law and United Nations
         Security Council Resolution 2803
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

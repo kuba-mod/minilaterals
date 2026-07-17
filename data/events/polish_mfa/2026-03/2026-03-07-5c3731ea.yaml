@@ -21,5 +21,7 @@ text: The heads of diplomacy of Poland and the UAE discussed in detail the progr
   risk of irreversible consequences on a global scale.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-ministers-foreign-ministers-of-poland-and-united-arab-emirates-meet-to-discuss-situation-in-middle-east
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-07T00:00:00Z'
 ingested_at: '2026-05-14T22:27:22Z'

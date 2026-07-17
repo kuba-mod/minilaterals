@@ -20,5 +20,7 @@ text: 'As part of the discussion on the European Council scheduled for 18–19 J
   below.'
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-ignacy-niemczycki-takes-part-in-general-affairs-council-meeting-in-brussels
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-26T00:00:00Z'
 ingested_at: '2026-07-07T00:22:38Z'

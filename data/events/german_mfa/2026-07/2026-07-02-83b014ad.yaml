@@ -19,5 +19,7 @@ text: 'A Federal Foreign Office Spokesperson issued the following statement toda
   high up on the agenda of the NATO summit in Ankara next week.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776718-2776718
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-07-02T11:25:23Z'
 ingested_at: '2026-07-03T09:26:23Z'

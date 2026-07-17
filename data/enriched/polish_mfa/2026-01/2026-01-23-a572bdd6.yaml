@@ -31,3 +31,7 @@ extracted:
       score: 1
       evidence: The head of Polish diplomacy reiterated that the threat from Russia
         and our continued support for Ukraine remain in the focus.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -39,5 +39,7 @@ text: We, the G7 Foreign Ministers of Canada, France, Germany, Italy, Japan, the
   democratic aspirations of the Sudanese people.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2778204-2778204
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-14T19:00:00Z'
 ingested_at: '2026-07-16T03:59:14Z'

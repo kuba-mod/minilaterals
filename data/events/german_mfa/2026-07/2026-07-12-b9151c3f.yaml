@@ -41,5 +41,7 @@ text: 'Federal Government Commissioner for Human Rights Policy and Humanitarian 
   the healthcare system, and strengthening basic services and municipal development.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2777646-2777646
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-12T10:15:00Z'
 ingested_at: '2026-07-14T08:15:39Z'

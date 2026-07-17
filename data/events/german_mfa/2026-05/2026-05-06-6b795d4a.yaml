@@ -197,5 +197,7 @@ text: 'Two raw materials and resources that, for centuries, served as both the c
   must be both a source of inspiration and a call to duty for us going forward.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2770616-2770616
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-05-06T15:18:42Z'
 ingested_at: '2026-05-13T21:15:26Z'

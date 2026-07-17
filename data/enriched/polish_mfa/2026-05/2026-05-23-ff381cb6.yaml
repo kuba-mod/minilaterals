@@ -55,3 +55,7 @@ extracted:
       score: 1
       evidence: to live in a country that is free from corruption, based on the rule
         of law, shifting from poverty to prosperity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

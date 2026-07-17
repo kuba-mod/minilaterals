@@ -46,3 +46,7 @@ extracted:
       score: 1
       evidence: resolutely drive forward the rapid expansion of key future sectors,
         such as a productive European hydrogen economy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: github_actions

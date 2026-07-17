@@ -18,5 +18,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, spoke on th
   the NATO summit in Ankara on 7 and 8 July 2026.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/etats-unis-entretien-du-ministre-avec-marco-rubio-secretaire-d-etat-des-etats-unis
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-02T00:00:00Z'
 ingested_at: '2026-07-03T09:26:27Z'

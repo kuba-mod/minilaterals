@@ -17,5 +17,7 @@ text: Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeting 
   effort on the French side with a view to the reopening of Route Nationale 20.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/andorre-entretien-de-jean-noel-barrot-avec-imma-tor-faus-ministre-des-affaires-etrangeres-de-la
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-20T00:00:00Z'
 ingested_at: '2026-05-14T21:11:10Z'

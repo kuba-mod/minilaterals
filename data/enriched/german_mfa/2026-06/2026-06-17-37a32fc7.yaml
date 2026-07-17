@@ -51,3 +51,7 @@ extracted:
       evidence: Our overarching aim remains the protection of European values, including
         the rule of law and free elections, and ultimately a lasting and just peace
         in Ukraine that strengthens European security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

@@ -57,3 +57,7 @@ extracted:
       score: 1
       evidence: The process must let both Ukraine and all of us rest assured that
         Russia will not be capable of another aggression.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

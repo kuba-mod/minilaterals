@@ -29,3 +29,7 @@ extracted:
       evidence: We urge the Iranian authorities to exercise full restraint, to refrain
         from violence, and to uphold the human rights and fundamental freedoms of
         Iran’s citizens
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

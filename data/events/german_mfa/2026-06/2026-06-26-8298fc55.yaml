@@ -46,5 +46,7 @@ text: 'The United States of America, Belgium, Canada, Denmark, France, Germany, 
   can be no military solution to the conflict.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/icg-2776128
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-26T15:32:35Z'
 ingested_at: '2026-07-03T09:26:23Z'

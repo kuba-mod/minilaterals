@@ -15,5 +15,7 @@ text: Deputy Prime Minister Radosław Sikorski thanked Deputy Prime Minister Ish
   basis and training exchanges, among other things.
 source_url: https://www.gov.pl/web/diplomacy/minister-sikorskis-call-with-foreign-minister-of-pakistan
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-19T00:00:00Z'
 ingested_at: '2026-05-14T22:27:00Z'

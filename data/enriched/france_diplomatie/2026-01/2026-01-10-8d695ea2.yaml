@@ -13,3 +13,7 @@ extracted:
     to a ceasefire while supporting efforts to ensure civilian protection and stability.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

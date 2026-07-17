@@ -25,3 +25,7 @@ extracted:
         Israel and Lebanon that came into force on 17 April to be fully observed,
         in order to enable a definitive political solution to the conflict through
         negotiation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

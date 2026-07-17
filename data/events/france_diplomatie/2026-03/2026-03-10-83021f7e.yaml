@@ -14,5 +14,7 @@ text: International Partnership against impunity for the use of chemical weapons
   architecture and the rules based international order on which we all rely.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/partenariat-international-contre-l-impunite-d-utilisation-d-armes-chimiques-soutenir-l-organisation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-10T00:00:00Z'
 ingested_at: '2026-05-14T21:10:53Z'

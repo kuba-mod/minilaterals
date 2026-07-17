@@ -48,3 +48,7 @@ extracted:
       evidence: In particular, he condemned the destruction of the Kyiv Pechersk Lavra,
         an Eastern Orthodox monastery complex from 11th century, listed as UNESCO
         World Heritage Site.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

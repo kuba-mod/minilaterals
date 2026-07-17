@@ -24,3 +24,7 @@ extracted:
         practices (NMPPs), and their adverse impacts, including persistent market
         distortions, global structural excess capacity, harmful spillovers in global
         and domestic markets, and growing economic dependencies.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

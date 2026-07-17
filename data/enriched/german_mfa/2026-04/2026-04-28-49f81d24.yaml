@@ -31,3 +31,7 @@ extracted:
       score: 2
       evidence: 'And I can assure those whose safety and livelihoods are endangered
         by climate change: We are, and we remain, at your side.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

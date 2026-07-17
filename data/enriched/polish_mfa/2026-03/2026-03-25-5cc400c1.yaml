@@ -38,3 +38,7 @@ extracted:
       evidence: The participants learned how to respond to hostile campaigns by developing
         communication strategies aimed to challenge hostile narratives, and how to
         cooperate with partners from public administration and the third sector.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

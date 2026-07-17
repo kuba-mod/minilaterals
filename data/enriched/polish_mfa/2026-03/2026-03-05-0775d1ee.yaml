@@ -24,3 +24,7 @@ extracted:
       score: 1
       evidence: The diplomats agreed that the only appropriate way to solve the region’s
         problems is through dialogue and respect for the rule of law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local

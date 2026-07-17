@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: Both sides stressed the importance of diplomatic dialogue as a fundamental
         instrument for resolving conflicts and building stability in the region.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '3'
+  environment: local
