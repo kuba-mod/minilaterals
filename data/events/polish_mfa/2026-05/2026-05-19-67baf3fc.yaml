@@ -20,5 +20,7 @@ text: 'Lech Wałęsa has been appointed Distinguished Member of the European Ord
   three levels of distinction:'
 source_url: https://www.gov.pl/web/diplomacy/jerzy-buzek-and-lech-walesa-receive-new-european-parliament-order
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-19T00:00:00Z'
 ingested_at: '2026-07-07T00:22:50Z'

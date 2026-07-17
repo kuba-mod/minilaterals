@@ -57,5 +57,7 @@ text: The International Contact Group (ICG) for the Great Lakes, including repre
   break cycles of instability.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/icg-greatlakes-2772938
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-22T00:00:00Z'
 ingested_at: '2026-07-07T08:03:08Z'

@@ -45,5 +45,7 @@ text: 'Greece and Germany can build upon a longstanding friendship rooted in dee
   consultations, in liaison with the competent ministries.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2770378-2770378
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-05-04T18:00:00Z'
 ingested_at: '2026-05-13T21:15:26Z'

@@ -56,5 +56,7 @@ text: 'In politics, much is often about clarity. It can be one of the key factor
   I look forward to today’s discussion with you.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2767786-2767786
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-16T13:58:40Z'
 ingested_at: '2026-05-13T21:15:26Z'

@@ -39,3 +39,7 @@ extracted:
       score: 2
       evidence: It will aim to protect the integrity of public debate, support free
         and fair elections, and develop citizens’ media literacy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

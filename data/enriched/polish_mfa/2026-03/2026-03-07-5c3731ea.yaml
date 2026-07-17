@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: At the same time, the ministers called for a peaceful resolution of
         the conflict and its swiftest possible deescalation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

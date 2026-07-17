@@ -35,5 +35,7 @@ text: During his visit on 12–13 December 2026, Deputy Minister Marcin Bosacki 
   military cemetery in Bykivnia.
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-marcin-bosacki-visits-ukraine
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-13T00:00:00Z'
 ingested_at: '2026-05-14T22:28:01Z'

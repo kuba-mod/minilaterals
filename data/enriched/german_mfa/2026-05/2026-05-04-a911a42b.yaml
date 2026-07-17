@@ -47,3 +47,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: Greece is the cradle of essential values that shape Europe today.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

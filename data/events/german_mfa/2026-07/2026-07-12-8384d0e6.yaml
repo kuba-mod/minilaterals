@@ -33,5 +33,7 @@ text: The text of the following statement was released by the Governments of the
   lawful commerce.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2777614-2777614
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-12T10:28:58Z'
 ingested_at: '2026-07-13T09:41:16Z'

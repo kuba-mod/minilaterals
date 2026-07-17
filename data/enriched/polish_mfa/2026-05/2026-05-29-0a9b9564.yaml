@@ -50,3 +50,7 @@ extracted:
       evidence: Joint security, solidarity in response to Russia’s aggression, and
         responsibility for the future of Europe require maturity and commitment to
         dialogue on both sides.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

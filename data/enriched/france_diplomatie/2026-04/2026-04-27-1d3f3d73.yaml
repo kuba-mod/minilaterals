@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: recalled the importance of effective multilateralism and adherence
         to international law and the United Nations Charter.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: on the prospects of working together on building resilience to threats
         and managing crisis situations.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

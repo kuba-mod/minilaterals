@@ -17,5 +17,7 @@ text: The ministers discussed bilateral relations. Poland and the United Kingdom
   until the aggression is over.
 source_url: https://www.gov.pl/web/diplomacy/on-polanduk-relations-in-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:59Z'

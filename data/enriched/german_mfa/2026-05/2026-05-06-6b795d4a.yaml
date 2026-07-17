@@ -53,3 +53,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: The freedom of Europe.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

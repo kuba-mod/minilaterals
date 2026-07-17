@@ -68,3 +68,7 @@ extracted:
       score: 2
       evidence: Deputy Minister Bosacki underlined that Warsaw and Kyiv jointly respond
         to false information spread across the public space.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

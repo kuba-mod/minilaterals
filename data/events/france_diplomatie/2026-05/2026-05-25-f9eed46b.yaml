@@ -56,5 +56,7 @@ text: The International Contact Group (ICG) for the Great Lakes, including repre
   break cycles of instability.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/23-mai-2026-groupe-de-contact-international-pour-la-region-des-grands-lacs-declaration-diplomatique
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-25T00:00:00Z'
 ingested_at: '2026-07-07T00:20:50Z'

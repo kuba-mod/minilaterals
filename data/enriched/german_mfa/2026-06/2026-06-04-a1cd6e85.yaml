@@ -24,3 +24,7 @@ extracted:
       evidence: Germany and France share the conviction that culture and language
         play a crucial role in promoting mutual understanding, strengthening democratic
         values and defending freedom in the service of peace.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

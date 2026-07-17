@@ -31,3 +31,7 @@ extracted:
       score: 1
       evidence: The ICG calls on all parties to honour their obligations to respect
         international humanitarian law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

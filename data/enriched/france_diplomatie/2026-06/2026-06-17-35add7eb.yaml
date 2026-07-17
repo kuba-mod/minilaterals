@@ -30,3 +30,7 @@ extracted:
       score: 2
       evidence: We reaffirm that the right of transit passage without restrictions
         or tolls is the bedrock of international trade.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -133,6 +133,7 @@ class PolishMFAIngester(BaseIngester):
                     text=summary,
                     source_url=url,
                     source_lang=lang,
+                    collection_method="html",
                     source_published_at=published_at,
                     date=date,
                 )

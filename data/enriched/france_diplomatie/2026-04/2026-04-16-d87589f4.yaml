@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: The two ministers agreed to continue deepening their cooperation in
         this field.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

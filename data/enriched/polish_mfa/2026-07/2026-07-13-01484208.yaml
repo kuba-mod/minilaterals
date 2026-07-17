@@ -51,3 +51,7 @@ extracted:
       score: 1
       evidence: Minister Sikorski stressed that the international community must respond
         to the violations of the international humanitarian law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

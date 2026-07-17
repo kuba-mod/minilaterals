@@ -54,5 +54,7 @@ text: 'Minister for Europe and Foreign Affairs Jean-Noël Barrot took part in th
   and economic failure that must end now.”'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/union-europeenne-participation-du-ministre-au-conseil-affaires-etrangeres-0
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-17T00:00:00Z'
 ingested_at: '2026-05-14T21:10:35Z'

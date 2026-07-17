@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: The fact that ODIHR has its premises in Warsaw consolidates Poland’s
         central position in a debate on human rights and democratic transformation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

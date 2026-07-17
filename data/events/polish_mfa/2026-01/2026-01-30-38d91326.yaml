@@ -27,5 +27,7 @@ text: 'When it comes to security, we share a clear understanding of NATO’s piv
   and confirmed solidarity with countries in the region.'
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-top-diplomats-of-poland-and-luxembourg
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-30T00:00:00Z'
 ingested_at: '2026-05-14T22:27:53Z'

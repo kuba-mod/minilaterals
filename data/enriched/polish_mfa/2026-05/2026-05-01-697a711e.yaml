@@ -13,3 +13,7 @@ extracted:
     the European Union, highlighting the single market's role in its prosperity.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

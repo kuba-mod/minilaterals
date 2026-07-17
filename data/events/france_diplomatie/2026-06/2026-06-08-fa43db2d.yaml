@@ -37,5 +37,7 @@ text: '*by Austria, Australia, Belgium, Denmark, Estonia, European Commissioner 
   any way, including that provided by humanitarian organizations.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-conjointe-sur-l-acces-humanitaire-a-gaza-et-la-loi-sur-l-enregistrement-des
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-08T00:00:00Z'
 ingested_at: '2026-07-07T00:19:48Z'

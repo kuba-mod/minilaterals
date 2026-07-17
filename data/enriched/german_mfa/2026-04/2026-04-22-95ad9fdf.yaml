@@ -39,3 +39,7 @@ extracted:
       evidence: it was once again very clear that amid all the horrors that Putin’s
         Russia is inflicting on Ukraine, the Ukrainian people continue to demonstrate
         unbelievable resilience
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

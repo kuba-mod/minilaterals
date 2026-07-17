@@ -54,3 +54,7 @@ extracted:
         Group of Five (E5), that is France, Germany, Italy, and the United Kingdom,
         as well as with the EU and Türkiye’s representatives, to discuss further cooperation
         centred on European security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

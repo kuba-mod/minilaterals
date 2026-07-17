@@ -23,3 +23,7 @@ extracted:
       evidence: the Minister emphasized the momentum within the Coalition of the Willing,
         which met last week in Paris to work on the security guarantees that are necessary
         to a just and lasting peace.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -22,3 +22,7 @@ extracted:
       evidence: Our relations with Israel can never be seen independently of the responsibility
         that Germany bears for the security of the only Jewish state in light of the
         Shoah – that most atrocious crime against humanity committed by Germans.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

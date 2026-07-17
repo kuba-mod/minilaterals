@@ -11,5 +11,7 @@ text: Italy and Germany follow with great concern developments regarding the Glo
   aid to Gaza in accordance with international law and standards.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2770056-2770056
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-30T14:40:07Z'
 ingested_at: '2026-05-13T21:15:26Z'

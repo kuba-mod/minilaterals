@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: He stressed the Court’s fundamental role in protecting democracy and
         the rule of law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

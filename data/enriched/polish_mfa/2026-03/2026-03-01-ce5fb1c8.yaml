@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: Painfully affected by recent political repressions following a wave
         of protests, the Iranian society deserves freedom, peace, stability, and prosperity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

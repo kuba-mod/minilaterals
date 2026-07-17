@@ -26,5 +26,7 @@ text: 'La France a officiellement notifié aujourd’hui au Conseil de l’Europ
   France : mompresse@outre-mer.gouv.fr'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/protection-des-droits-sociaux-extension-de-la-charte-sociale-europeenne-aux-outre-mer
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-20T00:00:00Z'
 ingested_at: '2026-05-14T21:10:32Z'

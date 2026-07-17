@@ -30,6 +30,8 @@ RAW_FIELDS = [
     "text",
     "source_url",
     "source_lang",
+    "collection",
+    "collection_method",
     "source_published_at",
     "ingested_at",
 ]

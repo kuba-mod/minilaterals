@@ -23,5 +23,7 @@ text: Following the two earthquakes that hit Venezuela on 24 June, and at the re
   in keeping with the solidarity that unites our two nations.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/venezuela-acheminement-de-44-tonnes-d-aide-humanitaire
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-07T00:00:00Z'
 ingested_at: '2026-07-08T08:40:22Z'

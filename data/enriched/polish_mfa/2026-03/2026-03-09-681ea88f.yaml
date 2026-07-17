@@ -33,3 +33,7 @@ extracted:
       score: 1
       evidence: They acknowledged the problem of disinformation in public space, which
         is a pressing issue in both countries.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

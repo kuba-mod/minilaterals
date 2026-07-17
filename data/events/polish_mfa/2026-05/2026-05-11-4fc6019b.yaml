@@ -10,5 +10,7 @@ text: The consultations with Under Secretary DiNanno focused on key strategic is
   the 16th round of the Poland–US Strategic Dialogue .
 source_url: https://www.gov.pl/web/diplomacy/polishus-talks-on-security
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-11T00:00:00Z'
 ingested_at: '2026-05-13T21:18:39Z'

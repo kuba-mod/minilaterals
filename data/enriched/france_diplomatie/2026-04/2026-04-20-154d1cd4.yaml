@@ -31,3 +31,7 @@ extracted:
       score: 1
       evidence: The Minister commended President Bayr on her commitment to the European
         Court of Human Rights’ independence
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

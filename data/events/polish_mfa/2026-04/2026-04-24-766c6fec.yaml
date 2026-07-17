@@ -24,5 +24,7 @@ text: During the visit, Deputy Minister Artur Harazim met with Nada Al-Nashif, U
   on crucial aspects of international, EU, and domestic law.
 source_url: https://www.gov.pl/web/diplomacy/undersecretary-of-state-artur-harazim-and-advisory-legal-committee-on-study-visit-to-geneva
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-24T00:00:00Z'
 ingested_at: '2026-05-14T22:26:53Z'

@@ -40,3 +40,7 @@ extracted:
       score: 2
       evidence: The initiative aims to ensure that audience has access to independent
         news in regions with limited media freedom.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -23,3 +23,7 @@ extracted:
         particularly the principles of distinction, proportionality and precaution,
         is vital to ensuring the protection of civilian populations and civilian infrastructure
         in all circumstances.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

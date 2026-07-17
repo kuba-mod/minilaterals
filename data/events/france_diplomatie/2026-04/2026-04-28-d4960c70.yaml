@@ -12,5 +12,7 @@ text: France welcomes the holding of local elections in the West Bank and in Dei
   will to be fully expressed.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/palestine-elections-municipales-en-cisjordanie-et-a-deir-el-balah
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-28T00:00:00Z'
 ingested_at: '2026-07-16T22:49:14Z'

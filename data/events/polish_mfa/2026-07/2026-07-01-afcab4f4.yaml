@@ -25,5 +25,7 @@ text: Foreign Minister Radosław Sikorski’s visit to Namibia is in line with P
   and the National Centre for Nuclear Research.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-visits-republic-of-namibia
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-01T00:00:00Z'
 ingested_at: '2026-07-04T10:53:50Z'

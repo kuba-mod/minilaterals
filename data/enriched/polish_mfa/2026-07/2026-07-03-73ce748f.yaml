@@ -23,3 +23,7 @@ extracted:
       evidence: The head of Polish diplomacy emphasised that improved security and
         effective governance are essential for the successful implementation of EUMAM’s
         objectives and for the region’s stabilisation by the Mozambican authorities.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

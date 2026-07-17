@@ -37,5 +37,7 @@ text: During the Congress, Deputy Prime Minister Sikorski emphasised that Poland
   from Russian energy materials.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-takes-part-in-international-maritime-congress-in-szczecin
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T00:00:00Z'
 ingested_at: '2026-07-07T00:22:53Z'

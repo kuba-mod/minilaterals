@@ -85,5 +85,7 @@ text: 'When the Federal Government signed the Coalition Treaty, on this day exac
   also at the heart of our foreign policy - and our Africa policies!'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/africa-day-2026-2770404
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-05-05T12:20:27Z'
 ingested_at: '2026-05-13T21:15:26Z'

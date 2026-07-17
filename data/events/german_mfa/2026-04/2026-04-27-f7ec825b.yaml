@@ -24,5 +24,7 @@ text: 'Minister of State Hahn issued the following statement today (27 April) on
   as are other measures to expand renewable energies.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2769488-2769488
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-27T10:40:48Z'
 ingested_at: '2026-05-13T21:15:26Z'

@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: Deputy Minister Władysław Teofil Bartoszewski noted that the “No freedom
         without Solidarity” slogan is still relevant
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

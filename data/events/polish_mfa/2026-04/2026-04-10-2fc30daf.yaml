@@ -27,5 +27,7 @@ text: 'On 10 April 2010, 96 people, including Polish President Lech Kaczyński a
   Maniewski/MFA'
 source_url: https://www.gov.pl/web/diplomacy/mfa-pays-tribute-to-victims-of-smolensk-plane-crash-on-its-16th-anniversary
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-10T00:00:00Z'
 ingested_at: '2026-05-14T22:27:08Z'

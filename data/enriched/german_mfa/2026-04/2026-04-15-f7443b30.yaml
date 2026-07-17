@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: In this spirit, Germany pledges 212 million euro of humanitarian assistance
         to Sudan and the neighbouring countries.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

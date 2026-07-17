@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: The two ministers talked about the main international crises, in particular
         the situations in the Middle East and Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

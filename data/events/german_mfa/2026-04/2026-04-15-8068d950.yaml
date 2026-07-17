@@ -89,5 +89,7 @@ text: '1. In Berlin today, we, Germany, France, the United Kingdom, the United S
   end.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/international-sudan-conference-berlin-2766850
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-15T18:30:00Z'
 ingested_at: '2026-05-13T21:15:26Z'

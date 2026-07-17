@@ -71,3 +71,7 @@ extracted:
       evidence: The Council emphasized that Russia supported by Belarus, and the individuals
         responsible, must be held accountable for their crimes and provide full compensation
         for the damages caused to Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

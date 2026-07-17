@@ -12,5 +12,7 @@ text: Following last weekend’s massive airstrikes and in light of the unaccept
   European security and supporting Ukraine.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/russie-convocation-de-l-ambassadeur-de-la-federation-de-russie-en-france
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-27T00:00:00Z'
 ingested_at: '2026-07-07T00:20:49Z'

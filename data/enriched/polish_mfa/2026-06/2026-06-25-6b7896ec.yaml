@@ -49,3 +49,7 @@ extracted:
       evidence: pointing out that the historic opening of formal EU accession negotiations
         with Ukraine on 15 June must be followed by genuine efforts towards compliance
         with the Union’s law, principles, and standards
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

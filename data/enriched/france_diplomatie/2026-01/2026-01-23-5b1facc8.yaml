@@ -25,3 +25,7 @@ extracted:
       evidence: reiterated the importance of fully implementing UNSC Resolution 2803,
         and particularly the delivery of humanitarian aid – vital to the people of
         Gaza – in cooperation with the UN.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

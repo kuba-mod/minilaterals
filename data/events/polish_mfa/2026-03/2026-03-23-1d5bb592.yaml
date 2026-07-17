@@ -13,5 +13,7 @@ text: The participants referred to the Arab League Council Resolution No. 9241 o
   also talked about Israel’s military operation in Lebanon.
 source_url: https://www.gov.pl/web/diplomacy/polands-top-diplomat-radoslaw-sikorski-meets-with-ambassadors-of-arab-countries
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-23T00:00:00Z'
 ingested_at: '2026-05-14T22:27:17Z'

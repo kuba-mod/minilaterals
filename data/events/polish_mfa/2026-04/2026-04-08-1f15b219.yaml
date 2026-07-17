@@ -15,5 +15,7 @@ text: Poland welcomes therefore the ceasefire between Iran and the US. We thank 
   for terrorist organizations that destabilize the region.
 source_url: https://www.gov.pl/web/diplomacy/statement-on-the-us-iran-ceasefire-agreement
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-08T00:00:00Z'
 ingested_at: '2026-05-14T22:27:09Z'

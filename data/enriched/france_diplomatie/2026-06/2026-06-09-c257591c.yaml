@@ -27,3 +27,7 @@ extracted:
       score: 2
       evidence: We continue to urge the Government of Israel to take action to ensure
         meaningful accountability for violence in the West Bank.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

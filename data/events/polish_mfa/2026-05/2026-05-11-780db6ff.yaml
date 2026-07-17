@@ -37,5 +37,7 @@ text: Besides the sanctions, the 11 May talks focused on Russia’s ongoing aggr
   partnerships.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-bosacki-takes-part-in-foreign-affairs-council-fac-in-brussels
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-11T00:00:00Z'
 ingested_at: '2026-05-13T21:18:39Z'

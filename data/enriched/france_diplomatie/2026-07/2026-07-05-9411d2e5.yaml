@@ -24,3 +24,7 @@ extracted:
       score: 2
       evidence: The conference was a highlight in the mobilization of all state actors
         and all the regional organizations responsible for combating illicit trafficking.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

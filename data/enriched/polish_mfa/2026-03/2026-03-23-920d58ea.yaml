@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: The participants also stressed the importance of building people-to-people
         contacts using academic cooperation and science diplomacy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

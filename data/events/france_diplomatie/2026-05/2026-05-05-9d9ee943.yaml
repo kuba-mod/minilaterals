@@ -24,5 +24,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeti
   for serious attacks on human rights, democracy and the rule of law.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/birmanie-entretien-de-jean-noel-barrot-avec-kim-aris-fils-de-la-conseillere-pour-l-etat-de-la
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-05T00:00:00Z'
 ingested_at: '2026-07-07T00:21:37Z'

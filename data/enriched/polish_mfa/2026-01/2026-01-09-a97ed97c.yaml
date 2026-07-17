@@ -26,3 +26,7 @@ extracted:
       evidence: Deputy Minister Mościcka-Dendys referred to the Bundestag resolution
         from December last year to establish a permanent memorial in Berlin commemorating
         the Polish victims of World War II and German occupation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

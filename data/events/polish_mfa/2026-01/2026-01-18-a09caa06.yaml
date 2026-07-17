@@ -9,5 +9,7 @@ text: The MFA also notes the readiness declared by the current authorities in Ca
   resolution of the crisis.
 source_url: https://www.gov.pl/web/diplomacy/the-release-of-the-polish-citizen-detained-in-venezuela
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-18T00:00:00Z'
 ingested_at: '2026-05-14T22:27:59Z'

@@ -22,3 +22,7 @@ extracted:
       evidence: Such actions constitute clear violations of international law, including
         the law of the sea, as reflected in the United Nations Convention on the Law
         of the Sea.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

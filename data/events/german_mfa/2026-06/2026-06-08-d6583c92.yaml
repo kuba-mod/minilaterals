@@ -59,5 +59,7 @@ text: The text of the following statement was released by the Governments of the
   goals.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2774504-2774504
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-08T18:00:00Z'
 ingested_at: '2026-07-03T09:26:23Z'

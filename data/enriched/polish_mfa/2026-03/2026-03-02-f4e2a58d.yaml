@@ -26,3 +26,7 @@ extracted:
         Commission will make a real contribution to strengthening these walls, democratic
         standards, the rule of law, and the protection of human rights throughout
         Europe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

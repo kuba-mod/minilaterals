@@ -19,5 +19,7 @@ text: The participants represented member states’ foreign ministries, the Euro
   economic competitiveness and innovation.
 source_url: https://www.gov.pl/web/diplomacy/polands-head-of-the-foreign-service-joins-meeting-of-eu-state-secretaries-and-secretaries-general
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-09T00:00:00Z'
 ingested_at: '2026-07-07T00:22:18Z'

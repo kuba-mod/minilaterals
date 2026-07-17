@@ -22,5 +22,7 @@ text: Albania, Australia, Belgium, Bulgaria, Canada, Czechia, Denmark, Estonia, 
   halt them.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/condamnation-conjointe-des-actes-malveillants-de-l-iran
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-10T00:00:00Z'
 ingested_at: '2026-07-07T00:19:42Z'

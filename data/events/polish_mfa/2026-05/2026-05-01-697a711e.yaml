@@ -50,5 +50,7 @@ text: 'Poland’s presence in the European Union has been a story of spectacular
   Labour Market'', available below (Polish version only).'
 source_url: https://www.gov.pl/web/diplomacy/polands-22-years-in-the-european-union-success-in-figures
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-01T00:00:00Z'
 ingested_at: '2026-05-13T21:18:44Z'

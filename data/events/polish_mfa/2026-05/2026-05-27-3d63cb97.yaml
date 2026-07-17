@@ -32,5 +32,7 @@ text: 'The participants discussed security challenges, development of infrastruc
   Wielkopolskie Province'
 source_url: https://www.gov.pl/web/diplomacy/head-of-the-foreign-service-henryka-moscicka-dendys-attends-jubilee-odra-partnership-summit-in-poznan
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-27T00:00:00Z'
 ingested_at: '2026-07-07T00:22:37Z'

@@ -25,3 +25,7 @@ extracted:
       evidence: Without identity, democracy is merely an empty form that can easily
         be filled with populism tailored to the needs of authoritarianism said Deputy
         Foreign Minister Artur Harazim.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

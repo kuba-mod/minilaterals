@@ -31,3 +31,7 @@ extracted:
       evidence: opening an exhibition titled Camas vacías (Empty beds) at the Senate
         focusing on the issue of illegal deportations and forced resettlements of
         Ukrainian children by Russia.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

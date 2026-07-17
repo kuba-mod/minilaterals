@@ -24,3 +24,7 @@ extracted:
       evidence: The Minister and the Foreign Secretary emphasized the importance of
         abiding by the ceasefire agreement reached by Iran and the United States,
         and of finding a swift and lasting end to the war through diplomatic means.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

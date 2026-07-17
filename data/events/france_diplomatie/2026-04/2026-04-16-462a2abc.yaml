@@ -20,5 +20,7 @@ text: France welcomes the US President’s announcement of a 10-day temporary ce
   partners to support the ongoing diplomatic process.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/cessez-le-feu-temporaire-entre-israel-et-le-liban
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-16T00:00:00Z'
 ingested_at: '2026-05-14T21:09:54Z'

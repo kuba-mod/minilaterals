@@ -46,3 +46,7 @@ extracted:
       score: 2
       evidence: Non-compliance with international obligations must carry enforceable
         consequences.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

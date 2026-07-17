@@ -24,5 +24,7 @@ text: On Monday, April 27, Jean-Noël Barrot, Minister for Europe and Foreign Af
   presidency of the G7.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/entretien-de-jean-noel-barrot-ministre-de-l-europe-et-des-affaires-etrangeres-avec-rafael-grossi
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-28T00:00:00Z'
 ingested_at: '2026-07-16T22:49:18Z'

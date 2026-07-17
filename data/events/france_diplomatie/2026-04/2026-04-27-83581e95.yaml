@@ -20,5 +20,7 @@ text: France was saddened to learn that a fourth Indonesian UNIFIL peacekeeper, 
   that went into effect on April 17 and was extended by three weeks on April 23.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-mort-d-un-quatrieme-soldat-indonesien-de-la-finul
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-27T00:00:00Z'
 ingested_at: '2026-05-14T21:09:34Z'

@@ -26,5 +26,7 @@ text: 'Foreign Minister Wadephul issued the following statement on 5 January 202
   Europe can secure lasting peace on our continent.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/wadephul-lithuania-2750818
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-01-05T08:06:00Z'
 ingested_at: '2026-07-16T22:38:11Z'

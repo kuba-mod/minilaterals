@@ -25,3 +25,7 @@ extracted:
       evidence: This decision reflects the French authorities’ desire to guarantee
         the same high-level protection of social rights to all its citizens, whatever
         their place of residence.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

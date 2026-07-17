@@ -236,6 +236,7 @@ class GermanMFAIngester(BaseIngester):
                     text=summary,
                     source_url=url,
                     source_lang=lang,
+                    collection_method="rss",
                     source_published_at=published_at,
                     date=date,
                 )
@@ -303,6 +304,7 @@ class GermanMFAIngester(BaseIngester):
                         text="",
                         source_url=url,
                         source_lang=lang,
+                        collection_method="wayback",
                         source_published_at=published_at,
                         date=date,
                     )
@@ -416,6 +418,7 @@ class GermanMFAIngester(BaseIngester):
                 text=text,
                 source_url=url,
                 source_lang="en" if "/en/" in url else "de",
+                collection_method="wayback",
                 source_published_at=published_at,
                 date=date,
             )
@@ -473,6 +476,7 @@ class GermanMFAIngester(BaseIngester):
                     text=summary,
                     source_url=item_url,
                     source_lang=self.source_lang,
+                    collection_method="html",
                     source_published_at=published_at,
                     date=date,
                 )

@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: signalling the French Republic’s recognition of his commitment to
         peace, respect for international law and multilateralism
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

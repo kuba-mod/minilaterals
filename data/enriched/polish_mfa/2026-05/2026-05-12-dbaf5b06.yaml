@@ -42,3 +42,7 @@ extracted:
       evidence: I think it is Ukraine stabilising the front and Europe overcoming
         its paralysis thanks to the magnificent victory of prodemocratic forces in
         Hungary that is forcing Putin to recalculate.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

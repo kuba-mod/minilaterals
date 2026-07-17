@@ -24,3 +24,7 @@ extracted:
       evidence: Germany is working to ensure that a democratic transitional period
         comes to a successful conclusion with the holding of free, transparent and
         inclusive parliamentary and presidential elections.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

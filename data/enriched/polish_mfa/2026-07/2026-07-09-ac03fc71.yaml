@@ -39,3 +39,7 @@ extracted:
       score: 0
       evidence: The ministers also discussed current security risks, including in
         the Middle East and Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

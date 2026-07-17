@@ -10,5 +10,7 @@ text: France welcomes the appointment of Mr Ali al-Zaidi as Prime Minister, task
   jointly for regional peace, stability and prosperity.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/irak-nomination-du-premier-ministre-ali-al-zaydi
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-28T00:00:00Z'
 ingested_at: '2026-07-16T22:49:15Z'

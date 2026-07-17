@@ -46,3 +46,7 @@ extracted:
       score: 1
       evidence: The foreign ministers of Poland and Ireland also discussed opportunities
         to develop economic cooperation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

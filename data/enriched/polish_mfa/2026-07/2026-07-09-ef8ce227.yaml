@@ -31,3 +31,7 @@ extracted:
       score: 1
       evidence: while reaffirming the importance of Polish historical memory and acknowledging
         the emotions associated with the Volhynian crime
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

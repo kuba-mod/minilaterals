@@ -21,5 +21,7 @@ text: The Strategy, adopted by the Polish government and published in early 2026
   followed by a discussion.
 source_url: https://www.gov.pl/web/diplomacy/polish-foreign-policy-strategy-20262030-presented-to-diplomats-from-nato-and-indo-pacific-four-countries
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-24T00:00:00Z'
 ingested_at: '2026-07-03T09:26:46Z'

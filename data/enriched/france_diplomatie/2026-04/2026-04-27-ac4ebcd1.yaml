@@ -12,3 +12,7 @@ extracted:
     on-the-ground health initiatives in various countries.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

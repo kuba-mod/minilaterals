@@ -22,3 +22,7 @@ extracted:
       evidence: France calls on all the parties to strictly abide by the current ceasefire
         and to refrain from any actions that would be liable to spark a new military
         escalation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -13,5 +13,7 @@ text: If Russia, as it claims, is not conducting a war but rather a so-called â€
   commitments and treaties.
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement27
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-25T00:00:00Z'
 ingested_at: '2026-07-07T00:22:40Z'

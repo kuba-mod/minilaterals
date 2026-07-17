@@ -25,5 +25,7 @@ text: 'The participants walked from the Copernicus Science Centre to the Asia an
   is a political and economic organisation based in Jakarta.'
 source_url: https://www.gov.pl/web/diplomacy/asiaeurope-friendship-walk-in-warsawtaking-a-step-towards-closer-relations-with-asia
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-28T00:00:00Z'
 ingested_at: '2026-05-14T22:27:36Z'

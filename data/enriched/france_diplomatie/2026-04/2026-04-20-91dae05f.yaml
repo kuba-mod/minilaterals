@@ -35,3 +35,7 @@ extracted:
         support programs as a key financing modality to enhance macroeconomic stability
         and ensure the efficient allocation of resources in line with national development
         objectives.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

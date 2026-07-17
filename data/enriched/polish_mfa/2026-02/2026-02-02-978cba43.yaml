@@ -57,3 +57,7 @@ extracted:
       evidence: The ministers stressed the strategic importance of Polish–Ukrainian
         partnership and Poland’s role as a key ally of Ukraine—both in the security
         context and as a provider of humanitarian, military, and logistical support.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

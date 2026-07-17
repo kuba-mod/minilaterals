@@ -34,3 +34,7 @@ extracted:
       evidence: France will continue to stand with the people of Ukraine and to lend
         its support to the essential efforts of international justice to ensure that
         those responsible for all the crimes committed in Ukraine are held accountable.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -39,3 +39,7 @@ extracted:
       score: 1
       evidence: The two states agree that the terms of ending the war must be in line
         with international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

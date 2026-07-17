@@ -21,3 +21,7 @@ extracted:
       score: 2
       evidence: The agenda focused on a draft Convention on Prevention and Punishment
         of Crimes Against Humanity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

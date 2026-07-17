@@ -45,3 +45,7 @@ extracted:
       score: 1
       evidence: Be it for the future of our energy supply, such as hydrogen production,
         safeguarding critical supply chains and the supply of raw materials
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

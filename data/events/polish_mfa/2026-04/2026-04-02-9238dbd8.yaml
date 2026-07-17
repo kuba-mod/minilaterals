@@ -11,5 +11,7 @@ text: Led by the UK’s Foreign Secretary Yvette Cooper, the gathering discussed
   the pressure on the Kremlin must be increased, including through ever harsher sanctions.
 source_url: https://www.gov.pl/web/diplomacy/polands-top-diplomat-takes-part-in-meeting-on-middle-east-situation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-02T00:00:00Z'
 ingested_at: '2026-05-14T22:27:09Z'

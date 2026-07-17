@@ -151,5 +151,7 @@ text: 'Mr Wadephul, what is conservative foreign policy? It’s good foreign pol
   Böhmer, Thorsten Jungholt'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/interview-wams-2770946
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-16T00:00:00Z'
 ingested_at: '2026-07-07T08:03:13Z'

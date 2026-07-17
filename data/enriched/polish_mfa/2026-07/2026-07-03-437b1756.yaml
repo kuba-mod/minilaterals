@@ -44,3 +44,7 @@ extracted:
       score: 1
       evidence: the ministers stressed their shared willingness to develop tools that
         foster historical dialogue based on truth and mutual respect for the past
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

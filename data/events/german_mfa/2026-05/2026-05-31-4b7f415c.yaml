@@ -25,5 +25,7 @@ text: Foreign Minister Wadephul issued the following statement on 31 May 2026 on
   must not further undermine this peace process.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2773682-2773682
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-31T00:00:00Z'
 ingested_at: '2026-07-07T08:03:05Z'

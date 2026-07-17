@@ -23,3 +23,7 @@ extracted:
       score: 2
       evidence: respect of international law and humanitarian principles, territorial
         integrity, respect of the fundamental rights of Palestinians
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

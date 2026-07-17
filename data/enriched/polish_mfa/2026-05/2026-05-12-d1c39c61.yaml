@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: the diplomats emphasised the need to de-escalate tensions and the
         importance of dialogue and respect for international law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

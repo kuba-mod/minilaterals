@@ -18,5 +18,7 @@ text: On World Refugee Day, 20 June, France reaffirms its solidarity with those 
   and Ukraine, as well as in supporting Afghan refugee women.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nations-unies-journee-mondiale-des-refugies
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-20T00:00:00Z'
 ingested_at: '2026-07-03T09:26:39Z'

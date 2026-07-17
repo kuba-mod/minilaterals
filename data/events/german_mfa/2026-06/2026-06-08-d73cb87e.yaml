@@ -71,5 +71,7 @@ text: The third Security Policy Consultations between the Foreign and Defence Mi
   system, including the World Trade Organization and the G20.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2774490-2774490
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-08T15:39:25Z'
 ingested_at: '2026-07-03T09:26:23Z'

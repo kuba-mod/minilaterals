@@ -53,5 +53,7 @@ text: 'Energy systems are vulnerable – including in Germany and Europe. Sighti
   .'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2772354-2772354
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-19T00:00:00Z'
 ingested_at: '2026-07-07T08:03:12Z'

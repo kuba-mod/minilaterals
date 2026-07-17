@@ -48,5 +48,7 @@ text: 'Users can log in to Odyseusz using mObywatel, the Trusted Profile (Profil
   your trip does.'
 source_url: https://www.gov.pl/web/diplomacy/odyseusz-now-available-in-mobywatel-app-to-make-travel-registration-even-simpler
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-02T00:00:00Z'
 ingested_at: '2026-07-04T10:53:46Z'

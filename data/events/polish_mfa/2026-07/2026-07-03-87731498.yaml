@@ -11,5 +11,7 @@ text: The talks confirmed mutual interest in the further development of politica
   ministers, to be held in November.
 source_url: https://www.gov.pl/web/diplomacy/undersecretary-of-state-wojciech-zajaczkowski-meets-with-minister-from-honduras
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-03T00:00:00Z'
 ingested_at: '2026-07-07T00:21:59Z'

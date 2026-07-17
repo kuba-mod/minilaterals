@@ -87,5 +87,7 @@ text: 'These last two weeks, I spent more time in New York than here in Berlin. 
   for being here today. I look forward to our conversations.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2774502-2774502
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-08T17:45:00Z'
 ingested_at: '2026-07-03T09:26:23Z'

@@ -13,5 +13,7 @@ text: MFA Secretary of State Marcin Bosacki expressed profound dissatisfaction w
   require maturity and commitment to dialogue on both sides.​
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement28
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T00:22:31Z'

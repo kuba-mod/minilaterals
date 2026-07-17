@@ -25,5 +25,7 @@ text: 'Discussions centred on the Council of Europe’s support for Ukraine and 
   discussion titled “Current Migration Challenges.”'
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-artur-harazim-takes-part-in-council-of-europe-ministerial-session
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-15T00:00:00Z'
 ingested_at: '2026-07-07T00:22:52Z'

@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: reaffirmed France’s solidarity with the Kingdom of Saudi Arabia in
         this context and its readiness to contribute to its defence
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

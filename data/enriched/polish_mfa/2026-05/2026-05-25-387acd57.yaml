@@ -22,3 +22,7 @@ extracted:
       evidence: The actions of the Russian Federation carry serious consequences under
         international law, once again undermining its role as a permanent member of
         the UN Security Council.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

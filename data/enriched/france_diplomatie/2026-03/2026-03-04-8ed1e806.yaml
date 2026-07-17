@@ -19,3 +19,7 @@ extracted:
     rule_of_law:
       score: 2
       evidence: We condemn this crime in the strongest possible terms.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -8,5 +8,7 @@ text: France is deeply saddened following the gas explosion at the Liushenyu coa
   with the Chinese authorities and people in this ordeal.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/chine-accident-minier-dans-la-province-du-shanxi
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-23T00:00:00Z'
 ingested_at: '2026-07-07T00:20:52Z'

@@ -31,3 +31,7 @@ extracted:
         fight drug trafficking and illicit trafficking of firearms, ammunition and
         explosives, which fuel violence and undermine the rule of law, economic development
         and democracy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

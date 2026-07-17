@@ -121,5 +121,7 @@ text: We, the Leaders of the G7, reaffirm our commitment to international cooper
   of views with partner countries.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-des-chefs-d-etat-et-de-gouvernement-du-g7-sur-des-partenariats-internationaux
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-16T22:47:37Z'

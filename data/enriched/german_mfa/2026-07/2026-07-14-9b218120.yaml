@@ -38,3 +38,7 @@ extracted:
       score: 1
       evidence: We can best tackle them together. This holds true for peace and security,
         but also for climate change
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

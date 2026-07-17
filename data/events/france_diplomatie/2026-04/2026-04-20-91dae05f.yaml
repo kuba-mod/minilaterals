@@ -114,5 +114,7 @@ text: On 20 April 2026, the first strategic dialogue between France and the Arab
   2027 in France.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/communique-conjoint-publie-a-l-issue-du-premier-dialogue-strategique-franco-egyptien
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-20T00:00:00Z'
 ingested_at: '2026-05-14T21:09:48Z'

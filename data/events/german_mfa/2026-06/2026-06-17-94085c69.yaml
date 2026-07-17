@@ -92,5 +92,7 @@ text: 'Gaude Mater Polonia – Rejoice, Oh Mother Poland. This hymn in praise of
   our two countries, between our two capitals.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775490-2775490
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-17T10:56:29Z'
 ingested_at: '2026-07-03T09:26:23Z'

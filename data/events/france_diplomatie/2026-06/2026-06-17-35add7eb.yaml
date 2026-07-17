@@ -59,5 +59,7 @@ text: We, the Leaders of the G7, stand united in our unwavering support for Ukra
   the G20 under the United States’ host year and in other relevant fora.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-des-chefs-d-etat-et-de-gouvernement-du-g7-sur-les-questions-geopolitiques
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-07T07:35:57Z'

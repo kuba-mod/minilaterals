@@ -34,5 +34,7 @@ text: 'The date, 20 April, is by no means accidental. It marks the anniversary o
   prelude to the Poland–France Cultural Season scheduled for 2027.'
 source_url: https://www.gov.pl/web/diplomacy/poland-and-france-open-a-new-chapter-the-first-friendship-day
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:03Z'

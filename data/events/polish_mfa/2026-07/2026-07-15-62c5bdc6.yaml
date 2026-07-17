@@ -57,5 +57,7 @@ text: I am grateful to be invited, and I am really moved by being here because R
   at the Ronald Reagan Presidential Library
 source_url: https://www.gov.pl/web/diplomacy/speech-by-deputy-prime-minister-and-minister-of-foreign-affairs-radoslaw-sikorski-at-the-ronald-reagan-presidential-library
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-15T00:00:00Z'
 ingested_at: '2026-07-16T03:59:38Z'

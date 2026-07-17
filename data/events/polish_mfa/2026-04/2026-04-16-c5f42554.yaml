@@ -24,5 +24,7 @@ text: Discussions focused on the current situation on the Korean Peninsula and i
   will be organized by Switzerland.
 source_url: https://www.gov.pl/web/diplomacy/capital-level-consultations-of-the-neutral-nations-supervisory-commission
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:02Z'

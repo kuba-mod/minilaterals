@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: We are both committed to a rules-based international order, to international
         law and to multilateralism.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

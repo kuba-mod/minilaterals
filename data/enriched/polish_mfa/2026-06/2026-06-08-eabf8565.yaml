@@ -29,3 +29,7 @@ extracted:
       score: 2
       evidence: The law cannot lag behind technology—it must provide a concrete response
         to the full spectrum of contemporary digital threats.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -51,3 +51,7 @@ extracted:
       evidence: Our overarching goal is to protect European values, including the
         rule of law and transparent electoral processes, and to secure a just and
         lasting peace in Ukraine that would strengthen Europe’s security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

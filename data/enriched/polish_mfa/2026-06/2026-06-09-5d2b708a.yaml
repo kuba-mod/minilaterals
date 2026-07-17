@@ -39,3 +39,7 @@ extracted:
       evidence: a joint effort of the whole European community is required to build
         resilience to Russian and Belarusian disinformation-related and other hybrid
         operations.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

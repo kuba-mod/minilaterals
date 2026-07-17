@@ -25,3 +25,7 @@ extracted:
         a major step forward and will help increase the effectiveness of cooperation
         in the fight against illicit cross-border activities, in particular illegal
         gold mining.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

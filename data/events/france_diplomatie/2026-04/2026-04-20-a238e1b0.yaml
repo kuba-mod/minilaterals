@@ -16,5 +16,7 @@ text: Today, on the first ever French-Polish Friendship Day, France applauds the
   and Science will likewise be lit up.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/pologne-20-avril-journee-d-amitie-franco-polonaise
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-20T00:00:00Z'
 ingested_at: '2026-05-14T21:09:44Z'

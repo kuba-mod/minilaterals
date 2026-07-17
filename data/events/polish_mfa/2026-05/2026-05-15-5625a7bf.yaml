@@ -40,5 +40,7 @@ text: 'The Congress was held at the Polish History Museum in Warsaw on 14–15 M
   Province. Photo: The Congress of Polish Architecture'
 source_url: https://www.gov.pl/web/diplomacy/head-of-foreign-service-and-director-general-henryka-moscicka-dendys-takes-part-in-polish-architecture-congress
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-15T00:00:00Z'
 ingested_at: '2026-07-07T00:22:51Z'

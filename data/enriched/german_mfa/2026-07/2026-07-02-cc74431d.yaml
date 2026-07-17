@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: it demonstrates that we will stand together as democracies committed
         to the rule of law and unite our societies that are built on the same values.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

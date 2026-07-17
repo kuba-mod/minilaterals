@@ -16,5 +16,7 @@ text: Article 18 of the Universal Declaration of Human Rights, adopted by the Un
   discrimination in the world.
 source_url: https://www.gov.pl/web/diplomacy/statement-mfa
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-07T00:00:00Z'
 ingested_at: '2026-05-13T21:18:41Z'

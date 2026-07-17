@@ -23,3 +23,7 @@ extracted:
       evidence: reaffirmed France’s unwavering solidarity with the United Arab Emirates
         under our bilateral defence agreement, and our willingness to participate
         in their defence
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

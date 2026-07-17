@@ -23,3 +23,7 @@ extracted:
       evidence: We firmly condemn any violence against humanitarian workers and civilian
         populations, which may constitute war crimes, and urge the parties to respect
         international humanitarian law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

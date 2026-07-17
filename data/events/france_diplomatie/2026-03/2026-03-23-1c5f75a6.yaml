@@ -22,5 +22,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeti
   and Bosnia and Herzegovina.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/bosnie-herzegovine-entretien-du-ministre-avec-m-elmedin-konakovic-ministre-des-affaires-etrangeres
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-23T00:00:00Z'
 ingested_at: '2026-05-14T21:10:29Z'

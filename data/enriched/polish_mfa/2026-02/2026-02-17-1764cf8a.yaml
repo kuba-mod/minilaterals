@@ -34,3 +34,7 @@ extracted:
       score: 2
       evidence: In the Poland–France Cultural Season 2027, European values are not
         merely declared but experienced and co-created.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

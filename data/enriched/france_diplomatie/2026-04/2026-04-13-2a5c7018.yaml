@@ -42,3 +42,7 @@ extracted:
       evidence: They also agreed on the need to restore the freedom of navigation
         in the Strait of Hormuz, in accordance with the Law of the Sea, and to include
         Lebanon in the terms of the U.S.-Iran ceasefire.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

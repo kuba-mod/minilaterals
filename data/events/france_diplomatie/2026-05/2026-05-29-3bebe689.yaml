@@ -14,5 +14,7 @@ text: France condemns in the strongest possible terms the unacceptable incursion
   deterrence and defense posture.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/roumanie-incursions-de-drones-russes-dans-l-espace-aerien-roumain
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T00:20:34Z'

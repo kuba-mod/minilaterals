@@ -24,3 +24,7 @@ extracted:
       score: 1
       evidence: The interlocutors saw a great potential in expanding cooperation in
         the defence, copper mining and mining technologies, and cybersecurity sectors.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

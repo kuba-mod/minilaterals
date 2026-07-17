@@ -17,5 +17,7 @@ text: Informal talks of EU member states’ top diplomats were held to exchange 
   Kallas on developments in the Middle East delivered on behalf of the EU.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-attends-informal-video-conference-of-eu-foreign-ministers-on-situation-in-the-middle-east
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-01T00:00:00Z'
 ingested_at: '2026-05-14T22:27:35Z'

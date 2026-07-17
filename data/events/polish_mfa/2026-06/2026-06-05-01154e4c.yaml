@@ -14,5 +14,7 @@ text: Minister Bosacki presented Poland’s position, emphasising that the Ukrai
   aggression against Ukraine.
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-marcin-bosacki-meets-head-of-zelenskyys-office-kyrylo-budanov
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-05T00:00:00Z'
 ingested_at: '2026-07-07T00:22:21Z'

@@ -42,3 +42,7 @@ extracted:
       evidence: Deputy Prime Minister Radosław Sikorski strongly condemned Iran’s
         attacks on states which are not parties to the conflict, including on civilian
         infrastructure.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

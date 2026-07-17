@@ -59,5 +59,7 @@ text: 'Germany and Syria are indeed linked by a special relationship. During the
   Syria. For more information: www.bundesregierung.de'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775130-2775130
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-15T08:35:50Z'
 ingested_at: '2026-07-03T09:26:23Z'

@@ -29,5 +29,7 @@ text: 'Deputy Prime Minister Sikorski emphasised Poland’s unwavering support f
   real progress in its work.'
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-top-diplomats-of-poland-and-palestine2
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-20T00:00:00Z'
 ingested_at: '2026-05-14T22:27:40Z'

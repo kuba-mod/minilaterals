@@ -135,6 +135,15 @@
     SHA-256 hash of the source URL and title, providing automatic deduplication.
     The full history is auditable via git log.
   </p>
+  <p>
+    Every file also records <em>how</em> it was produced, so a native-language item is never
+    mistaken for an English fallback. Each raw event carries <code>collection</code>
+    (<code>native</code> or <code>fallback</code>) and <code>collection_method</code>
+    (<code>rss</code>, <code>html</code>, or a Wayback backfill); each enriched sidecar carries
+    <code>enriched_by</code> — the <code>model_id</code>, the <code>prompt_version</code> that
+    produced its ratings, and whether it was enriched locally or in GitHub Actions. Values on
+    data collected before this tracking was added are reconstructed from git history.
+  </p>
 
   <span class="label">Corrections policy</span>
   <p>

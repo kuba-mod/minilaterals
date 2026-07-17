@@ -19,3 +19,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: in defiance of the Iranian people’s fundamental rights
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

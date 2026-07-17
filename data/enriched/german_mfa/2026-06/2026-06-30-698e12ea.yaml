@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: At a time when democracies are coming under pressure both from within
         and from outside.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

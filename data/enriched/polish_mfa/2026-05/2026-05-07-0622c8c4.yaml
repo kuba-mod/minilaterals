@@ -13,3 +13,7 @@ extracted:
     incidents involving Israeli representatives that violate Christian sentiments.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

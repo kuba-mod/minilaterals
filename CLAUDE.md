@@ -74,7 +74,14 @@ Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` side
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
+- `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py` — **bump it when the prompts change** so ratings stay traceable to the prompt that produced them
 - `_file_path` — added at load time by `render.py` (not stored in YAML)
+
+Provenance fields on the **raw** event YAML (set by the ingester in `base.py`, not LLM-derived):
+- `collection` — `native` or `fallback`; auto-derived in `Event.save()` from `source_lang` vs the source's `NATIVE_LANG` (so an English item from an MFA is `fallback`; see design principle #9)
+- `collection_method` — the fetch mechanism: `rss`, `html`, `wayback` (and `backfill` on legacy seed data whose per-item mechanism wasn't recorded)
+
+Both raw and enriched provenance fields are Optional in the schemas so pre-provenance data still validates; the one-off `pipeline.migrate_provenance` backfilled the existing tree by reconstructing values from git history (adding-commit → method, last-author → local/CI).
 
 ## Relevance classification (`enrich.py`)
 

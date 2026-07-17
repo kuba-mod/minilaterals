@@ -28,3 +28,7 @@ extracted:
         tracing, infection prevention and control, quarantine and isolation practices,
         laboratory testing, cross-border preparedness, border surveillance and community
         engagement.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

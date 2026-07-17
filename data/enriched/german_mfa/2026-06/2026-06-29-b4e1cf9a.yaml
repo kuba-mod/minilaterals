@@ -39,3 +39,7 @@ extracted:
       score: 1
       evidence: The more that global supply chains are impacted by trade conflicts
         and crises, the more economically strong, diverse and resilient we must become.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

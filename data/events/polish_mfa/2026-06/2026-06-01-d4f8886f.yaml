@@ -53,5 +53,7 @@ text: 'In Barcelona, the foreign ministers discussed European security, most of 
   the invitees.'
 source_url: https://www.gov.pl/web/diplomacy/geopolitical-challenges-discussed-in-barcelona
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-01T00:00:00Z'
 ingested_at: '2026-07-07T00:22:28Z'

@@ -15,5 +15,7 @@ text: Minister for Europe and Foreign Affairs Jean-Noël Barrot hosted his Norwe
   the Law of the Sea, and to include Lebanon in the terms of the U.S.-Iran ceasefire.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/entretien-de-jean-noel-barrot-avec-espen-barth-eide-ministre-norvegien-des-affaires-etrangeres
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-13T00:00:00Z'
 ingested_at: '2026-05-14T21:10:00Z'

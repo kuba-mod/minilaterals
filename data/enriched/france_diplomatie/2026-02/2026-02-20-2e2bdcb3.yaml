@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: they signalled their joint commitment to compliance with international
         law, effective multilateralism and Francophonie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

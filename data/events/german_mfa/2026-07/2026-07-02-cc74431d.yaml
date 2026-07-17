@@ -66,5 +66,7 @@ text: 'all the more so since I actually intended to come to Brazil in early Marc
   I want to hear how you think it can be still be improved in future.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776816-2776816
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-07-02T16:34:45Z'
 ingested_at: '2026-07-04T10:53:15Z'

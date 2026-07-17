@@ -14,5 +14,7 @@ text: The Minister for Europe and Foreign Affairs spoke to the Deputy Prime Mini
   sovereignty over Matthew and Hunter Islands.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/vanuatu-entretien-de-jean-noel-barrot-avec-johnny-koanapo-vice-premier-ministre-de-la-republique-du
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-02T00:00:00Z'
 ingested_at: '2026-07-03T09:26:30Z'

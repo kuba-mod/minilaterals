@@ -44,3 +44,7 @@ extracted:
       evidence: the Henrik Enderlein Prize is an expression of France’s and Germany’s
         shared commitment to intellectual excellence, democratic dialogue and the
         strengthening of a more united and resilient Europe.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

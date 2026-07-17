@@ -39,3 +39,7 @@ extracted:
       evidence: The project aims to present reliable information on political, social,
         and economic events from the European perspective and support the process
         of democratisation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

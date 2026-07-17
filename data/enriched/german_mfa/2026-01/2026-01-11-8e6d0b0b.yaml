@@ -40,3 +40,7 @@ extracted:
       score: 1
       evidence: For Germany, dependability as an international partner thus very clearly
         includes a commitment to international law and international cooperation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

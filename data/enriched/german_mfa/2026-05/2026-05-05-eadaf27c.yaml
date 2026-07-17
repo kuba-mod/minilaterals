@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: We are convinced that we now need the cooperation of the international
         community to alleviate the war’s consequences more than ever before.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

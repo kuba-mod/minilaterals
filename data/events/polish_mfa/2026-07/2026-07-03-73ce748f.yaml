@@ -22,5 +22,7 @@ text: Deputy Prime Minister Radosław Sikorski expressed his hope for giving bil
   visit is the first stop on the Mozambican foreign minister’s European tour.
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-top-diplomats-of-poland-and-mozambique
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-03T00:00:00Z'
 ingested_at: '2026-07-04T10:53:44Z'

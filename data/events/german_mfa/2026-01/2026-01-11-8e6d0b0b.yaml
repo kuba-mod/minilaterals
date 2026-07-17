@@ -41,5 +41,7 @@ text: 'Foreign Minister Johann Wadephul issued the following statement prior to 
   meet the Secretary-General of the United Nations Antonio Guterres in New York.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/wadephul-iceland-usa-2751728
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-01-11T11:00:00Z'
 ingested_at: '2026-07-16T22:38:10Z'

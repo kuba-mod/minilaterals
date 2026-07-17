@@ -31,3 +31,7 @@ extracted:
       evidence: Given that Moscow is benefitting from destabilisation in the Gulf
         region, the pressure on the Kremlin must be increased, including through ever
         harsher sanctions.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -38,3 +38,7 @@ extracted:
       score: 1
       evidence: Our relations are crucial for improving the security in the region
         and in Europe as a whole
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

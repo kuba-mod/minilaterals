@@ -14,3 +14,7 @@ extracted:
     the Middle East, while also discussing G7 priorities.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

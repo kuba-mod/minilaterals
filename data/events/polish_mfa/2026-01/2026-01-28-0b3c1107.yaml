@@ -23,5 +23,7 @@ text: In Nuuk, the ambassador met with members of the Government of Greenland, i
   Sapkowski, and Remigiusz Mróz, which are now available to the local readers.
 source_url: https://www.gov.pl/web/diplomacy/polish-ambassador-to-denmark-visits-greenland
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-28T00:00:00Z'
 ingested_at: '2026-05-14T22:27:54Z'

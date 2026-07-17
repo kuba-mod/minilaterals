@@ -21,3 +21,7 @@ extracted:
       score: 2
       evidence: Combating the activity of the clunker fleet is one of the priorities
         of Polish and EU foreign policy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

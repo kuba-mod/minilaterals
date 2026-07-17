@@ -33,5 +33,7 @@ text: 'The ministers discussed fundamental issues in the further development of 
   carried out to the benefit of people living in Poland and Czechia.'
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-top-diplomats-of-poland-and-czechia
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:45Z'

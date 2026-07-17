@@ -27,3 +27,7 @@ extracted:
       evidence: We are united in our determination to promote accountability for all
         violations of international humanitarian law and international human rights
         law committed by all parties to the conflict.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

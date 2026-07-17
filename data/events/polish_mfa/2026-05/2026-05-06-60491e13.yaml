@@ -31,5 +31,7 @@ text: 'Deputy Prime Minister Sikorski lauded the Bene Merito awardee Ewa Ośniec
   society is built.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-speaks-at-college-of-europe-in-natolin
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-06T00:00:00Z'
 ingested_at: '2026-05-13T21:18:42Z'

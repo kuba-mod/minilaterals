@@ -29,3 +29,7 @@ extracted:
       evidence: the destruction of any part of Ukraine’s heritage is a violation of
         the 1972 Convention concerning the Protection of the World Cultural and Natural
         Heritage.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

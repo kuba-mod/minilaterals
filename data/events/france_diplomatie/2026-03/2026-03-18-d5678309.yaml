@@ -10,5 +10,7 @@ text: France strongly condemns the March 16th air strike on a Kabul hospital tha
   with United Nations Security Council resolution 2593.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/afghanistan-frappe-contre-un-hopital-de-kaboul
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-18T00:00:00Z'
 ingested_at: '2026-05-14T21:10:34Z'

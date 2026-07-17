@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: Both sides emphasised that Poland and the UAE share their respect
         for the paramount role of international law in relations between countries
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

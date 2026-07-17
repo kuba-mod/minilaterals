@@ -13,5 +13,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, spoke to Mm
   shadow fleet.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/entretien-du-ministre-jean-noel-barrot-avec-kaja-kallas-haute-representante-de-l-union-europeenne
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-26T00:00:00Z'
 ingested_at: '2026-05-14T21:10:21Z'

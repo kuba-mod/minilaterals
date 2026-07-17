@@ -28,3 +28,7 @@ extracted:
       score: 2
       evidence: The deliberate targeting of journalists, where established, constitutes
         a war crime.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

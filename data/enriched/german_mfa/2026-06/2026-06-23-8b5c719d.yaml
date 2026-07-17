@@ -23,3 +23,7 @@ extracted:
       evidence: We must invest, produce, carry out research and training together
         with partners around the world. This means, among other things, playing by
         shared rules.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

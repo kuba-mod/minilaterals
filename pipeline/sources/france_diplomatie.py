@@ -97,6 +97,7 @@ class FranceDiplomatieIngester(BaseIngester):
                 text=summary,
                 source_url=url,
                 source_lang="fr",
+                collection_method="rss",
                 source_published_at=published_at,
                 date=date,
             )
@@ -148,6 +149,7 @@ class FranceDiplomatieIngester(BaseIngester):
                     text=summary,
                     source_url=item_url,
                     source_lang="en",
+                    collection_method="html",
                     source_published_at=published_at,
                     date=date,
                 )

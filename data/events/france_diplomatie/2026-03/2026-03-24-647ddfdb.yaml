@@ -20,5 +20,7 @@ text: On Tuesday 10 February, following the US Department of Justice’s publica
   are also being considered.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/epstein-files-situation-de-fabrice-aidan
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-24T00:00:00Z'
 ingested_at: '2026-05-14T21:10:28Z'

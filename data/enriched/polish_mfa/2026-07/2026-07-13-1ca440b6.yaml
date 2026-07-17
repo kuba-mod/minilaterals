@@ -22,3 +22,7 @@ extracted:
       evidence: We fully support the European Union's decision to adopt, in response
         to Russia’s malicious cyber activities, restrictive measures in the form of
         cybersanctions.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

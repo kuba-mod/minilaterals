@@ -20,5 +20,7 @@ text: Poland and the United Kingdom are linked by strategic political cooperatio
   component in shaping Poland’s foreign policy.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-visits-london
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-19T00:00:00Z'
 ingested_at: '2026-07-03T09:26:47Z'

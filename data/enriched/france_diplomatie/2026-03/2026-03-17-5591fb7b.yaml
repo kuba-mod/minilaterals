@@ -35,3 +35,7 @@ extracted:
         adversaries targeting us in cyberspace to pay the price, together with our
         partners and in accordance with the UN Framework of Responsible State Behavior
         in Cyberspace.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

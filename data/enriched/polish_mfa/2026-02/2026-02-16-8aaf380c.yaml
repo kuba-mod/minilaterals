@@ -48,3 +48,7 @@ extracted:
       score: 1
       evidence: The issue can be resolved by way of a joint flood control or other
         project carried out to the benefit of people living in Poland and Czechia.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

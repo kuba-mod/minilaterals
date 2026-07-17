@@ -74,5 +74,7 @@ text: 1. We, the Trade Ministers of the Group of Seven (G7), met in Paris on May
   Summit.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/communique-de-presse-des-ministres-du-commerce-du-g7
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T21:18:32Z'
 ingested_at: '2026-05-13T21:18:34Z'

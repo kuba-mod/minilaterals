@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: This step will strengthen and deepen our partnership in the transatlantic
         alliance for the long term.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

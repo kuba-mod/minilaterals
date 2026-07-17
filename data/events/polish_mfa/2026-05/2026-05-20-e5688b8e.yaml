@@ -22,5 +22,7 @@ text: Respecting international law, including international law of the sea and i
   do so at their own risk and the decision may have unforeseeable consequences.
 source_url: https://www.gov.pl/web/diplomacy/mfa-statement25
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-20T00:00:00Z'
 ingested_at: '2026-07-07T00:22:48Z'

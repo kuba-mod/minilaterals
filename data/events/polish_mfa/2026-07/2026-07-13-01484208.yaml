@@ -42,5 +42,7 @@ text: 'Necessary energy support for Ukraine and increasing pressure on the Kreml
   the EU’s engagement in Lebanon, including setting up a new EU mission.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-urges-to-adopt-21st-sanctions-package-against-kremlin-at-foreign-affairs-council-fac-brussels
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-13T00:00:00Z'
 ingested_at: '2026-07-15T03:57:11Z'

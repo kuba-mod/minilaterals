@@ -42,3 +42,7 @@ extracted:
       evidence: Minister Sikorski made a point about the stability of the Polish energy
         sector, obtained through diversification, departure from Russian energy sources,
         and the safeguarding of reserves.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

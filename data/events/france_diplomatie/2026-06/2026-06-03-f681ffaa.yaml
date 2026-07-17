@@ -21,5 +21,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeti
   fight against anti-Semitism.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/argentine-entretien-de-jean-noel-barrot-avec-m-pablo-quirno-ministre-des-relations-exterieures-du
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-03T00:00:00Z'
 ingested_at: '2026-07-07T00:20:22Z'

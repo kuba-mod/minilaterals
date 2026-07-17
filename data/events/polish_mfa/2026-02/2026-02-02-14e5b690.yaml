@@ -39,5 +39,7 @@ text: 'During the Conference, in a panel co hosted with Norway’s Foreign Minis
   the Polish Community and Poles Abroad, including in regard to returns to the country.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-and-foreign-minister-radoslaw-sikorski-visits-kingdom-of-norway
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-02T00:00:00Z'
 ingested_at: '2026-05-14T22:27:51Z'

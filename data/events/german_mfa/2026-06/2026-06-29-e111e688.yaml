@@ -85,5 +85,7 @@ text: 'Mr Wadephul, the industrial sector in the Bergisches Land region is parti
   to be there in the later stages.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775892-2775892
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-06-29T00:00:00Z'
 ingested_at: '2026-07-07T08:03:03Z'

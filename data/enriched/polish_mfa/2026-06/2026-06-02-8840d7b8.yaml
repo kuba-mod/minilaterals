@@ -49,3 +49,7 @@ extracted:
         General for International Economic Affairs Dimitris Skalkos to inaugurate
         a seminar on Energy Security and Critical Infrastructure in the Baltic and
         Mediterranean Maritime Space—Mutual Risk, Mutual Resilience.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

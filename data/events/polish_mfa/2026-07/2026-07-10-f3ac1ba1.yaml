@@ -61,5 +61,7 @@ text: The Conference was officially launched on 5 July with a gathering of Polan
   with Polish entrepreneurs.
 source_url: https://www.gov.pl/web/diplomacy/summary-of-polands-heads-of-missions-conference
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-10T00:00:00Z'
 ingested_at: '2026-07-16T03:59:42Z'

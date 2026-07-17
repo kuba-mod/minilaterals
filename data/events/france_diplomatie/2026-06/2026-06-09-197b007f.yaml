@@ -27,5 +27,7 @@ text: Ahead of the 12 June conference bringing together Israeli and Palestinian 
   all initiatives contributing to peace, dialogue and co-existence.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/entretien-du-ministre-avec-le-cardinal-pizzaballa-patriarche-latin-de-jerusalem
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-09T00:00:00Z'
 ingested_at: '2026-07-07T00:19:43Z'

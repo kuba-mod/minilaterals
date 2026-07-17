@@ -30,3 +30,7 @@ extracted:
       evidence: Access to independent media is crucial in the face of Russia’s attempts
         at influencing the democratic processes in Moldova, as evidenced during the
         2024 presidential vote and the 2025 parliamentary election in the country.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

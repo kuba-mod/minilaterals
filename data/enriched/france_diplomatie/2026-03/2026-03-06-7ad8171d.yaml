@@ -54,3 +54,7 @@ extracted:
       evidence: The visit also confirmed the two countries’ commitment to work for
         a more competitive, sovereign and resilient European Union, particularly as
         far as digital technology and supply chains are concerned.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

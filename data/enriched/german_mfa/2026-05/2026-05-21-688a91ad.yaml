@@ -56,3 +56,7 @@ extracted:
       score: 1
       evidence: With the countries in the region, we are focusing our efforts on ensuring
         free and safe passage without charge for all ships
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

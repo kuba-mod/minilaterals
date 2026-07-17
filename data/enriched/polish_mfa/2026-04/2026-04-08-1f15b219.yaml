@@ -24,3 +24,7 @@ extracted:
       evidence: The agreement should also include stabilization and the guarantees
         of Lebanon's territorial integrity, as one of the conditions for achieving
         peace in the Middle East.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

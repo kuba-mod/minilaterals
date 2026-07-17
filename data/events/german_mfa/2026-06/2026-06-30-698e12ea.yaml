@@ -71,5 +71,7 @@ text: 'Ladies and gentlemen, esteemed guests, Ambassador, Mr Lamlé, Allow me fi
   you.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2776644-2776644
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-30T21:30:00Z'
 ingested_at: '2026-07-03T09:26:23Z'

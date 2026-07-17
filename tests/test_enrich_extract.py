@@ -18,9 +18,10 @@ from pipeline import enrich
 class FakeProvider:
     """Returns canned responses in sequence; records prompts it was called with."""
 
-    def __init__(self, responses: list[str]):
+    def __init__(self, responses: list[str], model: str = "fake-model:test"):
         self._responses = list(responses)
         self.prompts: list[str] = []
+        self.model = model
 
     def call(self, prompt: str) -> str:
         self.prompts.append(prompt)
@@ -93,6 +94,14 @@ def test_extract_writes_enriched_sidecar(data_tree):
     assert written["issue_areas"] == ["ukraine"]
     assert written["actors"] == ["DE"]
     assert written["weimar_relevant"] is True
+    # Enrichment provenance is stamped: which model, prompt revision, and env.
+    # (environment is asserted via the detector so this passes both locally and
+    # in GitHub Actions, where GITHUB_ACTIONS flips it to "github_actions".)
+    assert written["enriched_by"] == {
+        "model_id": "fake-model:test",
+        "prompt_version": enrich.PROMPT_VERSION,
+        "environment": enrich._environment(),
+    }
 
 
 def test_extract_fails_when_topic_has_no_dict_entry(data_tree):

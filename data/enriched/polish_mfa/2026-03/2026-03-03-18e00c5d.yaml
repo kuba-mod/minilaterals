@@ -56,3 +56,7 @@ extracted:
       score: 1
       evidence: In this context, they called on all parties to exercise restraint,
         observe international law, and ensure the protection of civilians.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

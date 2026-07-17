@@ -42,3 +42,7 @@ extracted:
       evidence: At a time when relations between Warsaw and Berlin face new animosity,
         this visit aims to send a clear message about the friendship and ties between
         our countries
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

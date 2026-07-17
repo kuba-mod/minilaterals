@@ -30,3 +30,7 @@ extracted:
       evidence: No military aim can justify such atrocities, which constitute further
         deliberate breaches by Russia of its obligation to respect international humanitarian
         law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

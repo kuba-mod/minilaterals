@@ -15,5 +15,7 @@ text: France and the United States convened a French -U.S. Deterrence, Strategic
   and prepare annual talks.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/premiere-edition-du-dialogue-franco-americain-sur-la-dissuasion-la-stabilite-strategique-et-la-non
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-11T00:00:00Z'
 ingested_at: '2026-05-14T21:10:45Z'

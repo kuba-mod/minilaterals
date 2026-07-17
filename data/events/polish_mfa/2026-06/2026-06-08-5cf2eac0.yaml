@@ -17,5 +17,7 @@ text: The meeting was devoted, among other things, to the activities of the "Via
   to Lithuania. After the release, he continues his pro-democracy activities.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-and-minister-of-foreign-affairs-radoslaw-sikorski-met-with-ales-bialatski
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-08T00:00:00Z'
 ingested_at: '2026-07-07T00:22:19Z'

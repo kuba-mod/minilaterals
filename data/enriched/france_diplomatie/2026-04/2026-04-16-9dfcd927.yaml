@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: expressed their concern over developments in the Middle East, particularly
         in Lebanon
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

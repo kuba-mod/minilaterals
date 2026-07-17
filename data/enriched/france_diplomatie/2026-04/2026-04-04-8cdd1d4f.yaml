@@ -21,3 +21,7 @@ extracted:
       evidence: We particularly regret the fact that M. Chan’s defence had no access
         to the final court hearing, which constitutes a violation of the rights of
         the interested party.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

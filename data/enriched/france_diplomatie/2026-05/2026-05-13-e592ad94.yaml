@@ -25,3 +25,7 @@ extracted:
         in particular capacity-building for States and the development of a criminal
         justice system rooted in the rule of law and respect for human rights, which
         are an integral part of preventing violent extremism.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

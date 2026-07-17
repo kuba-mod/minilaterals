@@ -31,5 +31,7 @@ text: During the Paris meeting, the Weimar Triangle foreign ministers, Radosław
   policy issues.
 source_url: https://www.gov.pl/web/diplomacy/meeting-of-weimar-triangle-and-india-foreign-ministers
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-07T00:00:00Z'
 ingested_at: '2026-05-14T22:28:02Z'

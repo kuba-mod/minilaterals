@@ -20,5 +20,7 @@ text: Deputy Minister Harazim and Secretary-General Briens welcomed the results 
   ever-closer cooperation between the Polish and French foreign ministries.
 source_url: https://www.gov.pl/web/diplomacy/polishfrench-consultations-in-warsaw
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-30T00:00:00Z'
 ingested_at: '2026-07-03T09:26:43Z'

@@ -9,5 +9,7 @@ text: Jean-Noël Barrot spoke by phone with his Malaysian counterpart, Mohamad H
   defense, hybrid threats and critical minerals.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/malaisie-entretien-de-jean-noel-barrot-avec-son-homologue
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-09T00:00:00Z'
 ingested_at: '2026-05-14T21:11:20Z'

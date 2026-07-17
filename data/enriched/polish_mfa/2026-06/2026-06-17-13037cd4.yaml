@@ -45,3 +45,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: What matters is that we are able to discuss them openly.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

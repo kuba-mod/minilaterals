@@ -26,5 +26,7 @@ text: The ministers gave a positive assessment of bilateral relations, noting th
   approach to the key challenges facing Europe and the North Atlantic Alliance today.
 source_url: https://www.gov.pl/web/diplomacy/polish-and-north-macedonian-foreign-ministers-discuss-security-nato-and-eu-enlargement
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-25T00:00:00Z'
 ingested_at: '2026-05-14T22:27:14Z'

@@ -75,5 +75,7 @@ text: The signing of the Treaty on Good-Neighbourliness, Friendship and Cooperat
   as a whole.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2775352-2775352
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-06-17T10:32:09Z'
 ingested_at: '2026-07-03T09:26:23Z'

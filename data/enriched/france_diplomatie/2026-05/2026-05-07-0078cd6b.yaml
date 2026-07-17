@@ -22,3 +22,7 @@ extracted:
       score: 2
       evidence: France stands by the Iranian people, who must be able to exercise
         their fundamental rights and freely choose their destiny.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

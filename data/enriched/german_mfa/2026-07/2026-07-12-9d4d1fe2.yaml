@@ -24,3 +24,7 @@ extracted:
         and overflight, including the right of transit passage, as essential to regional
         stability, global security, and the maintenance of safe, free and open sea
         routes.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -18,5 +18,7 @@ text: France has delivered 20 tons of aid to the Democratic Republic of the Cong
   It also thanks Association Tulipe for its generous donations of medicines.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/epidemie-d-ebola-soutien-a-la-republique-democratique-du-congo-rdc
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-08T00:00:00Z'
 ingested_at: '2026-07-09T09:58:03Z'

@@ -25,5 +25,7 @@ text: 'The Treaty signed in Nancy on 9 May 2025 by French President Emmanuel Mac
   support.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-henryka-moscicka-dendys-takes-part-in-polish-french-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-23T00:00:00Z'
 ingested_at: '2026-05-14T22:27:56Z'

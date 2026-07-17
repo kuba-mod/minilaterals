@@ -42,5 +42,7 @@ text: We are deeply concerned about a recent series of backward steps going agai
   Kingdom, as well as the European Union.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/declaration-commune-de-41-membres-du-groupe-de-travail-interregional-pour-un-moratoire-sur-la-peine
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-21T00:00:00Z'
 ingested_at: '2026-07-07T00:21:02Z'

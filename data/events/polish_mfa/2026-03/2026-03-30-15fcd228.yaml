@@ -19,5 +19,7 @@ text: The project’s mission is also to increase the public’s resilience to m
   YouTube and Facebook.
 source_url: https://www.gov.pl/web/diplomacy/new-armenian-language-service-vt-hayastan-news-launched-in-response-to-disinformation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-30T00:00:00Z'
 ingested_at: '2026-05-14T22:27:11Z'

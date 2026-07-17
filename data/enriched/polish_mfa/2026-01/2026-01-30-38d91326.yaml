@@ -23,3 +23,7 @@ extracted:
       evidence: Minister Sikorski thanked Minister Bettel for his engagement in promoting
         European values, including measures against discrimination and initiatives
         fostering respect for the principles of equality and human dignity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

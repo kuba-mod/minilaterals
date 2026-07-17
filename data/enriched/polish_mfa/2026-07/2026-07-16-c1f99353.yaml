@@ -37,3 +37,7 @@ extracted:
       score: 1
       evidence: the consequences of Russian disinformation campaigns, and ways to
         counter them
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

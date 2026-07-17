@@ -14,5 +14,7 @@ text: France welcomes the appointment on Tuesday 5 May 2026 of the French candid
   part of preventing violent extremism.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nomination-de-m-naoufel-gaied-au-poste-de-directeur-executif-de-l-institut-international-pour-la
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T21:18:24Z'
 ingested_at: '2026-05-13T21:18:25Z'

@@ -28,3 +28,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: Under international law, Ukraine has every right to defend itself.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

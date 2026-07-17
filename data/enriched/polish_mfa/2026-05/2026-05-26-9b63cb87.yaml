@@ -39,3 +39,7 @@ extracted:
       score: 1
       evidence: as well as the rapid opening of accession negotiations in the “Fundamentals”
         cluster.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

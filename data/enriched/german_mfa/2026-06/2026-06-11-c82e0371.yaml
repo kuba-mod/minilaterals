@@ -29,3 +29,7 @@ extracted:
       score: 1
       evidence: In the very body in which states should jointly strive for peace through
         diplomacy, Russia is openly threatening a NATO ally with violence.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -21,3 +21,7 @@ extracted:
       score: 2
       evidence: Civilians and civilian infrastructure must be protected in accordance
         with international humanitarian law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

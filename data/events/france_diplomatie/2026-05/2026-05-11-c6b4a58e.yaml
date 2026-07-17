@@ -20,5 +20,7 @@ text: 'Minister for Europe and Foreign Affairs Jean-Noël Barrot spoke by teleph
   that will be central to the Peace and Security segment of the Africa Forward Summit.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/kenya-entretien-de-jean-noel-barrot-avec-son-homologue-musalia-mudavadi
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-11T00:00:00Z'
 ingested_at: '2026-05-14T21:09:21Z'

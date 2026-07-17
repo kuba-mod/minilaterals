@@ -31,5 +31,7 @@ text: The meeting was opened by Head of the Foreign Service and Director General
   Germany and Austria and work out a set of potential joint measures.
 source_url: https://www.gov.pl/web/diplomacy/meeting-on-commemorating-polish-victims-of-german-nazi-concentration-camps
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-02T00:00:00Z'
 ingested_at: '2026-07-04T10:53:48Z'

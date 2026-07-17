@@ -53,3 +53,7 @@ extracted:
       score: 1
       evidence: We have started a mature transatlantic conversation about the future
         shape of NATO, about the future distribution of rights and responsibilities,
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

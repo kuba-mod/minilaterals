@@ -40,3 +40,7 @@ extracted:
       evidence: The ministers also spoke about cooperation in the field of the international
         law of the sea and enhancing the Council’s political and expert dimension
         for regional security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

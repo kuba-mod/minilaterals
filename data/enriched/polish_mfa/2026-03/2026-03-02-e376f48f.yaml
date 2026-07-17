@@ -22,3 +22,7 @@ extracted:
       score: 1
       evidence: Poland unequivocally condemned Iran’s attacks on the territory of
         the UAE and other countries in the region.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

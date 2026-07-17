@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: uphold international humanitarian law, and honour their commitments
         under the Jeddah Declaration.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

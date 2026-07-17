@@ -47,5 +47,7 @@ text: 'Four years after Russia’s full-scale aggression against Ukraine, Deputy
   neighbours.'
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-visits-kyiv
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-24T00:00:00Z'
 ingested_at: '2026-05-14T22:27:38Z'

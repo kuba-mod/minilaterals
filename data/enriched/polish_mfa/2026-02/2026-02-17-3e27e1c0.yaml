@@ -47,3 +47,7 @@ extracted:
       score: 0
       evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
         and united response
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -50,3 +50,7 @@ extracted:
       evidence: Russia’s illegal war against Ukraine, which began in 2014, has demonstrated
         with complete clarity that Putin’s Russia poses a threat to freedom and security
         in Europe and against NATO .
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

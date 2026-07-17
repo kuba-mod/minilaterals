@@ -11,5 +11,7 @@ text: France welcomes the release of 250 prisoners in Belarus, thanks to mediati
   wish to return to live in their country.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/bielorussie-liberation-de-prisonniers-0
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-24T00:00:00Z'
 ingested_at: '2026-05-14T21:10:27Z'

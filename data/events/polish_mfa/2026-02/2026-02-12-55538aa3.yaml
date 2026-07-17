@@ -25,5 +25,7 @@ text: Wojciech Konończuk, Director of the Centre for Eastern Studies, presented
   promoting Poland’s expertise in foreign and security policy.
 source_url: https://www.gov.pl/web/diplomacy/deputy-minister-zajaczkowski-meets-osw-experts-and-ambassadors-of-latin-american-countries
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-12T00:00:00Z'
 ingested_at: '2026-05-14T22:27:48Z'

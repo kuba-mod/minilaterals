@@ -34,5 +34,7 @@ text: 'During their Warsaw meeting, the top diplomats of Poland and Croatia paid
   supporting countries aspiring to join the EU is currently a geopolitical necessity.'
 source_url: https://www.gov.pl/web/diplomacy/meeting-between-heads-of-diplomacy-of-poland-and-croatia2
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-04T00:00:00Z'
 ingested_at: '2026-05-14T22:27:27Z'

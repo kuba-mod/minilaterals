@@ -14,3 +14,7 @@ extracted:
     European integration and promoting belief in Europe's future.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

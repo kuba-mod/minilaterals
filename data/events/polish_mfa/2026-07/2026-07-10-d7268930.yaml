@@ -7,5 +7,7 @@ text: During the meeting, both delegations focused on Europe’s current securit
   aimed at reinforcing security in Poland, France, and the whole of Europe.
 source_url: https://www.gov.pl/web/diplomacy/first-meeting-of-polishfrench-steering-group-for-nuclear-cooperation
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-10T00:00:00Z'
 ingested_at: '2026-07-11T08:07:29Z'

@@ -44,3 +44,7 @@ extracted:
       score: 1
       evidence: current challenges to international security, and the opportunities
         to jointly combat cyber threats
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

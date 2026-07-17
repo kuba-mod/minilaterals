@@ -10,5 +10,7 @@ text: Today, a transport of humanitarian aid has been sent to the people of Afgh
   in Afghanistan who need them most.
 source_url: https://www.gov.pl/web/diplomacy/polands-humanitarian-aid-for-afghanistan
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-11T00:00:00Z'
 ingested_at: '2026-05-14T22:27:48Z'

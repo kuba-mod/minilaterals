@@ -16,3 +16,7 @@ extracted:
     a diplomat implicated in the Epstein case, cooperating fully with authorities.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

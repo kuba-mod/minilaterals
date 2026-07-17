@@ -19,5 +19,7 @@ text: VT Sakartvelo News is part of TVP’s International Media Centre, and is i
   of a Kazakh language VT Qazaqstan News is to take place by the end of the year.
 source_url: https://www.gov.pl/web/diplomacy/polish-television-to-start-newscast-in-georgian
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-27T00:00:00Z'
 ingested_at: '2026-05-14T22:26:52Z'

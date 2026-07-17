@@ -40,3 +40,7 @@ extracted:
       evidence: The vast majority of participants criticised the continued establishment
         of illegal Israeli settlements in the West Bank and endorsed the EU’s firm
         response.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

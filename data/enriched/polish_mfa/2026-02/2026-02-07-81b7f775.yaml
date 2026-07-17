@@ -54,3 +54,7 @@ extracted:
       score: 1
       evidence: This is an element of our economic security - summarised Minister
         Sikorski.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

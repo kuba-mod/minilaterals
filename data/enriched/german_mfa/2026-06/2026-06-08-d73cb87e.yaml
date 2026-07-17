@@ -33,3 +33,7 @@ extracted:
       score: 1
       evidence: Underlined the pivotal role of international law as the foundation
         of the international order
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

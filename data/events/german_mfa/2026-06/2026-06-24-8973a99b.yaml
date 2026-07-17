@@ -85,5 +85,7 @@ text: 'Let me start by conveying to you the Federal Government’s very best wis
   faith brings us.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/ekd-2775930
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-06-24T15:57:47Z'
 ingested_at: '2026-07-07T00:18:47Z'

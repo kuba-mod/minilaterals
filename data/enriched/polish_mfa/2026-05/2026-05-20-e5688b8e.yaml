@@ -21,3 +21,7 @@ extracted:
       score: 1
       evidence: Respecting international law, including international law of the sea
         and international humanitarian law is the duty of all states.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

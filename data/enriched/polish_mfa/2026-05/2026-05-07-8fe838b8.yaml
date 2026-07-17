@@ -21,3 +21,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: We support the democratic aspirations of the people of Cuba
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

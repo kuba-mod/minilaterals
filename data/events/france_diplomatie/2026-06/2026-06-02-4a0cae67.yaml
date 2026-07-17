@@ -19,5 +19,7 @@ text: France condemns in the strongest possible terms last night’s Russian air
   that guarantees its security and that of Europe.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/ukraine-frappes-massives-russes-sur-l-ukraine
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-02T00:00:00Z'
 ingested_at: '2026-07-07T00:20:27Z'

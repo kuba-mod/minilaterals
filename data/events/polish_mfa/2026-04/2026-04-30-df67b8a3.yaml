@@ -16,5 +16,7 @@ text: I spoke with Secretary of State Marco Rubio to thank him for the successfu
   of the Poland–US Strategic Dialogue that took place on 30 April in Warsaw.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-radoslaw-sikorski-calls-us-secretary-of-state-marco-rubio
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-30T00:00:00Z'
 ingested_at: '2026-05-14T22:26:47Z'

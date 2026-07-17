@@ -17,3 +17,7 @@ extracted:
     figures and institutions that have fostered strong bilateral relations.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

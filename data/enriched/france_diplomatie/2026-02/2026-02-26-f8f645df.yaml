@@ -23,3 +23,7 @@ extracted:
       score: 1
       evidence: It reiterates its readiness to facilitate the two parties’ access
         to the archives in its possession, linked to the demarcation of the border.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

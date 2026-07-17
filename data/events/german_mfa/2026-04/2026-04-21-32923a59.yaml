@@ -37,5 +37,7 @@ text: NATO Allies underline their strong commitment to the full implementation o
   same goal.
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2768216-2768216
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-21T09:00:00Z'
 ingested_at: '2026-05-13T21:15:26Z'

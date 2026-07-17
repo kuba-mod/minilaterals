@@ -11,5 +11,7 @@ text: France honors the memory of the former President of Suriname, Chandrikaper
   people and government of Suriname.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/deces-de-chandrikapersad-santokhi-ancien-president-de-la-republique-du-suriname
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-31T00:00:00Z'
 ingested_at: '2026-05-14T21:10:12Z'

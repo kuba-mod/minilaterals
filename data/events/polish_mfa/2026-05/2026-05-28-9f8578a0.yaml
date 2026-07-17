@@ -11,5 +11,7 @@ text: EU ministers discussed key issues currently on the EU’s foreign policy a
   Ukraine and Slovakia.
 source_url: https://www.gov.pl/web/diplomacy/informal-meeting-of-eu-foreign-ministers-in-cyprus
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-28T00:00:00Z'
 ingested_at: '2026-07-07T00:22:36Z'

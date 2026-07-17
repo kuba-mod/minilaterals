@@ -12,5 +12,7 @@ text: France is deeply concerned by reports of an unprecedented deterioration in
   choose their destiny.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/iran-degradation-de-l-etat-de-sante-de-mme-narges-mohammadi
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-13T21:18:31Z'
 ingested_at: '2026-05-13T21:18:32Z'

@@ -18,5 +18,7 @@ text: This was the first-ever visit of the ICAO head to Poland, and it took plac
   Safety Agency (EASA).
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-sikorski-meets-with-secretary-general-of-the-international-civil-aviation-organization-icao-juan-carlos-salazar
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-06T00:00:00Z'
 ingested_at: '2026-07-09T09:58:29Z'

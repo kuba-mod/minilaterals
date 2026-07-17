@@ -14,3 +14,7 @@ extracted:
     Flotilla and reaffirmed their commitment to humanitarian aid in Gaza.
   positions: {}
   stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

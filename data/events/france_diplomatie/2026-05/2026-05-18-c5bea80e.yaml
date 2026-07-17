@@ -22,5 +22,7 @@ text: On International Day Against Homophobia, Biphobia and Transphobia, France 
   of homosexuality.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/journee-internationale-contre-l-homophobie-la-biphobie-et-la-transphobie-0
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-18T00:00:00Z'
 ingested_at: '2026-07-07T00:21:10Z'

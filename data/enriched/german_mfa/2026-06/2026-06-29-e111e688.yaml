@@ -30,3 +30,7 @@ extracted:
       score: 2
       evidence: We Europeans absolutely must become more independent, and for that
         it is important for us in the EU to stick together.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

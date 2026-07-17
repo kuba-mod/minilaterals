@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: France calls for the immediate release of Nasrin Sotoudeh and all
         those detained arbitrarily in Iran.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

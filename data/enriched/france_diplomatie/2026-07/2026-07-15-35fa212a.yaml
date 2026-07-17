@@ -26,3 +26,7 @@ extracted:
       evidence: France is fully committed to the Baltic States’ security, particularly
         through its military presence in Estonia and its regular participation in
         the NATO Air Policing mission
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

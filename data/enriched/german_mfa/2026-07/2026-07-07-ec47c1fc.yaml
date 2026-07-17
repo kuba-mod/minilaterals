@@ -28,3 +28,7 @@ extracted:
         general public, including online. Contributing to this effort and thereby
         resolutely countering the growing trend of Holocaust trivialisation and even
         denial remains a duty and a commitment for my country.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

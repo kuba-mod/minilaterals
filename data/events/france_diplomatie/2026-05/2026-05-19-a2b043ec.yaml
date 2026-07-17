@@ -29,5 +29,7 @@ text: On May 13, France, along with 40 other participating States of the Organiz
   all the crimes committed in Ukraine are held accountable.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/ukraine-activation-du-mecanisme-de-moscou-de-l-osce-a-la-suite-d-enlevements-d-enfants-ukrainiens
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-19T00:00:00Z'
 ingested_at: '2026-07-07T00:21:09Z'

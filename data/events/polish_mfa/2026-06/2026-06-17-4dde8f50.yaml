@@ -26,5 +26,7 @@ text: The delegation was headed by Deputy Minister Marcin Bosacki and Deputy Min
   in Moldova.
 source_url: https://www.gov.pl/web/diplomacy/secretary-of-state-marcin-bosacki-visits-chiinu
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-03T09:26:49Z'

@@ -37,5 +37,7 @@ text: 'Foreign Minister Wadephul issued the following statement today (21 May 20
   greater responsibility Europe needs to assume in a new global security order.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/wadephul-helsingborg-prague-2772688
 source_lang: en
+collection: fallback
+collection_method: rss
 source_published_at: '2026-05-21T00:00:00Z'
 ingested_at: '2026-07-07T08:03:09Z'

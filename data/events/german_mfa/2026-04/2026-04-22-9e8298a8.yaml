@@ -28,5 +28,7 @@ text: 'Foreign Minister Johann Wadephul issued the following statement today (22
   Europe can take decisive steps forward over the coming weeks and months.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/2768404-2768404
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-22T09:03:04Z'
 ingested_at: '2026-05-13T21:15:26Z'

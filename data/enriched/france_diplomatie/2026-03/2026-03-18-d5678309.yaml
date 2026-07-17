@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: International humanitarian law applies to everyone and must ensure
         the protection of civilian populations.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

@@ -27,5 +27,7 @@ text: 'TVP has expanded the availability of its foreign-language broadcasts. Bel
   stations created by independent journalists from Ukraine, Belarus, and Russia.'
 source_url: https://www.gov.pl/web/diplomacy/tvp-expands-its-broadcasting-range-in-eastern-europe
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-05T00:00:00Z'
 ingested_at: '2026-07-07T00:22:22Z'

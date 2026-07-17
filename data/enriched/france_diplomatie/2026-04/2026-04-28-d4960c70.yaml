@@ -22,3 +22,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: democratic expression is possible through the ballot box in Palestine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: github_actions

@@ -34,3 +34,7 @@ extracted:
       score: 2
       evidence: A statement on Iran calling, in particular, for the protection of
         civilians and civilian energy infrastructures was adopted.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

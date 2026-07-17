@@ -33,5 +33,7 @@ text: The event was organised under the three-party cooperation between the MFA 
   and art both at home and abroad.
 source_url: https://www.gov.pl/web/diplomacy/a-great-vaudeville-at-warsaws-academy-of-fine-arts
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-26T00:00:00Z'
 ingested_at: '2026-07-07T00:22:39Z'

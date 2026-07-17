@@ -12,5 +12,7 @@ text: France welcomes the Palestinian Authority’s publication of a decree sett
   ready to provide all necessary support for the organization of these elections.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/palestine-organisation-des-elections-legislatives-et-presidentielle
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-10T00:00:00Z'
 ingested_at: '2026-07-11T08:07:00Z'

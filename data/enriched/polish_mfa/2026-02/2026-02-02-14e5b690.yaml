@@ -48,3 +48,7 @@ extracted:
       score: 1
       evidence: The two countries share strong political cooperation—including in
         the fields of security, defence, the economy, and culture.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

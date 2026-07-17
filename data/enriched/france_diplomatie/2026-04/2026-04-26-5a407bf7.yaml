@@ -30,3 +30,7 @@ extracted:
       score: 1
       evidence: The event is a reminder of the transnational nature of industrial
         accidents, which require a mutually-supportive response.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

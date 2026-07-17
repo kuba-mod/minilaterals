@@ -23,3 +23,7 @@ extracted:
     rule_of_law:
       score: 1
       evidence: They stressed the importance of the EU -Moroccan Human Rights Dialogue.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

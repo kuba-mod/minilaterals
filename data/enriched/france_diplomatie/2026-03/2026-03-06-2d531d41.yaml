@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: "which is a flagrant violation of Azerbaijan’s sovereignty and of\t\
         international law."
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

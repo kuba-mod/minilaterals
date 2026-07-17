@@ -20,5 +20,7 @@ text: The participation of the Polish delegation in the Review Conference of the
   with whom he discussed prospects for strengthening bilateral relations.
 source_url: https://www.gov.pl/web/diplomacy/poland-at-review-conference-of-treaty-on-non-proliferation-of-nuclear-weapons
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-29T00:00:00Z'
 ingested_at: '2026-05-14T22:26:50Z'

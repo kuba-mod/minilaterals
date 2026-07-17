@@ -13,5 +13,7 @@ text: Deputy Foreign Minister Kupiecki highlighted that Russia’s war against U
   an opportunity to discuss key issues in bilateral cooperation between the two countries.
 source_url: https://www.gov.pl/web/diplomacy/deputy-foreign-ministers-of-poland-and-egypt-hold-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-05T00:00:00Z'
 ingested_at: '2026-05-14T22:27:50Z'

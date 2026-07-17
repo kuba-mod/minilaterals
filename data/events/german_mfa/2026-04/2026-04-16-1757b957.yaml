@@ -23,5 +23,7 @@ text: 'On 16 April 2026, Foreign Minister Johann Wadephul issued the following s
   impact of the war, particularly the over one million internally displaced persons.'
 source_url: https://www.auswaertiges-amt.de/en/newsroom/news/ceasefire-israel-lebanon-2768008
 source_lang: en
+collection: fallback
+collection_method: backfill
 source_published_at: '2026-04-16T08:20:56Z'
 ingested_at: '2026-05-13T21:15:26Z'

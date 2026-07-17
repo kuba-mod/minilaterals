@@ -38,3 +38,7 @@ extracted:
       score: 1
       evidence: Human rights, democracy, and the rule of law are being undermined
         or attacked.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

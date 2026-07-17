@@ -21,5 +21,7 @@ text: Born in Warsaw, Stanisław Aronson grew up in an assimilated Jewish family
   international status.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-sikorski-presents-bene-merito-honorary-distinction-to-colonel-stanislaw-aronson
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-11T00:00:00Z'
 ingested_at: '2026-05-13T21:18:38Z'

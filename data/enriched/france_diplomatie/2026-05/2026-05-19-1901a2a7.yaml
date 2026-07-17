@@ -20,3 +20,7 @@ extracted:
       score: 1
       evidence: calls on all nations to abide by their obligations in this regard,
         particularly with respect to humanitarian law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

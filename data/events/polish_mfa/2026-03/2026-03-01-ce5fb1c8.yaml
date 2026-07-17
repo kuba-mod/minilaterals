@@ -12,5 +12,7 @@ text: We unwaveringly support peaceful settlement of conflicts in the Middle Eas
   citizens in the region.
 source_url: https://www.gov.pl/web/diplomacy/statement-on-developments-in-middle-east
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-03-01T00:00:00Z'
 ingested_at: '2026-05-14T22:27:35Z'

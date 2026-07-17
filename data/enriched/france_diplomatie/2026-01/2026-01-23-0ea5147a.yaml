@@ -24,3 +24,7 @@ extracted:
         all civilians, and to implement a global ceasefire that allows for the integration
         of the Syrian Democratic Forces (SDF) and provides guarantees to Kurds in
         Syria.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

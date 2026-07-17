@@ -150,5 +150,7 @@ text: 'If I had to sum up the relationship between France and Poland, of course 
   we will keep building Europe. Thank you very much, dear Radek, for your invitation.'
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/discours-de-jean-noel-barrot-ministre-de-l-europe-et-des-affaires-etrangeres-lors-de-la-conference
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-10T00:00:00Z'
 ingested_at: '2026-07-13T09:41:21Z'

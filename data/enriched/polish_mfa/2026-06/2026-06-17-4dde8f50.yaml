@@ -34,3 +34,7 @@ extracted:
       evidence: Both parties reaffirmed the very good state of bilateral relations,
         as well as Poland’s and Moldova’s similar assessment of the most important
         issues concerning European safety and the international situation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

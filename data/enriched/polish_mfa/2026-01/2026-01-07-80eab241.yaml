@@ -37,3 +37,7 @@ extracted:
       evidence: Europe, working closely with the US administration, should engage
         actively in forging peace solutions that comply with the rules of international
         law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

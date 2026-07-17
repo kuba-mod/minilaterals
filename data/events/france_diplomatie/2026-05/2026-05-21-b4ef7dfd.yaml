@@ -5,5 +5,7 @@ title: 8th India-France Maritime Cooperation Dialogue
 text: ''
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/8e-dialogue-de-cooperation-maritime-entre-l-inde-et-la-france
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-21T00:00:00Z'
 ingested_at: '2026-07-07T00:21:00Z'

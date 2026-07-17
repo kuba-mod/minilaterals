@@ -19,5 +19,7 @@ text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeti
   Tobago intends to promote there and that France shares.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/trinite-et-tobago-entretien-de-jean-noel-barrot-avec-sean-sobers-ministre-des-affaires-etrangeres-et
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-03T00:00:00Z'
 ingested_at: '2026-07-04T10:53:24Z'

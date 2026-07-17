@@ -66,6 +66,20 @@ def _load_goals() -> dict[str, str]:
 
 WEIMAR_GOALS = _load_goals()
 
+# Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
+# score can be traced to the exact prompt that produced it. BUMP THIS whenever
+# SYSTEM_PROMPT, EXTRACTION_PROMPT, STANCE_RUBRIC, or STANCE_BACKFILL_PROMPT
+# changes in a way that could move ratings. History:
+#   "1" — pre-multilingual prompt (single-language, English-only inputs)
+#   "2" — native-language inputs (de/fr/pl); output English, evidence verbatim
+PROMPT_VERSION = "2"
+
+
+def _environment() -> str:
+    """Where this enrichment ran — GitHub Actions sets GITHUB_ACTIONS=true."""
+    return "github_actions" if os.environ.get("GITHUB_ACTIONS") == "true" else "local"
+
+
 SYSTEM_PROMPT = (
     "You extract structured diplomatic position summaries from government press releases. "
     "Return ONLY valid JSON — no markdown, no explanation, no wrapper text."
@@ -452,6 +466,11 @@ def _extract(provider, raw_path: Path) -> bool:
             "weimar_relevant": weimar_relevant,
             "trilateral_signal": trilateral_signal,
             "extracted": extracted,
+            "enriched_by": {
+                "model_id": provider.model,
+                "prompt_version": PROMPT_VERSION,
+                "environment": _environment(),
+            },
         }
         EnrichedEventSchema.model_validate(enriched_data)
 
@@ -548,6 +567,12 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
 
         extracted["stances"] = stances
         enriched["extracted"] = extracted
+        # This run re-produced the stance ratings, so it owns the provenance.
+        enriched["enriched_by"] = {
+            "model_id": provider.model,
+            "prompt_version": PROMPT_VERSION,
+            "environment": _environment(),
+        }
         EnrichedEventSchema.model_validate(enriched)
         enriched_path.write_text(
             yaml.dump(enriched, allow_unicode=True, sort_keys=False),

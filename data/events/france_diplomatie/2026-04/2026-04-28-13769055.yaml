@@ -18,5 +18,7 @@ text: France condemns Israeli settlers’ attack, occupation and damaging of the
   two-state solution.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/israelpalestine-degradation-d-une-station-d-epuration-et-demolition-d-une-ecole-en-cisjordanie
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-28T00:00:00Z'
 ingested_at: '2026-07-16T22:49:16Z'

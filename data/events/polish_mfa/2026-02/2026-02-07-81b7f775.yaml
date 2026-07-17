@@ -35,5 +35,7 @@ text: The United States, in cooperation with its closest allies, is taking actio
   development and discussed prospects for strengthening economic cooperation.
 source_url: https://www.gov.pl/web/diplomacy/deputy-prime-minister-and-foreign-minister-radoslaw-sikorski-visits-united-states
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-07T00:00:00Z'
 ingested_at: '2026-05-14T22:27:49Z'

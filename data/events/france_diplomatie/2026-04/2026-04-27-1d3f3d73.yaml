@@ -25,5 +25,7 @@ text: As part of his visit to New York, the Minister for Europe and Foreign Affa
   in the Strait.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/nations-unies-entretien-du-ministre-avec-le-secretaire-general-des-nations-unies-antonio-guterres
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-04-27T00:00:00Z'
 ingested_at: '2026-05-14T21:09:32Z'

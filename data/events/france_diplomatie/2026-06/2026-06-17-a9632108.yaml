@@ -68,5 +68,7 @@ text: We, the Leaders of the G7, call for a strong and coordinated response to a
   of views with partner countries.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/appel-des-chefs-d-etat-et-de-gouvernement-du-g7-a-une-reponse-coordonnee-a-l-epidemie-d-ebolavirus
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-06-17T00:00:00Z'
 ingested_at: '2026-07-03T09:26:41Z'

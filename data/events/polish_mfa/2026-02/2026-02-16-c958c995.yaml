@@ -32,5 +32,7 @@ text: 'Joint statement: On the second commemoration of Alexei Navalny’s death 
   the Netherlands, New Zealand, Norway, Poland, Sweden and the United Kingdom'
 source_url: https://www.gov.pl/web/diplomacy/joint-likeminded-statement-on-the-occasion-of-the-second-anniversary-of-alexei-navalnys-death-on-16-february-2024
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-02-16T00:00:00Z'
 ingested_at: '2026-05-14T22:27:44Z'

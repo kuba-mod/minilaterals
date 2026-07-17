@@ -18,5 +18,7 @@ text: Deputy foreign ministers discussed bilateral ties, economic and defence co
   bonds on the Baltic–Mediterranean axis.
 source_url: https://www.gov.pl/web/diplomacy/warsaw-hosts-polishitalian-consultations
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-05-29T00:00:00Z'
 ingested_at: '2026-07-07T00:22:34Z'

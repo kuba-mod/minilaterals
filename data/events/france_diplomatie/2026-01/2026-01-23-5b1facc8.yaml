@@ -25,5 +25,7 @@ text: The Minister for Europe and Foreign Affairs spoke with his Saudi counterpa
   in every area.
 source_url: https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/arabie-saoudite-entretien-de-jean-noel-barrot-avec-son-homologue-saoudien-son-altesse-le-prince
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-01-23T00:00:00Z'
 ingested_at: '2026-05-14T21:11:32Z'

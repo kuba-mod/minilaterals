@@ -41,3 +41,7 @@ extracted:
       evidence: The head of Spanish diplomacy emphasised that peace and respect for
         international law are the principles to abide by in Ukraine as well as the
         Gaza Strip, Lebanon, and Iran.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '1'
+  environment: local

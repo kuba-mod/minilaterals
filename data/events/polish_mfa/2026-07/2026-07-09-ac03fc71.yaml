@@ -34,5 +34,7 @@ text: During bilateral talks, Deputy Prime Minister Radosław Sikorski and Minis
   who participated in the French Ambassadors’ Conference in Paris.
 source_url: https://www.gov.pl/web/diplomacy/minister-jean-nol-barrot-as-polish-heads-of-missions-conference-guest-of-honour
 source_lang: en
+collection: fallback
+collection_method: html
 source_published_at: '2026-07-09T00:00:00Z'
 ingested_at: '2026-07-11T08:07:31Z'
