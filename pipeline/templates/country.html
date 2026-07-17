@@ -71,6 +71,7 @@
   <thead>
     <tr>
       <th>Date</th>
+      <th>Source</th>
       <th>Title</th>
       <th>Topics</th>
     </tr>
@@ -79,6 +80,16 @@
     {% for e in country_events %}
     <tr>
       <td class="mono" style="white-space:nowrap; color:var(--muted); font-size:11px">{{ e.date }}</td>
+      <td style="white-space:nowrap">
+        {% set sm = source_meta.get(e.source_name) %}
+        {% if sm %}
+        {% if sm.type == "Executive office" %}
+        <span class="tag" style="color:{{ color }}; border-color:{{ color }}44; background:{{ color }}18; white-space:nowrap" title="{{ sm.institution }}">{{ sm.type }}</span>
+        {% else %}
+        <span class="tag" style="color:var(--muted); border-color:var(--rule); white-space:nowrap" title="{{ sm.institution }}">{{ sm.type }}</span>
+        {% endif %}
+        {% endif %}
+      </td>
       <td>
         {% if e.source_url %}<a href="{{ e.source_url }}" target="_blank" rel="noopener">{% endif %}
         {{ e.title | truncate(90) }}

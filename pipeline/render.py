@@ -108,6 +108,14 @@ COUNTRY_PROFILE = {
     },
 }
 
+# Flattened source_name -> {type, institution}, for labelling which of a
+# country's two voices each event came from.
+SOURCE_META = {
+    s["source"]: {"type": s["type"], "institution": s["institution"]}
+    for prof in COUNTRY_PROFILE.values()
+    for s in prof["sources"]
+}
+
 # Ingest method + page language per source, for the sources-table columns.
 SOURCE_INGEST = {
     "german_mfa": ("RSS", "EN"),
@@ -958,6 +966,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 others=others,
                 weimar_actors=WEIMAR_ACTORS,
                 country_stats=country_stats,
+                source_meta=SOURCE_META,
             ),
             encoding="utf-8",
         )
