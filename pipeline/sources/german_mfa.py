@@ -14,9 +14,17 @@ from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
 
-# Verified working May 2026 — previous URL at /SiteGlobals/Functions/RSSFeed/ is stale
-RSS_URL = "https://www.auswaertiges-amt.de/static/includes/rss_en/RSS_Pressemitteilungen_Reden.xml"
-FALLBACK_URL = "https://www.auswaertiges-amt.de/en/newsroom/news"
+# Native German feed first — the site publishes the same channel under
+# /static/includes/rss/ (German) and /static/includes/rss_en/ (English; verified
+# working May 2026). Two spellings of the German path are tried; the English
+# feed stays as a logged last resort so the source never goes dark if the
+# German path guess is wrong.
+RSS_FEEDS = [
+    ("https://www.auswaertiges-amt.de/static/includes/rss/RSS_Pressemitteilungen_Reden.xml", "de"),
+    ("https://www.auswaertiges-amt.de/static/includes/rss_de/RSS_Pressemitteilungen_Reden.xml", "de"),
+    ("https://www.auswaertiges-amt.de/static/includes/rss_en/RSS_Pressemitteilungen_Reden.xml", "en"),
+]
+FALLBACK_URL = "https://www.auswaertiges-amt.de/de/newsroom/news"
 BASE_URL = "https://www.auswaertiges-amt.de"
 SOURCE_NAME = "german_mfa"
 
@@ -111,8 +119,9 @@ def _extract_article_date(soup) -> str | None:
 
 
 # Site-wide boilerplate that must not be mistaken for an article headline —
-# the global <h1> on auswaertiges-amt.de English pages is literally "Welcome".
-_BOILERPLATE_TITLES = {"welcome", "federal foreign office", "auswärtiges amt"}
+# the global <h1> on auswaertiges-amt.de pages is literally "Welcome" /
+# "Willkommen".
+_BOILERPLATE_TITLES = {"welcome", "willkommen", "federal foreign office", "auswärtiges amt"}
 
 
 def _usable_title(candidate: str | None) -> str | None:
@@ -155,7 +164,7 @@ def _extract_article_title(soup, body_text: str = "") -> str | None:
 
 class GermanMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
-    source_lang = "en"
+    source_lang = "de"
 
     def fetch(self) -> Iterator[Event]:
         if self.since:
@@ -202,11 +211,16 @@ class GermanMFAIngester(BaseIngester):
         return ""
 
     def _fetch_rss(self) -> Iterator[Event]:
-        try:
-            feed = feedparser.parse(RSS_URL, request_headers=_HEADERS)
+        for feed_url, lang in RSS_FEEDS:
+            try:
+                feed = feedparser.parse(feed_url, request_headers=_HEADERS)
+            except Exception as exc:
+                print(f"[{SOURCE_NAME}] RSS error for {feed_url}: {exc}")
+                continue
             if not feed.entries:
-                print(f"[{SOURCE_NAME}] RSS empty, falling back to HTML")
-                return
+                continue
+            if lang != "de":
+                print(f"[{SOURCE_NAME}] German feed unavailable — falling back to English feed")
             for entry in feed.entries:
                 date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
                 url = entry.get("link", "")
@@ -221,114 +235,119 @@ class GermanMFAIngester(BaseIngester):
                     title=entry.get("title", "").strip(),
                     text=summary,
                     source_url=url,
-                    source_lang=self.source_lang,
+                    source_lang=lang,
                     source_published_at=published_at,
                     date=date,
                 )
-        except Exception as exc:
-            print(f"[{SOURCE_NAME}] RSS error: {exc}")
+            return
+        print(f"[{SOURCE_NAME}] all RSS feeds empty, falling back to HTML")
 
     def _fetch_wayback_rss(self, seen_urls: set[str]) -> Iterator[Event]:
-        """Yield events from Wayback Machine snapshots of the RSS feed taken on or
-        after `since`. Article bodies are fetched from the live site (the feed
-        entry links point at auswaertiges-amt.de, which keeps old articles up —
-        only the listing/feed window moves)."""
-        try:
-            r = requests.get(
-                WAYBACK_CDX_URL,
-                params={
-                    "url": RSS_URL,
-                    "from": self.since.replace("-", ""),
-                    "output": "json",
-                    "fl": "timestamp",
-                    "filter": "statuscode:200",
-                    "collapse": "timestamp:8",  # at most one snapshot per day
-                },
-                timeout=30,
-                headers=_HEADERS,
-            )
-            r.raise_for_status()
-            rows = r.json()
-        except Exception as exc:
-            print(f"[{SOURCE_NAME}] wayback CDX error: {exc}")
-            return
-        timestamps = [row[0] for row in rows[1:]]  # row 0 is the header
-        print(f"[{SOURCE_NAME}] wayback: {len(timestamps)} feed snapshots since {self.since}")
-
-        for ts in timestamps:
-            # id_ returns the original feed bytes rather than the rewritten page
-            snap_url = f"https://web.archive.org/web/{ts}id_/{RSS_URL}"
+        """Yield events from Wayback Machine snapshots of the RSS feeds taken on
+        or after `since`. All feed channels are replayed — gaps that predate the
+        switch to the native German feed live in the English feed's snapshot
+        history. Article bodies are fetched from the live site (the feed entry
+        links point at auswaertiges-amt.de, which keeps old articles up — only
+        the listing/feed window moves)."""
+        for feed_url, lang in RSS_FEEDS:
             try:
-                r = requests.get(snap_url, timeout=30, headers=_HEADERS)
-                r.raise_for_status()
-                feed = feedparser.parse(r.content)
-            except Exception as exc:
-                print(f"[{SOURCE_NAME}] wayback snapshot {ts} error: {exc}")
-                continue
-            time.sleep(1)
-
-            for entry in feed.entries:
-                url = entry.get("link", "")
-                if not url.startswith("http"):
-                    url = BASE_URL + url
-                if url in seen_urls:
-                    continue
-                seen_urls.add(url)
-                title = entry.get("title", "").strip()
-                date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
-                if date < self.since:
-                    continue
-                # Skip the body fetch for events already on disk — every snapshot
-                # overlaps heavily with the previous one and with prior runs.
-                probe = Event(
-                    source_name=SOURCE_NAME,
-                    title=title,
-                    text="",
-                    source_url=url,
-                    source_lang=self.source_lang,
-                    source_published_at=published_at,
-                    date=date,
+                r = requests.get(
+                    WAYBACK_CDX_URL,
+                    params={
+                        "url": feed_url,
+                        "from": self.since.replace("-", ""),
+                        "output": "json",
+                        "fl": "timestamp",
+                        "filter": "statuscode:200",
+                        "collapse": "timestamp:8",  # at most one snapshot per day
+                    },
+                    timeout=30,
+                    headers=_HEADERS,
                 )
-                if probe.output_path().exists():
+                r.raise_for_status()
+                rows = r.json()
+            except Exception as exc:
+                print(f"[{SOURCE_NAME}] wayback CDX error for {feed_url}: {exc}")
+                continue
+            timestamps = [row[0] for row in rows[1:]]  # row 0 is the header
+            print(f"[{SOURCE_NAME}] wayback: {len(timestamps)} snapshots of {feed_url} since {self.since}")
+
+            for ts in timestamps:
+                # id_ returns the original feed bytes rather than the rewritten page
+                snap_url = f"https://web.archive.org/web/{ts}id_/{feed_url}"
+                try:
+                    r = requests.get(snap_url, timeout=30, headers=_HEADERS)
+                    r.raise_for_status()
+                    feed = feedparser.parse(r.content)
+                except Exception as exc:
+                    print(f"[{SOURCE_NAME}] wayback snapshot {ts} error: {exc}")
                     continue
-                body = self._fetch_body(url)
-                summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
-                time.sleep(0.5)
-                probe.text = summary
-                yield probe
+                time.sleep(1)
+
+                for entry in feed.entries:
+                    url = entry.get("link", "")
+                    if not url.startswith("http"):
+                        url = BASE_URL + url
+                    if url in seen_urls:
+                        continue
+                    seen_urls.add(url)
+                    title = entry.get("title", "").strip()
+                    date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
+                    if date < self.since:
+                        continue
+                    # Skip the body fetch for events already on disk — every snapshot
+                    # overlaps heavily with the previous one and with prior runs.
+                    probe = Event(
+                        source_name=SOURCE_NAME,
+                        title=title,
+                        text="",
+                        source_url=url,
+                        source_lang=lang,
+                        source_published_at=published_at,
+                        date=date,
+                    )
+                    if probe.output_path().exists():
+                        continue
+                    body = self._fetch_body(url)
+                    summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
+                    time.sleep(0.5)
+                    probe.text = summary
+                    yield probe
 
     def _fetch_wayback_articles(self, seen_urls: set[str]) -> Iterator[Event]:
         """Discover article URLs the Wayback Machine captured under the newsroom
         path since `since`, and ingest them from the live site. Complements the
         feed-snapshot replay: individual articles get crawled (e.g. via links
         from other sites) even when the feed URL itself is never captured."""
-        rows = None
-        # Prefix queries scan a large slice of the CDX index and routinely take
-        # over a minute or fail transiently — be patient and retry.
-        for attempt in range(3):
-            try:
-                r = requests.get(
-                    WAYBACK_CDX_URL,
-                    params={
-                        "url": f"{BASE_URL}/en/newsroom/news/*",
-                        "from": self.since.replace("-", ""),
-                        "output": "json",
-                        "fl": "original",
-                        "collapse": "urlkey",
-                        "limit": "5000",
-                    },
-                    timeout=180,
-                    headers=_HEADERS,
-                )
-                r.raise_for_status()
-                rows = r.json()
-                break
-            except Exception as exc:
-                print(f"[{SOURCE_NAME}] wayback article CDX error (attempt {attempt + 1}/3): {exc}")
-                time.sleep(15)
-        if rows is None:
+        urls = []
+        # Both language trees are queried — captures that predate the switch to
+        # the native German source live under /en/. Prefix queries scan a large
+        # slice of the CDX index and routinely take over a minute or fail
+        # transiently — be patient and retry.
+        for prefix in (f"{BASE_URL}/de/newsroom/news/*", f"{BASE_URL}/en/newsroom/news/*"):
+            for attempt in range(3):
+                try:
+                    r = requests.get(
+                        WAYBACK_CDX_URL,
+                        params={
+                            "url": prefix,
+                            "from": self.since.replace("-", ""),
+                            "output": "json",
+                            "fl": "original",
+                            "collapse": "urlkey",
+                            "limit": "5000",
+                        },
+                        timeout=180,
+                        headers=_HEADERS,
+                    )
+                    r.raise_for_status()
+                    urls.extend(row[0] for row in r.json()[1:])  # row 0 is the header
+                    break
+                except Exception as exc:
+                    print(f"[{SOURCE_NAME}] wayback article CDX error (attempt {attempt + 1}/3): {exc}")
+                    time.sleep(15)
+        if not urls:
             return
-        urls = [row[0] for row in rows[1:]]  # row 0 is the header
         print(f"[{SOURCE_NAME}] wayback: {len(urls)} captured article URLs since {self.since}")
 
         # Dedupe by URL against events already on disk: the page <h1> can differ
@@ -356,7 +375,7 @@ class GermanMFAIngester(BaseIngester):
         dateless = 0
         for url in urls:
             url = url.split("?")[0].replace("http://", "https://")
-            if url in seen_urls or url.rstrip("/") == f"{BASE_URL}/en/newsroom/news":
+            if url in seen_urls or url.rstrip("/") in (f"{BASE_URL}/de/newsroom/news", f"{BASE_URL}/en/newsroom/news"):
                 continue
             seen_urls.add(url)
             try:
@@ -396,7 +415,7 @@ class GermanMFAIngester(BaseIngester):
                 title=title,
                 text=text,
                 source_url=url,
-                source_lang=self.source_lang,
+                source_lang="en" if "/en/" in url else "de",
                 source_published_at=published_at,
                 date=date,
             )

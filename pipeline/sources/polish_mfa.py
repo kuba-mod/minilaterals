@@ -10,8 +10,14 @@ from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
 
-# No RSS feed; scrape the news listing page directly.
-NEWS_URL = "https://www.gov.pl/web/diplomacy/news-"
+# No RSS feed on either language section; scrape the news listing directly.
+# The native Polish listing comes first — the English section is a translated
+# subset that lags and skips items — with English as a logged fallback. Both
+# run on the same gov.pl CMS, so the selectors below are shared.
+LISTINGS = [
+    ("https://www.gov.pl/web/dyplomacja/aktualnosci", "pl"),
+    ("https://www.gov.pl/web/diplomacy/news-", "en"),
+]
 BASE_URL = "https://www.gov.pl"
 SOURCE_NAME = "polish_mfa"
 
@@ -40,7 +46,7 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
 
 class PolishMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
-    source_lang = "en"
+    source_lang = "pl"
 
     def _fetch_body(self, url: str) -> str:
         """Fetch full article text from an individual news page."""
@@ -60,11 +66,21 @@ class PolishMFAIngester(BaseIngester):
         return ""
 
     def fetch(self) -> Iterator[Event]:
+        for listing_url, lang in LISTINGS:
+            got_any = False
+            for event in self._fetch_listing(listing_url, lang):
+                got_any = True
+                yield event
+            if got_any:
+                return
+            print(f"[{SOURCE_NAME}] listing {listing_url} yielded nothing")
+
+    def _fetch_listing(self, listing_url: str, lang: str) -> Iterator[Event]:
         # gov.pl paginates with ?page=N (1-indexed); base URL is page 1
         page = 1
         consecutive_empty = 0
         while True:
-            page_url = NEWS_URL if page == 1 else f"{NEWS_URL}?page={page}"
+            page_url = listing_url if page == 1 else f"{listing_url}?page={page}"
             try:
                 r = requests.get(page_url, timeout=15, headers=_HEADERS)
                 r.raise_for_status()
@@ -116,7 +132,7 @@ class PolishMFAIngester(BaseIngester):
                     title=title,
                     text=summary,
                     source_url=url,
-                    source_lang=self.source_lang,
+                    source_lang=lang,
                     source_published_at=published_at,
                     date=date,
                 )

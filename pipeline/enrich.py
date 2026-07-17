@@ -90,6 +90,10 @@ a stance on a topic, use stance 0 and evidence null."""
 EXTRACTION_PROMPT = """\
 Extract a structured summary from this press release.
 
+The press release may be written in German, French, Polish, or English. Write
+every output field in English, EXCEPT "evidence" fields, which must stay
+verbatim quotes in the original language of the text.
+
 Source country: {source}
 Title: {title}
 Text: {text}
@@ -120,6 +124,9 @@ Include in positions_by_topic ONLY the topics listed in "topics". Omit topics no
 
 STANCE_BACKFILL_PROMPT = """\
 Rate this government press release against shared Weimar Triangle policy goals.
+
+The press release may be written in German, French, Polish, or English. The
+"evidence" fields must stay verbatim quotes in the original language of the text.
 
 Source country: {source}
 Title: {title}

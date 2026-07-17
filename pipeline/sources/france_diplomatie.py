@@ -5,12 +5,18 @@ import time
 from collections.abc import Iterator
 from datetime import UTC, datetime
 
+import feedparser
 import requests
 from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
 
-# SPIP RSS endpoint confirmed unreachable May 2026; scrape official statements directly.
+# Native French RSS: the SPIP backend feed of the ministry's actualités.
+# The English section has no working feed (its SPIP RSS endpoint was confirmed
+# unreachable May 2026), which is why this ingester used to scrape the English
+# statements listing — kept below as a logged fallback, and as the archive for
+# --since backfill (the feed only holds the newest items; the listing paginates).
+FEED_URL = "https://www.diplomatie.gouv.fr/spip.php?lang=fr&page=backend-fd"
 LISTING_URL = "https://www.diplomatie.gouv.fr/en/press/press-room/official-statements-and-speeches"
 BASE_URL = "https://www.diplomatie.gouv.fr"
 SOURCE_NAME = "france_diplomatie"
@@ -49,9 +55,53 @@ def _parse_date(raw: str | None) -> tuple[str, str]:
 
 class FranceDiplomatieIngester(BaseIngester):
     source_name = SOURCE_NAME
-    source_lang = "en"
+    source_lang = "fr"
 
     def fetch(self) -> Iterator[Event]:
+        got_any = False
+        for event in self._fetch_rss():
+            got_any = True
+            yield event
+        if self.since:
+            # Backfill: the feed only holds the newest items; the English
+            # listing is the only paginated archive of past statements.
+            yield from self._fetch_listing()
+        elif not got_any:
+            print(f"[{SOURCE_NAME}] French feed yielded nothing — falling back to English scrape")
+            yield from self._fetch_listing()
+
+    def _fetch_rss(self) -> Iterator[Event]:
+        try:
+            feed = feedparser.parse(FEED_URL, request_headers=_HEADERS)
+        except Exception as exc:
+            print(f"[{SOURCE_NAME}] RSS error: {exc}")
+            return
+        for entry in feed.entries:
+            title = entry.get("title", "").strip()
+            url = entry.get("link", "")
+            if not title or not url:
+                continue
+            if not url.startswith("http"):
+                url = BASE_URL + url
+            # The feed's pubDate is authoritative; article pages print dates in
+            # French, which _parse_date can't read.
+            date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
+            if self.since and date < self.since:
+                continue
+            body, _ = self._fetch_body(url)
+            summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
+            time.sleep(1)
+            yield Event(
+                source_name=SOURCE_NAME,
+                title=title,
+                text=summary,
+                source_url=url,
+                source_lang="fr",
+                source_published_at=published_at,
+                date=date,
+            )
+
+    def _fetch_listing(self) -> Iterator[Event]:
         page = 1
         while True:
             url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page}"
@@ -97,7 +147,7 @@ class FranceDiplomatieIngester(BaseIngester):
                     title=title,
                     text=summary,
                     source_url=item_url,
-                    source_lang=self.source_lang,
+                    source_lang="en",
                     source_published_at=published_at,
                     date=date,
                 )
