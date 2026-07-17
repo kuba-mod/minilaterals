@@ -25,5 +25,5 @@ extracted:
         objectives and for the region’s stabilisation by the Mozambican authorities.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

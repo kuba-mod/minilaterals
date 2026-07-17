@@ -49,5 +49,5 @@ extracted:
       evidence: Greece is the cradle of essential values that shape Europe today.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

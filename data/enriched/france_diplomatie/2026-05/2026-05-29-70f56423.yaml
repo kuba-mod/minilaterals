@@ -46,5 +46,5 @@ extracted:
         strengthening of a more united and resilient Europe.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

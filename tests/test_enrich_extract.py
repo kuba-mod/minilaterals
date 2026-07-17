@@ -15,6 +15,17 @@ import yaml
 from pipeline import enrich
 
 
+def test_prompt_surface_in_sync():
+    # If a prompt string changes, its hash changes and this fails — the reminder
+    # to bump PROMPT_VERSION + PROMPT_SURFACE_SHA together so ratings are never
+    # stamped with a stale version (see enrich.PROMPT_VERSION lineage block).
+    assert enrich.prompt_surface_sha() == enrich.PROMPT_SURFACE_SHA, (
+        "Prompt surface changed: bump PROMPT_VERSION and set PROMPT_SURFACE_SHA to "
+        f"{enrich.prompt_surface_sha()!r}, and add the new hash to "
+        "migrate_provenance.PROMPT_LINEAGE."
+    )
+
+
 class FakeProvider:
     """Returns canned responses in sequence; records prompts it was called with."""
 

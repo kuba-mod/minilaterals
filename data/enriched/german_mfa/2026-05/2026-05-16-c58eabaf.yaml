@@ -32,5 +32,5 @@ extracted:
       evidence: On the contrary – we state what is in our interests and what isn’t.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

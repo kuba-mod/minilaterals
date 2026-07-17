@@ -36,5 +36,5 @@ extracted:
         sanctions evasion by the Democratic People’s Republic of Korea (DPRK).
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

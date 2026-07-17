@@ -50,5 +50,5 @@ extracted:
         the fields of security, defence, the economy, and culture.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

@@ -26,5 +26,5 @@ extracted:
         and of finding a swift and lasting end to the war through diplomatic means.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

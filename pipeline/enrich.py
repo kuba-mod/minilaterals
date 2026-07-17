@@ -37,6 +37,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -67,12 +68,32 @@ def _load_goals() -> dict[str, str]:
 WEIMAR_GOALS = _load_goals()
 
 # Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
-# score can be traced to the exact prompt that produced it. BUMP THIS whenever
-# SYSTEM_PROMPT, EXTRACTION_PROMPT, STANCE_RUBRIC, or STANCE_BACKFILL_PROMPT
-# changes in a way that could move ratings. History:
-#   "1" — pre-multilingual prompt (single-language, English-only inputs)
-#   "2" — native-language inputs (de/fr/pl); output English, evidence verbatim
-PROMPT_VERSION = "2"
+# score can be traced to the exact prompt that produced it. The lineage is keyed
+# by the sha256[:8] of the prompt surface (the *_PROMPT / *_RUBRIC constants
+# below), reconstructed from git history:
+#   "1"  612a65fa  original — regex classification, LLM for positions/stances
+#   "2"  da8777de  PR #35 — classification moved into the LLM prompt (actors)
+#   "3"  c2cfff1e  actors/explicit_weimar shape hardening + retry
+#   "4"  434962fe  native-language inputs (de/fr/pl); output English, evidence verbatim
+# BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
+# changes — test_prompt_surface_in_sync fails until you do, so ratings never get
+# mislabelled with a stale version. pipeline.migrate_provenance holds the full
+# hash→version map for backfilling historical sidecars.
+PROMPT_VERSION = "4"
+PROMPT_SURFACE_SHA = "434962fe"
+
+
+def prompt_surface_sha() -> str:
+    """sha256[:8] over the prompt strings sent to the model — the identity behind
+    PROMPT_VERSION. Stable across runs; changes iff a prompt string changes."""
+    parts = {
+        "EXTRACTION_PROMPT": EXTRACTION_PROMPT,
+        "STANCE_BACKFILL_PROMPT": STANCE_BACKFILL_PROMPT,
+        "STANCE_RUBRIC": STANCE_RUBRIC,
+        "SYSTEM_PROMPT": SYSTEM_PROMPT,
+    }
+    blob = "".join(f"{k}={parts[k]}" for k in sorted(parts))
+    return hashlib.sha256(blob.encode()).hexdigest()[:8]
 
 
 def _environment() -> str:

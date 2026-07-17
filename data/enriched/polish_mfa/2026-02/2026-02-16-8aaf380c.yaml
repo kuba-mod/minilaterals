@@ -50,5 +50,5 @@ extracted:
         project carried out to the benefit of people living in Poland and Czechia.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

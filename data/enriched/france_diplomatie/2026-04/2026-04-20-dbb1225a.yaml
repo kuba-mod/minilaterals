@@ -25,5 +25,5 @@ extracted:
         societies, with full respect for the rule of law and freedom of expression.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

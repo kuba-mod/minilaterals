@@ -25,5 +25,5 @@ extracted:
         fostering respect for the principles of equality and human dignity.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

@@ -49,5 +49,5 @@ extracted:
         to the international order.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local

@@ -44,5 +44,5 @@ extracted:
       evidence: The MFA head also urged Hungary to stop blocking a loan for Ukraine.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '1'
+  prompt_version: '3'
   environment: local
