@@ -843,8 +843,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     def _country_sources(actor: str) -> list[dict]:
         return [
-            {**s, "weekly_count": source_weekly_counts.get(s["source"], 0)}
-            for s in COUNTRY_PROFILE[actor]["sources"]
+            {**s, "weekly_count": source_weekly_counts.get(s["source"], 0)} for s in COUNTRY_PROFILE[actor]["sources"]
         ]
 
     country_stats = {
