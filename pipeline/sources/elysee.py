@@ -13,7 +13,7 @@ from .base import BaseIngester, Event
 # No RSS feed; scrape the news listing directly. The French site has fuller
 # coverage than the English translation, consistent with polish_pm scraping
 # gov.pl's Polish listing rather than a thinner English one.
-LISTING_URL = "https://www.elysee.fr/actualites"
+LISTING_URL = "https://www.elysee.fr/toutes-les-actualites"
 BASE_URL = "https://www.elysee.fr"
 SOURCE_NAME = "elysee"
 
@@ -21,7 +21,11 @@ _HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; minilaterals.com Weimar Triangle tracker; +https://minilaterals.com/weimar-triangle)"
 }
 
-# Élysée article URLs embed the publication date: /emmanuel-macron/2026/03/09/slug
+# Élysée article URLs are under /emmanuel-macron/... — some embed the
+# publication date (/emmanuel-macron/2026/07/13/slug), others don't
+# (/emmanuel-macron/sommet-du-g7-devian-2026), so the date isn't a reliable
+# filter for "is this an article link" — only the path prefix is.
+_ARTICLE_PATH = re.compile(r"^/emmanuel-macron/.+")
 _URL_DATE = re.compile(r"/(\d{4})/(\d{2})/(\d{2})/")
 
 
@@ -76,7 +80,7 @@ class ElyseeIngester(BaseIngester):
                 for a_tag in card.find_all("a", href=True):
                     href = a_tag["href"].split("?")[0]
                     item_url = href if href.startswith("http") else BASE_URL + href
-                    if not item_url.startswith(BASE_URL) or not _URL_DATE.search(item_url):
+                    if not item_url.startswith(BASE_URL) or not _ARTICLE_PATH.match(item_url[len(BASE_URL) :]):
                         continue
                     # Listing cards concatenate a date badge + category badge + title
                     # into one <a>; the title is the last <span>, others are dropped.
