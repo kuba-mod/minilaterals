@@ -129,6 +129,7 @@ class ElyseeIngester(BaseIngester):
                     text=body,
                     source_url=item_url,
                     source_lang=self.source_lang,
+                    collection_method="html",
                     source_published_at=date + "T00:00:00Z",
                     date=date,
                 )

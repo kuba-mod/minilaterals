@@ -127,6 +127,7 @@ class GermanChancelleryIngester(BaseIngester):
                     text=summary,
                     source_url=item_url,
                     source_lang=self.source_lang,
+                    collection_method="html",
                     source_published_at=published_at,
                     date=date,
                 )
