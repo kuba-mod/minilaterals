@@ -9,18 +9,12 @@
 <div class="table-wrap table-wrap--wide" style="margin-bottom:48px">
 <table>
   <thead>
-    <tr><th>Source</th><th>Actor</th><th>Method</th><th>Language</th><th>Last Run</th><th>Last Success</th><th>Fetched</th><th>New</th><th>Status</th></tr>
+    <tr><th>Source</th><th>Actor</th><th>Type</th><th>Method</th><th>Language</th><th>Last Run</th><th>Last Success</th><th>Fetched</th><th>New</th><th>Status</th></tr>
   </thead>
   <tbody>
-    {% set source_meta = [
-      ("german_mfa",         "DE", "RSS",          "DE"),
-      ("france_diplomatie",  "FR", "RSS",          "FR"),
-      ("polish_mfa",         "PL", "HTML scraper", "PL"),
-      ("german_chancellery", "DE", "HTML scraper", "DE"),
-      ("elysee",             "FR", "HTML scraper", "FR"),
-      ("polish_pm",          "PL", "HTML scraper", "PL"),
-    ] %}
-    {% for src, actor, method, lang in source_meta %}
+    {% for row in source_rows %}
+    {% set src = row.source %}
+    {% set actor = row.actor %}
     {% set s = source_stats.get(src, {}) %}
     <tr>
       <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ source_labels.get(src, src) }}</td>
@@ -31,8 +25,9 @@
         <span style="color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace">{{ actor }}</span>
         {% endif %}
       </td>
-      <td style="font-size:14px; color:var(--muted)">{{ method }}</td>
-      <td style="font-size:14px; color:var(--muted)">{{ lang }}</td>
+      <td style="font-size:14px; color:var(--muted)">{{ row.type }}</td>
+      <td style="font-size:14px; color:var(--muted)">{{ row.method }}</td>
+      <td style="font-size:14px; color:var(--muted)">{{ row.lang }}</td>
       <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{% if run %}{{ run.date }}{% else %}—{% endif %}</td>
       {% set h = source_health.get(src, {}) %}
       <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{{ h.last_ok or '—' }}</td>
@@ -58,9 +53,10 @@
 <div class="sources-prose">
 
   <p>
-    This tracker ingests press releases and official statements from the foreign ministries and
-    executive offices (the Federal Chancellery, the Élysée, the Prime Minister's Chancellery) of
-    Germany, France, and Poland — in German, French, and Polish, straight from each institution's
+    This tracker follows two official voices for each country: its <strong>foreign ministry</strong>
+    and its <strong>executive office</strong> — the Federal Chancellery in Germany, the Élysée
+    (presidency) in France, and the Prime Minister's Chancellery in Poland. It ingests their press
+    releases and official statements in German, French, and Polish, straight from each institution's
     native-language newsroom rather than the thinner English-translation sections. Each item is
     read by a language model, which classifies it for Weimar Triangle relevance and, for relevant
     items, extracts a one-sentence position summary in English. Following six institutions in
@@ -69,7 +65,7 @@
 
   <span class="label">Relevance classification</span>
   <p>
-    Because every source is a specific ministry or head-of-government office, the source country
+    Because every source is a specific foreign ministry or executive office, the source country
     always counts as an actor — a Polish statement about Ukraine counts Poland even when the text
     never names it. On top of that, the same language model that reads each item identifies which
     other Weimar countries it concerns, which tracked issue areas it touches (Ukraine, defence,
@@ -77,7 +73,7 @@
     the Weimar Triangle or trilateral format.
   </p>
   <p>
-    An item is marked <em>weimar_relevant</em> when it is a ministry or head-of-government item
+    An item is marked <em>weimar_relevant</em> when it is a foreign-ministry or executive-office item
     touching a tracked issue area, when two or more Weimar countries are involved on a tracked issue
     area, or when it carries an explicit trilateral reference. A stronger <em>trilateral_signal</em>
     flag is set when all three actors are present or the Weimar/trilateral reference appears
