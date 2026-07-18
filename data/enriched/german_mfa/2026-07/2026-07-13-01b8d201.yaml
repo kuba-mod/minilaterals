@@ -1,0 +1,52 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: Bodø, Norway
+  position: Germany is strengthening its strategic security and defense partnership
+    with Norway to counter Russian and Chinese influence in the Arctic and North Atlantic.
+  positions:
+    ukraine: Germany acknowledges the Russian war against Ukraine as the catalyst
+      for reorienting its security and deterrence strategy on NATO's flanks.
+    defence: Germany is actively advancing collective security through joint submarine
+      development and large-scale military exercises in Norway.
+    hybrid: Germany identifies and warns against Russian hybrid attacks and provocations
+      in the Arctic region.
+    green_transition: Germany links its security interests in the North to the future
+      of energy supply, specifically regarding hydrogen production.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Nach dem russischen Angriffskrieg gegen die Ukraine müssen wir unsere
+        Sicherheit, Verteidigung und Abschreckung gegenüber Russland an der Ost- und
+        Nordflanke der NATO neu ausrichten.
+    defence:
+      score: 2
+      evidence: Das zwischen Deutschland und Norwegen gemeinsam entwickelte U-Boot
+        der Klasse U212CD... verkörpert unsere herausragende Zusammenarbeit.
+    hybrid:
+      score: 1
+      evidence: Dabei schreckt Russland auch vor Provokationen und hybriden Angriffen
+        nicht zurück.
+    green_transition:
+      score: 1
+      evidence: Sei es für die Zukunft unserer Energieversorgung, wie etwa bei der
+        Gewinnung von Wasserstoff
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

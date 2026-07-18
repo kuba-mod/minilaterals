@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Gunther Krichbaum
+  - Benjamin Haddad
+  - Staatsminister für Europa
+  - Beigeordneter Minister für Europa
+  topics:
+  - green_transition
+  location: null
+  position: Germany is actively pursuing bilateral cooperation with France to improve
+    cross-border healthcare, transport, labor mobility, and vocational training in
+    border regions.
+  positions:
+    green_transition: Germany supports the exploration and utilization of geothermal
+      energy in the border region to advance green energy objectives.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Wir begrüßen das regionale Engagement zur Erforschung und Nutzung
+        des geothermischen Potentials in der Grenzregio
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

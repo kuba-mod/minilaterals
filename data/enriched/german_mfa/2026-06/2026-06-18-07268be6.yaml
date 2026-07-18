@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Gunther Krichbaum
+  - Claudia Bauer
+  - Nikolaus Marschik
+  topics:
+  - enlargement
+  location: Vienna, Austria
+  position: Germany is strengthening its bilateral relationship with Austria, focusing
+    on shared European perspectives and the integration of Western Balkan states into
+    the EU.
+  positions:
+    enlargement: Germany rhetorically supports the accession of Western Balkan states
+      to the European Union.
+  stances:
+    enlargement:
+      score: 1
+      evidence: die Integration der Staaten des Westlichen Balkans in die Europäische
+        Union
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

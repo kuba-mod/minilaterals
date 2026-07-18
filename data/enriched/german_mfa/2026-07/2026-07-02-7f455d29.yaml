@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Sprecher des Auswärtigen Amts
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany strongly condemns Russian airstrikes on Ukraine and reaffirms
+    its commitment to continued military and diplomatic support.
+  positions:
+    ukraine: Germany continues its support for Ukraine's defense against Russia's
+      illegal war of aggression.
+    defence: Germany is coordinating with partners to increase pressure on Russia
+      and will discuss support at the upcoming NATO summit.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Wir setzen unsere Unterstützung für die Ukraine in ihrem Abwehrkampf
+        fort.
+    defence:
+      score: 1
+      evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO -Gipfel
+        in Ankara gehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

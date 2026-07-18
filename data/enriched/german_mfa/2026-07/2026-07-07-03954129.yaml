@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - defence
+  location: Israel
+  position: Germany reaffirms its security partnership with Israel and seeks to contribute
+    to regional stability and peace in the Middle East.
+  positions:
+    defence: Germany supports collective security through a security partnership with
+      Israel and coordination with NATO.
+  stances:
+    defence:
+      score: 1
+      evidence: Wir sind aber auch durch eine gegenseitige Sicherheitspartnerschaft
+        verbunden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

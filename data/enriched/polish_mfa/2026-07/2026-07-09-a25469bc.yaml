@@ -1,0 +1,36 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jean-Noël Barrot
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland emphasizes France as a strategic partner in Europe and the Weimar
+    Triangle to strengthen security and economic cooperation.
+  positions:
+    ukraine: Poland discusses current security challenges regarding Ukraine with France.
+    defence: Poland seeks to develop cooperation in defense and perceives France as
+      a partner with a similar view of security challenges.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ministrowie dyskutowali także o bieżących wyzwaniach związanych z
+        bezpieczeństwem, w tym na Bliskim Wschodzie i w Ukrainie.
+    defence:
+      score: 1
+      evidence: Zadeklarowali kontynuację ścisłego dialogu politycznego i rozwój współpracy
+        w kluczowych obszarach, w tym m.in. gospodarce, obronności oraz kulturze.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

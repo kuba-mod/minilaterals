@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ambassadors of Latin America and the Caribbean accredited in Poland
+  - representatives of the Ministry of Climate and Environment
+  topics:
+  - green_transition
+  location: null
+  position: Poland is promoting the export of its green technologies and exploring
+    cooperation in green hydrogen production with Latin American and Caribbean partners.
+  positions:
+    green_transition: Poland actively advances the green transition by implementing
+      the GreenEvo program to transfer sustainable technologies and innovating in
+      green hydrogen.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Celem programu jest wspieranie międzynarodowego transferu zielonych
+        technologii, dostarczanych przez polskie małe i średnie przedsiębiorstwa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

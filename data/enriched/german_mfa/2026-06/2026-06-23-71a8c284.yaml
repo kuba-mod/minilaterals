@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is focusing on securing its industrial future through the diversification
+    of trade relations and the establishment of global partnerships based on shared
+    rules.
+  positions:
+    rule_of_law: Germany emphasizes the necessity of common, universal rules to provide
+      a secure framework for global action and economic stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Auf gemeinsame Regeln setzen. Dass ich das als Außenminister betonen
+        muss, sagt auch viel aus über die Welt, in der wir agieren. Gemeinsame Regeln,
+        die für alle gelten und einen sicheren Handlungsrahmen bieten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

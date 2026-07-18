@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Benjamin Haddad
+  - Gunther Krichbaum
+  topics:
+  - green_transition
+  location: Brühl, Germany
+  position: France is collaborating with Germany to implement practical cross-border
+    solutions in healthcare, mobility, education, and energy transition.
+  positions:
+    green_transition: France is actively advancing the green transition through cross-border
+      cooperation projects on energy and environmental risk management.
+  stances:
+    green_transition:
+      score: 2
+      evidence: they also welcomed the cooperation projects started in the energy-transition
+        field, particularly around the Interreg GeoTresOR project
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

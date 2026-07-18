@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - green_transition
+  - rule_of_law
+  location: São Paulo, Brazil
+  position: Germany celebrates the completion of the EU-Mercosur agreement as a strategic
+    milestone for open, rules-based trade and shared democratic values.
+  positions:
+    green_transition: Germany views the EU-Mercosur agreement as an opportunity for
+      a green and digital future.
+    rule_of_law: Germany emphasizes the importance of democratic resilience and the
+      rule of law in its strategic partnerships.
+  stances:
+    green_transition:
+      score: 1
+      evidence: EU-Mercosur-Abkommen – Chancen für eine grüne und digitale Zukunft
+    rule_of_law:
+      score: 1
+      evidence: Wir stehen als Demokratien und Rechtsstaaten zusammen und verbinden
+        unsere Gesellschaften, die von denselben Werten getragen werden!
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

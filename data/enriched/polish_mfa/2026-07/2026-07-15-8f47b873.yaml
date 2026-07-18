@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the importance of moral clarity and individual freedom
+    in foreign policy by honoring the legacy of Ronald Reagan.
+  positions:
+    rule_of_law: Poland rhetorically supports the values of freedom, dignity, and
+      morality as fundamental components of political leadership and international
+      relations.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Chcemy przywódców, którzy mają własne wyobrażenie wolności, godności,
+        odpowiedzialności, sprawiedliwości i patriotyzmu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

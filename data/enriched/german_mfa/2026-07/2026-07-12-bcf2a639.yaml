@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany and its international partners affirm their commitment to a rules-based
+    international order in the Indo-Pacific and support the 2016 arbitration ruling
+    regarding the South China Sea.
+  positions:
+    rule_of_law: Germany rhetorically supports the rule of law and international legal
+      frameworks by insisting on the binding nature of the UNCLOS arbitration ruling.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Wir bekräftigen unser unerschütterliches Bekenntnis zur Aufrechterhaltung
+        eines freien, offenen, friedlichen, stabilen, regelbasierten und fest an das
+        Völkerrecht gebundenen indopazifischen Raums
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

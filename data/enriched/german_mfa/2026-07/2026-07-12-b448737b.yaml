@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers
+  topics:
+  - defence
+  location: null
+  position: Germany condemns Iranian attacks on shipping and regional countries and
+    calls for the restoration of ceasefires and international law.
+  positions:
+    defence: Germany rhetorically supports collective security and stability in the
+      Gulf region by condemning aggression and advocating for the rule of international
+      law.
+  stances:
+    defence:
+      score: 1
+      evidence: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt
+        in der Straße von Hormus und auf Länder in der Region
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

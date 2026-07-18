@@ -1,0 +1,32 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Jean-Noël Barrot
+  - Władysław Kosiniak-Kamysz
+  - Magdalena Sobkowiak-Czarnecka
+  - Henryka Mościcka-Dendys
+  - Artur Harazim
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland emphasizes its leadership in armaments and the importance of strategic
+    security cooperation with France and NATO.
+  positions:
+    defence: Poland actively advances collective security and deterrence by positioning
+      itself as a leader in armaments.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska jest dziś liderem zbrojeń.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

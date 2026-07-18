@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Auswärtiges Amt
+  - Bundesministerium der Verteidigung
+  - Krisenstab der Bundesregierung
+  topics:
+  - defence
+  location: null
+  position: Germany is mobilizing military and civilian resources to provide urgent
+    humanitarian aid to Venezuela following severe earthquakes.
+  positions:
+    defence: Germany is deploying tactical air transport aircraft and personnel to
+      facilitate the delivery of humanitarian aid and medical evacuation.
+  stances:
+    defence:
+      score: 2
+      evidence: Sechs Maschinen der Luftwaffe stehen für die Unterstützung bereit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

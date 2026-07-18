@@ -1,0 +1,29 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Géza Andreas von Geyr
+  - Regierender Bürgermeister
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany emphasizes that close cooperation with Poland is essential for
+    European security and the strength of NATO, specifically through new defense agreements.
+  positions:
+    defence: Germany is actively advancing defense cooperation with Poland through
+      the signing of a bilateral defense agreement to strengthen European security.
+  stances:
+    defence:
+      score: 2
+      evidence: Dass heute in Warschau ein Verteidigungsabkommen zwischen unseren
+        Ländern unterzeichnet wurde, ist umso bedeutender.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

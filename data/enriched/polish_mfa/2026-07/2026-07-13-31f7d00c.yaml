@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: null
+  position: Poland strongly supports EU cyber sanctions against Russian entities and
+    is actively enhancing its own cyber defense and critical infrastructure protection.
+  positions:
+    hybrid: Poland actively advances the goal of combating hybrid threats through
+      the support of cyber sanctions and the strengthening of national cyber defense.
+  stances:
+    hybrid:
+      score: 2
+      evidence: 'Polska aktywnie działa na rzecz: ochrony krajowej infrastruktury
+        krytycznej, budowania odporności, wzmacniania cyberoobrony.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

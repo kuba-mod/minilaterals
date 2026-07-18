@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Prälat Jüsten
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany reaffirms its unwavering support for Ukraine's sovereignty and
+    freedom in the face of Russia's war of aggression and attempt to erase Ukrainian
+    identity.
+  positions:
+    ukraine: Germany commits to continued and strengthened support for Ukraine's freedom
+      and sovereignty against Russian aggression.
+    hybrid: Germany identifies and criticizes Russian propaganda and the exploitation
+      of peace desires as deceptive tactics.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Dieser Angriffskrieg wird unsere unerschütterliche Unterstützung für
+        die Freiheit und Souveränität der Ukraine nur noch verstärken.
+    hybrid:
+      score: 1
+      evidence: Der im Übrigen den ganzen Widerspruch der russischen Propaganda entlarvt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Gunther Krichbaum
+  - Benjamin Haddad
+  - Sabine Thillaye
+  topics:
+  - defence
+  location: Paris and Tours, France
+  position: Germany is emphasizing the necessity of intensified bilateral cooperation
+    with France to ensure a sovereign and capable European Union.
+  positions:
+    defence: Germany rhetorically supports the creation of a strong and capable European
+      Union, which aligns with the goal of enhancing EU defence capabilities.
+  stances:
+    defence:
+      score: 1
+      evidence: im Dienste eines starken, souveränen und handlungsfähigen Europas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

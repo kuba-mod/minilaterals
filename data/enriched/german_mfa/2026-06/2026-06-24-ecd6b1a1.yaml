@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Kirsten Fehrs
+  topics:
+  - ukraine
+  location: null
+  position: Germany acknowledges the ongoing crisis of the Russian war of aggression
+    against Ukraine as a significant pressure on society.
+  positions:
+    ukraine: Germany rhetorically acknowledges the ongoing Russian war of aggression
+      against Ukraine as a primary crisis facing the diplomatic service.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Der russische Angriffskrieg gegen die Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

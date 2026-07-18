@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Botschafter Lamlé
+  topics:
+  - rule_of_law
+  location: Buenos Aires, Argentina
+  position: Germany emphasizes the importance of reliable partnerships and democratic
+    resilience in an era of global instability.
+  positions:
+    rule_of_law: Germany rhetorically supports the need for stability and strength
+      in democracies facing internal and external pressures.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: In einer Zeit, in der Demokratien von innen und von außen unter Druck
+        stehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

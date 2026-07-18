@@ -1,0 +1,52 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: Helsinki, Finland
+  position: Germany emphasizes the strengthening of European security through NATO's
+    expansion to Finland, increased military support for Ukraine, and resilience against
+    Russian hybrid threats.
+  positions:
+    ukraine: Germany provides substantial financial military aid to Ukraine to force
+      Russia toward negotiations.
+    defence: Germany supports enhancing NATO's deterrence and defense capabilities,
+      specifically in the Baltic region.
+    hybrid: Germany aims to learn from Finnish resilience to better defend against
+      sabotage, cyber attacks, and disinformation.
+    green_transition: Germany supports the rapid expansion of future industries, specifically
+      the European hydrogen economy.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Wir haben der Ukraine als NATO -Partner beim Gipfel in Ankara 140
+        Milliarden Euro für die Verteidigung zugesagt
+    defence:
+      score: 2
+      evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
+        verstärken.
+    hybrid:
+      score: 1
+      evidence: Von dieser Erfahrung können wir in Europa lernen, um uns besser gegen
+        Sabotage, Cyberangriffe oder Desinformation zu wappnen.
+    green_transition:
+      score: 1
+      evidence: Der zügige Ausbau von Zukunftsbranchen, wie etwa einer leistungsfähigen
+        europäischen Wasserstoffwirtschaf
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

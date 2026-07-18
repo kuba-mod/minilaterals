@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Rada Odporności
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland warns against Russian disinformation campaigns regarding the Volhynia
+    massacre intended to destabilize Polish-Ukrainian relations.
+  positions:
+    ukraine: Poland emphasizes the importance of maintaining cooperation and stability
+      in relations with Ukraine to counter Russian interests.
+    hybrid: Poland actively warns against and calls for vigilance regarding Russian
+      disinformation operations aimed at creating social division.
+    rule_of_law: Poland supports the credibility of institutions fighting disinformation
+      as a matter of national interest.
+  stances:
+    ukraine:
+      score: 1
+      evidence: W żywotnym interesie Polski leży niedopuszczenie do realizacji takiego
+        scenariusza, będącego zagrożeniem dla bezpieczeństwa naszego kraju.
+    hybrid:
+      score: 2
+      evidence: Rada zwraca się z apelem o niereagowanie na wszelkie informacje na
+        temat zbrodni wołyńskiej pochodzące ze źródeł rosyjskich i niezweryfikowanych
+    rule_of_law:
+      score: 1
+      evidence: pogłębienia uprzedzeń i nieufności wobec instytucji zajmujących się
+        zwalczaniem rosyjskiej dezinformacji, co nie leży w polskim interesie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

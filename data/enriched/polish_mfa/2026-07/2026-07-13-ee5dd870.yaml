@@ -1,0 +1,57 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Kai Kallas
+  - Andrij Sybiha
+  - Oleksandra Matvijchuk
+  - Maksym Butkevych
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Brussels, Belgium
+  position: Poland advocates for urgent EU sanctions against Russia, energy and air
+    defense support for Ukraine, and international accountability for Russian war
+    crimes.
+  positions:
+    ukraine: Poland actively pushes for the immediate adoption of the 21st sanctions
+      package and critical energy infrastructure support for Ukraine.
+    defence: Poland emphasizes the urgent need to provide Ukraine with air defense
+      systems.
+    hybrid: Poland supports the EU's recognition of the Russian FSB's involvement
+      in hostile cyber activities.
+    rule_of_law: Poland demands international legal accountability and punishment
+      for Russian perpetrators of war crimes against civilians.
+  stances:
+    ukraine:
+      score: 2
+      evidence: zaapelował również o szybkie przyjęcie przez Unię Europejską 21. pakietu
+        sankcji wobec Rosji
+    defence:
+      score: 1
+      evidence: zaznaczył także konieczność pilnego wsparcia Ukrainy systemami obrony
+        powietrznej
+    hybrid:
+      score: 1
+      evidence: Wicepremier Sikorski z zadowoleniem przyjął oświadczenie Wysokiej
+        Przedstawiciel Kai Kallas w sprawie wrogich działań Rosji w cyberprzestrzeni
+        wobec państw członkowskich, w tym Polski.
+    rule_of_law:
+      score: 1
+      evidence: podkreślił konieczność reakcji społeczności międzynarodowej na naruszenia
+        międzynarodowego prawa humanitarnego. Należy ukarać sprawców
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

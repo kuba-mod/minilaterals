@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting an open house at the Foreign Office to engage citizens
+    in discussions about German foreign policy and international cooperation.
+  positions:
+    defence: Germany mentions its cooperation within NATO as part of its foreign policy
+      framework.
+  stances:
+    defence:
+      score: 0
+      evidence: Wie funktioniert die Zusammenarbeit in EU , NATO und UN ?
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Lars Castellucci
+  topics:
+  - rule_of_law
+  location: Tripolis, Libya
+  position: Germany is conducting a diplomatic visit to Libya to address human rights,
+    migration challenges, and the completion of the democratic transition process.
+  positions:
+    rule_of_law: Germany actively promotes democratic resilience and the rule of law
+      by advocating for free and inclusive national elections in Libya.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Deutschland setzt sich dafür ein, dass die demokratische Übergangsphase
+        mit freien, transparenten und inklusiven Parlaments- und Präsidialwahlen erfolgreich
+        vollendet wird.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

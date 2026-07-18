@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - defence
+  location: null
+  position: Germany welcomes Canada's selection of a German-Norwegian submarine bid
+    featuring TKMS to strengthen transatlantic defense cooperation.
+  positions:
+    defence: Germany actively advances collective security and defense industrial
+      capabilities through a strategic partnership with Canada and Norway.
+  stances:
+    defence:
+      score: 2
+      evidence: Dieser Schritt bedeutet eine langfristige Stärkung und Vertiefung
+        unserer Partnerschaft im transatlantischen Bündnis.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

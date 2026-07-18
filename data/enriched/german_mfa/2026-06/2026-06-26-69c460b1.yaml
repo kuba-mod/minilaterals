@@ -1,0 +1,25 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Special Envoy of the UN Secretary-General for the Great Lakes Region
+  - Faure Gnassingbé
+  - Mahmoud Ali Youssouf
+  - Bankole Adeoye
+  - Sahle-Work Zewde
+  topics: []
+  location: Nairobi, Kenya and Addis Ababa, Ethiopia
+  position: Germany, as part of the International Contact Group, is coordinating with
+    international organizations and regional actors to support peace, security, and
+    humanitarian efforts in the Great Lakes region.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

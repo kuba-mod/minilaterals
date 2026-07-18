@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  - Marco Rubio
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Foreign Minister Wadephul emphasizes strengthening alliances with the
+    USA and Mercosur nations to ensure security, support Ukraine, and diversify economic
+    supply chains.
+  positions:
+    ukraine: Germany seeks to secure stable, long-term support for Ukraine to compel
+      Russia to negotiate for peace.
+    defence: Germany reaffirms its commitment to NATO's collective deterrence and
+      the need for a new burden-sharing arrangement within the alliance.
+  stances:
+    ukraine:
+      score: 1
+      evidence: eine stabile, langfristige Unterstützung der Ukraine erreichen können
+    defence:
+      score: 1
+      evidence: Unsere kollektive Abschreckung wirkt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

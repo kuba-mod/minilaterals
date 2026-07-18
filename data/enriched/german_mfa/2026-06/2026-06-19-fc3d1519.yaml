@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  location: Kiel, Germany
+  position: Germany emphasizes the critical importance of NATO's eastern flank and
+    the Baltic Sea in countering Russian aggression to ensure European security.
+  positions:
+    ukraine: Germany characterizes Russia's war against Ukraine as a fundamental threat
+      to European freedom and security.
+    defence: Germany supports the strengthening of NATO's northeast flank, transforming
+      it from a vulnerability into a transatlantic bulwark.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russlands völkerrechtswidriger Krieg gegen die Ukraine, der im Jahr
+        2014 begann, hat in aller Deutlichkeit gezeigt, dass Putins Russland eine
+        Gefahr für die Freiheit und Sicherheit in Europa und eine Bedrohung für die
+        NATO darstellt.
+    defence:
+      score: 2
+      evidence: Die Präsenz der NATO hat sich vom „Stolperdraht“ hin zu einem transatlantischen
+        Bollwerk entwickelt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

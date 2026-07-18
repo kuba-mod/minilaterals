@@ -1,0 +1,41 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Kaja Kallas
+  - Marco Rubio
+  - Þorgerður Katrín Gunnarsdóttir
+  - Sheikh Jarrah Jaber Al-Ahmad Al-Sabah
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Poland actively supports increasing defense spending and strengthens multilateral
+    security cooperation within NATO and the E5 format to deter Russian aggression.
+  positions:
+    ukraine: Poland continues its diplomatic engagement and support for Ukraine through
+      participation in the NATO-Ukraine Council.
+    defence: Poland strongly advocates for increased defense spending and the development
+      of deterrence capabilities against Russia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: szef polskiej dyplomacji uczestniczył w posiedzeniu Rady NATO-Ukraina
+    defence:
+      score: 2
+      evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+        szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+        do 5% PKB
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

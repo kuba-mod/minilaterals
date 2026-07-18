@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Krisztián Mészáros
+  topics:
+  - hybrid
+  - enlargement
+  - rule_of_law
+  location: Budapest, Hungary
+  position: Poland engaged in diplomatic discussions in Hungary regarding EU enlargement,
+    the rule of law, and counteracting Russian hybrid threats.
+  positions:
+    hybrid: Poland expresses concern over Russian disinformation campaigns and discusses
+      methods to combat them.
+    enlargement: Poland conducted consultations regarding the expansion of the European
+      Union.
+    rule_of_law: Poland discussed reforms intended to restore the rule of law within
+      the Hungarian government.
+  stances:
+    hybrid:
+      score: 1
+      evidence: skutków kampanii dezinformacyjnych prowadzonych przez Rosję i sposobów
+        ich zwalczania
+    enlargement:
+      score: 1
+      evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
+    rule_of_law:
+      score: 1
+      evidence: dyskutował o reformach przywracających państwo prawa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

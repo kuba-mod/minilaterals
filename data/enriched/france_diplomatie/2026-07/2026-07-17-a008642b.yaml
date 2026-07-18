@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - chargé d’affaires a.i. of the Russian Federation’s Embassy in France
+  - Minister for Europe and Foreign Affairs
+  - Continental Europe Director
+  topics:
+  - hybrid
+  location: null
+  position: France summoned the Russian chargé d'affaires to condemn malicious cyber
+    activities conducted by Russia, specifically by the FSB’s Centre 16.
+  positions:
+    hybrid: France actively opposes Russian cyber attacks and expresses determination
+      to pre-empt and respond to these hybrid threats alongside partners.
+  stances:
+    hybrid:
+      score: 2
+      evidence: France remains determined to use every means at its disposal to pre-empt,
+        discourage and respond to the destabilizing actions of which it is the target.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

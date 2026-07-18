@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  - Außenminister Gideon Sa‘ar
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Israel
+  position: Germany is quintupling its annual financial support for Yad Vashem to
+    five million euros to enhance Holocaust digitalization and educational programs.
+  positions:
+    hybrid: Germany actively combats disinformation and Holocaust denial through the
+      funding of documentation and educational initiatives.
+    rule_of_law: Germany demonstrates commitment to democratic resilience and historical
+      truth by securing and digitizing witness testimonies.
+  stances:
+    hybrid:
+      score: 2
+      evidence: der grassierenden Relativierung und sogar Leugnung des Holocaust entschieden
+        entgegen zu treten
+    rule_of_law:
+      score: 2
+      evidence: die gewaltigen Bestände von Yad Vashem zu digitalisieren
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dr. Géza Andreas von Geyr
+  - Präsident al-Sharaa
+  - Bundeskanzler Merz
+  topics:
+  - rule_of_law
+  location: Damascus, Syria
+  position: Germany aims to support the reconstruction of Syria and the establishment
+    of professional state institutions through the joint action plan.
+  positions:
+    rule_of_law: Germany supports the restoration of freedom, dignity, and the establishment
+      of impartial state institutions in Syria.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Syrien braucht funktionierende, professionelle und unparteiische staatliche
+        Institutionen für alle Syrerinnen und Syrer
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

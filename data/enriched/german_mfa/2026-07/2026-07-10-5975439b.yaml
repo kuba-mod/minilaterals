@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - High Representative on behalf of the European Union
+  topics:
+  - rule_of_law
+  location: El Obeid, Sudan
+  position: Germany, via the EU, condemns the military escalation in El Obeid and
+    demands adherence to international humanitarian law and a transition to civilian
+    rule.
+  positions:
+    rule_of_law: Germany supports the rule of law by demanding accountability and
+      respect for international humanitarian law in the Sudanese conflict.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: restore and to uphold accountability and respect for international
+        law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

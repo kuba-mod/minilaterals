@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - green_transition
+  location: Brasilia, Brazil
+  position: Germany seeks to diversify its critical raw material supply chains through
+    a strategic partnership with Brazil encompassing the entire value chain from extraction
+    to recycling.
+  positions:
+    green_transition: Germany is actively pursuing the diversification of critical
+      raw materials essential for industrial and green technologies through strategic
+      partnerships and investment.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Wir möchten mit Brasilien entlang der gesamten Wertschöpfungskette
+        für Rohstoffe zusammenarbeiten – von der Erschließung über die Gewinnung bis
+        hin zu Verarbeitung, Recycling, Innovation und der Entwicklung neuer Technologien.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
