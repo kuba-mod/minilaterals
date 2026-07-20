@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Gavin Newsom
+  topics:
+  - defence
+  - hybrid
+  location: California, USA
+  position: Poland seeks to strengthen transatlantic ties with the US through diplomatic
+    engagement, security cooperation, and economic innovation.
+  positions:
+    defence: Poland emphasizes the importance of the transatlantic partnership and
+      the NATO framework for security.
+    hybrid: Poland is actively developing cooperation with California in the field
+      of cybersecurity.
+  stances:
+    defence:
+      score: 1
+      evidence: rozmowa dotyczyła relacji transatlantyckich, podsumowania szczytu
+        NATO w Ankarze oraz wzmacniania relacji polsko-amerykańskich
+    hybrid:
+      score: 2
+      evidence: Polska i Kalifornia rozwijają współpracę, m.in. w obszarze cyberbezpieczeństwa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
