@@ -57,7 +57,7 @@ Sources (RSS/HTML/API)
 
 | File | Purpose |
 |---|---|
-| `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `MFA_SOURCES` known-actor set |
+| `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `KNOWN_ACTOR_SOURCES` known-actor set |
 | `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
 | `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders 3 pages |
@@ -85,7 +85,7 @@ Both raw and enriched provenance fields are Optional in the schemas so pre-prove
 
 ## Relevance classification (`enrich.py`)
 
-Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor MFA item on a tracked topic. Sources in `MFA_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country MFA item on a tracked topic still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
+Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor item on a tracked topic. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
 
 ## Convergence scoring (`render.py`)
 
@@ -107,8 +107,8 @@ Every ingested event is a file at `data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{
 **2. Deduplication by filename.**
 `hash8 = sha256(source_url + title)[:8]`. File existence = already ingested. No database lookup, no `UNIQUE` constraint. Trade-off: 8 hex chars gives ~1-in-4-billion collision probability, acceptable for this volume. If the same event is published by two sources, both files are kept (different source_name → different path).
 
-**3. MFA sources are known-actor.**
-German MFA, French MFA, and Polish MFA are in `MFA_SOURCES`. During enrichment their source country is folded into `actors`, so any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across MFAs *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement. Trade-off: this produces false positives (an item that only touches a tracked topic in passing still counts).
+**3. MFAs and heads-of-government offices are known-actor.**
+The three MFAs and the three heads-of-government offices (German Chancellery, Élysée, Polish PM's Chancellery/KPRM) are in `KNOWN_ACTOR_SOURCES`. During enrichment their source country is folded into `actors`, so any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across known-actor sources *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement; and Weimar summits are leader-level, so chancellery/Élysée output is as much the country position as MFA output. Trade-off: this produces false positives (an item that only touches a tracked topic in passing still counts). Future *sectoral* sources (environment, defence ministries) should get a `SOURCE_ACTOR` entry but stay out of `KNOWN_ACTOR_SOURCES`: their newsrooms are dominated by domestic policy, so they keep the stricter 2+-country / explicit-trilateral gate.
 
 **4. Two-tier relevance.**
 `weimar_relevant` (broad — enables the comparison view) vs `trilateral_signal` (strong — explicit Weimar/trilateral mention or all 3 actors present). The renderer currently treats both the same way. The `trilateral_signal` field is available for a future "strong signal" filter or separate section.
@@ -130,7 +130,7 @@ Each MFA is ingested from its native-language newsroom (`source_lang` de/fr/pl):
 
 ## Adding a new source
 
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the ministry's native language — see design principle #9)
+1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and only set `source_name` + `news_url`
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is a foreign ministry (known-actor), also add it to `MFA_SOURCES` in `base.py`
+3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` in `base.py`
 4. Add a row to the sources table in `pipeline/templates/sources.html`

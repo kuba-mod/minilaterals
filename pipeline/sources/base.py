@@ -15,12 +15,21 @@ from pipeline.schemas import RawEventSchema
 # Relevance signals
 # ---------------------------------------------------------------------------
 
-# Sources where the actor (DE/FR/PL) is known from the source itself.
-# Enrichment folds the source country into the actor list even when the text
-# names only that one country, so a single-country MFA press release on a
+# Sources where the actor (DE/FR/PL) is known from the source itself: the 3
+# MFAs plus the 3 heads-of-government offices (Weimar summits are leader-level,
+# so chancellery/Élysée/KPRM output is as much the country position as MFA
+# output). Enrichment folds the source country into the actor list even when
+# the text names only that one country, so a single-country press release on a
 # tracked topic is as trackable as a joint statement — the comparison across
-# MFA sources IS the analysis, even when no joint statement exists.
-MFA_SOURCES = {"german_mfa", "france_diplomatie", "polish_mfa"}
+# known-actor sources IS the analysis, even when no joint statement exists.
+KNOWN_ACTOR_SOURCES = {
+    "german_mfa",
+    "france_diplomatie",
+    "polish_mfa",
+    "german_chancellery",
+    "elysee",
+    "polish_pm",
+}
 
 # Each MFA's native-language section (see design principle #9). An event whose
 # source_lang matches this is `collection: native`; anything else (the English

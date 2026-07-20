@@ -50,7 +50,7 @@ from openai import OpenAI
 from tqdm import tqdm
 
 from pipeline.schemas import EnrichedEventSchema, ExtractedSchema
-from pipeline.sources.base import MFA_SOURCES
+from pipeline.sources.base import KNOWN_ACTOR_SOURCES
 
 ROOT = Path(__file__).parent.parent
 EVENTS_DIR = ROOT / "data" / "events"
@@ -186,15 +186,21 @@ SOURCE_LABELS = {
     "german_mfa": "Germany",
     "france_diplomatie": "France",
     "polish_mfa": "Poland",
+    "german_chancellery": "Germany",
+    "elysee": "France",
+    "polish_pm": "Poland",
 }
 
 # Country code for each known-actor source. The source country is always folded
-# into the actor list for these sources (see MFA_SOURCES), so a single-country
-# MFA press release still counts its own country as an actor.
+# into the actor list for these sources (see KNOWN_ACTOR_SOURCES), so a single-country
+# MFA/chancellery press release still counts its own country as an actor.
 SOURCE_ACTOR = {
     "german_mfa": "DE",
     "france_diplomatie": "FR",
     "polish_mfa": "PL",
+    "german_chancellery": "DE",
+    "elysee": "FR",
+    "polish_pm": "PL",
 }
 
 # Canonical order for actor codes, and the aliases the model might return.
@@ -220,7 +226,7 @@ def _normalize_actors(raw_actors, source_name: str) -> list[str]:
         code = _ACTOR_ALIASES.get(str(a).strip().upper())
         if code:
             codes.add(code)
-    if source_name in MFA_SOURCES:
+    if source_name in KNOWN_ACTOR_SOURCES:
         codes.add(SOURCE_ACTOR[source_name])
     return [c for c in _ACTOR_ORDER if c in codes]
 
@@ -468,17 +474,17 @@ def _extract(provider, raw_path: Path) -> bool:
         # countries are involved, whether it explicitly invokes the trilateral
         # format, and which issue areas it touches. Relevance is then a fixed
         # rule over those signals — mirroring the previous policy (a trilateral
-        # signal, two-plus actors on a tracked topic, or a known-actor MFA item
-        # on a tracked topic), but with LLM-perceived signals instead of regex.
+        # signal, two-plus actors on a tracked topic, or a known-actor item on
+        # a tracked topic), but with LLM-perceived signals instead of regex.
         # Pulled out of `extracted` (not part of ExtractedSchema) since they're
         # promoted to top-level enriched fields instead.
         actors = _normalize_actors(extracted.pop("actors", None), source_name)
         explicit_weimar = _as_bool(extracted.pop("explicit_weimar", None))
         ExtractedSchema.model_validate(extracted)
-        from_mfa = source_name in MFA_SOURCES
+        from_known_actor = source_name in KNOWN_ACTOR_SOURCES
         trilateral_signal = explicit_weimar or len(actors) == 3
         weimar_relevant = (
-            trilateral_signal or (len(actors) >= 2 and bool(llm_topics)) or (from_mfa and bool(llm_topics))
+            trilateral_signal or (len(actors) >= 2 and bool(llm_topics)) or (from_known_actor and bool(llm_topics))
         )
 
         enriched_data = {

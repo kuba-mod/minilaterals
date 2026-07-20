@@ -13,9 +13,12 @@
   </thead>
   <tbody>
     {% set source_meta = [
-      ("german_mfa",       "DE", "RSS",          "DE"),
-      ("france_diplomatie","FR", "RSS",          "FR"),
-      ("polish_mfa",       "PL", "HTML scraper", "PL"),
+      ("german_mfa",         "DE", "RSS",          "DE"),
+      ("france_diplomatie",  "FR", "RSS",          "FR"),
+      ("polish_mfa",         "PL", "HTML scraper", "PL"),
+      ("german_chancellery", "DE", "HTML scraper", "DE"),
+      ("elysee",             "FR", "HTML scraper", "FR"),
+      ("polish_pm",          "PL", "HTML scraper", "PL"),
     ] %}
     {% for src, actor, method, lang in source_meta %}
     {% set s = source_stats.get(src, {}) %}
@@ -55,30 +58,31 @@
 <div class="sources-prose">
 
   <p>
-    This tracker ingests press releases and official statements from the foreign ministries of
-    Germany, France, and Poland — in German, French, and Polish, straight from each ministry's
+    This tracker ingests press releases and official statements from the foreign ministries and
+    executive offices (the Federal Chancellery, the Élysée, the Prime Minister's Chancellery) of
+    Germany, France, and Poland — in German, French, and Polish, straight from each institution's
     native-language newsroom rather than the thinner English-translation sections. Each item is
     read by a language model, which classifies it for Weimar Triangle relevance and, for relevant
-    items, extracts a one-sentence position summary in English. Following three ministries in
+    items, extracts a one-sentence position summary in English. Following six institutions in
     three languages is exactly the work this site exists to save you.
   </p>
 
   <span class="label">Relevance classification</span>
   <p>
-    Because every source is a specific foreign ministry, the source country always counts as an
-    actor — a Polish statement about Ukraine counts Poland even when the text never names it.
-    On top of that, the same language model that reads each item identifies which other Weimar
-    countries it concerns, which tracked issue areas it touches (Ukraine, defence, hybrid threats,
-    enlargement, green transition, rule of law), and whether it explicitly invokes the Weimar
-    Triangle or trilateral format.
+    Because every source is a specific ministry or head-of-government office, the source country
+    always counts as an actor — a Polish statement about Ukraine counts Poland even when the text
+    never names it. On top of that, the same language model that reads each item identifies which
+    other Weimar countries it concerns, which tracked issue areas it touches (Ukraine, defence,
+    hybrid threats, enlargement, green transition, rule of law), and whether it explicitly invokes
+    the Weimar Triangle or trilateral format.
   </p>
   <p>
-    An item is marked <em>weimar_relevant</em> when it is a ministry item touching a tracked issue
-    area, when two or more Weimar countries are involved on a tracked issue area, or when it carries
-    an explicit trilateral reference. A stronger <em>trilateral_signal</em> flag is set when all
-    three actors are present or the Weimar/trilateral reference appears explicitly. (Earlier editions
-    matched keywords for this; that missed the German, French, and Polish wording and could not read
-    paraphrase, so the reading is now done by the model.)
+    An item is marked <em>weimar_relevant</em> when it is a ministry or head-of-government item
+    touching a tracked issue area, when two or more Weimar countries are involved on a tracked issue
+    area, or when it carries an explicit trilateral reference. A stronger <em>trilateral_signal</em>
+    flag is set when all three actors are present or the Weimar/trilateral reference appears
+    explicitly. (Earlier editions matched keywords for this; that missed the German, French, and
+    Polish wording and could not read paraphrase, so the reading is now done by the model.)
   </p>
 
   <span class="label">Positional comparison</span>
@@ -157,11 +161,12 @@
   <span class="label">Caveats</span>
   <ul>
     <li>Sources are ingested in their native language (German, French, Polish) — the full output of each
-      ministry, not the thinner English-translation sections. Position summaries are extracted in English;
-      stance evidence quotes stay in the original language.</li>
-    <li>If a native-language feed or listing becomes unreachable, ingestion falls back to that ministry's
-      English section until it recovers, so a few events may carry English text.</li>
-    <li>Polish MFA has no RSS — HTML scraper may break if the site structure changes.</li>
+      institution, not the thinner English-translation sections where those even exist. Position summaries
+      are extracted in English; stance evidence quotes stay in the original language.</li>
+    <li>If a native-language feed or listing becomes unreachable, ingestion falls back to an English section
+      (where one exists) until it recovers, so a few events may carry English text.</li>
+    <li>Only the German MFA and France Diplomatie offer RSS — the other four sources are HTML scrapers that
+      may break if site structures change.</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>
 
