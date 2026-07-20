@@ -48,6 +48,7 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
                     print(f"  + [{source}] {event.date} — {event.title[:70]}")
                 else:
                     skipped += 1
+                    print(f"  · [{source}] {event.date} — {event.title[:70]}")
     except Exception as exc:
         error = str(exc)
         print(f"  ERROR in {source}: {exc}", file=sys.stderr)
