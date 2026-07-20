@@ -77,31 +77,53 @@ ACTOR_LABELS = {
 
 WEIMAR_ACTORS = ["FR", "DE", "PL"]
 
-COUNTRY_FM = {
+# Each Weimar country now speaks through two principal sources: its foreign
+# ministry and its executive office (chancellery / presidency / PM office).
+# Institution names are kept in the native language. No office-holder names —
+# those change and go stale; the institution is what we actually track.
+COUNTRY_PROFILE = {
     "FR": {
-        "name": "Jean-Noël Barrot",
-        "role": "Minister for Europe and Foreign Affairs",
-        "ministry": "Quai d'Orsay",
         "swatch": "fr",
         "path": "france",
-        "source": "france_diplomatie",
+        "sources": [
+            {"type": "Foreign ministry", "institution": "Quai d'Orsay", "source": "france_diplomatie"},
+            {"type": "Executive office", "institution": "Élysée", "source": "elysee"},
+        ],
     },
     "DE": {
-        "name": "Johann Wadephul",
-        "role": "Federal Minister for Foreign Affairs",
-        "ministry": "Auswärtiges Amt",
         "swatch": "de",
         "path": "germany",
-        "source": "german_mfa",
+        "sources": [
+            {"type": "Foreign ministry", "institution": "Auswärtiges Amt", "source": "german_mfa"},
+            {"type": "Executive office", "institution": "Bundeskanzleramt", "source": "german_chancellery"},
+        ],
     },
     "PL": {
-        "name": "Radosław Sikorski",
-        "role": "Deputy Prime Minister and Minister of Foreign Affairs",
-        "ministry": "MSZ",
         "swatch": "pl",
         "path": "poland",
-        "source": "polish_mfa",
+        "sources": [
+            {"type": "Foreign ministry", "institution": "MSZ", "source": "polish_mfa"},
+            {"type": "Executive office", "institution": "Kancelaria Prezesa Rady Ministrów", "source": "polish_pm"},
+        ],
     },
+}
+
+# Flattened source_name -> {type, institution}, for labelling which of a
+# country's two voices each event came from.
+SOURCE_META = {
+    s["source"]: {"type": s["type"], "institution": s["institution"]}
+    for prof in COUNTRY_PROFILE.values()
+    for s in prof["sources"]
+}
+
+# Ingest method + page language per source, for the sources-table columns.
+SOURCE_INGEST = {
+    "german_mfa": ("RSS", "EN"),
+    "france_diplomatie": ("HTML scraper", "EN"),
+    "polish_mfa": ("HTML scraper", "EN"),
+    "german_chancellery": ("HTML scraper", "DE"),
+    "elysee": ("HTML scraper", "FR"),
+    "polish_pm": ("HTML scraper", "PL"),
 }
 
 ACTOR_COLORS = {
@@ -783,9 +805,14 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # Per-country stats for country cards and country pages
     cutoff_7 = (edition_dt - timedelta(days=7)).strftime("%Y-%m-%d")
     weekly_counts: dict[str, int] = {a: 0 for a in WEIMAR_ACTORS}
+    # Per-source weekly counts, so each institution's activity shows separately
+    # on the country page's sources strip.
+    source_weekly_counts: dict[str, int] = defaultdict(int)
     for e in events:
         if (e.get("date") or "") >= cutoff_7:
-            actor = SOURCE_ACTOR.get(e.get("source_name", ""))
+            src = e.get("source_name", "")
+            source_weekly_counts[src] += 1
+            actor = SOURCE_ACTOR.get(src)
             if actor in weekly_counts:
                 weekly_counts[actor] += 1
 
@@ -822,9 +849,16 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 return pair_scores[k]
         return "—"
 
+    def _country_sources(actor: str) -> list[dict]:
+        return [
+            {**s, "weekly_count": source_weekly_counts.get(s["source"], 0)} for s in COUNTRY_PROFILE[actor]["sources"]
+        ]
+
     country_stats = {
         actor: {
-            **COUNTRY_FM[actor],
+            "swatch": COUNTRY_PROFILE[actor]["swatch"],
+            "path": COUNTRY_PROFILE[actor]["path"],
+            "sources": _country_sources(actor),
             "weekly_count": weekly_counts[actor],
             "align": {other: _pair_score(actor, other) for other in WEIMAR_ACTORS if other != actor},
         }
@@ -867,6 +901,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             issue_order=ISSUE_ORDER,
             country_stats=country_stats,
             weimar_actors=WEIMAR_ACTORS,
+            source_count=len(SOURCE_ACTOR),
             coverage_from=coverage_from,
             coverage_to=coverage_to,
             next_tuesday_str=next_tuesday_str,
@@ -886,6 +921,20 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     )
 
     # docs/sources/index.html
+    # Rows grouped by country (foreign ministry then executive office), driven
+    # from COUNTRY_PROFILE so the table and the country pages stay in sync.
+    source_rows = [
+        {
+            "source": s["source"],
+            "actor": actor,
+            "type": s["type"],
+            "institution": s["institution"],
+            "method": SOURCE_INGEST.get(s["source"], ("HTML scraper", "EN"))[0],
+            "lang": SOURCE_INGEST.get(s["source"], ("HTML scraper", "EN"))[1],
+        }
+        for actor in WEIMAR_ACTORS
+        for s in COUNTRY_PROFILE[actor]["sources"]
+    ]
     (out / "sources").mkdir(exist_ok=True)
     tmpl = env.get_template("sources.html")
     (out / "sources" / "index.html").write_text(
@@ -894,6 +943,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             source_health=source_health,
             run=run,
             source_labels=SOURCE_LABELS,
+            source_rows=source_rows,
             all_events_count=len(all_events),
             weimar_events_count=len(events),
         ),
@@ -903,19 +953,20 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # docs/{country}/index.html — one page per Weimar country
     tmpl = env.get_template("country.html")
     for actor in WEIMAR_ACTORS:
-        fm = COUNTRY_FM[actor]
+        profile = country_stats[actor]
         country_events = [e for e in recent_events if SOURCE_ACTOR.get(e.get("source_name", "")) == actor]
         others = [cs for a, cs in country_stats.items() if a != actor]
-        (out / fm["path"]).mkdir(exist_ok=True)
-        (out / fm["path"] / "index.html").write_text(
+        (out / profile["path"]).mkdir(exist_ok=True)
+        (out / profile["path"] / "index.html").write_text(
             tmpl.render(
                 actor=actor,
-                fm=fm,
+                profile=profile,
                 country_events=country_events,
                 stats=country_stats[actor],
                 others=others,
                 weimar_actors=WEIMAR_ACTORS,
                 country_stats=country_stats,
+                source_meta=SOURCE_META,
             ),
             encoding="utf-8",
         )
