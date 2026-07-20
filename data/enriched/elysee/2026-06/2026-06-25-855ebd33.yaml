@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Yaacov Agam
+  topics: []
+  location: null
+  position: France honors the passing of the kinetic artist Yaacov Agam and reflects
+    on his artistic contributions to French culture.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

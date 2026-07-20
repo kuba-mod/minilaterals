@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France hosted and participated in the 9th World Congress Against the Death
+    Penalty to advocate for universal abolition.
+  positions:
+    rule_of_law: France actively promotes the universal abolition of the death penalty
+      as a fundamental human right, aligning with the broader objective of democratic
+      resilience and rule of law.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: la France a accueilli le Congrès mondial pour la seconde fois
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

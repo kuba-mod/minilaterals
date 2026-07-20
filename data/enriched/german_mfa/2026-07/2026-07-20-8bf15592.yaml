@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany seeks to strengthen political, economic, and security partnerships
+    with Mauritania, Nigeria, and South Africa to ensure regional stability and resource
+    security.
+  positions:
+    green_transition: Germany is pursuing economic cooperation in renewable energies
+      and green hydrogen, aligning with climate neutrality goals.
+    rule_of_law: Germany emphasizes the importance of a rules-based international
+      order and shared democratic values as the basis for cooperation.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Mauretanien bietet zugleich Chancen für erneuerbare Energien, insbesondere
+        beim Gewinn von grünem Wasserstoff.
+    rule_of_law:
+      score: 1
+      evidence: Eine regelgeleitete internationale Ordnung ist der Rahmen, den wir
+        für unsere Zusammenarbeit brauchen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

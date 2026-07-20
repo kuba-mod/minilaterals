@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Abdelmadjid Tebboune
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany is meeting with the President of Algeria to discuss bilateral
+    relations and energy and economic policy.
+  positions:
+    green_transition: Germany is addressing energy and economic policy, which aligns
+      with the broad scope of energy policy goals.
+  stances:
+    green_transition:
+      score: 0
+      evidence: energie- und wirtschaftspolitische Fragen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - leaders
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is deepening its strategic partnership with Algeria, focusing
+    on political dialogue, economic trade, and energy cooperation, particularly in
+    renewables and hydrogen.
+  positions:
+    green_transition: Germany is advancing the green transition by partnering with
+      Algeria to develop its renewable energy sector and strategic hydrogen cooperation.
+    rule_of_law: Germany rhetorically supports international standards of governance
+      and the rule of law in investment relations.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Algeria’s role as a reliable supplier and its strategy to develop
+        its renewable energy sector
+    rule_of_law:
+      score: 1
+      evidence: The Sides reaffirm their commitment to international standards of
+        investment governance, including transparency, non-discrimination and the
+        rule of law.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

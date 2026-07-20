@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - garde des sceaux, ministre de la justice
+  - ministre de l'éducation nationale
+  - ministre de la santé, des familles, de l’autonomie et des personnes handicapées
+  - ministre de l’action et des comptes publics
+  topics:
+  - rule_of_law
+  location: null
+  position: France is strengthening its legal framework to protect children from sexual
+    predators and enhancing judicial efficiency and criminal penalties.
+  positions:
+    rule_of_law: France is advancing the rule of law by increasing judicial rigor,
+      speeding up investigations, and strengthening criminal sanctions against child
+      predators.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: accélérer la conduite des enquêtes et durcir la répression
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

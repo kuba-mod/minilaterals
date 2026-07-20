@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Hille
+  - Buschow
+  - Mark Rutte
+  - Müller
+  topics:
+  - defence
+  location: null
+  position: Germany is strengthening its national defense capabilities and NATO integration
+    through new legislation for reserves and infrastructure.
+  positions:
+    defence: Germany is actively advancing defense capabilities and deterrence through
+      the adoption of the Reserve Strengthening Act and the Bundeswehr Infrastructure
+      Acceleration Act.
+  stances:
+    defence:
+      score: 2
+      evidence: Verabschiedet hat das Bundeskabinett den Entwurf eines Reservestärkungsgesetzes
+        und eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

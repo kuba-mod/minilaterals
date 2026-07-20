@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Emmanuel Macron
+  topics:
+  - defence
+  - green_transition
+  location: Bensberg, Germany
+  position: Germany reaffirms its commitment to the bilateral partnership with France
+    and intends to discuss economic, energy, and security policies.
+  positions:
+    defence: Germany acknowledges security and defense policy as a key topic for discussion
+      with France.
+    green_transition: Germany identifies energy and economic policy as primary agenda
+      items for the bilateral talks.
+  stances:
+    defence:
+      score: 0
+      evidence: über die Sicherheits- und Verteidigungspolitik
+    green_transition:
+      score: 0
+      evidence: über die Wirtschaftspolitik, über die Energiepolitik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

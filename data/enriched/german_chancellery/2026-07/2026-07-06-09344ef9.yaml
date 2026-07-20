@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Mark Carney
+  - Jonas Gahr Støre
+  topics:
+  - defence
+  location: null
+  position: Germany welcomes Canada's decision to procure 212-CD class submarines
+    as a strategic achievement in transatlantic and European defense cooperation.
+  positions:
+    defence: Germany is actively advancing collective security and defense industrial
+      cooperation through a long-term strategic submarine project with Canada and
+      Norway.
+  stances:
+    defence:
+      score: 2
+      evidence: kanadische Regierung damit ein starkes Zeichen der transatlantischen
+        und europäischen Zusammenarbeit in der Verteidigungsindustrie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

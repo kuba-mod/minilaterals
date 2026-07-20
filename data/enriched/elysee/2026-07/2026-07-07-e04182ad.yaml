@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Président de la République
+  - Premier ministre
+  - François-Noël Buffet
+  - Présidente de l’Assemblée nationale
+  - Président du Sénat
+  topics:
+  - rule_of_law
+  location: null
+  position: The French President proposes the appointment of François-Noël Buffet
+    as the Defender of Rights.
+  positions:
+    rule_of_law: France is acting to appoint a Defender of Rights, which aligns with
+      maintaining the rule of law and democratic resilience.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: nommer M. François-Noël Buffet en qualité de Défenseur des droits
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

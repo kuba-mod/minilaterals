@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Klingbeil
+  - Bundesfinanzminister
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany is implementing a 2027 federal budget focused on economic growth,
+    climate neutrality, and significantly increased defense spending to ensure national
+    and collective security.
+  positions:
+    defence: Germany is actively advancing collective security and deterrence by significantly
+      increasing its defense budget to over 109 billion Euro.
+    green_transition: Germany is committing substantial financial resources to climate
+      neutrality and infrastructure modernization through dedicated funds.
+  stances:
+    defence:
+      score: 2
+      evidence: Für Verteidigung steigen die vorgesehenen Ausgaben im kommenden Jahr
+        deutlich auf über 109 Milliarden Euro
+    green_transition:
+      score: 2
+      evidence: Für 2027 sind über 36 Milliarden Euro für Investitionen des Bundes
+        vorgesehen. Hinzu kommen 10 Milliarden Euro für den Klima- und Transformationsfonds
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

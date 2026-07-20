@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Brigitte Macron
+  - Paul Kagame
+  - Jeannette Kagame
+  - Mark Carney
+  - Diana Fox Carney
+  - Donald Trump
+  - Saida Mirziyoyeva
+  topics: []
+  location: France
+  position: The text lists the social and diplomatic schedule of Brigitte Macron for
+    June 2026, involving various state guests and charitable activities.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Bundesministerinnen und Bundesministern
+  - Regierungschefinnen und Regierungschefs der Länder
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is focusing on internal state modernization, digitalization, and
+    administrative deregulation to increase efficiency and economic competitiveness.
+  positions:
+    defence: Germany discusses defense policy as part of a broader coordination between
+      federal and state governments.
+    green_transition: Germany is actively advancing infrastructure projects related
+      to energy and fiber optics.
+    rule_of_law: Germany recognizes the pact for the rule of law as a key component
+      of its current governmental discussions.
+  stances:
+    defence:
+      score: 0
+      evidence: Außerdem ging es unter anderem um die Außen- und Verteidigungspolitik
+    green_transition:
+      score: 2
+      evidence: Gleichzeitig wird der Ausbau der Infrastrukturen, sei es die Energie-
+        und Verkehrsinfrastruktur oder der Glasfaser- und Mobilfunkausbau vorangetrieben.
+    rule_of_law:
+      score: 1
+      evidence: Außerdem ging es unter anderem um [...] den Pakt für den Rechtsstaat
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

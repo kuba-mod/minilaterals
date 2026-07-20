@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Präsident Gitanas Nausėda
+  - Edgars Rinkēvičs
+  - Kristen Michal
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Berlin, Germany
+  position: Germany is coordinating closely with Baltic allies to strengthen NATO's
+    eastern flank and increase defense spending and support for Ukraine.
+  positions:
+    ukraine: Germany provides the largest absolute support to Kyiv globally, aligning
+      with the goal of long-term military and economic aid.
+    defence: Germany commits to reaching the 3.5% NATO spending target by 2029 to
+      enhance collective security and deterrence.
+    hybrid: Germany recognizes the concrete threat of Russian hybrid attacks on infrastructure
+      and cyberspace.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Deutschland leistet seit geraumer Zeit in absoluten Zahlen die größte
+        Unterstützung Kyjiws weltweit.
+    defence:
+      score: 2
+      evidence: Die 3,5-Prozent-Marke von Den Haag werden wir schon 2029 erreichen,
+        also deutlich vor der verabredeten Frist.
+    hybrid:
+      score: 1
+      evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
+        Unterwasserkabel in der Ostsee.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

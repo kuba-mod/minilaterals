@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany commemorates the 2021 Ahrtal flood disaster and highlights the
+    financial and structural efforts undertaken for reconstruction and future disaster
+    preparedness.
+  positions:
+    green_transition: Germany is taking concrete action to improve disaster preparedness
+      and population warning systems in response to climate-related natural catastrophes.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Um sich besser auf künftige Naturkatastrophen vorzubereiten, hat auch
+        der Bund aus dem damaligen Geschehen die richtigen Schlüsse gezogen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,18 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Germany is implementing digital modernization of vehicle documents and
+    parking management to reduce bureaucracy and improve road safety.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

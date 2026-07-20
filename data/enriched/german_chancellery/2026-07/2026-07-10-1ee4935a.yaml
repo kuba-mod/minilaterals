@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is modernizing the Federal Police Act to provide police officers
+    with contemporary powers to address current security threats and technological
+    challenges.
+  positions:
+    hybrid: Germany is enhancing its capabilities to counter technical threats through
+      new police powers regarding drone detection and telecommunications surveillance.
+    rule_of_law: Germany is implementing reliability checks for new police recruits
+      to protect the force from extremist infiltration, thereby supporting democratic
+      resilience.
+  stances:
+    hybrid:
+      score: 2
+      evidence: zum Einsatz von Drohnen als Sensorträger, zur Detektion und Abwehr
+        von Drohnen, von denen Gefahren ausgehen; zur präventive Telekommunikationsüberwachung
+    rule_of_law:
+      score: 2
+      evidence: Um die Bundespolizei vor der Unterwanderung durch Extremisten zu schützen,
+        wird außerdem eine Zuverlässigkeitsüberprüfung für alle Personen eingeführt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

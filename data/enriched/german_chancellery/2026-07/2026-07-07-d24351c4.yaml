@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Mark Carney
+  - Friedrich Merz
+  - Jonas Gahr Støre
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany is establishing a long-term strategic security and industrial
+    partnership with Canada and Norway, specifically regarding submarine cooperation
+    and critical technologies.
+  positions:
+    defence: Germany is advancing collective security and defence industrial cooperation
+      through a joint submarine project with Canada and Norway.
+    green_transition: Germany rhetorically supports cooperation in strategic energy
+      and mineral areas, aligning with the goals of a green industrial transition.
+  stances:
+    defence:
+      score: 2
+      evidence: Canadian decision to join the German-Norwegian Type 212CD submarine
+        cooperation creates a unique opportunity to boost our defence industrial and
+        military cooperation
+    green_transition:
+      score: 1
+      evidence: Our commitment extends beyond security and defence, encompassing strategic
+        areas such as investment, energy, artificial intelligence, space and critical
+        minerals
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

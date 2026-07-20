@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Francisco Carvalho
+  topics: []
+  location: null
+  position: Germany congratulates Francisco Carvalho on his appointment as Prime Minister
+    of Cabo Verde and affirms the trustful relations between the two nations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

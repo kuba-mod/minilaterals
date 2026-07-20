@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government intends to modernize cooperative law to make the
+    legal form more attractive, digital, and secure against unscrupulous actors.
+  positions:
+    rule_of_law: Germany is strengthening state oversight and regulatory frameworks
+      to combat unserious cooperatives, aligning with the goal of democratic resilience
+      and rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: so sollen die Rechte und Pflichten des genossenschaftlichen Prüfungsverbandes
+        ausgeweitet sowie die Aufsicht des Staates über die genossenschaftlichen Prüfungsverbände
+        gestärkt werden
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

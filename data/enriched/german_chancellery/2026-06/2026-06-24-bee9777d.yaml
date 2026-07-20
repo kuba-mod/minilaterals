@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesinnenminister Dobrindt
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is strengthening its domestic defenses against foreign disinformation
+    and hybrid threats through the establishment of a joint center and cross-governmental
+    coordination.
+  positions:
+    ukraine: Germany acknowledges the increase in disinformation linked to the Russian
+      war of aggression against Ukraine.
+    hybrid: Germany is actively combating hybrid threats by establishing the Joint
+      Center for Countering Hybrid Threats (GAZ Hybrid).
+    rule_of_law: Germany views the protection of the liberal-democratic basic order
+      as a primary duty of the federal government.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Besonders seit Beginn des russischen Angriffskriegs gegen die Ukraine
+        hat Desinformation noch einmal deutlich zugenommen.
+    hybrid:
+      score: 2
+      evidence: eröffnete Bundesinnenminister Dobrindt am 16. Juni 2026 gemeinsam
+        mit Vertreterinnen und Vertretern von Sicherheitsbehörden des Bundes und der
+        Länder das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen ( GAZ Hybrid
+        )
+    rule_of_law:
+      score: 2
+      evidence: Im Sinne der wehrhaften Demokratie ist der Schutz der freiheitlich-demokratischen
+        Grundordnung für die Bundesregierung Auftrag und Pflicht zugleich.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

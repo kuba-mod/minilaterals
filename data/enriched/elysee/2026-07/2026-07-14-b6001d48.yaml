@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Président de la République
+  - Brigitte Macron
+  - présidente de l’Assemblée nationale
+  - présidents de la République
+  - ministres
+  - Premiers ministres
+  - ambassadrices et ambassadeurs
+  - parlementaires
+  - procureur général près la Cour de cassation
+  - procureur national anti-terroriste
+  - préfet
+  - président du Conseil départemental
+  - vice-président du Conseil régional
+  - maire
+  topics:
+  - rule_of_law
+  location: Nice, France
+  position: France commemorates the 10th anniversary of the Nice terrorist attack,
+    emphasizing the values of the Republic and the resilience of the state.
+  positions:
+    rule_of_law: France rhetorically supports the foundational values of the Republic
+      and democratic resilience in the face of terrorism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: 'ont incarné ce que la France célébrait ce soir-là : la République'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

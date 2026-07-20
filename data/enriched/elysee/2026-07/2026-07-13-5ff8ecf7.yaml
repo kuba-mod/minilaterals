@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - British Prime Minister
+  - German Chancellor
+  - President Zelensky
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: France co-chaired a summit of the Coalition of the Willing to strengthen
+    military and security guarantees for Ukraine and increase pressure on Russia's
+    war effort.
+  positions:
+    ukraine: France actively advances the goal of long-term support by coordinating
+      a 37-nation coalition to ensure a robust and lasting peace.
+    defence: France is actively enhancing defensive capabilities through a new anti-ballistic
+      coalition and increased industrial cooperation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: ce Sommet a permis de prolonger et d’amplifier les avancées et les
+        convergences obtenues notamment lors du Sommet du G7 à Evian en faveur de
+        la réaffirmation du soutien à la défense de l’Ukraine
+    defence:
+      score: 2
+      evidence: Cette réunion a permis de travailler sur les moyens nécessaires pour
+        permettre à l’Ukraine de se défendre , sur le renforcement de notre coopération
+        industrielle ainsi que sur la mise en commun du savoir-faire de nombreux pays
+        et industries en Europe.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

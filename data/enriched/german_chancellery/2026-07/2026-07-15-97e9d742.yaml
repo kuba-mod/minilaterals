@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Itzchak Herzog
+  - Benjamin Netanjahu
+  - Donald Trump
+  topics: []
+  location: Israel
+  position: Germany strongly supports Israel's security and the implementation of
+    the US-led peace plan for Gaza, advocating for a negotiated two-state solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

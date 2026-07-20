@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler
+  - Präsident Emmanuel Macron
+  - Abdelmadjid Tebboune
+  - Frank-Walter Steinmeier
+  - Gordon Schnieder
+  topics:
+  - ukraine
+  location: Paris, France
+  position: Germany is coordinating with a 'Coalition of the Willing' to provide security
+    guarantees and further support for Ukraine to achieve a lasting peace.
+  positions:
+    ukraine: Germany actively coordinates security guarantees and continued support
+      to ensure a just and lasting peace for Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: gemeinsame Bestandsaufnahme zu den Sicherheitsgarantien für die Ukraine,
+        die weitere Unterstützung der Ukraine sowie die Abstimmung über Wege zu einem
+        gerechten und dauerhaften Frieden für die Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

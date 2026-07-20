@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is promoting sustainability through the 'Gemeinschaftswerk Nachhaltigkeit'
+    initiative to advance the 17 global sustainability goals.
+  positions:
+    green_transition: Germany is actively advancing sustainability goals through a
+      cross-sectoral platform involving government, civil society, and industry.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das Gemeinschaftswerk Nachhaltigkeit zielt darauf, Nachhaltigkeit
+        in der Gesellschaft im Rahmen der 17 globalen Nachhaltigkeitsziele voranzubringen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

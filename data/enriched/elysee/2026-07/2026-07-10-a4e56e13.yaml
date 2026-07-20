@@ -1,0 +1,31 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - senior military officials
+  - representatives of the ministries of Defense and Foreign Affairs
+  topics:
+  - defence
+  location: Paris, France
+  position: France is establishing bilateral strategic dialogues with European partners,
+    specifically Poland, to develop a concept of advanced deterrence.
+  positions:
+    defence: France is actively advancing collective security and eastern flank deterrence
+      through a concrete nuclear steering group and a common roadmap with Poland.
+  stances:
+    defence:
+      score: 2
+      evidence: Elles ont convenu d’une feuille de route commune et ont manifesté
+        leur ambition de coopération bilatérale pour œuvrer à une Europe plus sûre
+        et mieux défendue.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

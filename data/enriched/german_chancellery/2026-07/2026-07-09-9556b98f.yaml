@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Benjamin Netanjahu
+  topics: []
+  location: null
+  position: Chancellor Merz discussed the situation in Lebanon and the Palestinian
+    territories with Prime Minister Netanyahu, opposing the annexation of the West
+    Bank and supporting the US-Iran framework agreement.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

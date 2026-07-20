@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - green_transition
+  location: null
+  position: Germany is prioritizing the security of energy supplies and the stability
+    of fuel markets amidst geopolitical tensions in the Middle East.
+  positions:
+    green_transition: Germany is focusing on immediate fossil fuel energy security
+      and stability of supply rather than advancing climate neutrality goals in this
+      specific context.
+  stances:
+    green_transition:
+      score: 0
+      evidence: Für die Bundesregierung hat die sichere Versorgung mit Energie in
+        Deutschland höchste Priorität
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany has enacted the Procurement Acceleration Act to simplify and digitalize
+    public procurement, specifically to speed up infrastructure and security investments.
+  positions:
+    defence: Germany is accelerating procurement processes specifically for security
+      authorities and civil-military defense needs.
+    green_transition: Germany is utilizing a special fund for infrastructure and climate
+      protection to accelerate green investments through procurement reform.
+  stances:
+    defence:
+      score: 1
+      evidence: Bedarfen von Sicherheitsbehörden für die zivil-militärische Verteidigung
+    green_transition:
+      score: 2
+      evidence: Sondervermögen Infrastruktur und Klimaschutz soll schnell dort ankommen,
+        wofür es eingeplant ist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

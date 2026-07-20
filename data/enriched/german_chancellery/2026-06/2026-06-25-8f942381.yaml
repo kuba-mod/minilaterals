@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Dr. Karsten Wildberger
+  - Gordon Schnieder
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a federal modernization agenda focused on digitalization,
+    bureaucracy reduction, and accelerating infrastructure development.
+  positions:
+    green_transition: Germany is prioritizing the acceleration of energy infrastructure
+      and climate neutrality through a dedicated special fund.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Energie- und Verkehrsinfrastruktur, wie der Ersatz von maroden Brücken,
+        erhalten höchste Priorität, Planung und Genehmigung werden viel einfacher.
+        Damit können diese Vorhaben schneller vom Sondervermögen Infrastruktur und
+        Klimaneutralität finanziert werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of France
+  - Leaders of Germany
+  - Leaders of Italy
+  - Leaders of Poland
+  - Leaders of United Kingdom
+  - Secretary General of NATO
+  - President Erdogan
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany and its E5 partners affirm their commitment to Euro-Atlantic security
+    and the strengthening of European defence capabilities within the NATO framework.
+  positions:
+    defence: Germany supports the development of a stronger European presence within
+      NATO and advocates for close cooperation in defence industrial efforts.
+  stances:
+    defence:
+      score: 1
+      evidence: their strong determination to build a stronger Europe in a stronger
+        NATO and to pursue their respective defence industrial endeavors in the closest
+        possible cooperation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

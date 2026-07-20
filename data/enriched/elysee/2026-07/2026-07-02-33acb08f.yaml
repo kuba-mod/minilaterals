@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel MACRON
+  - members of the government
+  - directeurs d’administration
+  - chefs de l’autorité judiciaire
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France is intensifying its interministerial response to organized crime
+    and narcotics trafficking through increased judicial and police action.
+  positions:
+    rule_of_law: France is advancing the rule of law and democratic resilience by
+      deploying specialized judicial bodies and police operations to combat organized
+      crime.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Le parquet national anticriminalité organisée, qui est opérationnel
+        depuis le 5 janvier
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alois Rainer
+  topics: []
+  location: null
+  position: The German government is implementing a bureaucracy reduction act to relieve
+    the agricultural and food sectors of unnecessary administrative burdens.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

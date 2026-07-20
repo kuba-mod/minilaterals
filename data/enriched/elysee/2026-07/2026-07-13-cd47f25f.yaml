@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Brigitte Macron
+  - Prime Minister
+  - Minister of the Armed Forces and Veterans Affairs
+  - Minister Delegate
+  - Chief of the Defence Staff
+  topics:
+  - defence
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirms its commitment to military strengthening and the respect
+    of international law within a volatile strategic context.
+  positions:
+    defence: France is actively increasing its military capabilities and budget to
+      maintain its strategic standing.
+    rule_of_law: France rhetorically supports the defense of international law and
+      freedom of navigation.
+  stances:
+    defence:
+      score: 2
+      evidence: L’adoption définitive de l’actualisation de la loi de programmation
+        militaire traduit la volonté d’aller plus vite, plus loin et plus fort
+    rule_of_law:
+      score: 1
+      evidence: le respect du droit international et la défense de la liberté
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

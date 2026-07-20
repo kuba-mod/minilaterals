@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: null
+  position: Germany is allowing public libraries to open on Sundays and public holidays
+    to increase cultural participation and accessibility to knowledge.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

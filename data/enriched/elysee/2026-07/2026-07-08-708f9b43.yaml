@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Brigitte Macron
+  - President Erdoğan
+  topics:
+  - ukraine
+  - defence
+  location: Turkey
+  position: France reaffirms its commitment to European strategic autonomy and increased
+    defense contributions within a reinforced NATO alliance, specifically regarding
+    Ukraine and the eastern flank.
+  positions:
+    ukraine: France reaffirms the necessity of providing long-term support for Ukraine's
+      defense.
+    defence: France is actively advancing European defense capabilities through doubled
+      military budgets, leadership in NATO missions, and the promotion of a European
+      defense industry.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Il a réaffirmé la nécessité d’un soutien durable à la défense de l’Ukraine
+    defence:
+      score: 2
+      evidence: nous aurons doublé en 10 ans le budget des armées françaises
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

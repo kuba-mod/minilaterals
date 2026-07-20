@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - First Lady
+  topics:
+  - rule_of_law
+  location: null
+  position: The French President pays tribute to the career and legacy of Christian
+    Lambert, a high-ranking police official and prefect.
+  positions:
+    rule_of_law: France emphasizes the importance of the republican order, public
+      trust, and state protection as pillars of national stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: l’ordre républicain exige aussi de retisser la confiance, de garantir
+        l’égalité et de faire sentir partout la présence protectrice de l’État
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Karsten Wildberger
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has passed legislation to implement the EU AI Act, focusing on
+    innovation-friendly governance and the establishment of the Federal Network Agency
+    as a central supervisory body.
+  positions:
+    rule_of_law: Germany is establishing a legal framework to implement EU regulations
+      that protect fundamental rights and ensure the rule of law in the use of AI.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Sie soll Innovation fördern, Grundrechte schützen und Vertrauen in
+        KI stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

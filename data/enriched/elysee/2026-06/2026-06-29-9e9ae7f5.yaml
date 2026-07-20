@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - King Maha Vajiralongkorn, Rama X
+  - Queen Suthida Bajrasudhabimalalakshana
+  - Prime Minister Anutin Charnvirakul
+  topics: []
+  location: Paris, France
+  position: France hosted a state visit by the King and Queen of Thailand to deepen
+    bilateral cooperation and celebrate 170 years of diplomatic relations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

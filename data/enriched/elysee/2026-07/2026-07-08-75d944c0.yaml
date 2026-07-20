@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France is committing ground forces to the NATO Enhanced Forward Presence
+    in Finland to strengthen deterrence and collective defense in the High North.
+  positions:
+    defence: France is actively advancing eastern flank deterrence by deploying a
+      combat unit and providing training capacities to the NATO multinational tactical
+      group in Finland.
+  stances:
+    defence:
+      score: 2
+      evidence: La France contribuera par des déploiements de forces terrestres aux
+        rotations des Forces terrestres avancées Finlande, incluant une unité de combat
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

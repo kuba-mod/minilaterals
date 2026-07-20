@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Patrick Schnieder
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany has passed the Infrastructure Future Act to accelerate the construction
+    and renovation of critical transport networks through streamlined planning and
+    digitalization.
+  positions:
+    defence: Germany is prioritizing the construction of new roads based on their
+      military relevance, contributing to collective security and infrastructure readiness.
+    green_transition: Germany is advancing the green transition by accelerating the
+      electrification of railway lines and promoting sustainable transport infrastructure.
+  stances:
+    defence:
+      score: 2
+      evidence: Das gilt auch für den Bau neuer Straßen, die im Bundesverkehrswegeplan
+        im weiteren Bedarf liegen – soweit sie von militärischer Relevanz sind.
+    green_transition:
+      score: 2
+      evidence: Zudem ist geplant, bei der Elektrifizierung von Bahnstrecken künftig
+        schneller voranzukommen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

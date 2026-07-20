@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Josef Aschbacher
+  - Andrzej Domański
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland is establishing a European Space Agency (ESA) technological center
+    in Warsaw focused on security and dual-use technologies to enhance European sovereignty
+    and competitiveness.
+  positions:
+    defence: Poland is actively advancing EU security capabilities by hosting an ESA
+      center dedicated to dual-use technologies and significantly increasing financial
+      contributions to space-based defense and security infrastructure.
+  stances:
+    defence:
+      score: 2
+      evidence: Ośrodek ESA w Warszawie będzie koncentrować się na bezpieczeństwie
+        oraz rozwoju technologii o podwójnym zastosowaniu - wykorzystywanych zarówno
+        w infrastrukturze cywilnej, jak i wojskowej.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

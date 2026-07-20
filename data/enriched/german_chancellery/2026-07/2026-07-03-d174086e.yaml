@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Kristen Michal
+  - Edgars Rinkēvičs
+  - Gitanas Nausėda
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Berlin, Germany
+  position: Germany emphasizes the indivisibility of Baltic and German security and
+    seeks close coordination with allies ahead of the NATO summit in Ankara.
+  positions:
+    ukraine: Germany acknowledges the ongoing Russian aggression in Ukraine as a primary
+      security threat.
+    defence: Germany expresses a commitment to collective security on the eastern
+      flank and recognizes the need for increased defense spending.
+    hybrid: Germany explicitly identifies Russian hybrid attacks and infrastructure
+      sabotage as concrete threats to security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Wohin dieser russische Revisionismus führen kann, erleben wir seit
+        über vier Jahren Tag für Tag in der Ukraine.
+    defence:
+      score: 1
+      evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
+    hybrid:
+      score: 1
+      evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
+        Unterwasserkabel in der Ostsee.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

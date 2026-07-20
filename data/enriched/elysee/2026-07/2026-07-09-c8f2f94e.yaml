@@ -1,0 +1,46 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Premier ministre
+  - ministre de la transition écologique, de la biodiversité et des négociations internationales
+    sur le climat et la nature
+  topics:
+  - hybrid
+  - rule_of_law
+  - green_transition
+  location: null
+  position: France is introducing legislation to combat racism and antisemitism, particularly
+    online, and ratifying EU regulations regarding the environment.
+  positions:
+    hybrid: France is actively fighting the use of digital platforms as vectors for
+      hate speech and disinformation through the Pharos platform.
+    rule_of_law: France is strengthening the legal framework to protect democratic
+      values and combat hate crimes through new penalties and judicial tools.
+    green_transition: France is aligning its national law with European Union regulations
+      concerning climate and nature.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Le projet de loi de cohésion républicaine par la lutte contre le racisme
+        et l’antisémitisme entend d’abord améliorer les dispositifs existants
+    rule_of_law:
+      score: 2
+      evidence: Il réaffirme par ailleurs les valeurs communes de la République en
+        clarifiant les contours de l’infraction de contestation de la Shoah
+    green_transition:
+      score: 1
+      evidence: un projet de loi ratifiant l’ordonnance n° 2026- 326 du 29 avril 2026
+        portant adaptation du droit français aux textes pris pour l’application du
+        règlement (UE) 2023/956
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

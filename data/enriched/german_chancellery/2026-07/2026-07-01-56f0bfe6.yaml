@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  - Bundestag
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is implementing a new basic security law (Grundsicherung) to replace
+    the citizen's benefit (Bürgergeld), focusing on fairness and the principle of
+    'requesting and promoting'.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

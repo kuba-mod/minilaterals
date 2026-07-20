@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Giorgia Meloni
+  topics:
+  - ukraine
+  - defence
+  location: Antibes, France
+  position: France seeks to deepen strategic bilateral cooperation with Italy across
+    defense, energy, and space while coordinating on international crises.
+  positions:
+    ukraine: France supports the goal of assisting Ukraine through continued diplomatic
+      and strategic exchange.
+    defence: France is actively advancing defense capabilities through the deepening
+      of strategic bilateral cooperation and signed agreements.
+  stances:
+    ukraine:
+      score: 1
+      evidence: le soutien à l’Ukraine
+    defence:
+      score: 2
+      evidence: approfondir la coopération franco-italienne dans plusieurs secteurs
+        stratégiques , notamment la défense
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

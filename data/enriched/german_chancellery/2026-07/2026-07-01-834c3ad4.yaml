@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Germany is updating its emergency procurement and precaution laws to better
+    synchronize military and civilian capabilities in response to current threats.
+  positions:
+    defence: Germany is strengthening its national defense readiness and supply chains
+      for its own and allied forces to align with modern security threats.
+  stances:
+    defence:
+      score: 2
+      evidence: Die Eckpunkte schaffen eine wichtige Grundlage, um die Verzahnung
+        der militärischen und der zivilen Seite zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

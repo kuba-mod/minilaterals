@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  topics:
+  - ukraine
+  location: Paris, France
+  position: Germany reaffirms its commitment to a just and lasting peace in Ukraine
+    and continues to support Ukrainian security.
+  positions:
+    ukraine: Germany rhetorically supports a lasting peace and expresses readiness
+      to contribute to Ukraine's security even after a ceasefire.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Bundeskanzler Friedrich Merz betonte erneut die Bereitschaft aller
+        Beteiligten, auch nach einem Waffenstillstand zur Sicherheit der Ukraine beitragen
+        zu wollen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

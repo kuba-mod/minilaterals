@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Serhij Korezkyj
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: Germany congratulates the new Ukrainian Prime Minister and reaffirms its
+    commitment to supporting Ukraine's defense and European integration.
+  positions:
+    ukraine: Germany commits to continuing determined and powerful support for Ukraine
+      against Russian aggression.
+    enlargement: Germany supports Ukraine's European perspective and encourages the
+      implementation of a determined reform agenda.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Deutschland die Ukraine bei der Verteidigung gegen die russische Aggression
+        weiter entschlossen und kraftvoll unterstützen wird
+    enlargement:
+      score: 1
+      evidence: Um die europäische Perspektive der Ukraine weiter zu stärken, möchte
+        ich Sie zu einer entschlossen Reformagenda ermutigen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: press_conference
+  participants:
+  - Chancellor Merz
+  - Mark Rutte
+  - Defense Minister
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany aims to strengthen the Bundeswehr and increase the European dimension
+    of NATO to ensure collective security and freedom.
+  positions:
+    defence: Germany is actively working to enhance its own defense capabilities and
+      advocates for a more European-oriented NATO.
+  stances:
+    defence:
+      score: 2
+      evidence: Wir wollen die NATO insgesamt europäischer machen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

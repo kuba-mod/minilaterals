@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Sheikh Tamim bin Hamad Al-Thani
+  - Sheikh Hamad bin Khalifa Al-Thani
+  topics: []
+  location: null
+  position: France expresses condolences to Qatar on the passing of the Emir-Father
+    and reaffirms its commitment to the strategic partnership between the two nations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Bassirou Diomaye Faye
+  - Alabali Radovan
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany reaffirms its commitment to Senegal as a reliable partner, focusing
+    on economic cooperation, youth employment, and regional security in the Sahel.
+  positions:
+    defence: Germany maintains a security partnership with Senegal and supports its
+      role in ensuring stability in the Sahel region.
+  stances:
+    defence:
+      score: 1
+      evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
+        auch künftig intensiv fortgesetzt werden solle
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - President of France
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: Poland will host the first military exercises of the Coalition of the
+    Willing and continues its support for Ukraine, though currently limits new equipment
+    donations.
+  positions:
+    ukraine: Poland remains actively engaged in supporting Ukraine's defense but is
+      not currently planning new equipment or missile donations.
+    defence: Poland is actively advancing European security by hosting joint military
+      exercises and considering participation in an anti-ballistic defense coalition.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Polska pozostanie aktywnie zaangażowana we wspieranie Ukrainy we współpracy
+        z sojusznikami z NATO
+    defence:
+      score: 2
+      evidence: pierwsze ćwiczenia, w których wezmą udział wojska brytyjskie i francuskie,
+        odbędą się jesienią tego roku w Polsce
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

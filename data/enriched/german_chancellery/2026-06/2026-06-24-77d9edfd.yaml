@@ -1,0 +1,60 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany has formally adopted the comprehensive set of goals established
+    by the Weimar Triangle across security, political, and environmental dimensions.
+  positions:
+    ukraine: Germany commits to long-term military, economic, and diplomatic support
+      for Ukraine.
+    defence: Germany supports enhancing EU defence capabilities to complement NATO,
+      focusing on the eastern flank.
+    hybrid: Germany calls for coordinated efforts to counter hybrid threats, disinformation,
+      and cyber attacks.
+    enlargement: Germany supports the EU accession of Ukraine and Western Balkans
+      countries, provided institutional reforms are met.
+    green_transition: Germany supports the Clean Industrial Deal and aligning industrial
+      policy with climate neutrality goals.
+    rule_of_law: Germany affirms the rule of law and democratic resilience as essential
+      for European security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: ''
+    defence:
+      score: 1
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    green_transition:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

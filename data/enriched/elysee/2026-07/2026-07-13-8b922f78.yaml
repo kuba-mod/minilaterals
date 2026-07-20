@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Chef de l’État
+  - chefs d’État et de gouvernement de la Coalition des Volontaires
+  topics:
+  - defence
+  location: Paris, France
+  position: France hosted a military parade emphasizing European strategic awakening
+    and the synergy between military and security forces to defend collective interests.
+  positions:
+    defence: France actively advances the goal of stronger European defence capabilities
+      through a demonstration of operational forces and cooperation with allies.
+  stances:
+    defence:
+      score: 2
+      evidence: le « réveil stratégique de l’Europe »
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

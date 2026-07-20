@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Premier polskiego rządu
+  topics:
+  - ukraine
+  - enlargement
+  location: Warsaw, Poland
+  position: Poland emphasizes that historical truth and the identification of Volhynia
+    massacre victims are prerequisites for a future based on solidarity and integration
+    with Europe.
+  positions:
+    ukraine: Poland seeks to reconcile the painful past with Ukraine through the exhumation
+      of victims and historical truth as a foundation for current solidarity.
+    enlargement: Poland suggests that readiness to accept historical truths is a requirement
+      for those wishing to join the European community.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Potrzebujemy dziś solidarności wobec wspólnych zagrożeń, a solidarność
+        zbudowana jest na fundamencie prawdy, pamięci i nadziei.
+    enlargement:
+      score: -1
+      evidence: Kto chce przyłączyć się do tej wspólnoty, musi być na tę prawdę gotowy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

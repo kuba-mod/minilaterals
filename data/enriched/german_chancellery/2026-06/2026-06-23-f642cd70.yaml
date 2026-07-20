@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is investing approximately 1.5 million euros into 92 projects
+    to preserve historical written cultural assets to safeguard collective memory
+    and democratic resilience.
+  positions:
+    hybrid: Germany emphasizes the importance of authentic archives and libraries
+      to counter the questioning of historical facts.
+    rule_of_law: Germany views the preservation of historical archives as a fundamental
+      state task essential for the maintenance of democracy.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Gerade in Zeiten, in denen historische Fakten zunehmend infrage gestellt
+        werden, sind Archive, Bibliotheken und Museen als Orte der Überlieferung für
+        unsere Demokratie wichtiger denn je.
+    rule_of_law:
+      score: 2
+      evidence: Es ist unsere gesamtstaatliche Aufgabe, dieses Erbe für kommende Generationen
+        zu bewahren und für die Gesellschaft zugänglich zu machen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

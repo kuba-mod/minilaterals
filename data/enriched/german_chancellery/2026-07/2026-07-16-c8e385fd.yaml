@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: press_conference
+  participants:
+  - Bundeskanzler Merz
+  - President Abdelmadjid Tebboune
+  topics:
+  - green_transition
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany seeks to deepen economic and energy cooperation with Algeria,
+    focusing on raw materials, hydrogen, and investment security.
+  positions:
+    green_transition: Germany is actively pursuing the transition to clean energy
+      by promoting hydrogen exports from Algeria and developing a southern hydrogen
+      corridor.
+    rule_of_law: Germany supports the improvement of legal certainty and transparent
+      processes to strengthen bilateral investment relations.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Man wolle auch den Export von Wasserstoff aus Algerien weiter voranbringen
+        – gemeinsam mit Italien mit der Fortentwicklung eines südlichen Wasserstoffkorridors.
+    rule_of_law:
+      score: 1
+      evidence: Beide Länder wollen unter anderem das Investitionsklima und die Rechtssicherheit
+        weiter verbessern, um die bilateralen Handels- und Investitionsbeziehungen
+        weiter zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

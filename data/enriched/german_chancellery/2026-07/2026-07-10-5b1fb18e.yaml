@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a new law to establish a right to repair for consumers
+    to promote sustainable consumption.
+  positions:
+    green_transition: Germany is actively advancing the green transition by legislating
+      a right to repair to foster a culture of repair and sustainable consumption.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Ziel ist es, einen nachhaltigen Konsum und eine Kultur des Reparierens
+        zu fördern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

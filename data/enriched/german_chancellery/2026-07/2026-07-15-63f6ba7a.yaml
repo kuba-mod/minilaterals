@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Regierungschefinnen und -chefs der Länder
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is prioritizing the modernization of its state and administration
+    to reduce bureaucracy and strengthen public trust in democratic institutions.
+  positions:
+    rule_of_law: Germany aims to strengthen the democratic community and trust in
+      state institutions through administrative efficiency and modernization.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Vor allem geht es darum, das demokratische Gemeinwesen sowie das Vertrauen
+        in die Funktionsfähigkeit des Staates und seiner Institutionen zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

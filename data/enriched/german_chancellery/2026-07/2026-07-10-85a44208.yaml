@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundestag
+  - Bundesrat
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing the Electricity Security and Capacity Act (StromVKG)
+    to ensure a stable power supply during its transition to renewable energy.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality by increasing
+      the share of renewable energy to 80% by 2030 while implementing a capacity market
+      to manage energy volatility.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Der Anteil erneuerbarer Energien soll bis 2030 auf 80 Prozent steigen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Stefan Kornelius
+  - Dorothee Bär
+  - Johann Wadephul
+  - Verena Hubertz
+  - Patrick Schnieder
+  - Prien
+  - Hubig
+  - Wildberger
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Germany
+  position: The German government hosted a public event to discuss domestic digitalization,
+    construction, and international security and support for Ukraine.
+  positions:
+    ukraine: Germany expresses continued interest and support for Ukraine.
+    defence: Germany intends to conduct security policy as a European team player.
+    green_transition: Germany advocates for climate-neutral construction and the reduction
+      of bureaucracy to achieve this goal.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die Unterstützung der Ukraine Themen, die die zahlreichen Gäste im
+        Bundespresseamt besonders interessierten
+    defence:
+      score: 1
+      evidence: als europäischer Teamplayer Sicherheitspolitik machen zu wollen
+    green_transition:
+      score: 1
+      evidence: in Zukunft digitaler, klimaneutraler und pragmatischer zu bauen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

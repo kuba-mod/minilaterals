@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Persönlichen Beauftragten für Investitionen des Bundeskanzlers
+  topics:
+  - green_transition
+  location: null
+  position: The German government aims to boost economic growth and competitiveness
+    through digitalization, innovation, and energy cost reductions.
+  positions:
+    green_transition: Germany is implementing energy cost reliefs and supporting industrial
+      energy transitions to maintain international competitiveness.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Die Bundesregierung reduziert die Energiekosten spürbar und dauerhaft.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

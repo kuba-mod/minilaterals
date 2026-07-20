@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Peter Leibinger
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Chancellor Merz emphasizes the need for economic stability and enhanced
+    defense capabilities to ensure future prosperity for the youth.
+  positions:
+    ukraine: Germany acknowledges the ongoing Russian aggression against Ukraine.
+    defence: Germany identifies the improvement of defense capabilities as a critical
+      field of action for future security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Der russische Angriffskrieg ging ins vierte Jahr.
+    defence:
+      score: 2
+      evidence: bessere Verteidigungsfähigkeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

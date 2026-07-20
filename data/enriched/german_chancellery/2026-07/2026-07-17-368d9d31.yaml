@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Szent-Iványi
+  - Hille
+  - Wadephul
+  topics: []
+  location: null
+  position: Germany is planning a diplomatic and economic mission to Mauritania, Nigeria,
+    and South Africa to strengthen global partnerships.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - President Erdoğan
+  - Mark Carney
+  - Jonas Støre
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Germany aims to strengthen NATO's transatlantic nature by increasing European
+    defense capabilities and providing significant financial support to Ukraine.
+  positions:
+    ukraine: Germany is committing to a joint European initiative to provide substantial
+      financial aid to Ukraine for 2026 and 2027.
+    defence: Germany is actively enhancing European defense capabilities through improved
+      efforts and concrete industrial cooperation on submarine construction.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Durch eine gemeinsame Initiative europäischer Staaten solle die Ukraine
+        2026 und 2027 jeweils 70 Milliarden Euro erhalten.
+    defence:
+      score: 2
+      evidence: Ein Beispiel dafür sei die Verabredung, die Deutschland, Kanada und
+        Norwegen über die Zusammenarbeit im U -Boot-Bau getroffen hätten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

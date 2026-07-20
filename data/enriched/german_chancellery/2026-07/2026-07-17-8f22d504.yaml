@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Nina Warken
+  topics: []
+  location: null
+  position: Chancellor Merz outlines domestic legislative achievements and upcoming
+    reforms regarding infrastructure, healthcare, and pensions to improve economic
+    competitiveness.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

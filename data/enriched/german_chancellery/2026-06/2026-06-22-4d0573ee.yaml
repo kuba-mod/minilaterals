@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany intends to acquire a 40 percent stake in the joint venture KNDS
+    to strengthen European defense capabilities and industrial sovereignty.
+  positions:
+    ukraine: Germany supports Ukraine's military strength through the strategic importance
+      of defense companies like KNDS.
+    defence: Germany is actively expanding defense industry capacities and strengthening
+      bilateral and European cooperation through a direct investment in KNDS.
+  stances:
+    ukraine:
+      score: 1
+      evidence: leistet einen wichtigen Beitrag zur militärischen Stärke Europas sowie
+        zur Unterstützung der Ukraine
+    defence:
+      score: 2
+      evidence: Die Bundesregierung strebt daher eine Beteiligung in Höhe von 40 Prozent
+        der Anteile an KNDS an.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

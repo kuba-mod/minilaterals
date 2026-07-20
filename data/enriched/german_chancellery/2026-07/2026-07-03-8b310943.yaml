@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Präsident Trump
+  topics:
+  - defence
+  location: null
+  position: Germany emphasizes increasing its responsibility for euro-atlantic security
+    and strengthening the European dimension of NATO.
+  positions:
+    defence: Germany rhetorically supports a stronger European contribution to NATO
+      security to maintain the transatlantic alliance.
+  stances:
+    defence:
+      score: 1
+      evidence: Deutschland mehr Verantwortung für die Sicherheit im euroatlantischen
+        Raum übernimmt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

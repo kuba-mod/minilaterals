@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatssekretärsausschuss für Nachhaltige Entwicklung und Zukunftsfragen
+  topics:
+  - green_transition
+  location: null
+  position: Germany is developing a new, action-oriented Sustainability Action Plan
+    based on the 2030 Agenda to combine ecological, economic, and social sustainability
+    with state modernization.
+  positions:
+    green_transition: Germany is actively advancing climate and sustainability goals
+      through the creation of a concrete, mission-based Sustainability Action Plan
+      aligned with the 17 Sustainable Development Goals.
+  stances:
+    green_transition:
+      score: 2
+      evidence: bekennt sich die Bundesregierung zu den 17 Zielen der Agenda 2030
+        und hat die Erarbeitung eines Aktionsplans Nachhaltigkeit beschlossen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

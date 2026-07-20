@@ -1,0 +1,47 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Mark Rutte
+  - Donald Trump
+  - Recep Tayyip Erdoğan
+  - Mark Carney
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Ankara, Turkey
+  position: Germany seeks to project unity and strength within NATO to counter the
+    Russian threat while increasing defense spending and support for Ukraine.
+  positions:
+    ukraine: Germany is initiating an agreement to provide Ukraine with further financial
+      resources.
+    defence: Germany has significantly increased its defense spending and is promoting
+      a more European-led NATO and defense industry.
+    hybrid: Germany identifies Russian cyber attacks, sabotage, and disinformation
+      as serious threats to security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Auf deutsche Initiative solle es eine Vereinbarung dazu geben, die
+        Ukraine mit neuen, weiteren Mitteln auszustatten.
+    defence:
+      score: 2
+      evidence: Deutschland hat seine Verteidigungsausgaben im Jahr 2026 bereits auf
+        124 Milliarden Euro erhöht.
+    hybrid:
+      score: 1
+      evidence: Jeden Tag testet Moskau unsere Entschlossenheit durch Cyber angriffe,
+        durch Sabotage, durch Ausspähversuche und durch gezielte Desinformationen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

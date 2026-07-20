@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Premier
+  topics:
+  - defence
+  - green_transition
+  location: Budapest, Hungary
+  position: Poland emphasizes the need for the Visegrád Group to act as a unified
+    bloc to increase the influence of Central and Eastern Europe within the EU and
+    counter the dominance of France and Germany.
+  positions:
+    defence: Poland identifies security as a key area of regional cooperation to support
+      the eastern flank of the EU.
+    green_transition: Poland recognizes climate policy as a primary area for cooperation
+      among regional partners.
+  stances:
+    defence:
+      score: 1
+      evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
+        migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
+        między państwami regionu.
+    green_transition:
+      score: 1
+      evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
+        migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
+        między państwami regionu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

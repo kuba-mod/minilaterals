@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Petteri Orpo
+  - Nicușor Dan
+  - Gitanas Nauseda
+  - Kristen Michal
+  - President of Lithuania
+  - President of Romania
+  - Prime Minister of Finland
+  - Prime Minister of Estonia
+  - Prime Minister of Latvia
+  - Prime Minister of Sweden
+  - President of the European Commission
+  - European Commissioner for Defence
+  topics:
+  - ukraine
+  - defence
+  location: Gdańsk, Poland
+  position: Poland is advocating for the collective EU responsibility of eastern flank
+    defense and significantly increasing its own military spending to strengthen security
+    and transatlantic ties.
+  positions:
+    ukraine: Poland participates in the coordination of regional actions to counter
+      Russian aggression following the Ukraine Recovery Conference.
+    defence: Poland actively advances eastern flank security through massive increases
+      in defense spending and calls for EU-wide responsibility.
+  stances:
+    ukraine:
+      score: 1
+      evidence: koordynacja działań i polityki państw regionu zagrożonych przez agresywne
+        działania Rosji
+    defence:
+      score: 2
+      evidence: Na obronę bezpośrednio i na rzeczy związane z obroną to będzie 7%
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Wojciech Balczun
+  - Władysław Kosiniak-Kamysz
+  topics:
+  - ukraine
+  - defence
+  location: Bydgoszcz, Poland
+  position: Poland is strengthening its national security and defense industry through
+    a strategic partnership with the US company Anduril Industries to produce long-range
+    cruise missiles.
+  positions:
+    ukraine: Poland rhetorically reaffirms its national consensus on supporting Ukraine
+      in its war against Russia.
+    defence: Poland is actively advancing eastern flank deterrence by establishing
+      the production of advanced autonomous missile systems in cooperation with a
+      US partner.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Pomoc Polski dla Ukrainy w jej wojnie z Rosją była przedmiotem naszego
+        politycznego i narodowego konsensusu.
+    defence:
+      score: 2
+      evidence: Umowa przewiduje ulokowanie w Polsce montażu, a następnie produkcję
+        autonomicznych rakietowych pocisków manewrujących dalekiego zasięgu Barracuda-500
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

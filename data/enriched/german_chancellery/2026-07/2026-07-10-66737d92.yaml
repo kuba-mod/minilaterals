@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is reducing bureaucratic requirements for the real estate sector
+    and removing the requirement for heating labels on old systems.
+  positions:
+    green_transition: Germany is removing a heating label requirement after an evaluation
+      showed it failed to achieve energy saving and boiler replacement goals, potentially
+      diverging from strict green objectives in favor of deregulation.
+  stances:
+    green_transition:
+      score: -1
+      evidence: Eine Evaluation von 2020 zeigte hingegen, dass die Anzahl der Kesseltausche
+        und die Energieeinsparungen deutlich hinter den Zielen des Aktionsplans zurückgeblieben
+        sind.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

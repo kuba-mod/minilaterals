@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundestag
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is reducing the air transport tax effective July 1, 2026, to strengthen
+    the competitiveness and economic viability of its aviation industry.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

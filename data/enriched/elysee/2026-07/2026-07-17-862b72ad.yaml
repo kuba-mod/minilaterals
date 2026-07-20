@@ -1,0 +1,47 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Président Macron
+  - Chancelier Merz
+  - Ministres des Affaires étrangères
+  - Ministres de la Défense
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France is deepening its strategic military and nuclear cooperation with
+    Germany to strengthen European deterrence and security within the NATO framework.
+  positions:
+    defence: France is actively advancing European defence capabilities through concrete
+      operational steps and a new bilateral strategic cooperation on nuclear and conventional
+      deterrence.
+    hybrid: France recognizes the challenge of hybrid threats as a driver for strengthening
+      regional security.
+    rule_of_law: France rhetorically supports the maintenance of an international
+      order based on the rule of law.
+  stances:
+    defence:
+      score: 2
+      evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
+        auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
+        marque la première étape opérationnelle de la coopération stratégique franco-allemande
+    hybrid:
+      score: 1
+      evidence: le continent européen est confronté à la guerre et à des menaces hybrides
+    rule_of_law:
+      score: 1
+      evidence: contribuer à un ordre international fondé sur des règles de droit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

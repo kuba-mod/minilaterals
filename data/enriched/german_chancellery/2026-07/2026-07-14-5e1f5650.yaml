@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  topics:
+  - green_transition
+  location: null
+  position: Germany has passed the Building Modernization Act to achieve climate-neutral
+    heating by 2045 through a technology-neutral and pragmatic approach.
+  positions:
+    green_transition: Germany is implementing a legislative framework to ensure building
+      heating becomes climate-neutral by 2045, combining financial subsidies with
+      flexible heating technology options.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Brennstoffe für Heizungen müssen ab 2045 komplett klimaneutral sein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Kabinettsmitglieder
+  - Regierungschefinnen und Regierungschefs der Länder
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government emphasizes the importance of democratic processes
+    and expert-led reforms for the pension system and municipal funding.
+  positions:
+    rule_of_law: Germany highlights the value of democratic resilience and the necessity
+      of a meticulous, compromise-driven democratic process.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: eine hochentwickelte Demokratie ist ein kunstvolles Gewächs
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Germany is attending the NATO summit to discuss defense spending, industrial
+    capacity, and continued support for Ukraine.
+  positions:
+    ukraine: Germany supports continued military assistance to Ukraine.
+    defence: Germany is committed to increasing defense spending and enhancing the
+      European defense industrial capacity within the NATO framework.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die weitere militärische Unterstützung der Ukraine
+    defence:
+      score: 1
+      evidence: Erhöhung der Verteidigungsausgaben und eine stärkere Verantwortung
+        der europäischen Alliierten für eine gemeinsame euro-atlantische Sicherheit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

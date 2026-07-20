@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  topics:
+  - hybrid
+  location: null
+  position: Germany is implementing the GeDIG law to improve the stability, interoperability,
+    and security of digital health infrastructure and align with the European Health
+    Data Space.
+  positions:
+    hybrid: Germany is strengthening its digital health infrastructure and the role
+      of gematik to increase operational stability and protect against dangers, aligning
+      with goals to counter cyber threats.
+  stances:
+    hybrid:
+      score: 1
+      evidence: die gematik erhält eine stärker steuernde Rolle mit einer neuen Betreiberfunktion
+        sowie erweiterten Befugnissen zur Gefahrenabwehr, um die Betriebsstabilität
+        zu erhöhen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

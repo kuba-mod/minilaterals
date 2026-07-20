@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Keir Starmer
+  - Giorgia Meloni
+  - Donald Tusk
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is leading an E5 effort to strengthen NATO and increase European
+    defense spending ahead of the Ankara summit.
+  positions:
+    ukraine: Germany affirms continued support for Ukraine against Russian aggression.
+    defence: Germany commits to increasing defense spending to 3.5 percent by 2029
+      to strengthen the European pillar of NATO.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die weitere Unterstützung der Ukraine gegen den russischen Angriffskrieg
+    defence:
+      score: 2
+      evidence: Wir steigern unsere Verteidigungsausgaben auf 3,5 Prozent. Die Bundesregierung
+        will diese Marke schon 2029 erreichen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

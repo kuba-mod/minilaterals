@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - The Cabinet
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Berlin, Germany
+  position: Germany is prioritizing state modernization, stability, and a significant
+    increase in defense spending to ensure security and prosperity.
+  positions:
+    ukraine: Germany acknowledges the ongoing Russian war of aggression against Ukraine
+      as a driver for increased security expenditures.
+    defence: Germany has significantly increased its defense spending, nearly doubling
+      it since 2022 to fulfill alliance commitments.
+    green_transition: Germany is allocating record-level investments toward climate
+      protection and energy security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Seit 2022, dem Jahr des Beginns des russischen Angriffskrieges gegen
+        die Ukraine, haben wir die Verteidigungsausgaben gar verdoppelt.
+    defence:
+      score: 2
+      evidence: Deutschland hat seine Verteidigungsausgaben 2026 bereits auf fast
+        125 Milliarden Euro erhöht.
+    green_transition:
+      score: 2
+      evidence: Sie fließen in Forschung und Entwicklung, in Klimaschutz und Energiesicherheit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

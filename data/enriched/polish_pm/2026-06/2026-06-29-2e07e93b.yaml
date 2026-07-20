@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Ulf Kristersson
+  topics:
+  - defence
+  location: null
+  position: Poland has signed a historic contract with Sweden to purchase three A26
+    submarines as part of the 'Orka' program to enhance Baltic security.
+  positions:
+    defence: Poland is actively advancing collective security and eastern flank deterrence
+      through a major strategic defense acquisition and industrial partnership with
+      Sweden.
+  stances:
+    defence:
+      score: 2
+      evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
+        Wojennej RP w ramach programu „Orka”
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

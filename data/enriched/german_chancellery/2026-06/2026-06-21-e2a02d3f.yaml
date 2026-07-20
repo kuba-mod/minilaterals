@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Julia Klöckner
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany expresses high appreciation and respect for its military veterans
+    through the establishment and celebration of a National Veterans Day.
+  positions:
+    defence: Germany rhetorically supports the value of military service and the role
+      of the Bundeswehr by honoring active and former soldiers.
+  stances:
+    defence:
+      score: 1
+      evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
+        und höchste Wertschätzung entgegenbringen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

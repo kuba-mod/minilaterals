@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - SRS Meyer
+  - Vorsitzender Feldhoff
+  - Bundeskanzler
+  topics:
+  - defence
+  location: null
+  position: Germany welcomes a strategic submarine deal with Canada as a sign of transatlantic
+    cooperation in the defense industry.
+  positions:
+    defence: Germany is actively advancing collective security and defense industry
+      cooperation through a strategic partnership with Canada and Norway.
+  stances:
+    defence:
+      score: 2
+      evidence: ein starkes Zeichen der transatlantischen und europäischen Zusammenarbeit
+        in der Verteidigungsindustrie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

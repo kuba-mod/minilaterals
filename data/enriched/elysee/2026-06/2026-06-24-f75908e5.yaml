@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of France
+  - Leaders of Germany
+  - Leaders of Italy
+  - Leaders of Poland
+  - Leaders of the United Kingdom
+  - Secretary General of NATO
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: France, alongside other E5 leaders, commits to strengthening European
+    defense capabilities and industrial cooperation within a reinforced NATO framework.
+  positions:
+    defence: France actively advances a stronger EU defense capability through concrete
+      commitments to industrial cooperation and the development of joint precision
+      strike capabilities.
+  stances:
+    defence:
+      score: 2
+      evidence: Ils conviennent d’accélérer leur engagement en faveur du développement
+        et de l’acquisition conjoints, au niveau européen, de capacités de frappe
+        de précision en profondeur.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Germany will provide its final contribution to the UNIFIL mission in Lebanon,
+    concluding its operative mandate by December 31, 2026.
+  positions:
+    defence: Germany actively contributes to collective security and maritime stability
+      through the deployment of a frigate and personnel to support the UNIFIL mission
+      and train the Lebanese Navy.
+  stances:
+    defence:
+      score: 2
+      evidence: Dazu gehören die Beteiligung mit einer Fregatte am UNIFIL -Marineverband,
+        mit Stabspersonal im UNIFIL -Hauptquartier sowie mit Ausbildungspersonal für
+        den Fähigkeitsaufbau der libanesischen Marine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kornelius
+  - Keir Starmer
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany continues to coordinate with international partners to support
+    Ukraine and prepare for the upcoming NATO summit.
+  positions:
+    ukraine: Germany reaffirms its commitment to supporting Ukraine and focusing on
+      its preparation for peace negotiations.
+    defence: Germany is actively coordinating the preparation of the NATO summit to
+      ensure collective security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: im Mittelpunkt des Treffens ... stehen ... natürlich auch die Unterstützung
+        der Ukraine
+    defence:
+      score: 1
+      evidence: Das geplante Treffen im E5-Format ist Teil der Vorbereitung des NATO-Gipfels.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

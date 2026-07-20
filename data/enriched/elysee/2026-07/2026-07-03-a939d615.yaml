@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the French Republic
+  - British Prime Minister
+  topics:
+  - defence
+  location: null
+  position: France and the UK are committed to ensuring freedom of navigation in the
+    Strait of Hormuz and supporting regional stability through military cooperation.
+  positions:
+    defence: France actively advances collective security and navigation freedom by
+      standing ready to deploy a multinational military mission.
+  stances:
+    defence:
+      score: 2
+      evidence: La France et le Royaume-Uni se tiennent également prêts à déployer
+        la mission militaire multinationale plus large pour soutenir la liberté de
+        navigation dans le détroit d'Ormuz.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

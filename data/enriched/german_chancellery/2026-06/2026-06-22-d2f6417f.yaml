@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing new migration laws to more effectively limit and
+    steer migration by simplifying the designation of safe countries of origin and
+    reducing legal requirements for deportation detention.
+  positions:
+    rule_of_law: Germany is implementing measures to expedite asylum procedures and
+      restrict citizenship for those who commit fraud, reflecting a domestic focus
+      on legal order and administrative efficiency.
+  stances:
+    rule_of_law:
+      score: 0
+      evidence: Einbürgerung für die Dauer von zehn Jahren ausgeschlossen werden,
+        wenn sie unanfechtbar zurückgenommen oder im Einbürgerungsverfahren z.B. mit
+        Arglist, Drohung oder Bestechung falsche Angaben unterliegt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Ministerpräsident Michael Kretschmer
+  topics:
+  - green_transition
+  location: Dresden, Germany
+  position: Germany is emphasizing industrial competitiveness and strategic production
+    capabilities through the opening of a new Infineon semiconductor plant and labor
+    market reforms.
+  positions:
+    green_transition: Germany advances its industrial capacity and European competitiveness
+      by investing in strategic semiconductor production.
+  stances:
+    green_transition:
+      score: 1
+      evidence: die Bedeutung der Eröffnung Ihrer Smart Power Fab ist groß für Sie
+        bei Infineon, für den Standort Sachsen und für die industrielle Zukunft unseres
+        ganzen Landes, ja der ganzen Europäischen Union
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

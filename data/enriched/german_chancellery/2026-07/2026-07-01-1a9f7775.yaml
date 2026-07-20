@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Ursula von der Leyen
+  - Trump
+  topics: []
+  location: null
+  position: Germany supports the EU-US 'Turnberry Deal' to establish a 15% tariff
+    ceiling on exports to avoid trade escalation and ensure planning security for
+    companies.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

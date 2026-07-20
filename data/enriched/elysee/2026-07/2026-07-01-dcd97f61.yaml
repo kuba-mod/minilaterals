@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: Paris/Geneva
+  position: France is advancing legislation to restrict social media access for children
+    under 15 to protect their health and development from digital risks.
+  positions:
+    hybrid: France is taking concrete legislative action to protect citizens from
+      the risks of the digital environment, aligning with the goal of coordinating
+      action against digital threats.
+  stances:
+    hybrid:
+      score: 2
+      evidence: la France fait avancer une législation visant à interdire l’accès
+        aux réseaux sociaux aux moins de 15 ans
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

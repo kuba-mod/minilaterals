@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Mark Carney
+  - Jonas Gahr Støre
+  - Rutte
+  - Trump
+  - Erdoğan
+  - Wolodymyr Selenskyj
+  - Boris Pistorius
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Germany reaffirms its commitment to NATO unity, increased defense spending,
+    and strengthened military support for Ukraine.
+  positions:
+    ukraine: Germany supports increased military aid to Ukraine to combat the Russian
+      war of aggression.
+    defence: Germany is actively increasing defense expenditures and pursuing collaborative
+      military projects to strengthen European and transatlantic security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: eine stärkere Unterstützung der Ukraine
+    defence:
+      score: 2
+      evidence: Das betreffe vor allem die Erhöhung der Verteidigungsausgaben.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - President Erdoğan
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Ankara, Turkey
+  position: Germany is significantly increasing its defense spending and reaffirms
+    its commitment to NATO's collective defense to counter Russian aggression.
+  positions:
+    ukraine: Germany acknowledges the escalation of Russia's war against Ukraine and
+      its threat to Euro-Atlantic security.
+    defence: Germany is actively advancing defense capabilities by drastically increasing
+      military spending toward a 5% GDP target.
+    hybrid: Germany identifies Russian cyber attacks and disinformation as direct
+      threats to its determination and security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Vor allem sehen wir, dass Russland den Krieg gegen die Ukraine weiter
+        eskaliert.
+    defence:
+      score: 2
+      evidence: Wir haben unsere Verteidigungsausgaben auf knapp 125 Milliarden Euro
+        angehoben.
+    hybrid:
+      score: 1
+      evidence: Denn jeden Tag testet Russland unsere Entschlossenheit durch Cyber
+        angriffe, durch Sabotage, durch Ausspähversuche und gezielte Desinformation.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Wolodymyr Selenskyj
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany reaffirms its continued support for Ukraine, particularly in the
+    area of air defense.
+  positions:
+    ukraine: Germany rhetorically supports the continued long-term assistance to Ukraine.
+    defence: Germany provides concrete military support to Ukraine via air defense
+      capabilities.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Der Bundeskanzler bekräftigte, dass sich die Ukraine auf die fortgesetzte
+        Unterstützung Deutschlands verlassen kann.
+    defence:
+      score: 2
+      evidence: Der Präsident dankte dem Bundeskanzler für die deutsche Unterstützung,
+        insbesondere bei der Luftverteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

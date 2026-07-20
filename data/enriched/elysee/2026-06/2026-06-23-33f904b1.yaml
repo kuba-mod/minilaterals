@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Chef de l’État
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France honors the memory of Marc and Simonne Bloch, emphasizing the republican
+    values of truth, liberty, and secularism against Nazi barbarism.
+  positions:
+    rule_of_law: France affirms its commitment to democratic resilience and the rule
+      of law by honoring a defender of secularism and republican values who resisted
+      totalitarianism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: C'est le courage et l'engagement de deux vies au service de la vérité,
+        de la liberté et de la République qui sont ainsi honorés.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

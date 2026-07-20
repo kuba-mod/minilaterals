@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundesrat
+  - Bundesregierung
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is providing approximately four billion euros in financial relief
+    to states and municipalities to improve infrastructure and maintain democratic
+    resilience.
+  positions:
+    green_transition: Germany is advancing climate neutrality through the provision
+      of 100 billion euros from a special infrastructure and climate neutrality fund.
+    rule_of_law: Germany links the financial viability of local communities and a
+      functioning commonweal to the strengthening of democracy.
+  stances:
+    green_transition:
+      score: 2
+      evidence: So stehen den Ländern 100 Milliarden Euro aus dem Sondervermögen Infrastruktur
+        und Klimaneutralität zur Verfügung.
+    rule_of_law:
+      score: 1
+      evidence: Finanziell ausreichend ausgestattete Kommunen und ein gut funktionierendes
+        Gemeinwesen stärken unsere Demokratie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

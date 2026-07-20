@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - Minister of Europe and Foreign Affairs
+  - Minister of City and Housing
+  topics:
+  - green_transition
+  location: null
+  position: France is implementing EU financial regulations and establishing a joint
+    procurement platform for the Carbon Border Adjustment Mechanism.
+  positions:
+    green_transition: France is advancing the green transition by ratifying an agreement
+      to acquire a common platform for the carbon border adjustment mechanism.
+  stances:
+    green_transition:
+      score: 2
+      evidence: un projet de loi autorisant la ratification de l’accord de passation
+        conjointe de marché en vue de l’acquisition d’une plateforme centrale commune
+        pour le mécanisme d’ajustement carbone aux frontières
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

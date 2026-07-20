@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Cologne, Germany
+  position: Chancellor Merz emphasizes the necessity of strong, capable, and responsibly
+    led democratic institutions to navigate current global complexities.
+  positions:
+    rule_of_law: Germany supports the strengthening of democratic institutions and
+      good governance as a foundation for national and European stability.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: liberale und funktionierende Demokratien starke, handlungsfähige und
+        verantwortungsvoll geführte Institutionen brauchen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

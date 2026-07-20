@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Poland reaffirms its stable, long-term commitment to supporting Ukraine
+    and strengthening defense against Russian aggression in coordination with NATO
+    allies.
+  positions:
+    ukraine: Poland views Ukraine's victory as essential to its own national security
+      and commits to continued support.
+    defence: Poland intends to strengthen military cooperation and defenses against
+      threats from Russia via NATO.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska będzie wspierać Ukrainę w jej obronie przed rosyjską agresją
+        nie tylko z poczucia przyzwoitości i solidarności, lecz przede wszystkim w
+        trosce o własne bezpieczeństwo i w dobrze pojętym interesie narodowym.
+    defence:
+      score: 1
+      evidence: zapowiedział ścisłą współpracę w zakresie bezpieczeństwa i współpracy
+        wojskowej oraz dalsze wzmacnianie obrony przed zagrożeniem ze strony Rosji.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

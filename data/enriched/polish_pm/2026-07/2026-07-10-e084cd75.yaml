@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - green_transition
+  location: null
+  position: Poland is enhancing its energy security and independence through the development
+    of offshore wind energy and potential nuclear cooperation.
+  positions:
+    green_transition: Poland is actively implementing large-scale renewable energy
+      projects and diversifying its energy mix to achieve energy sovereignty.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Rozwój morskiej energetyki wiatrowej sprawia, że Polska wzmacnia swoją
+        niezależność i ogranicza wpływ wydarzeń w innych częściach świata
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

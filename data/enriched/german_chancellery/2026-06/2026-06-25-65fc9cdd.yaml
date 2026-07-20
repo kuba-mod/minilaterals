@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Gordon Schnieder
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Merz announces a new agreement between the federal government
+    and states to ensure that federal performance laws are fully funded to maintain
+    the operational capacity of municipalities.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

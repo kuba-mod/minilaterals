@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Andreas Mundt, Präsident des Bundeskartellamts
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany implemented temporary energy tax cuts and tightened antitrust
+    regulations to stabilize fuel prices and prevent market abuse by oil companies.
+  positions:
+    rule_of_law: Germany is strengthening its domestic rule of law and market oversight
+      by empowering the Federal Cartel Office to combat abusive pricing practices.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Das soll die Verlässlichkeit und Transparenz an den Tankstellen erhöhen
+        und das Bundeskartellamt stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

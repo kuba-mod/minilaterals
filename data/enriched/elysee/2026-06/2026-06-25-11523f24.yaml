@@ -1,0 +1,52 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: France reaffirms its strategic partnership with Italy to strengthen European
+    sovereignty, security, and comprehensive support for Ukraine.
+  positions:
+    ukraine: France commits to providing full political, financial, economic, humanitarian,
+      diplomatic, and military support to Ukraine.
+    defence: France seeks to deepen bilateral and multilateral cooperation in security
+      and defense across all sectors.
+    hybrid: France recognizes the increase in hybrid threats within the current geopolitical
+      context.
+    rule_of_law: France reaffirms its commitment to an international order based on
+      the rule of law.
+  stances:
+    ukraine:
+      score: 2
+      evidence: nous continuerons de fournir à l’Ukraine et au peuple ukrainien un
+        soutien politique, financier, économique, humanitaire, diplomatique et militaire
+        complet
+    defence:
+      score: 1
+      evidence: notre volonté d’ approfondir encore la coopération franco-italienne
+        en matière de politiques étrangère, de sécurité et de défense dans tous les
+        secteurs
+    hybrid:
+      score: 1
+      evidence: caractérisé par de nombreuses crises dans notre voisinage et un accroissement
+        des menaces hybrides
+    rule_of_law:
+      score: 1
+      evidence: nous réaffirmons notre attachement à un ordre international fondé
+        sur des règles de droit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

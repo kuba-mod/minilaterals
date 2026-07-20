@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Merz outlines reforms to the German pension system and emphasizes
+    the need to improve Germany's economic competitiveness.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

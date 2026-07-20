@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of Denmark
+  - Leaders of France
+  - Leaders of Germany
+  - Leaders of Italy
+  - Leaders of the Netherlands
+  - Leaders of Norway
+  - Leaders of Spain
+  - Leaders of Sweden
+  - Leaders of Ukraine
+  - Leaders of the United Kingdom
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France is co-founding an integrated coalition to develop a shared European
+    anti-ballistic missile defense capability.
+  positions:
+    ukraine: France acknowledges Ukraine's unique operational experience in defending
+      against Russian aggression as part of the coalition effort.
+    defence: France is actively advancing European collective security by establishing
+      a shared industrial and operational architecture for missile defense.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Nous reconnaissons l'expérience unique de l'Ukraine, acquise par sa
+        défense face à la guerre d'agression menée par la Russie.
+    defence:
+      score: 2
+      evidence: annonçons aujourd’hui le lancement de la création d’une coalition
+        purement défensive contre les missiles balistiques
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

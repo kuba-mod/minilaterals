@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundesrat
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing new legislation to prevent the fraudulent recognition
+    of paternity used to circumvent immigration and social benefit laws.
+  positions:
+    rule_of_law: Germany is strengthening the legal integrity of its citizenship and
+      residency processes by introducing stricter verification and criminal penalties
+      for fraudulent claims.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Das Gesetz trägt dazu bei, dass Vaterschaften künftig nicht mehr anerkannt
+        werden, die allein der aufenthaltsrechtlichen Vorteilsnahme dienen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

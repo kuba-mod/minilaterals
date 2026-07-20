@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Bundeskanzler
+  - NATO-Generalsekretär Rutte
+  - Staats- und Regierungschefs der drei baltischen Staaten
+  - Außenminister Wadephul
+  - Marco Rubio
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany is prioritizing security and defense policy, emphasizing support
+    for Ukraine and coordination with NATO and Baltic partners.
+  positions:
+    ukraine: Germany reiterates its commitment to providing continued support for
+      Ukraine.
+    defence: Germany is actively highlighting the importance of security and defense
+      policy through high-level meetings and ministerial coordination.
+  stances:
+    ukraine:
+      score: 1
+      evidence: gemeinsame Unterstützung der Ukraine im Fokus stehen
+    defence:
+      score: 1
+      evidence: Die Bundesregierung unterstreicht damit die Bedeutung der Bundeswehr
+        sowie der Sicherheits- und Verteidigungspolitik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

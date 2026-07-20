@@ -1,0 +1,20 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: null
+  position: Germany is awarding scholarships to artists for stays at German academies
+    and study centers in Italy and France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

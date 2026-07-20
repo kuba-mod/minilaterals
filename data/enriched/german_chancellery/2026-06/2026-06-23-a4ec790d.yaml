@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: press_conference
+  participants:
+  - Friedrich Merz
+  - Bärbel Bas
+  - Frank-Jürgen Weise
+  - Constanze Janda
+  topics: []
+  location: null
+  position: Germany's government has received a report from the Pension Security Commission
+    proposing 33 measures to ensure the long-term stability of the social security
+    system and the pension level.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

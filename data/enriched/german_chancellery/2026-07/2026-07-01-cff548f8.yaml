@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - defence
+  location: null
+  position: Germany is strengthening its defense capabilities by introducing the Reserve
+    Strength Act to ensure a more reliable and better-trained reserve force.
+  positions:
+    defence: Germany is actively advancing defense capabilities through legal frameworks
+      to increase the quantitative and qualitative strength of the Bundeswehr's reserves.
+  stances:
+    defence:
+      score: 2
+      evidence: Mit dem Entwurf des Reservestärkungsgesetzes schafft die Bundesregierung
+        die rechtlichen Rahmenbedingungen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

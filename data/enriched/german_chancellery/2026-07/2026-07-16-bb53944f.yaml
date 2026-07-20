@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  topics:
+  - defence
+  location: Bergisch Gladbach, Germany
+  position: Germany reaffirms its close cooperation with France to advance European
+    security and economic competitiveness.
+  positions:
+    defence: Germany emphasizes the necessity of joint action with France to protect
+      Europe in a dangerous global security environment.
+  stances:
+    defence:
+      score: 1
+      evidence: Wie schützen wir uns in einer gefährlichen Welt?
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Mark Carney
+  - Friedrich Merz
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany is launching negotiations for a Strategic Partnership Agreement
+    with Canada to advance cooperation in security, technology, energy, and investment.
+  positions:
+    defence: Germany is establishing a strategic framework with Canada to cooperate
+      on security and defence.
+    green_transition: Germany is pursuing strategic cooperation and investment in
+      energy and critical minerals.
+  stances:
+    defence:
+      score: 2
+      evidence: 'key areas of cooperation will include: (I) Security and Defence'
+    green_transition:
+      score: 2
+      evidence: 'key areas of cooperation will include: (III) Supply Chains and Critical
+        Minerals; (IV) Energy'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

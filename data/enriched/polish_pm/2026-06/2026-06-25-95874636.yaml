@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Julia Swyrydenko
+  - Antonio Costa
+  - Ursula von der Leyen
+  topics:
+  - ukraine
+  - enlargement
+  location: Gdańsk, Poland
+  position: Poland is co-organizing the Ukraine Recovery Conference to coordinate
+    international reconstruction efforts and mobilize investments for Ukraine.
+  positions:
+    ukraine: Poland is actively advancing the goal by co-hosting a major international
+      conference to coordinate the reconstruction of Ukraine.
+    enlargement: Poland supports Ukraine's integration into a united Europe based
+      on historical understanding and reconciliation.
+  stances:
+    ukraine:
+      score: 2
+      evidence: W Gdańsku rozpoczęła się dwudniowa Konferencja na rzecz Odbudowy Ukrainy
+        (Ukraine Recovery Conference – URC) współorganizowana przez Polskę oraz Ukrainę.
+    enlargement:
+      score: 1
+      evidence: Ukraina słusznie chce być częścią zjednoczonej Europy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

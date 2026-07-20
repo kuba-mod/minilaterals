@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Council of Ministers
+  topics:
+  - defence
+  - green_transition
+  location: Toulon, France
+  position: France and Germany reaffirm their partnership to strengthen the EU's economic
+    sovereignty, industrial resilience, and space infrastructure.
+  positions:
+    defence: France supports the creation of a resilient and integrated European space
+      infrastructure (IRIS²) as a strategic asset.
+    green_transition: France emphasizes the need for a robust industrial sector to
+      ensure the EU's competitiveness and global influence, aligning with industrial
+      goals.
+  stances:
+    defence:
+      score: 2
+      evidence: Les deux pays reconnaissent le rôle crucial joué par IRIS² dans la
+        mise en place d’une infrastructure spatiale européenne résiliente, intégrée
+        et robuste.
+    green_transition:
+      score: 1
+      evidence: Cela suppose un secteur industriel robuste, or celui-ci subit actuellement
+        de fortes pressions.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

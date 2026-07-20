@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing domestic measures for climate adaptation in urban
+    and rural areas and promoting public awareness of climate resilience.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality and resilience
+      through a dedicated funding program for urban and rural climate adaptation.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Mit dem Programm „Anpassung urbaner und ländlicher Räume an den Klimawandel“
+        werden Kommunen dabei unterstützt, öffentliche Räume widerstandsfähiger weiterzuentwickeln
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

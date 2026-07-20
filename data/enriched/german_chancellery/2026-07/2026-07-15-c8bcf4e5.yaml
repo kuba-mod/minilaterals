@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - defence
+  location: null
+  position: Chancellor Merz outlines domestic reforms and emphasizes Germany's commitment
+    to a stronger role within the EU and NATO.
+  positions:
+    defence: Germany supports military-technological cooperation through NATO.
+  stances:
+    defence:
+      score: 1
+      evidence: Er verwies auf Erfolge in der militärisch-technologischen Zusammenarbeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Sebastian Hille
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany encourages youth engagement with European values, specifically
+    addressing extremism and the rule of law.
+  positions:
+    rule_of_law: Germany rhetorically supports democratic resilience by engaging youth
+      in discussions about growing extremism and European law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: So sprach Hille mit den Schülerinnen und Schülern über die EU in der
+        internationalen Politik, den wachsenden Extremismus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

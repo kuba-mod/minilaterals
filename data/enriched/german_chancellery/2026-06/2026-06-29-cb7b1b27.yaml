@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatssekretär Kornelius
+  - Schraff
+  - Stolzenberg
+  - Ungrad
+  - Reck
+  - Kall
+  - Hinterseher
+  - Swistek
+  - Singer
+  - Dr. Schneidewindt
+  - Buschow
+  - Carsten Schneider
+  topics:
+  - green_transition
+  location: null
+  position: Germany is pursuing climate adaptation and heat protection through a combination
+    of federal research, funding for model projects, and local municipal actions.
+  positions:
+    green_transition: Germany is actively investing in climate adaptation and research
+      into a national heat action plan, backed by a significant infrastructure and
+      climate neutrality fund.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Er verweist auf die 100 Milliarden Euro, die aus dem Sondervermögen
+        für Infrastruktur und Klimaneutralität zur Verfügung stehen. Die sind auch
+        für Klimaanpassung gedacht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lars Klingbeil
+  topics: []
+  location: null
+  position: The German government coalition has agreed on a package of 34 measures
+    to modernize the country through tax reforms, pension adjustments, and labor market
+    deregulation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

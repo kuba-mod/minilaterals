@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Jörg Thadeusz
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is providing two million euros to support independent publishers
+    to preserve democratic plurality and prevent the monopolization of opinion.
+  positions:
+    rule_of_law: Germany actively advances democratic resilience by financially supporting
+      a diverse publishing landscape to protect against opinion monopolies.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Diese wertvolle verlegerische Vielstimmigkeit in unserem Land bewahrt
+        unsere Demokratie vor Einfalt, vor einer Monopolisierung der Meinungen – darum
+        wollen wir sie mit dem Deutschen Verlagspreis unterstützen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

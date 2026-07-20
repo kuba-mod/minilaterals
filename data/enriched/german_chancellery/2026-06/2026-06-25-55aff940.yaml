@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Regierungschefinnen und -chefs der Länder
+  topics: []
+  location: null
+  position: Germany is implementing a Federal Modernization Agenda to digitalize administration
+    and reduce bureaucracy across federal and state levels.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

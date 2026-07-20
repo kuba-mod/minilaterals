@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundesregierung
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: Germany has passed the Federal Testing Act (Bundeserprobungsgesetz) to
+    create regulatory sandboxes (Reallabore) for testing technological and administrative
+    innovations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

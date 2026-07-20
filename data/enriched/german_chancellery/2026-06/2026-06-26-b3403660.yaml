@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Edgars Rinkēvičs
+  - Kristen Michal
+  - Gitanas Nausėda
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting a B3+1 meeting with Baltic leaders to coordinate on
+    NATO preparations, security, and Ukrainian support.
+  positions:
+    ukraine: Germany continues to support the provision of aid to Ukraine.
+    defence: Germany is engaging in security and defense policy discussions and NATO
+      summit preparations.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die weitere Unterstützung der Ukraine im Mittelpunkt stehen
+    defence:
+      score: 1
+      evidence: sicherheits- und verteidigungspolitische Themen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

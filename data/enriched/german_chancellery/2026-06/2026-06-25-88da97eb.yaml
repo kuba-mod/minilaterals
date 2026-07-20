@@ -1,0 +1,32 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Entwicklungsministerin Alabali Radovan
+  - Ministerpräsident Donald
+  - Ministerpräsidentin Swyrydenko
+  topics:
+  - ukraine
+  location: Gdansk, Poland
+  position: Germany reaffirms its unwavering commitment to Ukraine's military and
+    civil support and its economic recovery through a combination of public and private
+    investment.
+  positions:
+    ukraine: Germany actively advances the goal of long-term support for Ukraine by
+      committing to military, civil, and economic recovery efforts.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Die militärische und zivile Unterstützung für die Ukraine sind nach
+        wie vor von grundlegender Bedeutung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

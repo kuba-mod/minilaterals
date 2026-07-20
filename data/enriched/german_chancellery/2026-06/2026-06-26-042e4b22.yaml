@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Sven Schulze
+  - Richard Saynor
+  topics:
+  - green_transition
+  location: Barleben, Germany
+  position: Germany emphasizes the strategic importance of a strong domestic pharmaceutical
+    industrial base to ensure resilient healthcare supply chains within Europe.
+  positions:
+    green_transition: Germany supports strengthening industrial resilience and competitiveness
+      within the EU, aligning with the broader industrial policy goals of the green
+      transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: setzen wir uns in der EU für Resilienz und Wettbewerbsfähigkeit ein
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

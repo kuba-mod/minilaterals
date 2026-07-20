@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Verena Hubertz, Bundesministerin für Wohnen, Stadtentwicklung und Bauwesen
+  topics:
+  - green_transition
+  location: null
+  position: Germany is extending the 'Effizienzhaus 55-Plus' funding program to activate
+    stalled housing projects through low-interest loans for climate-neutral construction.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality by funding
+      housing projects that exclusively use 100% renewable energy sources.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Um einen zinsverbilligten Kredit zu erhalten, müssen die Wohngebäude
+        im Effizienzhausstandard 55 geplant worden sein, also mit einer Wärmeerzeugung
+        mit 100 Prozent Erneuerbaren Energien.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

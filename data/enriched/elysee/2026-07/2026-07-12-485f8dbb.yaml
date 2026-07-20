@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - ministers
+  - ambassador
+  - defender of rights
+  - parliamentarians
+  - First President of the Court of Cassation
+  - Prosecutor General near the Court of Cassation
+  - Chief of the Armed Forces Staff
+  - Prefect of the Île-de-France region
+  - Mayor of Paris
+  - First President of the Court of Appeal of Paris
+  - Prosecutor General near the Court of Appeal of Paris
+  - Military Governor of Paris
+  - Chief Rabbi of France
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France commemorates the innocence of Alfred Dreyfus to reaffirm the nation's
+    commitment to justice, truth, and republican values against antisemitism and arbitrary
+    power.
+  positions:
+    rule_of_law: France rhetorically affirms its commitment to the rule of law, justice,
+      and the victory of republican spirit over arbitrary power.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: cette journée nationale réaffirme l’attachement de la Nation aux valeurs
+        des Lumières et de la République
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

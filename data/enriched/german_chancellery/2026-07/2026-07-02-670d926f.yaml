@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Karsten Wildberger
+  topics:
+  - green_transition
+  location: Dresden, Germany
+  position: Germany is strengthening its digital sovereignty and industrial resilience
+    through a massive investment in semiconductor production for future technologies.
+  positions:
+    green_transition: Germany is actively advancing the green transition by producing
+      semiconductors for renewable energies and power grids.
+  stances:
+    green_transition:
+      score: 2
+      evidence: hochmoderne Halbleiter für Zukunftstechnologien gefertigt, etwa f
+        ü r die Stromversorgung von KI -Rechenzentren, erneuerbare Energien, Stromnetze
+        und selbstfahrende Autos
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

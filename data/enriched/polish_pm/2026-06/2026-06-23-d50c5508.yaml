@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Karol Nawrocki
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  location: null
+  position: Prime Minister Donald Tusk seeks to mitigate bilateral tensions with Ukraine
+    and emphasizes the long-term strategic and economic importance of the partnership.
+  positions:
+    ukraine: Poland maintains support for Ukraine and seeks to preserve the strategic
+      relationship despite current diplomatic tensions and historical grievances.
+  stances:
+    ukraine:
+      score: 1
+      evidence: W długoterminowym interesie Polski jest budowanie relacji z Ukrainą
+        na wizji przyszłości
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

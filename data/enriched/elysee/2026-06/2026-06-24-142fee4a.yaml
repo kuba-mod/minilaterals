@@ -1,0 +1,44 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  - Chancelier allemand
+  - Premier ministre britannique
+  - Présidente du Conseil des ministres italien
+  - Premier ministre polonais
+  - Secrétaire général de l’OTAN
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: France coordinated with European allies to reinforce security guarantees
+    for Ukraine and strengthen European defense capabilities within NATO.
+  positions:
+    ukraine: France supports the continuation of aid to Ukraine and the establishment
+      of security guarantees.
+    defence: France advocates for a stronger European defense capability and increased
+      cooperation between European partners within the Alliance.
+  stances:
+    ukraine:
+      score: 1
+      evidence: évoqué la poursuite du soutien à l’Ukraine dans le prolongement des
+        initiatives annoncées lors du sommet du G7 et des travaux engagés dans le
+        cadre de la Coalition des volontaires pour doter l’Ukraine de garanties de
+        sécurité solides
+    defence:
+      score: 1
+      evidence: le développement des capacités européennes de défense et le renforcement
+        de la coopération entre partenaires européens
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

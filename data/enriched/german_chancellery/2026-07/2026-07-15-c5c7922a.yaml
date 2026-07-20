@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The German federal cabinet has approved an amendment to competition law
+    to facilitate economic stabilization and cooperation within the media sector to
+    preserve the dual media system.
+  positions:
+    hybrid: Germany is acting to strengthen the economic stability of media providers
+      and diversity of press, which serves as a bulwark against disinformation.
+    rule_of_law: Germany is implementing legal reforms to ensure legal certainty for
+      media cooperation and competition law.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Damit leistet die Bundesregierung einen wesentlichen ordnungspolitischen
+        Beitrag zum Erhalt der dualen Medienordnung in Deutschland.
+    rule_of_law:
+      score: 1
+      evidence: ein Verfahren beim Bundeskartellamt vorgesehen, das rasch die nötige
+        Rechtsklarheit schafft
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

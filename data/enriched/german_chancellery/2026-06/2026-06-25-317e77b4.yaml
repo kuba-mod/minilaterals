@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Bundeskanzler Merz
+  - Heads of state and government of France, Italy, Poland, and the United Kingdom
+  topics:
+  - defence
+  location: Évian-les-Bains, France
+  position: Germany supports regional stability in the Middle East, the reopening
+    of the Strait of Hormuz, and the prevention of Iranian nuclear proliferation through
+    diplomatic and military cooperation.
+  positions:
+    defence: Germany commits to participating in a multinational military mission
+      to secure freedom of navigation in the Strait of Hormus.
+  stances:
+    defence:
+      score: 2
+      evidence: sich im Einklang mit ihren jeweiligen verfassungsrechtlichen Voraussetzungen
+        und sobald es die Lage zulässt, an der von Frankreich und vom Vereinigten
+        Königreich geführten multinationalen Militärmission zu beteiligen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

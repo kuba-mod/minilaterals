@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Dariusz Klimczak
+  - Waldemar Żurek
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland is completing critical transport infrastructure to boost economic
+    growth and national security, while pledging to investigate medical malpractice
+    through the rule of law.
+  positions:
+    defence: Poland is strengthening its national security system through the completion
+      of the S6 expressway, which integrates into the trans-European road network.
+    rule_of_law: Poland affirms its commitment to legal accountability and the rule
+      of law by promising to investigate irregularities at the Południowy Hospital
+      via the prosecutor's office.
+  stances:
+    defence:
+      score: 1
+      evidence: będzie także ważnym elementem systemu bezpieczeństwa państwa
+    rule_of_law:
+      score: 1
+      evidence: będziemy wyjaśniali każdy element sprawy Szpitala Południowego i tam,
+        gdzie jest potrzebna prokuratura, ona jest i działa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

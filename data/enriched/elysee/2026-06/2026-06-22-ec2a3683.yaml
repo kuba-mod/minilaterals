@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France and Germany have agreed on a joint strategy and equal ownership
+    of KNDS to strengthen shared land defense sovereignty and European industrial
+    capacity.
+  positions:
+    defence: France is actively advancing EU defense capabilities through a concrete
+      joint industrial agreement and ownership structure with Germany.
+  stances:
+    defence:
+      score: 2
+      evidence: la France et l'Allemagne ont conclu un accord sur la stratégie et
+        la gouvernance de KNDS, dont elles ont l’intention de devenir co-actionnaires
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

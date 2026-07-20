@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Karin Prien
+  - Robert von Steinau-Steinrück
+  - Stefan Evers
+  - Valerie Riedesel Freifrau zu Eisenbach
+  - Andrea Lindholz
+  - Carsten Breuer
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany commemorates the victims of the resistance against the National
+    Socialist dictatorship to honor democratic resilience.
+  positions:
+    rule_of_law: Germany rhetorically supports democratic resilience by honoring those
+      who resisted the Nazi regime.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: erinnert am 20. Juli 2026 – dem 82. Jahrestag des Attentats- und Umsturzversuchs
+        gegen Hitler – mit einer Feierstunde um 11:00 Uhr im Ehrenhof des Bendlerblocks
+        in Berlin, Stauffenbergstraße, an den Widerstand gegen die nationalsozialistische
+        Gewaltherrschaft
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

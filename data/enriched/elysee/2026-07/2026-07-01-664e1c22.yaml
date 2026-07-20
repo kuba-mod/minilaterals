@@ -1,0 +1,18 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: France
+  position: France conducted various official activities including memorials and the
+    G7 summit in Evian.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

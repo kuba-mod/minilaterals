@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundestag
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: Germany has passed a new Sports Promotion Act to enhance the competitiveness
+    of elite athletes through structural reforms and the creation of a centralized
+    agency.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

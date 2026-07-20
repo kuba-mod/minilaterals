@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Staatssekretär Kornelius
+  - Vorsitzende Buschow
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is preparing for the NATO summit in Ankara with a focus on increasing
+    defense spending and providing further financial and military aid to Ukraine.
+  positions:
+    ukraine: Germany is planning a bilateral financial aid package for Ukraine in
+      the range of 30 to 40 billion euros.
+    defence: Germany supports increasing defense spending and enhancing the capacities
+      of the defense industry within the NATO framework.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Eine Größenordnung von 30 bis 40 Milliarden Euro an bilateralen Hilfen
+        war da angedacht.
+    defence:
+      score: 2
+      evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine stärkere
+        Verantwortungsübernahme der europäischen Alliierten für die gemeinsame transatlantische
+        Sicherheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

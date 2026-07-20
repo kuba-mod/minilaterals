@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bärbel Bas
+  - Nina Warken
+  topics: []
+  location: null
+  position: Germany has increased the minimum wages for elderly care workers and implemented
+    additional leave entitlements to enhance the attractiveness of the profession.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

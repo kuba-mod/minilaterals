@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - SRS Meyer
+  - Vorsitzende Küfner
+  - Frau Alabali Radovan
+  - Herr Wadephul
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing measures to align energy efficiency laws with
+    EU standards and expanding development relations with the Global South.
+  positions:
+    green_transition: Germany is advancing energy efficiency and climate goals through
+      a new draft law that streamlines EU energy efficiency directives and targets
+      climate protection.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen und
+        leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

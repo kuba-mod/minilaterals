@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany is introducing a legislative draft to implement EU energy efficiency
+    directives while reducing bureaucratic burdens for businesses and adjusting timelines
+    for data center renewable energy targets.
+  positions:
+    green_transition: Germany supports climate goals and energy efficiency, though
+      it is easing the timeline for data centers to reach 100% renewable energy to
+      remain pragmatic and business-friendly.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen –
+        und leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

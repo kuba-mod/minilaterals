@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics: []
+  location: null
+  position: Germany intends to fully and swiftly implement 33 recommendations for
+    a comprehensive pension reform to secure long-term stability and intergenerational
+    equity.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

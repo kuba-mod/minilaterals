@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Gordon Schnieder
+  topics:
+  - green_transition
+  location: Bad Neuenahr-Ahrweiler, Germany
+  position: Chancellor Merz commemorated the victims of the Ahrtal flood and emphasized
+    the implementation of climate adaptation and prevention measures.
+  positions:
+    green_transition: Germany is actively implementing climate adaptation and prevention
+      measures to better prepare the country for natural disasters.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Bund, Länder und Kommunen gemeinsam zahlreiche Vorsorge- und Präventionsmaßnahmen
+        sowie Maßnahmen der Klimaanpassung auf den Weg gebracht hätten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

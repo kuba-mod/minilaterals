@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  topics:
+  - ukraine
+  location: Paris, France
+  position: Chancellor Merz is visiting Paris to coordinate security guarantees and
+    continued support for Ukraine's path to peace.
+  positions:
+    ukraine: Germany supports the ongoing provision of security guarantees and assistance
+      to Ukraine to achieve a just and lasting peace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Austausch zu den Sicherheitsgarantien und die weitere Unterstützung
+        für die Ukraine sowie die Abstimmung über Wege zu einem gerechten und dauerhaften
+        Frieden für die Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

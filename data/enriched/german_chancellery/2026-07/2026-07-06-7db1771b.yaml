@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany reaffirms its commitment to supporting Ukraine and seeks a just
+    peace through negotiations and increased pressure on Russia.
+  positions:
+    ukraine: Germany actively supports Ukraine and promotes a diplomatic path toward
+      a just and lasting peace.
+    defence: Germany is continuing strategic consultations regarding overall defense
+      and the use of AI models.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Die Bundesregierung wird die Ukraine weiter entschlossen unterstützen
+        und den Druck auf Russland gemeinsam mit ihren Partnern weiter erhöhen.
+    defence:
+      score: 1
+      evidence: Darüber hinaus setzte der Nationale Sicherheitsrat die Beratung zum
+        strategischen Umgang mit fortgeschrittenen KI-Modellen sowie zum Thema der
+        Gesamtverteidigung fort.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

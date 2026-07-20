@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  topics:
+  - defence
+  - rule_of_law
+  location: Nörvenich and Brühl, Germany
+  position: Germany is coordinating with France on security policy, strategic defense
+    cooperation, and European economic resilience.
+  positions:
+    defence: Germany is actively pursuing strategic cooperation and security policy
+      through a dedicated defense and security council meeting.
+    rule_of_law: Germany supports enhancing societal resilience, which aligns with
+      the goal of democratic stability.
+  stances:
+    defence:
+      score: 2
+      evidence: Im Vordergrund stehen sicherheitspolitische Themen sowie Fragen der
+        strategischen Zusammenarbeit.
+    rule_of_law:
+      score: 1
+      evidence: hier werden Wirtschaft und Wettbewerbsfähigkeit sowie der gesellschaftliche
+        Austausch und Resilienz im Fokus der Gespräche stehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

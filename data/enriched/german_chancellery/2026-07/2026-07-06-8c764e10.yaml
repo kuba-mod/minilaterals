@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: The German federal cabinet has approved a draft law to reorganize and
+    simplify housing benefits (Wohngeld) to reduce bureaucracy and consolidate the
+    budget.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

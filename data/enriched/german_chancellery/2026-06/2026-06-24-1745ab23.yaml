@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Reem Alabali Radovan
+  - Laura Chinchilla
+  - Olaf Scholz
+  topics:
+  - green_transition
+  location: Hamburg, Germany
+  position: Germany is establishing a North-South Development Policy Commission to
+    strengthen partnerships with the Global South and address global challenges.
+  positions:
+    green_transition: Germany is actively supporting the expansion of renewable energy
+      in the Global South as part of its development policy.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Auch die Unterstützung beim Ausbau erneuerbarer Energien im Globalen
+        Süden ist Teil der deutschen Entwicklungspolitik.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

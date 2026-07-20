@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bärbel Bas
+  topics: []
+  location: null
+  position: Germany is modernizing and digitalizing its labor promotion services through
+    the Federal Employment Agency to reduce bureaucracy and improve job placement.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

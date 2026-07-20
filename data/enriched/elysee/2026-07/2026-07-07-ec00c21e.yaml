@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Ahmed al-Charaa
+  topics: []
+  location: Damascus, Syria
+  position: France is supporting the reconstruction and stabilization of Syria through
+    diplomatic visits, economic partnerships, and the lifting of sanctions.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Christian Prudhomme
+  topics: []
+  location: Hautes-Pyrénées, France
+  position: President Emmanuel Macron visited the Hautes-Pyrénées to attend a Tour
+    de France stage and visit local rural development projects.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

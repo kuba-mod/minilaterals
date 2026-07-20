@@ -1,0 +1,39 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Poland emphasizes the necessity of European and transatlantic unity to
+    ensure the security of Ukraine and the West, while committing significant defense
+    spending and organizing reconstruction efforts.
+  positions:
+    ukraine: Poland actively supports Ukraine through military solidarity and the
+      organization of a reconstruction conference in Gdańsk.
+    defence: Poland actively advances European security through record-breaking defense
+      expenditures and calls for increased NATO capabilities.
+  stances:
+    ukraine:
+      score: 2
+      evidence: jutro w Gdańsku rozpocznie się Konferencja Odbudowy Ukrainy z udziałem
+        wielu przywódców, dyplomatów i firm
+    defence:
+      score: 2
+      evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
+        czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
+        7 procent PKB
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

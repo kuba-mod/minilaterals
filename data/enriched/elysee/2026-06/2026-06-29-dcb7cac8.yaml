@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Haitham bin Tarik, Sultan d'Oman
+  topics:
+  - defence
+  - green_transition
+  location: Paris, France
+  position: France seeks to strengthen bilateral ties with Oman through expanded industrial
+    cooperation, investment, and regional security coordination.
+  positions:
+    defence: France actively advances defense cooperation with Oman through the engagement
+      of major defense firms.
+    green_transition: France is pursuing energy and industrial partnerships with Oman
+      involving key energy companies.
+  stances:
+    defence:
+      score: 2
+      evidence: what we want to do with Thales, KNDS, Airbus Defence and Space, and
+        Airbus
+    green_transition:
+      score: 2
+      evidence: we signed this morning several contracts involving Suez, EDF, CMS,
+        AGM
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

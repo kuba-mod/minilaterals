@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundeswehrverwaltung
+  topics:
+  - defence
+  location: null
+  position: Germany is accelerating the expansion and modernization of its military
+    infrastructure to enhance defense capabilities and accommodate personnel growth.
+  positions:
+    defence: Germany is actively increasing its defense capacity through a new acceleration
+      law for military infrastructure and an increase in troop strength to meet NATO
+      obligations and European security challenges.
+  stances:
+    defence:
+      score: 2
+      evidence: Dafür hat die Bundesregierung den Entwurf eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes
+        beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  - Sinan Selen
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany reports an increase in extremist threats across all sectors and
+    seeks expanded powers for security agencies to combat these threats.
+  positions:
+    hybrid: Germany is taking action against internal extremist threats and violence,
+      which aligns with broader goals of countering hybrid security risks.
+    rule_of_law: Germany emphasizes that rising left-wing extremist violence is a
+      serious warning sign for the rule of law.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Das Ziel sei, jede Form des Extremismus konsequent zu bekämpfen.
+    rule_of_law:
+      score: 1
+      evidence: Dass die linksextremistische Gewalt zunehme, sei ein „ernstes Warnsignal
+        für unseren Rechtsstaat“
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

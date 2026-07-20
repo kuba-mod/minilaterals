@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Friedrich Merz outlined a domestic agenda focused on economic
+    modernization, social justice, and comprehensive reforms in tax, pension, and
+    healthcare systems.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

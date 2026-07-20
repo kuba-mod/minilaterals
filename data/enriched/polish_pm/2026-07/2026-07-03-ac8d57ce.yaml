@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Radosław Sikorski
+  - Minister Zdrowia
+  - Prezes NFZ
+  topics:
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland is focusing on eliminating systemic corruption in public healthcare
+    and increasing European responsibility for its own defense ahead of a NATO summit.
+  positions:
+    defence: Poland supports increasing European responsibility for its own defense
+      and security within the NATO framework.
+    rule_of_law: Poland is taking active measures to eliminate systemic abuses and
+      lack of transparency in the public healthcare system to ensure equal access
+      for all citizens.
+  stances:
+    defence:
+      score: 1
+      evidence: Europa, w tym Polska, bierze większą odpowiedzialność za własną obronność
+    rule_of_law:
+      score: 2
+      evidence: najważniejsze jest jednak skuteczne wyeliminowanie nadużyć i patologii,
+        które są nie tylko efektem niewłaściwych działań poszczególnych osób, lecz
+        także słabości obowiązującego systemu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - SRS Meyer
+  - Szent-Iványi
+  - Foreign Minister Wadephul
+  - Foreign Minister Eide
+  - Foreign Minister Valtonen
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany is strengthening security cooperation with Norway and Finland
+    to secure the NATO northern and eastern flanks and support Ukraine.
+  positions:
+    ukraine: Germany is committing full effort to support Ukraine alongside its partners.
+    defence: Germany is actively engaging with Norway and Finland to secure the NATO
+      northern and eastern flanks through diplomatic visits and site inspections.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Gemeinsam setzen wir uns außerdem mit aller Kraft für die Unterstützung
+        der Ukraine ein.
+    defence:
+      score: 2
+      evidence: Deutschland engagiert sich mit seinen Partnern Norwegen und Finnland,
+        um die NATO-Nord- und -Ostflanke zu sichern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

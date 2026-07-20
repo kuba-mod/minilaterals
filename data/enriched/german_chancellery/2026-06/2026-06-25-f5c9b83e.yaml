@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: Freiburg, Germany
+  position: Germany emphasizes the importance of civil protection, crisis preparedness,
+    and coordinated state and societal measures to protect the population from disasters
+    and hybrid threats.
+  positions:
+    hybrid: Germany actively advances resilience against hybrid threats by organizing
+      public awareness events and coordinating state and societal measures for crisis
+      management.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Er umfasst alle staatlichen und gesellschaftlichen Maßnahmen, um die
+        Zivilbevölkerung im Krisen- oder Katastrophenfall zu schützen – von der Gefahrenabwehr
+        bis zur Wiederherstellung sicherer Lebensverhältnisse.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

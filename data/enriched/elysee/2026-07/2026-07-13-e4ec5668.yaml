@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Co-chairs of the Coalition of the Willing
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: France, as part of the Coalition of the Willing, reaffirms its unwavering
+    support for Ukraine's sovereignty and commits to increasing military aid and economic
+    pressure on Russia.
+  positions:
+    ukraine: France commits to long-term military, financial, and civil support for
+      Ukraine to achieve a just and lasting peace.
+    defence: France actively advances collective security by increasing air defense
+      deliveries and supporting a new Coalition against ballistic missiles.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Nous continuerons à soutenir l’Ukraine aussi longtemps que nécessaire,
+        y compris par de l’aide militaire, financière et civile.
+    defence:
+      score: 2
+      evidence: Nous convenons d’accroître la livraison de systèmes de défense aérienne,
+        d’intercepteurs et de moyens de longue portée.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

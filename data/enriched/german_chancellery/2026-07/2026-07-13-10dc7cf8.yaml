@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Keir Starmer
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: Germany, as a driving force in the Coalition of the Willing, commits to
+    continued diplomatic and military support for Ukraine to achieve a just peace
+    and long-term security guarantees.
+  positions:
+    ukraine: Germany actively supports the process for a lasting and just peace in
+      Ukraine and aims to increase pressure on Russia.
+    defence: Germany affirms its commitment to providing security guarantees for a
+      sovereign Ukraine even after a ceasefire.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Die Koalition der Willigen will den Friedensprozess der Ukraine weiter
+        voranbringen und den Druck auf Russland erhöhen.
+    defence:
+      score: 1
+      evidence: bekräftigt, auch nach einem Waffenstillstand zur Sicherheit der Ukraine
+        beizutragen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
