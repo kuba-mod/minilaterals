@@ -69,8 +69,8 @@
   const SERIES = {{ country_series_json | safe }};
   const COLORS = {{ actor_colors | tojson }};
   const ACTORS = {{ weimar_actors | tojson }};
-  const PAD_L = 44, PAD_R = 26, PAD_T = 15, PAD_B = 35, W = 800, H = 220;
-  const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B;
+  const PAD_L = 44, PAD_R = 14, PAD_T = 15, PAD_B = 35, W = 800, H = 220;
+  const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B, CHART_R = W - PAD_R;
 
   function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
   function r1(v){ return Math.round(v * 10) / 10; }
@@ -114,7 +114,7 @@
     let grid = '';
     for (let t = Math.ceil(lo * 2) / 2; t <= hi + 1e-9; t += 0.5) {
       const y = r1(yFor(t)), zero = Math.abs(t) < 1e-9;
-      grid += '<line x1="44" y1="' + y + '" x2="774" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? '' : ' stroke-dasharray="4 4"') + ' opacity="0.6"/>';
+      grid += '<line x1="44" y1="' + y + '" x2="' + CHART_R + '" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? '' : ' stroke-dasharray="4 4"') + ' opacity="0.6"/>';
       grid += '<text x="36" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="var(--muted)" opacity="0.8" font-family="\'IBM Plex Mono\',monospace">' + (t > 0 ? '+' + t : t) + '</text>';
     }
     document.getElementById('timeline-grid').innerHTML = grid;
@@ -124,7 +124,9 @@
       out += '<text x="' + r1(xFor(i, n)) + '" y="205" text-anchor="middle" font-size="8" fill="#888" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + '</text>';
     });
 
-    const endLabels = [];
+    // No per-line end labels: the legend above already names each colour, and
+    // a label stacked/leader-lined off a convergence point (all three capitals
+    // landing on the same value) read as visual noise rather than signal.
     ACTORS.forEach(function(a){
       var run = [];
       var flush = function(){
@@ -134,28 +136,6 @@
       };
       series.forEach(function(w, i){ if (w && a in w.pa) run.push({ i: i, v: w.pa[a], week: w.week, n: (w.n || {})[a] }); else flush(); });
       flush();
-      for (var i = n - 1; i >= 0; i--) { var w = series[i]; if (w && a in w.pa) {
-        endLabels.push({ a: a, y0: r1(yFor(w.pa[a])) });
-        break;
-      } }
-    });
-
-    // Declutter end-of-line labels: stack any that land within a text line's
-    // height of each other rather than letting them overlap into garbage.
-    const MIN_GAP = 11;
-    endLabels.sort(function(p, q){ return p.y0 - q.y0; });
-    endLabels.forEach(function(l, i){ l.y = l.y0; if (i > 0 && l.y - endLabels[i - 1].y < MIN_GAP) l.y = endLabels[i - 1].y + MIN_GAP; });
-    const maxY = H - PAD_B - 2;
-    if (endLabels.length && endLabels[endLabels.length - 1].y > maxY) {
-      var over = endLabels[endLabels.length - 1].y - maxY;
-      for (var j = endLabels.length - 1; j >= 0; j--) {
-        endLabels[j].y -= over;
-        if (j > 0 && endLabels[j].y - endLabels[j - 1].y >= MIN_GAP) break;
-      }
-    }
-    endLabels.forEach(function(l){
-      if (Math.abs(l.y - l.y0) > 1.5) out += '<line x1="774" y1="' + l.y0 + '" x2="778" y2="' + l.y + '" stroke="' + COLORS[l.a] + '" stroke-width="1" opacity="0.5"/>';
-      out += '<text x="782" y="' + (l.y + 3) + '" font-size="9" font-weight="600" fill="' + COLORS[l.a] + '" font-family="\'IBM Plex Sans\',sans-serif">' + l.a + '</text>';
     });
     document.getElementById('timeline-lines').innerHTML = out;
   };
