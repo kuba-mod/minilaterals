@@ -498,17 +498,7 @@ def build_country_line_series(
     the chart shows a trailing window rather than full history, so a capital
     whose coverage starts later doesn't read as a gap at the chart's left edge.
     """
-    actor_map = {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"}
-
-    # (date, actor, topic, score) for every stance-rated MFA statement.
-    rows: list[tuple[str, str, str, int]] = []
-    for e in events:
-        src = e.get("source_name", "")
-        if src not in actor_map:
-            continue
-        for topic, entry in ((e.get("extracted") or {}).get("stances") or {}).items():
-            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
-                rows.append((e.get("date", ""), actor_map[src], topic, entry["score"]))
+    rows = _stance_rows(events)
     if not rows:
         return {}
 

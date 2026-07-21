@@ -80,6 +80,24 @@ def test_country_lines_keep_each_capital_separate_and_show_lone_speakers():
     assert ov["pa"]["DE"] == pytest.approx(2.0)
 
 
+def test_country_lines_include_executive_office_statements():
+    # Regression: build_country_line_series once used its own hardcoded
+    # {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"} map
+    # instead of the shared _stance_rows() helper, so a country's executive
+    # office (chancellery/Élysée/KPRM) never fed the chart at all — e.g. the
+    # 2026-07-11 Polish PM statement rated enlargement: -1 was invisible here
+    # purely because it came from polish_pm, not polish_mfa.
+    events = [
+        _stance_event("polish_pm", "2026-07-11", -1, "enlargement"),
+        _stance_event("german_mfa", "2026-07-11", 1, "enlargement"),
+    ]
+    # `today` must be on/after a week's Monday label for that week to appear;
+    # 07-13 is the Monday following the (Saturday) statement date.
+    series = build_country_line_series(events, today=datetime(2026, 7, 13, tzinfo=UTC))
+    enl = [w for w in series["enlargement"] if w][-1]
+    assert enl["pa"] == {"PL": -1.0, "DE": 1.0}
+
+
 def test_country_lines_weeks_caps_to_trailing_window():
     # Statements span ~20 weeks; capping to 3 should keep only the most recent
     # 3 week-labels, ending on the week containing `today` — a capital whose
