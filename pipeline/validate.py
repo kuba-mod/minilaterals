@@ -39,11 +39,23 @@ from pipeline.schemas import (
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 
-# Mirrors the canonical actor codes (pipeline/enrich.py's _ACTOR_ORDER) and the
-# issue-area enum the LLM categoriser is prompted with — both now live only as
-# LLM-facing values since classify() and its keyword lists were removed.
-KNOWN_ACTORS = {"DE", "FR", "PL"}
-KNOWN_ISSUE_AREAS = {"ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law"}
+# The canonical actor codes and issue-area enum, derived from the grouping
+# config (data/groupings.yaml) so they can't drift from what enrich.py offers
+# the LLM. Both are the union across every tracked minilateral.
+GROUPINGS_PATH = DATA_DIR / "groupings.yaml"
+
+
+def _load_grouping_vocab() -> tuple[set[str], set[str]]:
+    try:
+        raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
+    except OSError:
+        return set(), set()
+    actors = {c for g in raw.values() for c in (g.get("members") or [])}
+    issues = {t for g in raw.values() for t in (g.get("topics") or [])}
+    return actors, issues
+
+
+KNOWN_ACTORS, KNOWN_ISSUE_AREAS = _load_grouping_vocab()
 
 # ---------------------------------------------------------------------------
 # Validation
@@ -175,7 +187,7 @@ def validate_all(
     if milestones_path.exists():
         errors.extend(_validate_list_file(milestones_path, MilestoneSchema))
 
-    errors.extend(_validate_goals(data_dir / "weimar_goals.yaml"))
+    errors.extend(_validate_goals(data_dir / "goals.yaml"))
 
     for f in sorted(glob.glob(str(data_dir / "runs" / "*.yaml"))):
         err = _validate_file(Path(f), RunLogSchema)

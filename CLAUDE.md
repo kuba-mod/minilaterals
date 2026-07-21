@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A static tracker for Weimar Triangle (DE-FR-PL) diplomatic coordination. The core use case is **positional comparison**: even when no joint statement exists, when Germany and Poland both publish press releases about Ukraine in the same week the tracker surfaces them side-by-side with extracted one-sentence position summaries, and scores how semantically similar those positions are.
 
+**Expanding to more minilaterals.** The pipeline now *collects and enriches* data for four additional formats besides Weimar — E3 (DE/FR/UK), Visegrád Group (PL/CZ/SK/HU), Baltic Three (EE/LV/LT), and AUKUS (AU/UK/US) — defined in `data/groupings.yaml`. Enrichment tags each event with per-grouping relevance flags. The **rendered site still shows only Weimar** for now; per-grouping views are a deliberate follow-up. See "Groupings" and "Relevance classification" below.
+
 No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` — see Deployment below for how that build actually gets triggered.
 
 ## Commands
@@ -59,9 +61,13 @@ Sources (RSS/HTML/API)
 |---|---|
 | `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `KNOWN_ACTOR_SOURCES` known-actor set |
 | `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
-| `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
+| `pipeline/sources/feedbase.py` | `FeedIngester`: generic RSS/Atom base for the new minilateral MFA sources (thin subclasses set `source_name`/`source_lang`/`feed_url`) |
+| `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; per-grouping relevance via `_grouping_relevance()`; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
+| `pipeline/migrate_groupings.py` | One-off LLM-free backfill of the per-grouping relevance flags across `data/enriched/` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `meetings.html` exists but isn't currently rendered |
+| `data/groupings.yaml` | The minilateral definitions (members + tracked topics); single source of truth for the actor/issue-area vocabulary |
+| `data/goals.yaml` | Per-topic reference goal sentences each stance is rated against (was `weimar_goals.yaml`) |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`); still loaded for the `meetings_count` stat, not for a rendered page |
 | `data/annual.yaml` | Activity scores 1991–2026 (fed the bar chart on the currently-unrendered `/meetings/` page) |
@@ -70,11 +76,12 @@ Sources (RSS/HTML/API)
 ## Data model
 
 Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` sidecar, not the raw event YAML):
-- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar Triangle countries and a tracked issue area
+- `weimar_relevant: true` — any MFA-sourced item touching a Weimar-tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar countries and a tracked issue area
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
+- `{grouping}_relevant` / `{grouping}_signal` — the same two-tier relevance computed **per grouping** for each of the non-Weimar formats (`e3_*`, `visegrad_*`, `baltic_*`, `aukus_*`). Weimar keeps the legacy field names for back-compat; the others follow this flat naming (design decision: parallel sibling booleans, not a nested map). Relevance is scoped to each grouping's member set, so a widened actor vocabulary can't leak relevance across formats (e.g. a `{UK, US}` item never becomes `weimar_relevant`). Computed by `_grouping_relevance()` in `enrich.py`
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
-- `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py`; the prompt has a real lineage (`"1"` regex-classification → `"2"` LLM classification at PR #35 → `"3"` shape hardening → `"4"` multilingual), keyed by `sha256[:8]` of the prompt surface. **Bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together when a prompt changes** — `test_prompt_surface_in_sync` fails until you do, so ratings can't be stamped with a stale version
+- `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py`; the prompt has a real lineage (`"1"` regex-classification → `"2"` LLM classification at PR #35 → `"3"` shape hardening → `"4"` multilingual → `"5"` multi-grouping: 12-country actors, topic union, `explicit_formats`), keyed by `sha256[:8]` of the prompt surface. **Bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together when a prompt changes** — `test_prompt_surface_in_sync` fails until you do, so ratings can't be stamped with a stale version
 - `_file_path` — added at load time by `render.py` (not stored in YAML)
 
 Provenance fields on the **raw** event YAML (set by the ingester in `base.py`, not LLM-derived):
@@ -85,7 +92,7 @@ Both raw and enriched provenance fields are Optional in the schemas so pre-prove
 
 ## Relevance classification (`enrich.py`)
 
-Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar Triangle countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor item on a tracked topic. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
+Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which member countries are involved (`actors`, from the 12-code vocabulary), which minilateral formats the text explicitly names (`explicit_formats`), and which `issue_areas` it touches (from the union of all groupings' topics). From those signals `_grouping_relevance()` computes `{grouping}_relevant` / `{grouping}_signal` for **every** grouping in `data/groupings.yaml` with a fixed rule, scoped to that grouping's member set: an explicit-format signal (or all members present), OR 2+ member actors on a topic that grouping tracks, OR a known-actor source belonging to the grouping on a tracked topic. The `weimar` grouping maps onto the legacy `weimar_relevant` / `trilateral_signal` field names. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names/aliases to the canonical codes. There is no keyword fallback — see design principles #5 and #8.
 
 ## Convergence scoring (`render.py`)
 
@@ -138,7 +145,7 @@ Each MFA is ingested from its native-language newsroom (`source_lang` de/fr/pl):
 
 ## Adding a new source
 
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and only set `source_name` + `news_url`
+1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). If the source has an RSS/Atom feed, subclass `FeedIngester` (`pipeline/sources/feedbase.py`) and set only `source_name` + `source_lang` + `feed_url`; gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and set `source_name` + `news_url`
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` in `base.py`
-4. Add a row to the sources table in `pipeline/templates/sources.html`
+3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` (and `NATIVE_LANG`) in `base.py`. If the source's country isn't already a member of some grouping, add it (and any new tracked topic + goal sentence) to `data/groupings.yaml` and `data/goals.yaml`
+4. Add a row to the sources table in `pipeline/templates/sources.html` (only needed once the source's grouping is surfaced on the site)
