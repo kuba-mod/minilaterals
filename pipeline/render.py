@@ -341,6 +341,34 @@ def compute_latest_topic_pills(
     return result
 
 
+def _stance_rows(
+    events: list[dict], topics: frozenset[str] = frozenset(ISSUE_ORDER)
+) -> list[tuple[str, str, str, int]]:
+    """
+    (date, actor, topic, score) rows for every stance-rated statement from a
+    Weimar source — all six: each country's foreign ministry *and* its
+    executive office (`SOURCE_ACTOR` covers both; see design principle #3).
+
+    This is the single place that decides which sources feed stance
+    aggregation. Any stance-aggregating function should call this rather than
+    re-deriving its own actor map: a second, narrower mapping wouldn't error,
+    it would just silently drop executive-office statements from that one
+    function's output — which is what happened when the per-country timeline
+    chart was first built with its own {"german_mfa": "DE", ...}-only map,
+    invisibly excluding chancellery/Élysée/KPRM statements from the chart.
+    """
+    rows: list[tuple[str, str, str, int]] = []
+    for e in events:
+        src = e.get("source_name", "")
+        if src not in SOURCE_ACTOR:
+            continue
+        stances = (e.get("extracted") or {}).get("stances") or {}
+        for topic, entry in stances.items():
+            if topic in topics and entry and isinstance(entry.get("score"), int):
+                rows.append((e.get("date", ""), SOURCE_ACTOR[src], topic, entry["score"]))
+    return rows
+
+
 def compute_topic_weekly_stances(
     events: list[dict], window_days: int = 14, today: datetime | None = None
 ) -> dict[str, list[dict | None]]:
@@ -353,17 +381,7 @@ def compute_topic_weekly_stances(
     published rated statements are None.
     Returns: {'overall': [...], 'ukraine': [...], ...}
     """
-    # (date, actor, topic, stance) rows from all stance-rated events
-    rows: list[tuple[str, str, str, int]] = []
-    for e in events:
-        src = e.get("source_name", "")
-        if src not in SOURCE_ACTOR:
-            continue
-        stances = (e.get("extracted") or {}).get("stances") or {}
-        for topic, entry in stances.items():
-            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
-                rows.append((e.get("date", ""), SOURCE_ACTOR[src], topic, entry["score"]))
-
+    rows = _stance_rows(events)
     if not rows:
         return {}
 
