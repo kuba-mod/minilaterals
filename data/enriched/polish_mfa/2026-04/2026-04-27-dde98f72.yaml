@@ -7,6 +7,14 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: false
+e3_signal: false
+visegrad_relevant: true
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: meeting
   participants:
