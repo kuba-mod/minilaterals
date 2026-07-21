@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics: []
+  location: null
+  position: Germany acknowledges its unsuccessful bid for a non-permanent seat on
+    the UN Security Council for 2027/28 while reaffirming its commitment to the multilateral
+    system.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Poland
+  position: Prime Minister Donald Tusk emphasizes the strengthening of national security,
+    border protection, and the defense of republican values and equality against hate
+    speech.
+  positions:
+    defence: Poland is actively increasing the size and resources of its security
+      services and modernizing its uniformed forces.
+    hybrid: Poland is actively combating illegal migration as a security threat through
+      concrete border protection decisions.
+    rule_of_law: The government rhetorically defends republican values, equality,
+      and the rule of law against political polarization and hate speech.
+  stances:
+    defence:
+      score: 2
+      evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld zł
+    hybrid:
+      score: 2
+      evidence: Podejmowaliśmy natomiast decyzje w kraju i na forum europejskim, które
+        realnie wzmocniły ochronę polskiego terytorium przed nielegalną migracją
+    rule_of_law:
+      score: 1
+      evidence: Politycy powinni pozostawać wierni wartościom republikańskim, które
+        stanowią fundament Rzeczypospolitej, takim jak służba państwu, przestrzeganie
+        prawa oraz równość obywateli
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - President of the National Assembly
+  - President of the Senate
+  - Thierry Dauxois
+  topics: []
+  location: null
+  position: The French President proposes the appointment of Thierry Dauxois as president
+    of the National Centre for Scientific Research (CNRS).
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

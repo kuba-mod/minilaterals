@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Buschow (Chairperson)
+  - Katherina Reiche (Federal Minister for Economic Affairs and Energy)
+  - Nina Warken (Federal Minister of Health)
+  topics:
+  - green_transition
+  location: null
+  position: Germany is pursuing strategic economic and energy partnerships with Turkey
+    and strengthening the European pharmaceutical and biotechnology sectors.
+  positions:
+    green_transition: Germany is actively strengthening its energy partnerships with
+      Turkey to enhance economic security.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Im Mittelpunkt der Reise stehen die deutsch-türkische Wirtschafts-
+        und Energiepartnerschaften, die wichtige Bausteine der deutschen Wirtschaftssicherheit
+        sein können.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

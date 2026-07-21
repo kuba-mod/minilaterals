@@ -1,0 +1,58 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Küfner
+  - Kornelius
+  - Carsten Schneider
+  - Angela Merkel
+  - Steffi Lemke
+  - Svenja Schulze
+  - Barbara Hendricks
+  - Peter Altmaier
+  - Jürgen Trittin
+  - Luisa Neubauer
+  - Michael Vassiliadis
+  - Wolfgang Ehmke
+  - Franziska Tanneberger
+  - Milena Glimbovski
+  - Jenning
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: null
+  position: Germany marks the 40th anniversary of its environment ministry and addresses
+    ongoing security needs regarding military reserves and the Chernobyl site.
+  positions:
+    ukraine: Germany continues to provide expertise and make demands at the IAEA regarding
+      the Chernobyl reactor ruin in Ukraine.
+    defence: Germany is seeking to increase the qualitative and quantitative capacity
+      of the Bundeswehr and its reserves due to the changed security situation.
+    green_transition: Germany celebrates four decades of environmental policy and
+      continued engagement for climate and nature protection.
+  stances:
+    ukraine:
+      score: 1
+      evidence: wie wir unsere Expertise vor Ort in Tschernobyl einbringen, und entsprechende
+        Forderungen bei der IAEA platziert
+    defence:
+      score: 2
+      evidence: die veränderte Sicherheitslage einen ganz deutlichen Aufwuchs der
+        Bundeswehr verlangt, und sowohl qualitativ als auch quantitativ
+    green_transition:
+      score: 1
+      evidence: das Engagement der vielen naturverbundenen Menschen in Deutschland,
+        die sich Tag für Tag für unsere Umwelt, unsere Natur own unser Klima eingesetzt
+        haben
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

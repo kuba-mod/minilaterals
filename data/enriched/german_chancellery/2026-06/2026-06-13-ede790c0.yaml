@@ -1,0 +1,18 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Germany is providing public information and guidelines regarding the necessity
+    and process of blood and plasma donations to ensure healthcare supply.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

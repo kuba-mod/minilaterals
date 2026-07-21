@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing the Common European Asylum System (CEAS) to ensure
+    uniform rules, reduce irregular migration, and increase legal certainty in asylum
+    procedures.
+  positions:
+    rule_of_law: Germany supports the establishment of uniform European standards
+      and legal certainty in migration management, aligning with the goal of democratic
+      resilience and the rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Das neue System bringt Ordnung, Sicherheit und Rechtssicherheit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

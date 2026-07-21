@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Staatssekretär Kornelius
+  - Feldhoff
+  topics:
+  - ukraine
+  location: null
+  position: Germany reaffirms its commitment to supporting Ukraine and seeks to coordinate
+    a path toward ending the war via the E3 framework and EU partners.
+  positions:
+    ukraine: Germany supports the goal of long-term support for Ukraine, emphasizing
+      that strength and pressure on Russia are necessary for a resolution.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Die Bundesregierung wird weiterhin die Ukraine unterstützen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

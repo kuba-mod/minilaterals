@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - hybrid
+  location: null
+  position: Germany is accelerating the expansion of fiber optic and mobile networks
+    through legislative changes to the Telecommunications Act to enhance digital resilience
+    and competitiveness.
+  positions:
+    hybrid: Germany is strengthening its digital infrastructure to create a more resilient
+      society, which aligns with the goal of countering hybrid threats and cyber attacks.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Leistungsfähige digitale Infrastrukturen sind die Grundlage für eine
+        moderne und resiliente Gesellschaft
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

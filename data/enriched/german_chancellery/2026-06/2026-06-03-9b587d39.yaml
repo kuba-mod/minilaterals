@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - stellvertretender Regierungssprecher Meyer
+  - Küfner
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: The German government approved an action program for the National Circular
+    Economy Strategy and issued a statement on the operational planning of Deutsche
+    Welle.
+  positions:
+    green_transition: Germany is advancing its green transition through a national
+      circular economy strategy aimed at resource conservation and environmental protection.
+    rule_of_law: Germany rhetorically supports the promotion of the rule of law and
+      human rights globally through the activities of Deutsche Welle.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das Kabinett hat heute den Entwurf eines Aktionsprogramms der Bundesregierung
+        zur Umsetzung der Nationalen Kreislaufwirtschaftsstrategie beschlossen.
+    rule_of_law:
+      score: 1
+      evidence: Die Bundesregierung hebt darin erneut die unverzichtbare Rolle der
+        Deutschen Welle für die Darstellung Deutschlands und seiner Perspektiven auf
+        universelle Werte wie Freiheit, Menschenrechte und Rechtsstaatlichkeit in
+        der Welt hervor.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

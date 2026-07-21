@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  - Deutscher Bundestag
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is reforming its private pension system to make it more attractive,
+    flexible, and accessible through new tax-incentivized products and subsidies.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

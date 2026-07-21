@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Premier
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: Poland emphasizes the necessity of supporting Ukraine's defense and EU
+    accession while insisting on the recognition of historical grievances and adherence
+    to standard EU membership criteria.
+  positions:
+    ukraine: Poland supports Ukraine's defense against Russia as a matter of national
+      interest, despite tensions over historical memory.
+    enlargement: Poland supports Ukraine's EU membership provided that it meets the
+      same standards and criteria as all other candidate states.
+  stances:
+    ukraine:
+      score: 1
+      evidence: w interesie Polski leży skuteczne wspieranie Ukrainy w jej obronie
+        przed rosyjską agresją
+    enlargement:
+      score: -1
+      evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
+        ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

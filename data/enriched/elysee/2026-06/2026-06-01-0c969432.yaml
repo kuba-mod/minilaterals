@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Brigitte Macron
+  - Christy Ferer
+  - James Marape
+  - Rachael Marape
+  - Clara Chappaz
+  - Amine Benyamina
+  - Yannick Neuder
+  - Prabowo Subianto
+  - Didit Hediprasetyo
+  topics: []
+  location: Paris, France
+  position: The text outlines the schedule of activities and diplomatic receptions
+    for Brigitte Macron, focusing on cultural visits, social causes, and state visits.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

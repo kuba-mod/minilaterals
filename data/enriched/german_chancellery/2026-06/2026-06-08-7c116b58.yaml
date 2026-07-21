@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler
+  - Leiter der Abteilung für Außen-, Sicherheits- und Entwicklungspolitik des Bundeskanzleramtes
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Germany is strengthening its national crisis resilience, overall defense
+    planning, and AI-driven cybersecurity capabilities.
+  positions:
+    defence: Germany is advancing its national defense capabilities by updating procurement
+      laws and establishing a comprehensive military defense concept.
+    hybrid: Germany is actively combatting cyber threats by establishing a dedicated
+      AI Security Institute to analyze risks and set international standards.
+  stances:
+    defence:
+      score: 2
+      evidence: hat der Nationale Sicherheitsrat unter anderem beschlossen, die sogenannten
+        Sicherstellungs- und Vorsorgegesetze zu überprüfen und sie an die aktuellen
+        sicherheits- und verteidigungspolitischen Herausforderungen anzupassen
+    hybrid:
+      score: 2
+      evidence: beschlossen, ein KI-Sicherheitsinstitut zu gründen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

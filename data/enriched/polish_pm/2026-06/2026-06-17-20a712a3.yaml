@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Barbara Nowacka
+  - Paweł Olszewski
+  topics:
+  - hybrid
+  location: KPRM, Poland
+  position: Poland is investing 1.86 billion PLN to equip schools with AI laboratories
+    and providing systemic training for teachers to ensure the responsible and sovereign
+    use of artificial intelligence.
+  positions:
+    hybrid: Poland is actively advancing digital competence and resilience by educating
+      citizens to recognize the risks and lack of objectivity in AI systems.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Najważniejszym zadaniem dla młodego pokolenia będzie nie lekceważyć
+        zagrożeń, jakie daje sztuczna inteligencja oraz mieć poczucie suwerenności
+        wobec narzędzi, których używają
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

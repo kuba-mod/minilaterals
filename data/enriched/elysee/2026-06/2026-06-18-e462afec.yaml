@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Le chef de l’État
+  topics: []
+  location: Mont Valérien, France
+  position: The French President commemorated the 86th anniversary of the Appeal of
+    June 18, 1940, honoring those who fought for France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

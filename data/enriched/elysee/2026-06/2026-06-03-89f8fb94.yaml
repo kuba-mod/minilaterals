@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Le chef de l'État
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: France honors the legacy of Edgar Morin, emphasizing his commitment to
+    humanism, international law, and ecology.
+  positions:
+    green_transition: France rhetorically supports ecological causes through the celebration
+      of Edgar Morin's lifelong commitment.
+    rule_of_law: France supports the defense of international law and human rights
+      as part of its humanist values.
+  stances:
+    green_transition:
+      score: 1
+      evidence: la cause écologique
+    rule_of_law:
+      score: 1
+      evidence: la défense du droit international
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

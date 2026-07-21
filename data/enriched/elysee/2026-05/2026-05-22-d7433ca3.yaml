@@ -1,0 +1,42 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Prime Minister
+  - CEA Administrator General
+  - CNRS Director General
+  - Délégué général pour l’armement
+  topics:
+  - defence
+  - hybrid
+  location: Bruyères-le-Châtel, France
+  position: France is investing in high-performance computing, quantum technology,
+    and semiconductors to ensure technological sovereignty and military-civil synergy.
+  positions:
+    defence: France emphasizes the dual-use nature of strategic technologies to strengthen
+      both civil and military capabilities.
+    hybrid: France is implementing structural measures to maintain technological sovereignty
+      in the face of increasing international competition.
+  stances:
+    defence:
+      score: 1
+      evidence: une vision française, duale, ce site du CEA et la présence de la DAM
+        ici le montrent ô combien, de la capacité aussi à œuvrer entre la recherche
+        fondamentale, la recherche appliquée et le monde industriel, entre le civil
+        et le militaire.
+    hybrid:
+      score: 1
+      evidence: plusieurs mesures structurantes destinées à maintenir notre souveraineté
+        et notre avance dans ces filières dans un contexte de compétition internationale
+        croissante
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

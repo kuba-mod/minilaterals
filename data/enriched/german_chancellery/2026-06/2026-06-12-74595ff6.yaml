@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesrat
+  - Bundestag
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: Germany is implementing a law to strengthen pharmacies, particularly in
+    rural areas, by improving economic conditions, reducing bureaucracy, and expanding
+    their healthcare services.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

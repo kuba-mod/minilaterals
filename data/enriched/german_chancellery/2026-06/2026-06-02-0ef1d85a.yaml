@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Carsten Schneider
+  - Steffi Lemke
+  - Svenja Schulze
+  - Barbara Hendricks
+  - Peter Altmaier
+  - Jürgen Trittin
+  - Angela Merkel
+  topics:
+  - green_transition
+  location: null
+  position: Germany celebrates 40 years of centralized environmental policy and reaffirms
+    its commitment to combating climate change and protecting nature.
+  positions:
+    green_transition: Germany actively advances climate neutrality and environmental
+      protection as a core state objective.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das gibt uns heute die Chance, den gefährlichen Klimawandel aufzuhalten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministre des outre-mer
+  - ministre l’intérieur
+  - garde des sceaux, ministre de la justice
+  topics:
+  - rule_of_law
+  location: null
+  position: The French government is updating internal legislation regarding overseas
+    territories in French Polynesia and aligning asylum and migration laws with the
+    European Pact on Migration and Asylum.
+  positions:
+    rule_of_law: France is adapting its national law to comply with the requirements
+      of the European Pact on Migration and Asylum.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: visant à adapter le droit interne aux nouvelles exigences découlant
+        du pacte européen sur la migration et l’asile
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - SRS Hille
+  - Lange
+  - Alois Zwinggi
+  - Ursula von der Leyen
+  - António Costa
+  topics: []
+  location: Berlin, Germany
+  position: Germany is focusing on enhancing European competitiveness and bureaucracy
+    reduction ahead of the European Council.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

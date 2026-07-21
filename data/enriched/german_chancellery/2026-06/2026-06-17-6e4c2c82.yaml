@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Präsident Macron
+  topics:
+  - ukraine
+  - defence
+  location: Évian-les-Bains, France
+  position: Germany emphasizes strong G7 unity in supporting Ukraine and is open to
+    military engagement in the Middle East to ensure security.
+  positions:
+    ukraine: Germany reaffirms exceptionally strong G7 support for Ukraine to help
+      achieve peace.
+    defence: Germany expresses willingness to engage militarily in the Strait of Hormuz
+      subject to parliamentary mandate.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die Unterstützung aus dem Kreis der G7 -Staaten heraus so stark wie
+        selten zuvor ist
+    defence:
+      score: 2
+      evidence: Dies könne ein militärisches Engagement in der Straße von Hormus mit
+        entsprechendem Bundestagsmandat beinhalten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

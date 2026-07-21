@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundeskabinett
+  topics:
+  - hybrid
+  - green_transition
+  location: null
+  position: The German government is implementing various domestic reforms focusing
+    on cybersecurity, housing, and green energy transitions.
+  positions:
+    hybrid: Germany is actively strengthening its cybersecurity framework by expanding
+      the powers of security agencies.
+    green_transition: Germany is promoting the green transition through e-mobility
+      subsidies and the implementation of energy sharing for solar power.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Das Bundeskabinett hat beschlossen, für mehr Cybersicherheit die Befugnisse
+        des BSI, des BKAs und der Bundespolizei zu erweitern.
+    green_transition:
+      score: 2
+      evidence: Dank „Energy Sharing“ können sich Nachbarn Solarstrom teilen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

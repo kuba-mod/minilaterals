@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Prabowo Subianto
+  topics: []
+  location: null
+  position: The text is a summary of official activities and visits in May 2026 and
+    does not state a diplomatic position on the specified goals.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

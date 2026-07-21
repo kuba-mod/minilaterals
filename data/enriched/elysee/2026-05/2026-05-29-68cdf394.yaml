@@ -1,0 +1,31 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - CEO and vice-presidents of Vorwerk
+  topics:
+  - green_transition
+  location: Eure-et-Loir, France
+  position: France is promoting its industrial attractivity and reindustrialization
+    strategy through the 'Choose France' initiative, highlighting Franco-German economic
+    cooperation.
+  positions:
+    green_transition: France supports European industrial sovereignty and reindustrialization,
+      which aligns with the broader goals of a clean industrial deal.
+  stances:
+    green_transition:
+      score: 1
+      evidence: illustre la coopération économique franco-allemande ainsi que les
+        ambitions européennes en matière de réindustrialisation et de souveraineté
+        industrielle
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

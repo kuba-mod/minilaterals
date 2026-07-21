@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Chancellor Merz emphasizes the need for economic resilience, strategic
+    independence, and reforms to support family-owned businesses amidst geopolitical
+    instability.
+  positions:
+    green_transition: Germany aims for a pragmatic and realistic energy policy to
+      support industrial competitiveness.
+  stances:
+    green_transition:
+      score: 1
+      evidence: eine pragmatische und realistische Energiepolitik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Prime Minister
+  topics:
+  - hybrid
+  location: null
+  position: Poland is implementing new regulations to restrict smartphone use in primary
+    schools and mandate age verification for digital services to protect children
+    from addiction and harmful online content.
+  positions:
+    hybrid: Poland is taking concrete domestic action to protect citizens from digital
+      harms and harmful content, aligning with the broader goal of countering digital
+      threats.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Rząd przyjął również ustawę o ochronie małoletnich przed dostępem
+        do treści pornograficznych w internecie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

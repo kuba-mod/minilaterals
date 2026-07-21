@@ -1,0 +1,54 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Mark Carney, Prime Minister of Canada
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - rule_of_law
+  location: Paris, France
+  position: France seeks to consolidate a strategic partnership with Canada to strengthen
+    democratic resilience and sovereignty in a fragmented international order.
+  positions:
+    defence: France intends to deepen bilateral cooperation in the field of defence
+      to enhance sovereignty.
+    hybrid: France identifies foreign interference and information warfare as key
+      threats to the international order.
+    green_transition: France supports the energy transition and climate action as
+      a shared conviction with Canada.
+    rule_of_law: France affirms its belief in the rule of law and the protection of
+      democratic values.
+  stances:
+    defence:
+      score: 1
+      evidence: approfondir leur coopération dans les domaines du commerce, de la
+        défense
+    hybrid:
+      score: 1
+      evidence: marqué par le retour des rapports de force, par la contestation des
+        règles communes, par la coercition économique, par les ingérences, les luttes
+        informationnelles
+    green_transition:
+      score: 1
+      evidence: approfondir leur coopération dans les domaines [...] de la transition
+        énergétique
+    rule_of_law:
+      score: 1
+      evidence: nous croyons dans l'État de droit, dans l'ordre international, dans
+        la science, dans le changement climatique et ce qu'il implique, dans le respect
+        de nos valeurs démocratiques et leur protection
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

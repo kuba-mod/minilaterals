@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  topics:
+  - enlargement
+  location: Tivat, Montenegro
+  position: Germany is actively pushing for the EU enlargement process in the Western
+    Balkans through concrete proposals developed in cooperation with France.
+  positions:
+    enlargement: Germany is actively advancing EU enlargement by proposing specific
+      next steps and acknowledging the need for the EU to overcome its own failures
+      in the process.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Gemeinsam mit Frankreichs Präsident Macron habe er einen konkreten
+        Vorschlag für die nächsten Schritte im Beitrittsprozess unterbreitet
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

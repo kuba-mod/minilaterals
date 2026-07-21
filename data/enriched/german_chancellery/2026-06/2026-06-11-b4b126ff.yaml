@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Chancellor Friedrich Merz advocates for a comprehensive domestic reform
+    course and a stronger, more sovereign Europe to ensure Germany's security and
+    economic resilience.
+  positions:
+    ukraine: Germany supports a resilient Europe capable of repelling the Russian
+      war of aggression.
+    defence: Germany emphasizes the need for increased military resilience and stronger
+      defense capabilities at both the national and EU levels.
+  stances:
+    ukraine:
+      score: 1
+      evidence: um Herausforderungen wie den russischen Angriffskrieg abzuwehren
+    defence:
+      score: 1
+      evidence: die EU militärisch, wirtschaftlich und politisch widerstandsfähiger
+        werden müsse
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

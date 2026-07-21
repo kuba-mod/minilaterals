@@ -1,0 +1,41 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Keir Starmer
+  - Emmanuel Macron
+  - Friedrich Merz
+  - Volodymyr Zelensky
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France, alongside Germany and the UK, reaffirms its unwavering support
+    for Ukraine's defense and a just peace through military cooperation and diplomatic
+    engagement.
+  positions:
+    ukraine: France actively advances long-term support for Ukraine by coordinating
+      military aid and supporting a direct diplomatic dialogue for a ceasefire.
+    defence: France supports strengthening European defense capabilities by scaling
+      up interceptor production and learning from Ukraine's battlefield expertise.
+  stances:
+    ukraine:
+      score: 2
+      evidence: réaffirmer leur soutien indéfectible à l’Ukraine dans sa défense contre
+        l’invasion illégale de la Russie
+    defence:
+      score: 2
+      evidence: besoin urgent de faire passer à l’échelle la production d’intercepteurs
+        et de développer conjointement des capacités antimissiles balistiques et de
+        frappe en profondeur
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

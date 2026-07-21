@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: France is actively advancing EU and G7 support for Ukraine through military
+    aid, financial loans, and increased sanctions against Russia.
+  positions:
+    ukraine: France actively advances the goal of long-term military and economic
+      support for Ukraine and the tightening of sanctions on Russia.
+    defence: France supports the strengthening of European defense capacities, specifically
+      in anti-aircraft capabilities and production alignment.
+  stances:
+    ukraine:
+      score: 2
+      evidence: le soutien à celle-ci, soutien militaire réaffirmé, soutien pour financer
+        ses infrastructures énergétiques et soutien aussi pour recoordonner des sanctions
+        à l'égard de la Russie
+    defence:
+      score: 1
+      evidence: On a eu un débat sur le soutien aux capacités de défense, en particulier
+        antiaériennes ; le rapprochement de nos capacités et de nos productions.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

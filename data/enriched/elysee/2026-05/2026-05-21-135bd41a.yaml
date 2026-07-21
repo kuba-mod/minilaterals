@@ -1,0 +1,38 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - chef de l'État
+  - présidente de l'Assemblée nationale
+  - ministres
+  - Premier ministre
+  - directeur général de l'UNESCO
+  - ambassadeurs
+  - défenseure des droits
+  - parlementaires
+  - présidents de départements
+  - maires
+  - élus
+  - Christiane Taubira
+  topics:
+  - rule_of_law
+  location: Palais de l'Élysée, France
+  position: France commemorates the 25th anniversary of the Taubira law, reaffirming
+    the state's recognition of slave trade and colonialism as crimes against humanity.
+  positions:
+    rule_of_law: France advances democratic resilience and the rule of law by legally
+      qualifying historical crimes against humanity and framing this fight as a duty
+      of the Republic.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: ce combat était celui de la République, encore et toujours
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

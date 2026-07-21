@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Narendra Modi, Prime Minister of India
+  topics:
+  - green_transition
+  location: Nice, France
+  position: France is deepening its strategic partnership with India through innovation
+    and technology cooperation, specifically inaugurating the Bharat Innovates event.
+  positions:
+    green_transition: France is actively advancing cooperation with India in key sectors
+      including energy, aligning with broader green transition objectives.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Cet événement a rassemblé notamment 120 startups indiennes , en particulier
+        dans des secteurs clés pour la relation bilatérale tels que l’énergie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

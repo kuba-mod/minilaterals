@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler
+  - Bundesjugendring
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: Bad Saarow, Germany
+  position: Germany is focusing on regional innovation, industrial growth in East
+    Germany, and the development of the hydrogen economy.
+  positions:
+    green_transition: Germany is positioning East Germany as a European leader in
+      the hydrogen economy to support industrial transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Bei der Wasserstoffwirtschaft und der Chip-Industrie zählt die Region
+        zu den Vorreitern in Europa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

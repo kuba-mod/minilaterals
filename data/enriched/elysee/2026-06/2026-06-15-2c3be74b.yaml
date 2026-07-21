@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Brigitte Macron
+  - Khaled El-Enamy
+  topics:
+  - ukraine
+  location: Évian, France
+  position: France is hosting the G7 Summit to advance key international dossiers
+    and global peace and prosperity.
+  positions:
+    ukraine: France indicates its intent to advance important dossiers related to
+      global peace, coinciding with the invitation of Ukraine to the summit.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Nous allons essayer de faire avancer au maximum tous les dossiers
+        qui sont importants pour notre pays, notre continent, et aussi la paix et
+        la prospérité dans le monde
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

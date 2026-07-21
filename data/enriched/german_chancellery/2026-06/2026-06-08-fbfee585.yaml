@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Thorsten Frei
+  - Kai Wegner
+  - Cornelia Seibeld
+  - Mike Mutterlose
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: The German government is commemorating the victims of the 1953 popular
+    uprising in East Germany.
+  positions:
+    rule_of_law: Germany commemorates a historical struggle for democratic freedom
+      and rights, aligning with the goal of affirming democratic resilience.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Gedenkveranstaltung der Bundesregierung zum 73. Jahrestag des Volksaufstandes
+        vom 17. Juni 1953
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

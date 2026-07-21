@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Charlotte Merz
+  topics:
+  - ukraine
+  - defence
+  location: Évian-les-Bains, France
+  position: Germany actively supports the G7's unified front in increasing military
+    and financial pressure on Russia to support Ukraine and is open to military engagement
+    in the Middle East.
+  positions:
+    ukraine: Germany commits to increasing both military and financial contributions
+      to support Ukraine.
+    defence: Germany expresses willingness for military engagement in the Strait of
+      Hormus, supporting collective security and deterrence.
+  stances:
+    ukraine:
+      score: 2
+      evidence: zudem werden alle G7 -Partner ihren militärischen und ihren finanziellen
+        Beitrag für die Ukraine verstärken
+    defence:
+      score: 2
+      evidence: Dies könne ein militärisches Engagement in der Straße von Hormus mit
+        entsprechendem Bundestagsmandat beinhalten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Andrew Burnham
+  topics: []
+  location: null
+  position: Chancellor Merz congratulates Prime Minister Burnham on his appointment
+    and invites him to Berlin to discuss shared challenges.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

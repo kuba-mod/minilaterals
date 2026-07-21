@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministre de l’aménagement du territoire et de la décentralisation
+  - Premier ministre
+  topics: []
+  location: null
+  position: France is proposing a law to strengthen local state authority, improve
+    coordination with local governments, and secure public decision-makers.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

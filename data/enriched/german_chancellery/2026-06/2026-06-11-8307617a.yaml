@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - defence
+  location: Schönefeld, Germany
+  position: Germany is implementing a new aviation strategy to ensure sovereignty,
+    innovation, and the capability for national and alliance defense.
+  positions:
+    defence: Germany emphasizes the aerospace industry's critical role in ensuring
+      national and alliance defense capabilities.
+  stances:
+    defence:
+      score: 1
+      evidence: unsere Souveränität und unsere Fähigkeit zur Landes- und Bündnisverteidigung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

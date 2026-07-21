@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France supports the US-Iran memorandum of understanding, emphasizing regional
+    stability, the prevention of Iranian nuclear proliferation, and the freedom of
+    navigation in the Strait of Hormuz.
+  positions:
+    defence: France commits to a defensive and independent mission to secure commercial
+      traffic and conduct mine clearing operations in the Strait of Hormuz.
+  stances:
+    defence:
+      score: 2
+      evidence: y compris par une mission strictement défensive et indépendante visant
+        à rassurer le trafic commercial et à mener des opérations de déminage
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

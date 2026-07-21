@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Thorsten Frei
+  - Klingbeil
+  - Wadephul
+  - Wildberger
+  - Schnieder
+  - Hubertz
+  - Prien
+  - Hubig
+  topics:
+  - defence
+  location: Germany
+  position: The German government is hosting an open house event to engage citizens
+    with political topics, including internal and external security.
+  positions:
+    defence: Germany mentions internal and external security as part of its current
+      political discourse.
+  stances:
+    defence:
+      score: 0
+      evidence: innere und äußere Sicherheit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

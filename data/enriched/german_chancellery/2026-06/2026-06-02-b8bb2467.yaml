@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Péter Magyar
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany welcomes the new Hungarian government's shift back toward European
+    unity and democratic values, emphasizing the need for close cooperation against
+    Russian threats.
+  positions:
+    ukraine: Germany stresses that the Russian war against Ukraine necessitates closer
+      European unity.
+    defence: Germany advocates for improved European defense capabilities in the face
+      of Russian threats.
+    rule_of_law: Germany celebrates the restoration of democratic resilience and the
+      rule of law in Hungary.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Angesichts der Bedrohung der NATO durch Russland und Moskaus Krieg
+        gegen die Ukraine sei ein enges Zusammenrücken unerlässlich.
+    defence:
+      score: 1
+      evidence: dass diese Europäische Union einen guten Weg nimmt im Hinblick auf
+        Wachstum, Beschäftigung, Wettbewerbsfähigkeit und Verteidigungsfähigkeit.
+    rule_of_law:
+      score: 2
+      evidence: Demokratie und Rechtsstaatlichkeit in Ungarn sind wieder gestärkt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Andrzej Domański
+  topics:
+  - ukraine
+  - green_transition
+  location: Warsaw, Poland
+  position: Poland aims to strengthen its position as a stable and attractive destination
+    for investment through deregulation, energy transformation, and economic modernization.
+  positions:
+    ukraine: Poland acknowledges the geopolitical tension and war in Ukraine while
+      maintaining its economic attractiveness.
+    green_transition: The Polish government identifies energy transformation as one
+      of the five key priority areas for its actions.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Mimo napiętej sytuacji geopolitycznej i trwającej wojny w Ukrainie,
+        Polska pozostaje atrakcyjnym kierunkiem dla inwestorów.
+    green_transition:
+      score: 2
+      evidence: Minister A. Domański wskazał pięć kluczowych obszarów, na których
+        rząd będzie koncentrował swoje działania. Są to deregulacja, transformacja
+        energetyczna
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

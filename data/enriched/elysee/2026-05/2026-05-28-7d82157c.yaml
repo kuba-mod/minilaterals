@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Prabowo Subianto
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: France is upgrading its relationship with Indonesia to a comprehensive
+    strategic partnership to enhance sovereignty and cooperation in defense and energy.
+  positions:
+    ukraine: France rhetorically supports efforts to assist Ukraine.
+    defence: France is actively deepening its defense cooperation with Indonesia as
+      part of a strategic partnership.
+  stances:
+    ukraine:
+      score: 1
+      evidence: les efforts pour soutenir l’Ukraine
+    defence:
+      score: 2
+      evidence: approfondir la coopération dans les domaines de la défense
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

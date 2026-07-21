@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Thorsten Frei
+  - Christiane Schenderlein
+  - Wolfram Weimer
+  - Klingbeil
+  - Wadephul
+  - Schnieder
+  - Hubig
+  - Prien
+  - Hubertz
+  - Wildberger
+  - Bär
+  - Alexander Gerst
+  - Matthias Maurer
+  - Stefan Kornelius
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: The German government is organizing an open house event to inform citizens
+    about its work, including the strengthening of the Bundeswehr.
+  positions:
+    defence: Germany rhetorically supports the strengthening of its armed forces as
+      part of its current political agenda.
+  stances:
+    defence:
+      score: 1
+      evidence: Stärkung der Bundeswehr
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

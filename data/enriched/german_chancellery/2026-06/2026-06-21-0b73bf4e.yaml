@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Thorsten Frei
+  - Stefan Kornelius
+  topics: []
+  location: null
+  position: The German government hosted an open house event to facilitate direct
+    dialogue with citizens regarding its government work.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Mark (Goodyear Director)
+  topics:
+  - green_transition
+  location: Amiens, France
+  position: France is supporting the modernization and re-industrialization of its
+    domestic industrial base through the France 2030 project.
+  positions:
+    green_transition: France is actively advancing industrial modernization and digitalization
+      of production sites as part of its broader industrial strategy.
+  stances:
+    green_transition:
+      score: 2
+      evidence: le projet de modernisation engagé par l’entreprise en 2021 et soutenu
+        dans le cadre de France 2030
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

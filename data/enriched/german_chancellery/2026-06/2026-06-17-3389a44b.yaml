@@ -1,0 +1,33 @@
+actors:
+- DE
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Wolfram Weimer
+  - Marion Ackermann
+  - Patrick Schnieder
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is returning cultural assets seized during WWII to Poland as an
+    act of historical responsibility and reconciliation.
+  positions:
+    rule_of_law: Germany actively advances democratic resilience and the rule of law
+      by acknowledging and rectifying historical injustices through the restitution
+      of stolen cultural property.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Die Rückgaben stehen für die enge deutsch-polnische Zusammenarbeit
+        bei der Aufarbeitung historischen Unrechts und sind Ausdruck der deutschen
+        Verantwortung gegenüber Polen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

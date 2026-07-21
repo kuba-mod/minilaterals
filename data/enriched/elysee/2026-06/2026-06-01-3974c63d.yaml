@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - André Santini
+  topics: []
+  location: null
+  position: The French President expressed condolences and paid tribute to the passing
+    of longtime politician and former minister André Santini.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

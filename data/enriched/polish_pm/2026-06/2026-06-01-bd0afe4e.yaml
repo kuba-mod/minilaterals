@@ -1,0 +1,21 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Jolanta Sobierańska-Grenda
+  - Aleksandra Gajewska
+  topics: []
+  location: null
+  position: Poland is expanding its pro-family policies through increased funding
+    for the in vitro fertilization program and expanded childcare support.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

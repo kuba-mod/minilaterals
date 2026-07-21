@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Spouse of the President
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses its grief over the passing of artist Marjane Satrapi
+    and honors her commitment to women's rights and the Iranian people.
+  positions:
+    rule_of_law: France supports the struggle for democratic freedoms and women's
+      rights in Iran through its recognition of Satrapi's activism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Marjane Satrapi porta aussi la cause du peuple iranien et l’étendard
+        du droit des femmes.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

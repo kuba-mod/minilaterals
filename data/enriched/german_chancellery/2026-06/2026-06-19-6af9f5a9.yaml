@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Ministerinnen und Minister
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: The German government highlights its participation in G7 and EU summits,
+    emphasizing sanctions against Russia and hopes for regional stability.
+  positions:
+    defence: Germany supports increasing pressure on Russia through new sanctions
+      on the energy sector to enhance security.
+  stances:
+    defence:
+      score: 1
+      evidence: Neue Sanktionen gegen den russischen Energiesektor sollen den Druck
+        auf Moskau erhöhen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

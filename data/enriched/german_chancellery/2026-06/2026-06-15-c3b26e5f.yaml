@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Donald Trump
+  topics:
+  - ukraine
+  location: Évian-les-Bains, France
+  position: Chancellor Merz emphasizes the need for G7 cooperation to address geopolitical
+    risks, specifically regarding the Middle East and Ukraine.
+  positions:
+    ukraine: Germany notes a new positive dynamic in the war in Ukraine and intends
+      to discuss it with the US President.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Auch beim Krieg in der Ukraine zeige sich eine neue positive Dynamik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

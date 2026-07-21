@@ -1,0 +1,30 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  topics:
+  - ukraine
+  location: Danzig, Poland
+  position: Germany is committing to participate in an international conference to
+    coordinate public and private efforts for the reconstruction of Ukraine.
+  positions:
+    ukraine: Germany actively advances the goal of long-term economic support for
+      Ukraine by participating in a dedicated recovery conference and advocating for
+      public-private partnerships.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Bundeskanzler Friedrich Merz wird am Donnerstag, 25. Juni 2026, an
+        der Ukraine-Wiederaufbaukonferenz (Ukraine Recovery Conference) in Danzig
+        teilnehmen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

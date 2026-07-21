@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Karsten Wildberger
+  - Bärbel Bas
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is implementing a Federal Modernization Agenda to reduce bureaucracy
+    and digitize administration to increase state efficiency and public trust.
+  positions:
+    rule_of_law: Germany promotes democratic resilience and trust in the state by
+      reducing bureaucracy and increasing transparency and efficiency in government
+      services.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Für Bundesminister Karsten Wildberger ist Staatsmodernisierung eine
+        Frage des Vertrauens – das Fundament der Demokratie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

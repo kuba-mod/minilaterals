@@ -1,0 +1,47 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Prabowo Subianto
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: Paris, France
+  position: France is deepening its strategic partnership with Indonesia through enhanced
+    security cooperation, economic ties, and joint efforts toward environmental and
+    technological transitions.
+  positions:
+    defence: France is actively advancing defense capabilities through joint training,
+      arms cooperation, and regular strategic dialogues.
+    green_transition: France supports the transition to green energy and sustainable
+      mining as part of its bilateral investment strategy.
+    rule_of_law: France rhetorically supports a global system based on rules and multilateralism.
+  stances:
+    defence:
+      score: 2
+      evidence: ils ont encouragé leurs ministres respectifs à approfondir encore
+        la coopération dans le domaine de l’armement, notamment grâce au renforcement
+        des capacités, au développement conjoint et à la coopération dans l’industrie
+        de la défense
+    green_transition:
+      score: 1
+      evidence: Ils ont soutenu la réalisation de projets d’intérêt commun et d'investissements
+        réciproques dans les secteurs du transport, de la santé, de la transition
+        énergétique
+    rule_of_law:
+      score: 1
+      evidence: Leur coopération repose sur la confiance mutuelle et un attachement
+        fort au multilatéralisme fondé sur des règles
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

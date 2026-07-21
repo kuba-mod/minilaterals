@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Herr Lösch
+  - Karsten Wildberger
+  - Frau Nandra
+  - Frau Kaiser
+  topics: []
+  location: null
+  position: Chancellor Friedrich Merz emphasized the importance of East Germany as
+    a dynamic region for innovation and investment amidst changing global conditions.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

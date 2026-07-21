@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - President Emmanuel Macron
+  - Chancellor Friedrich Merz
+  - Prime Minister Giorgia Meloni
+  - Prime Minister Keir Starmer
+  topics:
+  - defence
+  location: null
+  position: Germany and its partners welcome the US-Iran memorandum of understanding
+    and commit to ensuring freedom of navigation in the Strait of Hormuz.
+  positions:
+    defence: Germany supports collective security through a defensive mission to protect
+      commercial shipping and clear mines.
+  stances:
+    defence:
+      score: 1
+      evidence: including through a strictly defensive and independent mission to
+        reassure commercial shipping and conduct mine clearance operations
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

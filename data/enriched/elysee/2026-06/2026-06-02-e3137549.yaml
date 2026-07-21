@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Paul Kagame
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: France has inaugurated a memorial for the victims of the genocide against
+    the Tutsi and reaffirmed its commitment to truth, memory, and the recognition
+    of its historical responsibilities.
+  positions:
+    rule_of_law: France demonstrates a commitment to justice and the rule of law by
+      intensifying efforts to prosecute those responsible for the genocide.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: une intensification des efforts de justice contre les responsables
+        du génocide
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

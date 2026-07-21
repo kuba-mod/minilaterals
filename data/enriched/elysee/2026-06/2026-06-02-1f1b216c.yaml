@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  - Brigitte Macron
+  topics: []
+  location: Clairefontaine, France
+  position: President Emmanuel Macron visited the National Football Centre to support
+    the French national football teams.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

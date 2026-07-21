@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government is focusing on strengthening social cohesion and
+    democratic resilience through internal social and educational reforms.
+  positions:
+    rule_of_law: Germany aligns with the goal of democratic resilience by committing
+      to strengthen its own steady democracy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Die Bundesregierung stärkt den sozialen Zusammenhalt und die standhafte
+        Demokratie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

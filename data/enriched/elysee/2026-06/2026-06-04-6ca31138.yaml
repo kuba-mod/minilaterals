@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Jakov Milatović
+  topics:
+  - enlargement
+  location: Cetinje, Montenegro
+  position: France is strengthening its bilateral partnership with Montenegro and
+    supporting its aspirations to join the European Union.
+  positions:
+    enlargement: France explicitly supports the reforms Montenegro is undertaking
+      to achieve EU membership.
+  stances:
+    enlargement:
+      score: 1
+      evidence: le Président Emmanuel Macron a notamment apporté le soutien de la
+        France aux réformes engagées par le Monténégro dans le cadre de son processus
+        d’adhésion à l’Union européenne.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

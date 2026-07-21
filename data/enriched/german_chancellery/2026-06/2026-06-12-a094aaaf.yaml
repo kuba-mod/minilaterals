@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Friedrich Merz
+  - Gewerkschaften
+  - Wirtschaftsverbände
+  topics: []
+  location: Berlin, Germany
+  position: The German government is focusing on internal domestic reforms, economic
+    growth, and the implementation of a new aerospace strategy to strengthen the social
+    market economy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

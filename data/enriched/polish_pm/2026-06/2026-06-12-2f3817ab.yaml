@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Poland is strengthening its national security through the modernization
+    of the State Protection Service and the acquisition of F-35 fighter jets to enhance
+    eastern flank deterrence.
+  positions:
+    defence: Poland is actively advancing collective security and eastern flank deterrence
+      by becoming the first NATO eastern flank state to operate F-35 aircraft.
+    hybrid: Poland is committing resources and modernization to combat modern hybrid
+      threats, specifically cyber and drone-related risks.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
+        samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
+    hybrid:
+      score: 2
+      evidence: SOP będzie wzmacniana m.in. w ramach Programu Modernizacji Służb Mundurowych
+        na lata 2026–2029. Budżet formacji ma wzrosnąć o 125% i osiągnąć poziom blisko
+        500 mln zł.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

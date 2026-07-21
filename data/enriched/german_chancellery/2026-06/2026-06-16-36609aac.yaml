@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Donald Trump
+  topics:
+  - ukraine
+  location: Évian-les-Bains, France
+  position: Germany emphasizes G7 unity and supports the pursuit of a peaceful resolution
+    for Ukraine and stability in the Middle East.
+  positions:
+    ukraine: Germany supports the pursuit of peace in Ukraine, highlighting that previous
+      European and German aid has created a window for this opportunity.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Die „ nicht zuletzt dank massiver europäischer und auch deutscher
+        Hilfe“ bessere Lage in der Ukraine eröffne „vielleicht erstmals" die Chance
+        auf einen Frieden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

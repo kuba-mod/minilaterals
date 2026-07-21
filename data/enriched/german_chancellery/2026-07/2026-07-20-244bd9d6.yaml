@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Ilham Alijew
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany is hosting the President of Azerbaijan to discuss energy, raw
+    materials, regional peace, and international security.
+  positions:
+    green_transition: Germany is addressing energy and raw materials, which aligns
+      with the energy policy aspects of the green transition.
+  stances:
+    green_transition:
+      score: 0
+      evidence: Fragen zu Energie und Rohstoffen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

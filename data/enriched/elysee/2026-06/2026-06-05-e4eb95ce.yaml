@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  topics:
+  - enlargement
+  location: Montenegro
+  position: France reaffirms its strategic commitment to the stability and European
+    integration of the Western Balkans.
+  positions:
+    enlargement: France supports the EU integration of the Western Balkans, viewing
+      it as essential for continental security.
+  stances:
+    enlargement:
+      score: 1
+      evidence: évaluer les progrès réalisés vers l’intégration européenne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

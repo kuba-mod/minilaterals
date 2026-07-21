@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Masayoshi Son
+  - Olivier Blum
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France has secured a massive investment from SoftBank to develop AI infrastructure
+    and industrial production of data center components, leveraging its low-carbon
+    energy profile.
+  positions:
+    green_transition: France is advancing its industrial and digital capacity by utilizing
+      its decarbonized energy sector to attract large-scale AI infrastructure investments.
+  stances:
+    green_transition:
+      score: 2
+      evidence: grâce à une énergie largement décarbonée
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

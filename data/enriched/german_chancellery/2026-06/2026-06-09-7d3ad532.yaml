@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  - Holger Münch
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is reporting a record increase in politically motivated crime
+    and committing to expanding instruments to counter extremist threats.
+  positions:
+    rule_of_law: Germany is actively combatting domestic extremism to protect democratic
+      resilience and the rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Wir stellen uns gegen jede Form von Extremismus und bauen deswegen
+        unsere Instrumente gegen die extremistische Bedrohung weiter aus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

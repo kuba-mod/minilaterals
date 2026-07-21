@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ambassador Haughey
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: null
+  position: Poland expresses support for the priorities of the Irish EU Council presidency,
+    emphasizing continued military support for Ukraine and the importance of US engagement
+    in European security.
+  positions:
+    ukraine: Poland advocates for continued military support for Kyiv and increased
+      pressure on Moscow through sanctions.
+    defence: Poland emphasizes that strong US military engagement in Europe is the
+      primary line of defense against Russia.
+    enlargement: Poland supports Ukraine's EU membership provided that all candidacy
+      criteria are met.
+  stances:
+    ukraine:
+      score: 1
+      evidence: wskazał na potrzebę dalszego wsparcia militarnego Kijowa oraz utrzymania
+        presji wobec Moskwy zwłaszcza poprzez kolejne sankcje
+    defence:
+      score: 1
+      evidence: Polsce zależy na utrzymaniu silnego zaangażowania wojskowego USA w
+        Europie
+    enlargement:
+      score: 1
+      evidence: Polska popiera członkostwo Ukrainy w UE – zaznaczył minister Sikorski,
+        wskazując, że proces akcesyjny musi opierać się na wypełnieniu przez państwo
+        kandydujące wszystkich kryteriów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

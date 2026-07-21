@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Prime Minister
+  - Council of Ministers
+  topics:
+  - rule_of_law
+  location: null
+  position: The Polish government is implementing systemic reforms to increase transparency
+    in healthcare spending and combat corruption and abuse of power.
+  positions:
+    rule_of_law: Poland is advancing the rule of law by introducing legal mechanisms
+      to monitor public spending and holding officials accountable for legal violations.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Jeśli okaże się, że złamano prawo, sprawą zajmie się prokuratura
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

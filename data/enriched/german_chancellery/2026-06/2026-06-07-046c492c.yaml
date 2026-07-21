@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Keir Starmer
+  - Emmanuel Macron
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany reaffirms its unwavering support for Ukraine's defense and advocates
+    for a just, lasting peace through coordinated military and diplomatic efforts.
+  positions:
+    ukraine: Germany commits to continued military and diplomatic support for Ukraine,
+      including support for a direct dialogue with Russia to achieve a ceasefire.
+    defence: Germany actively seeks to scale up interceptor production and co-develop
+      anti-ballistic capabilities while leveraging Ukrainian battlefield expertise
+      to strengthen European defense.
+  stances:
+    ukraine:
+      score: 2
+      evidence: reiterate their unwavering support for Ukraine in its defence against
+        Russia’s illegal invasion
+    defence:
+      score: 2
+      evidence: underlined the urgent need to scale up the production of interceptors
+        and co-develop anti-ballistic missile and deep strike capabilities
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

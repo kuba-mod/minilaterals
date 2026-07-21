@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - United Kingdom
+  - Italy
+  - Spain
+  - Germany
+  - Norway
+  - Netherlands
+  - Canada
+  - Australia
+  - New Zealand
+  - High Representative of the EU and Vice-President of the European Commission
+  topics:
+  - rule_of_law
+  location: null
+  position: France and other partners condemn Israeli settlement expansion in the
+    West Bank and reaffirm their commitment to a two-state solution based on international
+    law.
+  positions:
+    rule_of_law: France aligns with the rule of law by emphasizing that Israeli settlements
+      are illegal under international law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: 'Le droit international est clair : les colonies israéliennes en Cisjordanie
+        sont illégales.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

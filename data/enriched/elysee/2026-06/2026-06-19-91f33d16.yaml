@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - entrepreneurs
+  - researchers
+  - investors
+  - technology company executives
+  topics:
+  - hybrid
+  location: Palais de l’Élysée, France
+  position: France is promoting its technological ecosystem and digital sovereignty,
+    specifically focusing on artificial intelligence and disruptive technologies.
+  positions:
+    hybrid: France supports the goal of addressing hybrid threats by emphasizing the
+      importance of digital sovereignty and competitiveness in the face of disruptive
+      technologies.
+  stances:
+    hybrid:
+      score: 1
+      evidence: questions de souveraineté numérique, de compétitivité et d’investissement
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

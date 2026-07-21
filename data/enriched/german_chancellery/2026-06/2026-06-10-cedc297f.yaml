@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundeskabinett
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany has adopted a new aviation strategy to strengthen its aviation
+    industry through economic relief, technological innovation, and sustainable development.
+  positions:
+    defence: Germany views its aviation industry as essential for ensuring the operational
+      readiness of the Bundeswehr.
+    green_transition: Germany is committing to concrete measures to promote sustainable
+      aviation through renewable fuels and climate-neutral airport operations.
+  stances:
+    defence:
+      score: 1
+      evidence: Die Industrie leistet einen wichtigen Beitrag zu einem starken und
+        leistungsfähigen Industriestandort Deutschland und auch dazu, dass die Bundeswehr
+        ihre Aufgaben erfüllen kann und einsatzbereit ist.
+    green_transition:
+      score: 2
+      evidence: Die Strategie sieht auch vor, die Bedingungen für die Verwendung von
+        erneuerbaren Kraftstoffen für die Luftfahrt zu verbessern
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

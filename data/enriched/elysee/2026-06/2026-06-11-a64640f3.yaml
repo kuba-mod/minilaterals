@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - representatives of the G7
+  - representatives of Brazil
+  - representatives of South Korea
+  - representatives of Egypt
+  - representatives of India
+  - representatives of Kenya
+  - representatives of China
+  - representatives of the IMF
+  topics:
+  - green_transition
+  location: Evian, France
+  position: France is leading an international effort to coordinate global economic
+    growth and reduce macroeconomic imbalances through partnerships between G7 and
+    emerging economies.
+  positions:
+    green_transition: France supports the creation of conditions for sustainable and
+      shared growth, aligning with the objective of a green transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: créer les conditions d’une croissance équilibrée, durable et partagée
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

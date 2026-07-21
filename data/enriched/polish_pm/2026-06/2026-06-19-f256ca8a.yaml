@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Premier D. Tusk
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Brussels, Belgium
+  position: Poland advocates for increased EU sanctions against Russia, continued
+    military support for Ukraine, and a leadership role in deciding future peace terms
+    to ensure its own security.
+  positions:
+    ukraine: Poland actively supports continuing and strengthening aid to Ukraine
+      to enable effective resistance against Russian aggression.
+    defence: Poland is actively strengthening its own capabilities and supporting
+      a new EU strategy for eastern flank protection.
+    hybrid: Poland identifies the need to be prepared for and protect against unconventional
+      actions such as cyber attacks and drone incidents.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Zadaniem Europy jest w tej sytuacji takie wsparcie dla Ukrainy, żeby
+        ona mogła dalej skutecznie stawiać opór rosyjskiej agresji
+    defence:
+      score: 2
+      evidence: Polska systematycznie wzmacnia swoje zdolności obronne
+    hybrid:
+      score: 1
+      evidence: Polska wraz z pozostałymi państwami wschodniej flanki musi być przygotowana
+        na różne scenariusze, w tym prowokacje, incydenty z wykorzystaniem dronów
+        czy ataki w cyberprzestrzeni
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

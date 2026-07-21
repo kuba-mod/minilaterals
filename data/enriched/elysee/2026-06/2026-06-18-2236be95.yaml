@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Caroline Roux
+  topics:
+  - ukraine
+  location: null
+  position: President Emmanuel Macron discussed several international issues, including
+    the situation in Ukraine.
+  positions:
+    ukraine: France continues to engage with the situation in Ukraine, though no new
+      concrete commitments were specified in this summary.
+  stances:
+    ukraine:
+      score: 0
+      evidence: la situation en Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

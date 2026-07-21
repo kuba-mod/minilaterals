@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Philip Edward Davis
+  topics: []
+  location: null
+  position: Germany congratulates Prime Minister Philip Edward Davis of the Bahamas
+    on his reelection and expresses a desire to continue constructive bilateral relations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

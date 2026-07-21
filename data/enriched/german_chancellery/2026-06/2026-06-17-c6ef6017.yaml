@@ -1,0 +1,40 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Boris Pistorius
+  - Wladyslaw Kosiniak-Kamysz
+  - Friedrich Merz
+  topics:
+  - defence
+  - hybrid
+  location: Warsaw, Poland
+  position: Germany has signed a new defense agreement with Poland to deepen military
+    cooperation, enhance capabilities, and strengthen collective security within the
+    NATO and EU frameworks.
+  positions:
+    defence: Germany is actively advancing collective security and eastern flank deterrence
+      through concrete commitments to military cooperation, joint training, and defense
+      industry collaboration with Poland.
+    hybrid: Germany commits to closer cooperation with Poland in countering hybrid
+      threats.
+  stances:
+    defence:
+      score: 2
+      evidence: Zudem stärkt und vertieft das Abkommen die militärische Zusammenarbeit
+        in allen Dimensionen.
+    hybrid:
+      score: 2
+      evidence: Deutschland und Polen wollen auch im Krisen management sowie der Begegnung
+        auf hybride Bedrohungen enger zusammenarbeiten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

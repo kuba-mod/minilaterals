@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Andris Kulbergs
+  topics:
+  - defence
+  location: null
+  position: Chancellor Merz congratulates the Latvian Prime Minister and emphasizes
+    continued cooperation within the EU and NATO for European security.
+  positions:
+    defence: Germany supports collective security and deterrence through the framework
+      of NATO.
+  stances:
+    defence:
+      score: 1
+      evidence: Zusammenarbeit im Rahmen der Europäischen Union und der NATO zum Wohle
+        unserer Länder sowie für die Sicherheit in Europa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

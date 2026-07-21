@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Brigitte Macron
+  - Volodymyr Zelensky
+  - heads of state and government of Egypt, UAE, Qatar, Brazil, India, South Korea,
+    Kenya
+  topics:
+  - ukraine
+  location: Évian, France
+  position: France hosted a G7 summit focusing on global security, specifically the
+    peace and security of Ukraine and stability in the Middle East.
+  positions:
+    ukraine: France actively advances the goal of supporting Ukraine by hosting a
+      dedicated working meeting on peace and security for the country.
+  stances:
+    ukraine:
+      score: 2
+      evidence: réunion de travail sur le thème « Construire la paix et la sécurité
+        pour l'Ukraine et l'Europe », en présence des pays du G7 et de l'Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -2,4 +2,4 @@
 # anchors all rolling windows to it, so re-renders between edition cuts
 # (e.g. layout-only merges) ship the same frozen data. Bumped by the weekly
 # Tuesday CI run, or manually via workflow_dispatch with cut_edition=true.
-cutoff: "2026-07-14"
+cutoff: "2026-07-21"

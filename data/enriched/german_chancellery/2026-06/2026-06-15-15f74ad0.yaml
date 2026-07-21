@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Christian Tischner
+  - Rainer Robra
+  - Dr. Dr. h. c. Schneider
+  topics: []
+  location: Germany
+  position: State Minister Wolfram Weimer is conducting a nationwide tour of cultural
+    sites to emphasize their importance to German identity and provide financial support
+    for their renovation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

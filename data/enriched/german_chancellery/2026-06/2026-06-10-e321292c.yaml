@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - stellvertretender Regierungssprecher Meyer
+  - Vorsitzender Feldhoff
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government has approved drafts to modernize arbitration law
+    and expand telecommunications infrastructure to enhance legal attractiveness and
+    digital resilience.
+  positions:
+    rule_of_law: Germany is modernizing its arbitration laws to increase transparency
+      and efficiency, aligning with the general goal of reinforcing the rule of law
+      and legal infrastructure.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Eine Neuregelung zur Veröffentlichung von Schiedssprüchen zielt auf
+        mehr Transparenz schiedsrechtlicher Rechtsprechung in Deutschland.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

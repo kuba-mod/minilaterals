@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing new legislation to enhance consumer protection
+    in online contracts and ensure patient rights to medical records.
+  positions:
+    rule_of_law: Germany is strengthening legal certainty for consumers and implementing
+      a ruling by the European Court of Justice, aligning with the principle of the
+      rule of law.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Das schafft Rechtssicherheit für Verbraucher und Verbraucher sowie
+        Unternehmen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

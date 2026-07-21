@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - representatives of G7 engagement groups
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: President Emmanuel Macron met with G7 engagement groups to receive recommendations
+    on shared prosperity and democratic resilience ahead of the Evian summit.
+  positions:
+    rule_of_law: France is focusing on the resilience of democracies as a key theme
+      for the upcoming G7 summit.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: la seconde, aux grands défis mondiaux et à la résilience des démocraties
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

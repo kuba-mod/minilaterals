@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Paris Saint-Germain team
+  - Luis Enrique
+  - President of the Assembly
+  - Ministers
+  - Parliamentarians
+  - Elected officials
+  - Minister of the Interior
+  - Prefect of Police
+  - Nasser Al-Khelaifi
+  topics: []
+  location: Palais de l’Elysée, Paris, France
+  position: The French President hosted the Paris Saint-Germain football team to celebrate
+    their Champions League victory while condemning recent urban violence.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

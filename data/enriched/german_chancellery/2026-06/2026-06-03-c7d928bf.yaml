@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The German government has approved the task planning for Deutsche Welle
+    (DW) for 2026-2029, prioritizing independent reporting in restricted information
+    spaces to counter disinformation and promote universal values.
+  positions:
+    hybrid: Germany is utilizing Deutsche Welle to actively combat disinformation
+      from autocratic actors and strengthen European resilience.
+    rule_of_law: Germany supports the global promotion of the rule of law and human
+      rights through the international broadcasting of Deutsche Welle.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Desinformation durch autokratische Akteure entgegenwirkt und so mittelbar
+        auch zur Stärkung europäischer Resilienz beiträgt
+    rule_of_law:
+      score: 1
+      evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
+        Menschenrechte und Rechtsstaatlichkeit in die Welt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

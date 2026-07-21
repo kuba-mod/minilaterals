@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Narendra Modi
+  - Nawaf Salam
+  topics: []
+  location: Paris, France
+  position: President Emmanuel Macron visited VivaTech to highlight the French startup
+    ecosystem and strengthen innovation partnerships with India and Lebanon.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

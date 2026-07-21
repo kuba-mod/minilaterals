@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Feldhoff
+  - Bundeskanzler
+  topics:
+  - ukraine
+  - enlargement
+  location: Berlin, Germany
+  position: The German government outlines the Chancellor's upcoming diplomatic schedule,
+    including G7 and European Council meetings focusing on Ukraine and EU enlargement.
+  positions:
+    ukraine: Germany reaffirms its commitment to providing continuous support for
+      Ukraine.
+    enlargement: Germany identifies EU enlargement as a key topic for discussion at
+      the European Council meeting.
+  stances:
+    ukraine:
+      score: 1
+      evidence: fortwährende Unterstützung der Ukraine
+    enlargement:
+      score: 1
+      evidence: das Thema EU-Erweiterung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

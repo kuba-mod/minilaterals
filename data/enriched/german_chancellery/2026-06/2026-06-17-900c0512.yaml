@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is commemorating the victims of the communist dictatorship in
+    the GDR through the establishment of a new memorial and ongoing financial support
+    for historical processing.
+  positions:
+    rule_of_law: Germany actively advances democratic resilience and the rule of law
+      by investing millions in memorials and archives to process the injustice of
+      the SED dictatorship.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Der Bund wendet für die Aufarbeitung der SED-Diktatur rund 16 Millionen
+        Euro jährlich auf.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

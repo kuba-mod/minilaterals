@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Chancellor Friedrich Merz praised the role of voluntary social engagement
+    in strengthening democratic resilience and social cohesion in Germany.
+  positions:
+    rule_of_law: Germany emphasizes that civic engagement and voluntary work are essential
+      for living democracy and maintaining social cohesion.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: zeigten mit ihren Ideen, ihrer Tatkraft und ihrer Ausdauer, wie gesellschaftlicher
+        Zusammenhalt gestärkt und Demokratie im Alltag gelebt werden könne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

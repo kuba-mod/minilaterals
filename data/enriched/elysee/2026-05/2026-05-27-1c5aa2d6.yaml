@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministre du travail et des solidarités
+  - ministre de la santé, des familles, de l’autonomie et des personnes handicapées
+  - ministre de l’action et des comptes publics
+  - garde des sceaux, ministre de la justice
+  - ministre de l’éducation nationale
+  topics: []
+  location: null
+  position: France is managing its internal domestic affairs, specifically social
+    security accounts and child protection legislation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

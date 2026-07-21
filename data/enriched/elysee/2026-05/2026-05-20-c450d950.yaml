@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Président de la République
+  topics: []
+  location: Paris, France
+  position: France will host the 2026 Esports World Cup in Paris, highlighting its
+    status as a global gaming hub and strengthening ties with Saudi Arabia.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

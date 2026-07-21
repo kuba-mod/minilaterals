@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - 70 international delegations
+  topics:
+  - hybrid
+  location: Paris, France
+  position: France hosted the fifth 'No Money For Terror' ministerial conference to
+    coordinate international efforts against terrorism financing as part of its G7
+    presidency.
+  positions:
+    hybrid: France actively leads international efforts to combat financial crimes
+      and terrorism financing, which aligns with coordinated action against hybrid
+      threats.
+  stances:
+    hybrid:
+      score: 2
+      evidence: la lutte contre la criminalité financière l’une de ses priorités
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,44 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Jonas Gahr Støre
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Paris, France
+  position: France is strengthening its global strategic partnership with Norway to
+    enhance European security, energy resilience, and industrial cooperation.
+  positions:
+    ukraine: France acknowledges the Russian war of aggression against Ukraine as
+      a primary international concern.
+    defence: France is actively deepening defense and security cooperation with Norway
+      to bolster collective European security.
+    green_transition: France views Norway as a key partner for Europe's energy transition
+      and resilience, particularly regarding critical raw materials.
+  stances:
+    ukraine:
+      score: 1
+      evidence: les principaux sujets internationaux ont été abordés, tels que la
+        guerre d’agression russe contre l’Ukraine
+    defence:
+      score: 2
+      evidence: le renforcement de la coopération entre les deux pays dans les domaines
+        de la défense
+    green_transition:
+      score: 2
+      evidence: Elle l'est aussi pour notre transition comme pour la résilience énergétique
+        de l'Europe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - President's spouse
+  - Professor Richard Delorme
+  topics: []
+  location: France
+  position: President Emmanuel Macron emphasizes the necessity of investing in children's
+    health and neurodevelopment as a critical investment in the nation's future.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

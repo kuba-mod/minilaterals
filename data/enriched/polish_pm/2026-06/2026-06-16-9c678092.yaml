@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Rada Ministrów
+  - Minister Obrony Narodowej
+  - Władysław Kosiniak-Kamysz
+  - Premier
+  - Minister Zdrowia
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Poland is enhancing its national security through a permanent US military
+    base and boosting its economy via local content requirements and electric vehicle
+    production.
+  positions:
+    defence: Poland is actively strengthening the NATO eastern flank by establishing
+      a permanent US military base.
+    green_transition: Poland is advancing the green transition by reactivating the
+      production of electric vehicles with significant funding.
+  stances:
+    defence:
+      score: 2
+      evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia działań
+        na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy USA
+    green_transition:
+      score: 2
+      evidence: Obecny rząd zakończył przygotowania do reaktywacji projektu realizowanego
+        przez spółkę ElectroMobility Poland, pozyskał nowego partnera oraz zabezpieczył
+        4,5 mld zł finansowania z Krajowego Planu Odbudowy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

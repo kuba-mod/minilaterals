@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - President Macron
+  - Prime Minister Milatovic
+  topics:
+  - enlargement
+  location: Tivat, Montenegro
+  position: Germany, in coordination with France, is actively pushing for the accelerated
+    and simplified EU accession process for Western Balkan states.
+  positions:
+    enlargement: Germany is actively advancing the goal by proposing concrete measures
+      to simplify and accelerate accession negotiations and granting observer status
+      to candidate states.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Deutschland und Frankreich hatten vor dem Gipfel gemeinsam Vorschläge
+        vorgelegt, wie die Beitrittsverhandlungen vereinfacht und beschleunigt werden
+        könnten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

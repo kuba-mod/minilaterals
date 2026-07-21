@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - chef de l’État
+  topics:
+  - green_transition
+  location: null
+  position: France is promoting its industrial and technological sectors through the
+    Choose France summit and associated open-house events.
+  positions:
+    green_transition: France is showcasing its industrial capabilities, including
+      technology and aerospace sectors, which aligns with the broader goal of industrial
+      modernization.
+  stances:
+    green_transition:
+      score: 0
+      evidence: plus de 100 sites industriels et technologiques ouvrent leurs portes
+        au public
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

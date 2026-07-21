@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: communique
+  participants:
+  - Heads of State and Government
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany affirms the G7 as a community of values that opposes the violation
+    of international law by Russia regarding Ukraine.
+  positions:
+    ukraine: Germany supports the exclusion of Russia from the G7 due to the violation
+      of Ukraine's sovereignty and territorial integrity.
+    rule_of_law: Germany emphasizes that the G7 is a community of values that does
+      not tolerate breaches of international law.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Aufgrund der Verletzung der Souveränität und territorialen Unversehrtheit
+        der Ukraine durch Russland beschlossen die Staats- und Regierungschefs der
+        G7 im Jahr 2014, sich wieder ohne Russland im G7 -Kreis zu treffen.
+    rule_of_law:
+      score: 1
+      evidence: Die G7 unterstrich damit, dass sie eine Wertegemeinschaft ist, die
+        den Bruch des Völkerrechts nicht unwidersprochen hinnimmt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

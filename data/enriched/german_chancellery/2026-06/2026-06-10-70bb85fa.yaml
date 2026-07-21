@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Stefanie Hubig
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is modernizing its arbitration law to increase digitalization,
+    international accessibility, and judicial efficiency to enhance its status as
+    a business and legal hub.
+  positions:
+    rule_of_law: Germany is strengthening the rule of law by improving the efficiency
+      and transparency of arbitration and judicial proceedings.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Die Bundesregierung hat den von Bundesjustizministerin Stefanie Hubig
+        vorgelegten Gesetzentwurf zur Modernisierung des Schiedsverfahrensrechts beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Members of the coalition committee
+  - Top representatives of trade unions
+  - Representatives of business associations
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany is seeking domestic economic reforms and cost reductions to strengthen
+    its industrial competitiveness and growth.
+  positions:
+    green_transition: Germany aims to improve competitiveness by reducing energy costs,
+      which aligns with the energy policy goals of the green transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Senkung von Energiekosten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

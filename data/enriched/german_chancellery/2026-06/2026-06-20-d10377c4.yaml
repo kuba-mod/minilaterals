@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Stefan Kornelius
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: The German government spokesperson emphasized the necessity of maintaining
+    a strong military for deterrence and national defense.
+  positions:
+    defence: Germany supports the goal of collective security and deterrence by asserting
+      the need for a capable national defense.
+  stances:
+    defence:
+      score: 1
+      evidence: Deutschland müsse in der Lage sein, sich zu verteidigen. „Das nennt
+        man Abschreckung“, so der Regierungssprecher.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

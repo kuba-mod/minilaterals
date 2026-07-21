@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: Chancellor Friedrich Merz emphasizes the need for European capability,
+    specifically regarding the EU financial framework, competitiveness, and a coordinated
+    approach to the Ukraine war.
+  positions:
+    ukraine: Germany supports a closely coordinated European line and the preparation
+      of potential peace talks for Ukraine.
+    enlargement: Germany acknowledges progress on the expansion of the European Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: eine eng koordinierte europäische Linie im Ukraine‑Krieg
+    enlargement:
+      score: 1
+      evidence: Im Mittelpunkt standen außerdem die Fortschritte bei der EU ‑Erweiterung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Andrew Burnham
+  topics:
+  - ukraine
+  location: null
+  position: Chancellor Merz reaffirmed Germany's commitment to comprehensive support
+    for Ukraine and increasing pressure on Russia during a call with the UK Prime
+    Minister.
+  positions:
+    ukraine: Germany rhetorically supports the continued comprehensive assistance
+      to Ukraine and the pursuit of a just peace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die Ukraine weiter umfassend zu unterstützen und den Druck auf Russland
+        zu erhöhen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

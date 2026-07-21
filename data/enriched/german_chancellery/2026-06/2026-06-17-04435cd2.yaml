@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Meyer (Deputy Government Spokesperson)
+  - Deschauer (AA)
+  - Wentzel (BMWE)
+  - Chagheri (BMAS)
+  - Müller (BMVg)
+  - Singer (BMI)
+  - Link (BMV)
+  - Hamberger
+  topics:
+  - ukraine
+  location: null
+  position: Germany advocates for a just and lasting peace in Ukraine through a combination
+    of continued military/financial support and leveraging G7 dynamics to bring Russia
+    to the negotiating table.
+  positions:
+    ukraine: Germany actively supports Ukraine through military, financial, and diplomatic
+      means while seeking a ceasefire as a prerequisite for peace talks.
+  stances:
+    ukraine:
+      score: 2
+      evidence: starke Unterstützung, die wir aus Europa und auch aus Deutschland
+        politisch, diplomatisch, aber natürlich auch finanziell und militärisch in
+        den vergangenen Monaten und Jahren gegeben haben
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  - Péter Magyar, Premier ministre de Hongrie
+  topics:
+  - ukraine
+  - defence
+  location: Palais de l’Elysée, France
+  position: France discussed European security, support for Ukraine, and strategic
+    bilateral cooperation with the Hungarian Prime Minister.
+  positions:
+    ukraine: France supports continued aid to Ukraine and sanctions against Russia.
+    defence: France emphasizes the importance of enhancing European security and defense
+      capabilities.
+  stances:
+    ukraine:
+      score: 1
+      evidence: le soutien à l’Ukraine et la poursuite des sanctions contre la Russie
+    defence:
+      score: 1
+      evidence: la sécurité et la défense européenne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

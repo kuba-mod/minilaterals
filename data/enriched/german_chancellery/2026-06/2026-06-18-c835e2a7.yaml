@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Ursula von der Leyen
+  - Emmanuel Macron
+  topics:
+  - ukraine
+  - enlargement
+  location: Brussels, Belgium
+  position: Germany emphasizes the competitiveness of European industry, expresses
+    support for EU enlargement for Ukraine and Moldova, and opposes new European debt.
+  positions:
+    ukraine: Germany supports the progression of accession talks for Ukraine.
+    enlargement: Germany actively advances EU enlargement through diplomatic initiatives
+      and the opening of negotiation clusters.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die Europäische Kommission das sogenannte Cluster 1 für die Verhandlungen
+        mit der Ukraine und mit Moldau geöffnet hat
+    enlargement:
+      score: 2
+      evidence: Das sind klare Schritte in Richtung Erweiterung der Europäischen Union
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

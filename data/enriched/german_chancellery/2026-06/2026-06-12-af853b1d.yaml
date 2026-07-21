@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Stefanie Hubig
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is introducing electronic monitoring (ankle bracelets) and mandatory
+    training to better protect victims of domestic violence.
+  positions:
+    rule_of_law: Germany advances the rule of law by implementing legal frameworks
+      to effectively enforce protection orders and combat domestic violence.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Der Bundesrat hat den Gesetzentwurf der Bundesregierung zur Einführung
+        der elektronischen Aufenthaltsüberwachung und der Täterarbeit im Gewaltschutzgesetz
+        beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

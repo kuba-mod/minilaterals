@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Meyer (Deputy Government Spokesperson)
+  - Bundeskanzler Merz
+  - Bundesministerin Bas
+  - Bassirou Diomaye Faye (President of Senegal)
+  topics: []
+  location: Berlin, Germany
+  position: The German government spokesperson outlines the upcoming schedule of the
+    Federal Chancellor, including domestic events and a diplomatic meeting with the
+    President of Senegal.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

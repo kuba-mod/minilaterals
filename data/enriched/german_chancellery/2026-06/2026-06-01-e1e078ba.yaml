@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Karin Prien
+  - Tim Kammel
+  - Friedrich Merz
+  topics: []
+  location: Herzogenaurach, Germany
+  position: Germany is promoting STEM education and youth research to address future
+    technological and societal challenges.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

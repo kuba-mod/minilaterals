@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Präsident der Republik Senegal, Bassirou Diomae Faye
+  topics: []
+  location: null
+  position: Germany is hosting the President of Senegal to discuss economic cooperation,
+    the Sahel region, and geopolitical issues.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

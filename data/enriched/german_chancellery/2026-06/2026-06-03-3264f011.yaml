@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Bundeskanzler
+  - Bundeskabinett
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is refining the mandate of Deutsche Welle to prioritize the promotion
+    of universal values and the combatting of disinformation in regions critical to
+    European interests.
+  positions:
+    hybrid: Germany is utilizing Deutsche Welle to actively counteract disinformation
+      campaigns from autocratic actors to strengthen European resilience.
+    rule_of_law: Germany promotes universal values, including human rights and the
+      rule of law, through its international broadcasting services.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Desinformation durch autokratische Akteure entgegenwirkt und somit
+        mittelbar auch zur Stärkung europäischer Resilienz beiträgt
+    rule_of_law:
+      score: 1
+      evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
+        Menschenrechte und Rechtsstaatlichkeit in die Welt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

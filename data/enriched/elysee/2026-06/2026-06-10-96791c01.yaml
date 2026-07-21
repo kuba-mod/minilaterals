@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - Minister of Overseas Territories
+  - Minister of Territorial Planning and Decentralization
+  topics:
+  - rule_of_law
+  location: null
+  position: France is updating and extending monetary, financial, and legal frameworks
+    to its overseas territories, including measures against money laundering and terrorism
+    financing.
+  positions:
+    rule_of_law: France is strengthening its legal framework and financial oversight
+      by extending anti-money laundering and counter-terrorism financing obligations
+      to overseas territories.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Le dispositif sur la lutte contre le blanchiment des capitaux et le
+        financement du terrorisme est notamment complété par des obligations de vigilance
+        à l’égard de la clientèle.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

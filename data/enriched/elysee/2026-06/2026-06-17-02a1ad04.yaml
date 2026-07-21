@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Donald Trump
+  topics:
+  - ukraine
+  location: Versailles, France
+  position: France acted as a diplomatic facilitator during a bilateral meeting with
+    the US President to celebrate US independence and finalize a peace agreement between
+    the US and Iran.
+  positions:
+    ukraine: France rhetorically supports advancing key subjects including Ukraine
+      via the G7 framework.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ces derniers jours, nous avons tenu ce G7 qui a permis d'avancer sur
+        beaucoup de sujets qui sont très importants pour nous. L'Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

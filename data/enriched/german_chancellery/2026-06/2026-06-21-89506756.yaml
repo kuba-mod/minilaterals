@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  location: Berlin, Germany
+  position: Chancellor Merz emphasizes the need for Germany to contribute to containing
+    and ending international conflicts, particularly the war in Ukraine, while securing
+    the domestic industrial base.
+  positions:
+    ukraine: Germany rhetorically supports efforts to contain and end the conflict
+      in Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: alles tun, um einen bescheidenen, aber deutschen Beitrag dazu zu leisten,
+        dass diese Konflikte eingedämmt werden und dass sie irgendwann auch aufhören
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
