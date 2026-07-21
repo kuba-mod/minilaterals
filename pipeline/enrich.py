@@ -82,10 +82,7 @@ class Grouping:
 
 def _load_groupings() -> dict[str, Grouping]:
     raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
-    return {
-        key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", []))
-        for key, g in raw.items()
-    }
+    return {key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", [])) for key, g in raw.items()}
 
 
 GROUPINGS = _load_groupings()
@@ -95,9 +92,7 @@ ALL_MEMBERS = [c for g in GROUPINGS.values() for c in g.members]
 # The global issue-area enum is the union of every grouping's tracked topics,
 # ordered so that the six original Weimar areas come first.
 _WEIMAR_TOPIC_ORDER = ["ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law"]
-ALL_TOPICS = _WEIMAR_TOPIC_ORDER + sorted(
-    {t for g in GROUPINGS.values() for t in g.topics} - set(_WEIMAR_TOPIC_ORDER)
-)
+ALL_TOPICS = _WEIMAR_TOPIC_ORDER + sorted({t for g in GROUPINGS.values() for t in g.topics} - set(_WEIMAR_TOPIC_ORDER))
 
 # Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
 # score can be traced to the exact prompt that produced it. The lineage is keyed
@@ -258,20 +253,50 @@ SOURCE_ACTOR = {
 # aliases the model might return for each country.
 _ACTOR_ORDER = list(dict.fromkeys(ALL_MEMBERS))
 _ACTOR_ALIASES = {
-    "DE": "DE", "GERMANY": "DE", "GERMAN": "DE",
-    "FR": "FR", "FRANCE": "FR", "FRENCH": "FR",
-    "PL": "PL", "POLAND": "PL", "POLISH": "PL",
-    "UK": "UK", "GB": "UK", "UNITED KINGDOM": "UK", "BRITAIN": "UK",
-    "GREAT BRITAIN": "UK", "BRITISH": "UK", "ENGLAND": "UK",
-    "US": "US", "USA": "US", "UNITED STATES": "US",
-    "UNITED STATES OF AMERICA": "US", "AMERICA": "US", "AMERICAN": "US",
-    "AU": "AU", "AUSTRALIA": "AU", "AUSTRALIAN": "AU",
-    "CZ": "CZ", "CZECHIA": "CZ", "CZECH REPUBLIC": "CZ", "CZECH": "CZ",
-    "SK": "SK", "SLOVAKIA": "SK", "SLOVAK": "SK",
-    "HU": "HU", "HUNGARY": "HU", "HUNGARIAN": "HU",
-    "EE": "EE", "ESTONIA": "EE", "ESTONIAN": "EE",
-    "LV": "LV", "LATVIA": "LV", "LATVIAN": "LV",
-    "LT": "LT", "LITHUANIA": "LT", "LITHUANIAN": "LT",
+    "DE": "DE",
+    "GERMANY": "DE",
+    "GERMAN": "DE",
+    "FR": "FR",
+    "FRANCE": "FR",
+    "FRENCH": "FR",
+    "PL": "PL",
+    "POLAND": "PL",
+    "POLISH": "PL",
+    "UK": "UK",
+    "GB": "UK",
+    "UNITED KINGDOM": "UK",
+    "BRITAIN": "UK",
+    "GREAT BRITAIN": "UK",
+    "BRITISH": "UK",
+    "ENGLAND": "UK",
+    "US": "US",
+    "USA": "US",
+    "UNITED STATES": "US",
+    "UNITED STATES OF AMERICA": "US",
+    "AMERICA": "US",
+    "AMERICAN": "US",
+    "AU": "AU",
+    "AUSTRALIA": "AU",
+    "AUSTRALIAN": "AU",
+    "CZ": "CZ",
+    "CZECHIA": "CZ",
+    "CZECH REPUBLIC": "CZ",
+    "CZECH": "CZ",
+    "SK": "SK",
+    "SLOVAKIA": "SK",
+    "SLOVAK": "SK",
+    "HU": "HU",
+    "HUNGARY": "HU",
+    "HUNGARIAN": "HU",
+    "EE": "EE",
+    "ESTONIA": "EE",
+    "ESTONIAN": "EE",
+    "LV": "LV",
+    "LATVIA": "LV",
+    "LATVIAN": "LV",
+    "LT": "LT",
+    "LITHUANIA": "LT",
+    "LITHUANIAN": "LT",
 }
 
 
