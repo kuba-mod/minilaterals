@@ -24,6 +24,7 @@ import argparse
 import glob
 import hashlib
 import json
+import math
 import os
 from collections import defaultdict
 from datetime import UTC, datetime, timedelta
@@ -217,6 +218,10 @@ TIMELINE_WEEKS = 12
 COLOR_GREEN = "#4d6b38"
 COLOR_AMBER = "#8a6320"
 COLOR_RED = "#a14132"
+
+# Row order (top to bottom) for the score-density heatmap: +2 backs the goal
+# most strongly, -2 opposes it most strongly.
+SCORES = [2, 1, 0, -1, -2]
 
 
 def _stance_agreement(spread: float, overall: float) -> tuple[str, str]:
@@ -478,66 +483,156 @@ def compute_topic_weekly_stances(
     return {"overall": overall_series, **per_topic}
 
 
-def build_country_line_series(
-    events: list[dict], window_days: int = 14, today: datetime | None = None, weeks: int | None = None
-) -> dict[str, list[dict | None]]:
+def compute_score_density(
+    events: list[dict], window_days: int = 7, today: datetime | None = None, weeks: int | None = None
+) -> dict[str, dict[str, dict]]:
     """
-    Per-country stance lines: one series per topic plus an 'overall' series.
+    Per (capital, topic) slice, a score x week grid of how many rated
+    statements landed at each stance level (2, 1, 0, -1, -2) in that calendar
+    week. Unlike `compute_topic_weekly_stances`' rolling mean, a week here is a
+    fixed, non-overlapping calendar bin (Monday-anchored): this chart shows the
+    full distribution of individual ratings rather than their average, so one
+    sharp statement (e.g. a -1 amid a run of +1s) is visible as an outlier
+    cell instead of being smoothed away.
 
-    The timeline draws Germany, France and Poland as three separate lines rather
-    than one averaged line + band, so divergence is read directly as the vertical
-    gap between capitals. Each week entry is `{"week", "pa": {actor: mean}}` with
-    per-actor means in stance units (−2..+2); a week no capital spoke on is None.
+    Returns `{"ALL": {"overall": {...}, "ukraine": {...}, ...}, "FR": {...}, ...}`
+    — 4 capitals ("ALL" + FR/DE/PL) x 7 topics ("overall" + ISSUE_ORDER) = 28
+    slices, all sharing one Monday-anchored week axis so switching slices never
+    shifts the x-axis. Each slice is
+    `{"weeks": [...], "grid": [[n, ...] x len(weeks)] (SCORES order),
+      "row_totals": [n, ...] (SCORES order), "grand_total": n}`.
 
-    Unlike `compute_topic_weekly_stances` (which needs ≥2 capitals to compute a
-    spread), a single capital's line still shows — the client draws such isolated
-    points as a dot with no connecting segment. `overall` means each capital
-    across every topic in the window.
-
-    `weeks` caps every series to the most recent N weeks (see TIMELINE_WEEKS) —
-    the chart shows a trailing window rather than full history, so a capital
-    whose coverage starts later doesn't read as a gap at the chart's left edge.
+    `weeks` caps to the most recent N calendar weeks (see TIMELINE_WEEKS), to
+    match the trailing window the rest of the page shows.
     """
     rows = _stance_rows(events)
     if not rows:
         return {}
 
     earliest = min(d for d, _, _, _ in rows)
-    today = (today or datetime.now(UTC)).date()
+    today_d = (today or datetime.now(UTC)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
     anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
-    all_weeks = []
-    while anchor <= today:
-        all_weeks.append(anchor.strftime("%Y-%m-%d"))
-        anchor += timedelta(days=7)
-    if weeks is not None and len(all_weeks) > weeks:
-        all_weeks = all_weeks[-weeks:]
 
-    def series_for(topic: str | None) -> list[dict | None]:
-        area_rows = [(d, a, s) for d, a, t, s in rows if topic is None or t == topic]
-        out: list[dict | None] = []
-        for week_str in all_weeks:
-            window_start = (datetime.strptime(week_str, "%Y-%m-%d").date() - timedelta(days=window_days)).strftime(
-                "%Y-%m-%d"
-            )
-            per_actor: dict[str, list[int]] = defaultdict(list)
-            for date_str, actor, score in area_rows:
-                if window_start <= date_str <= week_str:
-                    per_actor[actor].append(score)
-            if not per_actor:
-                out.append(None)
+    n_buckets = (today_d - anchor).days // window_days + 1
+    week_labels = [(anchor + timedelta(days=window_days * i)).strftime("%Y-%m-%d") for i in range(n_buckets)]
+    drop = 0
+    if weeks is not None and len(week_labels) > weeks:
+        drop = len(week_labels) - weeks
+        week_labels = week_labels[drop:]
+
+    def bucket_of(date_str: str) -> int:
+        d = datetime.strptime(date_str, "%Y-%m-%d").date()
+        return (d - anchor).days // window_days - drop
+
+    def grid_for(actor: str | None, topic: str | None) -> dict:
+        grid = [[0] * len(week_labels) for _ in SCORES]
+        for date_str, a, t, score in rows:
+            if actor is not None and a != actor:
                 continue
-            pa = {a: round(sum(v) / len(v), 1) for a, v in per_actor.items()}
-            n = {a: len(v) for a, v in per_actor.items()}
-            out.append({"week": week_str, "pa": pa, "n": n})
-        return out
+            if topic is not None and t != topic:
+                continue
+            if score not in SCORES:
+                continue
+            wi = bucket_of(date_str)
+            if 0 <= wi < len(week_labels):
+                grid[SCORES.index(score)][wi] += 1
+        row_totals = [sum(r) for r in grid]
+        return {"weeks": week_labels, "grid": grid, "row_totals": row_totals, "grand_total": sum(row_totals)}
 
-    result: dict[str, list[dict | None]] = {"overall": series_for(None)}
-    for area in ISSUE_ORDER:
-        series = series_for(area)
-        if any(w for w in series):
-            result[area] = series
-    return result
+    density: dict[str, dict[str, dict]] = {}
+    for actor in ["ALL", *WEIMAR_ACTORS]:
+        a_filter = None if actor == "ALL" else actor
+        density[actor] = {"overall": grid_for(a_filter, None)}
+        for topic in ISSUE_ORDER:
+            density[actor][topic] = grid_for(a_filter, topic)
+    return density
+
+
+def build_score_density_svg(grid: list[list[int]], row_totals: list[int], weeks: list[str]) -> dict:
+    """
+    SVG-ready cell/label geometry for one score-density slice (see
+    `compute_score_density`). Colour is diverging by row: statements backing
+    the goal (+1/+2) in gold, neutral (0) in amber, opposing (-1/-2) in red.
+    Opacity ~ sqrt(count) so a single statement (count=1) still reads clearly
+    instead of washing out next to weeks with many more. Rows at or below 0
+    get a ring around any nonzero cell — a lone negative statement should
+    visually pop out of the empty cells around it, not blend in; that's the
+    whole reason this chart exists.
+    """
+    W, H = 800, 250
+    PAD_L, PAD_R, PAD_T, PAD_B = 92, 68, 16, 34
+    n_cols = max(len(weeks), 1)
+    chart_w = W - PAD_L - PAD_R
+    chart_h = H - PAD_T - PAD_B
+    row_h = chart_h / len(SCORES)
+    col_w = chart_w / n_cols
+
+    grand_total = sum(row_totals)
+    max_n = max((max(row) for row in grid), default=0) or 1
+
+    def fill_for(score: int) -> str:
+        if score > 0:
+            return ACTOR_COLORS["DE"]  # gold — reused here as the "backing the goal" hue
+        if score == 0:
+            return COLOR_AMBER
+        return COLOR_RED
+
+    def score_label(score: int) -> str:
+        return f"{score:+d}" if score else "0"
+
+    cells = []
+    for ri, score in enumerate(SCORES):
+        y = PAD_T + ri * row_h
+        row = grid[ri] if ri < len(grid) else [0] * n_cols
+        for wi in range(n_cols):
+            n = row[wi] if wi < len(row) else 0
+            x = PAD_L + wi * col_w
+            opacity = 0.0 if n == 0 else round(0.16 + 0.84 * math.sqrt(n / max_n), 3)
+            week_label = weeks[wi] if wi < len(weeks) else ""
+            cells.append(
+                {
+                    "x": round(x, 1),
+                    "y": round(y, 1),
+                    "w": round(max(col_w - 1, 1), 1),
+                    "h": round(max(row_h - 1, 1), 1),
+                    "fill": fill_for(score),
+                    "opacity": opacity,
+                    "ringed": bool(score <= 0 and n > 0),
+                    "tooltip": f"Week of {week_label}  ·  stance {score_label(score)}  ·  {n} statement{'s' if n != 1 else ''}",
+                }
+            )
+
+    rows_meta = []
+    for ri, score in enumerate(SCORES):
+        total = row_totals[ri] if ri < len(row_totals) else 0
+        pct = round(100 * total / grand_total) if grand_total else 0
+        rows_meta.append(
+            {
+                "y": round(PAD_T + ri * row_h + row_h / 2, 1),
+                "label": score_label(score),
+                "total": total,
+                "pct": pct,
+            }
+        )
+
+    x_ticks = []
+    for wi, wk in enumerate(weeks):
+        if wi % 3 != 0 and wi != n_cols - 1:
+            continue
+        x_ticks.append({"x": round(PAD_L + wi * col_w + col_w / 2, 1), "label": wk[5:]})
+
+    return {
+        "viewbox": f"0 0 {W} {H}",
+        "pad_l": PAD_L,
+        "pad_r": PAD_R,
+        "w": W,
+        "h": H,
+        "cells": cells,
+        "rows": rows_meta,
+        "x_ticks": x_ticks,
+        "grand_total": grand_total,
+    }
 
 
 def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> list[dict]:
@@ -810,27 +905,36 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         cluster["convergence"] = score_cluster_stances(cluster)
         cluster["commentary"] = commentary.get(cluster_key(cluster))
 
-    # Per-country stance lines (overall + per topic), trailing TIMELINE_WEEKS only.
-    # The timeline draws FR·DE·PL as three separate lines; divergence reads as the
-    # gap between them. Capping to a trailing window keeps a source whose coverage
-    # starts later (e.g. a newly added feed) from reading as a gap at the left edge.
-    country_lines = build_country_line_series(events, today=edition_dt, weeks=TIMELINE_WEEKS)
-    country_series_json = json.dumps(country_lines)
+    # Score-density heatmap: one column per calendar week, one row per stance
+    # level (+2..-2), coloured by backing/neutral/opposing and sized by count.
+    # Replaces the old averaged-line chart — this shows the full distribution
+    # of individual ratings, so a single sharp statement (e.g. Poland's 11
+    # July enlargement statement) is a visible outlier cell rather than
+    # invisible inside a rolling mean. Capped to TIMELINE_WEEKS so a capital
+    # whose coverage starts later doesn't read as empty columns at the left.
+    density = compute_score_density(events, today=edition_dt, weeks=TIMELINE_WEEKS)
+    capital_order = ["ALL", *WEIMAR_ACTORS]
+    density_svg_json = json.dumps(
+        {
+            actor: {
+                topic: build_score_density_svg(slice_["grid"], slice_["row_totals"], slice_["weeks"])
+                for topic, slice_ in topics.items()
+            }
+            for actor, topics in density.items()
+        }
+    )
+    has_density = bool(density)
 
     # Divergence ranking (topics by this week's FR·DE·PL spread) orders both the
-    # topic pills and the convergence clusters below, so the most contested story
-    # leads — but the ranking itself is never shown as a list.
+    # topic toggle row and the convergence clusters below, so the most contested
+    # story leads — but the ranking itself is never shown as a list.
     topic_weekly = compute_topic_weekly_stances(events, today=edition_dt)
     leaderboard = build_divergence_leaderboard(topic_weekly)
-    # Pill order: Overall first, then topics that have a line, most-divergent first,
-    # then any remaining topics in their canonical order.
-    ranked_areas = [r["area"] for r in leaderboard if r["area"] in country_lines]
-    pill_order = ["overall"] + ranked_areas + [a for a in ISSUE_ORDER if a in country_lines and a not in ranked_areas]
+    ranked_areas = [r["area"] for r in leaderboard]
+    topic_order = ["overall"] + ranked_areas + [a for a in ISSUE_ORDER if a not in ranked_areas]
     # Reorder clusters to match the ranking (most divergent topic first).
     rank_index = {area: i for i, area in enumerate(ranked_areas)}
     clusters.sort(key=lambda c: rank_index.get(c.get("area"), len(rank_index)))
-    # The timeline needs ≥2 weeks with data in the overall series to draw a line.
-    has_timeline = sum(1 for w in country_lines.get("overall", []) if w is not None) >= 2
 
     # Recent events: last 90 days before the edition cutoff
     cutoff = (edition_dt - timedelta(days=90)).strftime("%Y-%m-%d")
@@ -930,9 +1034,10 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             total_events=len(events),
             total_all=len(all_events),
             meetings_count=len(meetings),
-            has_timeline=has_timeline,
-            country_series_json=country_series_json,
-            pill_order=pill_order,
+            has_density=has_density,
+            density_svg_json=density_svg_json,
+            capital_order=capital_order,
+            topic_order=topic_order,
             issue_order=ISSUE_ORDER,
             country_stats=country_stats,
             weimar_actors=WEIMAR_ACTORS,

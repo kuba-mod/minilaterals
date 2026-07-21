@@ -33,59 +33,52 @@
 </div>
 {% endif %}
 
-{# ── Alignment timeline ── #}
-{% if has_timeline %}
+{# ── Score density heatmap ── #}
+{% if has_density %}
 <div class="section-head" style="margin-top:0">
   How strongly are they backing shared goals?
-  <span>Each capital is drawn as its own line — its average stance (−2 opposes to +2 actively advances) against the agreed Weimar goals over a 14-day window. When the three lines run together they agree; where they fan apart, they diverge. Pick a topic to see just that debate.</span>
-</div>
-<div style="display:flex; align-items:center; gap:16px; margin-bottom:8px; flex-wrap:wrap; font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600">
-  {% for a in weimar_actors %}
-  <span style="display:inline-flex; align-items:center; gap:6px">
-    <span style="display:inline-block; width:20px; border-top:3px solid {{ actor_colors[a] }}; border-radius:2px"></span>{{ actor_labels[a] }}
-  </span>
-  {% endfor %}
-</div>
-<div style="width:100%; overflow:hidden; margin-bottom:4px">
-  <svg id="timeline-svg" viewBox="0 0 800 220" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
-    <g id="timeline-grid"></g>
-    <g id="timeline-lines"></g>
-  </svg>
+  <span>Every rated statement, one calendar week per column, one stance level per row (−2 opposes … +2 actively advances). Colour: gold backs the goal, amber is neutral, red opposes. A single sharp statement stands out as a ringed cell instead of being smoothed into an average. Pick a capital and a topic to isolate that debate.</span>
 </div>
 
-{# ── Topic pills — clicking switches the timeline view (ordered by this week's divergence) ── #}
-<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px">
-  {% for key in pill_order %}
-  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-series="{{ key }}"
+{# Capital toggle row #}
+<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px">
+  {% for c in capital_order %}
+  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-capital="{{ c }}"
         style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px; cursor:pointer"
-        onclick="selectTimelineSeries('{{ key }}')">
-    {% if key == 'overall' %}Overall{% else %}{{ issue_labels[key] }}{% endif %}
+        onclick="selectDensity('capital', '{{ c }}')">
+    {% if c == 'ALL' %}All{% else %}{{ actor_labels[c] }}{% endif %}
   </span>
   {% endfor %}
 </div>
+
+{# Topic toggle row (ordered by this week's divergence) #}
+<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px">
+  {% for t in topic_order %}
+  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-topic="{{ t }}"
+        style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px; cursor:pointer"
+        onclick="selectDensity('topic', '{{ t }}')">
+    {% if t == 'overall' %}Overall{% else %}{{ issue_labels[t] }}{% endif %}
+  </span>
+  {% endfor %}
+</div>
+
+<div style="width:100%; overflow:hidden; margin-bottom:4px">
+  <svg id="density-svg" viewBox="0 0 800 250" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
+    <g id="density-cells"></g>
+    <g id="density-rows"></g>
+    <g id="density-xticks"></g>
+  </svg>
+</div>
+<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:4px 0 0">Hover a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
 
 <script>
 (function () {
-  const SERIES = {{ country_series_json | safe }};
-  const COLORS = {{ actor_colors | tojson }};
-  const ACTORS = {{ weimar_actors | tojson }};
-  const PAD_L = 44, PAD_R = 14, PAD_T = 15, PAD_B = 35, W = 800, H = 220;
-  const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B, CHART_R = W - PAD_R;
+  const DENSITY = {{ density_svg_json | safe }};
+  const CAPITAL_ORDER = {{ capital_order | tojson }};
+  const TOPIC_ORDER = {{ topic_order | tojson }};
+  let curCapital = CAPITAL_ORDER[0], curTopic = TOPIC_ORDER[0];
 
   function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-  function r1(v){ return Math.round(v * 10) / 10; }
-  function xFor(i, n){ return n > 1 ? PAD_L + i * CHART_W / (n - 1) : PAD_L + CHART_W / 2; }
-
-  function domainFor(series){
-    const vals = [];
-    series.forEach(w => { if (w) ACTORS.forEach(a => { if (a in w.pa) vals.push(w.pa[a]); }); });
-    let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
-    const pad = Math.max(0.2, (hi - lo) * 0.15);
-    lo = Math.max(-2, Math.floor((lo - pad) * 2) / 2);
-    hi = Math.min(2, Math.ceil((hi + pad) * 2) / 2);
-    if (hi - lo < 0.5) hi = Math.min(2, lo + 0.5);
-    return [lo, hi];
-  }
 
   var originalClusterOrder = null;
   function reorderClusters(key){
@@ -101,51 +94,50 @@
     }
   }
 
-  window.selectTimelineSeries = function(key){
-    const series = SERIES[key];
-    if (!series) return;
-    document.querySelectorAll('.timeline-pill').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.series === key); });
-    reorderClusters(key);
+  function render(){
+    const slice = (DENSITY[curCapital] || {})[curTopic];
+    if (!slice) return;
 
-    const n = series.length;
-    const dom = domainFor(series), lo = dom[0], hi = dom[1];
-    const yFor = v => PAD_T + CHART_H * (1 - (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo));
+    let cellsHtml = '';
+    slice.cells.forEach(function(c){
+      cellsHtml += '<rect x="' + c.x + '" y="' + c.y + '" width="' + c.w + '" height="' + c.h + '" rx="2" fill="' + c.fill + '" fill-opacity="' + c.opacity + '"'
+        + (c.ringed ? ' stroke="' + c.fill + '" stroke-width="1.4"' : '')
+        + '><title>' + esc(c.tooltip) + '</title></rect>';
+    });
+    document.getElementById('density-cells').innerHTML = cellsHtml;
 
-    let grid = '';
-    for (let t = Math.ceil(lo * 2) / 2; t <= hi + 1e-9; t += 0.5) {
-      const y = r1(yFor(t)), zero = Math.abs(t) < 1e-9;
-      grid += '<line x1="44" y1="' + y + '" x2="' + CHART_R + '" y2="' + y + '" stroke="var(--rule)" stroke-width="1"' + (zero ? '' : ' stroke-dasharray="4 4"') + ' opacity="0.6"/>';
-      grid += '<text x="36" y="' + (y + 3) + '" text-anchor="end" font-size="9" fill="var(--muted)" opacity="0.8" font-family="\'IBM Plex Mono\',monospace">' + (t > 0 ? '+' + t : t) + '</text>';
+    let rowsHtml = '';
+    slice.rows.forEach(function(r){
+      rowsHtml += '<text x="' + (slice.pad_l - 8) + '" y="' + (r.y + 3) + '" text-anchor="end" font-size="10" font-weight="600" fill="var(--ink)" font-family="\'IBM Plex Mono\',monospace">' + r.label + '</text>';
+      rowsHtml += '<text x="' + (slice.w - slice.pad_r + 8) + '" y="' + (r.y + 3) + '" font-size="9" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + r.total + ' · ' + r.pct + '%</text>';
+    });
+    document.getElementById('density-rows').innerHTML = rowsHtml;
+
+    let ticksHtml = '';
+    slice.x_ticks.forEach(function(t){
+      ticksHtml += '<text x="' + t.x + '" y="' + (slice.h - 10) + '" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + t.label + '</text>';
+    });
+    document.getElementById('density-xticks').innerHTML = ticksHtml;
+  }
+
+  window.selectDensity = function(kind, value){
+    if (kind === 'capital') {
+      curCapital = value;
+      document.querySelectorAll('.timeline-pill[data-capital]').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.capital === value); });
+    } else {
+      curTopic = value;
+      document.querySelectorAll('.timeline-pill[data-topic]').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.topic === value); });
+      reorderClusters(value);
     }
-    document.getElementById('timeline-grid').innerHTML = grid;
-
-    let out = '';
-    series.forEach(function(w, i){ if (!w || (i % 3 !== 0 && i !== n - 1)) return;
-      out += '<text x="' + r1(xFor(i, n)) + '" y="205" text-anchor="middle" font-size="8" fill="#888" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + '</text>';
-    });
-
-    // No per-line end labels: the legend above already names each colour, and
-    // a label stacked/leader-lined off a convergence point (all three capitals
-    // landing on the same value) read as visual noise rather than signal.
-    ACTORS.forEach(function(a){
-      var run = [];
-      var flush = function(){
-        if (run.length >= 2) out += '<polyline points="' + run.map(function(r){ return r1(xFor(r.i, n)) + ',' + r1(yFor(r.v)); }).join(' ') + '" fill="none" stroke="' + COLORS[a] + '" stroke-width="2" stroke-linejoin="round"/>';
-        run.forEach(function(r){ out += '<circle cx="' + r1(xFor(r.i, n)) + '" cy="' + r1(yFor(r.v)) + '" r="' + (run.length >= 2 ? 2.5 : 3.4) + '" fill="' + COLORS[a] + '"><title>' + esc(a + ' ' + r.week + ': ' + (r.v >= 0 ? '+' : '') + r.v + ' (' + r.n + ' statements)') + '</title></circle>'; });
-        run = [];
-      };
-      series.forEach(function(w, i){ if (w && a in w.pa) run.push({ i: i, v: w.pa[a], week: w.week, n: (w.n || {})[a] }); else flush(); });
-      flush();
-    });
-    document.getElementById('timeline-lines').innerHTML = out;
+    render();
   };
 
-  selectTimelineSeries('overall');
+  render();
 })();
 </script>
 
 {% else %}
-{# spacer when no timeline data yet #}
+{# spacer when no density data yet #}
 {% endif %}
 
 {# ── Convergence view ── #}

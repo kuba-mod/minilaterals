@@ -7,11 +7,13 @@ from datetime import UTC, datetime
 import pytest
 
 from pipeline.render import (
+    SCORES,
     _fmt_stance,
     _stance_norm,
-    build_country_line_series,
     build_divergence_leaderboard,
+    build_score_density_svg,
     cluster_key,
+    compute_score_density,
     compute_topic_weekly_stances,
 )
 from tests.conftest import cluster_from_events, event_dict
@@ -54,65 +56,87 @@ def test_cluster_key_stable_and_order_independent():
     assert key == cluster_key(c2)  # sorted paths → stable regardless of actor order
 
 
-# --- country line series ---------------------------------------------------
+# --- score density (heatmap replacing the averaged-line chart) ------------
 
 
-def test_country_lines_keep_each_capital_separate_and_show_lone_speakers():
+def test_score_density_bins_into_the_right_score_row_and_actor_slice():
     events = [
-        # enlargement, same window: DE far above PL -> lines fan apart
-        _stance_event("german_mfa", "2026-06-29", 2, "enlargement"),
-        _stance_event("polish_mfa", "2026-06-29", 0, "enlargement"),
-        # ukraine: only France spoke -> a single-capital line still appears
-        _stance_event("france_diplomatie", "2026-06-29", 1, "ukraine"),
+        _stance_event("german_mfa", "2026-06-22", 2, "enlargement"),
+        _stance_event("polish_mfa", "2026-06-23", 0, "enlargement"),
+        _stance_event("polish_mfa", "2026-06-24", 0, "enlargement"),
     ]
-    series = build_country_line_series(events, today=datetime(2026, 6, 29, tzinfo=UTC))
-    assert "overall" in series
-    # Per-topic series keep each capital as its own mean (not averaged together).
-    enl = [w for w in series["enlargement"] if w][-1]
-    assert enl["pa"] == {"DE": 2.0, "PL": 0.0}
-    # A topic where only one capital spoke still yields a line (unlike the
-    # spread-based series, which drops <2-capital weeks).
-    ukr = [w for w in series["ukraine"] if w][-1]
-    assert ukr["pa"] == {"FR": 1.0}
-    # Overall blends every topic per capital: France's only score is the ukraine +1.
-    ov = [w for w in series["overall"] if w][-1]
-    assert ov["pa"]["FR"] == pytest.approx(1.0)
-    assert ov["pa"]["DE"] == pytest.approx(2.0)
+    density = compute_score_density(events, today=datetime(2026, 6, 29, tzinfo=UTC))
+    all_enl = density["ALL"]["enlargement"]
+    week_idx = all_enl["weeks"].index("2026-06-22")
+    assert all_enl["grid"][SCORES.index(2)][week_idx] == 1
+    assert all_enl["grid"][SCORES.index(0)][week_idx] == 2
+    assert all_enl["row_totals"] == [1, 0, 2, 0, 0]
+    assert all_enl["grand_total"] == 3
+    # A per-capital slice isolates just that capital's statements.
+    pl_enl = density["PL"]["enlargement"]
+    assert pl_enl["row_totals"] == [0, 0, 2, 0, 0]
+    de_enl = density["DE"]["enlargement"]
+    assert de_enl["row_totals"] == [1, 0, 0, 0, 0]
 
 
-def test_country_lines_include_executive_office_statements():
-    # Regression: build_country_line_series once used its own hardcoded
-    # {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"} map
-    # instead of the shared _stance_rows() helper, so a country's executive
-    # office (chancellery/Élysée/KPRM) never fed the chart at all — e.g. the
-    # 2026-07-11 Polish PM statement rated enlargement: -1 was invisible here
-    # purely because it came from polish_pm, not polish_mfa.
-    events = [
-        _stance_event("polish_pm", "2026-07-11", -1, "enlargement"),
-        _stance_event("german_mfa", "2026-07-11", 1, "enlargement"),
-    ]
-    # `today` must be on/after a week's Monday label for that week to appear;
-    # 07-13 is the Monday following the (Saturday) statement date.
-    series = build_country_line_series(events, today=datetime(2026, 7, 13, tzinfo=UTC))
-    enl = [w for w in series["enlargement"] if w][-1]
-    assert enl["pa"] == {"PL": -1.0, "DE": 1.0}
+def test_score_density_handles_negative_two_in_the_bottom_row():
+    events = [_stance_event("german_mfa", "2026-06-22", -2, "enlargement")]
+    density = compute_score_density(events, today=datetime(2026, 6, 29, tzinfo=UTC))
+    grid = density["ALL"]["enlargement"]["grid"]
+    assert SCORES[-1] == -2
+    assert grid[-1] == [1, 0]  # last row is -2; lands in its own (first) week
+    assert grid[0] == [0, 0]  # +2 row stays empty
 
 
-def test_country_lines_weeks_caps_to_trailing_window():
-    # Statements span ~20 weeks; capping to 3 should keep only the most recent
-    # 3 week-labels, ending on the week containing `today` — a capital whose
-    # coverage starts earlier (like a newly onboarded source) shouldn't leave a
-    # visible gap at the left edge of a capped chart.
+def test_score_density_includes_executive_office_statements():
+    # Regression: compute_score_density (like build_country_line_series before
+    # it) must go through the shared _stance_rows() helper, not a narrower
+    # ministry-only map — otherwise a country's executive office (chancellery/
+    # Élysée/KPRM) statements are invisible to the chart, as happened with the
+    # 2026-07-11 Polish PM statement rated enlargement: -1.
+    events = [_stance_event("polish_pm", "2026-07-11", -1, "enlargement")]
+    density = compute_score_density(events, today=datetime(2026, 7, 13, tzinfo=UTC))
+    assert density["PL"]["enlargement"]["grand_total"] == 1
+    assert density["ALL"]["enlargement"]["row_totals"][SCORES.index(-1)] == 1
+
+
+def test_score_density_weeks_cap_to_trailing_window():
     events = [
         _stance_event("german_mfa", "2026-02-02", 1, "ukraine"),
         _stance_event("france_diplomatie", "2026-06-22", 1, "ukraine"),
         _stance_event("polish_mfa", "2026-06-29", 1, "ukraine"),
     ]
-    full = build_country_line_series(events, today=datetime(2026, 6, 29, tzinfo=UTC))
-    capped = build_country_line_series(events, today=datetime(2026, 6, 29, tzinfo=UTC), weeks=3)
-    assert len(capped["overall"]) == 3
-    assert len(full["overall"]) > 3
-    assert capped["overall"][-1]["week"] == full["overall"][-1]["week"]
+    full = compute_score_density(events, today=datetime(2026, 6, 29, tzinfo=UTC))
+    capped = compute_score_density(events, today=datetime(2026, 6, 29, tzinfo=UTC), weeks=3)
+    assert len(capped["ALL"]["ukraine"]["weeks"]) == 3
+    assert len(full["ALL"]["ukraine"]["weeks"]) > 3
+    assert capped["ALL"]["ukraine"]["weeks"][-1] == full["ALL"]["ukraine"]["weeks"][-1]
+
+
+# --- score density SVG geometry ---------------------------------------------
+
+
+def test_score_density_svg_cell_totals_and_outlier_ring():
+    grid = [[0, 1], [0, 0], [0, 2], [0, 0], [1, 0]]  # +2, +1, 0, -1, -2 rows
+    row_totals = [1, 0, 2, 0, 1]
+    weeks = ["2026-06-15", "2026-06-22"]
+    svg = build_score_density_svg(grid, row_totals, weeks)
+    # Every nonzero grid cell becomes a rect; counts implied by opacity are
+    # recoverable only via the cell's tooltip, so check tooltip-derived counts
+    # sum to the grand total instead of re-deriving opacity.
+    total_from_tooltips = sum(int(c["tooltip"].rsplit(" ", 2)[1]) for c in svg["cells"] if c["opacity"] > 0)
+    assert total_from_tooltips == sum(row_totals)
+    # The -2 row (score <= 0) with a nonzero cell is ringed; the +2 row isn't.
+    minus_two_cell = next(c for c in svg["cells"] if "stance -2" in c["tooltip"] and c["opacity"] > 0)
+    assert minus_two_cell["ringed"] is True
+    plus_two_cell = next(c for c in svg["cells"] if "stance +2" in c["tooltip"] and c["opacity"] > 0)
+    assert plus_two_cell["ringed"] is False
+    # The neutral row reads "stance 0", not "stance +0" (f"{0:+d}" would wrongly sign it).
+    zero_cell = next(c for c in svg["cells"] if c["opacity"] > 0 and "stance 0" in c["tooltip"])
+    assert "stance +0" not in zero_cell["tooltip"]
+    # Row margin totals/labels match input, in SCORES order.
+    assert [r["label"] for r in svg["rows"]] == ["+2", "+1", "0", "-1", "-2"]
+    assert [r["total"] for r in svg["rows"]] == row_totals
 
 
 # --- divergence leaderboard (orders pills + clusters) ----------------------
