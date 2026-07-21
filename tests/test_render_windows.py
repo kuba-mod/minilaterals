@@ -6,6 +6,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from pipeline.render import (
+    _stance_rows,
     compute_latest_topic_pills,
     compute_topic_weekly_stances,
 )
@@ -54,6 +55,39 @@ def test_topic_weekly_stances_single_actor_weeks_are_none():
     ]
     result = compute_topic_weekly_stances(events, today=TODAY)
     assert all(w is None for w in result.get("ukraine", []))
+
+
+def test_topic_weekly_stances_counts_executive_office_sources():
+    # A country's executive office (chancellery/Élysée/KPRM) is as much its
+    # position as its foreign ministry (design principle #3) — a statement
+    # from only that source, paired with another country's MFA, must still
+    # form a scored 2-actor week rather than being silently dropped.
+    events = [
+        _stance_event("polish_pm", "2026-06-08", "pl_pm.yaml", "enlargement", -1),
+        _stance_event("german_mfa", "2026-06-09", "de.yaml", "enlargement", 1),
+    ]
+    result = compute_topic_weekly_stances(events, today=TODAY)
+    scored = [w for w in result.get("enlargement", []) if w is not None]
+    assert scored
+    assert scored[-1]["per_actor"] == {"PL": -1.0, "DE": 1.0}
+
+
+# --- _stance_rows ------------------------------------------------------------
+
+
+def test_stance_rows_include_all_six_sources():
+    events = [
+        _stance_event("polish_pm", "2026-06-08", "pl_pm.yaml", "enlargement", -1),
+        _stance_event("elysee", "2026-06-08", "fr_exec.yaml", "ukraine", 1),
+        _stance_event("german_chancellery", "2026-06-08", "de_exec.yaml", "defence", 2),
+        _stance_event("unknown_source", "2026-06-08", "x.yaml", "ukraine", 1),
+    ]
+    rows = _stance_rows(events)
+    actors = {(a, t) for _, a, t, _ in rows}
+    assert ("PL", "enlargement") in actors
+    assert ("FR", "ukraine") in actors
+    assert ("DE", "defence") in actors
+    assert len(rows) == 3  # the unrecognised source contributes nothing
 
 
 # --- compute_latest_topic_pills ---------------------------------------------
