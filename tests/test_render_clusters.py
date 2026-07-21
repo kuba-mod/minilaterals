@@ -15,7 +15,7 @@ def test_two_actors_within_window_form_a_cluster():
     assert len(clusters) == 1
     c = clusters[0]
     assert c["area"] == "ukraine"
-    assert c["actors"] == ["DE", "FR"]
+    assert c["actors"] == ["FR", "DE"]  # canonical FR·DE·PL order, not insertion/alpha order
     assert c["date_from"] == "2026-06-10"
     assert c["date_to"] == "2026-06-15"
 

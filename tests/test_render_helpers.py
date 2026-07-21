@@ -80,6 +80,23 @@ def test_country_lines_keep_each_capital_separate_and_show_lone_speakers():
     assert ov["pa"]["DE"] == pytest.approx(2.0)
 
 
+def test_country_lines_weeks_caps_to_trailing_window():
+    # Statements span ~20 weeks; capping to 3 should keep only the most recent
+    # 3 week-labels, ending on the week containing `today` — a capital whose
+    # coverage starts earlier (like a newly onboarded source) shouldn't leave a
+    # visible gap at the left edge of a capped chart.
+    events = [
+        _stance_event("german_mfa", "2026-02-02", 1, "ukraine"),
+        _stance_event("france_diplomatie", "2026-06-22", 1, "ukraine"),
+        _stance_event("polish_mfa", "2026-06-29", 1, "ukraine"),
+    ]
+    full = build_country_line_series(events, today=datetime(2026, 6, 29, tzinfo=UTC))
+    capped = build_country_line_series(events, today=datetime(2026, 6, 29, tzinfo=UTC), weeks=3)
+    assert len(capped["overall"]) == 3
+    assert len(full["overall"]) > 3
+    assert capped["overall"][-1]["week"] == full["overall"][-1]["week"]
+
+
 # --- divergence leaderboard (orders pills + clusters) ----------------------
 
 

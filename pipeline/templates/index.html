@@ -40,7 +40,7 @@
   <span>Each capital is drawn as its own line — its average stance (−2 opposes to +2 actively advances) against the agreed Weimar goals over a 14-day window. When the three lines run together they agree; where they fan apart, they diverge. Pick a topic to see just that debate.</span>
 </div>
 <div style="display:flex; align-items:center; gap:16px; margin-bottom:8px; flex-wrap:wrap; font-family:'IBM Plex Sans',sans-serif; font-size:12px; font-weight:600">
-  {% for a in ["DE", "FR", "PL"] %}
+  {% for a in weimar_actors %}
   <span style="display:inline-flex; align-items:center; gap:6px">
     <span style="display:inline-block; width:20px; border-top:3px solid {{ actor_colors[a] }}; border-radius:2px"></span>{{ actor_labels[a] }}
   </span>
@@ -68,7 +68,7 @@
 (function () {
   const SERIES = {{ country_series_json | safe }};
   const COLORS = {{ actor_colors | tojson }};
-  const ACTORS = ["DE", "FR", "PL"];
+  const ACTORS = {{ weimar_actors | tojson }};
   const PAD_L = 44, PAD_R = 26, PAD_T = 15, PAD_B = 35, W = 800, H = 220;
   const CHART_W = W - PAD_L - PAD_R, CHART_H = H - PAD_T - PAD_B;
 

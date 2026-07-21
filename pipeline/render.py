@@ -209,6 +209,11 @@ GOAL_AGAINST_OVERALL = -0.5
 # strong signal. Kept in sync with the JS constant in templates/index.html.
 LOW_CONFIDENCE_N = 4
 
+# The timeline shows a fixed trailing window rather than the full history, so
+# a source that starts coverage partway through (e.g. a newly added country
+# feed) doesn't read as a conspicuous gap at the left edge of the chart.
+TIMELINE_WEEKS = 12
+
 COLOR_GREEN = "#4d6b38"
 COLOR_AMBER = "#8a6320"
 COLOR_RED = "#a14132"
@@ -415,7 +420,7 @@ def compute_topic_weekly_stances(
                 if window_start <= date_str <= week_str:
                     actor_scores[actor].append(score)
 
-            actors_with_data = [a for a in ("DE", "FR", "PL") if actor_scores.get(a)]
+            actors_with_data = [a for a in WEIMAR_ACTORS if actor_scores.get(a)]
             if len(actors_with_data) < 2:
                 series.append(None)
                 continue
@@ -474,7 +479,7 @@ def compute_topic_weekly_stances(
 
 
 def build_country_line_series(
-    events: list[dict], window_days: int = 14, today: datetime | None = None
+    events: list[dict], window_days: int = 14, today: datetime | None = None, weeks: int | None = None
 ) -> dict[str, list[dict | None]]:
     """
     Per-country stance lines: one series per topic plus an 'overall' series.
@@ -488,6 +493,10 @@ def build_country_line_series(
     spread), a single capital's line still shows — the client draws such isolated
     points as a dot with no connecting segment. `overall` means each capital
     across every topic in the window.
+
+    `weeks` caps every series to the most recent N weeks (see TIMELINE_WEEKS) —
+    the chart shows a trailing window rather than full history, so a capital
+    whose coverage starts later doesn't read as a gap at the chart's left edge.
     """
     actor_map = {"german_mfa": "DE", "france_diplomatie": "FR", "polish_mfa": "PL"}
 
@@ -511,6 +520,8 @@ def build_country_line_series(
     while anchor <= today:
         all_weeks.append(anchor.strftime("%Y-%m-%d"))
         anchor += timedelta(days=7)
+    if weeks is not None and len(all_weeks) > weeks:
+        all_weeks = all_weeks[-weeks:]
 
     def series_for(topic: str | None) -> list[dict | None]:
         area_rows = [(d, a, s) for d, a, t, s in rows if topic is None or t == topic]
@@ -698,7 +709,7 @@ def build_convergence_clusters(events: list[dict], window_days: int = 14) -> lis
                 {
                     "area": area,
                     "area_label": ISSUE_LABELS.get(area, area.title()),
-                    "actors": sorted(actors_in_cluster),
+                    "actors": [a for a in WEIMAR_ACTORS if a in actors_in_cluster],
                     "date_from": min(dates),
                     "date_to": max(dates),
                     "by_actor": dict(by_actor),
@@ -809,12 +820,14 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         cluster["convergence"] = score_cluster_stances(cluster)
         cluster["commentary"] = commentary.get(cluster_key(cluster))
 
-    # Per-country stance lines (overall + per topic). The timeline draws DE·FR·PL
-    # as three separate lines; divergence reads as the gap between them.
-    country_lines = build_country_line_series(events, today=edition_dt)
+    # Per-country stance lines (overall + per topic), trailing TIMELINE_WEEKS only.
+    # The timeline draws FR·DE·PL as three separate lines; divergence reads as the
+    # gap between them. Capping to a trailing window keeps a source whose coverage
+    # starts later (e.g. a newly added feed) from reading as a gap at the left edge.
+    country_lines = build_country_line_series(events, today=edition_dt, weeks=TIMELINE_WEEKS)
     country_series_json = json.dumps(country_lines)
 
-    # Divergence ranking (topics by this week's DE·FR·PL spread) orders both the
+    # Divergence ranking (topics by this week's FR·DE·PL spread) orders both the
     # topic pills and the convergence clusters below, so the most contested story
     # leads — but the ranking itself is never shown as a list.
     topic_weekly = compute_topic_weekly_stances(events, today=edition_dt)
