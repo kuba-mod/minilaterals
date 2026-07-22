@@ -29,7 +29,7 @@ def test_single_actor_does_not_cluster():
 
 
 def test_events_outside_window_do_not_cluster():
-    # 20 days apart, default window is 14 → no shared cluster.
+    # 20 days apart, default window is 7 → no shared cluster.
     events = [
         event_dict(source_name="german_mfa", date="2026-06-01", file_path="a.yaml"),
         event_dict(source_name="france_diplomatie", date="2026-06-21", file_path="b.yaml"),

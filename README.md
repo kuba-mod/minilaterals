@@ -19,7 +19,7 @@ A scheduled job runs the full pipeline daily and commits the new data and pages 
 
 ### Measuring alignment
 
-Events are grouped by topic into rolling two-week windows in which two or more of the three ministries spoke. Within each window the tracker measures how close their positions are.
+Events are grouped by topic into rolling weekly windows (matching the edition cadence) in which two or more of the three ministries spoke. Within each window the tracker measures how close their positions are.
 
 The primary method is a **stance rating**: for each event, the LLM assigns an integer score from **−2 to +2** describing how strongly that country's statement advances a shared Weimar goal on the topic (−2 opposes it, +2 actively advances it with concrete commitments), always backed by a short verbatim quote from the source as evidence. A cluster is then labelled **Aligned**, **Mixed**, or **Divergent** based on how far the three countries' average stances spread apart. This stance rating is the single scoring method — a cluster with no stance ratings simply shows no score rather than falling back to another metric.
 

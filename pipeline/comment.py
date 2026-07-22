@@ -53,7 +53,7 @@ SYSTEM_PROMPT = (
 
 COMMENTARY_PROMPT = """\
 The following diplomatic positions were published by {countries} on the topic of \
-{area} within a 14-day period:
+{area} within a 7-day period:
 
 {positions}
 
