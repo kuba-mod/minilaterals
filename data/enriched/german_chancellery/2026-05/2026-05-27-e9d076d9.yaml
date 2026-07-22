@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Katherina Reiche
+  - Wang Wentao
+  - Zhou
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: Beijing and Guangzhou, China
+  position: Germany seeks to maintain a stable and reliable economic relationship
+    with China based on fair competition and cooperation in energy technology.
+  positions:
+    green_transition: Germany is pursuing joint goals and exchange in the development
+      of energy technologies.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Bei der Reise geht es um gemeinsame Ziele, zum Beispiel bei der Entwicklung
+        von Energietechnologien, und den Austausch darüber.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing various domestic regulations and subsidies to
+    promote electric mobility and local energy sharing.
+  positions:
+    green_transition: Germany is actively advancing the green transition by providing
+      financial subsidies for electric vehicles and facilitating local energy sharing.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Käuferinnen und Käufer können seit dem 20. Mai 2026 bis zu 6.000 Euro
+        Zuschuss online über das E -Auto-Förderportal beim Bundesamt für Wirtschaft
+        und Ausfuhrkontrolle (BAFA) beantragen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

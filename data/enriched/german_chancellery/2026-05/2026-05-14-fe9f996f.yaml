@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Mario Draghi
+  - Michael Ziemons
+  - Armin Laschet
+  - Guillaume V.
+  - Ursula von der Leyen
+  - Kyriakos Mitsotakis
+  - Edi Rama
+  - Christine Lagarde
+  - Hendrik Wüst
+  topics: []
+  location: Aachen, Germany
+  position: Chancellor Merz praised Mario Draghi's role in stabilizing the Euro and
+    emphasized the need for Europe to assert its interests and values in a changing
+    global landscape.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

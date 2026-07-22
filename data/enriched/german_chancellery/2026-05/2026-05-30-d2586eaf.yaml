@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  - Vicky Krieps
+  - Florian Gallenberger
+  topics: []
+  location: Berlin, Germany
+  position: Germany's Minister of State for Culture and the Media presented the 2026
+    German Film Awards and emphasized the cultural importance and competitiveness
+    of the German film industry.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

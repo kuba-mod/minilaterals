@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - Helena Budligier Artieda
+  - Patrice Franzen
+  topics:
+  - ukraine
+  - defence
+  location: Bern, Switzerland
+  position: Poland seeks to strengthen economic and security cooperation with Switzerland,
+    focusing on continued support for Ukraine and EU defense integration.
+  positions:
+    ukraine: Poland supports the ongoing provision of financial and humanitarian aid
+      to Ukraine.
+    defence: Poland welcomes Switzerland's increasing involvement in EU defense initiatives.
+  stances:
+    ukraine:
+      score: 1
+      evidence: potrzebę zapewnienia dalszego wsparcia finansowego i humanitarnego
+        dla ofiary agresji
+    defence:
+      score: 1
+      evidence: Rozmowcy z aprobatą odnieśli się do pogłębiającego się zaangażowania
+        Szwajcarii w przedsięwzięcia obronne UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Ministers of Foreign Affairs of Poland and Italy
+  - Donald Tusk
+  - Giorgia Meloni
+  - Radosław Sikorski
+  - Antonio Tajani
+  topics:
+  - defence
+  - enlargement
+  location: Warsaw, Poland
+  position: Poland is strengthening strategic and defense cooperation with Italy and
+    pursuing EU enlargement and migration policy integration.
+  positions:
+    defence: Poland is actively developing armaments and space industry cooperation
+      with Italy to enhance security.
+    enlargement: Poland discusses the expansion of the European Union as a key diplomatic
+      topic.
+  stances:
+    defence:
+      score: 2
+      evidence: omawiali możliwości rozwoju współpracy zbrojeniowej oraz w branży
+        kosmicznej
+    enlargement:
+      score: 1
+      evidence: okazją do omówienia tematów jakich jak [...] rozszerzenie UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

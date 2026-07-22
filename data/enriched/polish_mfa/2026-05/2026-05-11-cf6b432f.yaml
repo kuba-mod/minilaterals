@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wiceminister Bosacki
+  - ministers of foreign affairs of the Western Balkan countries
+  - Anita Anand
+  topics:
+  - ukraine
+  - enlargement
+  location: Brussels, Belgium
+  position: Poland actively supports Ukraine's military and financial stability and
+    advocates for a merit-based EU enlargement process.
+  positions:
+    ukraine: Poland advocates for the rapid disbursement of a 90 billion euro loan
+      and the maintenance of energy sanctions against Russia.
+    enlargement: Poland supports EU accession for Ukraine and the Western Balkans,
+      provided the process is merit-based and considers member state sensitivities.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Wezwał do szybkiego wdrożenia pożyczki dla Ukrainy w wysokości 90
+        miliardów euro
+    enlargement:
+      score: 1
+      evidence: rozszerzenie musi pozostać procesem opartym na podstawach merytorycznych
+        i uwzględniającym wrażliwości państw członkowskich
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

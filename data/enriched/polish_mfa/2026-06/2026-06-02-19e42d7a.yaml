@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - Dimitris Skalkos
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  location: Athens, Greece
+  position: Poland emphasized its strategic role in supporting Ukraine, advocated
+    for EU enlargement and sanctions, and voiced concerns regarding emissions criteria
+    in the Industrial Accelerator Act.
+  positions:
+    ukraine: Poland stresses the need for continued pressure on Russia through sanctions
+      and highlights its role as a pillar of support for Ukraine.
+    enlargement: Poland supports the European Union accession process for Ukraine.
+    green_transition: Poland supports the Industrial Accelerator Act but cautions
+      that emission criteria should not create divisions within the EU internal market.
+  stances:
+    ukraine:
+      score: 2
+      evidence: konieczne jest dalsze wywierania presji na agresora, m.in. za pomocą
+        sankcji
+    enlargement:
+      score: 1
+      evidence: wyrazili również nadzieję na przełom w drodze Ukrainy do Unii Europejskiej
+    green_transition:
+      score: -1
+      evidence: należy zadbać, aby zawarte w dokumencie kryterium emisyjne nie powodowało
+        podziałów na rynku wewnętrznym UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

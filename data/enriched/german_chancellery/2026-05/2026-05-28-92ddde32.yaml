@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is improving accessibility and information rights for people with
+    cognitive disabilities through the implementation of 'Easy Language' and the establishment
+    of a federal competence center.
+  positions:
+    rule_of_law: Germany advances democratic resilience and inclusivity by enshrining
+      accessibility as a legal right and mandating accessible information for all
+      citizens.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Barrierefreiheit ist ein verbrieftes Recht, das sich unter anderem
+        aus Artikel 9 der UN -Behindertenrechtskonvention ergibt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister
+  - Minister of Digital Affairs
+  - Minister of the Interior and Administration
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland commits to recognizing same-sex marriages performed abroad in accordance
+    with EU and national court rulings, while explicitly excluding the possibility
+    of adoption.
+  positions:
+    rule_of_law: Poland actively advances the rule of law by committing to implement
+      court rulings regarding the recognition of same-sex marriages from other EU
+      states.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Zobowiązaliśmy się, i będę tego też osobiście pilnował, aby przestrzegać
+        wyroków zarówno trybunałów europejskich, jak i polskich sądów.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

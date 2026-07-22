@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Matthew Cooper Wale
+  topics: []
+  location: null
+  position: Germany congratulates the new Prime Minister of the Solomon Islands and
+    expresses a desire to continue their partnership.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

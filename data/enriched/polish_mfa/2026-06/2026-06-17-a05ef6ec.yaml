@@ -1,0 +1,20 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Władysław Teofil Bartoszewski
+  - young generation of the Polish diaspora in the United States
+  topics: []
+  location: null
+  position: Poland is seeking to strengthen ties with the young Polish diaspora in
+    the US by promoting the country's economic, technological, and educational opportunities.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

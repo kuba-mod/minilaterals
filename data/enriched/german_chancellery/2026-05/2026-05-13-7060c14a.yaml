@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Guy Parmelin
+  topics:
+  - defence
+  location: Germany
+  position: Germany will host the Swiss President to discuss bilateral cooperation,
+    European politics, and foreign and security policy.
+  positions:
+    defence: Germany intends to exchange views on foreign and security policy questions.
+  stances:
+    defence:
+      score: 0
+      evidence: zu europapolitischen sowie außen- und sicherheitspolitischen Fragen
+        austauschen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

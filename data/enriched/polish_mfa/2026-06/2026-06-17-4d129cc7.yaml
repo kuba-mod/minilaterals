@@ -1,0 +1,50 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reaffirms its close partnership with Germany to strengthen European
+    security and support Ukraine in the face of Russian aggression.
+  positions:
+    ukraine: Poland supports achieving a lasting and just peace in Ukraine to ensure
+      European security.
+    defence: Poland has entered a new defense cooperation agreement with Germany to
+      strengthen the eastern flank.
+    hybrid: Poland commits to strengthening resilience and educating society against
+      Russian hybrid and disinformation attacks.
+    rule_of_law: Poland emphasizes the protection of European values, specifically
+      the rule of law and transparent elections.
+  stances:
+    ukraine:
+      score: 1
+      evidence: trwały i sprawiedliwy pokój na Ukrainie, wzmacniający bezpieczeństwo
+        Europy
+    defence:
+      score: 2
+      evidence: zawarcie w dniu 17 czerwca br. nowej polsko-niemieckiej umowy o współpracy
+        w dziedzinie obronności
+    hybrid:
+      score: 1
+      evidence: Będziemy skutecznie wzmacniać naszą odporność i edukować nasze społeczeństwa
+    rule_of_law:
+      score: 1
+      evidence: Naszym nadrzędnym celem pozostaje ochrona europejskich wartości, w
+        tym rządów państwa prawa i transparentnych procesów wyborczych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

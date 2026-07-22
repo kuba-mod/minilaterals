@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: The German government is implementing a series of domestic laws focused
+    on building modernization, energy security, and social reform.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality by passing
+      a law to make building heating more climate-friendly.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das Bundeskabinett hat das neue Gebäudemodernisierungsgesetz beschlossen.
+        Es dient dazu, Gebäude klimafreundlicher zu heizen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

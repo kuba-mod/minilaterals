@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Janez Janša
+  topics:
+  - defence
+  location: null
+  position: Germany congratulates the Slovenian Prime Minister and expresses a desire
+    to intensify bilateral cooperation within the EU and NATO frameworks.
+  positions:
+    defence: Germany rhetorically supports the strengthening of security cooperation
+      through NATO.
+  stances:
+    defence:
+      score: 1
+      evidence: auch im Rahmen der EU und der NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

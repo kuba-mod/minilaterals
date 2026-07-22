@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Þorgerdur Katrín Gunnarsdóttir
+  - Martin Eyjólfsson
+  - Paweł Bartoszek
+  - Anna Hjartardóttir
+  - Gustav Lindström
+  topics:
+  - defence
+  - hybrid
+  location: Reykjavik, Iceland
+  position: Poland focused on strengthening regional security and political cooperation
+    in the Baltic Sea region through its presidency of the Council of the Baltic Sea
+    States.
+  positions:
+    defence: Poland actively advances regional security by preparing detailed reports
+      on the security situation and challenges in the Baltic Sea region.
+    hybrid: Poland supports coordinated actions to increase the resilience of regional
+      states against hybrid threats.
+  stances:
+    defence:
+      score: 2
+      evidence: przygotowanie dwóch raportów poświęconych bezpieczeństwu regionu Morza
+        Bałtyckiego
+    hybrid:
+      score: 1
+      evidence: wzmacniania odporności państw regionu wobec zagrożeń hybrydowych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

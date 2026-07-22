@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  location: Szczecin, Poland
+  position: Poland is prioritizing the security and economic potential of the Baltic
+    Sea through military modernization, countermeasures against Russian shadow fleets,
+    and the expansion of energy infrastructure.
+  positions:
+    defence: Poland is actively enhancing its maritime defense capabilities and monitoring
+      systems to secure the eastern flank.
+    hybrid: Poland advocates for stricter controls and sanctions against the Russian
+      'shadow fleet' to mitigate security risks and underwater infrastructure damage.
+    green_transition: Poland is investing in offshore wind farms to increase the share
+      of renewable energy in its national power grid.
+  stances:
+    defence:
+      score: 2
+      evidence: 'Poprawy bezpieczeństwa Polski jest możliwa dzięki programom zbrojeniowym,
+        takim jak: „Orka” (dotyczącym okrętów podwodnych nowej generacji), „Miecznik”
+        (dotyczącym budowy wielozadaniowych fregat dla Marynarki Wojennej RP) i inwestycjom
+        w rozwój polskich bezzałogowych pojazdów nawodnych.'
+    hybrid:
+      score: 2
+      evidence: Kolejne statki są obejmowane unijnymi sankcjami. Obecnie to 632 jednostki.
+    green_transition:
+      score: 2
+      evidence: W 2026 r. dołączą do niego morskie farmy wiatrowe budowane w polskiej
+        wyłącznej strefie ekonomicznej.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Karsten Wildberger
+  topics: []
+  location: null
+  position: Germany is focusing on domestic digitalization, reducing bureaucracy,
+    and modernizing state infrastructure through the newly created Federal Ministry
+    for Digital and State Modernization.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

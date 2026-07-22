@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  location: Hamburg, Germany
+  position: The German government emphasizes the preservation of freedom and liberal
+    values through a series of domestic reforms, infrastructure investments, and enhanced
+    security measures.
+  positions:
+    defence: Germany is actively advancing collective security by investing heavily
+      in national defense and introducing new military service.
+    green_transition: Germany is supporting climate neutrality through dedicated special
+      funds for infrastructure and climate protection.
+    rule_of_law: Germany rhetorically emphasizes the preservation of freedom, liberality,
+      and the functioning of democracy during times of crisis.
+  stances:
+    defence:
+      score: 2
+      evidence: Wir haben massiv in unsere Verteidigung investiert und einen neuen
+        Wehrdienst eingeführt.
+    green_transition:
+      score: 2
+      evidence: das Sondervermögen für die Infrastruktur und Klimaschutz
+    rule_of_law:
+      score: 1
+      evidence: um die Bewahrung von Freiheit und Liberalität in einer von Krisen
+        und Konflikten zugeschütteten Zeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

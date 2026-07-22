@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesfinanzminister Klingbeil
+  - Staatsminister Weimer
+  topics: []
+  location: null
+  position: Germany is reforming its film funding by introducing an investment obligation
+    for streaming services and broadcasters and increasing annual funding to 250 million
+    euros.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

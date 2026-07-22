@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  topics:
+  - hybrid
+  location: null
+  position: Germany is strengthening its legal framework to improve the detection
+    and neutralization of cyber attacks and hybrid threats.
+  positions:
+    hybrid: Germany is actively advancing the goal of countering hybrid threats by
+      introducing a new bill to provide security agencies with the legal tools to
+      target attackers' infrastructure.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Einen entsprechenden Gesetzentwurf hat sie nun beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

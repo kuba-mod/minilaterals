@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bärbel Bas
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has enacted the Federal Tariff Loyalty Act to prevent wage dumping
+    and ensure fair labor conditions for companies receiving federal contracts.
+  positions:
+    rule_of_law: Germany is advancing social standards and fair competition by mandating
+      collective agreement conditions for federal procurement.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Tarifverträge seien „die Basis für anständige Löhne und gute Arbeitsbedingungen“
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

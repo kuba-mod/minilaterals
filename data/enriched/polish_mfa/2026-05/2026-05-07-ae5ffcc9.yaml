@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland condemns religious discrimination and an incident involving an
+    Israeli representative that offended Christian religious sentiments.
+  positions:
+    rule_of_law: Poland rhetorically supports the protection of fundamental human
+      rights and the rule of law regarding religious freedom.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: MSZ RP niezmiennie potępia przejawy wszelkiej dyskryminacji religijnej
+        na świecie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

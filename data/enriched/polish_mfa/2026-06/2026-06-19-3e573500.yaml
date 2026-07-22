@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  location: London, United Kingdom
+  position: Poland is strengthening its strategic partnership with the United Kingdom,
+    focusing on military cooperation and unwavering support for Ukraine's sovereignty.
+  positions:
+    ukraine: Poland supports Ukraine's territorial integrity and advocates for a peace
+      based on international law and continued pressure on Russia.
+    defence: Poland has entered a new chapter of closer security and defense cooperation
+      with the UK via the Northolt Treaty.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Warszawa i Londyn jednoznacznie popierają suwerenność i integralność
+        terytorialną Ukrainy.
+    defence:
+      score: 2
+      evidence: Podpisując w zeszłym miesiącu Traktat z Northolt, Brytyjczycy i Polacy
+        otworzyli nowy rozdział w naszych stosunkach – rozdział charakteryzujący się
+        ściślejszą współpracą w dziedzinie bezpieczeństwa i obrony.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

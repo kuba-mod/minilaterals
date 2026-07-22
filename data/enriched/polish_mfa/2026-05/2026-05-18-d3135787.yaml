@@ -1,0 +1,46 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Minister Barrot
+  - Fatih Birol
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Paris, France
+  position: Poland is strengthening its strategic partnership with France across security,
+    energy, and cultural dimensions, with a focus on supporting Ukraine and enhancing
+    energy independence.
+  positions:
+    ukraine: Poland reiterates its commitment to supporting Ukraine's fight and the
+      reconstruction of its energy system.
+    defence: Poland emphasizes its critical role in European security and the strategic
+      importance of the Treaty of Nancy regarding defense industry cooperation.
+    green_transition: Poland promotes its energy stability achieved through diversification
+      and the promotion of nuclear energy.
+  stances:
+    ukraine:
+      score: 1
+      evidence: rozmawiali również o wsparciu walczącej Ukrainy
+    defence:
+      score: 1
+      evidence: Podkreślili szczególną rolę Polski w europejskich działaniach na rzecz
+        bezpieczeństwa w regionie
+    green_transition:
+      score: 1
+      evidence: roli MAE w zakresie bezpieczeństwa dostaw surowców krytycznych i promocji
+        energii jądrowej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

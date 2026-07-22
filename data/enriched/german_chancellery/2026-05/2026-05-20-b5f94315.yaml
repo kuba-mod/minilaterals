@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Daniel Hager
+  - Herr Kegel
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Chancellor Merz emphasizes the importance of maintaining Germany's international
+    competitiveness through innovation, investment, and the strengthening of the European
+    Single Market.
+  positions:
+    green_transition: Germany supports industrial competitiveness and the development
+      of key technologies like microelectronics, aligning with the goal of a clean
+      industrial transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Künstliche Intelligenz und die Mikroelektronik seien die Schlüsseltechnologien
+        für die Elektro- und Metallindustrie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

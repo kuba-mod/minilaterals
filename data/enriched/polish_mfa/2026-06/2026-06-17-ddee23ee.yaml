@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Jacek Karnowski
+  - Cristina Gherasimov
+  - Alexei Buzu
+  - Carolina Perebinos
+  topics:
+  - enlargement
+  - rule_of_law
+  location: Chisinau, Moldova
+  position: Poland actively supports Moldova's European integration through political
+    support, institutional programs, and economic cooperation.
+  positions:
+    enlargement: Poland actively advances Moldova's EU accession by offering concrete
+      programs to help local institutions implement European standards.
+    rule_of_law: Poland emphasizes the necessity of judicial and administrative reforms
+      as a prerequisite for EU membership.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Oferujemy konkretne programy, które pomogą wdrażać europejskie standardy
+        lokalnym instytucjom.
+    rule_of_law:
+      score: 1
+      evidence: kluczowe będzie teraz skupienie się na efektywnym wdrażaniu reform,
+        w tym administracji samorządowej i sądownictwa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

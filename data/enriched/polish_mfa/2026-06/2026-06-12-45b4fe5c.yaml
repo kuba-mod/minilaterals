@@ -1,0 +1,45 @@
+actors:
+- FR
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland emphasizes the need for European industrial competitiveness, the
+    protection of democratic processes against Russian disinformation, and the strengthening
+    of bilateral security ties with France.
+  positions:
+    defence: Poland supports the development of a European defense identity that complements
+      NATO and the US, specifically through cooperation with France.
+    hybrid: Poland actively supports the creation of the European Democracy Shield
+      to combat Russian disinformation and foreign interference.
+    rule_of_law: Poland highlights the importance of protecting public debate and
+      democratic integrity against foreign interference.
+  stances:
+    defence:
+      score: 2
+      evidence: Unia Europejska powinna swoją tożsamość obronną rozwijać w harmonii
+        i z NATO i ze Stanami Zjednoczonymi.
+    hybrid:
+      score: 2
+      evidence: powstaje Europejska Tarcza Demokracji. Jej zadaniem będzie ochrona
+        integralności debaty publicznej
+    rule_of_law:
+      score: 1
+      evidence: rosyjskie kampanie informacyjne są wymierzone w zaufanie obywateli
+        do instytucji publicznych, mediów oraz współpracy międzynarodowej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

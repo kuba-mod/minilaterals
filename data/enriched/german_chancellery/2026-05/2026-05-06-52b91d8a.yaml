@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany emphasizes the need for strengthened deterrence and arms control
+    in response to threats from Russia, China, and nuclear proliferation.
+  positions:
+    ukraine: Germany identifies Russia's ongoing war against Ukraine as the greatest
+      current threat.
+    defence: Germany focuses on strengthening deterrence and defense capabilities
+      through NATO to ensure European security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Laut Bericht geht die größte Bedrohung weiterhin von Russland aus,
+        das seinen Angriffskrieg gegen die Ukraine mit unverminderter Härte fortführt
+    defence:
+      score: 2
+      evidence: Der sicherheitspolitische Schwerpunkt der Bundesregierung liegt auf
+        der Stärkung der Abschreckungs- und Verteidigungsfähigkeit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

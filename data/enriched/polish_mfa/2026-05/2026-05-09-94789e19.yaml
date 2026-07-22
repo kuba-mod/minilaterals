@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Poland celebrates its EU membership by highlighting its role in enhancing
+    European security and the economic benefits of the single market.
+  positions:
+    ukraine: Poland has provided critical humanitarian and logistical support by hosting
+      refugees from Ukraine.
+    defence: Poland actively strengthens EU and regional security through significant
+      defense spending and hosting Frontex.
+    green_transition: Poland supports the development of renewable energy sources
+      to reduce dependence on foreign fuel imports.
+    rule_of_law: Poland recognizes the rule of law and democracy as the essential
+      foundations of European security and prosperity.
+  stances:
+    ukraine:
+      score: 2
+      evidence: przyjmując milion uchodźców z Ukrainy
+    defence:
+      score: 2
+      evidence: Polska przeznacza 200 mld PLN na obronność a w Warszawie znajduje
+        się siedziba Frontexu
+    green_transition:
+      score: 1
+      evidence: Wspieramy rozwój OZE, niezależnych od importu paliw z zagranicy
+    rule_of_law:
+      score: 1
+      evidence: Wspólnota europejska opiera się na wartościach – demokracji, wolności
+        i rządach prawa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

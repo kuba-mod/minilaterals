@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Władysław Kosiniak-Kamysz
+  - Magdalena Sobkowiak-Czarnecka
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Poland is implementing the SAFE program to rapidly modernize its military
+    capabilities and protect its cyberspace using EU funds.
+  positions:
+    defence: Poland is actively advancing EU defence capabilities and deterrence on
+      the eastern flank through the massive SAFE program investment.
+    hybrid: Poland is prioritizing the protection of its cyberspace against hostile
+      attacks.
+  stances:
+    defence:
+      score: 2
+      evidence: Na rozwój i modernizację naszej armii przeznaczymy ok. 43,7 mld euro,
+        czyli ponad 180 mld zł.
+    hybrid:
+      score: 2
+      evidence: Obecnie szczególnie ważnym zadaniem jest ochrona polskiej cyberprzestrzeni.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

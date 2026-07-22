@@ -1,38 +1,38 @@
 date: '2026-07-22'
-run_at: '2026-07-22T04:17:09Z'
+run_at: '2026-07-22T08:13:46Z'
 sources:
 - source: german_mfa
-  fetched: 30
-  new: 0
+  fetched: 31
+  new: 1
   skipped: 30
   error: null
 - source: france_diplomatie
-  fetched: 10
-  new: 2
-  skipped: 8
+  fetched: 96
+  new: 0
+  skipped: 96
   error: null
 - source: polish_mfa
-  fetched: 10
-  new: 0
-  skipped: 10
+  fetched: 105
+  new: 93
+  skipped: 12
   error: null
 - source: german_chancellery
-  fetched: 11
-  new: 3
-  skipped: 8
+  fetched: 390
+  new: 156
+  skipped: 234
   error: null
 - source: elysee
-  fetched: 2
-  new: 2
-  skipped: 0
+  fetched: 100
+  new: 0
+  skipped: 100
   error: null
 - source: polish_pm
-  fetched: 10
-  new: 1
-  skipped: 9
+  fetched: 52
+  new: 24
+  skipped: 28
   error: null
 totals:
-  fetched: 73
-  new: 8
-  skipped: 65
+  fetched: 774
+  new: 274
+  skipped: 500
   errors: 0

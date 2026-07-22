@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Michał Broniatowski, dyrektor Ośrodka Mediów dla Zagranicy TVP
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is expanding the reach of its international media channels via
+    the 'Svoboda' package to combat disinformation and provide independent information
+    in Eastern Europe.
+  positions:
+    hybrid: Poland is actively combating hybrid threats and disinformation by increasing
+      the availability of independent news sources in regions affected by propaganda.
+    rule_of_law: Poland supports democratic resilience and freedom of expression by
+      providing an alternative to restricted media environments.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Dostęp do rzetelnych i ekskluzywnych materiałów informacyjnych jest
+        szczególnie ważny w obecnej sytuacji międzynarodowej oraz w czasach zalewu
+        dezinformacji i propagandy.
+    rule_of_law:
+      score: 2
+      evidence: Projekt ma na celu zapewnienie odbiorcom dostępu do niezależnych informacji
+        w regionach, gdzie wolność mediów jest ograniczana.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

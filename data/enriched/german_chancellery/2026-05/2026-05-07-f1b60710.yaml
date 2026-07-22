@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Herr Adrian
+  - Frau Melnikow
+  topics:
+  - rule_of_law
+  location: null
+  position: Chancellor Merz emphasizes the need to trust in the democratic and market
+    economic order to overcome geopolitical and structural economic challenges.
+  positions:
+    rule_of_law: Germany rhetorically supports the preservation of the democratic
+      and market economy order as a foundation for prosperity.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Bundeskanzler Merz rief in seiner Rede auf, der demokratischen und
+        marktwirtschaftlichen Ordnung zu vertrauen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

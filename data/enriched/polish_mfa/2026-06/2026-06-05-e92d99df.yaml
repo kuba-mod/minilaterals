@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Kyrylo Budanov
+  topics:
+  - ukraine
+  location: null
+  position: Poland reaffirms its strategic cooperation with Ukraine and support against
+    Russian aggression while emphasizing the need for historical truth and respect
+    in bilateral relations.
+  positions:
+    ukraine: Poland reiterates its strategic partnership and continued support for
+      Ukraine in the face of Russian aggression.
+  stances:
+    ukraine:
+      score: 1
+      evidence: potwierdzili strategiczny charakter współpracy polsko-ukraińskiej
+        oraz jej znaczenie w obliczu wyzwań związanych z bezpieczeństwem regionu i
+        trwającą agresją Rosji przeciwko Ukrainie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

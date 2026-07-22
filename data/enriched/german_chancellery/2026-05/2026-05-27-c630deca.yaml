@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government is strengthening the criminal prosecution of human
+    trafficking and sexual exploitation to combat modern slavery and implement EU
+    directives.
+  positions:
+    rule_of_law: Germany is actively advancing the rule of law by expanding criminal
+      statutes to more effectively prosecute human trafficking and protect victims.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Ziel des Gesetzentwurfs ist es, den Kampf gegen Menschenhandel in
+        Deutschland zu stärken und Täterinnen und Täter konsequenter zur Rechenschaft
+        zu ziehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Brussels
+  position: Poland advocated for continued multifaceted support for Ukraine, the strengthening
+    of the EU's eastern flank, and the acceleration of EU accession negotiations.
+  positions:
+    ukraine: Poland actively supports multifaceted aid for Ukraine, including financial
+      loans, security guarantees, and sanctions on Russia.
+    defence: Poland supports the enhancement of EU defense capabilities, specifically
+      focusing on the eastern flank.
+    enlargement: Poland advocates for the rapid opening of EU accession negotiations
+      for Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: 'podkreślił wagę kontynuacji wieloaspektowego wsparcia Ukrainy: konieczności
+        szybkiej realizacji pożyczki 90 mld euro dla Ukrainy, unijnych gwarancji bezpieczeństwa,
+        sankcji na rosyjski sektor energetyczny i kraje trzecie'
+    defence:
+      score: 1
+      evidence: zaznaczył również potrzebę dalszych prac w ramach polityki obronnej,
+        przede wszystkim wzmocnienia wschodniej flanki UE
+    enlargement:
+      score: 1
+      evidence: szybkiego otwarcia negocjacji akcesyjnych w klastrze „Sprawy podstawowe”
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

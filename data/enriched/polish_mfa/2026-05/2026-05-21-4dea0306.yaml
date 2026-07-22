@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Poland condemns Russian aggression against Ukraine and Russian threats
+    and disinformation campaigns targeting Latvia and NATO allies.
+  positions:
+    ukraine: Poland supports Ukraine's right to self-defense against Russian aggression.
+    defence: Poland opposes threats against NATO allies, aligning with collective
+      security and deterrence goals.
+    hybrid: Poland calls for an end to Russian disinformation and escalatory rhetoric.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Zgodnie z prawem międzynarodowym Ukraina ma prawo do obrony.
+    defence:
+      score: 1
+      evidence: Stanowczo sprzeciwiamy się kierowaniu gróźb wobec Łotwy lub innych
+        Sojuszników z NATO.
+    hybrid:
+      score: 1
+      evidence: Wzywamy stronę rosyjską do zaprzestania rozpowszechniania kłamstw
+        oraz formułowania eskalacyjnych wypowiedzi.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

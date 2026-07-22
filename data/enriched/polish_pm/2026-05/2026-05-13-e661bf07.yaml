@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Premier
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland emphasizes its commitment to democratic values and solidarity with
+    Ukraine as a counterweight to authoritarianism and geopolitical instability.
+  positions:
+    ukraine: Poland rhetorically supports Ukraine's fight for independence and highlights
+      the importance of international solidarity.
+    rule_of_law: Poland asserts that democratic values and the transition to democracy
+      are the foundation of its national success and stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Solidarność narodów Europy i Ameryki z Ukrainą okazuje się silniejsza
+        niż cynicznie pojmowane interesy biznesowe.
+    rule_of_law:
+      score: 1
+      evidence: Sukces Polski pokazuje, że pracowitość, wytrwałość i przywiązanie
+        do wartości demokratycznych mogą realnie zmieniać bieg historii.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

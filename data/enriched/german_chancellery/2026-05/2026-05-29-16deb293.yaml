@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Péter Magyar
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Chancellor Merz intends to discuss bilateral relations, European policy,
+    Ukraine support, and Euro-Atlantic security with the Hungarian Prime Minister.
+  positions:
+    ukraine: Germany supports the continued provision of assistance to Ukraine.
+    defence: Germany emphasizes the importance of security within the Euro-Atlantic
+      framework.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die weitere Unterstützung der Ukraine
+    defence:
+      score: 1
+      evidence: die euro-atlantische Sicherheit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

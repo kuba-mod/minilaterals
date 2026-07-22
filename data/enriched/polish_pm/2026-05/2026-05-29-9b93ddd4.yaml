@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Krzysztof Gawkowski
+  - Barbara Nowacka
+  - Maciej Berek
+  topics:
+  - hybrid
+  location: null
+  position: Poland is introducing restrictions on smartphone use in primary schools
+    and seeks greater accountability for digital platforms regarding harmful online
+    content.
+  positions:
+    hybrid: Poland is taking active measures to combat cyber threats and harmful digital
+      content to ensure the safety of youth online.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Szczególnie istotne jest skuteczne przeciwdziałanie szkodliwym treściom
+        w sieci oraz wprowadzenie większej odpowiedzialności platform cyfrowych za
+        treści udostępniane użytkownikom.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

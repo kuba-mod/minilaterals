@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesinnenminister Dobrindt
+  topics:
+  - hybrid
+  location: null
+  position: Germany reports an increase in cybercrime and ransomware attacks and emphasizes
+    the dual role of AI in cybersecurity.
+  positions:
+    hybrid: Germany identifies a significant increase in cyber attacks, including
+      ransomware and DDoS attacks, aligning with the need for coordinated action against
+      hybrid threats.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Die Zahl der digitalen Angriffe mit Schadsoftware ist gestiegen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Deputy Ministers of Foreign Affairs
+  topics:
+  - ukraine
+  - hybrid
+  - green_transition
+  - rule_of_law
+  location: Guatemala
+  position: Poland sought to expand bilateral cooperation with Guatemala in technology,
+    security, and trade while discussing global security challenges.
+  positions:
+    ukraine: Poland exchanged views on the war in Ukraine as a key global issue.
+    hybrid: Poland proposed expanding cooperation in cybersecurity to counter digital
+      threats.
+    green_transition: Poland identified green technologies as a priority area for
+      expanding bilateral cooperation.
+    rule_of_law: Poland emphasized the importance of protecting international law
+      against revisionist actions and the policy of force.
+  stances:
+    ukraine:
+      score: 1
+      evidence: wymienili także poglądy na temat najważniejszych kwestii regionalnych
+        i globalnych, w tym wojny w Ukrainie
+    hybrid:
+      score: 1
+      evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
+        jak [...] cyberbezpieczeństwo
+    green_transition:
+      score: 1
+      evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
+        jak „zielone” technologie
+    rule_of_law:
+      score: 1
+      evidence: podkreślili znaczenie współpracy na rzecz ochrony zasad prawa międzynarodowego
+        wobec współczesnych wyzwań, w tym działań rewizjonistycznych i polityki siły
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Premier
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The Polish government intends to introduce stricter cryptocurrency regulations
+    to combat organized crime, protect investors, and prevent foreign political interference.
+  positions:
+    hybrid: Poland is taking concrete legislative action to counter hybrid threats
+      related to organized crime and foreign influence in the financial sector.
+    rule_of_law: Poland aims to strengthen the rule of law by increasing penalties
+      for fraud and combating the influence of criminal organizations on political
+      processes.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Konieczne jest zdecydowane przeciwdziałanie takim zjawiskom poprzez
+        skuteczne regulacje oraz działania organów państwa.
+    rule_of_law:
+      score: 2
+      evidence: jeszcze wyraźniejsze zaostrzenie kar dla tych, którzy wykorzystując
+        marzenia ludzi, czasami ich naiwność, brak wiedzy, oszukują ich i narażają
+        państwo polskie, nasze bezpieczeństwo na szwank
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  - Bundestag
+  - Bundesrat
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing EU consumer credit directives and establishing
+    a legal basis for funding climate-neutral mobility.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality by introducing
+      a funding program for electric vehicles for low- and middle-income households.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Förderprogramm für „ klimaneutrale Mobilität für Haushalte mit kleinen
+        und mittleren Einkommen “
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

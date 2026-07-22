@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  location: null
+  position: Poland is significantly increasing its defense spending and utilizing
+    EU funding to enhance deterrence on its eastern flank.
+  positions:
+    defence: Poland actively advances European defense and eastern flank deterrence
+      through record-high GDP spending and participation in the EU's SAFE program.
+  stances:
+    defence:
+      score: 2
+      evidence: W 2025 roku łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7% PKB),
+        natomiast w 2026 roku budżet obronny (wraz z Funduszem Wsparcia Sił Zbrojnych)
+        ma osiągnąć ponad 200 mld zł, co stanowi ok. 4,8% PKB.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

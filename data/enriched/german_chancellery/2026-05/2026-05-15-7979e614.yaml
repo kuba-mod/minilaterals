@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Lisa Quarch
+  topics:
+  - green_transition
+  location: Würzburg, Germany
+  position: Chancellor Merz emphasized the necessity of capable climate technology
+    and CO2 storage to achieve global climate protection effects.
+  positions:
+    green_transition: Germany is actively pursuing climate neutrality through the
+      development of climate technology and carbon capture and storage regulations.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Genau daran arbeite die Bundesregierung, etwa durch die Regelungen
+        zur Abscheidung und Speicherung von CO 2 .
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

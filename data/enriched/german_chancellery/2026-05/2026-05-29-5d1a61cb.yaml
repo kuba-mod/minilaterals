@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - President Javier Milei
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany aims to strengthen bilateral cooperation with Argentina in the
+    fields of economy, energy, and security.
+  positions:
+    defence: Germany rhetorically supports closer cooperation on security with Argentina.
+    green_transition: Germany expresses a desire for closer cooperation in energy,
+      aligning with goals of energy policy transition.
+  stances:
+    defence:
+      score: 1
+      evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
+        Sicherheit noch enger zusammenarbeiten wollen
+    green_transition:
+      score: 1
+      evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
+        Sicherheit noch enger zusammenarbeiten wollen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

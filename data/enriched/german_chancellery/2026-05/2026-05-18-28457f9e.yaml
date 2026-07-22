@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Ministerpräsident Rumen Radev
+  topics:
+  - ukraine
+  location: Berlin, Germany
+  position: Germany reaffirms its strong economic and political partnership with Bulgaria
+    and its commitment to a just peace in Ukraine.
+  positions:
+    ukraine: Germany expresses a commitment to continue efforts toward achieving a
+      just peace in Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: In den Bemühungen um einen gerechten Frieden in der Ukraine werde
+        man nicht nachlassen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

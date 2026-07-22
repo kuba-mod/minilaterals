@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - defence
+  location: null
+  position: Germany expresses readiness to provide technical mine clearance support
+    in the Strait of Hormuz provided specific conditions of peace and legal mandates
+    are met.
+  positions:
+    defence: Germany supports a targeted military contribution for navigation safety
+      but conditions it on the end of hostilities and parliamentary consent.
+  stances:
+    defence:
+      score: -1
+      evidence: for us to do that, it also has to be clear that all hostilities have
+        ended
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is addressing national security shelters and greenhouse gas emission
+    reporting.
+  positions:
+    green_transition: Germany is reviewing its calculations for greenhouse gas emissions,
+      aligning with climate neutrality monitoring.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Prüfbericht zur Berechnung der deutschen Treibhausgasemissionen für
+        das Jahr ...
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

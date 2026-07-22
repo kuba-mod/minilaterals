@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: The German government is prioritizing economic growth through infrastructure
+    modernization, digitalization, and a transition to climate neutrality.
+  positions:
+    green_transition: Germany is actively advancing the green transition by allocating
+      substantial financial resources to reach climate neutrality.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Mit einem Sondervermögen von 500 Milliarden Euro soll eine umfassende
+        Modernisierung der Infrastruktur und ein beschleunigter Übergang zur Klimaneutralität
+        ermöglicht werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

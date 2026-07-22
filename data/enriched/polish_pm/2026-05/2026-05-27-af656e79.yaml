@@ -1,0 +1,54 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Keir Starmer
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Northolt, United Kingdom
+  position: Poland has signed a security and defence partnership treaty with the United
+    Kingdom to strengthen deterrence against Russia and enhance cooperation in cyber
+    and military domains.
+  positions:
+    ukraine: Poland identifies Russian aggression in and beyond Ukraine as the primary
+      security challenge.
+    defence: Poland has entered into a formal treaty with the UK to enhance security,
+      deterrence, and NATO's collective strength.
+    hybrid: Poland prioritizes cooperation with the UK in protecting cyberspace against
+      modern technological threats.
+    rule_of_law: Poland reaffirms its commitment to the rule of law and democracy
+      as the foundation of its international cooperation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Nie ma dla nas większego wyzwania niż rosyjska agresja. Widzimy to
+        nie tylko w samej Ukrainie, ale też poza jej granicami.
+    defence:
+      score: 2
+      evidence: Traktat polsko-brytyjski wzmacnia bezpieczeństwo obu państw oraz służy
+        skutecznemu odstraszaniu potencjalnych zagrożeń jeszcze przed wystąpieniem
+        konfliktu.
+    hybrid:
+      score: 2
+      evidence: Szczególnie ważnym obszarem współpracy między Warszawą a Londynem
+        będzie ochrona cyberprzestrzeni.
+    rule_of_law:
+      score: 1
+      evidence: Polska i Wielka Brytania zadeklarowały także ochronę wspólnych wartości,
+        takich jak rządy prawa, demokracja i prawa człowieka.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

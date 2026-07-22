@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Pope Leo XIV
+  - Cardinal Pietro Parolin
+  - Archbishop Paul Richard Gallagher
+  topics:
+  - rule_of_law
+  location: Vatican City
+  position: Poland emphasizes the importance of moral order, human rights, and non-violent
+    dialogue in public life.
+  positions:
+    rule_of_law: Poland rhetorically supports the relevance of human rights and the
+      pursuit of truth as foundational values.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: prawa człowieka są wciąż aktualne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

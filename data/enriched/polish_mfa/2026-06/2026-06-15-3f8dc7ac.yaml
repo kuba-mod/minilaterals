@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland advocates for increased pressure on Russia through sanctions, supports
+    Ukraine's EU accession, and proposes a coordinated EU response to Russian hybrid
+    threats.
+  positions:
+    ukraine: Poland actively pushes for increased economic and military pressure on
+      Russia to support Ukraine.
+    hybrid: Poland takes the lead in identifying hybrid threats by presenting a specific
+      report and calling for intelligence cooperation.
+    enlargement: Poland strongly supports and celebrates the progress of Ukraine's
+      EU accession process.
+  stances:
+    ukraine:
+      score: 2
+      evidence: zaapelował także o szybkie przyjęcie 21. pakietu sankcji gospodarczych
+    hybrid:
+      score: 2
+      evidence: Radosław Sikorski zaprezentował unijnym ministrom kluczowy dokument
+        opracowany przez Polski Instytut Spraw Międzynarodowych (PISM)
+    enlargement:
+      score: 1
+      evidence: Polska z satysfakcją odnotowała otwarcie pierwszego klastra w negocjacjach
+        akcesyjnych z Ukrainą
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

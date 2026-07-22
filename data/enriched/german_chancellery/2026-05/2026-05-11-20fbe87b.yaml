@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wefers
+  - Kornelius
+  - Markus Söder
+  - Meister
+  topics: []
+  location: null
+  position: The German government expresses regret over the Bundesrat's decision regarding
+    the relief premium and intends to determine further procedural steps to provide
+    citizen relief.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

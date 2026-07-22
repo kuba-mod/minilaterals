@@ -1,0 +1,45 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wiceminister Harazim
+  - Sekretarz Generalny Breins
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Warsaw, Poland
+  position: Poland aims to deepen its strategic partnership with France through economic,
+    defense, and energy cooperation while coordinating on European and Ukrainian agendas.
+  positions:
+    ukraine: Poland emphasizes the importance of the agreements reached during the
+      Reconstruction Conference for Ukraine.
+    defence: Poland is actively seeking to expand defense cooperation by promoting
+      its own arms industry to French partners.
+    enlargement: Poland is engaging in discussions regarding the European Union's
+      enlargement process.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Rozmówcy zgodnie podkreślili znaczenie wypracowanych podczas wydarzenia
+        ustaleń dla Ukrainy.
+    defence:
+      score: 2
+      evidence: zachęcając partnerów do zapoznania się m.in. z ofertą polskiego przemysłu
+        zbrojeniowego
+    enlargement:
+      score: 0
+      evidence: omówiono najważniejsze kwestie z agendy europejskiej, w tym [...]
+        unijnego procesu rozszerzenia
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,20 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  topics: []
+  location: null
+  position: Prime Minister Donald Tusk outlines government initiatives regarding family
+    support, IVF funding, social security for artists, and improvements to the National
+    Oncology Network.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

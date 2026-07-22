@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - podsekretarz DiNanno
+  topics:
+  - defence
+  location: null
+  position: Poland is coordinating with the United States to strengthen NATO deterrence
+    capabilities and bilateral defense cooperation.
+  positions:
+    defence: Poland actively advances collective security and eastern flank deterrence
+      through strategic consultations and defense sector cooperation with the US.
+  stances:
+    defence:
+      score: 2
+      evidence: rozwoju zdolności NATO do odstraszania
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

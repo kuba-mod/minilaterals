@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Carsten Schneider
+  - Murat Kurum
+  - Fatih Birol
+  - Simon Stiell
+  - Gunnar Groebler
+  - Stephanie Pfaeifer
+  - José Antonio Cabrera
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany reaffirms its commitment to the Paris Climate Agreement while
+    emphasizing the need to balance climate protection with industrial competitiveness
+    and innovation.
+  positions:
+    green_transition: Germany supports the path to climate neutrality and international
+      climate cooperation, provided that industrial competitiveness and social acceptance
+      are maintained.
+  stances:
+    green_transition:
+      score: 1
+      evidence: unterstrich, dass das Pariser Klima-Abkommen trotz aller Herausforderungen
+        eine bedeutende Errungenschaft bleibe und gleichzeitig eine zentrale Grundlage
+        für das Handeln der Bundesregierung im Klimaschutz darstelle
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

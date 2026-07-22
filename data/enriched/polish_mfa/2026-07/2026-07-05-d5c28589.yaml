@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Małgorzata Kidawa-Błońska
+  - Władysław Teofil Bartoszewski
+  - Radosław Sikorski
+  - Honorary Consuls of the Republic of Poland
+  topics: []
+  location: Warsaw, Poland
+  position: Poland held the II Congress of Honorary Consuls to strengthen its global
+    diplomatic network, promote the Polish brand, and expand consular representation
+    across six continents.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

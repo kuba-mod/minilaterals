@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Carsten Schneider
+  topics:
+  - green_transition
+  location: null
+  position: Germany is launching a multi-billion euro subsidy program to accelerate
+    the adoption of electric vehicles and reduce dependence on fossil fuels.
+  positions:
+    green_transition: Germany is actively advancing the green transition by providing
+      three billion euros in funding to incentivize the purchase and leasing of electric
+      vehicles.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Insgesamt werden von der Bundesregierung für das Programm drei Milliarden
+        Euro aus dem Klima- und Transformationsfonds bereitgestellt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

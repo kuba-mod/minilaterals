@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  - Cabinet
+  - Bundestag
+  - Bundesrat
+  - Government Spokesperson
+  topics: []
+  location: null
+  position: The German government proposed a tax-free relief bonus of up to 1,000
+    euros for employees to mitigate rising energy costs, but the plan was abandoned
+    after the Bundesrat rejected it.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - Wojciech Kruczek
+  topics:
+  - defence
+  location: Międzyleś, Poland
+  position: Poland is mobilizing comprehensive domestic emergency and military resources
+    to combat a large forest fire while acknowledging offers of support from neighbors.
+  positions:
+    defence: Poland is utilizing military assets and technology, including drones
+      and Territorial Defense Forces, for internal security and rescue operations.
+  stances:
+    defence:
+      score: 1
+      evidence: Cieszę się, że możliwości, którymi dysponuje Polska, służą nie tylko
+        bezpieczeństwu państwa, ale także akcjom ratowniczym
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

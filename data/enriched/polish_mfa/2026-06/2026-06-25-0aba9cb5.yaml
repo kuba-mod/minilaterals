@@ -1,0 +1,59 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Orysia Łucewycz
+  - Taras Kaczka
+  - Marta Kos
+  - Jeyhun Bayramov
+  - Reem Al-Hashimy
+  - Yvette Cooper
+  - Feridun Sinirlioğlu
+  - Mathias Cormann
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  - green_transition
+  location: Gdańsk, Poland
+  position: Poland advocates for the comprehensive reconstruction of Ukraine, emphasizing
+    the need for systemic reforms and EU legal alignment as part of the accession
+    process.
+  positions:
+    ukraine: Poland supports the long-term solidarity and international mobilization
+      for Ukraine's recovery and war effort.
+    enlargement: Poland supports Ukraine's EU membership but insists that it must
+      be accompanied by a real effort to align with EU standards and rules.
+    rule_of_law: Poland emphasizes that reforms in the area of rule of law and anti-corruption
+      are essential requirements for Ukraine's integration.
+    green_transition: Poland acknowledges energy transformation as a key component
+      of Ukraine's integration process.
+  stances:
+    ukraine:
+      score: 1
+      evidence: podkreślając konieczność zachowania europejskiej solidarności w zakresie
+        wsparcia Ukrainy w jej wojnie z Rosją
+    enlargement:
+      score: 1
+      evidence: musi iść realny wysiłek w kierunku spójności z prawem, zasadami i
+        standardami UE
+    rule_of_law:
+      score: 1
+      evidence: niezbędnych reformach, jakie Ukraina musi przeprowadzić na ścieżce
+        integracji, w szczególności w zakresie praworządności i walki z korupcją
+    green_transition:
+      score: 0
+      evidence: tematykę integracji z jednolitym rynkiem, transformacji energetycznej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

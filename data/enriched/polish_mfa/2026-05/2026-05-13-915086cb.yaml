@@ -1,0 +1,55 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Monika Sus
+  - Marcin Bosacki
+  - Ignacy Niemczycki
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland advocates for Ukraine's EU membership, the strengthening of EU
+    capabilities to counter hybrid and security threats, and the expansion of its
+    own cultural diplomacy.
+  positions:
+    ukraine: Poland supports Ukraine's right to self-determination and emphasizes
+      the economic opportunities for Polish business in Ukraine's reconstruction.
+    defence: Poland supports the EU's development of defense capabilities and funding
+      for the Ukrainian effort.
+    hybrid: Poland stresses the need to strengthen the EU against hybrid warfare and
+      other emerging threats.
+    enlargement: Poland strongly supports the right of Ukraine to join the European
+      Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: wojna Rosji przeciw Ukrainie nie jest wyłącznie konfliktem terytorialnym,
+        ale walką Ukraińców o prawo do samostanowienia
+    defence:
+      score: 2
+      evidence: Stworzyliśmy „budżet pokoju” (Europejski Instrument na Rzecz Pokoju),
+        który finansuje wysiłek ukraiński
+    hybrid:
+      score: 1
+      evidence: podkreślił także konieczność wzmacniania UE wobec nowych zagrożeń,
+        m.in. wojny - również tej hybrydowej
+    enlargement:
+      score: 1
+      evidence: Ukraińcy walczą i umierają za to, żeby mieć prawo przystąpienia do
+        Unii Europejskiej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

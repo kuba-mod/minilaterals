@@ -1,0 +1,32 @@
+actors:
+- DE
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marek Krawczyk
+  - Karol Polejowski
+  - Michał Syska
+  topics:
+  - hybrid
+  location: null
+  position: Poland is seeking to improve the representation of Polish victims of Nazi
+    concentration camps in German memory sites and education to combat historical
+    knowledge gaps.
+  positions:
+    hybrid: Poland aims to address deficits in historical knowledge and literature
+      in Germany, which relates to combating disinformation and historical inaccuracies.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Poważnym wyzwaniem pozostają braki wiedzy w niemieckim społeczeństwie
+        na temat historii II wojny światowej w Europie Środkowej i Wschodniej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

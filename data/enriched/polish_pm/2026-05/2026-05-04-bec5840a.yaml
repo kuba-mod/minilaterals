@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Nikol Paszynian
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: Armenia
+  position: Poland is strengthening strategic partnerships with Armenia, the UK, Canada,
+    and Ukraine while seeking to revitalize regional cooperation and support Ukrainian
+    reconstruction.
+  positions:
+    ukraine: Poland is actively supporting Ukraine by organizing a reconstruction
+      conference and attempting to mediate relations between Ukraine and Hungary.
+    defence: Poland is concretely advancing its defense capabilities through a new
+      treaty with the UK and cooperation with Canada.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Rozmowa dotyczyła między innymi przygotowań do konferencji odbudowy
+        Ukrainy (Ukrainian Recovery Conference), która odbędzie się w czerwcu w Gdańsku.
+    defence:
+      score: 2
+      evidence: Podjęliśmy decyzję z premierem Wielkiej Brytanii, że dojdzie do podpisania
+        traktatu między Polską i Wielką Brytanią, wzmacniającego realnie naszą współpracę
+        w dziedzinie obronności.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

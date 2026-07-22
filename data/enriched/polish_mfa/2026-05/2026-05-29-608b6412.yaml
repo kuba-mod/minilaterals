@@ -1,0 +1,23 @@
+actors:
+- FR
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Jolanta Kawa
+  - Paweł Bliźniuk
+  topics: []
+  location: null
+  position: Poland is strengthening bilateral relations and cultural dialogue with
+    France through the establishment of the Bronisław Geremek Award based on the Treaty
+    of Nancy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

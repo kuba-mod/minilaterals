@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Marcin Łoboda
+  - Zbigniew Stawicki
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Poland is aggressively enforcing EU and national sanctions against Russia
+    and Belarus to counter the aggression in Ukraine, leading the EU in monitoring
+    trade irregularities.
+  positions:
+    ukraine: Poland is actively implementing financial and legal sanctions to combat
+      Russian aggression and Belarus's involvement.
+    hybrid: Poland is taking a leading role in the EU in detecting and reporting trade
+      irregularities to prevent the circumvention of sanctions.
+  stances:
+    ukraine:
+      score: 2
+      evidence: koncentrują się na skutecznym wdrażaniu sankcji Unii Europejskiej
+        i krajowych związanych z rosyjską agresją na Ukrainę oraz udziałem w niej
+        Białorusi
+    hybrid:
+      score: 2
+      evidence: liczba polskich zgłoszeń celnych w systemie RIF, służącym ostrzeganiu
+        o nieprawidłowościach, wyniosła 180. Stanowi to aż 55,9% wszystkich zgłoszeń
+        dokonanych przez państwa członkowskie UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

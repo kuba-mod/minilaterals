@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Péter Magyar
+  - Prime Minister of Hungary
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Kraków, Warszawa, Gdańsk, Poland
+  position: Poland welcomes the return of democratic values in Hungary and seeks to
+    revitalize regional cooperation and joint European positions.
+  positions:
+    ukraine: Poland and Hungary intend to coordinate a joint European stance regarding
+      Ukraine.
+    rule_of_law: Poland views the new Hungarian leadership as a restoration of democratic
+      values and the rule of law in Europe.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Warszawa i Budapeszt będą także pracować nad wspólnym europejskim
+        stanowiskiem wobec Ukrainy.
+    rule_of_law:
+      score: 2
+      evidence: To także znak dla milionów ludzi w Europie i na świecie, że demokracja,
+        rządy prawa, przyzwoitość i moralność w polityce nie są przegranymi sprawami
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

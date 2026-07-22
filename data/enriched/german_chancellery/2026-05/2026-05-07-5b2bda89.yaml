@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Karsten Wildberger
+  - Katherina Reiche
+  topics: []
+  location: Germany
+  position: Chancellor Merz celebrates the first anniversary of the Ministry for Digital
+    and State Modernization, emphasizing the goals of reducing bureaucracy and accelerating
+    digitalization.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

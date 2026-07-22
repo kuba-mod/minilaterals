@@ -1,0 +1,62 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  location: null
+  position: The German federal cabinet has formally adopted a set of goals aligned
+    with the Weimar Triangle's objectives regarding security, EU expansion, and climate
+    policy.
+  positions:
+    ukraine: Germany commits to comprehensive long-term support for Ukraine until
+      a lasting peace is reached.
+    defence: Germany supports strengthening EU defence capabilities to complement
+      NATO, focusing on the eastern flank.
+    hybrid: Germany advocates for coordinated action to counter cyber attacks and
+      foreign interference.
+    enlargement: Germany supports EU accession for Ukraine and the Western Balkans,
+      conditioned on internal EU reforms.
+    green_transition: Germany aligns its industrial and energy policies with the Clean
+      Industrial Deal and climate neutrality goals.
+    rule_of_law: Germany affirms the rule of law and democratic resilience as essential
+      for European security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: ''
+    defence:
+      score: 1
+      evidence: ''
+    hybrid:
+      score: 1
+      evidence: ''
+    enlargement:
+      score: 1
+      evidence: ''
+    green_transition:
+      score: 1
+      evidence: ''
+    rule_of_law:
+      score: 1
+      evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

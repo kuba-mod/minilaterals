@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Łukasz Pawłowski, Deputy Director and Head of the Strategy Department
+  - Diplomats from NATO countries and the Indo-Pacific Quad
+  - Strategy Department of the Ministry of Foreign Affairs team
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland presented its foreign policy strategy for 2026-2030 to NATO and
+    Quad diplomats, emphasizing strategic stability and cooperation for peace and
+    security.
+  positions:
+    defence: Poland emphasizes the importance of predictable cooperation with partners
+      to build a space of peace and security, aligning with general collective security
+      goals.
+  stances:
+    defence:
+      score: 1
+      evidence: istnieje potrzeba identyfikacji obszarów odpowiedzialnej i przewidywalnej
+        współpracy z partnerami, którzy budują przestrzeń pokoju i bezpieczeństwa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

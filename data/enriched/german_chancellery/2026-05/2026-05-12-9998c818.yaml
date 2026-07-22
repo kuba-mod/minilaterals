@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Klingbeil
+  - Bundesfinanzminister
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Germany is strengthening its customs services to combat organized crime,
+    illegal employment, and smuggling to ensure internal security and economic stability.
+  positions:
+    hybrid: Germany is actively combating organized crime and smuggling through technical,
+      legal, and personnel reinforcements of the Customs and Federal Criminal Police
+      Office.
+    rule_of_law: Germany is taking legislative action to combat illegal employment
+      and exploitation to protect workers and maintain legal standards.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Zoll und Bundeskriminalamt sollen deshalb zur effektiveren Bekämpfung
+        der Organisierten Kriminalität rechtlich, technisch und personell gestärkt
+        werden.
+    rule_of_law:
+      score: 2
+      evidence: Im letzten Jahr hat sie ein Gesetz verabschiedet, mit dem unter anderem
+        die Finanzkontrolle Schwarzarbeit (FKS) gestärkt wurde.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
