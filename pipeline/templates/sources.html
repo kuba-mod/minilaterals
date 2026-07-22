@@ -4,96 +4,98 @@
 
 {% block content %}
 
-<div class="section-head" style="margin-top:0">Data sources</div>
+<div class="section-head" style="margin-top:0">Methodology<span>How six official sources become a weekly read on whether Paris, Berlin and Warsaw are pulling in the same direction.</span></div>
 
-<div class="table-wrap table-wrap--wide" style="margin-bottom:48px">
-<table>
-  <thead>
-    <tr><th>Source</th><th>Actor</th><th>Type</th><th>Method</th><th>Language</th><th>Last Run</th><th>Last Success</th><th>Fetched</th><th>New</th><th>Status</th></tr>
-  </thead>
-  <tbody>
-    {% for row in source_rows %}
-    {% set src = row.source %}
-    {% set actor = row.actor %}
-    {% set s = source_stats.get(src, {}) %}
-    <tr>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ source_labels.get(src, src) }}</td>
-      <td>
-        {% if actor in actor_colors %}
-        <span class="tag" style="color:{{ actor_colors[actor] }}; border-color:{{ actor_colors[actor] }}44; background:{{ actor_colors[actor] }}18">{{ actor }}</span>
-        {% else %}
-        <span style="color:var(--muted); font-size:13px; font-family:'IBM Plex Mono',monospace">{{ actor }}</span>
-        {% endif %}
-      </td>
-      <td style="font-size:14px; color:var(--muted)">{{ row.type }}</td>
-      <td style="font-size:14px; color:var(--muted)">{{ row.method }}</td>
-      <td style="font-size:14px; color:var(--muted)">{{ row.lang }}</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{% if run %}{{ run.date }}{% else %}—{% endif %}</td>
-      {% set h = source_health.get(src, {}) %}
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted)">{{ h.last_ok or '—' }}</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ s.fetched if s else '—' }}</td>
-      <td style="font-family:'IBM Plex Mono',monospace; font-size:13px">{{ s.new if s else '—' }}</td>
-      <td>
-        {% if h.get('last_error') %}
-        <span class="tag" style="color:var(--red); border-color:var(--red)44; background:var(--red-faint)" title="{{ h.last_error }}">error</span>
-        {% elif s %}
-        <span class="tag" style="color:var(--green); border-color:var(--green)44; background:var(--green-faint)">ok</span>
-        {% else %}
-        <span style="color:var(--muted); font-size:13px">—</span>
-        {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<p class="method-intro">
+  This tracker watches what the three governments <strong>actually say</strong> — not what
+  commentators say about them. Every week it reads the official statements of France, Germany
+  and Poland and checks, topic by topic, whether their positions line up. Here is how that works,
+  in four steps.
+</p>
+
+<div class="mdiagram">
+  <div class="mstep">
+    <div class="mnum">1</div>
+    <div>
+      <div class="mt">Collect the source material</div>
+      <div class="md">Two official voices per country — the foreign ministry and the top executive office — read in German, French and Polish, straight from each institution's own newsroom rather than the thinner English pages.</div>
+      <div class="mvis">
+        <span class="mchip" style="color:{{ actor_colors.FR }};border-color:{{ actor_colors.FR }}44;background:{{ actor_colors.FR }}10"><span class="mdot" style="background:{{ actor_colors.FR }}"></span>France</span>
+        <span class="mchip" style="color:{{ actor_colors.DE }};border-color:{{ actor_colors.DE }}44;background:{{ actor_colors.DE }}10"><span class="mdot" style="background:{{ actor_colors.DE }}"></span>Germany</span>
+        <span class="mchip" style="color:{{ actor_colors.PL }};border-color:{{ actor_colors.PL }}44;background:{{ actor_colors.PL }}10"><span class="mdot" style="background:{{ actor_colors.PL }}"></span>Poland</span>
+        <span class="msnum">{{ source_rows|length }} sources</span>
+      </div>
+    </div>
+  </div>
+  <div class="mstep">
+    <div class="mnum">2</div>
+    <div>
+      <div class="mt">Read every item</div>
+      <div class="md">Each statement is read to work out whether it's relevant to the Weimar Triangle — which countries and which issues it touches, whether it explicitly invokes the three-way format — and, for relevant items, to draw out a one-sentence summary of the position it takes. Irrelevant items are set aside.</div>
+      <div class="mvis">
+        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Countries involved</span>
+        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Issue areas</span>
+        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Three-way signal</span>
+        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Position summary</span>
+      </div>
+    </div>
+  </div>
+  <div class="mstep">
+    <div class="mnum">3</div>
+    <div>
+      <div class="mt">Score the stance</div>
+      <div class="md">Every relevant statement is rated from −2 to +2 against the goals the three governments jointly agreed in 2024 — the same way researchers hand-code party manifestos. Each score is backed by a direct quote.</div>
+      <div class="mvis" style="gap:14px">
+        <div class="mscale">
+          <span style="background:var(--green)">+2</span>
+          <span style="background:#6f8a4e">+1</span>
+          <span style="background:var(--amber)">0</span>
+          <span style="background:#b0674f">−1</span>
+          <span style="background:var(--red)">−2</span>
+        </div>
+        <span class="msnum">opposes ← → advances the goal</span>
+      </div>
+    </div>
+  </div>
+  <div class="mstep">
+    <div class="mnum">4</div>
+    <div>
+      <div class="mt">Compare &amp; label</div>
+      <div class="md">Statements on the same topic within a 7-day window are grouped, and the capitals' average scores are compared to see whether they converge or diverge.</div>
+      <div class="mvis">
+        <span class="mchip" style="color:var(--green);border-color:var(--green)55;background:var(--green-faint)"><span class="mdot" style="background:var(--green)"></span>Aligned</span>
+        <span class="mchip" style="color:var(--amber);border-color:var(--amber)55;background:var(--amber-faint)"><span class="mdot" style="background:var(--amber)"></span>Mixed</span>
+        <span class="mchip" style="color:var(--red);border-color:var(--red)55;background:var(--red-faint)"><span class="mdot" style="background:var(--red)"></span>Divergent</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="section-head">Methodology</div>
+<div class="sources-prose" style="margin-top:8px">
 
-<div class="sources-prose">
-
+  <span class="label">What counts as relevant</span>
   <p>
-    This tracker follows two official voices for each country: its <strong>foreign ministry</strong>
-    and its <strong>executive office</strong> — the Federal Chancellery in Germany, the Élysée
-    (presidency) in France, and the Prime Minister's Chancellery in Poland. It ingests their press
-    releases and official statements in German, French, and Polish, straight from each institution's
-    native-language newsroom rather than the thinner English-translation sections. Each item is
-    read by a language model, which classifies it for Weimar Triangle relevance and, for relevant
-    items, extracts a one-sentence position summary in English. Following six institutions in
-    three languages is exactly the work this site exists to save you.
+    Every source is a specific foreign ministry or executive office, so the source country always
+    counts — a Polish statement about Ukraine counts Poland even when the text never names it. On top
+    of that, each item is read to see which <em>other</em> Weimar countries it concerns, which tracked
+    issues it touches (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law),
+    and whether it explicitly invokes the Weimar Triangle. An item is kept when it touches a tracked
+    issue, when two or more of the three countries are involved, or when it names the trilateral format
+    directly.
   </p>
 
-  <span class="label">Relevance classification</span>
+  <span class="label">Comparing positions</span>
   <p>
-    Because every source is a specific foreign ministry or executive office, the source country
-    always counts as an actor — a Polish statement about Ukraine counts Poland even when the text
-    never names it. On top of that, the same language model that reads each item identifies which
-    other Weimar countries it concerns, which tracked issue areas it touches (Ukraine, defence,
-    hybrid threats, enlargement, green transition, rule of law), and whether it explicitly invokes
-    the Weimar Triangle or trilateral format.
-  </p>
-  <p>
-    An item is marked <em>weimar_relevant</em> when it is a foreign-ministry or executive-office item
-    touching a tracked issue area, when two or more Weimar countries are involved on a tracked issue
-    area, or when it carries an explicit trilateral reference. A stronger <em>trilateral_signal</em>
-    flag is set when all three actors are present or the Weimar/trilateral reference appears
-    explicitly. (Earlier editions matched keywords for this; that missed the German, French, and
-    Polish wording and could not read paraphrase, so the reading is now done by the model.)
+    The <a href="{{ base_path }}/">Recent</a> page groups relevant events into clusters where two or
+    more countries published on the same topic within the same week. This surfaces the moments where,
+    say, Germany and Poland both speak about Ukraine within days of each other — even without a joint
+    statement — so their positions can be compared side by side.
   </p>
 
-  <span class="label">Positional comparison</span>
+  <span class="label">How the stance is scored</span>
   <p>
-    The <a href="{{ base_path }}/">Recent</a> page groups weimar-relevant events into clusters where two or more
-    countries published on the same topic within a 7-day window. This surfaces cases where
-    Germany and Poland both speak about Ukraine in the same week — even without a joint statement —
-    enabling comparison of whether their positions converge or diverge.
-  </p>
-
-  <span class="label">Stance scoring</span>
-  <p>
-    Every statement is rated against the officially agreed Weimar Triangle goals
-    (from the joint declarations of February and May 2024) on a five-point scale,
-    the same way political scientists hand-code party manifestos:
+    Statements are rated against the goals the three governments jointly agreed in the Weimar
+    declarations of February and May 2024, on a five-point scale:
   </p>
   <ul>
     <li><strong>+2</strong> — actively advances the goal: concrete commitments, resources, initiatives</li>
@@ -103,70 +105,153 @@
     <li><strong>−2</strong> — opposes or undermines the goal</li>
   </ul>
   <p>
-    Each rating is stored with a verbatim quote from the statement that justifies it,
-    so every score on this site can be audited by reading the quote. The label combines
-    two things: how closely the capitals' average ratings sit to each other
-    (<em>Aligned</em> within half a point, <em>Mixed</em> within one and a half, otherwise
-    <em>Divergent</em>), and whether that shared position actually backs the goal. Three
-    capitals in lockstep opposition to a goal are in agreement, not alignment with
-    Weimar's aims — that case is labelled <em>Aligned against goal</em>, not <em>Aligned</em>.
-    A shared average too close to neutral to call support or opposition is labelled
-    <em>Noncommittal</em>. No black-box similarity math is involved in the headline scores.
+    Each rating is stored with a verbatim quote from the statement that justifies it, so every score
+    on this site can be checked by reading the quote behind it. No hidden similarity math sits behind
+    the headline scores.
   </p>
 
-  <span class="label">LLM enrichment</span>
-  <p>
-    Relevance classification, position extraction, and stance rating are all done by Gemma 4,
-    an open-weight language model, run through Ollama — on a local machine during development and
-    via Ollama Cloud in the automated pipeline. The model is asked which countries and issue areas
-    each item concerns, for a one-sentence position summary per topic, a stance rating, and the
-    quote that supports it. Its output is stored separately from the raw scraped text (under
-    <code>data/enriched/</code>), and both are committed to git.
-  </p>
+  <span class="label">What the labels mean</span>
+  <p>A cluster's label combines two things: how close the capitals' average scores are to each other, and whether that shared position actually backs the goal.</p>
+  <div class="verdict-key">
+    <div class="verdict-row">
+      <span class="vk" style="color:var(--green)"><span class="mdot" style="background:var(--green)"></span>Aligned</span>
+      <span class="vv">Averages sit within half a point of each other, and the shared position supports the goal.</span>
+    </div>
+    <div class="verdict-row">
+      <span class="vk" style="color:var(--amber)"><span class="mdot" style="background:var(--amber)"></span>Mixed</span>
+      <span class="vv">Averages sit within about a point and a half — broad agreement with real differences of emphasis.</span>
+    </div>
+    <div class="verdict-row">
+      <span class="vk" style="color:var(--red)"><span class="mdot" style="background:var(--red)"></span>Divergent</span>
+      <span class="vv">The capitals are pulling in visibly different directions on the topic.</span>
+    </div>
+    <div class="verdict-row">
+      <span class="vk" style="color:var(--ink-soft)"><span class="mdot" style="background:var(--ink-soft)"></span>Aligned against goal</span>
+      <span class="vv">The three agree with each other, but their shared position works against Weimar's stated aims — agreement is not the same as alignment.</span>
+    </div>
+    <div class="verdict-row">
+      <span class="vk" style="color:var(--muted)"><span class="mdot" style="background:var(--muted)"></span>Noncommittal</span>
+      <span class="vv">The shared average is too close to neutral to read as either support or opposition.</span>
+    </div>
+  </div>
 
-  <span class="label">Storage and provenance</span>
+  <span class="label">Corrections</span>
   <p>
-    Each event is split across two YAML files committed to git, both keyed by the same
-    relative path <code>{source}/{YYYY-MM}/{date}-{hash}.yaml</code>: the raw scraped fields
-    live under <code>data/events/</code> (title, text, <code>source_url</code>,
-    <code>source_published_at</code>, <code>ingested_at</code>), and the computed
-    classification plus the LLM <code>extracted</code> block live under
-    <code>data/enriched/</code>. The <code>{hash}</code> is the first eight hex characters of a
-    SHA-256 hash of the source URL and title, providing automatic deduplication.
-    The full history is auditable via git log.
-  </p>
-  <p>
-    Every file also records <em>how</em> it was produced, so a native-language item is never
-    mistaken for an English fallback. Each raw event carries <code>collection</code>
-    (<code>native</code> or <code>fallback</code>) and <code>collection_method</code>
-    (<code>rss</code>, <code>html</code>, or a Wayback backfill); each enriched sidecar carries
-    <code>enriched_by</code> — the <code>model_id</code>, the <code>prompt_version</code> that
-    produced its ratings, and whether it was enriched locally or in GitHub Actions. Values on
-    data collected before this tracking was added are reconstructed from git history.
-  </p>
-
-  <span class="label">Corrections policy</span>
-  <p>
-    Stance ratings are model-assigned and always quote-backed, but models make mistakes. If a rating
-    looks wrong, if a quote is out of context, or if a statement was misclassified, please
+    Scores are model-assigned and always quote-backed, but models make mistakes. If a rating looks
+    wrong, a quote reads out of context, or a statement was misclassified, please
     <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20correction">report it</a> —
-    corrections are reviewed and the underlying YAML is corrected in git, so the fix is itself part of
-    the public record.
+    corrections are reviewed and the underlying record is fixed, and that fix becomes part of the
+    public history too.
   </p>
 
   <span class="label">Caveats</span>
   <ul>
-    <li>Sources are ingested in their native language (German, French, Polish) — the full output of each
-      institution, not the thinner English-translation sections where those even exist. Position summaries
-      are extracted in English; stance evidence quotes stay in the original language.</li>
-    <li>If a native-language feed or listing becomes unreachable, ingestion falls back to an English section
-      (where one exists) until it recovers, so a few events may carry English text.</li>
-    <li>Only the German MFA and France Diplomatie offer RSS — the other four sources are HTML scrapers that
-      may break if site structures change.</li>
+    <li>Sources are read in their native language — the full output of each institution, not the thinner English sections where those even exist. Position summaries are written in English; the evidence quotes stay in the original language.</li>
+    <li>If a native-language feed goes down, collection falls back to an English section (where one exists) until it recovers, so a few items may carry English text.</li>
+    <li>Only the German foreign ministry and France Diplomatie offer clean feeds; the other four are read directly from their websites and can break if those sites change.</li>
     <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
   </ul>
+</div>
 
-  <span class="label">Coming next</span>
+<div class="section-head">Data sources</div>
+<p class="method-intro" style="font-size:16px;margin-bottom:18px">Six official sources, two per country — a foreign ministry and a top executive office.</p>
+
+<div class="table-wrap sources-table" style="margin-bottom:40px">
+<table>
+  <thead>
+    <tr><th>Source</th><th>Country</th><th>Type</th><th>Read in</th></tr>
+  </thead>
+  <tbody>
+    {% for row in source_rows %}
+    <tr>
+      <td>{{ row.institution }}</td>
+      <td><span class="tag" style="color:{{ actor_colors[row.actor] }}; border-color:{{ actor_colors[row.actor] }}44; background:{{ actor_colors[row.actor] }}18">{{ row.actor }}</span></td>
+      <td style="font-size:15px; color:var(--ink-soft); font-style:normal">{{ row.type }}</td>
+      <td style="font-size:15px; color:var(--ink-soft); font-style:normal">
+        {% if row.lang == 'EN' %}English{% elif row.lang == 'DE' %}German{% elif row.lang == 'FR' %}French{% elif row.lang == 'PL' %}Polish{% else %}{{ row.lang }}{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<details class="tech-details">
+  <summary>
+    <span class="tlabel">For the technically minded<small>The model, the data format, pipeline status, and how provenance is tracked</small></span>
+    <span class="ticon">▾</span>
+  </summary>
+  <div class="tech-body">
+    <div class="sources-prose" style="margin:0">
+      <span class="label">The language model</span>
+      <p>
+        Relevance classification, position extraction, and stance rating are all done by Gemma&nbsp;4,
+        an open-weight language model, run through Ollama — locally during development and via Ollama
+        Cloud in the automated pipeline. For each item the model is asked which countries and issue
+        areas it concerns, a one-sentence position summary per topic, a stance rating, and the quote
+        that supports it. Its output is stored separately from the raw scraped text (under
+        <code>data/enriched/</code>), and both are committed to git. An item is flagged
+        <code>weimar_relevant</code> under the rules above, with a stronger <code>trilateral_signal</code>
+        flag when all three actors are present or the format is named explicitly.
+      </p>
+
+      <span class="label">Storage &amp; provenance</span>
+      <p>
+        Each event is split across two YAML files committed to git, both keyed by the same relative
+        path <code>{source}/{YYYY-MM}/{date}-{hash}.yaml</code>: the raw scraped fields live under
+        <code>data/events/</code> (title, text, <code>source_url</code>,
+        <code>source_published_at</code>, <code>ingested_at</code>), and the computed classification
+        plus the model's <code>extracted</code> block live under <code>data/enriched/</code>. The
+        <code>{hash}</code> is the first eight hex characters of a SHA-256 hash of the source URL and
+        title, giving automatic deduplication. The full history is auditable via git log.
+      </p>
+      <p>
+        Every file also records <em>how</em> it was produced, so a native-language item is never
+        mistaken for an English fallback. Each raw event carries <code>collection</code>
+        (<code>native</code> or <code>fallback</code>) and <code>collection_method</code>
+        (<code>rss</code>, <code>html</code>, or a Wayback backfill); each enriched sidecar carries
+        <code>enriched_by</code> — the <code>model_id</code>, the <code>prompt_version</code> that
+        produced its ratings, and whether it was enriched locally or in GitHub Actions. Values on data
+        collected before this tracking was added are reconstructed from git history.
+      </p>
+
+      <span class="label">Pipeline status</span>
+      <p style="margin-bottom:10px">Last ingest run{% if run %} — <span class="mono" style="font-size:13px">{{ run.date }}</span>{% endif %}, per source:</p>
+      <div class="table-wrap sources-table" style="margin-bottom:4px">
+      <table>
+        <thead>
+          <tr><th>Source</th><th>Method</th><th>Last success</th><th>Fetched / new</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          {% for row in source_rows %}
+          {% set src = row.source %}
+          {% set s = source_stats.get(src, {}) %}
+          {% set h = source_health.get(src, {}) %}
+          <tr>
+            <td class="mono" style="font-size:13px !important">{{ source_labels.get(src, src) }}</td>
+            <td style="font-size:13px; color:var(--muted)">{{ row.method }}</td>
+            <td class="mono" style="font-size:13px !important">{{ h.last_ok or '—' }}</td>
+            <td class="mono" style="font-size:13px !important">{{ '%s / %s' % (s.fetched, s.new) if s else '—' }}</td>
+            <td>
+              {% if h.get('last_error') %}
+              <span class="tag" style="color:var(--red); border-color:var(--red)44; background:var(--red-faint)" title="{{ h.last_error }}">error</span>
+              {% elif s %}
+              <span class="tag" style="color:var(--green); border-color:var(--green)44; background:var(--green-faint)">ok</span>
+              {% else %}
+              <span style="color:var(--muted); font-size:13px">—</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</details>
+
+<div class="section-head">Coming next</div>
+<div class="sources-prose">
   <ul>
     <li><strong>Alerts &amp; monitoring</strong> — get notified when a topic's alignment shifts, instead of checking back.</li>
     <li><strong>Full-history Excel export</strong> — every rated statement, every quote, since the pipeline started.</li>
@@ -176,12 +261,10 @@
     Suggestions are welcome — if there's a feature or format you'd find useful, email
     <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20suggestion">hello@minilaterals.com</a>.
   </p>
-
-  <p style="font-size:14px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif">
-    Total events tracked: <span style="font-family:'IBM Plex Mono',monospace">{{ all_events_count }}</span> &nbsp;·&nbsp;
-    Weimar-relevant: <span style="font-family:'IBM Plex Mono',monospace">{{ weimar_events_count }}</span>
+  <p style="font-size:14px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif; margin-top:20px">
+    Total events tracked: <span class="mono">{{ all_events_count }}</span> &nbsp;·&nbsp;
+    Weimar-relevant: <span class="mono">{{ weimar_events_count }}</span>
   </p>
-
 </div>
 
 {% endblock %}
