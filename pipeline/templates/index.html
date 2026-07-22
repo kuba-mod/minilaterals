@@ -37,45 +37,41 @@
 {% if has_density %}
 <div class="section-head" style="margin-top:0">
   How strongly are they backing shared goals?
-  <span>Every rated statement, one calendar week per column, one stance level per row (−2 opposes … +2 actively advances). Colour: gold backs the goal, amber is neutral, red opposes. A single sharp statement stands out as a ringed cell instead of being smoothed into an average. Pick a capital and a topic to isolate that debate.</span>
+  <span>One calendar week per column, one stance level per row — from −2 (opposes) to +2 (actively advances). Deeper colour means more statements landed at that stance: green backs the goal, amber is neutral, red opposes. Dashed cells had no statements that week. Pick a capital and a topic to isolate that debate.</span>
 </div>
 
-{# Capital toggle row #}
-<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px">
-  {% for c in capital_order %}
-  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-capital="{{ c }}"
-        style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px; cursor:pointer"
-        onclick="selectDensity('capital', '{{ c }}')">
-    {% if c == 'ALL' %}All{% else %}{{ actor_labels[c] }}{% endif %}
-  </span>
-  {% endfor %}
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 20px; margin-bottom:20px">
+  {# Capital toggle — segmented control #}
+  <div id="density-caps" style="display:inline-flex; border:1px solid var(--border); border-radius:100px; overflow:hidden"></div>
+  {# Topic toggle — individual pills, ordered by this week's divergence #}
+  <div id="density-topics" style="display:flex; flex-wrap:wrap; gap:6px"></div>
 </div>
 
-{# Topic toggle row (ordered by this week's divergence) #}
-<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px">
-  {% for t in topic_order %}
-  <span class="tag timeline-pill{% if loop.first %} timeline-pill--active{% endif %}" data-topic="{{ t }}"
-        style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px; cursor:pointer"
-        onclick="selectDensity('topic', '{{ t }}')">
-    {% if t == 'overall' %}Overall{% else %}{{ issue_labels[t] }}{% endif %}
-  </span>
-  {% endfor %}
+<div style="background:var(--surface); border:1px solid var(--border-light); border-radius:4px; padding:20px 22px">
+  <div id="density-header" style="display:grid; gap:4px; margin-bottom:6px; align-items:end"></div>
+  <div id="density-rows"></div>
+  <div style="display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--border-light); font-family:'IBM Plex Sans',sans-serif; font-size:11px; color:var(--muted); flex-wrap:wrap">
+    <span>Fewer</span>
+    <span style="display:inline-flex; gap:3px">
+      {% for o in [0.2, 0.45, 0.7, 1] %}
+      <span style="width:20px; height:12px; border-radius:2px; background:#4d6b38; opacity:{{ o }}"></span>
+      {% endfor %}
+    </span>
+    <span>More</span>
+    <span id="density-caption" style="margin-left:auto; font-family:'Newsreader',serif; font-size:13px; color:var(--ink-soft)"></span>
+  </div>
 </div>
-
-<div style="width:100%; overflow:hidden; margin-bottom:4px">
-  <svg id="density-svg" viewBox="0 0 800 250" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
-    <g id="density-cells"></g>
-    <g id="density-rows"></g>
-    <g id="density-xticks"></g>
-  </svg>
-</div>
-<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:4px 0 0">Hover a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
+<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:10px 0 0; font-family:'IBM Plex Sans',sans-serif">Hover a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
 
 <script>
 (function () {
-  const DENSITY = {{ density_svg_json | safe }};
+  const DENSITY = {{ density_cells_json | safe }};
   const CAPITAL_ORDER = {{ capital_order | tojson }};
   const TOPIC_ORDER = {{ topic_order | tojson }};
+  const ACTOR_LABELS = {{ actor_labels | tojson }};
+  const ISSUE_LABELS = {{ issue_labels | tojson }};
+  const capLabel = function(c){ return c === 'ALL' ? 'All' : ACTOR_LABELS[c]; };
+  const topicLabel = function(t){ return t === 'overall' ? 'Overall' : ISSUE_LABELS[t]; };
   let curCapital = CAPITAL_ORDER[0], curTopic = TOPIC_ORDER[0];
 
   function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
@@ -94,44 +90,76 @@
     }
   }
 
+  function renderToggles(){
+    const capsEl = document.getElementById('density-caps');
+    capsEl.innerHTML = CAPITAL_ORDER.map(function(c, i){
+      const active = c === curCapital;
+      const style = "font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;padding:6px 15px;border:0;cursor:pointer;"
+        + "border-left:" + (i === 0 ? '0' : '1px solid var(--border)') + ";"
+        + "background:" + (active ? 'var(--ink)' : 'transparent') + ";color:" + (active ? 'var(--bg-paper)' : 'var(--ink-soft)') + ";";
+      return '<button data-capital="' + c + '" style="' + style + '" onclick="selectDensity(\'capital\',\'' + c + '\')">' + esc(capLabel(c)) + '</button>';
+    }).join('');
+
+    const topicsEl = document.getElementById('density-topics');
+    topicsEl.innerHTML = TOPIC_ORDER.map(function(t){
+      const active = t === curTopic;
+      const style = "font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;padding:5px 11px;border-radius:100px;cursor:pointer;"
+        + "border:1px solid " + (active ? 'var(--ink)' : 'var(--border)') + ";"
+        + "background:" + (active ? 'var(--ink)' : 'transparent') + ";color:" + (active ? 'var(--bg-paper)' : 'var(--muted)') + ";";
+      return '<button data-topic="' + t + '" style="' + style + '" onclick="selectDensity(\'topic\',\'' + t + '\')">' + esc(topicLabel(t)) + '</button>';
+    }).join('');
+  }
+
   function render(){
     const slice = (DENSITY[curCapital] || {})[curTopic];
     if (!slice) return;
+    const weeks = slice.weeks, n = weeks.length;
+    const cols = '68px repeat(' + n + ', minmax(0, 1fr)) 122px';
 
-    let cellsHtml = '';
-    slice.cells.forEach(function(c){
-      cellsHtml += '<rect x="' + c.x + '" y="' + c.y + '" width="' + c.w + '" height="' + c.h + '" rx="2" fill="' + c.fill + '" fill-opacity="' + c.opacity + '"'
-        + (c.ringed ? ' stroke="' + c.fill + '" stroke-width="1.4"' : '')
-        + '><title>' + esc(c.tooltip) + '</title></rect>';
+    const header = document.getElementById('density-header');
+    header.style.gridTemplateColumns = cols;
+    let headerHtml = '<div></div>';
+    weeks.forEach(function(w){
+      headerHtml += '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); text-align:center">' + esc(w.slice(5)) + '</div>';
     });
-    document.getElementById('density-cells').innerHTML = cellsHtml;
+    headerHtml += '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; padding-left:8px">Total · share</div>';
+    header.innerHTML = headerHtml;
 
-    let rowsHtml = '';
+    const rowsEl = document.getElementById('density-rows');
+    rowsEl.innerHTML = '';
     slice.rows.forEach(function(r){
-      rowsHtml += '<text x="' + (slice.pad_l - 8) + '" y="' + (r.y + 3) + '" text-anchor="end" font-size="10" font-weight="600" fill="var(--ink)" font-family="\'IBM Plex Mono\',monospace">' + r.label + '</text>';
-      rowsHtml += '<text x="' + (slice.w - slice.pad_r + 8) + '" y="' + (r.y + 3) + '" font-size="9" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + r.total + ' · ' + r.pct + '%</text>';
-    });
-    document.getElementById('density-rows').innerHTML = rowsHtml;
+      const rowDiv = document.createElement('div');
+      rowDiv.style.cssText = 'display:grid; grid-template-columns:' + cols + '; gap:4px; align-items:center; margin-bottom:4px';
 
-    let ticksHtml = '';
-    slice.x_ticks.forEach(function(t){
-      ticksHtml += '<text x="' + t.x + '" y="' + (slice.h - 10) + '" text-anchor="middle" font-size="8" fill="var(--muted)" font-family="\'IBM Plex Mono\',monospace">' + t.label + '</text>';
+      let html = '<div style="text-align:right; padding-right:10px">'
+        + '<div style="font-family:\'Newsreader\',serif; font-size:17px; font-weight:500; line-height:1; color:var(--ink)">' + r.label + '</div>'
+        + '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; color:var(--muted)">' + r.desc + '</div>'
+        + '</div>';
+      r.cells.forEach(function(c, i){
+        const cellStyle = c.filled
+          ? ('height:34px;border-radius:2px;background:' + c.color + ';opacity:' + c.opacity + ';')
+          : 'height:34px;border-radius:2px;background:transparent;border:1px dashed var(--border-light);';
+        html += '<div style="' + cellStyle + '" title="' + esc(c.tooltip) + '"></div>';
+      });
+      html += '<div style="padding-left:8px; display:flex; align-items:center; gap:8px">'
+        + '<div style="font-family:\'Newsreader\',serif; font-size:15px; color:var(--ink); width:32px">' + r.total + '</div>'
+        + '<div style="flex:1; height:6px; background:var(--surface2); border-radius:2px; overflow:hidden"><div style="width:' + r.share + '%; height:100%; border-radius:2px; background:' + r.color + '"></div></div>'
+        + '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:10px; color:var(--muted); width:26px; text-align:right">' + r.share + '%</div>'
+        + '</div>';
+      rowDiv.innerHTML = html;
+      rowsEl.appendChild(rowDiv);
     });
-    document.getElementById('density-xticks').innerHTML = ticksHtml;
+
+    document.getElementById('density-caption').textContent = capLabel(curCapital) + ' · ' + topicLabel(curTopic);
   }
 
   window.selectDensity = function(kind, value){
-    if (kind === 'capital') {
-      curCapital = value;
-      document.querySelectorAll('.timeline-pill[data-capital]').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.capital === value); });
-    } else {
-      curTopic = value;
-      document.querySelectorAll('.timeline-pill[data-topic]').forEach(function(el){ el.classList.toggle('timeline-pill--active', el.dataset.topic === value); });
-      reorderClusters(value);
-    }
+    if (kind === 'capital') curCapital = value; else { curTopic = value; reorderClusters(value); }
+    renderToggles();
     render();
   };
 
+  renderToggles();
   render();
 })();
 </script>

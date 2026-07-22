@@ -11,7 +11,7 @@ from pipeline.render import (
     _fmt_stance,
     _stance_norm,
     build_divergence_leaderboard,
-    build_score_density_svg,
+    build_score_density_cells,
     cluster_key,
     compute_score_density,
     compute_topic_weekly_stances,
@@ -116,27 +116,36 @@ def test_score_density_weeks_cap_to_trailing_window():
 # --- score density SVG geometry ---------------------------------------------
 
 
-def test_score_density_svg_cell_totals_and_outlier_ring():
+def test_score_density_cells_totals_colours_and_empty_cells():
     grid = [[0, 1], [0, 0], [0, 2], [0, 0], [1, 0]]  # +2, +1, 0, -1, -2 rows
     row_totals = [1, 0, 2, 0, 1]
     weeks = ["2026-06-15", "2026-06-22"]
-    svg = build_score_density_svg(grid, row_totals, weeks)
-    # Every nonzero grid cell becomes a rect; counts implied by opacity are
-    # recoverable only via the cell's tooltip, so check tooltip-derived counts
-    # sum to the grand total instead of re-deriving opacity.
-    total_from_tooltips = sum(int(c["tooltip"].rsplit(" ", 2)[1]) for c in svg["cells"] if c["opacity"] > 0)
+    out = build_score_density_cells(grid, row_totals, weeks)
+    assert out["weeks"] == weeks
+    assert out["grand_total"] == sum(row_totals)
+    # Every nonzero grid cell is marked filled; counts implied are recoverable
+    # only via the cell's tooltip, so check tooltip-derived counts sum to the
+    # grand total instead of re-deriving opacity.
+    all_cells = [c for r in out["rows"] for c in r["cells"]]
+    total_from_tooltips = sum(int(c["tooltip"].rsplit(" ", 2)[1]) for c in all_cells if c["filled"])
     assert total_from_tooltips == sum(row_totals)
-    # The -2 row (score <= 0) with a nonzero cell is ringed; the +2 row isn't.
-    minus_two_cell = next(c for c in svg["cells"] if "stance -2" in c["tooltip"] and c["opacity"] > 0)
-    assert minus_two_cell["ringed"] is True
-    plus_two_cell = next(c for c in svg["cells"] if "stance +2" in c["tooltip"] and c["opacity"] > 0)
-    assert plus_two_cell["ringed"] is False
+    # A zero-count cell is unfilled (renders as a dashed placeholder, not a
+    # coloured rect) and carries no opacity.
+    empty_cells = [c for c in all_cells if not c["filled"]]
+    assert empty_cells and all(c["opacity"] == 0.0 for c in empty_cells)
+    # Rows are diverging by colour: +2/+1 are (different) greens, 0 is amber,
+    # -1/-2 share the same red — not a single reused "gold" hue.
+    by_label = {r["label"]: r for r in out["rows"]}
+    assert by_label["+2"]["color"] != by_label["+1"]["color"]  # two green shades, not identical
+    assert by_label["-1"]["color"] == by_label["-2"]["color"]  # both red
+    assert by_label["+2"]["color"] != by_label["-2"]["color"]
     # The neutral row reads "stance 0", not "stance +0" (f"{0:+d}" would wrongly sign it).
-    zero_cell = next(c for c in svg["cells"] if c["opacity"] > 0 and "stance 0" in c["tooltip"])
-    assert "stance +0" not in zero_cell["tooltip"]
-    # Row margin totals/labels match input, in SCORES order.
-    assert [r["label"] for r in svg["rows"]] == ["+2", "+1", "0", "-1", "-2"]
-    assert [r["total"] for r in svg["rows"]] == row_totals
+    zero_cell = next(c for c in by_label["0"]["cells"] if c["filled"])
+    assert "stance 0" in zero_cell["tooltip"] and "stance +0" not in zero_cell["tooltip"]
+    # Row margin totals/labels/descriptions match input, in SCORES order.
+    assert [r["label"] for r in out["rows"]] == ["+2", "+1", "0", "-1", "-2"]
+    assert [r["desc"] for r in out["rows"]] == ["advances", "supports", "neutral", "opposes", "blocks"]
+    assert [r["total"] for r in out["rows"]] == row_totals
 
 
 # --- divergence leaderboard (orders pills + clusters) ----------------------

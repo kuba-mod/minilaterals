@@ -216,12 +216,20 @@ LOW_CONFIDENCE_N = 4
 TIMELINE_WEEKS = 12
 
 COLOR_GREEN = "#4d6b38"
+COLOR_GREEN_LIGHT = "#6d8a4c"  # +1 row on the score-density heatmap — a lighter
+# shade than +2's COLOR_GREEN, so "supports" reads as related to but weaker
+# than "advances" without relying on opacity alone to carry that distinction.
 COLOR_AMBER = "#8a6320"
 COLOR_RED = "#a14132"
 
 # Row order (top to bottom) for the score-density heatmap: +2 backs the goal
-# most strongly, -2 opposes it most strongly.
+# most strongly, -2 opposes it most strongly. Colour and short description
+# per row — both +1/+2 are shades of green and both -1/-2 share COLOR_RED
+# (asymmetric on purpose: two granular "how strongly positive" shades, but
+# opposition is opposition regardless of degree once it's opposition at all).
 SCORES = [2, 1, 0, -1, -2]
+SCORE_COLOR = {2: COLOR_GREEN, 1: COLOR_GREEN_LIGHT, 0: COLOR_AMBER, -1: COLOR_RED, -2: COLOR_RED}
+SCORE_DESC = {2: "advances", 1: "supports", 0: "neutral", -1: "opposes", -2: "blocks"}
 
 
 def _stance_agreement(spread: float, overall: float) -> tuple[str, str]:
@@ -549,90 +557,61 @@ def compute_score_density(
     return density
 
 
-def build_score_density_svg(grid: list[list[int]], row_totals: list[int], weeks: list[str]) -> dict:
-    """
-    SVG-ready cell/label geometry for one score-density slice (see
-    `compute_score_density`). Colour is diverging by row: statements backing
-    the goal (+1/+2) in gold, neutral (0) in amber, opposing (-1/-2) in red.
-    Opacity ~ sqrt(count) so a single statement (count=1) still reads clearly
-    instead of washing out next to weeks with many more. Rows at or below 0
-    get a ring around any nonzero cell — a lone negative statement should
-    visually pop out of the empty cells around it, not blend in; that's the
-    whole reason this chart exists.
-    """
-    W, H = 800, 250
-    PAD_L, PAD_R, PAD_T, PAD_B = 92, 68, 16, 34
-    n_cols = max(len(weeks), 1)
-    chart_w = W - PAD_L - PAD_R
-    chart_h = H - PAD_T - PAD_B
-    row_h = chart_h / len(SCORES)
-    col_w = chart_w / n_cols
+def _score_label(score: int) -> str:
+    return f"{score:+d}" if score else "0"
 
+
+def build_score_density_cells(grid: list[list[int]], row_totals: list[int], weeks: list[str]) -> dict:
+    """
+    CSS-grid-ready row/cell data for one score-density slice (see
+    `compute_score_density`) — a table of divs, not an SVG: each row is a grid
+    of `len(weeks)` cells plus a label column and a margin column, so the
+    template lays it out with `grid-template-columns` instead of pixel math.
+
+    Colour is diverging by row — green shades for +2/+1 ("advances"/
+    "supports"), amber for neutral, red for -1/-2 ("opposes"/"blocks") — using
+    the site's existing Aligned/Mixed/Divergent palette (`SCORE_COLOR`), not a
+    one-off hue. A filled cell's opacity ~ sqrt(count) so a single statement
+    still reads clearly instead of washing out next to busier weeks; a cell
+    with zero statements gets a dashed border instead of vanishing, so the
+    grid's shape stays legible even where nothing happened that week.
+    """
     grand_total = sum(row_totals)
     max_n = max((max(row) for row in grid), default=0) or 1
 
-    def fill_for(score: int) -> str:
-        if score > 0:
-            return ACTOR_COLORS["DE"]  # gold — reused here as the "backing the goal" hue
-        if score == 0:
-            return COLOR_AMBER
-        return COLOR_RED
-
-    def score_label(score: int) -> str:
-        return f"{score:+d}" if score else "0"
-
-    cells = []
+    rows = []
     for ri, score in enumerate(SCORES):
-        y = PAD_T + ri * row_h
-        row = grid[ri] if ri < len(grid) else [0] * n_cols
-        for wi in range(n_cols):
-            n = row[wi] if wi < len(row) else 0
-            x = PAD_L + wi * col_w
-            opacity = 0.0 if n == 0 else round(0.16 + 0.84 * math.sqrt(n / max_n), 3)
-            week_label = weeks[wi] if wi < len(weeks) else ""
+        color = SCORE_COLOR[score]
+        row_counts = grid[ri] if ri < len(grid) else [0] * len(weeks)
+        total = row_totals[ri] if ri < len(row_totals) else 0
+        share = round(100 * total / grand_total) if grand_total else 0
+
+        cells = []
+        for wi, week_label in enumerate(weeks):
+            n = row_counts[wi] if wi < len(row_counts) else 0
+            filled = n > 0
+            opacity = round(0.16 + 0.84 * math.sqrt(n / max_n), 3) if filled else 0.0
             cells.append(
                 {
-                    "x": round(x, 1),
-                    "y": round(y, 1),
-                    "w": round(max(col_w - 1, 1), 1),
-                    "h": round(max(row_h - 1, 1), 1),
-                    "fill": fill_for(score),
+                    "filled": filled,
+                    "color": color,
                     "opacity": opacity,
-                    "ringed": bool(score <= 0 and n > 0),
-                    "tooltip": f"Week of {week_label}  ·  stance {score_label(score)}  ·  {n} statement{'s' if n != 1 else ''}",
+                    "tooltip": f"Week of {week_label}  ·  stance {_score_label(score)}  ·  {n} statement{'s' if n != 1 else ''}",
                 }
             )
 
-    rows_meta = []
-    for ri, score in enumerate(SCORES):
-        total = row_totals[ri] if ri < len(row_totals) else 0
-        pct = round(100 * total / grand_total) if grand_total else 0
-        rows_meta.append(
+        rows.append(
             {
-                "y": round(PAD_T + ri * row_h + row_h / 2, 1),
-                "label": score_label(score),
+                "label": _score_label(score),
+                "desc": SCORE_DESC[score],
+                "color": color,
                 "total": total,
-                "pct": pct,
+                "share": share,
+                "cells": cells,
             }
         )
 
-    x_ticks = []
-    for wi, wk in enumerate(weeks):
-        if wi % 3 != 0 and wi != n_cols - 1:
-            continue
-        x_ticks.append({"x": round(PAD_L + wi * col_w + col_w / 2, 1), "label": wk[5:]})
-
-    return {
-        "viewbox": f"0 0 {W} {H}",
-        "pad_l": PAD_L,
-        "pad_r": PAD_R,
-        "w": W,
-        "h": H,
-        "cells": cells,
-        "rows": rows_meta,
-        "x_ticks": x_ticks,
-        "grand_total": grand_total,
-    }
+    return {"weeks": weeks, "rows": rows, "grand_total": grand_total}
 
 
 def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> list[dict]:
@@ -914,10 +893,10 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # whose coverage starts later doesn't read as empty columns at the left.
     density = compute_score_density(events, today=edition_dt, weeks=TIMELINE_WEEKS)
     capital_order = ["ALL", *WEIMAR_ACTORS]
-    density_svg_json = json.dumps(
+    density_cells_json = json.dumps(
         {
             actor: {
-                topic: build_score_density_svg(slice_["grid"], slice_["row_totals"], slice_["weeks"])
+                topic: build_score_density_cells(slice_["grid"], slice_["row_totals"], slice_["weeks"])
                 for topic, slice_ in topics.items()
             }
             for actor, topics in density.items()
@@ -1035,7 +1014,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             total_all=len(all_events),
             meetings_count=len(meetings),
             has_density=has_density,
-            density_svg_json=density_svg_json,
+            density_cells_json=density_cells_json,
             capital_order=capital_order,
             topic_order=topic_order,
             issue_order=ISSUE_ORDER,
