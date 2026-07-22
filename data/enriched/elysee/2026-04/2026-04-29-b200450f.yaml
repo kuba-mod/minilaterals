@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministre du travail et des solidarités
+  topics: []
+  location: null
+  position: The French government is proposing a law to allow artisanal bakers, pastry
+    chefs, and florists to employ voluntary workers on May 1st through sector-level
+    social dialogue.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

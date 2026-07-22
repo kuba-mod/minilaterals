@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Abdel Fattah Al-Sissi
+  - Louise Mushikiwabo
+  topics: []
+  location: Alexandria, Egypt
+  position: President Macron visited Egypt to strengthen bilateral relations, address
+    the Middle East crisis, and inaugurate the new Senghor University campus.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

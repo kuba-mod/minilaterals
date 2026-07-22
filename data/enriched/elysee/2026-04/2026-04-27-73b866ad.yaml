@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - President of the Regional Council
+  - President of the Departmental Council
+  topics:
+  - green_transition
+  location: Ariège, France
+  position: President Emmanuel Macron promotes the reindustrialization of France through
+    innovative, ecologically transitioned textile projects supported by the France
+    2030 program.
+  positions:
+    green_transition: France is actively advancing industrial decarbonization and
+      ecological transition through state-funded innovative projects like Géotex.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Le chantier illustre la politique de réindustrialisation menée depuis
+        2017, avec un ancrage dans les territoires , tournée vers l'innovation et
+        la transition écologique .
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

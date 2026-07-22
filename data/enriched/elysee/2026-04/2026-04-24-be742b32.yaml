@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Kyriákos Mitsotákis
+  topics:
+  - defence
+  location: Athens, Greece
+  position: France emphasizes its commitment to European sovereignty and strategic
+    autonomy through strong bilateral defense cooperation with Greece.
+  positions:
+    defence: France actively advances European defense capabilities by providing advanced
+      military equipment and coordinated security actions.
+  stances:
+    defence:
+      score: 2
+      evidence: nous avons notre système de protection aérienne, nous avons nos rafales,
+        nous avons de nouveaux systèmes de dernière génération et nous avons contribué
+        concrètement, dès les premiers instants, à leur défense.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,44 @@
+actors:
+- FR
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leader of France
+  - Leader of Lithuania
+  - Leader of Estonia
+  - Leader of Norway
+  - Leader of Poland
+  - Leader of the United Kingdom
+  - President of the European Council
+  - High Representative of the European Union for Foreign Affairs and Security Policy
+  - Prime Minister Nikol Pashinyan
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Yerevan, Armenia
+  position: France and its partners express strong support for Armenia's democratic
+    resilience and sovereignty against foreign interference.
+  positions:
+    hybrid: France commits to helping Armenia strengthen its resilience against external
+      hybrid threats.
+    rule_of_law: France actively supports Armenia's democratic integrity and the conduct
+      of free and fair elections through the provision of experts and equipment.
+  stances:
+    hybrid:
+      score: 1
+      evidence: renforcement de sa résilience face aux menaces hybrides extérieures
+    rule_of_law:
+      score: 2
+      evidence: Nous continuerons à fournir un soutien à l’Arménie, notamment par
+        le biais d’experts, du renforcement des capacités, de la fourniture d’équipements
+        et de l’observation électorale
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

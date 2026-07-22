@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - William Ruto
+  topics:
+  - green_transition
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France seeks to strengthen its bilateral partnership with Kenya and supports
+    the promotion of an open international order and sustainable global solutions.
+  positions:
+    green_transition: France supports international sustainable solutions and the
+      Paris Pact for People and the Planet regarding climate and the environment.
+    rule_of_law: France advocates for an open international order based on the rule
+      of law and effective multilateralism.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Pacte de Paris pour la prospérité, les peuples et la planète
+    rule_of_law:
+      score: 1
+      evidence: un ordre international ouvert, fondé sur la règle de droit, attaché
+        à un multilatéralisme efficace
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

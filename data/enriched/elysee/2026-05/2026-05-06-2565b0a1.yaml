@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - President of the Kenyan Republic
+  - African heads of state and government
+  topics:
+  - green_transition
+  location: Nairobi, Kenya
+  position: France is co-organizing the 'Africa Forward' summit with Kenya to strengthen
+    economic partnerships and address global challenges through innovation and investment.
+  positions:
+    green_transition: France is committing to a summit that addresses energy access
+      and connects to previous climate summits, aligning with green transition goals.
+  stances:
+    green_transition:
+      score: 2
+      evidence: construire et financer des solutions concrètes aux défis communs,
+        tels que [...] l’accès à l’énergie et la connectivité
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

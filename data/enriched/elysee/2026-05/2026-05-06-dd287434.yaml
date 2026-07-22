@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - le garde des sceaux, ministre de la justice
+  - la ministre de l’agriculture, de l’agro-alimentaire et de la souveraineté alimentaire
+  - Premier ministre
+  - le ministre de l'économie, des finances et de la souveraineté industrielle, énergétique
+    et numérique
+  - M. Marc GUILLAUME
+  - M. Claude IMAUVEN
+  topics:
+  - rule_of_law
+  location: null
+  position: France is updating its internal legal frameworks, specifically the code
+    of criminal procedure and rural codes for overseas territories.
+  positions:
+    rule_of_law: France is advancing its legal system by rewriting the legislative
+      part of the code of criminal procedure to correct inaccuracies and omissions.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: le conseil des ministres a adopté le projet de loi ratifiant l’ordonnance
+        du 19 novembre 2025 qui a réécrit à droit constant la partie législative du
+        code de procédure pénale
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

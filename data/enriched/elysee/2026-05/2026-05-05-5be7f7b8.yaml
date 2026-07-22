@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the French Republic
+  - President Vahagn Khatchatourian
+  topics:
+  - enlargement
+  - defence
+  location: Yerevan, Armenia
+  position: France is deepening its historical relationship with Armenia and supporting
+    its rapprochement with the European Union through economic, military, and financial
+    aid.
+  positions:
+    enlargement: France supports Armenia's strategic pivot and rapprochement toward
+      the European Union.
+    defence: France has actively established and strengthened military relations with
+      Armenia.
+  stances:
+    enlargement:
+      score: 1
+      evidence: dans le contexte du rapprochement engagé entre l’Arménie et l’Union
+        européenne
+    defence:
+      score: 2
+      evidence: la France a décidé de construire une relation militaire
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

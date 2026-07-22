@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic of France
+  - President William Ruto
+  - Secretary General of the African Union Commission
+  - Secretary General of La Francophonie
+  topics:
+  - rule_of_law
+  location: Kenya
+  position: France advocates for a partnership with Africa based on mutual respect,
+    strategic autonomy, and adherence to international law.
+  positions:
+    rule_of_law: France supports a middle path that respects international law and
+      a multilateral order over hegemonic dominance.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: essayer d'être sur une voie médiane qui respecte le droit international
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

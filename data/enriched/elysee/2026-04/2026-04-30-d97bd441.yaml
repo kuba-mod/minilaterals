@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Pierre Schill
+  topics:
+  - defence
+  location: Mailly-le-Camp and Suippes, France
+  position: France is demonstrating its military readiness and modernization through
+    high-intensity combat exercises to signal strength to allies and adversaries.
+  positions:
+    defence: France is actively advancing its military capabilities and modernization
+      to meet contemporary security challenges.
+  stances:
+    defence:
+      score: 2
+      evidence: un succès et un signal clair envoyé tout à la fois à nos alliés et
+        à nos adversaires
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

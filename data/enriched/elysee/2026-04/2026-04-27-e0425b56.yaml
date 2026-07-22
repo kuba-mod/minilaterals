@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République française
+  - cabinet du premier ministre suédois
+  topics:
+  - defence
+  location: Paris, France
+  position: France is establishing a bilateral nuclear steering group with Sweden
+    to implement a concept of advanced deterrence.
+  positions:
+    defence: France is actively advancing European defence capabilities through a
+      concrete bilateral nuclear cooperation initiative with Sweden.
+  stances:
+    defence:
+      score: 2
+      evidence: La France et la Suède ont réuni, ce jeudi 23 avril à Paris, leur premier
+        groupe de pilotage nucléaire
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

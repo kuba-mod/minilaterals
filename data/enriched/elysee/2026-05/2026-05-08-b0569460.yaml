@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Président de la République
+  - Alice Rufo
+  - Ambassadeur de France en Algérie
+  topics: []
+  location: Sétif, Algérie
+  position: France seeks to strengthen bilateral relations with Algeria through a
+    historical acknowledgment of the 1945 Sétif massacres and the restoration of diplomatic
+    and consular cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Prime Minister
+  - Ministers
+  - Parliamentarians
+  - Prefects
+  - President of the Departmental Council
+  - Mayor
+  - Director General of Imerys
+  topics:
+  - green_transition
+  location: Montluçon and Échassières, France
+  position: France is accelerating strategic industrial projects to ensure industrial
+    and food sovereignty while pursuing decarbonization and the green transition.
+  positions:
+    green_transition: France is actively advancing the green transition by investing
+      in strategic lithium mining to support the production of electric vehicle batteries
+      and achieve decarbonization.
+  stances:
+    green_transition:
+      score: 2
+      evidence: la mine de lithium d'Imerys à Échassières. À partir de 2030 , ce projet
+        permettra l'équipement de 700 000 batteries de véhicules électriques par an
+        et générera près de 3 200 emplois directs et indirects , en cohérence avec
+        l'impératif de décarbonation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

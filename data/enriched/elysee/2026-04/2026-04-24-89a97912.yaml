@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  topics:
+  - ukraine
+  location: Cyprus
+  position: President Emmanuel Macron participated in an informal European Council
+    meeting to discuss the EU financial framework and support for Ukraine.
+  positions:
+    ukraine: France supports the goal of providing continued assistance to Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: le soutien à l'Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
