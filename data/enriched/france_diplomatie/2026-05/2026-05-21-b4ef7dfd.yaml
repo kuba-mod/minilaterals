@@ -8,15 +8,10 @@ issue_areas:
 - green_transition
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: false
 e3_relevant: true
-e3_signal: false
 visegrad_relevant: false
-visegrad_signal: false
 baltic_relevant: false
-baltic_signal: false
 aukus_relevant: false
-aukus_signal: false
 extracted:
   event_type: communique
   participants: []
