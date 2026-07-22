@@ -4,17 +4,17 @@ Backfill the per-grouping relevance flags onto existing enriched sidecars.
 
 When the pipeline gained the additional minilaterals (E3, Visegrád Group,
 Baltic Three, AUKUS), every event enriched before that change lacked the new
-{key}_relevant / {key}_signal fields. Relevance is a pure function of the
-already-stored `actors` + `issue_areas` + the source's country, so those flags
-can be recomputed here **without re-running the LLM** — this is a cheap,
-deterministic pass over data/enriched/, not a re-enrichment.
+{key}_relevant fields. Relevance is a pure function of the already-stored
+`actors` + `issue_areas` + the source's country, so those flags can be
+recomputed here **without re-running the LLM** — this is a cheap, deterministic
+pass over data/enriched/, not a re-enrichment.
 
-The legacy Weimar fields (weimar_relevant / trilateral_signal) are left exactly
-as they were: old sidecars only ever carried DE/FR/PL actors, so the original
-Weimar computation is still correct for them. The `explicit_formats` signal
-isn't recoverable from an old sidecar (it wasn't captured), so it defaults to
-empty here — a non-Weimar grouping only gains a `_signal` from an all-members-
-present event, which historical DE/FR/PL-only data never satisfies anyway.
+The legacy `weimar_relevant` field is left exactly as it was: old sidecars only
+ever carried DE/FR/PL actors, so the original Weimar computation is still
+correct for them. The `explicit_formats` signal isn't recoverable from an old
+sidecar (it wasn't captured), so it defaults to empty here — a non-Weimar
+grouping only gains `_relevant` from an all-members-present event via that path,
+which historical DE/FR/PL-only data never satisfies anyway.
 
 Only supported as a module (python -m pipeline.migrate_groupings) so
 pipeline.enrich / pipeline.sources resolve without a sys.path shim.
@@ -39,7 +39,7 @@ ENRICHED_DIR = ROOT / "data" / "enriched"
 EVENTS_DIR = ROOT / "data" / "events"
 
 # The new (non-Weimar) flag names this migration is responsible for.
-NEW_FLAGS = [f"{k}_{suffix}" for k in GROUPINGS if k != "weimar" for suffix in ("relevant", "signal")]
+NEW_FLAGS = [f"{k}_relevant" for k in GROUPINGS if k != "weimar"]
 
 
 def _source_name(enriched_path: Path, data: dict) -> str:
@@ -51,7 +51,7 @@ def _source_name(enriched_path: Path, data: dict) -> str:
 
 def _with_new_flags(data: dict, source_name: str) -> dict:
     """Return a copy of the sidecar dict with the non-Weimar grouping flags
-    (re)computed and inserted right after trilateral_signal, preserving order."""
+    (re)computed and inserted right after weimar_relevant, preserving order."""
     actors = list(data.get("actors") or [])
     topics = list(data.get("issue_areas") or [])
     flags = _grouping_relevance(actors, set(), topics, source_name)
@@ -62,10 +62,10 @@ def _with_new_flags(data: dict, source_name: str) -> dict:
         if key in NEW_FLAGS:
             continue  # drop any stale copy; re-inserted in canonical position
         out[key] = value
-        if key == "trilateral_signal":
+        if key == "weimar_relevant":
             out.update(new)
-    # If the sidecar predates trilateral_signal entirely, append at the end.
-    if "trilateral_signal" not in data:
+    # If the sidecar predates weimar_relevant entirely, append at the end.
+    if "weimar_relevant" not in data:
         for k, v in new.items():
             out.setdefault(k, v)
     return out

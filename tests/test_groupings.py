@@ -73,9 +73,9 @@ def _matched(flags):
     return {k for k, v in flags.items() if v}
 
 
-def test_relevance_all_members_present_is_a_signal():
+def test_relevance_all_members_present():
     flags = _grouping_relevance(["DE", "FR", "UK"], set(), ["iran"], "uk_fcdo")
-    assert flags["e3_relevant"] and flags["e3_signal"]
+    assert flags["e3_relevant"]
     # Not a Weimar or AUKUS event.
     assert not flags["weimar_relevant"]
     assert not flags["aukus_relevant"]
@@ -84,7 +84,6 @@ def test_relevance_all_members_present_is_a_signal():
 def test_relevance_two_members_on_tracked_topic():
     flags = _grouping_relevance(["UK", "US"], set(), ["defence"], "us_state")
     assert flags["aukus_relevant"]
-    assert not flags["aukus_signal"]  # only 2 of 3 members, no explicit mention
 
 
 def test_relevance_known_actor_single_country():
@@ -93,24 +92,22 @@ def test_relevance_known_actor_single_country():
     assert _matched(flags) == {"baltic_relevant"}
 
 
-def test_relevance_explicit_format_is_a_signal():
+def test_relevance_explicit_format():
     # Text explicitly names AUKUS even with a single actor present.
     flags = _grouping_relevance(["US"], {"aukus"}, ["submarines"], "us_state")
-    assert flags["aukus_relevant"] and flags["aukus_signal"]
+    assert flags["aukus_relevant"]
 
 
 def test_widened_vocabulary_does_not_leak_into_weimar():
     # Two non-Weimar countries must never make an item Weimar-relevant.
     flags = _grouping_relevance(["UK", "US"], set(), ["defence"], "us_state")
     assert not flags["weimar_relevant"]
-    assert not flags["trilateral_signal"]
 
 
 def test_weimar_backward_compatible():
     # A DE MFA Ukraine release is Weimar-relevant exactly as before.
     flags = _grouping_relevance(["DE"], set(), ["ukraine"], "german_mfa")
     assert flags["weimar_relevant"]
-    assert not flags["trilateral_signal"]
 
 
 def test_topic_outside_grouping_does_not_make_relevant():

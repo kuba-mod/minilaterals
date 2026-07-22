@@ -342,16 +342,14 @@ def _normalize_formats(raw_formats) -> set[str]:
 
 
 def _grouping_relevance(actors: list[str], explicit_formats: set[str], topics: list[str], source_name: str) -> dict:
-    """Compute per-grouping relevance/signal flags. For each grouping, relevance is
+    """Compute the per-grouping {key}_relevant flags. For each grouping, relevance is
     a fixed rule over the event's actors that are members of that grouping and the
     topics that grouping tracks (mirroring the original Weimar policy, but scoped to
     each grouping's membership so a widened actor vocabulary can't leak across
-    formats): an explicit-format signal, OR 2+ member actors on a tracked topic, OR
-    a known-actor source that belongs to the grouping on a tracked topic.
-
-    The `weimar` grouping is mapped onto the legacy weimar_relevant /
-    trilateral_signal field names for backward compatibility; every other grouping
-    emits {key}_relevant / {key}_signal.
+    formats): an explicit-format mention (or all members present), OR 2+ member
+    actors on a tracked topic, OR a known-actor source that belongs to the grouping
+    on a tracked topic. Every grouping — including weimar — uses the same flat
+    {key}_relevant naming; there is no separate "strong signal" tier.
     """
     from_known_actor = source_name in KNOWN_ACTOR_SOURCES
     source_code = SOURCE_ACTOR.get(source_name)
@@ -359,18 +357,12 @@ def _grouping_relevance(actors: list[str], explicit_formats: set[str], topics: l
     for key, g in GROUPINGS.items():
         present = [a for a in actors if a in g.member_set]
         gtopics = [t for t in topics if t in g.topics]
-        signal = key in explicit_formats or (len(present) == len(g.members) and len(g.members) > 0)
-        relevant = (
-            signal
+        explicit = key in explicit_formats or (len(present) == len(g.members) and len(g.members) > 0)
+        flags[f"{key}_relevant"] = (
+            explicit
             or (len(present) >= 2 and bool(gtopics))
             or (from_known_actor and source_code in g.member_set and bool(gtopics))
         )
-        if key == "weimar":
-            flags["weimar_relevant"] = relevant
-            flags["trilateral_signal"] = signal
-        else:
-            flags[f"{key}_relevant"] = relevant
-            flags[f"{key}_signal"] = signal
     return flags
 
 
@@ -638,7 +630,7 @@ def _extract(provider, raw_path: Path) -> bool:
             yaml.dump(enriched_data, allow_unicode=True, sort_keys=False),
             encoding="utf-8",
         )
-        matched = [k for k in GROUPINGS if relevance.get("weimar_relevant" if k == "weimar" else f"{k}_relevant")]
+        matched = [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
         flag = ("+" + ",".join(matched)) if matched else "·"
         print(f"  + [{flag}] [{source_name}] {data.get('date')} actors={actors} topics={llm_topics}")
         return True
