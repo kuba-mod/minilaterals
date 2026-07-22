@@ -144,8 +144,13 @@ def test_score_density_cells_totals_colours_and_empty_cells():
     assert "stance 0" in zero_cell["tooltip"] and "stance +0" not in zero_cell["tooltip"]
     # Row margin totals/labels/descriptions match input, in SCORES order.
     assert [r["label"] for r in out["rows"]] == ["+2", "+1", "0", "-1", "-2"]
-    assert [r["desc"] for r in out["rows"]] == ["advances", "supports", "neutral", "opposes", "blocks"]
+    assert [r["desc"] for r in out["rows"]] == ["advances", "supports", "neutral", "hedges", "opposes"]
     assert [r["total"] for r in out["rows"]] == row_totals
+    # Columns are labelled by the Tuesday edition each Monday-anchored bucket
+    # falls under (see data/edition.yaml's weekly Tuesday cadence), not the
+    # internal Monday bucket-start date.
+    assert out["edition_labels"] == ["16 Jun", "23 Jun"]
+    assert out["edition_full_labels"] == ["Tuesday 16 Jun", "Tuesday 23 Jun"]
 
 
 # --- divergence leaderboard (orders pills + clusters) ----------------------

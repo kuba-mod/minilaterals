@@ -119,8 +119,9 @@
     const header = document.getElementById('density-header');
     header.style.gridTemplateColumns = cols;
     let headerHtml = '<div></div>';
-    weeks.forEach(function(w){
-      headerHtml += '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); text-align:center">' + esc(w.slice(5)) + '</div>';
+    slice.edition_labels.forEach(function(label, i){
+      const full = esc('Edition of ' + slice.edition_full_labels[i]);
+      headerHtml += '<div title="' + full + '" style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); text-align:center">' + esc(label) + '</div>';
     });
     headerHtml += '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; padding-left:8px">Total · share</div>';
     header.innerHTML = headerHtml;

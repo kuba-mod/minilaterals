@@ -27,7 +27,7 @@ import json
 import math
 import os
 from collections import defaultdict
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -227,9 +227,12 @@ COLOR_RED = "#a14132"
 # per row — both +1/+2 are shades of green and both -1/-2 share COLOR_RED
 # (asymmetric on purpose: two granular "how strongly positive" shades, but
 # opposition is opposition regardless of degree once it's opposition at all).
+# Wording matches the per-event stance tag on the convergence cards below
+# (index.html: "+2 actively advances · +1 supports · 0 neutral · −1 hedges ·
+# −2 opposes") so a reader doesn't learn two vocabularies for the same scale.
 SCORES = [2, 1, 0, -1, -2]
 SCORE_COLOR = {2: COLOR_GREEN, 1: COLOR_GREEN_LIGHT, 0: COLOR_AMBER, -1: COLOR_RED, -2: COLOR_RED}
-SCORE_DESC = {2: "advances", 1: "supports", 0: "neutral", -1: "opposes", -2: "blocks"}
+SCORE_DESC = {2: "advances", 1: "supports", 0: "neutral", -1: "hedges", -2: "opposes"}
 
 
 def _stance_agreement(spread: float, overall: float) -> tuple[str, str]:
@@ -561,6 +564,19 @@ def _score_label(score: int) -> str:
     return f"{score:+d}" if score else "0"
 
 
+def _edition_date(monday_str: str) -> date:
+    """
+    A score-density week bucket is Monday-anchored (see `compute_score_density`),
+    but editions are cut and published on Tuesdays (`data/edition.yaml`). Since
+    both cadences are fixed weekly, a bucket's Tuesday is always the edition
+    that statements in it were (or will be) published under — so columns
+    should be labelled by that edition date rather than the internal Monday
+    bucket-start date.
+    """
+    monday = datetime.strptime(monday_str, "%Y-%m-%d").date()
+    return monday + timedelta(days=1)
+
+
 def build_score_density_cells(grid: list[list[int]], row_totals: list[int], weeks: list[str]) -> dict:
     """
     CSS-grid-ready row/cell data for one score-density slice (see
@@ -569,7 +585,7 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
     template lays it out with `grid-template-columns` instead of pixel math.
 
     Colour is diverging by row — green shades for +2/+1 ("advances"/
-    "supports"), amber for neutral, red for -1/-2 ("opposes"/"blocks") — using
+    "supports"), amber for neutral, red for -1/-2 ("hedges"/"opposes") — using
     the site's existing Aligned/Mixed/Divergent palette (`SCORE_COLOR`), not a
     one-off hue. A filled cell's opacity ~ sqrt(count) so a single statement
     still reads clearly instead of washing out next to busier weeks; a cell
@@ -578,6 +594,9 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
     """
     grand_total = sum(row_totals)
     max_n = max((max(row) for row in grid), default=0) or 1
+    edition_dates = [_edition_date(w) for w in weeks]
+    edition_full_labels = [d.strftime("%A %-d %b") for d in edition_dates]
+    edition_short_labels = [d.strftime("%-d %b") for d in edition_dates]
 
     rows = []
     for ri, score in enumerate(SCORES):
@@ -587,7 +606,7 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
         share = round(100 * total / grand_total) if grand_total else 0
 
         cells = []
-        for wi, week_label in enumerate(weeks):
+        for wi, edition_full_label in enumerate(edition_full_labels):
             n = row_counts[wi] if wi < len(row_counts) else 0
             filled = n > 0
             opacity = round(0.16 + 0.84 * math.sqrt(n / max_n), 3) if filled else 0.0
@@ -596,7 +615,7 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
                     "filled": filled,
                     "color": color,
                     "opacity": opacity,
-                    "tooltip": f"Week of {week_label}  ·  stance {_score_label(score)}  ·  {n} statement{'s' if n != 1 else ''}",
+                    "tooltip": f"Edition of {edition_full_label}  ·  stance {_score_label(score)}  ·  {n} statement{'s' if n != 1 else ''}",
                 }
             )
 
@@ -611,7 +630,13 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
             }
         )
 
-    return {"weeks": weeks, "rows": rows, "grand_total": grand_total}
+    return {
+        "weeks": weeks,
+        "edition_labels": edition_short_labels,
+        "edition_full_labels": edition_full_labels,
+        "rows": rows,
+        "grand_total": grand_total,
+    }
 
 
 def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> list[dict]:
