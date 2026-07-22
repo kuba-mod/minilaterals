@@ -21,10 +21,10 @@ LISTING_URL = "https://www.elysee.fr/toutes-les-actualites"
 BASE_URL = "https://www.elysee.fr"
 SOURCE_NAME = "elysee"
 
-# Wayback Machine CDX endpoint, used only in backfill mode. The listing ignores
-# ?page= and always returns the same ~100-item batch (see the pagination loop
-# below), so HTML pagination alone can't reach further back than that — but
-# web.archive.org's crawl history of /emmanuel-macron/* article URLs can, and
+# Wayback Machine CDX endpoint, used only in backfill mode as a fallback after
+# HTML pagination plateaus (whatever the actual cause — page-index scheme,
+# archive depth, or something else not yet root-caused). web.archive.org's
+# crawl history of /emmanuel-macron/* article URLs can reach further back, and
 # elysee.fr keeps old articles live, so backfill discovers URLs via CDX and
 # fetches full text/date from the live site rather than from the snapshot.
 WAYBACK_CDX_URL = "https://web.archive.org/cdx/search/cdx"
@@ -85,7 +85,16 @@ class ElyseeIngester(BaseIngester):
         prev_urls: frozenset[str] = frozenset()
         seen_urls: set[str] = set()
         while True:
-            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page}"
+            # ?page= is 0-indexed from the *second* page (matching the pager
+            # convention on bundesregierung.de's listing — see
+            # german_chancellery.py): no param = page 1, ?page=1 = page 2,
+            # ?page=2 = page 3. Requesting ?page=2 for the second fetch (page==2)
+            # would actually ask for the third page, not the second — previously
+            # unnoticed because both the correct and the off-by-one requests can
+            # land past the archive's real depth and get clamped back to page 1,
+            # which looked identical to "the site ignores ?page=" from a page-1
+            # vs page-2 comparison alone.
+            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page - 1}"
             try:
                 r = requests.get(url, timeout=15, headers=_HEADERS)
                 r.raise_for_status()
@@ -120,9 +129,10 @@ class ElyseeIngester(BaseIngester):
             if not links:
                 break
 
-            # The site ignores ?page= on this listing and always returns the
-            # same recent batch, so a repeated batch means we've hit the end
-            # of what's paginatable — stop instead of looping forever.
+            # A page returning the same batch as the one before it means we've
+            # hit the end of what's paginatable (whether that's the archive's
+            # real depth or the listing clamping an out-of-range request back
+            # to page 1) — stop instead of looping forever.
             if seen == prev_urls:
                 break
             prev_urls = frozenset(seen)
@@ -174,8 +184,8 @@ class ElyseeIngester(BaseIngester):
     def _fetch_wayback_articles(self, seen_urls: set[str]) -> Iterator[Event]:
         """Discover article URLs Wayback crawled under /emmanuel-macron/ since
         `since`, then fetch title/body/date from the live site — elysee.fr keeps
-        old articles up, only the listing rolls off. This is the only way to
-        backfill past the listing's ~100-item window (see module docstring)."""
+        old articles up, only the listing rolls off. Fallback for whatever the
+        listing pagination in fetch() can't reach on its own."""
         urls: list[str] = []
         for attempt in range(3):
             try:
