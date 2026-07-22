@@ -540,8 +540,7 @@ def compute_score_density(
     if weeks is not None:
         n_buckets = min(n_buckets, weeks)
     week_labels = [
-        (today_d - timedelta(days=window_days * (n_buckets - 1 - i))).strftime("%Y-%m-%d")
-        for i in range(n_buckets)
+        (today_d - timedelta(days=window_days * (n_buckets - 1 - i))).strftime("%Y-%m-%d") for i in range(n_buckets)
     ]
 
     def bucket_of(date_str: str) -> int:
