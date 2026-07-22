@@ -70,7 +70,7 @@ Sources (RSS/HTML/API)
 ## Data model
 
 Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` sidecar, not the raw event YAML):
-- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar countries and a tracked issue area
+- `weimar_relevant: true` — any MFA-sourced item touching a tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar Triangle countries and a tracked issue area
 - `trilateral_signal: true` — explicit "Weimar Triangle" mention or all 3 actors present
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
 - `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
@@ -85,15 +85,19 @@ Both raw and enriched provenance fields are Optional in the schemas so pre-prove
 
 ## Relevance classification (`enrich.py`)
 
-Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor item on a tracked topic. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
+Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which Weimar Triangle countries are involved (`actors`), whether the text explicitly invokes the trilateral format (`explicit_weimar`), and which `issue_areas` it touches. From those signals it computes `weimar_relevant` and `trilateral_signal` with a fixed rule (mirroring the previous policy): a trilateral signal, OR 2+ actors on a tracked topic, OR a known-actor item on a tracked topic. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names to `DE`/`FR`/`PL` codes. There is no keyword fallback — see design principles #5 and #8.
 
 ## Convergence scoring (`render.py`)
 
 `build_convergence_clusters()` groups `weimar_relevant` events by issue area into 7-day windows (matching the weekly edition cadence) where 2+ MFA actors published. `score_cluster_stances()` is the **single** scoring method: for each actor it means that actor's per-event stance ratings (`extracted.stances[area].score`, −2..+2 vs. the agreed Weimar goal). `overall` is the mean stance across actors. `_stance_agreement(spread, overall)` labels the cluster from **two** axes, not one: the `spread` between per-actor means (agreement between capitals) and `overall` (agreement with the goal itself). Low spread alone is not "Aligned" — capitals in lockstep opposition (e.g. both at −2) label as `Aligned against goal` (red), not a green `Aligned`; low spread with `overall` too close to neutral (−0.5..+0.5) labels `Noncommittal` (amber). Only low spread *and* `overall` ≥ 0.5 is `Aligned` (green). Above spread 0.5 the label is purely spread-driven: `Mixed` (≤ 1.5) or `Divergent`. A cluster whose events carry no stance ratings scores `None` and renders without a badge — there is no embedding/cosine fallback. Every score is auditable via the evidence quote stored on each stance. Backfill missing stances with `pipeline.enrich --stances-only`.
 
+## Terminology
+
+Always say **"Weimar Triangle countries"**, never "Weimar countries" — in prose, UI copy, and commit/PR text alike.
+
 ## Country ordering
 
-Wherever all three Weimar countries appear together in the UI — legends, chart lines/end-labels, cluster columns, convergence badges, nav links — the order is always **France, Germany, Poland** (`FR`, `DE`, `PL`), matching `WEIMAR_ACTORS` in `render.py`. Never alphabetical (`DE, FR, PL`) and never insertion/discovery order. When building a new list of actors, iterate `WEIMAR_ACTORS` (Python) or the Jinja `weimar_actors` context var / a `weimar_actors | tojson` array passed into inline `<script>` blocks, rather than a fresh hardcoded tuple or a `sorted()` call on a set of actor codes.
+Wherever all three Weimar Triangle countries appear together in the UI — legends, chart lines/end-labels, cluster columns, convergence badges, nav links — the order is always **France, Germany, Poland** (`FR`, `DE`, `PL`), matching `WEIMAR_ACTORS` in `render.py`. Never alphabetical (`DE, FR, PL`) and never insertion/discovery order. When building a new list of actors, iterate `WEIMAR_ACTORS` (Python) or the Jinja `weimar_actors` context var / a `weimar_actors | tojson` array passed into inline `<script>` blocks, rather than a fresh hardcoded tuple or a `sorted()` call on a set of actor codes.
 
 ## Enrichment providers
 
