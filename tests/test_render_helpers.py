@@ -61,15 +61,21 @@ def test_cluster_key_stable_and_order_independent():
 
 def test_score_density_bins_into_the_right_score_row_and_actor_slice():
     events = [
+        # Windows are anchored to `today` (2026-06-29), not the calendar:
+        # the rightmost window is the 7 days ending on `today`
+        # (2026-06-23..2026-06-29), the one before it ends 7 days earlier
+        # (..2026-06-22). So 06-22 lands in the older window, and 06-23/06-24
+        # — despite being calendar-adjacent to 06-22 — land in the newest one.
         _stance_event("german_mfa", "2026-06-22", 2, "enlargement"),
         _stance_event("polish_mfa", "2026-06-23", 0, "enlargement"),
         _stance_event("polish_mfa", "2026-06-24", 0, "enlargement"),
     ]
     density = compute_score_density(events, today=datetime(2026, 6, 29, tzinfo=UTC))
     all_enl = density["ALL"]["enlargement"]
-    week_idx = all_enl["weeks"].index("2026-06-22")
-    assert all_enl["grid"][SCORES.index(2)][week_idx] == 1
-    assert all_enl["grid"][SCORES.index(0)][week_idx] == 2
+    assert all_enl["weeks"] == ["2026-06-22", "2026-06-29"]
+    old_idx, new_idx = 0, 1
+    assert all_enl["grid"][SCORES.index(2)][old_idx] == 1
+    assert all_enl["grid"][SCORES.index(0)][new_idx] == 2
     assert all_enl["row_totals"] == [1, 0, 2, 0, 0]
     assert all_enl["grand_total"] == 3
     # A per-capital slice isolates just that capital's statements.
@@ -77,6 +83,23 @@ def test_score_density_bins_into_the_right_score_row_and_actor_slice():
     assert pl_enl["row_totals"] == [0, 0, 2, 0, 0]
     de_enl = density["DE"]["enlargement"]
     assert de_enl["row_totals"] == [1, 0, 0, 0, 0]
+
+
+def test_score_density_last_window_is_a_full_window_not_a_partial_calendar_week():
+    # Regression: the rightmost column must cover the full window_days before
+    # the cutoff, even when the cutoff falls mid-(calendar-)week — otherwise
+    # the most recent column under-reports relative to older, complete columns.
+    events = [
+        _stance_event("german_mfa", "2026-07-16", 1, "enlargement"),  # Thursday
+        _stance_event("france_diplomatie", "2026-07-21", 1, "enlargement"),  # Tuesday (the cutoff)
+    ]
+    density = compute_score_density(events, today=datetime(2026, 7, 21, tzinfo=UTC))
+    all_enl = density["ALL"]["enlargement"]
+    assert all_enl["weeks"][-1] == "2026-07-21"
+    # Both statements fall in the 7 days ending on the cutoff (07-15..07-21),
+    # so both land in the rightmost column, not split across a Monday-anchored
+    # calendar-week boundary that would fall between them.
+    assert all_enl["grid"][SCORES.index(1)][-1] == 2
 
 
 def test_score_density_handles_negative_two_in_the_bottom_row():
@@ -119,7 +142,7 @@ def test_score_density_weeks_cap_to_trailing_window():
 def test_score_density_cells_totals_colours_and_empty_cells():
     grid = [[0, 1], [0, 0], [0, 2], [0, 0], [1, 0]]  # +2, +1, 0, -1, -2 rows
     row_totals = [1, 0, 2, 0, 1]
-    weeks = ["2026-06-15", "2026-06-22"]
+    weeks = ["2026-06-16", "2026-06-23"]  # window end dates, i.e. edition dates (both Tuesdays)
     out = build_score_density_cells(grid, row_totals, weeks)
     assert out["weeks"] == weeks
     assert out["grand_total"] == sum(row_totals)
@@ -146,9 +169,7 @@ def test_score_density_cells_totals_colours_and_empty_cells():
     assert [r["label"] for r in out["rows"]] == ["+2", "+1", "0", "-1", "-2"]
     assert [r["desc"] for r in out["rows"]] == ["advances", "supports", "neutral", "hedges", "opposes"]
     assert [r["total"] for r in out["rows"]] == row_totals
-    # Columns are labelled by the Tuesday edition each Monday-anchored bucket
-    # falls under (see data/edition.yaml's weekly Tuesday cadence), not the
-    # internal Monday bucket-start date.
+    # Columns are labelled by their window's end date (the edition date).
     assert out["edition_labels"] == ["16 Jun", "23 Jun"]
     assert out["edition_full_labels"] == ["Tuesday 16 Jun", "Tuesday 23 Jun"]
 

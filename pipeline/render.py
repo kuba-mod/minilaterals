@@ -27,7 +27,7 @@ import json
 import math
 import os
 from collections import defaultdict
-from datetime import UTC, date, datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -499,21 +499,33 @@ def compute_score_density(
 ) -> dict[str, dict[str, dict]]:
     """
     Per (capital, topic) slice, a score x week grid of how many rated
-    statements landed at each stance level (2, 1, 0, -1, -2) in that calendar
-    week. Unlike `compute_topic_weekly_stances`' rolling mean, a week here is a
-    fixed, non-overlapping calendar bin (Monday-anchored): this chart shows the
-    full distribution of individual ratings rather than their average, so one
-    sharp statement (e.g. a -1 amid a run of +1s) is visible as an outlier
-    cell instead of being smoothed away.
+    statements landed at each stance level (2, 1, 0, -1, -2) in that window.
+    Unlike `compute_topic_weekly_stances`' rolling mean, a window here is a
+    fixed, non-overlapping bin: this chart shows the full distribution of
+    individual ratings rather than their average, so one sharp statement
+    (e.g. a -1 amid a run of +1s) is visible as an outlier cell instead of
+    being smoothed away.
+
+    Windows are anchored to `today` (the edition cutoff) rather than to the
+    calendar: the rightmost window always ends exactly on `today` and covers
+    the `window_days` immediately before it, and each window to its left is a
+    further `window_days` back. A calendar-week (Monday-anchored) bucketing
+    would let the rightmost column land mid-week and only show a partial
+    window's worth of statements — since editions are cut on a fixed weekly
+    schedule (`data/edition.yaml`), anchoring to `today` instead keeps every
+    column, including the most recent one, a complete `window_days`-day slice
+    and makes each column correspond 1:1 to the edition that reported it.
 
     Returns `{"ALL": {"overall": {...}, "ukraine": {...}, ...}, "FR": {...}, ...}`
     — 4 capitals ("ALL" + FR/DE/PL) x 7 topics ("overall" + ISSUE_ORDER) = 28
-    slices, all sharing one Monday-anchored week axis so switching slices never
-    shifts the x-axis. Each slice is
+    slices, all sharing one window axis so switching slices never shifts the
+    x-axis. Each slice is
     `{"weeks": [...], "grid": [[n, ...] x len(weeks)] (SCORES order),
       "row_totals": [n, ...] (SCORES order), "grand_total": n}`.
+    Each entry in `weeks` is a window's *end* date (the edition date), not
+    its start.
 
-    `weeks` caps to the most recent N calendar weeks (see TIMELINE_WEEKS), to
+    `weeks` param caps to the most recent N windows (see TIMELINE_WEEKS), to
     match the trailing window the rest of the page shows.
     """
     rows = _stance_rows(events)
@@ -523,18 +535,18 @@ def compute_score_density(
     earliest = min(d for d, _, _, _ in rows)
     today_d = (today or datetime.now(UTC)).date()
     start_dt = datetime.strptime(earliest, "%Y-%m-%d").date()
-    anchor = start_dt - timedelta(days=start_dt.weekday())  # snap to Monday
 
-    n_buckets = (today_d - anchor).days // window_days + 1
-    week_labels = [(anchor + timedelta(days=window_days * i)).strftime("%Y-%m-%d") for i in range(n_buckets)]
-    drop = 0
-    if weeks is not None and len(week_labels) > weeks:
-        drop = len(week_labels) - weeks
-        week_labels = week_labels[drop:]
+    n_buckets = (today_d - start_dt).days // window_days + 1
+    if weeks is not None:
+        n_buckets = min(n_buckets, weeks)
+    week_labels = [
+        (today_d - timedelta(days=window_days * (n_buckets - 1 - i))).strftime("%Y-%m-%d")
+        for i in range(n_buckets)
+    ]
 
     def bucket_of(date_str: str) -> int:
         d = datetime.strptime(date_str, "%Y-%m-%d").date()
-        return (d - anchor).days // window_days - drop
+        return (n_buckets - 1) - (today_d - d).days // window_days
 
     def grid_for(actor: str | None, topic: str | None) -> dict:
         grid = [[0] * len(week_labels) for _ in SCORES]
@@ -564,19 +576,6 @@ def _score_label(score: int) -> str:
     return f"{score:+d}" if score else "0"
 
 
-def _edition_date(monday_str: str) -> date:
-    """
-    A score-density week bucket is Monday-anchored (see `compute_score_density`),
-    but editions are cut and published on Tuesdays (`data/edition.yaml`). Since
-    both cadences are fixed weekly, a bucket's Tuesday is always the edition
-    that statements in it were (or will be) published under — so columns
-    should be labelled by that edition date rather than the internal Monday
-    bucket-start date.
-    """
-    monday = datetime.strptime(monday_str, "%Y-%m-%d").date()
-    return monday + timedelta(days=1)
-
-
 def build_score_density_cells(grid: list[list[int]], row_totals: list[int], weeks: list[str]) -> dict:
     """
     CSS-grid-ready row/cell data for one score-density slice (see
@@ -594,7 +593,9 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
     """
     grand_total = sum(row_totals)
     max_n = max((max(row) for row in grid), default=0) or 1
-    edition_dates = [_edition_date(w) for w in weeks]
+    # Each entry in `weeks` is already the window's end date, i.e. the
+    # edition date that window's statements were reported under.
+    edition_dates = [datetime.strptime(w, "%Y-%m-%d").date() for w in weeks]
     edition_full_labels = [d.strftime("%A %-d %b") for d in edition_dates]
     edition_short_labels = [d.strftime("%-d %b") for d in edition_dates]
 
