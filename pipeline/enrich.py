@@ -93,6 +93,10 @@ ALL_MEMBERS = [c for g in GROUPINGS.values() for c in g.members]
 # ordered so that the six original Weimar areas come first.
 _WEIMAR_TOPIC_ORDER = ["ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law"]
 ALL_TOPICS = _WEIMAR_TOPIC_ORDER + sorted({t for g in GROUPINGS.values() for t in g.topics} - set(_WEIMAR_TOPIC_ORDER))
+# A legend of format key -> name (member codes), injected into the extraction
+# prompt so the model has a concrete example per grouping to match against
+# instead of just a bare list of keys.
+FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for key, g in GROUPINGS.items())
 
 # Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
 # score can be traced to the exact prompt that produced it. The lineage is keyed
@@ -103,12 +107,13 @@ ALL_TOPICS = _WEIMAR_TOPIC_ORDER + sorted({t for g in GROUPINGS.values() for t i
 #   "3"  c2cfff1e  actors/explicit_weimar shape hardening + retry
 #   "4"  434962fe  native-language inputs (de/fr/pl); output English, evidence verbatim
 #   "5"  c6353f81  multi-grouping: 12-country actors, topic union, explicit_formats
+#   "6"  f5697563  explicit_formats legend + explicit-naming-vs-mere-involvement clarification
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "5"
-PROMPT_SURFACE_SHA = "c6353f81"
+PROMPT_VERSION = "6"
+PROMPT_SURFACE_SHA = "f5697563"
 
 
 def prompt_surface_sha() -> str:
@@ -164,6 +169,9 @@ Text: {text}
 Shared minilateral goals — frame topic entries against these:
 {goals_block}
 
+Minilateral format keys (for "explicit_formats" below):
+{format_hints_block}
+
 {stance_rubric}
 
 Return JSON with exactly these fields:
@@ -171,7 +179,7 @@ Return JSON with exactly these fields:
   "event_type": "one of: joint_statement, speech, meeting, communique, statement",
   "participants": ["list of named officials or roles mentioned"],
   "actors": ["a flat array of the country codes ({actor_codes}) that this item represents or discusses; [] if none; never nest arrays or add other values"],
-  "explicit_formats": ["a flat array of any of these minilateral formats the text explicitly names, as lowercase keys ({format_keys}); [] if none — e.g. 'weimar' only if it refers to the Weimar Triangle / trilateral Germany-France-Poland cooperation, 'aukus' only if it names AUKUS"],
+  "explicit_formats": ["a flat array of format keys from the list above, ONLY if the text itself names that format (e.g. says 'the E3', 'AUKUS', 'Weimar Triangle') — NOT just because the format's member countries happen to be discussed; [] if the text never names a format by its own name"],
   "topics": ["list from: {topic_list}"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
@@ -549,9 +557,9 @@ def _extract(provider, raw_path: Path) -> bool:
         title=data.get("title", "")[:300],
         text=(data.get("text", "") or "")[:3000],
         goals_block=goals_block,
+        format_hints_block=FORMAT_HINTS_BLOCK,
         stance_rubric=STANCE_RUBRIC,
         actor_codes=", ".join(_ACTOR_ORDER),
-        format_keys=", ".join(GROUPINGS),
         topic_list=", ".join(ALL_TOPICS),
     )
 

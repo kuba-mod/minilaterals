@@ -60,6 +60,11 @@ class FeedIngester(BaseIngester):
     source_name = ""
     source_lang = "en"
     feed_url = ""
+    # Every event from a FeedIngester subclass came via a syndicated feed, so this
+    # is "rss" for both RSS and Atom (the existing collection_method vocabulary —
+    # see schemas.py — doesn't distinguish the two). A subclass can override this
+    # if it ever needs a different label.
+    collection_method = "rss"
 
     def fetch(self) -> Iterator[Event]:
         yield from self.parse_feed(self._download())
@@ -99,7 +104,7 @@ class FeedIngester(BaseIngester):
                 text=_entry_text(entry),
                 source_url=url,
                 source_lang=self.source_lang,
-                collection_method="rss",
+                collection_method=self.collection_method,
                 source_published_at=published_at,
                 date=date,
             )

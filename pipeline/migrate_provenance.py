@@ -76,6 +76,7 @@ PROMPT_LINEAGE = {
     "c2cfff1e": "3",  # actors/explicit_weimar shape hardening + retry
     "434962fe": "4",  # native-language inputs (this branch)
     "c6353f81": "5",  # multi-grouping: 12-country actors, topic union, explicit_formats
+    "f5697563": "6",  # explicit_formats legend + naming-vs-involvement clarification
 }
 
 
