@@ -13,16 +13,17 @@ extracted:
   - ukraine
   - enlargement
   location: Cyprus
-  position: Germany pledges continued EU support for Ukraine and advocates for its
-    closer integration into the European Union.
+  position: Chancellor Merz announced continued EU support for Ukraine and advocated
+    for closer ties between Ukraine and the EU.
   positions:
-    ukraine: Germany reaffirms its commitment to providing ongoing EU support for
-      Ukraine.
-    enlargement: Germany supports a closer connection between Ukraine and the EU.
+    ukraine: Germany continues to support the EU's assistance to Ukraine.
+    enlargement: Germany supports a closer integration of Ukraine into the European
+      Union.
   stances:
     ukraine:
       score: 1
-      evidence: die weitere Unterstützung der EU für die Ukraine angekündigt
+      evidence: hat nach dem Europäischen Rat auf Zypern die weitere Unterstützung
+        der EU für die Ukraine angekündigt
     enlargement:
       score: 1
       evidence: Engere Anbindung der Ukraine an EU

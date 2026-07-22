@@ -8,15 +8,15 @@ extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - Chief of diplomacy of Lebanon
+  - Head of diplomacy of Lebanon
   topics:
   - defence
   location: null
-  position: Poland expresses solidarity with Lebanon, supports peace talks with Israel,
-    and emphasizes the security of UNIFIL peacekeepers.
+  position: Poland expressed solidarity with Lebanon, supported peace talks with Israel,
+    and emphasized the security of UNIFIL peacekeepers.
   positions:
-    defence: Poland supports collective security and the safety of international peacekeeping
-      forces in Lebanon.
+    defence: Poland prioritizes the security of international peacekeeping forces
+      in Lebanon, aligning with goals of collective security.
   stances:
     defence:
       score: 1

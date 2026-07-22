@@ -6,16 +6,11 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants:
-  - Hille
-  - Hamberger
-  - Karin Prien
-  - Wadephul
-  - Nasser Bourita
+  - Bundesregierung
   topics: []
   location: null
-  position: Germany is conducting diplomatic missions to Canada for education policy
-    and to Morocco for strategic and economic consultations, while maintaining its
-    UN-led position on Western Sahara.
+  position: The German government has decided to increase the funding for the Federal
+    Foundation for Mother and Child to better support pregnant women in need.
   positions: {}
   stances: {}
 enriched_by:

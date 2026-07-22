@@ -3,7 +3,6 @@ actors:
 issue_areas:
 - defence
 - enlargement
-- rule_of_law
 weimar_relevant: true
 trilateral_signal: false
 extracted:
@@ -13,31 +12,25 @@ extracted:
   topics:
   - defence
   - enlargement
-  - rule_of_law
   location: Berlin, Germany
-  position: Germany has decided to continue its military participation in the KFOR
-    mission in Kosovo with up to 400 soldiers to ensure regional stability.
+  position: Germany will continue its military commitment to KFOR in Kosovo with up
+    to 400 soldiers to ensure regional stability and support the transition to local
+    security institutions.
   positions:
-    defence: Germany actively contributes military personnel and intelligence capabilities
-      to the NATO-led KFOR mission to secure peace in Kosovo.
+    defence: Germany actively contributes military personnel and resources to NATO-led
+      security operations to maintain stability in the Balkans.
     enlargement: Germany supports the normalization of relations between Kosovo and
-      Serbia and the EU-led dialogue, aligning with Western Balkans integration goals.
-    rule_of_law: Germany supports the democratic stabilization of Kosovo and the transition
-      of security responsibilities to local institutions.
+      Serbia and promotes stability in the Western Balkans, aligning with EU integration
+      goals.
   stances:
     defence:
       score: 2
-      evidence: Die Beteiligung bewaffneter deutscher Streitkräfte an der internationalen
-        Sicherheitspräsenz in Kosovo ( KFOR ) wird fortgesetzt.
+      evidence: Insgesamt können unverändert bis zu 400 deutsche Soldatinnen und Soldaten
+        eingesetzt werden.
     enlargement:
       score: 1
       evidence: Zentrales Anliegen der Bundesregierung ist eine nachhaltige und rechtsverbindliche
         Normalisierung der Beziehungen zwischen Kosovo und Serbien.
-    rule_of_law:
-      score: 1
-      evidence: Deutsche Soldatinnen und Soldaten unterstützen als Teil der NATO die
-        Sicherung der öffentlichen Ordnung und beteiligen sich in verschiedenen Bereichen
-        an der demokratischen Stabilisierung des Landes.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

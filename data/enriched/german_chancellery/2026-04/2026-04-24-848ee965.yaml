@@ -13,12 +13,13 @@ extracted:
   - hybrid
   location: null
   position: Germany and the EU have adopted the 20th sanctions package against Russia
-    to weaken its economy and support Ukraine's sovereignty.
+    to increase pressure on the Kremlin and support Ukraine's sovereignty.
   positions:
-    ukraine: Germany actively advances the goal of long-term support for Ukraine by
-      implementing a comprehensive new sanctions package to pressure Russia.
-    hybrid: Germany takes concrete action against hybrid threats by restricting Russian
-      cybersecurity services and banning crypto-assets used to bypass sanctions.
+    ukraine: Germany actively advances long-term support for Ukraine by implementing
+      a comprehensive new sanctions package targeting Russia's energy, financial,
+      and military sectors.
+    hybrid: Germany supports coordinated action against hybrid threats by restricting
+      cybersecurity services for Russia.
   stances:
     ukraine:
       score: 2

@@ -4,14 +4,14 @@ issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
 extracted:
-  event_type: speech
+  event_type: statement
   participants:
   - Friedrich Merz
   - Gitta Connemann
   topics: []
   location: Moormerland, Germany
-  position: Chancellor Merz emphasizes the strategic importance of the maritime economy,
-    port infrastructure, and supporting small-to-medium enterprises in rural regions.
+  position: Chancellor Merz emphasized the strategic importance of maritime infrastructure
+    and the need for better conditions for medium-sized enterprises in rural regions.
   positions: {}
   stances: {}
 enriched_by:

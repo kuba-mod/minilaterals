@@ -9,18 +9,18 @@ extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - Foreign Minister of Italy
+  - heads of diplomacy
   topics:
   - ukraine
   - enlargement
   location: Rome, Italy
-  position: Poland strengthened its strategic cooperation with Italy, focusing on
-    security architecture in Europe and the EU enlargement process.
+  position: Poland formalized a strategic cooperation framework with Italy, emphasizing
+    continued support for Ukraine and EU enlargement.
   positions:
-    ukraine: Poland emphasizes the necessity of continued military and financial support
-      for Ukraine and coordinated pressure on Russia.
-    enlargement: Poland views the EU enlargement process as a critical tool for ensuring
-      continental stability and security.
+    ukraine: Poland advocates for uninterrupted military and financial support for
+      Ukraine and coordinated pressure on Russia.
+    enlargement: Poland views the EU enlargement process as a vital tool for continental
+      stability and security.
   stances:
     ukraine:
       score: 1
@@ -28,8 +28,8 @@ extracted:
         dla Ukrainy
     enlargement:
       score: 1
-      evidence: omówili proces rozszerzenia Unii Europejskiej, uznając go za ważne
-        narzędzie budowania stabilności i bezpieczeństwa na kontynencie
+      evidence: Ministrowie omówili proces rozszerzenia Unii Europejskiej, uznając
+        go za ważne narzędzie budowania stabilności i bezpieczeństwa na kontynencie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

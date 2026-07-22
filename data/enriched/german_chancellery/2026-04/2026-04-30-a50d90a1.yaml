@@ -8,15 +8,15 @@ extracted:
   event_type: meeting
   participants:
   - Friedrich Merz
+  - Bundeskanzler
   topics:
   - rule_of_law
   location: Salzwedel, Germany
   position: Chancellor Merz emphasizes the critical role of local journalism and a
-    respectful political debate culture in maintaining a functioning democracy.
+    respectful debate culture in maintaining a functioning democracy.
   positions:
     rule_of_law: Germany rhetorically supports democratic resilience by stressing
-      the importance of local journalism and a factual, respectful discourse for a
-      functioning democracy.
+      the importance of local media for transparency and democratic participation.
   stances:
     rule_of_law:
       score: 1

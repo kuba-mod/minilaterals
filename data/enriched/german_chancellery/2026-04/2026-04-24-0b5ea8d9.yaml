@@ -12,24 +12,23 @@ extracted:
   - ukraine
   - defence
   location: null
-  position: Germany is providing extensive military, financial, and humanitarian aid
-    to Ukraine to support its defense and recovery against Russian aggression.
+  position: Germany provides comprehensive military, financial, and humanitarian support
+    to Ukraine to ensure its defense and recovery.
   positions:
-    ukraine: Germany is providing massive bilateral civilian and military financial
-      support to Ukraine to ensure its defense and stability.
-    defence: Germany is actively enhancing Ukraine's defense capabilities through
-      the delivery of air defense systems and military equipment.
+    ukraine: Germany provides massive bilateral financial and humanitarian aid to
+      support Ukraine's stability and recovery.
+    defence: Germany actively strengthens Ukraine's military capabilities through
+      the supply of advanced weaponry and equipment.
   stances:
     ukraine:
       score: 2
       evidence: Die Bundesregierung hat seit Beginn des russischen Angriffskriegs
         am 24.02.2022 bilaterale zivile Unterstützung für die Ukraine in Höhe von
-        rund 41 Milliarden Euro geleistet und militärische Unterstützung in Höhe von
-        circa 55,5 Milliarden Euro geleistet
+        rund 41 Milliarden Euro geleistet
     defence:
       score: 2
-      evidence: Gleichzeitig wird die Luftverteidigung durch die Beschaffung und Bereitstellung
-        von Flugabwehrsystemen gestärkt
+      evidence: militärische Unterstützung in Höhe von circa 55,5 Milliarden Euro
+        geleistet beziehungsweise für die kommenden Jahre bereitgestellt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

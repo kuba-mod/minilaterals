@@ -10,26 +10,26 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants:
-  - Klingbeil
-  - Merz
+  - Bundesfinanzminister Klingbeil
+  - Bundeskanzler Merz
   topics:
   - ukraine
   - defence
   - hybrid
   - green_transition
   location: null
-  position: Germany is implementing a budgetary framework that prioritizes a significant
-    increase in defense spending and infrastructure investment while managing fiscal
-    consolidation.
+  position: Germany is implementing a budget for 2027 that balances massive fiscal
+    consolidation with strategic investments in defense, infrastructure, and climate
+    protection.
   positions:
     ukraine: Germany acknowledges the ongoing Russian war of aggression against Ukraine
-      as a primary driver of its security policy.
-    defence: Germany is actively advancing its defense capabilities by significantly
-      increasing the defense budget to approximately 106 billion euros.
-    hybrid: Germany identifies Russian hybrid threats as a critical challenge to European
-      security.
+      as a driver for changing security priorities.
+    defence: Germany is significantly increasing its defense budget to ensure alliance
+      capability and security.
+    hybrid: Germany recognizes the continued presence of significant hybrid threats
+      from Russia.
     green_transition: Germany is committing massive investments toward climate protection
-      as part of its infrastructure modernization offensive.
+      as part of its infrastructure modernization.
   stances:
     ukraine:
       score: 1

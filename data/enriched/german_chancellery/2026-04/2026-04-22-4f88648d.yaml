@@ -12,10 +12,9 @@ extracted:
   - defence
   location: Berlin, Germany
   position: The German government has lowered its GDP growth projections for 2026
-    due to geopolitical tensions in the Middle East and is emphasizing the need for
-    structural economic reforms.
+    due to conflicts in the Middle East and structural economic weaknesses.
   positions:
-    defence: Germany is utilizing state orders in the defense sector to stimulate
+    defence: Germany is allocating government contracts to the defense sector to stimulate
       investment and economic recovery.
   stances:
     defence:

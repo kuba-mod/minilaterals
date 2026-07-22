@@ -1,5 +1,7 @@
 actors:
 - DE
+- FR
+- PL
 issue_areas:
 - ukraine
 - defence
@@ -21,21 +23,21 @@ extracted:
   - green_transition
   - rule_of_law
   location: null
-  position: The German Federal Cabinet has formally adopted the goals of the Weimar
-    Triangle across military, security, industrial, and legal dimensions.
+  position: The German Federal Cabinet has formally adopted the shared goals of the
+    Weimar Triangle across security, European integration, and climate policy.
   positions:
-    ukraine: Germany commits to comprehensive long-term support for Ukraine to achieve
-      a just peace.
-    defence: Germany supports enhancing EU defence capabilities as a complement to
-      NATO, focusing on the eastern flank.
+    ukraine: Germany commits to long-term military, economic, and diplomatic support
+      for Ukraine.
+    defence: Germany supports enhancing EU defence capabilities to complement NATO
+      and secure the eastern flank.
     hybrid: Germany calls for coordinated trilateral action against disinformation
       and cyber threats.
     enlargement: Germany supports EU accession for Ukraine and the Western Balkans,
-      conditioned on institutional reforms.
+      contingent on internal EU reforms.
     green_transition: Germany aligns its industrial and energy policy with the Clean
-      Industrial Deal and climate neutrality goals.
+      Industrial Deal and climate neutrality.
     rule_of_law: Germany affirms the rule of law and democratic resilience as essential
-      for European security.
+      to European security.
   stances:
     ukraine:
       score: 2

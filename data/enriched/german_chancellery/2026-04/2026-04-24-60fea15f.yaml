@@ -7,11 +7,11 @@ extracted:
   event_type: meeting
   participants:
   - Bundeskanzler Merz
-  - students
   topics: []
   location: Marsberg, Germany
-  position: Chancellor Merz is visiting a gymnasium to engage with students on European
-    topics as part of the EU School Project Day.
+  position: Chancellor Merz is visiting a school to engage students in discussions
+    and projects regarding European themes as part of the annual EU School Project
+    Day.
   positions: {}
   stances: {}
 enriched_by:

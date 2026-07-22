@@ -13,18 +13,17 @@ extracted:
   - green_transition
   - rule_of_law
   location: null
-  position: Germany is implementing a significantly expanded urban development funding
-    program to create sustainable living spaces and strengthen social cohesion.
+  position: Germany is increasing federal funding for urban development to create
+    sustainable living spaces and strengthen social cohesion.
   positions:
-    green_transition: Germany is allocating substantial financial resources to create
-      climate-fit infrastructure and sustainable urban environments.
-    rule_of_law: Germany links the improvement of urban living conditions and social
-      cohesion to the acceptance of democracy.
+    green_transition: Germany is investing in climate-resilient infrastructure and
+      sustainable urban quarters.
+    rule_of_law: Germany links the creation of livable communities to the maintenance
+      of democratic acceptance and social cohesion.
   stances:
     green_transition:
       score: 2
-      evidence: erstmals stellt der Bund im Jahr 2026 Städten und Gemeinden eine Milliarde
-        Euro für die Städtebauförderung bereit
+      evidence: mehr Grün in der Stadt oder eine klimafitte Infrastruktur
     rule_of_law:
       score: 1
       evidence: lebenswerte Städte und Kommunen sind wichtig für das gesellschaftliche

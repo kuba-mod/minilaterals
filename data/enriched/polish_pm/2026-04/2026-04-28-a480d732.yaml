@@ -7,15 +7,17 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants:
-  - Tomasz Siemioniaka
+  - Tomasz Siemoniak
+  - Andrzej Poczobut
   topics:
   - rule_of_law
-  location: null
-  position: Poland successfully negotiated the release of political prisoner Andrzej
-    Poczobut through a symmetric prisoner exchange with Belarus.
+  location: Polish-Belarusian border
+  position: Poland successfully secured the release of Andrzej Poczobut through a
+    symmetric prisoner exchange and diplomatic pressure on the Belarusian regime.
   positions:
-    rule_of_law: Poland actively promotes the release of political prisoners and the
-      protection of human rights against the Belarusian regime.
+    rule_of_law: Poland actively advances the goal of democratic resilience and human
+      rights by securing the release of a political prisoner and pledging continued
+      support for others.
   stances:
     rule_of_law:
       score: 2

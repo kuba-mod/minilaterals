@@ -3,6 +3,7 @@ actors:
 issue_areas:
 - ukraine
 - rule_of_law
+- green_transition
 weimar_relevant: true
 trilateral_signal: false
 extracted:
@@ -18,14 +19,18 @@ extracted:
   topics:
   - ukraine
   - rule_of_law
+  - green_transition
   location: Algeria
-  position: Poland seeks to develop bilateral economic and diplomatic relations with
-    Algeria, focusing on energy, agriculture, and regional security.
+  position: Poland seeks to revitalize bilateral relations with Algeria, focusing
+    on economic cooperation in energy and agriculture and reinforcing shared commitments
+    to international law and stability.
   positions:
-    ukraine: Poland emphasizes the importance of international security and stability
-      in the context of the war in Ukraine.
+    ukraine: Poland emphasizes the importance of international law and security in
+      the context of the war in Ukraine.
     rule_of_law: Poland reaffirms its commitment to the principles of international
       law.
+    green_transition: Poland identifies significant potential for cooperation in the
+      sector of renewable energy sources.
   stances:
     ukraine:
       score: 1
@@ -34,6 +39,10 @@ extracted:
     rule_of_law:
       score: 1
       evidence: Rozmówcy potwierdzili przywiązanie do zasad prawa międzynarodowego
+    green_transition:
+      score: 1
+      evidence: Szczególny potencjał wskazano w sektorze energetycznym – w tym odnawialnych
+        źródeł energii
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

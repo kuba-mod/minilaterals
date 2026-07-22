@@ -12,16 +12,14 @@ extracted:
   - hybrid
   - rule_of_law
   location: null
-  position: Germany is expanding the digital surveillance and investigative powers
-    of law enforcement to combat terrorism and organized crime while establishing
-    legal frameworks for AI use.
+  position: Germany is implementing a legislative package to strengthen police and
+    law enforcement agencies through expanded digital surveillance and AI-driven data
+    analysis.
   positions:
-    hybrid: Germany is implementing technical tools and AI-driven data analysis to
-      combat international terrorism and organized crime, aligning with the goal of
-      coordinated action against hybrid threats.
-    rule_of_law: Germany emphasizes that the deployment of digital investigative tools
-      must be governed by legal boundaries to remain compatible with a constitutional
-      state.
+    hybrid: Germany is expanding digital investigative powers and automated data analysis
+      to combat international terrorism, extremism, and organized crime.
+    rule_of_law: Germany emphasizes that the deployment of digital tools must remain
+      within the legal boundaries of a constitutional state.
   stances:
     hybrid:
       score: 2
@@ -30,7 +28,6 @@ extracted:
     rule_of_law:
       score: 1
       evidence: Nicht alles was technisch möglich ist, ist in einem Rechtsstaat zulässig.
-        Es braucht gesetzliche Leitplanken für den Einsatz von digitalen Instrumenten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -12,11 +12,12 @@ extracted:
   topics:
   - hybrid
   location: null
-  position: The German government is advancing legislation to strengthen investigative
-    powers against internet crime and cyber-attacks through IP address storage.
+  position: The German government has approved legislation to improve pension equality
+    and strengthen law enforcement capabilities against cybercrime through IP address
+    storage.
   positions:
-    hybrid: Germany is taking concrete legislative action to strengthen the fight
-      against internet crime and cyber threats by introducing IP address storage.
+    hybrid: Germany is actively strengthening its domestic legal framework to combat
+      internet crime and cyber-enabled threats.
   stances:
     hybrid:
       score: 2

@@ -13,18 +13,17 @@ extracted:
   topics:
   - rule_of_law
   location: Berlin, Germany
-  position: Germany is initiating an international design competition and providing
-    five million euros to establish a memorial for Polish victims of WWII and Nazi
-    crimes in Berlin.
+  position: Germany is launching an international design competition and funding a
+    memorial to honor Polish victims of World War II and Nazi crimes.
   positions:
-    rule_of_law: Germany advances democratic resilience and historical accountability
-      by formally commemorating victims of Nazi persecution and the erasure of Polish
-      identity.
+    rule_of_law: Germany demonstrates a commitment to democratic resilience and historical
+      accountability by establishing a permanent memorial to the victims of National
+      Socialism.
   stances:
     rule_of_law:
       score: 2
-      evidence: Die Errichtung des Denkmals ist eines der bedeutsamsten erinnerungspolitischen
-        Projekte Deutschlands.
+      evidence: Für den Wettbewerb und die anschließende Realisierung des Denkmals
+        stellt der Bund insgesamt fünf Millionen Euro zur Verfügung.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

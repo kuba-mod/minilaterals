@@ -12,15 +12,16 @@ extracted:
   topics:
   - green_transition
   location: null
-  position: The Polish Prime Minister emphasizes the stability of the government coalition
-    and the continued implementation of climate, energy, and health reforms.
+  position: The Polish Prime Minister emphasizes the stability of the governing coalition
+    and its commitment to reforming the environment, energy, and health sectors.
   positions:
-    green_transition: Poland is advancing its climate and energy policy through increased
-      investments in clean energy and the implementation of environmental protections.
+    green_transition: Poland is actively implementing energy and climate policies,
+      including clean energy investments and the removal of illegal waste.
   stances:
     green_transition:
       score: 2
-      evidence: zwiększenie inwestycji w czystą energię
+      evidence: zwiększenie inwestycji w czystą energię, odroczenie systemu ETS2,
+        działania na rzecz usuwania nielegalnych i niebezpiecznych odpadów
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

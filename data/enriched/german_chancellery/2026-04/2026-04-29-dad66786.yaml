@@ -6,12 +6,12 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants:
-  - Friedrich Merz
-  - Nina Warken
+  - Bundeskanzler Friedrich Merz
+  - Bundesgesundheitsministerin Nina Warken
   topics: []
   location: Berlin, Germany
-  position: Germany is implementing a comprehensive reform of its statutory health
-    insurance system to ensure long-term affordability and stability of contributions.
+  position: Germany is implementing a major reform of the statutory health insurance
+    system to ensure long-term affordability and stability of contributions.
   positions: {}
   stances: {}
 enriched_by:

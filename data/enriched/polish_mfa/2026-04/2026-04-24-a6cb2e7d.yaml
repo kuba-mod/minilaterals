@@ -8,18 +8,17 @@ extracted:
   event_type: meeting
   participants:
   - Artur Harazim
-  - Nada Al-Nashif
+  - Nada Al–Nashif
   - Ruvendrini Menikdewel
   - Advisory Legal Committee at the Ministry of Foreign Affairs
   topics:
   - rule_of_law
   location: Geneva, Switzerland
-  position: Poland conducted a study visit to Geneva to consult with international
-    organizations and legal experts on human rights and international law.
+  position: Poland is consulting with international organizations and legal experts
+    to refine its positions on human rights instruments and the law of the sea.
   positions:
-    rule_of_law: Poland is actively analyzing international human rights instruments
-      to develop its official position on the Convention on the Prevention and Punishment
-      of Crimes Against Humanity.
+    rule_of_law: Poland is actively engaging with international human rights mechanisms
+      and legal experts to develop its future legal positions.
   stances:
     rule_of_law:
       score: 1

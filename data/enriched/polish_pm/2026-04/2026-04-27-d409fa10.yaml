@@ -8,19 +8,19 @@ trilateral_signal: false
 extracted:
   event_type: speech
   participants:
-  - Prime Minister of Ukraine
   - Prime Minister of Poland
+  - Prime Minister of Ukraine
   topics:
   - ukraine
   - defence
   location: Rzeszów, Poland
   position: Poland is launching a joint drone armada project leveraging Ukrainian
-    combat expertise to enhance the security of Poland and the EU's eastern flank.
+    battlefield expertise to enhance Polish and European security.
   positions:
-    ukraine: Poland provides active, long-term military and strategic support to Ukraine
-      and seeks a mutual partnership based on shared security interests.
-    defence: Poland is actively investing in drone technology and air defense to strengthen
-      the deterrence of the eastern flank.
+    ukraine: Poland provides active support to Ukraine through a strategic partnership
+      and the integration of Ukrainian technical competencies.
+    defence: Poland is initiating a technological leap in drone capabilities to strengthen
+      the eastern flank of Europe.
   stances:
     ukraine:
       score: 2

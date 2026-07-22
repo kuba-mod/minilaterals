@@ -8,15 +8,15 @@ extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - heads of diplomacy of Poland and Iran
+  - Heads of diplomacy of Poland and Iran
   topics:
   - defence
   location: null
-  position: Poland emphasizes the importance of diplomatic dialogue and the security
-    of critical transport routes to ensure global stability.
+  position: Poland advocates for diplomatic dialogue with Iran to de-escalate tensions
+    and ensure the security of global transport routes.
   positions:
-    defence: Poland supports collective security and stability by stressing the need
-      to maintain secure transport routes and the freedom of navigation.
+    defence: Poland supports the maintenance of security on transport routes to ensure
+      global market stability and the supply of critical resources.
   stances:
     defence:
       score: 1

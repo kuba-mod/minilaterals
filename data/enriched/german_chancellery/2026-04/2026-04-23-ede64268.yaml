@@ -11,12 +11,11 @@ extracted:
   topics:
   - ukraine
   location: Cyprus
-  position: Germany expresses its commitment to discussing key European issues, specifically
-    focusing on support for Ukraine and financial frameworks during the informal European
-    Council.
+  position: Germany expresses its commitment to discussing the situation in Ukraine
+    and supports the release of EU loans for the country.
   positions:
-    ukraine: Germany supports the economic dimension of Ukraine's stability through
-      the release of an EU loan.
+    ukraine: Germany rhetorically supports the financial aid to Ukraine via the EU
+      loan.
   stances:
     ukraine:
       score: 1

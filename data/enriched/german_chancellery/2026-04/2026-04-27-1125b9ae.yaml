@@ -6,21 +6,21 @@ issue_areas:
 weimar_relevant: true
 trilateral_signal: false
 extracted:
-  event_type: speech
+  event_type: meeting
   participants:
-  - Friedrich Merz
-  - Reiche
+  - Bundeskanzler Friedrich Merz
+  - Bundeswirtschafts- und Energieministerin Reiche
   topics:
   - defence
   - green_transition
   location: Hamburg, Germany
   position: Germany is hosting the third North Sea Summit to accelerate offshore wind
-    energy development and address regional security concerns.
+    energy production and address security concerns in the region.
   positions:
-    defence: Germany is actively prioritizing and discussing security in the North
-      Sea region.
+    defence: Germany is actively prioritizing and coordinating security measures in
+      the North Sea region.
     green_transition: Germany is actively advancing the green transition by hosting
-      the summit to speed up the construction of offshore wind plants.
+      a summit to accelerate the construction of offshore wind energy plants.
   stances:
     defence:
       score: 2

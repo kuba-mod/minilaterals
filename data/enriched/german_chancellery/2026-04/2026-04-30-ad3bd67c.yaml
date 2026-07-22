@@ -11,12 +11,11 @@ extracted:
   topics:
   - green_transition
   location: null
-  position: Germany is promoting sustainable public transportation through the nationwide
-    Deutschlandticket.
+  position: Germany is promoting sustainable public transport through the implementation
+    and pricing of the Deutschlandticket.
   positions:
-    green_transition: Germany advances the green transition by providing a simplified,
-      affordable nationwide public transport ticket to encourage a shift away from
-      individual car travel.
+    green_transition: Germany advances the green transition by facilitating nationwide
+      affordable access to public regional and local transport.
   stances:
     green_transition:
       score: 2

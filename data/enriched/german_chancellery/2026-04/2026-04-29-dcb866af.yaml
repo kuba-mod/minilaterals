@@ -9,21 +9,18 @@ extracted:
   event_type: statement
   participants:
   - stellvertretender Regierungssprecher Meyer
-  - Vorsitzende Hamberger
-  - Bundeskanzler
-  - Bundesfinanzminister
+  - Hamberger
   topics:
   - ukraine
   - defence
   location: null
-  position: Germany is implementing structural reforms and budget priorities to maintain
-    operational capacity amidst geopolitical tensions, specifically focusing on defense
-    and security.
+  position: Germany is implementing internal structural reforms and budget priorities
+    to maintain national and alliance capability amidst global geopolitical tensions.
   positions:
-    ukraine: Germany acknowledges the ongoing Russian aggression against Ukraine as
-      a key global uncertainty influencing its national planning.
-    defence: Germany is committing more financial resources to enhance its defense
-      capabilities and alliance security.
+    ukraine: Germany acknowledges the ongoing Russian war of aggression against Ukraine
+      as a key global instability.
+    defence: Germany is prioritizing increased spending on defense capabilities and
+      alliance security.
   stances:
     ukraine:
       score: 1

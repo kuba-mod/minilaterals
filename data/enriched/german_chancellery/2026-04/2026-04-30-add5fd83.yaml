@@ -10,12 +10,13 @@ extracted:
   topics:
   - green_transition
   location: null
-  position: Germany is implementing energy relief measures and accelerating the build-out
-    of hydrogen infrastructure to support industrial decarbonization.
+  position: The German government is implementing measures to reduce energy costs
+    for consumers and accelerating the development of hydrogen infrastructure to lower
+    industrial CO2 emissions.
   positions:
-    green_transition: Germany is actively advancing the green transition by facilitating
-      the rapid development of hydrogen infrastructure and promoting green hydrogen
-      to reduce industrial CO2 emissions.
+    green_transition: Germany is actively advancing the green transition by legislating
+      for a faster build-out of hydrogen infrastructure to replace fossil fuels in
+      industry and transport.
   stances:
     green_transition:
       score: 2

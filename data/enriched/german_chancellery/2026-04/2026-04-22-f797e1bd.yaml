@@ -10,7 +10,7 @@ issue_areas:
 weimar_relevant: true
 trilateral_signal: true
 extracted:
-  event_type: meeting
+  event_type: statement
   participants:
   - Bundeskabinett
   topics:
@@ -22,18 +22,17 @@ extracted:
   - rule_of_law
   location: null
   position: The German Federal Cabinet has formally adopted the goals of the Weimar
-    Triangle across several key security and policy dimensions.
+    Triangle across several strategic domains.
   positions:
-    ukraine: Germany commits to comprehensive long-term support for Ukraine until
-      a lasting peace is reached.
-    defence: Germany supports enhancing EU defence capabilities as a complement to
-      NATO, focusing on the eastern flank.
-    hybrid: Germany calls for coordinated trilateral action against disinformation
-      and cyber threats.
-    enlargement: Germany supports the EU accession of Ukraine and the Western Balkans,
-      contingent on internal EU reforms.
-    green_transition: Germany aligns its industrial and energy policy with European
-      climate neutrality goals via the Clean Industrial Deal.
+    ukraine: Germany commits to long-term military, economic, and diplomatic support
+      for Ukraine.
+    defence: Germany supports enhancing EU defence capabilities to complement NATO
+      and secure the eastern flank.
+    hybrid: Germany calls for coordinated action against cyber attacks and disinformation.
+    enlargement: Germany supports EU accession for Ukraine and the Western Balkans,
+      conditioned on institutional reforms.
+    green_transition: Germany aligns its industrial and energy policy with the Clean
+      Industrial Deal and climate neutrality.
     rule_of_law: Germany affirms the rule of law and democratic resilience as essential
       for European security.
   stances:
@@ -41,19 +40,19 @@ extracted:
       score: 2
       evidence: ''
     defence:
-      score: 1
+      score: 2
       evidence: ''
     hybrid:
-      score: 1
+      score: 2
       evidence: ''
     enlargement:
-      score: 1
+      score: 2
       evidence: ''
     green_transition:
-      score: 1
+      score: 2
       evidence: ''
     rule_of_law:
-      score: 1
+      score: 2
       evidence: ''
 enriched_by:
   model_id: gemma4:latest
