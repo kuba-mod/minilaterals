@@ -3,9 +3,9 @@ from __future__ import annotations
 from .feedbase import FeedIngester
 
 # Slovak Ministry of Foreign and European Affairs (mzv.sk) — Visegrád Group
-# member. Native-language (sk) news feed. (feed_url unverified in the authoring
-# environment — see feedbase.py.)
-FEED_URL = "https://www.mzv.sk/rss/-/asset_publisher/rss/aktuality"
+# member. Native-language (sk) news feed — a Liferay "journal content RSS"
+# export, confirmed to return recent press-release items.
+FEED_URL = "https://www.mzv.sk/sk/web/sk/home/-/journal/rss/"
 
 
 class SlovakMFAIngester(FeedIngester):

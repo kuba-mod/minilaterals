@@ -3,9 +3,8 @@ from __future__ import annotations
 from .feedbase import FeedIngester
 
 # Estonian Ministry of Foreign Affairs (vm.ee) — Baltic Three member.
-# Native-language (et) news feed. (feed_url unverified in the authoring
-# environment — see feedbase.py.)
-FEED_URL = "https://vm.ee/et/uudised/rss"
+# Native-language (et) news feed. Confirmed working.
+FEED_URL = "https://vm.ee/rss-feeds/rss.xml"
 
 
 class EstonianMFAIngester(FeedIngester):
