@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland warns of a full-scale cognitive war waged by Russia and calls for
+    legal updates to counter AI-driven disinformation and digital threats.
+  positions:
+    hybrid: Poland actively combats hybrid threats by identifying Russian cognitive
+      warfare and establishing initiatives like the Young Resilience Council.
+    rule_of_law: Poland advocates for updating legislation to protect democratic values
+      against digital threats and AI-driven disinformation.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Przywołał pozytywny przykład takiej współpracy - Młodą Radę Odporności
+        przy MSZ.
+    rule_of_law:
+      score: 1
+      evidence: Prawo nie może pozostawać w tyle za technologią — musi dać konkretną
+        odpowiedź na pełne spektrum współczesnych zagrożeń cyfrowych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

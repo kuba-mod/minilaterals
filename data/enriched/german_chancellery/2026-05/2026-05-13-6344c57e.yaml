@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundesministerium für Justiz und Verbraucherschutz
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The German government is implementing a series of legislative measures
+    to combat various forms of violence against women, including digital violence
+    and domestic abuse.
+  positions:
+    hybrid: Germany is actively introducing legislation to combat digital violence
+      and the creation of deepfakes, aligning with coordinated action against hybrid
+      threats.
+    rule_of_law: Germany is strengthening legal protections and judicial mechanisms
+      to ensure the fundamental right to a life free from violence.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Das Bundesministerium für Justiz und Verbraucherschutz hat ein digitales
+        Gewaltschutzgesetz vorgelegt.
+    rule_of_law:
+      score: 2
+      evidence: Die Bundesregierung hat einen neuen Gewaltschutz auf den Weg gebracht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

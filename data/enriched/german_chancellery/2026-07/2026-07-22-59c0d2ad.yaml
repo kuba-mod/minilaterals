@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: The German government is implementing a comprehensive modernization and
+    investment program to restore economic competitiveness and climate neutrality.
+  positions:
+    green_transition: Germany is actively advancing the green transition through a
+      significant special fund for climate neutrality.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Sondervermögen für Infrastruktur und Klimaneutralität in Höhe von
+        500 Milliarden Euro
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

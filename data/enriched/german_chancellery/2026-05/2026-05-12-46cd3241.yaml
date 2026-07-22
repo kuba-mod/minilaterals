@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Frau Fahimi
+  - Frau Hannack
+  - Herr Körzell
+  - Frau Piel
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Merz calls for deep reforms and cooperation between the government
+    and social partners to ensure the future viability of the welfare state.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

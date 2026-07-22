@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Selma Ashipala-Musavyi
+  topics:
+  - rule_of_law
+  location: Namibia
+  position: Poland seeks to strengthen political, economic, and scientific cooperation
+    with Namibia while emphasizing international law and state sovereignty.
+  positions:
+    rule_of_law: Poland supports the adherence to international legal norms and the
+      principle of state sovereignty.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Rozmówcy potwierdzili wagę poszanowania zasady suwerenności państw
+        oraz respektowania międzynarodowych norm prawnych.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

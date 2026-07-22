@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Klingbeil
+  topics: []
+  location: null
+  position: Germany is addressing significant tax revenue losses and economic slowdown
+    attributed to the conflict with Iran, focusing on investment and budget consolidation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

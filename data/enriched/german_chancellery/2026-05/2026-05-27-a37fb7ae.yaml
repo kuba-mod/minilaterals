@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Lars Klingbeil
+  topics: []
+  location: null
+  position: Germany has approved a law requiring streaming services and broadcasters
+    to invest at least 8% of their annual turnover into the German film industry,
+    supported by 250 million euros in federal funding.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

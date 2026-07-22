@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Itamar Ben-Gvir
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland demands respect for the rights and dignity of detainees and has
+    requested an entry ban for Israel's National Security Minister.
+  positions:
+    rule_of_law: Poland advances the principle of the rule of law by demanding adherence
+      to international standards and accountability for violations of human dignity.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: żądaniem poszanowania praw i godności aresztowanych oraz traktowania
+        ich w sposób zgodny z międzynarodowymi standardami
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

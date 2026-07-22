@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Maria Manuel dos Santos Lucas
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland seeks to dynamize bilateral relations with Mozambique through energy
+    cooperation, security support in Africa, and mutual commitment to international
+    law.
+  positions:
+    ukraine: Poland addresses the Russian war in Ukraine and its global consequences.
+    defence: Poland supports the strengthening of operational capabilities of Mozambican
+      forces through EU military support.
+    rule_of_law: Poland emphasizes that effective governance and security are essential
+      for regional stabilization.
+  stances:
+    ukraine:
+      score: 1
+      evidence: W rozmowie poruszono także kwestię rosyjskiej wojny w Ukrainie i jej
+        skutków dla Europy oraz Afryki.
+    defence:
+      score: 1
+      evidence: Omówiono możliwości wzmocnienia trwałych zdolności operacyjnych mozambickich
+        sił szybkiego reagowania.
+    rule_of_law:
+      score: 1
+      evidence: poprawa bezpieczeństwa i skuteczne sprawowanie rządów ma zasadnicze
+        znaczenie dla powodzenia realizacji celów UEMAM oraz stabilizacji regionu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

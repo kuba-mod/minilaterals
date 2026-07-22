@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Ali al-Zaidi
+  topics: []
+  location: null
+  position: German Chancellor Friedrich Merz congratulated Iraqi Prime Minister Ali
+    al-Zaidi on his election and expressed a desire to deepen bilateral cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

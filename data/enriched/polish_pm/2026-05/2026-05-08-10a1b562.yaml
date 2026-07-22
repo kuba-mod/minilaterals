@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Andrzej Domański
+  - Andrius Kubilius
+  - Piotr Serafin
+  topics:
+  - defence
+  location: KPRM, Poland
+  position: Poland has signed the SAFE program agreement to secure over 180 billion
+    PLN for the modernization of its army and the development of the domestic defense
+    industry.
+  positions:
+    defence: Poland is actively advancing EU defense capabilities and eastern flank
+      security through the creation and implementation of the SAFE program.
+  stances:
+    defence:
+      score: 2
+      evidence: przeznaczymy ok. 43,7 mld euro, czyli ponad 180 mld zł z unijnego
+        programu SAFE, na rozwój i modernizację polskiej armii
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

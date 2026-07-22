@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - Wojciech Kruczek
+  - Paulina Hennig-Kloska
+  topics:
+  - green_transition
+  location: Poland
+  position: Poland is coordinating an emergency response to widespread forest fires
+    and implementing preventive measures due to severe drought.
+  positions:
+    green_transition: Poland is taking active operational and preventive measures
+      to combat environmental crises resulting from drought and forest fires.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Wdrożyliśmy dodatkowe działania prewencyjne i uruchomiliśmy wzmożone
+        patrole
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

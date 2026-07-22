@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Sviatlana Tsikhanouskaya
+  - MSZ leadership
+  - City of Gdańsk representatives
+  - Belarusian democratic forces
+  topics:
+  - rule_of_law
+  location: Gdańsk, Poland
+  position: Poland emphasizes the fundamental role of culture and identity in sustaining
+    democratic resilience and opposing authoritarianism.
+  positions:
+    rule_of_law: Poland rhetorically supports democratic resilience by linking cultural
+      identity to the survival of democratic structures.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Kultura nie jest uzupełnieniem polityki, lecz fundamentem, bez którego
+        budowla demokratyczna nie może przetrwać.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

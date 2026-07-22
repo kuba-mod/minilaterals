@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  - Minister Albares
+  topics:
+  - ukraine
+  - defence
+  location: Barcelona, Spain
+  position: Poland emphasizes the fundamental threat posed by Russian aggression and
+    advocates for stronger security cooperation and the reform of EU decision-making
+    regarding sanctions.
+  positions:
+    ukraine: Poland asserts that the war in Ukraine is a fundamental threat and highlights
+      the degradation of Russian military capabilities.
+    defence: Poland advocates for closer security cooperation between bilateral partners,
+      within the EU, and specifically within NATO.
+  stances:
+    ukraine:
+      score: 1
+      evidence: wojna w Ukrainie stanowi, zwłaszcza dla państw wschodniej flanki,
+        zagrożenie o fundamentalnym znaczeniu
+    defence:
+      score: 1
+      evidence: Podkreślili, konieczność zacieśniania współpracy obu państw nie tylko
+        dwustronnie czy w Unii Europejskiej, lecz także w ramach NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

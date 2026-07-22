@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Poland condemns Russian aggression and warns that attacks on diplomatic
+    missions will be treated as intentional acts of hostility.
+  positions:
+    ukraine: Poland demands an immediate end to Russia's illegal aggression against
+      Ukraine.
+    rule_of_law: Poland emphasizes the necessity of adhering to international treaties
+      and laws in the face of Russian actions.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Wzywamy Rosję do natychmiastowego zaprzestania nieuzasadnionej i bezprawnej
+        agresji
+    rule_of_law:
+      score: 1
+      evidence: Wzywamy Rosję [...] do przestrzegania zobowiązań i traktatów międzynarodowych.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

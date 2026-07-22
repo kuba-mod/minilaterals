@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Staatsminister für Kultur und Medien
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the necessity of historical remembrance and the defense
+    of democratic values against authoritarian thinking and disinformation.
+  positions:
+    hybrid: Germany actively counters foreign disinformation by establishing a research
+      platform to critically examine historical myths promoted by the Russian government.
+    rule_of_law: Germany rhetorically supports the defense of human rights, the rule
+      of law, and democratic resilience against hatred and exclusion.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Dabei wird sie sich auch kritisch mit Geschichtsmythen der aktuellen
+        russischen Regierung auseinandersetzen.
+    rule_of_law:
+      score: 1
+      evidence: Freiheit, Rechtsstaatlichkeit und Menschenrechte keine Selbstverständlichkeit
+        sind, sondern immer wieder neu verteidigt werden müssen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

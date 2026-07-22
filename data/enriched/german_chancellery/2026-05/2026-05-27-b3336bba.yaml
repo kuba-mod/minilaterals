@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Wolf
+  topics:
+  - hybrid
+  location: null
+  position: The German government has approved a draft law to strengthen national
+    cybersecurity and expand the powers of security agencies to combat cyber threats.
+  positions:
+    hybrid: Germany is actively advancing the goal of combating hybrid threats by
+      implementing a new law to strengthen cybersecurity and enable active prevention
+      and mitigation of cyberattacks.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Die Bundesregierung hat heute den Entwurf eines Gesetzes zur Stärkung
+        der Cybersicherheit beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

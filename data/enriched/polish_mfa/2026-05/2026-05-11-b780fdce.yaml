@@ -1,0 +1,18 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Poland is organizing a competition for a new logo for the 'Odyseusz' traveler
+    information system.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

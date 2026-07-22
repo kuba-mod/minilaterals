@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Government Spokesperson Meyer
+  - Chairperson Buschow
+  topics: []
+  location: null
+  position: The German government announced the adoption of the Digital Identity Act
+    for the EUDI-Wallet and a reform of driving school training.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

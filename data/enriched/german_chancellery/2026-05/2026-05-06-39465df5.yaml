@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Szent-Iványi (Chairman)
+  topics:
+  - defence
+  location: null
+  position: The German government highlights its first year of achievements, emphasizing
+    significant investments in national defense and security.
+  positions:
+    defence: Germany is actively advancing defense capabilities through massive investments
+      and the introduction of a new military service.
+  stances:
+    defence:
+      score: 2
+      evidence: massive Investitionen in die Verteidigung, die Einführung des neuen
+        Wehrdienstes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

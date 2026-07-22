@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Péter Magyar
+  topics:
+  - rule_of_law
+  - green_transition
+  location: Warsaw, Poland
+  position: Poland seeks to rebuild bilateral relations with Hungary while emphasizing
+    the importance of the rule of law and energy independence from Russia.
+  positions:
+    rule_of_law: Poland rhetorically supports the rule of law as a prerequisite for
+      Hungary to unlock European funds.
+    green_transition: Poland supports the goal of energy security by offering to help
+      Hungary diversify away from Russian raw materials.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: podkreślając w tym kontekście znaczenie praworządności i przywracania
+        zaufania do instytucji publicznych
+    green_transition:
+      score: 1
+      evidence: Polska może być ważnym partnerem Węgier w poszukiwaniu alternatywnych
+        źródeł dostaw i uniezależnianiu się od rosyjskich surowców
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

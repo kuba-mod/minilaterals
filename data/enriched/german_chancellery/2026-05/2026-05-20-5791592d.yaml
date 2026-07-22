@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Germany is implementing a comprehensive modernization of its civil protection
+    and defense systems through a 10 billion euro investment package to prepare for
+    emergency scenarios.
+  positions:
+    ukraine: Germany acknowledges the Russian war of aggression against Ukraine as
+      a concrete threat necessitating improved national emergency preparedness.
+    defence: Germany is strengthening the integration of civilian and military planning
+      and investing 10 billion euros in civil defense and equipment.
+    hybrid: Germany is actively preparing for and countering increasing hybrid attacks
+      as part of its national security strategy.
+  stances:
+    ukraine:
+      score: 1
+      evidence: völkerrechtswidrige russische Angriffskrieg auf die Ukraine
+    defence:
+      score: 2
+      evidence: Der Bund wird zudem bis zum Jahr 2029 insgesamt zehn Milliarden Euro
+        in den Bevölkerungsschutz investieren.
+    hybrid:
+      score: 2
+      evidence: zunehmenden hybriden Angriffe. Die Bundesregierung handelt, um sich
+        auf den Ernstfall vorzubereiten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

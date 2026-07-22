@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Undersecretary of State at the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland strongly supports the establishment of a Special Tribunal for the
+    Crime of Aggression against Ukraine and the strengthening of democratic resilience
+    in Europe.
+  positions:
+    ukraine: Poland actively advances the goal by joining a resolution to create a
+      Special Tribunal for the Crime of Aggression against Ukraine.
+    hybrid: Poland supports efforts to combat disinformation and foreign information
+      manipulation.
+    rule_of_law: Poland rhetorically supports the redefinition and strengthening of
+      democracy through the New Democratic Pact.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Polska, wraz z 36 innymi państwami oraz Unią Europejską, przystąpiła
+        do rezolucji Komitetu Ministrów dotyczącej utworzenia Poszerzonego Porozumienia
+        Częściowego w sprawie Komitetu Zarządzającego Specjalnego Trybunału ds. Zbrodni
+        Agresji przeciwko Ukrainie.
+    hybrid:
+      score: 1
+      evidence: omawiano walkę z dezinformacją i zagranicznymi manipulacjami informacją
+        (FIMI)
+    rule_of_law:
+      score: 1
+      evidence: 'wiceminister wyraził poparcie Polski dla wizji zawartej w Nowym Pakcie
+        Demokratycznym: wspólnych działaniach na rzecz redefinicji i wzmocnienia demokracji.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

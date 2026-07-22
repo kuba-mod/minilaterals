@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - wiceminister Zajączkowski
+  - Król Aszanti
+  topics:
+  - hybrid
+  location: Poland
+  position: Poland is seeking to expand economic and academic cooperation with Ghana,
+    viewing it as a strategic gateway to West African markets.
+  positions:
+    hybrid: Poland identifies cybersecurity as a key area of potential cooperation
+      with Ghana, aligning with the goal of addressing cyber threats.
+  stances:
+    hybrid:
+      score: 1
+      evidence: 'Szczególny potencjał współpracy dostrzeżono w sektorach: [...] cyberbezpieczeństwa.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

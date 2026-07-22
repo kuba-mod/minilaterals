@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Heads of State or Government of the EU
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Germany, as part of the EU, is providing massive financial aid, sanctions,
+    and loans to support Ukraine's defense and long-term recovery.
+  positions:
+    ukraine: Germany actively advances long-term economic and diplomatic support through
+      substantial financial packages and sanctions against Russia.
+    defence: Germany supports Ukraine's military capabilities through a significant
+      EU-led credit facility.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Ein klares Bekenntnis zur finanziellen Unterstützung der Ukraine in
+        Höhe von 50 Milliarden Euro.
+    defence:
+      score: 2
+      evidence: Die Ukraine wird zudem in ihrer Verteidigungsfähigkeit mit einem 90-Milliarden-Euro-Kredit
+        der Europäischen Union substanziell unterstützt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

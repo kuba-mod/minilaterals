@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The German government is implementing a comprehensive security offensive
+    to strengthen internal stability, combat digital crime, and secure the democratic
+    order.
+  positions:
+    hybrid: Germany is actively expanding digital police powers and implementing IP
+      address storage to combat cybercrime and online hate speech.
+    rule_of_law: Germany is taking legislative steps to protect the democratic order
+      and strengthen the capabilities of security authorities.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Um wirksam die Kriminalität im Netz zu bekämpfen, ermöglicht die Bundesregierung
+        die vorsorgliche Speicherung von IP-Adressen
+    rule_of_law:
+      score: 2
+      evidence: Ziel ist es, den Schutz der Bürgerinnen und Bürger zu gewährleisten
+        und die demokratische Ordnung zu festigen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

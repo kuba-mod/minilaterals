@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Juan Carlos Salazar
+  topics:
+  - green_transition
+  location: null
+  position: Poland aims to leverage its membership in the ICAO Council to promote
+    aviation safety, modern air traffic management, and sustainable fuels.
+  positions:
+    green_transition: Poland supports the development of sustainable aviation fuels,
+      aligning with European green objectives.
+  stances:
+    green_transition:
+      score: 1
+      evidence: rozwoju zrównoważonych paliw lotniczych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  - Bundesregierung
+  - Bundesrat
+  - Deutscher Bundestag
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing the digitalization of the judiciary and reducing
+    bureaucracy in the enforcement of claims.
+  positions:
+    rule_of_law: Germany is strengthening its judicial administration and the rule
+      of law through the digitalization and simplification of legal enforcement processes.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: die Fortführung der Digitalisierung der Justiz und einen konsequenten
+        Bürokratieabbau für Staat und Verwaltung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

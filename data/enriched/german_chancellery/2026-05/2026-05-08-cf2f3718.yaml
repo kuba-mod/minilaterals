@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Nina Warken
+  topics:
+  - enlargement
+  location: null
+  position: Germany is accelerating the recognition of foreign professional qualifications
+    in healthcare to combat skilled labor shortages.
+  positions:
+    enlargement: Germany's initiative to integrate foreign professionals into the
+      labor market aligns with the broader goal of facilitating mobility and institutional
+      openness, although it focuses on labor rather than political accession.
+  stances:
+    enlargement:
+      score: 1
+      evidence: brauchen wir neben attraktiven Ausbildungsbedingungen in Deutschland
+        auch qualifizierte Fachkräfte aus dem Ausland
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

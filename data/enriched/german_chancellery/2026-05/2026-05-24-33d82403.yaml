@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - leaders of the United Kingdom
+  - leaders of Italy
+  - leaders of France
+  - leaders of Germany
+  - leaders of Canada
+  - leaders of Australia
+  - leaders of New Zealand
+  - leaders of Norway
+  - leaders of Netherlands
+  - leaders of Spain
+  - leaders of Belgium
+  - EU High Representative for Foreign Affairs and Security Policy
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany and its partners condemn Israeli settlement expansion in the West
+    Bank as illegal and call for a negotiated two-state solution.
+  positions:
+    rule_of_law: Germany supports the rule of law and international legal standards
+      by declaring Israeli settlements in the West Bank illegal.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: 'International law is clear: Israeli settlements in the West Bank
+        are illegal.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

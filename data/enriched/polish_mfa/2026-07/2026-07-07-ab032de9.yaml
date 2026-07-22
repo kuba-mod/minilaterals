@@ -1,0 +1,40 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Artur Harazim
+  - Henryka Mościcka-Dendys
+  - Andrzej Domański
+  - Mariusz Malinowski
+  - Jean-Noël Barrot
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland emphasizes its growing economic strength and the urgent need to
+    invest in defense technologies to counter Russian aggression and support Ukraine.
+  positions:
+    ukraine: Poland recognizes the necessity of addressing the Russian-Ukrainian war
+      and learning from its course.
+    defence: Poland is actively investing in drone and anti-drone systems via the
+      SAFE loan to modernize its military capabilities.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Uważam, że przyszłą wojnę wygra ten, kto wdroży lekcje z wojny rosyjsko-ukraińskiej.
+    defence:
+      score: 2
+      evidence: Dopiero pożyczka SAFE daje nam środki, dzięki którym możemy zainwestować
+        w systemu dronowe i antydronowe.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

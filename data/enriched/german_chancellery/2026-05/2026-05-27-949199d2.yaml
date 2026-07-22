@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  topics:
+  - rule_of_law
+  location: null
+  position: The German government has approved the Seventh Act to Amend the Administrative
+    Court Code to modernize and digitalize the administrative judiciary to strengthen
+    the rule of law.
+  positions:
+    rule_of_law: Germany is actively advancing the rule of law by implementing legislative
+      changes to make administrative courts more efficient, digital, and resilient.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Die Bundesregierung setzt hiermit weitere wichtige Vorhaben aus dem
+        Koalitionsvertrag um, um den Rechtsstaat zu modernisieren, zu digitalisieren
+        und wehrhafter zu machen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

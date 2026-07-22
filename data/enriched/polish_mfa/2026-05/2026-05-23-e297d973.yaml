@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Petr Pavel
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: null
+  position: Poland emphasizes that the conflict in Ukraine is fundamentally about
+    the country's aspiration to join Europe and establish a state based on the rule
+    of law.
+  positions:
+    ukraine: Poland rhetorically supports Ukraine's struggle as a fight for its European
+      future.
+    enlargement: Poland supports the goal of Ukraine joining Europe.
+    rule_of_law: Poland aligns with the goal of establishing a state based on the
+      rule of law and freedom from corruption in Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: To nie jest wojna o NATO. To wojna o dążenie Ukrainy do dołączenia
+        do Europy
+    enlargement:
+      score: 1
+      evidence: To wojna o dążenie Ukrainy do dołączenia do Europy
+    rule_of_law:
+      score: 1
+      evidence: do życia w kraju wolnym od korupcji, opartym na praworządności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

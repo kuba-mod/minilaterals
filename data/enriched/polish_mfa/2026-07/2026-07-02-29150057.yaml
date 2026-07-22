@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ronald Lamola
+  - Michał Baranowski
+  topics:
+  - green_transition
+  location: Pretoria, South Africa
+  position: Poland seeks to deepen political and economic ties with South Africa,
+    specifically focusing on G20 membership and cooperation in energy and mining sectors.
+  positions:
+    green_transition: Poland identifies the energy transition as a key area for promising
+      bilateral economic cooperation and investment.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Sektory takie jak górnictwo i przetwórstwo, surowce krytyczne, transformacja
+        energetyczna oraz logistyka oferują obiecujące możliwości
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

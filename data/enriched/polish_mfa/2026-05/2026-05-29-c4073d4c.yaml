@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ministers of the Council of the Baltic Sea States
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Sopot, Poland
+  position: Poland, as the current chair of the Council of the Baltic Sea States,
+    is leading regional efforts to counter Russian hybrid threats and support Ukraine's
+    security and European integration.
+  positions:
+    ukraine: Poland advocates for closer cooperation between Baltic Sea states and
+      Ukraine as a key element of security architecture.
+    defence: Poland emphasizes the need to protect critical infrastructure and strengthen
+      the regional security pillar.
+    hybrid: Poland is actively leading initiatives to sanction the Russian 'shadow
+      fleet' and documenting Russian sabotage acts.
+    enlargement: Poland supports the process of Kyiv's integration into the European
+      Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: zacieśnianie współpracy pomiędzy państwami regionu Morza Bałtyckiego
+        a Ukrainą – państwem-obserwatorem w RPMB – jest kluczowym elementem nowej
+        architektury bezpieczeństwa
+    defence:
+      score: 1
+      evidence: konieczności ochrony infrastruktury krytycznej
+    hybrid:
+      score: 2
+      evidence: Dziś, także dzięki pracy polskiej prezydencji, jest to ponad 630 jednostek
+    enlargement:
+      score: 1
+      evidence: proces integracji europejskiej Kijowa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - María Teresa Mercado
+  - María Angélica Granados Trespalacios
+  topics:
+  - ukraine
+  - hybrid
+  location: Mexico
+  position: Poland conducted bilateral consultations with Mexico to strengthen economic
+    ties, cyber security cooperation, and address the war in Ukraine.
+  positions:
+    ukraine: Poland actively raises the issue of Russian crimes, specifically the
+      illegal deportation of Ukrainian children, on the international stage.
+    hybrid: Poland seeks to expand bilateral cooperation with Mexico in the field
+      of cybersecurity.
+  stances:
+    ukraine:
+      score: 2
+      evidence: wystawę Camas vacías („Puste łóżka”), poświęconą problemowi nielegalnych
+        deportacji i przymusowych przesiedleń ukraińskich dzieci przez Rosję
+    hybrid:
+      score: 1
+      evidence: omówili perspektywy współpracy dwustronnej w takich dziedzinach, jak
+        nowe technologie i cyberbezpieczeństwo
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

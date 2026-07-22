@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Władysław Teofil Bartoszewski
+  - Deputy Minister of Foreign Affairs of Mongolia
+  - Dr. hab. Karol Polejowski
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Ulaanbaatar, Mongolia
+  position: Poland is strengthening its comprehensive partnership with Mongolia through
+    financial aid, sectoral cooperation, and shared security concerns regarding Russian
+    aggression.
+  positions:
+    ukraine: Poland explicitly identifies Russia's imperialist policy and the war
+      on its border as a primary threat to national security.
+    defence: Poland emphasizes national security as a top priority within the context
+      of regional security dialogues.
+    green_transition: Poland is actively pursuing cooperation with Mongolia in the
+      field of green technologies and renewable energy sources.
+  stances:
+    ukraine:
+      score: 2
+      evidence: bezpieczeństwo narodowe, które obecnie jest zagrożone przez wojnę
+        toczącą się tuż za naszą wschodnią granicą, za której wywołanie i ofiary z
+        nią związane ponosi Rosja i jej imperialistyczna polityka
+    defence:
+      score: 1
+      evidence: najwyższym priorytetem dla Polski [...] jest bezpieczeństwo narodowe
+    green_transition:
+      score: 1
+      evidence: zaangażowanie swoich rządów w rozwój dwustronnych relacji we wszystkich
+        sektorach, zwłaszcza w [...] zielonych technologiach, [...] odnawialnych źródłach
+        energii
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

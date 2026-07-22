@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: The German government is launching a communication campaign to highlight
+    domestic measures aimed at improving competitiveness, energy costs, and digitalization.
+  positions:
+    green_transition: Germany is implementing financial relief and tax reductions
+      to lower energy costs for citizens and businesses as part of its economic and
+      energy strategy.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Seit 1. Januar 2026 werden Bürgerinnen, Bürger und die Wirtschaft
+        zusammen um rund 10 Milliarden Euro bei den Energiekosten entlastet.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

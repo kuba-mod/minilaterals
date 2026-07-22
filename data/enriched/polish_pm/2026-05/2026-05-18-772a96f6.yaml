@@ -1,0 +1,30 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  topics:
+  - defence
+  location: Dęblin, Poland
+  position: Poland is strengthening its defense capabilities and security guarantees
+    through the establishment of an authorized Abrams tank engine service center in
+    collaboration with the USA.
+  positions:
+    defence: Poland actively advances collective security and eastern flank deterrence
+      by investing in high-tech military maintenance capabilities and strengthening
+      the transatlantic alliance.
+  stances:
+    defence:
+      score: 2
+      evidence: Polska będzie pierwszym państwem w Europie i trzecim na świecie, który
+        posiada autoryzowane centrum serwisowe silników do czołgów Abrams.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

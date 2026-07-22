@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Szent-Iványi
+  - StS Kornelius
+  - Bundeskanzler
+  topics:
+  - defence
+  location: null
+  position: Germany is pursuing the development of indigenous and European long-range
+    strike capabilities to maintain deterrence against Russia following the US decision
+    not to deploy intermediate-range missiles.
+  positions:
+    defence: Germany is actively advancing European defence capabilities through the
+      ELSA program and the modernization of Taurus missiles to address capability
+      gaps and ensure eastern flank deterrence.
+  stances:
+    defence:
+      score: 2
+      evidence: Deutschland in der Entwicklung der eigenen Systeme mit Nachdruck umsetzen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

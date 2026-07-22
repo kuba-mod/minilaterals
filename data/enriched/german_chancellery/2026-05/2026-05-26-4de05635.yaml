@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany is strengthening its national cybersecurity architecture and economic
+    resilience in response to increasing cyber threats and the geopolitical shift
+    caused by the war in Ukraine.
+  positions:
+    ukraine: Germany acknowledges the Russian attack on Ukraine as a turning point
+      that necessitates increased cybersecurity protection measures.
+    hybrid: Germany is actively implementing a comprehensive security architecture
+      to protect critical infrastructure and companies from cyber and hybrid threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: zudem markiert der russische Angriff auf die Ukraine eine Zeitenwende
+        – auch in der Cyber sicherheitspolitik
+    hybrid:
+      score: 2
+      evidence: Im Fokus steht dabei insbesondere der Schutz vor physischen, digitalen
+        und hybriden Bedrohungen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

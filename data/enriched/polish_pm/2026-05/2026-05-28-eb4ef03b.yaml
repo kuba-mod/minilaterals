@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is strengthening its internal security and emergency response capabilities
+    while vowing to prosecute sabotage and fake alarms that destabilize state services.
+  positions:
+    hybrid: Poland is actively combating hybrid threats such as sabotage and disinformation
+      that interfere with the operation of emergency services.
+    rule_of_law: Poland emphasizes the importance of democratic resilience by prohibiting
+      the political exploitation of crisis situations to undermine state services.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Każdy, kto przez fałszywe alarmy i sabotaż naraża ludzkie życie oraz
+        dezorganizuje pracę strażaków, zostanie zidentyfikowany i trafi do więzienia
+        na długie lata
+    rule_of_law:
+      score: 1
+      evidence: Donald Tusk zaapelował także o odpowiedzialność i niewykorzystywanie
+        sytuacji kryzysowych do podważania zaufania do służb państwowych i w celach
+        politycznych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

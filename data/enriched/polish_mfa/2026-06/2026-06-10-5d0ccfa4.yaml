@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Imma Tor Faus
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland expressed support for Andorra's closer integration with the EU
+    and praised Andorra's condemnation of Russian aggression against Ukraine.
+  positions:
+    ukraine: Poland supports the condemnation of Russian aggression and the provision
+      of aid to Ukrainian refugees.
+    enlargement: Poland explicitly supports the process of Andorra establishing an
+      association agreement with the European Union.
+    rule_of_law: Poland identifies shared democratic values and the rule of law as
+      the basis for Andorra's relationship with the EU.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Minister Sikorski wyraził uznanie dla jednoznacznego stanowiska Andory
+        potępiającego działania Rosji oraz dla wsparcia udzielanego obywatelom Ukrainy
+    enlargement:
+      score: 1
+      evidence: Podkreślił także poparcie Polski dla dalszego zbliżenia Andory z Unią
+        Europejską.
+    rule_of_law:
+      score: 1
+      evidence: bliskie relacje Andory z Unią Europejską wynikają nie tylko z jej
+        położenia geograficznego, ale również ze wspólnych wartości demokratycznych,
+        poszanowania praworządności oraz podstawowych wolności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

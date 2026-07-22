@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Brussels, Belgium
+  position: Germany is advocating for a sovereign European culture and media policy
+    to counter the dominance of online platforms and combat antisemitism.
+  positions:
+    hybrid: Germany seeks to create a counterweight to the monopoly of large online
+      platforms and establish fair rules for the digital media arena to protect public
+      opinion formation.
+    rule_of_law: Germany is actively integrating the fight against all forms of antisemitism
+      into the new EU funding program to strengthen democratic resilience.
+  stances:
+    hybrid:
+      score: 1
+      evidence: ein Gegengewicht zur monopolartigen Dominanz großer Online-Plattformen
+        bilden
+    rule_of_law:
+      score: 2
+      evidence: in diesem Förderprogramm den Kampf gegen Antisemitismus zu verankern
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

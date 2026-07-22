@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Frank-Walter Steinmeier
+  topics: []
+  location: null
+  position: Germany acknowledges its historical responsibility for the genocide of
+    the Herero and Nama in Namibia and is committed to a process of reconciliation
+    and reparations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

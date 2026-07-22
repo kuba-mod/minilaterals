@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: The German government is focusing on economic competitiveness, infrastructure
+    modernization, and strategic investments in defense and climate protection.
+  positions:
+    defence: Germany is actively increasing investments in defense to strengthen security.
+    green_transition: Germany has established a significant special fund for infrastructure
+      and climate protection.
+  stances:
+    defence:
+      score: 2
+      evidence: Im Fokus stehen Investitionen in Verteidigung
+    green_transition:
+      score: 2
+      evidence: Das Sondervermögen Infrastruktur und Klimaschutz mit 500 Milliarden
+        Euro ist nun angelaufen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

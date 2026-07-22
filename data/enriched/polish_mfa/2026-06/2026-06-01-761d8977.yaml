@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Władysław Teofil Bartoszewski
+  - Minister Rolnictwa i Rozwoju Wsi Stefan Krajewski
+  - Ambasador Chin w Polsce Lu Shana
+  - vicedeputy governor of Heilongjiang province
+  - vice-mayor of Harbin
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Beijing and Harbin, China
+  position: Poland seeks to maintain a strategic partnership with China through political
+    dialogue and agricultural trade while emphasizing the importance of international
+    law and sovereignty.
+  positions:
+    ukraine: Poland discussed the issue of Russian aggression against Ukraine during
+      the Strategic Dialogue.
+    rule_of_law: Poland rhetorically supports the defense of international law, state
+      sovereignty, and territorial integrity.
+  stances:
+    ukraine:
+      score: 0
+      evidence: Pośród problemów międzynarodowych, które omówiono w trakcie Dialogu
+        Strategicznego znalazła się agresja Rosji na Ukrainę
+    rule_of_law:
+      score: 1
+      evidence: obrona prawa międzynarodowego, upominanie się o suwerenność i integralność
+        terytorialną państw, nienaruszalność ich granic
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

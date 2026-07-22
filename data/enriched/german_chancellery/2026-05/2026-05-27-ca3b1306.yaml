@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  topics:
+  - green_transition
+  location: null
+  position: The German government has approved amendments to the Building Code and
+    Spatial Planning Act to accelerate housing construction and climate change adaptation.
+  positions:
+    green_transition: Germany is implementing legislative tools to better adapt urban
+      areas to the effects of climate change and promote sustainable development.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Zudem müssen sie sich besser an die Folgen des Klimawandels anpassen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

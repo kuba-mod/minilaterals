@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Szefowa Służby Zagranicznej i Dyrektor Generalna Henryka Mościcka-Dendys
+  - representatives of the European External Action Service
+  - representatives of the General Secretariat of the Council of the EU
+  - representatives of the ministries of foreign affairs of member states
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  location: null
+  position: Poland emphasizes the threat posed by Russia and the need for collective
+    European resilience against hybrid actions while discussing EU strategic priorities.
+  positions:
+    defence: Poland identifies Russia as the primary threat to European security.
+    hybrid: Poland advocates for joint European efforts to build resilience against
+      Russian and Belarusian hybrid activities and disinformation.
+    enlargement: Poland participated in discussions regarding EU enlargement policy.
+  stances:
+    defence:
+      score: 1
+      evidence: Rosja pozostaje głównym zagrożeniem dla Europy
+    hybrid:
+      score: 1
+      evidence: budowa odporności na rosyjskie i białoruskie działania hybrydowe,
+        w tym w obszarze dezinformacji, wymaga wspólnych wysiłków całej europejskiej
+        wspólnoty
+    enlargement:
+      score: 0
+      evidence: polityką rozszerzenia UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

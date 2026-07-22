@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Verena Pausder
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Merz emphasizes the necessity of innovation, competitiveness,
+    and entrepreneurship to ensure Germany's future economic prosperity.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

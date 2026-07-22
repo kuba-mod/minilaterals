@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Stanisław Aronson
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland honored Colonel Stanisław Aronson with the Bene Merito badge for
+    his lifelong efforts in promoting Polish-Jewish dialogue and historical truth.
+  positions:
+    rule_of_law: Poland emphasizes the importance of honest historical memory and
+      combating the manipulation of history as a foundation for international understanding.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Stanisław Aronson wielokrotnie przestrzegał przed nienawiścią i manipulowaniem
+        pamięcią historyczną
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

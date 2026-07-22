@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Minister of Foreign Affairs of Poland
+  - Minister of Foreign Affairs of Ukraine
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland reaffirms its strategic military and economic support for Ukraine
+    while emphasizing the importance of historical dialogue and regional stability.
+  positions:
+    ukraine: Poland actively supports Ukraine through economic cooperation and participation
+      in post-war reconstruction.
+    defence: Poland rhetorically supports military cooperation and stability in the
+      region to ensure European security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: zaangażowanie rodzimych przedsiębiorstw w powojenną rekonstrukcję
+        kraju
+    defence:
+      score: 1
+      evidence: Minister Radosław Sikorski potwierdził wsparcie dla Ukrainy w jej
+        walce z agresorem
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

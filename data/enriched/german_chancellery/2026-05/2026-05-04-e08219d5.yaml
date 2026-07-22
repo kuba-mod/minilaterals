@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: true
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany pursues a responsible foreign policy focused on European unity,
+    strengthening security structures, and supporting Ukraine against Russian aggression.
+  positions:
+    ukraine: Germany considers support for Ukraine to be of central importance and
+      seeks a sustainable peace from a position of strength.
+    defence: Germany is enhancing its defensive capabilities and coordinating security
+      policy through a new National Security Council.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Die Unterstützung der Ukraine ist für die neue Bundesregierung von
+        zentraler Bedeutung.
+    defence:
+      score: 2
+      evidence: Deutschland will sich verteidigen können, um sich nicht verteidigen
+        zu müssen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

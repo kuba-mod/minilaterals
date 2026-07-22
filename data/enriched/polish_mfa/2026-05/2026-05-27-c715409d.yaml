@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Ayeganagato Nakwipone
+  topics:
+  - hybrid
+  location: Warsaw, Poland
+  position: Poland is seeking to deepen bilateral relations with the Democratic Republic
+    of the Congo through economic cooperation, technological exchange, and regional
+    security discussions.
+  positions:
+    hybrid: Poland is actively promoting its cybersecurity offerings as part of its
+      bilateral cooperation strategy.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Wiceminister Wojciech Zajączkowski przedstawił polską ofertę w takich
+        sektorach jak cyberbezpieczeństwo
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

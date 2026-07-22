@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a temporary reduction of the mineral oil tax to
+    provide short-term financial relief to consumers and businesses facing high energy
+    prices.
+  positions:
+    green_transition: Germany is prioritizing short-term economic relief through fuel
+      tax cuts over immediate climate-neutral energy policy goals.
+  stances:
+    green_transition:
+      score: -1
+      evidence: wird die Mineralölsteuer für zwei Monate gesenkt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

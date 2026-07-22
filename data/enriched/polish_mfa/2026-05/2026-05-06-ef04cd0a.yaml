@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Ewa Ośniecka-Tamecka
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Deputy Prime Minister Radosław Sikorski emphasized the necessity of defending
+    European values and democratic governance against the rise of authoritarianism.
+  positions:
+    rule_of_law: Poland rhetorically supports the defense of European values, specifically
+      cooperation, responsibility, and the law, while criticizing authoritarian models.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: zaapelował też do studentów o obronę europejskich wartości – współpracy,
+        odpowiedzialności i prawa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

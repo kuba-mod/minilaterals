@@ -1,0 +1,44 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Berlin, Germany
+  position: Poland reaffirms its commitment to supporting Ukraine, strengthening collective
+    security and enhancing bilateral cooperation with Germany on infrastructure and
+    trade.
+  positions:
+    ukraine: Poland reiterates its commitment to continued support for Ukraine against
+      Russian aggression.
+    defence: Poland advocates for strengthening the security of the eastern flank
+      and all EU member states.
+    enlargement: Poland discusses the future and expansion of the European Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Będziemy nadal wspierać Ukrainę
+    defence:
+      score: 1
+      evidence: wzmacniać bezpieczeństwo nie tylko wschodniej flanki, ale wszystkich
+        krajów Wspólnoty
+    enlargement:
+      score: 0
+      evidence: omówili również relacje transatlantyckie, współpracę w ramach NATO,
+        przyszłość i rozszerzenie Unii Europejskiej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

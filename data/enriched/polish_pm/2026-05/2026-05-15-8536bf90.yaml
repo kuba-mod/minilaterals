@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - Robert Bagan
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Otwock, Poland
+  position: Poland is significantly investing in infrastructure and personnel to secure
+    its eastern border against illegal crossings and hybrid threats.
+  positions:
+    defence: Poland is actively strengthening its eastern flank through massive financial
+      investments in border security and personnel.
+    hybrid: Poland has implemented a comprehensive system of physical and electronic
+      barriers to stop illegal border crossings used as hybrid tools.
+    rule_of_law: Poland links the effective protection of its borders to the broader
+      defense of democracy and civil liberties.
+  stances:
+    defence:
+      score: 2
+      evidence: To prawie 3 mld zł inwestycji w uszczelnienie naszej granicy.
+    hybrid:
+      score: 2
+      evidence: W ciągu pierwszych trzech miesięcy 2026 roku nie odnotowano ani jednej
+        udanej próby nielegalnego przekroczenia granicy z Białorusią.
+    rule_of_law:
+      score: 1
+      evidence: stanowi także obronę demokracji, praw obywatelskich i wolności w kraju
+        oraz Europie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics:
+  - rule_of_law
+  location: null
+  position: The German federal cabinet has approved a bill to increase criminal penalties
+    for the use of date rape drugs and other dangerous substances during sexual assaults
+    or robberies.
+  positions:
+    rule_of_law: Germany is strengthening its legal framework and judicial clarity
+      to provide better protection against violence and ensure stricter punishment
+      for severe crimes.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Die Bundesregierung schafft Rechtsklarheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

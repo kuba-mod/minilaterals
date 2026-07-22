@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  - Deutscher Bundestag
+  - Bundesrat
+  - Bundesnetzagentur
+  - Bundesbeauftragte für Datenschutz und Informationsfreiheit
+  topics:
+  - hybrid
+  location: null
+  position: Germany has passed legislation to implement the EU Data Act to ensure
+    fair data access and protect non-personal data from foreign government access.
+  positions:
+    hybrid: Germany is implementing security measures to prevent foreign government
+      access to non-personal data, aligning with goals to counter hybrid threats.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Hier gelten Sicherheitsvorkehrungen, um den Zugriff ausländischer
+        Regierungen auf diese Daten zu verhindern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

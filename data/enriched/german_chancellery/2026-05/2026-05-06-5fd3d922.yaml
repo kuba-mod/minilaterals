@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: Germany provides extensive humanitarian and medical aid to Ukraine through
+    the BBK and the EU Civil Protection Mechanism.
+  positions:
+    ukraine: Germany is actively advancing long-term support for Ukraine by coordinating
+      high-value humanitarian goods and medical transports.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Seit Beginn des russischen Angriffskrieges gegen die Ukraine wurden
+        staatliche Hilfsgüter und Großspenden im Wert von rund 259 Millionen Euro
+        über den UCPM ( Union Civil Protection Mechanism ) in die Ukraine gebracht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Ministerpräsident Rumen Radev
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting the Bulgarian Prime Minister to discuss bilateral cooperation
+    and international security.
+  positions:
+    defence: Germany intends to discuss international security policy, aligning rhetorically
+      with the goal of collective security.
+  stances:
+    defence:
+      score: 1
+      evidence: Fragen der Europa- und der internationalen Sicherheitspolitik im Mittelpunkt
+        stehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

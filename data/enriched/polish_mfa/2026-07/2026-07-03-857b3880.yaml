@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Minister Marinakys
+  topics:
+  - green_transition
+  location: Poland
+  position: Poland seeks to strengthen political and economic cooperation with Honduras,
+    specifically in technology and waste management.
+  positions:
+    green_transition: Poland is promoting economic cooperation in the waste management
+      sector, which aligns with environmental objectives.
+  stances:
+    green_transition:
+      score: 1
+      evidence: spotkania z przedstawicielami polskich firm z sektorów technologii
+        medycznych, fintech, IT i gospodarki odpadami
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

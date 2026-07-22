@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Marcin Bosacki
+  - Ambassador of Ukraine to Poland
+  - Oleksandr Mishchenko
+  - Piotr Łukasiewicz
+  topics:
+  - ukraine
+  location: null
+  position: Poland expresses dissatisfaction with a specific decision and emphasizes
+    the need for Polish-Ukrainian relations to prioritize security and dialogue over
+    historical grievances.
+  positions:
+    ukraine: Poland stresses the critical importance of maintaining strong bilateral
+      relations and solidarity in the face of Russian aggression.
+  stances:
+    ukraine:
+      score: 1
+      evidence: W obliczu trwającej agresywnej wojny Rosji przeciw Ukrainie i zagrożenia
+        dla bezpieczeństwa całego regionu, kluczowe dla obu naszych państw i narodów
+        relacje polsko-ukraińskie nie powinny stawać się zakładnikiem trudnej historii.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

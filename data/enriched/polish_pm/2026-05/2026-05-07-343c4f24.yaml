@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Giorgia Meloni
+  topics:
+  - ukraine
+  - green_transition
+  location: null
+  position: Poland seeks to significantly deepen bilateral relations with Italy through
+    a potential new treaty and coordinated action on EU policies and Ukraine's reconstruction.
+  positions:
+    ukraine: Poland is committing to practical, immediate cooperation with Italy to
+      expand aid and security for Ukraine.
+    green_transition: Poland intends to act as a political duo with Italy to influence
+      the EU emissions trading system.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Nasze firmy i instytucje będą razem pracowały, aby pomoc dla Ukrainy
+        była rozbudowywana już teraz.
+    green_transition:
+      score: 1
+      evidence: W sprawie ETS będziemy działać razem
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

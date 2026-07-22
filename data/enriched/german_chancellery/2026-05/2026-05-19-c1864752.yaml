@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Guy Parmelin
+  topics: []
+  location: Berlin, Germany
+  position: Germany emphasizes its close economic and geographic ties with Switzerland
+    and calls for the restoration of free maritime trade routes.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

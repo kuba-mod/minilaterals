@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Maria Malmer Stenergard
+  - Artur Harazim
+  - Jessica Rosencrantz
+  - Donald Tusk
+  - Ulf Kristersson
+  - Robert Kupiecki
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  location: Gdynia, Poland
+  position: Poland is deepening its strategic partnership with Sweden, specifically
+    through military procurement and a joint security pact for the Baltic Sea.
+  positions:
+    ukraine: Poland supports the effort to address Russian aggression against Ukraine.
+    defence: Poland is actively advancing collective security and naval capabilities
+      through a contract for A26 submarines and a Baltic Pact.
+    green_transition: Poland is engaging in dialogue regarding the European Emissions
+      Trading System.
+  stances:
+    ukraine:
+      score: 1
+      evidence: rosyjskiej agresji przeciwko Ukrainie
+    defence:
+      score: 2
+      evidence: podpisanie kontraktu na zakup trzech okrętów podwodnych A26 w ramach
+        programu „Orka”
+    green_transition:
+      score: 0
+      evidence: rozmawiali również o Wieloletnich Ramach Finansowych i Europejskim
+        Systemie Handlu Emisjami (ETS)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

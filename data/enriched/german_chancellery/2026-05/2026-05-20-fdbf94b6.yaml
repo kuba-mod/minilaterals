@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Bundeskabinett
+  - Bundeswehr
+  - Sicherheitsbehörden
+  topics:
+  - defence
+  location: null
+  position: Germany conducted a crisis response exercise to simulate the government's
+    decision-making process and subsequent military execution during a civilian aircraft
+    hijacking scenario.
+  positions:
+    defence: Germany is actively enhancing its collective security and crisis response
+      capabilities through real-time simulations involving the military and security
+      agencies.
+  stances:
+    defence:
+      score: 2
+      evidence: Die Bundesregierung hat am 20. Mai 2026 eine Krisenreaktionsübung
+        zur Entführung eines zivilen Flugzeugs im deutschen Luftraum (sogenanntes
+        „Renegade“- Szenario) erfolgreich durchgeführt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

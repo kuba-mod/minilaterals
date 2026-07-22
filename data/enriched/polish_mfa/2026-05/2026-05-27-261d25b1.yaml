@@ -1,0 +1,38 @@
+actors:
+- DE
+- PL
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marek Woźniak
+  topics:
+  - hybrid
+  - defence
+  location: Poznań, Poland
+  position: Poland emphasizes the need for increased security and social resilience
+    against hybrid threats in Polish-German regional cooperation.
+  positions:
+    hybrid: Poland actively calls for the inclusion of countermeasures against hybrid
+      threats and disinformation in regional activities.
+    defence: Poland highlights the necessity of addressing security challenges and
+      resilience within the current international context.
+  stances:
+    hybrid:
+      score: 1
+      evidence: zaapelowała do reprezentantów polskich województw i niemieckich krajów
+        związkowych o uwzględnianie w swoich aktywnościach kwestii bezpieczeństwa
+        i budowy odporności społecznej, w tym przeciwdziałania zagrożeniom hybrydowym
+        i dezinformacji.
+    defence:
+      score: 1
+      evidence: Uczestnicy spotkania rozmawiali o wyzwaniach bezpieczeństwa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

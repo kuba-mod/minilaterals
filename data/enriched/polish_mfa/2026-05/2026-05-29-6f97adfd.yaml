@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Rada
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Sopot, Poland
+  position: Poland strongly condemns Russian aggression and advocates for increased
+    military, financial, and diplomatic support for Ukraine alongside tougher sanctions
+    and countermeasures against hybrid threats.
+  positions:
+    ukraine: Poland provides comprehensive support for Ukraine's sovereignty and territorial
+      integrity, emphasizing the need for increased multi-dimensional aid.
+    defence: Poland supports Ukraine's right to self-defense and recognizes its role
+      in ensuring security for its partners.
+    hybrid: Poland calls for more decisive measures in the Baltic region to counter
+      Russian cyber operations and sabotage.
+  stances:
+    ukraine:
+      score: 2
+      evidence: podkreśla znaczenie zapewnienia zwiększonej pomocy politycznej, finansowej,
+        gospodarczej, humanitarnej, wojskowej i dyplomatycznej
+    defence:
+      score: 1
+      evidence: Rada wspiera Ukrainę, korzystającą z przyrodzonego prawa do samoobrony
+        w obliczu nielegalnej wojny napastniczej Rosji
+    hybrid:
+      score: 1
+      evidence: 'Rada wyraziła potrzebę stosowania w regionie Morza Bałtyckiego bardziej
+        zdecydowanych środków w odpowiedzi na agresywne działania Rosji, z którymi
+        mierzyły się państwa członkowskie RPMB, takie jak: operacje w cyberprzestrzeni,
+        akty sabotażu'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

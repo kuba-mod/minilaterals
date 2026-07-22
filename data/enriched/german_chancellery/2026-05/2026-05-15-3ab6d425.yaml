@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: Würzburg, Germany
+  position: The German government is advancing energy security and climate neutrality
+    through a technology-open approach to building modernization and a new power plant
+    strategy.
+  positions:
+    green_transition: Germany is pursuing climate neutrality and energy security by
+      promoting diverse heating technologies and investing in modern gas power plants
+      to ensure supply stability.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Der Trend zu klimaneutralen Techniken ist ungebrochen, auch das neue
+        Gesetz wird ihn nicht brechen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

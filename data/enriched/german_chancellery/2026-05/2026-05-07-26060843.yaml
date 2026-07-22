@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Herr Vogelsang
+  - Erster Bürgermeister
+  topics:
+  - green_transition
+  location: Hamburg, Germany
+  position: Chancellor Merz emphasizes economic competitiveness and a pragmatic energy
+    transition focused on cost-efficiency and security of supply.
+  positions:
+    green_transition: Germany is pursuing an energy transition based on pragmatism,
+      cost-efficiency, and security of supply to ensure affordable energy.
+  stances:
+    green_transition:
+      score: 1
+      evidence: eine Energiewende im Geiste des Pragmatismus, eine Energiewende mit
+        dem Fokus auf Kosteneffizienz und Versorgungssicherheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

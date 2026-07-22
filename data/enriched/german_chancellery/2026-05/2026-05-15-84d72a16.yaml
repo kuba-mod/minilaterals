@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Belu-Simion Fainaru
+  - Henrike Naumann
+  - Sung Tieu
+  - Gitte Zschoch
+  - Zhanna Kadyrova
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Venice, Italy
+  position: Germany expresses solidarity with Israeli and Ukrainian artists at the
+    Venice Biennale, emphasizing artistic freedom and cultural exchange.
+  positions:
+    ukraine: Germany rhetorically supports Ukraine by emphasizing the importance of
+      its visibility and artistic survival during the conflict.
+    rule_of_law: Germany advocates for the principle of artistic freedom as a symbol
+      of democratic values.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Es ist so wichtig, dass die Ukraine hier erlebt und gesehen werden
+        kann.
+    rule_of_law:
+      score: 1
+      evidence: Die Biennale ist somit auch sichtbares Symbol der gelebten Kunstfreiheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

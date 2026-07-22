@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Irena Lichnerowicz, dyrektorka Protokołu Dyplomatycznego MSZ
+  - Barbara Kazana
+  - Anna Godlewska, zastępczyni dyrektora w Departamencie Dyplomacji Kulturalnej i
+    Promocji Polski
+  - Rektor Akademii Sztuk Pięknych w Warszawie
+  topics: []
+  location: Warsaw, Poland
+  position: Poland is promoting its national culture and artistic heritage through
+    a collaborative exhibition between the Ministry of Foreign Affairs and the Academy
+    of Fine Arts in Warsaw.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

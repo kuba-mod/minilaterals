@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a comprehensive economic strategy to restore growth
+    through tax reforms, investment incentives, and bureaucracy reduction.
+  positions:
+    green_transition: Germany is actively promoting the green transition by providing
+      investment boosters specifically for the adoption of electric vehicles in business.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Darüber hinaus werden mit einem Investitions-Booster für E-Mobilität
+        betrieblich genutzte Elektrofahrzeuge gefördert.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

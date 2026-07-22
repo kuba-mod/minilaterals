@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Luís Montenegro
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany is strengthening bilateral security ties with Portugal and committing
+    military resources to secure international shipping lanes.
+  positions:
+    defence: Germany actively advances collective security by deploying a ship to
+      the Mediterranean and promoting military hardware interoperability.
+  stances:
+    defence:
+      score: 2
+      evidence: Deutschland bereit, die Freiheit der Seewege auch militärisch zu sichern.
+        Das sagte Bundeskanzler Friedrich Merz bei einer Pressekonferenz zum Besuch
+        des portugiesischen Ministerpräsidenten Luís Montenegro in Berlin. Ein erstes
+        Schiff sei bereits zur Vorstationierung ins östliche Mittelmeer unterwegs.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

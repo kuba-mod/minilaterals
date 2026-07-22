@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - enlargement
+  location: Montenegro
+  position: Germany is actively pursuing the acceleration of EU accession for Western
+    Balkan countries through proposed measures to speed up negotiations.
+  positions:
+    enlargement: Germany is proposing concrete measures to accelerate accession negotiations
+      and integrate Western Balkan countries more closely into the EU.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Der Bundeskanzler wird mit den Teilnehmenden aus EU und Westbalkan
+        über seine Vorschläge sprechen, die Beitrittsverhandlungen zu beschleunigen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Henryka Mościcka-Dendys
+  - Marta A. Urbańska
+  - Kazimierz Butelski
+  - Tomasz Konior
+  - Paweł Potoroczyn
+  topics:
+  - ukraine
+  location: Warsaw, Poland
+  position: Poland promotes its national brand and soft power through the strategic
+    use of architecture in its diplomatic missions, including those in challenging
+    geopolitical environments.
+  positions:
+    ukraine: Poland emphasizes the importance of maintaining investments and connections
+      with neighbors during difficult times, referencing the embassy in Minsk.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Sąsiedztwo, nawet w trudnych czasach, wymaga inwestycji, a architektura
+        może być tą nicią, która łączy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

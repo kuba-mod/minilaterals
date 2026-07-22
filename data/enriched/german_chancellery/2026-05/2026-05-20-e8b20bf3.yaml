@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Federal Chancellor
+  - Federal Ministry of Defence
+  - Federal Ministry of the Interior
+  - Federal Ministry for Digital and Transport
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Germany conducted a cross-departmental crisis response exercise to strengthen
+    its airspace security architecture and national resilience against threats.
+  positions:
+    defence: Germany is actively enhancing its collective security and deterrence
+      capabilities through the maintenance of Quick Reaction Alert forces and the
+      strengthening of the National Security Council.
+    hybrid: Germany is improving its resilience and operational readiness to counter
+      non-traditional threats, such as the hijacking of civilian aircraft.
+  stances:
+    defence:
+      score: 2
+      evidence: stärkt der Nationale Sicherheitsrat (NSR) die Sicherheitsarchitektur
+        Deutschlands und bündelt ressortübergreifend sicherheitspolitische Kompetenzen
+        und Wissen
+    hybrid:
+      score: 2
+      evidence: trägt er außerdem zur Steigerung der gesamtgesellschaftlichen Resilienz
+        bei, indem sich Bund, Länder und Sicherheitsbehörden auf den Umgang mit Krisenszenarien
+        vorbereiten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

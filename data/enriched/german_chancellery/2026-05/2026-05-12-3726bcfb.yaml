@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Rumen Radev
+  topics:
+  - defence
+  location: null
+  position: Germany expresses its desire to deepen ties and maintain close cooperation
+    with Bulgaria within the frameworks of the EU and NATO.
+  positions:
+    defence: Germany rhetorically supports close cooperation and partnership within
+      NATO during challenging geopolitical times.
+  stances:
+    defence:
+      score: 1
+      evidence: als verlässliche Partner in der Europäischen Union und in der NATO
+        in geopolitisch herausfordernden Zeiten weiter gut und eng zusammenzuarbeiten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Pistorius
+  - Klingbeil
+  - Bas
+  - Warken
+  - Connemann
+  topics:
+  - defence
+  location: Ottawa, Canada
+  position: Germany is strengthening defence industry ties and diplomatic relations
+    with Canada.
+  positions:
+    defence: Germany is actively advancing defence capabilities and industrial cooperation
+      through the visit of the Defence Minister to the CANSEC arms fair and visits
+      to defense firms.
+  stances:
+    defence:
+      score: 2
+      evidence: Verteidigungsminister Pistorius wird in der kommenden Woche, am Dienstagnachmittag,
+        nach Kanada fliegen. Am Mittwoch wird er in Ottawa sein und am Vormittag die
+        Rüstungsindustriemesse CANSEC besuchen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

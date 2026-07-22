@@ -1,0 +1,61 @@
+date: '2026-04-22'
+type: press_release
+source_name: german_chancellery
+title: Im Kabinett beschlossen Internetkriminalität wirksam bekämpfen
+text: 'Künftig sollen Internet-Zugangsanbieter verpflichtet werde, IP -Adressen für
+  drei Monate zu speichern. Das hat das Kabinett nun beschlossen. Foto: mauritius
+  images / Cultura / Andrew Brookes Straftaten im digitalen Raum nehmen erheblich
+  zu. Vor allem die Verbreitung von Kinderpornographie ist in den letzten Jahren drastisch
+  gestiegen. Stark zugenommen haben auch Online -Betrug und Hasskriminalität im Netz.
+  Derzeit kommen viele Täter ungestraft davon, da ihre Identität sich in zahlreichen
+  Fällen nicht ermitteln lässt. Die Bundesregierung hat nun einen Gesetzentwurf auf
+  den Weg gebracht, mit dem Internet-Zugangsanbieter verpflichtet werden sollen, IP
+  -Adressen für einen Zeitraum von drei Monaten zu speichern. Damit werden die Ermittlungsmöglichkeiten
+  der Strafverfolgungs- und Sicherheitsbehörden im Kampf gegen Internetkriminalität
+  deutlich verbessert. IP -Adresse steht für Internetprotokoll-Adresse. Sie besteht
+  aus einer Kette von Zahlen und Buchstaben. Ihr Zweck ist es, den betreffenden Anschluss
+  im Netz eindeutig zu identifizieren und so die Kommunikation zwischen den Geräten
+  zu ermöglichen. Eine IP -Adresse wird üblicherweise dynamisch vergeben. Das heißt,
+  dass sie sich ständig ändert. Eine bestimmte IP -Adresse ist einem bestimmten Anschluss
+  also nur für eine gewisse Zeit zugewiesen. Zusätzlich soll die Möglichkeit einer
+  Sicherungsanordnung geschaffen werden. Damit kann die Strafverfolgungsbehörde bei
+  einem konkreten Anlass die Sicherung von Verkehrsdaten für bis zu drei Monaten anordnen,
+  sofern rechtliche oder tatsächliche Voraussetzungen einer Datenerhebung noch nicht
+  vorliegen. Darüber hinaus regelt der Gesetzentwurf, dass eine sogenannte Funkzellenabfrage
+  nicht nur bei Verdacht einer besonders schweren Straftat, sondern schon bei Straftaten
+  von erheblicher Bedeutung zulässig ist. Ziel ist es, den Strafverfolgungs- und Polizeibehörden
+  mit der IP -Adressspeicherung einen konkreten Ermittlungsansatz zu geben. Bei Straftaten
+  im Netz sind IP -Adressen häufig die einzige Spur, die ein Täter hinterlässt. Das
+  Gerät, mit dem der Täter im Netz unterwegs ist, kommuniziert mit anderen Geräten.
+  Dabei hinterlässt das Gerät regelmäßig eine seinem Anschluss zugewiesene IP -Adresse
+  – eine digitale Spur, die eine Strafverfolgung deutlich erleichtert. Nur die Internetdiensteanbieter
+  können Auskunft darüber geben, welchem Anschluss eine bestimmte IP -Adresse zu einem
+  bestimmten Zeitpunkt zugeordnet war. Grundsätzlich kann die Speicherung von IP -Adressen
+  bei der Aufklärung aller Straftaten im Internet einen hilfreichen Betrag leisten.
+  Insbesondere für die Aufklärung von kinderpornographischen Straftaten, Cyber -Betrug
+  und Hasskriminalität im Netz ist die Speicherung von IP -Adressen von großer Bedeutung.
+  Nein. Es geht nicht darum, Informationen über spezielle Online -Dienste oder das
+  Surfen auf Websites zu erhalten. Ausgenommen von einer Speicherung sind auch Informationen,
+  mit wem, wann oder wie lange von einem bestimmten Anschluss aus kommuniziert worden
+  ist. Vielmehr geht es um eine eindeutige Zuordnung einer IP -Adresse zu einem Anschluss
+  im Netz. Ja, denn es werden keine Bewegungs- oder Persönlichkeitsprofile gespeichert.
+  Die Vertraulichkeit von Kommunikation im Netz bleibt strikt gewahrt. Inhaltliche
+  Daten der Kommunikation werden nicht von der Speicherung erfasst. Bei dem vorliegenden
+  Gesetzentwurf geht es einzig um die Speicherung der Daten, die notwendig sind, um
+  nachträglich eine bestimmte IP -Adresse einem bestimmten Internetanschluss zuordnen
+  zu können, um bei begründetem Anfangstatverdacht Straftaten effektiv aufklären zu
+  können. Die Speicherung von IP -Adressen ist ein zentraler Aspekt der aktuellen
+  Sicherheitspolitik in Deutschland. Sie unterscheidet sich von der allgemeinen Vorratsdatenspeicherung
+  durch eine gezielte, zeitlich begrenzte Speicherung der „Nummernschilder“ im Internet.
+  Bei der IP -Speicherung werden Verbindungsdaten wie IP -Adresse, Zeitpunkt der Nutzung
+  – Beginn und Ende – und teilweise Portnummern gespeichert. Es geht im Gegensatz
+  zur früher diskutierten Vorratsdatenspeicherung nicht um die umfassende Speicherung
+  aller Verbindungsdaten, sondern um eine vorsorgliche, temporäre Speicherung der
+  Zuordnung von IP -Adressen zu einem Internetnutzer, um kriminelle Aktivitäten im
+  Nachhinein nachvollziehbar zu machen.'
+source_url: https://www.bundesregierung.de/breg-de/aktuelles/kabinett-ip-adressen-2422604
+source_lang: de
+collection: null
+collection_method: html
+source_published_at: '2026-04-22T00:00:00Z'
+ingested_at: '2026-07-22T08:10:21Z'

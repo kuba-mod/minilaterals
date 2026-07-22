@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics:
+  - hybrid
+  location: null
+  position: Germany has approved the Digital Identity Act to implement the EUDI Wallet,
+    facilitating secure electronic identification and transactions across the EU.
+  positions:
+    hybrid: Germany is advancing secure digital infrastructure and data security to
+      combat vulnerabilities in electronic transactions and identity verification.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Die Bundesregierung trifft Maßnahmen, um Datenschutz und Datensicherheit
+        sicherzustellen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

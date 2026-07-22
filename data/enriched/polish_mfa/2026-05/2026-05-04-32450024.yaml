@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of Foreign Affairs
+  topics:
+  - ukraine
+  location: null
+  position: Poland is providing financial grants to organizations for humanitarian
+    aid in Ukraine, Lebanon, Palestine, and Syria.
+  positions:
+    ukraine: Poland is actively advancing long-term support for Ukraine by funding
+      humanitarian projects including healthcare, hygiene, and food security.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Wsparcie funkcjonowania systemu ochrony zdrowia i dostępności usług
+        medycznych w obwodzie charkowskim w Ukrainie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

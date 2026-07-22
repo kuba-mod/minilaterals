@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Boris Pistorius
+  - David McGuinty
+  topics:
+  - defence
+  - rule_of_law
+  location: Ottawa, Canada
+  position: Germany aims to intensify defense cooperation and armaments collaboration
+    with Canada to enhance NATO's deterrence capabilities.
+  positions:
+    defence: Germany is actively expanding defense and armaments cooperation with
+      Canada to strengthen NATO's stability and deterrence.
+    rule_of_law: Germany rhetorically affirms the importance of shared democratic
+      values as a basis for its partnership with Canada.
+  stances:
+    defence:
+      score: 2
+      evidence: Die Rüstungszusammenarbeit mit Kanada soll ausgeweitet werden.
+    rule_of_law:
+      score: 1
+      evidence: Beide Länder teilen demokratische Werte
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

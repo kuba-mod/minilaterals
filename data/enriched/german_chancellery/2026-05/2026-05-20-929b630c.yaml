@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundesrat
+  topics: []
+  location: null
+  position: The German government has issued a temporary ordinance allowing noise
+    protection exceptions for public viewing events during the 2026 Men's World Cup.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

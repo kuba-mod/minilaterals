@@ -1,0 +1,40 @@
+actors:
+- DE
+- PL
+issue_areas:
+- ukraine
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Katherina Reiche
+  - Dietmar Woidke
+  topics:
+  - ukraine
+  - green_transition
+  location: Schwedt, Germany
+  position: Germany is investing in green fuel production and securing regional energy
+    supply while coordinating with Poland on alternative oil routes due to the situation
+    in Ukraine.
+  positions:
+    ukraine: Germany acknowledges the disruption of energy supply routes caused by
+      the Russian invasion of Ukraine.
+    green_transition: Germany is actively advancing the green transition through a
+      350 million euro investment in synthetic fuels and the decarbonization of aviation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Seit einigen Jahren steht die Raffinerie unter anderem wegen der geopolitischen
+        Situation infolge des russischen Überfalls auf die Ukraine vor erheblichen
+        Herausforderungen.
+    green_transition:
+      score: 2
+      evidence: überreichten einen symbolischen Förderbescheid in Höhe von rund 350
+        Millionen Euro für ein Joint Venture zur Herstellung synthetischer Kraftstoffe
+        auf Basis von grünem Wasserstoff und biogenem Kohlendioxid.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

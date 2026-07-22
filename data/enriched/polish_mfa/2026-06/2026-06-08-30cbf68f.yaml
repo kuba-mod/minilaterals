@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Aleś Białacki
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland expresses strong support for human rights and civil liberties through
+    its engagement with Aleś Białacki and the establishment of his foundation in Poland.
+  positions:
+    rule_of_law: Poland actively promotes the protection of human rights and civil
+      liberties by supporting pro-democracy activists and creating a dedicated foundation.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Minister Sikorski wyraził zadowolenie z niedawnego zarejestrowania
+        w Polsce Fundacji Alesia Białackiego, której celem jest działalność na rzecz
+        ochrony i promocji praw człowieka.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
