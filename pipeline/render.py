@@ -117,11 +117,14 @@ SOURCE_META = {
     for s in prof["sources"]
 }
 
-# Ingest method + page language per source, for the sources-table columns.
+# Ingest method + native page language per source, for the sources-table
+# columns. Matches each ingester's primary (native-language) fetch path —
+# see design principle #9: native newsroom first, English fallback only if
+# that native path fails.
 SOURCE_INGEST = {
-    "german_mfa": ("RSS", "EN"),
-    "france_diplomatie": ("HTML scraper", "EN"),
-    "polish_mfa": ("HTML scraper", "EN"),
+    "german_mfa": ("RSS", "DE"),
+    "france_diplomatie": ("RSS", "FR"),
+    "polish_mfa": ("HTML scraper", "PL"),
     "german_chancellery": ("HTML scraper", "DE"),
     "elysee": ("HTML scraper", "FR"),
     "polish_pm": ("HTML scraper", "PL"),
