@@ -1,0 +1,28 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+e3_relevant: true
+e3_signal: true
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics: []
+  location: null
+  position: The United Kingdom joined a joint statement to launch the United Nations
+    Horizon Fund for the Occupied Palestinian Territories.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

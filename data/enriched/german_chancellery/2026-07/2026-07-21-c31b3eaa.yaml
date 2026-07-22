@@ -3,31 +3,48 @@ actors:
 issue_areas:
 - defence
 - green_transition
+- energy
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: true
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: joint_statement
   participants: []
   topics:
   - defence
   - green_transition
+  - energy
   location: null
-  position: Germany is establishing a strategic bilateral partnership with Azerbaijan
-    focusing on energy transition, security cooperation, and regional peace.
+  position: Germany and Azerbaijan have agreed to a strategic agenda to deepen bilateral
+    partnership in political, economic, and security cooperation.
   positions:
-    defence: Germany seeks to advance security cooperation through defense industry
-      promotion and academic exchanges.
-    green_transition: Germany is actively pursuing green energy and hydrogen cooperation
-      to align with climate objectives.
+    defence: Germany seeks to advance security capabilities through cooperation in
+      the defence industry and institutional exchanges.
+    green_transition: Germany is committing to collaborate on sustainable economic
+      development and low-carbon energy technologies.
+    energy: Germany emphasizes the importance of securing energy flows, specifically
+      gas, and enhancing infrastructure connectivity.
   stances:
     defence:
       score: 1
       evidence: promotion of cooperation in the defence industry
     green_transition:
-      score: 2
+      score: 1
       evidence: leveraging the full potential of cooperation in areas such as agriculture,
-        sustainable economic development, green energy, green and low-carbon hydrogen
+        sustainable economic development, green energy, green and low-carbon hydrogen,
+        energy efficiency
+    energy:
+      score: 1
+      evidence: increased collaboration on issues of global and regional significance
+        such as connectivity and infrastructure, energy flows including gas
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

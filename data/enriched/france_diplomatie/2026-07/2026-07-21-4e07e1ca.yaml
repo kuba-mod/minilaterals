@@ -7,6 +7,14 @@ issue_areas:
 - rule_of_law
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: true
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: meeting
   participants:
@@ -18,18 +26,14 @@ extracted:
   - green_transition
   - rule_of_law
   location: Iceland
-  position: France strengthened bilateral relations with Iceland through a roadmap
-    covering security, climate, and economic cooperation, while reaffirming support
-    for Ukraine and international law.
+  position: France strengthened bilateral relations with Iceland through a new roadmap
+    focusing on security, climate, and economic cooperation.
   positions:
-    ukraine: France supports continued assistance to Ukraine in the context of Russia's
-      war of aggression.
-    defence: France committed to a formalized framework for security discussions with
-      Iceland.
-    green_transition: France established a roadmap to coordinate discussions on climate
-      and environmental challenges.
-    rule_of_law: France reaffirmed its commitment to the respect for international
-      law and effective multilateralism.
+    ukraine: France supports continued aid to Ukraine amidst the Russian war of aggression.
+    defence: France is collaborating with Iceland on security frameworks and maritime
+      security.
+    green_transition: France is coordinating with Iceland on climate-related objectives.
+    rule_of_law: France emphasizes the importance of international law and multilateralism.
   stances:
     ukraine:
       score: 1
@@ -41,12 +45,12 @@ extracted:
     green_transition:
       score: 1
       evidence: signed a roadmap that bolsters the framework for our discussions on
-        security, climate and our economies
+        security, climate
     rule_of_law:
       score: 1
       evidence: reaffirmed their commitment to the respect for international law and
         effective multilateralism
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

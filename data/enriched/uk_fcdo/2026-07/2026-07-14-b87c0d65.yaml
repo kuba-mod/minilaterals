@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+e3_relevant: false
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Alistair Burt
+  topics: []
+  location: null
+  position: The United Kingdom has created a new envoy role to provide support for
+    British nationals detained abroad in complex cases.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

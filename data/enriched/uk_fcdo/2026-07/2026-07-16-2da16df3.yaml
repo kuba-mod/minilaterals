@@ -1,0 +1,35 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+trilateral_signal: false
+e3_relevant: false
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Ambassador James Ford
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom honors the victims of the Srebrenica genocide and affirms
+    its support for the stability and sovereignty of Bosnia and Herzegovina.
+  positions:
+    rule_of_law: The UK supports democratic resilience and stability in Bosnia and
+      Herzegovina by addressing the legacies of the Srebrenica genocide.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: underlines the UK's support for BiH’s stability, sovereignty and territorial
+        integrity, and for addressing the lasting legacies
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

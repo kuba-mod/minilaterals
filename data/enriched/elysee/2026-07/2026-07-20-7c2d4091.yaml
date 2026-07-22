@@ -2,9 +2,18 @@ actors:
 - FR
 issue_areas:
 - defence
+- energy
 - green_transition
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: true
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: meeting
   participants:
@@ -14,23 +23,29 @@ extracted:
   - Zita Oligui Nguema
   topics:
   - defence
+  - energy
   - green_transition
   location: null
-  position: France is renewing its partnership with Gabon focusing on economic, energy,
+  position: France has renewed its partnership with Gabon, focusing on economic, energy,
     cultural, and defense cooperation, as well as environmental protection.
   positions:
-    defence: France is actively engaging in defense cooperation with Gabon as part
-      of a renewed partnership.
-    green_transition: France supports environmental protection efforts, specifically
-      regarding the Congo Basin forest.
+    defence: France is renewing its cooperation with Gabon in the field of defense.
+    energy: France is focusing on renewed energy cooperation with Gabon.
+    green_transition: France supports the protection of the Congo Basin forest as
+      part of global environmental efforts.
   stances:
     defence:
       score: 1
-      evidence: coopération en matière économique, énergétique, culturelle et de défense
+      evidence: un partenariat renouvelé entre le Gabon et la France , porté sur la
+        coopération en matière économique, énergétique, culturelle et de défense
+    energy:
+      score: 1
+      evidence: un partenariat renouvelé entre le Gabon et la France , porté sur la
+        coopération en matière économique, énergétique, culturelle et de défense
     green_transition:
       score: 1
       evidence: la protection de la forêt du Bassin du Congo
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

@@ -4,20 +4,31 @@ issue_areas:
 - hybrid
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: false
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: statement
   participants:
-  - Bundesministeriums für Digitales und Staatsmodernisierung (BMDS)
+  - Federal Cabinet
+  - Federal Ministry for Digital and State Modernization (BMDS)
   - Chief Information Security Officer Bund (CISO Bund)
-  - Präsidentin des BSI
+  - President of the BSI
   topics:
   - hybrid
   location: null
-  position: Germany has approved the 'CyberGovSecure' program to strengthen the cyber
-    resilience and security of its federal administration against hybrid threats.
+  position: Germany is implementing the 'CyberGovSecure' program to strengthen the
+    cyber security and resilience of the federal administration against digital and
+    hybrid threats.
   positions:
-    hybrid: Germany is implementing concrete measures and a governance structure to
-      protect state functions against cyber attacks and hybrid threats.
+    hybrid: Germany is actively advancing the goal of countering hybrid threats by
+      implementing a comprehensive program of immediate measures to protect federal
+      IT systems from cyber attacks and espionage.
   stances:
     hybrid:
       score: 2
@@ -26,5 +37,5 @@ extracted:
         beschlossen.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

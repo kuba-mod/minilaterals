@@ -1,0 +1,37 @@
+actors:
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+trilateral_signal: false
+e3_relevant: true
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Iranian Chargé d'Affaires
+  - Foreign, Commonwealth and Development Office
+  topics:
+  - iran
+  location: London, United Kingdom
+  position: The United Kingdom summoned the Iranian Chargé d'Affaires to protest the
+    IRGC-QF's role in directing proxy attacks.
+  positions:
+    iran: The UK is actively addressing destabilising regional activity by holding
+      Iran accountable for the actions of the IRGC-QF and its proxy groups.
+  stances:
+    iran:
+      score: 2
+      evidence: summoned the Iranian Chargé d'Affaires in London in response to the
+        Islamic Revolutionary Guard Corps Qods Force’s (IRGC-QF) role in directing
+        proxy groups
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

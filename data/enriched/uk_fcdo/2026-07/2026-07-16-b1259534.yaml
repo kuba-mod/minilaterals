@@ -1,0 +1,34 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+trilateral_signal: false
+e3_relevant: true
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: true
+aukus_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ankur Narayan, UK Counsellor for Politico-Military Affairs
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom asserts that increased European defence spending and
+    NATO readiness are necessary defensive responses to Russian aggression.
+  positions:
+    defence: The UK supports the strengthening of European defence and NATO readiness
+      as a means of deterrence against Russian hostility.
+  stances:
+    defence:
+      score: 1
+      evidence: underlines that these are defensive measures taken in re…
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

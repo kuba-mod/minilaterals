@@ -2,26 +2,42 @@ actors:
 - DE
 issue_areas:
 - green_transition
+- energy
 weimar_relevant: true
 trilateral_signal: false
+e3_relevant: false
+e3_signal: false
+visegrad_relevant: false
+visegrad_signal: false
+baltic_relevant: false
+baltic_signal: false
+aukus_relevant: false
+aukus_signal: false
 extracted:
   event_type: statement
   participants: []
   topics:
   - green_transition
+  - energy
   location: null
   position: The German government is implementing economic and labor market reforms,
-    including investment incentives for e-mobility and energy cost reductions, to
-    strengthen national competitiveness.
+    including investment incentives and energy cost reductions, to strengthen national
+    competitiveness and growth.
   positions:
-    green_transition: Germany is actively advancing the green transition by providing
-      specific investment incentives and tax exemptions for corporate e-mobility.
+    green_transition: Germany is actively promoting the transition to electric mobility
+      through targeted investment boosters and tax exemptions for companies.
+    energy: Germany is reducing energy costs for businesses and citizens to improve
+      international competitiveness.
   stances:
     green_transition:
       score: 2
       evidence: Mit dem Investitions-Booster für E -Mobilität bei Unternehmen werden
         betrieblich genutzte Elektrofahrzeuge gefördert.
+    energy:
+      score: 2
+      evidence: Die Bundesregierung hat die Energiekosten für die Wirtschaft sowie
+        für Bürgerinnen und Bürger spürbar und dauerhaft gesenkt.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions
