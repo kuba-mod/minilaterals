@@ -726,7 +726,7 @@ def compute_source_health() -> dict[str, dict]:
 # ---------------------------------------------------------------------------
 
 
-def build_convergence_clusters(events: list[dict], window_days: int = 14) -> list[dict]:
+def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list[dict]:
     """
     Group weimar_relevant events by topic into clusters where 2+ MFA actors
     published within window_days of each other.
@@ -1007,9 +1007,11 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         for actor in WEIMAR_ACTORS
     }
 
-    # Continue-card date range, anchored to the edition cutoff
+    # Continue-card date range, anchored to the edition cutoff. Matches the
+    # convergence clusters' window_days so the diary blurb and heatmap agree
+    # on what counts as "this edition".
     today_utc = edition_dt
-    coverage_from = (today_utc - timedelta(days=14)).strftime("%-d %b")
+    coverage_from = (today_utc - timedelta(days=7)).strftime("%-d %b")
     coverage_to = today_utc.strftime("%-d %b")
     weekday = today_utc.weekday()
     days_to_tue = (1 - weekday) % 7 or 7
