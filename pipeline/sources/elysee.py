@@ -5,7 +5,7 @@ import hashlib
 import re
 import time
 from collections.abc import Iterator
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import requests
@@ -186,29 +186,43 @@ class ElyseeIngester(BaseIngester):
         `since`, then fetch title/body/date from the live site — elysee.fr keeps
         old articles up, only the listing rolls off. Fallback for whatever the
         listing pagination in fetch() can't reach on its own."""
+        # A single query across the whole /emmanuel-macron/* prefix times out
+        # server-side (observed: 504 Gateway Time-out even with `from` set — the
+        # prefix's capture history spans the entire presidency, so CDX can't
+        # finish the scan). Most article URLs embed their publication date
+        # (/emmanuel-macron/YYYY/MM/DD/slug — see _URL_DATE), so scan that
+        # narrower dated subpath one month at a time instead; each query only
+        # covers a few weeks of captures and stays fast. This misses the
+        # minority of articles whose URL has no date segment.
+        since_dt = datetime.strptime(self.since, "%Y-%m-%d")
+        today = datetime.now(UTC).replace(tzinfo=None)
         urls: list[str] = []
-        for attempt in range(3):
-            try:
-                r = requests.get(
-                    WAYBACK_CDX_URL,
-                    params={
-                        "url": f"{BASE_URL}/emmanuel-macron/*",
-                        "from": self.since.replace("-", ""),
-                        "output": "json",
-                        "fl": "original",
-                        "collapse": "urlkey",
-                        "filter": "statuscode:200",
-                        "limit": "5000",
-                    },
-                    timeout=180,
-                    headers=_HEADERS,
-                )
-                r.raise_for_status()
-                urls = [row[0] for row in r.json()[1:]]  # row 0 is the CDX header row
-                break
-            except Exception as exc:
-                print(f"[{SOURCE_NAME}] wayback CDX error (attempt {attempt + 1}/3): {exc}")
-                time.sleep(15)
+        month = since_dt.replace(day=1)
+        while month <= today:
+            prefix = f"{BASE_URL}/emmanuel-macron/{month.year:04d}/{month.month:02d}/"
+            for attempt in range(2):
+                try:
+                    r = requests.get(
+                        WAYBACK_CDX_URL,
+                        params={
+                            "url": prefix,
+                            "matchType": "prefix",
+                            "output": "json",
+                            "fl": "original",
+                            "collapse": "urlkey",
+                            "filter": "statuscode:200",
+                            "limit": "2000",
+                        },
+                        timeout=60,
+                        headers=_HEADERS,
+                    )
+                    r.raise_for_status()
+                    urls.extend(row[0] for row in r.json()[1:])  # row 0 is the CDX header row
+                    break
+                except Exception as exc:
+                    print(f"[{SOURCE_NAME}] wayback CDX error for {month:%Y-%m} (attempt {attempt + 1}/2): {exc}")
+                    time.sleep(10)
+            month = (month.replace(day=28) + timedelta(days=4)).replace(day=1)
         if not urls:
             return
 
