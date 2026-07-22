@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Brigitte Macron
+  - Brice Oligui Nguema
+  - Zita Oligui Nguema
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: France is renewing its partnership with Gabon focusing on economic, energy,
+    cultural, and defense cooperation, as well as environmental protection.
+  positions:
+    defence: France is actively engaging in defense cooperation with Gabon as part
+      of a renewed partnership.
+    green_transition: France supports environmental protection efforts, specifically
+      regarding the Congo Basin forest.
+  stances:
+    defence:
+      score: 1
+      evidence: coopération en matière économique, énergétique, culturelle et de défense
+    green_transition:
+      score: 1
+      evidence: la protection de la forêt du Bassin du Congo
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

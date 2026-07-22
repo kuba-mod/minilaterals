@@ -1,0 +1,52 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Thorgerdur Katrin Gunnarsdóttir
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - rule_of_law
+  location: Iceland
+  position: France strengthened bilateral relations with Iceland through a roadmap
+    covering security, climate, and economic cooperation, while reaffirming support
+    for Ukraine and international law.
+  positions:
+    ukraine: France supports continued assistance to Ukraine in the context of Russia's
+      war of aggression.
+    defence: France committed to a formalized framework for security discussions with
+      Iceland.
+    green_transition: France established a roadmap to coordinate discussions on climate
+      and environmental challenges.
+    rule_of_law: France reaffirmed its commitment to the respect for international
+      law and effective multilateralism.
+  stances:
+    ukraine:
+      score: 1
+      evidence: support for Ukraine in Russia’s war of aggression
+    defence:
+      score: 1
+      evidence: signed a roadmap that bolsters the framework for our discussions on
+        security
+    green_transition:
+      score: 1
+      evidence: signed a roadmap that bolsters the framework for our discussions on
+        security, climate and our economies
+    rule_of_law:
+      score: 1
+      evidence: reaffirmed their commitment to the respect for international law and
+        effective multilateralism
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

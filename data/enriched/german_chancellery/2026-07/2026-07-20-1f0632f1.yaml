@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler
+  - Ilham Alijew
+  - Vorsitzende Wefers
+  - StS Kornelius
+  topics:
+  - green_transition
+  location: Bundeskanzleramt, Germany
+  position: Germany is hosting the President of Azerbaijan to discuss energy security,
+    raw materials, and regional stability in the South Caucasus.
+  positions:
+    green_transition: Germany is pursuing energy and raw material agreements with
+      Azerbaijan to ensure resource security, which aligns with the energy policy
+      aspects of the green transition.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Dabei wird es um die Themen der Energie und der Rohstoffe [...] gehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

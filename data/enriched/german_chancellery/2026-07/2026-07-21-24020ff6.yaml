@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Bundeskanzler Merz
+  - Präsident Alijew
+  topics: []
+  location: Berlin, Germany
+  position: Germany is expanding its bilateral partnership with Azerbaijan through
+    a joint declaration.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
