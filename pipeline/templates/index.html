@@ -33,156 +33,140 @@
 </div>
 {% endif %}
 
-{# ── Alignment timeline ── #}
-{% if timeline_svg %}
+{# ── Score density heatmap ── #}
+{% if has_density %}
 <div class="section-head" style="margin-top:0">
   How strongly are they backing shared goals?
-  <span>Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goals. The line is the three capitals' average; the shaded band spans the most and least supportive capital — a narrow band means they agree.</span>
-</div>
-<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px; flex-wrap:wrap">
-  <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600">This week — w/o {{ timeline_svg.recent.week }}</div>
-  <span id="timeline-current-label" style="font-size:22px; font-weight:600; font-family:'Courier New',monospace; color:{{ timeline_svg.recent.color }}">
-    {{ timeline_svg.recent.label }} · {{ timeline_svg.recent.display }}
-  </span>
-</div>
-<div style="width:100%; overflow:hidden; margin-bottom:4px">
-  <svg id="timeline-svg" viewBox="{{ timeline_svg.viewbox }}" style="width:100%; height:auto; display:block" xmlns="http://www.w3.org/2000/svg">
-    {# Min–max band across capitals #}
-    <polygon id="timeline-band" points="{{ timeline_svg.band_points }}" fill="{{ timeline_svg.recent.color }}22" stroke="none"/>
-    {# Reference lines (stance rubric levels) #}
-    {% for rl in timeline_svg.ref_lines %}
-    <line x1="44" y1="{{ rl.y }}" x2="780" y2="{{ rl.y }}"
-          stroke="{{ rl.color }}" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
-    <text x="782" y="{{ rl.y + 4 }}" font-size="9" fill="{{ rl.color }}" opacity="0.7" font-family="'IBM Plex Mono',monospace">{{ rl.label }}</text>
-    {% endfor %}
-    {# Score line through scored points #}
-    <polyline id="timeline-line" points="{{ timeline_svg.line_points }}" fill="none"
-              stroke="{{ timeline_svg.recent.color }}" stroke-width="1.5" stroke-linejoin="round"/>
-    {# Dots and labels #}
-    <g id="timeline-dots">
-    {% for pt in timeline_svg.points %}
-    {% if pt.has_data %}
-    <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="4" fill="{{ pt.color }}" stroke="var(--bg,#f4ecdb)" stroke-width="1.5">
-      <title>{{ pt.tooltip }}</title>
-    </circle>
-    <text x="{{ pt.x }}" y="{{ pt.y - 8 }}" text-anchor="middle" font-size="9"
-          fill="{{ pt.color }}" font-family="'IBM Plex Mono',monospace">{{ pt.display }}</text>
-    <text x="{{ pt.x }}" y="205" text-anchor="middle" font-size="8"
-          fill="#888" font-family="'IBM Plex Mono',monospace">{{ pt.week[5:] }}</text>
-    {% else %}
-    <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="3" fill="none" stroke="#b0a48a" stroke-width="1" opacity="0.5"/>
-    {% endif %}
-    {% endfor %}
-    </g>
-  </svg>
+  <span>One calendar week per column, one stance level per row — from −2 (opposes) to +2 (actively advances). Deeper colour means more statements landed at that stance: green backs the goal, amber is neutral, red opposes. Dashed cells had no statements that week. Pick a capital and a topic to isolate that debate.</span>
 </div>
 
-{# ── Topic pills — clicking switches the timeline view ── #}
-{% if topic_pills %}
-<div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:24px">
-  <span class="tag timeline-pill timeline-pill--active" data-series="overall"
-        style="font-size:10px; cursor:pointer"
-        onclick="selectTimelineSeries('overall')">
-    Overall
-  </span>
-  {% for area in issue_order %}
-  {% set h = topic_pills[area] %}
-  {% if h %}
-  <span class="tag timeline-pill" data-series="{{ area }}"
-        style="color:{{ h.color }}; border-color:{{ h.color }}44; background:{{ h.color }}18; font-size:10px; cursor:pointer"
-        title="{{ h.label }} · avg stance {{ h.display }}"
-        onclick="selectTimelineSeries('{{ area }}')">
-    {{ issue_labels[area] }} {{ h.display }}
-  </span>
-  {% else %}
-  <span class="tag" style="color:var(--muted); border-color:var(--rule); background:transparent; font-size:10px" title="No recent data">
-    {{ issue_labels[area] }}
-  </span>
-  {% endif %}
-  {% endfor %}
+<div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 36px; margin-bottom:20px">
+  {# Capital toggle — segmented control #}
+  <div id="density-caps" style="display:inline-flex; border:1px solid var(--border); border-radius:100px; overflow:hidden"></div>
+  {# Topic toggle — individual pills, ordered by this week's divergence #}
+  <div id="density-topics" style="display:flex; flex-wrap:wrap; gap:6px"></div>
 </div>
-{% endif %}
+
+<div style="background:var(--surface); border:1px solid var(--border-light); border-radius:4px; padding:20px 22px">
+  <div id="density-header" style="display:grid; gap:4px; margin-bottom:6px; align-items:end"></div>
+  <div id="density-rows"></div>
+  <div style="display:flex; align-items:center; gap:10px; margin-top:14px; padding-top:14px; border-top:1px solid var(--border-light); font-family:'IBM Plex Sans',sans-serif; font-size:11px; color:var(--muted); flex-wrap:wrap">
+    <span>Fewer</span>
+    <span style="display:inline-flex; gap:3px">
+      {% for o in [0.2, 0.45, 0.7, 1] %}
+      <span style="width:20px; height:12px; border-radius:2px; background:#4d6b38; opacity:{{ o }}"></span>
+      {% endfor %}
+    </span>
+    <span>More</span>
+    <span id="density-caption" style="margin-left:auto; font-family:'Newsreader',serif; font-size:13px; color:var(--ink-soft)"></span>
+  </div>
+</div>
+<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:10px 0 0; font-family:'IBM Plex Sans',sans-serif">Hover a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
 
 <script>
 (function () {
-  const SERIES = {{ topic_series_json | safe }};
-  const PAD_L = 44, PAD_T = 15, CHART_W = 736, CHART_H = 170;
+  const DENSITY = {{ density_cells_json | safe }};
+  const CAPITAL_ORDER = {{ capital_order | tojson }};
+  const TOPIC_ORDER = {{ topic_order | tojson }};
+  const ACTOR_LABELS = {{ actor_labels | tojson }};
+  const ISSUE_LABELS = {{ issue_labels | tojson }};
+  const capLabel = function(c){ return c === 'ALL' ? 'All' : ACTOR_LABELS[c]; };
+  const topicLabel = function(t){ return t === 'overall' ? 'Overall' : ISSUE_LABELS[t]; };
+  let curCapital = CAPITAL_ORDER[0], curTopic = TOPIC_ORDER[0];
 
-  function xFor(i, n) { return n > 1 ? PAD_L + i * CHART_W / (n - 1) : PAD_L + CHART_W / 2; }
-  function yFor(s) { return PAD_T + CHART_H * (1.0 - s); }
-  function r1(v) { return Math.round(v * 10) / 10; }
+  function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 
   var originalClusterOrder = null;
-
-  function reorderClusters(key) {
+  function reorderClusters(key){
     var container = document.getElementById('clusters-container');
     if (!container) return;
     var clusters = Array.from(container.querySelectorAll(':scope > .cluster'));
-    if (!originalClusterOrder) {
-      originalClusterOrder = clusters.map(function(c) { return c.id; });
-    }
+    if (!originalClusterOrder) originalClusterOrder = clusters.map(function(c){ return c.id; });
     if (key === 'overall') {
-      originalClusterOrder.forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) container.appendChild(el);
-      });
+      originalClusterOrder.forEach(function(id){ var el = document.getElementById(id); if (el) container.appendChild(el); });
     } else {
       var target = document.getElementById('cluster-' + key);
-      if (target && container.firstElementChild !== target) {
-        container.insertBefore(target, container.firstElementChild);
-      }
+      if (target && container.firstElementChild !== target) container.insertBefore(target, container.firstElementChild);
     }
   }
 
-  window.selectTimelineSeries = function(key) {
-    const series = SERIES[key];
-    if (!series) return;
+  function renderToggles(){
+    const capsEl = document.getElementById('density-caps');
+    capsEl.innerHTML = CAPITAL_ORDER.map(function(c, i){
+      const active = c === curCapital;
+      const style = "font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;padding:6px 15px;border:0;cursor:pointer;"
+        + "border-left:" + (i === 0 ? '0' : '1px solid var(--border)') + ";"
+        + "background:" + (active ? 'var(--ink)' : 'transparent') + ";color:" + (active ? 'var(--bg-paper)' : 'var(--ink-soft)') + ";";
+      return '<button data-capital="' + c + '" style="' + style + '" onclick="selectDensity(\'capital\',\'' + c + '\')">' + esc(capLabel(c)) + '</button>';
+    }).join('');
 
-    document.querySelectorAll('.timeline-pill').forEach(function(el) {
-      el.classList.toggle('timeline-pill--active', el.dataset.series === key);
+    const topicsEl = document.getElementById('density-topics');
+    topicsEl.innerHTML = TOPIC_ORDER.map(function(t){
+      const active = t === curTopic;
+      const style = "font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;padding:5px 11px;border-radius:100px;cursor:pointer;"
+        + "border:1px solid " + (active ? 'var(--ink)' : 'var(--border)') + ";"
+        + "background:" + (active ? 'var(--ink)' : 'transparent') + ";color:" + (active ? 'var(--bg-paper)' : 'var(--muted)') + ";";
+      return '<button data-topic="' + t + '" style="' + style + '" onclick="selectDensity(\'topic\',\'' + t + '\')">' + esc(topicLabel(t)) + '</button>';
+    }).join('');
+  }
+
+  function render(){
+    const slice = (DENSITY[curCapital] || {})[curTopic];
+    if (!slice) return;
+    const weeks = slice.weeks, n = weeks.length;
+    const cols = '68px repeat(' + n + ', minmax(0, 1fr)) 122px';
+
+    const header = document.getElementById('density-header');
+    header.style.gridTemplateColumns = cols;
+    let headerHtml = '<div></div>';
+    slice.edition_labels.forEach(function(label, i){
+      const full = esc('Edition of ' + slice.edition_full_labels[i]);
+      headerHtml += '<div title="' + full + '" style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); text-align:center">' + esc(label) + '</div>';
+    });
+    headerHtml += '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; padding-left:8px">Total · share</div>';
+    header.innerHTML = headerHtml;
+
+    const rowsEl = document.getElementById('density-rows');
+    rowsEl.innerHTML = '';
+    slice.rows.forEach(function(r){
+      const rowDiv = document.createElement('div');
+      rowDiv.style.cssText = 'display:grid; grid-template-columns:' + cols + '; gap:4px; align-items:center; margin-bottom:4px';
+
+      let html = '<div style="text-align:right; padding-right:10px">'
+        + '<div style="font-family:\'Newsreader\',serif; font-size:17px; font-weight:500; line-height:1; color:var(--ink)">' + r.label + '</div>'
+        + '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; color:var(--muted)">' + r.desc + '</div>'
+        + '</div>';
+      r.cells.forEach(function(c, i){
+        const cellStyle = c.filled
+          ? ('height:34px;border-radius:2px;background:' + c.color + ';opacity:' + c.opacity + ';')
+          : 'height:34px;border-radius:2px;background:transparent;border:1px dashed var(--border-light);';
+        html += '<div style="' + cellStyle + '" title="' + esc(c.tooltip) + '"></div>';
+      });
+      html += '<div style="padding-left:8px; display:flex; align-items:center; gap:8px">'
+        + '<div style="font-family:\'Newsreader\',serif; font-size:15px; color:var(--ink); width:32px">' + r.total + '</div>'
+        + '<div style="flex:1; height:6px; background:var(--surface2); border-radius:2px; overflow:hidden"><div style="width:' + r.share + '%; height:100%; border-radius:2px; background:' + r.color + '"></div></div>'
+        + '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:10px; color:var(--muted); width:26px; text-align:right">' + r.share + '%</div>'
+        + '</div>';
+      rowDiv.innerHTML = html;
+      rowsEl.appendChild(rowDiv);
     });
 
-    reorderClusters(key);
+    document.getElementById('density-caption').textContent = capLabel(curCapital) + ' · ' + topicLabel(curTopic);
+  }
 
-    const scored = series.filter(function(w) { return w !== null; });
-    if (scored.length < 2) return;
-    const recent = scored[scored.length - 1];
-    const n = series.length;
-
-    const lbl = document.getElementById('timeline-current-label');
-    if (lbl) {
-      lbl.textContent = recent.label + ' · ' + recent.display;
-      lbl.style.color = recent.color;
-    }
-
-    const lineXY = [], dotsSVG = [];
-    series.forEach(function(w, i) {
-      const x = r1(xFor(i, n));
-      if (w === null) {
-        dotsSVG.push('<circle cx="' + x + '" cy="' + r1(yFor(0.5)) + '" r="3" fill="none" stroke="#b0a48a" stroke-width="1" opacity="0.5"/>');
-        return;
-      }
-      const y = r1(yFor(w.score));
-      lineXY.push(x + ',' + y);
-      dotsSVG.push(
-        '<circle cx="' + x + '" cy="' + y + '" r="4" fill="' + w.color + '" stroke="var(--bg,#f4ecdb)" stroke-width="1.5"/>',
-        '<text x="' + x + '" y="' + r1(y - 8) + '" text-anchor="middle" font-size="9" fill="' + w.color + '" font-family="\'IBM Plex Mono\',monospace">' + w.display + '</text>',
-        '<text x="' + x + '" y="205" text-anchor="middle" font-size="8" fill="#888" font-family="\'IBM Plex Mono\',monospace">' + w.week.slice(5) + '</text>'
-      );
-    });
-
-    const line = document.getElementById('timeline-line');
-    if (line) { line.setAttribute('points', lineXY.join(' ')); line.setAttribute('stroke', recent.color); }
-    const band = document.getElementById('timeline-band');
-    if (band) band.setAttribute('points', '');
-    const dots = document.getElementById('timeline-dots');
-    if (dots) dots.innerHTML = dotsSVG.join('');
+  window.selectDensity = function(kind, value){
+    if (kind === 'capital') curCapital = value; else { curTopic = value; reorderClusters(value); }
+    renderToggles();
+    render();
   };
+
+  renderToggles();
+  render();
 })();
 </script>
 
 {% else %}
-{# spacer when no timeline data yet #}
+{# spacer when no density data yet #}
 {% endif %}
 
 {# ── Convergence view ── #}
