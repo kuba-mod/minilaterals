@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+from unittest.mock import patch
+
+import requests
+
 from pipeline.sources import ALL_INGESTERS
 from pipeline.sources.feedbase import FeedIngester, _entry_text, _strip_html
 
@@ -95,3 +99,38 @@ def test_entry_text_prefers_full_content():
         "summary": "short summary",
     }
     assert _entry_text(entry) == "Full body text here."
+
+
+# --- _download ---------------------------------------------------------------
+# Regression coverage for a real incident: feedparser.parse(url) does its own
+# network fetch with no timeout of its own, so an unresponsive (not just
+# 404ing) server hangs that call indefinitely — and since ingest.py runs
+# ingesters sequentially, one hanging source stalls the entire collect run with
+# no exception ever raised for run_ingester to catch. _download() must fetch via
+# requests (which has an explicit timeout) and hand feedparser only the bytes.
+
+
+def test_download_uses_bounded_timeout():
+    with patch("pipeline.sources.feedbase.requests.get") as mock_get:
+        mock_get.return_value.content = b"<feed></feed>"
+        mock_get.return_value.raise_for_status.return_value = None
+        _StubFeed()._download()
+    _, kwargs = mock_get.call_args
+    assert kwargs.get("timeout") is not None
+    assert kwargs["timeout"] <= 30
+
+
+def test_download_never_lets_feedparser_fetch_the_url():
+    # feedparser.parse must never be called with a bare URL string/None from
+    # _download — only with the already-downloaded bytes.
+    with patch("pipeline.sources.feedbase.requests.get") as mock_get:
+        mock_get.return_value.content = b"<feed></feed>"
+        mock_get.return_value.raise_for_status.return_value = None
+        result = _StubFeed()._download()
+    assert result == b"<feed></feed>"
+
+
+def test_download_returns_empty_bytes_on_request_failure():
+    with patch("pipeline.sources.feedbase.requests.get", side_effect=requests.exceptions.Timeout("boom")):
+        result = _StubFeed()._download()
+    assert result == b""

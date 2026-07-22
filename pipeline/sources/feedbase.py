@@ -5,6 +5,7 @@ from collections.abc import Iterator
 from datetime import UTC, datetime
 
 import feedparser
+import requests
 from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
@@ -69,15 +70,20 @@ class FeedIngester(BaseIngester):
     def fetch(self) -> Iterator[Event]:
         yield from self.parse_feed(self._download())
 
-    def _download(self) -> str:
-        """Fetch the raw feed body. Split out so tests can drive parse_feed()
-        directly with a fixture instead of hitting the network."""
+    def _download(self) -> bytes:
+        """Fetch the raw feed body via requests (with an explicit timeout), then
+        hand the bytes to feedparser to parse — NOT feedparser.parse(url), which
+        does its own network fetch with no timeout of its own and can hang
+        indefinitely on an unresponsive server, stalling the whole sequential
+        ingest run. Split out so tests can drive parse_feed() directly with a
+        fixture instead of hitting the network."""
         try:
-            feed = feedparser.parse(self.feed_url, request_headers=_HEADERS)
+            r = requests.get(self.feed_url, headers=_HEADERS, timeout=15)
+            r.raise_for_status()
         except Exception as exc:  # noqa: BLE001 — surfaced by run_ingester
             print(f"[{self.source_name}] feed error: {exc}")
-            return ""
-        return feed
+            return b""
+        return r.content
 
     def parse_feed(self, feed) -> Iterator[Event]:
         if not feed:
