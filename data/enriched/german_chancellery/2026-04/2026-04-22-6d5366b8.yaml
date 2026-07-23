@@ -8,8 +8,8 @@ extracted:
   event_type: speech
   participants:
   - Chancellor Merz
-  - Carsten Schneider
-  - Murat Kurum
+  - BM Carsten Schneider
+  - Minister Murat Kurum
   - Fatih Birol
   - Simon Stiell
   - Gunnar Groebler
@@ -18,12 +18,12 @@ extracted:
   topics:
   - green_transition
   location: Berlin, Germany
-  position: Germany reaffirms its commitment to the Paris Agreement and an integrated
-    approach to climate, energy, and innovation policy to ensure global security and
-    competitiveness.
+  position: Germany reaffirms its commitment to the Paris Agreement and advocates
+    for an integrated approach combining climate, economic, and innovation policies
+    to ensure competitiveness and security.
   positions:
-    green_transition: Germany actively supports climate neutrality and the alignment
-      of industrial and energy policies through innovation and multilateral cooperation.
+    green_transition: Germany actively supports the path to climate neutrality by
+      integrating innovation and technology into its climate and energy policy.
   stances:
     green_transition:
       score: 2

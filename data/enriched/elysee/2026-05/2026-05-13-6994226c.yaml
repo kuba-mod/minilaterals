@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - French co-chairs
+  - Kenyan co-chairs
+  - heads of state and government
+  topics:
+  - defence
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France advocates for a reformed multilateral system and supports African-led
+    peace, security, and sovereignty to ensure sustainable stability on the continent.
+  positions:
+    defence: France supports enhancing African military capabilities and funding for
+      African peace operations, aligning with the broader goal of strengthening collective
+      security.
+    rule_of_law: France emphasizes the primacy of international law, the UN Charter,
+      and the prevention of mass atrocities as the foundation for peace.
+  stances:
+    defence:
+      score: 1
+      evidence: Ils soutiennent le renforcement des capacités des armées africaines
+    rule_of_law:
+      score: 1
+      evidence: fondé sur le droit international et la Charte des Nations Unies
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

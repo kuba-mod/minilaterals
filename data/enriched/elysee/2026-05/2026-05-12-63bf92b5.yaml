@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government of African countries
+  - President of the French Republic
+  - representatives of the International Monetary Fund (IMF)
+  - World Bank Group
+  - African Development Bank (AfDB)
+  - European Bank for Reconstruction and Development (EBRD)
+  - European Investment Bank (EIB)
+  - Green Climate Fund (GCF)
+  - West African Development Bank (BOAD)
+  - Agence Française de Développement (AFD)
+  - Pact for Prosperity, Peoples and the Planet (4P)
+  topics:
+  - green_transition
+  location: Nairobi, Kenya
+  position: France supports African nations in pursuing just energy transitions and
+    climate adaptation to foster sustainable development.
+  positions:
+    green_transition: France aligns with the goal of climate neutrality by supporting
+      just energy transitions and climate adaptation in Africa.
+  stances:
+    green_transition:
+      score: 1
+      evidence: permettre des transitions énergétiques justes et l'adaptation au changement
+        climatique
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - ministre de l’économie, des finances et de la souveraineté industrielle, énergétique
+    et numérique
+  - ministre de l’action et des comptes publics
+  topics: []
+  location: null
+  position: The French government presented a bill to approve the 2025 financial accounts,
+    highlighting a reduction in the public deficit.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

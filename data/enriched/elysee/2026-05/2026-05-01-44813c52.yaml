@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Cécile Kohler
+  - Jacques Paris
+  topics: []
+  location: null
+  position: France provides a summary of presidential and governmental activities
+    for April 2026, including international visits and domestic ceremonies.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

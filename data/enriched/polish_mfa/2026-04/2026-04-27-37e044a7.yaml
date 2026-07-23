@@ -12,13 +12,13 @@ extracted:
   - hybrid
   - rule_of_law
   location: null
-  position: Poland is launching a Georgian-language news service to counter disinformation
-    and support democratic processes in Georgia.
+  position: Poland is launching a Georgian-language news service to promote democratic
+    values and counter disinformation in Georgia.
   positions:
-    hybrid: Poland is actively countering hybrid threats by establishing a news service
-      to combat disinformation aimed at Georgia and the EU.
-    rule_of_law: Poland is supporting democratic resilience and processes in Georgia
-      through the provision of reliable information from a European perspective.
+    hybrid: Poland is actively implementing a media project to counter disinformation
+      campaigns targeting Georgia and the EU.
+    rule_of_law: Poland is actively supporting democratic processes and resilience
+      in Georgia through the provision of reliable information from a European perspective.
   stances:
     hybrid:
       score: 2

@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Xavier Espot Zamora
+  - Josep-Lluis Serrano Pentinat
+  topics:
+  - enlargement
+  - green_transition
+  location: Andorra
+  position: France seeks to support Andorra's economic and social modernization, its
+    ecological transition, and its closer integration with the European Union.
+  positions:
+    enlargement: France encourages the continued process of Andorra's rapprochement
+      with the European Union.
+    green_transition: France is actively supporting ecological transition projects
+      through energy cooperation with Andorra.
+  stances:
+    enlargement:
+      score: 1
+      evidence: encourager la poursuite du rapprochement d’Andorre avec l’Union européenne
+    green_transition:
+      score: 2
+      evidence: soutenir les projets de coopération en matière de transition écologique
+        à travers des coopérations énergétiques franco-andorranes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

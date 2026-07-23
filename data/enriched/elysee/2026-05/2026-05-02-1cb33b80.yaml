@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Brigitte Macron
+  - Kunihiko Moriguchi
+  - Sanae Takaichi
+  - Akie Abe
+  - Emperor of Japan
+  - Empress of Japan
+  - Lee Jae-myung
+  - Kim Hye-kyung
+  - Pope Léon XIV
+  - Cardinal Pietro Parolin
+  - Édouard Geffray
+  - Céline Greco
+  - David Chemoul
+  - Mohamed Ould Cheikh El Ghazouani
+  - Mariem Mint Mohamed Fadel Ould Dah
+  - Olivier Théophile
+  - Olivier Klein
+  - Princess Lalla Hasnaa
+  - Princess Lalla Khadija
+  - Princess Lalla Meryem
+  - Konstantínos Tasoúlas
+  - Fani Stathopoulou
+  topics: []
+  location: null
+  position: Brigitte Macron conducted a series of official visits and diplomatic meetings
+    in Japan, South Korea, the Vatican, Morocco, and Greece, alongside domestic engagements
+    in France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

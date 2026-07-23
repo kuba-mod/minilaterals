@@ -11,11 +11,11 @@ extracted:
   topics:
   - hybrid
   location: Berlin, Germany
-  position: Chancellor Merz promotes MINT education for women and social professions
-    for men to better utilize Germany's potential and address technical needs.
+  position: Chancellor Merz promotes the expansion of women in STEM fields and men
+    in social professions to better utilize Germany's workforce potential.
   positions:
-    hybrid: Germany demonstrates a focus on technical competence in identifying and
-      preventing cyber attacks through educational initiatives.
+    hybrid: Germany emphasizes the importance of understanding and preventing cyber
+      attacks as part of technical education.
   stances:
     hybrid:
       score: 1

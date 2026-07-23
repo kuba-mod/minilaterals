@@ -8,19 +8,19 @@ trilateral_signal: false
 extracted:
   event_type: speech
   participants:
-  - Wolfram Weimer
+  - Wolfram Weimer, Staatsminister für Kultur und Medien
   topics:
   - hybrid
   - rule_of_law
   location: Leipzig, Germany
-  position: Germany advocates for a strong, independent European media space to ensure
-    journalistic quality and democratic resilience against the influence of global
-    big-tech platforms.
+  position: Germany advocates for a strong, independent European media space and coordinated
+    EU-wide solutions to ensure media diversity and fair competition against global
+    tech platforms.
   positions:
-    hybrid: Germany supports coordinated European action to protect media diversity
-      and quality journalism against the disruptive influence of global platforms.
-    rule_of_law: Germany emphasizes the necessity of an independent media landscape
-      to safeguard a democratic public sphere and diversity of opinion.
+    hybrid: Germany supports coordinated European action to protect journalistic quality
+      and diversity against the influence of global big-tech actors.
+    rule_of_law: Germany emphasizes the necessity of a strong, independent media landscape
+      to maintain a democratic public sphere.
   stances:
     hybrid:
       score: 1
@@ -28,9 +28,8 @@ extracted:
         nur durch eine dauerhafte Zusammenarbeit gelingen.
     rule_of_law:
       score: 1
-      evidence: Im Fokus standen die tiefgreifenden Veränderungen durch Digitalisierung,
-        Künstliche Intelligenz und globale Plattformen sowie deren Auswirkungen auf
-        die Meinungsvielfalt und die demokratische Öffentlichkeit.
+      evidence: brauchen wir einen starken, unabhängigen Kultur- und Medienraum in
+        Europa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

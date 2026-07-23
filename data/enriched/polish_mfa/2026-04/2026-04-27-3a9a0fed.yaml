@@ -10,41 +10,41 @@ trilateral_signal: false
 extracted:
   event_type: meeting
   participants:
+  - Radosław Sikorski
   - Helen McEntee
-  - Wicepremier Sikorski
   topics:
   - ukraine
   - defence
   - hybrid
   - enlargement
   location: Warsaw, Poland
-  position: Poland coordinated with Ireland to support Ukraine's integration and security,
-    while strengthening EU defense capabilities and economic ties.
+  position: Poland reaffirmed its commitment to supporting Ukraine's security and
+    EU integration, strengthening defense cooperation, and promoting EU enlargement.
   positions:
-    ukraine: Poland emphasizes the necessity of continued aid to Kyiv and views Ukrainian
-      support as essential for EU security.
-    defence: Poland aligns with the goal of strengthening EU defense capabilities
-      and investing in the security industry.
-    hybrid: Poland acknowledges the need to address emerging hybrid threats as part
-      of a broader security strategy.
-    enlargement: Poland actively advances EU enlargement by providing advisory support
-      for reforms in Ukraine and supporting Western Balkans countries.
+    ukraine: Poland actively supports Ukraine through military, diplomatic means and
+      the Ukraine2EU integration program.
+    defence: Poland supports the need for increased investments in the EU defense
+      industry to ensure collective security.
+    hybrid: Poland acknowledges the necessity of addressing new security challenges,
+      including hybrid threats.
+    enlargement: Poland actively supports and provides administrative guidance for
+      the EU accession of Ukraine and Western Balkan states.
   stances:
     ukraine:
-      score: 1
-      evidence: zgadzają się, że konieczna jest dalsza pomoc dla Kijowa
+      score: 2
+      evidence: państwa przystąpiły do unijnego programu wsparcia integracji Ukraine2EU
     defence:
       score: 1
-      evidence: byśmy wspólnie zadbali o to, by nasza obrona była silna, byśmy inwestowali
-        w przemysł bezpieczeństwa i obronny
+      evidence: państwa Unii Europejskiej powinny zwiększyć inwestycje w przemysł
+        obronny
     hybrid:
       score: 1
-      evidence: byśmy stawiali czoła nowym i pojawiającym się wyzwaniom, czy to zagrożeniom
+      evidence: stawiały czoła nowym i pojawiającym się wyzwaniom, czy to zagrożeniom
         hybrydowym
     enlargement:
       score: 2
       evidence: Polska doradza ukraińskim organom administracji publicznej we wprowadzaniu
-        reform związanych z UE i dostosowywaniu prawodawstwa do unijnego dorobku prawnego
+        reform związanych z UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

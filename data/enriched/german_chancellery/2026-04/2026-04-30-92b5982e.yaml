@@ -11,12 +11,11 @@ extracted:
   topics:
   - rule_of_law
   location: null
-  position: Germany emphasizes that press and freedom of expression are indispensable
-    prerequisites for democracy and expresses concern over global declines in these
-    freedoms.
+  position: Germany emphasizes that press freedom and freedom of expression are fundamental
+    requirements for democracy and expresses concern over global democratic erosion.
   positions:
-    rule_of_law: Germany rhetorically supports the rule of law and democratic resilience
-      by framing press freedom as the essential basis for democracy.
+    rule_of_law: Germany rhetorically supports democratic resilience by framing press
+      freedom as an indispensable condition for democracy.
   stances:
     rule_of_law:
       score: 1

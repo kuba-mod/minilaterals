@@ -1,0 +1,19 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Emmanuel Macron
+  topics: []
+  location: Paris, France
+  position: President Emmanuel Macron presided over the 81st anniversary commemoration
+    of the Victory of May 8, 1945.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

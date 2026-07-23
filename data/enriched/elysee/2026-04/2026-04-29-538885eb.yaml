@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Président de la République
+  - Sébastien Lecornu
+  - Marina Ferrari
+  - Amélie Oudéa-Castéra
+  - Marie-Amélie Le Fur
+  - Marie Bochet
+  topics: []
+  location: Paris, France
+  position: The President of France hosted a ceremony at the Elysée Palace to decorate
+    French athletes who medaled at the Milan-Cortina 2026 Winter Olympic and Paralympic
+    Games.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

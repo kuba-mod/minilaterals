@@ -11,18 +11,17 @@ extracted:
   topics:
   - hybrid
   location: null
-  position: Germany is introducing legislation to obligate internet service providers
-    to store IP addresses for three months to combat cybercrime, including child pornography,
-    fraud, and hate speech.
+  position: Germany is introducing legislation to require internet service providers
+    to store IP addresses to better combat cybercrime, including child pornography
+    and hate speech.
   positions:
-    hybrid: Germany is taking concrete legislative action to improve the investigation
-      of cybercrime and online threats, aligning with the goal of coordinated action
-      against hybrid threats.
+    hybrid: Germany is actively advancing the goal of coordinating action against
+      hybrid threats by implementing technical measures to combat cybercrime and online
+      hate.
   stances:
     hybrid:
       score: 2
-      evidence: Die Bundesregierung hat nun einen Gesetzentwurf auf den Weg gebracht,
-        mit dem Internet-Zugangsanbieter verpflichtet werden sollen, IP -Adressen
+      evidence: Internet-Zugangsanbieter verpflichtet werden sollen, IP -Adressen
         für einen Zeitraum von drei Monaten zu speichern.
 enriched_by:
   model_id: gemma4:latest

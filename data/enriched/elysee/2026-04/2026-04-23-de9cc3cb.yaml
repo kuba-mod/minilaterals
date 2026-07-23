@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic (France)
+  - President Nikos Christodoulides
+  topics:
+  - ukraine
+  - defence
+  location: Cyprus
+  position: France reaffirms its strategic partnership with Cyprus and its commitment
+    to European security and support for Ukraine.
+  positions:
+    ukraine: France supports the European priority of providing assistance to Ukraine.
+    defence: France actively advances European security by deploying military assets,
+      including a naval group, to the region.
+  stances:
+    ukraine:
+      score: 1
+      evidence: le soutien à l'Ukraine
+    defence:
+      score: 2
+      evidence: nous avons renforcé notre dispositif de défense dans la région, avec
+        le déploiement rapide de moyens militaires, en particulier le groupe aéronaval
+        français
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

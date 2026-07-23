@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Kyriákos Mitsotákis
+  topics:
+  - defence
+  location: Athens, Greece
+  position: France is strengthening its global and strategic partnership with Greece,
+    particularly in the security and defense sectors.
+  positions:
+    defence: France actively advances defense capabilities through the delivery of
+      military hardware to Greece and the signing of security agreements.
+  stances:
+    defence:
+      score: 2
+      evidence: visiter la frégate Kimon , construite par Naval Group à Lorient et
+        livrée à la Grèce en janvier 2026
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

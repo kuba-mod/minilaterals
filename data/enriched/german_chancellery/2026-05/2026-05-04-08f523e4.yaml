@@ -4,13 +4,13 @@ issue_areas: []
 weimar_relevant: false
 trilateral_signal: false
 extracted:
-  event_type: statement
+  event_type: speech
   participants:
   - Wolfram Weimer
   topics: []
   location: Berlin, Germany
-  position: Germany is investing over 35 million euros into national cultural institutions
-    and monuments through the KulturInvest program.
+  position: Germany is investing over 35 million euros into cultural infrastructure
+    and monuments of national importance through the KulturInvest program.
   positions: {}
   stances: {}
 enriched_by:

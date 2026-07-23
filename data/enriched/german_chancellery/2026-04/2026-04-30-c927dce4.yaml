@@ -7,10 +7,11 @@ extracted:
   event_type: meeting
   participants:
   - Wolfram Weimer
+  - Kulturstaatsminister
   topics: []
-  location: null
-  position: Germany is promoting the preservation of international cultural heritage
-    through modern research practices at the Stiftung Preußische Schlösser und Gärten.
+  location: Berlin, Germany
+  position: Germany is supporting the preservation and scientific research of Flemish
+    paintings at the Stiftung Preußische Schlösser und Gärten.
   positions: {}
   stances: {}
 enriched_by:

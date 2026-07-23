@@ -12,10 +12,11 @@ extracted:
   - hybrid
   location: null
   position: Germany has approved a draft law to implement the EU Cyber Resilience
-    Act to enhance the cybersecurity of networked products.
+    Act, establishing mandatory cybersecurity requirements for products with digital
+    elements.
   positions:
-    hybrid: Germany is actively advancing the goal of combating cyber attacks by introducing
-      mandatory cybersecurity requirements for products with digital elements.
+    hybrid: Germany is actively advancing the goal of coordinating action against
+      cyber attacks by implementing binding security standards for networked products.
   stances:
     hybrid:
       score: 2

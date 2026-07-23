@@ -13,13 +13,13 @@ extracted:
   - hybrid
   - green_transition
   location: null
-  position: Germany is implementing domestic measures to support the green transition
-    of the automotive sector and informing consumers about AI-driven cyber threats.
+  position: The German government is implementing domestic economic relief, healthcare
+    reforms, and measures to promote electric mobility and cyber awareness.
   positions:
-    hybrid: Germany is raising consumer awareness regarding the use of AI by cybercriminals
-      for online fraud.
-    green_transition: Germany is actively promoting the adoption of electric vehicles
-      through tax advantages and purchase grants.
+    hybrid: Germany is addressing the impact of AI on online fraud to better prepare
+      consumers against cybercrime.
+    green_transition: Germany is actively promoting the transition to electric vehicles
+      through tax advantages and purchase premiums.
   stances:
     hybrid:
       score: 1

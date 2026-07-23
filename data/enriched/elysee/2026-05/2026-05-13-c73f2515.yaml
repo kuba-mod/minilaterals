@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Abiy Ahmed
+  - Mahmoud Ali Youssouf
+  - António Guterres
+  topics:
+  - hybrid
+  location: Addis-Abeba, Ethiopia
+  position: France advocates for African-led mediation and coordination of peace operations
+    under the authority of the African Union to eliminate external interference.
+  positions:
+    hybrid: France aligns with the goal of combating foreign political interference
+      by calling for an end to external interferences that fuel African conflicts.
+  stances:
+    hybrid:
+      score: 1
+      evidence: d’en finir en particulier avec les ingérences extérieures qui nourrissent
+        beaucoup de conflits
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

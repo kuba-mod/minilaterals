@@ -6,16 +6,16 @@ weimar_relevant: true
 trilateral_signal: false
 extracted:
   event_type: statement
-  participants:
-  - Bundesregierung
+  participants: []
   topics:
   - green_transition
   location: null
-  position: Germany is reforming its fertilizer law to protect groundwater and water
-    bodies from agricultural pollutants in alignment with EU law.
+  position: Germany is reforming its fertilizer laws to protect water bodies and align
+    with EU environmental standards.
   positions:
-    green_transition: Germany is actively advancing environmental protection and water
-      quality goals through a new legal framework for fertilization and expanded monitoring.
+    green_transition: Germany is implementing a new fertilizer law and monitoring
+      system to reduce nitrate pollution and protect groundwater and seas, aligning
+      with EU green objectives.
   stances:
     green_transition:
       score: 2

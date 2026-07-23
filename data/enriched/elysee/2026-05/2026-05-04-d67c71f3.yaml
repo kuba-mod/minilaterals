@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  topics:
+  - ukraine
+  - defence
+  location: Yerevan, Armenia
+  position: France reaffirms its commitment to European security autonomy and support
+    for Ukraine and regional stability through the European Political Community.
+  positions:
+    ukraine: France actively supports Ukraine through security guarantees and dedicated
+      support meetings.
+    defence: France advocates for European strategic autonomy and assumes leadership
+      for security in Romania to ensure eastern flank stability.
+  stances:
+    ukraine:
+      score: 2
+      evidence: On va dans un instant tenir une réunion de soutien à l'Ukraine.
+    defence:
+      score: 2
+      evidence: La France est nation-cadre pour la sécurité de la Roumanie et donc,
+        nous prendrons nos responsabilités.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

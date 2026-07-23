@@ -1,9 +1,9 @@
 date: '2026-07-22'
-run_at: '2026-07-22T08:13:46Z'
+run_at: '2026-07-22T10:30:35Z'
 sources:
 - source: german_mfa
-  fetched: 31
-  new: 1
+  fetched: 30
+  new: 0
   skipped: 30
   error: null
 - source: france_diplomatie
@@ -13,26 +13,26 @@ sources:
   error: null
 - source: polish_mfa
   fetched: 105
-  new: 93
-  skipped: 12
+  new: 0
+  skipped: 105
   error: null
 - source: german_chancellery
-  fetched: 390
-  new: 156
-  skipped: 234
+  fetched: 395
+  new: 2
+  skipped: 393
   error: null
 - source: elysee
-  fetched: 100
-  new: 0
+  fetched: 139
+  new: 39
   skipped: 100
   error: null
 - source: polish_pm
   fetched: 52
-  new: 24
-  skipped: 28
+  new: 0
+  skipped: 52
   error: null
 totals:
-  fetched: 774
-  new: 274
-  skipped: 500
+  fetched: 817
+  new: 41
+  skipped: 776
   errors: 0

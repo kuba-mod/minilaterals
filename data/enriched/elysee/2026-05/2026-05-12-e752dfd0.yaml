@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - French co-presidents
+  - Kenyan co-presidents
+  - heads of State and government
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France advocates for a renewed global governance system based on international
+    law, African-led security solutions, and a reformed UN Security Council.
+  positions:
+    defence: France supports the capacity building of African militaries and the funding
+      of African peace operations.
+    hybrid: France rejects foreign interference and the privatization of security
+      via mercenaries.
+    rule_of_law: France emphasizes that a durable peace is based on international
+      law, the UN Charter, and the respect for sovereignty.
+  stances:
+    defence:
+      score: 1
+      evidence: Ils soutiennent le renforcement des capacités des armées africaines
+    hybrid:
+      score: 1
+      evidence: Ils rejettent les ingérences extérieures qui sapent les efforts visant
+        à réaliser les aspirations de l'Agenda 2063 de l'UA, et la privatisation de
+        la sécurité
+    rule_of_law:
+      score: 1
+      evidence: un multilatéralisme efficace et inclusif, fondé sur le droit international
+        et la Charte des Nations Unies
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

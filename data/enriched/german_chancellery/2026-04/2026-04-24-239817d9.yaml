@@ -1,8 +1,7 @@
 actors:
 - DE
-issue_areas:
-- rule_of_law
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 trilateral_signal: false
 extracted:
   event_type: statement
@@ -20,19 +19,12 @@ extracted:
   - Feldhoff
   - Bundeskanzler
   - Katherina Reiche
-  topics:
-  - rule_of_law
-  location: Berlin, Germany
-  position: The German government emphasizes the importance of democratic coexistence
-    and the European Union through educational engagement and national economic conferences.
-  positions:
-    rule_of_law: Germany rhetorically supports the importance of democratic coexistence
-      within the framework of the European Union.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: zu zeigen, wie wichtig demokratisches Zusammenleben und die Europäische
-        Union für uns alle ist
+  topics: []
+  location: Germany
+  position: The German government spokesperson outlined the Chancellor's upcoming
+    schedule, including school visits and a maritime conference.
+  positions: {}
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

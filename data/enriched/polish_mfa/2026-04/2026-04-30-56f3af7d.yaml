@@ -7,16 +7,15 @@ trilateral_signal: false
 extracted:
   event_type: statement
   participants:
-  - Ministry of Foreign Affairs
+  - Ministry of Foreign Affairs (MSZ)
   - Crisis Management Team
   topics:
   - rule_of_law
   location: null
   position: Poland condemns the use of force on international waters and demands explanations
-    and safety guarantees from Israeli armed forces for the Global Sumud Flotilla
-    participants.
+    and safety guarantees for the Global Sumud Flotilla participants.
   positions:
-    rule_of_law: Poland supports the principle of the rule of law by calling for adherence
+    rule_of_law: Poland rhetorically supports the rule of law by calling for adherence
       to international law and the law of the sea.
   stances:
     rule_of_law:

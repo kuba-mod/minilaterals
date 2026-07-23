@@ -8,17 +8,17 @@ extracted:
   event_type: speech
   participants:
   - Kanzler Merz
-  - Lars Klingbeil
-  - General Freuding
+  - Vizekanzler und Bundesminister der Finanzen Lars Klingbeil
+  - Inspekteur des Heeres, General Freuding
   topics:
   - defence
   location: Munster, Germany
-  position: Germany is prioritizing the comprehensive strengthening and modernization
-    of the Bundeswehr to ensure immediate deterrence and long-term capability within
-    NATO.
+  position: Germany is committed to strengthening the Bundeswehr's capabilities and
+    funding to ensure deterrence and defense readiness within NATO and Europe.
   positions:
-    defence: Germany is actively increasing defense spending and implementing structural
-      adjustments to enhance its military capability and leadership role in NATO.
+    defence: Germany is actively advancing defense capabilities through increased
+      spending, new procurements, and structural adjustments to support NATO and European
+      security.
   stances:
     defence:
       score: 2

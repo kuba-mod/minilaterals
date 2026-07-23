@@ -1,0 +1,20 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - William Ruto
+  topics: []
+  location: Nairobi, Kenya
+  position: France seeks to transition its relationship with Africa from a donor-recipient
+    model to a partnership of equals focused on investment, innovation, and growth.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

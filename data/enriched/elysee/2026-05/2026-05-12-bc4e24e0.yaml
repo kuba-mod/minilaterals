@@ -1,0 +1,53 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - représentants de pays africains
+  - représentants de la République française
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - rule_of_law
+  location: Nairobi, Kenya
+  position: France seeks to strengthen its strategic partnership with African nations
+    through mutual respect, co-development, and collective security cooperation.
+  positions:
+    defence: France supports the enhancement of African collective security capacities
+      and African-led peace and security solutions.
+    hybrid: France commits to cooperating on threats including cyber threats and transnational
+      organized crime.
+    green_transition: France rhetorically supports sustainable development and resilient
+      societies.
+    rule_of_law: France affirms its commitment to an international order based on
+      the rule of law and democratic governance.
+  stances:
+    defence:
+      score: 1
+      evidence: Renforcer l’autonomie stratégique, la résilience et les capacités
+        en matière de sécurité collective de l’Afrique
+    hybrid:
+      score: 1
+      evidence: Définir de nouvelles pistes de coopération afin de faire face aux
+        menaces émergentes et aux menaces transnationales, notamment le terrorisme,
+        la criminalité transnationale organisée, les cybermenaces
+    green_transition:
+      score: 1
+      evidence: Affirmant notre attachement commun au développement durable, à la
+        croissance solidaire et à des économies et à des sociétés résilientes
+    rule_of_law:
+      score: 1
+      evidence: Affirmant notre attachement commun à un ordre international pacifique,
+        juste et fondé sur des règles de droit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

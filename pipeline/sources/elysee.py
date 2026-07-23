@@ -5,9 +5,11 @@ import hashlib
 import re
 import time
 from collections.abc import Iterator
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 import requests
+import yaml
 from bs4 import BeautifulSoup
 
 from .base import BaseIngester, Event
@@ -18,6 +20,14 @@ from .base import BaseIngester, Event
 LISTING_URL = "https://www.elysee.fr/toutes-les-actualites"
 BASE_URL = "https://www.elysee.fr"
 SOURCE_NAME = "elysee"
+
+# Wayback Machine CDX endpoint, used only in backfill mode as a fallback after
+# HTML pagination plateaus (whatever the actual cause — page-index scheme,
+# archive depth, or something else not yet root-caused). web.archive.org's
+# crawl history of /emmanuel-macron/* article URLs can reach further back, and
+# elysee.fr keeps old articles live, so backfill discovers URLs via CDX and
+# fetches full text/date from the live site rather than from the snapshot.
+WAYBACK_CDX_URL = "https://web.archive.org/cdx/search/cdx"
 
 _HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; minilaterals.com Weimar Triangle tracker; +https://minilaterals.com/weimar-triangle)"
@@ -73,8 +83,18 @@ class ElyseeIngester(BaseIngester):
     def fetch(self) -> Iterator[Event]:
         page = 1
         prev_urls: frozenset[str] = frozenset()
+        seen_urls: set[str] = set()
         while True:
-            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page}"
+            # ?page= is 0-indexed from the *second* page (matching the pager
+            # convention on bundesregierung.de's listing — see
+            # german_chancellery.py): no param = page 1, ?page=1 = page 2,
+            # ?page=2 = page 3. Requesting ?page=2 for the second fetch (page==2)
+            # would actually ask for the third page, not the second — previously
+            # unnoticed because both the correct and the off-by-one requests can
+            # land past the archive's real depth and get clamped back to page 1,
+            # which looked identical to "the site ignores ?page=" from a page-1
+            # vs page-2 comparison alone.
+            url = LISTING_URL if page == 1 else f"{LISTING_URL}?page={page - 1}"
             try:
                 r = requests.get(url, timeout=15, headers=_HEADERS)
                 r.raise_for_status()
@@ -109,15 +129,17 @@ class ElyseeIngester(BaseIngester):
             if not links:
                 break
 
-            # The site ignores ?page= on this listing and always returns the
-            # same recent batch, so a repeated batch means we've hit the end
-            # of what's paginatable — stop instead of looping forever.
+            # A page returning the same batch as the one before it means we've
+            # hit the end of what's paginatable (whether that's the archive's
+            # real depth or the listing clamping an out-of-range request back
+            # to page 1) — stop instead of looping forever.
             if seen == prev_urls:
                 break
             prev_urls = frozenset(seen)
 
             all_before_since = True
             for title, item_url in links:
+                seen_urls.add(item_url)
                 # In daily mode (no --since) already-known items don't need a body
                 # fetch at all — --since backfill still walks every item to find
                 # the pagination boundary, so this only applies to routine runs.
@@ -155,6 +177,149 @@ class ElyseeIngester(BaseIngester):
             if all_before_since or not self.since:
                 break
             page += 1
+
+        if self.since:
+            yield from self._fetch_wayback_articles(seen_urls)
+
+    def _fetch_wayback_articles(self, seen_urls: set[str]) -> Iterator[Event]:
+        """Discover article URLs Wayback crawled under /emmanuel-macron/ since
+        `since`, then fetch title/body/date from the live site — elysee.fr keeps
+        old articles up, only the listing rolls off. Fallback for whatever the
+        listing pagination in fetch() can't reach on its own."""
+        # A single query across the whole /emmanuel-macron/* prefix times out
+        # server-side (observed: 504 Gateway Time-out even with `from` set — the
+        # prefix's capture history spans the entire presidency, so CDX can't
+        # finish the scan). Most article URLs embed their publication date
+        # (/emmanuel-macron/YYYY/MM/DD/slug — see _URL_DATE), so scan that
+        # narrower dated subpath one month at a time instead; each query only
+        # covers a few weeks of captures and stays fast. This misses the
+        # minority of articles whose URL has no date segment.
+        since_dt = datetime.strptime(self.since, "%Y-%m-%d")
+        today = datetime.now(UTC).replace(tzinfo=None)
+        urls: list[str] = []
+        month = since_dt.replace(day=1)
+        while month <= today:
+            prefix = f"{BASE_URL}/emmanuel-macron/{month.year:04d}/{month.month:02d}/"
+            for attempt in range(2):
+                try:
+                    r = requests.get(
+                        WAYBACK_CDX_URL,
+                        params={
+                            "url": prefix,
+                            "matchType": "prefix",
+                            "output": "json",
+                            "fl": "original",
+                            "collapse": "urlkey",
+                            "filter": "statuscode:200",
+                            "limit": "2000",
+                        },
+                        timeout=60,
+                        headers=_HEADERS,
+                    )
+                    r.raise_for_status()
+                    urls.extend(row[0] for row in r.json()[1:])  # row 0 is the CDX header row
+                    break
+                except Exception as exc:
+                    print(f"[{SOURCE_NAME}] wayback CDX error for {month:%Y-%m} (attempt {attempt + 1}/2): {exc}")
+                    time.sleep(10)
+            month = (month.replace(day=28) + timedelta(days=4)).replace(day=1)
+        if not urls:
+            return
+
+        # Dedupe against events already on disk, not just this run's listing pass —
+        # the CDX index and the live listing can each surface URLs the other missed.
+        for path in Path("data/events").joinpath(SOURCE_NAME).glob("**/*.yaml"):
+            try:
+                stored = yaml.safe_load(path.read_text(encoding="utf-8"))
+                if stored and stored.get("source_url"):
+                    seen_urls.add(stored["source_url"])
+            except Exception:
+                continue
+
+        # URLs with a date in the path sort for free; process those newest-first
+        # so the per-article fetch below (needed to date/title the rest) is spent
+        # on the most likely-relevant candidates first.
+        candidates = sorted(
+            {u.split("?")[0].replace("http://", "https://") for u in urls},
+            key=lambda u: _date_from_url(u) or "",
+            reverse=True,
+        )
+        print(f"[{SOURCE_NAME}] wayback: {len(candidates)} captured article URLs since {self.since}")
+
+        dateless = 0
+        for url in candidates[:500]:
+            if not _ARTICLE_PATH.match(url[len(BASE_URL) :]) or url in seen_urls:
+                continue
+            seen_urls.add(url)
+
+            result = self._fetch_article(url)
+            time.sleep(0.5)
+            if not result:
+                continue
+            title, body, date = result
+            if not date:
+                # A statement without a recoverable date would land in the wrong
+                # week on the timeline; skip it.
+                dateless += 1
+                continue
+            if date < self.since:
+                continue
+
+            yield Event(
+                source_name=SOURCE_NAME,
+                title=title,
+                text=body,
+                source_url=url,
+                source_lang=self.source_lang,
+                collection_method="wayback",
+                source_published_at=date + "T00:00:00Z",
+                date=date,
+            )
+        if dateless:
+            print(f"[{SOURCE_NAME}] wayback: skipped {dateless} articles without a recoverable date")
+
+    def _fetch_article(self, url: str) -> tuple[str, str, str | None] | None:
+        """Returns (title, body_text, date_str_or_None) from an individual
+        article page, or None on fetch failure. Unlike _fetch_body, also
+        extracts the title — needed because wayback-discovered URLs don't come
+        with a listing-card title the way the paginated fetch's links do."""
+        try:
+            r = requests.get(url, timeout=15, headers=_HEADERS)
+            r.raise_for_status()
+        except Exception:
+            return None
+        soup = BeautifulSoup(r.text, "lxml")
+
+        title = None
+        og = soup.find("meta", attrs={"property": "og:title"})
+        if og and og.get("content"):
+            title = og["content"].strip()
+        if not title:
+            h1 = soup.find("h1")
+            if h1:
+                title = h1.get_text(" ", strip=True)
+        if not title:
+            return None
+
+        date_str = _date_from_url(url)
+        if not date_str:
+            tag = soup.find("time")
+            if tag:
+                date_str = _parse_date(tag.get("datetime") or tag.get_text(strip=True))
+        if not date_str:
+            meta = soup.find("meta", attrs={"property": "article:published_time"})
+            if meta:
+                date_str = _parse_date(meta.get("content"))
+
+        article = soup.find("article") or soup.find("main")
+        body = ""
+        if article:
+            paragraphs = [
+                p.get_text(" ", strip=True) for p in article.find_all("p") if len(p.get_text(strip=True)) > 40
+            ]
+            body = " ".join(paragraphs)
+
+        return title, body, date_str
 
     def _fetch_body(self, url: str) -> tuple[str, str | None]:
         """Returns (body_text, date_str_or_None) from an individual article page."""

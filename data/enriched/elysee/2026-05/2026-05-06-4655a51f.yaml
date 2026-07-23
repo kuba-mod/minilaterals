@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - spouse of the President of the Republic
+  topics:
+  - rule_of_law
+  location: null
+  position: The French presidency pays tribute to the life and career of Pierre-François
+    Veil, emphasizing his devotion to law, justice, and the memory of the Shoah.
+  positions:
+    rule_of_law: France rhetorically supports the values of law and justice through
+      the commendation of Pierre-François Veil's professional life.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: saluent la mémoire d’un homme qui aura servi le droit, la justice
+        et la mémoire avec une fidélité exemplaire
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -7,7 +7,7 @@ issue_areas:
 weimar_relevant: true
 trilateral_signal: false
 extracted:
-  event_type: speech
+  event_type: meeting
   participants:
   - Friedrich Merz
   - Stefan Kornelius
@@ -18,28 +18,26 @@ extracted:
   - enlargement
   - rule_of_law
   location: Marsberg, Germany
-  position: Chancellor Merz supports a credible long-term perspective for Ukraine
-    but argues that full EU membership is currently unrealistic due to the ongoing
-    war and necessary reforms.
+  position: Chancellor Merz emphasizes a cautious, condition-based approach to Ukraine's
+    EU integration while proposing gradual institutional involvement.
   positions:
-    ukraine: Germany supports offering credible perspectives and gradual integration
-      to prevent the political isolation of Ukraine.
-    enlargement: Germany conditions EU accession on the end of the war and institutional
-      reforms, rejecting an accelerated timeline.
-    rule_of_law: Germany emphasizes the rule of law and anti-corruption measures as
-      essential prerequisites for EU membership.
+    ukraine: Germany supports providing credible perspectives for Ukraine to avoid
+      political isolation, despite disagreeing with the timeline.
+    enlargement: Germany conditions EU accession on the end of the war and specific
+      reforms, calling the 2027/2028 timeline unrealistic.
+    rule_of_law: Germany identifies the rule of law and anti-corruption measures as
+      necessary prerequisites for EU membership.
   stances:
     ukraine:
       score: 1
-      evidence: Die EU müsse glaubwürdige Perspektiven bieten, besonders falls ein
-        Friedensschluss territoriale Zugeständnisse erfordere.
+      evidence: Die EU müsse glaubwürdige Perspektiven bieten
     enlargement:
       score: -1
       evidence: Einen schnellen EU -Beitritt der Ukraine bezeichnete er als unrealistisch.
     rule_of_law:
       score: 1
       evidence: Neben einem stabilen Friedenszustand nannte er weitere Voraussetzungen
-        wie Rechtsstaatlichkeit, Korruptionsbekämpfung und offene Grenzen
+        wie Rechtsstaatlichkeit, Korruptionsbekämpfung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

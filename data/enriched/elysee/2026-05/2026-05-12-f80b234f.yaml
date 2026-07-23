@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Chefs d'État et de gouvernement de la France et des pays africains
+  - représentants du Fonds Monétaire International (FMI)
+  - Groupe de la Banque mondiale
+  - Groupe de la Banque africaine de développement (BAD)
+  - Banque européenne pour la reconstruction et le développement (BERD)
+  - Banque européenne d'investissement (BEI)
+  - Fonds vert pour le climat (GCF)
+  - Banque ouest-africaine de développement (BOAD)
+  - Agence Française de Développement (AFD)
+  - Pacte pour la Prospérité, les Peuples et la Planète (4P)
+  topics:
+  - green_transition
+  location: Nairobi, Kenya
+  position: France is promoting a renewed partnership with African nations based on
+    mutual benefit, co-investment, and updated development financing.
+  positions:
+    green_transition: France engages with international climate finance mechanisms
+      to support development and resilience in Africa.
+  stances:
+    green_transition:
+      score: 1
+      evidence: en présence des représentants du... Fonds vert pour le climat (GCF)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

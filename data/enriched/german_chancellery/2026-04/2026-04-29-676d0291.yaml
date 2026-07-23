@@ -8,17 +8,15 @@ extracted:
   event_type: statement
   participants:
   - Katherina Reiche
-  - Bundesministerin für Wirtschaft und Energie
   topics:
   - green_transition
   location: null
-  position: Germany is accelerating the expansion of its high-voltage power grids
-    via a new law prioritizing overhead lines to lower costs and support the energy
-    transition.
+  position: Germany is accelerating the expansion of its power grid to ensure a sustainable
+    and cost-efficient energy transition.
   positions:
-    green_transition: Germany is taking concrete legislative action to expand energy
-      infrastructure and integrate renewable energy, directly advancing climate neutrality
-      and energy policy goals.
+    green_transition: Germany is actively advancing the green transition by implementing
+      laws to speed up the construction of high-voltage grids and supporting renewable
+      energy integration.
   stances:
     green_transition:
       score: 2

@@ -6,12 +6,13 @@ weimar_relevant: true
 trilateral_signal: false
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - Bundesregierung
   topics:
   - rule_of_law
   location: null
-  position: The German government outlines its domestic priorities focusing on economic
-    competitiveness, administrative modernization, and internal security.
+  position: The German government outlines its legislative priorities focusing on
+    economic modernization, security, and internal stability.
   positions:
     rule_of_law: Germany commits to protecting the democratic order and combating
       extremism.
