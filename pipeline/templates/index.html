@@ -271,15 +271,13 @@
 
 {# ── Continue reading card ── #}
 <div class="continue-card">
-  <div class="continue-eyebrow">That's everything</div>
-  <h2 class="continue-title">{{ coverage_from }}–{{ coverage_to }}: the full weekly diary</h2>
+  <div class="continue-eyebrow">That's this week</div>
+  <h2 class="continue-title">{{ coverage_from }}–{{ coverage_to }}: the weekly diary</h2>
   <p class="continue-body">
-    You've seen the highlights. The complete record of every tracked statement — all sources, all topics — is one click away.
-    Come back <strong>{{ next_tuesday_str }}</strong> for the next weekly update.
+    You've seen the highlights. Come back <strong>{{ next_tuesday_str }}</strong> for the next weekly update.
   </p>
   <div class="continue-actions">
-    <a href="{{ base_path }}/meetings/" class="cta-primary">All trilateral meetings <span>→</span></a>
-    <a href="{{ base_path }}/sources/" class="cta-secondary">How we track this</a>
+    <a href="{{ base_path }}/sources/" class="cta-primary">How we track this <span>→</span></a>
   </div>
 </div>
 
@@ -287,9 +285,9 @@
 <div class="about-tracker">
   <h3>About this tracker</h3>
   <div class="about-stats">
-    <div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, mapped and annotated.</div>
     <div><strong>{{ total_all }}</strong> total events ingested from {{ source_count }} official feeds — each country's foreign ministry and executive office.</div>
     <div><strong>{{ clusters|length }}</strong> active topic clusters in the current 7-day window.</div>
+    <div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, tracked in our records.</div>
   </div>
 </div>
 
