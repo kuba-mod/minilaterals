@@ -85,7 +85,7 @@ def test_new_sources_registered():
         "australia_dfat",
         "czech_mfa",
         "slovak_mfa",
-        "hungarian_mfa",
+        "hungary_government",
         "estonian_mfa",
         "latvian_mfa",
         "lithuanian_mfa",

@@ -31,13 +31,15 @@ KNOWN_ACTOR_SOURCES = {
     "polish_pm",
     # Additional minilateral MFAs (E3, Visegrád, Baltic Three, AUKUS). All are
     # foreign ministries, so their source country is folded into the actor list
-    # exactly like the Weimar MFAs.
+    # exactly like the Weimar MFAs. hungary_government is deliberately excluded:
+    # it's a shared cross-ministry portal (kormany.hu), not a dedicated MFA
+    # newsroom, so its domestic-heavy output stays under the stricter
+    # 2+-actor/explicit-mention gate instead of a single-country auto-count.
     "uk_fcdo",
     "us_state",
     "australia_dfat",
     "czech_mfa",
     "slovak_mfa",
-    "hungarian_mfa",
     "estonian_mfa",
     "latvian_mfa",
     "lithuanian_mfa",
@@ -56,7 +58,7 @@ NATIVE_LANG = {
     "australia_dfat": "en",
     "czech_mfa": "cs",
     "slovak_mfa": "sk",
-    "hungarian_mfa": "hu",
+    "hungary_government": "hu",
     "estonian_mfa": "et",
     "latvian_mfa": "lv",
     "lithuanian_mfa": "lt",

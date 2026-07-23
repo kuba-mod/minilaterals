@@ -5,7 +5,7 @@ from .estonian_mfa import EstonianMFAIngester
 from .france_diplomatie import FranceDiplomatieIngester
 from .german_chancellery import GermanChancelleryIngester
 from .german_mfa import GermanMFAIngester
-from .hungarian_mfa import HungarianMFAIngester
+from .hungary_government import HungaryGovernmentIngester
 from .latvian_mfa import LatvianMFAIngester
 from .lithuanian_mfa import LithuanianMFAIngester
 from .polish_mfa import PolishMFAIngester
@@ -30,7 +30,7 @@ ALL_INGESTERS = [
     # Visegrád Group (adds CZ/SK/HU; reuses PL)
     CzechMFAIngester,
     SlovakMFAIngester,
-    HungarianMFAIngester,
+    HungaryGovernmentIngester,
     # Baltic Three (EE/LV/LT)
     EstonianMFAIngester,
     LatvianMFAIngester,
