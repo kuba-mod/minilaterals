@@ -851,6 +851,21 @@ OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"
 </svg>
 """
 
+HUB_OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f4ecdb"/>
+<rect x="0" y="0" width="1200" height="8" fill="#1f4279"/>
+<rect x="400" y="0" width="400" height="8" fill="#c8a648"/>
+<rect x="800" y="0" width="400" height="8" fill="#b22823"/>
+<text x="80" y="260" font-family="Georgia, serif" font-size="72" fill="#1c1812">The</text>
+<text x="80" y="350" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">minilaterals</text>
+<text x="80" y="420" font-family="Georgia, serif" font-size="30" fill="#3f372b">monitor</text>
+<text x="80" y="480" font-family="Georgia, serif" font-size="30" fill="#3f372b">
+  Small groups of capitals, tracked week by week.
+</text>
+<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">minilaterals &middot; a coordination tracker</text>
+</svg>
+"""
+
 ROBOTS_TXT = """User-agent: *
 Allow: /
 """
@@ -923,7 +938,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         (root / ".nojekyll").touch()
         (root / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
         (root / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
-        (root / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
+        (root / "og-image.svg").write_text(HUB_OG_IMAGE_SVG, encoding="utf-8")
 
     edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
