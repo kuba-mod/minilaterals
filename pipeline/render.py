@@ -853,16 +853,20 @@ OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"
 
 HUB_OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#f4ecdb"/>
-<rect x="0" y="0" width="1200" height="8" fill="#1f4279"/>
-<rect x="400" y="0" width="400" height="8" fill="#c8a648"/>
-<rect x="800" y="0" width="400" height="8" fill="#b22823"/>
-<text x="80" y="260" font-family="Georgia, serif" font-size="72" fill="#1c1812">The</text>
-<text x="80" y="350" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">minilaterals</text>
-<text x="80" y="420" font-family="Georgia, serif" font-size="30" fill="#3f372b">monitor</text>
-<text x="80" y="480" font-family="Georgia, serif" font-size="30" fill="#3f372b">
-  Small groups of capitals, tracked week by week.
-</text>
-<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">minilaterals &middot; a coordination tracker</text>
+<text x="80" y="88" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="3" fill="#7a7060">&#8212; A COORDINATION TRACKER</text>
+<text x="80" y="205" font-family="Georgia, serif" font-size="70" fill="#1c1812">The <tspan font-style="italic" fill="#8a3a23">minilaterals</tspan> monitor</text>
+<text x="80" y="270" font-family="Georgia, serif" font-size="27" fill="#3f372b">Formal alliances make the headlines. The real coordination</text>
+<text x="80" y="308" font-family="Georgia, serif" font-size="27" fill="#3f372b">happens in small groups — tracked week by week.</text>
+<text x="80" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">POSITIONAL COMPARISON</text>
+<text x="80" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Capitals speaking on one topic,</text>
+<text x="80" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">lined up side by side.</text>
+<text x="460" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">A STANCE, SCORED</text>
+<text x="460" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Rated &#8722;2 to +2 against</text>
+<text x="460" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">the shared goal.</text>
+<text x="840" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">FILES, NOT A DATABASE</text>
+<text x="840" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Every statement is a file</text>
+<text x="840" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">in a public repo.</text>
+<rect x="0" y="622" width="1200" height="8" fill="#c8a648" opacity="0.6"/>
 </svg>
 """
 
