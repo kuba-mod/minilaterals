@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: Latvia supports the presentation of an independent expert report on the
+    militarization and indoctrination of Ukrainian children by the Russian Federation
+    within the OSCE.
+  positions:
+    ukraine: Latvia supports the documentation and exposure of Russian human rights
+      violations against Ukrainian children to advance accountability and a just peace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: tika prezentēts neatkarīgo ekspertu ziņojums par cilvēktiesību un…
+        Krievijas Federācijas īstenoto Ukrainas bērnu militarizāciju un indoktrināciju
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

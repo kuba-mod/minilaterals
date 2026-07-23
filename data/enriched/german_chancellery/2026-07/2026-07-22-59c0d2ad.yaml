@@ -3,24 +3,29 @@ actors:
 issue_areas:
 - green_transition
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants: []
   topics:
   - green_transition
   location: null
-  position: The German government is implementing a comprehensive modernization and
-    investment program to restore economic competitiveness and climate neutrality.
+  position: The German government is implementing a series of economic and structural
+    reforms to modernize the country, increase competitiveness, and ensure future
+    prosperity.
   positions:
-    green_transition: Germany is actively advancing the green transition through a
-      significant special fund for climate neutrality.
+    green_transition: Germany is supporting the transition to climate neutrality through
+      the establishment of a significant special fund for infrastructure and climate
+      neutrality.
   stances:
     green_transition:
       score: 2
-      evidence: Sondervermögen für Infrastruktur und Klimaneutralität in Höhe von
-        500 Milliarden Euro
+      evidence: Zudem hat die Bundesregierung das Sondervermögen für Infrastruktur
+        und Klimaneutralität in Höhe von 500 Milliarden Euro aufgelegt.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - special ambassadors for digital and cyber security of the Nordic-Baltic (NB8)
+    countries
+  topics:
+  - hybrid
+  location: Tallinn, Estonia
+  position: Estonia hosted a meeting of NB8 digital and cyber security ambassadors
+    to strengthen regional cooperation and share experiences in preventing and repelling
+    cyber threats.
+  positions:
+    hybrid: Estonia is actively advancing coordinated action against hybrid threats
+      by hosting regional meetings to strengthen cooperation and share experiences
+      in cyber defense.
+  stances:
+    hybrid:
+      score: 2
+      evidence: arutada regionaalse koostöö tihendamist ning jagada kogemusi küberohtude
+        ennetamisel ja tõrjumisel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

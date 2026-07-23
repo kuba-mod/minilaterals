@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - diplomats
+  - cyber experts
+  topics:
+  - hybrid
+  location: Tallinn, Estonia
+  position: Estonia is hosting the 7th Tallinn Cyber Diplomacy Summer School to bring
+    together international diplomats and experts.
+  positions:
+    hybrid: Estonia is actively advancing the goal of countering hybrid threats by
+      hosting a global gathering of cyber diplomacy experts.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Tallinn muutub sel nädalal üleilmse küberdiplomaatia keskpunktiks,
+        kui 7. Tallinna küberdiplomaatia Suvekooli koguneb 60 diplomaati ja kübereksperti
+        üle maailma.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

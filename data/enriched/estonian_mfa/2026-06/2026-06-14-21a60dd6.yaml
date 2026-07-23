@@ -1,0 +1,29 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Välisminister Tsahkna
+  topics:
+  - rule_of_law
+  location: null
+  position: Foreign Minister Tsahkna emphasizes the enduring nature of the crimes
+    associated with the June Deportations.
+  positions:
+    rule_of_law: Estonia highlights the importance of remembering historical crimes
+      and ensuring justice, aligning with the goal of democratic resilience.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: juuniküüditamise taga olnud kurjus pole tänagi kuhugile kadunud
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

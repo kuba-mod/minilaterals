@@ -1,0 +1,32 @@
+actors:
+- FR
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  - Martin Briens
+  topics:
+  - defence
+  location: Narva and Tapa, Estonia
+  position: Estonia hosted a French official to visit border points and military facilities,
+    highlighting cooperation on security and the presence of French troops.
+  positions:
+    defence: Estonia demonstrates a commitment to collective security and the eastern
+      flank by hosting and coordinating with French allied troops.
+  stances:
+    defence:
+      score: 2
+      evidence: külastati Narva linnust ja piiripunkti ning Tapa kaitseväelinnakut
+        ja seal teenivaid Prantsusmaa liitlassõdureid
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

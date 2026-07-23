@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - enlargement
+  location: null
+  position: Estonia supports the EU's progress in expanding its membership to include
+    Ukraine and Moldova.
+  positions:
+    enlargement: Estonia views the opening of the sixth thematic block of accession
+      negotiations with Ukraine and Moldova as a significant step toward EU enlargement.
+  stances:
+    enlargement:
+      score: 1
+      evidence: Välisminister Margus Tsahkna sõnul on tegemist olulise sammuga Euroopa
+        Liidu laienemise suunas.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

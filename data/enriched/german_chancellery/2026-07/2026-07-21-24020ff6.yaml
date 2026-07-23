@@ -1,20 +1,38 @@
 actors:
 - DE
-issue_areas: []
-weimar_relevant: false
-trilateral_signal: false
+issue_areas:
+- ukraine
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
-  event_type: joint_statement
+  event_type: meeting
   participants:
-  - Bundeskanzler Merz
-  - Präsident Alijew
-  topics: []
+  - Friedrich Merz
+  - Ilham Aliyev
+  topics:
+  - ukraine
+  - iran
   location: Berlin, Germany
-  position: Germany is expanding its bilateral partnership with Azerbaijan through
-    a joint declaration.
-  positions: {}
-  stances: {}
+  position: Germany is expanding its strategic partnership with Azerbaijan and supporting
+    peace and stability in the South Caucasus.
+  positions:
+    ukraine: Germany acknowledges the impact of the Russian war of aggression against
+      Ukraine on its security and economic interests.
+    iran: Germany identifies the war in Iran as a significant crisis affecting regional
+      and international stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Dies gilt für den Nahen und Mittleren Osten, dies gilt aber auch für
+        den russischen Angriffskrieg gegen die Ukraine.
+    iran:
+      score: 1
+      evidence: Wir mussten ihn wegen des Irankriegs verschieben.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

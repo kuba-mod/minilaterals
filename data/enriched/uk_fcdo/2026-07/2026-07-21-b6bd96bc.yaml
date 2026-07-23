@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster, UK Chargé d’Affaires to the UN
+  topics: []
+  location: New York, USA
+  position: The United Kingdom welcomes the inaugural meeting of the Syrian People’s
+    Assembly and emphasizes the importance of a political solution for Syria.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

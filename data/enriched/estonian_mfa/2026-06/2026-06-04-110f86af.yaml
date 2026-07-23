@@ -1,0 +1,44 @@
+actors:
+- FR
+- EE
+- LV
+- LT
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Anita Anand
+  - Penny Wong
+  - Lars Løkke Rasmussen
+  - Margus Tsahkna
+  - Kaja Kallas
+  - Elina Valtonen
+  - Jean-Noël Barrot
+  - Þorgerður Katrín Gunnarsdóttir
+  - Baiba Braže
+  - Kęstutis Budrys
+  - Espen Barth Eide
+  - Maria Malmer Stenergard
+  topics:
+  - iran
+  location: Ottawa, Ontario
+  position: Estonia joined a joint statement regarding the situation between Hezbollah
+    and Israel.
+  positions:
+    iran: Estonia expresses concern regarding the regional destabilization involving
+      Hezbollah and Israel, aligning with the goal of addressing destabilizing regional
+      activity.
+  stances:
+    iran:
+      score: 1
+      evidence: Ühisavaldus olukorra kohta Hezbollah’ ja Iisraeli vahel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,39 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Välisminister Tsahkna
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Estonia dismisses Russian claims regarding minority rights as a disinformation
+    tactic intended to distract from Russia's aggression in Ukraine.
+  positions:
+    ukraine: Estonia highlights Russia's attempts to divert international attention
+      away from its violations of international law in Ukraine.
+    hybrid: Estonia identifies Russia's rhetoric as part of a long-term pattern of
+      systematic disinformation and political pressure.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Venemaa valeväidete eesmärk on juhtida tähelepanu kõrvale Ukrainalt
+        ja enda rasketelt rahvusvahelise õiguse rikkumistelt
+    hybrid:
+      score: 1
+      evidence: Tegemist on järjekordse sammuga Venemaa pikaajalises käitumismustris,
+        mis hõlmab süstemaatilist desinformatsiooni ja poliitilist surveavaldust Balti
+        riikide vastu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

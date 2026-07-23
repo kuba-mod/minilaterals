@@ -2,18 +2,21 @@ actors:
 - DE
 issue_areas: []
 weimar_relevant: false
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
   - Bundesregierung
   topics: []
   location: null
-  position: The German government has decided to increase funding for the Federal
+  position: The German government has decided to increase the funding for the Federal
     Foundation for Mother and Child to better support pregnant women in need.
   positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

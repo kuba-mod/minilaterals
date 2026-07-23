@@ -1,0 +1,40 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of the Nordic and Baltic countries
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Estonia, alongside Nordic and Baltic partners, strongly rejects Russian
+    disinformation and threats of force against regional states.
+  positions:
+    hybrid: Estonia actively counters Russian disinformation campaigns and false claims
+      supported by Belarus.
+    defence: Estonia condemns Russian threats to use force against Latvia and other
+      regional nations, aligning with collective security goals.
+  stances:
+    hybrid:
+      score: 1
+      evidence: Põhja- ja Baltimaade välisministrid lükkavad kindlalt tagasi Venemaa
+        räige desinformatsioonikampaania ja valeväited
+    defence:
+      score: 1
+      evidence: Mõistame teravalt hukka Venemaa ähvardused kasutada jõudu Läti ja
+        teiste piirkonna riikide vastu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Riccardo Paternò di Montecupo
+  topics: []
+  location: Tallinn, Estonia
+  position: Estonia signed a cooperation agreement with the Sovereign Military Order
+    of Malta to promote healthcare and humanitarian aid activities in Estonia.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

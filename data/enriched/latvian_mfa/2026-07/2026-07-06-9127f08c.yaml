@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Edgars Rinkēvičs
+  topics:
+  - defence
+  location: Ankara, Turkey
+  position: Latvia, represented by President Edgars Rinkēvičs and Minister Baiba Braže,
+    is participating in the NATO summit in Ankara.
+  positions:
+    defence: Latvia is engaging with NATO allies to address collective security and
+      defense coordination.
+  stances:
+    defence:
+      score: 1
+      evidence: B. Braže piedalīsies NATO samitā Ankarā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

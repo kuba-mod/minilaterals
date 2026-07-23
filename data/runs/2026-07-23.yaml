@@ -1,5 +1,5 @@
 date: '2026-07-23'
-run_at: '2026-07-23T04:14:58Z'
+run_at: '2026-07-23T08:34:24Z'
 sources:
 - source: german_mfa
   fetched: 30
@@ -18,8 +18,8 @@ sources:
   error: null
 - source: german_chancellery
   fetched: 11
-  new: 10
-  skipped: 1
+  new: 7
+  skipped: 4
   error: null
 - source: elysee
   fetched: 2
@@ -31,8 +31,38 @@ sources:
   new: 1
   skipped: 9
   error: null
+- source: uk_fcdo
+  fetched: 20
+  new: 3
+  skipped: 17
+  error: null
+- source: us_state
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: australia_dfat
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: estonian_mfa
+  fetched: 100
+  new: 100
+  skipped: 0
+  error: null
+- source: latvian_mfa
+  fetched: 20
+  new: 20
+  skipped: 0
+  error: null
+- source: lithuanian_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
 totals:
-  fetched: 73
-  new: 14
-  skipped: 59
+  fetched: 213
+  new: 134
+  skipped: 79
   errors: 0

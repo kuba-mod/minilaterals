@@ -1,0 +1,40 @@
+actors:
+- EE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - climate special envoys of the Nordic-Baltic eight countries
+  topics:
+  - green_transition
+  - energy
+  location: Tallinn, Estonia
+  position: Estonia hosted and participated in a meeting of Nordic-Baltic climate
+    envoys to discuss the impact of the geopolitical situation on climate policy and
+    the role of renewable energy.
+  positions:
+    green_transition: Estonia supports enhancing the effectiveness of global climate
+      policy and funding ahead of COP31.
+    energy: Estonia emphasizes the importance of renewable energy and green technology
+      in mitigating the climate crisis.
+  stances:
+    green_transition:
+      score: 1
+      evidence: arutada, kuidas praegune geopoliitiline ja julgeolekuolukord mõjutab
+        globaalset kliimapoliitikat ja kliimarahastust ning kuidas olla tulemuslikum
+        sügisel toimuval COP31 kliimakonverentsil
+    energy:
+      score: 1
+      evidence: Käsitleti ka rohetehnoloogia ja taastuvenergia rolli kliimakriisi
+        leevendamisel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

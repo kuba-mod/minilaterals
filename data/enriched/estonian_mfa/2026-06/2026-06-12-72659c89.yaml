@@ -1,0 +1,25 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Roger, Deputy Secretary for Political Affairs
+  - Fariz Rzayev, Deputy Minister of Foreign Affairs of Azerbaijan
+  - Hikmet Hajiyev, Foreign Policy and Security Advisor to the President of Azerbaijan
+  - Agil Gurbanov, Deputy Minister of Defense of Azerbaijan
+  topics: []
+  location: Baku, Azerbaijan
+  position: Estonia's Deputy Secretary for Political Affairs conducted political consultations
+    and meetings with high-level Azerbaijani officials.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

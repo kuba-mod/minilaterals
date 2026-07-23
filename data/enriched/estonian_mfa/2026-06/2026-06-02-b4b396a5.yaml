@@ -1,0 +1,37 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Julija Svõrõdenko
+  topics:
+  - ukraine
+  - enlargement
+  location: Tallinn, Estonia
+  position: Estonia reaffirms its support for Ukraine's security and EU accession,
+    emphasizing that such integration is vital for European security.
+  positions:
+    ukraine: Estonia supports the need to increase pressure on Russia to ensure Ukraine's
+      security.
+    enlargement: Estonia actively supports Ukraine's EU membership, viewing it as
+      essential for the security of all of Europe.
+  stances:
+    ukraine:
+      score: 1
+      evidence: vajadusele suurendada survet Venemaale
+    enlargement:
+      score: 1
+      evidence: Ukraina liitumine ELiga on kogu Euroopa julgeoleku huvides
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

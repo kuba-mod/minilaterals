@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artjoms Uršuļskis, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics: []
+  location: Brussels, Belgium
+  position: Latvia, representing a group of 16 member states, advocated for a strong
+    Common Agricultural and Fisheries Policy within the EU budget negotiations to
+    promote convergence and economic growth.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

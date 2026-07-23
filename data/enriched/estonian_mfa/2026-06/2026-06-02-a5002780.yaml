@@ -1,0 +1,26 @@
+actors:
+- EE
+- LV
+- LT
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Roger, Deputy Secretary General for Political Affairs of the Ministry of
+    Foreign Affairs
+  topics: []
+  location: Tallinn and Narva, Estonia
+  position: Estonia hosted foreign and security policy consultations with the US,
+    Nordic, and Baltic countries within the E-PINE cooperation format.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

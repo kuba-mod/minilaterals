@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artjoms Uršuļskis, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: Brussels, Belgium
+  position: Latvia advocates for increasing pressure on Russia and the rapid agreement
+    of a strong 21st package of sanctions.
+  positions:
+    ukraine: Latvia actively pushes for increased economic and diplomatic pressure
+      on Russia through a new round of sanctions to support Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: akcentē turpmāka spiediena palielināšanu uz Krieviju un aicina pēc
+        iespējas ātrāk vienoties par spēcīgu sankciju 21. kārtu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

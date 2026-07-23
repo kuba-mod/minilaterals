@@ -3,7 +3,10 @@ actors:
 issue_areas:
 - hybrid
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:

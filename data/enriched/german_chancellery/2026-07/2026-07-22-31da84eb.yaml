@@ -1,29 +1,32 @@
 actors:
 - DE
 issue_areas:
-- rule_of_law
-weimar_relevant: true
-trilateral_signal: false
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants: []
   topics:
-  - rule_of_law
+  - migration
   location: Berlin, Germany
-  position: The German government has approved a bill to make the Foundation 'Flight,
-    Expulsion, Reconciliation' an independent entity to strengthen its capacity to
-    document forced migration and promote reconciliation.
+  position: The German government has approved a draft law to make the Foundation
+    'Flight, Expulsion, Reconciliation' an independent entity to strengthen its ability
+    to document the history of forced migration.
   positions:
-    rule_of_law: Germany advances democratic resilience and the processing of historical
-      injustices by establishing an independent foundation for the remembrance of
-      flight and expulsion.
+    migration: Germany supports the documentation and remembrance of forced migration
+      and expulsion in Europe, providing institutional resources to create a dedicated
+      learning center.
   stances:
-    rule_of_law:
+    migration:
       score: 1
-      evidence: Die Stiftung Flucht, Vertreibung, Versöhnung widmet sich seit mehreren
-        Jahren im Geiste der Versöhnung der Erinnerung und dem Gedenken an Flucht
-        und Vertreibung im 20. Jahrhundert in Europa und darüber hinaus
+      evidence: Ein Dokumentationszentrum Flucht, Vertreibung, Versöhnung dient seit
+        2021 als als Lern- und Erinnerungsort zu Flucht, Vertreibung und Zwangsmigration
+        sowohl in der Geschichte als auch in der Gegenwart.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

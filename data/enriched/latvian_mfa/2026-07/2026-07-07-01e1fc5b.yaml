@@ -1,0 +1,22 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet of Ministers
+  topics: []
+  location: null
+  position: The Latvian Cabinet of Ministers approved funding for the State Administration
+    School to conduct e-learning on European Union issues.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

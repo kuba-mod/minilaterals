@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 Foreign Ministers
+  topics: []
+  location: El-Obeid, Sudan
+  position: The United Kingdom, as part of the G7, calls for the protection of civilians,
+    humanitarian access, and a cessation of hostilities in Sudan.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

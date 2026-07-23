@@ -1,0 +1,32 @@
+actors:
+- EE
+- US
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Välisminister Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia has become an observer state of the US-led Pax Silica initiative
+    to strengthen cooperation on artificial intelligence and critical raw material
+    supply chains.
+  positions:
+    hybrid: Estonia is actively advancing security and technological resilience by
+      joining a US-led initiative focused on AI and critical supply chains.
+  stances:
+    hybrid:
+      score: 2
+      evidence: sai Eesti USA juhitud Pax Silica algatuse vaatlejariigiks ja allkirjastas
+        Pax Silica tehisaruavalduse
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

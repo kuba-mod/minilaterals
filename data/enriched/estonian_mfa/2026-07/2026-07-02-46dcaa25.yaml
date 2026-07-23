@@ -1,0 +1,31 @@
+actors:
+- EE
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Baiba Braže
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia and Latvia are coordinating their expectations for ally unity
+    at the upcoming NATO summit in Ankara.
+  positions:
+    defence: Estonia supports the goal of NATO alliance unity and collective security
+      in preparation for the Ankara summit.
+  stances:
+    defence:
+      score: 1
+      evidence: Eesti ja Läti ootavad NATO tippkohtumiselt liitlaste ühtsust
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

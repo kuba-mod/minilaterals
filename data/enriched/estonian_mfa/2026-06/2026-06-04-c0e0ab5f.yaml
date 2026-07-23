@@ -1,0 +1,31 @@
+actors:
+- HU
+- EE
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - enlargement
+  location: null
+  position: Estonia welcomes a breakthrough agreement between Hungary and Ukraine
+    as a necessary step for EU enlargement progress.
+  positions:
+    enlargement: Estonia supports the EU enlargement process and views the resolution
+      of tensions between Hungary and Ukraine as key to its advancement.
+  stances:
+    enlargement:
+      score: 2
+      evidence: Ungari ja Ukraina läbimurdeline kokkulepe sillutab viimaks tee ELi
+        laienemisega edasiliikumisele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

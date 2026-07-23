@@ -1,0 +1,38 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Russian Federation chargé d'affaires
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Estonia condemned Russian attacks on Ukraine and issued a diplomatic note
+    protesting Russian disinformation campaigns targeting Estonia and other Baltic
+    states.
+  positions:
+    ukraine: Estonia strongly condemns Russian drone and missile attacks against Ukraine.
+    hybrid: Estonia is taking active diplomatic action against Russian disinformation
+      targeting the Baltic region.
+  stances:
+    ukraine:
+      score: 1
+      evidence: väljendada karmi hukkamõistu Venemaa viimase nädala drooni- ja raketirünnakutele
+        Ukrainas
+    hybrid:
+      score: 2
+      evidence: edastas välisministeerium asjurile noodi seoses järjepideva Eesti
+        ja teiste Balti riikide vastase väärinfo levitamisega
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

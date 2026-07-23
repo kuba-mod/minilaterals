@@ -55,7 +55,8 @@ from pipeline.sources.base import KNOWN_ACTOR_SOURCES
 ROOT = Path(__file__).parent.parent
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
-GOALS_PATH = ROOT / "data" / "weimar_goals.yaml"
+GOALS_PATH = ROOT / "data" / "goals.yaml"
+GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
 def _load_goals() -> dict[str, str]:
@@ -65,7 +66,37 @@ def _load_goals() -> dict[str, str]:
         return {}
 
 
-WEIMAR_GOALS = _load_goals()
+GOALS = _load_goals()
+
+
+class Grouping:
+    """A minilateral: its member country codes and the issue areas it tracks."""
+
+    def __init__(self, key: str, name: str, members: list[str], topics: list[str]):
+        self.key = key
+        self.name = name
+        self.members = list(members)
+        self.member_set = set(members)
+        self.topics = set(topics)
+
+
+def _load_groupings() -> dict[str, Grouping]:
+    raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
+    return {key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", [])) for key, g in raw.items()}
+
+
+GROUPINGS = _load_groupings()
+
+# All country codes that appear in any grouping — the actor vocabulary.
+ALL_MEMBERS = [c for g in GROUPINGS.values() for c in g.members]
+# The global issue-area enum is the union of every grouping's tracked topics,
+# ordered so that the six original Weimar areas come first.
+_WEIMAR_TOPIC_ORDER = ["ukraine", "defence", "hybrid", "enlargement", "green_transition", "rule_of_law"]
+ALL_TOPICS = _WEIMAR_TOPIC_ORDER + sorted({t for g in GROUPINGS.values() for t in g.topics} - set(_WEIMAR_TOPIC_ORDER))
+# A legend of format key -> name (member codes), injected into the extraction
+# prompt so the model has a concrete example per grouping to match against
+# instead of just a bare list of keys.
+FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for key, g in GROUPINGS.items())
 
 # Prompt revision stamped into each sidecar's `enriched_by.prompt_version`, so a
 # score can be traced to the exact prompt that produced it. The lineage is keyed
@@ -75,12 +106,14 @@ WEIMAR_GOALS = _load_goals()
 #   "2"  da8777de  PR #35 — classification moved into the LLM prompt (actors)
 #   "3"  c2cfff1e  actors/explicit_weimar shape hardening + retry
 #   "4"  434962fe  native-language inputs (de/fr/pl); output English, evidence verbatim
+#   "5"  c6353f81  multi-grouping: 12-country actors, topic union, explicit_formats
+#   "6"  f5697563  explicit_formats legend + explicit-naming-vs-mere-involvement clarification
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "4"
-PROMPT_SURFACE_SHA = "434962fe"
+PROMPT_VERSION = "6"
+PROMPT_SURFACE_SHA = "f5697563"
 
 
 def prompt_surface_sha() -> str:
@@ -107,7 +140,7 @@ SYSTEM_PROMPT = (
 )
 
 STANCE_RUBRIC = """\
-Stance scale (integer, rating the country's stance against the Weimar goal for that topic):
+Stance scale (integer, rating the country's stance against the shared goal for that topic):
  +2 = actively advances the goal: concrete commitments, resources, initiatives
       (e.g. "provides EUR 5bn in military aid", "will host a summit on X")
  +1 = supports the goal rhetorically, no new commitments
@@ -133,8 +166,11 @@ Source country: {source}
 Title: {title}
 Text: {text}
 
-Weimar Triangle goals — frame topic entries against these:
+Shared minilateral goals — frame topic entries against these:
 {goals_block}
+
+Minilateral format keys (for "explicit_formats" below):
+{format_hints_block}
 
 {stance_rubric}
 
@@ -142,14 +178,14 @@ Return JSON with exactly these fields:
 {{
   "event_type": "one of: joint_statement, speech, meeting, communique, statement",
   "participants": ["list of named officials or roles mentioned"],
-  "actors": ["a flat array of zero to three of the strings DE, FR, PL — one entry per Weimar Triangle country (Germany/France/Poland) this item represents or discusses; [] if none of the three; never nest arrays or add other values"],
-  "explicit_weimar": "a JSON boolean, true or false — never a quoted string; true only if the text explicitly refers to the Weimar Triangle, the Weimar format, or trilateral Germany-France-Poland cooperation",
-  "topics": ["list from: ukraine, defence, hybrid, enlargement, green_transition, rule_of_law"],
+  "actors": ["a flat array of the country codes ({actor_codes}) that this item represents or discusses; [] if none; never nest arrays or add other values"],
+  "explicit_formats": ["a flat array of format keys from the list above, ONLY if the text itself names that format (e.g. says 'the E3', 'AUKUS', 'Weimar Triangle') — NOT just because the format's member countries happen to be discussed; [] if the text never names a format by its own name"],
+  "topics": ["list from: {topic_list}"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
   "positions_by_topic": {{
     "<topic>": {{
-      "position": "one sentence: how {source}'s stance advances, aligns with, or departs from the Weimar goal for this topic",
+      "position": "one sentence: how {source}'s stance advances, aligns with, or departs from the shared goal for this topic",
       "stance": <integer -2 to +2 from the stance scale>,
       "evidence": "shortest verbatim quote from the text that justifies the stance rating"
     }}
@@ -158,16 +194,16 @@ Return JSON with exactly these fields:
 Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned."""
 
 STANCE_BACKFILL_PROMPT = """\
-Rate this government press release against shared Weimar Triangle policy goals.
+Rate this government press release against shared minilateral policy goals.
 
-The press release may be written in German, French, Polish, or English. The
+The press release may be written in a European language or English. The
 "evidence" fields must stay verbatim quotes in the original language of the text.
 
 Source country: {source}
 Title: {title}
 Text: {text}
 
-Weimar Triangle goals:
+Shared goals:
 {goals_block}
 
 {stance_rubric}
@@ -189,6 +225,15 @@ SOURCE_LABELS = {
     "german_chancellery": "Germany",
     "elysee": "France",
     "polish_pm": "Poland",
+    "uk_fcdo": "United Kingdom",
+    "us_state": "United States",
+    "australia_dfat": "Australia",
+    "czech_mfa": "Czechia",
+    "slovak_mfa": "Slovakia",
+    "hungary_government": "Hungary",
+    "estonian_mfa": "Estonia",
+    "latvian_mfa": "Latvia",
+    "lithuanian_mfa": "Lithuania",
 }
 
 # Country code for each known-actor source. The source country is always folded
@@ -201,10 +246,20 @@ SOURCE_ACTOR = {
     "german_chancellery": "DE",
     "elysee": "FR",
     "polish_pm": "PL",
+    "uk_fcdo": "UK",
+    "us_state": "US",
+    "australia_dfat": "AU",
+    "czech_mfa": "CZ",
+    "slovak_mfa": "SK",
+    "hungary_government": "HU",
+    "estonian_mfa": "EE",
+    "latvian_mfa": "LV",
+    "lithuanian_mfa": "LT",
 }
 
-# Canonical order for actor codes, and the aliases the model might return.
-_ACTOR_ORDER = ["DE", "FR", "PL"]
+# Canonical order for actor codes (deduped from the grouping members), and the
+# aliases the model might return for each country.
+_ACTOR_ORDER = list(dict.fromkeys(ALL_MEMBERS))
 _ACTOR_ALIASES = {
     "DE": "DE",
     "GERMANY": "DE",
@@ -215,12 +270,47 @@ _ACTOR_ALIASES = {
     "PL": "PL",
     "POLAND": "PL",
     "POLISH": "PL",
+    "UK": "UK",
+    "GB": "UK",
+    "UNITED KINGDOM": "UK",
+    "BRITAIN": "UK",
+    "GREAT BRITAIN": "UK",
+    "BRITISH": "UK",
+    "ENGLAND": "UK",
+    "US": "US",
+    "USA": "US",
+    "UNITED STATES": "US",
+    "UNITED STATES OF AMERICA": "US",
+    "AMERICA": "US",
+    "AMERICAN": "US",
+    "AU": "AU",
+    "AUSTRALIA": "AU",
+    "AUSTRALIAN": "AU",
+    "CZ": "CZ",
+    "CZECHIA": "CZ",
+    "CZECH REPUBLIC": "CZ",
+    "CZECH": "CZ",
+    "SK": "SK",
+    "SLOVAKIA": "SK",
+    "SLOVAK": "SK",
+    "HU": "HU",
+    "HUNGARY": "HU",
+    "HUNGARIAN": "HU",
+    "EE": "EE",
+    "ESTONIA": "EE",
+    "ESTONIAN": "EE",
+    "LV": "LV",
+    "LATVIA": "LV",
+    "LATVIAN": "LV",
+    "LT": "LT",
+    "LITHUANIA": "LT",
+    "LITHUANIAN": "LT",
 }
 
 
 def _normalize_actors(raw_actors, source_name: str) -> list[str]:
-    """Map the model's actor list to canonical DE/FR/PL codes, folding in the
-    source country for MFA sources, returned in canonical order."""
+    """Map the model's actor list to canonical country codes, folding in the
+    source country for known-actor sources, returned in canonical order."""
     codes = set()
     for a in raw_actors or []:
         code = _ACTOR_ALIASES.get(str(a).strip().upper())
@@ -239,6 +329,41 @@ def _as_bool(value) -> bool:
     if isinstance(value, str):
         return value.strip().lower() in {"true", "yes", "1"}
     return bool(value)
+
+
+def _normalize_formats(raw_formats) -> set[str]:
+    """Map the model's explicit_formats list to known grouping keys (lowercased)."""
+    out = set()
+    for f in raw_formats or []:
+        key = str(f).strip().lower()
+        if key in GROUPINGS:
+            out.add(key)
+    return out
+
+
+def _grouping_relevance(actors: list[str], explicit_formats: set[str], topics: list[str], source_name: str) -> dict:
+    """Compute the per-grouping {key}_relevant flags. For each grouping, relevance is
+    a fixed rule over the event's actors that are members of that grouping and the
+    topics that grouping tracks (mirroring the original Weimar policy, but scoped to
+    each grouping's membership so a widened actor vocabulary can't leak across
+    formats): an explicit-format mention (or all members present), OR 2+ member
+    actors on a tracked topic, OR a known-actor source that belongs to the grouping
+    on a tracked topic. Every grouping — including weimar — uses the same flat
+    {key}_relevant naming; there is no separate "strong signal" tier.
+    """
+    from_known_actor = source_name in KNOWN_ACTOR_SOURCES
+    source_code = SOURCE_ACTOR.get(source_name)
+    flags: dict[str, bool] = {}
+    for key, g in GROUPINGS.items():
+        present = [a for a in actors if a in g.member_set]
+        gtopics = [t for t in topics if t in g.topics]
+        explicit = key in explicit_formats or (len(present) == len(g.members) and len(g.members) > 0)
+        flags[f"{key}_relevant"] = (
+            explicit
+            or (len(present) >= 2 and bool(gtopics))
+            or (from_known_actor and source_code in g.member_set and bool(gtopics))
+        )
+    return flags
 
 
 # ---------------------------------------------------------------------------
@@ -385,7 +510,7 @@ def _clean_evidence(evidence, topic: str) -> str:
     ev = (evidence or "").strip()
     if not ev:
         return ""
-    goal = WEIMAR_GOALS.get(topic, "")
+    goal = GOALS.get(topic, "")
     if ev and (ev in goal or goal.strip() in ev):
         return ""
     return ev
@@ -401,16 +526,16 @@ def _parse_json(raw: str) -> dict:
 
 
 def _validate_llm_shape(extracted: dict) -> None:
-    """Reject actors/explicit_weimar shapes the prompt didn't ask for, instead of
-    letting _normalize_actors/_as_bool silently mis-parse them (observed: gemma4
-    occasionally nests "actors", e.g. [["FR"]] or ["FR", []], which a naive
+    """Reject actors/explicit_formats shapes the prompt didn't ask for, instead of
+    letting _normalize_actors/_normalize_formats silently mis-parse them (observed:
+    gemma4 occasionally nests "actors", e.g. [["FR"]] or ["FR", []], which a naive
     str()-based parse just drops with no error)."""
     actors = extracted.get("actors")
     if actors is not None and (not isinstance(actors, list) or any(not isinstance(a, str) for a in actors)):
         raise ValueError(f"actors must be a flat array of strings, got {actors!r}")
-    explicit_weimar = extracted.get("explicit_weimar")
-    if isinstance(explicit_weimar, str) and explicit_weimar.strip().lower() not in {"true", "false"}:
-        raise ValueError(f"explicit_weimar must be a boolean, got {explicit_weimar!r}")
+    formats = extracted.get("explicit_formats")
+    if formats is not None and (not isinstance(formats, list) or any(not isinstance(f, str) for f in formats)):
+        raise ValueError(f"explicit_formats must be a flat array of strings, got {formats!r}")
 
 
 def _extract(provider, raw_path: Path) -> bool:
@@ -418,13 +543,16 @@ def _extract(provider, raw_path: Path) -> bool:
     source_name = data.get("source_name", "unknown")
     source_label = SOURCE_LABELS.get(source_name, source_name)
 
-    goals_block = "\n".join(f"- {topic}: {text.strip()}" for topic, text in WEIMAR_GOALS.items())
+    goals_block = "\n".join(f"- {topic}: {GOALS[topic].strip()}" for topic in ALL_TOPICS if topic in GOALS)
     prompt = EXTRACTION_PROMPT.format(
         source=source_label,
         title=data.get("title", "")[:300],
         text=(data.get("text", "") or "")[:3000],
         goals_block=goals_block,
+        format_hints_block=FORMAT_HINTS_BLOCK,
         stance_rubric=STANCE_RUBRIC,
+        actor_codes=", ".join(_ACTOR_ORDER),
+        topic_list=", ".join(ALL_TOPICS),
     )
 
     raw = ""
@@ -470,28 +598,22 @@ def _extract(provider, raw_path: Path) -> bool:
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]
 
-        # Classify from the model's own reading of the item: which Weimar
-        # countries are involved, whether it explicitly invokes the trilateral
-        # format, and which issue areas it touches. Relevance is then a fixed
-        # rule over those signals — mirroring the previous policy (a trilateral
-        # signal, two-plus actors on a tracked topic, or a known-actor item on
-        # a tracked topic), but with LLM-perceived signals instead of regex.
-        # Pulled out of `extracted` (not part of ExtractedSchema) since they're
-        # promoted to top-level enriched fields instead.
+        # Classify from the model's own reading of the item: which member
+        # countries are involved, which minilateral formats it explicitly names,
+        # and which issue areas it touches. Relevance is then a fixed rule over
+        # those signals, computed per grouping (see _grouping_relevance) so a
+        # widened actor vocabulary can't leak relevance across formats. Pulled out
+        # of `extracted` (not part of ExtractedSchema) since they're promoted to
+        # top-level enriched fields instead.
         actors = _normalize_actors(extracted.pop("actors", None), source_name)
-        explicit_weimar = _as_bool(extracted.pop("explicit_weimar", None))
+        explicit_formats = _normalize_formats(extracted.pop("explicit_formats", None))
         ExtractedSchema.model_validate(extracted)
-        from_known_actor = source_name in KNOWN_ACTOR_SOURCES
-        trilateral_signal = explicit_weimar or len(actors) == 3
-        weimar_relevant = (
-            trilateral_signal or (len(actors) >= 2 and bool(llm_topics)) or (from_known_actor and bool(llm_topics))
-        )
+        relevance = _grouping_relevance(actors, explicit_formats, llm_topics, source_name)
 
         enriched_data = {
             "actors": actors,
             "issue_areas": llm_topics,
-            "weimar_relevant": weimar_relevant,
-            "trilateral_signal": trilateral_signal,
+            **relevance,
             "extracted": extracted,
             "enriched_by": {
                 "model_id": provider.model,
@@ -508,8 +630,9 @@ def _extract(provider, raw_path: Path) -> bool:
             yaml.dump(enriched_data, allow_unicode=True, sort_keys=False),
             encoding="utf-8",
         )
-        flag = "WEIMAR" if weimar_relevant else "  ·   "
-        print(f"  + {flag} [{source_name}] {data.get('date')} actors={actors} topics={llm_topics}")
+        matched = [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
+        flag = ("+" + ",".join(matched)) if matched else "·"
+        print(f"  + [{flag}] [{source_name}] {data.get('date')} actors={actors} topics={llm_topics}")
         return True
     except Exception as exc:
         print(f"  ! Error for {raw_path.name}: {exc}")
@@ -526,7 +649,7 @@ def _find_stance_pending(limit: int | None = None) -> list[Path]:
         except Exception:
             continue
         extracted = (d or {}).get("extracted") or {}
-        topics = [t for t in (extracted.get("topics") or []) if t in WEIMAR_GOALS]
+        topics = [t for t in (extracted.get("topics") or []) if t in GOALS]
         if not topics:
             continue
         stances = extracted.get("stances") or {}
@@ -542,7 +665,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
     """Add stance ratings to an already-enriched event, reading the raw text."""
     enriched = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
     extracted = enriched.get("extracted") or {}
-    topics = [t for t in (extracted.get("topics") or []) if t in WEIMAR_GOALS]
+    topics = [t for t in (extracted.get("topics") or []) if t in GOALS]
 
     raw_path = EVENTS_DIR / enriched_path.relative_to(ENRICHED_DIR)
     if not raw_path.exists():
@@ -551,7 +674,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_label = SOURCE_LABELS.get(data.get("source_name", ""), "unknown")
 
-    goals_block = "\n".join(f"- {t}: {WEIMAR_GOALS[t].strip()}" for t in topics)
+    goals_block = "\n".join(f"- {t}: {GOALS[t].strip()}" for t in topics)
     prompt = STANCE_BACKFILL_PROMPT.format(
         source=source_label,
         title=data.get("title", "")[:300],

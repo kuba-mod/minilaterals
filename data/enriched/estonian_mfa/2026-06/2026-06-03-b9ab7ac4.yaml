@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  topics:
+  - ukraine
+  - defence
+  location: Riga, Latvia
+  position: Estonia participated in a strategic dialogue conference to discuss the
+    impact of Russia-Ukraine peace talks on European security and deterrence.
+  positions:
+    ukraine: Estonia is engaging in discussions regarding the impact of peace talks
+      between Russia and Ukraine on European security.
+    defence: Estonia is analyzing how peace negotiations affect deterrence and reassurance
+      measures.
+  stances:
+    ukraine:
+      score: 1
+      evidence: keskendus Ukraina ja Venemaa rahukõneluste mõjule Euroopa julgeolekule
+    defence:
+      score: 1
+      evidence: 'Russia-Ukraine Peace Talks: Impact on Reassurance and Deterrence?'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

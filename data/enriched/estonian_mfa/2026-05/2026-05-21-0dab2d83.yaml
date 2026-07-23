@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Russian Federation chargé d'affaires
+  topics:
+  - hybrid
+  location: null
+  position: Estonia summoned the Russian chargé d'affaires to deliver a diplomatic
+    note protesting ongoing disinformation campaigns targeting Estonia and the Baltic
+    states.
+  positions:
+    hybrid: Estonia is taking concrete diplomatic action to counter foreign disinformation
+      campaigns.
+  stances:
+    hybrid:
+      score: 2
+      evidence: andis üle noot järjepideva Eesti ja Balti riikide vastu suunatud desinformatsioonikampaania
+        kohta
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

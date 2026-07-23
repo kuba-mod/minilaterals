@@ -1,0 +1,31 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet of Ministers
+  topics:
+  - hybrid
+  location: null
+  position: The Latvian Cabinet of Ministers has allocated 2.2 million euros to improve
+    the security and cybersecurity infrastructure of the National Library for its
+    role in the EU Council presidency and other high-level events.
+  positions:
+    hybrid: Latvia is actively investing in cybersecurity infrastructure to protect
+      critical institutions during high-level diplomatic events.
+  stances:
+    hybrid:
+      score: 2
+      evidence: lēma par 2,2 miljonu eiro pārdali Latvijas Nacionālajai bibliotēkai,
+        lai nodrošinātu tās infrastruktūras… drošības un kiberdrošības
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

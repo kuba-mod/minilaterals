@@ -1,0 +1,37 @@
+actors:
+- CZ
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Petr Pavel
+  topics:
+  - ukraine
+  - defence
+  location: Prague, Czech Republic
+  position: Foreign Minister Tsahkna met with President Pavel to discuss European
+    security, support for Ukraine, and the isolation of Russia.
+  positions:
+    ukraine: Estonia rhetorically supports the continued assistance of Ukraine.
+    defence: Estonia emphasizes the importance of European security and the isolation
+      of Russia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ukraina toetamist
+    defence:
+      score: 1
+      evidence: arutati Euroopa julgeolekut... ja Venemaa jätkuvat isoleerimist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

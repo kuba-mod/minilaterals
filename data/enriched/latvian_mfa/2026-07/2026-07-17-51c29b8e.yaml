@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Baiba Braže
+  topics:
+  - hybrid
+  location: null
+  position: Latvia has declared certain individuals persona non grata in accordance
+    with the Immigration Law.
+  positions:
+    hybrid: Latvia is taking active measures against foreign interference by declaring
+      undesirable persons.
+  stances:
+    hybrid:
+      score: 2
+      evidence: ārlietu ministre Baiba Braže ir pieņēmusi lēmumu Latvijas Republikai
+        nevēlamo personu (persona non grata)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

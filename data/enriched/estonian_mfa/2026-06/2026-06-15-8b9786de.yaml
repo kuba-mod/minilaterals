@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: Luxembourg
+  position: Estonia supports the implementation of sanctions against Russia and advocates
+    for more stringent measures, including bans on maritime services and aluminum
+    oxide exports.
+  positions:
+    ukraine: Estonia actively pushes for the acceleration and intensification of sanctions
+      against Russia to increase pressure.
+  stances:
+    ukraine:
+      score: 2
+      evidence: survet Venemaale tuleb veelgi suurendada tugeva 21. sanktsioonipaketi
+        kiire vastuvõtmisega
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

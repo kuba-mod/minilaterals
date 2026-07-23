@@ -1,0 +1,41 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Reem Al Hashimy
+  - Ayano Kunimitsu
+  topics:
+  - ukraine
+  - defence
+  location: Gdansk, Poland
+  position: Estonia emphasizes that Ukraine's battlefield experiences are essential
+    for strengthening European defense capabilities during the fifth Ukraine recovery
+    conference.
+  positions:
+    ukraine: Estonia supports the long-term recovery and success of Ukraine by participating
+      in the recovery conference.
+    defence: Estonia advocates for using Ukrainian battlefield experience to enhance
+      European deterrence and defense capabilities.
+  stances:
+    ukraine:
+      score: 1
+      evidence: viiveb 25.–26. juunil Poolas Gdanskis, kus toimub viies Ukraina taastekonverents
+    defence:
+      score: 1
+      evidence: Ukraina kogemused lahinguväljal on Euroopa kaitsevõime tugevdamisel
+        hindamatud
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

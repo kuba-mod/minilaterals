@@ -1,0 +1,41 @@
+# Minilateral groupings tracked by the pipeline.
+#
+# Each grouping declares its member country codes and the issue areas (topics)
+# it tracks. This is the single source of truth consumed by:
+#   - pipeline/enrich.py  — per-grouping relevance/signal computation and the
+#                           actor/topic vocabulary offered to the LLM
+#   - pipeline/validate.py — the set of known actor codes and issue areas
+#
+# `weimar` is listed first and maps onto the legacy weimar_relevant /
+# trilateral_signal fields for backward compatibility; the others emit
+# {key}_relevant / {key}_signal booleans.
+#
+# The UNION of every grouping's `topics` is the global issue-area enum. Goal
+# sentences for each topic live in data/goals.yaml (topic-level, shared across
+# groupings that track the topic). Topic assignments below are editable
+# judgment calls, not fixed policy.
+
+weimar:
+  name: Weimar Triangle
+  members: [DE, FR, PL]
+  topics: [ukraine, defence, hybrid, enlargement, green_transition, rule_of_law]
+
+e3:
+  name: E3
+  members: [DE, FR, UK]
+  topics: [iran, defence]
+
+visegrad:
+  name: Visegrád Group
+  members: [PL, CZ, SK, HU]
+  topics: [migration, enlargement, defence, energy]
+
+baltic:
+  name: Baltic Three
+  members: [EE, LV, LT]
+  topics: [defence, hybrid, energy]
+
+aukus:
+  name: AUKUS
+  members: [AU, UK, US]
+  topics: [indo_pacific, submarines, defence]

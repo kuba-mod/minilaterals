@@ -2,18 +2,21 @@ actors:
 - DE
 issue_areas: []
 weimar_relevant: false
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants: []
   topics: []
   location: null
-  position: The German government is implementing comprehensive reforms to the pension
-    and health insurance systems to ensure long-term financial sustainability and
-    generational fairness.
+  position: The German government is implementing fundamental reforms to the pension
+    and health insurance systems to ensure long-term financial stability and intergenerational
+    fairness.
   positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

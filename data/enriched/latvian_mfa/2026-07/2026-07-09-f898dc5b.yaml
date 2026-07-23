@@ -1,0 +1,24 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - representatives of the World Federation of Free Latvians (PBLA)
+  topics: []
+  location: null
+  position: Foreign Minister Baiba Braže is meeting with the World Federation of Free
+    Latvians to present certificates of appreciation for their contribution to strengthening
+    Latvian statehood.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

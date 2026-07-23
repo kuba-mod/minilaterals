@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Orlando Gutierrez-Boronat
+  topics:
+  - rule_of_law
+  location: Estonia
+  position: Estonia's Foreign Minister met with a Cuban opposition representative
+    to discuss supporting civil society and improving the human rights situation in
+    Cuba.
+  positions:
+    rule_of_law: Estonia rhetorically supports democratic resilience and human rights
+      by advocating for a free and democratic future for the Cuban people.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Kuuba rahvas väärib vaba ja demokraatlikku tulevikku
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Canadian Foreign Minister
+  - Estonian Foreign Minister
+  - Lithuanian Foreign Minister
+  - Latvian Ministry of Foreign Affairs Parliamentary Secretary
+  topics: []
+  location: Tallinn, Estonia
+  position: Estonia reaffirms the value of the '3+1' format with Canada and the Baltic
+    states to strengthen coordination between close allies.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

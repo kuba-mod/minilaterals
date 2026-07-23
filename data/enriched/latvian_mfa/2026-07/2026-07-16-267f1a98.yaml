@@ -1,0 +1,22 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Artjoms Uršuļskis
+  topics: []
+  location: null
+  position: Latvia announces the appointment of Artjoms Uršuļskis as the head of the
+    Minister of Foreign Affairs' office.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

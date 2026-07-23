@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Colin McIntyre
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom emphasizes the necessity of justice and accountability
+    in international efforts to address the conflict in Sudan.
+  positions:
+    rule_of_law: The United Kingdom supports the rule of law by stressing the importance
+      of justice and accountability in Sudan.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Justice and accountability remain important to international efforts
+        in Sudan
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

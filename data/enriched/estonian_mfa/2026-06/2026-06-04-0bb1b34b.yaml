@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Foreign Minister Margus Tsahkna provided the government with an overview
+    of the strategic goods commission's activities for 2025, focusing on export controls
+    and national oversight.
+  positions:
+    defence: Estonia is strengthening its national oversight and alignment with international
+      export controls for strategic goods, contributing to collective security.
+  stances:
+    defence:
+      score: 1
+      evidence: rahvusvahelise ekspordikontrolli arengutest, komisjoni tööst ja riikliku
+        järelevalve tugevdamisest
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

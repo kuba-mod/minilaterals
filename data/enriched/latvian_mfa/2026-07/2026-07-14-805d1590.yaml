@@ -1,0 +1,24 @@
+actors:
+- LV
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - M. Rubio
+  topics: []
+  location: Washington, USA
+  position: Latvian Foreign Minister Baiba Braže will visit Washington to participate
+    in a foreign ministers' conference hosted by US Secretary of State M. Rubio.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
