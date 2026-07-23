@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia asserts that the downing of a drone in its airspace demonstrates
+    the effectiveness of NATO's air policing and its role in ensuring security.
+  positions:
+    defence: Estonia supports the effectiveness of NATO's collective security and
+      air defense capabilities.
+  stances:
+    defence:
+      score: 1
+      evidence: näitab, et NATO õhuturve töötab ja täidab oma eesmärki tagada meie
+        kõigi turvalisust
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

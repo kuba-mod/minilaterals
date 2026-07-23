@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minna-Liina Lind
+  - Deputy Secretaries and Deputy Ministers of the NB8 countries' ministries of foreign
+    affairs
+  topics:
+  - ukraine
+  location: Kyiv, Ukraine
+  position: Estonia, through the NB8 format, is coordinating international support
+    for Ukraine and efforts to isolate Russia.
+  positions:
+    ukraine: Estonia supports sustained diplomatic and international coordination
+      to assist Ukraine and hold Russia accountable.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Arutelude keskmes olid Ukraina jätkuv toetamine rahvusvahelistes organisatsioonides,
+        Venemaa isoleerimine ja vastutusele võtmine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

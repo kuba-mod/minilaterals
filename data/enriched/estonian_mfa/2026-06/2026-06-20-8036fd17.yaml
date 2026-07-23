@@ -1,0 +1,31 @@
+actors:
+- DE
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  - Johann Wadephul
+  topics:
+  - defence
+  location: Germany
+  position: Foreign Minister Margus Tsahkna warned against Europe taking a neutral
+    mediator role with Russia and discussed security and deterrence.
+  positions:
+    defence: Estonia emphasizes the importance of security and deterrence, warning
+      against neutral mediation roles that could be exploited by Russia.
+  stances:
+    defence:
+      score: 1
+      evidence: osales Euroopa julgeoleku ja heidutuse teemalises vestlusringis
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

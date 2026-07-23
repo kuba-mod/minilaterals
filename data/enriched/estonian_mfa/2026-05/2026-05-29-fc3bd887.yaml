@@ -1,0 +1,31 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: Sopot, Poland
+  position: Foreign Minister Margus Tsahkna emphasized the need to increase pressure
+    on Russia to end its aggression following drone attacks.
+  positions:
+    ukraine: Estonia supports increasing pressure on Russia to cease its aggression,
+      aligning with the goal of achieving a just and lasting peace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: kinnitab vajadust jätkata tegutsemist Venemaa survestamiseks agressiooni
+        lõpetamiseks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

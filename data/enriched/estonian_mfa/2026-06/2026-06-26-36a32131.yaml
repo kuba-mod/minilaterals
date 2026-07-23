@@ -1,0 +1,31 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Foreign Minister of Estonia
+  topics:
+  - ukraine
+  location: Gdansk, Poland
+  position: Estonia has committed to host the sixth Ukraine Recovery Conference in
+    Tallinn in 2027.
+  positions:
+    ukraine: Estonia is actively advancing the goal of long-term support for Ukraine
+      by hosting a future recovery conference.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Kuues Ukraina taastekonverents toimub 2027. aastal Tallinnas.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia condemns Russia's brutal missile attacks on Ukraine and views
+    them as a sign of Putin's increasing desperation.
+  positions:
+    ukraine: Estonia rhetorically supports Ukraine by condemning Russian aggression
+      and its humanitarian impact.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Välisminister Margus Tsahkna sõnul kinnitab see brutaalne rünnak,
+        et Venemaa muutub sõja venimise ja strateegilise paigalseisu tõttu üha närvilisemaks.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

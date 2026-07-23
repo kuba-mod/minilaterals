@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Shri Piyush Goyal
+  topics:
+  - indo_pacific
+  location: null
+  position: Estonia seeks to develop its strategic partnership and trade relations
+    with India.
+  positions:
+    indo_pacific: Estonia views India as an important and strategic partner, aligning
+      with the goal of maintaining strong relations in the Indo-Pacific region.
+  stances:
+    indo_pacific:
+      score: 1
+      evidence: India on Eesti jaoks oluline ja strateegiline partner
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

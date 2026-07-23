@@ -1,0 +1,35 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Anita Anand
+  - Kęstutis Budrys
+  - Artjoms Urulskis
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia is strengthening its security and transatlantic ties through cooperation
+    with Canada and the other Baltic states.
+  positions:
+    defence: Estonia supports strengthening regional security and transatlantic relations
+      in cooperation with Canada and Baltic partners.
+  stances:
+    defence:
+      score: 1
+      evidence: arutati Balti riikide ja Kanada koostöö tugevdamist, regionaalset
+        julgeolekut ja transatlantilisi suhteid
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

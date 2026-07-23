@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Tsahkna
+  - policy makers
+  - civil society representatives
+  - experts
+  topics:
+  - green_transition
+  location: Tallinn, Estonia
+  position: Estonia hosted an international conference on environmental justice, framing
+    the mitigation of the climate crisis as a matter of global security.
+  positions:
+    green_transition: Estonia advocates for equitable and inclusive solutions to the
+      climate crisis, linking climate action to global security.
+  stances:
+    green_transition:
+      score: 1
+      evidence: kliimakriisi pidurdamine on globaalse julgeoleku küsimus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

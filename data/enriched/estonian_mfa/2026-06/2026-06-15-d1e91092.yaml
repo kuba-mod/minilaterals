@@ -1,0 +1,24 @@
+actors:
+- HU
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Tsahkna
+  - Anita Orban
+  topics: []
+  location: Luxembourg
+  position: Estonia led a meeting of Nordic and Baltic foreign ministers with Hungary's
+    foreign minister to discuss cooperation within the European Union.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

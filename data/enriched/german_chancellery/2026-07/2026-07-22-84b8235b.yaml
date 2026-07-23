@@ -4,7 +4,10 @@ issue_areas:
 - ukraine
 - enlargement
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
@@ -14,23 +17,23 @@ extracted:
   - ukraine
   - enlargement
   location: null
-  position: Germany discussed regional stability in the South Caucasus and expressed
-    support for Armenia's relations with the EU and the peace process with Azerbaijan.
+  position: Germany discussed the regional stability of the South Caucasus, the war
+    in Ukraine, and the strengthening of Armenia's relations with the EU.
   positions:
-    ukraine: Germany maintains an interest in the impact of Russia's war against Ukraine
-      on regional stability.
-    enlargement: Germany rhetorically supports the strengthening of Armenia's relationship
+    ukraine: Germany engaged in discussions regarding Russia's war against Ukraine
+      and its regional implications.
+    enlargement: Germany rhetorically supports the expansion of Armenia's relations
       with the European Union.
   stances:
     ukraine:
-      score: 1
+      score: 0
       evidence: tauschten sich zur aktuellen Lage im Nahen Osten und zum Krieg Russlands
         gegen die Ukraine sowie den Auswirkungen auf den Südkaukasus aus
     enlargement:
       score: 1
-      evidence: beide betonten in diesem Zusammenhang die Chancen für den Ausbau der
-        bilateralen Beziehungen und der Beziehungen Armeniens mit der EU
+      evidence: beiden betonten in diesem Zusammenhang die Chancen für den Ausbau
+        der bilateralen Beziehungen und der Beziehungen Armeniens mit der EU
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

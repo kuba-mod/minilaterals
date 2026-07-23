@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: Ankara, Turkey
+  position: Foreign Minister Tsahkna asserts that NATO summit decisions, including
+    increased spending and the transition to an air defense mission in Estonia, strengthen
+    national and collective security.
+  positions:
+    defence: Estonia supports the strengthening of NATO capabilities and the specific
+      transition of the air policing mission to an air defense mission to enhance
+      security on the eastern flank.
+  stances:
+    defence:
+      score: 2
+      evidence: NATO õhuturbemissiooni Eestis muutumine õhukaitsemissiooniks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

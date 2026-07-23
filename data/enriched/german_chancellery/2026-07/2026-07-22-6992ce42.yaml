@@ -3,7 +3,10 @@ actors:
 issue_areas:
 - defence
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
@@ -11,17 +14,20 @@ extracted:
   topics:
   - defence
   location: null
-  position: Germany is implementing a startup and scaleup strategy to foster innovation,
-    economic growth, and specifically the integration of security and defense technologies.
+  position: Germany is implementing a comprehensive Startup and Scaleup Strategy to
+    foster innovation and economic growth, including specific support for security
+    and defense sectors.
   positions:
-    defence: Germany is actively integrating the security and defense sectors into
-      its national startup funding strategy to enhance technological capabilities.
+    defence: Germany is systematically integrating security and defense startups into
+      its national funding strategy to enhance capabilities.
   stances:
     defence:
       score: 2
       evidence: Die wichtigen Bereiche der Sicherheit und Verteidigung werden erstmals
-        in der Strategie systematisch erfasst.
+        in der Strategie systematisch erfasst. Startups und junge Unternehmen aus
+        diesen Bereichen erhalten so beispielsweise gleichberechtigten Zugang zu der
+        Startup - und Scaleup -Förderung.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

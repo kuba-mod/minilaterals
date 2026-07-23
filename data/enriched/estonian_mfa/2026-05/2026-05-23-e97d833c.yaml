@@ -1,0 +1,29 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: Prague, Czech Republic
+  position: Foreign Minister Margus Tsahkna emphasized that supporting Ukraine is
+    essential for Europe's own security interests.
+  positions:
+    ukraine: Estonia rhetorically supports the continued backing of Ukraine as a necessity
+      for European security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ukraina toetamine on Euroopa enda julgeolekuhuvides
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

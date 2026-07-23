@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  - hybrid
+  location: Helsingborg, Sweden
+  position: Estonia emphasizes that European nations must take greater responsibility
+    for collective security and that NATO's mechanisms are functioning effectively.
+  positions:
+    defence: Estonia supports the goal of increased European responsibility for common
+      security within the NATO framework.
+    hybrid: Estonia highlights specific drone incidents as evidence of the need for
+      and the effectiveness of NATO's response to hybrid challenges.
+  stances:
+    defence:
+      score: 1
+      evidence: Euroopa jätkab suurema vastutuse võtmist ühise julgeoleku eest
+    hybrid:
+      score: 1
+      evidence: droonijuhtum Eestis näitab, et NATO töötab
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

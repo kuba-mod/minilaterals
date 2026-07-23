@@ -1,18 +1,29 @@
 actors:
 - FR
-issue_areas: []
-weimar_relevant: false
-trilateral_signal: false
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants: []
-  topics: []
+  topics:
+  - defence
   location: null
-  position: France expressed condolences to Guyana and provided a specialist rescue
-    team following the sinking of the MV Barima.
-  positions: {}
-  stances: {}
+  position: France expressed condolences to Guyana and provided emergency rescue support
+    following the sinking of the MV Barima.
+  positions:
+    defence: France actively deployed military rescue assets to support a regional
+      partner in a crisis.
+  stances:
+    defence:
+      score: 2
+      evidence: France sent support in the form of a 15-strong specialist team of
+        divers and rescue workers from the armed forces stationed in French Guiana
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

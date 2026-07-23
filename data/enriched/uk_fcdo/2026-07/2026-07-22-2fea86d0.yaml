@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Secretary
+  topics:
+  - indo_pacific
+  location: Manila, Philippines
+  position: The United Kingdom reaffirms its commitment to a free and open Indo-Pacific
+    during the ASEAN-UK Post-Ministerial Conference.
+  positions:
+    indo_pacific: The United Kingdom supports the goal of a free and open Indo-Pacific
+      and the upholding of international law.
+  stances:
+    indo_pacific:
+      score: 1
+      evidence: The Foreign Secretary's opening remarks at the ASEAN-UK Post-Ministerial
+        Conference in Manila
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

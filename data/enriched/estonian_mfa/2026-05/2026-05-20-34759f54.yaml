@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - K. Shanmugam
+  topics:
+  - ukraine
+  - hybrid
+  location: Tallinn, Estonia
+  position: Estonia met with Singapore to discuss regional security, specifically
+    focusing on Russian aggression in Ukraine and hybrid threats.
+  positions:
+    ukraine: Estonia supports the goal by discussing Russia's ongoing aggression against
+      Ukraine.
+    hybrid: Estonia rhetorically supports coordinated action against hybrid threats.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Venemaa jätkuv agressioon Ukraina vastu
+    hybrid:
+      score: 1
+      evidence: hübriidohud
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- DE
+- EE
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia views the German-Dutch Corps' takeover of tactical command of
+    Estonian and Latvian land forces as a key step in strengthening NATO's eastern
+    flank and national security.
+  positions:
+    defence: Estonia actively advances collective security and the deterrence of the
+      eastern flank through the integration of command with the German-Dutch Corps.
+  stances:
+    defence:
+      score: 2
+      evidence: Eesti ja Läti maavägede taktikalise juhtimise ülevõtmine Saksa-Hollandi
+        korpuse poolt oluline samm NATO idatiiva kaitse ja Eesti julgeoleku tugevdamisel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

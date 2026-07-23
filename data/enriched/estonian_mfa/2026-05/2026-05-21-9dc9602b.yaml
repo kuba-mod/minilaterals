@@ -1,0 +1,33 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  - Eivind Vad Petersson
+  - Torgeir Larsen
+  - Gøran Johansen Stenseth
+  topics:
+  - defence
+  location: Norway
+  position: Estonia's Secretary General Jonatan Vseviov visited Norway to discuss
+    geopolitics and border security.
+  positions:
+    defence: Estonia engaged in geopolitical discussions and border security consultations
+      with Norwegian officials.
+  stances:
+    defence:
+      score: 1
+      evidence: osales Kirkenesi konverentsi vestlusringis „Deep dive into geopolitics“,
+        külastas Norra ja Venemaa piiripunkti
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

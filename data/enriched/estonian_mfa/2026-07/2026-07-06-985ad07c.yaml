@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - representatives of governments
+  - international organizations
+  - companies
+  - scientists
+  - civil society representatives
+  topics:
+  - hybrid
+  location: Geneva, Switzerland
+  position: Estonia is co-leading the first UN Global Dialogue on AI Governance to
+    promote responsible, inclusive, and transparent AI use.
+  positions:
+    hybrid: Estonia is actively advancing the goal of countering hybrid threats and
+      ensuring security by leading a global initiative for responsible and transparent
+      AI governance.
+  stances:
+    hybrid:
+      score: 2
+      evidence: ÜRO esimene ülemaailmne tehisaru haldamise dialoog (Global Dialogue
+        on AI Governance), mida juhivad Eesti ja El Salvador
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
