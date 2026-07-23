@@ -2,8 +2,10 @@
 """
 Weimar Triangle tracker — static HTML renderer.
 
-Reads data/events/**/*.yaml + data/meetings.yaml + data/milestones.yaml + data/annual.yaml
-and renders HTML pages to docs/ (or --output DIR).
+Reads data/events/**/*.yaml + data/meetings.yaml and renders HTML pages to docs/
+(or --output DIR). The Meetings page itself is not currently rendered — see the
+"docs/meetings/index.html" comment below — so data/milestones.yaml and
+data/annual.yaml aren't read here right now either.
 
 Usage:
     python -m pipeline.render               # renders to docs/
@@ -893,6 +895,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
             "edition_date_str": edition_dt.strftime("%A %-d %b"),
             "base_path": base_path,
+            "weimar_actors": WEIMAR_ACTORS,
+            "country_paths": {a: COUNTRY_PROFILE[a]["path"] for a in WEIMAR_ACTORS},
         }
     )
 
@@ -900,9 +904,9 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # they belong to the next edition.
     events = [e for e in load_events(weimar_only=True) if (e.get("date") or "") <= edition_cutoff]
     all_events = [e for e in load_events(weimar_only=False) if (e.get("date") or "") <= edition_cutoff]
+    # milestones.yaml/annual.yaml feed meetings.html only, which isn't rendered
+    # right now (see below) — meetings.yaml itself stays loaded for meetings_count.
     meetings = _load_yaml(ROOT / "data" / "meetings.yaml") or []
-    milestones = _load_yaml(ROOT / "data" / "milestones.yaml") or []
-    annual = _load_yaml(ROOT / "data" / "annual.yaml") or []
     run = load_latest_run()
     clusters = build_convergence_clusters(events)
     commentary = load_commentary()
@@ -1060,13 +1064,9 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         encoding="utf-8",
     )
 
-    # docs/meetings/index.html
-    (out / "meetings").mkdir(exist_ok=True)
-    tmpl = env.get_template("meetings.html")
-    (out / "meetings" / "index.html").write_text(
-        tmpl.render(meetings=meetings, milestones=milestones, annual=annual),
-        encoding="utf-8",
-    )
+    # docs/meetings/index.html — not rendered for now (kept in git: data/meetings.yaml,
+    # data/milestones.yaml, data/annual.yaml, pipeline/templates/meetings.html), pending
+    # a decision on what to do with this page.
 
     # docs/sources/index.html
     # Rows grouped by country (foreign ministry then executive office), driven
@@ -1129,7 +1129,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     print(f"Rendered → {root.resolve()}")
     print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")
-    print(f"  meetings: {len(meetings)}, milestones: {len(milestones)}")
+    print(f"  meetings: {len(meetings)}")
 
 
 def main() -> None:

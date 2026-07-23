@@ -1,18 +1,6 @@
 {% extends "base.html" %}
+{% set active_page = "country_" + actor %}
 {% block title %}{{ {"FR":"France","DE":"Germany","PL":"Poland"}[actor] }} — Weimar Triangle{% endblock %}
-
-{% block nav %}
-<div class="nav-wrap">
-  <nav>
-    <a href="{{ base_path }}/">Recent</a>
-    <a href="{{ base_path }}/france/" {% if actor == "FR" %}class="active"{% endif %}>France</a>
-    <a href="{{ base_path }}/germany/" {% if actor == "DE" %}class="active"{% endif %}>Germany</a>
-    <a href="{{ base_path }}/poland/" {% if actor == "PL" %}class="active"{% endif %}>Poland</a>
-    <a href="{{ base_path }}/meetings/">Meetings</a>
-    <a href="{{ base_path }}/sources/">Sources</a>
-  </nav>
-</div>
-{% endblock %}
 
 {% block content %}
 

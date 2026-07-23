@@ -60,11 +60,11 @@ Sources (RSS/HTML/API)
 | `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `KNOWN_ACTOR_SOURCES` known-actor set |
 | `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
 | `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
-| `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders 3 pages |
-| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `meetings.html`, `sources.html` |
+| `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
+| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `meetings.html` exists but isn't currently rendered |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
-| `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`) |
-| `data/annual.yaml` | Activity scores 1991–2026 (drives the bar chart on `/meetings/`) |
+| `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`); still loaded for the `meetings_count` stat, not for a rendered page |
+| `data/annual.yaml` | Activity scores 1991–2026 (fed the bar chart on the currently-unrendered `/meetings/` page) |
 | `weimar-tracker.jsx` | Original React dashboard — reference only, not served |
 
 ## Data model
