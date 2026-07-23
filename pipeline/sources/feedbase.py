@@ -22,15 +22,8 @@ from .base import BaseIngester, Event
 # open network; the first CI run surfaces any endpoint that needs adjusting.
 # run_ingester() isolates per-source failures, so a dead feed logs and yields
 # nothing rather than breaking the day's collection.
-#
-# A browser User-Agent, not a self-identifying one: several of these feeds
-# (confirmed reachable and correct by hand) return 403/empty/timeout
-# specifically when fetched with a custom bot string from automated CI runs —
-# consistent with WAF bot-detection rather than a wrong URL. A standard
-# browser UA is the common, low-risk workaround for that class of false
-# positive (this is what most RSS readers and aggregators send).
-_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-_HEADERS = {"User-Agent": _UA}
+
+_HEADERS = {"User-Agent": "minilaterals.com diplomatic tracker (+https://minilaterals.com)"}
 
 _MAX_TEXT = 5000
 
