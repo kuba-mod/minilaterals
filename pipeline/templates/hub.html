@@ -19,87 +19,230 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  html,body{background:#f4ecdb;color:#1c1812;}
-  body{font-family:'Newsreader',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  a{color:#8a3a23;text-decoration:none;}
-  a:hover{color:#8a3a23;}
-  @keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.3}}
-  .fl{display:block;border-radius:3px;box-shadow:0 0 0 1px rgba(28,24,18,.14);object-fit:cover;background:#faf3e3;}
-  .lnk-ul{border-bottom:1px solid transparent;transition:border-color .15s,color .15s;}
-  .lnk-ul:hover{border-bottom-color:#8a3a23;}
+:root {
+  --bg:           #f4ecdb;
+  --bg-paper:     #faf3e3;
+  --bg-card:      #ffffff;
+  --border:       #ddd1b6;
+  --border-light: #e9dfc6;
+  --ink:          #1c1812;
+  --ink-soft:     #3f372b;
+  --muted:        #7a7060;
+  --hl:           #8a3a23;
+
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-sans:  'IBM Plex Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); color: var(--ink); }
+body {
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--hl); text-decoration: none; }
+a:hover { color: var(--hl); }
+
+@keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+.fl {
+  display: block; border-radius: 3px; width: 34px; height: 23px;
+  box-shadow: 0 0 0 1px rgba(28, 24, 18, .14); object-fit: cover; background: var(--bg-paper);
+}
+.lnk-ul { border-bottom: 1px solid transparent; transition: border-color .15s, color .15s; }
+.lnk-ul:hover { border-bottom-color: var(--hl); }
+
+/* ── Header ── */
+.hub-header {
+  position: relative;
+  background: linear-gradient(180deg, var(--bg-paper) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.hub-header-inner { max-width: 1200px; margin: 0 auto; padding: 56px 56px 40px; }
+.hub-header-accent { position: absolute; left: 0; right: 0; bottom: -1px; height: 4px; background: #c8a648; opacity: .6; }
+
+.hub-eyebrow-row {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 18px; flex-wrap: wrap; margin-bottom: 22px; font-family: var(--font-sans);
+}
+.hub-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; align-items: center; }
+.hub-eyebrow-dash { width: 28px; height: 1px; background: var(--ink-soft); }
+.hub-meta { font-size: 12px; color: var(--muted); }
+.hub-meta strong { color: var(--ink); font-weight: 500; }
+.hub-meta a { color: var(--muted); border-bottom: 1px solid var(--border); }
+
+.hub-title {
+  font-family: var(--font-serif); font-weight: 500;
+  font-size: clamp(46px, 7vw, 78px); line-height: .94; letter-spacing: -.03em;
+  color: var(--ink); margin-bottom: 22px;
+}
+.hub-title em { font-style: italic; color: var(--hl); font-weight: 400; }
+.hub-tagline {
+  font-family: var(--font-serif); font-size: clamp(18px, 1.7vw, 21px);
+  line-height: 1.45; color: var(--ink-soft); max-width: 600px;
+}
+
+.hub-blurbs {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  margin-top: 36px; padding-top: 26px; border-top: 1px solid var(--border);
+  font-family: var(--font-sans);
+}
+.hub-blurb-title { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--hl); margin-bottom: 7px; }
+.hub-blurb-desc { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+
+/* ── Main / groupings grid ── */
+.hub-main { max-width: 1200px; margin: 0 auto; padding: 48px 56px 24px; }
+.hub-section-head { font-family: var(--font-serif); font-size: 30px; font-weight: 500; letter-spacing: -.01em; margin-bottom: 6px; }
+.hub-section-lede { font-family: var(--font-sans); font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+
+.hub-card {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: 13px;
+  border-radius: 12px; padding: 22px 22px 20px;
+}
+.hub-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.hub-card-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px 10px; margin-top: 4px; }
+.hub-card-flags { display: flex; gap: 5px; }
+.hub-card-name { font-family: var(--font-serif); font-size: 23px; font-weight: 500; line-height: 1.1; letter-spacing: -.01em; }
+.hub-card-members { font-family: var(--font-sans); font-size: 12px; color: var(--muted); }
+.hub-card-blurb { font-family: var(--font-serif); font-size: 15px; line-height: 1.5; }
+.hub-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.hub-tag {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+  border: 1px solid; padding: 3px 10px; border-radius: 100px;
+}
+
+.hub-card--live {
+  background: var(--bg-card); border: 1px solid #c9ba97;
+  box-shadow: 0 8px 22px rgba(58, 46, 20, .08);
+}
+.hub-card--live .hub-card-accent { background: linear-gradient(90deg, #1f4279 0 33.33%, #c8a648 33.33% 66.66%, #b22823 66.66%); }
+.hub-card--live .hub-card-name { color: var(--ink); }
+.hub-card--live .hub-card-blurb { color: var(--ink-soft); }
+.hub-card--live .hub-tags { margin-top: 2px; }
+.hub-card--live .hub-tag { color: var(--muted); border-color: var(--border); background: var(--bg-paper); }
+
+.hub-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-sans); font-size: 10px; font-weight: 600;
+  letter-spacing: .5px; text-transform: uppercase;
+  color: var(--badge-color); background: color-mix(in srgb, var(--badge-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge-color) 35%, transparent);
+  padding: 4px 10px; border-radius: 100px;
+}
+.hub-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--badge-color); animation: pulseDot 2s infinite; }
+
+.hub-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--border-light);
+  font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; color: var(--hl);
+}
+.hub-card-footer strong { font-family: var(--font-serif); font-weight: 500; font-size: 16px; }
+
+.hub-card--soon { background: var(--bg-paper); border: 1px solid #e0d5ba; opacity: .94; }
+.hub-card--soon .hub-card-accent { opacity: .42; background: var(--accent); }
+.hub-card--soon .hub-card-name { color: var(--ink-soft); }
+.hub-card--soon .hub-card-blurb { color: #6a6152; }
+.hub-card--soon .hub-tags { margin-top: auto; }
+.hub-card--soon .hub-tag { color: #8a7d66; border-color: #e0d5ba; background: var(--bg-card); }
+.hub-soon-badge {
+  font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  color: var(--muted); background: #ebe3d3; border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 100px; white-space: nowrap;
+}
+
+/* ── Footer ── */
+.hub-footer {
+  max-width: 1200px; margin: 60px auto 0; border-top: 1px solid var(--border);
+  padding: 28px 56px 56px; font-family: var(--font-sans); font-size: 13px; color: var(--muted);
+}
+.hub-footer a { color: var(--hl); }
+
+/* ── Mobile ── */
+@media (max-width: 820px) {
+  .hub-header-inner { padding: 40px 24px 28px; }
+  .hub-blurbs { grid-template-columns: 1fr; gap: 18px; }
+  .hub-main { padding: 32px 24px 16px; }
+  .hub-grid { grid-template-columns: 1fr; }
+  .hub-footer { padding: 24px; }
+}
 </style>
 </head>
 <body>
 
-<header style="position:relative;background:linear-gradient(180deg,#faf3e3 0%,#f4ecdb 100%);border-bottom:1px solid #ddd1b6;">
-  <div style="max-width:1200px;margin:0 auto;padding:56px 56px 40px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:22px;font-family:'IBM Plex Sans',sans-serif;">
-      <div style="font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#7a7060;display:flex;gap:12px;align-items:center;"><span style="width:28px;height:1px;background:#3f372b;"></span>A Coordination Tracker</div>
-      <div style="font-size:12px;color:#7a7060;">{{ hub_groupings|length + 1 }} groupings &nbsp;·&nbsp; Edition of <strong style="color:#1c1812;font-weight:500;">{{ edition_hub_date_str }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/" class="lnk-ul" style="color:#7a7060;border-bottom:1px solid #ddd1b6;">Methodology</a></div>
+<header class="hub-header">
+  <div class="hub-header-inner">
+    <div class="hub-eyebrow-row">
+      <div class="hub-eyebrow"><span class="hub-eyebrow-dash"></span>A Coordination Tracker</div>
+      <div class="hub-meta">{{ hub_groupings|length + 1 }} groupings &nbsp;·&nbsp; Edition of <strong>{{ edition_hub_date_str }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/" class="lnk-ul">Methodology</a></div>
     </div>
-    <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(46px,7vw,78px);line-height:.94;letter-spacing:-.03em;color:#1c1812;margin-bottom:22px;">The <em style="font-style:italic;color:#8a3a23;font-weight:400;">minilaterals</em> monitor</h1>
-    <p style="font-family:'Newsreader',Georgia,serif;font-size:clamp(18px,1.7vw,21px);line-height:1.45;color:#3f372b;max-width:600px;">Formal alliances make the headlines. The real coordination happens in small groups — three or four capitals moving together, or not. We track what each says, week by week, and measure how aligned they actually are.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px;padding-top:26px;border-top:1px solid #ddd1b6;font-family:'IBM Plex Sans',sans-serif;">
-      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">Positional comparison</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">When several capitals speak on one topic in the same week, we line their statements up side by side.</div></div>
-      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">A stance, scored</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">Each statement is rated −2 to +2 against the group's shared goal, always backed by a quote.</div></div>
-      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">Files, not a database</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">Every tracked statement is a plain text file in a public repo. The history is the audit log.</div></div>
+    <h1 class="hub-title">The <em>minilaterals</em> monitor</h1>
+    <p class="hub-tagline">Formal alliances make the headlines. The real coordination happens in small groups — three or four capitals moving together, or not. We track what each says, week by week, and measure how aligned they actually are.</p>
+    <div class="hub-blurbs">
+      <div><div class="hub-blurb-title">Positional comparison</div><div class="hub-blurb-desc">When several capitals speak on one topic in the same week, we line their statements up side by side.</div></div>
+      <div><div class="hub-blurb-title">A stance, scored</div><div class="hub-blurb-desc">Each statement is rated −2 to +2 against the group's shared goal, always backed by a quote.</div></div>
+      <div><div class="hub-blurb-title">Files, not a database</div><div class="hub-blurb-desc">Every tracked statement is a plain text file in a public repo. The history is the audit log.</div></div>
     </div>
   </div>
-  <div style="position:absolute;left:0;right:0;bottom:-1px;height:4px;background:#c8a648;opacity:.6;"></div>
+  <div class="hub-header-accent"></div>
 </header>
 
-<main style="max-width:1200px;margin:0 auto;padding:48px 56px 24px;">
-  <div style="font-family:'Newsreader',Georgia,serif;font-size:30px;font-weight:500;letter-spacing:-.01em;margin-bottom:6px;">The groupings</div>
-  <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:#7a7060;margin-bottom:28px;">One tracker per small group. Open a live one to see this week's side-by-side comparison.</div>
+<main class="hub-main">
+  <div class="hub-section-head">The groupings</div>
+  <div class="hub-section-lede">One tracker per small group. Open a live one to see this week's side-by-side comparison.</div>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;">
+  <div class="hub-grid">
     {# ── Weimar Triangle (live) ── #}
-    <a href="{{ base_path }}/" style="position:relative;display:flex;flex-direction:column;gap:13px;background:#fff;border:1px solid #c9ba97;border-radius:12px;padding:22px 22px 20px;box-shadow:0 8px 22px rgba(58,46,20,.08);overflow:hidden;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%);"></div>
-      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 10px;margin-top:4px;">
-        <div style="display:flex;gap:5px;">
+    <a href="{{ base_path }}/" class="hub-card hub-card--live">
+      <div class="hub-card-accent"></div>
+      <div class="hub-card-top">
+        <div class="hub-card-flags">
           {% for a in weimar_actors %}
-          <img class="fl" src="https://flagcdn.com/{{ {'FR':'fr','DE':'de','PL':'pl'}[a] }}.svg" alt="" style="width:34px;height:23px;">
+          <img class="fl" src="https://flagcdn.com/{{ {'FR':'fr','DE':'de','PL':'pl'}[a] }}.svg" alt="">
           {% endfor %}
         </div>
         {% if weimar_badge %}
-        <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:{{ weimar_badge.color }};background:{{ weimar_badge.color }}18;border:1px solid {{ weimar_badge.color }}44;padding:4px 10px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:{{ weimar_badge.color }};animation:pulseDot 2s infinite;"></span>{{ weimar_badge.label }}</span>
+        <span class="hub-badge" style="--badge-color: {{ weimar_badge.color }};">
+          <span class="hub-badge-dot"></span>{{ weimar_badge.label }}
+        </span>
         {% endif %}
       </div>
-      <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:500;line-height:1.1;letter-spacing:-.01em;color:#1c1812;">The Weimar Triangle</div>
-      <div style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#7a7060;">France · Germany · Poland</div>
-      <div style="font-family:'Newsreader',Georgia,serif;font-size:15px;line-height:1.5;color:#3f372b;">The original trilateral — and the grouping this tracker was built around.</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;">
+      <div class="hub-card-name">The Weimar Triangle</div>
+      <div class="hub-card-members">France · Germany · Poland</div>
+      <div class="hub-card-blurb">The original trilateral — and the grouping this tracker was built around.</div>
+      <div class="hub-tags">
         {% for area in issue_order %}
-        <span style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;color:#7a7060;border:1px solid #ddd1b6;background:#faf3e3;padding:3px 10px;border-radius:100px;">{{ issue_labels[area] }}</span>
+        <span class="hub-tag">{{ issue_labels[area] }}</span>
         {% endfor %}
       </div>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;padding-top:12px;border-top:1px solid #e9dfc6;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:500;color:#8a3a23;"><span><strong style="font-family:'Newsreader',serif;font-weight:500;font-size:16px;">{{ weimar_weekly_statements }}</strong> statement{{ '' if weimar_weekly_statements == 1 else 's' }} this week</span><span>Open tracker →</span></div>
+      <div class="hub-card-footer"><span><strong>{{ weimar_weekly_statements }}</strong> statement{{ '' if weimar_weekly_statements == 1 else 's' }} this week</span><span>Open tracker →</span></div>
     </a>
 
     {# ── Coming soon ── #}
     {% for m in hub_groupings %}
-    <div style="position:relative;overflow:hidden;display:flex;flex-direction:column;gap:13px;background:#faf3e3;border:1px solid #e0d5ba;border-radius:12px;padding:22px 22px 20px;opacity:.94;">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;opacity:.42;background:{{ m.accent }};"></div>
-      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 10px;margin-top:4px;">
-        <div style="display:flex;gap:5px;">
-          {% for c in m.members %}<img class="fl" src="https://flagcdn.com/{{ c }}.svg" alt="" style="width:34px;height:23px;">{% endfor %}
+    <div class="hub-card hub-card--soon">
+      <div class="hub-card-accent" style="--accent: {{ m.accent }};"></div>
+      <div class="hub-card-top">
+        <div class="hub-card-flags">
+          {% for c in m.members %}<img class="fl" src="https://flagcdn.com/{{ c }}.svg" alt="">{% endfor %}
         </div>
-        <span style="font-family:'IBM Plex Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7a7060;background:#ebe3d3;border:1px solid #ddd1b6;padding:4px 10px;border-radius:100px;white-space:nowrap;">Coming soon</span>
+        <span class="hub-soon-badge">Coming soon</span>
       </div>
-      <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:500;line-height:1.1;letter-spacing:-.01em;color:#3f372b;">{{ m.name }}</div>
-      <div style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#7a7060;">{{ m.member_names }}</div>
-      <div style="font-family:'Newsreader',Georgia,serif;font-size:15px;line-height:1.5;color:#6a6152;">{{ m.blurb }}</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;">
-        {% for t in m.topics %}<span style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;color:#8a7d66;border:1px solid #e0d5ba;background:#fff;padding:3px 10px;border-radius:100px;">{{ t }}</span>{% endfor %}
+      <div class="hub-card-name">{{ m.name }}</div>
+      <div class="hub-card-members">{{ m.member_names }}</div>
+      <div class="hub-card-blurb">{{ m.blurb }}</div>
+      <div class="hub-tags">
+        {% for t in m.topics %}<span class="hub-tag">{{ t }}</span>{% endfor %}
       </div>
     </div>
     {% endfor %}
   </div>
 </main>
 
-<footer style="max-width:1200px;margin:60px auto 0;border-top:1px solid #ddd1b6;padding:28px 56px 56px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:#7a7060;">minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/" style="color:#8a3a23;">methodology &amp; sources</a></footer>
+<footer class="hub-footer">minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/">methodology &amp; sources</a></footer>
 
 </body>
 </html>
