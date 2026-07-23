@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>minilaterals — a coordination tracker</title>
+<meta name="description" content="Formal alliances make the headlines. The real coordination happens in small groups. We track what each capital says, week by week, and measure how aligned they actually are.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="minilaterals — a coordination tracker">
+<meta property="og:description" content="Formal alliances make the headlines. The real coordination happens in small groups. We track what each capital says, week by week, and measure how aligned they actually are.">
+<meta property="og:image" content="/og-image.svg">
+<meta property="og:site_name" content="minilaterals">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="minilaterals — a coordination tracker">
+<meta name="twitter:description" content="Formal alliances make the headlines. The real coordination happens in small groups. We track what each capital says, week by week, and measure how aligned they actually are.">
+<meta name="twitter:image" content="/og-image.svg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#f4ecdb;color:#1c1812;}
+  body{font-family:'Newsreader',Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  a{color:#8a3a23;text-decoration:none;}
+  a:hover{color:#8a3a23;}
+  @keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.3}}
+  .fl{display:block;border-radius:3px;box-shadow:0 0 0 1px rgba(28,24,18,.14);object-fit:cover;background:#faf3e3;}
+  .lnk-ul{border-bottom:1px solid transparent;transition:border-color .15s,color .15s;}
+  .lnk-ul:hover{border-bottom-color:#8a3a23;}
+</style>
+</head>
+<body>
+
+<header style="position:relative;background:linear-gradient(180deg,#faf3e3 0%,#f4ecdb 100%);border-bottom:1px solid #ddd1b6;">
+  <div style="max-width:1200px;margin:0 auto;padding:56px 56px 40px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:22px;font-family:'IBM Plex Sans',sans-serif;">
+      <div style="font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#7a7060;display:flex;gap:12px;align-items:center;"><span style="width:28px;height:1px;background:#3f372b;"></span>A Coordination Tracker</div>
+      <div style="font-size:12px;color:#7a7060;">{{ hub_groupings|length + 1 }} groupings &nbsp;·&nbsp; Edition of <strong style="color:#1c1812;font-weight:500;">{{ edition_hub_date_str }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/" class="lnk-ul" style="color:#7a7060;border-bottom:1px solid #ddd1b6;">Methodology</a></div>
+    </div>
+    <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(46px,7vw,78px);line-height:.94;letter-spacing:-.03em;color:#1c1812;margin-bottom:22px;">The <em style="font-style:italic;color:#8a3a23;font-weight:400;">minilaterals</em> monitor</h1>
+    <p style="font-family:'Newsreader',Georgia,serif;font-size:clamp(18px,1.7vw,21px);line-height:1.45;color:#3f372b;max-width:600px;">Formal alliances make the headlines. The real coordination happens in small groups — three or four capitals moving together, or not. We track what each says, week by week, and measure how aligned they actually are.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px;padding-top:26px;border-top:1px solid #ddd1b6;font-family:'IBM Plex Sans',sans-serif;">
+      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">Positional comparison</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">When several capitals speak on one topic in the same week, we line their statements up side by side.</div></div>
+      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">A stance, scored</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">Each statement is rated −2 to +2 against the group's shared goal, always backed by a quote.</div></div>
+      <div><div style="font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#8a3a23;margin-bottom:7px;">Files, not a database</div><div style="font-size:13.5px;line-height:1.5;color:#3f372b;">Every tracked statement is a plain text file in a public repo. The history is the audit log.</div></div>
+    </div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:-1px;height:4px;background:#c8a648;opacity:.6;"></div>
+</header>
+
+<div style="border-bottom:1px solid #ddd1b6;background:#f4ecdb;"><nav style="max-width:1200px;margin:0 auto;padding:0 56px;display:flex;gap:32px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:500;">
+  <span style="padding:18px 0;color:#1c1812;border-bottom:2px solid #8a3a23;">Overview</span>
+  <a href="{{ base_path }}/sources/" class="lnk-ul" style="padding:18px 0;color:#7a7060;">Methodology</a>
+  <a href="#about" class="lnk-ul" style="padding:18px 0;color:#7a7060;">About</a>
+</nav></div>
+
+<main style="max-width:1200px;margin:0 auto;padding:48px 56px 24px;">
+  <div style="font-family:'Newsreader',Georgia,serif;font-size:30px;font-weight:500;letter-spacing:-.01em;margin-bottom:6px;">The groupings</div>
+  <div style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;color:#7a7060;margin-bottom:28px;">One tracker per small group. Open a live one to see this week's side-by-side comparison.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;">
+    {# ── Weimar Triangle (live) ── #}
+    <a href="{{ base_path }}/" style="position:relative;display:flex;flex-direction:column;gap:13px;background:#fff;border:1px solid #c9ba97;border-radius:12px;padding:22px 22px 20px;box-shadow:0 8px 22px rgba(58,46,20,.08);overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%);"></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 10px;margin-top:4px;">
+        <div style="display:flex;gap:5px;">
+          {% for a in weimar_actors %}
+          <img class="fl" src="https://flagcdn.com/{{ {'FR':'fr','DE':'de','PL':'pl'}[a] }}.svg" alt="" style="width:34px;height:23px;">
+          {% endfor %}
+        </div>
+        {% if weimar_badge %}
+        <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:{{ weimar_badge.color }};background:{{ weimar_badge.color }}18;border:1px solid {{ weimar_badge.color }}44;padding:4px 10px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:{{ weimar_badge.color }};animation:pulseDot 2s infinite;"></span>{{ weimar_badge.label }}</span>
+        {% endif %}
+      </div>
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:500;line-height:1.1;letter-spacing:-.01em;color:#1c1812;">The Weimar Triangle</div>
+      <div style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#7a7060;">France · Germany · Poland</div>
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:15px;line-height:1.5;color:#3f372b;">The original trilateral — and the grouping this tracker was built around.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;">
+        {% for area in issue_order %}
+        <span style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;color:#7a7060;border:1px solid #ddd1b6;background:#faf3e3;padding:3px 10px;border-radius:100px;">{{ issue_labels[area] }}</span>
+        {% endfor %}
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;padding-top:12px;border-top:1px solid #e9dfc6;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;font-weight:500;color:#8a3a23;"><span><strong style="font-family:'Newsreader',serif;font-weight:500;font-size:16px;">{{ weimar_weekly_statements }}</strong> statement{{ '' if weimar_weekly_statements == 1 else 's' }} this week</span><span>Open tracker →</span></div>
+    </a>
+
+    {# ── Coming soon ── #}
+    {% for m in hub_groupings %}
+    <div style="position:relative;overflow:hidden;display:flex;flex-direction:column;gap:13px;background:#faf3e3;border:1px solid #e0d5ba;border-radius:12px;padding:22px 22px 20px;opacity:.94;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;opacity:.42;background:{{ m.accent }};"></div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 10px;margin-top:4px;">
+        <div style="display:flex;gap:5px;">
+          {% for c in m.members %}<img class="fl" src="https://flagcdn.com/{{ c }}.svg" alt="" style="width:34px;height:23px;">{% endfor %}
+        </div>
+        <span style="font-family:'IBM Plex Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#7a7060;background:#ebe3d3;border:1px solid #ddd1b6;padding:4px 10px;border-radius:100px;white-space:nowrap;">Coming soon</span>
+      </div>
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:500;line-height:1.1;letter-spacing:-.01em;color:#3f372b;">{{ m.name }}</div>
+      <div style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:#7a7060;">{{ m.member_names }}</div>
+      <div style="font-family:'Newsreader',Georgia,serif;font-size:15px;line-height:1.5;color:#6a6152;">{{ m.blurb }}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;">
+        {% for t in m.topics %}<span style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:500;color:#8a7d66;border:1px solid #e0d5ba;background:#fff;padding:3px 10px;border-radius:100px;">{{ t }}</span>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div id="about" style="margin:52px 0 0;padding:28px 0 0;border-top:1px solid #ddd1b6;">
+    <h3 style="font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7a7060;margin-bottom:20px;">About this tracker</h3>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;font-family:'Newsreader',Georgia,serif;font-size:15px;color:#3f372b;line-height:1.45;">
+      <div><strong style="display:block;font-size:44px;font-weight:400;color:#1c1812;letter-spacing:-.018em;line-height:1;margin-bottom:10px;">{{ hub_groupings|length + 1 }}</strong>minilateral groupings tracked, from the Weimar Triangle to AUKUS.</div>
+      <div><strong style="display:block;font-size:44px;font-weight:400;color:#1c1812;letter-spacing:-.018em;line-height:1;margin-bottom:10px;">−2…+2</strong>stance scale rating each statement against the group's shared goal, backed by a quote.</div>
+      <div><strong style="display:block;font-size:44px;font-weight:400;color:#1c1812;letter-spacing:-.018em;line-height:1;margin-bottom:10px;">0</strong>databases. Every event is a plain text file in a public repo — the history is the audit log.</div>
+    </div>
+  </div>
+</main>
+
+<footer style="max-width:1200px;margin:60px auto 0;border-top:1px solid #ddd1b6;padding:28px 56px 56px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:#7a7060;">minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/" style="color:#8a3a23;">methodology &amp; sources</a></footer>
+
+</body>
+</html>

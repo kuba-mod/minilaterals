@@ -855,6 +855,45 @@ ROBOTS_TXT = """User-agent: *
 Allow: /
 """
 
+# Umbrella hub page (minilaterals.com root): one card per minilateral grouping.
+# Only the Weimar Triangle is live; the rest are placeholders until their own
+# ingesters/render targets exist. Flag codes are ISO 3166-1 alpha-2, lowercase,
+# for flagcdn.com.
+HUB_GROUPINGS = [
+    {
+        "name": "The E3",
+        "accent": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
+        "members": ["de", "fr", "gb"],
+        "member_names": "Germany · France · United Kingdom",
+        "topics": ["Iran", "Defence", "Nuclear file"],
+        "blurb": "Europe's lead trio on Iran and hard security — Berlin, Paris and London coordinating outside the EU frame.",
+    },
+    {
+        "name": "The Visegrád Group",
+        "accent": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
+        "members": ["pl", "cz", "sk", "hu"],
+        "member_names": "Poland · Czechia · Slovakia · Hungary",
+        "topics": ["Migration", "EU funds", "Energy"],
+        "blurb": "Central Europe's caucus inside the EU — four capitals that vote together more often than not.",
+    },
+    {
+        "name": "The Baltic Three",
+        "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
+        "members": ["ee", "lv", "lt"],
+        "member_names": "Estonia · Latvia · Lithuania",
+        "topics": ["Deterrence", "Russia", "Energy security"],
+        "blurb": "NATO's north-eastern frontier — Tallinn, Riga and Vilnius rarely more than a sentence apart.",
+    },
+    {
+        "name": "AUKUS",
+        "accent": "linear-gradient(90deg,#00247d 0 33.33%,#c8102e 33.33% 66.66%,#3c3b6e 66.66%)",
+        "members": ["au", "gb", "us"],
+        "member_names": "Australia · United Kingdom · United States",
+        "topics": ["Submarines", "Indo-Pacific", "Defence tech"],
+        "blurb": "A Pacific security pact built around nuclear-powered submarines and shared defence technology.",
+    },
+]
+
 
 # ---------------------------------------------------------------------------
 # Render
@@ -876,6 +915,15 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
     (out / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
     (out / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
+    if base_path:
+        # The hub page (rendered further below) occupies the true domain root,
+        # so it needs its own copies of these root-relative assets alongside
+        # the ones the subsite already wrote into `out`.
+        root.mkdir(parents=True, exist_ok=True)
+        (root / ".nojekyll").touch()
+        (root / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
+        (root / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
+        (root / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
 
     edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
@@ -1121,11 +1169,34 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     # Root-level deploy files, beside (not inside) the base-path subdir.
     # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
-    # not_found_handling); _redirects sends the bare root into the site and is
-    # only meaningful when the site sits under a path prefix.
+    # not_found_handling).
     (root / "404.html").write_text(env.get_template("404.html").render() + "\n", encoding="utf-8")
+
+    # docs/index.html — the minilaterals.com hub page, one card per minilateral
+    # grouping. Only rendered when the site sits under a path prefix (base_path
+    # set): that's what makes room for a hub at the true domain root. In local
+    # dev (no SITE_BASE_PATH) `out` already *is* `root`, so the Weimar Triangle
+    # tracker's own index.html lives there instead.
     if base_path:
-        (root / "_redirects").write_text(f"/  {base_path}/  301\n", encoding="utf-8")
+        overall_series = topic_weekly.get("overall") or []
+        latest_overall = next((w for w in reversed(overall_series) if w), None)
+        weimar_badge = (
+            {"label": latest_overall["label"], "color": latest_overall["color"]} if latest_overall else None
+        )
+        tmpl = env.get_template("hub.html")
+        (root / "index.html").write_text(
+            tmpl.render(
+                base_path=base_path,
+                weimar_actors=WEIMAR_ACTORS,
+                issue_order=ISSUE_ORDER,
+                issue_labels=ISSUE_LABELS,
+                edition_hub_date_str=edition_dt.strftime("%-d %b %Y"),
+                weimar_weekly_statements=sum(weekly_counts.values()),
+                weimar_badge=weimar_badge,
+                hub_groupings=HUB_GROUPINGS,
+            ),
+            encoding="utf-8",
+        )
 
     print(f"Rendered → {root.resolve()}")
     print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")
