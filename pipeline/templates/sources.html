@@ -153,29 +153,6 @@
   </ul>
 </div>
 
-<div class="section-head">Data sources</div>
-<p class="method-intro" style="font-size:16px;margin-bottom:18px">Six official sources, two per country — a foreign ministry and a top executive office.</p>
-
-<div class="table-wrap sources-table" style="margin-bottom:40px">
-<table>
-  <thead>
-    <tr><th>Source</th><th>Country</th><th>Type</th><th>Read in</th></tr>
-  </thead>
-  <tbody>
-    {% for row in source_rows %}
-    <tr>
-      <td>{{ row.institution }}</td>
-      <td><span class="tag" style="color:{{ actor_colors[row.actor] }}; border-color:{{ actor_colors[row.actor] }}44; background:{{ actor_colors[row.actor] }}18">{{ row.actor }}</span></td>
-      <td style="font-size:15px; color:var(--ink-soft); font-style:normal">{{ row.type }}</td>
-      <td style="font-size:15px; color:var(--ink-soft); font-style:normal">
-        {% if row.lang == 'EN' %}English{% elif row.lang == 'DE' %}German{% elif row.lang == 'FR' %}French{% elif row.lang == 'PL' %}Polish{% else %}{{ row.lang }}{% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
-
 <details class="tech-details">
   <summary>
     <span class="tlabel">For the technically minded<small>The model, the data format, pipeline status, and how provenance is tracked</small></span>
@@ -215,12 +192,12 @@
         collected before this tracking was added are reconstructed from git history.
       </p>
 
-      <span class="label">Pipeline status</span>
-      <p style="margin-bottom:10px">Last ingest run{% if run %} — <span class="mono" style="font-size:13px">{{ run.date }}</span>{% endif %}, per source:</p>
+      <span class="label">Sources &amp; pipeline status</span>
+      <p style="margin-bottom:10px">Six official sources, two per country — a foreign ministry and a top executive office. Last ingest run{% if run %} — <span class="mono" style="font-size:13px">{{ run.date }}</span>{% endif %}:</p>
       <div class="table-wrap sources-table" style="margin-bottom:4px">
       <table>
         <thead>
-          <tr><th>Source</th><th>Method</th><th>Last success</th><th>Fetched / new</th><th>Status</th></tr>
+          <tr><th>Source</th><th>Lang</th><th>Method</th><th>Success</th><th>Fetched</th><th>Status</th></tr>
         </thead>
         <tbody>
           {% for row in source_rows %}
@@ -228,10 +205,16 @@
           {% set s = source_stats.get(src, {}) %}
           {% set h = source_health.get(src, {}) %}
           <tr>
-            <td class="mono" style="font-size:13px !important">{{ source_labels.get(src, src) }}</td>
-            <td style="font-size:13px; color:var(--muted)">{{ row.method }}</td>
-            <td class="mono" style="font-size:13px !important">{{ h.last_ok or '—' }}</td>
-            <td class="mono" style="font-size:13px !important">{{ '%s / %s' % (s.fetched, s.new) if s else '—' }}</td>
+            <td class="mono">
+              {{ source_labels.get(src, src) }}
+              <span class="tag" style="color:{{ actor_colors[row.actor] }}; border-color:{{ actor_colors[row.actor] }}44; background:{{ actor_colors[row.actor] }}18; margin-left:4px">{{ row.actor }}</span>
+            </td>
+            <td style="color:var(--muted)">
+              {% if row.lang == 'EN' %}English{% elif row.lang == 'DE' %}German{% elif row.lang == 'FR' %}French{% elif row.lang == 'PL' %}Polish{% else %}{{ row.lang }}{% endif %}
+            </td>
+            <td style="color:var(--muted)">{{ row.method }}</td>
+            <td class="mono">{{ h.last_ok or '—' }}</td>
+            <td class="mono">{{ '%s (+%s)' % (s.fetched, s.new) if s else '—' }}</td>
             <td>
               {% if h.get('last_error') %}
               <span class="tag" style="color:var(--red); border-color:var(--red)44; background:var(--red-faint)" title="{{ h.last_error }}">error</span>
