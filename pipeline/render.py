@@ -1180,9 +1180,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     if base_path:
         overall_series = topic_weekly.get("overall") or []
         latest_overall = next((w for w in reversed(overall_series) if w), None)
-        weimar_badge = (
-            {"label": latest_overall["label"], "color": latest_overall["color"]} if latest_overall else None
-        )
+        weimar_badge = {"label": latest_overall["label"], "color": latest_overall["color"]} if latest_overall else None
         tmpl = env.get_template("hub.html")
         (root / "index.html").write_text(
             tmpl.render(
