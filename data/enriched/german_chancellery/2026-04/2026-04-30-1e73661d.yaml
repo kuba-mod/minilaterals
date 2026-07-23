@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Friedrich Merz
+  topics:
+  - defence
+  location: Munster, Germany
+  position: The German government is focusing on internal fiscal stability, healthcare
+    reform, and the modernization of the Bundeswehr.
+  positions:
+    defence: Germany is investing in the modernization and digitalization of its military
+      capabilities to enhance deterrence.
+  stances:
+    defence:
+      score: 2
+      evidence: Die vernetzte und digitalisierte Truppe schreckt mit modernster Aufklärungs-
+        und Drohnentechnik ab.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

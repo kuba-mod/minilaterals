@@ -1,0 +1,18 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Poland highlights the immense economic growth and development achieved
+    through its 22-year membership in the European Union.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

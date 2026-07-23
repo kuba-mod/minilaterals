@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Kanzler Merz
+  - Lars Klingbeil
+  - General Freuding
+  topics:
+  - defence
+  location: Munster, Germany
+  position: Germany is prioritizing the comprehensive strengthening and modernization
+    of the Bundeswehr to ensure immediate deterrence and long-term capability within
+    NATO.
+  positions:
+    defence: Germany is actively increasing defense spending and implementing structural
+      adjustments to enhance its military capability and leadership role in NATO.
+  stances:
+    defence:
+      score: 2
+      evidence: Dafür wurden bereits wichtige Maßnahmen angestoßen – von höheren Verteidigungsausgaben
+        bis hin zu neuen Beschaffungen und strukturellen Anpassungen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

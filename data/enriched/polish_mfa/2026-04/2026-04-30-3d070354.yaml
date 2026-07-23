@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Abdelmadjid Tebboune
+  - Ahmed Attaf
+  - Grzegorz Wrona
+  - Agnieszka Kurpińska
+  - Mariusz Bogacki
+  - Karolina Florek
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Algeria
+  position: Poland seeks to develop bilateral economic and diplomatic relations with
+    Algeria, focusing on energy, agriculture, and regional security.
+  positions:
+    ukraine: Poland emphasizes the importance of international security and stability
+      in the context of the war in Ukraine.
+    rule_of_law: Poland reaffirms its commitment to the principles of international
+      law.
+  stances:
+    ukraine:
+      score: 1
+      evidence: podkreślając znaczenie bezpieczeństwa, stabilności oraz przestrzegania
+        prawa międzynarodowego, zarówno w kontekście wojny w Ukrainie
+    rule_of_law:
+      score: 1
+      evidence: Rozmówcy potwierdzili przywiązanie do zasad prawa międzynarodowego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

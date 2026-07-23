@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Karin Prien
+  - Wadephul
+  - Nasser Bourita
+  - Demetrios Nicolaides
+  topics: []
+  location: null
+  position: Germany is conducting diplomatic visits to Canada to discuss education
+    policy and to Morocco for strategic consultations and economic cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

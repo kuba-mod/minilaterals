@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Verena Hubertz, Bundesministerin für Wohnen, Stadtentwicklung und Bauwesen
+  topics:
+  - green_transition
+  - rule_of_law
+  location: null
+  position: Germany is implementing a significantly expanded urban development funding
+    program to create sustainable living spaces and strengthen social cohesion.
+  positions:
+    green_transition: Germany is allocating substantial financial resources to create
+      climate-fit infrastructure and sustainable urban environments.
+    rule_of_law: Germany links the improvement of urban living conditions and social
+      cohesion to the acceptance of democracy.
+  stances:
+    green_transition:
+      score: 2
+      evidence: erstmals stellt der Bund im Jahr 2026 Städten und Gemeinden eine Milliarde
+        Euro für die Städtebauförderung bereit
+    rule_of_law:
+      score: 1
+      evidence: lebenswerte Städte und Kommunen sind wichtig für das gesellschaftliche
+        Zusammenleben, für attraktive Arbeitsplätze und für die Akzeptanz der Demokratie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

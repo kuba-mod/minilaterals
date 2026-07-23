@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Helen McEntee
+  - Wicepremier Sikorski
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Warsaw, Poland
+  position: Poland coordinated with Ireland to support Ukraine's integration and security,
+    while strengthening EU defense capabilities and economic ties.
+  positions:
+    ukraine: Poland emphasizes the necessity of continued aid to Kyiv and views Ukrainian
+      support as essential for EU security.
+    defence: Poland aligns with the goal of strengthening EU defense capabilities
+      and investing in the security industry.
+    hybrid: Poland acknowledges the need to address emerging hybrid threats as part
+      of a broader security strategy.
+    enlargement: Poland actively advances EU enlargement by providing advisory support
+      for reforms in Ukraine and supporting Western Balkans countries.
+  stances:
+    ukraine:
+      score: 1
+      evidence: zgadzają się, że konieczna jest dalsza pomoc dla Kijowa
+    defence:
+      score: 1
+      evidence: byśmy wspólnie zadbali o to, by nasza obrona była silna, byśmy inwestowali
+        w przemysł bezpieczeństwa i obronny
+    hybrid:
+      score: 1
+      evidence: byśmy stawiali czoła nowym i pojawiającym się wyzwaniom, czy to zagrożeniom
+        hybrydowym
+    enlargement:
+      score: 2
+      evidence: Polska doradza ukraińskim organom administracji publicznej we wprowadzaniu
+        reform związanych z UE i dostosowywaniu prawodawstwa do unijnego dorobku prawnego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

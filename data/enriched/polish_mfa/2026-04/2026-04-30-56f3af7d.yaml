@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  - Crisis Management Team
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland condemns the use of force on international waters and demands explanations
+    and safety guarantees from Israeli armed forces for the Global Sumud Flotilla
+    participants.
+  positions:
+    rule_of_law: Poland supports the principle of the rule of law by calling for adherence
+      to international law and the law of the sea.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Wzywamy wszystkie strony do przestrzegania obowiązującego prawa międzynarodowego.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

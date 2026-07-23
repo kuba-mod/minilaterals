@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Nikol Paschinjan
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: Germany discussed regional stability in the South Caucasus and expressed
+    support for Armenia's relations with the EU and the peace process with Azerbaijan.
+  positions:
+    ukraine: Germany maintains an interest in the impact of Russia's war against Ukraine
+      on regional stability.
+    enlargement: Germany rhetorically supports the strengthening of Armenia's relationship
+      with the European Union.
+  stances:
+    ukraine:
+      score: 1
+      evidence: tauschten sich zur aktuellen Lage im Nahen Osten und zum Krieg Russlands
+        gegen die Ukraine sowie den Auswirkungen auf den Südkaukasus aus
+    enlargement:
+      score: 1
+      evidence: beide betonten in diesem Zusammenhang die Chancen für den Ausbau der
+        bilateralen Beziehungen und der Beziehungen Armeniens mit der EU
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

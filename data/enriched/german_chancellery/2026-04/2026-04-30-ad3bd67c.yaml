@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Verkehrsministerinnen und Verkehrsminister der Länder
+  topics:
+  - green_transition
+  location: null
+  position: Germany is promoting sustainable public transportation through the nationwide
+    Deutschlandticket.
+  positions:
+    green_transition: Germany advances the green transition by providing a simplified,
+      affordable nationwide public transport ticket to encourage a shift away from
+      individual car travel.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das Deutschlandticket für den gesamten öffentlichen Personennahverkehr
+        ( ÖPNV ) ist eine Erfolgsgeschichte
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

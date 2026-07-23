@@ -1,0 +1,29 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  - John Coale
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland reaffirmed its commitment to deepening strategic cooperation with
+    the United States in security, defense, energy, and economy.
+  positions:
+    defence: Poland supports the strengthening of security and defense cooperation
+      through its strategic alliance with the US.
+  stances:
+    defence:
+      score: 1
+      evidence: potwierdzili wolę pogłębiania współpracy polsko-amerykańskiej w strategicznych
+        obszarach dotyczących bezpieczeństwa i obrony
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

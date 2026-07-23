@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Nina Warken
+  topics: []
+  location: Berlin, Germany
+  position: Germany is implementing a comprehensive reform of its statutory health
+    insurance system to ensure long-term affordability and stability of contributions.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

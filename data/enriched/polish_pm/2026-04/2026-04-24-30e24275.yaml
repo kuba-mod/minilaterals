@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  - President of the European Commission
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: null
+  position: Poland emphasizes the need for tangible European collective action and
+    increased defense spending to counter Russian threats while securing financial
+    support through the SAFE mechanism.
+  positions:
+    ukraine: Poland stresses the urgency of a unified European response to the Russian
+      threat to ensure Ukrainian and regional stability.
+    defence: Poland actively advances EU defense capabilities complementary to NATO,
+      citing its own spending as an example for other partners.
+    rule_of_law: Poland views the resilience of democracy in Central Europe as a foundation
+      for European unity.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Jeśli chcemy uniknąć agresywnych kroków ze strony Rosji musimy pokazać,
+        że Europa i Polska są gotowe działać.
+    defence:
+      score: 2
+      evidence: Polska to robi i jest przykładem dla europejskich partnerów
+    rule_of_law:
+      score: 1
+      evidence: Wybory na Węgrzech są sygnałem, że demokracja nie przegrywa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

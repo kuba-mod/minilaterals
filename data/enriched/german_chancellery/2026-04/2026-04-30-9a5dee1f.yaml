@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Friedrich Merz
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing comprehensive domestic and international climate
+    policies, including a new climate protection program and hydrogen infrastructure
+    legislation.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality through a specific
+      CO2 reduction program and an investment offensive for infrastructure.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das Bundeskabinett hat ein Klimaschutzprogramm verabschiedet, um bis
+        2030 25 Millionen Tonnen CO2 einzusparen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

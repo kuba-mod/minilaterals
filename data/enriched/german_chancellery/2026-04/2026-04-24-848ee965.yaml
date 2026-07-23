@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany and the EU have adopted the 20th sanctions package against Russia
+    to weaken its economy and support Ukraine's sovereignty.
+  positions:
+    ukraine: Germany actively advances the goal of long-term support for Ukraine by
+      implementing a comprehensive new sanctions package to pressure Russia.
+    hybrid: Germany takes concrete action against hybrid threats by restricting Russian
+      cybersecurity services and banning crypto-assets used to bypass sanctions.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Die EU ‑Mitgliedstaaten haben das 20. Sanktionspaket gegen Russland
+        angenommen.
+    hybrid:
+      score: 2
+      evidence: Cyber sicherheitsdienste für Russland werden eingeschränkt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

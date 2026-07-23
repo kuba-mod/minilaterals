@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - ukraine
+  location: Cyprus
+  position: Germany expresses its commitment to discussing key European issues, specifically
+    focusing on support for Ukraine and financial frameworks during the informal European
+    Council.
+  positions:
+    ukraine: Germany supports the economic dimension of Ukraine's stability through
+      the release of an EU loan.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ich bin sehr dankbar, dass das Darlehen der Europäischen Union jetzt
+        endgültig freigegeben worden ist.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

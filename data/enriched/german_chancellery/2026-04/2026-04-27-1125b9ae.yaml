@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Reiche
+  topics:
+  - defence
+  - green_transition
+  location: Hamburg, Germany
+  position: Germany is hosting the third North Sea Summit to accelerate offshore wind
+    energy development and address regional security concerns.
+  positions:
+    defence: Germany is actively prioritizing and discussing security in the North
+      Sea region.
+    green_transition: Germany is actively advancing the green transition by hosting
+      the summit to speed up the construction of offshore wind plants.
+  stances:
+    defence:
+      score: 2
+      evidence: Sicherheit in der Nordsee. Auch das wird ein Thema unserer Gespräche
+        heute hier in Hamburg sein.
+    green_transition:
+      score: 2
+      evidence: den Bau neuer Windenergieanlagen auf See - sogenannte Offshore-Anlagen
+        - zügig voranzubringen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

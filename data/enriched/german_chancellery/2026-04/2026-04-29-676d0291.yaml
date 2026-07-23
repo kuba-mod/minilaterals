@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  - Bundesministerin für Wirtschaft und Energie
+  topics:
+  - green_transition
+  location: null
+  position: Germany is accelerating the expansion of its high-voltage power grids
+    via a new law prioritizing overhead lines to lower costs and support the energy
+    transition.
+  positions:
+    green_transition: Germany is taking concrete legislative action to expand energy
+      infrastructure and integrate renewable energy, directly advancing climate neutrality
+      and energy policy goals.
+  stances:
+    green_transition:
+      score: 2
+      evidence: das neue Gesetz dem Netzausbau in Deutschland neue Impulse gebe und
+        die Energiewende konsequent fortführe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

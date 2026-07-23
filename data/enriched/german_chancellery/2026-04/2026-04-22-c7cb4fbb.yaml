@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - hybrid
+  location: Berlin, Germany
+  position: Chancellor Merz promotes MINT education for women and social professions
+    for men to better utilize Germany's potential and address technical needs.
+  positions:
+    hybrid: Germany demonstrates a focus on technical competence in identifying and
+      preventing cyber attacks through educational initiatives.
+  stances:
+    hybrid:
+      score: 1
+      evidence: erklärten, wie Cyber angriffe entstehen und wie sie verhindert werden
+        können
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

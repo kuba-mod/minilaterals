@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - stellvertretender Regierungssprecher Meyer
+  - Vorsitzende Hamberger
+  - Bundeskanzler
+  - Bundesfinanzminister
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany is implementing structural reforms and budget priorities to maintain
+    operational capacity amidst geopolitical tensions, specifically focusing on defense
+    and security.
+  positions:
+    ukraine: Germany acknowledges the ongoing Russian aggression against Ukraine as
+      a key global uncertainty influencing its national planning.
+    defence: Germany is committing more financial resources to enhance its defense
+      capabilities and alliance security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: zu nennen sind hier sicherlich der russische Angriffskrieg gegen die
+        Ukraine
+    defence:
+      score: 2
+      evidence: Das gilt insbesondere für unsere Verteidigungsfähigkeit und unsere
+        Sicherheit im Bündnis. Hier stehen wir im Wort und müssen Prioritäten setzen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,19 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: null
+  position: Germany is promoting the preservation of international cultural heritage
+    through modern research practices at the Stiftung Preußische Schlösser und Gärten.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

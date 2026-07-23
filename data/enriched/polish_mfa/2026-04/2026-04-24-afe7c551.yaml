@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - scientists from SGH
+  - Centre for Social and Economic Research
+  - representatives of Cuban economic centers
+  topics: []
+  location: Warsaw, Poland
+  position: Poland is supporting Cuba's economic transformation by sharing its own
+    historical experience of transitioning from a centrally planned to a free-market
+    economy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

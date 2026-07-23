@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany has passed a legislative amendment to increase greenhouse gas
+    reduction quotas for fuels to achieve climate neutrality by 2045.
+  positions:
+    green_transition: Germany is actively advancing climate neutrality through legally
+      binding increases in the THG quota and promoting green hydrogen and sustainable
+      biofuels.
+  stances:
+    green_transition:
+      score: 2
+      evidence: die nationale THG -Minderungsquote bis 2040 fortgeschrieben, sie steigt
+        von derzeit 10,6 Prozent schrittweise auf 65 Prozent
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

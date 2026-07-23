@@ -1,0 +1,20 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Służba Zagraniczna
+  - Ministerstwo Spraw Zagranicznych
+  topics: []
+  location: null
+  position: Poland celebrates the Day of the Polish Diaspora and Poles Abroad, emphasizing
+    the importance of maintaining ties with the global Polish community.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

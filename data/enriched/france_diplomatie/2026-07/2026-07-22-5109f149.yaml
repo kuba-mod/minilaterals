@@ -1,0 +1,18 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: France expressed condolences to Guyana and provided a specialist rescue
+    team following the sinking of the MV Barima.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

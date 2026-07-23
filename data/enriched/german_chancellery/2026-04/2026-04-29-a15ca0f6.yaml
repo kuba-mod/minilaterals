@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Kabinett
+  topics:
+  - hybrid
+  location: null
+  position: Germany has approved a draft law to implement the EU Cyber Resilience
+    Act to enhance the cybersecurity of networked products.
+  positions:
+    hybrid: Germany is actively advancing the goal of combating cyber attacks by introducing
+      mandatory cybersecurity requirements for products with digital elements.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Das Kabinett hat den Entwurf des Gesetzes zur Durchführung des sogenannten
+        Cyber Resilience Act ( Cyber resilienz-Verordnung) beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

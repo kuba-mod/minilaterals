@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Kanzler Merz
+  topics:
+  - ukraine
+  - enlargement
+  location: Cyprus
+  position: Germany pledges continued EU support for Ukraine and advocates for its
+    closer integration into the European Union.
+  positions:
+    ukraine: Germany reaffirms its commitment to providing ongoing EU support for
+      Ukraine.
+    enlargement: Germany supports a closer connection between Ukraine and the EU.
+  stances:
+    ukraine:
+      score: 1
+      evidence: die weitere Unterstützung der EU für die Ukraine angekündigt
+    enlargement:
+      score: 1
+      evidence: Engere Anbindung der Ukraine an EU
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Katherina Reiche
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: The German government has lowered its GDP growth projections for 2026
+    due to geopolitical tensions in the Middle East and is emphasizing the need for
+    structural economic reforms.
+  positions:
+    defence: Germany is utilizing state orders in the defense sector to stimulate
+      investment and economic recovery.
+  stances:
+    defence:
+      score: 1
+      evidence: Staatsaufträge – insbesondere in den Bereichen Infrastruktur und Verteidigung
+        – werden zu Anlageinvestitionen und zur gesamtgesellschaftlichen Belebung
+        beitragen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

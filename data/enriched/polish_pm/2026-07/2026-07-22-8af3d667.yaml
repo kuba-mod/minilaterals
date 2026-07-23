@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Dariusz Klimczak
+  - Minister Infrastruktury
+  topics:
+  - green_transition
+  location: null
+  position: Poland is investing 100 billion PLN to develop a modern, high-speed integrated
+    railway network to increase passenger capacity and accessibility.
+  positions:
+    green_transition: Poland is actively advancing sustainable transport by investing
+      heavily in the modernization and expansion of its railway infrastructure.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Obecnie na rozwój infrastruktury kolejowej przeznaczamy 100 mld zł.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

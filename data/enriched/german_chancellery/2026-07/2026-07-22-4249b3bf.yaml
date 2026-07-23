@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Taoiseach Micheál Martin
+  topics:
+  - enlargement
+  location: Dublin, Ireland
+  position: Germany intends to discuss EU competitiveness, enlargement, and bilateral
+    relations during a visit to the Irish Taoiseach.
+  positions:
+    enlargement: Germany is engaging in discussions regarding the European enlargement
+      agenda.
+  stances:
+    enlargement:
+      score: 0
+      evidence: europäische Erweiterungsagenda
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

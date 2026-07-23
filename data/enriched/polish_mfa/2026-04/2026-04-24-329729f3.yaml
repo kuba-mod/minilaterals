@@ -1,0 +1,19 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - representatives of the Strategy Department of the Ministry of Foreign Affairs
+  topics: []
+  location: Kraków, Poland
+  position: Poland emphasizes the importance of building positive transatlantic relations
+    to serve its national and strategic interests.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

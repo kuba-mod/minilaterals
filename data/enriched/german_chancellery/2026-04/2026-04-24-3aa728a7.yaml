@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - Lula da Silva
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: The German government is advancing domestic reforms and enhancing legal
+    tools to combat cybercrime and online hate speech while maintaining European cohesion.
+  positions:
+    hybrid: Germany is introducing legislation to better track and combat online crime,
+      including hate speech and cyber-fraud, by requiring IP address storage.
+    rule_of_law: Germany emphasizes the necessity of providing the state with legal
+      tools to combat endemic online crime and hate speech to protect the rule of
+      law.
+  stances:
+    hybrid:
+      score: 2
+      evidence: die Bundesregierung hat nun einen Gesetzentwurf auf den Weg gebracht,
+        mit dem Internet-Zugangsanbieter verpflichtet werden sollen, IP-Adressen für
+        einen Zeitraum von drei Monaten zu speichern
+    rule_of_law:
+      score: 1
+      evidence: muss der Rechtsstaat die Werkzeuge in die Hand bekommen, um dagegen
+        vorgehen zu können
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

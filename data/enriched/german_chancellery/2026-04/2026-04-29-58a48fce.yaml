@@ -1,0 +1,31 @@
+actors:
+- DE
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Staatsminister für Kultur und Medien
+  - Marta Cienkowska, Ministerin für Kultur und nationales Erbe
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is initiating an international design competition and providing
+    five million euros to establish a memorial for Polish victims of WWII and Nazi
+    crimes in Berlin.
+  positions:
+    rule_of_law: Germany advances democratic resilience and historical accountability
+      by formally commemorating victims of Nazi persecution and the erasure of Polish
+      identity.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Die Errichtung des Denkmals ist eines der bedeutsamsten erinnerungspolitischen
+        Projekte Deutschlands.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

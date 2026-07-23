@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany has approved the signing and provisional application of the modernized
+    Global Agreement between the EU and Mexico to reduce tariffs and diversify supply
+    chains.
+  positions:
+    green_transition: Germany supports the implementation of international climate
+      and environmental agreements through the sustainability chapter of the trade
+      deal.
+  stances:
+    green_transition:
+      score: 1
+      evidence: Das Nachhaltigkeitskapitel im Handelsteil enthält unter anderem Vereinbarungen
+        zur Umsetzung von wesentlichen internationalen Arbeits-, Umwelt- und Klimaübereinkommen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

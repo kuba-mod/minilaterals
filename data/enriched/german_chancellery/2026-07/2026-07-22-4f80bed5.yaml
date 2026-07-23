@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Vasile Tofan
+  topics:
+  - enlargement
+  location: null
+  position: Germany congratulates the new Prime Minister of Moldova and reaffirms
+    its support for Moldova's EU accession process.
+  positions:
+    enlargement: Germany rhetorically supports Moldova's path toward European Union
+      membership and the associated reforms.
+  stances:
+    enlargement:
+      score: 1
+      evidence: Auf dem Weg in die Europäische Union und bei den dafür notwendigen
+        Reformen wird Deutschland auch weiterhin ein verlässlicher Partner der Republik
+        Moldau sein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

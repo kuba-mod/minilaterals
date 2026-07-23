@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister of Ukraine
+  - Prime Minister of Poland
+  topics:
+  - ukraine
+  - defence
+  location: Rzeszów, Poland
+  position: Poland is launching a joint drone armada project leveraging Ukrainian
+    combat expertise to enhance the security of Poland and the EU's eastern flank.
+  positions:
+    ukraine: Poland provides active, long-term military and strategic support to Ukraine
+      and seeks a mutual partnership based on shared security interests.
+    defence: Poland is actively investing in drone technology and air defense to strengthen
+      the deterrence of the eastern flank.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Dziś rozpoczął się wspólny projekt armady dronowej.
+    defence:
+      score: 2
+      evidence: Projekt ma nie tylko wzmocnić polską obronność, ale przyczynić się
+        do skoku technologicznego obejmującego całą wschodnią flankę Europy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

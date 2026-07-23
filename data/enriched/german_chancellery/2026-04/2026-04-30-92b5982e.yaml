@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Staatsminister für Kultur und Medien
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes that press and freedom of expression are indispensable
+    prerequisites for democracy and expresses concern over global declines in these
+    freedoms.
+  positions:
+    rule_of_law: Germany rhetorically supports the rule of law and democratic resilience
+      by framing press freedom as the essential basis for democracy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Das ist die unverzichtbare Grundbedingung der Demokratie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

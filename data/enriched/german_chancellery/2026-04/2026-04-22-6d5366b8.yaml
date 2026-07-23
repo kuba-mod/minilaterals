@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Chancellor Merz
+  - Carsten Schneider
+  - Murat Kurum
+  - Fatih Birol
+  - Simon Stiell
+  - Gunnar Groebler
+  - Stephanie Pfaeifer
+  - José Antonio Cabrera
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany reaffirms its commitment to the Paris Agreement and an integrated
+    approach to climate, energy, and innovation policy to ensure global security and
+    competitiveness.
+  positions:
+    green_transition: Germany actively supports climate neutrality and the alignment
+      of industrial and energy policies through innovation and multilateral cooperation.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Our commitment to the Paris Agreement and to our climate goals is
+        firm.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

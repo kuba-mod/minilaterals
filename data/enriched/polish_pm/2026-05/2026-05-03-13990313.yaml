@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Premier
+  - President of Ukraine
+  - Leader of Canada
+  - Leader of Great Britain
+  - President Nawrocki
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: Yerevan, Armenia
+  position: Poland emphasizes political responsibility, the rule of law, and continued
+    support for Ukraine within the context of the European Political Community summit.
+  positions:
+    ukraine: Poland expresses its commitment to continuing support for Ukraine.
+    defence: Poland highlights the need to strengthen the political community's ability
+      to respond to threats.
+    rule_of_law: Poland asserts that adherence to the constitution and the rule of
+      law is essential for state effectiveness and stability.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Rozmowy będą dotyczyć zarówno bieżącej sytuacji bezpieczeństwa, jak
+        i dalszego wsparcia dla Ukrainy
+    defence:
+      score: 1
+      evidence: Jednym z kluczowych tematów będzie wzmacnianie wspólnoty politycznej
+        i zdolności do reagowania na zagrożenia.
+    rule_of_law:
+      score: 1
+      evidence: Najważniejszą rzeczą jest przestrzeganie konstytucji i wzmacnianie
+        rządów prawa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Abboud
+  - Fichtner
+  - Dr. Schneidewindt
+  - Hinterseher
+  - Müller
+  - Galle
+  - Singer
+  - Greve
+  - Dr. Laiadhi
+  - Feldhoff
+  - Bundeskanzler
+  - Katherina Reiche
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: The German government emphasizes the importance of democratic coexistence
+    and the European Union through educational engagement and national economic conferences.
+  positions:
+    rule_of_law: Germany rhetorically supports the importance of democratic coexistence
+      within the framework of the European Union.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: zu zeigen, wie wichtig demokratisches Zusammenleben und die Europäische
+        Union für uns alle ist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

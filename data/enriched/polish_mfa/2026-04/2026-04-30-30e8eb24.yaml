@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Delegations of Poland
+  - Delegations of the United States
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  location: null
+  position: Poland is strengthening its strategic partnership with the United States
+    across security, energy, and critical technology sectors to enhance deterrence
+    and regional stability.
+  positions:
+    defence: Poland is actively advancing collective security and deterrence through
+      commitments to strengthen defense industry cooperation and interoperability
+      with the US.
+    hybrid: Poland supports the protection of critical technological infrastructure
+      and the reduction of dependency on high-risk suppliers to counter external interference.
+    green_transition: Poland is pursuing energy security and diversification through
+      LNG and civil nuclear energy projects to increase power production capacity.
+  stances:
+    defence:
+      score: 2
+      evidence: Obie strony ponowiły zobowiązanie do wzmacniania współpracy na rzecz
+        bezpieczeństwa, w tym do wzajemnej obrony i odstraszania
+    hybrid:
+      score: 1
+      evidence: ochronę krytycznej infrastruktury technologicznej przed zewnętrzną
+        ingerencją
+    green_transition:
+      score: 1
+      evidence: wspieranie realizacji projektów w dziedzinie cywilnej energetyki jądrowej
+        z udziałem amerykańskich przedsiębiorstw
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

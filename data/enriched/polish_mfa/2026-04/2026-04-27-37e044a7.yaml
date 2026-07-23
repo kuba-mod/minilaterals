@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland is launching a Georgian-language news service to counter disinformation
+    and support democratic processes in Georgia.
+  positions:
+    hybrid: Poland is actively countering hybrid threats by establishing a news service
+      to combat disinformation aimed at Georgia and the EU.
+    rule_of_law: Poland is supporting democratic resilience and processes in Georgia
+      through the provision of reliable information from a European perspective.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Misją serwisu jest również wzmacnianie odporności odbiorców na manipulacje
+        oraz przeciwdziałanie dezinformacji wymierzonej w Gruzję i jej partnerów międzynarodowych,
+        w szczególności Unię Europejską.
+    rule_of_law:
+      score: 2
+      evidence: Celem projektu jest dostarczanie rzetelnych informacji o wydarzeniach
+        politycznych, społecznych i gospodarczych z europejskiej perspektywy oraz
+        wspieranie procesów demokratycznych.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

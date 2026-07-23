@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  - Federal Ministry for Digital and State Modernization
+  - Chief Information Security Officer Bund
+  - President of the BSI
+  topics:
+  - hybrid
+  location: null
+  position: Germany has launched the 'CyberGovSecure' program to increase the cyber
+    resilience and security of its federal administration against cyber attacks and
+    hybrid threats.
+  positions:
+    hybrid: Germany is implementing concrete measures and a strategic governance framework
+      to protect the state from cyber attacks and hybrid threats.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Mit dem Programm zur Steigerung der Cyber sicherheit in der Bundesverwaltung,
+        kurz CyberGovSecure , hat das Kabinett eine Bündelung von Sofortmaßnahmen
+        beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

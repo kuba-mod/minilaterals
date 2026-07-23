@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesgesundheitsministerin
+  topics:
+  - hybrid
+  - green_transition
+  location: null
+  position: Germany is implementing domestic measures to support the green transition
+    of the automotive sector and informing consumers about AI-driven cyber threats.
+  positions:
+    hybrid: Germany is raising consumer awareness regarding the use of AI by cybercriminals
+      for online fraud.
+    green_transition: Germany is actively promoting the adoption of electric vehicles
+      through tax advantages and purchase grants.
+  stances:
+    hybrid:
+      score: 1
+      evidence: KI verändert auch Online-Betrug. Wie gut sind Verbraucherinnen und
+        Verbraucher darauf vorbereitet?
+    green_transition:
+      score: 2
+      evidence: Die Bundesregierung fördert Elektroautos mit Steuervorteilen und rückwirkend
+        ab Januar 2026 auch wieder mit einer Kaufprämie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

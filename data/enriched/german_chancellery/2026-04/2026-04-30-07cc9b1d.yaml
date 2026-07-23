@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Stefan Kornelius
+  - Steffen Meyer
+  - Sebastian Hille
+  topics:
+  - ukraine
+  - enlargement
+  - rule_of_law
+  location: Marsberg, Germany
+  position: Chancellor Merz supports a credible long-term perspective for Ukraine
+    but argues that full EU membership is currently unrealistic due to the ongoing
+    war and necessary reforms.
+  positions:
+    ukraine: Germany supports offering credible perspectives and gradual integration
+      to prevent the political isolation of Ukraine.
+    enlargement: Germany conditions EU accession on the end of the war and institutional
+      reforms, rejecting an accelerated timeline.
+    rule_of_law: Germany emphasizes the rule of law and anti-corruption measures as
+      essential prerequisites for EU membership.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Die EU müsse glaubwürdige Perspektiven bieten, besonders falls ein
+        Friedensschluss territoriale Zugeständnisse erfordere.
+    enlargement:
+      score: -1
+      evidence: Einen schnellen EU -Beitritt der Ukraine bezeichnete er als unrealistisch.
+    rule_of_law:
+      score: 1
+      evidence: Neben einem stabilen Friedenszustand nannte er weitere Voraussetzungen
+        wie Rechtsstaatlichkeit, Korruptionsbekämpfung und offene Grenzen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

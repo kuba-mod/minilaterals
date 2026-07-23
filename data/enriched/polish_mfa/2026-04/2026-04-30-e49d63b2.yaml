@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Krzysztof Galos
+  - Allison Hooker
+  topics:
+  - green_transition
+  location: null
+  position: Poland has signed a framework agreement with the United States to secure
+    the supply, processing, and recycling of critical raw materials.
+  positions:
+    green_transition: Poland is actively advancing the transition to climate neutrality
+      by securing critical minerals through a bilateral agreement with the US.
+  stances:
+    green_transition:
+      score: 2
+      evidence: podpisali porozumienie ramowe w sprawie zabezpieczenia dostaw w zakresie
+        wydobycia, przetwarzania i recyklingu surowców krytycznych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

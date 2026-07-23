@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Nada Al-Nashif
+  - Ruvendrini Menikdewel
+  - Advisory Legal Committee at the Ministry of Foreign Affairs
+  topics:
+  - rule_of_law
+  location: Geneva, Switzerland
+  position: Poland conducted a study visit to Geneva to consult with international
+    organizations and legal experts on human rights and international law.
+  positions:
+    rule_of_law: Poland is actively analyzing international human rights instruments
+      to develop its official position on the Convention on the Prevention and Punishment
+      of Crimes Against Humanity.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Omówiono mechanizmy kontrolne dotyczące wykonywania i interpretacji
+        międzynarodowych instrumentów z zakresu ochrony praw człowieka.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

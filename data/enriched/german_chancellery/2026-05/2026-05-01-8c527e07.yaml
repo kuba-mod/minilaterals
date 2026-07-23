@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Ursula von der Leyen
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany welcomes the provisional application of the EU-MERCOSUR trade
+    agreement as a milestone for strategic sovereignty and economic growth.
+  positions:
+    rule_of_law: Germany supports the embedding of democratic principles and human
+      rights within the framework of the trade agreement.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Als zentrale gemeinsame Werte verankert das MERCOSUR -Abkommen die
+        Achtung der demokratischen Grundsätze, der Menschenrechte
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

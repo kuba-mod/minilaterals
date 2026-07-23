@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: speech
+  participants:
+  - Robert Kupiecki
+  - Rosemary DiCarlo
+  - Guy Ryder
+  - Izumi Nakamitsu
+  - Thi Thu Hang
+  topics:
+  - defence
+  location: New York, USA
+  position: Poland emphasizes the necessity of nuclear deterrence to ensure European
+    peace in response to Russia's aggressive nuclear intimidation tactics.
+  positions:
+    defence: Poland supports the use of nuclear deterrence as a key tool for European
+      security and collective defense against aggression.
+  stances:
+    defence:
+      score: 1
+      evidence: Polska będzie postrzegała politykę odstraszania jądrowego jako kluczowe
+        narzędzie zapewniania pokoju w Europie, przeciwdziałania agresji oraz przymusowi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

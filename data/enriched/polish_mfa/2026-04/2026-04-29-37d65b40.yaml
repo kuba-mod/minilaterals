@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - heads of diplomacy of Poland and Iran
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes the importance of diplomatic dialogue and the security
+    of critical transport routes to ensure global stability.
+  positions:
+    defence: Poland supports collective security and stability by stressing the need
+      to maintain secure transport routes and the freedom of navigation.
+  stances:
+    defence:
+      score: 1
+      evidence: Wicepremier Radosław Sikorski zwrócił uwagę na znaczenie utrzymania
+        bezpieczeństwa szlaków transportowych dla stabilności globalnych rynków
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

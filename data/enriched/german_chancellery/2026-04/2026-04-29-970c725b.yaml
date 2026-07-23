@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany is reforming its fertilizer law to protect groundwater and water
+    bodies from agricultural pollutants in alignment with EU law.
+  positions:
+    green_transition: Germany is actively advancing environmental protection and water
+      quality goals through a new legal framework for fertilization and expanded monitoring.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Die Bundesregierung will das Düngerecht neu ausrichten und das Grundwasser,
+        Flüsse und Meere vor schädlichen Nährstoffeinträgen aus der Landwirtschaft
+        schützen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics: []
+  location: Cyprus
+  position: Germany advocates for a restructured EU budget for 2028 with new priorities
+    and spending cuts, while firmly opposing increased common debt or new European
+    bonds.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

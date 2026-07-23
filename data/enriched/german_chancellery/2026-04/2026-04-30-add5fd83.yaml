@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing energy relief measures and accelerating the build-out
+    of hydrogen infrastructure to support industrial decarbonization.
+  positions:
+    green_transition: Germany is actively advancing the green transition by facilitating
+      the rapid development of hydrogen infrastructure and promoting green hydrogen
+      to reduce industrial CO2 emissions.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Das neue Gesetz bezweckt einen schnelleren Aufbau der Wasserstoff-Infrastruktur
+        durch einfachere, digitale und schnellere Verfahren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

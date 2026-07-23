@@ -1,0 +1,54 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Klingbeil
+  - Merz
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: null
+  position: Germany is implementing a budgetary framework that prioritizes a significant
+    increase in defense spending and infrastructure investment while managing fiscal
+    consolidation.
+  positions:
+    ukraine: Germany acknowledges the ongoing Russian war of aggression against Ukraine
+      as a primary driver of its security policy.
+    defence: Germany is actively advancing its defense capabilities by significantly
+      increasing the defense budget to approximately 106 billion euros.
+    hybrid: Germany identifies Russian hybrid threats as a critical challenge to European
+      security.
+    green_transition: Germany is committing massive investments toward climate protection
+      as part of its infrastructure modernization offensive.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine und
+        seine erheblichen hybriden Bedrohungen unvermindert fort.
+    defence:
+      score: 2
+      evidence: Für die Bündnis- und Verteidigungsfähigkeit sehen die Eckwerte daher
+        einen deutlichen Anstieg des Verteidigungshaushalts um knapp 28 Prozent auf
+        etwa 106 Milliarden Euro vor.
+    hybrid:
+      score: 1
+      evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine und
+        seine erheblichen hybriden Bedrohungen unvermindert fort.
+    green_transition:
+      score: 2
+      evidence: Dafür investiert die Bundesregierung massiv in die Verkehrsinfrastruktur,
+        Digitalisierung und Klimaschutz
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

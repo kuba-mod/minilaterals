@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: statement
+  participants:
+  - Feldhoff
+  - StS Kornelius
+  topics:
+  - hybrid
+  location: null
+  position: The German government is advancing legislation to strengthen investigative
+    powers against internet crime and cyber-attacks through IP address storage.
+  positions:
+    hybrid: Germany is taking concrete legislative action to strengthen the fight
+      against internet crime and cyber threats by introducing IP address storage.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Ziel des Gesetzentwurfs ist es, die Ermittlungsbefugnisse der Strafverfolgungs-
+        und Sicherheitsbehörden besonders im Kampf gegen Internetkriminalität deutlich
+        zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

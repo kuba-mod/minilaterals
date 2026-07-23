@@ -1,0 +1,20 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Ali Al-Zaidi
+  topics: []
+  location: null
+  position: Germany sought to strengthen bilateral relations and economic ties with
+    Iraq during a phone call between the Chancellor and the Prime Minister.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions

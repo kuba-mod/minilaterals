@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+trilateral_signal: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Salzwedel, Germany
+  position: Chancellor Merz emphasizes the critical role of local journalism and a
+    respectful political debate culture in maintaining a functioning democracy.
+  positions:
+    rule_of_law: Germany rhetorically supports democratic resilience by stressing
+      the importance of local journalism and a factual, respectful discourse for a
+      functioning democracy.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Lokaljournalismus eine zentrale Rolle f ü r eine funktionierende Demokratie
+        spielt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '4'
+  environment: github_actions
