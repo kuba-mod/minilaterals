@@ -78,8 +78,9 @@ def test_empty_feed_yields_nothing():
 
 
 def test_new_sources_registered():
-    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government) is paused —
-    # see the comment in pipeline/sources/__init__.py — pending working feeds.
+    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government) and
+    # lithuanian_mfa (Cloudflare bot-protection) are paused — see the comment
+    # in pipeline/sources/__init__.py — pending working/reachable feeds.
     names = {c.source_name for c in ALL_INGESTERS}
     for expected in (
         "uk_fcdo",
@@ -87,10 +88,9 @@ def test_new_sources_registered():
         "australia_dfat",
         "estonian_mfa",
         "latvian_mfa",
-        "lithuanian_mfa",
     ):
         assert expected in names
-    for paused in ("czech_mfa", "slovak_mfa", "hungary_government"):
+    for paused in ("czech_mfa", "slovak_mfa", "hungary_government", "lithuanian_mfa"):
         assert paused not in names
 
 

@@ -147,6 +147,8 @@ Every outbound request (`_HEADERS` in `feedbase.py` and each scraper's own heade
 
 ## Adding a new source
 
+Weimar's pattern — foreign ministry *and* head-of-government office, both known-actor — is the ideal, not a requirement. For the newer groupings, a country's MFA doesn't always have a usable feed, or a shared/multi-ministry portal is the only practical option (see `hungary_government`, which ingests kormany.hu's general government news rather than a nonexistent ministry-scoped feed). Pick whatever reachable, reasonably authoritative government source is practical for that country, and be honest in the source's naming/comments about what it actually is — see `KNOWN_ACTOR_SOURCES` guidance in step 3 below for how that choice affects relevance scoping.
+
 1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). If the source has an RSS/Atom feed, subclass `FeedIngester` (`pipeline/sources/feedbase.py`) and set only `source_name` + `source_lang` + `feed_url`; gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and set `source_name` + `news_url`
 2. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
 3. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` (and `NATIVE_LANG`) in `base.py`. If the source's country isn't already a member of some grouping, add it (and any new tracked topic + goal sentence) to `data/groupings.yaml` and `data/goals.yaml`

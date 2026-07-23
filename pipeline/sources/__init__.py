@@ -5,7 +5,6 @@ from .france_diplomatie import FranceDiplomatieIngester
 from .german_chancellery import GermanChancelleryIngester
 from .german_mfa import GermanMFAIngester
 from .latvian_mfa import LatvianMFAIngester
-from .lithuanian_mfa import LithuanianMFAIngester
 from .polish_mfa import PolishMFAIngester
 from .polish_pm import PolishPMIngester
 from .uk_fcdo import UKFCDOIngester
@@ -19,6 +18,12 @@ from .us_state import USStateIngester
 # collection pause so the confirmed-working groups (E3, AUKUS, Baltic Three)
 # aren't held up by it. Poland (polish_mfa/polish_pm) still ingests as a
 # Weimar source as before; it just isn't joined by CZ/SK/HU right now.
+#
+# lithuanian_mfa is also paused: its feed URL is correct (confirmed live), but
+# the site sits behind Cloudflare bot-protection that returns a JS challenge —
+# not solvable without impersonating a browser, which design principle #10
+# rules out. The class stays in the repo in case the site's protection
+# changes or an alternate reachable source for Lithuania turns up.
 
 ALL_INGESTERS = [
     # Weimar Triangle (DE/FR/PL) — MFAs + heads-of-government offices
@@ -33,8 +38,7 @@ ALL_INGESTERS = [
     # AUKUS (adds US/AU; reuses UK)
     USStateIngester,
     AustraliaDFATIngester,
-    # Baltic Three (EE/LV/LT)
+    # Baltic Three (EE/LV; LT paused — see comment above)
     EstonianMFAIngester,
     LatvianMFAIngester,
-    LithuanianMFAIngester,
 ]
