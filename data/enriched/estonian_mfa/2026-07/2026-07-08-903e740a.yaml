@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia condemns the International Olympic Committee's decision to ease
+    restrictions on Russian athletes, arguing it normalizes aggression.
+  positions:
+    ukraine: Estonia supports the diplomatic isolation of Russia following its aggression
+      against Ukraine and opposes any measures that normalize the regime.
+  stances:
+    ukraine:
+      score: 1
+      evidence: vastutustundetu otsusega, mis normaliseerib agressiooni ja aitab murendada
+        Venemaa rahvusvahelist isolatsiooni
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

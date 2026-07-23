@@ -1,0 +1,22 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - honorary consuls
+  topics: []
+  location: Riga, Latvia
+  position: Latvia is organizing the 12th gathering of honorary consuls to provide
+    updates on the country's foreign policy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

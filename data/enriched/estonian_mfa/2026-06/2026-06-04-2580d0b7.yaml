@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Roger
+  - Mehmet Kemal Bozay
+  - Levent Gümrükçü
+  topics:
+  - ukraine
+  location: Ankara, Turkey
+  position: Estonia conducted political consultations with Turkey regarding bilateral
+    cooperation and regional security challenges.
+  positions:
+    ukraine: Estonia discussed Russia's ongoing aggression in Ukraine, aligning with
+      the goal of addressing the conflict.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Venemaa jätkuv agressioon Ukrainas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

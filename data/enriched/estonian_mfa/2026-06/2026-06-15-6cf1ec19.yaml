@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - enlargement
+  location: Luxembourg
+  position: Estonia supports the opening of the first thematic block of accession
+    negotiations for Ukraine and Moldova into the European Union.
+  positions:
+    enlargement: Estonia actively supports the progress of EU accession negotiations
+      for Ukraine and Moldova, describing the opening of the first thematic block
+      as a long-awaited step.
+  stances:
+    enlargement:
+      score: 2
+      evidence: tegemist kauaoodatud sammuga, mis võimaldab pärast mitmeaastast paigalseisu
+        nende riikide ühinemisläbirääkimistega edasi liikuda
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

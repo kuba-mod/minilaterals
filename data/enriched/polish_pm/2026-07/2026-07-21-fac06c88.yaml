@@ -3,25 +3,29 @@ actors:
 issue_areas:
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
-  - Jolanta Sobierańska-Grenda
-  - Prime Minister
+  - Minister Zdrowia Jolanta Sobierańska-Grenda
+  - Premier
   topics:
   - rule_of_law
   location: null
   position: The Polish government is introducing legislative changes to regulate healthcare
-    salaries and increase transparency to eliminate abuses in the medical system.
+    salaries and ensure transparency in the medical system to prevent abuses.
   positions:
-    rule_of_law: Poland is pursuing institutional transparency and the elimination
-      of systemic abuses within the healthcare sector.
+    rule_of_law: Poland is pursuing domestic institutional reforms to ensure transparency,
+      legal compliance, and the elimination of abuses within the healthcare system.
   stances:
     rule_of_law:
       score: 1
-      evidence: Leczenie nie jest biznesem i takie praktyki muszą się skończyć
+      evidence: Będziemy pilnowali każdej godziny i każdego dnia, aby jak najszybciej,
+        ale zgodnie z regułami, doprowadzić do głosowania w Sejmie tych ustaw.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

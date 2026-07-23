@@ -1,0 +1,34 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Roger
+  - Baiba Braže
+  - Darius Jauniškis
+  - Edward Lucas
+  topics:
+  - hybrid
+  location: Ankara, Turkey
+  position: Estonia participated in a side event at the NATO summit to discuss and
+    debunk security myths concerning the Baltic states.
+  positions:
+    hybrid: Estonia actively engages in countering disinformation and security myths
+      regarding the Baltic region.
+  stances:
+    hybrid:
+      score: 1
+      evidence: vestlusringis Balti riikide julgeolekumüütidest
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

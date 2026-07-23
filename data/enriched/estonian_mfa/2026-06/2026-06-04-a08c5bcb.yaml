@@ -1,0 +1,32 @@
+actors:
+- EE
+- US
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - iran
+  location: null
+  position: Estonia supports the US-brokered ceasefire between Israel and Lebanon
+    as a vital step toward regional stability.
+  positions:
+    iran: Estonia supports the reduction of tensions in the Middle East through the
+      ceasefire between Israel and Lebanon.
+  stances:
+    iran:
+      score: 1
+      evidence: Ameerika Ühendriikide vahendusel kokku lepitud relvarahu Iisraeli
+        ja Liibanoni vahel on oluline samm püsiva rahu saavutamiseks ning aitab maandada
+        pingeid kogu Lähis-Ida regioonis.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

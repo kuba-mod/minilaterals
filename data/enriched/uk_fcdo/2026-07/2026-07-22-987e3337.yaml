@@ -1,0 +1,36 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom warns that Russian aerial attacks on Ukraine threaten
+    civilians, violate airspace, and increase the risk of wider European escalation.
+  positions:
+    ukraine: The UK highlights the dangers of Russian aggression against Ukraine to
+      the stability of the region.
+    defence: The UK emphasizes that Russian military actions increase the risk of
+      miscalculation and escalation across Europe, aligning with the need for deterrence.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russia’s missile and drone attacks endanger civilians
+    defence:
+      score: 1
+      evidence: increase the risk of miscalculation and escalation across Europe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

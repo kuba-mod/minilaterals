@@ -3,7 +3,10 @@ actors:
 issue_areas:
 - rule_of_law
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
@@ -13,17 +16,16 @@ extracted:
   - rule_of_law
   location: null
   position: Germany is establishing a legal basis for the Federal Commissioner for
-    Victims to ensure support for victims of domestic terrorist attacks and extremist
-    violence.
+    Victims to provide better support for victims of domestic terrorism and extremism.
   positions:
     rule_of_law: Germany is strengthening democratic resilience and the rule of law
-      by formalizing legal support and institutional protection for victims of terrorism.
+      by formalizing the legal support and representation of victims of terrorism.
   stances:
     rule_of_law:
-      score: 2
+      score: 1
       evidence: Die Bundesregierung will das Amt des Bundesopferbeauftragten auf eine
         gesetzliche Grundlage stellen.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

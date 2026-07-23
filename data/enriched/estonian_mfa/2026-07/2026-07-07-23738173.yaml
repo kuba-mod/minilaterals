@@ -1,0 +1,38 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia is actively supporting Ukraine through the organization of a recovery
+    conference and the signing of a drone agreement.
+  positions:
+    ukraine: Estonia is actively advancing Ukraine's economic recovery by preparing
+      to host the Ukraine Recovery Conference in 2027.
+    defence: Estonia is providing concrete military support through a bilateral drone
+      agreement with Ukraine.
+  stances:
+    ukraine:
+      score: 2
+      evidence: ettevalmistused 2027. aasta 28. ja 29. jaanuaril Tallinnas toimuvaks
+        Ukraina taastekonverentsiks (Ukraine Recovery Conference) on juba alanud
+    defence:
+      score: 2
+      evidence: Tsahkna kohtus Zelenskõiga ka Eesti ja Ukraina droonikokkuleppe allkirjastamisel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

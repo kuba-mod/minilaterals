@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Mark Rutte
+  topics:
+  - defence
+  location: Brussels, Belgium
+  position: Estonia affirms that NATO is operating effectively and precisely according
+    to plan in protecting its allies.
+  positions:
+    defence: Estonia supports the effectiveness of NATO's collective security and
+      defense plans.
+  stances:
+    defence:
+      score: 1
+      evidence: NATO toimib liitlaste kaitsmisel efektiivselt ja täpselt plaanide
+        järgi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics: []
+  location: Tallinn, Estonia
+  position: Foreign Minister Margus Tsahkna is opening a two-day festival showcasing
+    Armenian products, flavors, and culture.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

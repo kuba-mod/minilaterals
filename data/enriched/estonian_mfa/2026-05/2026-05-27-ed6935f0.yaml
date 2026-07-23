@@ -1,0 +1,29 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - ukraine
+  location: Kyiv, Ukraine
+  position: Estonia condemns Russian threats and confirms that its diplomats will
+    remain in Kyiv despite intimidation.
+  positions:
+    ukraine: Estonia demonstrates sustained diplomatic support for Ukraine by refusing
+      to evacuate its diplomats despite Russian threats.
+  stances:
+    ukraine:
+      score: 2
+      evidence: ei lahku Eesti diplomaadid Kiievist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

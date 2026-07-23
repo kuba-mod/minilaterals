@@ -1,0 +1,38 @@
+actors:
+- CZ
+- EE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Alar Karis
+  - Petr Pavel
+  topics:
+  - defence
+  - hybrid
+  location: Estonia
+  position: Estonia is strengthening economic and security cooperation with the Czech
+    Republic, specifically in the fields of defense and cyber security.
+  positions:
+    defence: Estonia is actively advancing European defense capabilities through a
+      concrete defense cooperation agreement with Czech companies.
+    hybrid: Estonia is seeking to establish new contacts and cooperation in the cyber
+      domain to counter hybrid threats.
+  stances:
+    defence:
+      score: 2
+      evidence: Eesti ja Tšehhi ettevõtted sõlmisid ärifoorumil kaitsekoostöö lepingu
+    hybrid:
+      score: 2
+      evidence: luua uusi kontakte eeskätt kaitse- ja kübervaldkonnas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

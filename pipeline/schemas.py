@@ -81,8 +81,15 @@ class EnrichedEventSchema(BaseModel):
 
     actors: list[str] = Field(default_factory=list)
     issue_areas: list[str] = Field(default_factory=list)
+    # One {key}_relevant flag per grouping in data/groupings.yaml, including
+    # weimar — a single flat boolean per format, no separate "strong signal"
+    # tier. All default False so sidecars written before a grouping existed
+    # still validate.
     weimar_relevant: bool = False
-    trilateral_signal: bool = False
+    e3_relevant: bool = False
+    visegrad_relevant: bool = False
+    baltic_relevant: bool = False
+    aukus_relevant: bool = False
     extracted: ExtractedSchema | None = None
     # Optional so sidecars written before provenance tracking still validate;
     # new/backfilled sidecars always carry it.

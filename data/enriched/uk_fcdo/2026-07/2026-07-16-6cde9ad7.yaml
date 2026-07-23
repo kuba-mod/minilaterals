@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - hybrid
+  location: null
+  position: The United Kingdom is updating the OSCE on its legislative measures and
+    joint sanctions to combat hybrid threats.
+  positions:
+    hybrid: The UK is taking concrete action against hybrid threats through the National
+      Security (State Threats) Act 2026 and joint cyber sanctions with the EU.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Ambassador Holland updates on the National Security (State Threats)
+        Act 2026 and the recent UK and EU joint cyber sanctions package.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

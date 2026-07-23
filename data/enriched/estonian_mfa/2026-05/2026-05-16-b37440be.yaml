@@ -1,0 +1,37 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  - enlargement
+  location: null
+  position: Foreign Minister Margus Tsahkna emphasized that Ukraine's integration
+    into the European Union is critical for European security and international stability.
+  positions:
+    ukraine: Estonia rhetorically supports the strategic integration of Ukraine into
+      Europe for the sake of security and stability.
+    enlargement: Estonia supports the accession of Ukraine to the European Union as
+      a matter of critical importance.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ukraina integreerimine Euroopa Liiduga on otsustava tähtsusega nii
+        Euroopa julgeoleku kui ka rahvusvahelise stabiilsuse jaoks
+    enlargement:
+      score: 1
+      evidence: Ukraina integreerimine Euroopa Liiduga on otsustava tähtsusega
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

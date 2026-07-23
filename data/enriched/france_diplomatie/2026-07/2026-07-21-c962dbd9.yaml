@@ -1,28 +1,32 @@
 actors:
 - FR
 issue_areas:
-- rule_of_law
-weimar_relevant: true
-trilateral_signal: false
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
   - Jean-Noël Barrot
-  - Secretary-General of the Quai d’Orsay
+  - Quai d’Orsay’s Secretary-General
   - Islamic Republic of Iran’s chargé d’affaires
   topics:
-  - rule_of_law
+  - iran
   location: null
-  position: France condemned an attack on its embassy staff in Iran and demanded accountability
-    and adherence to international law.
+  position: France summoned Iran's chargé d'affaires to condemn a premeditated attack
+    on French embassy personnel and demand accountability.
   positions:
-    rule_of_law: France advocates for the rule of law and international legal standards
-      by condemning a violation of the Vienna Conventions.
+    iran: France is addressing destabilizing behavior by Iran by condemning violations
+      of international law and diplomatic protections.
   stances:
-    rule_of_law:
+    iran:
       score: 1
-      evidence: It was a flagrant violation of international law and the Vienna Conventions
+      evidence: condemned this premeditated, deliberate attack in the strongest possible
+        terms
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

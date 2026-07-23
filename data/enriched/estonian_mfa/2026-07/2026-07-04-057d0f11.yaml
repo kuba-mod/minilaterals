@@ -1,0 +1,31 @@
+actors:
+- EE
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - rule_of_law
+  location: null
+  position: Estonia celebrates the 250th anniversary of US independence, emphasizing
+    shared values of freedom and individual opportunity.
+  positions:
+    rule_of_law: Estonia rhetorically supports the ideals of freedom and the right
+      to shape one's own future as foundational to its relations with the US.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Ameerika Ühendriikide ajalugu on olnud alati tihedalt seotud vabaduse
+        ideaaliga ja veendumusega, et igaühel peab olema võimalus kujundada oma tulevikku
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

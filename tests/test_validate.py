@@ -34,7 +34,6 @@ VALID_ENRICHED_EVENT = {
     "actors": ["DE"],
     "issue_areas": ["ukraine"],
     "weimar_relevant": True,
-    "trilateral_signal": False,
     "extracted": {
         "event_type": "statement",
         "participants": ["Wadephul"],

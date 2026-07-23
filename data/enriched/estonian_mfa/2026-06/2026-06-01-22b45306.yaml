@@ -1,0 +1,34 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  - Dag Hartelius
+  - Michael Claesson
+  - Niclas Kvarnström
+  - Jakob Hallgren
+  topics:
+  - defence
+  location: Stockholm, Sweden
+  position: Estonia's Secretary General of the Ministry of Foreign Affairs conducted
+    a working visit to Stockholm to meet with Swedish diplomatic and defense officials.
+  positions:
+    defence: Estonia engaged with Swedish military and security leadership to discuss
+      defense matters.
+  stances:
+    defence:
+      score: 0
+      evidence: kohtumised Rootsi kaitseväe juhataja kindral Michael Claessoni, rahvusliku
+        julgeoleku nõuniku Niclas Kvarnströmi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

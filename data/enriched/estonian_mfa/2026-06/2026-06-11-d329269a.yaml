@@ -1,0 +1,23 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Minister Tsahkna
+  - non-resident ambassadors accredited to Estonia
+  topics: []
+  location: null
+  position: Foreign Minister Tsahkna held a conference for non-resident ambassadors
+    to present Estonia's key domestic and foreign policy priorities.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

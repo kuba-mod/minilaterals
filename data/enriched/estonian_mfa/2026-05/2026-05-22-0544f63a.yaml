@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - foreign ministers of the Nordic and Baltic countries
+  topics:
+  - hybrid
+  location: null
+  position: Estonia and other Nordic-Baltic foreign ministers issued a joint statement
+    condemning disinformation campaigns by Russia and Belarus.
+  positions:
+    hybrid: Estonia actively counters hybrid threats by jointly condemning Russian
+      and Belarusian disinformation regarding airspace violations.
+  stances:
+    hybrid:
+      score: 1
+      evidence: mõistsid teravalt hukka Venemaa ja Valgevene desinformatsioonikampaania
+        ja valeväited
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

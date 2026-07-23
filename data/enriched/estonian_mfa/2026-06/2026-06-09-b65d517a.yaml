@@ -1,0 +1,37 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sõbiha
+  topics:
+  - ukraine
+  - enlargement
+  location: Tallinn, Estonia
+  position: Estonia reaffirms its support for Ukraine's security and EU accession,
+    viewing the latter as a matter of its own national security.
+  positions:
+    ukraine: Estonia supports increasing pressure on Russia and sustaining security
+      for Ukraine.
+    enlargement: Estonia actively advocates for Ukraine's EU membership, linking it
+      directly to Estonian security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: vajadus suurendada survet Venemaale
+    enlargement:
+      score: 2
+      evidence: Ukraina ELi liikmesus on meie enda julgeoleku küsimus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

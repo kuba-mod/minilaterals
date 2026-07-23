@@ -1,0 +1,21 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics: []
+  location: Tallinn, Estonia
+  position: Estonia is strengthening economic cooperation and creating new business
+    opportunities between Estonia and Africa.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

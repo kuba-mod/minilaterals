@@ -1,0 +1,21 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: The provided text is a preliminary announcement for the Ministry of Foreign
+    Affairs' schedule for June 1-7, 2026, and contains no specific policy positions.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

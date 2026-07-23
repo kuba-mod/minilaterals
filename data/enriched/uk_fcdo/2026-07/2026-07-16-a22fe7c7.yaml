@@ -1,0 +1,38 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom asserts that Russian aggression is the sole cause of
+    insecurity and supports Ukraine's defense as a necessary response.
+  positions:
+    ukraine: The United Kingdom attributes the war to Russia's illegal use of force
+      and supports Ukraine.
+    defence: The United Kingdom frames NATO and international support for Ukraine
+      as defensive measures against Russian aggression.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Russia alone caused this war through its illegal use of force against
+        Ukraine
+    defence:
+      score: 1
+      evidence: NATO and international support for Ukraine are defensive responses
+        to Russian aggression
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

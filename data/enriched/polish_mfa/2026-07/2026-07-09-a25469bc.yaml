@@ -5,7 +5,10 @@ issue_areas:
 - ukraine
 - defence
 weimar_relevant: true
-trilateral_signal: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:

@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sõbiha
+  topics:
+  - ukraine
+  location: null
+  position: Estonia calls for a strong international response to Russian attacks on
+    Ukrainian infrastructure and the Black Sea, and discusses further pressure on
+    Russia.
+  positions:
+    ukraine: Estonia actively supports Ukraine by advocating for a forceful international
+      response to Russian aggression and seeking ways to increase pressure on Russia.
+  stances:
+    ukraine:
+      score: 2
+      evidence: rahvusvaheline kogukond peab Venemaa rünnakutele Mustal merel jõuliselt
+        reageerima
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

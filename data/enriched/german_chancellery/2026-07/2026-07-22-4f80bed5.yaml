@@ -3,7 +3,10 @@ actors:
 issue_areas:
 - enlargement
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
@@ -12,11 +15,11 @@ extracted:
   topics:
   - enlargement
   location: null
-  position: Germany congratulates the new Prime Minister of Moldova and reaffirms
-    its support for Moldova's EU accession process.
+  position: Germany congratulates the new Moldovan Prime Minister and affirms its
+    continued support for Moldova's EU accession and reform process.
   positions:
-    enlargement: Germany rhetorically supports Moldova's path toward European Union
-      membership and the associated reforms.
+    enlargement: Germany rhetorically supports Moldova's path to EU membership and
+      the associated institutional reforms.
   stances:
     enlargement:
       score: 1
@@ -25,5 +28,5 @@ extracted:
         Moldau sein.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

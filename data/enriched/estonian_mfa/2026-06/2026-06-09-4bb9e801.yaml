@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sobiha
+  topics:
+  - ukraine
+  location: Estonia
+  position: Estonia is promoting new trade opportunities for its businesses through
+    EU agreements with Mercosur and Mexico while reaffirming diplomatic ties with
+    Ukraine.
+  positions:
+    ukraine: Estonia continues to maintain diplomatic relations and support for Ukraine
+      through official ceremonies and ministerial cooperation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Ukraina aukonsulite ametisse astumise tseremoonia
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

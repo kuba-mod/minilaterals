@@ -2,18 +2,21 @@ actors:
 - FR
 issue_areas: []
 weimar_relevant: false
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
   - Emmanuel Macron
   topics: []
   location: Paris, France
-  position: President Emmanuel Macron visited the Asterya child support center to
-    highlight a coordinated health care model for children in social care.
+  position: President Emmanuel Macron visited the Astérya child support center to
+    highlight a coordinated model of healthcare for children in social care.
   positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

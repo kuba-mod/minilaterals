@@ -1,0 +1,36 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Baiba Braže
+  topics:
+  - ukraine
+  - defence
+  location: Ankara, Turkey
+  position: Latvia reaffirms the importance of NATO's collective defense and the necessity
+    of continued support for Ukraine.
+  positions:
+    ukraine: Latvia supports the continued provision of aid to Ukraine throughout
+      the year.
+    defence: Latvia emphasizes the critical importance of NATO's Article 5 collective
+      defense obligation.
+  stances:
+    ukraine:
+      score: 1
+      evidence: vienojās turpināt atbalstu Ukrainai šogad
+    defence:
+      score: 1
+      evidence: sabiedrotie apstiprināja kolektīvās aizsardzības – 5. panta – nozīmi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

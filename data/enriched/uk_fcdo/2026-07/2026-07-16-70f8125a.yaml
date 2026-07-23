@@ -1,0 +1,21 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: El Obeid, Sudan
+  position: The United Kingdom has imposed sanctions on individuals and networks involved
+    in financing and procurement for the conflict in Sudan.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

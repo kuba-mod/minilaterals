@@ -1,9 +1,13 @@
 actors:
 - DE
+- LT
 issue_areas:
 - defence
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: statement
   participants:
@@ -13,10 +17,10 @@ extracted:
   - defence
   location: null
   position: Germany congratulates the new Lithuanian Prime Minister and reaffirms
-    its commitment to European security and bilateral cooperation.
+    their close partnership and commitment to European security.
   positions:
-    defence: Germany actively supports eastern flank deterrence through the deployment
-      of a brigade in Lithuania.
+    defence: Germany actively advances European collective security and the deterrence
+      of the eastern flank through the stationing of a brigade in Lithuania.
   stances:
     defence:
       score: 2
@@ -24,5 +28,5 @@ extracted:
         gemeinsames Bekenntnis zur Sicherheit Europas.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

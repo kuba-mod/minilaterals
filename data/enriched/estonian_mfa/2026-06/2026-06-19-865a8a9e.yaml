@@ -1,0 +1,37 @@
+actors:
+- DE
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - defence
+  location: Kiel, Germany
+  position: Estonia met with a German representative to discuss increasing pressure
+    on Russia to end the war and strengthening European security.
+  positions:
+    ukraine: Estonia supports the continued application of pressure on Russia to bring
+      an end to the war.
+    defence: Estonia aims to strengthen European security and prepare for NATO summits.
+  stances:
+    ukraine:
+      score: 1
+      evidence: arutada Venemaa edasist survestamist sõja lõpetamiseks
+    defence:
+      score: 1
+      evidence: ettevalmistusi NATO Ankara tippkohtumiseks ja Euroopa julgeoleku tugevdamist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

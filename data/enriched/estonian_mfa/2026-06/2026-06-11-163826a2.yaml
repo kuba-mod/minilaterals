@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia advocates for stricter sanctions against Russia, specifically
+    calling for a ban on the export of aluminum oxide from the EU to Russia.
+  positions:
+    ukraine: Estonia seeks to increase pressure on Russia through coordinated sanctions
+      to raise the cost of aggression.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Eesti jätkab tööd selle nimel, et agressiooni hind ja surve Venemaale
+        oleks võimalikult kõrge.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

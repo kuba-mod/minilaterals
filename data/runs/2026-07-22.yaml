@@ -1,5 +1,5 @@
 date: '2026-07-22'
-run_at: '2026-07-22T10:30:35Z'
+run_at: '2026-07-22T10:01:03Z'
 sources:
 - source: german_mfa
   fetched: 30
@@ -7,32 +7,77 @@ sources:
   skipped: 30
   error: null
 - source: france_diplomatie
-  fetched: 96
-  new: 0
-  skipped: 96
+  fetched: 6
+  new: 2
+  skipped: 4
   error: null
 - source: polish_mfa
-  fetched: 105
+  fetched: 5
   new: 0
-  skipped: 105
+  skipped: 5
   error: null
 - source: german_chancellery
-  fetched: 395
-  new: 2
-  skipped: 393
+  fetched: 47
+  new: 14
+  skipped: 33
   error: null
 - source: elysee
-  fetched: 139
-  new: 39
-  skipped: 100
+  fetched: 8
+  new: 2
+  skipped: 6
   error: null
 - source: polish_pm
-  fetched: 52
+  fetched: 2
+  new: 1
+  skipped: 1
+  error: null
+- source: uk_fcdo
+  fetched: 20
+  new: 20
+  skipped: 0
+  error: null
+- source: us_state
+  fetched: 0
   new: 0
-  skipped: 52
+  skipped: 0
+  error: null
+- source: australia_dfat
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: czech_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: slovak_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: hungarian_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: estonian_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: latvian_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
+  error: null
+- source: lithuanian_mfa
+  fetched: 0
+  new: 0
+  skipped: 0
   error: null
 totals:
-  fetched: 817
-  new: 41
-  skipped: 776
+  fetched: 118
+  new: 39
+  skipped: 79
   errors: 0

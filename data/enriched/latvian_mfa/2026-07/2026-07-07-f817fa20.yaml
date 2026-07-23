@@ -1,0 +1,29 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Russian chargé d'affaires
+  topics:
+  - hybrid
+  location: null
+  position: Latvia's Ministry of Foreign Affairs summoned the Russian chargé d'affaires
+    to lodge a protest note condemning Russian disinformation.
+  positions:
+    hybrid: Latvia actively counters Russian disinformation campaigns by formally
+      protesting and rejecting false claims.
+  stances:
+    hybrid:
+      score: 2
+      evidence: noraidot Krievijas melus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,41 @@
+actors:
+- EE
+- US
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  - Lindsey Graham
+  - Richard Blumenthal
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Estonia supports a US-led sanctions package aimed at penalizing countries
+    that import Russian energy or help Russia evade sanctions.
+  positions:
+    ukraine: Estonia supports measures to weaken the Russian economy to aid the effort
+      for a just peace in Ukraine.
+    energy: Estonia supports the imposition of tariffs on countries continuing to
+      purchase Russian oil and gas to reduce global dependence.
+  stances:
+    ukraine:
+      score: 2
+      evidence: senaator Grahami algatatud Venemaa-vastane sanktsioonipakett annaks
+        tugeva löögi Vene majandusele
+    energy:
+      score: 2
+      evidence: Paketi eesmärk on kehtestada tollimaksud riikidele, kes jätkavad Venemaa
+        nafta ja gaasi ostmist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

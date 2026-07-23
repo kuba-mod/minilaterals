@@ -29,13 +29,40 @@ KNOWN_ACTOR_SOURCES = {
     "german_chancellery",
     "elysee",
     "polish_pm",
+    # Additional minilateral MFAs (E3, Visegrád, Baltic Three, AUKUS). All are
+    # foreign ministries, so their source country is folded into the actor list
+    # exactly like the Weimar MFAs. hungary_government is deliberately excluded:
+    # it's a shared cross-ministry portal (kormany.hu), not a dedicated MFA
+    # newsroom, so its domestic-heavy output stays under the stricter
+    # 2+-actor/explicit-mention gate instead of a single-country auto-count.
+    "uk_fcdo",
+    "us_state",
+    "australia_dfat",
+    "czech_mfa",
+    "slovak_mfa",
+    "estonian_mfa",
+    "latvian_mfa",
+    "lithuanian_mfa",
 }
 
-# Each MFA's native-language section (see design principle #9). An event whose
+# Each source's native-language section (see design principle #9). An event whose
 # source_lang matches this is `collection: native`; anything else (the English
-# fallback section) is `collection: fallback`. Kept beside MFA_SOURCES so the
-# native/fallback tier is derivable from source_lang alone.
-NATIVE_LANG = {"german_mfa": "de", "france_diplomatie": "fr", "polish_mfa": "pl"}
+# fallback section) is `collection: fallback`. The native/fallback tier is
+# derivable from source_lang alone. UK/US/AU are natively English.
+NATIVE_LANG = {
+    "german_mfa": "de",
+    "france_diplomatie": "fr",
+    "polish_mfa": "pl",
+    "uk_fcdo": "en",
+    "us_state": "en",
+    "australia_dfat": "en",
+    "czech_mfa": "cs",
+    "slovak_mfa": "sk",
+    "hungary_government": "hu",
+    "estonian_mfa": "et",
+    "latvian_mfa": "lv",
+    "lithuanian_mfa": "lt",
+}
 
 
 def collection_tier(source_name: str, source_lang: str) -> str | None:

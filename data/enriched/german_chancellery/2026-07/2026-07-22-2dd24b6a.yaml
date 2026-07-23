@@ -2,7 +2,10 @@ actors:
 - DE
 issue_areas: []
 weimar_relevant: false
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
@@ -10,11 +13,11 @@ extracted:
   - Ali Al-Zaidi
   topics: []
   location: null
-  position: Germany sought to strengthen bilateral relations and economic ties with
-    Iraq during a phone call between the Chancellor and the Prime Minister.
+  position: Germany expressed its congratulations to the new Iraqi Prime Minister
+    and emphasized the expansion of bilateral economic relations.
   positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

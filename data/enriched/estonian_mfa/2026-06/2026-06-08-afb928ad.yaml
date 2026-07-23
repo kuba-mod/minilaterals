@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - rule_of_law
+  location: null
+  position: Foreign Minister Margus Tsahkna welcomed the results of the parliamentary
+    elections in Armenia, noting the victory of a pro-Western party.
+  positions:
+    rule_of_law: Estonia supports the democratic process and pro-Western orientation
+      in Armenia as a means of supporting regional peace.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Välisminister Margus Tsahkna tervitas Armeenias toimunud parlamendivalimiste
+        tulemusi, kus ülekaalu saavutas regionaalset rahu toetav läänemeelne Kodanikulepingu
+        partei.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

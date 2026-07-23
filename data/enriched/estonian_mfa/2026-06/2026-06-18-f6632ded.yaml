@@ -1,0 +1,37 @@
+actors:
+- EE
+- US
+issue_areas:
+- iran
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - iran
+  - ukraine
+  location: null
+  position: Estonia supports the interim agreement between the US and Iran as a means
+    to increase pressure on Russia's war machine.
+  positions:
+    iran: Estonia views the US-Iran agreement as a strategic tool to limit destabilizing
+      activity and pressure Russia.
+    ukraine: Estonia believes that diplomatic pressure on Iran via the US will hinder
+      Russia's ability to wage war against Ukraine.
+  stances:
+    iran:
+      score: 1
+      evidence: USA ja Iraani vahekokkuleppele
+    ukraine:
+      score: 1
+      evidence: aitab suurendada survet Venemaa sõjamasinale
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

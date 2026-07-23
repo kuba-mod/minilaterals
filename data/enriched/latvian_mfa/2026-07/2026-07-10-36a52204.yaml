@@ -1,0 +1,29 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artjoms Uršuļskis, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: Brussels, Belgium
+  position: Latvia is participating in the EU Foreign Affairs Council to discuss Russian
+    aggression against Ukraine and the EU's Black Sea strategy.
+  positions:
+    ukraine: Latvia supports the EU's coordinated response to Russian aggression against
+      Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: diskutēs par Krievijas agresiju pret Ukrainu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

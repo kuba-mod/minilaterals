@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Affairs Council
+  topics:
+  - hybrid
+  location: null
+  position: Estonia supports the European Union's adoption of its most extensive package
+    of cyber sanctions against Russia to date.
+  positions:
+    hybrid: Estonia actively advances the goal of coordinated action against hybrid
+      threats by implementing EU-wide cyber sanctions against Russian individuals
+      and entities.
+  stances:
+    hybrid:
+      score: 2
+      evidence: Euroopa Liit kiitis täna, 13. juulil välisasjade nõukogul heaks seni
+        kõige ulatuslikuma Venemaa vastase kübersanktsioonide paketi.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

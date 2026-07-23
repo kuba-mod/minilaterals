@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artjoms
+  topics: []
+  location: Brussels, Belgium
+  position: Latvia is participating in the General Affairs Council to discuss the
+    Irish presidency priorities, the EU multiannual budget for 2028–2034, and the
+    simplification of EU legislation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

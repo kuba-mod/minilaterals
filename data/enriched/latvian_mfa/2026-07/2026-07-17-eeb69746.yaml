@@ -1,0 +1,37 @@
+actors:
+- LV
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - ukraine
+  - defence
+  location: Washington, USA
+  position: Foreign Minister Baiba Braže met with US and international partners to
+    strengthen the strategic partnership, focusing on security and support for Ukraine.
+  positions:
+    ukraine: Latvia supports continued assistance for Ukraine to ensure a lasting
+      peace.
+    defence: Latvia is working with US partners to enhance defense cooperation and
+      security.
+  stances:
+    ukraine:
+      score: 1
+      evidence: atbalstu Ukrainai
+    defence:
+      score: 1
+      evidence: pārrunāja aizsardzības sadarbību
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

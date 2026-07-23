@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - migration
+  location: null
+  position: Estonia is ceasing recognition of non-biometric Russian diplomatic, service,
+    and ordinary passports to restrict access to the EU external border.
+  positions:
+    migration: Estonia is strengthening the control of the EU's external border by
+      refusing non-biometric Russian passports.
+  stances:
+    migration:
+      score: 2
+      evidence: ei tunnusta Eesti Vabariik Venemaa Föderatsiooni mittebiomeetrilisi
+        diplomaatilisi ega teenistuspasse Euroopa Liidu välispiiri ületamiseks ega
+        viisa taotlemiseks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

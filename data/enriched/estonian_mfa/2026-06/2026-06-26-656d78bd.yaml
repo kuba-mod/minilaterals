@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Marianne Mikko
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: Estonia has secured representation in the UN Committee on the Elimination
+    of Discrimination against Women (CEDAW) through the re-election of Marianne Mikko.
+  positions:
+    rule_of_law: Estonia actively supports the international legal framework for women's
+      rights by securing a seat on a key UN human rights body.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: Täna, 26. juunil valiti New Yorgis toimunud valimistel Marianne Mikko
+        uueks ametiajaks ÜRO naiste õiguste komitee (CEDAW) liikmeks.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

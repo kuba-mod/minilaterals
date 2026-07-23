@@ -1,0 +1,38 @@
+actors:
+- HU
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Anita Orban
+  topics:
+  - ukraine
+  - enlargement
+  location: Luxembourg
+  position: Estonia is participating in EU Foreign Affairs Council meetings and intergovernmental
+    conferences to advance Ukraine's EU accession and address Russian aggression.
+  positions:
+    ukraine: Estonia supports discussions on countering Russian aggression against
+      Ukraine.
+    enlargement: Estonia supports the opening of the first thematic block of accession
+      negotiations with Ukraine and Moldova.
+  stances:
+    ukraine:
+      score: 1
+      evidence: arutatakse Venemaa agressiooni Ukraina vastu
+    enlargement:
+      score: 2
+      evidence: avatakse ametlikult ELiga liitumisläbirääkimiste esimene teemaplokk
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - rule_of_law
+  location: null
+  position: Estonia emphasizes the need to ensure equal rights for sexual minorities
+    and the total eradication of discrimination and violence.
+  positions:
+    rule_of_law: Estonia advances democratic resilience and human rights by promoting
+      marriage equality and combating discrimination against sexual minorities.
+  stances:
+    rule_of_law:
+      score: 2
+      evidence: seksuaalvähemustele tuleb tagada täpselt samad õigused ja võimalused
+        nagu kõigile teistele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

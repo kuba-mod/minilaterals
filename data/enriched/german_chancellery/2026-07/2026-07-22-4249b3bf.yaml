@@ -3,7 +3,10 @@ actors:
 issue_areas:
 - enlargement
 weimar_relevant: true
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
@@ -12,16 +15,16 @@ extracted:
   topics:
   - enlargement
   location: Dublin, Ireland
-  position: Germany intends to discuss EU competitiveness, enlargement, and bilateral
-    relations during a visit to the Irish Taoiseach.
+  position: Chancellor Merz plans to discuss the EU enlargement agenda and other Union-wide
+    priorities with Taoiseach Martin.
   positions:
-    enlargement: Germany is engaging in discussions regarding the European enlargement
-      agenda.
+    enlargement: Germany intends to discuss the European enlargement agenda as part
+      of its coordination with Ireland's EU Council presidency.
   stances:
     enlargement:
       score: 0
       evidence: europäische Erweiterungsagenda
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

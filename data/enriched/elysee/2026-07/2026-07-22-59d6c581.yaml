@@ -1,20 +1,32 @@
 actors:
 - FR
-issue_areas: []
+issue_areas:
+- indo_pacific
 weimar_relevant: false
-trilateral_signal: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
 extracted:
   event_type: communique
   participants:
   - Emmanuel Macron
   - Lee Jae-myung
-  topics: []
+  topics:
+  - indo_pacific
   location: Saint-Paul de Vence, France
-  position: France is hosting the Lumière Summit to lead international strategic alliances
-    and address the future of cinema, animated images, and artificial intelligence.
-  positions: {}
-  stances: {}
+  position: France is hosting an international summit with South Korea to address
+    the future of cinema, audiovisuals, and gaming, leveraging its cultural and industrial
+    assets.
+  positions:
+    indo_pacific: France is actively strengthening strategic ties and alliances with
+      a key Indo-Pacific partner, South Korea, through a high-level joint summit.
+  stances:
+    indo_pacific:
+      score: 2
+      evidence: Le Président de la République française, Emmanuel Macron, et le Président
+        de la République de Corée, Lee Jae-myung, coprésideront le Sommet Lumière
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '4'
+  prompt_version: '6'
   environment: github_actions

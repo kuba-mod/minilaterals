@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Kenneth Kopamees
+  topics:
+  - ukraine
+  location: Paris, France
+  position: Estonia emphasized its support for Ukraine and the importance of open
+    markets during an OECD ministerial meeting on industrial policy.
+  positions:
+    ukraine: Estonia rhetorically supports continued assistance to Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Eesti rõhutas OECD ministrite kohtumisel toetust Ukrainale
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

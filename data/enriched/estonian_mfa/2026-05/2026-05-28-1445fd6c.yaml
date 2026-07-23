@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: Cyprus
+  position: Estonia supports the continuation of the EU's two-pronged peace plan involving
+    the support of Ukraine and pressure on Russia.
+  positions:
+    ukraine: Estonia advocates for the continued implementation of the EU's strategy
+      to support Ukraine and pressure Russia.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Euroopa senine kahepunktiline Ukraina toetamisest ja Venemaa survestamisest
+        koosnev rahuplaan on hästi töötanud ning ainuõige on sellega jätkata
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
