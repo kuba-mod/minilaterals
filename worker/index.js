@@ -12,6 +12,15 @@
 // KV has no atomic increment, so a vote count is a read-then-write and can
 // under-count if two votes land in the same instant. Acceptable for a
 // low-traffic "gauge interest" signal, not a real ballot.
+//
+// The endpoints are unauthenticated by design (a low-stakes interest signal),
+// so the two write routes are guarded two ways against scripted abuse:
+//   1. An optional per-IP rate-limit binding (RATE_LIMITER) blunts floods that
+//      would otherwise exhaust the shared VOTES namespace's daily write budget
+//      and break the feature for everyone. It's optional so `wrangler dev`
+//      and any environment without the binding configured still work.
+//   2. KV writes are wrapped so a rejected put (e.g. quota exceeded) returns a
+//      clean 503 instead of throwing an unhandled 500 out of the Worker.
 
 const VALID_SLUGS = new Set([
   "e3", "visegrad", "baltic_three", "aukus",
@@ -39,6 +48,21 @@ async function readBody(request) {
   }
 }
 
+// Returns true when the caller has exceeded the per-IP write budget. No-ops
+// (never limits) when the RATE_LIMITER binding isn't configured, so local dev
+// and unbound environments keep working. Fails open on limiter errors — the
+// KV-write guard below is the backstop if the limiter is unavailable.
+async function rateLimited(request, env) {
+  if (!env.RATE_LIMITER) return false;
+  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  try {
+    const { success } = await env.RATE_LIMITER.limit({ key: ip });
+    return !success;
+  } catch {
+    return false;
+  }
+}
+
 async function handleVotesList(env) {
   const counts = {};
   await Promise.all(
@@ -50,6 +74,10 @@ async function handleVotesList(env) {
 }
 
 async function handleVote(request, env) {
+  if (await rateLimited(request, env)) {
+    return json({ error: "rate limited" }, 429);
+  }
+
   const body = await readBody(request);
   const slug = body && body.slug;
   if (typeof slug !== "string" || !VALID_SLUGS.has(slug)) {
@@ -57,13 +85,20 @@ async function handleVote(request, env) {
   }
 
   const key = `votes:${slug}`;
-  const next = parseInt((await env.VOTES.get(key)) || "0", 10) + 1;
-  await env.VOTES.put(key, String(next));
-
-  return json({ ok: true, count: next });
+  try {
+    const next = parseInt((await env.VOTES.get(key)) || "0", 10) + 1;
+    await env.VOTES.put(key, String(next));
+    return json({ ok: true, count: next });
+  } catch {
+    return json({ error: "unavailable" }, 503);
+  }
 }
 
 async function handleNotify(request, env) {
+  if (await rateLimited(request, env)) {
+    return json({ error: "rate limited" }, 429);
+  }
+
   const body = await readBody(request);
   const slug = body && body.slug;
   const emailRaw = body && body.email;
@@ -78,8 +113,12 @@ async function handleNotify(request, env) {
     return json({ error: "invalid email" }, 400);
   }
 
-  await env.VOTES.put(`notify:${slug}:${email}`, new Date().toISOString());
-  return json({ ok: true });
+  try {
+    await env.VOTES.put(`notify:${slug}:${email}`, new Date().toISOString());
+    return json({ ok: true });
+  } catch {
+    return json({ error: "unavailable" }, 503);
+  }
 }
 
 export default {
