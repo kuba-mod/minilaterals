@@ -24,6 +24,8 @@ uv run python -m pipeline.enrich --stances-only --limit 200   # backfill missing
 uv run python -m pipeline.render             # Jinja2 → docs/ (as of data/edition.yaml cutoff)
 uv run python -m pipeline.render --output /tmp/test
 uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
+uv run python -m pipeline.vote_report        # terminal histogram of hub-page votes (production /api/votes)
+uv run python -m pipeline.vote_report --url http://localhost:8788/api/votes --format html
 
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
@@ -42,7 +44,7 @@ Sources (RSS/HTML/API)
           → pipeline/render.py  Jinja2 + stance-based convergence scoring → docs/
 ```
 
-**CI:** three workflows. `.github/workflows/collect.yml` is cron/dispatch-driven data collection and the only workflow that commits to `main`: the daily cron at 01:00 UTC ingests → enriches and commits `data/**` (the cutoff is unchanged, so a rebuild ships the same published edition); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today and generates commentary — the weekly edition cut, which also commits only `data/**`. It never renders: every push to `main` (including these commits) triggers Cloudflare's build, which renders from source and deploys, so an edition ships simply by moving the cutoff. Its commit uses `GITHUB_TOKEN`, which does not re-trigger GitHub Actions workflows, so there is no commit loop. `render.yml` is a render **CI check**, not a deploy path: it renders on every branch push to fail fast if `render.py` crashes and to upload the built tree as a downloadable `site` artifact — it commits nothing. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). `.github/workflows/lint.yml` runs `ruff check .` on every branch push. See Deployment below for how the site actually gets built and served.
+**CI:** four workflows. `.github/workflows/collect.yml` is cron/dispatch-driven data collection and the only workflow that commits to `main`: the daily cron at 01:00 UTC ingests → enriches and commits `data/**` (the cutoff is unchanged, so a rebuild ships the same published edition); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today and generates commentary — the weekly edition cut, which also commits only `data/**`. It never renders: every push to `main` (including these commits) triggers Cloudflare's build, which renders from source and deploys, so an edition ships simply by moving the cutoff. Its commit uses `GITHUB_TOKEN`, which does not re-trigger GitHub Actions workflows, so there is no commit loop. `render.yml` is a render **CI check**, not a deploy path: it renders on every branch push to fail fast if `render.py` crashes and to upload the built tree as a downloadable `site` artifact — it commits nothing. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). `.github/workflows/lint.yml` runs `ruff check .` on every branch push. `.github/workflows/vote_report.yml` emails a weekly histogram of hub-page votes to hello@minilaterals.com — `schedule` + `workflow_dispatch` only (never `pull_request`/issue events), so nothing an outside visitor or fork PR can do reaches its SMTP secrets (`SMTP_SERVER`/`SMTP_PORT`/`SMTP_USERNAME`/`SMTP_PASSWORD`); see `pipeline/vote_report.py`. See Deployment below for how the site actually gets built and served.
 
 ## Deployment
 
@@ -68,6 +70,7 @@ Sources (RSS/HTML/API)
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `hub.html` is the standalone minilaterals.com umbrella landing page (root, not part of the Weimar Triangle subsite — see Deployment), including the vote-for-the-next-grouping UI; `meetings.html` exists but isn't currently rendered |
 | `worker/index.js` | The Cloudflare Worker's API surface (`/api/vote`, `/api/votes`, `/api/notify`) backing the hub page's vote feature; falls through to static assets for everything else — see Deployment |
+| `pipeline/vote_report.py` | Fetches `/api/votes` and renders it as a histogram — terminal bar chart or the HTML used by `vote_report.yml`'s weekly email; grouping names come from `HUB_GROUPINGS` so there's one slug→name mapping, not two |
 | `data/groupings.yaml` | The minilateral definitions (members + tracked topics); single source of truth for the actor/issue-area vocabulary |
 | `data/goals.yaml` | Per-topic reference goal sentences each stance is rated against (was `weimar_goals.yaml`) |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
