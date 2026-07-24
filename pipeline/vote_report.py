@@ -1,36 +1,73 @@
 #!/usr/bin/env python3
 """
-Fetches current vote counts from the hub page's "vote for the next grouping"
-feature (worker/index.js's /api/votes) and reports them as a histogram — a
-terminal bar chart by default, or an HTML report for the weekly email (see
-.github/workflows/vote_report.yml).
+Reads current vote counts directly from the VOTES KV namespace via the
+Cloudflare API and prints them as a terminal histogram.
+
+This deliberately does not go through any HTTP endpoint on the site —
+worker/index.js only exposes routes to cast a vote or a notify-me signup, not
+to read the tallies back (see the comment in worker/index.js), so this is the
+only way to see the standings. It's authenticated with your own Cloudflare
+API token, so it only works for whoever holds that token — not for anyone
+who just visits the site or clones this repo.
 
 Grouping display names come from pipeline.render.HUB_GROUPINGS, so the report
 stays in sync with the hub page without a second slug→name mapping to maintain.
 
+Setup (one-time): create a token at
+https://dash.cloudflare.com/profile/api-tokens with "Workers KV Storage:
+Read" permission scoped to this account, then:
+
+    export CLOUDFLARE_API_TOKEN=...
+
 Usage:
     uv run python -m pipeline.vote_report
-    uv run python -m pipeline.vote_report --format html > /tmp/vote_report.html
-    uv run python -m pipeline.vote_report --url https://<branch>.workers.dev/api/votes
 """
 
 from __future__ import annotations
 
-import argparse
-import html as html_lib
+import os
+import sys
 
 import requests
 
 from pipeline.render import HUB_GROUPINGS
 
-DEFAULT_URL = "https://minilaterals.com/api/votes"
+ACCOUNT_ID = "ee9d519739225a663addb76c8e7e0d34"
+KV_NAMESPACE_ID = "59cf38506c0340eeaba6abed0fd552cb"
+API_BASE = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/storage/kv/namespaces/{KV_NAMESPACE_ID}"
 BAR_WIDTH = 30  # terminal bar chart max width, in characters
 
 
-def fetch_counts(url: str) -> dict[str, int]:
-    resp = requests.get(url, timeout=10)
-    resp.raise_for_status()
-    return resp.json()["counts"]
+def _auth_headers() -> dict[str, str]:
+    token = os.environ.get("CLOUDFLARE_API_TOKEN", "").strip()
+    if not token:
+        sys.exit(
+            "CLOUDFLARE_API_TOKEN is not set.\n\n"
+            "This script reads vote tallies directly from Cloudflare KV, authenticated as you —\n"
+            "nobody else can run it without your token. Create one at\n"
+            "https://dash.cloudflare.com/profile/api-tokens with 'Workers KV Storage: Read'\n"
+            "permission scoped to this account, then:\n\n"
+            "    export CLOUDFLARE_API_TOKEN=...\n"
+        )
+    return {"Authorization": f"Bearer {token}"}
+
+
+def fetch_counts() -> dict[str, int]:
+    headers = _auth_headers()
+
+    keys_resp = requests.get(f"{API_BASE}/keys", headers=headers, params={"prefix": "votes:"}, timeout=10)
+    keys_resp.raise_for_status()
+    keys_body = keys_resp.json()
+    if not keys_body.get("success"):
+        raise RuntimeError(f"Cloudflare API error: {keys_body.get('errors')}")
+
+    counts: dict[str, int] = {}
+    for key in keys_body["result"]:
+        slug = key["name"].removeprefix("votes:")
+        value_resp = requests.get(f"{API_BASE}/values/{key['name']}", headers=headers, timeout=10)
+        value_resp.raise_for_status()
+        counts[slug] = int(value_resp.text or "0")
+    return counts
 
 
 def _ranked(counts: dict[str, int]) -> list[tuple[str, int]]:
@@ -53,41 +90,8 @@ def render_text(counts: dict[str, int]) -> str:
     return "\n".join(lines)
 
 
-def render_html(counts: dict[str, int]) -> str:
-    rows = _ranked(counts)
-    total = sum(c for _, c in rows)
-    max_count = max((c for _, c in rows), default=0)
-
-    bar_rows = []
-    for name, count in rows:
-        pct = round(100 * count / max_count) if max_count else 0
-        bar_rows.append(
-            "<tr>"
-            f'<td style="padding:4px 10px 4px 0;white-space:nowrap;font-family:sans-serif;'
-            f'font-size:13px;color:#1c1812;">{html_lib.escape(name)}</td>'
-            f'<td style="width:100%;padding:4px 0;">'
-            f'<div style="background:#8a3a23;height:14px;border-radius:3px;'
-            f'width:{pct}%;min-width:{2 if count else 0}px;"></div></td>'
-            f'<td style="padding:4px 0 4px 10px;font-family:sans-serif;font-size:13px;'
-            f'color:#7a7060;text-align:right;">{count}</td>'
-            "</tr>"
-        )
-
-    return (
-        '<div style="font-family:sans-serif;color:#1c1812;">'
-        f"<p>{total} total vote{'' if total == 1 else 's'} across {len(rows)} groupings.</p>"
-        '<table style="border-collapse:collapse;width:100%;max-width:640px;">' + "".join(bar_rows) + "</table></div>"
-    )
-
-
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--url", default=DEFAULT_URL, help="votes API endpoint (default: production)")
-    parser.add_argument("--format", choices=["text", "html"], default="text")
-    args = parser.parse_args()
-
-    counts = fetch_counts(args.url)
-    print(render_html(counts) if args.format == "html" else render_text(counts))
+    print(render_text(fetch_counts()))
 
 
 if __name__ == "__main__":

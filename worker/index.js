@@ -12,6 +12,12 @@
 // KV has no atomic increment, so a vote count is a read-then-write and can
 // under-count if two votes land in the same instant. Acceptable for a
 // low-traffic "gauge interest" signal, not a real ballot.
+//
+// Deliberately no GET route to read the tallies back: that would be public
+// and unauthenticated like everything else here. pipeline/vote_report.py
+// reads votes:* directly from this KV namespace via the Cloudflare API,
+// authenticated with the site owner's own CLOUDFLARE_API_TOKEN — the only
+// way to make "only I can see the standings" actually true.
 
 const VALID_SLUGS = new Set([
   "e3", "visegrad", "baltic_three", "aukus",
@@ -37,16 +43,6 @@ async function readBody(request) {
   } catch {
     return null;
   }
-}
-
-async function handleVotesList(env) {
-  const counts = {};
-  await Promise.all(
-    Array.from(VALID_SLUGS, async (slug) => {
-      counts[slug] = parseInt((await env.VOTES.get(`votes:${slug}`)) || "0", 10);
-    }),
-  );
-  return json({ counts });
 }
 
 async function handleVote(request, env) {
@@ -86,9 +82,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    if (url.pathname === "/api/votes" && request.method === "GET") {
-      return handleVotesList(env);
-    }
     if (url.pathname === "/api/vote" && request.method === "POST") {
       return handleVote(request, env);
     }

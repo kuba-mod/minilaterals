@@ -1,9 +1,11 @@
-"""pipeline/vote_report.py — pure formatting helpers (fetch_counts hits the network, not tested here)."""
+"""pipeline/vote_report.py — pure formatting helpers (fetch_counts hits the Cloudflare API, not tested here)."""
 
 from __future__ import annotations
 
+import pytest
+
 from pipeline.render import HUB_GROUPINGS
-from pipeline.vote_report import _ranked, render_html, render_text
+from pipeline.vote_report import _auth_headers, _ranked, render_text
 
 
 def test_ranked_covers_every_hub_grouping():
@@ -35,17 +37,15 @@ def test_render_text_includes_total_and_names():
 
 def test_render_text_singular_vote():
     out = render_text({"quad": 1, **{m["slug"]: 0 for m in HUB_GROUPINGS if m["slug"] != "quad"}})
-    assert "1 total vote " in out or out.startswith("Vote report — 1 total vote across")
+    assert out.startswith("Vote report — 1 total vote across")
 
 
-def test_render_html_escapes_and_bars():
-    out = render_html({"quad": 4})
-    assert "<table" in out
-    assert "The Quad" in out
-    assert "width:100%" in out  # the max-count row fills its bar
+def test_auth_headers_uses_bearer_token(monkeypatch):
+    monkeypatch.setenv("CLOUDFLARE_API_TOKEN", "secret-token")
+    assert _auth_headers() == {"Authorization": "Bearer secret-token"}
 
 
-def test_render_html_zero_votes_has_no_bar_width():
-    out = render_html({})
-    assert "8 total" not in out
-    assert "0 total votes" in out
+def test_auth_headers_exits_without_token(monkeypatch):
+    monkeypatch.delenv("CLOUDFLARE_API_TOKEN", raising=False)
+    with pytest.raises(SystemExit):
+        _auth_headers()
