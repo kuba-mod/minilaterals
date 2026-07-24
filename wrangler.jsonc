@@ -7,10 +7,11 @@
   "workers_dev": true,
   // Production route. Only applied by `wrangler deploy` (the production-branch
   // build); preview `versions upload` builds never bind it, so branch pushes
-  // can never take over the real domain.
+  // can never take over the real domain. Matches the whole domain (not just
+  // /weimar-triangle*) so the hub page at the root is served too.
   "routes": [
     {
-      "pattern": "minilaterals.com/weimar-triangle*",
+      "pattern": "minilaterals.com/*",
       "zone_name": "minilaterals.com"
     }
   ],
