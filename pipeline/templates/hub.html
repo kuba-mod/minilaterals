@@ -168,7 +168,6 @@ a:hover { color: var(--hl); }
 .hub-vote-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--hl) 8%, var(--bg-card)); border-color: var(--hl); }
 .hub-vote-btn:disabled { opacity: .55; cursor: default; }
 .hub-vote-arrow { font-size: 9px; }
-.hub-vote-count { font-size: 11px; color: var(--muted); }
 .hub-vote-thanks {
   font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; color: var(--hl);
 }
@@ -276,7 +275,6 @@ a:hover { color: var(--hl); }
       <div class="hub-vote" data-slug="{{ m.slug }}">
         <button type="button" class="hub-vote-btn">
           <span class="hub-vote-arrow">&#9650;</span> Vote for this next
-          <span class="hub-vote-count" hidden></span>
         </button>
       </div>
     </div>
@@ -289,16 +287,6 @@ a:hover { color: var(--hl); }
 <script>
 (function () {
   "use strict";
-
-  function escapeHtml(s) {
-    return s.replace(/[&<>"']/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-    });
-  }
-
-  function countLabel(n) {
-    return n === 1 ? "1 vote" : n + " votes";
-  }
 
   function notifyFormHtml() {
     return (
@@ -343,44 +331,21 @@ a:hover { color: var(--hl); }
     });
   }
 
-  function renderVoted(el, slug, count, showNotify) {
-    var label = typeof count === "number" ? " (" + escapeHtml(countLabel(count)) + ")" : "";
+  function renderVoted(el, slug, showNotify) {
     el.innerHTML =
-      '<div class="hub-vote-thanks">✓ Thanks — your vote is recorded' + label + ".</div>" +
+      '<div class="hub-vote-thanks">✓ Thanks — your vote is recorded.</div>' +
       (showNotify ? notifyFormHtml() : "");
     if (showNotify) wireNotifyForm(el, slug);
   }
 
   var voteEls = Array.prototype.slice.call(document.querySelectorAll(".hub-vote"));
 
-  fetch("/api/votes")
-    .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (data) { return (data && data.counts) || {}; })
-    .catch(function () { return {}; })
-    .then(function (counts) {
-      voteEls.forEach(function (el) {
-        var slug = el.dataset.slug;
-        var n = counts[slug];
-        var votedKey = "minilaterals:voted:" + slug;
-
-        if (localStorage.getItem(votedKey)) {
-          renderVoted(el, slug, typeof n === "number" ? n : null, false);
-          return;
-        }
-
-        var countEl = el.querySelector(".hub-vote-count");
-        if (typeof n === "number" && countEl) {
-          countEl.textContent = countLabel(n);
-          countEl.hidden = false;
-        }
-      });
-    });
-
   voteEls.forEach(function (el) {
     var slug = el.dataset.slug;
     var votedKey = "minilaterals:voted:" + slug;
 
     if (localStorage.getItem(votedKey)) {
+      renderVoted(el, slug, false);
       return;
     }
 
@@ -396,7 +361,7 @@ a:hover { color: var(--hl); }
         .then(function (data) {
           if (data && data.ok) {
             localStorage.setItem(votedKey, "1");
-            renderVoted(el, slug, data.count, true);
+            renderVoted(el, slug, true);
           } else {
             btn.disabled = false;
           }
