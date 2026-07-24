@@ -880,6 +880,7 @@ Allow: /
 # for flagcdn.com.
 HUB_GROUPINGS = [
     {
+        "slug": "e3",
         "name": "The E3",
         "accent": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
         "members": ["de", "fr", "gb"],
@@ -888,6 +889,7 @@ HUB_GROUPINGS = [
         "blurb": "Europe's lead trio on Iran and hard security — Berlin, Paris and London coordinating outside the EU frame.",
     },
     {
+        "slug": "visegrad",
         "name": "The Visegrád Group",
         "accent": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
         "members": ["pl", "cz", "sk", "hu"],
@@ -896,6 +898,7 @@ HUB_GROUPINGS = [
         "blurb": "Central Europe's caucus inside the EU — four capitals that vote together more often than not.",
     },
     {
+        "slug": "baltic_three",
         "name": "The Baltic Three",
         "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
         "members": ["ee", "lv", "lt"],
@@ -904,6 +907,7 @@ HUB_GROUPINGS = [
         "blurb": "NATO's north-eastern frontier — Tallinn, Riga and Vilnius rarely more than a sentence apart.",
     },
     {
+        "slug": "aukus",
         "name": "AUKUS",
         "accent": "linear-gradient(90deg,#00247d 0 33.33%,#c8102e 33.33% 66.66%,#3c3b6e 66.66%)",
         "members": ["au", "gb", "us"],
@@ -914,6 +918,7 @@ HUB_GROUPINGS = [
     # -- Additional global minilaterals (survey-sourced placeholders; not yet
     #    tracked by the ingest/enrich pipeline) --
     {
+        "slug": "quad",
         "name": "The Quad",
         "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#ff9933 50% 75%,#00247d 75%)",
         "members": ["us", "jp", "in", "au"],
@@ -922,6 +927,7 @@ HUB_GROUPINGS = [
         "blurb": "The Indo-Pacific's flagship quartet — institutionally busy in 2026, but without a leaders' summit since 2024.",
     },
     {
+        "slug": "squad",
         "name": "The Squad",
         "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#00247d 50% 75%,#0038a8 75%)",
         "members": ["us", "jp", "au", "ph"],
@@ -930,6 +936,7 @@ HUB_GROUPINGS = [
         "blurb": "The Quad's operational cousin — four militaries coordinating against grey-zone pressure in the South China Sea.",
     },
     {
+        "slug": "us_japan_rok",
         "name": "US–Japan–ROK Trilateral",
         "accent": "linear-gradient(90deg,#3c3b6e 0 33.33%,#bc002d 33.33% 66.66%,#003478 66.66%)",
         "members": ["us", "jp", "kr"],
@@ -938,6 +945,7 @@ HUB_GROUPINGS = [
         "blurb": "Institutionalised at Camp David in 2023 — now navigating a change of government in all three capitals.",
     },
     {
+        "slug": "coalition_of_the_willing",
         "name": "Coalition of the Willing",
         "accent": "linear-gradient(90deg,#012169 0 33.33%,#0055a4 33.33% 66.66%,#000000 66.66%)",
         "members": ["gb", "fr", "de"],
@@ -946,6 +954,7 @@ HUB_GROUPINGS = [
         "blurb": "Started in London in 2025 to backstop a Ukraine ceasefire — some 26 states have pledged troops to a planned reassurance force.",
     },
     {
+        "slug": "e5",
         "name": "The E5",
         "accent": "linear-gradient(90deg,#0055a4 0 20%,#000000 20% 40%,#00247d 40% 60%,#008C45 60% 80%,#dc143c 80%)",
         "members": ["fr", "de", "gb", "it", "pl"],
@@ -954,6 +963,7 @@ HUB_GROUPINGS = [
         "blurb": "The E3 widened to Europe's biggest defence spenders — stood up in 2025 to coordinate support for Ukraine.",
     },
     {
+        "slug": "jef",
         "name": "Joint Expeditionary Force",
         "accent": "linear-gradient(90deg,#00247d 0 25%,#c8102e 25% 50%,#002868 50% 75%,#003893 75%)",
         "members": ["gb", "nl", "dk", "no", "is", "se", "fi", "ee", "lv", "lt"],
@@ -962,6 +972,7 @@ HUB_GROUPINGS = [
         "blurb": "A UK-led ten-nation coalition now tracking Russia's shadow fleet across the Baltic and North Seas.",
     },
     {
+        "slug": "lancaster_house",
         "name": "Lancaster House 2.0",
         "accent": "linear-gradient(90deg,#00247d 0 50%,#0055a4 50%)",
         "members": ["gb", "fr"],
@@ -970,6 +981,7 @@ HUB_GROUPINGS = [
         "blurb": "The 2010 treaties rebooted in 2025 — the Northwood Declaration opened the door to coordinating the two nuclear deterrents.",
     },
     {
+        "slug": "b9",
         "name": "Bucharest Nine",
         "accent": "linear-gradient(90deg,#00966e 0 33.33%,#11457e 33.33% 66.66%,#ce1126 66.66%)",
         "members": ["bg", "cz", "ee", "hu", "lv", "lt", "pl", "ro", "sk"],
@@ -978,6 +990,7 @@ HUB_GROUPINGS = [
         "blurb": "NATO's eastern-flank caucus, founded after Crimea — now debating whether to widen to the Black Sea's south-east.",
     },
     {
+        "slug": "nb8",
         "name": "Nordic-Baltic Eight",
         "accent": "linear-gradient(90deg,#c8102e 0 25%,#003893 25% 50%,#0072ce 50% 75%,#fdb913 75%)",
         "members": ["dk", "fi", "no", "se", "is", "ee", "lv", "lt"],
@@ -986,6 +999,7 @@ HUB_GROUPINGS = [
         "blurb": "An informal Nordic-Baltic format since the 1990s, now doing double duty as Europe's most reliable security engine.",
     },
     {
+        "slug": "three_seas",
         "name": "Three Seas Initiative",
         "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%)",
         "members": ["ee", "lv", "lt", "pl", "cz", "sk", "hu", "si", "at", "hr", "ro", "gr", "bg"],
@@ -994,6 +1008,7 @@ HUB_GROUPINGS = [
         "blurb": "A north-south infrastructure club for the EU's eastern half — Spain and Turkey joined as strategic partners in 2025.",
     },
     {
+        "slug": "i2u2",
         "name": "I2U2",
         "accent": "linear-gradient(90deg,#ff9933 0 25%,#0038b8 25% 50%,#00732f 50% 75%,#3c3b6e 75%)",
         "members": ["in", "il", "ae", "us"],
@@ -1002,6 +1017,7 @@ HUB_GROUPINGS = [
         "blurb": "The 'West Asian Quad' — private-sector projects that stalled through 2024 and lean heavily on US engagement to move.",
     },
     {
+        "slug": "negev_forum",
         "name": "Negev Forum",
         "accent": "linear-gradient(90deg,#0038b8 0 33.33%,#3c3b6e 33.33% 66.66%,#00732f 66.66%)",
         "members": ["il", "us", "ae", "bh", "eg", "ma"],
@@ -1010,6 +1026,7 @@ HUB_GROUPINGS = [
         "blurb": "Six Abraham Accords-era working groups, suspended at ministerial level since the Gaza war.",
     },
     {
+        "slug": "imec",
         "name": "IMEC",
         "accent": "linear-gradient(90deg,#ff9933 0 25%,#3c3b6e 25% 50%,#006c35 50% 75%,#00732f 75%)",
         "members": ["in", "us", "fr", "de", "it", "sa", "ae"],
@@ -1018,6 +1035,7 @@ HUB_GROUPINGS = [
         "blurb": "A rail-port-cable corridor pitched as an answer to China's Belt and Road — construction has started, funding hasn't firmed up.",
     },
     {
+        "slug": "india_france_uae",
         "name": "India–France–UAE Trilateral",
         "accent": "linear-gradient(90deg,#ff9933 0 33.33%,#0055a4 33.33% 66.66%,#00732f 66.66%)",
         "members": ["in", "fr", "ae"],
@@ -1026,6 +1044,7 @@ HUB_GROUPINGS = [
         "blurb": "A defence-and-energy trio watching the Western Indian Ocean, with an AI and space roadmap agreed in 2025.",
     },
     {
+        "slug": "aes",
         "name": "Alliance of Sahel States",
         "accent": "linear-gradient(90deg,#14b53a 0 33.33%,#ce1126 33.33% 66.66%,#00a651 66.66%)",
         "members": ["ml", "bf", "ne"],
@@ -1034,6 +1053,7 @@ HUB_GROUPINGS = [
         "blurb": "Three juntas that quit ECOWAS and stood up a joint military force in 2025 — the clearest anti-Western minilateral.",
     },
     {
+        "slug": "pacific_alliance",
         "name": "Pacific Alliance",
         "accent": "linear-gradient(90deg,#0033a0 0 25%,#fcd116 25% 50%,#006847 50% 75%,#d91023 75%)",
         "members": ["cl", "co", "mx", "pe"],
@@ -1042,6 +1062,7 @@ HUB_GROUPINGS = [
         "blurb": "Latin America's trade bright spot, representing roughly half the region's trade — though a presidency rift is testing it.",
     },
     {
+        "slug": "mekong_lancang",
         "name": "Mekong-Lancang Cooperation",
         "accent": "linear-gradient(90deg,#de2910 0 33.33%,#032ea1 33.33% 66.66%,#da251d 66.66%)",
         "members": ["cn", "kh", "la", "mm", "th", "vn"],
@@ -1050,6 +1071,7 @@ HUB_GROUPINGS = [
         "blurb": "Beijing's mechanism for the Mekong basin — trade with the five downstream states topped $437bn over the decade.",
     },
     {
+        "slug": "china_pakistan_afghanistan",
         "name": "China–Pakistan–Afghanistan Trilateral",
         "accent": "linear-gradient(90deg,#de2910 0 33.33%,#01411c 33.33% 66.66%,#000000 66.66%)",
         "members": ["cn", "pk", "af"],
@@ -1058,6 +1080,7 @@ HUB_GROUPINGS = [
         "blurb": "A revived counterterrorism-and-connectivity channel, extending the China-Pakistan Economic Corridor into Afghanistan.",
     },
     {
+        "slug": "csc",
         "name": "Colombo Security Conclave",
         "accent": "linear-gradient(90deg,#ff9933 0 25%,#ffb700 25% 50%,#d21034 50% 75%,#006a4e 75%)",
         "members": ["in", "lk", "mv", "mu", "bd"],
@@ -1066,6 +1089,7 @@ HUB_GROUPINGS = [
         "blurb": "An India-led Indian Ocean security format, widely read as a counterweight to Chinese influence in the region.",
     },
     {
+        "slug": "mikta",
         "name": "MIKTA",
         "accent": "linear-gradient(90deg,#006847 0 20%,#ff0000 20% 40%,#003478 40% 60%,#e30a17 60% 80%,#00247d 80%)",
         "members": ["mx", "id", "kr", "tr", "au"],
@@ -1074,6 +1098,7 @@ HUB_GROUPINGS = [
         "blurb": "A cross-regional middle-power caucus of G20 members — its relevance is perennially debated, and it perennially persists.",
     },
     {
+        "slug": "chip4",
         "name": "Chip 4 / Fab 4",
         "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#003478 50% 75%,#fe0000 75%)",
         "members": ["us", "jp", "kr", "tw"],

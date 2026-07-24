@@ -8,7 +8,7 @@ A static tracker for Weimar Triangle (DE-FR-PL) diplomatic coordination. The cor
 
 **Expanding to more minilaterals.** The pipeline now *collects and enriches* data for four additional formats besides Weimar — E3 (DE/FR/UK), Visegrád Group (PL/CZ/SK/HU), Baltic Three (EE/LV/LT), and AUKUS (AU/UK/US) — defined in `data/groupings.yaml`. Enrichment tags each event with per-grouping relevance flags. The **rendered site still shows only Weimar** for now; per-grouping views are a deliberate follow-up. See "Groupings" and "Relevance classification" below.
 
-No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` — see Deployment below for how that build actually gets triggered.
+No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` and also runs a small API (`worker/index.js`) for the hub page's vote feature — see Deployment below for how that build actually gets triggered.
 
 ## Commands
 
@@ -54,6 +54,7 @@ Sources (RSS/HTML/API)
 - **`docs/404.html`** (always generated): what Cloudflare serves for unknown paths, per `wrangler.jsonc`'s `not_found_handling: "404-page"`.
 - **Routing**: `wrangler.jsonc`'s `routes` binds `minilaterals.com/*` to the worker (covering both the hub at the root and `/weimar-triangle/*`), but that route only applies on `wrangler deploy` (the `main`/production build). Branch previews get a `workers_dev` subdomain instead (a per-commit URL and a per-branch alias), where the worker owns the whole subdomain root — so a branch preview's hub page lives at `<alias>.workers.dev/`, with `<alias>.workers.dev/weimar-triangle/` the tracker itself, matching production's shape.
 - **Previewing without Cloudflare**: `render.yml` uploads the built tree as a `site` artifact on every branch push; download it to inspect a render locally.
+- **`worker/index.js`** is the Worker's `main` script (see `wrangler.jsonc`'s `main`/`assets.binding`/`kv_namespaces`). Requests are matched against static assets first; only unmatched paths — currently `/api/vote`, `/api/votes`, `/api/notify` — reach the script, which falls back to `env.ASSETS.fetch(request)` for anything else (e.g. the 404 page). It backs the hub page's "vote for the next grouping" feature, reading/writing the `VOTES` KV namespace (`minilaterals_emails` in the dashboard). Test it locally with `npx wrangler dev --local` (no live Cloudflare credentials needed; KV is emulated on disk under `.wrangler/state`, gitignored).
 
 ## Key files
 
@@ -65,7 +66,8 @@ Sources (RSS/HTML/API)
 | `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; per-grouping relevance via `_grouping_relevance()`; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
 | `pipeline/migrate_groupings.py` | One-off LLM-free backfill of the per-grouping relevance flags across `data/enriched/` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
-| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `hub.html` is the standalone minilaterals.com umbrella landing page (root, not part of the Weimar Triangle subsite — see Deployment); `meetings.html` exists but isn't currently rendered |
+| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `hub.html` is the standalone minilaterals.com umbrella landing page (root, not part of the Weimar Triangle subsite — see Deployment), including the vote-for-the-next-grouping UI; `meetings.html` exists but isn't currently rendered |
+| `worker/index.js` | The Cloudflare Worker's API surface (`/api/vote`, `/api/votes`, `/api/notify`) backing the hub page's vote feature; falls through to static assets for everything else — see Deployment |
 | `data/groupings.yaml` | The minilateral definitions (members + tracked topics); single source of truth for the actor/issue-area vocabulary |
 | `data/goals.yaml` | Per-topic reference goal sentences each stance is rated against (was `weimar_goals.yaml`) |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
@@ -133,8 +135,8 @@ Two separate concerns, both the model's. Which countries/topics an event covers 
 **6. One-sentence position extraction.**
 The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly.
 
-**7. Static site, no backend.**
-`pipeline/render.py` writes plain HTML to `docs/`. A Cloudflare Worker (Static Assets) serves it. No API routes, no server-side search, no authentication. Rationale: zero hosting cost, zero attack surface, Cloudflare CDN globally. Trade-off: no dynamic filtering, no per-user views, no search beyond browser Ctrl+F.
+**7. Static site, with one deliberate, narrow exception for the vote feature.**
+`pipeline/render.py` writes plain HTML to `docs/`; a Cloudflare Worker (Static Assets) serves it, no server-side search, no authentication, no per-user views. The one exception is `worker/index.js`, a handful of routes (`/api/vote`, `/api/votes`, `/api/notify`) backing the hub page's "vote for the next grouping" feature — the only place the site needs to persist something a static render can't (visitor-submitted votes and notify-me emails), stored in the `VOTES` KV namespace. Everything else about the page is still a pure function of (templates, data, cutoff). Trade-off: this is a real attack surface and a real (if small) hosting cost that the rest of the site deliberately avoids; it's scoped to a fixed slug allowlist and unauthenticated by design (a low-stakes interest signal, not a real ballot — see the race-condition note in `worker/index.js`).
 
 **8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
 The stance comparison *is* the product, and `pipeline.enrich` now owns both halves of it: in one call it classifies an event (actors/topics/relevance) *and* rates its per-topic stances. Without enrichment there is only a data-collection pipeline — a raw event carries no classification, so `render.py` omits it entirely (it isn't `weimar_relevant`) rather than showing it mis-tagged. There is no keyword fallback: an event the model hasn't processed simply waits, un-categorised, and is retried next run (or recovered by re-running `pipeline.enrich` locally against gemma4). Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if sparser) site. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.

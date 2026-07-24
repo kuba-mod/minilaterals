@@ -156,6 +156,40 @@ a:hover { color: var(--hl); }
   margin-left: auto;
 }
 
+/* ── Vote / notify-me ── */
+.hub-vote { margin-top: 2px; }
+.hub-vote-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-sans); font-size: 12px; font-weight: 500;
+  color: var(--hl); background: var(--bg-card); border: 1px solid var(--border);
+  padding: 6px 13px; border-radius: 100px; cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.hub-vote-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--hl) 8%, var(--bg-card)); border-color: var(--hl); }
+.hub-vote-btn:disabled { opacity: .55; cursor: default; }
+.hub-vote-arrow { font-size: 9px; }
+.hub-vote-count { font-size: 11px; color: var(--muted); }
+.hub-vote-thanks {
+  font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; color: var(--hl);
+}
+.hub-notify { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; align-items: center; }
+.hub-notify input {
+  flex: 1 1 150px; min-width: 0; font-family: var(--font-sans); font-size: 12.5px;
+  padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg-card); color: var(--ink);
+}
+.hub-notify button[type="submit"] {
+  font-family: var(--font-sans); font-size: 12px; font-weight: 500; color: #fff;
+  background: var(--hl); border: none; padding: 7px 13px; border-radius: 6px; cursor: pointer;
+}
+.hub-notify button[type="submit"]:disabled { opacity: .6; cursor: default; }
+.hub-notify-skip {
+  font-family: var(--font-sans); font-size: 11.5px; color: var(--muted);
+  background: none; border: none; cursor: pointer; text-decoration: underline;
+  padding: 4px 2px;
+}
+.hub-notify-done { font-family: var(--font-sans); font-size: 12.5px; color: var(--muted); margin-top: 9px; }
+
 /* ── Footer ── */
 .hub-footer {
   max-width: 1200px; margin: 60px auto 0; border-top: 1px solid var(--border);
@@ -239,12 +273,139 @@ a:hover { color: var(--hl); }
       <div class="hub-tags">
         {% for t in m.topics %}<span class="hub-tag">{{ t }}</span>{% endfor %}
       </div>
+      <div class="hub-vote" data-slug="{{ m.slug }}">
+        <button type="button" class="hub-vote-btn">
+          <span class="hub-vote-arrow">&#9650;</span> Vote for this next
+          <span class="hub-vote-count" hidden></span>
+        </button>
+      </div>
     </div>
     {% endfor %}
   </div>
 </main>
 
 <footer class="hub-footer">minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/">methodology &amp; sources</a></footer>
+
+<script>
+(function () {
+  "use strict";
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function countLabel(n) {
+    return n === 1 ? "1 vote" : n + " votes";
+  }
+
+  function notifyFormHtml() {
+    return (
+      '<form class="hub-notify">' +
+        '<input type="email" placeholder="you@example.com" required>' +
+        '<button type="submit">Notify me</button>' +
+        '<button type="button" class="hub-notify-skip">No thanks</button>' +
+      "</form>"
+    );
+  }
+
+  function wireNotifyForm(el, slug) {
+    var form = el.querySelector(".hub-notify");
+    if (!form) return;
+
+    form.querySelector(".hub-notify-skip").addEventListener("click", function () {
+      form.remove();
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = form.querySelector("input");
+      var email = input.value.trim();
+      if (!email) return;
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ slug: slug, email: email }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.ok) {
+            form.outerHTML = '<div class="hub-notify-done">You’re on the list — we’ll email you when it ships.</div>';
+          } else {
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function () { submitBtn.disabled = false; });
+    });
+  }
+
+  function renderVoted(el, slug, count, showNotify) {
+    var label = typeof count === "number" ? " (" + escapeHtml(countLabel(count)) + ")" : "";
+    el.innerHTML =
+      '<div class="hub-vote-thanks">✓ Thanks — your vote is recorded' + label + ".</div>" +
+      (showNotify ? notifyFormHtml() : "");
+    if (showNotify) wireNotifyForm(el, slug);
+  }
+
+  var voteEls = Array.prototype.slice.call(document.querySelectorAll(".hub-vote"));
+
+  fetch("/api/votes")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (data) { return (data && data.counts) || {}; })
+    .catch(function () { return {}; })
+    .then(function (counts) {
+      voteEls.forEach(function (el) {
+        var slug = el.dataset.slug;
+        var n = counts[slug];
+        var votedKey = "minilaterals:voted:" + slug;
+
+        if (localStorage.getItem(votedKey)) {
+          renderVoted(el, slug, typeof n === "number" ? n : null, false);
+          return;
+        }
+
+        var countEl = el.querySelector(".hub-vote-count");
+        if (typeof n === "number" && countEl) {
+          countEl.textContent = countLabel(n);
+          countEl.hidden = false;
+        }
+      });
+    });
+
+  voteEls.forEach(function (el) {
+    var slug = el.dataset.slug;
+    var votedKey = "minilaterals:voted:" + slug;
+
+    if (localStorage.getItem(votedKey)) {
+      return;
+    }
+
+    var btn = el.querySelector(".hub-vote-btn");
+    btn.addEventListener("click", function () {
+      btn.disabled = true;
+      fetch("/api/vote", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ slug: slug }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.ok) {
+            localStorage.setItem(votedKey, "1");
+            renderVoted(el, slug, data.count, true);
+          } else {
+            btn.disabled = false;
+          }
+        })
+        .catch(function () { btn.disabled = false; });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
