@@ -18,6 +18,23 @@
 // reads votes:* directly from this KV namespace via the Cloudflare API,
 // authenticated with the site owner's own CLOUDFLARE_API_TOKEN — the only
 // way to make "only I can see the standings" actually true.
+//
+// wrangler.jsonc binds one KV namespace with no per-environment override, so
+// branch previews (*.workers.dev, per the routes comment there) and
+// production (minilaterals.com) would otherwise write into the exact same
+// keys. Every write below goes through keyPrefix(request) instead, which
+// buckets anything not on the production hostname under "preview:" — a
+// completely different key prefix, so preview/testing votes never show up
+// in a votes:* listing and can't inflate real counts. (Local `wrangler dev
+// --local` doesn't need this: it emulates KV entirely on disk, isolated
+// from the real namespace regardless of hostname.)
+
+const PRODUCTION_HOSTNAME = "minilaterals.com"; // keep in sync with wrangler.jsonc's routes
+
+function keyPrefix(request) {
+  const hostname = new URL(request.url).hostname;
+  return hostname === PRODUCTION_HOSTNAME ? "" : "preview:";
+}
 
 const VALID_SLUGS = new Set([
   "e3", "visegrad", "baltic_three", "aukus",
@@ -52,7 +69,7 @@ async function handleVote(request, env) {
     return json({ error: "unknown grouping" }, 400);
   }
 
-  const key = `votes:${slug}`;
+  const key = `${keyPrefix(request)}votes:${slug}`;
   const next = parseInt((await env.VOTES.get(key)) || "0", 10) + 1;
   await env.VOTES.put(key, String(next));
 
@@ -74,7 +91,7 @@ async function handleNotify(request, env) {
     return json({ error: "invalid email" }, 400);
   }
 
-  await env.VOTES.put(`notify:${slug}:${email}`, new Date().toISOString());
+  await env.VOTES.put(`${keyPrefix(request)}notify:${slug}:${email}`, new Date().toISOString());
   return json({ ok: true });
 }
 

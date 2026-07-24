@@ -13,6 +13,12 @@ who just visits the site or clones this repo.
 Grouping display names come from pipeline.render.HUB_GROUPINGS, so the report
 stays in sync with the hub page without a second slug→name mapping to maintain.
 
+Only counts real production votes: worker/index.js buckets anything cast
+against a non-production hostname (branch previews, *.workers.dev) under a
+"preview:votes:*" key prefix instead of "votes:*", and the `prefix=votes:`
+filter below only ever matches the latter — so votes from testing a preview
+deployment never inflate what this reports.
+
 Setup (one-time): create a token at
 https://dash.cloudflare.com/profile/api-tokens with "Workers KV Storage:
 Read" permission scoped to this account, then:
