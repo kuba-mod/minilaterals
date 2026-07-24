@@ -29,5 +29,20 @@
       "binding": "VOTES",
       "id": "59cf38506c0340eeaba6abed0fd552cb"
     }
-  ]
+  ],
+  // Per-IP rate limit for the unauthenticated /api/vote and /api/notify write
+  // endpoints (worker/index.js). Caps scripted abuse that would otherwise burn
+  // the shared VOTES namespace's daily write budget. The binding is read
+  // defensively in the Worker, so its absence (e.g. `wrangler dev`) just
+  // disables limiting rather than erroring. `period` must be 10 or 60.
+  "unsafe": {
+    "bindings": [
+      {
+        "name": "RATE_LIMITER",
+        "type": "ratelimit",
+        "namespace_id": "1001",
+        "simple": { "limit": 30, "period": 60 }
+      }
+    ]
+  }
 }
