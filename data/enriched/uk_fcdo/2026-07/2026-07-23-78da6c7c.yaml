@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - indo_pacific
+  location: null
+  position: The United Kingdom reaffirms its commitment to a free and open Indo-Pacific
+    in alignment with the ASEAN Outlook.
+  positions:
+    indo_pacific: The UK actively supports a free and open Indo-Pacific based on international
+      law and the ASEAN Outlook.
+  stances:
+    indo_pacific:
+      score: 2
+      evidence: 'ASEAN-UK Joint Ministerial Statement on Cooperation on the ASEAN
+        Outlook on the Indo-Pacific: Advancing Together'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

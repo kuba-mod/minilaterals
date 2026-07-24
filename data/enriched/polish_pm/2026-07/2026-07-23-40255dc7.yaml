@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Władysław Kosiniak-Kamysz
+  - Marcin Kulasek
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Poland is investing heavily in domestic defense innovation and technology
+    through the PERUN program to strengthen its military capabilities and national
+    security.
+  positions:
+    ukraine: Poland is implementing combat experiences from Ukraine to enhance its
+      own defense capabilities.
+    defence: Poland is aggressively expanding its defense spending and technological
+      capacity with the goal of building the strongest army in Europe.
+    hybrid: Poland is developing specific technological solutions to counter threats
+      in cyberspace.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Implementujemy doświadczenia z Ukrainy i budujemy zdolności we wszystkich
+        obszarach.
+    defence:
+      score: 2
+      evidence: Celem rządu pozostaje budowa najsilniejszej armii w Europie.
+    hybrid:
+      score: 2
+      evidence: 'rozwijane są rozwiązania w takich obszarach takich jak: [...] cyberbezpieczeństwo'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

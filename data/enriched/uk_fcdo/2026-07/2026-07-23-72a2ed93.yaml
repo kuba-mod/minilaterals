@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: Bishkek, Kyrgyzstan
+  position: The United Kingdom expresses support for the OSCE's efforts in promoting
+    stability, democratic governance, and human rights in Kyrgyzstan.
+  positions:
+    rule_of_law: The UK rhetorically supports the promotion of democratic governance
+      and human rights in Kyrgyzstan.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: The Office’s contributions to border security, democratic governance,
+        human rights, economic resilien…
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

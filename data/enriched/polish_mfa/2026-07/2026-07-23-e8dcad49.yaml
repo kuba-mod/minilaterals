@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- indo_pacific
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - indo_pacific
+  - iran
+  location: null
+  position: Poland strongly opposes Houthi threats to block the Bab al-Mandab strait,
+    emphasizing the importance of freedom of navigation for global trade and humanitarian
+    stability.
+  positions:
+    indo_pacific: Poland supports the principle of freedom of navigation in key international
+      corridors to protect global supply chains.
+    iran: Poland highlights the destabilizing regional impact of conflicts in the
+      Persian Gulf, specifically referencing the blockade of the Strait of Hormuz.
+  stances:
+    indo_pacific:
+      score: 1
+      evidence: wyrażamy zdecydowany sprzeciw wobec wszelkich gróźb formułowanych
+        ostatnio przez Huti, roszczących sobie prawo do wpływania na swobodę żeglugi
+        w tym kluczowym korytarzu międzynarodowym
+    iran:
+      score: 1
+      evidence: Konflikt w Zatoce Perskiej oraz będąca jego bezpośrednim następstwem
+        blokada cieśniny Ormuz już wcześniej poważnie zagroziły światowym szlakom
+        handlowym
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

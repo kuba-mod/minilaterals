@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Varsen Aghabekian
+  topics:
+  - ukraine
+  location: null
+  position: Poland reaffirms its long-term humanitarian and development support for
+    Palestine and its commitment to a two-state solution.
+  positions:
+    ukraine: Poland maintains and has even increased its humanitarian aid to Palestine
+      despite the ongoing Russian aggression against Ukraine.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Zaangażowanie Polski w pomoc humanitarną i rozwojową dla Palestyny
+        nie zmalało po rosyjskiej agresji na Ukrainę w lutym 2022 roku. Wręcz przeciwnie
+        – znacząco wzrosło.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

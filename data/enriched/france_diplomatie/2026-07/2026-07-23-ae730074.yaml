@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  - iran
+  location: null
+  position: France strongly condemns Houthi attacks on Saudi vessels and reaffirms
+    its commitment to maritime security in the Red Sea.
+  positions:
+    defence: France is actively contributing to maritime security through the European
+      defensive operation ASPIDES.
+    iran: France rhetorically opposes the destabilizing regional activities of the
+      Houthis, who are proxies of Iran.
+  stances:
+    defence:
+      score: 2
+      evidence: France remains fully committed to the safeguarding of maritime security
+        and freedom of navigation under the European defensive operation ASPIDES
+    iran:
+      score: 1
+      evidence: France condemns in the strongest terms the attacks claimed by the
+        Houthis
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

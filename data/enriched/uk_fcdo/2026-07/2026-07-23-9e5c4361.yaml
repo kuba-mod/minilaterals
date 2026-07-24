@@ -1,0 +1,28 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom condemned Russia's aerial attacks on Ukraine and highlighted
+    evidence of human rights abuses in occupied territories.
+  positions:
+    ukraine: The UK supports Ukraine by condemning Russian aggression and citing reports
+      of civilian harm and identity erasure.
+  stances:
+    ukraine:
+      score: 1
+      evidence: The UK condemned Russia’s ongoing aerial attacks on Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

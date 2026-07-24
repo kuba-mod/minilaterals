@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - iran
+  location: null
+  position: Germany strongly condemns Houthi attacks on Saudi ships in the Red Sea
+    and demands their immediate cessation to ensure freedom of navigation.
+  positions:
+    iran: Germany opposes destabilizing regional activity by addressing and condemning
+      Houthi attacks in the Red Sea.
+  stances:
+    iran:
+      score: 1
+      evidence: Die Bundesregierung verurteilt die Angriffe der Huthi auf saudische
+        Schiffe im Roten Meer auf das Schärfste.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
