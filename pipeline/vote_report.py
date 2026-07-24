@@ -76,9 +76,7 @@ def render_html(counts: dict[str, int]) -> str:
     return (
         '<div style="font-family:sans-serif;color:#1c1812;">'
         f"<p>{total} total vote{'' if total == 1 else 's'} across {len(rows)} groupings.</p>"
-        '<table style="border-collapse:collapse;width:100%;max-width:640px;">'
-        + "".join(bar_rows)
-        + "</table></div>"
+        '<table style="border-collapse:collapse;width:100%;max-width:640px;">' + "".join(bar_rows) + "</table></div>"
     )
 
 
