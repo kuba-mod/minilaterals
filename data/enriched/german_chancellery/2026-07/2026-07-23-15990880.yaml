@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a new Packaging Act to align with EU regulations,
+    focusing on reducing packaging waste and increasing recycling quotas.
+  positions:
+    green_transition: Germany is advancing climate and industrial objectives by implementing
+      stricter recycling quotas and promoting recyclable packaging.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Ab 2028 werden für die dualen Systeme für Kunststoffabfälle erhöhte
+        Recycling quoten von 75 Prozent gelten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

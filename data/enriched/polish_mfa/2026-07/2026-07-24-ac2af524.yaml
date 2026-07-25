@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- indo_pacific
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Mongkol Surasatcha
+  - Lertsak Pattanachaikul
+  - Chadchai Bangchaud
+  - Bhumivisan Kasemsook
+  - Blanka Gołębiowska
+  - Jolanta Orlińska-Krupa
+  topics:
+  - indo_pacific
+  - migration
+  location: Bangkok, Thailand
+  position: Poland is strengthening bilateral ties with Thailand through strategic
+    dialogue, agricultural cooperation, and development aid.
+  positions:
+    indo_pacific: Poland is actively advancing its engagement in the region by establishing
+      a Strategic Dialogue and conducting high-level diplomatic visits to Thailand.
+    migration: Poland provides development aid and educational support to migrant
+      children from neighboring Southeast Asian countries.
+  stances:
+    indo_pacific:
+      score: 2
+      evidence: Trwają przygotowania do pierwszego spotkania w ramach Dialogu Strategicznego
+        w Tajlandii.
+    migration:
+      score: 2
+      evidence: Artur Harazim odwiedził również szkołę im. Janusza Korczaka w Bangkoku
+        dla dzieci migrantów z Mjanmy, Kambodży i Laosu, wspieranej w ramach projektów
+        Polskiej pomocy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

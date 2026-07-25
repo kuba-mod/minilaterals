@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- migration
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  topics:
+  - migration
+  - defence
+  location: Warsaw, Poland
+  position: Poland emphasizes the success of its internal security forces and the
+    effective securing of its eastern border.
+  positions:
+    migration: Poland claims to have achieved a secure and airtight eastern border
+      through the support of police and border guards.
+    defence: Poland highlights the integrated effort of the military and police to
+      maintain national security given its geographical location.
+  stances:
+    migration:
+      score: 2
+      evidence: mamy najbezpieczniejszą, szczelną granicę, przez którą nikt nieproszony
+        nie może się już przemknąć
+    defence:
+      score: 1
+      evidence: To wszystko dzięki wysiłkowi wojska, Straży Granicznej, jak i Policji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of Foreign Affairs of Latvia
+  topics:
+  - ukraine
+  location: Slovjanska, Ukraine
+  position: Latvia condemns the Russian attack that destroyed the Latvian honorary
+    consulate building in Slovyansk, Ukraine.
+  positions:
+    ukraine: Latvia expresses strong condemnation of Russian aggression within Ukrainian
+      territory.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Krievijas uzbrukumā iznīcināta Latvijas goda konsulāta ēka Slovjanskā,
+        Doņeckas apgabalā Ukrainā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

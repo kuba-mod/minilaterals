@@ -1,0 +1,35 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Latvia supports the 21st package of EU sanctions against Russia, targeting
+    its energy, financial, and trade sectors.
+  positions:
+    ukraine: Latvia supports coordinated economic pressure on Russia through the implementation
+      of EU sanctions.
+    energy: Latvia supports targeting the Russian energy sector to reduce dependence
+      and apply economic pressure.
+  stances:
+    ukraine:
+      score: 2
+      evidence: Sankciju pakotne aptver individuālās un sektorālās sankcijas
+    energy:
+      score: 2
+      evidence: vērstas pret Krievijas enerģētikas, finanšu, tirdzniecības sektoriem
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

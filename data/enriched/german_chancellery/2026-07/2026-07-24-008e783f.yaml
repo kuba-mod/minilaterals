@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a bureaucracy reduction law that removes mandatory
+    continuing education for real estate agents and eliminates the national heating
+    label for older systems while continuing funding for energy-efficient heating
+    replacements.
+  positions:
+    green_transition: Germany continues to support the transition to climate-neutral
+      heating by providing funding for the replacement of old heating systems.
+  stances:
+    green_transition:
+      score: 1
+      evidence: 'Die Bundesregierung setzt die Förderung fort : Die neuen Förderbedingungen
+        gelten bereits ab dem 21. Juli 2026.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

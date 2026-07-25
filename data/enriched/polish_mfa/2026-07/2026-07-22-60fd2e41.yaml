@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - representatives of Polish companies
+  - representatives of business environment institutions
+  - Robert Zduńczyk
+  topics:
+  - ukraine
+  location: Warsaw, Poland
+  position: Poland is integrating its diplomatic, economic, and development aid efforts
+    to support business expansion and partnerships in Africa and the Middle East.
+  positions:
+    ukraine: Poland continues to provide development cooperation and support to Ukraine
+      as part of its strategic priorities.
+  stances:
+    ukraine:
+      score: 2
+      evidence: 'Polska współpraca rozwojowa w 2026 roku obejmuje przede wszystkim
+        działania na rzecz: Ukrainy'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
