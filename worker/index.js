@@ -6,12 +6,26 @@
 // unmatched path needs the ASSETS fallback for a 404).
 //
 // Data lives in the VOTES KV namespace as plain counters/markers:
-//   votes:{slug}          -> integer vote count, stored as a string
-//   notify:{slug}:{email} -> ISO timestamp of signup (also dedupes re-signups)
+//   votes:{slug}           -> integer vote count, stored as a string
+//   voter:{slug}:{ip}      -> ISO timestamp; presence means this IP's vote for
+//                             this slug is already counted, so a repeat visit
+//                             (or a re-click after a page reload) can't
+//                             inflate the count — see clientIp() below
+//   notify:{slug}:{email}  -> ISO timestamp of signup (also dedupes re-signups)
 //
 // KV has no atomic increment, so a vote count is a read-then-write and can
-// under-count if two votes land in the same instant. Acceptable for a
-// low-traffic "gauge interest" signal, not a real ballot.
+// still under-count if two *different* IPs' first votes land in the same
+// instant. Acceptable for a low-traffic "gauge interest" signal, not a real
+// ballot.
+//
+// IP dedup is a soft defense, not a hard guarantee: CF-Connecting-IP reflects
+// the real TCP peer as seen by Cloudflare's edge, which a plain HTTP client
+// can't forge — but Cloudflare has a documented cross-zone quirk where a
+// *Worker* relaying a request into another zone can influence what
+// CF-Connecting-IP that zone sees. So this stops casual abuse (a curl loop,
+// repeated clicking) cheaply, but doesn't stop someone deliberately routing
+// through their own Worker. Good enough for this feature's stakes; Cloudflare
+// Turnstile would be the next step up if that ever changes.
 //
 // Deliberately no GET route to read the tallies back: that would be public
 // and unauthenticated like everything else here. pipeline/vote_report.py
@@ -34,6 +48,13 @@ const PRODUCTION_HOSTNAME = "minilaterals.com"; // keep in sync with wrangler.js
 function keyPrefix(request) {
   const hostname = new URL(request.url).hostname;
   return hostname === PRODUCTION_HOSTNAME ? "" : "preview:";
+}
+
+// Absent under `wrangler dev --local` (no real Cloudflare edge in front of
+// it), where every local vote collides on "unknown" and dedupes after the
+// first — expected there, not a bug; see the module comment above.
+function clientIp(request) {
+  return request.headers.get("CF-Connecting-IP") || "unknown";
 }
 
 const VALID_SLUGS = new Set([
@@ -69,11 +90,23 @@ async function handleVote(request, env) {
     return json({ error: "unknown grouping" }, 400);
   }
 
-  const key = `${keyPrefix(request)}votes:${slug}`;
-  const next = parseInt((await env.VOTES.get(key)) || "0", 10) + 1;
-  await env.VOTES.put(key, String(next));
+  const prefix = keyPrefix(request);
+  const voterKey = `${prefix}voter:${slug}:${clientIp(request)}`;
 
-  return json({ ok: true, count: next });
+  if (await env.VOTES.get(voterKey)) {
+    // Same IP has already voted for this slug — don't count it again, but
+    // still tell the caller it succeeded. Distinguishing "already voted"
+    // client-side would just reveal the dedup mechanism (and misfire for
+    // legitimate cases like two people sharing a home/office IP).
+    return json({ ok: true });
+  }
+  await env.VOTES.put(voterKey, new Date().toISOString());
+
+  const countKey = `${prefix}votes:${slug}`;
+  const next = parseInt((await env.VOTES.get(countKey)) || "0", 10) + 1;
+  await env.VOTES.put(countKey, String(next));
+
+  return json({ ok: true });
 }
 
 async function handleNotify(request, env) {
