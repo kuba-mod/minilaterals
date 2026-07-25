@@ -897,6 +897,10 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             "base_path": base_path,
             "weimar_actors": WEIMAR_ACTORS,
             "country_paths": {a: COUNTRY_PROFILE[a]["path"] for a in WEIMAR_ACTORS},
+            # Cloudflare Web Analytics site token (dashboard → Analytics & Logs →
+            # Web Analytics → Add a site). Unset until registered, in which case
+            # base.html omits the beacon entirely.
+            "cf_analytics_token": os.environ.get("CLOUDFLARE_ANALYTICS_TOKEN", ""),
         }
     )
 
