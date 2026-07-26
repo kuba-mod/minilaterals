@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% set active_page = "sources" %}
-{% block title %}Weimar Triangle — Methodology{% endblock %}
+{% block title %}{{ grouping.name }} — Methodology{% endblock %}
 
 {% block content %}
 
-<div class="section-head" style="margin-top:0">Methodology<span>How six official sources become a weekly read on whether Paris, Berlin and Warsaw are pulling in the same direction.</span></div>
+<div class="section-head" style="margin-top:0">Methodology<span>How {{ grouping.source_count_word }} official sources become a weekly read on whether {{ grouping.capitals_phrase }} are pulling in the same direction.</span></div>
 
 <p class="method-intro">
-  This tracker watches what the three governments <strong>actually say</strong> — not what
-  commentators say about them. Every week it reads the official statements of France, Germany
-  and Poland and checks, topic by topic, whether their positions line up. Here is how that works,
+  This tracker watches what the {{ grouping.member_count_word }} governments <strong>actually say</strong> — not what
+  commentators say about them. Every week it reads the official statements of {{ grouping.members_phrase }}
+  and checks, topic by topic, whether their positions line up. Here is how that works,
   in four steps.
 </p>
 
@@ -18,11 +18,11 @@
     <div class="mnum">1</div>
     <div>
       <div class="mt">Collect the source material</div>
-      <div class="md">Two official voices per country — the foreign ministry and the top executive office — read in German, French and Polish, straight from each institution's own newsroom rather than the thinner English pages.</div>
+      <div class="md">The principal official voices of each country — its foreign ministry, and where it has one, the top executive office — read in {{ languages_phrase }}, straight from each institution's own newsroom rather than the thinner English pages.</div>
       <div class="mvis">
-        <span class="mchip" style="color:{{ actor_colors.FR }};border-color:{{ actor_colors.FR }}44;background:{{ actor_colors.FR }}10"><span class="mdot" style="background:{{ actor_colors.FR }}"></span>France</span>
-        <span class="mchip" style="color:{{ actor_colors.DE }};border-color:{{ actor_colors.DE }}44;background:{{ actor_colors.DE }}10"><span class="mdot" style="background:{{ actor_colors.DE }}"></span>Germany</span>
-        <span class="mchip" style="color:{{ actor_colors.PL }};border-color:{{ actor_colors.PL }}44;background:{{ actor_colors.PL }}10"><span class="mdot" style="background:{{ actor_colors.PL }}"></span>Poland</span>
+        {% for a in grouping_actors %}
+        <span class="mchip" style="color:{{ actor_colors[a] }};border-color:{{ actor_colors[a] }}44;background:{{ actor_colors[a] }}10"><span class="mdot" style="background:{{ actor_colors[a] }}"></span>{{ actor_labels[a] }}</span>
+        {% endfor %}
         <span class="msnum">{{ source_rows|length }} sources</span>
       </div>
     </div>
@@ -31,11 +31,11 @@
     <div class="mnum">2</div>
     <div>
       <div class="mt">Read every item</div>
-      <div class="md">Each statement is read to work out whether it's relevant to the Weimar Triangle — which countries and which issues it touches, whether it explicitly invokes the three-way format — and, for relevant items, to draw out a one-sentence summary of the position it takes. Irrelevant items are set aside.</div>
+      <div class="md">Each statement is read to work out whether it's relevant to the {{ grouping.name }} — which countries and which issues it touches, whether it explicitly invokes the format — and, for relevant items, to draw out a one-sentence summary of the position it takes. Irrelevant items are set aside.</div>
       <div class="mvis">
         <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Countries involved</span>
         <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Issue areas</span>
-        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Three-way signal</span>
+        <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Format mention</span>
         <span class="mchip" style="color:var(--ink-soft);border-color:var(--rule)">Position summary</span>
       </div>
     </div>
@@ -44,7 +44,7 @@
     <div class="mnum">3</div>
     <div>
       <div class="mt">Score the stance</div>
-      <div class="md">Every relevant statement is rated from −2 to +2 against the goals the three governments jointly agreed in 2024 — the same way researchers hand-code party manifestos. Each score is backed by a direct quote.</div>
+      <div class="md">Every relevant statement is rated from −2 to +2 against {{ grouping.goals_note }} — the same way researchers hand-code party manifestos. Each score is backed by a direct quote.</div>
       <div class="mvis" style="gap:14px">
         <div class="mscale">
           <span style="background:var(--red)">−2</span>
@@ -76,26 +76,25 @@
   <span class="label">What counts as relevant</span>
   <p>
     Every source is a specific foreign ministry or executive office, so the source country always
-    counts — a Polish statement about Ukraine counts Poland even when the text never names it. On top
-    of that, each item is read to see which <em>other</em> Weimar Triangle countries it concerns, which tracked
-    issues it touches (Ukraine, defence, hybrid threats, enlargement, green transition, rule of law),
-    and whether it explicitly invokes the Weimar Triangle. An item is kept when it's from one of these
-    six ministries/offices and touches a tracked issue, when two or more of the three countries are
-    involved on a tracked issue, or when it names the trilateral format directly.
+    counts — a French statement about Iran counts France even when the text never names it. On top
+    of that, each item is read to see which <em>other</em> {{ grouping.name }} countries it concerns, which tracked
+    issues it touches ({{ grouping.topics_phrase }}), and whether it explicitly invokes the
+    {{ grouping.name }}. An item is kept when it's from one of these {{ grouping.source_count_word }}
+    ministries/offices and touches a tracked issue, when two or more of the {{ grouping.member_count_word }}
+    countries are involved on a tracked issue, or when it names the format directly.
   </p>
 
   <span class="label">Comparing positions</span>
   <p>
     The <a href="{{ base_path }}/">Recent</a> page groups relevant events into clusters where two or
     more countries published on the same topic within the same week. This surfaces the moments where,
-    say, Germany and Poland both speak about Ukraine within days of each other — even without a joint
-    statement — so their positions can be compared side by side.
+    say, {{ grouping.example_pair }} both speak about {{ grouping.example_topic }} within days of each
+    other — even without a joint statement — so their positions can be compared side by side.
   </p>
 
   <span class="label">How the stance is scored</span>
   <p>
-    Statements are rated against the goals the three governments jointly agreed in the Weimar
-    declarations of February and May 2024, on a five-point scale:
+    Statements are rated against {{ grouping.goals_note }}, on a five-point scale:
   </p>
   <ul>
     <li><strong>+2</strong> — actively advances the goal: concrete commitments, resources, initiatives</li>
@@ -109,6 +108,14 @@
     on this site can be checked by reading the quote behind it. No hidden similarity math sits behind
     the headline scores.
   </p>
+  {% if grouping.goals %}
+  <p>These are the goals themselves, one per tracked issue — the yardstick every score on this site is measured against:</p>
+  <ul>
+    {% for g in grouping.goals %}
+    <li><strong>{{ g.label }}</strong> — {{ g.text }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
   <span class="label">What the labels mean</span>
   <p>A cluster's label combines two things: how close the capitals' average scores are to each other, and whether that shared position actually backs the goal.</p>
@@ -127,7 +134,7 @@
     </div>
     <div class="verdict-row">
       <span class="vk" style="color:var(--ink-soft)"><span class="mdot" style="background:var(--ink-soft)"></span>Aligned against goal</span>
-      <span class="vv">The three agree with each other, but their shared position works against Weimar's stated aims — agreement is not the same as alignment.</span>
+      <span class="vv">The capitals agree with each other, but their shared position works against the {{ grouping.name }}'s stated aims — agreement is not the same as alignment.</span>
     </div>
     <div class="verdict-row">
       <span class="vk" style="color:var(--muted)"><span class="mdot" style="background:var(--muted)"></span>Noncommittal</span>
@@ -139,7 +146,7 @@
   <p>
     Scores are model-assigned and always quote-backed, but models make mistakes. If a rating looks
     wrong, a quote reads out of context, or a statement was misclassified, please
-    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20correction">report it</a> —
+    <a href="mailto:hello@minilaterals.com?subject={{ grouping.name|urlencode }}%20correction">report it</a> —
     corrections are reviewed and the underlying record is fixed, and that fix becomes part of the
     public history too.
   </p>
@@ -148,8 +155,8 @@
   <ul>
     <li>Sources are read in their native language — the full output of each institution, not the thinner English sections where those even exist. Position summaries are written in English; the evidence quotes stay in the original language.</li>
     <li>If a native-language feed goes down, collection falls back to an English section (where one exists) until it recovers, so a few items may carry English text.</li>
-    <li>Only the German foreign ministry and France Diplomatie offer clean feeds; the other four are read directly from their websites and can break if those sites change.</li>
-    <li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>
+    <li>{{ feed_count_word|capitalize }} of the {{ grouping.source_count_word }} sources offer a clean feed; the rest are read directly from their websites and can break if those sites change.</li>
+    {% if meetings_count %}<li>Historical meetings data (pre-pipeline) is hand-curated from public records.</li>{% endif %}
   </ul>
 </div>
 
@@ -167,9 +174,9 @@
         Cloud in the automated pipeline. For each item the model is asked which countries and issue
         areas it concerns, a one-sentence position summary per topic, a stance rating, and the quote
         that supports it. Its output is stored separately from the raw scraped text (under
-        <code>data/enriched/</code>), and both are committed to git. An item is flagged
-        <code>weimar_relevant</code> under the rules above, with a stronger <code>trilateral_signal</code>
-        flag when all three actors are present or the format is named explicitly.
+        <code>data/enriched/</code>), and both are committed to git. Each item carries one flag per
+        tracked format — this site reads <code>{{ grouping.relevance_key }}</code> — set under the
+        rules above.
       </p>
 
       <span class="label">Storage &amp; provenance</span>
@@ -193,7 +200,7 @@
       </p>
 
       <span class="label">Sources &amp; pipeline status</span>
-      <p style="margin-bottom:10px">Six official sources, two per country — a foreign ministry and a top executive office. Last ingest run{% if run %} — <span class="mono" style="font-size:13px">{{ run.date }}</span>{% endif %}:</p>
+      <p style="margin-bottom:10px">{{ grouping.source_count_word|capitalize }} official sources across {{ grouping.member_count_word }} countries — foreign ministries and top executive offices. Last ingest run{% if run %} — <span class="mono" style="font-size:13px">{{ run.date }}</span>{% endif %}:</p>
       <div class="table-wrap sources-table" style="margin-bottom:4px">
       <table>
         <thead>
@@ -209,9 +216,7 @@
               {{ source_labels.get(src, src) }}
               <span class="tag" style="color:{{ actor_colors[row.actor] }}; border-color:{{ actor_colors[row.actor] }}44; background:{{ actor_colors[row.actor] }}18; margin-left:4px">{{ row.actor }}</span>
             </td>
-            <td style="color:var(--muted)">
-              {% if row.lang == 'EN' %}English{% elif row.lang == 'DE' %}German{% elif row.lang == 'FR' %}French{% elif row.lang == 'PL' %}Polish{% else %}{{ row.lang }}{% endif %}
-            </td>
+            <td style="color:var(--muted)">{{ lang_labels.get(row.lang, row.lang) }}</td>
             <td style="color:var(--muted)">{{ row.method }}</td>
             <td class="mono">{{ h.last_ok or '—' }}</td>
             <td class="mono">{{ '%s (+%s)' % (s.fetched, s.new) if s else '—' }}</td>
@@ -238,15 +243,21 @@
   <ul>
     <li><strong>Alerts &amp; monitoring</strong> — get notified when a topic's alignment shifts, instead of checking back.</li>
     <li><strong>Full-history Excel export</strong> — every rated statement, every quote, since the pipeline started.</li>
-    <li><strong>More minilateral formats</strong> — E3 (France–Germany–UK), Visegrád Four, Baltic Three, and other coordination formats tracked the same way.</li>
+    <li><strong>More minilateral formats</strong> — the Visegrád Group, the Baltic Three and AUKUS are already being collected, and will be published the same way once their sources are solid enough to score.</li>
   </ul>
+  {% if other_sites %}
+  <p>
+    Already published alongside this one:
+    {% for s in other_sites %}<a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.
+  </p>
+  {% endif %}
   <p>
     Suggestions are welcome — if there's a feature or format you'd find useful, email
-    <a href="mailto:hello@minilaterals.com?subject=Weimar%20Triangle%20suggestion">hello@minilaterals.com</a>.
+    <a href="mailto:hello@minilaterals.com?subject={{ grouping.name|urlencode }}%20suggestion">hello@minilaterals.com</a>.
   </p>
   <p style="font-size:14px; color:var(--muted); font-family:'IBM Plex Sans',sans-serif; margin-top:20px">
     Total events tracked: <span class="mono">{{ all_events_count }}</span> &nbsp;·&nbsp;
-    Weimar-relevant: <span class="mono">{{ weimar_events_count }}</span>
+    relevant to the {{ grouping.name }}: <span class="mono">{{ relevant_events_count }}</span>
   </p>
 </div>
 
