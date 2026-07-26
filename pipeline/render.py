@@ -296,8 +296,7 @@ GROUPING_SITES = {
             "— across Ukraine, defence, enlargement, and the rule of law."
         ),
         "goals_note": (
-            "the goals the three governments jointly agreed in the Weimar declarations "
-            "of February and May 2024"
+            "the goals the three governments jointly agreed in the Weimar declarations of February and May 2024"
         ),
         # data/meetings.yaml is a hand-curated Weimar-only record.
         "has_meetings": True,
@@ -904,9 +903,7 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
     }
 
 
-def build_divergence_leaderboard(
-    topic_weekly: dict[str, list[dict | None]], grouping: Grouping = WEIMAR
-) -> list[dict]:
+def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]], grouping: Grouping = WEIMAR) -> list[dict]:
     """
     Rank topics by how far apart the capitals were in the current week.
 
@@ -1088,6 +1085,7 @@ def build_convergence_clusters(events: list[dict], window_days: int = 7, groupin
 # ---------------------------------------------------------------------------
 # Static shareability assets
 # ---------------------------------------------------------------------------
+
 
 def _member_names(actors: list[str] | tuple[str, ...]) -> str:
     """'France, Germany and Poland' — members in display order, Oxford-comma-free."""
