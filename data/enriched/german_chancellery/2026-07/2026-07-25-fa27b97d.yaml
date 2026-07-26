@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Katharina Wagner
+  - Nike Wagner
+  - Markus Söder
+  - Andreas Zippel
+  - Michel Friedman
+  topics:
+  - rule_of_law
+  location: Bayreuth, Germany
+  position: Chancellor Merz emphasizes the importance of Germany seriously confronting
+    its historical crimes and the legacy of National Socialism through the lens of
+    the Bayreuth Festival.
+  positions:
+    rule_of_law: Germany demonstrates a commitment to democratic resilience by actively
+      engaging with and drawing conclusions from its history of injustice and totalitarianism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Die Bayreuther Festspiele sind damit selbst ein Beispiel für die Bereitschaft
+        unseres Landes geworden, sich der eigenen Vergangenheit ernsthaft zu stellen
+        und dauerhafte Schlussfolgerungen aus ihr zu ziehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
