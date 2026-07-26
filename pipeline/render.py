@@ -885,7 +885,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
         "members": ["de", "fr", "gb"],
         "member_names": "Germany · France · United Kingdom",
-        "topics": ["Iran", "Defence", "Nuclear file"],
+        "topics": ["Iran nuclear file", "Sanctions snapback", "European security"],
         "blurb": "Europe's lead trio on Iran and hard security — Berlin, Paris and London coordinating outside the EU frame.",
     },
     {
@@ -894,7 +894,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
         "members": ["pl", "cz", "sk", "hu"],
         "member_names": "Poland · Czechia · Slovakia · Hungary",
-        "topics": ["Migration", "EU funds", "Energy"],
+        "topics": ["Migration & external borders", "Energy security", "EU enlargement"],
         "blurb": "Central Europe's caucus inside the EU — four capitals that vote together more often than not.",
     },
     {
@@ -903,7 +903,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
         "members": ["ee", "lv", "lt"],
         "member_names": "Estonia · Latvia · Lithuania",
-        "topics": ["Deterrence", "Russia", "Energy security"],
+        "topics": ["Deterrence", "Energy security", "Hybrid threats"],
         "blurb": "NATO's north-eastern frontier — Tallinn, Riga and Vilnius rarely more than a sentence apart.",
     },
     {
@@ -941,7 +941,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#3c3b6e 0 33.33%,#bc002d 33.33% 66.66%,#003478 66.66%)",
         "members": ["us", "jp", "kr"],
         "member_names": "United States · Japan · South Korea",
-        "topics": ["Camp David process", "Exercises", "Export controls"],
+        "topics": ["Camp David process", "Trilateral exercises", "DPRK deterrence"],
         "blurb": "Institutionalised at Camp David in 2023 — now navigating a change of government in all three capitals.",
     },
     {
@@ -959,8 +959,8 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#0055a4 0 20%,#000000 20% 40%,#00247d 40% 60%,#008C45 60% 80%,#dc143c 80%)",
         "members": ["fr", "de", "gb", "it", "pl"],
         "member_names": "France · Germany · UK · Italy · Poland",
-        "topics": ["Ukraine support", "Defence coordination"],
-        "blurb": "The E3 widened to Europe's biggest defence spenders — stood up in 2025 to coordinate support for Ukraine.",
+        "topics": ["Ukraine support", "Capability & procurement", "European pillar of NATO"],
+        "blurb": "Europe's five biggest defence spenders, convened by their defence ministers since late 2024 to coordinate support for Ukraine and build out NATO's European pillar.",
     },
     {
         "slug": "jef",
@@ -968,7 +968,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#00247d 0 25%,#c8102e 25% 50%,#002868 50% 75%,#003893 75%)",
         "members": ["gb", "nl", "dk", "no", "is", "se", "fi", "ee", "lv", "lt"],
         "member_names": "UK · Netherlands · Denmark · Norway · Iceland · Sweden · Finland · Estonia · Latvia · Lithuania",
-        "topics": ["Baltic Sea", "Shadow fleet", "Hybrid threats"],
+        "topics": ["Baltic Sea & High North", "Shadow fleet", "Hybrid threats"],
         "blurb": "A UK-led ten-nation coalition now tracking Russia's shadow fleet across the Baltic and North Seas.",
     },
     {
@@ -995,7 +995,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#c8102e 0 25%,#003893 25% 50%,#0072ce 50% 75%,#fdb913 75%)",
         "members": ["dk", "fi", "no", "se", "is", "ee", "lv", "lt"],
         "member_names": "Denmark · Finland · Norway · Sweden · Iceland · Estonia · Latvia · Lithuania",
-        "topics": ["Security", "Ukraine support"],
+        "topics": ["Foreign policy coordination", "Ukraine support", "Regional security"],
         "blurb": "An informal Nordic-Baltic format since the 1990s, now doing double duty as Europe's most reliable security engine.",
     },
     {
@@ -1022,7 +1022,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#0038b8 0 33.33%,#3c3b6e 33.33% 66.66%,#00732f 66.66%)",
         "members": ["il", "us", "ae", "bh", "eg", "ma"],
         "member_names": "Israel · United States · UAE · Bahrain · Egypt · Morocco",
-        "topics": ["Regional security", "Abraham Accords"],
+        "topics": ["Regional security", "Regional integration", "Clean energy"],
         "blurb": "Six Abraham Accords-era working groups, suspended at ministerial level since the Gaza war.",
     },
     {
@@ -1031,7 +1031,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#ff9933 0 25%,#3c3b6e 25% 50%,#006c35 50% 75%,#00732f 75%)",
         "members": ["in", "us", "fr", "de", "it", "sa", "ae"],
         "member_names": "India · US · EU · France · Germany · Italy · Saudi Arabia · UAE",
-        "topics": ["Connectivity", "Rail & ports", "BRI alternative"],
+        "topics": ["Connectivity", "Rail & ports", "Energy & data cables"],
         "blurb": "A rail-port-cable corridor pitched as an answer to China's Belt and Road — construction has started, funding hasn't firmed up.",
     },
     {
@@ -1049,7 +1049,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#14b53a 0 33.33%,#ce1126 33.33% 66.66%,#00a651 66.66%)",
         "members": ["ml", "bf", "ne"],
         "member_names": "Mali · Burkina Faso · Niger",
-        "topics": ["Sovereigntism", "Joint military force"],
+        "topics": ["Collective defence", "Joint military force", "Confederation"],
         "blurb": "Three juntas that quit ECOWAS and stood up a joint military force in 2025 — the clearest anti-Western minilateral.",
     },
     {
@@ -1058,7 +1058,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#0033a0 0 25%,#fcd116 25% 50%,#006847 50% 75%,#d91023 75%)",
         "members": ["cl", "co", "mx", "pe"],
         "member_names": "Chile · Colombia · Mexico · Peru",
-        "topics": ["Trade", "Asia-Pacific links"],
+        "topics": ["Trade integration", "Free movement", "Asia-Pacific links"],
         "blurb": "Latin America's trade bright spot, representing roughly half the region's trade — though a presidency rift is testing it.",
     },
     {
@@ -1067,7 +1067,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#de2910 0 33.33%,#032ea1 33.33% 66.66%,#da251d 66.66%)",
         "members": ["cn", "kh", "la", "mm", "th", "vn"],
         "member_names": "China · Cambodia · Laos · Myanmar · Thailand · Vietnam",
-        "topics": ["Water management", "Connectivity", "Law enforcement"],
+        "topics": ["Water resources", "Connectivity", "Law enforcement"],
         "blurb": "Beijing's mechanism for the Mekong basin — trade with the five downstream states topped $437bn over the decade.",
     },
     {
@@ -1094,7 +1094,7 @@ HUB_GROUPINGS = [
         "accent": "linear-gradient(90deg,#006847 0 20%,#ff0000 20% 40%,#003478 40% 60%,#e30a17 60% 80%,#00247d 80%)",
         "members": ["mx", "id", "kr", "tr", "au"],
         "member_names": "Mexico · Indonesia · South Korea · Turkey · Australia",
-        "topics": ["Global governance", "Middle powers"],
+        "topics": ["Global governance", "Multilateral reform"],
         "blurb": "A cross-regional middle-power caucus of G20 members — its relevance is perennially debated, and it perennially persists.",
     },
     {
