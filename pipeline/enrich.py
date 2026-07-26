@@ -81,8 +81,19 @@ class Grouping:
 
 
 def _load_groupings() -> dict[str, Grouping]:
+    """The groupings the pipeline classifies against.
+
+    data/groupings.yaml also carries hub-page placeholders that nothing ingests
+    yet; `topics` is what marks an entry as wired into the pipeline. Loading
+    those too would widen the actor vocabulary and issue-area enum offered to
+    the LLM, and emit a relevance flag per placeholder — see the file header.
+    """
     raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
-    return {key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", [])) for key, g in raw.items()}
+    return {
+        key: Grouping(key, g.get("name", key), g.get("members", []), g["topics"])
+        for key, g in raw.items()
+        if g.get("topics")
+    }
 
 
 GROUPINGS = _load_groupings()

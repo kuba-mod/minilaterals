@@ -50,8 +50,11 @@ def _load_grouping_vocab() -> tuple[set[str], set[str]]:
         raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
     except OSError:
         return set(), set()
-    actors = {c for g in raw.values() for c in (g.get("members") or [])}
-    issues = {t for g in raw.values() for t in (g.get("topics") or [])}
+    # `topics` marks a grouping as tracked by the pipeline; the file also holds
+    # hub-page placeholders, whose members must not widen the actor enum.
+    tracked = [g for g in raw.values() if g.get("topics")]
+    actors = {c for g in tracked for c in (g.get("members") or [])}
+    issues = {t for g in tracked for t in g["topics"]}
     return actors, issues
 
 
