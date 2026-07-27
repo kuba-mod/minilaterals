@@ -44,6 +44,27 @@ def _write(events_dir: Path, source: str, url: str, title: str, date: str = "202
     event.save(str(events_dir))
 
 
+# --- the shared dedup key --------------------------------------------------
+
+
+def test_event_files_under_the_shared_content_hash():
+    # save() and already_ingested() must agree exactly: if the filing key and
+    # the lookup key ever drifted apart, the skip would silently stop matching
+    # and every routine run would go back to re-fetching the whole listing.
+    event = Event(
+        source_name="stub_source",
+        title="A",
+        text="",
+        source_url="https://x/1",
+        source_lang="de",
+        source_published_at="2026-06-01T00:00:00Z",
+        date="2026-06-01",
+    )
+    expected = base.content_hash("https://x/1", "A")
+    assert event.content_hash() == expected
+    assert event.output_path().name == f"2026-06-01-{expected}.yaml"
+
+
 # --- already_ingested ------------------------------------------------------
 
 

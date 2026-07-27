@@ -16,6 +16,18 @@ from pipeline.schemas import RawEventSchema
 # into save(); this constant is the same tree under normal operation.
 EVENTS_DIR = Path(__file__).resolve().parents[2] / "data" / "events"
 
+
+def content_hash(source_url: str, title: str) -> str:
+    """The dedup key an event is filed under: sha256(url + title)[:8].
+
+    Single definition, because two callers depend on it agreeing exactly.
+    `Event.save()` files by it, and `BaseIngester.already_ingested()` looks
+    items up by it to decide whether an article fetch can be skipped — if the
+    two ever drifted apart, the skip would silently stop matching and every
+    routine run would go back to re-fetching the whole listing.
+    """
+    return sha256((source_url + title).encode()).hexdigest()[:8]
+
 # ---------------------------------------------------------------------------
 # Relevance signals
 # ---------------------------------------------------------------------------
@@ -103,7 +115,7 @@ class Event:
     collection_method: str | None = None
 
     def content_hash(self) -> str:
-        return sha256((self.source_url + self.title).encode()).hexdigest()[:8]
+        return content_hash(self.source_url, self.title)
 
     def output_path(self, base: str = "data/events") -> Path:
         month = self.date[:7] if self.date else "unknown"
@@ -162,9 +174,9 @@ class BaseIngester(ABC):
         always discarded. Gating that fetch on this predicate costs a directory
         scan once per run and removes the request entirely.
 
-        Matching is by content hash (sha256(url+title)[:8]) rather than by
-        output path, because several ingesters only learn an item's date from
-        the article page itself — the fetch this is meant to avoid.
+        Matching is on the same `content_hash()` `save()` files by, rather than
+        on the output path, because several ingesters only learn an item's date
+        from the article page itself — the fetch this is meant to avoid.
 
         Pure: call sites increment `known_skipped` themselves.
         """
@@ -173,7 +185,7 @@ class BaseIngester(ABC):
             self._known_hashes = (
                 {p.stem.rsplit("-", 1)[-1] for p in source_dir.glob("*/*.yaml")} if source_dir.is_dir() else set()
             )
-        return sha256((source_url + title).encode()).hexdigest()[:8] in self._known_hashes
+        return content_hash(source_url, title) in self._known_hashes
 
     @abstractmethod
     def fetch(self) -> Iterator[Event]:
