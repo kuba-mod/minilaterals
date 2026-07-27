@@ -55,15 +55,19 @@ from pipeline.sources.base import KNOWN_ACTOR_SOURCES
 ROOT = Path(__file__).parent.parent
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
-GOALS_PATH = ROOT / "data" / "goals.yaml"
 GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
-def _load_goals() -> dict[str, str]:
+def _load_config() -> dict:
     try:
-        return yaml.safe_load(GOALS_PATH.read_text(encoding="utf-8")) or {}
+        return yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
     except Exception:
         return {}
+
+
+def _load_goals() -> dict[str, str]:
+    """Reference goal sentences per issue area, keyed by topic."""
+    return _load_config().get("topic_goals") or {}
 
 
 GOALS = _load_goals()
@@ -81,8 +85,20 @@ class Grouping:
 
 
 def _load_groupings() -> dict[str, Grouping]:
-    raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
-    return {key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", [])) for key, g in raw.items()}
+    """The groupings the pipeline classifies against.
+
+    The `groupings` block also carries hub-page placeholders that nothing
+    ingests yet; `topics` is what marks an entry as wired into the pipeline.
+    Loading those too would widen the actor vocabulary and issue-area enum
+    offered to the LLM, and emit a relevance flag per placeholder — see the
+    file header.
+    """
+    raw = _load_config().get("groupings") or {}
+    return {
+        key: Grouping(key, g.get("name", key), g.get("members", []), g["topics"])
+        for key, g in raw.items()
+        if g.get("topics")
+    }
 
 
 GROUPINGS = _load_groupings()

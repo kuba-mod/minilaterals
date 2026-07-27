@@ -851,9 +851,98 @@ OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"
 </svg>
 """
 
+HUB_OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f4ecdb"/>
+<text x="80" y="88" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="3" fill="#7a7060">&#8212; A COORDINATION TRACKER</text>
+<text x="80" y="205" font-family="Georgia, serif" font-size="70" fill="#1c1812">The <tspan font-style="italic" fill="#8a3a23">minilaterals</tspan> monitor</text>
+<text x="80" y="270" font-family="Georgia, serif" font-size="27" fill="#3f372b">Formal alliances make the headlines. The real coordination</text>
+<text x="80" y="308" font-family="Georgia, serif" font-size="27" fill="#3f372b">happens in small groups — tracked week by week.</text>
+<text x="80" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">POSITIONAL COMPARISON</text>
+<text x="80" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Capitals speaking on one topic,</text>
+<text x="80" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">lined up side by side.</text>
+<text x="460" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">A STANCE, SCORED</text>
+<text x="460" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Rated &#8722;2 to +2 against</text>
+<text x="460" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">the shared goal.</text>
+<text x="840" y="440" font-family="'IBM Plex Sans', sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8a3a23">FILES, NOT A DATABASE</text>
+<text x="840" y="470" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">Every statement is a file</text>
+<text x="840" y="496" font-family="'IBM Plex Sans', sans-serif" font-size="18" fill="#3f372b">in a public repo.</text>
+<rect x="0" y="622" width="1200" height="8" fill="#c8a648" opacity="0.6"/>
+</svg>
+"""
+
 ROBOTS_TXT = """User-agent: *
 Allow: /
 """
+
+# Umbrella hub page (minilaterals.com root): one card per minilateral grouping.
+# Only the Weimar Triangle is live (templated directly in hub.html); the rest are
+# placeholders until their own ingesters/render targets exist.
+#
+# Card content — name, members, tags, blurb — lives in data/groupings.yaml
+# alongside each grouping's goal and the instrument it was agreed in, so a tag
+# can't drift away from the objective backing it. Only the accent gradients stay
+# here: they're presentation, with no counterpart in the data.
+HUB_ACCENTS = {
+    "e3": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
+    "visegrad": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
+    "baltic_three": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
+    "aukus": "linear-gradient(90deg,#00247d 0 33.33%,#c8102e 33.33% 66.66%,#3c3b6e 66.66%)",
+    "quad": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#ff9933 50% 75%,#00247d 75%)",
+    "squad": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#00247d 50% 75%,#0038a8 75%)",
+    "us_japan_rok": "linear-gradient(90deg,#3c3b6e 0 33.33%,#bc002d 33.33% 66.66%,#003478 66.66%)",
+    "coalition_of_the_willing": "linear-gradient(90deg,#012169 0 33.33%,#0055a4 33.33% 66.66%,#000000 66.66%)",
+    "e5": "linear-gradient(90deg,#0055a4 0 20%,#000000 20% 40%,#00247d 40% 60%,#008C45 60% 80%,#dc143c 80%)",
+    "jef": "linear-gradient(90deg,#00247d 0 25%,#c8102e 25% 50%,#002868 50% 75%,#003893 75%)",
+    "lancaster_house": "linear-gradient(90deg,#00247d 0 50%,#0055a4 50%)",
+    "b9": "linear-gradient(90deg,#00966e 0 33.33%,#11457e 33.33% 66.66%,#ce1126 66.66%)",
+    "nb8": "linear-gradient(90deg,#c8102e 0 25%,#003893 25% 50%,#0072ce 50% 75%,#fdb913 75%)",
+    "three_seas": "linear-gradient(90deg,#0072ce 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%)",
+    "i2u2": "linear-gradient(90deg,#ff9933 0 25%,#0038b8 25% 50%,#00732f 50% 75%,#3c3b6e 75%)",
+    "negev_forum": "linear-gradient(90deg,#0038b8 0 33.33%,#3c3b6e 33.33% 66.66%,#00732f 66.66%)",
+    "imec": "linear-gradient(90deg,#ff9933 0 25%,#3c3b6e 25% 50%,#006c35 50% 75%,#00732f 75%)",
+    "india_france_uae": "linear-gradient(90deg,#ff9933 0 33.33%,#0055a4 33.33% 66.66%,#00732f 66.66%)",
+    "aes": "linear-gradient(90deg,#14b53a 0 33.33%,#ce1126 33.33% 66.66%,#00a651 66.66%)",
+    "pacific_alliance": "linear-gradient(90deg,#0033a0 0 25%,#fcd116 25% 50%,#006847 50% 75%,#d91023 75%)",
+    "mekong_lancang": "linear-gradient(90deg,#de2910 0 33.33%,#032ea1 33.33% 66.66%,#da251d 66.66%)",
+    "china_pakistan_afghanistan": "linear-gradient(90deg,#de2910 0 33.33%,#01411c 33.33% 66.66%,#000000 66.66%)",
+    "csc": "linear-gradient(90deg,#ff9933 0 25%,#ffb700 25% 50%,#d21034 50% 75%,#006a4e 75%)",
+    "mikta": "linear-gradient(90deg,#006847 0 20%,#ff0000 20% 40%,#003478 40% 60%,#e30a17 60% 80%,#00247d 80%)",
+    "chip4": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#003478 50% 75%,#fe0000 75%)",
+}
+
+# Flag codes are ISO 3166-1 alpha-2, lowercase, for flagcdn.com — which uses the
+# ISO `gb` where the project's actor vocabulary uses `UK`.
+_FLAG_CODES = {"UK": "gb"}
+
+GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
+
+
+def load_hub_groupings() -> list[dict]:
+    """The "coming soon" cards, in file order, from data/groupings.yaml.
+
+    `weimar` is skipped — its card is the live tracker and is templated in
+    hub.html with real numbers rather than rendered from this list.
+    """
+    raw = (_load_yaml(GROUPINGS_PATH) or {}).get("groupings") or {}
+    cards = []
+    for key, g in raw.items():
+        if key == "weimar":
+            continue
+        cards.append(
+            {
+                "slug": g.get("hub_slug", key),
+                "name": g.get("hub_name", g["name"]),
+                "accent": HUB_ACCENTS[g.get("hub_slug", key)],
+                "members": [_FLAG_CODES.get(c, c.lower()) for c in g["members"]],
+                "member_names": g["member_names"],
+                "topics": list(g["tags"]),
+                "blurb": g["blurb"],
+            }
+        )
+    return cards
+
+
+HUB_GROUPINGS = load_hub_groupings()
 
 
 # ---------------------------------------------------------------------------
@@ -876,6 +965,15 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
     (out / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
     (out / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
+    if base_path:
+        # The hub page (rendered further below) occupies the true domain root,
+        # so it needs its own copies of these root-relative assets alongside
+        # the ones the subsite already wrote into `out`.
+        root.mkdir(parents=True, exist_ok=True)
+        (root / ".nojekyll").touch()
+        (root / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
+        (root / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
+        (root / "og-image.svg").write_text(HUB_OG_IMAGE_SVG, encoding="utf-8")
 
     edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
@@ -1121,11 +1219,32 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     # Root-level deploy files, beside (not inside) the base-path subdir.
     # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
-    # not_found_handling); _redirects sends the bare root into the site and is
-    # only meaningful when the site sits under a path prefix.
+    # not_found_handling).
     (root / "404.html").write_text(env.get_template("404.html").render() + "\n", encoding="utf-8")
+
+    # docs/index.html — the minilaterals.com hub page, one card per minilateral
+    # grouping. Only rendered when the site sits under a path prefix (base_path
+    # set): that's what makes room for a hub at the true domain root. In local
+    # dev (no SITE_BASE_PATH) `out` already *is* `root`, so the Weimar Triangle
+    # tracker's own index.html lives there instead.
     if base_path:
-        (root / "_redirects").write_text(f"/  {base_path}/  301\n", encoding="utf-8")
+        overall_series = topic_weekly.get("overall") or []
+        latest_overall = next((w for w in reversed(overall_series) if w), None)
+        weimar_badge = {"label": latest_overall["label"], "color": latest_overall["color"]} if latest_overall else None
+        tmpl = env.get_template("hub.html")
+        (root / "index.html").write_text(
+            tmpl.render(
+                base_path=base_path,
+                weimar_actors=WEIMAR_ACTORS,
+                issue_order=ISSUE_ORDER,
+                issue_labels=ISSUE_LABELS,
+                edition_hub_date_str=edition_dt.strftime("%-d %b %Y"),
+                weimar_weekly_statements=sum(weekly_counts.values()),
+                weimar_badge=weimar_badge,
+                hub_groupings=HUB_GROUPINGS,
+            ),
+            encoding="utf-8",
+        )
 
     print(f"Rendered → {root.resolve()}")
     print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")
