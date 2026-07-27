@@ -151,16 +151,9 @@ a:hover { color: var(--hl); }
 
 .hub-section-break {
   grid-column: 1 / -1;
-  margin: 14px 0 2px; padding-top: 20px; border-top: 1px solid var(--border);
+  margin: 22px 0 0; padding-top: 28px; border-top: 1px solid var(--border);
 }
-.hub-section-break span {
-  font-family: var(--font-sans); font-size: 11px; font-weight: 600;
-  letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted);
-}
-.hub-section-break p {
-  font-family: var(--font-serif); font-size: 13.5px; color: var(--muted);
-  margin: 6px 0 0; max-width: 62ch;
-}
+.hub-section-break .hub-section-head { margin-bottom: 0; }
 .hub-card--inactive { opacity: .78; }
 
 .hub-card--soon { background: var(--bg-paper); border: 1px solid #e0d5ba; opacity: .94; }
@@ -281,10 +274,7 @@ a:hover { color: var(--hl); }
     {# ── Coming soon: active first, then intermittent, then inactive ── #}
     {% for m in hub_groupings %}
     {% if m.inactive and not loop.previtem.inactive %}
-    <div class="hub-section-break">
-      <span>No longer meeting</span>
-      <p>Listed because the gap is itself informative — a format that stalled, was suspended, or was proposed and never agreed.</p>
-    </div>
+    <div class="hub-section-break"><div class="hub-section-head">No longer meeting</div></div>
     {% endif %}
     <div class="hub-card hub-card--soon{{ ' hub-card--inactive' if m.inactive }}">
       <div class="hub-card-accent" style="--accent: {{ m.accent }};"></div>
@@ -292,7 +282,7 @@ a:hover { color: var(--hl); }
         <div class="hub-card-flags">
           {% for c in m.members %}<img class="fl" src="https://flagcdn.com/{{ c }}.svg" alt="">{% endfor %}
         </div>
-        <span class="hub-soon-badge">Coming soon</span>
+        {% if not m.inactive %}<span class="hub-soon-badge">Coming soon</span>{% endif %}
       </div>
       <div class="hub-card-name">{{ m.name }}</div>
       <div class="hub-card-members">{{ m.member_names }}</div>
