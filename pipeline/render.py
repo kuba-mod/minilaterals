@@ -927,17 +927,28 @@ _FLAG_CODES = {"UK": "gb"}
 GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
-def load_hub_groupings() -> list[dict]:
-    """The "coming soon" cards, in file order, from data/groupings.yaml.
+# Card order within the grid. A grouping that has stopped meeting is still worth
+# listing — the fact that it stalled is part of the picture — but it shouldn't
+# sit above formats that are actually running, so the inactive ones drop to
+# their own section and `intermittent` sinks to the bottom of the active one.
+STATUS_ORDER = {"active": 0, "intermittent": 1, "dormant": 2, "suspended": 2, "aspirational": 2}
+INACTIVE_FROM = 2
 
-    `weimar` is skipped — its card is the live tracker and is templated in
-    hub.html with real numbers rather than rendered from this list.
+
+def load_hub_groupings() -> list[dict]:
+    """The "coming soon" cards from data/groupings.yaml, ordered by status.
+
+    Active first, then intermittent, then the inactive ones; file order breaks
+    ties, so related formats stay together within a band. `weimar` is skipped —
+    its card is the live tracker and is templated in hub.html with real numbers
+    rather than rendered from this list.
     """
     raw = _load_yaml(GROUPINGS_PATH) or {}
     cards = []
-    for key, g in raw.items():
+    for position, (key, g) in enumerate(raw.items()):
         if key == "weimar":
             continue
+        rank = STATUS_ORDER[g["status"]]
         cards.append(
             {
                 "slug": g.get("hub_slug", key),
@@ -946,13 +957,26 @@ def load_hub_groupings() -> list[dict]:
                 "members": [_FLAG_CODES.get(c, c.lower()) for c in g["members"]],
                 "member_names": g["member_names"],
                 "topics": list(g["tags"]),
-                "blurb": g["blurb"],
+                "purpose": g["purpose"],
+                "agreed": g["agreed"],
+                "status": g["status"],
+                "inactive": rank >= INACTIVE_FROM,
+                "_sort": (rank, position),
             }
         )
-    return cards
+    return sorted(cards, key=lambda c: c.pop("_sort"))
 
 
 HUB_GROUPINGS = load_hub_groupings()
+
+
+def load_weimar_card() -> dict:
+    """The live card's own text, from the same file as every other card."""
+    entry = (_load_yaml(GROUPINGS_PATH) or {}).get("weimar") or {}
+    return {"purpose": entry.get("purpose", ""), "agreed": entry.get("agreed", "")}
+
+
+WEIMAR_CARD = load_weimar_card()
 
 
 # ---------------------------------------------------------------------------
@@ -1252,6 +1276,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
                 weimar_weekly_statements=sum(weekly_counts.values()),
                 weimar_badge=weimar_badge,
                 hub_groupings=HUB_GROUPINGS,
+                weimar_card=WEIMAR_CARD,
             ),
             encoding="utf-8",
         )

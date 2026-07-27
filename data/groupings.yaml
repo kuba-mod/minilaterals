@@ -84,6 +84,12 @@ weimar:
       >-
         The rule of law and democratic resilience inside the Union treated as a security
         question rather than only a legal one.
+  status: active
+  purpose:
+  >-
+    Concerts French, German and Polish positions so the three governments arrive at European
+    tables having already settled a common line on security and the Union's eastern policy.
+  agreed: "Weimar Declaration, 29 August 1991; priorities restated by the three foreign ministers in 2024"
   tags:
     "Ukraine":
       >-
@@ -131,7 +137,13 @@ e3:
         — coordination between the continent's two nuclear powers and its largest
         defence spenders.
   member_names: "Germany · France · United Kingdom"
-  blurb: "Europe's lead trio on Iran and hard security — Berlin, Paris and London coordinating outside the EU frame."
+  status: active
+  purpose:
+  >-
+    Prevents Iran from acquiring nuclear weapons by holding a single European negotiating
+    position on its nuclear programme, backed by the sanctions leverage the three
+    governments retain.
+  agreed: "Tehran Declaration, 21 October 2003"
   tags:
     "Iran nuclear file":
       >-
@@ -169,7 +181,12 @@ visegrad:
         interconnection, LNG and nuclear — an objective the four share while differing
         sharply on its pace.
   member_names: "Poland · Czechia · Slovakia · Hungary"
-  blurb: "Central Europe's caucus inside the EU — four capitals that vote together more often than not."
+  status: intermittent
+  purpose:
+  >-
+    Coordinates four Central European governments inside the European Union and the Atlantic
+    alliance, principally on external borders, energy supply and further enlargement.
+  agreed: "Visegrád Declaration, 15 February 1991"
   tags:
     "Migration & external borders":
       >-
@@ -205,7 +222,13 @@ baltic:
         Complete energy separation from Russia: desynchronisation from the BRELL grid,
         synchronisation with continental Europe, and regional LNG and interconnection.
   member_names: "Estonia · Latvia · Lithuania"
-  blurb: "NATO's north-eastern frontier — Tallinn, Riga and Vilnius rarely more than a sentence apart."
+  status: active
+  purpose:
+  >-
+    Presents a single Estonian, Latvian and Lithuanian position on regional defence, energy
+    independence and resilience, and builds the shared infrastructure that position depends
+    on.
+  agreed: "Agreement on Baltic Parliamentary and Governmental Co-operation, 13 June 1994"
   tags:
     "Deterrence":
       >-
@@ -240,7 +263,12 @@ aukus:
         quantum, hypersonics and undersea capability, plus the export-control reform
         that lets technology actually move between the three.
   member_names: "Australia · United Kingdom · United States"
-  blurb: "A Pacific security pact built around nuclear-powered submarines and shared defence technology."
+  status: active
+  purpose:
+  >-
+    Gives Australia a conventionally armed, nuclear-powered submarine fleet, and develops
+    advanced military technology jointly between the three governments.
+  agreed: "Joint Leaders Statement, 15 September 2021"
   tags:
     "Submarines":
       >-
@@ -262,7 +290,12 @@ quad:
   name: "The Quad"
   members: [US, JP, IN, AU]
   member_names: "United States · Japan · India · Australia"
-  blurb: "The Indo-Pacific's flagship quartet — institutionally busy in 2026, but without a leaders' summit since 2024."
+  status: intermittent
+  purpose:
+  >-
+    Sustains a free and open Indo-Pacific through practical cooperation on maritime
+    awareness, critical mineral supply and resilient supply chains.
+  agreed: "First leaders' summit, 12 March 2021"
   tags:
     "Indo-Pacific":
       >-
@@ -281,7 +314,12 @@ squad:
   name: "The Squad"
   members: [US, JP, AU, PH]
   member_names: "United States · Japan · Australia · Philippines"
-  blurb: "The Quad's operational cousin — four militaries coordinating against grey-zone pressure in the South China Sea."
+  status: active
+  purpose:
+  >-
+    Deters coercion against the Philippines and upholds freedom of navigation in the South
+    China Sea through combined maritime operations.
+  agreed: "First defence ministers' meeting, Hawaii, 2 May 2024"
   tags:
     "South China Sea":
       >-
@@ -300,7 +338,13 @@ us_japan_rok:
   name: "US–Japan–ROK Trilateral"
   members: [US, JP, KR]
   member_names: "United States · Japan · South Korea"
-  blurb: "Institutionalised at Camp David in 2023 — now navigating a change of government in all three capitals."
+  status: intermittent
+  purpose:
+  >-
+    Institutionalises three-way security coordination — a standing meeting calendar, named
+    joint exercises and a commitment to consult in a crisis — so that it outlives any single
+    government.
+  agreed: "Camp David summit, 18 August 2023"
   tags:
     "Camp David process":
       >-
@@ -318,7 +362,12 @@ coalition_of_the_willing:
   name: "Coalition of the Willing"
   members: [UK, FR, DE]
   member_names: "UK & France (co-chairs) · Germany · ~35 countries in total"
-  blurb: "Started in London in 2025 to backstop a Ukraine ceasefire — some 26 states have pledged troops to a planned reassurance force."
+  status: active
+  purpose:
+  >-
+    Underwrites any Ukrainian ceasefire with security guarantees credible enough to hold,
+    including a multinational force deployed at Ukraine's invitation.
+  agreed: "London summit, 2 March 2025"
   tags:
     "Ukraine":
       >-
@@ -336,7 +385,12 @@ e5:
   name: "The E5"
   members: [FR, DE, UK, IT, PL]
   member_names: "France · Germany · UK · Italy · Poland"
-  blurb: "Europe's five biggest defence spenders, convened by their defence ministers since late 2024 to coordinate support for Ukraine and build out NATO's European pillar."
+  status: active
+  purpose:
+  >-
+    Coordinates Europe's five largest defence budgets on support for Ukraine and on building
+    a European pillar within the Atlantic alliance.
+  agreed: "First defence ministers' meeting, Berlin, 25 November 2024"
   tags:
     "Ukraine support":
       >-
@@ -355,7 +409,12 @@ jef:
   name: "Joint Expeditionary Force"
   members: [UK, NL, DK, "NO", IS, SE, FI, EE, LV, LT]
   member_names: "UK · Netherlands · Denmark · Norway · Iceland · Sweden · Finland · Estonia · Latvia · Lithuania"
-  blurb: "A UK-led ten-nation coalition now tracking Russia's shadow fleet across the Baltic and North Seas."
+  status: active
+  purpose:
+  >-
+    Maintains a British-led, high-readiness force for the Baltic Sea, the High North and the
+    North Atlantic, able to act below the threshold that would summon the full alliance.
+  agreed: "Letter of Intent, 5 September 2014; remit reset by the Policy Direction of 2021"
   tags:
     "Baltic Sea & High North":
       >-
@@ -374,7 +433,12 @@ lancaster_house:
   name: "Lancaster House 2.0"
   members: [UK, FR]
   member_names: "United Kingdom · France"
-  blurb: "The 2010 treaties rebooted in 2025 — the Northwood Declaration opened the door to coordinating the two nuclear deterrents."
+  status: active
+  purpose:
+  >-
+    Deepens British and French defence integration to the point of coordinating Europe's two
+    nuclear deterrents, alongside jointly developed deep-strike weapons.
+  agreed: "Northwood Declaration, 10 July 2025"
   tags:
     "Nuclear coordination":
       >-
@@ -389,7 +453,12 @@ b9:
   name: "Bucharest Nine"
   members: [BG, CZ, EE, HU, LV, LT, PL, RO, SK]
   member_names: "Bulgaria · Czechia · Estonia · Hungary · Latvia · Lithuania · Poland · Romania · Slovakia"
-  blurb: "NATO's eastern-flank caucus, founded after Crimea — now debating whether to widen to the Black Sea's south-east."
+  status: active
+  purpose:
+  >-
+    Speaks with one voice inside the Atlantic alliance for a permanently reinforced eastern
+    flank, treated as a single theatre from the Baltic to the Black Sea.
+  agreed: "First summit, Bucharest, 4 November 2015"
   tags:
     "NATO eastern flank":
       >-
@@ -404,7 +473,12 @@ nb8:
   name: "Nordic-Baltic Eight"
   members: [DK, FI, "NO", SE, IS, EE, LV, LT]
   member_names: "Denmark · Finland · Norway · Sweden · Iceland · Estonia · Latvia · Lithuania"
-  blurb: "An informal Nordic-Baltic format since the 1990s, now doing double duty as Europe's most reliable security engine."
+  status: active
+  purpose:
+  >-
+    Keeps eight northern European governments aligned across foreign, security and civil
+    policy through continuous consultation rather than a standing institution.
+  agreed: "Format established in 1992; work programme set by the Wise Men Report of 2010"
   tags:
     "Foreign policy coordination":
       >-
@@ -422,7 +496,12 @@ three_seas:
   name: "Three Seas Initiative"
   members: [EE, LV, LT, PL, CZ, SK, HU, SI, AT, HR, RO, GR, BG]
   member_names: "13 states between the Baltic, Adriatic and Black Seas"
-  blurb: "A north-south infrastructure club for the EU's eastern half — Spain and Turkey joined as strategic partners in 2025."
+  status: active
+  purpose:
+  >-
+    Closes the north-south infrastructure gap between the Baltic, Adriatic and Black Seas,
+    connecting energy, transport and digital networks across the Union's eastern half.
+  agreed: "Dubrovnik Joint Statement, 25 August 2016"
   tags:
     "Energy":
       >-
@@ -439,7 +518,12 @@ i2u2:
   name: "I2U2"
   members: [IN, IL, AE, US]
   member_names: "India · Israel · UAE · United States"
-  blurb: "The 'West Asian Quad' — private-sector projects that stalled through 2024 and lean heavily on US engagement to move."
+  status: dormant
+  purpose:
+  >-
+    Mobilises private capital and the four countries' technology bases into joint projects
+    in water, energy, transport, health and food security.
+  agreed: "First leaders' meeting, 14 July 2022"
   tags:
     "Food security":
       >-
@@ -457,7 +541,12 @@ negev_forum:
   name: "Negev Forum"
   members: [IL, US, AE, BH, EG, MA]
   member_names: "Israel · United States · UAE · Bahrain · Egypt · Morocco"
-  blurb: "Six Abraham Accords-era working groups, suspended at ministerial level since the Gaza war."
+  status: suspended
+  purpose:
+  >-
+    Turns the normalisation agreements between Israel and its Arab partners into a standing
+    regional architecture of six permanent working groups.
+  agreed: "Negev Summit, 27 March 2022; working groups established 27 June 2022"
   tags:
     "Regional security":
       >-
@@ -475,7 +564,13 @@ imec:
   name: "IMEC"
   members: [IN, US, FR, DE, IT, SA, AE]
   member_names: "India · US · EU · France · Germany · Italy · Saudi Arabia · UAE"
-  blurb: "A rail-port-cable corridor pitched as an answer to China's Belt and Road — construction has started, funding hasn't firmed up."
+  status: intermittent
+  purpose:
+  >-
+    Builds a shipping and rail corridor from India through the Gulf to Europe, with an
+    electricity interconnector, a hydrogen pipeline and a data cable laid along the same
+    route.
+  agreed: "Memorandum of Understanding signed at the Group of Twenty summit, 9 September 2023"
   tags:
     "Connectivity":
       >-
@@ -494,7 +589,12 @@ india_france_uae:
   name: "India–France–UAE Trilateral"
   members: [IN, FR, AE]
   member_names: "India · France · UAE"
-  blurb: "A defence-and-energy trio watching the Western Indian Ocean, with an AI and space roadmap agreed in 2025."
+  status: intermittent
+  purpose:
+  >-
+    Runs joint projects in solar and nuclear energy, defence manufacturing, and climate and
+    biodiversity protection, with the western Indian Ocean as the shared area of interest.
+  agreed: "Trilateral joint statement and roadmap, 4 February 2023"
   tags:
     "Indian Ocean":
       >-
@@ -511,7 +611,12 @@ aes:
   name: "Alliance of Sahel States"
   members: [ML, BF, NE]
   member_names: "Mali · Burkina Faso · Niger"
-  blurb: "Three juntas that quit ECOWAS and stood up a joint military force in 2025 — the clearest anti-Western minilateral."
+  status: active
+  purpose:
+  >-
+    Binds three governments to mutual defence, an attack on one treated as an attack on all,
+    and deepens that into a confederation outside the West African regional bloc.
+  agreed: "Charter of Liptako-Gourma, 16 September 2023; confederation treaty, 6 July 2024"
   tags:
     "Collective defence":
       >-
@@ -528,7 +633,13 @@ pacific_alliance:
   name: "Pacific Alliance"
   members: [CL, CO, MX, PE]
   member_names: "Chile · Colombia · Mexico · Peru"
-  blurb: "Latin America's trade bright spot, representing roughly half the region's trade — though a presidency rift is testing it."
+  status: intermittent
+  purpose:
+  >-
+    Builds an area of deep integration between four Latin American economies, letting goods,
+    services, capital and people move freely, and projects them together into the Asia-
+    Pacific.
+  agreed: "Declaration of Lima, 28 April 2011; Framework Agreement, 6 June 2012"
   tags:
     "Trade integration":
       >-
@@ -546,7 +657,12 @@ mekong_lancang:
   name: "Mekong-Lancang Cooperation"
   members: [CN, KH, LA, MM, TH, VN]
   member_names: "China · Cambodia · Laos · Myanmar · Thailand · Vietnam"
-  blurb: "Beijing's mechanism for the Mekong basin — trade with the five downstream states topped $437bn over the decade."
+  status: active
+  purpose:
+  >-
+    Binds the five downstream Mekong states to China through cooperation on shared water
+    resources, transport connectivity and cross-border economic development.
+  agreed: "Sanya Declaration, 23 March 2016"
   tags:
     "Water resources":
       >-
@@ -565,7 +681,12 @@ china_pakistan_afghanistan:
   name: "China–Pakistan–Afghanistan Trilateral"
   members: [CN, PK, AF]
   member_names: "China · Pakistan · Afghanistan"
-  blurb: "A revived counterterrorism-and-connectivity channel, extending the China-Pakistan Economic Corridor into Afghanistan."
+  status: active
+  purpose:
+  >-
+    Contains cross-border militancy through joint counterterrorism and policing, and extends
+    the China-Pakistan Economic Corridor into Afghanistan.
+  agreed: "Trilateral foreign ministers' dialogue, established 26 December 2017"
   tags:
     "Counterterrorism":
       >-
@@ -578,7 +699,12 @@ csc:
   name: "Colombo Security Conclave"
   members: [IN, LK, MV, MU, BD]
   member_names: "India · Sri Lanka · Maldives · Mauritius · Bangladesh"
-  blurb: "An India-led Indian Ocean security format, widely read as a counterweight to Chinese influence in the region."
+  status: active
+  purpose:
+  >-
+    Coordinates Indian Ocean security across five agreed pillars, from maritime safety and
+    counter-terrorism to disaster relief.
+  agreed: "Founding charter and secretariat agreement, 30 August 2024"
   tags:
     "Maritime security":
       >-
@@ -595,7 +721,12 @@ mikta:
   name: "MIKTA"
   members: [MX, ID, KR, TR, AU]
   member_names: "Mexico · Indonesia · South Korea · Turkey · Australia"
-  blurb: "A cross-regional middle-power caucus of G20 members — its relevance is perennially debated, and it perennially persists."
+  status: active
+  purpose:
+  >-
+    Gives five cross-regional middle powers a standing channel to coordinate positions in
+    the Group of Twenty, the United Nations and other multilateral bodies.
+  agreed: "Inaugural foreign ministers' meeting, 25 September 2013"
   tags:
     "Global governance":
       >-
@@ -610,7 +741,12 @@ chip4:
   name: "Chip 4 / Fab 4"
   members: [US, JP, KR, TW]
   member_names: "United States · Japan · South Korea · Taiwan"
-  blurb: "A proposed chip-supply alliance among states that together hold most of the world's semiconductor value chain — still more aspiration than institution."
+  status: aspirational
+  purpose:
+  >-
+    Proposed but never agreed: a coordination group on semiconductor supply-chain
+    resilience, diversified fabrication and aligned export controls.
+  agreed: "Proposed in March 2022; no joint statement or charter has ever been published"
   tags:
     "Semiconductors":
       >-

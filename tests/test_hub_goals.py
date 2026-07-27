@@ -16,7 +16,7 @@ import pytest
 import yaml
 
 from pipeline.enrich import GOALS, GROUPINGS
-from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER
+from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER, STATUS_ORDER
 
 CONFIG = yaml.safe_load((Path(__file__).parent.parent / "data" / "groupings.yaml").read_text(encoding="utf-8"))
 ENTRIES = CONFIG
@@ -56,7 +56,22 @@ def test_placeholder_entries_carry_what_the_card_needs(key):
     slug = entry.get("hub_slug", key)
     assert slug in HUB_ACCENTS, f"{key}: no accent gradient for slug {slug!r}"
     assert entry["member_names"].strip(), f"{key}: no member_names line"
-    assert entry["blurb"].strip(), f"{key}: no blurb"
+
+
+@pytest.mark.parametrize("key", list(ENTRIES))
+def test_every_card_states_its_purpose_and_provenance(key):
+    # The card text is the goal plus the instrument that established it — no
+    # commentary, and nothing that isn't rendered.
+    entry = ENTRIES[key]
+    assert entry["purpose"].strip(), f"{key}: no purpose"
+    assert entry["agreed"].strip(), f"{key}: no agreed-in line"
+    assert entry["status"] in STATUS_ORDER, f"{key}: bad status {entry['status']!r}"
+
+
+def test_cards_are_ordered_active_then_intermittent_then_inactive():
+    ranks = [STATUS_ORDER[m["status"]] for m in HUB_GROUPINGS]
+    assert ranks == sorted(ranks), "a stalled grouping is sitting above a running one"
+    assert [m["inactive"] for m in HUB_GROUPINGS] == sorted(m["inactive"] for m in HUB_GROUPINGS)
 
 
 def test_weimar_is_the_only_entry_without_a_card():

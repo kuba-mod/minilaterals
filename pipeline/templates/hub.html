@@ -143,10 +143,31 @@ a:hover { color: var(--hl); }
 }
 .hub-card-footer strong { font-family: var(--font-serif); font-weight: 500; font-size: 16px; }
 
+.hub-card-agreed {
+  font-family: var(--font-sans); font-size: 11.5px; line-height: 1.5;
+  color: var(--muted); margin-top: -4px;
+}
+.hub-card-agreed::before { content: "Agreed in "; }
+
+.hub-section-break {
+  grid-column: 1 / -1;
+  margin: 14px 0 2px; padding-top: 20px; border-top: 1px solid var(--border);
+}
+.hub-section-break span {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 600;
+  letter-spacing: 1.2px; text-transform: uppercase; color: var(--muted);
+}
+.hub-section-break p {
+  font-family: var(--font-serif); font-size: 13.5px; color: var(--muted);
+  margin: 6px 0 0; max-width: 62ch;
+}
+.hub-card--inactive { opacity: .78; }
+
 .hub-card--soon { background: var(--bg-paper); border: 1px solid #e0d5ba; opacity: .94; }
 .hub-card--soon .hub-card-accent { opacity: .42; background: var(--accent); }
 .hub-card--soon .hub-card-name { color: var(--ink-soft); }
 .hub-card--soon .hub-card-blurb { color: #6a6152; }
+.hub-card--soon .hub-card-agreed { color: #8a7d66; }
 .hub-card--soon .hub-tags { margin-top: auto; }
 .hub-card--soon .hub-tag { color: #8a7d66; border-color: #e0d5ba; background: var(--bg-card); }
 .hub-soon-badge {
@@ -247,7 +268,8 @@ a:hover { color: var(--hl); }
       </div>
       <div class="hub-card-name">The Weimar Triangle</div>
       <div class="hub-card-members">France · Germany · Poland</div>
-      <div class="hub-card-blurb">The original trilateral — and the grouping this tracker was built around.</div>
+      <div class="hub-card-blurb">{{ weimar_card.purpose }}</div>
+      <div class="hub-card-agreed">{{ weimar_card.agreed }}</div>
       <div class="hub-tags">
         {% for area in issue_order %}
         <span class="hub-tag">{{ issue_labels[area] }}</span>
@@ -256,9 +278,15 @@ a:hover { color: var(--hl); }
       <div class="hub-card-footer"><span><strong>{{ weimar_weekly_statements }}</strong> statement{{ '' if weimar_weekly_statements == 1 else 's' }} this week</span><span>Open tracker →</span></div>
     </a>
 
-    {# ── Coming soon ── #}
+    {# ── Coming soon: active first, then intermittent, then inactive ── #}
     {% for m in hub_groupings %}
-    <div class="hub-card hub-card--soon">
+    {% if m.inactive and not loop.previtem.inactive %}
+    <div class="hub-section-break">
+      <span>No longer meeting</span>
+      <p>Listed because the gap is itself informative — a format that stalled, was suspended, or was proposed and never agreed.</p>
+    </div>
+    {% endif %}
+    <div class="hub-card hub-card--soon{{ ' hub-card--inactive' if m.inactive }}">
       <div class="hub-card-accent" style="--accent: {{ m.accent }};"></div>
       <div class="hub-card-top">
         <div class="hub-card-flags">
@@ -268,7 +296,8 @@ a:hover { color: var(--hl); }
       </div>
       <div class="hub-card-name">{{ m.name }}</div>
       <div class="hub-card-members">{{ m.member_names }}</div>
-      <div class="hub-card-blurb">{{ m.blurb }}</div>
+      <div class="hub-card-blurb">{{ m.purpose }}</div>
+      <div class="hub-card-agreed">{{ m.agreed }}</div>
       <div class="hub-tags">
         {% for t in m.topics %}<span class="hub-tag">{{ t }}</span>{% endfor %}
       </div>
