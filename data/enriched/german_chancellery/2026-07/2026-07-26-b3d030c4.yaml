@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany condemns the Islamist terrorist attack at the Christopher Street
+    Day parade and pledges to defend the openness, freedom, and democratic values
+    of society.
+  positions:
+    rule_of_law: Germany rhetorically supports democratic resilience and the rule
+      of law by pledging to defend the freedom and openness of its society against
+      terrorism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Wir werden die Freiheit unserer Gesellschaft verteidigen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

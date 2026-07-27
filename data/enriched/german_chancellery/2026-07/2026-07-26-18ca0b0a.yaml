@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Chancellor Merz condemns the attack on the Christopher Street Day parade
+    and pledges the full support of the state to protect the freedom, openness, and
+    rule of law of German society.
+  positions:
+    rule_of_law: Germany emphasizes the commitment of state institutions to defend
+      the rule of law and democratic freedoms against intolerance and violence.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Wir, die Vertreter der staatlichen Institutionen, werden alles tun,
+        um die Freiheit unseres Landes und unserer Gesellschaft zu schützen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
