@@ -21,6 +21,7 @@ from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDE
 CONFIG = yaml.safe_load((Path(__file__).parent.parent / "data" / "groupings.yaml").read_text(encoding="utf-8"))
 ENTRIES = CONFIG
 
+
 def test_only_the_pipeline_groupings_carry_topics():
     # Adding `topics` to a placeholder silently changes what the LLM is asked to
     # classify, so pin the tracked set explicitly.

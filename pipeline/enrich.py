@@ -674,10 +674,7 @@ def _find_stance_pending(limit: int | None = None) -> list[Path]:
         extracted = (d or {}).get("extracted") or {}
         topics = [t for t in (extracted.get("topics") or []) if t != "other"]
         stances = extracted.get("stances") or {}
-        wanted = {
-            key: _stance_topics(key, topics)
-            for key in _relevant_groupings(d or {})
-        }
+        wanted = {key: _stance_topics(key, topics) for key in _relevant_groupings(d or {})}
         wanted = {k: v for k, v in wanted.items() if v}
         if not wanted:
             continue
@@ -759,9 +756,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
             wanted = _stance_topics(key, topics)
             if not wanted or all(t in (stances.get(key) or {}) for t in wanted):
                 continue
-            rated = _rate_stances(
-                provider, source_label, data.get("title", ""), data.get("text", ""), key, wanted
-            )
+            rated = _rate_stances(provider, source_label, data.get("title", ""), data.get("text", ""), key, wanted)
             if rated:
                 stances[key] = {**(stances.get(key) or {}), **rated}
         if not stances:
@@ -781,9 +776,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
             yaml.dump(enriched, allow_unicode=True, sort_keys=False),
             encoding="utf-8",
         )
-        summary = "  ".join(
-            f"{k}/{t}:{v['score']:+d}" for k, topics_ in stances.items() for t, v in topics_.items()
-        )
+        summary = "  ".join(f"{k}/{t}:{v['score']:+d}" for k, topics_ in stances.items() for t, v in topics_.items())
         print(f"  + [{data.get('source_name')}] {data.get('date')} {summary}")
         return True
     except Exception as exc:

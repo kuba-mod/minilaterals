@@ -30,7 +30,10 @@ uv run python -m pipeline.vote_report --reset quad --yes   # clear one grouping'
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
 
-uv run ruff check .                          # lint (enforced in CI via .github/workflows/lint.yml)
+uv run ruff check .                          # lint
+uv run ruff format --check .                 # formatting — CI runs this too, and it fails independently
+uv run python -m pipeline.validate           # YAML schemas
+# all three are enforced in CI via .github/workflows/lint.yml
 ```
 
 ## Architecture
