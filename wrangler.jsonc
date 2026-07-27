@@ -15,8 +15,19 @@
       "zone_name": "minilaterals.com"
     }
   ],
+  // Requests are matched against assets first; anything that doesn't match a
+  // static file (currently just /api/*) falls through to worker/index.js.
+  // The "ASSETS" binding lets that script re-delegate (e.g. for a 404).
   "assets": {
     "directory": "docs",
-    "not_found_handling": "404-page"
-  }
+    "not_found_handling": "404-page",
+    "binding": "ASSETS"
+  },
+  "main": "worker/index.js",
+  "kv_namespaces": [
+    {
+      "binding": "VOTES",
+      "id": "59cf38506c0340eeaba6abed0fd552cb"
+    }
+  ]
 }
