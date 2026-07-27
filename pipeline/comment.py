@@ -38,6 +38,7 @@ import anthropic
 from openai import OpenAI
 
 from pipeline.render import (
+    WEIMAR,
     build_convergence_clusters,
     load_events,
     score_cluster_stances,
@@ -223,8 +224,8 @@ def main() -> None:
     parser.add_argument("--force", action="store_true", help="Regenerate even if cached")
     args = parser.parse_args()
 
-    events = load_events(weimar_only=True)
-    clusters = build_convergence_clusters(events)
+    events = load_events(WEIMAR)
+    clusters = build_convergence_clusters(events, grouping=WEIMAR)
     for c in clusters:
         c["convergence"] = score_cluster_stances(c)
 

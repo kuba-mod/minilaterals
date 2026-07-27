@@ -5,12 +5,18 @@
   // (`wrangler versions upload` publishes a versioned *-minilaterals.<subdomain>.workers.dev
   // link without touching production traffic).
   "workers_dev": true,
-  // Production route. Only applied by `wrangler deploy` (the production-branch
-  // build); preview `versions upload` builds never bind it, so branch pushes
-  // can never take over the real domain.
+  // Production routes — one per published grouping, matching the slugs
+  // RENDERED_GROUPINGS emits in pipeline/render.py. A new grouping needs its
+  // route added here or its pages 404 in production. Only applied by
+  // `wrangler deploy` (the production-branch build); preview `versions upload`
+  // builds never bind them, so branch pushes can never take over the real domain.
   "routes": [
     {
       "pattern": "minilaterals.com/weimar-triangle*",
+      "zone_name": "minilaterals.com"
+    },
+    {
+      "pattern": "minilaterals.com/e3*",
       "zone_name": "minilaterals.com"
     }
   ],

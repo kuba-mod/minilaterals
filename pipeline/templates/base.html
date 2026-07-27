@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Weimar Triangle{% endblock %}</title>
+  <title>{% block title %}{{ grouping.name }}{% endblock %}</title>
   {% block meta_description %}
-  <meta name="description" content="A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.">
+  <meta name="description" content="{{ grouping.tagline }}">
   {% endblock %}
   {% set og_title = self.title() %}
-  {% set og_description = "A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law." %}
+  {% set og_description = grouping.tagline %}
   {% block og_tags %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ og_title }}">
@@ -99,16 +99,12 @@ header {
   border-bottom: 1px solid var(--rule);
   position: relative;
 }
+/* One band per member country, in display order — built in render.py
+   (header_gradient) so it works for any member count. */
 header::after {
   content: '';
   position: absolute; left: 0; right: 0; bottom: -1px; height: 4px;
-  background:
-    linear-gradient(90deg,
-      var(--fr) 0 calc(33.333% - 1px),
-      transparent calc(33.333% - 1px) calc(33.333% + 1px),
-      #c8a648 calc(33.333% + 1px) calc(66.666% - 1px),
-      transparent calc(66.666% - 1px) calc(66.666% + 1px),
-      var(--pl) calc(66.666% + 1px) 100%);
+  background: {{ header_gradient }};
 }
 .hdr-inner { max-width: 1200px; margin: 0 auto; padding: 40px 56px 36px; }
 .hdr-eyebrow-row {
@@ -619,7 +615,7 @@ td .tag {
 /* ── Country cards ── */
 .country-cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat({{ grouping.member_count }}, minmax(0, 1fr));
   gap: 14px;
   margin: 0 0 56px;
 }
@@ -647,6 +643,16 @@ td .tag {
 .swatch.fr { background: linear-gradient(90deg, #1f4279 33%, #ffffff 33% 66%, #b22823 66%); }
 .swatch.de { background: linear-gradient(180deg, #1c1812 33%, #b22823 33% 66%, #c8a648 66%); }
 .swatch.pl { background: linear-gradient(180deg, #ffffff 50%, #b22823 50%); }
+/* Stylised to the same level as the others: the St George cross on the union
+   blue, without the saltires. */
+.swatch.uk {
+  background-color: #012169;
+  background-image:
+    linear-gradient(180deg, transparent 42%, #c8102e 42% 58%, transparent 58%),
+    linear-gradient(90deg, transparent 42%, #c8102e 42% 58%, transparent 58%),
+    linear-gradient(180deg, transparent 34%, #ffffff 34% 66%, transparent 66%),
+    linear-gradient(90deg, transparent 34%, #ffffff 34% 66%, transparent 66%);
+}
 .country-card .cc-body { flex: 1; min-width: 0; }
 .country-card .cc-name {
   font-family: 'Newsreader', Georgia, serif;
@@ -949,10 +955,15 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
   <div class="hdr-inner">
     <div class="hdr-eyebrow-row">
       <div class="site-eyebrow">A Coordination Tracker</div>
-      <div class="hdr-meta">Edition of <strong>{{ edition_date_str }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/">Methodology</a></div>
+      <div class="hdr-meta">
+        {%- if other_sites %}Also tracking
+        {%- for s in other_sites %} <a href="{{ s.url }}">{{ s.name }}</a>{% if not loop.last %},{% endif %}{% endfor %}
+        &nbsp;·&nbsp; {% endif -%}
+        Edition of <strong>{{ edition_date_str }}</strong> &nbsp;·&nbsp; <a href="{{ base_path }}/sources/">Methodology</a>
+      </div>
     </div>
-    <h1 class="site-title">The Weimar <em>Triangle</em></h1>
-    <p class="site-tagline">A weekly read on whether France, Germany and Poland are pulling in the same direction — across Ukraine, defence, enlargement, and the rule of law.</p>
+    <h1 class="site-title">{{ grouping.title_lead }} <em>{{ grouping.title_em }}</em></h1>
+    <p class="site-tagline">{{ grouping.tagline }}</p>
     {% block header_stats %}{% endblock %}
   </div>
 </header>
@@ -961,7 +972,7 @@ footer a { color: var(--hl); border-bottom-color: transparent; }
 <div class="nav-wrap">
   <nav>
     <a href="{{ base_path }}/" {% if active_page == 'index' %}class="active"{% endif %}>Recent</a>
-    {% for a in weimar_actors %}
+    {% for a in grouping_actors %}
     <a href="{{ base_path }}/{{ country_paths[a] }}/" {% if active_page == 'country_' + a %}class="active"{% endif %}>{{ actor_labels[a] }}</a>
     {% endfor %}
     <a href="{{ base_path }}/sources/" {% if active_page == 'sources' %}class="active"{% endif %}>Methodology</a>

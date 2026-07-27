@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
 """
-Weimar Triangle tracker — static HTML renderer.
+Minilaterals tracker — static HTML renderer.
 
-Reads data/events/**/*.yaml + data/meetings.yaml and renders HTML pages to docs/
-(or --output DIR). The Meetings page itself is not currently rendered — see the
-"docs/meetings/index.html" comment below — so data/milestones.yaml and
-data/annual.yaml aren't read here right now either.
+Reads data/events/**/*.yaml + data/meetings.yaml and renders one site per
+tracked minilateral grouping into docs/ (or --output DIR). The Meetings page
+itself is not currently rendered — see the "meetings/index.html" comment below
+— so data/milestones.yaml and data/annual.yaml aren't read here right now
+either.
 
 Usage:
-    python -m pipeline.render               # renders to docs/
+    python -m pipeline.render                      # renders every site to docs/
     python -m pipeline.render --output /tmp/test
+    python -m pipeline.render --grouping e3        # just one grouping
     python -m pipeline.render --as-of 2026-06-24   # render a past edition
+
+Each grouping in RENDERED_GROUPINGS gets its own self-contained site under its
+own slug (docs/weimar-triangle/, docs/e3/), built from the same templates and
+the same scoring code — the grouping object supplies the members, the tracked
+topics, and the copy. A grouping listed in data/groupings.yaml but not in
+RENDERED_GROUPINGS is still collected and enriched, just not published.
 
 The site is rendered "as of" an edition cutoff date: events dated after it are
 excluded and all rolling windows anchor to it. The cutoff comes from --as-of,
@@ -29,6 +37,7 @@ import json
 import math
 import os
 from collections import defaultdict
+from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
@@ -61,6 +70,15 @@ SOURCE_ACTOR = {
     "german_chancellery": "DE",
     "elysee": "FR",
     "polish_pm": "PL",
+    "uk_fcdo": "UK",
+    "us_state": "US",
+    "australia_dfat": "AU",
+    "czech_mfa": "CZ",
+    "slovak_mfa": "SK",
+    "hungary_government": "HU",
+    "estonian_mfa": "EE",
+    "latvian_mfa": "LV",
+    "lithuanian_mfa": "LT",
 }
 
 SOURCE_LABELS = {
@@ -70,24 +88,54 @@ SOURCE_LABELS = {
     "german_chancellery": "German Chancellery",
     "elysee": "Élysée",
     "polish_pm": "Polish PM Chancellery",
+    "uk_fcdo": "UK FCDO",
+    "us_state": "US State Department",
+    "australia_dfat": "Australian DFAT",
+    "czech_mfa": "Czech MFA",
+    "slovak_mfa": "Slovak MFA",
+    "hungary_government": "Hungarian Government",
+    "estonian_mfa": "Estonian MFA",
+    "latvian_mfa": "Latvian MFA",
+    "lithuanian_mfa": "Lithuanian MFA",
+}
+
+# Names as they read mid-sentence, where that differs from the label ("France,
+# Germany and *the* United Kingdom").
+ACTOR_PROSE = {
+    "UK": "the United Kingdom",
+    "US": "the United States",
 }
 
 ACTOR_LABELS = {
     "DE": "Germany",
     "FR": "France",
     "PL": "Poland",
+    "UK": "United Kingdom",
+    "US": "United States",
+    "AU": "Australia",
+    "CZ": "Czechia",
+    "SK": "Slovakia",
+    "HU": "Hungary",
+    "EE": "Estonia",
+    "LV": "Latvia",
+    "LT": "Lithuania",
 }
 
-WEIMAR_ACTORS = ["FR", "DE", "PL"]
-
-# Each Weimar country now speaks through two principal sources: its foreign
-# ministry and its executive office (chancellery / presidency / PM office).
-# Institution names are kept in the native language. No office-holder names —
-# those change and go stale; the institution is what we actually track.
+# Each country speaks through the principal sources we ingest for it. The Weimar
+# Triangle pattern is two voices — foreign ministry plus executive office
+# (chancellery / presidency / PM office); newer members may have only one (see
+# "Adding a new source" in CLAUDE.md). Institution names are kept in the native
+# language. No office-holder names — those change and go stale; the institution
+# is what we actually track. `band` is the country's flag accent, used for the
+# header rule and the social card; `spoke` is the brighter variant that reads on
+# the favicon's dark tile; `capital` feeds the methodology copy.
 COUNTRY_PROFILE = {
     "FR": {
         "swatch": "fr",
         "path": "france",
+        "capital": "Paris",
+        "band": "#1f4279",
+        "spoke": "#3a6bb0",
         "sources": [
             {"type": "Foreign ministry", "institution": "Quai d'Orsay", "source": "france_diplomatie"},
             {"type": "Executive office", "institution": "Élysée", "source": "elysee"},
@@ -96,6 +144,9 @@ COUNTRY_PROFILE = {
     "DE": {
         "swatch": "de",
         "path": "germany",
+        "capital": "Berlin",
+        "band": "#c8a648",
+        "spoke": "#cf9530",
         "sources": [
             {"type": "Foreign ministry", "institution": "Auswärtiges Amt", "source": "german_mfa"},
             {"type": "Executive office", "institution": "Bundeskanzleramt", "source": "german_chancellery"},
@@ -104,15 +155,32 @@ COUNTRY_PROFILE = {
     "PL": {
         "swatch": "pl",
         "path": "poland",
+        "capital": "Warsaw",
+        "band": "#b22823",
+        "spoke": "#c23a30",
         "sources": [
             {"type": "Foreign ministry", "institution": "MSZ", "source": "polish_mfa"},
             {"type": "Executive office", "institution": "Kancelaria Prezesa Rady Ministrów", "source": "polish_pm"},
         ],
     },
+    "UK": {
+        "swatch": "uk",
+        "path": "united-kingdom",
+        "capital": "London",
+        "band": "#c8102e",
+        "spoke": "#c0455a",
+        "sources": [
+            {
+                "type": "Foreign ministry",
+                "institution": "Foreign, Commonwealth & Development Office",
+                "source": "uk_fcdo",
+            },
+        ],
+    },
 }
 
 # Flattened source_name -> {type, institution}, for labelling which of a
-# country's two voices each event came from.
+# country's voices each event came from.
 SOURCE_META = {
     s["source"]: {"type": s["type"], "institution": s["institution"]}
     for prof in COUNTRY_PROFILE.values()
@@ -130,12 +198,29 @@ SOURCE_INGEST = {
     "german_chancellery": ("HTML scraper", "DE"),
     "elysee": ("HTML scraper", "FR"),
     "polish_pm": ("HTML scraper", "PL"),
+    "uk_fcdo": ("RSS", "EN"),
+}
+
+LANG_LABELS = {
+    "EN": "English",
+    "DE": "German",
+    "FR": "French",
+    "PL": "Polish",
 }
 
 ACTOR_COLORS = {
     "DE": "#9a6a1f",
     "FR": "#1f4279",
     "PL": "#b22823",
+    "UK": "#8c2f39",
+    "US": "#3f5a7a",
+    "AU": "#3d6b63",
+    "CZ": "#7a4a6a",
+    "SK": "#4a5a8a",
+    "HU": "#6a7a3a",
+    "EE": "#4a7a8a",
+    "LV": "#8a4a3a",
+    "LT": "#7a6a2a",
     "EU": "#6a7a9a",
 }
 
@@ -146,8 +231,31 @@ ISSUE_LABELS = {
     "enlargement": "Enlargement",
     "green_transition": "Green Transition",
     "rule_of_law": "Rule of Law",
+    "iran": "Iran",
+    "migration": "Migration",
+    "energy": "Energy",
+    "indo_pacific": "Indo-Pacific",
+    "submarines": "Submarines",
 }
 
+# Topic names as they read mid-sentence in the methodology prose — sentence case
+# except where the topic is a proper noun ("Ukraine, defence, hybrid threats…").
+ISSUE_PROSE = {
+    "ukraine": "Ukraine",
+    "defence": "defence",
+    "hybrid": "hybrid threats",
+    "enlargement": "enlargement",
+    "green_transition": "green transition",
+    "rule_of_law": "rule of law",
+    "iran": "Iran",
+    "migration": "migration",
+    "energy": "energy",
+    "indo_pacific": "the Indo-Pacific",
+    "submarines": "submarines",
+}
+
+# Global topic display order. A grouping's own topic order is this list filtered
+# to the topics it tracks, so a topic always sits in the same place across sites.
 ISSUE_ORDER = [
     "ukraine",
     "defence",
@@ -155,7 +263,138 @@ ISSUE_ORDER = [
     "enlargement",
     "green_transition",
     "rule_of_law",
+    "iran",
+    "migration",
+    "energy",
+    "indo_pacific",
+    "submarines",
 ]
+
+# ---------------------------------------------------------------------------
+# Groupings
+# ---------------------------------------------------------------------------
+
+GROUPINGS_FILE = ROOT / "data" / "groupings.yaml"
+GOALS_FILE = ROOT / "data" / "goals.yaml"
+
+# Presentation config per grouping: the URL slug, the member display order, and
+# the copy that can't be derived from data/groupings.yaml. Members and topics
+# themselves come from groupings.yaml (the single source of truth shared with
+# enrich.py); `actors` here only fixes the *order* they're shown in, and is
+# checked against groupings.yaml at load time so the two can't drift.
+#
+# Country ordering is deliberate, never alphabetical: France before Germany
+# before the third member, matching how the formats are conventionally named.
+GROUPING_SITES = {
+    "weimar": {
+        "slug": "weimar-triangle",
+        "actors": ["FR", "DE", "PL"],
+        "title_lead": "The Weimar",
+        "title_em": "Triangle",
+        "tagline": (
+            "A weekly read on whether France, Germany and Poland are pulling in the same direction "
+            "— across Ukraine, defence, enlargement, and the rule of law."
+        ),
+        "goals_note": (
+            "the goals the three governments jointly agreed in the Weimar declarations of February and May 2024"
+        ),
+        # data/meetings.yaml is a hand-curated Weimar-only record.
+        "has_meetings": True,
+    },
+    "e3": {
+        "slug": "e3",
+        "actors": ["FR", "DE", "UK"],
+        "title_lead": "The",
+        "title_em": "E3",
+        "tagline": (
+            "A weekly read on whether France, Germany and the United Kingdom are pulling in the "
+            "same direction — on Iran and European defence."
+        ),
+        "goals_note": "the format's stated objectives on Iran and European defence",
+        "has_meetings": False,
+    },
+}
+
+# Which groupings actually get published. Visegrád, the Baltic Three and AUKUS
+# are collected and enriched (see data/groupings.yaml) but not rendered yet:
+# their sources are either paused or too thin to score against.
+RENDERED_GROUPINGS = ["weimar", "e3"]
+
+
+@dataclass(frozen=True)
+class Grouping:
+    """A minilateral as the renderer sees it: members, tracked topics, and copy."""
+
+    key: str
+    name: str
+    slug: str
+    actors: tuple[str, ...]
+    topics: tuple[str, ...]
+    title_lead: str
+    title_em: str
+    tagline: str
+    goals_note: str
+    has_meetings: bool
+
+    @property
+    def relevance_key(self) -> str:
+        """The enriched-sidecar flag that marks an event relevant to this format."""
+        return f"{self.key}_relevant"
+
+    @property
+    def topic_labels(self) -> list[str]:
+        return [ISSUE_LABELS.get(t, t.title()) for t in self.topics]
+
+    @property
+    def sources(self) -> list[str]:
+        """Every source name that speaks for one of this grouping's members."""
+        return [s["source"] for a in self.actors for s in COUNTRY_PROFILE[a]["sources"]]
+
+
+def _load_groupings() -> dict[str, Grouping]:
+    """Build the renderable groupings from data/groupings.yaml + GROUPING_SITES."""
+    raw = yaml.safe_load(GROUPINGS_FILE.read_text(encoding="utf-8")) or {}
+    out: dict[str, Grouping] = {}
+    for key, site in GROUPING_SITES.items():
+        cfg = raw.get(key)
+        if cfg is None:
+            raise KeyError(f"grouping {key!r} is in GROUPING_SITES but not data/groupings.yaml")
+        members = set(cfg.get("members") or [])
+        if set(site["actors"]) != members:
+            raise ValueError(
+                f"grouping {key!r}: GROUPING_SITES order {site['actors']} "
+                f"doesn't match data/groupings.yaml members {sorted(members)}"
+            )
+        missing = [a for a in site["actors"] if a not in COUNTRY_PROFILE]
+        if missing:
+            raise KeyError(f"grouping {key!r}: no COUNTRY_PROFILE entry for {missing} — can't render it")
+        topics = [t for t in ISSUE_ORDER if t in set(cfg.get("topics") or [])]
+        out[key] = Grouping(
+            key=key,
+            name=cfg.get("name", key),
+            slug=site["slug"],
+            actors=tuple(site["actors"]),
+            topics=tuple(topics),
+            title_lead=site["title_lead"],
+            title_em=site["title_em"],
+            tagline=site["tagline"],
+            goals_note=site["goals_note"],
+            has_meetings=site["has_meetings"],
+        )
+    return out
+
+
+GROUPINGS = _load_groupings()
+
+# The reference goal sentence each stance is rated against, keyed by topic and
+# shared across every grouping that tracks that topic (see data/goals.yaml).
+GOALS: dict[str, str] = yaml.safe_load(GOALS_FILE.read_text(encoding="utf-8")) or {}
+
+# The default grouping: the site's flagship, and the fallback every scoring
+# helper uses when called without an explicit grouping (which is how the whole
+# module behaved before it grew a second format).
+WEIMAR = GROUPINGS["weimar"]
+
 
 ERA_COLORS = {
     "founding": "#5a8a5a",
@@ -271,7 +510,13 @@ def _load_yaml(path: Path) -> list | dict | None:
         return None
 
 
-def load_events(weimar_only: bool = True) -> list[dict]:
+def load_events(grouping: Grouping | None = WEIMAR) -> list[dict]:
+    """
+    Load every event, merged with its enriched sidecar.
+
+    `grouping` keeps only the events flagged relevant to that format
+    (`{key}_relevant`); pass None to load the whole tree unfiltered.
+    """
     files = sorted(glob.glob(str(EVENTS_DIR / "**" / "*.yaml"), recursive=True))
     events = []
     for f in files:
@@ -286,7 +531,7 @@ def load_events(weimar_only: bool = True) -> list[dict]:
                 enriched = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
                 if enriched:
                     d.update(enriched)
-            if weimar_only and not d.get("weimar_relevant"):
+            if grouping is not None and not d.get(grouping.relevance_key):
                 continue
             d["_file_path"] = str(Path(f).relative_to(ROOT))  # always data/events/... path
             events.append(d)
@@ -354,14 +599,14 @@ def score_cluster_stances(cluster: dict) -> dict | None:
 
 
 def compute_latest_topic_pills(
-    clusters: list[dict], days: int = 7, today: datetime | None = None
+    clusters: list[dict], days: int = 7, today: datetime | None = None, grouping: Grouping = WEIMAR
 ) -> dict[str, dict | None]:
     """Per-topic convergence for the most recent scored cluster within the last `days` days."""
     cutoff = ((today or datetime.now(UTC)) - timedelta(days=days)).strftime("%Y-%m-%d")
-    result: dict[str, dict | None] = {area: None for area in ISSUE_ORDER}
+    result: dict[str, dict | None] = {area: None for area in grouping.topics}
     for cluster in clusters:
         area = cluster["area"]
-        if result[area] is None and cluster.get("convergence") and cluster["date_to"] >= cutoff:
+        if result.get(area) is None and area in result and cluster.get("convergence") and cluster["date_to"] >= cutoff:
             conv = cluster["convergence"]
             result[area] = {
                 "label": conv["label"],
@@ -372,13 +617,14 @@ def compute_latest_topic_pills(
     return result
 
 
-def _stance_rows(
-    events: list[dict], topics: frozenset[str] = frozenset(ISSUE_ORDER)
-) -> list[tuple[str, str, str, int]]:
+def _stance_rows(events: list[dict], grouping: Grouping = WEIMAR) -> list[tuple[str, str, str, int]]:
     """
-    (date, actor, topic, score) rows for every stance-rated statement from a
-    Weimar source — all six: each country's foreign ministry *and* its
-    executive office (`SOURCE_ACTOR` covers both; see design principle #3).
+    (date, actor, topic, score) rows for every stance-rated statement published
+    by one of the grouping's members, on one of the topics it tracks.
+
+    A member speaks through *every* source mapped to it — for the Weimar
+    Triangle that's six, each country's foreign ministry *and* its executive
+    office (`SOURCE_ACTOR` covers both; see design principle #3).
 
     This is the single place that decides which sources feed stance
     aggregation. Any stance-aggregating function should call this rather than
@@ -387,21 +633,29 @@ def _stance_rows(
     function's output — which is what happened when the per-country timeline
     chart was first built with its own {"german_mfa": "DE", ...}-only map,
     invisibly excluding chancellery/Élysée/KPRM statements from the chart.
+
+    The grouping filter matters in both directions now that SOURCE_ACTOR spans
+    every tracked country: an event can be relevant to a format because it
+    concerns its members while being published by a non-member (a Polish MFA
+    item about the E3), and it can carry stances on topics that format doesn't
+    track. Neither belongs in that format's scores.
     """
+    members = set(grouping.actors)
+    topics = set(grouping.topics)
     rows: list[tuple[str, str, str, int]] = []
     for e in events:
-        src = e.get("source_name", "")
-        if src not in SOURCE_ACTOR:
+        actor = SOURCE_ACTOR.get(e.get("source_name", ""))
+        if actor not in members:
             continue
         stances = (e.get("extracted") or {}).get("stances") or {}
         for topic, entry in stances.items():
             if topic in topics and entry and isinstance(entry.get("score"), int):
-                rows.append((e.get("date", ""), SOURCE_ACTOR[src], topic, entry["score"]))
+                rows.append((e.get("date", ""), actor, topic, entry["score"]))
     return rows
 
 
 def compute_topic_weekly_stances(
-    events: list[dict], window_days: int = 14, today: datetime | None = None
+    events: list[dict], window_days: int = 14, today: datetime | None = None, grouping: Grouping = WEIMAR
 ) -> dict[str, list[dict | None]]:
     """
     Stance-based weekly series per topic, plus an 'overall' series.
@@ -412,7 +666,7 @@ def compute_topic_weekly_stances(
     published rated statements are None.
     Returns: {'overall': [...], 'ukraine': [...], ...}
     """
-    rows = _stance_rows(events)
+    rows = _stance_rows(events, grouping)
     if not rows:
         return {}
 
@@ -426,7 +680,7 @@ def compute_topic_weekly_stances(
         anchor += timedelta(days=7)
 
     per_topic: dict[str, list[dict | None]] = {}
-    for area in ISSUE_ORDER:
+    for area in grouping.topics:
         area_rows = [(d, a, s) for d, a, t, s in rows if t == area]
         if not area_rows:
             continue
@@ -441,7 +695,7 @@ def compute_topic_weekly_stances(
                 if window_start <= date_str <= week_str:
                     actor_scores[actor].append(score)
 
-            actors_with_data = [a for a in WEIMAR_ACTORS if actor_scores.get(a)]
+            actors_with_data = [a for a in grouping.actors if actor_scores.get(a)]
             if len(actors_with_data) < 2:
                 series.append(None)
                 continue
@@ -500,7 +754,11 @@ def compute_topic_weekly_stances(
 
 
 def compute_score_density(
-    events: list[dict], window_days: int = 7, today: datetime | None = None, weeks: int | None = None
+    events: list[dict],
+    window_days: int = 7,
+    today: datetime | None = None,
+    weeks: int | None = None,
+    grouping: Grouping = WEIMAR,
 ) -> dict[str, dict[str, dict]]:
     """
     Per (capital, topic) slice, a score x week grid of how many rated
@@ -522,8 +780,9 @@ def compute_score_density(
     and makes each column correspond 1:1 to the edition that reported it.
 
     Returns `{"ALL": {"overall": {...}, "ukraine": {...}, ...}, "FR": {...}, ...}`
-    — 4 capitals ("ALL" + FR/DE/PL) x 7 topics ("overall" + ISSUE_ORDER) = 28
-    slices, all sharing one window axis so switching slices never shifts the
+    — one slice per (capital, topic) pair, over "ALL" + the grouping's members
+    and "overall" + the topics it tracks (for the Weimar Triangle: 4 x 7 = 28),
+    all sharing one window axis so switching slices never shifts the
     x-axis. Each slice is
     `{"weeks": [...], "grid": [[n, ...] x len(weeks)] (SCORES order),
       "row_totals": [n, ...] (SCORES order), "grand_total": n}`.
@@ -533,7 +792,7 @@ def compute_score_density(
     `weeks` param caps to the most recent N windows (see TIMELINE_WEEKS), to
     match the trailing window the rest of the page shows.
     """
-    rows = _stance_rows(events)
+    rows = _stance_rows(events, grouping)
     if not rows:
         return {}
 
@@ -568,10 +827,10 @@ def compute_score_density(
         return {"weeks": week_labels, "grid": grid, "row_totals": row_totals, "grand_total": sum(row_totals)}
 
     density: dict[str, dict[str, dict]] = {}
-    for actor in ["ALL", *WEIMAR_ACTORS]:
+    for actor in ["ALL", *grouping.actors]:
         a_filter = None if actor == "ALL" else actor
         density[actor] = {"overall": grid_for(a_filter, None)}
-        for topic in ISSUE_ORDER:
+        for topic in grouping.topics:
             density[actor][topic] = grid_for(a_filter, topic)
     return density
 
@@ -644,9 +903,9 @@ def build_score_density_cells(grid: list[list[int]], row_totals: list[int], week
     }
 
 
-def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> list[dict]:
+def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]], grouping: Grouping = WEIMAR) -> list[dict]:
     """
-    Rank topics by how far apart the three capitals were in the current week.
+    Rank topics by how far apart the capitals were in the current week.
 
     The current week is the latest week any topic has scored. Topics scored that
     week are ranked by spread (most contested first); topics that were quiet that
@@ -664,7 +923,7 @@ def build_divergence_leaderboard(topic_weekly: dict[str, list[dict | None]]) -> 
     current = max(weeks)
 
     rows = []
-    for area in ISSUE_ORDER:
+    for area in grouping.topics:
         series = topic_series.get(area) or []
         entry = next((w for w in series if w and w["week"] == current), None)
         latest = next((w for w in reversed(series) if w), None)
@@ -731,19 +990,21 @@ def compute_source_health() -> dict[str, dict]:
 # ---------------------------------------------------------------------------
 
 
-def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list[dict]:
+def build_convergence_clusters(events: list[dict], window_days: int = 7, grouping: Grouping = WEIMAR) -> list[dict]:
     """
-    Group weimar_relevant events by topic into clusters where 2+ MFA actors
-    published within window_days of each other.
+    Group the grouping's relevant events by topic into clusters where 2+ member
+    actors published within window_days of each other.
     """
+    members = set(grouping.actors)
+    topics = set(grouping.topics)
     # Expand each event into (area, actor, date, event) rows
     rows = []
     for e in events:
         actor = SOURCE_ACTOR.get(e.get("source_name", ""))
-        if actor not in ("DE", "FR", "PL"):
+        if actor not in members:
             continue
         for area in e.get("issue_areas") or []:
-            if area == "other":
+            if area not in topics:
                 continue
             rows.append(
                 {
@@ -760,7 +1021,7 @@ def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list
         by_area[row["area"]].append(row)
 
     clusters = []
-    for area in ISSUE_ORDER:
+    for area in grouping.topics:
         items = sorted(by_area.get(area, []), key=lambda x: x["date"], reverse=True)
         if not items:
             continue
@@ -803,7 +1064,7 @@ def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list
                 {
                     "area": area,
                     "area_label": ISSUE_LABELS.get(area, area.title()),
-                    "actors": [a for a in WEIMAR_ACTORS if a in actors_in_cluster],
+                    "actors": [a for a in grouping.actors if a in actors_in_cluster],
                     "date_from": min(dates),
                     "date_to": max(dates),
                     "by_actor": dict(by_actor),
@@ -825,31 +1086,101 @@ def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list
 # Static shareability assets
 # ---------------------------------------------------------------------------
 
-FAVICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="12" fill="#1c1812"/>
-<circle cx="32" cy="32" r="3.5" fill="#f4ecdb"/>
-<path d="M32 12 L32 21" stroke="#cf9530" stroke-width="5" stroke-linecap="round"/>
-<path d="M13 45 L21 40" stroke="#3a6bb0" stroke-width="5" stroke-linecap="round"/>
-<path d="M51 45 L43 40" stroke="#c23a30" stroke-width="5" stroke-linecap="round"/>
-</svg>
-"""
 
-OG_IMAGE_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+def _member_names(actors: list[str] | tuple[str, ...]) -> str:
+    """'France, Germany and Poland' — members in display order, Oxford-comma-free."""
+    return _label_list([ACTOR_PROSE.get(a) or ACTOR_LABELS.get(a, a) for a in actors])
+
+
+_NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+
+
+def number_word(n: int) -> str:
+    """Small counts read as words in prose ('six official sources'), not digits."""
+    return _NUMBER_WORDS[n] if 0 <= n < len(_NUMBER_WORDS) else str(n)
+
+
+def _label_list(labels: list[str]) -> str:
+    """'Iran and Defence' / 'Ukraine, Defence and Hybrid Threats'."""
+    if not labels:
+        return ""
+    if len(labels) == 1:
+        return labels[0]
+    return ", ".join(labels[:-1]) + " and " + labels[-1]
+
+
+def _member_names_of(actors: list[str] | tuple[str, ...], field: str) -> str:
+    """As `_member_names`, but over a COUNTRY_PROFILE field (e.g. 'capital')."""
+    return _label_list([COUNTRY_PROFILE[a][field] for a in actors])
+
+
+def _band_colors(grouping: Grouping) -> list[str]:
+    """Each member's flag accent, in display order — the header rule and og image."""
+    return [COUNTRY_PROFILE[a]["band"] for a in grouping.actors]
+
+
+def header_gradient(grouping: Grouping) -> str:
+    """
+    The thin multi-colour rule under the masthead: one band per member, in
+    display order, hairline-separated. Built here rather than in CSS so it
+    works for any member count.
+    """
+    colors = _band_colors(grouping)
+    n = len(colors)
+    step = 100.0 / n
+    parts: list[str] = []
+    for i, color in enumerate(colors):
+        start = "0" if i == 0 else f"calc({i * step:.3f}% + 1px)"
+        end = "100%" if i == n - 1 else f"calc({(i + 1) * step:.3f}% - 1px)"
+        parts.append(f"{color} {start} {end}")
+        if i < n - 1:
+            edge = f"{(i + 1) * step:.3f}%"
+            parts.append(f"transparent calc({edge} - 1px) calc({edge} + 1px)")
+    return "linear-gradient(90deg, " + ", ".join(parts) + ")"
+
+
+def favicon_svg(grouping: Grouping) -> str:
+    """A member-coloured spoke per country around a common centre."""
+    colors = [COUNTRY_PROFILE[a]["spoke"] for a in grouping.actors]
+    n = len(colors)
+    spokes = []
+    for i, color in enumerate(colors):
+        angle = -math.pi / 2 + (2 * math.pi * i / n)
+        x1, y1 = 32 + 20 * math.cos(angle), 32 + 20 * math.sin(angle)
+        x2, y2 = 32 + 11 * math.cos(angle), 32 + 11 * math.sin(angle)
+        spokes.append(
+            f'<path d="M{x1:.1f} {y1:.1f} L{x2:.1f} {y2:.1f}" '
+            f'stroke="{color}" stroke-width="5" stroke-linecap="round"/>'
+        )
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n'
+        '<rect width="64" height="64" rx="12" fill="#1c1812"/>\n'
+        '<circle cx="32" cy="32" r="3.5" fill="#f4ecdb"/>\n' + "\n".join(spokes) + "\n</svg>\n"
+    )
+
+
+def og_image_svg(grouping: Grouping) -> str:
+    """Social card: the member bands, the wordmark, and the question the site asks."""
+    colors = _band_colors(grouping)
+    width = 1200 // len(colors)
+    bands = "\n".join(
+        f'<rect x="{i * width}" y="0" width="{width}" height="8" fill="{c}"/>' for i, c in enumerate(colors)
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
 <rect width="1200" height="630" fill="#f4ecdb"/>
-<rect x="0" y="0" width="1200" height="8" fill="#1f4279"/>
-<rect x="400" y="0" width="400" height="8" fill="#c8a648"/>
-<rect x="800" y="0" width="400" height="8" fill="#b22823"/>
-<text x="80" y="220" font-family="Georgia, serif" font-size="72" fill="#1c1812">The Weimar</text>
-<text x="80" y="310" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">Triangle</text>
+{bands}
+<text x="80" y="220" font-family="Georgia, serif" font-size="72" fill="#1c1812">{grouping.title_lead}</text>
+<text x="80" y="310" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#8a3a23">{grouping.title_em}</text>
 <text x="80" y="380" font-family="Georgia, serif" font-size="30" fill="#3f372b">
-  Are France, Germany and Poland pulling
+  Are {_member_names(grouping.actors)} pulling
 </text>
 <text x="80" y="420" font-family="Georgia, serif" font-size="30" fill="#3f372b">
   in the same direction?
 </text>
-<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">weimar-triangle · a coordination tracker</text>
+<text x="80" y="560" font-family="monospace" font-size="20" fill="#7a7060">{grouping.slug} · a coordination tracker</text>
 </svg>
 """
+
 
 ROBOTS_TXT = """User-agent: *
 Allow: /
@@ -861,54 +1192,82 @@ Allow: /
 # ---------------------------------------------------------------------------
 
 
-def render(output_dir: str = "docs", as_of: str | None = None) -> None:
-    # Set when this site is deployed under a path prefix on the minilaterals.com
-    # umbrella (e.g. "/weimar-triangle") rather than at the domain root.
-    base_path = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
+def render_grouping(
+    grouping: Grouping,
+    root: Path,
+    umbrella_path: str,
+    edition_dt: datetime,
+    env: Environment,
+    all_events: list[dict],
+) -> int:
+    """
+    Render one grouping's complete site into `root/<umbrella>/<slug>/`.
 
-    # render.py owns the whole deployable tree. `root` is the directory Cloudflare
-    # serves (docs/); the site itself lives in the base-path subdir beside the
-    # root-level deploy files (_redirects, 404.html) written near the end.
-    root = Path(output_dir)
-    out = root / base_path.lstrip("/") if base_path else root
+    Every page, chart, and cluster on it is scoped to this grouping's members
+    and tracked topics; `all_events` is the unfiltered tree, shared across
+    groupings purely for the "total events ingested" stat and the staleness
+    check. Returns the number of relevant events published.
+    """
+    base_path = f"{umbrella_path}/{grouping.slug}"
+    out = root / base_path.lstrip("/")
     out.mkdir(parents=True, exist_ok=True)
     (out / ".nojekyll").touch()
     (out / "robots.txt").write_text(ROBOTS_TXT, encoding="utf-8")
-    (out / "favicon.svg").write_text(FAVICON_SVG, encoding="utf-8")
-    (out / "og-image.svg").write_text(OG_IMAGE_SVG, encoding="utf-8")
+    (out / "favicon.svg").write_text(favicon_svg(grouping), encoding="utf-8")
+    (out / "og-image.svg").write_text(og_image_svg(grouping), encoding="utf-8")
 
-    edition_dt = resolve_edition_date(as_of)
     edition_cutoff = edition_dt.strftime("%Y-%m-%d")
+    actors = list(grouping.actors)
 
-    env = Environment(
-        loader=FileSystemLoader(str(TEMPLATES_DIR)),
-        autoescape=True,
-    )
-    env.globals.update(
-        {
-            "actor_labels": ACTOR_LABELS,
-            "actor_colors": ACTOR_COLORS,
-            "issue_labels": ISSUE_LABELS,
-            "era_colors": ERA_COLORS,
-            "era_labels": ERA_LABELS,
-            "type_colors": TYPE_COLORS,
-            "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
-            "edition_date_str": edition_dt.strftime("%A %-d %b"),
-            "base_path": base_path,
-            "weimar_actors": WEIMAR_ACTORS,
-            "country_paths": {a: COUNTRY_PROFILE[a]["path"] for a in WEIMAR_ACTORS},
-        }
-    )
+    # Per-grouping context: everything a template needs to describe *this*
+    # format, so no template hardcodes a member list, a topic, or a name.
+    grouping_ctx = {
+        "grouping": {
+            "key": grouping.key,
+            "name": grouping.name,
+            "slug": grouping.slug,
+            "title_lead": grouping.title_lead,
+            "title_em": grouping.title_em,
+            "tagline": grouping.tagline,
+            "goals_note": grouping.goals_note,
+            "relevance_key": grouping.relevance_key,
+            "member_count": len(actors),
+            "member_count_word": number_word(len(actors)),
+            "source_count": len(grouping.sources),
+            "source_count_word": number_word(len(grouping.sources)),
+            "members_phrase": _member_names(actors),
+            "capitals_phrase": _member_names_of(actors, "capital"),
+            "topics_phrase": _label_list([ISSUE_PROSE.get(t, t) for t in grouping.topics]),
+            # "Germany and Poland both speak about Ukraine" — a concrete example
+            # of a cluster, built from this format's own members and topics.
+            "example_pair": _member_names(actors[-2:]),
+            "example_topic": ISSUE_PROSE.get(grouping.topics[0], "") if grouping.topics else "",
+            # The reference goal each stance is rated against, per tracked topic,
+            # shown verbatim on the methodology page rather than paraphrased.
+            "goals": [
+                {"label": ISSUE_LABELS.get(t, t), "text": GOALS[t].strip()} for t in grouping.topics if t in GOALS
+            ],
+        },
+        "grouping_actors": actors,
+        "base_path": base_path,
+        "header_gradient": header_gradient(grouping),
+        "country_paths": {a: COUNTRY_PROFILE[a]["path"] for a in actors},
+        # Cross-links to the other published formats, for the header switcher.
+        "other_sites": [
+            {"name": g.name, "url": f"{umbrella_path}/{g.slug}/"}
+            for k in RENDERED_GROUPINGS
+            if (g := GROUPINGS[k]).key != grouping.key
+        ],
+    }
 
     # Events after the edition cutoff exist in data/ but are not published yet —
     # they belong to the next edition.
-    events = [e for e in load_events(weimar_only=True) if (e.get("date") or "") <= edition_cutoff]
-    all_events = [e for e in load_events(weimar_only=False) if (e.get("date") or "") <= edition_cutoff]
+    events = [e for e in load_events(grouping) if (e.get("date") or "") <= edition_cutoff]
     # milestones.yaml/annual.yaml feed meetings.html only, which isn't rendered
     # right now (see below) — meetings.yaml itself stays loaded for meetings_count.
-    meetings = _load_yaml(ROOT / "data" / "meetings.yaml") or []
+    meetings = _load_yaml(ROOT / "data" / "meetings.yaml") or [] if grouping.has_meetings else []
     run = load_latest_run()
-    clusters = build_convergence_clusters(events)
+    clusters = build_convergence_clusters(events, grouping=grouping)
     commentary = load_commentary()
     for cluster in clusters:
         # Convergence is scored purely from LLM-judged stance ratings. A cluster
@@ -923,8 +1282,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # July enlargement statement) is a visible outlier cell rather than
     # invisible inside a rolling mean. Capped to TIMELINE_WEEKS so a capital
     # whose coverage starts later doesn't read as empty columns at the left.
-    density = compute_score_density(events, today=edition_dt, weeks=TIMELINE_WEEKS)
-    capital_order = ["ALL", *WEIMAR_ACTORS]
+    density = compute_score_density(events, today=edition_dt, weeks=TIMELINE_WEEKS, grouping=grouping)
+    capital_order = ["ALL", *actors]
     density_cells_json = json.dumps(
         {
             actor: {
@@ -936,13 +1295,13 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     )
     has_density = bool(density)
 
-    # Divergence ranking (topics by this week's FR·DE·PL spread) orders both the
-    # topic toggle row and the convergence clusters below, so the most contested
-    # story leads — but the ranking itself is never shown as a list.
-    topic_weekly = compute_topic_weekly_stances(events, today=edition_dt)
-    leaderboard = build_divergence_leaderboard(topic_weekly)
+    # Divergence ranking (topics by this week's spread between the members)
+    # orders both the topic toggle row and the convergence clusters below, so the
+    # most contested story leads — but the ranking itself is never shown as a list.
+    topic_weekly = compute_topic_weekly_stances(events, today=edition_dt, grouping=grouping)
+    leaderboard = build_divergence_leaderboard(topic_weekly, grouping=grouping)
     ranked_areas = [r["area"] for r in leaderboard]
-    topic_order = ["overall"] + ranked_areas + [a for a in ISSUE_ORDER if a not in ranked_areas]
+    topic_order = ["overall"] + ranked_areas + [a for a in grouping.topics if a not in ranked_areas]
     # Reorder clusters to match the ranking (most divergent topic first).
     rank_index = {area: i for i, area in enumerate(ranked_areas)}
     clusters.sort(key=lambda c: rank_index.get(c.get("area"), len(rank_index)))
@@ -953,7 +1312,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     # Per-country stats for country cards and country pages
     cutoff_7 = (edition_dt - timedelta(days=7)).strftime("%Y-%m-%d")
-    weekly_counts: dict[str, int] = {a: 0 for a in WEIMAR_ACTORS}
+    weekly_counts: dict[str, int] = {a: 0 for a in actors}
     # Per-source weekly counts, so each institution's activity shows separately
     # on the country page's sources strip.
     source_weekly_counts: dict[str, int] = defaultdict(int)
@@ -971,17 +1330,17 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     # show "—".
     pair_scores: dict[str, int] = {}
     cutoff_14 = (edition_dt - timedelta(days=14)).strftime("%Y-%m-%d")
-    actor_topic_scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in WEIMAR_ACTORS}
+    actor_topic_scores: dict[str, dict[str, list[int]]] = {a: defaultdict(list) for a in actors}
     for e in events:
         actor = SOURCE_ACTOR.get(e.get("source_name", ""))
         if actor not in actor_topic_scores or (e.get("date") or "") < cutoff_14:
             continue
         for topic, entry in (((e.get("extracted") or {}).get("stances")) or {}).items():
-            if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
+            if topic in grouping.topics and entry and isinstance(entry.get("score"), int):
                 actor_topic_scores[actor][topic].append(entry["score"])
 
-    for i, a1 in enumerate(WEIMAR_ACTORS):
-        for a2 in WEIMAR_ACTORS[i + 1 :]:
+    for i, a1 in enumerate(actors):
+        for a2 in actors[i + 1 :]:
             shared = set(actor_topic_scores[a1]) & set(actor_topic_scores[a2])
             if not shared:
                 continue
@@ -1005,13 +1364,17 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
 
     country_stats = {
         actor: {
+            "actor": actor,
             "swatch": COUNTRY_PROFILE[actor]["swatch"],
             "path": COUNTRY_PROFILE[actor]["path"],
             "sources": _country_sources(actor),
+            # "Foreign ministry · Executive office" — however many voices this
+            # country actually has (see "Adding a new source" in CLAUDE.md).
+            "voices": " · ".join(s["type"] for s in COUNTRY_PROFILE[actor]["sources"]),
             "weekly_count": weekly_counts[actor],
-            "align": {other: _pair_score(actor, other) for other in WEIMAR_ACTORS if other != actor},
+            "align": {other: _pair_score(actor, other) for other in actors if other != actor},
         }
-        for actor in WEIMAR_ACTORS
+        for actor in actors
     }
 
     # Continue-card date range, anchored to the edition cutoff. Matches the
@@ -1036,10 +1399,11 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
     if latest_event_date:
         stale_days = (today_utc.date() - datetime.strptime(latest_event_date, "%Y-%m-%d").date()).days
 
-    # docs/index.html
+    # {slug}/index.html
     tmpl = env.get_template("index.html")
     (out / "index.html").write_text(
         tmpl.render(
+            **grouping_ctx,
             recent_events=recent_events,
             clusters=clusters,
             source_stats=source_stats,
@@ -1051,10 +1415,9 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             density_cells_json=density_cells_json,
             capital_order=capital_order,
             topic_order=topic_order,
-            issue_order=ISSUE_ORDER,
+            issue_order=list(grouping.topics),
             country_stats=country_stats,
-            weimar_actors=WEIMAR_ACTORS,
-            source_count=len(SOURCE_ACTOR),
+            source_count=len(grouping.sources),
             coverage_from=coverage_from,
             coverage_to=coverage_to,
             next_tuesday_str=next_tuesday_str,
@@ -1064,11 +1427,11 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         encoding="utf-8",
     )
 
-    # docs/meetings/index.html — not rendered for now (kept in git: data/meetings.yaml,
+    # {slug}/meetings/index.html — not rendered for now (kept in git: data/meetings.yaml,
     # data/milestones.yaml, data/annual.yaml, pipeline/templates/meetings.html), pending
     # a decision on what to do with this page.
 
-    # docs/sources/index.html
+    # {slug}/sources/index.html
     # Rows grouped by country (foreign ministry then executive office), driven
     # from COUNTRY_PROFILE so the table and the country pages stay in sync.
     source_rows = [
@@ -1080,60 +1443,122 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             "method": SOURCE_INGEST.get(s["source"], ("HTML scraper", "EN"))[0],
             "lang": SOURCE_INGEST.get(s["source"], ("HTML scraper", "EN"))[1],
         }
-        for actor in WEIMAR_ACTORS
+        for actor in actors
         for s in COUNTRY_PROFILE[actor]["sources"]
     ]
     (out / "sources").mkdir(exist_ok=True)
     tmpl = env.get_template("sources.html")
     (out / "sources" / "index.html").write_text(
         tmpl.render(
+            **grouping_ctx,
             source_stats=source_stats,
             source_health=source_health,
             run=run,
             source_labels=SOURCE_LABELS,
             source_rows=source_rows,
+            lang_labels=LANG_LABELS,
+            # "German, French and Polish" — the languages actually read for this
+            # grouping, deduped in source order.
+            languages_phrase=_label_list(
+                list(dict.fromkeys(LANG_LABELS.get(r["lang"], r["lang"]) for r in source_rows))
+            ),
+            feed_count_word=number_word(sum(1 for r in source_rows if r["method"] == "RSS")),
+            meetings_count=len(meetings),
             all_events_count=len(all_events),
-            weimar_events_count=len(events),
+            relevant_events_count=len(events),
         ),
         encoding="utf-8",
     )
 
-    # docs/{country}/index.html — one page per Weimar country
+    # {slug}/{country}/index.html — one page per member country
     tmpl = env.get_template("country.html")
-    for actor in WEIMAR_ACTORS:
+    for actor in actors:
         profile = country_stats[actor]
         country_events = [e for e in recent_events if SOURCE_ACTOR.get(e.get("source_name", "")) == actor]
         others = [cs for a, cs in country_stats.items() if a != actor]
         (out / profile["path"]).mkdir(exist_ok=True)
         (out / profile["path"] / "index.html").write_text(
             tmpl.render(
+                **grouping_ctx,
                 actor=actor,
                 profile=profile,
                 country_events=country_events,
                 stats=country_stats[actor],
                 others=others,
-                weimar_actors=WEIMAR_ACTORS,
                 country_stats=country_stats,
                 source_meta=SOURCE_META,
             ),
             encoding="utf-8",
         )
 
-    # Root-level deploy files, beside (not inside) the base-path subdir.
-    # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
-    # not_found_handling); _redirects sends the bare root into the site and is
-    # only meaningful when the site sits under a path prefix.
-    (root / "404.html").write_text(env.get_template("404.html").render() + "\n", encoding="utf-8")
-    if base_path:
-        (root / "_redirects").write_text(f"/  {base_path}/  301\n", encoding="utf-8")
+    print(f"  {grouping.name} → {out}")
+    print(f"    relevant events: {len(events)}, recent (90d): {len(recent_events)}, clusters: {len(clusters)}")
+    return len(events)
 
-    print(f"Rendered → {root.resolve()}")
-    print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")
-    print(f"  meetings: {len(meetings)}")
+
+def render(output_dir: str = "docs", as_of: str | None = None, groupings: list[str] | None = None) -> None:
+    """
+    Render every published grouping's site into `output_dir`.
+
+    render.py owns the whole deployable tree: each grouping gets its own subdir
+    (docs/weimar-triangle/, docs/e3/), and the root-level deploy files
+    (_redirects, 404.html) are written beside them.
+    """
+    # The prefix the whole umbrella is mounted at, if it isn't at the domain
+    # root. Each grouping's site then lives at {prefix}/{slug}/. Production
+    # serves the groupings straight off minilaterals.com, so this stays empty
+    # there and the routes in wrangler.jsonc bind the per-grouping slugs.
+    umbrella_path = os.environ.get("SITE_BASE_PATH", "").rstrip("/")
+
+    root = Path(output_dir)
+    root.mkdir(parents=True, exist_ok=True)
+
+    edition_dt = resolve_edition_date(as_of)
+    edition_cutoff = edition_dt.strftime("%Y-%m-%d")
+
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATES_DIR)),
+        autoescape=True,
+    )
+    env.globals.update(
+        {
+            "actor_labels": ACTOR_LABELS,
+            "actor_colors": ACTOR_COLORS,
+            "issue_labels": ISSUE_LABELS,
+            "era_colors": ERA_COLORS,
+            "era_labels": ERA_LABELS,
+            "type_colors": TYPE_COLORS,
+            "now": datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
+            "edition_date_str": edition_dt.strftime("%A %-d %b"),
+        }
+    )
+
+    # Loaded once and shared: the unfiltered tree is grouping-independent, and
+    # re-globbing thousands of YAML files per site would triple the build.
+    all_events = [e for e in load_events(grouping=None) if (e.get("date") or "") <= edition_cutoff]
+
+    keys = groupings or RENDERED_GROUPINGS
+    print(f"Rendering → {root.resolve()}")
+    for key in keys:
+        if key not in GROUPINGS:
+            raise SystemExit(f"unknown grouping {key!r} — published groupings are {', '.join(GROUPINGS)}")
+        render_grouping(GROUPINGS[key], root, umbrella_path, edition_dt, env, all_events)
+
+    # Root-level deploy files, beside (not inside) the per-grouping subdirs.
+    # 404.html is what Cloudflare serves for unknown paths (wrangler.jsonc
+    # not_found_handling); _redirects sends the bare root to the flagship site,
+    # since nothing is served at the umbrella root itself.
+    default = GROUPINGS[keys[0]]
+    default_url = f"{umbrella_path}/{default.slug}/"
+    (root / "404.html").write_text(
+        env.get_template("404.html").render(home_url=default_url, home_name=default.name) + "\n",
+        encoding="utf-8",
+    )
+    (root / "_redirects").write_text(f"/  {default_url}  301\n", encoding="utf-8")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Weimar tracker renderer")
+    parser = argparse.ArgumentParser(description="Minilaterals tracker renderer")
     parser.add_argument("--output", default="docs", help="Output directory (default: docs)")
     parser.add_argument(
         "--as-of",
@@ -1141,8 +1566,14 @@ def main() -> None:
         metavar="YYYY-MM-DD",
         help="Edition cutoff override (default: data/edition.yaml, else today)",
     )
+    parser.add_argument(
+        "--grouping",
+        action="append",
+        metavar="KEY",
+        help=f"Render only this grouping (repeatable). Default: {', '.join(RENDERED_GROUPINGS)}",
+    )
     args = parser.parse_args()
-    render(args.output, as_of=args.as_of)
+    render(args.output, as_of=args.as_of, groupings=args.grouping)
 
 
 if __name__ == "__main__":

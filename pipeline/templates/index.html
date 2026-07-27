@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% set active_page = "index" %}
-{% block title %}Weimar Triangle — Recent Activity{% endblock %}
+{% block title %}{{ grouping.name }} — Recent Activity{% endblock %}
 
 {% block content %}
 
@@ -16,16 +16,16 @@
 {# ── Country cards ── #}
 {% if country_stats %}
 <div class="country-cards">
-  {% for actor in weimar_actors %}
+  {% for actor in grouping_actors %}
   {% set cs = country_stats[actor] %}
   <a href="{{ base_path }}/{{ cs.path }}/" class="country-card">
     <div class="cc-flag">
       <span class="swatch {{ cs.swatch }}"></span>
     </div>
     <div class="cc-body">
-      <div class="cc-name">{{ {"FR":"France","DE":"Germany","PL":"Poland"}[actor] }}</div>
+      <div class="cc-name">{{ actor_labels[actor] }}</div>
       <div class="cc-stat"><strong>{{ cs.weekly_count }}</strong> statements this week</div>
-      <div class="cc-ministry">Foreign ministry · Executive office</div>
+      <div class="cc-ministry">{{ cs.voices }}</div>
     </div>
     <div class="cc-arrow">→</div>
   </a>
@@ -177,8 +177,8 @@
 {% if clusters %}
   <p style="font-size:14px; color:var(--muted); margin-bottom:18px; font-family:'IBM Plex Sans',sans-serif;">
     When two or more capitals spoke on the same topic within 14 days, we placed their statements side by side.
-    Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed Weimar goal for that topic,
-    with the quote that justifies the rating.
+    Each statement is rated −2 (opposes) to +2 (actively advances) against the agreed {{ grouping.name }} goal for
+    that topic, with the quote that justifies the rating.
   </p>
 
   <div id="clusters-container">
@@ -190,7 +190,7 @@
       </span>
       {% if cluster.convergence %}
       <span class="tag" style="color:{{ cluster.convergence.color }}; border-color:{{ cluster.convergence.color }}44; background:{{ cluster.convergence.color }}18; margin-left:4px"
-        title="Mean stance vs. the Weimar goal, −2 to +2, per capital. Spread {{ cluster.convergence.spread }} between the most and least supportive.">
+        title="Mean stance vs. the {{ grouping.name }} goal, −2 to +2, per capital. Spread {{ cluster.convergence.spread }} between the most and least supportive.">
         {{ cluster.convergence.label }}
         ·
         {%- for a, pa in cluster.convergence.per_actor.items() %}
@@ -207,9 +207,10 @@
     <p class="cluster-commentary">{{ cluster.commentary }}</p>
     {% endif %}
 
-    {# Always render 3 columns in FR · DE · PL order #}
-    <div class="cluster-cols actors-3">
-      {% for actor in ["FR", "DE", "PL"] %}
+    {# One column per member, always in the grouping's display order — a member
+       that published nothing gets an explicit empty column rather than vanishing. #}
+    <div class="cluster-cols actors-{{ grouping.member_count }}">
+      {% for actor in grouping_actors %}
       {% set events_for_actor = cluster.by_actor.get(actor, []) %}
       {% if events_for_actor %}
       <div class="actor-col" data-actor="{{ actor }}">
@@ -232,7 +233,7 @@
             {% if _stance %}
             <div style="margin-top:6px; display:flex; align-items:baseline; gap:6px; flex-wrap:wrap">
               <span class="tag" style="font-size:9px; color:{% if _stance.score > 0 %}#4d6b38{% elif _stance.score < 0 %}#a14132{% else %}#8a6320{% endif %}; border-color:currentColor"
-                    title="Stance vs. the Weimar {{ cluster.area_label }} goal: +2 actively advances · +1 supports · 0 neutral · −1 hedges · −2 opposes">
+                    title="Stance vs. the {{ grouping.name }} {{ cluster.area_label }} goal: +2 actively advances · +1 supports · 0 neutral · −1 hedges · −2 opposes">
                 {{ "%+d"|format(_stance.score) }}
                 {{ {2: "advances", 1: "supports", 0: "neutral", -1: "hedges", -2: "opposes"}[_stance.score] }}
               </span>
@@ -285,9 +286,9 @@
 <div class="about-tracker">
   <h3>About this tracker</h3>
   <div class="about-stats">
-    <div><strong>{{ total_all }}</strong> total events ingested from {{ source_count }} official feeds — each country's foreign ministry and executive office.</div>
+    <div><strong>{{ total_all }}</strong> total events ingested across every tracked format, <strong>{{ total_events }}</strong> of them relevant to the {{ grouping.name }} — read from {{ grouping.source_count_word }} official feeds.</div>
     <div><strong>{{ clusters|length }}</strong> active topic clusters in the current 7-day window.</div>
-    <div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, tracked in our records.</div>
+    {% if meetings_count %}<div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, tracked in our records.</div>{% endif %}
   </div>
 </div>
 

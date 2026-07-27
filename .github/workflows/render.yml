@@ -3,11 +3,11 @@ name: Render
 # Render CI check. Cloudflare is the deploy path now — its Git-integration build
 # runs scripts/cf-build.sh (pipeline.render) on every push and serves the result,
 # so docs/ is a build artifact and is not committed to the repo. This workflow
-# does not deploy; it renders on every push purely to (a) fail fast if render.py
-# crashes and (b) upload the built tree as a downloadable artifact for previewing
-# a layout change without waiting on Cloudflare. render.py excludes events dated
-# after data/edition.yaml's cutoff, so a render is a pure function of
-# (templates, data, cutoff).
+# does not deploy; it renders every published grouping on every push purely to
+# (a) fail fast if render.py crashes and (b) upload the built tree as a
+# downloadable artifact for previewing a layout change without waiting on
+# Cloudflare. render.py excludes events dated after data/edition.yaml's cutoff,
+# so a render is a pure function of (templates, data, cutoff).
 
 on:
   push:
@@ -19,10 +19,6 @@ permissions:
 concurrency:
   group: render-${{ github.ref }}
   cancel-in-progress: true
-
-env:
-  # Deployed under the minilaterals.com umbrella at this path, not the domain root.
-  SITE_BASE_PATH: /weimar-triangle
 
 jobs:
   render:
@@ -43,7 +39,8 @@ jobs:
 
       - name: Upload rendered site
         # Download the zip from the run summary and open weimar-triangle/index.html
-        # locally to verify a render without waiting on the Cloudflare preview.
+        # (or e3/index.html) locally to verify a render without waiting on the
+        # Cloudflare preview.
         uses: actions/upload-artifact@v4
         with:
           name: site
