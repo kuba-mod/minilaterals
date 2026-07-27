@@ -57,6 +57,24 @@ function clientIp(request) {
   return request.headers.get("CF-Connecting-IP") || "unknown";
 }
 
+// Per-IP rate limit on the write routes. IP dedup above stops a single IP
+// inflating one grouping's *count*, but it still writes a voter marker per
+// (slug, IP) and does nothing for /api/notify, so a script cycling slugs or
+// emails could still burn the shared VOTES namespace's daily write budget and
+// break the feature for everyone. This caps that. Returns true when the caller
+// is over budget. No-ops (never limits) when the RATE_LIMITER binding isn't
+// configured — e.g. `wrangler dev --local` — and fails open on limiter errors,
+// since the per-put 503 guard below is the backstop.
+async function rateLimited(request, env) {
+  if (!env.RATE_LIMITER) return false;
+  try {
+    const { success } = await env.RATE_LIMITER.limit({ key: clientIp(request) });
+    return !success;
+  } catch {
+    return false;
+  }
+}
+
 const VALID_SLUGS = new Set([
   "e3", "visegrad", "baltic_three", "aukus",
   "quad", "squad", "us_japan_rok", "coalition_of_the_willing", "e5",
@@ -84,6 +102,10 @@ async function readBody(request) {
 }
 
 async function handleVote(request, env) {
+  if (await rateLimited(request, env)) {
+    return json({ error: "rate limited" }, 429);
+  }
+
   const body = await readBody(request);
   const slug = body && body.slug;
   if (typeof slug !== "string" || !VALID_SLUGS.has(slug)) {
@@ -93,23 +115,33 @@ async function handleVote(request, env) {
   const prefix = keyPrefix(request);
   const voterKey = `${prefix}voter:${slug}:${clientIp(request)}`;
 
-  if (await env.VOTES.get(voterKey)) {
-    // Same IP has already voted for this slug — don't count it again, but
-    // still tell the caller it succeeded. Distinguishing "already voted"
-    // client-side would just reveal the dedup mechanism (and misfire for
-    // legitimate cases like two people sharing a home/office IP).
+  try {
+    if (await env.VOTES.get(voterKey)) {
+      // Same IP has already voted for this slug — don't count it again, but
+      // still tell the caller it succeeded. Distinguishing "already voted"
+      // client-side would just reveal the dedup mechanism (and misfire for
+      // legitimate cases like two people sharing a home/office IP).
+      return json({ ok: true });
+    }
+    await env.VOTES.put(voterKey, new Date().toISOString());
+
+    const countKey = `${prefix}votes:${slug}`;
+    const next = parseInt((await env.VOTES.get(countKey)) || "0", 10) + 1;
+    await env.VOTES.put(countKey, String(next));
+
     return json({ ok: true });
+  } catch {
+    // KV rejected (e.g. daily write quota exhausted) — degrade to a clean 503
+    // instead of throwing an unhandled 500 out of the Worker.
+    return json({ error: "unavailable" }, 503);
   }
-  await env.VOTES.put(voterKey, new Date().toISOString());
-
-  const countKey = `${prefix}votes:${slug}`;
-  const next = parseInt((await env.VOTES.get(countKey)) || "0", 10) + 1;
-  await env.VOTES.put(countKey, String(next));
-
-  return json({ ok: true });
 }
 
 async function handleNotify(request, env) {
+  if (await rateLimited(request, env)) {
+    return json({ error: "rate limited" }, 429);
+  }
+
   const body = await readBody(request);
   const slug = body && body.slug;
   const emailRaw = body && body.email;
@@ -124,8 +156,12 @@ async function handleNotify(request, env) {
     return json({ error: "invalid email" }, 400);
   }
 
-  await env.VOTES.put(`${keyPrefix(request)}notify:${slug}:${email}`, new Date().toISOString());
-  return json({ ok: true });
+  try {
+    await env.VOTES.put(`${keyPrefix(request)}notify:${slug}:${email}`, new Date().toISOString());
+    return json({ ok: true });
+  } catch {
+    return json({ error: "unavailable" }, 503);
+  }
 }
 
 export default {
