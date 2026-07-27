@@ -43,7 +43,7 @@ The enrichment step runs on Ollama (a local model in dev, Ollama Cloud in CI; a 
 - **Files as the database.** Every event is a human-readable file. Diffs show exactly what changed each day, and history is the audit log. Trade-off: querying means loading everything into memory, which is fine at this scale.
 - **Topic grouping first, alignment scoring second.** Fast keyword matching decides *which events belong to a topic*; the LLM stance step decides *how aligned the positions are*. Two separate concerns kept deliberately separate.
 - **One-sentence positions.** Each country's stance is summarised in a single sentence — enough for a side-by-side view without trying to replace the source article.
-- **Static site, no backend.** Zero hosting cost and nothing to attack, at the cost of no server-side search or dynamic filtering.
+- **Static site, mostly no backend.** Zero hosting cost and almost nothing to attack, at the cost of no server-side search or dynamic filtering — except a small Worker API (`worker/index.js`) for the hub page's vote-for-the-next-grouping feature, the one place the site needs to persist visitor input.
 
 ## Deployment
 
