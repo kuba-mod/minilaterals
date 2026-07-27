@@ -28,7 +28,9 @@ uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
 
-uv run ruff check .                          # lint (enforced in CI via .github/workflows/lint.yml)
+# Lint — CI (.github/workflows/lint.yml) runs BOTH of these; `check` passing alone isn't green
+uv run ruff check .
+uv run ruff format --check .                 # or `ruff format .` to fix in place
 ```
 
 ## Architecture

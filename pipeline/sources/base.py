@@ -28,6 +28,7 @@ def content_hash(source_url: str, title: str) -> str:
     """
     return sha256((source_url + title).encode()).hexdigest()[:8]
 
+
 # ---------------------------------------------------------------------------
 # Relevance signals
 # ---------------------------------------------------------------------------
