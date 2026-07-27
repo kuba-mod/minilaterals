@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import glob
-import hashlib
 import re
 import time
 from collections.abc import Iterator
@@ -49,16 +47,6 @@ def _date_from_url(url: str) -> str | None:
     if "1995-01-01" < date <= datetime.now(UTC).strftime("%Y-%m-%d"):
         return date
     return None
-
-
-def _already_ingested(item_url: str, title: str) -> bool:
-    """True if a file for this URL+title already exists under data/events/elysee,
-    regardless of date/month. Lets daily runs skip the per-article body fetch for
-    items already on disk — the listing page returns ~100 items at once (unlike
-    the other sources' small page-1 batches), so without this a routine run would
-    hit elysee.fr roughly 100 times for content already ingested days ago."""
-    content_hash = hashlib.sha256((item_url + title).encode()).hexdigest()[:8]
-    return bool(glob.glob(f"data/events/{SOURCE_NAME}/*/*-{content_hash}.yaml"))
 
 
 def _parse_date(raw: str | None) -> str | None:
@@ -143,7 +131,11 @@ class ElyseeIngester(BaseIngester):
                 # In daily mode (no --since) already-known items don't need a body
                 # fetch at all — --since backfill still walks every item to find
                 # the pagination boundary, so this only applies to routine runs.
-                if not self.since and _already_ingested(item_url, title):
+                # The listing returns ~100 items at once, so without this a
+                # routine run would hit elysee.fr ~100 times for content already
+                # ingested days ago.
+                if not self.since and self.already_ingested(item_url, title):
+                    self.known_skipped += 1
                     continue
 
                 date = _date_from_url(item_url)

@@ -38,7 +38,25 @@ def test_run_ingester_counts_new_events():
         make_event(source_name="fake_source", title="B", source_url="https://x/2"),
     ]
     result = ingest.run_ingester(FakeIngester(events))
-    assert result == {"source": "fake_source", "fetched": 2, "new": 2, "skipped": 0, "error": None}
+    assert result == {
+        "source": "fake_source",
+        "fetched": 2,
+        "new": 2,
+        "skipped": 0,
+        "known": 0,
+        "error": None,
+    }
+
+
+def test_run_ingester_reports_known_skipped():
+    # An ingester that skipped items without fetching them reports the count via
+    # known_skipped; run_ingester surfaces it as `known` in the run log.
+    ingester = FakeIngester([make_event(source_name="fake_source", title="A", source_url="https://x/1")])
+    ingester.known_skipped = 29
+    result = ingest.run_ingester(ingester)
+    assert result["fetched"] == 1
+    assert result["new"] == 1
+    assert result["known"] == 29
 
 
 def test_run_ingester_dedups_repeat_event():

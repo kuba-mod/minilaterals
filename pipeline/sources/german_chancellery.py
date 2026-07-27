@@ -108,6 +108,14 @@ class GermanChancelleryIngester(BaseIngester):
                 if not title:
                     continue
 
+                # In daily mode an item already on disk needs no body fetch —
+                # save() would discard the result. Backfill still walks every
+                # item, because the pagination boundary below is derived from
+                # the dates of the items on the page.
+                if not self.since and self.already_ingested(item_url, title):
+                    self.known_skipped += 1
+                    continue
+
                 body, article_date = self._fetch_body(item_url)
                 date, published_at = _parse_date(article_date or item.get("sortDate"))
                 time.sleep(0.5)

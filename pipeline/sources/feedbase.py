@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import time
 from collections.abc import Iterator
 from datetime import UTC, datetime
 
@@ -114,4 +113,7 @@ class FeedIngester(BaseIngester):
                 source_published_at=published_at,
                 date=date,
             )
-            time.sleep(0.1)
+            # No per-entry sleep: a FeedIngester makes exactly one request (the
+            # feed) and every entry is parsed from those same bytes, so pacing
+            # per entry throttles nothing. It only cost wall-clock — 10s a run
+            # on the 100-entry Estonian feed alone.
