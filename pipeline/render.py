@@ -875,238 +875,74 @@ Allow: /
 """
 
 # Umbrella hub page (minilaterals.com root): one card per minilateral grouping.
-# Only the Weimar Triangle is live; the rest are placeholders until their own
-# ingesters/render targets exist. Flag codes are ISO 3166-1 alpha-2, lowercase,
-# for flagcdn.com.
-HUB_GROUPINGS = [
-    {
-        "slug": "e3",
-        "name": "The E3",
-        "accent": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
-        "members": ["de", "fr", "gb"],
-        "member_names": "Germany · France · United Kingdom",
-        "topics": ["Iran nuclear file", "Sanctions snapback", "European security"],
-        "blurb": "Europe's lead trio on Iran and hard security — Berlin, Paris and London coordinating outside the EU frame.",
-    },
-    {
-        "slug": "visegrad",
-        "name": "The Visegrád Group",
-        "accent": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
-        "members": ["pl", "cz", "sk", "hu"],
-        "member_names": "Poland · Czechia · Slovakia · Hungary",
-        "topics": ["Migration & external borders", "Energy security", "EU enlargement"],
-        "blurb": "Central Europe's caucus inside the EU — four capitals that vote together more often than not.",
-    },
-    {
-        "slug": "baltic_three",
-        "name": "The Baltic Three",
-        "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
-        "members": ["ee", "lv", "lt"],
-        "member_names": "Estonia · Latvia · Lithuania",
-        "topics": ["Deterrence", "Energy security", "Hybrid threats"],
-        "blurb": "NATO's north-eastern frontier — Tallinn, Riga and Vilnius rarely more than a sentence apart.",
-    },
-    {
-        "slug": "aukus",
-        "name": "AUKUS",
-        "accent": "linear-gradient(90deg,#00247d 0 33.33%,#c8102e 33.33% 66.66%,#3c3b6e 66.66%)",
-        "members": ["au", "gb", "us"],
-        "member_names": "Australia · United Kingdom · United States",
-        "topics": ["Submarines", "Indo-Pacific", "Defence tech"],
-        "blurb": "A Pacific security pact built around nuclear-powered submarines and shared defence technology.",
-    },
-    # -- Additional global minilaterals (survey-sourced placeholders; not yet
-    #    tracked by the ingest/enrich pipeline) --
-    {
-        "slug": "quad",
-        "name": "The Quad",
-        "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#ff9933 50% 75%,#00247d 75%)",
-        "members": ["us", "jp", "in", "au"],
-        "member_names": "United States · Japan · India · Australia",
-        "topics": ["Indo-Pacific", "Critical minerals", "Maritime security"],
-        "blurb": "The Indo-Pacific's flagship quartet — institutionally busy in 2026, but without a leaders' summit since 2024.",
-    },
-    {
-        "slug": "squad",
-        "name": "The Squad",
-        "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#00247d 50% 75%,#0038a8 75%)",
-        "members": ["us", "jp", "au", "ph"],
-        "member_names": "United States · Japan · Australia · Philippines",
-        "topics": ["South China Sea", "Deterrence", "Defence"],
-        "blurb": "The Quad's operational cousin — four militaries coordinating against grey-zone pressure in the South China Sea.",
-    },
-    {
-        "slug": "us_japan_rok",
-        "name": "US–Japan–ROK Trilateral",
-        "accent": "linear-gradient(90deg,#3c3b6e 0 33.33%,#bc002d 33.33% 66.66%,#003478 66.66%)",
-        "members": ["us", "jp", "kr"],
-        "member_names": "United States · Japan · South Korea",
-        "topics": ["Camp David process", "Trilateral exercises", "DPRK deterrence"],
-        "blurb": "Institutionalised at Camp David in 2023 — now navigating a change of government in all three capitals.",
-    },
-    {
-        "slug": "coalition_of_the_willing",
-        "name": "Coalition of the Willing",
-        "accent": "linear-gradient(90deg,#012169 0 33.33%,#0055a4 33.33% 66.66%,#000000 66.66%)",
-        "members": ["gb", "fr", "de"],
-        "member_names": "UK & France (co-chairs) · Germany · ~35 countries in total",
-        "topics": ["Ukraine", "Security guarantees", "Reassurance force"],
-        "blurb": "Started in London in 2025 to backstop a Ukraine ceasefire — some 26 states have pledged troops to a planned reassurance force.",
-    },
-    {
-        "slug": "e5",
-        "name": "The E5",
-        "accent": "linear-gradient(90deg,#0055a4 0 20%,#000000 20% 40%,#00247d 40% 60%,#008C45 60% 80%,#dc143c 80%)",
-        "members": ["fr", "de", "gb", "it", "pl"],
-        "member_names": "France · Germany · UK · Italy · Poland",
-        "topics": ["Ukraine support", "Capability & procurement", "European pillar of NATO"],
-        "blurb": "Europe's five biggest defence spenders, convened by their defence ministers since late 2024 to coordinate support for Ukraine and build out NATO's European pillar.",
-    },
-    {
-        "slug": "jef",
-        "name": "Joint Expeditionary Force",
-        "accent": "linear-gradient(90deg,#00247d 0 25%,#c8102e 25% 50%,#002868 50% 75%,#003893 75%)",
-        "members": ["gb", "nl", "dk", "no", "is", "se", "fi", "ee", "lv", "lt"],
-        "member_names": "UK · Netherlands · Denmark · Norway · Iceland · Sweden · Finland · Estonia · Latvia · Lithuania",
-        "topics": ["Baltic Sea & High North", "Shadow fleet", "Hybrid threats"],
-        "blurb": "A UK-led ten-nation coalition now tracking Russia's shadow fleet across the Baltic and North Seas.",
-    },
-    {
-        "slug": "lancaster_house",
-        "name": "Lancaster House 2.0",
-        "accent": "linear-gradient(90deg,#00247d 0 50%,#0055a4 50%)",
-        "members": ["gb", "fr"],
-        "member_names": "United Kingdom · France",
-        "topics": ["Nuclear coordination", "Deep strike"],
-        "blurb": "The 2010 treaties rebooted in 2025 — the Northwood Declaration opened the door to coordinating the two nuclear deterrents.",
-    },
-    {
-        "slug": "b9",
-        "name": "Bucharest Nine",
-        "accent": "linear-gradient(90deg,#00966e 0 33.33%,#11457e 33.33% 66.66%,#ce1126 66.66%)",
-        "members": ["bg", "cz", "ee", "hu", "lv", "lt", "pl", "ro", "sk"],
-        "member_names": "Bulgaria · Czechia · Estonia · Hungary · Latvia · Lithuania · Poland · Romania · Slovakia",
-        "topics": ["NATO eastern flank", "Deterrence"],
-        "blurb": "NATO's eastern-flank caucus, founded after Crimea — now debating whether to widen to the Black Sea's south-east.",
-    },
-    {
-        "slug": "nb8",
-        "name": "Nordic-Baltic Eight",
-        "accent": "linear-gradient(90deg,#c8102e 0 25%,#003893 25% 50%,#0072ce 50% 75%,#fdb913 75%)",
-        "members": ["dk", "fi", "no", "se", "is", "ee", "lv", "lt"],
-        "member_names": "Denmark · Finland · Norway · Sweden · Iceland · Estonia · Latvia · Lithuania",
-        "topics": ["Foreign policy coordination", "Ukraine support", "Regional security"],
-        "blurb": "An informal Nordic-Baltic format since the 1990s, now doing double duty as Europe's most reliable security engine.",
-    },
-    {
-        "slug": "three_seas",
-        "name": "Three Seas Initiative",
-        "accent": "linear-gradient(90deg,#0072ce 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%)",
-        "members": ["ee", "lv", "lt", "pl", "cz", "sk", "hu", "si", "at", "hr", "ro", "gr", "bg"],
-        "member_names": "13 states between the Baltic, Adriatic and Black Seas",
-        "topics": ["Energy", "Transport", "Digital infrastructure"],
-        "blurb": "A north-south infrastructure club for the EU's eastern half — Spain and Turkey joined as strategic partners in 2025.",
-    },
-    {
-        "slug": "i2u2",
-        "name": "I2U2",
-        "accent": "linear-gradient(90deg,#ff9933 0 25%,#0038b8 25% 50%,#00732f 50% 75%,#3c3b6e 75%)",
-        "members": ["in", "il", "ae", "us"],
-        "member_names": "India · Israel · UAE · United States",
-        "topics": ["Food security", "Clean energy", "Water"],
-        "blurb": "The 'West Asian Quad' — private-sector projects that stalled through 2024 and lean heavily on US engagement to move.",
-    },
-    {
-        "slug": "negev_forum",
-        "name": "Negev Forum",
-        "accent": "linear-gradient(90deg,#0038b8 0 33.33%,#3c3b6e 33.33% 66.66%,#00732f 66.66%)",
-        "members": ["il", "us", "ae", "bh", "eg", "ma"],
-        "member_names": "Israel · United States · UAE · Bahrain · Egypt · Morocco",
-        "topics": ["Regional security", "Regional integration", "Clean energy"],
-        "blurb": "Six Abraham Accords-era working groups, suspended at ministerial level since the Gaza war.",
-    },
-    {
-        "slug": "imec",
-        "name": "IMEC",
-        "accent": "linear-gradient(90deg,#ff9933 0 25%,#3c3b6e 25% 50%,#006c35 50% 75%,#00732f 75%)",
-        "members": ["in", "us", "fr", "de", "it", "sa", "ae"],
-        "member_names": "India · US · EU · France · Germany · Italy · Saudi Arabia · UAE",
-        "topics": ["Connectivity", "Rail & ports", "Energy & data cables"],
-        "blurb": "A rail-port-cable corridor pitched as an answer to China's Belt and Road — construction has started, funding hasn't firmed up.",
-    },
-    {
-        "slug": "india_france_uae",
-        "name": "India–France–UAE Trilateral",
-        "accent": "linear-gradient(90deg,#ff9933 0 33.33%,#0055a4 33.33% 66.66%,#00732f 66.66%)",
-        "members": ["in", "fr", "ae"],
-        "member_names": "India · France · UAE",
-        "topics": ["Indian Ocean", "Defence", "Energy"],
-        "blurb": "A defence-and-energy trio watching the Western Indian Ocean, with an AI and space roadmap agreed in 2025.",
-    },
-    {
-        "slug": "aes",
-        "name": "Alliance of Sahel States",
-        "accent": "linear-gradient(90deg,#14b53a 0 33.33%,#ce1126 33.33% 66.66%,#00a651 66.66%)",
-        "members": ["ml", "bf", "ne"],
-        "member_names": "Mali · Burkina Faso · Niger",
-        "topics": ["Collective defence", "Joint military force", "Confederation"],
-        "blurb": "Three juntas that quit ECOWAS and stood up a joint military force in 2025 — the clearest anti-Western minilateral.",
-    },
-    {
-        "slug": "pacific_alliance",
-        "name": "Pacific Alliance",
-        "accent": "linear-gradient(90deg,#0033a0 0 25%,#fcd116 25% 50%,#006847 50% 75%,#d91023 75%)",
-        "members": ["cl", "co", "mx", "pe"],
-        "member_names": "Chile · Colombia · Mexico · Peru",
-        "topics": ["Trade integration", "Free movement", "Asia-Pacific links"],
-        "blurb": "Latin America's trade bright spot, representing roughly half the region's trade — though a presidency rift is testing it.",
-    },
-    {
-        "slug": "mekong_lancang",
-        "name": "Mekong-Lancang Cooperation",
-        "accent": "linear-gradient(90deg,#de2910 0 33.33%,#032ea1 33.33% 66.66%,#da251d 66.66%)",
-        "members": ["cn", "kh", "la", "mm", "th", "vn"],
-        "member_names": "China · Cambodia · Laos · Myanmar · Thailand · Vietnam",
-        "topics": ["Water resources", "Connectivity", "Law enforcement"],
-        "blurb": "Beijing's mechanism for the Mekong basin — trade with the five downstream states topped $437bn over the decade.",
-    },
-    {
-        "slug": "china_pakistan_afghanistan",
-        "name": "China–Pakistan–Afghanistan Trilateral",
-        "accent": "linear-gradient(90deg,#de2910 0 33.33%,#01411c 33.33% 66.66%,#000000 66.66%)",
-        "members": ["cn", "pk", "af"],
-        "member_names": "China · Pakistan · Afghanistan",
-        "topics": ["Counterterrorism", "CPEC extension"],
-        "blurb": "A revived counterterrorism-and-connectivity channel, extending the China-Pakistan Economic Corridor into Afghanistan.",
-    },
-    {
-        "slug": "csc",
-        "name": "Colombo Security Conclave",
-        "accent": "linear-gradient(90deg,#ff9933 0 25%,#ffb700 25% 50%,#d21034 50% 75%,#006a4e 75%)",
-        "members": ["in", "lk", "mv", "mu", "bd"],
-        "member_names": "India · Sri Lanka · Maldives · Mauritius · Bangladesh",
-        "topics": ["Maritime security", "Counter-terrorism", "HADR"],
-        "blurb": "An India-led Indian Ocean security format, widely read as a counterweight to Chinese influence in the region.",
-    },
-    {
-        "slug": "mikta",
-        "name": "MIKTA",
-        "accent": "linear-gradient(90deg,#006847 0 20%,#ff0000 20% 40%,#003478 40% 60%,#e30a17 60% 80%,#00247d 80%)",
-        "members": ["mx", "id", "kr", "tr", "au"],
-        "member_names": "Mexico · Indonesia · South Korea · Turkey · Australia",
-        "topics": ["Global governance", "Multilateral reform"],
-        "blurb": "A cross-regional middle-power caucus of G20 members — its relevance is perennially debated, and it perennially persists.",
-    },
-    {
-        "slug": "chip4",
-        "name": "Chip 4 / Fab 4",
-        "accent": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#003478 50% 75%,#fe0000 75%)",
-        "members": ["us", "jp", "kr", "tw"],
-        "member_names": "United States · Japan · South Korea · Taiwan",
-        "topics": ["Semiconductors", "Supply chains"],
-        "blurb": "A proposed chip-supply alliance among states that together hold most of the world's semiconductor value chain — still more aspiration than institution.",
-    },
-]
+# Only the Weimar Triangle is live (templated directly in hub.html); the rest are
+# placeholders until their own ingesters/render targets exist.
+#
+# Card content — name, members, tags, blurb — lives in data/groupings.yaml
+# alongside each grouping's goal and the instrument it was agreed in, so a tag
+# can't drift away from the objective backing it. Only the accent gradients stay
+# here: they're presentation, with no counterpart in the data.
+HUB_ACCENTS = {
+    "e3": "linear-gradient(90deg,#1f4279 0 33.33%,#c8a648 33.33% 66.66%,#c8102e 66.66%)",
+    "visegrad": "linear-gradient(90deg,#b22823 0 25%,#11457e 25% 50%,#ee1c25 50% 75%,#2f7a46 75%)",
+    "baltic_three": "linear-gradient(90deg,#0072ce 0 33.33%,#9e3039 33.33% 66.66%,#fdb913 66.66%)",
+    "aukus": "linear-gradient(90deg,#00247d 0 33.33%,#c8102e 33.33% 66.66%,#3c3b6e 66.66%)",
+    "quad": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#ff9933 50% 75%,#00247d 75%)",
+    "squad": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#00247d 50% 75%,#0038a8 75%)",
+    "us_japan_rok": "linear-gradient(90deg,#3c3b6e 0 33.33%,#bc002d 33.33% 66.66%,#003478 66.66%)",
+    "coalition_of_the_willing": "linear-gradient(90deg,#012169 0 33.33%,#0055a4 33.33% 66.66%,#000000 66.66%)",
+    "e5": "linear-gradient(90deg,#0055a4 0 20%,#000000 20% 40%,#00247d 40% 60%,#008C45 60% 80%,#dc143c 80%)",
+    "jef": "linear-gradient(90deg,#00247d 0 25%,#c8102e 25% 50%,#002868 50% 75%,#003893 75%)",
+    "lancaster_house": "linear-gradient(90deg,#00247d 0 50%,#0055a4 50%)",
+    "b9": "linear-gradient(90deg,#00966e 0 33.33%,#11457e 33.33% 66.66%,#ce1126 66.66%)",
+    "nb8": "linear-gradient(90deg,#c8102e 0 25%,#003893 25% 50%,#0072ce 50% 75%,#fdb913 75%)",
+    "three_seas": "linear-gradient(90deg,#0072ce 0 33.33%,#c8a648 33.33% 66.66%,#b22823 66.66%)",
+    "i2u2": "linear-gradient(90deg,#ff9933 0 25%,#0038b8 25% 50%,#00732f 50% 75%,#3c3b6e 75%)",
+    "negev_forum": "linear-gradient(90deg,#0038b8 0 33.33%,#3c3b6e 33.33% 66.66%,#00732f 66.66%)",
+    "imec": "linear-gradient(90deg,#ff9933 0 25%,#3c3b6e 25% 50%,#006c35 50% 75%,#00732f 75%)",
+    "india_france_uae": "linear-gradient(90deg,#ff9933 0 33.33%,#0055a4 33.33% 66.66%,#00732f 66.66%)",
+    "aes": "linear-gradient(90deg,#14b53a 0 33.33%,#ce1126 33.33% 66.66%,#00a651 66.66%)",
+    "pacific_alliance": "linear-gradient(90deg,#0033a0 0 25%,#fcd116 25% 50%,#006847 50% 75%,#d91023 75%)",
+    "mekong_lancang": "linear-gradient(90deg,#de2910 0 33.33%,#032ea1 33.33% 66.66%,#da251d 66.66%)",
+    "china_pakistan_afghanistan": "linear-gradient(90deg,#de2910 0 33.33%,#01411c 33.33% 66.66%,#000000 66.66%)",
+    "csc": "linear-gradient(90deg,#ff9933 0 25%,#ffb700 25% 50%,#d21034 50% 75%,#006a4e 75%)",
+    "mikta": "linear-gradient(90deg,#006847 0 20%,#ff0000 20% 40%,#003478 40% 60%,#e30a17 60% 80%,#00247d 80%)",
+    "chip4": "linear-gradient(90deg,#3c3b6e 0 25%,#bc002d 25% 50%,#003478 50% 75%,#fe0000 75%)",
+}
+
+# Flag codes are ISO 3166-1 alpha-2, lowercase, for flagcdn.com — which uses the
+# ISO `gb` where the project's actor vocabulary uses `UK`.
+_FLAG_CODES = {"UK": "gb"}
+
+GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
+
+
+def load_hub_groupings() -> list[dict]:
+    """The "coming soon" cards, in file order, from data/groupings.yaml.
+
+    `weimar` is skipped — its card is the live tracker and is templated in
+    hub.html with real numbers rather than rendered from this list.
+    """
+    raw = (_load_yaml(GROUPINGS_PATH) or {}).get("groupings") or {}
+    cards = []
+    for key, g in raw.items():
+        if key == "weimar":
+            continue
+        cards.append(
+            {
+                "slug": g.get("hub_slug", key),
+                "name": g.get("hub_name", g["name"]),
+                "accent": HUB_ACCENTS[g.get("hub_slug", key)],
+                "members": [_FLAG_CODES.get(c, c.lower()) for c in g["members"]],
+                "member_names": g["member_names"],
+                "topics": list(g["tags"]),
+                "blurb": g["blurb"],
+            }
+        )
+    return cards
+
+
+HUB_GROUPINGS = load_hub_groupings()
 
 
 # ---------------------------------------------------------------------------

@@ -1,13 +1,11 @@
-"""data/groupings.yaml — the per-format goals behind the hub cards.
+"""data/groupings.yaml — the goals behind the hub cards, and the file's two jobs.
 
-The point of the goal/`agreed` fields is that no hub card tag exists without a
-stated, agreed objective to back it, so these tests keep the two in lockstep:
-every card has an entry, every entry's `tags` are exactly the card's tags, and
-every entry names the instrument the goal was agreed in.
-
-Also guards the file's other job: `topics` marks an entry as tracked by the
-pipeline, and hub placeholders must not acquire it by accident — that would
-widen the LLM's actor and issue-area vocabulary.
+The hub cards are now built from this file (`render.load_hub_groupings`), so the
+tags and the goals can't drift apart by construction. What still needs guarding
+is that every card entry is complete enough to render and to justify its tags,
+and that `topics` — which marks an entry as tracked by the pipeline — doesn't
+spread to a placeholder, since that would widen the LLM's actor and issue-area
+vocabulary.
 """
 
 from __future__ import annotations
@@ -17,67 +15,62 @@ from pathlib import Path
 import pytest
 import yaml
 
-from pipeline.enrich import GROUPINGS
-from pipeline.render import HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER
+from pipeline.enrich import GOALS, GROUPINGS
+from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER
 
-GOALS_PATH = Path(__file__).parent.parent / "data" / "groupings.yaml"
-GOALS = yaml.safe_load(GOALS_PATH.read_text(encoding="utf-8"))
-
-# Entries are keyed by hub slug, except where a grouping predates the hub under
-# another key (`baltic` names the baltic_relevant field across data/enriched/).
-BY_SLUG = {g.get("hub_slug", key): g for key, g in GOALS.items()}
+CONFIG = yaml.safe_load((Path(__file__).parent.parent / "data" / "groupings.yaml").read_text(encoding="utf-8"))
+ENTRIES = CONFIG["groupings"]
 
 STATUSES = {"active", "intermittent", "dormant", "suspended", "aspirational"}
-
-# flagcdn uses the ISO alpha-2 `gb`; the project's actor vocabulary uses `UK`.
-_ALIASES = {"GB": "UK"}
-
-
-def _slugs():
-    return ["weimar"] + [m["slug"] for m in HUB_GROUPINGS]
-
-
-def test_every_hub_card_has_a_goal_entry():
-    assert set(BY_SLUG) == set(_slugs())
 
 
 def test_only_the_pipeline_groupings_carry_topics():
     # Adding `topics` to a placeholder silently changes what the LLM is asked to
     # classify, so pin the tracked set explicitly.
-    tracked = {k for k, g in GOALS.items() if g.get("topics")}
+    tracked = {k for k, g in ENTRIES.items() if g.get("topics")}
     assert tracked == {"weimar", "e3", "visegrad", "baltic", "aukus"} == set(GROUPINGS)
 
 
-@pytest.mark.parametrize("slug", _slugs())
-def test_entry_states_a_goal_and_where_it_was_agreed(slug):
-    entry = BY_SLUG[slug]
-    assert entry["goal"].strip(), f"{slug}: empty goal"
+def test_topic_goals_cover_every_tracked_topic_exactly():
+    tracked_topics = {t for g in ENTRIES.values() for t in (g.get("topics") or [])}
+    assert set(GOALS) == tracked_topics
+
+
+@pytest.mark.parametrize("key", list(ENTRIES))
+def test_entry_states_a_goal_and_where_it_was_agreed(key):
+    entry = ENTRIES[key]
+    assert entry["goal"].strip(), f"{key}: empty goal"
     agreed = entry["agreed"]
     # `instrument` may say no founding text exists (chip4) — it may not be blank.
-    assert agreed["instrument"].strip(), f"{slug}: no instrument named"
-    assert agreed.get("date"), f"{slug}: no date for the agreed goal"
-    assert agreed.get("level"), f"{slug}: no level (leaders/ministers/officials)"
-    assert entry["status"] in STATUSES, f"{slug}: bad status {entry['status']!r}"
+    assert agreed["instrument"].strip(), f"{key}: no instrument named"
+    assert agreed.get("date"), f"{key}: no date for the agreed goal"
+    assert agreed.get("level"), f"{key}: no level (leaders/ministers/officials)"
+    assert entry["status"] in STATUSES, f"{key}: bad status {entry['status']!r}"
 
 
-@pytest.mark.parametrize("m", HUB_GROUPINGS, ids=lambda m: m["slug"])
-def test_card_tags_match_the_agreed_goals(m):
-    # Tag order is the card's display order, so compare as a list, not a set.
-    assert list(BY_SLUG[m["slug"]]["tags"]) == m["topics"]
+@pytest.mark.parametrize("key", list(ENTRIES))
+def test_every_tag_carries_its_basis(key):
+    # A tag with no stated basis is exactly what this file exists to prevent.
+    for tag, basis in ENTRIES[key]["tags"].items():
+        assert basis and basis.strip(), f"{key}/{tag}: tag with no stated basis"
+
+
+@pytest.mark.parametrize("key", [k for k in ENTRIES if k != "weimar"])
+def test_placeholder_entries_carry_what_the_card_needs(key):
+    entry = ENTRIES[key]
+    slug = entry.get("hub_slug", key)
+    assert slug in HUB_ACCENTS, f"{key}: no accent gradient for slug {slug!r}"
+    assert entry["member_names"].strip(), f"{key}: no member_names line"
+    assert entry["blurb"].strip(), f"{key}: no blurb"
+
+
+def test_weimar_is_the_only_entry_without_a_card():
+    # Weimar's card is the live tracker, templated in hub.html rather than built
+    # from this list.
+    assert {m["slug"] for m in HUB_GROUPINGS} == {g.get("hub_slug", k) for k, g in ENTRIES.items() if k != "weimar"}
 
 
 def test_weimar_tags_match_the_live_cards_issue_labels():
-    # The Weimar card renders its tags from ISSUE_ORDER rather than HUB_GROUPINGS.
-    assert list(BY_SLUG["weimar"]["tags"]) == [ISSUE_LABELS[a] for a in ISSUE_ORDER]
-
-
-@pytest.mark.parametrize("m", HUB_GROUPINGS, ids=lambda m: m["slug"])
-def test_members_match_the_card(m):
-    carded = [_ALIASES.get(c.upper(), c.upper()) for c in m["members"]]
-    assert BY_SLUG[m["slug"]]["members"] == carded
-
-
-@pytest.mark.parametrize("slug", _slugs())
-def test_every_tag_carries_its_basis(slug):
-    for tag, basis in BY_SLUG[slug]["tags"].items():
-        assert basis and basis.strip(), f"{slug}/{tag}: tag with no stated basis"
+    # The Weimar card renders its tags from ISSUE_ORDER, so the documented tags
+    # have to track that rather than a HUB_GROUPINGS entry.
+    assert list(ENTRIES["weimar"]["tags"]) == [ISSUE_LABELS[a] for a in ISSUE_ORDER]
