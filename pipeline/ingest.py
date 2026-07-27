@@ -53,7 +53,19 @@ def run_ingester(ingester, dry_run: bool = False) -> dict:
         error = str(exc)
         print(f"  ERROR in {source}: {exc}", file=sys.stderr)
 
-    return {"source": source, "fetched": fetched, "new": new, "skipped": skipped, "error": error}
+    # Items the source offered but that were already on disk, so the ingester
+    # skipped them without an article fetch. Not every ingester tracks this
+    # (and test doubles don't subclass BaseIngester), hence the getattr.
+    known = getattr(ingester, "known_skipped", 0)
+
+    return {
+        "source": source,
+        "fetched": fetched,
+        "new": new,
+        "skipped": skipped,
+        "known": known,
+        "error": error,
+    }
 
 
 def write_run_log(results: list[dict]) -> None:
@@ -68,6 +80,7 @@ def write_run_log(results: list[dict]) -> None:
             "fetched": sum(r["fetched"] for r in results),
             "new": sum(r["new"] for r in results),
             "skipped": sum(r["skipped"] for r in results),
+            "known": sum(r["known"] for r in results),
             "errors": sum(1 for r in results if r["error"]),
         },
     }
@@ -99,14 +112,15 @@ def main() -> None:
         print(f"── {ingester.source_name}")
         r = run_ingester(ingester, dry_run=args.dry_run)
         print(
-            f"   fetched={r['fetched']}  new={r['new']}  skipped={r['skipped']}"
+            f"   fetched={r['fetched']}  new={r['new']}  skipped={r['skipped']}  known={r['known']}"
             + (f"  ERROR: {r['error']}" if r["error"] else "")
         )
         results.append(r)
 
     totals_fetched = sum(r["fetched"] for r in results)
     totals_new = sum(r["new"] for r in results)
-    print(f"\nTOTAL  fetched={totals_fetched}  new={totals_new}")
+    totals_known = sum(r["known"] for r in results)
+    print(f"\nTOTAL  fetched={totals_fetched}  new={totals_new}  known={totals_known} (skipped without fetching)")
 
     if not args.dry_run:
         write_run_log(results)

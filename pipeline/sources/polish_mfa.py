@@ -48,6 +48,10 @@ class PolishMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
     source_lang = "pl"
 
+    # Items the current listing offered, regardless of how many survived the
+    # already-ingested skip. Drives the English fallback in fetch().
+    _items_seen = 0
+
     def _fetch_body(self, url: str) -> str:
         """Fetch full article text from an individual news page."""
         try:
@@ -67,11 +71,14 @@ class PolishMFAIngester(BaseIngester):
 
     def fetch(self) -> Iterator[Event]:
         for listing_url, lang in LISTINGS:
-            got_any = False
-            for event in self._fetch_listing(listing_url, lang):
-                got_any = True
-                yield event
-            if got_any:
+            # Fall through to the English listing only when the Polish one had
+            # no items at all. "Yielded no events" is a different question — a
+            # routine run skips every item as already-ingested — and falling
+            # through on that would scrape both sections every day, and file
+            # English duplicates of native items the moment one is new.
+            self._items_seen = 0
+            yield from self._fetch_listing(listing_url, lang)
+            if self._items_seen:
                 return
             print(f"[{SOURCE_NAME}] listing {listing_url} yielded nothing")
 
@@ -106,6 +113,7 @@ class PolishMFAIngester(BaseIngester):
                 title = a_tag.get_text(strip=True)
                 if not title:
                     continue
+                self._items_seen += 1
                 href = a_tag["href"]
                 url = href if href.startswith("http") else urljoin(BASE_URL, href)
 
@@ -119,6 +127,14 @@ class PolishMFAIngester(BaseIngester):
                     all_before_since = False
 
                 if self.since and date < self.since:
+                    continue
+
+                # In daily mode an item already on disk needs no body fetch —
+                # save() would discard the result. Backfill still walks every
+                # item, because the pagination boundary below is derived from
+                # the dates of the items on the page.
+                if not self.since and self.already_ingested(url, title):
+                    self.known_skipped += 1
                     continue
 
                 intro_tag = item.select_one(".intro") or item.find("p")

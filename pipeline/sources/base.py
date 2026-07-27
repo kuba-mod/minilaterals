@@ -11,6 +11,11 @@ import yaml
 
 from pipeline.schemas import RawEventSchema
 
+# Where Event.save() writes by default, and where already_ingested() looks for
+# prior runs' output. ingest.py passes its own (test-monkeypatchable) DATA_DIR
+# into save(); this constant is the same tree under normal operation.
+EVENTS_DIR = Path(__file__).resolve().parents[2] / "data" / "events"
+
 # ---------------------------------------------------------------------------
 # Relevance signals
 # ---------------------------------------------------------------------------
@@ -140,6 +145,35 @@ class BaseIngester(ABC):
     def __init__(self, since: str | None = None) -> None:
         # ISO date string "YYYY-MM-DD"; if set, ingesters should backfill to this date.
         self.since = since
+        # Items recognised as already on disk and skipped without an article
+        # fetch. run_ingester() reads this after fetch() and reports it as
+        # `known` in the run log, so "items the listing offered" stays visible
+        # as fetched + known even though the skipped ones are never yielded.
+        self.known_skipped = 0
+        self._known_hashes: set[str] | None = None
+
+    def already_ingested(self, source_url: str, title: str) -> bool:
+        """True when a file for this URL+title already exists under
+        data/events/{source_name}, regardless of date/month.
+
+        Listings and feeds re-offer the same items every run — a routine day
+        sees ~97% already on disk — and `save()` refuses to overwrite an
+        existing file, so the per-article body fetch behind a known item is
+        always discarded. Gating that fetch on this predicate costs a directory
+        scan once per run and removes the request entirely.
+
+        Matching is by content hash (sha256(url+title)[:8]) rather than by
+        output path, because several ingesters only learn an item's date from
+        the article page itself — the fetch this is meant to avoid.
+
+        Pure: call sites increment `known_skipped` themselves.
+        """
+        if self._known_hashes is None:
+            source_dir = EVENTS_DIR / self.source_name
+            self._known_hashes = (
+                {p.stem.rsplit("-", 1)[-1] for p in source_dir.glob("*/*.yaml")} if source_dir.is_dir() else set()
+            )
+        return sha256((source_url + title).encode()).hexdigest()[:8] in self._known_hashes
 
     @abstractmethod
     def fetch(self) -> Iterator[Event]:

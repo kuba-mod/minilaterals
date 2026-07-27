@@ -57,16 +57,21 @@ class FranceDiplomatieIngester(BaseIngester):
     source_name = SOURCE_NAME
     source_lang = "fr"
 
+    # Entries the French feed offered on this run, regardless of how many
+    # survived the already-ingested skip. Drives the English fallback below.
+    _rss_entries_seen = 0
+
     def fetch(self) -> Iterator[Event]:
-        got_any = False
-        for event in self._fetch_rss():
-            got_any = True
-            yield event
+        self._rss_entries_seen = 0
+        yield from self._fetch_rss()
         if self.since:
             # Backfill: the feed only holds the newest items; the English
             # listing is the only paginated archive of past statements.
             yield from self._fetch_listing()
-        elif not got_any:
+        elif not self._rss_entries_seen:
+            # Gate the fallback on the feed being empty, not on it yielding no
+            # events — a routine run skips every entry as already-ingested, and
+            # falling back on that would scrape the English listing daily.
             print(f"[{SOURCE_NAME}] French feed yielded nothing — falling back to English scrape")
             yield from self._fetch_listing()
 
@@ -77,6 +82,7 @@ class FranceDiplomatieIngester(BaseIngester):
             print(f"[{SOURCE_NAME}] RSS error: {exc}")
             return
         for entry in feed.entries:
+            self._rss_entries_seen += 1
             title = entry.get("title", "").strip()
             url = entry.get("link", "")
             if not title or not url:
@@ -87,6 +93,9 @@ class FranceDiplomatieIngester(BaseIngester):
             # French, which _parse_date can't read.
             date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
             if self.since and date < self.since:
+                continue
+            if self.already_ingested(url, title):
+                self.known_skipped += 1
                 continue
             body, _ = self._fetch_body(url)
             summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)

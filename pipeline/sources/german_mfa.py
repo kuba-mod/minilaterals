@@ -166,6 +166,10 @@ class GermanMFAIngester(BaseIngester):
     source_name = SOURCE_NAME
     source_lang = "de"
 
+    # Entries the live feed offered on this run, regardless of how many survived
+    # the already-ingested skip. Drives the HTML fallback in fetch().
+    _rss_entries_seen = 0
+
     def fetch(self) -> Iterator[Event]:
         if self.since:
             # Backfill mode: paginate the HTML listing, supplement with RSS,
@@ -184,10 +188,15 @@ class GermanMFAIngester(BaseIngester):
             for event in self._fetch_wayback_articles(seen_urls):
                 yield event
         else:
-            items = list(self._fetch_rss())
-            if items:
-                yield from items
-            else:
+            # Fall back to the HTML listing only when the feed itself came back
+            # empty. "_fetch_rss yielded no events" is no longer the same
+            # question — a routine run skips every entry as already-ingested —
+            # and keying the fallback off that would paginate the listing (and
+            # fetch every article on it) on exactly the ordinary days this skip
+            # exists to make cheap.
+            self._rss_entries_seen = 0
+            yield from self._fetch_rss()
+            if not self._rss_entries_seen:
                 yield from self._fetch_html_paginated()
 
     def _fetch_body(self, url: str) -> str:
@@ -222,17 +231,25 @@ class GermanMFAIngester(BaseIngester):
             if lang != "de":
                 print(f"[{SOURCE_NAME}] German feed unavailable — falling back to English feed")
             for entry in feed.entries:
+                self._rss_entries_seen += 1
                 date, published_at = _parse_date(entry.get("published") or entry.get("updated"))
                 url = entry.get("link", "")
                 if not url.startswith("http"):
                     url = BASE_URL + url
+                title = entry.get("title", "").strip()
+                # The feed window (~30 items) turns over slowly, so most entries
+                # are already on disk; save() would discard their re-fetched body
+                # anyway. Same skip the wayback path below already applies.
+                if self.already_ingested(url, title):
+                    self.known_skipped += 1
+                    continue
                 # Prefer full article body over RSS snippet
                 body = self._fetch_body(url)
                 summary = body or BeautifulSoup(entry.get("summary", ""), "lxml").get_text(" ", strip=True)
                 time.sleep(0.5)
                 yield Event(
                     source_name=SOURCE_NAME,
-                    title=entry.get("title", "").strip(),
+                    title=title,
                     text=summary,
                     source_url=url,
                     source_lang=lang,

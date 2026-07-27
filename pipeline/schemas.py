@@ -138,6 +138,9 @@ class SourceRunSchema(BaseModel):
     fetched: int
     new: int
     skipped: int
+    # Offered by the source but already on disk, so skipped without an article
+    # fetch. Defaulted so run logs written before this counter existed validate.
+    known: int = 0
     error: str | None = None
 
 
@@ -147,6 +150,7 @@ class RunTotalsSchema(BaseModel):
     fetched: int
     new: int
     skipped: int
+    known: int = 0
     errors: int
 
 

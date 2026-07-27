@@ -106,6 +106,14 @@ class GovPlIngester(BaseIngester):
                 if self.since and date < self.since:
                     continue
 
+                # In daily mode an item already on disk needs no body fetch —
+                # save() would discard the result. Backfill still walks every
+                # item, because the pagination boundary below is derived from
+                # the dates of the items on the page.
+                if not self.since and self.already_ingested(url, title):
+                    self.known_skipped += 1
+                    continue
+
                 intro_tag = item.select_one(".intro") or item.find("p")
                 intro = intro_tag.get_text(" ", strip=True) if intro_tag else ""
                 body = self._fetch_body(url)
