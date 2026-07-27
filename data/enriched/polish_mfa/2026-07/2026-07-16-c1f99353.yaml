@@ -28,18 +28,21 @@ extracted:
     hybrid: Poland identifies Russian disinformation as a long-term security threat
       and seeks ways to counter it.
   stances:
-    enlargement:
-      score: 1
-      evidence: Deputy Minister Marcin Bosacki held talks focused on EU enlargement
-        with Secretary of State at the Hungarian MFA Krisztián Mészáros
-    rule_of_law:
-      score: 1
-      evidence: discussions on the reforms aimed at restoring the rule of law, currently
-        implemented by the Tisza government
-    hybrid:
-      score: 1
-      evidence: the consequences of Russian disinformation campaigns, and ways to
-        counter them
+    weimar:
+      enlargement: &id001
+        score: 1
+        evidence: Deputy Minister Marcin Bosacki held talks focused on EU enlargement
+          with Secretary of State at the Hungarian MFA Krisztián Mészáros
+      rule_of_law:
+        score: 1
+        evidence: discussions on the reforms aimed at restoring the rule of law, currently
+          implemented by the Tisza government
+      hybrid:
+        score: 1
+        evidence: the consequences of Russian disinformation campaigns, and ways to
+          counter them
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

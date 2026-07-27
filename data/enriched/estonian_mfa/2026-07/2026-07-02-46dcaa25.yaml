@@ -22,9 +22,10 @@ extracted:
     defence: Estonia supports the goal of NATO alliance unity and collective security
       in preparation for the Ankara summit.
   stances:
-    defence:
-      score: 1
-      evidence: Eesti ja Läti ootavad NATO tippkohtumiselt liitlaste ühtsust
+    baltic:
+      defence:
+        score: 1
+        evidence: Eesti ja Läti ootavad NATO tippkohtumiselt liitlaste ühtsust
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

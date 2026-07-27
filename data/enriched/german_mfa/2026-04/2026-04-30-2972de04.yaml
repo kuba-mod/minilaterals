@@ -23,9 +23,10 @@ extracted:
     rule_of_law: Germany stressed the importance of continuing cooperation on human
       rights issues, specifically mentioning the EU-Moroccan Human Rights Dialogue.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: They stressed the importance of the EU -Moroccan Human Rights Dialogue.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: They stressed the importance of the EU -Moroccan Human Rights Dialogue.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

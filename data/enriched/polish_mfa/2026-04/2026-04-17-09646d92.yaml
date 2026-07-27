@@ -26,15 +26,16 @@ extracted:
     rule_of_law: Poland supports the principle of freedom of navigation and international
       law by advocating for the clearing of the Strait of Hormuz.
   stances:
-    ukraine:
-      score: 1
-      evidence: A continued pressure on Moscow is necessary to prevent it from using
-        global crises to fund its war against Ukraine.
-    rule_of_law:
-      score: 1
-      evidence: The gathering prioritised freedom of navigation without further restrictions
-        and charges, particularly in regard to the shipment of energy supplies, food,
-        and fertilisers.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: A continued pressure on Moscow is necessary to prevent it from using
+          global crises to fund its war against Ukraine.
+      rule_of_law:
+        score: 1
+        evidence: The gathering prioritised freedom of navigation without further
+          restrictions and charges, particularly in regard to the shipment of energy
+          supplies, food, and fertilisers.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

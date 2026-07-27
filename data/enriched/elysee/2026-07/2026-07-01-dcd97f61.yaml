@@ -20,10 +20,11 @@ extracted:
       the risks of the digital environment, aligning with the goal of coordinating
       action against digital threats.
   stances:
-    hybrid:
-      score: 2
-      evidence: la France fait avancer une législation visant à interdire l’accès
-        aux réseaux sociaux aux moins de 15 ans
+    weimar:
+      hybrid:
+        score: 2
+        evidence: la France fait avancer une législation visant à interdire l’accès
+          aux réseaux sociaux aux moins de 15 ans
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

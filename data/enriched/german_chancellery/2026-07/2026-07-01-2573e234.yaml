@@ -22,10 +22,13 @@ extracted:
       law for military infrastructure and an increase in troop strength to meet NATO
       obligations and European security challenges.
   stances:
-    defence:
-      score: 2
-      evidence: Dafür hat die Bundesregierung den Entwurf eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes
-        beschlossen.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Dafür hat die Bundesregierung den Entwurf eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes
+          beschlossen.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -23,10 +23,11 @@ extracted:
       planning on electrification, circular economy, and carbon strategy to achieve
       energy sovereignty and reindustrialization.
   stances:
-    green_transition:
-      score: 2
-      evidence: ce conseil a permis de rappeler le lien fondamental entre planification
-        écologique, enjeux économiques et industriels et indépendance de la France
+    weimar:
+      green_transition:
+        score: 2
+        evidence: ce conseil a permis de rappeler le lien fondamental entre planification
+          écologique, enjeux économiques et industriels et indépendance de la France
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

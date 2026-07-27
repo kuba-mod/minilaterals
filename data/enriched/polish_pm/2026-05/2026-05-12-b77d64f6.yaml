@@ -21,10 +21,11 @@ extracted:
       court rulings regarding the recognition of same-sex marriages from other EU
       states.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Zobowiązaliśmy się, i będę tego też osobiście pilnował, aby przestrzegać
-        wyroków zarówno trybunałów europejskich, jak i polskich sądów.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Zobowiązaliśmy się, i będę tego też osobiście pilnował, aby przestrzegać
+          wyroków zarówno trybunałów europejskich, jak i polskich sądów.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

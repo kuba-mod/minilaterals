@@ -22,10 +22,11 @@ extracted:
     rule_of_law: France demonstrates a commitment to justice and the rule of law by
       intensifying efforts to prosecute those responsible for the genocide.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: une intensification des efforts de justice contre les responsables
-        du génocide
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: une intensification des efforts de justice contre les responsables
+          du génocide
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

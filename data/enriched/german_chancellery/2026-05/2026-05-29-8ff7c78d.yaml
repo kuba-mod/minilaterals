@@ -19,10 +19,11 @@ extracted:
       development by implementing a comprehensive national strategy aligned with global
       sustainability goals.
   stances:
-    green_transition:
-      score: 2
-      evidence: Im Januar 2025 wurde die aktuelle Deutsche Nachhaltigkeitsstrategie
-        Weiterentwicklung 2025 PDF, 2 MB, barrierefrei ( DNS ) beschlossen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Im Januar 2025 wurde die aktuelle Deutsche Nachhaltigkeitsstrategie
+          Weiterentwicklung 2025 PDF, 2 MB, barrierefrei ( DNS ) beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

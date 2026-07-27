@@ -20,10 +20,11 @@ extracted:
     green_transition: Poland is actively implementing large-scale renewable energy
       projects and diversifying its energy mix to achieve energy sovereignty.
   stances:
-    green_transition:
-      score: 2
-      evidence: Rozwój morskiej energetyki wiatrowej sprawia, że Polska wzmacnia swoją
-        niezależność i ogranicza wpływ wydarzeń w innych częściach świata
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Rozwój morskiej energetyki wiatrowej sprawia, że Polska wzmacnia
+          swoją niezależność i ogranicza wpływ wydarzeń w innych częściach świata
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

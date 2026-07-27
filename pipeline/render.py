@@ -312,6 +312,18 @@ def cluster_key(cluster: dict) -> str:
     return hashlib.sha256(json.dumps(paths).encode()).hexdigest()[:12]
 
 
+# Stances are keyed by grouping, then topic — the same topic is rated against a
+# different goal per grouping. This site renders the Weimar Triangle only, so
+# every scoring path here reads the `weimar` block; a per-grouping view would
+# take the same accessor with its own key.
+WEIMAR_GROUPING = "weimar"
+
+
+def event_stances(event: dict, grouping: str = WEIMAR_GROUPING) -> dict:
+    """One grouping's {topic: stance} for an event, or {} if it has none."""
+    return ((event.get("extracted") or {}).get("stances") or {}).get(grouping) or {}
+
+
 def score_cluster_stances(cluster: dict) -> dict | None:
     """
     Score a cluster from LLM-judged stance ratings (-2..+2 vs. the Weimar goal).
@@ -327,8 +339,7 @@ def score_cluster_stances(cluster: dict) -> dict | None:
     per_actor_scores: dict[str, list[int]] = defaultdict(list)
     for actor, items in cluster["by_actor"].items():
         for item in items:
-            stances = (item["event"].get("extracted") or {}).get("stances") or {}
-            entry = stances.get(area)
+            entry = event_stances(item["event"]).get(area)
             if entry and isinstance(entry.get("score"), int):
                 per_actor_scores[actor].append(entry["score"])
 
@@ -393,8 +404,7 @@ def _stance_rows(
         src = e.get("source_name", "")
         if src not in SOURCE_ACTOR:
             continue
-        stances = (e.get("extracted") or {}).get("stances") or {}
-        for topic, entry in stances.items():
+        for topic, entry in event_stances(e).items():
             if topic in topics and entry and isinstance(entry.get("score"), int):
                 rows.append((e.get("date", ""), SOURCE_ACTOR[src], topic, entry["score"]))
     return rows
@@ -923,7 +933,7 @@ def load_hub_groupings() -> list[dict]:
     `weimar` is skipped — its card is the live tracker and is templated in
     hub.html with real numbers rather than rendered from this list.
     """
-    raw = (_load_yaml(GROUPINGS_PATH) or {}).get("groupings") or {}
+    raw = _load_yaml(GROUPINGS_PATH) or {}
     cards = []
     for key, g in raw.items():
         if key == "weimar":
@@ -1074,7 +1084,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         actor = SOURCE_ACTOR.get(e.get("source_name", ""))
         if actor not in actor_topic_scores or (e.get("date") or "") < cutoff_14:
             continue
-        for topic, entry in (((e.get("extracted") or {}).get("stances")) or {}).items():
+        for topic, entry in event_stances(e).items():
             if topic in ISSUE_ORDER and entry and isinstance(entry.get("score"), int):
                 actor_topic_scores[actor][topic].append(entry["score"])
 

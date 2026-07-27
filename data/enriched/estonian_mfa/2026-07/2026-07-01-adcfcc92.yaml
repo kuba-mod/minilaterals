@@ -22,10 +22,11 @@ extracted:
     defence: Estonia demonstrates a commitment to collective security and the eastern
       flank by hosting and coordinating with French allied troops.
   stances:
-    defence:
-      score: 2
-      evidence: külastati Narva linnust ja piiripunkti ning Tapa kaitseväelinnakut
-        ja seal teenivaid Prantsusmaa liitlassõdureid
+    baltic:
+      defence:
+        score: 2
+        evidence: külastati Narva linnust ja piiripunkti ning Tapa kaitseväelinnakut
+          ja seal teenivaid Prantsusmaa liitlassõdureid
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

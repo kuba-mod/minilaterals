@@ -22,14 +22,15 @@ extracted:
     rule_of_law: Poland views the new Hungarian leadership as a restoration of democratic
       values and the rule of law in Europe.
   stances:
-    ukraine:
-      score: 1
-      evidence: Warszawa i Budapeszt będą także pracować nad wspólnym europejskim
-        stanowiskiem wobec Ukrainy.
-    rule_of_law:
-      score: 2
-      evidence: To także znak dla milionów ludzi w Europie i na świecie, że demokracja,
-        rządy prawa, przyzwoitość i moralność w polityce nie są przegranymi sprawami
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Warszawa i Budapeszt będą także pracować nad wspólnym europejskim
+          stanowiskiem wobec Ukrainy.
+      rule_of_law:
+        score: 2
+        evidence: To także znak dla milionów ludzi w Europie i na świecie, że demokracja,
+          rządy prawa, przyzwoitość i moralność w polityce nie są przegranymi sprawami
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

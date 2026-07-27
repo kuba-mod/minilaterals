@@ -25,15 +25,16 @@ extracted:
     rule_of_law: France emphasizes upholding democratic resilience and combating war
       crimes through sanctions against perpetrators.
   stances:
-    ukraine:
-      score: 2
-      evidence: He assured [the Ukrainian President] that we are continuing our efforts
-        to ensure that Ukraine has everything it needs, both militarily and financially,
-        to continue resisting the Russian aggression.
-    rule_of_law:
-      score: 2
-      evidence: The Council also adopted 19 new individual sanctions against Iranians
-        responsible for State violence in January 2026.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: He assured [the Ukrainian President] that we are continuing our
+          efforts to ensure that Ukraine has everything it needs, both militarily
+          and financially, to continue resisting the Russian aggression.
+      rule_of_law:
+        score: 2
+        evidence: The Council also adopted 19 new individual sanctions against Iranians
+          responsible for State violence in January 2026.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

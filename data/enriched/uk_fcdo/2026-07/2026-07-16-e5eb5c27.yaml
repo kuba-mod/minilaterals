@@ -22,13 +22,7 @@ extracted:
       Russian aggression against Ukraine.
     rule_of_law: The UK emphasizes the importance of international legal rulings and
       accountability for the downing of Flight MH17.
-  stances:
-    ukraine:
-      score: 1
-      evidence: stressing their unwavering commitment to truth, justice and accountability
-    rule_of_law:
-      score: 1
-      evidence: noting international rulings attributing responsibility to Ru…
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -26,16 +26,17 @@ extracted:
     hybrid: Germany is improving its resilience and operational readiness to counter
       non-traditional threats, such as the hijacking of civilian aircraft.
   stances:
-    defence:
-      score: 2
-      evidence: stärkt der Nationale Sicherheitsrat (NSR) die Sicherheitsarchitektur
-        Deutschlands und bündelt ressortübergreifend sicherheitspolitische Kompetenzen
-        und Wissen
-    hybrid:
-      score: 2
-      evidence: trägt er außerdem zur Steigerung der gesamtgesellschaftlichen Resilienz
-        bei, indem sich Bund, Länder und Sicherheitsbehörden auf den Umgang mit Krisenszenarien
-        vorbereiten
+    weimar:
+      defence:
+        score: 2
+        evidence: stärkt der Nationale Sicherheitsrat (NSR) die Sicherheitsarchitektur
+          Deutschlands und bündelt ressortübergreifend sicherheitspolitische Kompetenzen
+          und Wissen
+      hybrid:
+        score: 2
+        evidence: trägt er außerdem zur Steigerung der gesamtgesellschaftlichen Resilienz
+          bei, indem sich Bund, Länder und Sicherheitsbehörden auf den Umgang mit
+          Krisenszenarien vorbereiten
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

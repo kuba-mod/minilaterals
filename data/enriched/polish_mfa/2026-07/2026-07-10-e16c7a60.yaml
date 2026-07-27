@@ -26,9 +26,12 @@ extracted:
     defence: Poland actively advances collective security and deterrence by positioning
       itself as a leader in armaments.
   stances:
-    defence:
-      score: 2
-      evidence: Polska jest dziś liderem zbrojeń.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Polska jest dziś liderem zbrojeń.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

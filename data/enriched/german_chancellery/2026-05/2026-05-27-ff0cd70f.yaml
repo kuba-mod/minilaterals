@@ -18,9 +18,10 @@ extracted:
       introducing a new bill to provide security agencies with the legal tools to
       target attackers' infrastructure.
   stances:
-    hybrid:
-      score: 2
-      evidence: Einen entsprechenden Gesetzentwurf hat sie nun beschlossen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Einen entsprechenden Gesetzentwurf hat sie nun beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

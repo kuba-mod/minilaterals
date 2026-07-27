@@ -26,13 +26,16 @@ extracted:
     rule_of_law: Germany emphasizes stating its national interests clearly rather
       than adopting a 'normative surplus' approach in foreign policy.
   stances:
-    defence:
-      score: 1
-      evidence: With defence spending of five percent of GDP, which I firmly supported,
-        we are now finally putting this goal into practice.
-    rule_of_law:
-      score: 1
-      evidence: On the contrary – we state what is in our interests and what isn’t.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: With defence spending of five percent of GDP, which I firmly supported,
+          we are now finally putting this goal into practice.
+      rule_of_law:
+        score: 1
+        evidence: On the contrary – we state what is in our interests and what isn’t.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

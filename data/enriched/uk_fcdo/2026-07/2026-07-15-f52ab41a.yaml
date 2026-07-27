@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: The United Kingdom supports the rule of law by stressing the importance
       of justice and accountability in Sudan.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: Justice and accountability remain important to international efforts
-        in Sudan
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

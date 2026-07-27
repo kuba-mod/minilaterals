@@ -16,10 +16,11 @@ extracted:
     green_transition: Germany is reviewing its calculations for greenhouse gas emissions,
       aligning with climate neutrality monitoring.
   stances:
-    green_transition:
-      score: 1
-      evidence: Prüfbericht zur Berechnung der deutschen Treibhausgasemissionen für
-        das Jahr ...
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Prüfbericht zur Berechnung der deutschen Treibhausgasemissionen
+          für das Jahr ...
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

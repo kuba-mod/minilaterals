@@ -30,18 +30,22 @@ extracted:
     rule_of_law: Germany affirms democratic resilience by emphasizing free trade over
       protectionism and promoting economic strength to counter global crises.
   stances:
-    ukraine:
-      score: 1
-      evidence: Support that will make Moscow realise that the time has finally come
-        to stop the killing in Ukraine and sit down at the negotiating table.
-    defence:
-      score: 1
-      evidence: Our Euro-Atlantic security decisively depends on us retaining our
-        steadfast resolve within NATO in the future, too.
-    rule_of_law:
-      score: 1
-      evidence: The more that global supply chains are impacted by trade conflicts
-        and crises, the more economically strong, diverse and resilient we must become.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Support that will make Moscow realise that the time has finally
+          come to stop the killing in Ukraine and sit down at the negotiating table.
+      defence: &id001
+        score: 1
+        evidence: Our Euro-Atlantic security decisively depends on us retaining our
+          steadfast resolve within NATO in the future, too.
+      rule_of_law:
+        score: 1
+        evidence: The more that global supply chains are impacted by trade conflicts
+          and crises, the more economically strong, diverse and resilient we must
+          become.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

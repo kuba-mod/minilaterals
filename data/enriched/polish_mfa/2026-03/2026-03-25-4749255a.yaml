@@ -34,26 +34,30 @@ extracted:
     rule_of_law: Poland views supporting EU membership aspirants in both the south
       and east as a geopolitical necessity for stability and prosperity.
   stances:
-    defence:
-      score: 1
-      evidence: In this context, the ministers jointly emphasised the need to further
-        increase defence spending to bolster Europe’s security.
-    hybrid:
-      score: 1
-      evidence: The talks also covered the prospects for EU enlargement, including
-        into Western Balkan countries, as well as the regional situation in the context
-        of the Russian Federation’s actions, including disinformation.
-    enlargement:
-      score: 2
-      evidence: ‘Poland fully supports North Macedonia’s European aspirations. We
-        are ready to share our experience of the pre-accession period and our expert
-        knowledge on accession negotiations—to the extent that this is desired by
-        our partners,’ emphasised Deputy Prime Minister Radosław Sikorski.
-    rule_of_law:
-      score: 1
-      evidence: The ministers agreed that expanding the area of security, stability,
-        and prosperity by supporting countries aspiring to EU membership—in both the
-        south and the east—is nowadays a geopolitical necessity.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: In this context, the ministers jointly emphasised the need to further
+          increase defence spending to bolster Europe’s security.
+      hybrid:
+        score: 1
+        evidence: The talks also covered the prospects for EU enlargement, including
+          into Western Balkan countries, as well as the regional situation in the
+          context of the Russian Federation’s actions, including disinformation.
+      enlargement: &id002
+        score: 2
+        evidence: ‘Poland fully supports North Macedonia’s European aspirations. We
+          are ready to share our experience of the pre-accession period and our expert
+          knowledge on accession negotiations—to the extent that this is desired by
+          our partners,’ emphasised Deputy Prime Minister Radosław Sikorski.
+      rule_of_law:
+        score: 1
+        evidence: The ministers agreed that expanding the area of security, stability,
+          and prosperity by supporting countries aspiring to EU membership—in both
+          the south and the east—is nowadays a geopolitical necessity.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

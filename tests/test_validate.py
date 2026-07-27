@@ -41,7 +41,7 @@ VALID_ENRICHED_EVENT = {
         "location": None,
         "position": "Germany reaffirms its support for Ukraine.",
         "positions": {"ukraine": "Germany reaffirms its support for Ukraine."},
-        "stances": {"ukraine": {"score": 2, "evidence": "reaffirms its support"}},
+        "stances": {"weimar": {"ukraine": {"score": 2, "evidence": "reaffirms its support"}}},
     },
 }
 
@@ -126,7 +126,10 @@ def test_validate_all_reports_broken_stance_score(tmp_path: Path):
     raw_path.write_text(yaml.dump(VALID_RAW_EVENT), encoding="utf-8")
     broken = {
         **VALID_ENRICHED_EVENT,
-        "extracted": {**VALID_ENRICHED_EVENT["extracted"], "stances": {"ukraine": {"score": 9, "evidence": ""}}},
+        "extracted": {
+            **VALID_ENRICHED_EVENT["extracted"],
+            "stances": {"weimar": {"ukraine": {"score": 9, "evidence": ""}}},
+        },
     }
     enriched_path.write_text(yaml.dump(broken), encoding="utf-8")
 

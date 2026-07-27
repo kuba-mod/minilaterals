@@ -17,10 +17,11 @@ extracted:
     enlargement: Germany is proposing concrete measures to accelerate accession negotiations
       and integrate Western Balkan countries more closely into the EU.
   stances:
-    enlargement:
-      score: 2
-      evidence: Der Bundeskanzler wird mit den Teilnehmenden aus EU und Westbalkan
-        über seine Vorschläge sprechen, die Beitrittsverhandlungen zu beschleunigen
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Der Bundeskanzler wird mit den Teilnehmenden aus EU und Westbalkan
+          über seine Vorschläge sprechen, die Beitrittsverhandlungen zu beschleunigen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

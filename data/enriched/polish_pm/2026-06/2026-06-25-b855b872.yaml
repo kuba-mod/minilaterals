@@ -37,13 +37,16 @@ extracted:
     defence: Poland actively advances eastern flank security through massive increases
       in defense spending and calls for EU-wide responsibility.
   stances:
-    ukraine:
-      score: 1
-      evidence: koordynacja działań i polityki państw regionu zagrożonych przez agresywne
-        działania Rosji
-    defence:
-      score: 2
-      evidence: Na obronę bezpośrednio i na rzeczy związane z obroną to będzie 7%
+    weimar:
+      ukraine:
+        score: 1
+        evidence: koordynacja działań i polityki państw regionu zagrożonych przez
+          agresywne działania Rosji
+      defence: &id001
+        score: 2
+        evidence: Na obronę bezpośrednio i na rzeczy związane z obroną to będzie 7%
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

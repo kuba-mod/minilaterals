@@ -33,25 +33,28 @@ extracted:
     rule_of_law: The Polish side supports strengthening EU security and stability
       through cooperation with Greece on critical infrastructure and energy.
   stances:
-    ukraine:
-      score: 1
-      evidence: Deputy Minister Niemczycki stressed that it is necessary to exercise
-        further pressure on the aggressor, including by means of sanctions.
-    enlargement:
-      score: 1
-      evidence: The two countries share similar approach to security, stability of
-        the Western Balkans, EU enlargement, and the protection of the EU’s external
-        borders.
-    green_transition:
-      score: -1
-      evidence: Poland finds it necessary to ensure that the document’s emissions
-        criterion does not provoke divisions in the EU’s internal market.
-    rule_of_law:
-      score: 1
-      evidence: Deputy Minister Niemczycki was joined by the Hellenic Republic’s Secretary
-        General for International Economic Affairs Dimitris Skalkos to inaugurate
-        a seminar on Energy Security and Critical Infrastructure in the Baltic and
-        Mediterranean Maritime Space—Mutual Risk, Mutual Resilience.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deputy Minister Niemczycki stressed that it is necessary to exercise
+          further pressure on the aggressor, including by means of sanctions.
+      enlargement: &id001
+        score: 1
+        evidence: The two countries share similar approach to security, stability
+          of the Western Balkans, EU enlargement, and the protection of the EU’s external
+          borders.
+      green_transition:
+        score: -1
+        evidence: Poland finds it necessary to ensure that the document’s emissions
+          criterion does not provoke divisions in the EU’s internal market.
+      rule_of_law:
+        score: 1
+        evidence: Deputy Minister Niemczycki was joined by the Hellenic Republic’s
+          Secretary General for International Economic Affairs Dimitris Skalkos to
+          inaugurate a seminar on Energy Security and Critical Infrastructure in the
+          Baltic and Mediterranean Maritime Space—Mutual Risk, Mutual Resilience.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

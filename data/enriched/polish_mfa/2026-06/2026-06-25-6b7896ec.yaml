@@ -38,20 +38,23 @@ extracted:
     enlargement: Poland advocates for Ukraine's EU accession by emphasizing that negotiations
       require genuine compliance with the Union’s laws and standards.
   stances:
-    ukraine:
-      score: 2
-      evidence: underscoring the need to maintain European solidarity in supporting
-        Ukraine in its war with Russia.
-    rule_of_law:
-      score: 2
-      evidence: The panel addressed the necessary reforms that Ukraine must undertake
-        on its path to integration, particularly as regards the rule of law and the
-        fight against corruption
-    enlargement:
-      score: 2
-      evidence: pointing out that the historic opening of formal EU accession negotiations
-        with Ukraine on 15 June must be followed by genuine efforts towards compliance
-        with the Union’s law, principles, and standards
+    weimar:
+      ukraine:
+        score: 2
+        evidence: underscoring the need to maintain European solidarity in supporting
+          Ukraine in its war with Russia.
+      rule_of_law:
+        score: 2
+        evidence: The panel addressed the necessary reforms that Ukraine must undertake
+          on its path to integration, particularly as regards the rule of law and
+          the fight against corruption
+      enlargement: &id001
+        score: 2
+        evidence: pointing out that the historic opening of formal EU accession negotiations
+          with Ukraine on 15 June must be followed by genuine efforts towards compliance
+          with the Union’s law, principles, and standards
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

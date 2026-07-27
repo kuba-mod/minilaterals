@@ -19,10 +19,11 @@ extracted:
     ukraine: Poland provides concrete financial resources to support humanitarian
       aid for Ukraine.
   stances:
-    ukraine:
-      score: 2
-      evidence: W 2025 r. Polska przekazała MKCK ok. 4,5 mln zł w ramach wpłat dobrowolnych
-        na rzecz pomocy humanitarnej dla Ukrainy.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: W 2025 r. Polska przekazała MKCK ok. 4,5 mln zł w ramach wpłat dobrowolnych
+          na rzecz pomocy humanitarnej dla Ukrainy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -19,10 +19,11 @@ extracted:
     green_transition: France is committing to a summit that addresses energy access
       and connects to previous climate summits, aligning with green transition goals.
   stances:
-    green_transition:
-      score: 2
-      evidence: construire et financer des solutions concrètes aux défis communs,
-        tels que [...] l’accès à l’énergie et la connectivité
+    weimar:
+      green_transition:
+        score: 2
+        evidence: construire et financer des solutions concrètes aux défis communs,
+          tels que [...] l’accès à l’énergie et la connectivité
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

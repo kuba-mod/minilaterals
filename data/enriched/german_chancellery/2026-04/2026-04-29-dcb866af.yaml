@@ -22,14 +22,15 @@ extracted:
     defence: Germany is prioritizing increased spending on defense capabilities and
       alliance security.
   stances:
-    ukraine:
-      score: 1
-      evidence: zu nennen sind hier sicherlich der russische Angriffskrieg gegen die
-        Ukraine
-    defence:
-      score: 2
-      evidence: Das gilt insbesondere für unsere Verteidigungsfähigkeit und unsere
-        Sicherheit im Bündnis. Hier stehen wir im Wort und müssen Prioritäten setzen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: zu nennen sind hier sicherlich der russische Angriffskrieg gegen
+          die Ukraine
+      defence:
+        score: 2
+        evidence: Das gilt insbesondere für unsere Verteidigungsfähigkeit und unsere
+          Sicherheit im Bündnis. Hier stehen wir im Wort und müssen Prioritäten setzen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

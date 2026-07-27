@@ -26,15 +26,16 @@ extracted:
     rule_of_law: Germany stresses that maintaining social cohesion, democratic resilience,
       and trust is paramount for a stable society facing multiple modern challenges.
   stances:
-    hybrid:
-      score: 1
-      evidence: I don’t need to go into the many crises that my colleagues in the
-        Diplomatic Service and myself are dealing with day in day out. Russia’s war
-        of aggression against Ukraine.
-    rule_of_law:
-      score: 1
-      evidence: And indeed, we are seeing how when crises accumulate and interweave,
-        the pressure builds even in affluent societies.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: I don’t need to go into the many crises that my colleagues in the
+          Diplomatic Service and myself are dealing with day in day out. Russia’s
+          war of aggression against Ukraine.
+      rule_of_law:
+        score: 1
+        evidence: And indeed, we are seeing how when crises accumulate and interweave,
+          the pressure builds even in affluent societies.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

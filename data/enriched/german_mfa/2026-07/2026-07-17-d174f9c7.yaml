@@ -25,10 +25,11 @@ extracted:
     green_transition: Germany supports the exploration and utilization of geothermal
       energy in the border region to advance green energy objectives.
   stances:
-    green_transition:
-      score: 2
-      evidence: Wir begrüßen das regionale Engagement zur Erforschung und Nutzung
-        des geothermischen Potentials in der Grenzregio
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Wir begrüßen das regionale Engagement zur Erforschung und Nutzung
+          des geothermischen Potentials in der Grenzregio
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

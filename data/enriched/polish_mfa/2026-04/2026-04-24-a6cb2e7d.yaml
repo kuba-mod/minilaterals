@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland is actively engaging with international human rights mechanisms
       and legal experts to develop its future legal positions.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Omówiono mechanizmy kontrolne dotyczące wykonywania i interpretacji
-        międzynarodowych instrumentów z zakresu ochrony praw człowieka.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Omówiono mechanizmy kontrolne dotyczące wykonywania i interpretacji
+          międzynarodowych instrumentów z zakresu ochrony praw człowieka.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

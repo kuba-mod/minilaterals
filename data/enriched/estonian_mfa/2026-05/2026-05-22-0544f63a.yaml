@@ -20,10 +20,11 @@ extracted:
     hybrid: Estonia actively counters hybrid threats by jointly condemning Russian
       and Belarusian disinformation regarding airspace violations.
   stances:
-    hybrid:
-      score: 1
-      evidence: mõistsid teravalt hukka Venemaa ja Valgevene desinformatsioonikampaania
-        ja valeväited
+    baltic:
+      hybrid:
+        score: 1
+        evidence: mõistsid teravalt hukka Venemaa ja Valgevene desinformatsioonikampaania
+          ja valeväited
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

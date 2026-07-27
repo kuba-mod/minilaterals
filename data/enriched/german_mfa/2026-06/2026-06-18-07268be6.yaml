@@ -23,10 +23,11 @@ extracted:
     enlargement: Germany rhetorically supports the accession of Western Balkan states
       to the European Union.
   stances:
-    enlargement:
-      score: 1
-      evidence: die Integration der Staaten des Westlichen Balkans in die Europäische
-        Union
+    weimar:
+      enlargement:
+        score: 1
+        evidence: die Integration der Staaten des Westlichen Balkans in die Europäische
+          Union
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

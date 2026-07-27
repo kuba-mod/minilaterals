@@ -30,20 +30,24 @@ extracted:
     rule_of_law: France emphasizes the importance of democratic resilience and coordinating
       efforts within the EU to maintain stability.
   stances:
-    ukraine:
-      score: 1
-      evidence: The two ministers reaffirmed their resolute and lasting support for
-        Ukraine, particularly within the Coalition of the Willing, and called for
-        pressure to be maintained on Russia with a view to a ceasefire being reached.
-    defence:
-      score: 1
-      evidence: the ministers reaffirmed their desire to coordinate closely to make
-        the EU more competitive, sovereign and resilient, committed to its values
-        and its security.
-    rule_of_law:
-      score: 1
-      evidence: reaffirmed their desire to coordinate closely to make the EU more
-        competitive, sovereign and resilient, committed to its values and its security.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: The two ministers reaffirmed their resolute and lasting support
+          for Ukraine, particularly within the Coalition of the Willing, and called
+          for pressure to be maintained on Russia with a view to a ceasefire being
+          reached.
+      defence: &id001
+        score: 1
+        evidence: the ministers reaffirmed their desire to coordinate closely to make
+          the EU more competitive, sovereign and resilient, committed to its values
+          and its security.
+      rule_of_law:
+        score: 1
+        evidence: reaffirmed their desire to coordinate closely to make the EU more
+          competitive, sovereign and resilient, committed to its values and its security.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

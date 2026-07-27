@@ -35,25 +35,26 @@ extracted:
     rule_of_law: France emphasizes the importance of democratic resilience and stability
       by supporting security cooperation and institutional development in the region.
   stances:
-    enlargement:
-      score: 2
-      evidence: Minister was keen to express to his interlocutors France’s deep support
-        for Serbia’s prospective EU membership
-    green_transition:
-      score: 2
-      evidence: The Minister also signed a Memorandum of Understanding on the construction
-        of a wastewater treatment plant for the city of Belgrade.
-    hybrid:
-      score: 2
-      evidence: Finally, the Minister announced that France is funding a regional
-        programme to combat trafficking in synthetic drugs, their precursors, and
-        explosives in the Western Balkans
-    rule_of_law:
-      score: 1
-      evidence: The two ministers emphasized the goal shared by our two countries
-        of providing the more than 1.4 million inhabitants of the capital, Belgrade,
-        with an efficient, modern, reliable metro system that guarantees residents
-        a better quality of life
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Minister was keen to express to his interlocutors France’s deep
+          support for Serbia’s prospective EU membership
+      green_transition:
+        score: 2
+        evidence: The Minister also signed a Memorandum of Understanding on the construction
+          of a wastewater treatment plant for the city of Belgrade.
+      hybrid:
+        score: 2
+        evidence: Finally, the Minister announced that France is funding a regional
+          programme to combat trafficking in synthetic drugs, their precursors, and
+          explosives in the Western Balkans
+      rule_of_law:
+        score: 1
+        evidence: The two ministers emphasized the goal shared by our two countries
+          of providing the more than 1.4 million inhabitants of the capital, Belgrade,
+          with an efficient, modern, reliable metro system that guarantees residents
+          a better quality of life
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -25,14 +25,15 @@ extracted:
     enlargement: Germany supports Ukraine's European perspective and encourages the
       implementation of a determined reform agenda.
   stances:
-    ukraine:
-      score: 1
-      evidence: Deutschland die Ukraine bei der Verteidigung gegen die russische Aggression
-        weiter entschlossen und kraftvoll unterstützen wird
-    enlargement:
-      score: 1
-      evidence: Um die europäische Perspektive der Ukraine weiter zu stärken, möchte
-        ich Sie zu einer entschlossen Reformagenda ermutigen
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland die Ukraine bei der Verteidigung gegen die russische
+          Aggression weiter entschlossen und kraftvoll unterstützen wird
+      enlargement:
+        score: 1
+        evidence: Um die europäische Perspektive der Ukraine weiter zu stärken, möchte
+          ich Sie zu einer entschlossen Reformagenda ermutigen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

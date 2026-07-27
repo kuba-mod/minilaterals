@@ -37,28 +37,32 @@ extracted:
     rule_of_law: Poland emphasizes adherence to international law and democratic principles
       in conflict zones while supporting EU unity.
   stances:
-    ukraine:
-      score: 2
-      evidence: The ministers stressed the need to immediately adopt the 20th sanctions
-        package to curb Russia’s ability to finance warfare.
-    defence:
-      score: 1
-      evidence: In the context of regional security, special attention was paid to
-        NATO’s eastern flank
-    hybrid:
-      score: 1
-      evidence: Ministers Sikorski and Țoiu declared that close coordination of actions
-        taken to enhance Moldova’s security and resilience will continue, including
-        measures to support its democratic institutions and counter disinformation.
-    enlargement:
-      score: 1
-      evidence: We want to further support Moldova through enhancing its security
-        and resilience as well as work on institutional reforms and, obviously, the
-        EU accession process.
-    rule_of_law:
-      score: 1
-      evidence: In this context, they called on all parties to exercise restraint,
-        observe international law, and ensure the protection of civilians.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The ministers stressed the need to immediately adopt the 20th sanctions
+          package to curb Russia’s ability to finance warfare.
+      defence: &id001
+        score: 1
+        evidence: In the context of regional security, special attention was paid
+          to NATO’s eastern flank
+      hybrid:
+        score: 1
+        evidence: Ministers Sikorski and Țoiu declared that close coordination of
+          actions taken to enhance Moldova’s security and resilience will continue,
+          including measures to support its democratic institutions and counter disinformation.
+      enlargement: &id002
+        score: 1
+        evidence: We want to further support Moldova through enhancing its security
+          and resilience as well as work on institutional reforms and, obviously,
+          the EU accession process.
+      rule_of_law:
+        score: 1
+        evidence: In this context, they called on all parties to exercise restraint,
+          observe international law, and ensure the protection of civilians.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

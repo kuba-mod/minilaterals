@@ -21,10 +21,11 @@ extracted:
       and stability of supply rather than advancing climate neutrality goals in this
       specific context.
   stances:
-    green_transition:
-      score: 0
-      evidence: Für die Bundesregierung hat die sichere Versorgung mit Energie in
-        Deutschland höchste Priorität
+    weimar:
+      green_transition:
+        score: 0
+        evidence: Für die Bundesregierung hat die sichere Versorgung mit Energie in
+          Deutschland höchste Priorität
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

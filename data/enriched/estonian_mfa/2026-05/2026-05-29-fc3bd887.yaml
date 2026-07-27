@@ -20,11 +20,7 @@ extracted:
   positions:
     ukraine: Estonia supports increasing pressure on Russia to cease its aggression,
       aligning with the goal of achieving a just and lasting peace.
-  stances:
-    ukraine:
-      score: 1
-      evidence: kinnitab vajadust jätkata tegutsemist Venemaa survestamiseks agressiooni
-        lõpetamiseks
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

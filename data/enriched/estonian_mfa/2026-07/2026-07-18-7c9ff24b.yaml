@@ -27,14 +27,11 @@ extracted:
     energy: Estonia supports the imposition of tariffs on countries continuing to
       purchase Russian oil and gas to reduce global dependence.
   stances:
-    ukraine:
-      score: 2
-      evidence: senaator Grahami algatatud Venemaa-vastane sanktsioonipakett annaks
-        tugeva löögi Vene majandusele
-    energy:
-      score: 2
-      evidence: Paketi eesmärk on kehtestada tollimaksud riikidele, kes jätkavad Venemaa
-        nafta ja gaasi ostmist
+    baltic:
+      energy:
+        score: 2
+        evidence: Paketi eesmärk on kehtestada tollimaksud riikidele, kes jätkavad
+          Venemaa nafta ja gaasi ostmist
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

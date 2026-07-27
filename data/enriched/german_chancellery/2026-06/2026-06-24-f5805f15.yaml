@@ -24,10 +24,11 @@ extracted:
       a new draft law that streamlines EU energy efficiency directives and targets
       climate protection.
   stances:
-    green_transition:
-      score: 2
-      evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen und
-        leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen
+          und leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

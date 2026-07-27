@@ -24,11 +24,14 @@ extracted:
       center dedicated to dual-use technologies and significantly increasing financial
       contributions to space-based defense and security infrastructure.
   stances:
-    defence:
-      score: 2
-      evidence: Ośrodek ESA w Warszawie będzie koncentrować się na bezpieczeństwie
-        oraz rozwoju technologii o podwójnym zastosowaniu - wykorzystywanych zarówno
-        w infrastrukturze cywilnej, jak i wojskowej.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Ośrodek ESA w Warszawie będzie koncentrować się na bezpieczeństwie
+          oraz rozwoju technologii o podwójnym zastosowaniu - wykorzystywanych zarówno
+          w infrastrukturze cywilnej, jak i wojskowej.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

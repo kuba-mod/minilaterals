@@ -27,14 +27,17 @@ extracted:
     defence: Germany is actively engaging with Norway and Finland to secure the NATO
       northern and eastern flanks through diplomatic visits and site inspections.
   stances:
-    ukraine:
-      score: 1
-      evidence: Gemeinsam setzen wir uns außerdem mit aller Kraft für die Unterstützung
-        der Ukraine ein.
-    defence:
-      score: 2
-      evidence: Deutschland engagiert sich mit seinen Partnern Norwegen und Finnland,
-        um die NATO-Nord- und -Ostflanke zu sichern.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Gemeinsam setzen wir uns außerdem mit aller Kraft für die Unterstützung
+          der Ukraine ein.
+      defence: &id001
+        score: 2
+        evidence: Deutschland engagiert sich mit seinen Partnern Norwegen und Finnland,
+          um die NATO-Nord- und -Ostflanke zu sichern.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

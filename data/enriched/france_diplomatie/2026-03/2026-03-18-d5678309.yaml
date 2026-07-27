@@ -19,10 +19,11 @@ extracted:
     rule_of_law: France stresses that international humanitarian law must be upheld
       to ensure the protection of civilian populations.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: International humanitarian law applies to everyone and must ensure
-        the protection of civilian populations.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: International humanitarian law applies to everyone and must ensure
+          the protection of civilian populations.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

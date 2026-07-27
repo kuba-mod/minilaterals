@@ -27,11 +27,12 @@ extracted:
     rule_of_law: The statement emphasizes the importance of upholding universal human
       rights and democratic freedoms for all citizens.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We urge the Iranian authorities to exercise full restraint, to refrain
-        from violence, and to uphold the human rights and fundamental freedoms of
-        Iran’s citizens
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We urge the Iranian authorities to exercise full restraint, to refrain
+          from violence, and to uphold the human rights and fundamental freedoms of
+          Iran’s citizens
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

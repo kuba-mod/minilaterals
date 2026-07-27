@@ -31,10 +31,11 @@ extracted:
     rule_of_law: Germany supports upholding international humanitarian law and democratic
       principles by urging adherence to agreements and protecting civilians.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The ICG condemns violations of international humanitarian law in the
-        strongest terms.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The ICG condemns violations of international humanitarian law in
+          the strongest terms.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

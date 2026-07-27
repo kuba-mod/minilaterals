@@ -24,10 +24,13 @@ extracted:
       the adoption of the Reserve Strengthening Act and the Bundeswehr Infrastructure
       Acceleration Act.
   stances:
-    defence:
-      score: 2
-      evidence: Verabschiedet hat das Bundeskabinett den Entwurf eines Reservestärkungsgesetzes
-        und eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Verabschiedet hat das Bundeskabinett den Entwurf eines Reservestärkungsgesetzes
+          und eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

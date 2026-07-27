@@ -21,10 +21,7 @@ extracted:
   positions:
     ukraine: Estonia continues to maintain diplomatic relations and support for Ukraine
       through official ceremonies and ministerial cooperation.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Ukraina aukonsulite ametisse astumise tseremoonia
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

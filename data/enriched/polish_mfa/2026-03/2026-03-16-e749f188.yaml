@@ -43,25 +43,29 @@ extracted:
       calling for coordinated efforts to stabilize energy prices and addressing Russia's
       threat.
   stances:
-    ukraine:
-      score: 2
-      evidence: Maintaining support for Ukraine must remain Europe’s priority underlined
-        Deputy Prime Minister Radosław Sikorski.
-    defence:
-      score: 1
-      evidence: enhancing European defence capabilities considerably.
-    hybrid:
-      score: 1
-      evidence: recognising Russia as the main threat to the EU in both short- and
-        long-term perspective
-    enlargement:
-      score: 0
-      evidence: Deputy Prime Minister Sikorski also took part in an informal discussion
-        regarding the work on a new European Security Strategy.
-    rule_of_law:
-      score: 1
-      evidence: The Council discussed minimising the negative impact of the conflict
-        in the Middle East on Ukraine as it fights the Russian aggressor.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Maintaining support for Ukraine must remain Europe’s priority underlined
+          Deputy Prime Minister Radosław Sikorski.
+      defence: &id001
+        score: 1
+        evidence: enhancing European defence capabilities considerably.
+      hybrid:
+        score: 1
+        evidence: recognising Russia as the main threat to the EU in both short- and
+          long-term perspective
+      enlargement: &id002
+        score: 0
+        evidence: Deputy Prime Minister Sikorski also took part in an informal discussion
+          regarding the work on a new European Security Strategy.
+      rule_of_law:
+        score: 1
+        evidence: The Council discussed minimising the negative impact of the conflict
+          in the Middle East on Ukraine as it fights the Russian aggressor.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

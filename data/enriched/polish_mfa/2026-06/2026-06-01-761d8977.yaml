@@ -26,14 +26,15 @@ extracted:
     rule_of_law: Poland rhetorically supports the defense of international law, state
       sovereignty, and territorial integrity.
   stances:
-    ukraine:
-      score: 0
-      evidence: Pośród problemów międzynarodowych, które omówiono w trakcie Dialogu
-        Strategicznego znalazła się agresja Rosji na Ukrainę
-    rule_of_law:
-      score: 1
-      evidence: obrona prawa międzynarodowego, upominanie się o suwerenność i integralność
-        terytorialną państw, nienaruszalność ich granic
+    weimar:
+      ukraine:
+        score: 0
+        evidence: Pośród problemów międzynarodowych, które omówiono w trakcie Dialogu
+          Strategicznego znalazła się agresja Rosji na Ukrainę
+      rule_of_law:
+        score: 1
+        evidence: obrona prawa międzynarodowego, upominanie się o suwerenność i integralność
+          terytorialną państw, nienaruszalność ich granic
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

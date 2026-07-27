@@ -19,10 +19,11 @@ extracted:
       hybrid threats by implementing technical measures to combat cybercrime and online
       hate.
   stances:
-    hybrid:
-      score: 2
-      evidence: Internet-Zugangsanbieter verpflichtet werden sollen, IP -Adressen
-        für einen Zeitraum von drei Monaten zu speichern.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Internet-Zugangsanbieter verpflichtet werden sollen, IP -Adressen
+          für einen Zeitraum von drei Monaten zu speichern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

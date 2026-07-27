@@ -27,14 +27,15 @@ extracted:
     rule_of_law: Germany promotes universal values, including human rights and the
       rule of law, through its international broadcasting services.
   stances:
-    hybrid:
-      score: 2
-      evidence: Desinformation durch autokratische Akteure entgegenwirkt und somit
-        mittelbar auch zur Stärkung europäischer Resilienz beiträgt
-    rule_of_law:
-      score: 1
-      evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
-        Menschenrechte und Rechtsstaatlichkeit in die Welt
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Desinformation durch autokratische Akteure entgegenwirkt und somit
+          mittelbar auch zur Stärkung europäischer Resilienz beiträgt
+      rule_of_law:
+        score: 1
+        evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
+          Menschenrechte und Rechtsstaatlichkeit in die Welt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

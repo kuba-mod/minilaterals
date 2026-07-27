@@ -22,11 +22,12 @@ extracted:
     rule_of_law: Poland is actively preparing its position regarding crimes against
       humanity and discussing the interpretation of international human rights instruments.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: This is a particularly important topic given that Poland is to prepare
-        its position for a draft Convention on the Prevention and Punishment of Crimes
-        Against Humanity .
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: This is a particularly important topic given that Poland is to prepare
+          its position for a draft Convention on the Prevention and Punishment of
+          Crimes Against Humanity .
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

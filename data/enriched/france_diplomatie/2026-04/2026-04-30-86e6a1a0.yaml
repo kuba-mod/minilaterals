@@ -21,11 +21,14 @@ extracted:
     defence: France actively supports collective security through a bilateral defence
       agreement and readiness to participate in the UAE's defence.
   stances:
-    defence:
-      score: 2
-      evidence: reaffirmed France’s unwavering solidarity with the United Arab Emirates
-        under our bilateral defence agreement, and our willingness to participate
-        in their defence
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: reaffirmed France’s unwavering solidarity with the United Arab Emirates
+          under our bilateral defence agreement, and our willingness to participate
+          in their defence
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

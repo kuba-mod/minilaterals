@@ -19,10 +19,7 @@ extracted:
   positions:
     rule_of_law: Estonia highlights the importance of remembering historical crimes
       and ensuring justice, aligning with the goal of democratic resilience.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: juuniküüditamise taga olnud kurjus pole tänagi kuhugile kadunud
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

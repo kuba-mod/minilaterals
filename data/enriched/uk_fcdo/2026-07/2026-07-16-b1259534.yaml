@@ -20,9 +20,12 @@ extracted:
     defence: The UK supports the strengthening of European defence and NATO readiness
       as a means of deterrence against Russian hostility.
   stances:
-    defence:
-      score: 1
-      evidence: underlines that these are defensive measures taken in re…
+    e3:
+      defence: &id001
+        score: 1
+        evidence: underlines that these are defensive measures taken in re…
+    aukus:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

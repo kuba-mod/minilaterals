@@ -31,23 +31,24 @@ extracted:
     green_transition: Germany is committing massive investments toward climate protection
       as part of its infrastructure modernization.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine und
-        seine erheblichen hybriden Bedrohungen unvermindert fort.
-    defence:
-      score: 2
-      evidence: Für die Bündnis- und Verteidigungsfähigkeit sehen die Eckwerte daher
-        einen deutlichen Anstieg des Verteidigungshaushalts um knapp 28 Prozent auf
-        etwa 106 Milliarden Euro vor.
-    hybrid:
-      score: 1
-      evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine und
-        seine erheblichen hybriden Bedrohungen unvermindert fort.
-    green_transition:
-      score: 2
-      evidence: Dafür investiert die Bundesregierung massiv in die Verkehrsinfrastruktur,
-        Digitalisierung und Klimaschutz
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine
+          und seine erheblichen hybriden Bedrohungen unvermindert fort.
+      defence:
+        score: 2
+        evidence: Für die Bündnis- und Verteidigungsfähigkeit sehen die Eckwerte daher
+          einen deutlichen Anstieg des Verteidigungshaushalts um knapp 28 Prozent
+          auf etwa 106 Milliarden Euro vor.
+      hybrid:
+        score: 1
+        evidence: Russland setzt seinen Angriffskrieg in Europa gegen die Ukraine
+          und seine erheblichen hybriden Bedrohungen unvermindert fort.
+      green_transition:
+        score: 2
+        evidence: Dafür investiert die Bundesregierung massiv in die Verkehrsinfrastruktur,
+          Digitalisierung und Klimaschutz
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

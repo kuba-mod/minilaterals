@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany is strengthening its judicial administration and the rule
       of law through the digitalization and simplification of legal enforcement processes.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: die Fortführung der Digitalisierung der Justiz und einen konsequenten
-        Bürokratieabbau für Staat und Verwaltung
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: die Fortführung der Digitalisierung der Justiz und einen konsequenten
+          Bürokratieabbau für Staat und Verwaltung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

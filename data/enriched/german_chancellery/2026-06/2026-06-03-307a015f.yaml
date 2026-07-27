@@ -21,10 +21,11 @@ extracted:
       a circular economy strategy focused on resource conservation, innovation in
       recycling, and digital product passports.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Kabinett hat den Entwurf eines Aktionsprogramms zur Umsetzung
-        der Nationalen Kreislaufwirtschaftsstrategie beschlossen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Kabinett hat den Entwurf eines Aktionsprogramms zur Umsetzung
+          der Nationalen Kreislaufwirtschaftsstrategie beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

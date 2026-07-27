@@ -1,11 +1,11 @@
 """data/groupings.yaml — the goals behind the hub cards, and the file's two jobs.
 
-The hub cards are now built from this file (`render.load_hub_groupings`), so the
-tags and the goals can't drift apart by construction. What still needs guarding
-is that every card entry is complete enough to render and to justify its tags,
-and that `topics` — which marks an entry as tracked by the pipeline — doesn't
-spread to a placeholder, since that would widen the LLM's actor and issue-area
-vocabulary.
+The hub cards are built from this file (`render.load_hub_groupings`), so a chip
+and the objective behind it can't drift apart by construction. What still needs
+guarding is that every entry is complete enough to render, that goals are per
+grouping rather than collapsing back to one sentence per topic, and that
+`topics` — which marks an entry as tracked by the pipeline — doesn't spread to a
+placeholder, since that would widen the LLM's actor and issue-area vocabulary.
 """
 
 from __future__ import annotations
@@ -19,10 +19,7 @@ from pipeline.enrich import GOALS, GROUPINGS
 from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER
 
 CONFIG = yaml.safe_load((Path(__file__).parent.parent / "data" / "groupings.yaml").read_text(encoding="utf-8"))
-ENTRIES = CONFIG["groupings"]
-
-STATUSES = {"active", "intermittent", "dormant", "suspended", "aspirational"}
-
+ENTRIES = CONFIG
 
 def test_only_the_pipeline_groupings_carry_topics():
     # Adding `topics` to a placeholder silently changes what the LLM is asked to
@@ -31,28 +28,25 @@ def test_only_the_pipeline_groupings_carry_topics():
     assert tracked == {"weimar", "e3", "visegrad", "baltic", "aukus"} == set(GROUPINGS)
 
 
-def test_topic_goals_cover_every_tracked_topic_exactly():
-    tracked_topics = {t for g in ENTRIES.values() for t in (g.get("topics") or [])}
-    assert set(GOALS) == tracked_topics
+def test_each_tracked_grouping_has_a_goal_for_each_of_its_topics():
+    # Goals are per grouping — `defence` reads differently for each of the five.
+    assert set(GOALS) == set(GROUPINGS)
+    for key, grouping in GROUPINGS.items():
+        assert set(GOALS[key]) == grouping.topics, key
+
+
+def test_shared_topics_have_genuinely_distinct_goals():
+    # The reason stances are keyed by (grouping, topic): if these ever collapsed
+    # back to one sentence, the per-grouping keying would be pointless.
+    defence = {GOALS[k]["defence"].strip() for k in GOALS if "defence" in GOALS[k]}
+    assert len(defence) == len(GROUPINGS), "every tracked grouping tracks defence with its own goal"
 
 
 @pytest.mark.parametrize("key", list(ENTRIES))
-def test_entry_states_a_goal_and_where_it_was_agreed(key):
-    entry = ENTRIES[key]
-    assert entry["goal"].strip(), f"{key}: empty goal"
-    agreed = entry["agreed"]
-    # `instrument` may say no founding text exists (chip4) — it may not be blank.
-    assert agreed["instrument"].strip(), f"{key}: no instrument named"
-    assert agreed.get("date"), f"{key}: no date for the agreed goal"
-    assert agreed.get("level"), f"{key}: no level (leaders/ministers/officials)"
-    assert entry["status"] in STATUSES, f"{key}: bad status {entry['status']!r}"
-
-
-@pytest.mark.parametrize("key", list(ENTRIES))
-def test_every_tag_carries_its_basis(key):
-    # A tag with no stated basis is exactly what this file exists to prevent.
-    for tag, basis in ENTRIES[key]["tags"].items():
-        assert basis and basis.strip(), f"{key}/{tag}: tag with no stated basis"
+def test_every_tag_states_the_objective_behind_it(key):
+    # A chip with no stated objective is exactly what this file exists to prevent.
+    for tag, goal in ENTRIES[key]["tags"].items():
+        assert goal and goal.strip(), f"{key}/{tag}: card chip with no stated goal"
 
 
 @pytest.mark.parametrize("key", [k for k in ENTRIES if k != "weimar"])

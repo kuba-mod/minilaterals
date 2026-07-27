@@ -29,17 +29,16 @@ extracted:
     green_transition: France supports the protection of the Congo Basin forest as
       part of global environmental efforts.
   stances:
-    defence:
-      score: 1
-      evidence: un partenariat renouvelé entre le Gabon et la France , porté sur la
-        coopération en matière économique, énergétique, culturelle et de défense
-    energy:
-      score: 1
-      evidence: un partenariat renouvelé entre le Gabon et la France , porté sur la
-        coopération en matière économique, énergétique, culturelle et de défense
-    green_transition:
-      score: 1
-      evidence: la protection de la forêt du Bassin du Congo
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: un partenariat renouvelé entre le Gabon et la France , porté sur
+          la coopération en matière économique, énergétique, culturelle et de défense
+      green_transition:
+        score: 1
+        evidence: la protection de la forêt du Bassin du Congo
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

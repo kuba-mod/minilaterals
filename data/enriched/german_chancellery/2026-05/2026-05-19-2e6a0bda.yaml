@@ -17,10 +17,11 @@ extracted:
       to lower energy costs for citizens and businesses as part of its economic and
       energy strategy.
   stances:
-    green_transition:
-      score: 1
-      evidence: Seit 1. Januar 2026 werden Bürgerinnen, Bürger und die Wirtschaft
-        zusammen um rund 10 Milliarden Euro bei den Energiekosten entlastet.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Seit 1. Januar 2026 werden Bürgerinnen, Bürger und die Wirtschaft
+          zusammen um rund 10 Milliarden Euro bei den Energiekosten entlastet.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

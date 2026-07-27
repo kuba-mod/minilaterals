@@ -20,11 +20,12 @@ extracted:
       critical raw materials and rare earth metals through a bilateral agreement with
       the USA.
   stances:
-    green_transition:
-      score: 2
-      evidence: podpisali porozumienie ramowe w sprawie zabezpieczenia dostaw w zakresie
-        wydobycia, przetwarzania i recyklingu surowców krytycznych, w tym metali ziem
-        rzadkich
+    weimar:
+      green_transition:
+        score: 2
+        evidence: podpisali porozumienie ramowe w sprawie zabezpieczenia dostaw w
+          zakresie wydobycia, przetwarzania i recyklingu surowców krytycznych, w tym
+          metali ziem rzadkich
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

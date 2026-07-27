@@ -22,10 +22,11 @@ extracted:
       opposing capital punishment, which is considered contrary to human dignity and
       the right to life.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: The death penalty is inhumane and degrading, contrary to human dignity,
-        without any deterring effect.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: The death penalty is inhumane and degrading, contrary to human dignity,
+          without any deterring effect.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -25,18 +25,20 @@ extracted:
     enlargement: Poland advocates for the rapid opening of EU accession negotiations
       for Ukraine.
   stances:
-    ukraine:
-      score: 2
-      evidence: 'podkreślił wagę kontynuacji wieloaspektowego wsparcia Ukrainy: konieczności
-        szybkiej realizacji pożyczki 90 mld euro dla Ukrainy, unijnych gwarancji bezpieczeństwa,
-        sankcji na rosyjski sektor energetyczny i kraje trzecie'
-    defence:
-      score: 1
-      evidence: zaznaczył również potrzebę dalszych prac w ramach polityki obronnej,
-        przede wszystkim wzmocnienia wschodniej flanki UE
-    enlargement:
-      score: 1
-      evidence: szybkiego otwarcia negocjacji akcesyjnych w klastrze „Sprawy podstawowe”
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 'podkreślił wagę kontynuacji wieloaspektowego wsparcia Ukrainy:
+          konieczności szybkiej realizacji pożyczki 90 mld euro dla Ukrainy, unijnych
+          gwarancji bezpieczeństwa, sankcji na rosyjski sektor energetyczny i kraje
+          trzecie'
+      defence:
+        score: 1
+        evidence: zaznaczył również potrzebę dalszych prac w ramach polityki obronnej,
+          przede wszystkim wzmocnienia wschodniej flanki UE
+      enlargement:
+        score: 1
+        evidence: szybkiego otwarcia negocjacji akcesyjnych w klastrze „Sprawy podstawowe”
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

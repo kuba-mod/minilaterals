@@ -28,15 +28,18 @@ extracted:
     rule_of_law: Poland affirms shared commitment with Moldova regarding key international
       issues concerning safety and stability.
   stances:
-    enlargement:
-      score: 2
-      evidence: Deputy Minister Marcin Bosacki emphasised Poland’s willingness to
-        further support Moldova in its European integration
-    rule_of_law:
-      score: 1
-      evidence: Both parties reaffirmed the very good state of bilateral relations,
-        as well as Poland’s and Moldova’s similar assessment of the most important
-        issues concerning European safety and the international situation.
+    weimar:
+      enlargement: &id001
+        score: 2
+        evidence: Deputy Minister Marcin Bosacki emphasised Poland’s willingness to
+          further support Moldova in its European integration
+      rule_of_law:
+        score: 1
+        evidence: Both parties reaffirmed the very good state of bilateral relations,
+          as well as Poland’s and Moldova’s similar assessment of the most important
+          issues concerning European safety and the international situation.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -18,9 +18,10 @@ extracted:
     rule_of_law: Poland actively promotes democratic resilience and human rights by
       supporting Cuban dissidents and democratic aspirations.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Polska popiera kubańskie dążenia do przemian demokratycznych
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Polska popiera kubańskie dążenia do przemian demokratycznych
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

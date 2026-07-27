@@ -17,9 +17,10 @@ extracted:
     rule_of_law: Germany rhetorically supports democratic resilience by framing press
       freedom as an indispensable condition for democracy.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Das ist die unverzichtbare Grundbedingung der Demokratie.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Das ist die unverzichtbare Grundbedingung der Demokratie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

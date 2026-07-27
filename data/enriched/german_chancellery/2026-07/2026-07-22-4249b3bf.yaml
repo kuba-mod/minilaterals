@@ -21,9 +21,10 @@ extracted:
     enlargement: Germany intends to discuss the European enlargement agenda as part
       of its coordination with Ireland's EU Council presidency.
   stances:
-    enlargement:
-      score: 0
-      evidence: europäische Erweiterungsagenda
+    weimar:
+      enlargement:
+        score: 0
+        evidence: europäische Erweiterungsagenda
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

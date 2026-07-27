@@ -26,16 +26,17 @@ extracted:
     ukraine: Poland commended Andorra's clear condemnation of Russia's actions and
       support for Ukrainian citizens.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Minister Radosław Sikorski pointed out that Andorra’s close relations
-        with the EU result not only from its geographical location but also from shared
-        democratic values, respect for the rule of law and fundamental freedoms.
-    ukraine:
-      score: 1
-      evidence: Minister Sikorski commended Andorra on its clear stance condemning
-        Russia’s actions and its support for Ukrainian citizens forced to leave their
-        country.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Minister Radosław Sikorski pointed out that Andorra’s close relations
+          with the EU result not only from its geographical location but also from
+          shared democratic values, respect for the rule of law and fundamental freedoms.
+      ukraine:
+        score: 1
+        evidence: Minister Sikorski commended Andorra on its clear stance condemning
+          Russia’s actions and its support for Ukrainian citizens forced to leave
+          their country.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -29,15 +29,18 @@ extracted:
     defence: France supports strengthening European defense capabilities by scaling
       up interceptor production and learning from Ukraine's battlefield expertise.
   stances:
-    ukraine:
-      score: 2
-      evidence: réaffirmer leur soutien indéfectible à l’Ukraine dans sa défense contre
-        l’invasion illégale de la Russie
-    defence:
-      score: 2
-      evidence: besoin urgent de faire passer à l’échelle la production d’intercepteurs
-        et de développer conjointement des capacités antimissiles balistiques et de
-        frappe en profondeur
+    weimar:
+      ukraine:
+        score: 2
+        evidence: réaffirmer leur soutien indéfectible à l’Ukraine dans sa défense
+          contre l’invasion illégale de la Russie
+      defence: &id001
+        score: 2
+        evidence: besoin urgent de faire passer à l’échelle la production d’intercepteurs
+          et de développer conjointement des capacités antimissiles balistiques et
+          de frappe en profondeur
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

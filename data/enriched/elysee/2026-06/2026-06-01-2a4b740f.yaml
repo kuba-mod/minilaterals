@@ -23,9 +23,10 @@ extracted:
     green_transition: France is advancing its industrial and digital capacity by utilizing
       its decarbonized energy sector to attract large-scale AI infrastructure investments.
   stances:
-    green_transition:
-      score: 2
-      evidence: grâce à une énergie largement décarbonée
+    weimar:
+      green_transition:
+        score: 2
+        evidence: grâce à une énergie largement décarbonée
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

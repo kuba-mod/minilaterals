@@ -25,10 +25,11 @@ extracted:
       by hosting regional meetings to strengthen cooperation and share experiences
       in cyber defense.
   stances:
-    hybrid:
-      score: 2
-      evidence: arutada regionaalse koostöö tihendamist ning jagada kogemusi küberohtude
-        ennetamisel ja tõrjumisel
+    baltic:
+      hybrid:
+        score: 2
+        evidence: arutada regionaalse koostöö tihendamist ning jagada kogemusi küberohtude
+          ennetamisel ja tõrjumisel
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

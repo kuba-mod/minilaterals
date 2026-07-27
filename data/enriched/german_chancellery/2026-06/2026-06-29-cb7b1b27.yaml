@@ -32,11 +32,12 @@ extracted:
       into a national heat action plan, backed by a significant infrastructure and
       climate neutrality fund.
   stances:
-    green_transition:
-      score: 2
-      evidence: Er verweist auf die 100 Milliarden Euro, die aus dem Sondervermögen
-        für Infrastruktur und Klimaneutralität zur Verfügung stehen. Die sind auch
-        für Klimaanpassung gedacht.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Er verweist auf die 100 Milliarden Euro, die aus dem Sondervermögen
+          für Infrastruktur und Klimaneutralität zur Verfügung stehen. Die sind auch
+          für Klimaanpassung gedacht.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

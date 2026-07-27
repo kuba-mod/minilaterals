@@ -22,10 +22,11 @@ extracted:
       the GreenEvo program to transfer sustainable technologies and innovating in
       green hydrogen.
   stances:
-    green_transition:
-      score: 2
-      evidence: Celem programu jest wspieranie międzynarodowego transferu zielonych
-        technologii, dostarczanych przez polskie małe i średnie przedsiębiorstwa.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Celem programu jest wspieranie międzynarodowego transferu zielonych
+          technologii, dostarczanych przez polskie małe i średnie przedsiębiorstwa.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

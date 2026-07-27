@@ -21,10 +21,13 @@ extracted:
     defence: France commits to a defensive and independent mission to secure commercial
       traffic and conduct mine clearing operations in the Strait of Hormuz.
   stances:
-    defence:
-      score: 2
-      evidence: y compris par une mission strictement défensive et indépendante visant
-        à rassurer le trafic commercial et à mener des opérations de déminage
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: y compris par une mission strictement défensive et indépendante
+          visant à rassurer le trafic commercial et à mener des opérations de déminage
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

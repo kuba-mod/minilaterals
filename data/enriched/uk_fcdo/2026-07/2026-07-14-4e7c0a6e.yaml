@@ -21,11 +21,12 @@ extracted:
     iran: The UK is actively addressing destabilising regional activity by holding
       Iran accountable for the actions of the IRGC-QF and its proxy groups.
   stances:
-    iran:
-      score: 2
-      evidence: summoned the Iranian Chargé d'Affaires in London in response to the
-        Islamic Revolutionary Guard Corps Qods Force’s (IRGC-QF) role in directing
-        proxy groups
+    e3:
+      iran:
+        score: 2
+        evidence: summoned the Iranian Chargé d'Affaires in London in response to
+          the Islamic Revolutionary Guard Corps Qods Force’s (IRGC-QF) role in directing
+          proxy groups
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

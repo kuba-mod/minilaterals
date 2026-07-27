@@ -27,15 +27,18 @@ extracted:
     defence: Poland intends to strengthen military cooperation and defenses against
       threats from Russia via NATO.
   stances:
-    ukraine:
-      score: 2
-      evidence: Polska będzie wspierać Ukrainę w jej obronie przed rosyjską agresją
-        nie tylko z poczucia przyzwoitości i solidarności, lecz przede wszystkim w
-        trosce o własne bezpieczeństwo i w dobrze pojętym interesie narodowym.
-    defence:
-      score: 1
-      evidence: zapowiedział ścisłą współpracę w zakresie bezpieczeństwa i współpracy
-        wojskowej oraz dalsze wzmacnianie obrony przed zagrożeniem ze strony Rosji.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polska będzie wspierać Ukrainę w jej obronie przed rosyjską agresją
+          nie tylko z poczucia przyzwoitości i solidarności, lecz przede wszystkim
+          w trosce o własne bezpieczeństwo i w dobrze pojętym interesie narodowym.
+      defence: &id001
+        score: 1
+        evidence: zapowiedział ścisłą współpracę w zakresie bezpieczeństwa i współpracy
+          wojskowej oraz dalsze wzmacnianie obrony przed zagrożeniem ze strony Rosji.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

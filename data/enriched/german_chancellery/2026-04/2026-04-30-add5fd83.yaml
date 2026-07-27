@@ -18,10 +18,11 @@ extracted:
       for a faster build-out of hydrogen infrastructure to replace fossil fuels in
       industry and transport.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das neue Gesetz bezweckt einen schnelleren Aufbau der Wasserstoff-Infrastruktur
-        durch einfachere, digitale und schnellere Verfahren.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das neue Gesetz bezweckt einen schnelleren Aufbau der Wasserstoff-Infrastruktur
+          durch einfachere, digitale und schnellere Verfahren.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

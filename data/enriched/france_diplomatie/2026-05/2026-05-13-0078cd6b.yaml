@@ -21,10 +21,11 @@ extracted:
       by calling for the release of political prisoners and emphasizing the right
       to freely choose one's destiny.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: France stands by the Iranian people, who must be able to exercise
-        their fundamental rights and freely choose their destiny.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: France stands by the Iranian people, who must be able to exercise
+          their fundamental rights and freely choose their destiny.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

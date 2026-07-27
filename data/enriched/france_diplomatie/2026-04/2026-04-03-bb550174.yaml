@@ -19,10 +19,11 @@ extracted:
     rule_of_law: France strongly advocates for fundamental human rights and democratic
       freedoms, specifically calling for the release of detained activists in Iran.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France calls for the immediate release of Nasrin Sotoudeh and all
-        those detained arbitrarily in Iran.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France calls for the immediate release of Nasrin Sotoudeh and all
+          those detained arbitrarily in Iran.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

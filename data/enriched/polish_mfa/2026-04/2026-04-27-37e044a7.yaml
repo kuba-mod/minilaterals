@@ -20,16 +20,17 @@ extracted:
     rule_of_law: Poland is actively supporting democratic processes and resilience
       in Georgia through the provision of reliable information from a European perspective.
   stances:
-    hybrid:
-      score: 2
-      evidence: Misją serwisu jest również wzmacnianie odporności odbiorców na manipulacje
-        oraz przeciwdziałanie dezinformacji wymierzonej w Gruzję i jej partnerów międzynarodowych,
-        w szczególności Unię Europejską.
-    rule_of_law:
-      score: 2
-      evidence: Celem projektu jest dostarczanie rzetelnych informacji o wydarzeniach
-        politycznych, społecznych i gospodarczych z europejskiej perspektywy oraz
-        wspieranie procesów demokratycznych.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Misją serwisu jest również wzmacnianie odporności odbiorców na manipulacje
+          oraz przeciwdziałanie dezinformacji wymierzonej w Gruzję i jej partnerów
+          międzynarodowych, w szczególności Unię Europejską.
+      rule_of_law:
+        score: 2
+        evidence: Celem projektu jest dostarczanie rzetelnych informacji o wydarzeniach
+          politycznych, społecznych i gospodarczych z europejskiej perspektywy oraz
+          wspieranie procesów demokratycznych.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

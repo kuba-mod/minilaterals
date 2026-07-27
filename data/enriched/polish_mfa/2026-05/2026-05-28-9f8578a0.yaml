@@ -33,16 +33,19 @@ extracted:
     rule_of_law: Poland's participation in discussions implies an adherence to democratic
       principles and international law, though no explicit statement is made.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russia’s aggression against Ukraine, supporting Ukraine, and ways
-        of ramping up pressure on Russia.
-    enlargement:
-      score: 0
-      evidence: ''
-    rule_of_law:
-      score: 0
-      evidence: ''
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russia’s aggression against Ukraine, supporting Ukraine, and ways
+          of ramping up pressure on Russia.
+      enlargement: &id001
+        score: 0
+        evidence: ''
+      rule_of_law:
+        score: 0
+        evidence: ''
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

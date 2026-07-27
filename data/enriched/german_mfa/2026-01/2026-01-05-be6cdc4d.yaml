@@ -24,12 +24,15 @@ extracted:
     defence: Germany is actively advancing eastern flank deterrence by establishing
       its first-ever permanent brigade abroad in Lithuania.
   stances:
-    ukraine:
-      score: 1
-      evidence: our firm support for Ukraine
-    defence:
-      score: 2
-      evidence: Germany is stationing such a brigade abroad for the first time
+    weimar:
+      ukraine:
+        score: 1
+        evidence: our firm support for Ukraine
+      defence: &id001
+        score: 2
+        evidence: Germany is stationing such a brigade abroad for the first time
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

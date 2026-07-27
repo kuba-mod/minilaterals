@@ -38,21 +38,22 @@ extracted:
     green_transition: Poland acknowledges energy transformation as a key component
       of Ukraine's integration process.
   stances:
-    ukraine:
-      score: 1
-      evidence: podkreślając konieczność zachowania europejskiej solidarności w zakresie
-        wsparcia Ukrainy w jej wojnie z Rosją
-    enlargement:
-      score: 1
-      evidence: musi iść realny wysiłek w kierunku spójności z prawem, zasadami i
-        standardami UE
-    rule_of_law:
-      score: 1
-      evidence: niezbędnych reformach, jakie Ukraina musi przeprowadzić na ścieżce
-        integracji, w szczególności w zakresie praworządności i walki z korupcją
-    green_transition:
-      score: 0
-      evidence: tematykę integracji z jednolitym rynkiem, transformacji energetycznej
+    weimar:
+      ukraine:
+        score: 1
+        evidence: podkreślając konieczność zachowania europejskiej solidarności w
+          zakresie wsparcia Ukrainy w jej wojnie z Rosją
+      enlargement:
+        score: 1
+        evidence: musi iść realny wysiłek w kierunku spójności z prawem, zasadami
+          i standardami UE
+      rule_of_law:
+        score: 1
+        evidence: niezbędnych reformach, jakie Ukraina musi przeprowadzić na ścieżce
+          integracji, w szczególności w zakresie praworządności i walki z korupcją
+      green_transition:
+        score: 0
+        evidence: tematykę integracji z jednolitym rynkiem, transformacji energetycznej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

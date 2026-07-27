@@ -23,10 +23,11 @@ extracted:
     defence: Estonia actively advances collective security and the deterrence of the
       eastern flank through the integration of command with the German-Dutch Corps.
   stances:
-    defence:
-      score: 2
-      evidence: Eesti ja Läti maavägede taktikalise juhtimise ülevõtmine Saksa-Hollandi
-        korpuse poolt oluline samm NATO idatiiva kaitse ja Eesti julgeoleku tugevdamisel
+    baltic:
+      defence:
+        score: 2
+        evidence: Eesti ja Läti maavägede taktikalise juhtimise ülevõtmine Saksa-Hollandi
+          korpuse poolt oluline samm NATO idatiiva kaitse ja Eesti julgeoleku tugevdamisel
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

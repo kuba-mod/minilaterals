@@ -37,27 +37,31 @@ extracted:
     rule_of_law: Poland highlights the benefits of common EU regulations and standards
       for protecting consumers and ensuring predictable business environments.
   stances:
-    defence:
-      score: 2
-      evidence: Poland has allocated PLN 200 billion to defence, and Warsaw is home
-        to the headquarters of Frontex, the agency responsible for protecting the
-        EU’s external borders.
-    hybrid:
-      score: 2
-      evidence: Experience of the recent years has shown that the EU offers not only
-        long-term development benefits, but also effective measures for responding
-        to crises—from the pandemic and the energy crisis to the war in Ukraine.
-    enlargement:
-      score: 1
-      evidence: EU membership is about much more than just European funds.
-    green_transition:
-      score: 2
-      evidence: We support the development of renewable energy sources that are not
-        reliant on fuel imports from abroad.
-    rule_of_law:
-      score: 2
-      evidence: Thanks to common regulations, consumers in Europe are better protected
-        and businesses operate in a predictable environment.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Poland has allocated PLN 200 billion to defence, and Warsaw is home
+          to the headquarters of Frontex, the agency responsible for protecting the
+          EU’s external borders.
+      hybrid:
+        score: 2
+        evidence: Experience of the recent years has shown that the EU offers not
+          only long-term development benefits, but also effective measures for responding
+          to crises—from the pandemic and the energy crisis to the war in Ukraine.
+      enlargement: &id002
+        score: 1
+        evidence: EU membership is about much more than just European funds.
+      green_transition:
+        score: 2
+        evidence: We support the development of renewable energy sources that are
+          not reliant on fuel imports from abroad.
+      rule_of_law:
+        score: 2
+        evidence: Thanks to common regulations, consumers in Europe are better protected
+          and businesses operate in a predictable environment.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

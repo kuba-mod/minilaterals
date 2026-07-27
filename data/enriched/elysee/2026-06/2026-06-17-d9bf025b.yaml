@@ -24,10 +24,11 @@ extracted:
     green_transition: France supports the goal of sustainable economic growth as part
       of the G7 working agenda.
   stances:
-    green_transition:
-      score: 1
-      evidence: Relancer une croissance économique équilibrée, partagée et durable,
-        au bénéfice de tous
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Relancer une croissance économique équilibrée, partagée et durable,
+          au bénéfice de tous
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

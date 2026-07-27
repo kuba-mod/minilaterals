@@ -20,9 +20,10 @@ extracted:
     green_transition: France is advancing its industrial green goals through the production
       of decarbonized energy.
   stances:
-    green_transition:
-      score: 2
-      evidence: une production en quantité d’énergie décarbonée
+    weimar:
+      green_transition:
+        score: 2
+        evidence: une production en quantité d’énergie décarbonée
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

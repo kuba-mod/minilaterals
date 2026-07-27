@@ -25,14 +25,15 @@ extracted:
     rule_of_law: Germany emphasizes the importance of a rules-based international
       order and shared democratic values as the basis for cooperation.
   stances:
-    green_transition:
-      score: 1
-      evidence: Mauretanien bietet zugleich Chancen für erneuerbare Energien, insbesondere
-        beim Gewinn von grünem Wasserstoff.
-    rule_of_law:
-      score: 1
-      evidence: Eine regelgeleitete internationale Ordnung ist der Rahmen, den wir
-        für unsere Zusammenarbeit brauchen.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Mauretanien bietet zugleich Chancen für erneuerbare Energien, insbesondere
+          beim Gewinn von grünem Wasserstoff.
+      rule_of_law:
+        score: 1
+        evidence: Eine regelgeleitete internationale Ordnung ist der Rahmen, den wir
+          für unsere Zusammenarbeit brauchen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

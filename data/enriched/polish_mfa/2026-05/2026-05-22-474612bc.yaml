@@ -18,10 +18,11 @@ extracted:
     hybrid: Poland is actively addressing the role of strategic communication and
       countering disinformation within the context of modern diplomacy.
   stances:
-    hybrid:
-      score: 1
-      evidence: roli komunikacji strategicznej i przeciwdziałania dezinformacji we
-        współczesnej dyplomacji
+    weimar:
+      hybrid:
+        score: 1
+        evidence: roli komunikacji strategicznej i przeciwdziałania dezinformacji
+          we współczesnej dyplomacji
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

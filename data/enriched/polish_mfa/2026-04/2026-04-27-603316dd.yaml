@@ -28,20 +28,23 @@ extracted:
     rule_of_law: The initiative promotes democratic values and reliable information
       regarding political, social, and economic events from a European perspective.
   stances:
-    hybrid:
-      score: 2
-      evidence: Its mission also involves strengthening of the public’s resilience
-        to manipulation and countering disinformation targeted at Georgia and its
-        international partners, most importantly the European Union.
-    enlargement:
-      score: 1
-      evidence: The project, supported by the MFA, is planned to cover all the EU’s
-        Eastern Partnership countries and more.
-    rule_of_law:
-      score: 1
-      evidence: The project aims to present reliable information on political, social,
-        and economic events from the European perspective and support the process
-        of democratisation.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Its mission also involves strengthening of the public’s resilience
+          to manipulation and countering disinformation targeted at Georgia and its
+          international partners, most importantly the European Union.
+      enlargement: &id001
+        score: 1
+        evidence: The project, supported by the MFA, is planned to cover all the EU’s
+          Eastern Partnership countries and more.
+      rule_of_law:
+        score: 1
+        evidence: The project aims to present reliable information on political, social,
+          and economic events from the European perspective and support the process
+          of democratisation.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

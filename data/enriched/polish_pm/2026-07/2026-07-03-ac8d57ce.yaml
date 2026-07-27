@@ -29,14 +29,18 @@ extracted:
       lack of transparency in the public healthcare system to ensure equal access
       for all citizens.
   stances:
-    defence:
-      score: 1
-      evidence: Europa, w tym Polska, bierze większą odpowiedzialność za własną obronność
-    rule_of_law:
-      score: 2
-      evidence: najważniejsze jest jednak skuteczne wyeliminowanie nadużyć i patologii,
-        które są nie tylko efektem niewłaściwych działań poszczególnych osób, lecz
-        także słabości obowiązującego systemu
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: Europa, w tym Polska, bierze większą odpowiedzialność za własną
+          obronność
+      rule_of_law:
+        score: 2
+        evidence: najważniejsze jest jednak skuteczne wyeliminowanie nadużyć i patologii,
+          które są nie tylko efektem niewłaściwych działań poszczególnych osób, lecz
+          także słabości obowiązującego systemu
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

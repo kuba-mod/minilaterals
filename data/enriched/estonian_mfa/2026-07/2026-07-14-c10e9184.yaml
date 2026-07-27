@@ -19,11 +19,7 @@ extracted:
   positions:
     enlargement: Estonia views the opening of the sixth thematic block of accession
       negotiations with Ukraine and Moldova as a significant step toward EU enlargement.
-  stances:
-    enlargement:
-      score: 1
-      evidence: Välisminister Margus Tsahkna sõnul on tegemist olulise sammuga Euroopa
-        Liidu laienemise suunas.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

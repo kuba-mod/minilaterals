@@ -21,10 +21,13 @@ extracted:
     defence: France supports strengthening EU defense capabilities by expanding cooperation
       with allies on the eastern flank.
   stances:
-    defence:
-      score: 1
-      evidence: The Minister expressed France’s wish to expand cooperation with Canada
-        on defense and security.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: The Minister expressed France’s wish to expand cooperation with
+          Canada on defense and security.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

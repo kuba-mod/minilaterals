@@ -33,27 +33,31 @@ extracted:
     rule_of_law: Germany affirms its commitment to democratic resilience and justice
       by participating in international tribunals for war crimes.
   stances:
-    ukraine:
-      score: 2
-      evidence: I went not only for an act of remembrance. Not only to bring back
-        into our nations’ collective memory the unspeakable horror that Russian soldiers
-        perpetrated there. But also to announce there that we will participate in
-        a special tribunal that will investigate and criminally prosecute the crimes
-        committed by Russia.
-    defence:
-      score: 2
-      evidence: The opponent must be deterred, to make sure he will refrain from an
-        open attack on NATO .
-    hybrid:
-      score: 2
-      evidence: 'Be it through drones and aircraft incursions into Baltic airspace,
-        through provocations by the Russian navy in the Baltic, or through disinformation
-        campaigns that are designed to undermine trust: All this forms a cohesive
-        Russian strategy that aims to weaken our willpower.'
-    rule_of_law:
-      score: 2
-      evidence: But also to announce there that we will participate in a special tribunal
-        that will investigate and criminally prosecute the crimes committed by Russia.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: I went not only for an act of remembrance. Not only to bring back
+          into our nations’ collective memory the unspeakable horror that Russian
+          soldiers perpetrated there. But also to announce there that we will participate
+          in a special tribunal that will investigate and criminally prosecute the
+          crimes committed by Russia.
+      defence: &id001
+        score: 2
+        evidence: The opponent must be deterred, to make sure he will refrain from
+          an open attack on NATO .
+      hybrid:
+        score: 2
+        evidence: 'Be it through drones and aircraft incursions into Baltic airspace,
+          through provocations by the Russian navy in the Baltic, or through disinformation
+          campaigns that are designed to undermine trust: All this forms a cohesive
+          Russian strategy that aims to weaken our willpower.'
+      rule_of_law:
+        score: 2
+        evidence: But also to announce there that we will participate in a special
+          tribunal that will investigate and criminally prosecute the crimes committed
+          by Russia.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,15 +21,16 @@ extracted:
     defence: Poland has entered a new chapter of closer security and defense cooperation
       with the UK via the Northolt Treaty.
   stances:
-    ukraine:
-      score: 1
-      evidence: Warszawa i Londyn jednoznacznie popierają suwerenność i integralność
-        terytorialną Ukrainy.
-    defence:
-      score: 2
-      evidence: Podpisując w zeszłym miesiącu Traktat z Northolt, Brytyjczycy i Polacy
-        otworzyli nowy rozdział w naszych stosunkach – rozdział charakteryzujący się
-        ściślejszą współpracą w dziedzinie bezpieczeństwa i obrony.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Warszawa i Londyn jednoznacznie popierają suwerenność i integralność
+          terytorialną Ukrainy.
+      defence:
+        score: 2
+        evidence: Podpisując w zeszłym miesiącu Traktat z Northolt, Brytyjczycy i
+          Polacy otworzyli nowy rozdział w naszych stosunkach – rozdział charakteryzujący
+          się ściślejszą współpracą w dziedzinie bezpieczeństwa i obrony.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

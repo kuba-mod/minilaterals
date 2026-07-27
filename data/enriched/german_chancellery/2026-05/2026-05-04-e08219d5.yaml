@@ -20,14 +20,15 @@ extracted:
     defence: Germany is enhancing its defensive capabilities and coordinating security
       policy through a new National Security Council.
   stances:
-    ukraine:
-      score: 2
-      evidence: Die Unterstützung der Ukraine ist für die neue Bundesregierung von
-        zentraler Bedeutung.
-    defence:
-      score: 2
-      evidence: Deutschland will sich verteidigen können, um sich nicht verteidigen
-        zu müssen.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die Unterstützung der Ukraine ist für die neue Bundesregierung von
+          zentraler Bedeutung.
+      defence:
+        score: 2
+        evidence: Deutschland will sich verteidigen können, um sich nicht verteidigen
+          zu müssen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

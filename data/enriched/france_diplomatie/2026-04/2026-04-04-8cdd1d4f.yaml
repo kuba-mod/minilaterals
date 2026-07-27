@@ -19,11 +19,12 @@ extracted:
     rule_of_law: France emphasized violations of fundamental rights, specifically
       noting that the deceased's defense lacked access to the final court hearing.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We particularly regret the fact that M. Chan’s defence had no access
-        to the final court hearing, which constitutes a violation of the rights of
-        the interested party.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We particularly regret the fact that M. Chan’s defence had no access
+          to the final court hearing, which constitutes a violation of the rights
+          of the interested party.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

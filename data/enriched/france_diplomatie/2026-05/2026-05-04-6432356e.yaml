@@ -21,12 +21,13 @@ extracted:
     rule_of_law: France stresses the importance of addressing threats posed by Iran's
       nuclear ambitions and destabilization activities through diplomacy.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The Minister emphasized that a diplomatic solution was essential in
-        order to guarantee that Iran never acquires nuclear weapons and to address
-        the threats posed by its ballistic and drone programmes and its destabilization
-        activities.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The Minister emphasized that a diplomatic solution was essential
+          in order to guarantee that Iran never acquires nuclear weapons and to address
+          the threats posed by its ballistic and drone programmes and its destabilization
+          activities.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

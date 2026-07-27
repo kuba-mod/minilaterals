@@ -21,10 +21,12 @@ extracted:
     green_transition: France is actively advancing cooperation with India in key sectors
       including energy, aligning with broader green transition objectives.
   stances:
-    green_transition:
-      score: 2
-      evidence: Cet événement a rassemblé notamment 120 startups indiennes , en particulier
-        dans des secteurs clés pour la relation bilatérale tels que l’énergie
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Cet événement a rassemblé notamment 120 startups indiennes , en
+          particulier dans des secteurs clés pour la relation bilatérale tels que
+          l’énergie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

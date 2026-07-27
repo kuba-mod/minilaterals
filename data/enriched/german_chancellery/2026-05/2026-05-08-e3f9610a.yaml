@@ -19,10 +19,11 @@ extracted:
     green_transition: Germany is actively advancing climate neutrality by introducing
       a funding program for electric vehicles for low- and middle-income households.
   stances:
-    green_transition:
-      score: 2
-      evidence: Förderprogramm für „ klimaneutrale Mobilität für Haushalte mit kleinen
-        und mittleren Einkommen “
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Förderprogramm für „ klimaneutrale Mobilität für Haushalte mit kleinen
+          und mittleren Einkommen “
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,9 +21,10 @@ extracted:
     rule_of_law: France is focusing on the resilience of democracies as a key theme
       for the upcoming G7 summit.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: la seconde, aux grands défis mondiaux et à la résilience des démocraties
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: la seconde, aux grands défis mondiaux et à la résilience des démocraties
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

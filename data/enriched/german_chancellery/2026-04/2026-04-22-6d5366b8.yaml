@@ -25,10 +25,11 @@ extracted:
     green_transition: Germany actively supports the path to climate neutrality by
       integrating innovation and technology into its climate and energy policy.
   stances:
-    green_transition:
-      score: 2
-      evidence: Our commitment to the Paris Agreement and to our climate goals is
-        firm.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Our commitment to the Paris Agreement and to our climate goals is
+          firm.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

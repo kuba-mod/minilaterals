@@ -21,9 +21,10 @@ extracted:
     ukraine: Germany rhetorically acknowledges the ongoing Russian war of aggression
       against Ukraine as a primary crisis facing the diplomatic service.
   stances:
-    ukraine:
-      score: 1
-      evidence: Der russische Angriffskrieg gegen die Ukraine.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Der russische Angriffskrieg gegen die Ukraine.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -40,10 +40,11 @@ extracted:
     rule_of_law: Germany stresses the importance of democratic resilience and rule
       of law by underlining the need to consider civil society perspectives.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The ICG underlines the importance of considering the perspectives
-        of the civil society and communities of the region.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The ICG underlines the importance of considering the perspectives
+          of the civil society and communities of the region.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -23,11 +23,12 @@ extracted:
       through the visit of the Defence Minister to the CANSEC arms fair and visits
       to defense firms.
   stances:
-    defence:
-      score: 2
-      evidence: Verteidigungsminister Pistorius wird in der kommenden Woche, am Dienstagnachmittag,
-        nach Kanada fliegen. Am Mittwoch wird er in Ottawa sein und am Vormittag die
-        Rüstungsindustriemesse CANSEC besuchen.
+    weimar:
+      defence:
+        score: 2
+        evidence: Verteidigungsminister Pistorius wird in der kommenden Woche, am
+          Dienstagnachmittag, nach Kanada fliegen. Am Mittwoch wird er in Ottawa sein
+          und am Vormittag die Rüstungsindustriemesse CANSEC besuchen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

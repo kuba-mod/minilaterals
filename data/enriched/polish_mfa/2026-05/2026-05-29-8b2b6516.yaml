@@ -32,19 +32,23 @@ extracted:
     rule_of_law: Poland affirms commitment to broader European cooperation and institutional
       strengthening through new treaties and memoranda of understanding.
   stances:
-    defence:
-      score: 1
-      evidence: The diplomats highlighted their countries’ similar views on security,
-        which led them to discussing the prospects of working together, for example
-        in the armaments and space sectors.
-    enlargement:
-      score: 1
-      evidence: At the meeting, Poland officially declared its willingness to join
-        the 'Rome Process' on migration as a participating state.
-    rule_of_law:
-      score: 1
-      evidence: Both sides also confirmed the inauguration of works on a new Treaty
-        of Friendship and Cooperation,
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: The diplomats highlighted their countries’ similar views on security,
+          which led them to discussing the prospects of working together, for example
+          in the armaments and space sectors.
+      enlargement: &id002
+        score: 1
+        evidence: At the meeting, Poland officially declared its willingness to join
+          the 'Rome Process' on migration as a participating state.
+      rule_of_law:
+        score: 1
+        evidence: Both sides also confirmed the inauguration of works on a new Treaty
+          of Friendship and Cooperation,
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

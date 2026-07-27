@@ -27,16 +27,19 @@ extracted:
     green_transition: Germany rhetorically supports cooperation in strategic energy
       and mineral areas, aligning with the goals of a green industrial transition.
   stances:
-    defence:
-      score: 2
-      evidence: Canadian decision to join the German-Norwegian Type 212CD submarine
-        cooperation creates a unique opportunity to boost our defence industrial and
-        military cooperation
-    green_transition:
-      score: 1
-      evidence: Our commitment extends beyond security and defence, encompassing strategic
-        areas such as investment, energy, artificial intelligence, space and critical
-        minerals
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Canadian decision to join the German-Norwegian Type 212CD submarine
+          cooperation creates a unique opportunity to boost our defence industrial
+          and military cooperation
+      green_transition:
+        score: 1
+        evidence: Our commitment extends beyond security and defence, encompassing
+          strategic areas such as investment, energy, artificial intelligence, space
+          and critical minerals
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

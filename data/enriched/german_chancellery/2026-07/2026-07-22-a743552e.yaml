@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany is strengthening democratic resilience and the rule of law
       by formalizing the legal support and representation of victims of terrorism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Die Bundesregierung will das Amt des Bundesopferbeauftragten auf eine
-        gesetzliche Grundlage stellen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Die Bundesregierung will das Amt des Bundesopferbeauftragten auf
+          eine gesetzliche Grundlage stellen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -37,31 +37,35 @@ extracted:
     rule_of_law: Poland supports fostering a predictable investment environment by
       promoting streamlined regulatory frameworks and strong government-business dialogue.
   stances:
-    defence:
-      score: 2
-      evidence: Both sides reaffirmed their commitment to enhance security cooperation,
-        including on mutual self-defense and deterrence
-    hybrid:
-      score: 2
-      evidence: The United States and Poland also agreed on the importance of deepening
-        cooperation on technology security, including by reducing dependency on high-risk
-        vendors in sensitive sectors and protecting critical technology infrastructure
-        from foreign interference
-    enlargement:
-      score: 1
-      evidence: In turn, the United States expressed its strong support for Poland’s
-        accession to the G20 as a permanent member.
-    green_transition:
-      score: 2
-      evidence: The United States and Poland discussed opportunities to reinforce
-        their strong partnership on energy security, including through the secure
-        delivery of liquefied natural gas (LNG) to the region and support for civil
-        nuclear energy projects with U.S. companies to increase power generation in
-        Poland.
-    rule_of_law:
-      score: 2
-      evidence: Both sides emphasized the need for streamlined regulatory environments
-        that support economic growth, entrepreneurship, and technological advancement.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Both sides reaffirmed their commitment to enhance security cooperation,
+          including on mutual self-defense and deterrence
+      hybrid:
+        score: 2
+        evidence: The United States and Poland also agreed on the importance of deepening
+          cooperation on technology security, including by reducing dependency on
+          high-risk vendors in sensitive sectors and protecting critical technology
+          infrastructure from foreign interference
+      enlargement: &id002
+        score: 1
+        evidence: In turn, the United States expressed its strong support for Poland’s
+          accession to the G20 as a permanent member.
+      green_transition:
+        score: 2
+        evidence: The United States and Poland discussed opportunities to reinforce
+          their strong partnership on energy security, including through the secure
+          delivery of liquefied natural gas (LNG) to the region and support for civil
+          nuclear energy projects with U.S. companies to increase power generation
+          in Poland.
+      rule_of_law:
+        score: 2
+        evidence: Both sides emphasized the need for streamlined regulatory environments
+          that support economic growth, entrepreneurship, and technological advancement.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

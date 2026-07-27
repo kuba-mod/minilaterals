@@ -27,10 +27,11 @@ extracted:
     green_transition: France aligns with the goal of climate neutrality by supporting
       just energy transitions and climate adaptation in Africa.
   stances:
-    green_transition:
-      score: 1
-      evidence: permettre des transitions énergétiques justes et l'adaptation au changement
-        climatique
+    weimar:
+      green_transition:
+        score: 1
+        evidence: permettre des transitions énergétiques justes et l'adaptation au
+          changement climatique
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

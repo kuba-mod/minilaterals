@@ -25,12 +25,13 @@ extracted:
     rule_of_law: France emphasizes the importance of democratic values and addressing
       geopolitical challenges like Russia's actions.
   stances:
-    ukraine:
-      score: 1
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: stepped-up pressure on Russia
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ''
+      rule_of_law:
+        score: 1
+        evidence: stepped-up pressure on Russia
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

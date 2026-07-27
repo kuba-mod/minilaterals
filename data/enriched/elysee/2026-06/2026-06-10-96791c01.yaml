@@ -24,11 +24,12 @@ extracted:
       by extending anti-money laundering and counter-terrorism financing obligations
       to overseas territories.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Le dispositif sur la lutte contre le blanchiment des capitaux et le
-        financement du terrorisme est notamment complété par des obligations de vigilance
-        à l’égard de la clientèle.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Le dispositif sur la lutte contre le blanchiment des capitaux et
+          le financement du terrorisme est notamment complété par des obligations
+          de vigilance à l’égard de la clientèle.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

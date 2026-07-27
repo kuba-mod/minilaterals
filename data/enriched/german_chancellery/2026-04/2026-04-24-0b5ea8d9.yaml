@@ -20,15 +20,16 @@ extracted:
     defence: Germany actively strengthens Ukraine's military capabilities through
       the supply of advanced weaponry and equipment.
   stances:
-    ukraine:
-      score: 2
-      evidence: Die Bundesregierung hat seit Beginn des russischen Angriffskriegs
-        am 24.02.2022 bilaterale zivile Unterstützung für die Ukraine in Höhe von
-        rund 41 Milliarden Euro geleistet
-    defence:
-      score: 2
-      evidence: militärische Unterstützung in Höhe von circa 55,5 Milliarden Euro
-        geleistet beziehungsweise für die kommenden Jahre bereitgestellt
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die Bundesregierung hat seit Beginn des russischen Angriffskriegs
+          am 24.02.2022 bilaterale zivile Unterstützung für die Ukraine in Höhe von
+          rund 41 Milliarden Euro geleistet
+      defence:
+        score: 2
+        evidence: militärische Unterstützung in Höhe von circa 55,5 Milliarden Euro
+          geleistet beziehungsweise für die kommenden Jahre bereitgestellt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,11 +22,12 @@ extracted:
       to international norms by emphasizing the importance of the NPT framework and
       arms control commitments.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Allies remain firmly committed to arms control, disarmament, and non-proliferation
-        efforts, with a focus on promoting transparency, reducing risk, and enhancing
-        security.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Allies remain firmly committed to arms control, disarmament, and
+          non-proliferation efforts, with a focus on promoting transparency, reducing
+          risk, and enhancing security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

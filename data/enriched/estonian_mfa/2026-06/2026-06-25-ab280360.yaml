@@ -28,13 +28,11 @@ extracted:
     defence: Estonia advocates for using Ukrainian battlefield experience to enhance
       European deterrence and defense capabilities.
   stances:
-    ukraine:
-      score: 1
-      evidence: viiveb 25.–26. juunil Poolas Gdanskis, kus toimub viies Ukraina taastekonverents
-    defence:
-      score: 1
-      evidence: Ukraina kogemused lahinguväljal on Euroopa kaitsevõime tugevdamisel
-        hindamatud
+    baltic:
+      defence:
+        score: 1
+        evidence: Ukraina kogemused lahinguväljal on Euroopa kaitsevõime tugevdamisel
+          hindamatud
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

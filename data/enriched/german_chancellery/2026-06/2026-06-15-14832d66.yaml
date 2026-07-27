@@ -25,10 +25,13 @@ extracted:
     defence: Germany supports collective security through a defensive mission to protect
       commercial shipping and clear mines.
   stances:
-    defence:
-      score: 1
-      evidence: including through a strictly defensive and independent mission to
-        reassure commercial shipping and conduct mine clearance operations
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: including through a strictly defensive and independent mission to
+          reassure commercial shipping and conduct mine clearance operations
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

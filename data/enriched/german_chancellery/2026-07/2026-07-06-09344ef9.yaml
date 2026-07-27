@@ -23,10 +23,13 @@ extracted:
       cooperation through a long-term strategic submarine project with Canada and
       Norway.
   stances:
-    defence:
-      score: 2
-      evidence: kanadische Regierung damit ein starkes Zeichen der transatlantischen
-        und europäischen Zusammenarbeit in der Verteidigungsindustrie
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: kanadische Regierung damit ein starkes Zeichen der transatlantischen
+          und europäischen Zusammenarbeit in der Verteidigungsindustrie
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

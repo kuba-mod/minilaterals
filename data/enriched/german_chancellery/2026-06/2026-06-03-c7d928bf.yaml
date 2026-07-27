@@ -25,14 +25,15 @@ extracted:
     rule_of_law: Germany supports the global promotion of the rule of law and human
       rights through the international broadcasting of Deutsche Welle.
   stances:
-    hybrid:
-      score: 2
-      evidence: Desinformation durch autokratische Akteure entgegenwirkt und so mittelbar
-        auch zur Stärkung europäischer Resilienz beiträgt
-    rule_of_law:
-      score: 1
-      evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
-        Menschenrechte und Rechtsstaatlichkeit in die Welt
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Desinformation durch autokratische Akteure entgegenwirkt und so
+          mittelbar auch zur Stärkung europäischer Resilienz beiträgt
+      rule_of_law:
+        score: 1
+        evidence: Sie trägt unsere Perspektiven auf universelle Werte wie Freiheit,
+          Menschenrechte und Rechtsstaatlichkeit in die Welt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

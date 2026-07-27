@@ -29,17 +29,20 @@ extracted:
     defence: France is actively enhancing defensive capabilities through a new anti-ballistic
       coalition and increased industrial cooperation.
   stances:
-    ukraine:
-      score: 2
-      evidence: ce Sommet a permis de prolonger et d’amplifier les avancées et les
-        convergences obtenues notamment lors du Sommet du G7 à Evian en faveur de
-        la réaffirmation du soutien à la défense de l’Ukraine
-    defence:
-      score: 2
-      evidence: Cette réunion a permis de travailler sur les moyens nécessaires pour
-        permettre à l’Ukraine de se défendre , sur le renforcement de notre coopération
-        industrielle ainsi que sur la mise en commun du savoir-faire de nombreux pays
-        et industries en Europe.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: ce Sommet a permis de prolonger et d’amplifier les avancées et les
+          convergences obtenues notamment lors du Sommet du G7 à Evian en faveur de
+          la réaffirmation du soutien à la défense de l’Ukraine
+      defence: &id001
+        score: 2
+        evidence: Cette réunion a permis de travailler sur les moyens nécessaires
+          pour permettre à l’Ukraine de se défendre , sur le renforcement de notre
+          coopération industrielle ainsi que sur la mise en commun du savoir-faire
+          de nombreux pays et industries en Europe.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

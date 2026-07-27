@@ -28,13 +28,16 @@ extracted:
       of law by promising to investigate irregularities at the Południowy Hospital
       via the prosecutor's office.
   stances:
-    defence:
-      score: 1
-      evidence: będzie także ważnym elementem systemu bezpieczeństwa państwa
-    rule_of_law:
-      score: 1
-      evidence: będziemy wyjaśniali każdy element sprawy Szpitala Południowego i tam,
-        gdzie jest potrzebna prokuratura, ona jest i działa
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: będzie także ważnym elementem systemu bezpieczeństwa państwa
+      rule_of_law:
+        score: 1
+        evidence: będziemy wyjaśniali każdy element sprawy Szpitala Południowego i
+          tam, gdzie jest potrzebna prokuratura, ona jest i działa
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

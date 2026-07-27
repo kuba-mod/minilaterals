@@ -29,13 +29,16 @@ extracted:
     rule_of_law: France rhetorically supports the defense of international law and
       freedom of navigation.
   stances:
-    defence:
-      score: 2
-      evidence: L’adoption définitive de l’actualisation de la loi de programmation
-        militaire traduit la volonté d’aller plus vite, plus loin et plus fort
-    rule_of_law:
-      score: 1
-      evidence: le respect du droit international et la défense de la liberté
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: L’adoption définitive de l’actualisation de la loi de programmation
+          militaire traduit la volonté d’aller plus vite, plus loin et plus fort
+      rule_of_law:
+        score: 1
+        evidence: le respect du droit international et la défense de la liberté
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

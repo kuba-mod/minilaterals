@@ -26,15 +26,16 @@ extracted:
     green_transition: France promotes nuclear energy as a safe and affordable energy
       source to support energy goals.
   stances:
-    ukraine:
-      score: 2
-      evidence: underscored France’s commitment to continuing international mobilization
-        efforts to restore Chernobyl’s New Safe Confinement under France’s presidency
-        of the G7
-    green_transition:
-      score: 1
-      evidence: adoption of two statements on the development of nuclear energy as
-        a safe, affordable energy source and the financing of nuclear energy
+    weimar:
+      ukraine:
+        score: 2
+        evidence: underscored France’s commitment to continuing international mobilization
+          efforts to restore Chernobyl’s New Safe Confinement under France’s presidency
+          of the G7
+      green_transition:
+        score: 1
+        evidence: adoption of two statements on the development of nuclear energy
+          as a safe, affordable energy source and the financing of nuclear energy
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

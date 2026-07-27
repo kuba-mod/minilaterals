@@ -31,16 +31,18 @@ extracted:
     rule_of_law: Poland supports democratic resilience by organizing joint exercises
       focused on countering hostile narratives and information manipulation.
   stances:
-    hybrid:
-      score: 2
-      evidence: As part of the war game, the participants could jointly practice the
-        techniques used to identify and defend against information manipulation and
-        foreign interference (FIMI).
-    rule_of_law:
-      score: 1
-      evidence: The participants learned how to respond to hostile campaigns by developing
-        communication strategies aimed to challenge hostile narratives, and how to
-        cooperate with partners from public administration and the third sector.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: As part of the war game, the participants could jointly practice
+          the techniques used to identify and defend against information manipulation
+          and foreign interference (FIMI).
+      rule_of_law:
+        score: 1
+        evidence: The participants learned how to respond to hostile campaigns by
+          developing communication strategies aimed to challenge hostile narratives,
+          and how to cooperate with partners from public administration and the third
+          sector.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

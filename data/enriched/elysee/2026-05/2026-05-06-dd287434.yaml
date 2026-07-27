@@ -23,11 +23,12 @@ extracted:
     rule_of_law: France is advancing its legal system by rewriting the legislative
       part of the code of criminal procedure to correct inaccuracies and omissions.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: le conseil des ministres a adopté le projet de loi ratifiant l’ordonnance
-        du 19 novembre 2025 qui a réécrit à droit constant la partie législative du
-        code de procédure pénale
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: le conseil des ministres a adopté le projet de loi ratifiant l’ordonnance
+          du 19 novembre 2025 qui a réécrit à droit constant la partie législative
+          du code de procédure pénale
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

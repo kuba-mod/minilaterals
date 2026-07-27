@@ -27,12 +27,13 @@ extracted:
     enlargement: Germany identifies EU enlargement as a key topic for discussion at
       the European Council meeting.
   stances:
-    ukraine:
-      score: 1
-      evidence: fortwährende Unterstützung der Ukraine
-    enlargement:
-      score: 1
-      evidence: das Thema EU-Erweiterung
+    weimar:
+      ukraine:
+        score: 1
+        evidence: fortwährende Unterstützung der Ukraine
+      enlargement:
+        score: 1
+        evidence: das Thema EU-Erweiterung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

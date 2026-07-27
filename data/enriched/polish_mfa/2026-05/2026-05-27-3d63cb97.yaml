@@ -27,15 +27,16 @@ extracted:
     rule_of_law: Poland stresses that maintaining democratic resilience and addressing
       international challenges are crucial for continued cooperation.
   stances:
-    hybrid:
-      score: 1
-      evidence: She also called on the representatives of Polish provinces and German
-        federal states to consider in their activities the security issue and building
-        social resilience, including countering hybrid threats and disinformation.
-    rule_of_law:
-      score: 1
-      evidence: As allies within NATO and partners within the European Union, we are
-        being confronted with a new international situation.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: She also called on the representatives of Polish provinces and German
+          federal states to consider in their activities the security issue and building
+          social resilience, including countering hybrid threats and disinformation.
+      rule_of_law:
+        score: 1
+        evidence: As allies within NATO and partners within the European Union, we
+          are being confronted with a new international situation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

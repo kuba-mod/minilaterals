@@ -18,10 +18,11 @@ extracted:
     green_transition: Germany is actively advancing climate neutrality by passing
       a law to make building heating more climate-friendly.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Bundeskabinett hat das neue Gebäudemodernisierungsgesetz beschlossen.
-        Es dient dazu, Gebäude klimafreundlicher zu heizen
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Bundeskabinett hat das neue Gebäudemodernisierungsgesetz beschlossen.
+          Es dient dazu, Gebäude klimafreundlicher zu heizen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

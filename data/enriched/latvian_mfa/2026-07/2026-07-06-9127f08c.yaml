@@ -21,9 +21,10 @@ extracted:
     defence: Latvia is engaging with NATO allies to address collective security and
       defense coordination.
   stances:
-    defence:
-      score: 1
-      evidence: B. Braže piedalīsies NATO samitā Ankarā
+    baltic:
+      defence:
+        score: 1
+        evidence: B. Braže piedalīsies NATO samitā Ankarā
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

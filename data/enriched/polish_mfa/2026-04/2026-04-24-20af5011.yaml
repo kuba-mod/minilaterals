@@ -24,15 +24,16 @@ extracted:
     rule_of_law: Poland's focus on general foreign policy strategy suggests an alignment
       with the foundational principles of democratic resilience and rule of law.
   stances:
-    hybrid:
-      score: 1
-      evidence: The Q&A session focused on various aspects of Polish foreign policy,
-        including promoting Poland, politics in Central, Eastern, and Southern Europe,
-        and coordinating Polish diplomatic efforts.
-    rule_of_law:
-      score: 1
-      evidence: They emphasised the need to forge positive transatlantic relations
-        that benefit Poland’s national and strategic interest.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: The Q&A session focused on various aspects of Polish foreign policy,
+          including promoting Poland, politics in Central, Eastern, and Southern Europe,
+          and coordinating Polish diplomatic efforts.
+      rule_of_law:
+        score: 1
+        evidence: They emphasised the need to forge positive transatlantic relations
+          that benefit Poland’s national and strategic interest.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

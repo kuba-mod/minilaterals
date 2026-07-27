@@ -37,23 +37,26 @@ extracted:
     rule_of_law: France stresses the importance of maintaining democratic resilience
       and stability through robust defense mechanisms.
   stances:
-    ukraine:
-      score: 1
-      evidence: stressed the importance of continuing our support for Ukraine
-    defence:
-      score: 1
-      evidence: underscored the European commitment to strengthen its own defenses
-        and engage in burden-sharing with the United States
-    hybrid:
-      score: 0
-      evidence: addressed the main announcements that were made with regard to advanced
-        deterrence
-    enlargement:
-      score: 0
-      evidence: noted the key role played by the European Union in this regard
-    rule_of_law:
-      score: 1
-      evidence: All of these efforts serve to shore up the Alliance’s European pillar
+    weimar:
+      ukraine:
+        score: 1
+        evidence: stressed the importance of continuing our support for Ukraine
+      defence: &id001
+        score: 1
+        evidence: underscored the European commitment to strengthen its own defenses
+          and engage in burden-sharing with the United States
+      hybrid:
+        score: 0
+        evidence: addressed the main announcements that were made with regard to advanced
+          deterrence
+      enlargement:
+        score: 0
+        evidence: noted the key role played by the European Union in this regard
+      rule_of_law:
+        score: 1
+        evidence: All of these efforts serve to shore up the Alliance’s European pillar
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

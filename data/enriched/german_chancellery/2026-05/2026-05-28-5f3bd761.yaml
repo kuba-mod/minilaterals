@@ -22,12 +22,13 @@ extracted:
     rule_of_law: Germany rhetorically affirms the importance of shared democratic
       values as a basis for its partnership with Canada.
   stances:
-    defence:
-      score: 2
-      evidence: Die Rüstungszusammenarbeit mit Kanada soll ausgeweitet werden.
-    rule_of_law:
-      score: 1
-      evidence: Beide Länder teilen demokratische Werte
+    weimar:
+      defence:
+        score: 2
+        evidence: Die Rüstungszusammenarbeit mit Kanada soll ausgeweitet werden.
+      rule_of_law:
+        score: 1
+        evidence: Beide Länder teilen demokratische Werte
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

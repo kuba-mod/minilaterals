@@ -32,23 +32,26 @@ extracted:
     rule_of_law: Poland supports upholding international law by maintaining sanctions
       against Russia and condemning violations of ceasefires in other regions.
   stances:
-    ukraine:
-      score: 2
-      evidence: He called for prompt launching of the EUR 90 billion loan for Ukraine,
-        which is necessary to strengthen Ukraine’s Armed Forces and keep the Ukrainian
-        state operational.
-    enlargement:
-      score: -1
-      evidence: whilst emphasising that enlargement must remain a process based on
-        substantive grounds and taking into account the vulnerabilities of the member
-        states (including those relating to agriculture and transport).
-    rule_of_law:
-      score: 1
-      evidence: The deputy head of Polish diplomacy called for the urgent opening
-        of the first negotiating cluster with Ukraine (Fundamentals), whilst emphasising
-        that enlargement must remain a process based on substantive grounds and taking
-        into account the vulnerabilities of the member states (including those relating
-        to agriculture and transport).
+    weimar:
+      ukraine:
+        score: 2
+        evidence: He called for prompt launching of the EUR 90 billion loan for Ukraine,
+          which is necessary to strengthen Ukraine’s Armed Forces and keep the Ukrainian
+          state operational.
+      enlargement: &id001
+        score: -1
+        evidence: whilst emphasising that enlargement must remain a process based
+          on substantive grounds and taking into account the vulnerabilities of the
+          member states (including those relating to agriculture and transport).
+      rule_of_law:
+        score: 1
+        evidence: The deputy head of Polish diplomacy called for the urgent opening
+          of the first negotiating cluster with Ukraine (Fundamentals), whilst emphasising
+          that enlargement must remain a process based on substantive grounds and
+          taking into account the vulnerabilities of the member states (including
+          those relating to agriculture and transport).
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

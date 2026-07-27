@@ -17,11 +17,12 @@ extracted:
     defence: Germany is allocating government contracts to the defense sector to stimulate
       investment and economic recovery.
   stances:
-    defence:
-      score: 1
-      evidence: Staatsaufträge – insbesondere in den Bereichen Infrastruktur und Verteidigung
-        – werden zu Anlageinvestitionen und zur gesamtgesellschaftlichen Belebung
-        beitragen.
+    weimar:
+      defence:
+        score: 1
+        evidence: Staatsaufträge – insbesondere in den Bereichen Infrastruktur und
+          Verteidigung – werden zu Anlageinvestitionen und zur gesamtgesellschaftlichen
+          Belebung beitragen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

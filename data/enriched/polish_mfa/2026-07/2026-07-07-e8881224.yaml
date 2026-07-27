@@ -38,22 +38,26 @@ extracted:
     rule_of_law: Poland stresses the importance of learning from conflicts like the
       Russo-Ukrainian war to build a resilient defense structure.
   stances:
-    defence:
-      score: 2
-      evidence: It’s only the SAFE loan that provides us with the means to invest
-        in drones and anti-drone systems.
-    hybrid:
-      score: 1
-      evidence: 'The race is on: every few months either Ukraine or Russia gains the
-        upper hand in new technologies'
-    enlargement:
-      score: 0
-      evidence: The imbalance of power between us and the western Europe is much smaller
-        today than in the past.
-    rule_of_law:
-      score: 1
-      evidence: I think that the next war will be won by those who will learn the
-        lesson from the Russo–Ukrainian war.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: It’s only the SAFE loan that provides us with the means to invest
+          in drones and anti-drone systems.
+      hybrid:
+        score: 1
+        evidence: 'The race is on: every few months either Ukraine or Russia gains
+          the upper hand in new technologies'
+      enlargement: &id002
+        score: 0
+        evidence: The imbalance of power between us and the western Europe is much
+          smaller today than in the past.
+      rule_of_law:
+        score: 1
+        evidence: I think that the next war will be won by those who will learn the
+          lesson from the Russo–Ukrainian war.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

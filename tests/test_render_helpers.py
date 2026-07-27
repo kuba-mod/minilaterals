@@ -26,7 +26,7 @@ def _stance_event(source, date, score, area="enlargement", *, title="t", positio
         "date": date,
         "title": title,
         "source_url": f"https://example.test/{date}",
-        "extracted": {"position": position, "stances": {area: {"score": score, "evidence": evidence}}},
+        "extracted": {"position": position, "stances": {"weimar": {area: {"score": score, "evidence": evidence}}}},
     }
 
 

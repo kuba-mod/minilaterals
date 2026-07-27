@@ -21,10 +21,11 @@ extracted:
     hybrid: Latvia is actively investing in cybersecurity infrastructure to protect
       critical institutions during high-level diplomatic events.
   stances:
-    hybrid:
-      score: 2
-      evidence: lēma par 2,2 miljonu eiro pārdali Latvijas Nacionālajai bibliotēkai,
-        lai nodrošinātu tās infrastruktūras… drošības un kiberdrošības
+    baltic:
+      hybrid:
+        score: 2
+        evidence: lēma par 2,2 miljonu eiro pārdali Latvijas Nacionālajai bibliotēkai,
+          lai nodrošinātu tās infrastruktūras… drošības un kiberdrošības
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

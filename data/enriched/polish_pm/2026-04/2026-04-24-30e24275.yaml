@@ -28,17 +28,18 @@ extracted:
     rule_of_law: Poland asserts that democratic resilience and the restoration of
       trust between member states are essential for security.
   stances:
-    ukraine:
-      score: 1
-      evidence: Rozmowa z prezydentem Zełenskim o Ukrainie i Rosji była nadzwyczajnie
-        szczera.
-    defence:
-      score: 2
-      evidence: Z kwotą w wysokości 43,7 mld euro Polska będzie największym beneficjentem
-        programu.
-    rule_of_law:
-      score: 1
-      evidence: Wybory na Węgrzech są sygnałem, że demokracja nie przegrywa.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Rozmowa z prezydentem Zełenskim o Ukrainie i Rosji była nadzwyczajnie
+          szczera.
+      defence:
+        score: 2
+        evidence: Z kwotą w wysokości 43,7 mld euro Polska będzie największym beneficjentem
+          programu.
+      rule_of_law:
+        score: 1
+        evidence: Wybory na Węgrzech są sygnałem, że demokracja nie przegrywa.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Germany supports partners in the region who commit to democracy and
       the rule of law as part of a values-based international order.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: die meisten zu Demokratie und Rechtsstaatlichkeit, zu Marktwirtschaft
-        und Sozialstaat, zu einer multilateralen, wertebasierten internationalen Ordnung
-        bekennen
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: die meisten zu Demokratie und Rechtsstaatlichkeit, zu Marktwirtschaft
+          und Sozialstaat, zu einer multilateralen, wertebasierten internationalen
+          Ordnung bekennen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -27,15 +27,16 @@ extracted:
       by creating rapid judicial response mechanisms and increasing penalties for
       electoral fraud.
   stances:
-    hybrid:
-      score: 2
-      evidence: le ministre de l’intérieur a présenté un projet de loi visant à renforcer
-        la protection de la vie démocratique
-    rule_of_law:
-      score: 2
-      evidence: doter la justice et les autorités compétentes d'outils efficaces et
-        proportionnés pour lutter contre la manipulation du débat public et préserver
-        la sincérité des scrutins
+    weimar:
+      hybrid:
+        score: 2
+        evidence: le ministre de l’intérieur a présenté un projet de loi visant à
+          renforcer la protection de la vie démocratique
+      rule_of_law:
+        score: 2
+        evidence: doter la justice et les autorités compétentes d'outils efficaces
+          et proportionnés pour lutter contre la manipulation du débat public et préserver
+          la sincérité des scrutins
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

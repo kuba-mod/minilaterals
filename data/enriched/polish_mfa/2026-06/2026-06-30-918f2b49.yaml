@@ -26,15 +26,18 @@ extracted:
       Recovery Conference.
     enlargement: Poland is engaged in discussions regarding the EU enlargement process.
   stances:
-    ukraine:
-      score: 1
-      evidence: The interlocutors agreed that arrangements made during the event are
-        crucial for Ukraine.
-    enlargement:
-      score: 0
-      evidence: The talks also focused on major European Union topics, including the
-        ongoing work on the future Multiannual Financial Framework and the EU enlargement
-        process.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: The interlocutors agreed that arrangements made during the event
+          are crucial for Ukraine.
+      enlargement: &id001
+        score: 0
+        evidence: The talks also focused on major European Union topics, including
+          the ongoing work on the future Multiannual Financial Framework and the EU
+          enlargement process.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -20,10 +20,11 @@ extracted:
     rule_of_law: France emphasizes adherence to international law regarding humanitarian
       operations and worker protection.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: with all parties involved acting in compliance with international
-        law.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: with all parties involved acting in compliance with international
+          law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

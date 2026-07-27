@@ -19,10 +19,13 @@ extracted:
     defence: France actively deployed military rescue assets to support a regional
       partner in a crisis.
   stances:
-    defence:
-      score: 2
-      evidence: France sent support in the form of a 15-strong specialist team of
-        divers and rescue workers from the armed forces stationed in French Guiana
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: France sent support in the form of a 15-strong specialist team of
+          divers and rescue workers from the armed forces stationed in French Guiana
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

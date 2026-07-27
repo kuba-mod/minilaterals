@@ -24,12 +24,10 @@ extracted:
       Ukraine.
     hybrid: Estonia rhetorically supports coordinated action against hybrid threats.
   stances:
-    ukraine:
-      score: 1
-      evidence: Venemaa jätkuv agressioon Ukraina vastu
-    hybrid:
-      score: 1
-      evidence: hübriidohud
+    baltic:
+      hybrid:
+        score: 1
+        evidence: hübriidohud
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

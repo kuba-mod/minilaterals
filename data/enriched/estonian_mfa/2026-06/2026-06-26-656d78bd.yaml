@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: Estonia actively supports the international legal framework for women's
       rights by securing a seat on a key UN human rights body.
-  stances:
-    rule_of_law:
-      score: 2
-      evidence: Täna, 26. juunil valiti New Yorgis toimunud valimistel Marianne Mikko
-        uueks ametiajaks ÜRO naiste õiguste komitee (CEDAW) liikmeks.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

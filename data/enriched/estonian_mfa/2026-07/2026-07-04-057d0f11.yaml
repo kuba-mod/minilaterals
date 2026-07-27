@@ -20,11 +20,7 @@ extracted:
   positions:
     rule_of_law: Estonia rhetorically supports the ideals of freedom and the right
       to shape one's own future as foundational to its relations with the US.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: Ameerika Ühendriikide ajalugu on olnud alati tihedalt seotud vabaduse
-        ideaaliga ja veendumusega, et igaühel peab olema võimalus kujundada oma tulevikku
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

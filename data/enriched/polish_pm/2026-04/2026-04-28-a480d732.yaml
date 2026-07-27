@@ -19,11 +19,12 @@ extracted:
       rights by securing the release of a political prisoner and pledging continued
       support for others.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Polska będzie kontynuować działania na rzecz uwolnienia wszystkich
-        więźniów politycznych na Białorusi oraz wspierać osoby represjonowane przez
-        tamtejszy reżim.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Polska będzie kontynuować działania na rzecz uwolnienia wszystkich
+          więźniów politycznych na Białorusi oraz wspierać osoby represjonowane przez
+          tamtejszy reżim.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

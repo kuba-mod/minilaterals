@@ -19,10 +19,11 @@ extracted:
       promoting diverse heating technologies and investing in modern gas power plants
       to ensure supply stability.
   stances:
-    green_transition:
-      score: 2
-      evidence: Der Trend zu klimaneutralen Techniken ist ungebrochen, auch das neue
-        Gesetz wird ihn nicht brechen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Der Trend zu klimaneutralen Techniken ist ungebrochen, auch das
+          neue Gesetz wird ihn nicht brechen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

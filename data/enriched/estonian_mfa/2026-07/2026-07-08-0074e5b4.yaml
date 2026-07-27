@@ -24,14 +24,11 @@ extracted:
     hybrid: Estonia is taking active diplomatic action against Russian disinformation
       targeting the Baltic region.
   stances:
-    ukraine:
-      score: 1
-      evidence: väljendada karmi hukkamõistu Venemaa viimase nädala drooni- ja raketirünnakutele
-        Ukrainas
-    hybrid:
-      score: 2
-      evidence: edastas välisministeerium asjurile noodi seoses järjepideva Eesti
-        ja teiste Balti riikide vastase väärinfo levitamisega
+    baltic:
+      hybrid:
+        score: 2
+        evidence: edastas välisministeerium asjurile noodi seoses järjepideva Eesti
+          ja teiste Balti riikide vastase väärinfo levitamisega
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

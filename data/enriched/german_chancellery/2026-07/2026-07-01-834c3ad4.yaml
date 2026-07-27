@@ -19,10 +19,13 @@ extracted:
     defence: Germany is strengthening its national defense readiness and supply chains
       for its own and allied forces to align with modern security threats.
   stances:
-    defence:
-      score: 2
-      evidence: Die Eckpunkte schaffen eine wichtige Grundlage, um die Verzahnung
-        der militärischen und der zivilen Seite zu stärken.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Die Eckpunkte schaffen eine wichtige Grundlage, um die Verzahnung
+          der militärischen und der zivilen Seite zu stärken.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -38,28 +38,32 @@ extracted:
     rule_of_law: Poland emphasizes that maintaining democratic understanding and stability
       is vital through people-to-people contacts and humanitarian aid.
   stances:
-    ukraine:
-      score: 2
-      evidence: Deputy Foreign Minister Bosacki confirmed that Poland can offer concrete
-        support for Kyiv, referring to recent actions of the Government Agency for
-        Strategic Reserves, and the “Warmth from Poland for Kyiv” campaign.
-    defence:
-      score: 2
-      evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
-        military cooperation, including cooperation in the unmanned aerial systems
-        (drones) sector.
-    hybrid:
-      score: 1
-      evidence: Deputy foreign ministers discussed current regional challenges and
-        the need to continuously put international pressure on Russia.
-    enlargement:
-      score: 0
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: The ministers stressed the strategic importance of Polish–Ukrainian
-        partnership and Poland’s role as a key ally of Ukraine—both in the security
-        context and as a provider of humanitarian, military, and logistical support.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deputy Foreign Minister Bosacki confirmed that Poland can offer
+          concrete support for Kyiv, referring to recent actions of the Government
+          Agency for Strategic Reserves, and the “Warmth from Poland for Kyiv” campaign.
+      defence: &id001
+        score: 2
+        evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
+          military cooperation, including cooperation in the unmanned aerial systems
+          (drones) sector.
+      hybrid:
+        score: 1
+        evidence: Deputy foreign ministers discussed current regional challenges and
+          the need to continuously put international pressure on Russia.
+      enlargement: &id002
+        score: 0
+        evidence: ''
+      rule_of_law:
+        score: 1
+        evidence: The ministers stressed the strategic importance of Polish–Ukrainian
+          partnership and Poland’s role as a key ally of Ukraine—both in the security
+          context and as a provider of humanitarian, military, and logistical support.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

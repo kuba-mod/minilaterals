@@ -25,10 +25,11 @@ extracted:
       ensuring security by leading a global initiative for responsible and transparent
       AI governance.
   stances:
-    hybrid:
-      score: 2
-      evidence: ÜRO esimene ülemaailmne tehisaru haldamise dialoog (Global Dialogue
-        on AI Governance), mida juhivad Eesti ja El Salvador
+    baltic:
+      hybrid:
+        score: 2
+        evidence: ÜRO esimene ülemaailmne tehisaru haldamise dialoog (Global Dialogue
+          on AI Governance), mida juhivad Eesti ja El Salvador
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -20,9 +20,12 @@ extracted:
     defence: Germany emphasizes the aerospace industry's critical role in ensuring
       national and alliance defense capabilities.
   stances:
-    defence:
-      score: 1
-      evidence: unsere Souveränität und unsere Fähigkeit zur Landes- und Bündnisverteidigung
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: unsere Souveränität und unsere Fähigkeit zur Landes- und Bündnisverteidigung
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

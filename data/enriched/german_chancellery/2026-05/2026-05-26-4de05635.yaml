@@ -22,14 +22,15 @@ extracted:
     hybrid: Germany is actively implementing a comprehensive security architecture
       to protect critical infrastructure and companies from cyber and hybrid threats.
   stances:
-    ukraine:
-      score: 1
-      evidence: zudem markiert der russische Angriff auf die Ukraine eine Zeitenwende
-        – auch in der Cyber sicherheitspolitik
-    hybrid:
-      score: 2
-      evidence: Im Fokus steht dabei insbesondere der Schutz vor physischen, digitalen
-        und hybriden Bedrohungen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: zudem markiert der russische Angriff auf die Ukraine eine Zeitenwende
+          – auch in der Cyber sicherheitspolitik
+      hybrid:
+        score: 2
+        evidence: Im Fokus steht dabei insbesondere der Schutz vor physischen, digitalen
+          und hybriden Bedrohungen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

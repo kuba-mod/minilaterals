@@ -21,10 +21,13 @@ extracted:
     defence: Germany rhetorically supports a stronger European contribution to NATO
       security to maintain the transatlantic alliance.
   stances:
-    defence:
-      score: 1
-      evidence: Deutschland mehr Verantwortung für die Sicherheit im euroatlantischen
-        Raum übernimmt
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: Deutschland mehr Verantwortung für die Sicherheit im euroatlantischen
+          Raum übernimmt
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

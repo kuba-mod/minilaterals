@@ -20,11 +20,7 @@ extracted:
   positions:
     rule_of_law: The United Kingdom supports the promotion of democratic resilience
       and the rule of law in the region.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: deteriorating security and humanitarian situation across West Africa
-        and the Sahel
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

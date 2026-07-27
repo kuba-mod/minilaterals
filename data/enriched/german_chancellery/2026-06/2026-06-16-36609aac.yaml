@@ -21,11 +21,12 @@ extracted:
     ukraine: Germany supports the pursuit of peace in Ukraine, highlighting that previous
       European and German aid has created a window for this opportunity.
   stances:
-    ukraine:
-      score: 1
-      evidence: Die „ nicht zuletzt dank massiver europäischer und auch deutscher
-        Hilfe“ bessere Lage in der Ukraine eröffne „vielleicht erstmals" die Chance
-        auf einen Frieden.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die „ nicht zuletzt dank massiver europäischer und auch deutscher
+          Hilfe“ bessere Lage in der Ukraine eröffne „vielleicht erstmals" die Chance
+          auf einen Frieden.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

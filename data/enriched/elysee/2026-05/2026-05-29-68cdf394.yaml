@@ -23,11 +23,12 @@ extracted:
     green_transition: France supports European industrial sovereignty and reindustrialization,
       which aligns with the broader goals of a clean industrial deal.
   stances:
-    green_transition:
-      score: 1
-      evidence: illustre la coopération économique franco-allemande ainsi que les
-        ambitions européennes en matière de réindustrialisation et de souveraineté
-        industrielle
+    weimar:
+      green_transition:
+        score: 1
+        evidence: illustre la coopération économique franco-allemande ainsi que les
+          ambitions européennes en matière de réindustrialisation et de souveraineté
+          industrielle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

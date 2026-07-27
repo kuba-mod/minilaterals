@@ -78,16 +78,13 @@ def test_extract_writes_enriched_sidecar(data_tree):
             "topics": ["ukraine"],
             "location": "Berlin",
             "position": "Germany reaffirms support for Ukraine.",
-            "positions_by_topic": {
-                "ukraine": {
-                    "position": "Germany backs long-term aid to Ukraine.",
-                    "stance": 2,
-                    "evidence": "announced further aid",
-                }
-            },
+            "positions_by_topic": {"ukraine": {"position": "Germany backs long-term aid to Ukraine."}},
         }
     )
-    provider = FakeProvider([response])
+    # Second call: stances, rated against the Weimar Triangle's own goals once
+    # relevance is known.
+    stance_response = json.dumps({"ukraine": {"stance": 2, "evidence": "announced further aid"}})
+    provider = FakeProvider([response, stance_response])
 
     assert enrich._extract(provider, raw) is True
 
@@ -96,8 +93,8 @@ def test_extract_writes_enriched_sidecar(data_tree):
     written = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
     extracted = written["extracted"]
     assert extracted["positions"]["ukraine"] == "Germany backs long-term aid to Ukraine."
-    assert extracted["stances"]["ukraine"]["score"] == 2
-    assert extracted["stances"]["ukraine"]["evidence"] == "announced further aid"
+    assert extracted["stances"]["weimar"]["ukraine"]["score"] == 2
+    assert extracted["stances"]["weimar"]["ukraine"]["evidence"] == "announced further aid"
     # positions_by_topic is reshaped away.
     assert "positions_by_topic" not in extracted
     # Classification is LLM-derived: issue_areas come from topics, and the MFA
@@ -179,15 +176,16 @@ def test_extract_retries_on_malformed_actors_then_succeeds(data_tree):
             "topics": ["ukraine"],
             "actors": ["FR"],
             "position": "France reaffirms support for Ukraine.",
-            "positions_by_topic": {
-                "ukraine": {"position": "France backs Ukraine.", "stance": 1, "evidence": "reaffirmed support"}
-            },
+            "positions_by_topic": {"ukraine": {"position": "France backs Ukraine."}},
         }
     )
-    provider = FakeProvider([bad_response, good_response])
+    stance_response = json.dumps({"ukraine": {"stance": 1, "evidence": "reaffirmed support"}})
+    provider = FakeProvider([bad_response, good_response, stance_response])
 
     assert enrich._extract(provider, raw) is True
-    assert len(provider.prompts) == 2
+    # Two extraction attempts (the first response was malformed), then one
+    # stance call for the single relevant grouping.
+    assert len(provider.prompts) == 3
 
     enriched_path = enriched_dir / raw.relative_to(events_dir)
     written = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
@@ -227,4 +225,4 @@ def test_backfill_stances_adds_ratings(data_tree):
 
     assert enrich._backfill_stances(FakeProvider([response]), enriched_path) is True
     updated = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
-    assert updated["extracted"]["stances"]["ukraine"]["score"] == 1
+    assert updated["extracted"]["stances"]["weimar"]["ukraine"]["score"] == 1

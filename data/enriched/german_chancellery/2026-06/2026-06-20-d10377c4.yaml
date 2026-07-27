@@ -20,10 +20,13 @@ extracted:
     defence: Germany supports the goal of collective security and deterrence by asserting
       the need for a capable national defense.
   stances:
-    defence:
-      score: 1
-      evidence: Deutschland müsse in der Lage sein, sich zu verteidigen. „Das nennt
-        man Abschreckung“, so der Regierungssprecher.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: Deutschland müsse in der Lage sein, sich zu verteidigen. „Das nennt
+          man Abschreckung“, so der Regierungssprecher.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

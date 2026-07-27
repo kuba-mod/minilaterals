@@ -27,14 +27,17 @@ extracted:
     defence: Poland is actively advancing European security by hosting joint military
       exercises and considering participation in an anti-ballistic defense coalition.
   stances:
-    ukraine:
-      score: 1
-      evidence: Polska pozostanie aktywnie zaangażowana we wspieranie Ukrainy we współpracy
-        z sojusznikami z NATO
-    defence:
-      score: 2
-      evidence: pierwsze ćwiczenia, w których wezmą udział wojska brytyjskie i francuskie,
-        odbędą się jesienią tego roku w Polsce
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska pozostanie aktywnie zaangażowana we wspieranie Ukrainy we
+          współpracy z sojusznikami z NATO
+      defence: &id001
+        score: 2
+        evidence: pierwsze ćwiczenia, w których wezmą udział wojska brytyjskie i francuskie,
+          odbędą się jesienią tego roku w Polsce
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

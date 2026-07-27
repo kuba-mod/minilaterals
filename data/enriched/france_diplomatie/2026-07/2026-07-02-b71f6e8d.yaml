@@ -21,10 +21,11 @@ extracted:
     ukraine: France discussed the ongoing situation in Ukraine following constructive
       talks at the G7 summit.
   stances:
-    ukraine:
-      score: 0
-      evidence: Together they discussed the situation in Ukraine in the wake of the
-        constructive talks held at the G7 summit in Evian.
+    weimar:
+      ukraine:
+        score: 0
+        evidence: Together they discussed the situation in Ukraine in the wake of
+          the constructive talks held at the G7 summit in Evian.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

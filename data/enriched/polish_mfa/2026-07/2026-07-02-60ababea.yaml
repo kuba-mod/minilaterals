@@ -22,10 +22,11 @@ extracted:
     hybrid: Poland aims to address deficits in historical knowledge and literature
       in Germany, which relates to combating disinformation and historical inaccuracies.
   stances:
-    hybrid:
-      score: 1
-      evidence: Poważnym wyzwaniem pozostają braki wiedzy w niemieckim społeczeństwie
-        na temat historii II wojny światowej w Europie Środkowej i Wschodniej
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Poważnym wyzwaniem pozostają braki wiedzy w niemieckim społeczeństwie
+          na temat historii II wojny światowej w Europie Środkowej i Wschodniej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -17,10 +17,11 @@ extracted:
   positions:
     defence: Germany intends to exchange views on foreign and security policy questions.
   stances:
-    defence:
-      score: 0
-      evidence: zu europapolitischen sowie außen- und sicherheitspolitischen Fragen
-        austauschen
+    weimar:
+      defence:
+        score: 0
+        evidence: zu europapolitischen sowie außen- und sicherheitspolitischen Fragen
+          austauschen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

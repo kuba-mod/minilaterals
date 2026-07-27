@@ -22,12 +22,13 @@ extracted:
     enlargement: Poland supports Ukraine's EU accession process and the implementation
       of necessary reforms.
   stances:
-    ukraine:
-      score: 2
-      evidence: my jesteśmy gotowi nadal ją wspierać
-    enlargement:
-      score: 1
-      evidence: ministrowie rozmawiali o procesie akcesji Ukrainy do Unii Europejskiej
+    weimar:
+      ukraine:
+        score: 2
+        evidence: my jesteśmy gotowi nadal ją wspierać
+      enlargement:
+        score: 1
+        evidence: ministrowie rozmawiali o procesie akcesji Ukrainy do Unii Europejskiej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

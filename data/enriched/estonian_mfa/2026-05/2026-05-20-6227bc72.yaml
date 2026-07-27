@@ -25,10 +25,11 @@ extracted:
     defence: Estonia supports strengthening regional security and transatlantic relations
       in cooperation with Canada and Baltic partners.
   stances:
-    defence:
-      score: 1
-      evidence: arutati Balti riikide ja Kanada koostöö tugevdamist, regionaalset
-        julgeolekut ja transatlantilisi suhteid
+    baltic:
+      defence:
+        score: 1
+        evidence: arutati Balti riikide ja Kanada koostöö tugevdamist, regionaalset
+          julgeolekut ja transatlantilisi suhteid
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

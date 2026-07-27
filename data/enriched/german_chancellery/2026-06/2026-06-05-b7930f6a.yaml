@@ -24,11 +24,12 @@ extracted:
       to simplify and accelerate accession negotiations and granting observer status
       to candidate states.
   stances:
-    enlargement:
-      score: 2
-      evidence: Deutschland und Frankreich hatten vor dem Gipfel gemeinsam Vorschläge
-        vorgelegt, wie die Beitrittsverhandlungen vereinfacht und beschleunigt werden
-        könnten.
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Deutschland und Frankreich hatten vor dem Gipfel gemeinsam Vorschläge
+          vorgelegt, wie die Beitrittsverhandlungen vereinfacht und beschleunigt werden
+          könnten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

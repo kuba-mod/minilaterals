@@ -37,25 +37,28 @@ extracted:
     rule_of_law: Germany stresses the importance of democratic resilience and rule
       of law by linking it to defending Europe's freedom against external threats.
   stances:
-    ukraine:
-      score: 1
-      evidence: We’re continuing to support Ukraine’s battle to defend itself with
-        substantial economic and military resources as it is also defending our freedom
-        at the end of the day.
-    defence:
-      score: 1
-      evidence: We’re currently not keeping pace with developments in AI and the digital
-        economy.
-    hybrid:
-      score: 1
-      evidence: China’s trade and industrial policy is distorting global markets to
-        a massive degree. And this approach is set to intensify.
-    enlargement:
-      score: 0
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: The freedom of Europe.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: We’re continuing to support Ukraine’s battle to defend itself with
+          substantial economic and military resources as it is also defending our
+          freedom at the end of the day.
+      defence: &id001
+        score: 1
+        evidence: We’re currently not keeping pace with developments in AI and the
+          digital economy.
+      hybrid:
+        score: 1
+        evidence: China’s trade and industrial policy is distorting global markets
+          to a massive degree. And this approach is set to intensify.
+      enlargement:
+        score: 0
+        evidence: ''
+      rule_of_law:
+        score: 1
+        evidence: The freedom of Europe.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

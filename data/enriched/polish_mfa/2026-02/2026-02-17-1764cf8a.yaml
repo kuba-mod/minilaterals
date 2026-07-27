@@ -28,15 +28,16 @@ extracted:
     rule_of_law: Poland highlights that European values, including human rights and
       civil liberties, are central to the bilateral cooperation with France.
   stances:
-    hybrid:
-      score: 2
-      evidence: 'Next year’s programme will address issues crucial for today’s Europe:
-        countering misinformation, opposing the revival of totalitarian ideas, and
-        defending human rights and civil liberties.'
-    rule_of_law:
-      score: 2
-      evidence: In the Poland–France Cultural Season 2027, European values are not
-        merely declared but experienced and co-created.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: 'Next year’s programme will address issues crucial for today’s Europe:
+          countering misinformation, opposing the revival of totalitarian ideas, and
+          defending human rights and civil liberties.'
+      rule_of_law:
+        score: 2
+        evidence: In the Poland–France Cultural Season 2027, European values are not
+          merely declared but experienced and co-created.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

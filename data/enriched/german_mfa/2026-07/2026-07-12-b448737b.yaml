@@ -21,10 +21,13 @@ extracted:
       Gulf region by condemning aggression and advocating for the rule of international
       law.
   stances:
-    defence:
-      score: 1
-      evidence: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt
-        in der Straße von Hormus und auf Länder in der Region
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt
+          in der Straße von Hormus und auf Länder in der Region
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

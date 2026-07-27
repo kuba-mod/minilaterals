@@ -21,10 +21,7 @@ extracted:
   positions:
     ukraine: Estonia discussed Russia's ongoing aggression in Ukraine, aligning with
       the goal of addressing the conflict.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Venemaa jätkuv agressioon Ukrainas
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

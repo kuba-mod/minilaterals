@@ -20,9 +20,10 @@ extracted:
     rule_of_law: Poland emphasizes the importance of adhering to the rule of law and
       peaceful coexistence in regional conflicts.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: take the path of the rule of law and peaceful coexistence.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: take the path of the rule of law and peaceful coexistence.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

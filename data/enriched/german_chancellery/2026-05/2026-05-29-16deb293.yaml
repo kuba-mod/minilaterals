@@ -21,12 +21,13 @@ extracted:
     defence: Germany emphasizes the importance of security within the Euro-Atlantic
       framework.
   stances:
-    ukraine:
-      score: 1
-      evidence: die weitere Unterstützung der Ukraine
-    defence:
-      score: 1
-      evidence: die euro-atlantische Sicherheit
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die weitere Unterstützung der Ukraine
+      defence:
+        score: 1
+        evidence: die euro-atlantische Sicherheit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

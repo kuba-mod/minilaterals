@@ -24,12 +24,10 @@ extracted:
     defence: Estonia is analyzing how peace negotiations affect deterrence and reassurance
       measures.
   stances:
-    ukraine:
-      score: 1
-      evidence: keskendus Ukraina ja Venemaa rahukõneluste mõjule Euroopa julgeolekule
-    defence:
-      score: 1
-      evidence: 'Russia-Ukraine Peace Talks: Impact on Reassurance and Deterrence?'
+    baltic:
+      defence:
+        score: 1
+        evidence: 'Russia-Ukraine Peace Talks: Impact on Reassurance and Deterrence?'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

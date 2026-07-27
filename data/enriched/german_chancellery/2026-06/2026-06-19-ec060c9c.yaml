@@ -21,10 +21,11 @@ extracted:
       a ruling by the European Court of Justice, aligning with the principle of the
       rule of law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Das schafft Rechtssicherheit für Verbraucher und Verbraucher sowie
-        Unternehmen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Das schafft Rechtssicherheit für Verbraucher und Verbraucher sowie
+          Unternehmen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

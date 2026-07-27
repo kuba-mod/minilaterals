@@ -33,23 +33,26 @@ extracted:
     rule_of_law: Poland strongly condemns transnational terrorism and the crossing
       of international borders by any hostile force.
   stances:
-    ukraine:
-      score: 1
-      evidence: He also reported on the current state of Russia’s war against Ukraine
-        and underlined the importance of Europe’s commitment to this cause.
-    defence:
-      score: 0
-      evidence: ''
-    hybrid:
-      score: 1
-      evidence: Poland has been faced with Russia-inspired attacks on critical infrastructure,
-        including railway tracks, among other threats - said Deputy Prime Minister
-        Radosław Sikorski.
-    rule_of_law:
-      score: 1
-      evidence: Both India and Poland are victims of transnational terrorism, and
-        therefore we condemn the crossing of international borders, either by tanks
-        or by terrorists, in the strongest terms.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: He also reported on the current state of Russia’s war against Ukraine
+          and underlined the importance of Europe’s commitment to this cause.
+      defence: &id001
+        score: 0
+        evidence: ''
+      hybrid:
+        score: 1
+        evidence: Poland has been faced with Russia-inspired attacks on critical infrastructure,
+          including railway tracks, among other threats - said Deputy Prime Minister
+          Radosław Sikorski.
+      rule_of_law:
+        score: 1
+        evidence: Both India and Poland are victims of transnational terrorism, and
+          therefore we condemn the crossing of international borders, either by tanks
+          or by terrorists, in the strongest terms.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -24,12 +24,15 @@ extracted:
     defence: France is actively deepening its defense cooperation with Indonesia as
       part of a strategic partnership.
   stances:
-    ukraine:
-      score: 1
-      evidence: les efforts pour soutenir l’Ukraine
-    defence:
-      score: 2
-      evidence: approfondir la coopération dans les domaines de la défense
+    weimar:
+      ukraine:
+        score: 1
+        evidence: les efforts pour soutenir l’Ukraine
+      defence: &id001
+        score: 2
+        evidence: approfondir la coopération dans les domaines de la défense
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,11 +21,12 @@ extracted:
     ukraine: Poland stresses the critical importance of maintaining strong bilateral
       relations and solidarity in the face of Russian aggression.
   stances:
-    ukraine:
-      score: 1
-      evidence: W obliczu trwającej agresywnej wojny Rosji przeciw Ukrainie i zagrożenia
-        dla bezpieczeństwa całego regionu, kluczowe dla obu naszych państw i narodów
-        relacje polsko-ukraińskie nie powinny stawać się zakładnikiem trudnej historii.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: W obliczu trwającej agresywnej wojny Rosji przeciw Ukrainie i zagrożenia
+          dla bezpieczeństwa całego regionu, kluczowe dla obu naszych państw i narodów
+          relacje polsko-ukraińskie nie powinny stawać się zakładnikiem trudnej historii.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

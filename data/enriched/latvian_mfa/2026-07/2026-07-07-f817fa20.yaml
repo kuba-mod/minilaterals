@@ -20,9 +20,10 @@ extracted:
     hybrid: Latvia actively counters Russian disinformation campaigns by formally
       protesting and rejecting false claims.
   stances:
-    hybrid:
-      score: 2
-      evidence: noraidot Krievijas melus
+    baltic:
+      hybrid:
+        score: 2
+        evidence: noraidot Krievijas melus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

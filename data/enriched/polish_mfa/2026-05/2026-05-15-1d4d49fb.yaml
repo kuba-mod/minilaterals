@@ -22,10 +22,11 @@ extracted:
     ukraine: Poland emphasizes the importance of maintaining investments and connections
       with neighbors during difficult times, referencing the embassy in Minsk.
   stances:
-    ukraine:
-      score: 1
-      evidence: Sąsiedztwo, nawet w trudnych czasach, wymaga inwestycji, a architektura
-        może być tą nicią, która łączy
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Sąsiedztwo, nawet w trudnych czasach, wymaga inwestycji, a architektura
+          może być tą nicią, która łączy
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

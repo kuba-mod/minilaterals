@@ -21,9 +21,12 @@ extracted:
     defence: France actively advances the goal of stronger European defence capabilities
       through a demonstration of operational forces and cooperation with allies.
   stances:
-    defence:
-      score: 2
-      evidence: le « réveil stratégique de l’Europe »
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: le « réveil stratégique de l’Europe »
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

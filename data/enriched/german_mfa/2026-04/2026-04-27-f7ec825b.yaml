@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany stresses commitment to a rules-based international order
       and multilateralism as foundational principles for cooperation.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We are both committed to a rules-based international order, to international
-        law and to multilateralism.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We are both committed to a rules-based international order, to international
+          law and to multilateralism.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

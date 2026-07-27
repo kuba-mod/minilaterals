@@ -21,9 +21,10 @@ extracted:
     rule_of_law: Germany supports the rule of law by demanding that perpetrators of
       atrocities be held accountable and that international humanitarian law be respected.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: die Verantwortlichen müssen zur Rechenschaft gezogen werden
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: die Verantwortlichen müssen zur Rechenschaft gezogen werden
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

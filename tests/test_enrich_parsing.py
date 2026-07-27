@@ -101,23 +101,24 @@ def test_clean_stance_raises_out_of_range(value):
 
 
 def test_clean_evidence_keeps_genuine_quote(monkeypatch):
-    monkeypatch.setattr(enrich, "GOALS", {"ukraine": "long-term support for Ukraine"})
-    assert _clean_evidence("Germany will provide EUR 5bn in aid", "ukraine") == "Germany will provide EUR 5bn in aid"
+    monkeypatch.setattr(enrich, "GOALS", {"weimar": {"ukraine": "long-term support for Ukraine"}})
+    kept = _clean_evidence("Germany will provide EUR 5bn in aid", "ukraine", "weimar")
+    assert kept == "Germany will provide EUR 5bn in aid"
 
 
 def test_clean_evidence_drops_goal_copy(monkeypatch):
     goal = "The Weimar Triangle commits to long-term support for Ukraine"
-    monkeypatch.setattr(enrich, "GOALS", {"ukraine": goal})
+    monkeypatch.setattr(enrich, "GOALS", {"weimar": {"ukraine": goal}})
     # Evidence copied verbatim from the goal statement must be dropped.
-    assert _clean_evidence(goal, "ukraine") == ""
+    assert _clean_evidence(goal, "ukraine", "weimar") == ""
 
 
 def test_clean_evidence_drops_substring_of_goal(monkeypatch):
     goal = "The Weimar Triangle commits to long-term support for Ukraine"
-    monkeypatch.setattr(enrich, "GOALS", {"ukraine": goal})
-    assert _clean_evidence("long-term support for Ukraine", "ukraine") == ""
+    monkeypatch.setattr(enrich, "GOALS", {"weimar": {"ukraine": goal}})
+    assert _clean_evidence("long-term support for Ukraine", "ukraine", "weimar") == ""
 
 
 def test_clean_evidence_empty_input():
-    assert _clean_evidence(None, "ukraine") == ""
-    assert _clean_evidence("   ", "ukraine") == ""
+    assert _clean_evidence(None, "ukraine", "weimar") == ""
+    assert _clean_evidence("   ", "ukraine", "weimar") == ""

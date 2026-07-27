@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland supports the promotion of human rights and democracy, which
       is central to Poland's diplomatic position regarding the ODIHR.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The fact that ODIHR has its premises in Warsaw consolidates Poland’s
-        central position in a debate on human rights and democratic transformation.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The fact that ODIHR has its premises in Warsaw consolidates Poland’s
+          central position in a debate on human rights and democratic transformation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -17,10 +17,11 @@ extracted:
     green_transition: Germany advances the green transition by facilitating nationwide
       affordable access to public regional and local transport.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Deutschlandticket für den gesamten öffentlichen Personennahverkehr
-        ( ÖPNV ) ist eine Erfolgsgeschichte
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Deutschlandticket für den gesamten öffentlichen Personennahverkehr
+          ( ÖPNV ) ist eine Erfolgsgeschichte
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,10 +20,12 @@ extracted:
     rule_of_law: Germany emphasizes that civic engagement and voluntary work are essential
       for living democracy and maintaining social cohesion.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: zeigten mit ihren Ideen, ihrer Tatkraft und ihrer Ausdauer, wie gesellschaftlicher
-        Zusammenhalt gestärkt und Demokratie im Alltag gelebt werden könne
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: zeigten mit ihren Ideen, ihrer Tatkraft und ihrer Ausdauer, wie
+          gesellschaftlicher Zusammenhalt gestärkt und Demokratie im Alltag gelebt
+          werden könne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

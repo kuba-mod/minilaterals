@@ -29,17 +29,22 @@ extracted:
     green_transition: Green transition is not explicitly mentioned as a topic of discussion
       between France and Malaysia.
   stances:
-    defence:
-      score: 1
-      evidence: The two Ministers also discussed expanding bilateral relations, particularly
-        in the areas of business, defense, hybrid threats and critical minerals.
-    hybrid:
-      score: 1
-      evidence: The two Ministers also discussed expanding bilateral relations, particularly
-        in the areas of business, defense, hybrid threats and critical minerals.
-    green_transition:
-      score: 0
-      evidence: ''
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: The two Ministers also discussed expanding bilateral relations,
+          particularly in the areas of business, defense, hybrid threats and critical
+          minerals.
+      hybrid:
+        score: 1
+        evidence: The two Ministers also discussed expanding bilateral relations,
+          particularly in the areas of business, defense, hybrid threats and critical
+          minerals.
+      green_transition:
+        score: 0
+        evidence: ''
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

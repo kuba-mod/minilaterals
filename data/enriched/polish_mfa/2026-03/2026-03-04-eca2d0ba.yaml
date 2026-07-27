@@ -22,10 +22,11 @@ extracted:
     rule_of_law: The government emphasizes the importance of safety, caution, and
       continuous monitoring in all actions taken for its citizens.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Every decision is made with the safety of Polish citizens in mind,
-        which requires particular caution.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Every decision is made with the safety of Polish citizens in mind,
+          which requires particular caution.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

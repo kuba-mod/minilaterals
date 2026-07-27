@@ -24,15 +24,18 @@ extracted:
     defence: France supports the strengthening of European defense capacities, specifically
       in anti-aircraft capabilities and production alignment.
   stances:
-    ukraine:
-      score: 2
-      evidence: le soutien à celle-ci, soutien militaire réaffirmé, soutien pour financer
-        ses infrastructures énergétiques et soutien aussi pour recoordonner des sanctions
-        à l'égard de la Russie
-    defence:
-      score: 1
-      evidence: On a eu un débat sur le soutien aux capacités de défense, en particulier
-        antiaériennes ; le rapprochement de nos capacités et de nos productions.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: le soutien à celle-ci, soutien militaire réaffirmé, soutien pour
+          financer ses infrastructures énergétiques et soutien aussi pour recoordonner
+          des sanctions à l'égard de la Russie
+      defence: &id001
+        score: 1
+        evidence: On a eu un débat sur le soutien aux capacités de défense, en particulier
+          antiaériennes ; le rapprochement de nos capacités et de nos productions.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -26,11 +26,12 @@ extracted:
       climate cooperation, provided that industrial competitiveness and social acceptance
       are maintained.
   stances:
-    green_transition:
-      score: 1
-      evidence: unterstrich, dass das Pariser Klima-Abkommen trotz aller Herausforderungen
-        eine bedeutende Errungenschaft bleibe und gleichzeitig eine zentrale Grundlage
-        für das Handeln der Bundesregierung im Klimaschutz darstelle
+    weimar:
+      green_transition:
+        score: 1
+        evidence: unterstrich, dass das Pariser Klima-Abkommen trotz aller Herausforderungen
+          eine bedeutende Errungenschaft bleibe und gleichzeitig eine zentrale Grundlage
+          für das Handeln der Bundesregierung im Klimaschutz darstelle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

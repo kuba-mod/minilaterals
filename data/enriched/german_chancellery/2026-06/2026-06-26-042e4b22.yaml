@@ -23,9 +23,11 @@ extracted:
       within the EU, aligning with the broader industrial policy goals of the green
       transition.
   stances:
-    green_transition:
-      score: 1
-      evidence: setzen wir uns in der EU für Resilienz und Wettbewerbsfähigkeit ein
+    weimar:
+      green_transition:
+        score: 1
+        evidence: setzen wir uns in der EU für Resilienz und Wettbewerbsfähigkeit
+          ein
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

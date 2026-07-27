@@ -21,13 +21,14 @@ extracted:
     hybrid: Germany supports coordinated action against hybrid threats by restricting
       cybersecurity services for Russia.
   stances:
-    ukraine:
-      score: 2
-      evidence: Die EU ‑Mitgliedstaaten haben das 20. Sanktionspaket gegen Russland
-        angenommen.
-    hybrid:
-      score: 2
-      evidence: Cyber sicherheitsdienste für Russland werden eingeschränkt.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die EU ‑Mitgliedstaaten haben das 20. Sanktionspaket gegen Russland
+          angenommen.
+      hybrid:
+        score: 2
+        evidence: Cyber sicherheitsdienste für Russland werden eingeschränkt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

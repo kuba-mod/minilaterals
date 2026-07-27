@@ -25,13 +25,7 @@ extracted:
       Ukraine.
     enlargement: Estonia supports the opening of the first thematic block of accession
       negotiations with Ukraine and Moldova.
-  stances:
-    ukraine:
-      score: 1
-      evidence: arutatakse Venemaa agressiooni Ukraina vastu
-    enlargement:
-      score: 2
-      evidence: avatakse ametlikult ELiga liitumisläbirääkimiste esimene teemaplokk
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

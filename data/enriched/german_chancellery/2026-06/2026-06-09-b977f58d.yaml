@@ -25,10 +25,11 @@ extracted:
       of digital platforms and copyright, which aligns with broader democratic resilience
       and rule of law efforts in the digital sphere.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Dabei ging es insbesondere um medienpolitische Themen wie Urheberrecht
-        und KI sowie die Plattformregulierung.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Dabei ging es insbesondere um medienpolitische Themen wie Urheberrecht
+          und KI sowie die Plattformregulierung.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

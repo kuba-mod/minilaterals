@@ -25,14 +25,15 @@ extracted:
       experience and supports the foundational principles of democracy and rule of
       law.
   stances:
-    hybrid:
-      score: 2
-      evidence: Poland brings unique expertise in countering foreign interference,
-        including both informational and cyber domains.
-    rule_of_law:
-      score: 1
-      evidence: represents another step toward enhancing transatlantic and European
-        cooperation in countering hybrid threats and disinformation campaigns.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Poland brings unique expertise in countering foreign interference,
+          including both informational and cyber domains.
+      rule_of_law:
+        score: 1
+        evidence: represents another step toward enhancing transatlantic and European
+          cooperation in countering hybrid threats and disinformation campaigns.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

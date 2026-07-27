@@ -28,11 +28,12 @@ extracted:
     ukraine: Germany actively supports Ukraine through military, financial, and diplomatic
       means while seeking a ceasefire as a prerequisite for peace talks.
   stances:
-    ukraine:
-      score: 2
-      evidence: starke Unterstützung, die wir aus Europa und auch aus Deutschland
-        politisch, diplomatisch, aber natürlich auch finanziell und militärisch in
-        den vergangenen Monaten und Jahren gegeben haben
+    weimar:
+      ukraine:
+        score: 2
+        evidence: starke Unterstützung, die wir aus Europa und auch aus Deutschland
+          politisch, diplomatisch, aber natürlich auch finanziell und militärisch
+          in den vergangenen Monaten und Jahren gegeben haben
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,11 +22,12 @@ extracted:
       of law by calling for guarantees of Lebanon's territorial integrity as a condition
       for Middle East peace.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The agreement should also include stabilization and the guarantees
-        of Lebanon's territorial integrity, as one of the conditions for achieving
-        peace in the Middle East.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The agreement should also include stabilization and the guarantees
+          of Lebanon's territorial integrity, as one of the conditions for achieving
+          peace in the Middle East.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

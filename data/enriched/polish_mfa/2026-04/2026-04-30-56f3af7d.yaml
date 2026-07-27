@@ -18,9 +18,11 @@ extracted:
     rule_of_law: Poland rhetorically supports the rule of law by calling for adherence
       to international law and the law of the sea.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Wzywamy wszystkie strony do przestrzegania obowiązującego prawa międzynarodowego.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wzywamy wszystkie strony do przestrzegania obowiązującego prawa
+          międzynarodowego.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

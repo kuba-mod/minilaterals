@@ -32,17 +32,20 @@ extracted:
     rule_of_law: Germany affirms its commitment to the rules-based international order
       and international law as the foundation for security and prosperity.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russia’s war of aggression against Ukraine, which threatens our security
-        across the entire Euro-Atlantic area.
-    defence:
-      score: 2
-      evidence: Germany is taking resolute action to progress towards this goal.
-    rule_of_law:
-      score: 1
-      evidence: For Germany, dependability as an international partner thus very clearly
-        includes a commitment to international law and international cooperation.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russia’s war of aggression against Ukraine, which threatens our
+          security across the entire Euro-Atlantic area.
+      defence: &id001
+        score: 2
+        evidence: Germany is taking resolute action to progress towards this goal.
+      rule_of_law:
+        score: 1
+        evidence: For Germany, dependability as an international partner thus very
+          clearly includes a commitment to international law and international cooperation.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

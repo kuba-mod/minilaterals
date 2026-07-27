@@ -19,11 +19,12 @@ extracted:
     hybrid: Germany is actively strengthening its domestic legal framework to combat
       internet crime and cyber-enabled threats.
   stances:
-    hybrid:
-      score: 2
-      evidence: Ziel des Gesetzentwurfs ist es, die Ermittlungsbefugnisse der Strafverfolgungs-
-        und Sicherheitsbehörden besonders im Kampf gegen Internetkriminalität deutlich
-        zu stärken.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Ziel des Gesetzentwurfs ist es, die Ermittlungsbefugnisse der Strafverfolgungs-
+          und Sicherheitsbehörden besonders im Kampf gegen Internetkriminalität deutlich
+          zu stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

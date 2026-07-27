@@ -23,13 +23,15 @@ extracted:
     green_transition: France is actively supporting ecological transition projects
       through energy cooperation with Andorra.
   stances:
-    enlargement:
-      score: 1
-      evidence: encourager la poursuite du rapprochement d’Andorre avec l’Union européenne
-    green_transition:
-      score: 2
-      evidence: soutenir les projets de coopération en matière de transition écologique
-        à travers des coopérations énergétiques franco-andorranes
+    weimar:
+      enlargement:
+        score: 1
+        evidence: encourager la poursuite du rapprochement d’Andorre avec l’Union
+          européenne
+      green_transition:
+        score: 2
+        evidence: soutenir les projets de coopération en matière de transition écologique
+          à travers des coopérations énergétiques franco-andorranes
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

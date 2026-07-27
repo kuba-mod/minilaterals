@@ -22,13 +22,14 @@ extracted:
     defence: Poland is initiating a technological leap in drone capabilities to strengthen
       the eastern flank of Europe.
   stances:
-    ukraine:
-      score: 2
-      evidence: Dziś rozpoczął się wspólny projekt armady dronowej.
-    defence:
-      score: 2
-      evidence: Projekt ma nie tylko wzmocnić polską obronność, ale przyczynić się
-        do skoku technologicznego obejmującego całą wschodnią flankę Europy.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Dziś rozpoczął się wspólny projekt armady dronowej.
+      defence:
+        score: 2
+        evidence: Projekt ma nie tylko wzmocnić polską obronność, ale przyczynić się
+          do skoku technologicznego obejmującego całą wschodnią flankę Europy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

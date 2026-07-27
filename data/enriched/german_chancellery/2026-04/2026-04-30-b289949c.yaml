@@ -20,10 +20,11 @@ extracted:
       spending, new procurements, and structural adjustments to support NATO and European
       security.
   stances:
-    defence:
-      score: 2
-      evidence: Dafür wurden bereits wichtige Maßnahmen angestoßen – von höheren Verteidigungsausgaben
-        bis hin zu neuen Beschaffungen und strukturellen Anpassungen.
+    weimar:
+      defence:
+        score: 2
+        evidence: Dafür wurden bereits wichtige Maßnahmen angestoßen – von höheren
+          Verteidigungsausgaben bis hin zu neuen Beschaffungen und strukturellen Anpassungen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

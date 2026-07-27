@@ -29,18 +29,20 @@ extracted:
     green_transition: Germany recognizes climate change as a global challenge requiring
       joint action.
   stances:
-    ukraine:
-      score: 2
-      evidence: Russia started this war 4 1/2 years ago without any acceptable justification.
-        And it´s on Russia to end this war by showing willingness for meaningful negotiations.
-    hybrid:
-      score: 1
-      evidence: This holds true for peace and security, but also for climate change,
-        health, AI, cyber, trade and many other areas of our cooperation.
-    green_transition:
-      score: 1
-      evidence: We can best tackle them together. This holds true for peace and security,
-        but also for climate change
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Russia started this war 4 1/2 years ago without any acceptable justification.
+          And it´s on Russia to end this war by showing willingness for meaningful
+          negotiations.
+      hybrid:
+        score: 1
+        evidence: This holds true for peace and security, but also for climate change,
+          health, AI, cyber, trade and many other areas of our cooperation.
+      green_transition:
+        score: 1
+        evidence: We can best tackle them together. This holds true for peace and
+          security, but also for climate change
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -18,11 +18,12 @@ extracted:
     defence: Poland prioritizes the security of international peacekeeping forces
       in Lebanon, aligning with goals of collective security.
   stances:
-    defence:
-      score: 1
-      evidence: bezpieczeństwo członków misji pokojowej Tymczasowych Sił Zbrojnych
-        ONZ w Libanie (UNIFIL), w tym żołnierzy Polskiego Kontyngentu Wojskowego,
-        pozostaje najwyższym priorytetem
+    weimar:
+      defence:
+        score: 1
+        evidence: bezpieczeństwo członków misji pokojowej Tymczasowych Sił Zbrojnych
+          ONZ w Libanie (UNIFIL), w tym żołnierzy Polskiego Kontyngentu Wojskowego,
+          pozostaje najwyższym priorytetem
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

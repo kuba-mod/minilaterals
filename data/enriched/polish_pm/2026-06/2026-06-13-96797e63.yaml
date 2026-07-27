@@ -20,9 +20,10 @@ extracted:
     green_transition: Poland is actively advancing sustainable transport by investing
       180 billion PLN in railway development and modernization of rolling stock.
   stances:
-    green_transition:
-      score: 2
-      evidence: Do 2032 roku wydamy 180 mld zł na rozwój kolei
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Do 2032 roku wydamy 180 mld zł na rozwój kolei
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

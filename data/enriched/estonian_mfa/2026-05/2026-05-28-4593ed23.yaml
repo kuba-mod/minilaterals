@@ -22,10 +22,7 @@ extracted:
   positions:
     green_transition: Estonia advocates for equitable and inclusive solutions to the
       climate crisis, linking climate action to global security.
-  stances:
-    green_transition:
-      score: 1
-      evidence: kliimakriisi pidurdamine on globaalse julgeoleku küsimus
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

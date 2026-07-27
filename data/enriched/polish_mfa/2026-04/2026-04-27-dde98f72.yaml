@@ -33,22 +33,26 @@ extracted:
     rule_of_law: Poland stresses the importance of safeguarding the EU's security
       by supporting Ukraine, which is foundational to European stability.
   stances:
-    defence:
-      score: 1
-      evidence: Minister McEntee emphasised that EU member states should increase
-        their defence investment.
-    hybrid:
-      score: 1
-      evidence: whether hybrid threats or maritime security, which has come to the
-        forefront - said Minister Helen McEntee.
-    enlargement:
-      score: 2
-      evidence: Poland advises Ukrainian public administration institutions in their
-        efforts to conduct EU-related reforms and align legislation with EU acquis.
-    rule_of_law:
-      score: 1
-      evidence: The foreign ministers of Poland and Ireland also discussed opportunities
-        to develop economic cooperation.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: Minister McEntee emphasised that EU member states should increase
+          their defence investment.
+      hybrid:
+        score: 1
+        evidence: whether hybrid threats or maritime security, which has come to the
+          forefront - said Minister Helen McEntee.
+      enlargement: &id002
+        score: 2
+        evidence: Poland advises Ukrainian public administration institutions in their
+          efforts to conduct EU-related reforms and align legislation with EU acquis.
+      rule_of_law:
+        score: 1
+        evidence: The foreign ministers of Poland and Ireland also discussed opportunities
+          to develop economic cooperation.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

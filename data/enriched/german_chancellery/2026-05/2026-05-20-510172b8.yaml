@@ -17,10 +17,11 @@ extracted:
     hybrid: Germany is advancing secure digital infrastructure and data security to
       combat vulnerabilities in electronic transactions and identity verification.
   stances:
-    hybrid:
-      score: 1
-      evidence: Die Bundesregierung trifft Maßnahmen, um Datenschutz und Datensicherheit
-        sicherzustellen.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Die Bundesregierung trifft Maßnahmen, um Datenschutz und Datensicherheit
+          sicherzustellen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

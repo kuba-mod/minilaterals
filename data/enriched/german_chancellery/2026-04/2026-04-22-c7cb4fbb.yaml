@@ -17,10 +17,11 @@ extracted:
     hybrid: Germany emphasizes the importance of understanding and preventing cyber
       attacks as part of technical education.
   stances:
-    hybrid:
-      score: 1
-      evidence: erklärten, wie Cyber angriffe entstehen und wie sie verhindert werden
-        können
+    weimar:
+      hybrid:
+        score: 1
+        evidence: erklärten, wie Cyber angriffe entstehen und wie sie verhindert werden
+          können
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

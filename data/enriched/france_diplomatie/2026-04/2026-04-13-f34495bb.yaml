@@ -22,11 +22,12 @@ extracted:
     rule_of_law: France stressed the need for adherence to ceasefire agreements and
       finding a lasting end to conflict through diplomacy.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The Minister and the Foreign Secretary emphasized the importance of
-        abiding by the ceasefire agreement reached by Iran and the United States,
-        and of finding a swift and lasting end to the war through diplomatic means.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The Minister and the Foreign Secretary emphasized the importance
+          of abiding by the ceasefire agreement reached by Iran and the United States,
+          and of finding a swift and lasting end to the war through diplomatic means.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

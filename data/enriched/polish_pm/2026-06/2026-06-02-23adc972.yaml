@@ -23,10 +23,11 @@ extracted:
       harms and harmful content, aligning with the broader goal of countering digital
       threats.
   stances:
-    hybrid:
-      score: 2
-      evidence: Rząd przyjął również ustawę o ochronie małoletnich przed dostępem
-        do treści pornograficznych w internecie.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Rząd przyjął również ustawę o ochronie małoletnich przed dostępem
+          do treści pornograficznych w internecie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France supports democratic resilience and sovereignty by reiterating
       commitment to Armenia’s sovereignty and supporting regional stability.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The Minister signalled France’s unwavering commitment to Armenia’s
-        sovereignty and democratic resilience.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The Minister signalled France’s unwavering commitment to Armenia’s
+          sovereignty and democratic resilience.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

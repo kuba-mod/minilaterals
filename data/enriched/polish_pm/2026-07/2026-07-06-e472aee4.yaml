@@ -28,14 +28,17 @@ extracted:
       the production of advanced autonomous missile systems in cooperation with a
       US partner.
   stances:
-    ukraine:
-      score: 1
-      evidence: Pomoc Polski dla Ukrainy w jej wojnie z Rosją była przedmiotem naszego
-        politycznego i narodowego konsensusu.
-    defence:
-      score: 2
-      evidence: Umowa przewiduje ulokowanie w Polsce montażu, a następnie produkcję
-        autonomicznych rakietowych pocisków manewrujących dalekiego zasięgu Barracuda-500
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Pomoc Polski dla Ukrainy w jej wojnie z Rosją była przedmiotem naszego
+          politycznego i narodowego konsensusu.
+      defence: &id001
+        score: 2
+        evidence: Umowa przewiduje ulokowanie w Polsce montażu, a następnie produkcję
+          autonomicznych rakietowych pocisków manewrujących dalekiego zasięgu Barracuda-500
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,12 +21,13 @@ extracted:
       and democratic principles by calling out harmful non-market practices and economic
       coercion.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We reaffirm our shared concerns regarding non-market policies and
-        practices (NMPPs), and their adverse impacts, including persistent market
-        distortions, global structural excess capacity, harmful spillovers in global
-        and domestic markets, and growing economic dependencies.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We reaffirm our shared concerns regarding non-market policies and
+          practices (NMPPs), and their adverse impacts, including persistent market
+          distortions, global structural excess capacity, harmful spillovers in global
+          and domestic markets, and growing economic dependencies.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

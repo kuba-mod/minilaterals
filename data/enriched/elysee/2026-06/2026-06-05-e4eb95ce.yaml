@@ -20,9 +20,10 @@ extracted:
     enlargement: France supports the EU integration of the Western Balkans, viewing
       it as essential for continental security.
   stances:
-    enlargement:
-      score: 1
-      evidence: évaluer les progrès réalisés vers l’intégration européenne
+    weimar:
+      enlargement:
+        score: 1
+        evidence: évaluer les progrès réalisés vers l’intégration européenne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

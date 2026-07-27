@@ -26,18 +26,19 @@ extracted:
     rule_of_law: Poland emphasizes that effective governance and security are essential
       for regional stabilization.
   stances:
-    ukraine:
-      score: 1
-      evidence: W rozmowie poruszono także kwestię rosyjskiej wojny w Ukrainie i jej
-        skutków dla Europy oraz Afryki.
-    defence:
-      score: 1
-      evidence: Omówiono możliwości wzmocnienia trwałych zdolności operacyjnych mozambickich
-        sił szybkiego reagowania.
-    rule_of_law:
-      score: 1
-      evidence: poprawa bezpieczeństwa i skuteczne sprawowanie rządów ma zasadnicze
-        znaczenie dla powodzenia realizacji celów UEMAM oraz stabilizacji regionu
+    weimar:
+      ukraine:
+        score: 1
+        evidence: W rozmowie poruszono także kwestię rosyjskiej wojny w Ukrainie i
+          jej skutków dla Europy oraz Afryki.
+      defence:
+        score: 1
+        evidence: Omówiono możliwości wzmocnienia trwałych zdolności operacyjnych
+          mozambickich sił szybkiego reagowania.
+      rule_of_law:
+        score: 1
+        evidence: poprawa bezpieczeństwa i skuteczne sprawowanie rządów ma zasadnicze
+          znaczenie dla powodzenia realizacji celów UEMAM oraz stabilizacji regionu
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

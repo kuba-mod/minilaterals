@@ -21,10 +21,7 @@ extracted:
   positions:
     rule_of_law: Estonia rhetorically supports democratic resilience and human rights
       by advocating for a free and democratic future for the Cuban people.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: Kuuba rahvas väärib vaba ja demokraatlikku tulevikku
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

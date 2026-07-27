@@ -26,13 +26,14 @@ extracted:
     rule_of_law: Poland stressed that both it and the UAE respect international law
       and are ready to cooperate for peaceful conflict resolution.
   stances:
-    ukraine:
-      score: 1
-      evidence: including providing humanitarian aid to Ukraine
-    rule_of_law:
-      score: 1
-      evidence: Both sides emphasised that Poland and the UAE share their respect
-        for the paramount role of international law in relations between countries
+    weimar:
+      ukraine:
+        score: 1
+        evidence: including providing humanitarian aid to Ukraine
+      rule_of_law:
+        score: 1
+        evidence: Both sides emphasised that Poland and the UAE share their respect
+          for the paramount role of international law in relations between countries
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -26,19 +26,21 @@ extracted:
     rule_of_law: Poland identifies shared democratic values and the rule of law as
       the basis for Andorra's relationship with the EU.
   stances:
-    ukraine:
-      score: 1
-      evidence: Minister Sikorski wyraził uznanie dla jednoznacznego stanowiska Andory
-        potępiającego działania Rosji oraz dla wsparcia udzielanego obywatelom Ukrainy
-    enlargement:
-      score: 1
-      evidence: Podkreślił także poparcie Polski dla dalszego zbliżenia Andory z Unią
-        Europejską.
-    rule_of_law:
-      score: 1
-      evidence: bliskie relacje Andory z Unią Europejską wynikają nie tylko z jej
-        położenia geograficznego, ale również ze wspólnych wartości demokratycznych,
-        poszanowania praworządności oraz podstawowych wolności
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Minister Sikorski wyraził uznanie dla jednoznacznego stanowiska
+          Andory potępiającego działania Rosji oraz dla wsparcia udzielanego obywatelom
+          Ukrainy
+      enlargement:
+        score: 1
+        evidence: Podkreślił także poparcie Polski dla dalszego zbliżenia Andory z
+          Unią Europejską.
+      rule_of_law:
+        score: 1
+        evidence: bliskie relacje Andory z Unią Europejską wynikają nie tylko z jej
+          położenia geograficznego, ale również ze wspólnych wartości demokratycznych,
+          poszanowania praworządności oraz podstawowych wolności
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

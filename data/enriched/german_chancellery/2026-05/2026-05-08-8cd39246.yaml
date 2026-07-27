@@ -26,17 +26,18 @@ extracted:
     rule_of_law: Germany rhetorically emphasizes the preservation of freedom, liberality,
       and the functioning of democracy during times of crisis.
   stances:
-    defence:
-      score: 2
-      evidence: Wir haben massiv in unsere Verteidigung investiert und einen neuen
-        Wehrdienst eingeführt.
-    green_transition:
-      score: 2
-      evidence: das Sondervermögen für die Infrastruktur und Klimaschutz
-    rule_of_law:
-      score: 1
-      evidence: um die Bewahrung von Freiheit und Liberalität in einer von Krisen
-        und Konflikten zugeschütteten Zeit
+    weimar:
+      defence:
+        score: 2
+        evidence: Wir haben massiv in unsere Verteidigung investiert und einen neuen
+          Wehrdienst eingeführt.
+      green_transition:
+        score: 2
+        evidence: das Sondervermögen für die Infrastruktur und Klimaschutz
+      rule_of_law:
+        score: 1
+        evidence: um die Bewahrung von Freiheit und Liberalität in einer von Krisen
+          und Konflikten zugeschütteten Zeit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

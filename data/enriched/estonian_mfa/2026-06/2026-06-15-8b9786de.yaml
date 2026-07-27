@@ -20,11 +20,7 @@ extracted:
   positions:
     ukraine: Estonia actively pushes for the acceleration and intensification of sanctions
       against Russia to increase pressure.
-  stances:
-    ukraine:
-      score: 2
-      evidence: survet Venemaale tuleb veelgi suurendada tugeva 21. sanktsioonipaketi
-        kiire vastuvõtmisega
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

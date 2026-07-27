@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: Estonia advances democratic resilience and human rights by promoting
       marriage equality and combating discrimination against sexual minorities.
-  stances:
-    rule_of_law:
-      score: 2
-      evidence: seksuaalvähemustele tuleb tagada täpselt samad õigused ja võimalused
-        nagu kõigile teistele
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

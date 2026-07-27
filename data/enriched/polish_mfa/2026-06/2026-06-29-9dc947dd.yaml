@@ -30,17 +30,18 @@ extracted:
     green_transition: Poland is engaging in dialogue regarding the European Emissions
       Trading System.
   stances:
-    ukraine:
-      score: 1
-      evidence: rosyjskiej agresji przeciwko Ukrainie
-    defence:
-      score: 2
-      evidence: podpisanie kontraktu na zakup trzech okrętów podwodnych A26 w ramach
-        programu „Orka”
-    green_transition:
-      score: 0
-      evidence: rozmawiali również o Wieloletnich Ramach Finansowych i Europejskim
-        Systemie Handlu Emisjami (ETS)
+    weimar:
+      ukraine:
+        score: 1
+        evidence: rosyjskiej agresji przeciwko Ukrainie
+      defence:
+        score: 2
+        evidence: podpisanie kontraktu na zakup trzech okrętów podwodnych A26 w ramach
+          programu „Orka”
+      green_transition:
+        score: 0
+        evidence: rozmawiali również o Wieloletnich Ramach Finansowych i Europejskim
+          Systemie Handlu Emisjami (ETS)
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

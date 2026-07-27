@@ -22,10 +22,11 @@ extracted:
     rule_of_law: Poland stressed the importance of international law and dialogue
       in managing regional conflicts.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: the diplomats emphasised the need to de-escalate tensions and the
-        importance of dialogue and respect for international law.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: the diplomats emphasised the need to de-escalate tensions and the
+          importance of dialogue and respect for international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,10 +21,11 @@ extracted:
       technology and aerospace sectors, which aligns with the broader goal of industrial
       modernization.
   stances:
-    green_transition:
-      score: 0
-      evidence: plus de 100 sites industriels et technologiques ouvrent leurs portes
-        au public
+    weimar:
+      green_transition:
+        score: 0
+        evidence: plus de 100 sites industriels et technologiques ouvrent leurs portes
+          au public
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

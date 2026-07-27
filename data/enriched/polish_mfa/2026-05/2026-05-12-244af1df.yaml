@@ -18,10 +18,11 @@ extracted:
     green_transition: Poland is engaging with Egyptian companies in the renewable
       energy sector as part of its economic cooperation.
   stances:
-    green_transition:
-      score: 1
-      evidence: 'W wydarzeniu uczestniczyło kilkadziesiąt firm z Polski i Egiptu reprezentujących
-        sektory: (...) energii odnawialnej'
+    weimar:
+      green_transition:
+        score: 1
+        evidence: 'W wydarzeniu uczestniczyło kilkadziesiąt firm z Polski i Egiptu
+          reprezentujących sektory: (...) energii odnawialnej'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

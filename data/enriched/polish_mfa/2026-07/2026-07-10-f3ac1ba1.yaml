@@ -26,9 +26,12 @@ extracted:
     defence: Poland asserts its role as a leader in armaments and emphasizes collective
       security through NATO.
   stances:
-    defence:
-      score: 2
-      evidence: Poland is now a leader in armaments.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Poland is now a leader in armaments.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -24,13 +24,14 @@ extracted:
     rule_of_law: Germany emphasizes the importance of democratic resilience and the
       rule of law in its strategic partnerships.
   stances:
-    green_transition:
-      score: 1
-      evidence: EU-Mercosur-Abkommen – Chancen für eine grüne und digitale Zukunft
-    rule_of_law:
-      score: 1
-      evidence: Wir stehen als Demokratien und Rechtsstaaten zusammen und verbinden
-        unsere Gesellschaften, die von denselben Werten getragen werden!
+    weimar:
+      green_transition:
+        score: 1
+        evidence: EU-Mercosur-Abkommen – Chancen für eine grüne und digitale Zukunft
+      rule_of_law:
+        score: 1
+        evidence: Wir stehen als Demokratien und Rechtsstaaten zusammen und verbinden
+          unsere Gesellschaften, die von denselben Werten getragen werden!
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France supports strengthening global governance by advocating for
       the reform of the Security Council to ensure it is fully capable of taking action.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Ministers agreed on the need to reform the Security Council and ensure
-        that it is fully capable of taking action
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Ministers agreed on the need to reform the Security Council and
+          ensure that it is fully capable of taking action
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

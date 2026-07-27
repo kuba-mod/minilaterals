@@ -29,19 +29,22 @@ extracted:
     rule_of_law: Poland stresses the importance of democratic resilience and combating
       disinformation as key elements for European stability and cooperation.
   stances:
-    defence:
-      score: 2
-      evidence: The European Union should develop its defence identity in harmony
-        with both NATO and the United States - minister Radosław Sikorski said.
-    hybrid:
-      score: 2
-      evidence: The foreign minister stressed that Russian information campaigns are
-        supposed to undermine citizens’ trust in public institutions, the media, and
-        international cooperation.
-    rule_of_law:
-      score: 2
-      evidence: It will aim to protect the integrity of public debate, support free
-        and fair elections, and develop citizens’ media literacy.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: The European Union should develop its defence identity in harmony
+          with both NATO and the United States - minister Radosław Sikorski said.
+      hybrid:
+        score: 2
+        evidence: The foreign minister stressed that Russian information campaigns
+          are supposed to undermine citizens’ trust in public institutions, the media,
+          and international cooperation.
+      rule_of_law:
+        score: 2
+        evidence: It will aim to protect the integrity of public debate, support free
+          and fair elections, and develop citizens’ media literacy.
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

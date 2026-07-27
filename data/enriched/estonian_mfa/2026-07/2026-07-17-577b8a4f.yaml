@@ -20,10 +20,7 @@ extracted:
   positions:
     indo_pacific: Estonia views India as an important and strategic partner, aligning
       with the goal of maintaining strong relations in the Indo-Pacific region.
-  stances:
-    indo_pacific:
-      score: 1
-      evidence: India on Eesti jaoks oluline ja strateegiline partner
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

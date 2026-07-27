@@ -16,10 +16,11 @@ extracted:
     rule_of_law: Poland rhetorically supports the protection of fundamental human
       rights and the rule of law regarding religious freedom.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: MSZ RP niezmiennie potępia przejawy wszelkiej dyskryminacji religijnej
-        na świecie.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: MSZ RP niezmiennie potępia przejawy wszelkiej dyskryminacji religijnej
+          na świecie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

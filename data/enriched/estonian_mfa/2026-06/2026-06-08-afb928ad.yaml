@@ -19,12 +19,7 @@ extracted:
   positions:
     rule_of_law: Estonia supports the democratic process and pro-Western orientation
       in Armenia as a means of supporting regional peace.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: Välisminister Margus Tsahkna tervitas Armeenias toimunud parlamendivalimiste
-        tulemusi, kus ülekaalu saavutas regionaalset rahu toetav läänemeelne Kodanikulepingu
-        partei.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

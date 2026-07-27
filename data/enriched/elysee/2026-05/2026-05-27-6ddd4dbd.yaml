@@ -29,18 +29,21 @@ extracted:
     green_transition: France views Norway as a key partner for Europe's energy transition
       and resilience, particularly regarding critical raw materials.
   stances:
-    ukraine:
-      score: 1
-      evidence: les principaux sujets internationaux ont été abordés, tels que la
-        guerre d’agression russe contre l’Ukraine
-    defence:
-      score: 2
-      evidence: le renforcement de la coopération entre les deux pays dans les domaines
-        de la défense
-    green_transition:
-      score: 2
-      evidence: Elle l'est aussi pour notre transition comme pour la résilience énergétique
-        de l'Europe
+    weimar:
+      ukraine:
+        score: 1
+        evidence: les principaux sujets internationaux ont été abordés, tels que la
+          guerre d’agression russe contre l’Ukraine
+      defence: &id001
+        score: 2
+        evidence: le renforcement de la coopération entre les deux pays dans les domaines
+          de la défense
+      green_transition:
+        score: 2
+        evidence: Elle l'est aussi pour notre transition comme pour la résilience
+          énergétique de l'Europe
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

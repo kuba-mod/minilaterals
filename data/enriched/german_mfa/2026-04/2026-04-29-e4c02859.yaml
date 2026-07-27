@@ -27,15 +27,16 @@ extracted:
     green_transition: Germany sees significant potential for economic growth with
       Morocco in key green sectors such as renewable energies and hydrogen.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Our countries share a commitment to the rules-based international
-        order, with the United Nations at its core.
-    green_transition:
-      score: 1
-      evidence: there is significant further potential for growth in our economic
-        relations, particularly in the areas of renewable energies, critical raw materials
-        and hydrogen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Our countries share a commitment to the rules-based international
+          order, with the United Nations at its core.
+      green_transition:
+        score: 1
+        evidence: there is significant further potential for growth in our economic
+          relations, particularly in the areas of renewable energies, critical raw
+          materials and hydrogen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

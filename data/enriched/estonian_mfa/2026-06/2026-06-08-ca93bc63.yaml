@@ -20,9 +20,10 @@ extracted:
     defence: Estonia supports the decisiveness of NATO in ensuring the collective
       security and protection of allies.
   stances:
-    defence:
-      score: 1
-      evidence: NATO tegutseb liitlaste kaitsmisel otsustavalt
+    baltic:
+      defence:
+        score: 1
+        evidence: NATO tegutseb liitlaste kaitsmisel otsustavalt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

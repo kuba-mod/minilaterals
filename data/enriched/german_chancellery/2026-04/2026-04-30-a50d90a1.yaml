@@ -18,10 +18,11 @@ extracted:
     rule_of_law: Germany rhetorically supports democratic resilience by stressing
       the importance of local media for transparency and democratic participation.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Lokaljournalismus eine zentrale Rolle f ü r eine funktionierende Demokratie
-        spielt
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Lokaljournalismus eine zentrale Rolle f ü r eine funktionierende
+          Demokratie spielt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

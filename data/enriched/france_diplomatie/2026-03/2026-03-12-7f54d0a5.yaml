@@ -24,10 +24,11 @@ extracted:
       substantial emergency humanitarian assistance to address a major civil crisis
       in Lebanon.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: In addition, there is medical equipment to support the medical teams
-        mobilized on the ground.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: In addition, there is medical equipment to support the medical teams
+          mobilized on the ground.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -23,14 +23,15 @@ extracted:
     defence: Poland advocates for closer security cooperation between bilateral partners,
       within the EU, and specifically within NATO.
   stances:
-    ukraine:
-      score: 1
-      evidence: wojna w Ukrainie stanowi, zwłaszcza dla państw wschodniej flanki,
-        zagrożenie o fundamentalnym znaczeniu
-    defence:
-      score: 1
-      evidence: Podkreślili, konieczność zacieśniania współpracy obu państw nie tylko
-        dwustronnie czy w Unii Europejskiej, lecz także w ramach NATO
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wojna w Ukrainie stanowi, zwłaszcza dla państw wschodniej flanki,
+          zagrożenie o fundamentalnym znaczeniu
+      defence:
+        score: 1
+        evidence: Podkreślili, konieczność zacieśniania współpracy obu państw nie
+          tylko dwustronnie czy w Unii Europejskiej, lecz także w ramach NATO
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

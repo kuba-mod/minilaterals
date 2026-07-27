@@ -28,14 +28,17 @@ extracted:
     defence: Germany expresses willingness for military engagement in the Strait of
       Hormus, supporting collective security and deterrence.
   stances:
-    ukraine:
-      score: 2
-      evidence: zudem werden alle G7 -Partner ihren militärischen und ihren finanziellen
-        Beitrag für die Ukraine verstärken
-    defence:
-      score: 2
-      evidence: Dies könne ein militärisches Engagement in der Straße von Hormus mit
-        entsprechendem Bundestagsmandat beinhalten.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: zudem werden alle G7 -Partner ihren militärischen und ihren finanziellen
+          Beitrag für die Ukraine verstärken
+      defence: &id001
+        score: 2
+        evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
+          mit entsprechendem Bundestagsmandat beinhalten.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

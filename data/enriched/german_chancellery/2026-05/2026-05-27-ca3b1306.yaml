@@ -17,9 +17,10 @@ extracted:
     green_transition: Germany is implementing legislative tools to better adapt urban
       areas to the effects of climate change and promote sustainable development.
   stances:
-    green_transition:
-      score: 2
-      evidence: Zudem müssen sie sich besser an die Folgen des Klimawandels anpassen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Zudem müssen sie sich besser an die Folgen des Klimawandels anpassen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

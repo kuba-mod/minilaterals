@@ -29,19 +29,22 @@ extracted:
     enlargement: Poland supports the EU's enlargement process alongside other legislative
       reforms aimed at boosting competitiveness.
   stances:
-    ukraine:
-      score: 1
-      evidence: Minister Niemczycki reiterated the need for European countries to
-        take part in the current negotiations.
-    rule_of_law:
-      score: 1
-      evidence: Poland and Ireland support the establishment of the Centre dedicated
-        to safeguarding democratic institutions, strengthening civil society, and
-        combating disinformation.
-    enlargement:
-      score: 1
-      evidence: Discussed were, among other issues, support for the EU enlargement
-        process, and the EU legislation simplification package,
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Minister Niemczycki reiterated the need for European countries to
+          take part in the current negotiations.
+      rule_of_law:
+        score: 1
+        evidence: Poland and Ireland support the establishment of the Centre dedicated
+          to safeguarding democratic institutions, strengthening civil society, and
+          combating disinformation.
+      enlargement: &id001
+        score: 1
+        evidence: Discussed were, among other issues, support for the EU enlargement
+          process, and the EU legislation simplification package,
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

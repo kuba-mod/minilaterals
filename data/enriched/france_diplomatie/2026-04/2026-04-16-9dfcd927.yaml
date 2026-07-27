@@ -25,14 +25,15 @@ extracted:
     rule_of_law: France emphasized democratic resilience and stability concerns related
       to geopolitical hotspots like Lebanon.
   stances:
-    ukraine:
-      score: 1
-      evidence: reaffirmed their unwavering support for Ukraine in the face of the
-        war of aggression being waged by Russia
-    rule_of_law:
-      score: 1
-      evidence: expressed their concern over developments in the Middle East, particularly
-        in Lebanon
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their unwavering support for Ukraine in the face of the
+          war of aggression being waged by Russia
+      rule_of_law:
+        score: 1
+        evidence: expressed their concern over developments in the Middle East, particularly
+          in Lebanon
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -23,11 +23,12 @@ extracted:
     hybrid: Poland is actively advancing digital competence and resilience by educating
       citizens to recognize the risks and lack of objectivity in AI systems.
   stances:
-    hybrid:
-      score: 2
-      evidence: Najważniejszym zadaniem dla młodego pokolenia będzie nie lekceważyć
-        zagrożeń, jakie daje sztuczna inteligencja oraz mieć poczucie suwerenności
-        wobec narzędzi, których używają
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Najważniejszym zadaniem dla młodego pokolenia będzie nie lekceważyć
+          zagrożeń, jakie daje sztuczna inteligencja oraz mieć poczucie suwerenności
+          wobec narzędzi, których używają
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

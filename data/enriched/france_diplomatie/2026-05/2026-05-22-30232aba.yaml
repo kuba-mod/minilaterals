@@ -32,21 +32,22 @@ extracted:
       sanctions against Russia and initiatives like the Special Tribunal for the Crime
       of Aggression.
   stances:
-    ukraine:
-      score: 2
-      evidence: The Minister once again applauded Ukrainian resilience after a particularly
-        harsh winter, and condemned the ongoing Russian airstrikes targeting energy
-        infrastructure and residential buildings
-    enlargement:
-      score: 1
-      evidence: reiterated France’s support for Ukraine in the membership process
-        for joining the EU and emphasized the importance of continuing its reform
-        efforts in this regard
-    rule_of_law:
-      score: 2
-      evidence: the EU’s adoption, on May 11, of a sanctions package against several
-        Russian individuals and entities involved in the deportation and forcible
-        transfer of Ukrainian children
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The Minister once again applauded Ukrainian resilience after a particularly
+          harsh winter, and condemned the ongoing Russian airstrikes targeting energy
+          infrastructure and residential buildings
+      enlargement:
+        score: 1
+        evidence: reiterated France’s support for Ukraine in the membership process
+          for joining the EU and emphasized the importance of continuing its reform
+          efforts in this regard
+      rule_of_law:
+        score: 2
+        evidence: the EU’s adoption, on May 11, of a sanctions package against several
+          Russian individuals and entities involved in the deportation and forcible
+          transfer of Ukrainian children
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

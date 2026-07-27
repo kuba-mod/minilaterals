@@ -27,14 +27,12 @@ extracted:
     iran: Germany seeks to leverage regional partners to contribute to stability near
       Iran and other conflict zones.
   stances:
-    energy:
-      score: 2
-      evidence: Dabei wird es um die Themen der Energie und der Rohstoffe [...] gehen
-    iran:
-      score: 1
-      evidence: Deutschland hat ebenfalls ein hohes Interesse daran, dass diese Schlüsselländer
-        in der Nähe Irans [...] auch zur Stabilität in der breiteren Region beitragen
-        können.
+    e3:
+      iran:
+        score: 1
+        evidence: Deutschland hat ebenfalls ein hohes Interesse daran, dass diese
+          Schlüsselländer in der Nähe Irans [...] auch zur Stabilität in der breiteren
+          Region beitragen können.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

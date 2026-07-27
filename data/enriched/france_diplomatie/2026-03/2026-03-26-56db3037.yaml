@@ -21,11 +21,12 @@ extracted:
     rule_of_law: France stressed the importance of supporting state sovereignty against
       external challenges, particularly concerning Lebanon.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The two ministers also discussed the consequences of the war in the
-        region, especially in Lebanon, and the need to support the authorities in
-        the face of forces that challenge the sovereignty of the State.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The two ministers also discussed the consequences of the war in
+          the region, especially in Lebanon, and the need to support the authorities
+          in the face of forces that challenge the sovereignty of the State.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

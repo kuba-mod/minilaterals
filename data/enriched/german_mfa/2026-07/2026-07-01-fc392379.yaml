@@ -23,9 +23,12 @@ extracted:
     defence: Germany rhetorically supports the creation of a strong and capable European
       Union, which aligns with the goal of enhancing EU defence capabilities.
   stances:
-    defence:
-      score: 1
-      evidence: im Dienste eines starken, souveränen und handlungsfähigen Europas
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: im Dienste eines starken, souveränen und handlungsfähigen Europas
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

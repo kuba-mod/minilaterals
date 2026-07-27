@@ -24,12 +24,15 @@ extracted:
     defence: France emphasizes the importance of enhancing European security and defense
       capabilities.
   stances:
-    ukraine:
-      score: 1
-      evidence: le soutien à l’Ukraine et la poursuite des sanctions contre la Russie
-    defence:
-      score: 1
-      evidence: la sécurité et la défense européenne
+    weimar:
+      ukraine:
+        score: 1
+        evidence: le soutien à l’Ukraine et la poursuite des sanctions contre la Russie
+      defence: &id001
+        score: 1
+        evidence: la sécurité et la défense européenne
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

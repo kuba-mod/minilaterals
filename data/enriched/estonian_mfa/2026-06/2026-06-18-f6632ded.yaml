@@ -24,13 +24,7 @@ extracted:
       activity and pressure Russia.
     ukraine: Estonia believes that diplomatic pressure on Iran via the US will hinder
       Russia's ability to wage war against Ukraine.
-  stances:
-    iran:
-      score: 1
-      evidence: USA ja Iraani vahekokkuleppele
-    ukraine:
-      score: 1
-      evidence: aitab suurendada survet Venemaa sõjamasinale
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

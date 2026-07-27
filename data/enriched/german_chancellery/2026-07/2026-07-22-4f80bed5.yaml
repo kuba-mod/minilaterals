@@ -21,11 +21,12 @@ extracted:
     enlargement: Germany rhetorically supports Moldova's path to EU membership and
       the associated institutional reforms.
   stances:
-    enlargement:
-      score: 1
-      evidence: Auf dem Weg in die Europäische Union und bei den dafür notwendigen
-        Reformen wird Deutschland auch weiterhin ein verlässlicher Partner der Republik
-        Moldau sein.
+    weimar:
+      enlargement:
+        score: 1
+        evidence: Auf dem Weg in die Europäische Union und bei den dafür notwendigen
+          Reformen wird Deutschland auch weiterhin ein verlässlicher Partner der Republik
+          Moldau sein.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -32,22 +32,26 @@ extracted:
     rule_of_law: Poland emphasizes democratic principles and the rule of law as foundational
       for renewed bilateral relations.
   stances:
-    defence:
-      score: 1
-      evidence: The two officials affirmed readiness to work closely towards enhanced
-        regional security
-    hybrid:
-      score: 1
-      evidence: The meeting will focus on giving new energy to cooperation in Central
-        Europe and working out shared positions on key security issues.
-    enlargement:
-      score: 1
-      evidence: namely to resume constructive dialogue, both bilaterally and in the
-        European Union
-    rule_of_law:
-      score: 1
-      evidence: carries a symbolic meaning for the states that stand up for democratic
-        principles.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: The two officials affirmed readiness to work closely towards enhanced
+          regional security
+      hybrid:
+        score: 1
+        evidence: The meeting will focus on giving new energy to cooperation in Central
+          Europe and working out shared positions on key security issues.
+      enlargement: &id002
+        score: 1
+        evidence: namely to resume constructive dialogue, both bilaterally and in
+          the European Union
+      rule_of_law:
+        score: 1
+        evidence: carries a symbolic meaning for the states that stand up for democratic
+          principles.
+    visegrad:
+      defence: *id001
+      enlargement: *id002
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

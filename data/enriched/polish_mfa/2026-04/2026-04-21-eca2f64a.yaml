@@ -30,19 +30,22 @@ extracted:
       law by criticizing illegal settlements and supporting diplomatic processes like
       those in the Middle East.
   stances:
-    ukraine:
-      score: 2
-      evidence: Deputy Minister Ignacy Niemczycki stressed that the European Union
-        should urgently approve a EUR 90 billion loan for Ukraine.
-    enlargement:
-      score: 2
-      evidence: open the “Fundamentals” cluster in the EU’s accession negotiations
-        with Ukraine as soon as possible.
-    rule_of_law:
-      score: 1
-      evidence: The vast majority of participants criticised the continued establishment
-        of illegal Israeli settlements in the West Bank and endorsed the EU’s firm
-        response.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deputy Minister Ignacy Niemczycki stressed that the European Union
+          should urgently approve a EUR 90 billion loan for Ukraine.
+      enlargement: &id001
+        score: 2
+        evidence: open the “Fundamentals” cluster in the EU’s accession negotiations
+          with Ukraine as soon as possible.
+      rule_of_law:
+        score: 1
+        evidence: The vast majority of participants criticised the continued establishment
+          of illegal Israeli settlements in the West Bank and endorsed the EU’s firm
+          response.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

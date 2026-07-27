@@ -22,10 +22,13 @@ extracted:
     defence: Germany is actively advancing defense cooperation with Poland through
       the signing of a bilateral defense agreement to strengthen European security.
   stances:
-    defence:
-      score: 2
-      evidence: Dass heute in Warschau ein Verteidigungsabkommen zwischen unseren
-        Ländern unterzeichnet wurde, ist umso bedeutender.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: Dass heute in Warschau ein Verteidigungsabkommen zwischen unseren
+          Ländern unterzeichnet wurde, ist umso bedeutender.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

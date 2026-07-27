@@ -52,7 +52,7 @@ def _load_grouping_vocab() -> tuple[set[str], set[str]]:
         return set(), set()
     # `topics` marks a grouping as tracked by the pipeline; the file also holds
     # hub-page placeholders, whose members must not widen the actor enum.
-    tracked = [g for g in (raw.get("groupings") or {}).values() if g.get("topics")]
+    tracked = [g for g in raw.values() if isinstance(g, dict) and g.get("topics")]
     actors = {c for g in tracked for c in (g.get("members") or [])}
     issues = {t for g in tracked for t in g["topics"]}
     return actors, issues
@@ -107,11 +107,11 @@ def _validate_list_file(path: Path, schema: type[BaseModel]) -> list[str]:
 
 
 def _validate_goals(path: Path) -> list[str]:
-    """`topic_goals` must name every tracked issue area and nothing else.
+    """Every tracked grouping's `goals` must match its `topics` exactly.
 
-    Both sides come from the same file: the enum is the union of the tracked
-    groupings' `topics`, so a topic added to a grouping without a goal sentence
-    (or a leftover sentence for a dropped topic) fails here.
+    Goals are per grouping, not per topic — `defence` means something different
+    to AUKUS than to the Weimar Triangle. A topic added to a grouping without a
+    goal sentence (or a leftover sentence for a dropped topic) fails here.
     """
     if not path.exists():
         return []
@@ -121,19 +121,26 @@ def _validate_goals(path: Path) -> list[str]:
         return [f"{_rel(path)}: invalid YAML — {exc}"]
     if not isinstance(raw, dict):
         return [f"{_rel(path)}: expected a mapping, got {type(raw).__name__}"]
-    data = raw.get("topic_goals")
-    if not isinstance(data, dict):
-        return [f"{_rel(path)}: expected a `topic_goals` mapping, got {type(data).__name__}"]
     errors = []
-    extra_keys = set(data) - KNOWN_ISSUE_AREAS
-    missing_keys = KNOWN_ISSUE_AREAS - set(data)
-    if extra_keys:
-        errors.append(f"{_rel(path)}: topic_goals has unknown issue-area keys {sorted(extra_keys)}")
-    if missing_keys:
-        errors.append(f"{_rel(path)}: topic_goals is missing issue-area keys {sorted(missing_keys)}")
-    for key, value in data.items():
-        if not isinstance(value, str):
-            errors.append(f"{_rel(path)}: topic_goals[{key}] expected a string, got {type(value).__name__}")
+    for key, g in raw.items():
+        if not isinstance(g, dict):
+            continue
+        topics = set(g.get("topics") or [])
+        if not topics:
+            if g.get("goals"):
+                errors.append(f"{_rel(path)}: {key} has goals but no topics — it is not tracked")
+            continue
+        goals = g.get("goals")
+        if not isinstance(goals, dict):
+            errors.append(f"{_rel(path)}: {key} is tracked but has no `goals` mapping")
+            continue
+        for extra in sorted(set(goals) - topics):
+            errors.append(f"{_rel(path)}: {key}.goals has {extra!r}, which is not one of its topics")
+        for missing in sorted(topics - set(goals)):
+            errors.append(f"{_rel(path)}: {key}.goals is missing a sentence for topic {missing!r}")
+        for topic, value in goals.items():
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{_rel(path)}: {key}.goals[{topic}] expected a non-empty string")
     return errors
 
 

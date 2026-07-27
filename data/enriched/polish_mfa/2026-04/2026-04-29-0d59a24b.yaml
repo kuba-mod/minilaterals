@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland emphasizes democratic resilience and adherence to international
       treaties by criticizing Russia’s destabilizing actions regarding nuclear weapons.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: He pointed out that Russia’s actions are destabilising the security
-        environment and run counter to the spirit of the NPT.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: He pointed out that Russia’s actions are destabilising the security
+          environment and run counter to the spirit of the NPT.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

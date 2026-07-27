@@ -25,13 +25,17 @@ extracted:
     enlargement: Poland suggests that readiness to accept historical truths is a requirement
       for those wishing to join the European community.
   stances:
-    ukraine:
-      score: 1
-      evidence: Potrzebujemy dziś solidarności wobec wspólnych zagrożeń, a solidarność
-        zbudowana jest na fundamencie prawdy, pamięci i nadziei.
-    enlargement:
-      score: -1
-      evidence: Kto chce przyłączyć się do tej wspólnoty, musi być na tę prawdę gotowy.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Potrzebujemy dziś solidarności wobec wspólnych zagrożeń, a solidarność
+          zbudowana jest na fundamencie prawdy, pamięci i nadziei.
+      enlargement: &id001
+        score: -1
+        evidence: Kto chce przyłączyć się do tej wspólnoty, musi być na tę prawdę
+          gotowy.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

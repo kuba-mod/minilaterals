@@ -37,23 +37,26 @@ extracted:
     rule_of_law: Poland demands international legal accountability and punishment
       for Russian perpetrators of war crimes against civilians.
   stances:
-    ukraine:
-      score: 2
-      evidence: zaapelował również o szybkie przyjęcie przez Unię Europejską 21. pakietu
-        sankcji wobec Rosji
-    defence:
-      score: 1
-      evidence: zaznaczył także konieczność pilnego wsparcia Ukrainy systemami obrony
-        powietrznej
-    hybrid:
-      score: 1
-      evidence: Wicepremier Sikorski z zadowoleniem przyjął oświadczenie Wysokiej
-        Przedstawiciel Kai Kallas w sprawie wrogich działań Rosji w cyberprzestrzeni
-        wobec państw członkowskich, w tym Polski.
-    rule_of_law:
-      score: 1
-      evidence: podkreślił konieczność reakcji społeczności międzynarodowej na naruszenia
-        międzynarodowego prawa humanitarnego. Należy ukarać sprawców
+    weimar:
+      ukraine:
+        score: 2
+        evidence: zaapelował również o szybkie przyjęcie przez Unię Europejską 21.
+          pakietu sankcji wobec Rosji
+      defence: &id001
+        score: 1
+        evidence: zaznaczył także konieczność pilnego wsparcia Ukrainy systemami obrony
+          powietrznej
+      hybrid:
+        score: 1
+        evidence: Wicepremier Sikorski z zadowoleniem przyjął oświadczenie Wysokiej
+          Przedstawiciel Kai Kallas w sprawie wrogich działań Rosji w cyberprzestrzeni
+          wobec państw członkowskich, w tym Polski.
+      rule_of_law:
+        score: 1
+        evidence: podkreślił konieczność reakcji społeczności międzynarodowej na naruszenia
+          międzynarodowego prawa humanitarnego. Należy ukarać sprawców
+    visegrad:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

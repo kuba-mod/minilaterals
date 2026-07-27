@@ -22,13 +22,14 @@ extracted:
     rule_of_law: France advocates for an open international order based on the rule
       of law and effective multilateralism.
   stances:
-    green_transition:
-      score: 1
-      evidence: Pacte de Paris pour la prospérité, les peuples et la planète
-    rule_of_law:
-      score: 1
-      evidence: un ordre international ouvert, fondé sur la règle de droit, attaché
-        à un multilatéralisme efficace
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Pacte de Paris pour la prospérité, les peuples et la planète
+      rule_of_law:
+        score: 1
+        evidence: un ordre international ouvert, fondé sur la règle de droit, attaché
+          à un multilatéralisme efficace
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

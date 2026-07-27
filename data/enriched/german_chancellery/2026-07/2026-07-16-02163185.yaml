@@ -24,10 +24,11 @@ extracted:
       and future technologies, supporting the industrial side of the green and digital
       transition.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Geld soll unter anderem in Künstliche Intelligenz, Biotechnologie
-        und die Sicherung von Rohstoffen fließen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Geld soll unter anderem in Künstliche Intelligenz, Biotechnologie
+          und die Sicherung von Rohstoffen fließen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

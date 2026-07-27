@@ -25,13 +25,14 @@ extracted:
     rule_of_law: France emphasized the importance of democratic resilience and adherence
       to international rules in global affairs.
   stances:
-    ukraine:
-      score: 1
-      evidence: reaffirmed their support for Ukraine.
-    rule_of_law:
-      score: 1
-      evidence: reiterated their commitment to multilateralism and the rules-based
-        international order
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their support for Ukraine.
+      rule_of_law:
+        score: 1
+        evidence: reiterated their commitment to multilateralism and the rules-based
+          international order
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

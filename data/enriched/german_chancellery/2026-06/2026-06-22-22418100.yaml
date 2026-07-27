@@ -33,16 +33,19 @@ extracted:
     green_transition: Germany advocates for climate-neutral construction and the reduction
       of bureaucracy to achieve this goal.
   stances:
-    ukraine:
-      score: 1
-      evidence: die Unterstützung der Ukraine Themen, die die zahlreichen Gäste im
-        Bundespresseamt besonders interessierten
-    defence:
-      score: 1
-      evidence: als europäischer Teamplayer Sicherheitspolitik machen zu wollen
-    green_transition:
-      score: 1
-      evidence: in Zukunft digitaler, klimaneutraler und pragmatischer zu bauen
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die Unterstützung der Ukraine Themen, die die zahlreichen Gäste
+          im Bundespresseamt besonders interessierten
+      defence: &id001
+        score: 1
+        evidence: als europäischer Teamplayer Sicherheitspolitik machen zu wollen
+      green_transition:
+        score: 1
+        evidence: in Zukunft digitaler, klimaneutraler und pragmatischer zu bauen
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

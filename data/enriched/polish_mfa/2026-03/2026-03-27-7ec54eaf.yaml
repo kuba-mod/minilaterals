@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Poland affirms the importance of democratic solidarity and the rule
       of law by supporting the democratic community in Belarus.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Deputy Minister Władysław Teofil Bartoszewski noted that the “No freedom
-        without Solidarity” slogan is still relevant
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Deputy Minister Władysław Teofil Bartoszewski noted that the “No
+          freedom without Solidarity” slogan is still relevant
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

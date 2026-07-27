@@ -20,10 +20,13 @@ extracted:
     defence: Germany supports strengthening EU and NATO defense capabilities through
       cooperation with partners like Norway and Canada.
   stances:
-    defence:
-      score: 1
-      evidence: This step will strengthen and deepen our partnership in the transatlantic
-        alliance for the long term.
+    weimar:
+      defence: &id001
+        score: 1
+        evidence: This step will strengthen and deepen our partnership in the transatlantic
+          alliance for the long term.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

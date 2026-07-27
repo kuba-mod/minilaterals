@@ -25,9 +25,10 @@ extracted:
       importance of digital sovereignty and competitiveness in the face of disruptive
       technologies.
   stances:
-    hybrid:
-      score: 1
-      evidence: questions de souveraineté numérique, de compétitivité et d’investissement
+    weimar:
+      hybrid:
+        score: 1
+        evidence: questions de souveraineté numérique, de compétitivité et d’investissement
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

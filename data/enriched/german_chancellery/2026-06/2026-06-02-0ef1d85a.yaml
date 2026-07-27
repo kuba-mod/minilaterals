@@ -26,9 +26,10 @@ extracted:
     green_transition: Germany actively advances climate neutrality and environmental
       protection as a core state objective.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das gibt uns heute die Chance, den gefährlichen Klimawandel aufzuhalten.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das gibt uns heute die Chance, den gefährlichen Klimawandel aufzuhalten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

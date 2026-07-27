@@ -21,11 +21,14 @@ extracted:
     defence: France actively advances collective security and navigation freedom by
       standing ready to deploy a multinational military mission.
   stances:
-    defence:
-      score: 2
-      evidence: La France et le Royaume-Uni se tiennent également prêts à déployer
-        la mission militaire multinationale plus large pour soutenir la liberté de
-        navigation dans le détroit d'Ormuz.
+    weimar:
+      defence: &id001
+        score: 2
+        evidence: La France et le Royaume-Uni se tiennent également prêts à déployer
+          la mission militaire multinationale plus large pour soutenir la liberté
+          de navigation dans le détroit d'Ormuz.
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

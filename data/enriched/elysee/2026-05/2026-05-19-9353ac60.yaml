@@ -25,11 +25,12 @@ extracted:
       through specific decarbonization targets, electrification of industry, and the
       launch of a national plastics plan.
   stances:
-    green_transition:
-      score: 2
-      evidence: le Conseil a validé le lancement du plan Plastique , traduction opérationnelle
-        de la refondation des filières à responsabilité élargie du producteur (REP)
-        vers une approche industrielle
+    weimar:
+      green_transition:
+        score: 2
+        evidence: le Conseil a validé le lancement du plan Plastique , traduction
+          opérationnelle de la refondation des filières à responsabilité élargie du
+          producteur (REP) vers une approche industrielle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

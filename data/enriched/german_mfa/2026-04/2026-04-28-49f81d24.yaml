@@ -26,14 +26,15 @@ extracted:
       particularly rising sea levels, and commits to supporting vulnerable island
       states in their fight against environmental threats.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Above all, unwavering commitment to the UN Charter and international
-        law.
-    green_transition:
-      score: 2
-      evidence: 'And I can assure those whose safety and livelihoods are endangered
-        by climate change: We are, and we remain, at your side.'
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Above all, unwavering commitment to the UN Charter and international
+          law.
+      green_transition:
+        score: 2
+        evidence: 'And I can assure those whose safety and livelihoods are endangered
+          by climate change: We are, and we remain, at your side.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

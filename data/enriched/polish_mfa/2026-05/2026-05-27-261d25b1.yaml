@@ -23,15 +23,16 @@ extracted:
     defence: Poland highlights the necessity of addressing security challenges and
       resilience within the current international context.
   stances:
-    hybrid:
-      score: 1
-      evidence: zaapelowała do reprezentantów polskich województw i niemieckich krajów
-        związkowych o uwzględnianie w swoich aktywnościach kwestii bezpieczeństwa
-        i budowy odporności społecznej, w tym przeciwdziałania zagrożeniom hybrydowym
-        i dezinformacji.
-    defence:
-      score: 1
-      evidence: Uczestnicy spotkania rozmawiali o wyzwaniach bezpieczeństwa
+    weimar:
+      hybrid:
+        score: 1
+        evidence: zaapelowała do reprezentantów polskich województw i niemieckich
+          krajów związkowych o uwzględnianie w swoich aktywnościach kwestii bezpieczeństwa
+          i budowy odporności społecznej, w tym przeciwdziałania zagrożeniom hybrydowym
+          i dezinformacji.
+      defence:
+        score: 1
+        evidence: Uczestnicy spotkania rozmawiali o wyzwaniach bezpieczeństwa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

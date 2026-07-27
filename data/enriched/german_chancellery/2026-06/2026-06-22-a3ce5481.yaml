@@ -19,10 +19,11 @@ extracted:
     green_transition: Germany is actively advancing sustainability goals through a
       cross-sectoral platform involving government, civil society, and industry.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Gemeinschaftswerk Nachhaltigkeit zielt darauf, Nachhaltigkeit
-        in der Gesellschaft im Rahmen der 17 globalen Nachhaltigkeitsziele voranzubringen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Gemeinschaftswerk Nachhaltigkeit zielt darauf, Nachhaltigkeit
+          in der Gesellschaft im Rahmen der 17 globalen Nachhaltigkeitsziele voranzubringen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

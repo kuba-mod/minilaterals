@@ -29,19 +29,23 @@ extracted:
       resilience against disinformation and hybrid operations, aligning with foundational
       principles of democratic security.
   stances:
-    hybrid:
-      score: 1
-      evidence: she emphasised that Russia remains the principal threat for Europe,
-        and a joint effort of the whole European community is required to build resilience
-        to Russian and Belarusian disinformation-related and other hybrid operations.
-    enlargement:
-      score: 0
-      evidence: the meeting’s agenda included... the EU enlargement policy
-    rule_of_law:
-      score: 1
-      evidence: a joint effort of the whole European community is required to build
-        resilience to Russian and Belarusian disinformation-related and other hybrid
-        operations.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: she emphasised that Russia remains the principal threat for Europe,
+          and a joint effort of the whole European community is required to build
+          resilience to Russian and Belarusian disinformation-related and other hybrid
+          operations.
+      enlargement: &id001
+        score: 0
+        evidence: the meeting’s agenda included... the EU enlargement policy
+      rule_of_law:
+        score: 1
+        evidence: a joint effort of the whole European community is required to build
+          resilience to Russian and Belarusian disinformation-related and other hybrid
+          operations.
+    visegrad:
+      enlargement: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

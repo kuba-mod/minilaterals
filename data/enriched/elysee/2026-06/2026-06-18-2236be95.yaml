@@ -21,9 +21,10 @@ extracted:
     ukraine: France continues to engage with the situation in Ukraine, though no new
       concrete commitments were specified in this summary.
   stances:
-    ukraine:
-      score: 0
-      evidence: la situation en Ukraine
+    weimar:
+      ukraine:
+        score: 0
+        evidence: la situation en Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

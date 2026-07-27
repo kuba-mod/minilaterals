@@ -24,14 +24,17 @@ extracted:
     defence: Germany signals a willingness for concrete military engagement in the
       Strait of Hormuz subject to parliamentary approval.
   stances:
-    ukraine:
-      score: 1
-      evidence: die Unterstützung aus dem Kreis der G7 -Staaten heraus so stark wie
-        selten zuvor ist
-    defence:
-      score: 2
-      evidence: Dies könne ein militärisches Engagement in der Straße von Hormus mit
-        entsprechendem Bundestagsmandat beinhalten
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die Unterstützung aus dem Kreis der G7 -Staaten heraus so stark
+          wie selten zuvor ist
+      defence: &id001
+        score: 2
+        evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
+          mit entsprechendem Bundestagsmandat beinhalten
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

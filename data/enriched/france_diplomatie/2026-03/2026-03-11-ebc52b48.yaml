@@ -20,12 +20,13 @@ extracted:
     rule_of_law: France strongly emphasizes adherence to international humanitarian
       law and principles like distinction and proportionality during hostilities.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Compliance with the rules governing the conduct of hostilities, and
-        particularly the principles of distinction, proportionality and precaution,
-        is vital to ensuring the protection of civilian populations and civilian infrastructure
-        in all circumstances.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Compliance with the rules governing the conduct of hostilities,
+          and particularly the principles of distinction, proportionality and precaution,
+          is vital to ensuring the protection of civilian populations and civilian
+          infrastructure in all circumstances.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

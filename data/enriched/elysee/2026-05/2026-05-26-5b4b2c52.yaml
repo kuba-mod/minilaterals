@@ -27,10 +27,11 @@ extracted:
       energy policy through concrete commitments to nuclear power, renewables, and
       large-scale electrification.
   stances:
-    green_transition:
-      score: 2
-      evidence: Le chef de l’État a officialisé des engagements concrets pris par
-        des acteurs économiques dans quatre domaines prioritaires
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Le chef de l’État a officialisé des engagements concrets pris par
+          des acteurs économiques dans quatre domaines prioritaires
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

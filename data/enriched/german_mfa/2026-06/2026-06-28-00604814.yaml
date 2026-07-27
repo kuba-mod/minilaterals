@@ -21,12 +21,13 @@ extracted:
     rule_of_law: Germany affirms its commitment to supporting democracy, rule of law,
       and a multilateral international order in Latin America and the Caribbean.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Latin America and the Caribbean is a greater region comprising more
-        than 30 states, most of which are committed to democracy and the rule of law,
-        to the market economy and the welfare state, to a multilateral, values-based
-        international order.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Latin America and the Caribbean is a greater region comprising more
+          than 30 states, most of which are committed to democracy and the rule of
+          law, to the market economy and the welfare state, to a multilateral, values-based
+          international order.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

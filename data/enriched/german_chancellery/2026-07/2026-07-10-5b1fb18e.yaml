@@ -19,10 +19,11 @@ extracted:
     green_transition: Germany is actively advancing the green transition by legislating
       a right to repair to foster a culture of repair and sustainable consumption.
   stances:
-    green_transition:
-      score: 2
-      evidence: Ziel ist es, einen nachhaltigen Konsum und eine Kultur des Reparierens
-        zu fördern.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Ziel ist es, einen nachhaltigen Konsum und eine Kultur des Reparierens
+          zu fördern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

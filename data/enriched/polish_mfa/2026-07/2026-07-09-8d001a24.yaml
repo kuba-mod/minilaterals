@@ -28,18 +28,19 @@ extracted:
     rule_of_law: Poland supports the credibility of institutions fighting disinformation
       as a matter of national interest.
   stances:
-    ukraine:
-      score: 1
-      evidence: W żywotnym interesie Polski leży niedopuszczenie do realizacji takiego
-        scenariusza, będącego zagrożeniem dla bezpieczeństwa naszego kraju.
-    hybrid:
-      score: 2
-      evidence: Rada zwraca się z apelem o niereagowanie na wszelkie informacje na
-        temat zbrodni wołyńskiej pochodzące ze źródeł rosyjskich i niezweryfikowanych
-    rule_of_law:
-      score: 1
-      evidence: pogłębienia uprzedzeń i nieufności wobec instytucji zajmujących się
-        zwalczaniem rosyjskiej dezinformacji, co nie leży w polskim interesie.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: W żywotnym interesie Polski leży niedopuszczenie do realizacji takiego
+          scenariusza, będącego zagrożeniem dla bezpieczeństwa naszego kraju.
+      hybrid:
+        score: 2
+        evidence: Rada zwraca się z apelem o niereagowanie na wszelkie informacje
+          na temat zbrodni wołyńskiej pochodzące ze źródeł rosyjskich i niezweryfikowanych
+      rule_of_law:
+        score: 1
+        evidence: pogłębienia uprzedzeń i nieufności wobec instytucji zajmujących
+          się zwalczaniem rosyjskiej dezinformacji, co nie leży w polskim interesie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

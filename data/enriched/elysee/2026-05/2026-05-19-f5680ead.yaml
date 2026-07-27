@@ -24,9 +24,10 @@ extracted:
       and terrorism financing, which aligns with coordinated action against hybrid
       threats.
   stances:
-    hybrid:
-      score: 2
-      evidence: la lutte contre la criminalité financière l’une de ses priorités
+    weimar:
+      hybrid:
+        score: 2
+        evidence: la lutte contre la criminalité financière l’une de ses priorités
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

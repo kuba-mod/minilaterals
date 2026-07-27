@@ -18,10 +18,11 @@ extracted:
     defence: France actively advances defense capabilities through the delivery of
       military hardware to Greece and the signing of security agreements.
   stances:
-    defence:
-      score: 2
-      evidence: visiter la frégate Kimon , construite par Naval Group à Lorient et
-        livrée à la Grèce en janvier 2026
+    weimar:
+      defence:
+        score: 2
+        evidence: visiter la frégate Kimon , construite par Naval Group à Lorient
+          et livrée à la Grèce en janvier 2026
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

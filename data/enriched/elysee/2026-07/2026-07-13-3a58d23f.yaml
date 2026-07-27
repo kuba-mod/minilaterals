@@ -34,14 +34,17 @@ extracted:
     defence: France is actively advancing European collective security by establishing
       a shared industrial and operational architecture for missile defense.
   stances:
-    ukraine:
-      score: 1
-      evidence: Nous reconnaissons l'expérience unique de l'Ukraine, acquise par sa
-        défense face à la guerre d'agression menée par la Russie.
-    defence:
-      score: 2
-      evidence: annonçons aujourd’hui le lancement de la création d’une coalition
-        purement défensive contre les missiles balistiques
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Nous reconnaissons l'expérience unique de l'Ukraine, acquise par
+          sa défense face à la guerre d'agression menée par la Russie.
+      defence: &id001
+        score: 2
+        evidence: annonçons aujourd’hui le lancement de la création d’une coalition
+          purement défensive contre les missiles balistiques
+    e3:
+      defence: *id001
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'
