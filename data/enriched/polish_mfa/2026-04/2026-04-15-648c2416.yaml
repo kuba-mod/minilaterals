@@ -25,7 +25,7 @@ extracted:
       establishment of a special tribunal to prosecute aggression.
   stances:
     weimar:
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: Deputy Prime Minister Radosław Sikorski signed a declaration of
           will to join the Enlarged Partial Agreement on the Management Committee
@@ -37,7 +37,11 @@ extracted:
           against Ukraine, which constitutes a violation of Article 2(4) of the UN
           Charter and customary international law.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: Deputy Prime Minister Radosław Sikorski signed a declaration of
+          will to join the Enlarged Partial Agreement on the Management Committee
+          of the Special Tribunal for the Crime of Aggression against Ukraine.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

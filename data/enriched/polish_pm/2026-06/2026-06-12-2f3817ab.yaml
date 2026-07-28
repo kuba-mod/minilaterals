@@ -25,7 +25,7 @@ extracted:
       threats, specifically cyber and drone-related risks.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
           samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
@@ -35,7 +35,10 @@ extracted:
           Mundurowych na lata 2026–2029. Budżet formacji ma wzrosnąć o 125% i osiągnąć
           poziom blisko 500 mln zł.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
+          samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -24,12 +24,15 @@ extracted:
       Norway.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: kanadische Regierung damit ein starkes Zeichen der transatlantischen
           und europäischen Zusammenarbeit in der Verteidigungsindustrie
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: kanadische Regierung damit ein starkes Zeichen der transatlantischen
+          und europäischen Zusammenarbeit in der Verteidigungsindustrie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

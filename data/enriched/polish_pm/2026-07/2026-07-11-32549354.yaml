@@ -30,12 +30,15 @@ extracted:
         score: 1
         evidence: Potrzebujemy dziś solidarności wobec wspólnych zagrożeń, a solidarność
           zbudowana jest na fundamencie prawdy, pamięci i nadziei.
-      enlargement: &id001
+      enlargement:
         score: -1
         evidence: Kto chce przyłączyć się do tej wspólnoty, musi być na tę prawdę
           gotowy.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: -1
+        evidence: Kto chce przyłączyć się do tej wspólnoty, musi być na tę prawdę
+          gotowy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

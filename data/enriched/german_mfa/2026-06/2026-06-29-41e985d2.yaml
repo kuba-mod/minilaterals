@@ -30,11 +30,13 @@ extracted:
       ukraine:
         score: 1
         evidence: eine stabile, langfristige Unterstützung der Ukraine erreichen können
-      defence: &id001
+      defence:
         score: 1
         evidence: Unsere kollektive Abschreckung wirkt.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Unsere kollektive Abschreckung wirkt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -38,14 +38,16 @@ extracted:
         score: 1
         evidence: Russia’s aggression against Ukraine, supporting Ukraine, and ways
           of ramping up pressure on Russia.
-      enlargement: &id001
+      enlargement:
         score: 0
         evidence: ''
       rule_of_law:
         score: 0
         evidence: ''
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 0
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

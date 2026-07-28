@@ -38,7 +38,7 @@ extracted:
         score: 1
         evidence: He also reported on the current state of Russia’s war against Ukraine
           and underlined the importance of Europe’s commitment to this cause.
-      defence: &id001
+      defence:
         score: 0
         evidence: ''
       hybrid:
@@ -52,7 +52,9 @@ extracted:
           therefore we condemn the crossing of international borders, either by tanks
           or by terrorists, in the strongest terms.
     visegrad:
-      defence: *id001
+      defence:
+        score: 0
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

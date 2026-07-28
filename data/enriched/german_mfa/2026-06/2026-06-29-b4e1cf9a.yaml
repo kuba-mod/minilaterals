@@ -35,7 +35,7 @@ extracted:
         score: 1
         evidence: Support that will make Moscow realise that the time has finally
           come to stop the killing in Ukraine and sit down at the negotiating table.
-      defence: &id001
+      defence:
         score: 1
         evidence: Our Euro-Atlantic security decisively depends on us retaining our
           steadfast resolve within NATO in the future, too.
@@ -45,7 +45,10 @@ extracted:
           and crises, the more economically strong, diverse and resilient we must
           become.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Our Euro-Atlantic security decisively depends on us retaining our
+          steadfast resolve within NATO in the future, too.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -43,7 +43,7 @@ extracted:
       ukraine:
         score: 1
         evidence: ''
-      defence: &id001
+      defence:
         score: 1
         evidence: ''
       hybrid:
@@ -59,7 +59,9 @@ extracted:
         score: 1
         evidence: ''
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

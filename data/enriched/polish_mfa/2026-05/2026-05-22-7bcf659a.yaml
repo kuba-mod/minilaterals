@@ -35,7 +35,7 @@ extracted:
       conflicts to improve military readiness and effective deterrence.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Deputy Prime Minister Sikorski observed that military modernisation
           in Europe must be stepped up because of continued Russia threat.
@@ -44,7 +44,7 @@ extracted:
         evidence: We are all aware that we must draw lessons for the purchasing policy,
           for the operational art, for troop trainings in the light of defence against
           the Russian aggression, where things are looking up for Ukraine.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: The minister added that close cooperation is as necessary between
           Poland and the US as it is between the US and Europe, with greater engagement
@@ -54,8 +54,15 @@ extracted:
         evidence: drawing on lessons learned and a swift adjustment are the key aspects
           of effective deterrence.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: Deputy Prime Minister Sikorski observed that military modernisation
+          in Europe must be stepped up because of continued Russia threat.
+      enlargement:
+        score: 1
+        evidence: The minister added that close cooperation is as necessary between
+          Poland and the US as it is between the US and Europe, with greater engagement
+          of European states in NATO.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

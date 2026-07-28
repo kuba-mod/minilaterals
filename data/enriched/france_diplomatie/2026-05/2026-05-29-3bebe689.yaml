@@ -36,7 +36,7 @@ extracted:
       ukraine:
         score: 1
         evidence: France will continue to provide Ukraine with unwavering support.
-      defence: &id001
+      defence:
         score: 2
         evidence: As a framework nation of NATO’s multinational battlegroup deployed
           in Romania, France will continue to play a full role in the efforts to strengthen
@@ -49,7 +49,11 @@ extracted:
         score: 1
         evidence: The security of our allies is our priority and must be guaranteed.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: As a framework nation of NATO’s multinational battlegroup deployed
+          in Romania, France will continue to play a full role in the efforts to strengthen
+          NATO’s deterrence and defense posture.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

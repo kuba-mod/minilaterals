@@ -26,7 +26,7 @@ extracted:
       involving key energy companies.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: what we want to do with Thales, KNDS, Airbus Defence and Space,
           and Airbus
@@ -35,7 +35,10 @@ extracted:
         evidence: we signed this morning several contracts involving Suez, EDF, CMS,
           AGM
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: what we want to do with Thales, KNDS, Airbus Defence and Space,
+          and Airbus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

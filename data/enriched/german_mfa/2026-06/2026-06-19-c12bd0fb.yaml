@@ -22,11 +22,13 @@ extracted:
       framework.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 0
         evidence: Wie funktioniert die Zusammenarbeit in EU , NATO und UN ?
     e3:
-      defence: *id001
+      defence:
+        score: 0
+        evidence: Wie funktioniert die Zusammenarbeit in EU , NATO und UN ?
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

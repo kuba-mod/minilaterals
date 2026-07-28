@@ -22,12 +22,15 @@ extracted:
       law.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt
           in der Straße von Hormus und auf Länder in der Region
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt
+          in der Straße von Hormus und auf Länder in der Region
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

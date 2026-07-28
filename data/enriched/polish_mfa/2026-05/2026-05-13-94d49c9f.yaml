@@ -34,7 +34,7 @@ extracted:
       sources, including offshore wind farms, into its energy supply.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Poland’s security is being improved through armaments programmes,
           which include the Orka (new-generation submarines), the Miecznik (multipurpose
@@ -58,7 +58,12 @@ extracted:
           Since 2026, the hub will also include wind farms currently under construction
           in Poland’s exclusive economic zone.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Poland’s security is being improved through armaments programmes,
+          which include the Orka (new-generation submarines), the Miecznik (multipurpose
+          frigates for the Polish Navy), and investments in the development of Polish
+          unmanned surface vehicles.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

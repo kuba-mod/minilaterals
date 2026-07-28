@@ -24,11 +24,13 @@ extracted:
       Union, which aligns with the goal of enhancing EU defence capabilities.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: im Dienste eines starken, souveränen und handlungsfähigen Europas
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: im Dienste eines starken, souveränen und handlungsfähigen Europas
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

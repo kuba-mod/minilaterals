@@ -25,12 +25,15 @@ extracted:
       as defensive measures against Russian aggression.
   stances:
     e3:
-      defence: &id001
+      defence:
         score: 1
         evidence: NATO and international support for Ukraine are defensive responses
           to Russian aggression
     aukus:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: NATO and international support for Ukraine are defensive responses
+          to Russian aggression
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

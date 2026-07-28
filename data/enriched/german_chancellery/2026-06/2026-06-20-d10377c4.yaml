@@ -21,12 +21,15 @@ extracted:
       the need for a capable national defense.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Deutschland müsse in der Lage sein, sich zu verteidigen. „Das nennt
           man Abschreckung“, so der Regierungssprecher.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Deutschland müsse in der Lage sein, sich zu verteidigen. „Das nennt
+          man Abschreckung“, so der Regierungssprecher.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

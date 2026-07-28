@@ -41,7 +41,7 @@ extracted:
           soldiers perpetrated there. But also to announce there that we will participate
           in a special tribunal that will investigate and criminally prosecute the
           crimes committed by Russia.
-      defence: &id001
+      defence:
         score: 2
         evidence: The opponent must be deterred, to make sure he will refrain from
           an open attack on NATO .
@@ -57,7 +57,10 @@ extracted:
           tribunal that will investigate and criminally prosecute the crimes committed
           by Russia.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: The opponent must be deterred, to make sure he will refrain from
+          an open attack on NATO .
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

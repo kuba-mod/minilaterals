@@ -27,7 +27,7 @@ extracted:
       than adopting a 'normative surplus' approach in foreign policy.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: With defence spending of five percent of GDP, which I firmly supported,
           we are now finally putting this goal into practice.
@@ -35,7 +35,10 @@ extracted:
         score: 1
         evidence: On the contrary – we state what is in our interests and what isn’t.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: With defence spending of five percent of GDP, which I firmly supported,
+          we are now finally putting this goal into practice.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

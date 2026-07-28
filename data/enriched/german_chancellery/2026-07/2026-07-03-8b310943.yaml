@@ -22,12 +22,15 @@ extracted:
       security to maintain the transatlantic alliance.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Deutschland mehr Verantwortung für die Sicherheit im euroatlantischen
           Raum übernimmt
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Deutschland mehr Verantwortung für die Sicherheit im euroatlantischen
+          Raum übernimmt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

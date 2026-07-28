@@ -29,7 +29,7 @@ extracted:
       via the prosecutor's office.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: będzie także ważnym elementem systemu bezpieczeństwa państwa
       rule_of_law:
@@ -37,7 +37,9 @@ extracted:
         evidence: będziemy wyjaśniali każdy element sprawy Szpitala Południowego i
           tam, gdzie jest potrzebna prokuratura, ona jest i działa
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: będzie także ważnym elementem systemu bezpieczeństwa państwa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

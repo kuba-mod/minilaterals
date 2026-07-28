@@ -34,7 +34,7 @@ extracted:
       ukraine:
         score: 1
         evidence: support for Ukraine in Russia’s war of aggression
-      defence: &id001
+      defence:
         score: 1
         evidence: signed a roadmap that bolsters the framework for our discussions
           on security
@@ -47,7 +47,10 @@ extracted:
         evidence: reaffirmed their commitment to the respect for international law
           and effective multilateralism
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: signed a roadmap that bolsters the framework for our discussions
+          on security
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

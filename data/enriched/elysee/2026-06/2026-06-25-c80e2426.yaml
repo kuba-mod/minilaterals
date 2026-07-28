@@ -29,12 +29,15 @@ extracted:
       ukraine:
         score: 1
         evidence: le soutien à l’Ukraine
-      defence: &id001
+      defence:
         score: 2
         evidence: approfondir la coopération franco-italienne dans plusieurs secteurs
           stratégiques , notamment la défense
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: approfondir la coopération franco-italienne dans plusieurs secteurs
+          stratégiques , notamment la défense
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

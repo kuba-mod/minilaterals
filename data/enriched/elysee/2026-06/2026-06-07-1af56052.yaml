@@ -34,13 +34,17 @@ extracted:
         score: 2
         evidence: réaffirmer leur soutien indéfectible à l’Ukraine dans sa défense
           contre l’invasion illégale de la Russie
-      defence: &id001
+      defence:
         score: 2
         evidence: besoin urgent de faire passer à l’échelle la production d’intercepteurs
           et de développer conjointement des capacités antimissiles balistiques et
           de frappe en profondeur
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: besoin urgent de faire passer à l’échelle la production d’intercepteurs
+          et de développer conjointement des capacités antimissiles balistiques et
+          de frappe en profondeur
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

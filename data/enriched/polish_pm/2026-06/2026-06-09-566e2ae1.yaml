@@ -30,12 +30,15 @@ extracted:
         score: 1
         evidence: w interesie Polski leży skuteczne wspieranie Ukrainy w jej obronie
           przed rosyjską agresją
-      enlargement: &id001
+      enlargement:
         score: -1
         evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
           ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: -1
+        evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
+          ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

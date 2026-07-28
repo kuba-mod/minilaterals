@@ -36,7 +36,7 @@ extracted:
         score: 1
         evidence: need to provide financial and humanitarian aid to the victim of
           aggression
-      defence: &id001
+      defence:
         score: 1
         evidence: appreciated Switzerland’s growing engagement in the EU’s defence
           activity
@@ -45,7 +45,10 @@ extracted:
         evidence: Poland and Switzerland take a similar position on this issue, including
           the perception of the war in Ukraine
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: appreciated Switzerland’s growing engagement in the EU’s defence
+          activity
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -23,11 +23,13 @@ extracted:
       facilitate the delivery of humanitarian aid and medical evacuation.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Sechs Maschinen der Luftwaffe stehen für die Unterstützung bereit
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Sechs Maschinen der Luftwaffe stehen für die Unterstützung bereit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

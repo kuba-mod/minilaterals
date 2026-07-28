@@ -32,12 +32,15 @@ extracted:
         score: 1
         evidence: im Mittelpunkt des Treffens ... stehen ... natürlich auch die Unterstützung
           der Ukraine
-      defence: &id001
+      defence:
         score: 1
         evidence: Das geplante Treffen im E5-Format ist Teil der Vorbereitung des
           NATO-Gipfels.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Das geplante Treffen im E5-Format ist Teil der Vorbereitung des
+          NATO-Gipfels.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

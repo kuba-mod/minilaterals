@@ -33,7 +33,7 @@ extracted:
       for renewed bilateral relations.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The two officials affirmed readiness to work closely towards enhanced
           regional security
@@ -41,7 +41,7 @@ extracted:
         score: 1
         evidence: The meeting will focus on giving new energy to cooperation in Central
           Europe and working out shared positions on key security issues.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: namely to resume constructive dialogue, both bilaterally and in
           the European Union
@@ -50,8 +50,14 @@ extracted:
         evidence: carries a symbolic meaning for the states that stand up for democratic
           principles.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: The two officials affirmed readiness to work closely towards enhanced
+          regional security
+      enlargement:
+        score: 1
+        evidence: namely to resume constructive dialogue, both bilaterally and in
+          the European Union
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

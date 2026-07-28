@@ -27,7 +27,7 @@ extracted:
       neutrality and infrastructure modernization through dedicated funds.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Für Verteidigung steigen die vorgesehenen Ausgaben im kommenden
           Jahr deutlich auf über 109 Milliarden Euro
@@ -36,7 +36,10 @@ extracted:
         evidence: Für 2027 sind über 36 Milliarden Euro für Investitionen des Bundes
           vorgesehen. Hinzu kommen 10 Milliarden Euro für den Klima- und Transformationsfonds
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Für Verteidigung steigen die vorgesehenen Ausgaben im kommenden
+          Jahr deutlich auf über 109 Milliarden Euro
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

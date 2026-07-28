@@ -38,7 +38,7 @@ extracted:
       promoting streamlined regulatory frameworks and strong government-business dialogue.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Both sides reaffirmed their commitment to enhance security cooperation,
           including on mutual self-defense and deterrence
@@ -48,7 +48,7 @@ extracted:
           cooperation on technology security, including by reducing dependency on
           high-risk vendors in sensitive sectors and protecting critical technology
           infrastructure from foreign interference
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: In turn, the United States expressed its strong support for Poland’s
           accession to the G20 as a permanent member.
@@ -64,8 +64,14 @@ extracted:
         evidence: Both sides emphasized the need for streamlined regulatory environments
           that support economic growth, entrepreneurship, and technological advancement.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: Both sides reaffirmed their commitment to enhance security cooperation,
+          including on mutual self-defense and deterrence
+      enlargement:
+        score: 1
+        evidence: In turn, the United States expressed its strong support for Poland’s
+          accession to the G20 as a permanent member.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -29,12 +29,12 @@ extracted:
       and democratic resilience in Europe.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Our relations are crucial for improving the security in the region
           and in Europe as a whole, especially in the context of protecting the EU’s
           and NATO’s Eastern flank.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: interlocutors backed staying the course of Ukrainian integration
           with the European Union
@@ -43,8 +43,15 @@ extracted:
         evidence: Our relations are crucial for improving the security in the region
           and in Europe as a whole
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: Our relations are crucial for improving the security in the region
+          and in Europe as a whole, especially in the context of protecting the EU’s
+          and NATO’s Eastern flank.
+      enlargement:
+        score: 1
+        evidence: interlocutors backed staying the course of Ukrainian integration
+          with the European Union
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

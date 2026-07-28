@@ -32,7 +32,7 @@ extracted:
       stability through ceasefire agreements.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: They discussed the prospects for strengthening bilateral cooperation,
           particularly in green industries, defense and the space industry, as well
@@ -47,7 +47,11 @@ extracted:
           in the Strait of Hormuz, in accordance with the Law of the Sea, and to include
           Lebanon in the terms of the U.S.-Iran ceasefire.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: They discussed the prospects for strengthening bilateral cooperation,
+          particularly in green industries, defense and the space industry, as well
+          as NATO’s commitment to Arctic security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

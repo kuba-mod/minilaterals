@@ -35,7 +35,7 @@ extracted:
       and east as a geopolitical necessity for stability and prosperity.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: In this context, the ministers jointly emphasised the need to further
           increase defence spending to bolster Europe’s security.
@@ -44,7 +44,7 @@ extracted:
         evidence: The talks also covered the prospects for EU enlargement, including
           into Western Balkan countries, as well as the regional situation in the
           context of the Russian Federation’s actions, including disinformation.
-      enlargement: &id002
+      enlargement:
         score: 2
         evidence: ‘Poland fully supports North Macedonia’s European aspirations. We
           are ready to share our experience of the pre-accession period and our expert
@@ -56,8 +56,16 @@ extracted:
           and prosperity by supporting countries aspiring to EU membership—in both
           the south and the east—is nowadays a geopolitical necessity.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: In this context, the ministers jointly emphasised the need to further
+          increase defence spending to bolster Europe’s security.
+      enlargement:
+        score: 2
+        evidence: ‘Poland fully supports North Macedonia’s European aspirations. We
+          are ready to share our experience of the pre-accession period and our expert
+          knowledge on accession negotiations—to the extent that this is desired by
+          our partners,’ emphasised Deputy Prime Minister Radosław Sikorski.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

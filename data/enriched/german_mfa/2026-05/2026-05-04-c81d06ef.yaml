@@ -47,7 +47,7 @@ extracted:
         score: 1
         evidence: As members of the United Nations we are fully committed to upholding
           the rules based international order
-      defence: &id001
+      defence:
         score: 1
         evidence: with the objective to strengthen our capabilities to respond to
           conventional and hybrid threats and expand our efforts in defence procurement,
@@ -69,7 +69,11 @@ extracted:
           assume responsibility and step up their efforts to contribute to peace and
           security in Europe and beyond.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: with the objective to strengthen our capabilities to respond to
+          conventional and hybrid threats and expand our efforts in defence procurement,
+          logistics, and crisis management.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

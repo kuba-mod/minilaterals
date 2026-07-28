@@ -35,7 +35,7 @@ extracted:
         score: 2
         evidence: Deputy Minister Ignacy Niemczycki stressed that the European Union
           should urgently approve a EUR 90 billion loan for Ukraine.
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: open the “Fundamentals” cluster in the EU’s accession negotiations
           with Ukraine as soon as possible.
@@ -45,7 +45,10 @@ extracted:
           of illegal Israeli settlements in the West Bank and endorsed the EU’s firm
           response.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: open the “Fundamentals” cluster in the EU’s accession negotiations
+          with Ukraine as soon as possible.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

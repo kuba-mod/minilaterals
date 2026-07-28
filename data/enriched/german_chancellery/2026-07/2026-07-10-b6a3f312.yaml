@@ -33,7 +33,7 @@ extracted:
         score: 1
         evidence: Seit 2022, dem Jahr des Beginns des russischen Angriffskrieges gegen
           die Ukraine, haben wir die Verteidigungsausgaben gar verdoppelt.
-      defence: &id001
+      defence:
         score: 2
         evidence: Deutschland hat seine Verteidigungsausgaben 2026 bereits auf fast
           125 Milliarden Euro erhöht.
@@ -41,7 +41,10 @@ extracted:
         score: 2
         evidence: Sie fließen in Forschung und Entwicklung, in Klimaschutz und Energiesicherheit
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Deutschland hat seine Verteidigungsausgaben 2026 bereits auf fast
+          125 Milliarden Euro erhöht.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

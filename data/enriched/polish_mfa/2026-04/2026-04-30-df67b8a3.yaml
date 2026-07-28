@@ -27,7 +27,7 @@ extracted:
       release and maintaining democratic resilience through continued US-Polish cooperation.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Minister Sikorski and Secretary Rubio confirmed willingness to deepen
           the Polish–American cooperation in such strategic areas as security, defence,
@@ -38,7 +38,11 @@ extracted:
           to work with the United States to secure the release of all political prisoners,
           not only in Belarus.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Minister Sikorski and Secretary Rubio confirmed willingness to deepen
+          the Polish–American cooperation in such strategic areas as security, defence,
+          economy, and energy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

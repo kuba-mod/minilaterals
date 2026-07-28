@@ -21,11 +21,13 @@ extracted:
       national and alliance defense capabilities.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: unsere Souveränität und unsere Fähigkeit zur Landes- und Bündnisverteidigung
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: unsere Souveränität und unsere Fähigkeit zur Landes- und Bündnisverteidigung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

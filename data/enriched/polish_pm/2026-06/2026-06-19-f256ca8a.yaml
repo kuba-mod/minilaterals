@@ -34,7 +34,7 @@ extracted:
         score: 2
         evidence: Zadaniem Europy jest w tej sytuacji takie wsparcie dla Ukrainy,
           żeby ona mogła dalej skutecznie stawiać opór rosyjskiej agresji
-      defence: &id001
+      defence:
         score: 2
         evidence: Polska systematycznie wzmacnia swoje zdolności obronne
       hybrid:
@@ -43,7 +43,9 @@ extracted:
           na różne scenariusze, w tym prowokacje, incydenty z wykorzystaniem dronów
           czy ataki w cyberprzestrzeni
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Polska systematycznie wzmacnia swoje zdolności obronne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

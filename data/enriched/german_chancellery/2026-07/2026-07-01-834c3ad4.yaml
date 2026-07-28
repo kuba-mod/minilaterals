@@ -20,12 +20,15 @@ extracted:
       for its own and allied forces to align with modern security threats.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Die Eckpunkte schaffen eine wichtige Grundlage, um die Verzahnung
           der militärischen und der zivilen Seite zu stärken.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Die Eckpunkte schaffen eine wichtige Grundlage, um die Verzahnung
+          der militärischen und der zivilen Seite zu stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -27,14 +27,16 @@ extracted:
       items for the bilateral talks.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 0
         evidence: über die Sicherheits- und Verteidigungspolitik
       green_transition:
         score: 0
         evidence: über die Wirtschaftspolitik, über die Energiepolitik
     e3:
-      defence: *id001
+      defence:
+        score: 0
+        evidence: über die Sicherheits- und Verteidigungspolitik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

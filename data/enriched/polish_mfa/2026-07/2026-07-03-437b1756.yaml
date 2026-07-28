@@ -36,11 +36,11 @@ extracted:
       ukraine:
         score: 1
         evidence: reaffirmed Poland’s support for Ukraine’s struggle against the aggressor
-      defence: &id001
+      defence:
         score: 1
         evidence: underlined the strategic importance of deepening military cooperation
           and ensuring the region’s stability for the security of the entire continent
-      enlargement: &id002
+      enlargement:
         score: 0
         evidence: interlocutors looked at it through the lens of the positive outcomes
           of the recent Ukraine Recovery Conference in Gdańsk
@@ -50,8 +50,14 @@ extracted:
           that foster historical dialogue based on truth and mutual respect for the
           past
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: underlined the strategic importance of deepening military cooperation
+          and ensuring the region’s stability for the security of the entire continent
+      enlargement:
+        score: 0
+        evidence: interlocutors looked at it through the lens of the positive outcomes
+          of the recent Ukraine Recovery Conference in Gdańsk
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

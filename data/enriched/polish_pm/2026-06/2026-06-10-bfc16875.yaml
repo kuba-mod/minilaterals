@@ -31,7 +31,7 @@ extracted:
       and the rule of law against political polarization and hate speech.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld
           zł
@@ -45,7 +45,10 @@ extracted:
           stanowią fundament Rzeczypospolitej, takim jak służba państwu, przestrzeganie
           prawa oraz równość obywateli
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld
+          zł
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

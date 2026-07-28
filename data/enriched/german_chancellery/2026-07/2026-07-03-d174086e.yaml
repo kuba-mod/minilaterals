@@ -36,7 +36,7 @@ extracted:
         score: 1
         evidence: Wohin dieser russische Revisionismus führen kann, erleben wir seit
           über vier Jahren Tag für Tag in der Ukraine.
-      defence: &id001
+      defence:
         score: 1
         evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
       hybrid:
@@ -44,7 +44,9 @@ extracted:
         evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
           Unterwasserkabel in der Ostsee.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

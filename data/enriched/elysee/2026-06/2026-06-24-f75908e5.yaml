@@ -29,13 +29,17 @@ extracted:
       strike capabilities.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Ils conviennent d’accélérer leur engagement en faveur du développement
           et de l’acquisition conjoints, au niveau européen, de capacités de frappe
           de précision en profondeur.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Ils conviennent d’accélérer leur engagement en faveur du développement
+          et de l’acquisition conjoints, au niveau européen, de capacités de frappe
+          de précision en profondeur.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

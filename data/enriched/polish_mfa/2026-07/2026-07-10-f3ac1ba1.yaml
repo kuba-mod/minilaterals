@@ -27,11 +27,13 @@ extracted:
       security through NATO.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Poland is now a leader in armaments.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Poland is now a leader in armaments.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

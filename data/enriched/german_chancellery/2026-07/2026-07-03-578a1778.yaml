@@ -31,13 +31,17 @@ extracted:
         score: 2
         evidence: Eine Größenordnung von 30 bis 40 Milliarden Euro an bilateralen
           Hilfen war da angedacht.
-      defence: &id001
+      defence:
         score: 2
         evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine
           stärkere Verantwortungsübernahme der europäischen Alliierten für die gemeinsame
           transatlantische Sicherheit.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine
+          stärkere Verantwortungsübernahme der europäischen Alliierten für die gemeinsame
+          transatlantische Sicherheit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -39,7 +39,7 @@ extracted:
         score: 2
         evidence: During a joint press conference, the foreign ministers of Poland
           and Norway expressed support for embattled Ukraine
-      defence: &id001
+      defence:
         score: 2
         evidence: Norway, which is Poland’s strategic partner in Northern Europe,
           supports—just as Poland does—strengthening NATO’s defence and deterrence
@@ -54,7 +54,11 @@ extracted:
         evidence: The two countries share strong political cooperation—including in
           the fields of security, defence, the economy, and culture.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Norway, which is Poland’s strategic partner in Northern Europe,
+          supports—just as Poland does—strengthening NATO’s defence and deterrence
+          capabilities
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

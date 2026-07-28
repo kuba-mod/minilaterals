@@ -39,11 +39,11 @@ extracted:
         score: 2
         evidence: most notably in security, which includes support for Ukraine and
           deterrence of Russia
-      defence: &id001
+      defence:
         score: 2
         evidence: most notably in security, which includes support for Ukraine and
           deterrence of Russia
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: in EU policy, in such fields as the future Multiannual Financial
           Framework, the enlargement process as well as strengthening the common market
@@ -54,8 +54,15 @@ extracted:
           Framework, the enlargement process as well as strengthening the common market
           and EU’s competitiveness
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: most notably in security, which includes support for Ukraine and
+          deterrence of Russia
+      enlargement:
+        score: 1
+        evidence: in EU policy, in such fields as the future Multiannual Financial
+          Framework, the enlargement process as well as strengthening the common market
+          and EU’s competitiveness
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

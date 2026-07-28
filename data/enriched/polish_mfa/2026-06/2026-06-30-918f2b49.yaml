@@ -31,13 +31,17 @@ extracted:
         score: 1
         evidence: The interlocutors agreed that arrangements made during the event
           are crucial for Ukraine.
-      enlargement: &id001
+      enlargement:
         score: 0
         evidence: The talks also focused on major European Union topics, including
           the ongoing work on the future Multiannual Financial Framework and the EU
           enlargement process.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 0
+        evidence: The talks also focused on major European Union topics, including
+          the ongoing work on the future Multiannual Financial Framework and the EU
+          enlargement process.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

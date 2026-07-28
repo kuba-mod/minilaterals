@@ -40,7 +40,7 @@ extracted:
         evidence: Our overarching aim remains the protection of European values, including
           the rule of law and free elections, and ultimately a lasting and just peace
           in Ukraine that strengthens European security.
-      defence: &id001
+      defence:
         score: 2
         evidence: We welcome the signing of the new German-Polish Agreement on Defence
           Cooperation. It is testament to our determination to act together.
@@ -56,7 +56,10 @@ extracted:
           the rule of law and free elections, and ultimately a lasting and just peace
           in Ukraine that strengthens European security.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: We welcome the signing of the new German-Polish Agreement on Defence
+          Cooperation. It is testament to our determination to act together.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -37,7 +37,7 @@ extracted:
         evidence: 'Deputy Prime Minister Sikorski stressed that Poland will continue
           to support Ukraine: It is important for the adversary to know that Ukraine
           is willing to continue and we are willing to continue to support it.'
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: At the bilateral level, the top diplomats also talked about the
           process of Ukraine’s accession to the European Union.
@@ -47,7 +47,10 @@ extracted:
           its paralysis thanks to the magnificent victory of prodemocratic forces
           in Hungary that is forcing Putin to recalculate.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: At the bilateral level, the top diplomats also talked about the
+          process of Ukraine’s accession to the European Union.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

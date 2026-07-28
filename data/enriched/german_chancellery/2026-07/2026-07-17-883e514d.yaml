@@ -33,12 +33,15 @@ extracted:
         score: 2
         evidence: beim NATO-Gipfel in Ankara beschlossen wurde, die Ukraine in diesem
           und im nächsten Jahr mit jeweils mehr als 70 Milliarden Euro zu unterstützen
-      defence: &id001
+      defence:
         score: 2
         evidence: Die strategische Abschreckung Frankreichs wird mehr und mehr von
           der Bundeswehr unterstützt
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Die strategische Abschreckung Frankreichs wird mehr und mehr von
+          der Bundeswehr unterstützt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

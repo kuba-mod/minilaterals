@@ -34,7 +34,7 @@ extracted:
         evidence: Its mission also involves strengthening of the public’s resilience
           to manipulation and countering disinformation targeted at Georgia and its
           international partners, most importantly the European Union.
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: The project, supported by the MFA, is planned to cover all the EU’s
           Eastern Partnership countries and more.
@@ -44,7 +44,10 @@ extracted:
           and economic events from the European perspective and support the process
           of democratisation.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: The project, supported by the MFA, is planned to cover all the EU’s
+          Eastern Partnership countries and more.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

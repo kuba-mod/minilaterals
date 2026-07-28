@@ -32,13 +32,17 @@ extracted:
         score: 2
         evidence: jutro w Gdańsku rozpocznie się Konferencja Odbudowy Ukrainy z udziałem
           wielu przywódców, dyplomatów i firm
-      defence: &id001
+      defence:
         score: 2
         evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
           czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
           7 procent PKB
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
+          czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
+          7 procent PKB
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

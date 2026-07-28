@@ -22,12 +22,15 @@ extracted:
       of the Bundeswehr by honoring active and former soldiers.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
           und höchste Wertschätzung entgegenbringen.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
+          und höchste Wertschätzung entgegenbringen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

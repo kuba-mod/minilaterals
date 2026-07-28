@@ -24,13 +24,17 @@ extracted:
       through a concrete nuclear steering group and a common roadmap with Poland.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Elles ont convenu d’une feuille de route commune et ont manifesté
           leur ambition de coopération bilatérale pour œuvrer à une Europe plus sûre
           et mieux défendue.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Elles ont convenu d’une feuille de route commune et ont manifesté
+          leur ambition de coopération bilatérale pour œuvrer à une Europe plus sûre
+          et mieux défendue.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

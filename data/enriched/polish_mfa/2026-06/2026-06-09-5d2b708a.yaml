@@ -36,7 +36,7 @@ extracted:
           and a joint effort of the whole European community is required to build
           resilience to Russian and Belarusian disinformation-related and other hybrid
           operations.
-      enlargement: &id001
+      enlargement:
         score: 0
         evidence: the meeting’s agenda included... the EU enlargement policy
       rule_of_law:
@@ -45,7 +45,9 @@ extracted:
           resilience to Russian and Belarusian disinformation-related and other hybrid
           operations.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 0
+        evidence: the meeting’s agenda included... the EU enlargement policy
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -43,7 +43,7 @@ extracted:
         score: 2
         evidence: I intend to make concrete proposals on how we can continue to firmly
           support Ukraine in defending freedom in Europe
-      defence: &id001
+      defence:
         score: 2
         evidence: We were the first country to clearly commit to the five-percent
           goal, and we want to achieve this goal
@@ -61,7 +61,10 @@ extracted:
         evidence: With the countries in the region, we are focusing our efforts on
           ensuring free and safe passage without charge for all ships
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: We were the first country to clearly commit to the five-percent
+          goal, and we want to achieve this goal
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

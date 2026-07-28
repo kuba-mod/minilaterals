@@ -25,7 +25,7 @@ extracted:
       at strengthening institutional ties and addressing historical truth.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: the top priority for Poland—which, like Mongolia, also enjoys a
           unique geographical location—is national security, which is currently threatened
@@ -36,7 +36,11 @@ extracted:
           a Memorandum of Understanding with the State Commission for the Management
           of Political Rehabilitation of Mongolia.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: the top priority for Poland—which, like Mongolia, also enjoys a
+          unique geographical location—is national security, which is currently threatened
+          by the war raging just beyond our eastern border
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

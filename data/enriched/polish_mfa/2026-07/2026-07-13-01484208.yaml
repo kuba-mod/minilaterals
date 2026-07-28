@@ -42,7 +42,7 @@ extracted:
         score: 2
         evidence: Minister Sikorski also urged the EU to adopt the 21st package of
           sanctions against Russia
-      defence: &id001
+      defence:
         score: 2
         evidence: he noted the need to immediately provide Ukraine with air defence
           systems
@@ -56,7 +56,10 @@ extracted:
         evidence: Minister Sikorski stressed that the international community must
           respond to the violations of the international humanitarian law
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: he noted the need to immediately provide Ukraine with air defence
+          systems
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

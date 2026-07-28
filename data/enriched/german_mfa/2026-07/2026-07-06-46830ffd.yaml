@@ -21,12 +21,15 @@ extracted:
       capabilities through a strategic partnership with Canada and Norway.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Dieser Schritt bedeutet eine langfristige Stärkung und Vertiefung
           unserer Partnerschaft im transatlantischen Bündnis.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Dieser Schritt bedeutet eine langfristige Stärkung und Vertiefung
+          unserer Partnerschaft im transatlantischen Bündnis.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

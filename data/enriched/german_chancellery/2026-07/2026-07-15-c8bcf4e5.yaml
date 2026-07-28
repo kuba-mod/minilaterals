@@ -20,11 +20,13 @@ extracted:
     defence: Germany supports military-technological cooperation through NATO.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Er verwies auf Erfolge in der militärisch-technologischen Zusammenarbeit
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Er verwies auf Erfolge in der militärisch-technologischen Zusammenarbeit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

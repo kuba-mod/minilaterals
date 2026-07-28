@@ -38,7 +38,7 @@ extracted:
         score: 1
         evidence: Deputy Minister Niemczycki stressed that it is necessary to exercise
           further pressure on the aggressor, including by means of sanctions.
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: The two countries share similar approach to security, stability
           of the Western Balkans, EU enlargement, and the protection of the EU’s external
@@ -54,7 +54,11 @@ extracted:
           inaugurate a seminar on Energy Security and Critical Infrastructure in the
           Baltic and Mediterranean Maritime Space—Mutual Risk, Mutual Resilience.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: The two countries share similar approach to security, stability
+          of the Western Balkans, EU enlargement, and the protection of the EU’s external
+          borders.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

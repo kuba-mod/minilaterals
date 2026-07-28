@@ -27,7 +27,7 @@ extracted:
       international order and is ready to cooperate multilaterally with Latvia.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The ministers discussed the prospects for the further strengthening
           of NATO’s eastern flank
@@ -37,7 +37,10 @@ extracted:
           well-organised and efficient United Nations to be a key element of the rules-based
           international order
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: The ministers discussed the prospects for the further strengthening
+          of NATO’s eastern flank
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

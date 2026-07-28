@@ -39,7 +39,7 @@ extracted:
       and cooperation within the EU framework.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: One of the most important points of the intergovernmental consultations
           was the signing of a contract for the purchase of three A26 submarines under
@@ -50,7 +50,7 @@ extracted:
           challenges to international security, including European defence, Russia’s
           aggression against Ukraine, the Middle East conflict, and cooperation on
           the Korean Peninsula.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: As demonstrated by the historically significant Polish–Swedish initiative
           of the Eastern Partnership
@@ -60,8 +60,15 @@ extracted:
           exceptionally close, almost identical, perception of the challenges we are
           now facing in the region, Europe, and the world.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: One of the most important points of the intergovernmental consultations
+          was the signing of a contract for the purchase of three A26 submarines under
+          the Orka programme
+      enlargement:
+        score: 1
+        evidence: As demonstrated by the historically significant Polish–Swedish initiative
+          of the Eastern Partnership
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -42,7 +42,7 @@ extracted:
         score: 2
         evidence: zaapelował również o szybkie przyjęcie przez Unię Europejską 21.
           pakietu sankcji wobec Rosji
-      defence: &id001
+      defence:
         score: 1
         evidence: zaznaczył także konieczność pilnego wsparcia Ukrainy systemami obrony
           powietrznej
@@ -56,7 +56,10 @@ extracted:
         evidence: podkreślił konieczność reakcji społeczności międzynarodowej na naruszenia
           międzynarodowego prawa humanitarnego. Należy ukarać sprawców
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: zaznaczył także konieczność pilnego wsparcia Ukrainy systemami obrony
+          powietrznej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

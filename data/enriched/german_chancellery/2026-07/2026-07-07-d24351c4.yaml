@@ -28,7 +28,7 @@ extracted:
       and mineral areas, aligning with the goals of a green industrial transition.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Canadian decision to join the German-Norwegian Type 212CD submarine
           cooperation creates a unique opportunity to boost our defence industrial
@@ -39,7 +39,11 @@ extracted:
           strategic areas such as investment, energy, artificial intelligence, space
           and critical minerals
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Canadian decision to join the German-Norwegian Type 212CD submarine
+          cooperation creates a unique opportunity to boost our defence industrial
+          and military cooperation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

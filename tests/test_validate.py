@@ -9,6 +9,7 @@ import pytest
 import yaml
 from pydantic import ValidationError
 
+from pipeline.enrich import dump_yaml
 from pipeline.schemas import (
     AnnualSchema,
     EnrichedEventSchema,
@@ -137,3 +138,16 @@ def test_validate_all_reports_broken_stance_score(tmp_path: Path):
 
     assert len(errors) == 1
     assert "2026-06-01-aaaaaaaa.yaml" in errors[0]
+
+
+def test_enriched_yaml_never_shares_a_stance_node_between_groupings():
+    """Two groupings rating a topic identically must still be two ratings.
+
+    PyYAML would otherwise emit `&id001` / `*id001` for the shared dict, and
+    re-rating one grouping would silently rewrite the other's — see the
+    NoAliasDumper docstring.
+    """
+    rating = {"score": 1, "evidence": "same quote"}
+    out = dump_yaml({"extracted": {"stances": {"e3": {"defence": rating}, "aukus": {"defence": rating}}}})
+    assert "&id" not in out and "*id" not in out
+    assert out.count("same quote") == 2

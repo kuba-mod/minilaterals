@@ -34,7 +34,7 @@ extracted:
         score: 1
         evidence: Vor allem sehen wir, dass Russland den Krieg gegen die Ukraine weiter
           eskaliert.
-      defence: &id001
+      defence:
         score: 2
         evidence: Wir haben unsere Verteidigungsausgaben auf knapp 125 Milliarden
           Euro angehoben.
@@ -43,7 +43,10 @@ extracted:
         evidence: Denn jeden Tag testet Russland unsere Entschlossenheit durch Cyber
           angriffe, durch Sabotage, durch Ausspähversuche und gezielte Desinformation.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Wir haben unsere Verteidigungsausgaben auf knapp 125 Milliarden
+          Euro angehoben.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

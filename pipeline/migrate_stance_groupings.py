@@ -26,11 +26,12 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from copy import deepcopy
 from pathlib import Path
 
 import yaml
 
-from pipeline.enrich import GOALS, GROUPINGS
+from pipeline.enrich import GOALS, GROUPINGS, dump_yaml
 
 ROOT = Path(__file__).parent.parent
 ENRICHED_DIR = ROOT / "data" / "enriched"
@@ -53,7 +54,9 @@ def regroup(enriched: dict) -> dict | None:
             continue
         for key in relevant:
             if topic in GOALS.get(key, {}):
-                out.setdefault(key, {})[topic] = rating
+                # A copy per grouping: these are independent judgements against
+                # different goals, and re-rating one must not touch the other.
+                out.setdefault(key, {})[topic] = deepcopy(rating)
     return out
 
 
@@ -81,10 +84,7 @@ def main() -> None:
         changed += 1
         if not args.dry_run:
             enriched["extracted"]["stances"] = new
-            path.write_text(
-                yaml.dump(enriched, allow_unicode=True, sort_keys=False),
-                encoding="utf-8",
-            )
+            path.write_text(dump_yaml(enriched), encoding="utf-8")
 
     verb = "would rewrite" if args.dry_run else "rewrote"
     print(f"{verb} {changed} file(s)")

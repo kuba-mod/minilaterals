@@ -34,7 +34,7 @@ extracted:
         score: 2
         evidence: Belarus-backed Russia is responsible for dozens or more hostile
           hybrid operations in the Council member states.
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: The ministers agreed that closer cooperation between the Baltic
           Sea region states and Ukraine, a CBSS observer state, is a key component
@@ -45,7 +45,11 @@ extracted:
           law of the sea and enhancing the Council’s political and expert dimension
           for regional security.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: The ministers agreed that closer cooperation between the Baltic
+          Sea region states and Ukraine, a CBSS observer state, is a key component
+          of a new security architecture.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

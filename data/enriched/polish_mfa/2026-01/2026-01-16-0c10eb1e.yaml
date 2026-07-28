@@ -41,7 +41,7 @@ extracted:
           sanctions—on Russia, to sustain support for Ukraine in its defence, and
           to work towards achieving a just and lasting peace that provides strong
           security guarantees for Kyiv.
-      defence: &id001
+      defence:
         score: 1
         evidence: During the meeting, we emphasised that the Council should be able
           to respond more effectively to new regional security challenges.
@@ -54,7 +54,10 @@ extracted:
         evidence: Poland’s contribution consisted of proposals addressing these challenges
           from the perspective of international law.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: During the meeting, we emphasised that the Council should be able
+          to respond more effectively to new regional security challenges.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -31,7 +31,7 @@ extracted:
       of its current governmental discussions.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 0
         evidence: Außerdem ging es unter anderem um die Außen- und Verteidigungspolitik
       green_transition:
@@ -42,7 +42,9 @@ extracted:
         score: 1
         evidence: Außerdem ging es unter anderem um [...] den Pakt für den Rechtsstaat
     e3:
-      defence: *id001
+      defence:
+        score: 0
+        evidence: Außerdem ging es unter anderem um die Außen- und Verteidigungspolitik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

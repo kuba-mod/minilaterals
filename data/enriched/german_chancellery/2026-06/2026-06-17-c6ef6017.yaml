@@ -30,7 +30,7 @@ extracted:
       threats.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Zudem stärkt und vertieft das Abkommen die militärische Zusammenarbeit
           in allen Dimensionen.
@@ -39,7 +39,10 @@ extracted:
         evidence: Deutschland und Polen wollen auch im Krisen management sowie der
           Begegnung auf hybride Bedrohungen enger zusammenarbeiten.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Zudem stärkt und vertieft das Abkommen die militärische Zusammenarbeit
+          in allen Dimensionen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

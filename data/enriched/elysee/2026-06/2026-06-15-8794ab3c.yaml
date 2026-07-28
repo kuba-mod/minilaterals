@@ -22,12 +22,15 @@ extracted:
       traffic and conduct mine clearing operations in the Strait of Hormuz.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: y compris par une mission strictement défensive et indépendante
           visant à rassurer le trafic commercial et à mener des opérations de déminage
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: y compris par une mission strictement défensive et indépendante
+          visant à rassurer le trafic commercial et à mener des opérations de déminage
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -34,7 +34,7 @@ extracted:
       democratic values.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: approfondir leur coopération dans les domaines du commerce, de la
           défense
@@ -53,7 +53,10 @@ extracted:
           la science, dans le changement climatique et ce qu'il implique, dans le
           respect de nos valeurs démocratiques et leur protection
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: approfondir leur coopération dans les domaines du commerce, de la
+          défense
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

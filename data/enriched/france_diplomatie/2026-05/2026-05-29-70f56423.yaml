@@ -34,7 +34,7 @@ extracted:
       dialogue.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: It is our common duty to advance the security, freedom and prosperity
           of our continent.
@@ -49,7 +49,10 @@ extracted:
           shared commitment to intellectual excellence, democratic dialogue and the
           strengthening of a more united and resilient Europe.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: It is our common duty to advance the security, freedom and prosperity
+          of our continent.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

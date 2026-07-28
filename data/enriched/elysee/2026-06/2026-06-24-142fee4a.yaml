@@ -38,12 +38,15 @@ extracted:
           des initiatives annoncées lors du sommet du G7 et des travaux engagés dans
           le cadre de la Coalition des volontaires pour doter l’Ukraine de garanties
           de sécurité solides
-      defence: &id001
+      defence:
         score: 1
         evidence: le développement des capacités européennes de défense et le renforcement
           de la coopération entre partenaires européens
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: le développement des capacités européennes de défense et le renforcement
+          de la coopération entre partenaires européens
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -37,7 +37,7 @@ extracted:
       region.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: We have agreed to expand cooperation in fields such as national
           security and policing.
@@ -56,7 +56,10 @@ extracted:
           which is based on shared values and a mutual commitment to an international
           system underpinned by agreed rules and norms.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: We have agreed to expand cooperation in fields such as national
+          security and policing.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -28,11 +28,13 @@ extracted:
       ukraine:
         score: 1
         evidence: Der russische Angriffskrieg ging ins vierte Jahr.
-      defence: &id001
+      defence:
         score: 2
         evidence: bessere Verteidigungsfähigkeit
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: bessere Verteidigungsfähigkeit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -43,7 +43,7 @@ extracted:
         evidence: The minister emphasised that in order to stop Russia’s hybrid aggression
           the EU member states must strengthen their intelligence cooperation, set
           up a common data exchange system, and clearly identify the perpetrators.
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: At the same time, Poland welcomed the opening of the first cluster
           in negotiations with Ukraine, a milestone on its path to the EU.
@@ -53,7 +53,10 @@ extracted:
           Lavra, an Eastern Orthodox monastery complex from 11th century, listed as
           UNESCO World Heritage Site.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: At the same time, Poland welcomed the opening of the first cluster
+          in negotiations with Ukraine, a milestone on its path to the EU.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

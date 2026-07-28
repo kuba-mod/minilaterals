@@ -30,12 +30,15 @@ extracted:
         evidence: le soutien à celle-ci, soutien militaire réaffirmé, soutien pour
           financer ses infrastructures énergétiques et soutien aussi pour recoordonner
           des sanctions à l'égard de la Russie
-      defence: &id001
+      defence:
         score: 1
         evidence: On a eu un débat sur le soutien aux capacités de défense, en particulier
           antiaériennes ; le rapprochement de nos capacités et de nos productions.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: On a eu un débat sur le soutien aux capacités de défense, en particulier
+          antiaériennes ; le rapprochement de nos capacités et de nos productions.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

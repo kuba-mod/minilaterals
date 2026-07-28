@@ -34,12 +34,15 @@ extracted:
         score: 2
         evidence: reiterate their unwavering support for Ukraine in its defence against
           Russia’s illegal invasion
-      defence: &id001
+      defence:
         score: 2
         evidence: underlined the urgent need to scale up the production of interceptors
           and co-develop anti-ballistic missile and deep strike capabilities
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: underlined the urgent need to scale up the production of interceptors
+          and co-develop anti-ballistic missile and deep strike capabilities
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -48,7 +48,7 @@ extracted:
         evidence: The Council reaffirmed its strong and unwavering support for Ukraine’s
           independence, sovereignty and territorial integrity within its internationally
           recognised borders
-      defence: &id001
+      defence:
         score: 2
         evidence: The Council expressed the need to reinforce response measures in
           the Baltic Sea region against Russia’s aggressive actions that the CBSS
@@ -61,7 +61,7 @@ extracted:
           across European supply chains; Foreign Information Manipulation and Interference
           (FIMI); election interference; instrumentalization of migration including
           through the actions of Belarus'
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: The Council reaffirmed its strong and unwavering support for Ukraine’s
           independence, sovereignty and territorial integrity within its internationally
@@ -76,8 +76,16 @@ extracted:
           individuals responsible, must be held accountable for their crimes and provide
           full compensation for the damages caused to Ukraine.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: The Council expressed the need to reinforce response measures in
+          the Baltic Sea region against Russia’s aggressive actions that the CBSS
+          Member States have faced
+      enlargement:
+        score: 1
+        evidence: The Council reaffirmed its strong and unwavering support for Ukraine’s
+          independence, sovereignty and territorial integrity within its internationally
+          recognised borders
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

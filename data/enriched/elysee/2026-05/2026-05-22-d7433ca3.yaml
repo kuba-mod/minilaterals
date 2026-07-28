@@ -29,7 +29,7 @@ extracted:
       in the face of increasing international competition.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: une vision française, duale, ce site du CEA et la présence de la
           DAM ici le montrent ô combien, de la capacité aussi à œuvrer entre la recherche
@@ -41,7 +41,12 @@ extracted:
           et notre avance dans ces filières dans un contexte de compétition internationale
           croissante
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: une vision française, duale, ce site du CEA et la présence de la
+          DAM ici le montrent ô combien, de la capacité aussi à œuvrer entre la recherche
+          fondamentale, la recherche appliquée et le monde industriel, entre le civil
+          et le militaire.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

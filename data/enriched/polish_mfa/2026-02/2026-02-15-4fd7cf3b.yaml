@@ -44,7 +44,7 @@ extracted:
         score: 2
         evidence: Europe is paying for this war. We are buying American weapons to
           be delivered to Ukraine.
-      defence: &id001
+      defence:
         score: 2
         evidence: I can say with full responsibility that the European SAFE programme
           is exactly what the United States need from Europe— to restore its capabilities
@@ -58,7 +58,11 @@ extracted:
         evidence: We have started a mature transatlantic conversation about the future
           shape of NATO, about the future distribution of rights and responsibilities,
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: I can say with full responsibility that the European SAFE programme
+          is exactly what the United States need from Europe— to restore its capabilities
+          for producing arms and ammunition, and to replace some US capabilities.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

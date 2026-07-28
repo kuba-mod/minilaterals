@@ -27,7 +27,7 @@ extracted:
       the goal of democratic stability.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Im Vordergrund stehen sicherheitspolitische Themen sowie Fragen
           der strategischen Zusammenarbeit.
@@ -36,7 +36,10 @@ extracted:
         evidence: hier werden Wirtschaft und Wettbewerbsfähigkeit sowie der gesellschaftliche
           Austausch und Resilienz im Fokus der Gespräche stehen
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Im Vordergrund stehen sicherheitspolitische Themen sowie Fragen
+          der strategischen Zusammenarbeit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

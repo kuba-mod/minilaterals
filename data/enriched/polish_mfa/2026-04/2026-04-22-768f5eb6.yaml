@@ -40,11 +40,11 @@ extracted:
           well as coordinated action that would exert pressure on the Russian Federation
           in order to bring the war to an end said Deputy Prime Minister Radosław
           Sikorski.
-      defence: &id001
+      defence:
         score: 1
         evidence: The ministers discussed the security architecture in Europe in the
           light of Russia’s aggression.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: The ministers spoke about the EU enlargement process as an important
           tool to build the continent’s stability and security.
@@ -53,8 +53,14 @@ extracted:
         evidence: We agree that Russia’s full-scale aggression poses a fundamental
           challenge to the international order.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: The ministers discussed the security architecture in Europe in the
+          light of Russia’s aggression.
+      enlargement:
+        score: 1
+        evidence: The ministers spoke about the EU enlargement process as an important
+          tool to build the continent’s stability and security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

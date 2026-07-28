@@ -23,12 +23,15 @@ extracted:
       obligations and European security challenges.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Dafür hat die Bundesregierung den Entwurf eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes
           beschlossen.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Dafür hat die Bundesregierung den Entwurf eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes
+          beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

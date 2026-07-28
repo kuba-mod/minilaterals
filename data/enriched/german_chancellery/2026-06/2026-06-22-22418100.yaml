@@ -38,14 +38,16 @@ extracted:
         score: 1
         evidence: die Unterstützung der Ukraine Themen, die die zahlreichen Gäste
           im Bundespresseamt besonders interessierten
-      defence: &id001
+      defence:
         score: 1
         evidence: als europäischer Teamplayer Sicherheitspolitik machen zu wollen
       green_transition:
         score: 1
         evidence: in Zukunft digitaler, klimaneutraler und pragmatischer zu bauen
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: als europäischer Teamplayer Sicherheitspolitik machen zu wollen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

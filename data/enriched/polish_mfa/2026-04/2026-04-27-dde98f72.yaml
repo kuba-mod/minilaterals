@@ -34,7 +34,7 @@ extracted:
       by supporting Ukraine, which is foundational to European stability.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Minister McEntee emphasised that EU member states should increase
           their defence investment.
@@ -42,7 +42,7 @@ extracted:
         score: 1
         evidence: whether hybrid threats or maritime security, which has come to the
           forefront - said Minister Helen McEntee.
-      enlargement: &id002
+      enlargement:
         score: 2
         evidence: Poland advises Ukrainian public administration institutions in their
           efforts to conduct EU-related reforms and align legislation with EU acquis.
@@ -51,8 +51,14 @@ extracted:
         evidence: The foreign ministers of Poland and Ireland also discussed opportunities
           to develop economic cooperation.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: Minister McEntee emphasised that EU member states should increase
+          their defence investment.
+      enlargement:
+        score: 2
+        evidence: Poland advises Ukrainian public administration institutions in their
+          efforts to conduct EU-related reforms and align legislation with EU acquis.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

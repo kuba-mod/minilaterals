@@ -22,12 +22,15 @@ extracted:
       joint industrial agreement and ownership structure with Germany.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: la France et l'Allemagne ont conclu un accord sur la stratégie et
           la gouvernance de KNDS, dont elles ont l’intention de devenir co-actionnaires
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: la France et l'Allemagne ont conclu un accord sur la stratégie et
+          la gouvernance de KNDS, dont elles ont l’intention de devenir co-actionnaires
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

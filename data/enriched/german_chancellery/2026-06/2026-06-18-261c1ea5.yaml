@@ -29,12 +29,15 @@ extracted:
         score: 1
         evidence: die Unterstützung aus dem Kreis der G7 -Staaten heraus so stark
           wie selten zuvor ist
-      defence: &id001
+      defence:
         score: 2
         evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
           mit entsprechendem Bundestagsmandat beinhalten
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
+          mit entsprechendem Bundestagsmandat beinhalten
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

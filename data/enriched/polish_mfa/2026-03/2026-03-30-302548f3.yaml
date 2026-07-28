@@ -37,7 +37,7 @@ extracted:
         evidence: Minister Radosław Sikorski talked about the challenges of the modern
           world, including the growing militarisation of international relations as
           well as the threats related to disinformation
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: Your work inspires further Polish–German cooperation for the sake
           of the Europe we share
@@ -47,7 +47,10 @@ extracted:
           this visit aims to send a clear message about the friendship and ties between
           our countries
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: Your work inspires further Polish–German cooperation for the sake
+          of the Europe we share
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

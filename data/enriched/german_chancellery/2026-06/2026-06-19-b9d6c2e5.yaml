@@ -33,12 +33,15 @@ extracted:
         score: 2
         evidence: zudem werden alle G7 -Partner ihren militärischen und ihren finanziellen
           Beitrag für die Ukraine verstärken
-      defence: &id001
+      defence:
         score: 2
         evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
           mit entsprechendem Bundestagsmandat beinhalten.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Dies könne ein militärisches Engagement in der Straße von Hormus
+          mit entsprechendem Bundestagsmandat beinhalten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

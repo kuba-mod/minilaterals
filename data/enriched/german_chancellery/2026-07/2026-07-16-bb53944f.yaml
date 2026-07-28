@@ -23,11 +23,13 @@ extracted:
       Europe in a dangerous global security environment.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Wie schützen wir uns in einer gefährlichen Welt?
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Wie schützen wir uns in einer gefährlichen Welt?
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

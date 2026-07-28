@@ -24,12 +24,15 @@ extracted:
       Sweden.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
           Wojennej RP w ramach programu „Orka”
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
+          Wojennej RP w ramach programu „Orka”
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

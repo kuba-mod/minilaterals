@@ -27,11 +27,13 @@ extracted:
       itself as a leader in armaments.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Polska jest dziś liderem zbrojeń.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Polska jest dziś liderem zbrojeń.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

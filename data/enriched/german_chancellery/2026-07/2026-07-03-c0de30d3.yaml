@@ -27,12 +27,15 @@ extracted:
       ukraine:
         score: 1
         evidence: die weitere militärische Unterstützung der Ukraine
-      defence: &id001
+      defence:
         score: 1
         evidence: Erhöhung der Verteidigungsausgaben und eine stärkere Verantwortung
           der europäischen Alliierten für eine gemeinsame euro-atlantische Sicherheit
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Erhöhung der Verteidigungsausgaben und eine stärkere Verantwortung
+          der europäischen Alliierten für eine gemeinsame euro-atlantische Sicherheit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

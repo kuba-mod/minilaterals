@@ -30,7 +30,7 @@ extracted:
       production of electric vehicles with significant funding.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia
           działań na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy
@@ -41,7 +41,11 @@ extracted:
           przez spółkę ElectroMobility Poland, pozyskał nowego partnera oraz zabezpieczył
           4,5 mld zł finansowania z Krajowego Planu Odbudowy
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia
+          działań na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy
+          USA
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

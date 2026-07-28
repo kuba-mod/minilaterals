@@ -37,7 +37,7 @@ extracted:
       among key European partners.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: It involves increasing the annual defence spending to 5% of GDP,
           allocating at least 3.5% of GDP to resourcing core defence requirements
@@ -47,7 +47,7 @@ extracted:
         evidence: Obviously, we would have preferred to earmark these funds for something
           else, but if security is lacking, it is impossible to enjoy other aspects
           of civilised life said Deputy Prime Minister Radosław Sikorski.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: We are determined to make sure everyone understands that today it
           is not feasible for two countries to run the European Union. This is why
@@ -59,8 +59,16 @@ extracted:
           as well as with the EU and Türkiye’s representatives, to discuss further
           cooperation centred on European security.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: It involves increasing the annual defence spending to 5% of GDP,
+          allocating at least 3.5% of GDP to resourcing core defence requirements
+          and 1.5% of GDP to broader defence- and security-related investments.
+      enlargement:
+        score: 1
+        evidence: We are determined to make sure everyone understands that today it
+          is not feasible for two countries to run the European Union. This is why
+          we are committed to the E5 format
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

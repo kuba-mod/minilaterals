@@ -23,12 +23,15 @@ extracted:
       on the energy sector to enhance security.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Neue Sanktionen gegen den russischen Energiesektor sollen den Druck
           auf Moskau erhöhen.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Neue Sanktionen gegen den russischen Energiesektor sollen den Druck
+          auf Moskau erhöhen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

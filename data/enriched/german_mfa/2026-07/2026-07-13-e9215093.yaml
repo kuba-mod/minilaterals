@@ -37,7 +37,7 @@ extracted:
         score: 1
         evidence: following Russia’s war of aggression against Ukraine, we need to
           realign our security, defence and deterrence vis-à-vis Russia
-      defence: &id001
+      defence:
         score: 2
         evidence: The 212CD class submarine co-developed by Germany and Norway...
           will bring about the largest, most powerful and most modern conventional
@@ -50,7 +50,11 @@ extracted:
         evidence: Be it for the future of our energy supply, such as hydrogen production,
           safeguarding critical supply chains and the supply of raw materials
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: The 212CD class submarine co-developed by Germany and Norway...
+          will bring about the largest, most powerful and most modern conventional
+          submarine fleet in NATO
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '1'

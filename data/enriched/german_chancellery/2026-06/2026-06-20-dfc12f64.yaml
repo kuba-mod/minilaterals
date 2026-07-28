@@ -29,11 +29,13 @@ extracted:
       political discourse.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 0
         evidence: innere und äußere Sicherheit
     e3:
-      defence: *id001
+      defence:
+        score: 0
+        evidence: innere und äußere Sicherheit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

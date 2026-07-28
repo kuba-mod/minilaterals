@@ -38,7 +38,7 @@ extracted:
         evidence: Nach dem russischen Angriffskrieg gegen die Ukraine müssen wir unsere
           Sicherheit, Verteidigung und Abschreckung gegenüber Russland an der Ost-
           und Nordflanke der NATO neu ausrichten.
-      defence: &id001
+      defence:
         score: 2
         evidence: Das zwischen Deutschland und Norwegen gemeinsam entwickelte U-Boot
           der Klasse U212CD... verkörpert unsere herausragende Zusammenarbeit.
@@ -51,7 +51,10 @@ extracted:
         evidence: Sei es für die Zukunft unserer Energieversorgung, wie etwa bei der
           Gewinnung von Wasserstoff
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Das zwischen Deutschland und Norwegen gemeinsam entwickelte U-Boot
+          der Klasse U212CD... verkörpert unsere herausragende Zusammenarbeit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,13 +22,17 @@ extracted:
       standing ready to deploy a multinational military mission.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: La France et le Royaume-Uni se tiennent également prêts à déployer
           la mission militaire multinationale plus large pour soutenir la liberté
           de navigation dans le détroit d'Ormuz.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: La France et le Royaume-Uni se tiennent également prêts à déployer
+          la mission militaire multinationale plus large pour soutenir la liberté
+          de navigation dans le détroit d'Ormuz.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

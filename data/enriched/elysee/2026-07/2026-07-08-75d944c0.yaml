@@ -21,13 +21,17 @@ extracted:
       group in Finland.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: La France contribuera par des déploiements de forces terrestres
           aux rotations des Forces terrestres avancées Finlande, incluant une unité
           de combat
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: La France contribuera par des déploiements de forces terrestres
+          aux rotations des Forces terrestres avancées Finlande, incluant une unité
+          de combat
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

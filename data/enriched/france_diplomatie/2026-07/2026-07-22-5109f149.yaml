@@ -20,12 +20,15 @@ extracted:
       partner in a crisis.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: France sent support in the form of a 15-strong specialist team of
           divers and rescue workers from the armed forces stationed in French Guiana
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: France sent support in the form of a 15-strong specialist team of
+          divers and rescue workers from the armed forces stationed in French Guiana
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

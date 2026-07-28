@@ -34,7 +34,7 @@ extracted:
       democratic resilience and stability in the international environment.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The interlocutors emphasised the potential of joint defence projects
           (including those under the Security Action for Europe programme adopted
@@ -44,7 +44,7 @@ extracted:
         evidence: 'She highlighted that close cooperation between European countries
           sharing views on international policy will be crucial in avoiding or mitigating
           various types of pressure: economic, social, or related to hybrid threats.'
-      enlargement: &id002
+      enlargement:
         score: 0
         evidence: They also discussed European affairs, including the developments
           in Ukraine, EU enlargement, the agreement with Mercosur countries, and global
@@ -54,8 +54,16 @@ extracted:
         evidence: She noted the enormous importance of a deeper and closer Polish-French
           dialogue in the context of growing instability in the international environment.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: The interlocutors emphasised the potential of joint defence projects
+          (including those under the Security Action for Europe programme adopted
+          in 2025), as well as energy and social projects.
+      enlargement:
+        score: 0
+        evidence: They also discussed European affairs, including the developments
+          in Ukraine, EU enlargement, the agreement with Mercosur countries, and global
+          issues.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

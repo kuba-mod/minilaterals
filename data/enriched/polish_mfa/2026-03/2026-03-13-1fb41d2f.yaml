@@ -39,12 +39,15 @@ extracted:
         evidence: Poland and Ireland support the establishment of the Centre dedicated
           to safeguarding democratic institutions, strengthening civil society, and
           combating disinformation.
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: Discussed were, among other issues, support for the EU enlargement
           process, and the EU legislation simplification package,
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: Discussed were, among other issues, support for the EU enlargement
+          process, and the EU legislation simplification package,
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

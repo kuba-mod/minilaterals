@@ -29,7 +29,7 @@ extracted:
       and seeks ways to counter it.
   stances:
     weimar:
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: Deputy Minister Marcin Bosacki held talks focused on EU enlargement
           with Secretary of State at the Hungarian MFA Krisztián Mészáros
@@ -42,7 +42,10 @@ extracted:
         evidence: the consequences of Russian disinformation campaigns, and ways to
           counter them
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: Deputy Minister Marcin Bosacki held talks focused on EU enlargement
+          with Secretary of State at the Hungarian MFA Krisztián Mészáros
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -244,7 +244,7 @@ a:hover { color: var(--hl); }
     {% if loop.previtem is defined and m.band != loop.previtem.band %}
     <div class="hub-section-break"><div class="hub-section-head">{{ m.band_label }}</div></div>
     {% endif %}
-    <div class="hub-card hub-card--soon{{ ' hub-card--inactive' if m.inactive }}">
+    <a href="/{{ m.path }}/" class="hub-card hub-card--soon{{ ' hub-card--inactive' if m.inactive }}">
       <div class="hub-card-accent" style="--accent: {{ m.accent }};"></div>
       <div class="hub-card-top">
         <div class="hub-card-flags">
@@ -259,7 +259,7 @@ a:hover { color: var(--hl); }
       <div class="hub-tags">
         {% for t in m.topics %}<span class="hub-tag">{{ t }}</span>{% endfor %}
       </div>
-    </div>
+    </a>
     {% endfor %}
   </div>
 </main>

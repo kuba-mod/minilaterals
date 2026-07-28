@@ -45,14 +45,14 @@ extracted:
         score: 2
         evidence: The Baltic Sea region is particularly interested in achieving and
           implementing strong security guarantees for Ukraine.
-      defence: &id001
+      defence:
         score: 1
         evidence: They spoke about the progress of the commitments made at the previous
           NATO summit in The Hague.
       hybrid:
         score: 1
         evidence: Ukraine must not slip off the agenda.
-      enlargement: &id002
+      enlargement:
         score: 2
         evidence: They expressed support for Ukraine’s accession to the European Union
           and emphasised the need for the country to align its legislation with the
@@ -62,8 +62,15 @@ extracted:
         evidence: The process must let both Ukraine and all of us rest assured that
           Russia will not be capable of another aggression.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: They spoke about the progress of the commitments made at the previous
+          NATO summit in The Hague.
+      enlargement:
+        score: 2
+        evidence: They expressed support for Ukraine’s accession to the European Union
+          and emphasised the need for the country to align its legislation with the
+          EU acquis.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

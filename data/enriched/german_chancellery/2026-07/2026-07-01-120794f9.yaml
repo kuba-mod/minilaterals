@@ -25,12 +25,15 @@ extracted:
       Acceleration Act.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Verabschiedet hat das Bundeskabinett den Entwurf eines Reservestärkungsgesetzes
           und eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Verabschiedet hat das Bundeskabinett den Entwurf eines Reservestärkungsgesetzes
+          und eines Bundeswehr-Infrastrukturbeschleunigungsgesetzes.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

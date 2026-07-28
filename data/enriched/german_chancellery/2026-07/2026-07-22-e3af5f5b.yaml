@@ -23,12 +23,15 @@ extracted:
       of the eastern flank through the stationing of a brigade in Lithuania.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Die Stationierung der deutschen Brigade in Litauen unterstreicht
           unser gemeinsames Bekenntnis zur Sicherheit Europas.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Die Stationierung der deutschen Brigade in Litauen unterstreicht
+          unser gemeinsames Bekenntnis zur Sicherheit Europas.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

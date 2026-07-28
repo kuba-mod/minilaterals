@@ -29,7 +29,7 @@ extracted:
       issues concerning safety and stability.
   stances:
     weimar:
-      enlargement: &id001
+      enlargement:
         score: 2
         evidence: Deputy Minister Marcin Bosacki emphasised Poland’s willingness to
           further support Moldova in its European integration
@@ -39,7 +39,10 @@ extracted:
           as well as Poland’s and Moldova’s similar assessment of the most important
           issues concerning European safety and the international situation.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 2
+        evidence: Deputy Minister Marcin Bosacki emphasised Poland’s willingness to
+          further support Moldova in its European integration
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

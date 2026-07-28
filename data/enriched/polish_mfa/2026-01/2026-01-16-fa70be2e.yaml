@@ -35,7 +35,7 @@ extracted:
         score: 2
         evidence: Both Poland and the United Kingdom unequivocally support Ukraine’s
           sovereignty and territorial integrity.
-      defence: &id001
+      defence:
         score: 1
         evidence: The two countries cooperate closely in political terms as well as
           in the spheres of security, defence, economy, and culture.
@@ -44,7 +44,10 @@ extracted:
         evidence: The two states agree that the terms of ending the war must be in
           line with international law.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: The two countries cooperate closely in political terms as well as
+          in the spheres of security, defence, economy, and culture.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -42,11 +42,13 @@ extracted:
         score: 1
         evidence: koordynacja działań i polityki państw regionu zagrożonych przez
           agresywne działania Rosji
-      defence: &id001
+      defence:
         score: 2
         evidence: Na obronę bezpośrednio i na rzeczy związane z obroną to będzie 7%
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Na obronę bezpośrednio i na rzeczy związane z obroną to będzie 7%
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

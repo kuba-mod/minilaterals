@@ -26,12 +26,15 @@ extracted:
       commercial shipping and clear mines.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: including through a strictly defensive and independent mission to
           reassure commercial shipping and conduct mine clearance operations
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: including through a strictly defensive and independent mission to
+          reassure commercial shipping and conduct mine clearance operations
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

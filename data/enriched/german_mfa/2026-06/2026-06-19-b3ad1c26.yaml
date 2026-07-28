@@ -35,7 +35,7 @@ extracted:
       and security in Europe, particularly citing its illegal war against Ukraine.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Today, nobody would call it a weak spot anymore. NATO ’s presence
           has developed from the “tripwire” into a transatlantic stronghold.
@@ -55,7 +55,10 @@ extracted:
           with complete clarity that Putin’s Russia poses a threat to freedom and
           security in Europe and against NATO .
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Today, nobody would call it a weak spot anymore. NATO ’s presence
+          has developed from the “tripwire” into a transatlantic stronghold.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

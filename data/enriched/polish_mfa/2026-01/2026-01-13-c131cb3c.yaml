@@ -52,7 +52,7 @@ extracted:
         evidence: The agenda of the meeting with representatives of the Office of
           the President of Ukraine, Sergiy Kyslytsya and Iryna Vereshchuk, included
           the peace process and Poland's participation in international consultations.
-      defence: &id001
+      defence:
         score: 2
         evidence: They talked about the participation of Polish companies in the post-war
           reconstruction of Ukraine and the cooperation between the two countries’
@@ -62,7 +62,7 @@ extracted:
         evidence: We have been enhancing bilateral cooperation in countering Russian
           disinformation—Russia's false narrative will not cause the withdrawal of
           support for Ukraine
-      enlargement: &id002
+      enlargement:
         score: 2
         evidence: Deputy Minister Bosacki emphasised that Poland continues to support
           Ukraine's integration with the European Union and wants to share with Kyiv
@@ -73,8 +73,17 @@ extracted:
         evidence: Deputy Minister Bosacki underlined that Warsaw and Kyiv jointly
           respond to false information spread across the public space.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: They talked about the participation of Polish companies in the post-war
+          reconstruction of Ukraine and the cooperation between the two countries’
+          defence industries.
+      enlargement:
+        score: 2
+        evidence: Deputy Minister Bosacki emphasised that Poland continues to support
+          Ukraine's integration with the European Union and wants to share with Kyiv
+          its experience of the EU accession process, including the alignment of national
+          legislation with EU law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

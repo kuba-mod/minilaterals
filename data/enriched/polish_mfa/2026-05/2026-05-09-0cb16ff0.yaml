@@ -38,7 +38,7 @@ extracted:
       for protecting consumers and ensuring predictable business environments.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Poland has allocated PLN 200 billion to defence, and Warsaw is home
           to the headquarters of Frontex, the agency responsible for protecting the
@@ -48,7 +48,7 @@ extracted:
         evidence: Experience of the recent years has shown that the EU offers not
           only long-term development benefits, but also effective measures for responding
           to crises—from the pandemic and the energy crisis to the war in Ukraine.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: EU membership is about much more than just European funds.
       green_transition:
@@ -60,8 +60,14 @@ extracted:
         evidence: Thanks to common regulations, consumers in Europe are better protected
           and businesses operate in a predictable environment.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: Poland has allocated PLN 200 billion to defence, and Warsaw is home
+          to the headquarters of Frontex, the agency responsible for protecting the
+          EU’s external borders.
+      enlargement:
+        score: 1
+        evidence: EU membership is about much more than just European funds.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

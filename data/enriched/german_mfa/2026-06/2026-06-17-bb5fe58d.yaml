@@ -23,12 +23,15 @@ extracted:
       the signing of a bilateral defense agreement to strengthen European security.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: Dass heute in Warschau ein Verteidigungsabkommen zwischen unseren
           Ländern unterzeichnet wurde, ist umso bedeutender.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Dass heute in Warschau ein Verteidigungsabkommen zwischen unseren
+          Ländern unterzeichnet wurde, ist umso bedeutender.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

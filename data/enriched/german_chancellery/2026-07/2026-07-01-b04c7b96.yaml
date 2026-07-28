@@ -24,7 +24,7 @@ extracted:
       protection to accelerate green investments through procurement reform.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Bedarfen von Sicherheitsbehörden für die zivil-militärische Verteidigung
       green_transition:
@@ -32,7 +32,9 @@ extracted:
         evidence: Sondervermögen Infrastruktur und Klimaschutz soll schnell dort ankommen,
           wofür es eingeplant ist
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Bedarfen von Sicherheitsbehörden für die zivil-militärische Verteidigung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -43,7 +43,7 @@ extracted:
         evidence: We’re continuing to support Ukraine’s battle to defend itself with
           substantial economic and military resources as it is also defending our
           freedom at the end of the day.
-      defence: &id001
+      defence:
         score: 1
         evidence: We’re currently not keeping pace with developments in AI and the
           digital economy.
@@ -58,7 +58,10 @@ extracted:
         score: 1
         evidence: The freedom of Europe.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: We’re currently not keeping pace with developments in AI and the
+          digital economy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

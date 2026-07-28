@@ -32,12 +32,15 @@ extracted:
         score: 1
         evidence: Polska pozostanie aktywnie zaangażowana we wspieranie Ukrainy we
           współpracy z sojusznikami z NATO
-      defence: &id001
+      defence:
         score: 2
         evidence: pierwsze ćwiczenia, w których wezmą udział wojska brytyjskie i francuskie,
           odbędą się jesienią tego roku w Polsce
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: pierwsze ćwiczenia, w których wezmą udział wojska brytyjskie i francuskie,
+          odbędą się jesienią tego roku w Polsce
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

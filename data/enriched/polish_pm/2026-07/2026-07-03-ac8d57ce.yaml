@@ -30,7 +30,7 @@ extracted:
       for all citizens.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Europa, w tym Polska, bierze większą odpowiedzialność za własną
           obronność
@@ -40,7 +40,10 @@ extracted:
           które są nie tylko efektem niewłaściwych działań poszczególnych osób, lecz
           także słabości obowiązującego systemu
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Europa, w tym Polska, bierze większą odpowiedzialność za własną
+          obronność
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -39,7 +39,7 @@ extracted:
       security through diversified resource sourcing.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: He also expressed his belief that transatlantic cooperation on security
           and the economy is evidence of the enduring bonds between the US and Europe.
@@ -47,7 +47,7 @@ extracted:
         score: 1
         evidence: Critical minerals cannot be used for blackmail, and their production
           should be geographically more diversified.
-      enlargement: &id002
+      enlargement:
         score: 0
         evidence: ''
       green_transition:
@@ -59,8 +59,13 @@ extracted:
         evidence: This is an element of our economic security - summarised Minister
           Sikorski.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: He also expressed his belief that transatlantic cooperation on security
+          and the economy is evidence of the enduring bonds between the US and Europe.
+      enlargement:
+        score: 0
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

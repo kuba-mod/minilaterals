@@ -33,12 +33,12 @@ extracted:
       strengthening through new treaties and memoranda of understanding.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The diplomats highlighted their countries’ similar views on security,
           which led them to discussing the prospects of working together, for example
           in the armaments and space sectors.
-      enlargement: &id002
+      enlargement:
         score: 1
         evidence: At the meeting, Poland officially declared its willingness to join
           the 'Rome Process' on migration as a participating state.
@@ -47,8 +47,15 @@ extracted:
         evidence: Both sides also confirmed the inauguration of works on a new Treaty
           of Friendship and Cooperation,
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: The diplomats highlighted their countries’ similar views on security,
+          which led them to discussing the prospects of working together, for example
+          in the armaments and space sectors.
+      enlargement:
+        score: 1
+        evidence: At the meeting, Poland officially declared its willingness to join
+          the 'Rome Process' on migration as a participating state.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

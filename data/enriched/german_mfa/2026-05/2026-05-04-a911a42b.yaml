@@ -35,7 +35,7 @@ extracted:
       rules as foundational to Europe's future stability and security.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: 'Fortunately, new options are now available to us in this regard:
           in joint procurement, in European funding and in building a robust defence
@@ -52,7 +52,11 @@ extracted:
         score: 1
         evidence: Greece is the cradle of essential values that shape Europe today.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: 'Fortunately, new options are now available to us in this regard:
+          in joint procurement, in European funding and in building a robust defence
+          industry.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

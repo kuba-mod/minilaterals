@@ -48,7 +48,7 @@ extracted:
         score: 2
         evidence: Poland remains ready to support self-defending Ukraine, including
           in military terms, for as long as needed
-      defence: &id001
+      defence:
         score: 2
         evidence: Poland is going to accede to the Enlarged Partial Agreement on the
           Management Committee of the Special Tribunal for the Crime of Aggression
@@ -57,7 +57,7 @@ extracted:
         score: 2
         evidence: We must continue to put pressure on Russia in order to change its
           calculations
-      enlargement: &id002
+      enlargement:
         score: 2
         evidence: Poland’s top diplomat invited partners to take part in the Ukraine
           Recovery Conference in Gdańsk on 25–26 June
@@ -66,8 +66,15 @@ extracted:
         evidence: They agreed that Russia must be called to account for its crimes
           in Ukraine and there is no room for any tolerance of its impunity
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 2
+        evidence: Poland is going to accede to the Enlarged Partial Agreement on the
+          Management Committee of the Special Tribunal for the Crime of Aggression
+          against Ukraine
+      enlargement:
+        score: 2
+        evidence: Poland’s top diplomat invited partners to take part in the Ukraine
+          Recovery Conference in Gdańsk on 25–26 June
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

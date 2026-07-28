@@ -35,7 +35,7 @@ extracted:
       challenges and combating cyber threats as foundational to stability.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: concerned defence cooperation, military procurement and partnerships
       hybrid:
@@ -49,7 +49,9 @@ extracted:
         evidence: current challenges to international security, and the opportunities
           to jointly combat cyber threats
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: concerned defence cooperation, military procurement and partnerships
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

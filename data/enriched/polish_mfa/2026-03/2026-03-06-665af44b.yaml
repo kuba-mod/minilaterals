@@ -37,7 +37,7 @@ extracted:
         score: 1
         evidence: The talks focused on threats to European security resulting from
           Russia’s actions
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: He also presented the objectives of the Ukraine Recovery Conference,
           scheduled to take place in Gdańsk in June 2026.
@@ -47,7 +47,10 @@ extracted:
           attacks on states which are not parties to the conflict, including on civilian
           infrastructure.
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: He also presented the objectives of the Ukraine Recovery Conference,
+          scheduled to take place in Gdańsk in June 2026.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

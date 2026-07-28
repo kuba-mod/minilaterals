@@ -41,7 +41,7 @@ extracted:
       ukraine:
         score: 1
         evidence: stressed the importance of continuing our support for Ukraine
-      defence: &id001
+      defence:
         score: 1
         evidence: underscored the European commitment to strengthen its own defenses
           and engage in burden-sharing with the United States
@@ -56,7 +56,10 @@ extracted:
         score: 1
         evidence: All of these efforts serve to shore up the Alliance’s European pillar
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: underscored the European commitment to strengthen its own defenses
+          and engage in burden-sharing with the United States
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

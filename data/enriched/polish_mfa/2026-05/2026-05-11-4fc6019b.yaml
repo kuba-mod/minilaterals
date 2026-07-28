@@ -25,7 +25,7 @@ extracted:
       through discussions on arms control and disarmament regimes.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
           capabilities
@@ -33,7 +33,10 @@ extracted:
         score: 0
         evidence: the future of the arms control and disarmament regime
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
+          capabilities
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

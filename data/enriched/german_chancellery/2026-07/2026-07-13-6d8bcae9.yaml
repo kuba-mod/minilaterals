@@ -32,12 +32,15 @@ extracted:
         score: 1
         evidence: Gemeinsam setzen wir uns außerdem mit aller Kraft für die Unterstützung
           der Ukraine ein.
-      defence: &id001
+      defence:
         score: 2
         evidence: Deutschland engagiert sich mit seinen Partnern Norwegen und Finnland,
           um die NATO-Nord- und -Ostflanke zu sichern.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Deutschland engagiert sich mit seinen Partnern Norwegen und Finnland,
+          um die NATO-Nord- und -Ostflanke zu sichern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

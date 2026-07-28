@@ -34,7 +34,7 @@ extracted:
       ukraine:
         score: 1
         evidence: notre soutien à l'Ukraine et la paix et la sécurité en Europe
-      defence: &id001
+      defence:
         score: 2
         evidence: en matière de dissuasion avancée, d'alertes précoces, de tirs dans
           la profondeur, de capacités communes. Nous voulons redonner une nouvelle
@@ -43,7 +43,11 @@ extracted:
         score: 1
         evidence: de convergence énergétique
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: en matière de dissuasion avancée, d'alertes précoces, de tirs dans
+          la profondeur, de capacités communes. Nous voulons redonner une nouvelle
+          dynamique
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

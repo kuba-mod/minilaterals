@@ -25,13 +25,17 @@ extracted:
       to secure freedom of navigation in the Strait of Hormus.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: sich im Einklang mit ihren jeweiligen verfassungsrechtlichen Voraussetzungen
           und sobald es die Lage zulässt, an der von Frankreich und vom Vereinigten
           Königreich geführten multinationalen Militärmission zu beteiligen.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: sich im Einklang mit ihren jeweiligen verfassungsrechtlichen Voraussetzungen
+          und sobald es die Lage zulässt, an der von Frankreich und vom Vereinigten
+          Königreich geführten multinationalen Militärmission zu beteiligen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

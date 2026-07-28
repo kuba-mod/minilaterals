@@ -28,11 +28,13 @@ extracted:
       ukraine:
         score: 1
         evidence: le soutien à l’Ukraine et la poursuite des sanctions contre la Russie
-      defence: &id001
+      defence:
         score: 1
         evidence: la sécurité et la défense européenne
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: la sécurité et la défense européenne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

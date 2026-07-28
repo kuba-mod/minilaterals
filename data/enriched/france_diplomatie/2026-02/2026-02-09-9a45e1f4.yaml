@@ -30,7 +30,7 @@ extracted:
       between France and Malaysia.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The two Ministers also discussed expanding bilateral relations,
           particularly in the areas of business, defense, hybrid threats and critical
@@ -44,7 +44,11 @@ extracted:
         score: 0
         evidence: ''
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: The two Ministers also discussed expanding bilateral relations,
+          particularly in the areas of business, defense, hybrid threats and critical
+          minerals.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

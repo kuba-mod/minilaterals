@@ -40,11 +40,11 @@ extracted:
         evidence: emphasising that the Ukrainian president’s decision caused pain
           and indignation in the Polish society, which has been supporting Ukraine
           in its fight since the onset of the Russian aggression.
-      defence: &id001
+      defence:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
           and its significance in the face of regional security challenges
-      enlargement: &id002
+      enlargement:
         score: 0
         evidence: ''
       rule_of_law:
@@ -52,8 +52,13 @@ extracted:
         evidence: mutual relations must be built on historical truth, respect for
           the victims, and dialogue.
     visegrad:
-      defence: *id001
-      enlargement: *id002
+      defence:
+        score: 1
+        evidence: confirmed the strategic character of Poland–Ukraine cooperation
+          and its significance in the face of regional security challenges
+      enlargement:
+        score: 0
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

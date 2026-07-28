@@ -29,12 +29,15 @@ extracted:
         score: 1
         evidence: Wir setzen unsere Unterstützung für die Ukraine in ihrem Abwehrkampf
           fort.
-      defence: &id001
+      defence:
         score: 1
         evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO
           -Gipfel in Ankara gehen.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO
+          -Gipfel in Ankara gehen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

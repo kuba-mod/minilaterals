@@ -23,13 +23,17 @@ extracted:
       for the region.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: The Group also outlined the scope of further detailed talks and
           bilateral cooperation aimed at reinforcing security in Poland, France, and
           the whole of Europe.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: The Group also outlined the scope of further detailed talks and
+          bilateral cooperation aimed at reinforcing security in Poland, France, and
+          the whole of Europe.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

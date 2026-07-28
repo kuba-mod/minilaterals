@@ -78,6 +78,24 @@ def _load_goals() -> dict[str, dict[str, str]]:
 GOALS = _load_goals()
 
 
+class NoAliasDumper(yaml.SafeDumper):
+    """Never emit YAML anchors/aliases.
+
+    Two groupings can hold identical stance ratings for a topic — the same score
+    and the same evidence quote — without those being the *same* rating. Left to
+    itself PyYAML would collapse them into `&id001` / `*id001`, so re-rating one
+    grouping would silently rewrite the other's. They are independent
+    judgements against different goals, so they are written out independently.
+    """
+
+    def ignore_aliases(self, data):
+        return True
+
+
+def dump_yaml(data) -> str:
+    return yaml.dump(data, Dumper=NoAliasDumper, allow_unicode=True, sort_keys=False)
+
+
 class Grouping:
     """A minilateral: its member country codes and the issue areas it tracks."""
 
@@ -650,7 +668,7 @@ def _extract(provider, raw_path: Path) -> bool:
         enriched_path = ENRICHED_DIR / rel
         enriched_path.parent.mkdir(parents=True, exist_ok=True)
         enriched_path.write_text(
-            yaml.dump(enriched_data, allow_unicode=True, sort_keys=False),
+            dump_yaml(enriched_data),
             encoding="utf-8",
         )
         matched = [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
@@ -773,7 +791,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
         }
         EnrichedEventSchema.model_validate(enriched)
         enriched_path.write_text(
-            yaml.dump(enriched, allow_unicode=True, sort_keys=False),
+            dump_yaml(enriched),
             encoding="utf-8",
         )
         summary = "  ".join(f"{k}/{t}:{v['score']:+d}" for k, topics_ in stances.items() for t, v in topics_.items())

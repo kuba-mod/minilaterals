@@ -33,12 +33,15 @@ extracted:
       ukraine:
         score: 1
         evidence: gemeinsame Unterstützung der Ukraine im Fokus stehen
-      defence: &id001
+      defence:
         score: 1
         evidence: Die Bundesregierung unterstreicht damit die Bedeutung der Bundeswehr
           sowie der Sicherheits- und Verteidigungspolitik
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Die Bundesregierung unterstreicht damit die Bedeutung der Bundeswehr
+          sowie der Sicherheits- und Verteidigungspolitik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -36,7 +36,7 @@ extracted:
         score: 2
         evidence: Deutschland leistet seit geraumer Zeit in absoluten Zahlen die größte
           Unterstützung Kyjiws weltweit.
-      defence: &id001
+      defence:
         score: 2
         evidence: Die 3,5-Prozent-Marke von Den Haag werden wir schon 2029 erreichen,
           also deutlich vor der verabredeten Frist.
@@ -45,7 +45,10 @@ extracted:
         evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
           Unterwasserkabel in der Ostsee.
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Die 3,5-Prozent-Marke von Den Haag werden wir schon 2029 erreichen,
+          also deutlich vor der verabredeten Frist.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

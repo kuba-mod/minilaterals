@@ -33,11 +33,13 @@ extracted:
         score: 1
         evidence: Il a réaffirmé la nécessité d’un soutien durable à la défense de
           l’Ukraine
-      defence: &id001
+      defence:
         score: 2
         evidence: nous aurons doublé en 10 ans le budget des armées françaises
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: nous aurons doublé en 10 ans le budget des armées françaises
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -25,11 +25,13 @@ extracted:
       miscalculation and escalation across Europe, aligning with the need for deterrence.
   stances:
     e3:
-      defence: &id001
+      defence:
         score: 1
         evidence: increase the risk of miscalculation and escalation across Europe
     aukus:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: increase the risk of miscalculation and escalation across Europe
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

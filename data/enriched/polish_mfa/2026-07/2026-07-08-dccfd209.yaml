@@ -34,15 +34,23 @@ extracted:
       ukraine:
         score: 1
         evidence: szef polskiej dyplomacji uczestniczył w posiedzeniu Rady NATO-Ukraina
-      defence: &id001
+      defence:
         score: 2
         evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
           szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
           do 5% PKB
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+          szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+          do 5% PKB
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+          szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+          do 5% PKB
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

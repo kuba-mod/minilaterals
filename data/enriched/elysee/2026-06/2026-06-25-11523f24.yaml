@@ -37,7 +37,7 @@ extracted:
         evidence: nous continuerons de fournir à l’Ukraine et au peuple ukrainien
           un soutien politique, financier, économique, humanitaire, diplomatique et
           militaire complet
-      defence: &id001
+      defence:
         score: 1
         evidence: notre volonté d’ approfondir encore la coopération franco-italienne
           en matière de politiques étrangère, de sécurité et de défense dans tous
@@ -51,7 +51,11 @@ extracted:
         evidence: nous réaffirmons notre attachement à un ordre international fondé
           sur des règles de droit
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: notre volonté d’ approfondir encore la coopération franco-italienne
+          en matière de politiques étrangère, de sécurité et de défense dans tous
+          les secteurs
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,12 +21,15 @@ extracted:
       cooperation with partners like Norway and Canada.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: This step will strengthen and deepen our partnership in the transatlantic
           alliance for the long term.
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: This step will strengthen and deepen our partnership in the transatlantic
+          alliance for the long term.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

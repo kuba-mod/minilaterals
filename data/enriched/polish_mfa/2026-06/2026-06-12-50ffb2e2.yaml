@@ -30,7 +30,7 @@ extracted:
       disinformation as key elements for European stability and cooperation.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: The European Union should develop its defence identity in harmony
           with both NATO and the United States - minister Radosław Sikorski said.
@@ -44,7 +44,10 @@ extracted:
         evidence: It will aim to protect the integrity of public debate, support free
           and fair elections, and develop citizens’ media literacy.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: The European Union should develop its defence identity in harmony
+          with both NATO and the United States - minister Radosław Sikorski said.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

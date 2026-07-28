@@ -35,11 +35,13 @@ extracted:
       part of its current political agenda.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Stärkung der Bundeswehr
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Stärkung der Bundeswehr
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

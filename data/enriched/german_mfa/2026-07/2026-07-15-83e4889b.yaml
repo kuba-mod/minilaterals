@@ -38,7 +38,7 @@ extracted:
         score: 2
         evidence: At the summit in Ankara, we NATO partners pledged 140 billion euro
           to Ukraine for defence
-      defence: &id001
+      defence:
         score: 1
         evidence: counter Russia’s constant provocations with an enhanced deterrent
           and defence capability
@@ -51,7 +51,10 @@ extracted:
         evidence: resolutely drive forward the rapid expansion of key future sectors,
           such as a productive European hydrogen economy
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: counter Russia’s constant provocations with an enhanced deterrent
+          and defence capability
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

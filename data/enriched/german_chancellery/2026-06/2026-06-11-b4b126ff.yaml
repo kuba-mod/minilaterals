@@ -29,12 +29,15 @@ extracted:
       ukraine:
         score: 1
         evidence: um Herausforderungen wie den russischen Angriffskrieg abzuwehren
-      defence: &id001
+      defence:
         score: 1
         evidence: die EU militärisch, wirtschaftlich und politisch widerstandsfähiger
           werden müsse
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: die EU militärisch, wirtschaftlich und politisch widerstandsfähiger
+          werden müsse
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -23,12 +23,15 @@ extracted:
       role in ensuring stability in the Sahel region.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
           auch künftig intensiv fortgesetzt werden solle
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
+          auch künftig intensiv fortgesetzt werden solle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

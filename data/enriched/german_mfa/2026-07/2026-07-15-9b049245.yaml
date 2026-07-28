@@ -38,7 +38,7 @@ extracted:
         score: 2
         evidence: Wir haben der Ukraine als NATO -Partner beim Gipfel in Ankara 140
           Milliarden Euro für die Verteidigung zugesagt
-      defence: &id001
+      defence:
         score: 2
         evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
           verstärken.
@@ -51,7 +51,10 @@ extracted:
         evidence: Der zügige Ausbau von Zukunftsbranchen, wie etwa einer leistungsfähigen
           europäischen Wasserstoffwirtschaf
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
+          verstärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

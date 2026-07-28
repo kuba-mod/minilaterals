@@ -34,14 +34,16 @@ extracted:
         score: 1
         evidence: skutków kampanii dezinformacyjnych prowadzonych przez Rosję i sposobów
           ich zwalczania
-      enlargement: &id001
+      enlargement:
         score: 1
         evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
       rule_of_law:
         score: 1
         evidence: dyskutował o reformach przywracających państwo prawa
     visegrad:
-      enlargement: *id001
+      enlargement:
+        score: 1
+        evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

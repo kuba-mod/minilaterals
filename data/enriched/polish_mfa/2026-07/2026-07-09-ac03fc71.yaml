@@ -31,7 +31,7 @@ extracted:
       discussion with its strategic partner France.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: We’ll have to build a stronger European security architecture with
           France and Poland as core pillars.
@@ -44,7 +44,10 @@ extracted:
         evidence: The ministers also discussed current security risks, including in
           the Middle East and Ukraine.
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: We’ll have to build a stronger European security architecture with
+          France and Poland as core pillars.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

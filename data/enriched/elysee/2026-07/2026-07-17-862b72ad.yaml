@@ -34,7 +34,7 @@ extracted:
       order based on the rule of law.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 2
         evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
           auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
@@ -47,7 +47,11 @@ extracted:
         score: 1
         evidence: contribuer à un ordre international fondé sur des règles de droit
     e3:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
+          auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
+          marque la première étape opérationnelle de la coopération stratégique franco-allemande
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

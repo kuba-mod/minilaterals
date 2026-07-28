@@ -48,9 +48,6 @@
 # against the wording current at the time; re-rate with
 # `pipeline.enrich --stances-only` when a change needs to apply retroactively.
 
-# ==========================================================================
-# --- Live tracker ---
-# ==========================================================================
 weimar:
   name: "Weimar Triangle"
   members: [DE, FR, PL]
@@ -116,10 +113,6 @@ weimar:
         Rule of law and democratic resilience inside the Union treated as a security
         question.
 
-
-# ==========================================================================
-# --- Tracked by the pipeline (these carry `topics` and `goals`) ---
-# ==========================================================================
 e3:
   name: "E3"
   hub_name: "The E3"
@@ -282,10 +275,6 @@ aukus:
         Joint development of cyber, AI, quantum and undersea capability, and the export-
         control reform to move it (Pillar II).
 
-
-# ==========================================================================
-# --- Hub placeholders — no ingester yet, so no `topics` ---
-# ==========================================================================
 quad:
   name: "The Quad"
   members: [US, JP, IN, AU]

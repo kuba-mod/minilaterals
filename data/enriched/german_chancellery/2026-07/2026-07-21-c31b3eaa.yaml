@@ -28,7 +28,7 @@ extracted:
       gas, and enhancing infrastructure connectivity.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: promotion of cooperation in the defence industry
       green_transition:
@@ -37,7 +37,9 @@ extracted:
           sustainable economic development, green energy, green and low-carbon hydrogen,
           energy efficiency
     e3:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: promotion of cooperation in the defence industry
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

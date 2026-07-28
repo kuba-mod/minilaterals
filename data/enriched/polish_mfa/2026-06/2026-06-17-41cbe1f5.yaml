@@ -41,7 +41,7 @@ extracted:
         evidence: Our overarching goal is to protect European values, including the
           rule of law and transparent electoral processes, and to secure a just and
           lasting peace in Ukraine that would strengthen Europe’s security.
-      defence: &id001
+      defence:
         score: 2
         evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
           defence cooperation agreement.
@@ -56,7 +56,10 @@ extracted:
           rule of law and transparent electoral processes, and to secure a just and
           lasting peace in Ukraine that would strengthen Europe’s security.
     visegrad:
-      defence: *id001
+      defence:
+        score: 2
+        evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
+          defence cooperation agreement.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

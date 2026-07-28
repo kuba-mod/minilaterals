@@ -23,12 +23,15 @@ extracted:
       and national security.
   stances:
     weimar:
-      defence: &id001
+      defence:
         score: 1
         evidence: współpracy dwustronnej w celu wzmocnienia bezpieczeństwa Polski,
           Francji i Europy
     visegrad:
-      defence: *id001
+      defence:
+        score: 1
+        evidence: współpracy dwustronnej w celu wzmocnienia bezpieczeństwa Polski,
+          Francji i Europy
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'
