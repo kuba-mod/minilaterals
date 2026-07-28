@@ -565,8 +565,8 @@ def _extract(provider, raw_path: Path) -> bool:
     goals_block = "\n".join(f"- {topic}: {GOALS[topic].strip()}" for topic in ALL_TOPICS if topic in GOALS)
     prompt = EXTRACTION_PROMPT.format(
         source=source_label,
-        title=data.get("title", "")[:300],
-        text=(data.get("text", "") or "")[:3000],
+        title=data.get("title", ""),
+        text=data.get("text", "") or "",
         goals_block=goals_block,
         format_hints_block=FORMAT_HINTS_BLOCK,
         stance_rubric=STANCE_RUBRIC,
@@ -697,8 +697,8 @@ def _rate_stances(provider, source_label: str, title: str, text: str, grouping: 
     goals_block = "\n".join(f"- {t}: {GOALS[grouping][t].strip()}" for t in topics)
     prompt = STANCE_BACKFILL_PROMPT.format(
         source=source_label,
-        title=title[:300],
-        text=(text or "")[:3000],
+        title=title,
+        text=text or "",
         grouping=GROUPINGS[grouping].name,
         goals_block=goals_block,
         stance_rubric=STANCE_RUBRIC,

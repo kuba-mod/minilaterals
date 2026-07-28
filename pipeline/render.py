@@ -927,11 +927,13 @@ _FLAG_CODES = {"UK": "gb"}
 GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
-# Card order within the grid. A grouping that has stopped meeting is still worth
-# listing — the fact that it stalled is part of the picture — but it shouldn't
-# sit above formats that are actually running, so the inactive ones drop to
-# their own section and `intermittent` sinks to the bottom of the active one.
+# Card order within the grid, and the section each card falls into. A grouping
+# that has stalled is still worth listing — the gap is part of the picture — but
+# it shouldn't sit among formats that are actually running, so each band gets its
+# own heading.
 STATUS_ORDER = {"active": 0, "intermittent": 1, "dormant": 2, "suspended": 2, "aspirational": 2}
+BAND_LABELS = {0: "Active minilaterals", 1: "Intermittent minilaterals", 2: "Currently inactive minilaterals"}
+# Bands at or past this rank get no "Coming soon" badge — nothing is coming.
 INACTIVE_FROM = 2
 
 
@@ -960,6 +962,8 @@ def load_hub_groupings() -> list[dict]:
                 "purpose": g["purpose"],
                 "agreed": g["agreed"],
                 "status": g["status"],
+                "band": rank,
+                "band_label": BAND_LABELS[rank],
                 "inactive": rank >= INACTIVE_FROM,
                 "_sort": (rank, position),
             }

@@ -16,7 +16,7 @@ import pytest
 import yaml
 
 from pipeline.enrich import GOALS, GROUPINGS
-from pipeline.render import HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER, STATUS_ORDER
+from pipeline.render import BAND_LABELS, HUB_ACCENTS, HUB_GROUPINGS, ISSUE_LABELS, ISSUE_ORDER, STATUS_ORDER
 
 CONFIG = yaml.safe_load((Path(__file__).parent.parent / "data" / "groupings.yaml").read_text(encoding="utf-8"))
 ENTRIES = CONFIG
@@ -69,9 +69,11 @@ def test_every_card_states_its_purpose_and_provenance(key):
 
 
 def test_cards_are_ordered_active_then_intermittent_then_inactive():
-    ranks = [STATUS_ORDER[m["status"]] for m in HUB_GROUPINGS]
-    assert ranks == sorted(ranks), "a stalled grouping is sitting above a running one"
-    assert [m["inactive"] for m in HUB_GROUPINGS] == sorted(m["inactive"] for m in HUB_GROUPINGS)
+    bands = [m["band"] for m in HUB_GROUPINGS]
+    assert bands == sorted(bands), "a stalled grouping is sitting above a running one"
+    assert bands == [STATUS_ORDER[m["status"]] for m in HUB_GROUPINGS]
+    # Each band gets exactly one heading, so a card's label must match its band.
+    assert {m["band"]: m["band_label"] for m in HUB_GROUPINGS} == {b: BAND_LABELS[b] for b in set(bands)}
 
 
 def test_weimar_is_the_only_entry_without_a_card():
