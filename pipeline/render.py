@@ -927,6 +927,70 @@ HUB_ACCENTS = {
 # ISO `gb` where the project's actor vocabulary uses `UK`.
 _FLAG_CODES = {"UK": "gb"}
 
+# Every member code used in data/groupings.yaml, for the per-grouping pages'
+# member columns. `member_names` on the card stays separate: it is bespoke prose
+# ("UK & France (co-chairs)", "13 states between the Baltic, Adriatic and Black
+# Seas") that cannot be derived from a code list.
+COUNTRY_NAMES = {
+    "AE": "United Arab Emirates",
+    "AF": "Afghanistan",
+    "AT": "Austria",
+    "AU": "Australia",
+    "BD": "Bangladesh",
+    "BF": "Burkina Faso",
+    "BG": "Bulgaria",
+    "BH": "Bahrain",
+    "CL": "Chile",
+    "CN": "China",
+    "CO": "Colombia",
+    "CZ": "Czechia",
+    "DE": "Germany",
+    "DK": "Denmark",
+    "EE": "Estonia",
+    "EG": "Egypt",
+    "FI": "Finland",
+    "FR": "France",
+    "GR": "Greece",
+    "HR": "Croatia",
+    "HU": "Hungary",
+    "ID": "Indonesia",
+    "IL": "Israel",
+    "IN": "India",
+    "IS": "Iceland",
+    "IT": "Italy",
+    "JP": "Japan",
+    "KH": "Cambodia",
+    "KR": "South Korea",
+    "LA": "Laos",
+    "LK": "Sri Lanka",
+    "LT": "Lithuania",
+    "LV": "Latvia",
+    "MA": "Morocco",
+    "ML": "Mali",
+    "MM": "Myanmar",
+    "MU": "Mauritius",
+    "MV": "Maldives",
+    "MX": "Mexico",
+    "NE": "Niger",
+    "NL": "Netherlands",
+    "NO": "Norway",
+    "PE": "Peru",
+    "PH": "Philippines",
+    "PK": "Pakistan",
+    "PL": "Poland",
+    "RO": "Romania",
+    "SA": "Saudi Arabia",
+    "SE": "Sweden",
+    "SI": "Slovenia",
+    "SK": "Slovakia",
+    "TH": "Thailand",
+    "TR": "Türkiye",
+    "TW": "Taiwan",
+    "UK": "United Kingdom",
+    "US": "United States",
+    "VN": "Vietnam",
+}
+
 GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
@@ -963,6 +1027,9 @@ def load_hub_groupings() -> list[dict]:
                 "name": g.get("hub_name", g["name"]),
                 "accent": HUB_ACCENTS[slug],
                 "members": [_FLAG_CODES.get(c, c.lower()) for c in g["members"]],
+                "member_countries": [
+                    {"code": _FLAG_CODES.get(c, c.lower()), "name": COUNTRY_NAMES[c]} for c in g["members"]
+                ],
                 "member_names": g["member_names"],
                 "topics": list(g["tags"]),
                 "tags": dict(g["tags"]),
@@ -1291,6 +1358,25 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             ),
             encoding="utf-8",
         )
+
+        # docs/{path}/index.html — one page per grouping that has no tracker yet,
+        # in the tracker's own chrome with the panels it will fill left empty.
+        # Root-level like the hub, so base_path is "" for these: their assets
+        # resolve against the domain root, not the Weimar subsite.
+        gtmpl = env.get_template("grouping.html")
+        for card in HUB_GROUPINGS:
+            page_dir = root / card["path"]
+            page_dir.mkdir(parents=True, exist_ok=True)
+            (page_dir / "index.html").write_text(
+                gtmpl.render(
+                    base_path="",
+                    hub_url="/",
+                    weimar_url=f"{base_path}/",
+                    methodology_url=f"{base_path}/sources/",
+                    g={**card, "members": card["member_countries"]},
+                ),
+                encoding="utf-8",
+            )
 
     print(f"Rendered → {root.resolve()}")
     print(f"  recent events (90d): {len(recent_events)}, clusters: {len(clusters)}")

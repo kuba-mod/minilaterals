@@ -142,6 +142,9 @@ a:hover { color: var(--hl); }
   font-family: var(--font-sans); font-size: 12.5px; font-weight: 500; color: var(--hl);
 }
 .hub-card-footer strong { font-family: var(--font-serif); font-weight: 500; font-size: 16px; }
+.hub-card-link { color: var(--hl); text-decoration: none; border-bottom: 1px solid transparent; }
+.hub-card-link:hover { border-bottom-color: var(--hl); }
+.hub-card--inactive .hub-card-link { color: var(--muted); }
 
 .hub-card-agreed {
   font-family: var(--font-sans); font-size: 11.5px; line-height: 1.5;
@@ -277,8 +280,9 @@ a:hover { color: var(--hl); }
     {% if loop.previtem is defined and m.band != loop.previtem.band %}
     <div class="hub-section-break"><div class="hub-section-head">{{ m.band_label }}</div></div>
     {% endif %}
-    {# Not a link yet: these groupings have no page of their own until they get
-       one. See the per-grouping pages that follow this change. #}
+    {# A div, not an anchor: the card holds a vote button and the notify form it
+       injects, and interactive content cannot live inside an <a>. The link to
+       the grouping's own page is the explicit one in the footer below. #}
     <div class="hub-card hub-card--soon{{ ' hub-card--inactive' if m.inactive }}">
       <div class="hub-card-accent" style="--accent: {{ m.accent }};"></div>
       <div class="hub-card-top">
@@ -299,6 +303,11 @@ a:hover { color: var(--hl); }
           <span class="hub-vote-arrow">&#9650;</span> Vote for this next
         </button>
       </div>
+      {# An explicit link rather than wrapping the card in an <a>: the vote
+         button and the notify form it injects are interactive content, which
+         cannot live inside an anchor — and a card-wide link would navigate away
+         on every vote click. #}
+      <div class="hub-card-footer"><a class="hub-card-link" href="/{{ m.path }}/">View grouping &rarr;</a></div>
     </div>
     {% endfor %}
   </div>
