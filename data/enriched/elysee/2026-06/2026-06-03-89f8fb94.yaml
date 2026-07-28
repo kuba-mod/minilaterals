@@ -24,12 +24,13 @@ extracted:
     rule_of_law: France supports the defense of international law and human rights
       as part of its humanist values.
   stances:
-    green_transition:
-      score: 1
-      evidence: la cause écologique
-    rule_of_law:
-      score: 1
-      evidence: la défense du droit international
+    weimar:
+      green_transition:
+        score: 1
+        evidence: la cause écologique
+      rule_of_law:
+        score: 1
+        evidence: la défense du droit international
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

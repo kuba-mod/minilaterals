@@ -23,16 +23,17 @@ extracted:
     rule_of_law: Poland emphasizes the importance of independent media and democratic
       processes as crucial defenses against foreign influence.
   stances:
-    hybrid:
-      score: 2
-      evidence: The purpose of the new programme is to reach out to the Romanian-speaking
-        part of Moldovan society and to strengthen the region’s resilience to disinformation,
-        in particular inspired by the Russian Federation.
-    rule_of_law:
-      score: 2
-      evidence: Access to independent media is crucial in the face of Russia’s attempts
-        at influencing the democratic processes in Moldova, as evidenced during the
-        2024 presidential vote and the 2025 parliamentary election in the country.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: The purpose of the new programme is to reach out to the Romanian-speaking
+          part of Moldovan society and to strengthen the region’s resilience to disinformation,
+          in particular inspired by the Russian Federation.
+      rule_of_law:
+        score: 2
+        evidence: Access to independent media is crucial in the face of Russia’s attempts
+          at influencing the democratic processes in Moldova, as evidenced during
+          the 2024 presidential vote and the 2025 parliamentary election in the country.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

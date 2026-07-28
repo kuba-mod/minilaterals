@@ -26,9 +26,10 @@ extracted:
     green_transition: France engages with international climate finance mechanisms
       to support development and resilience in Africa.
   stances:
-    green_transition:
-      score: 1
-      evidence: en présence des représentants du... Fonds vert pour le climat (GCF)
+    weimar:
+      green_transition:
+        score: 1
+        evidence: en présence des représentants du... Fonds vert pour le climat (GCF)
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

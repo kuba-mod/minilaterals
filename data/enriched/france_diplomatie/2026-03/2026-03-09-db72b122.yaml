@@ -30,10 +30,11 @@ extracted:
     rule_of_law: France supports the general adherence to international humanitarian
       law and commitments made under various accords for peace in the DRC.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The ICG calls on all parties to honour their obligations to respect
-        international humanitarian law
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The ICG calls on all parties to honour their obligations to respect
+          international humanitarian law
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

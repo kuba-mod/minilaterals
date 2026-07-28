@@ -22,12 +22,13 @@ extracted:
     ukraine: France expresses unwavering support for Ukraine in the face of Russian
       aggression and is organizing a meeting of the Coalition of the Willing.
   stances:
-    ukraine:
-      score: 2
-      evidence: unwavering support of France, Poland and the European Union in the
-        face of the war of aggression being waged by Russia, with a view to the meeting
-        of Coalition of the Willing heads of State and government, which will be held
-        in Paris on 13 July at President Macron’s invitation
+    weimar:
+      ukraine:
+        score: 2
+        evidence: unwavering support of France, Poland and the European Union in the
+          face of the war of aggression being waged by Russia, with a view to the
+          meeting of Coalition of the Willing heads of State and government, which
+          will be held in Paris on 13 July at President Macron’s invitation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

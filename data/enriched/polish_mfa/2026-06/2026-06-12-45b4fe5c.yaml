@@ -27,18 +27,19 @@ extracted:
     rule_of_law: Poland highlights the importance of protecting public debate and
       democratic integrity against foreign interference.
   stances:
-    defence:
-      score: 2
-      evidence: Unia Europejska powinna swoją tożsamość obronną rozwijać w harmonii
-        i z NATO i ze Stanami Zjednoczonymi.
-    hybrid:
-      score: 2
-      evidence: powstaje Europejska Tarcza Demokracji. Jej zadaniem będzie ochrona
-        integralności debaty publicznej
-    rule_of_law:
-      score: 1
-      evidence: rosyjskie kampanie informacyjne są wymierzone w zaufanie obywateli
-        do instytucji publicznych, mediów oraz współpracy międzynarodowej
+    weimar:
+      defence:
+        score: 2
+        evidence: Unia Europejska powinna swoją tożsamość obronną rozwijać w harmonii
+          i z NATO i ze Stanami Zjednoczonymi.
+      hybrid:
+        score: 2
+        evidence: powstaje Europejska Tarcza Demokracji. Jej zadaniem będzie ochrona
+          integralności debaty publicznej
+      rule_of_law:
+        score: 1
+        evidence: rosyjskie kampanie informacyjne są wymierzone w zaufanie obywateli
+          do instytucji publicznych, mediów oraz współpracy międzynarodowej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

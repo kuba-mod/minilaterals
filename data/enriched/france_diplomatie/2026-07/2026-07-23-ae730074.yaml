@@ -23,14 +23,20 @@ extracted:
     iran: France rhetorically opposes the destabilizing regional activities of the
       Houthis, who are proxies of Iran.
   stances:
-    defence:
-      score: 2
-      evidence: France remains fully committed to the safeguarding of maritime security
-        and freedom of navigation under the European defensive operation ASPIDES
-    iran:
-      score: 1
-      evidence: France condemns in the strongest terms the attacks claimed by the
-        Houthis
+    weimar:
+      defence:
+        score: 2
+        evidence: France remains fully committed to the safeguarding of maritime security
+          and freedom of navigation under the European defensive operation ASPIDES
+    e3:
+      defence:
+        score: 2
+        evidence: France remains fully committed to the safeguarding of maritime security
+          and freedom of navigation under the European defensive operation ASPIDES
+      iran:
+        score: 1
+        evidence: France condemns in the strongest terms the attacks claimed by the
+          Houthis
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -30,16 +30,21 @@ extracted:
     hybrid: Poland is developing specific technological solutions to counter threats
       in cyberspace.
   stances:
-    ukraine:
-      score: 1
-      evidence: Implementujemy doświadczenia z Ukrainy i budujemy zdolności we wszystkich
-        obszarach.
-    defence:
-      score: 2
-      evidence: Celem rządu pozostaje budowa najsilniejszej armii w Europie.
-    hybrid:
-      score: 2
-      evidence: 'rozwijane są rozwiązania w takich obszarach takich jak: [...] cyberbezpieczeństwo'
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Implementujemy doświadczenia z Ukrainy i budujemy zdolności we wszystkich
+          obszarach.
+      defence:
+        score: 2
+        evidence: Celem rządu pozostaje budowa najsilniejszej armii w Europie.
+      hybrid:
+        score: 2
+        evidence: 'rozwijane są rozwiązania w takich obszarach takich jak: [...] cyberbezpieczeństwo'
+    visegrad:
+      defence:
+        score: 2
+        evidence: Celem rządu pozostaje budowa najsilniejszej armii w Europie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

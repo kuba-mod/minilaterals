@@ -21,10 +21,11 @@ extracted:
     green_transition: Germany is actively implementing climate adaptation and prevention
       measures to better prepare the country for natural disasters.
   stances:
-    green_transition:
-      score: 2
-      evidence: Bund, Länder und Kommunen gemeinsam zahlreiche Vorsorge- und Präventionsmaßnahmen
-        sowie Maßnahmen der Klimaanpassung auf den Weg gebracht hätten
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Bund, Länder und Kommunen gemeinsam zahlreiche Vorsorge- und Präventionsmaßnahmen
+          sowie Maßnahmen der Klimaanpassung auf den Weg gebracht hätten
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

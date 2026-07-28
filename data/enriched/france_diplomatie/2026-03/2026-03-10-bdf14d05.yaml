@@ -24,17 +24,18 @@ extracted:
     enlargement: The statement criticizes Georgia's actions for hindering its EU accession
       process, while reaffirming support for the democratic future of Georgia.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We regret the adoption on March 4th by the Georgian Parliament of
-        new legislation on foreign funding and political activities, which is proof
-        of a further repressive approach adopted by the Georgian authorities in relation
-        to civil society.
-    enlargement:
-      score: 1
-      evidence: Through those new regulations, the Georgian authorities consciously
-        breach the commitments undertaken by Georgia vis-à-vis the European Union,
-        in particular through the Association Agreement with the European Union.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We regret the adoption on March 4th by the Georgian Parliament of
+          new legislation on foreign funding and political activities, which is proof
+          of a further repressive approach adopted by the Georgian authorities in
+          relation to civil society.
+      enlargement:
+        score: 1
+        evidence: Through those new regulations, the Georgian authorities consciously
+          breach the commitments undertaken by Georgia vis-à-vis the European Union,
+          in particular through the Association Agreement with the European Union.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

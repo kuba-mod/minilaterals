@@ -17,10 +17,11 @@ extracted:
     rule_of_law: Germany commits to protecting the democratic order and combating
       extremism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Zum Schutz der freiheitlich-demokratischen Grundordnung will die Bundesregierung
-        entschlossen gegen jegliche Form des Extremismus vorgehen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Zum Schutz der freiheitlich-demokratischen Grundordnung will die
+          Bundesregierung entschlossen gegen jegliche Form des Extremismus vorgehen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

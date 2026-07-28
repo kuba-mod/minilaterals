@@ -22,10 +22,11 @@ extracted:
     hybrid: Estonia is actively advancing security and technological resilience by
       joining a US-led initiative focused on AI and critical supply chains.
   stances:
-    hybrid:
-      score: 2
-      evidence: sai Eesti USA juhitud Pax Silica algatuse vaatlejariigiks ja allkirjastas
-        Pax Silica tehisaruavalduse
+    baltic:
+      hybrid:
+        score: 2
+        evidence: sai Eesti USA juhitud Pax Silica algatuse vaatlejariigiks ja allkirjastas
+          Pax Silica tehisaruavalduse
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

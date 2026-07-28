@@ -33,22 +33,23 @@ extracted:
     enlargement: Poland strongly supports the right of Ukraine to join the European
       Union.
   stances:
-    ukraine:
-      score: 1
-      evidence: wojna Rosji przeciw Ukrainie nie jest wyłącznie konfliktem terytorialnym,
-        ale walką Ukraińców o prawo do samostanowienia
-    defence:
-      score: 2
-      evidence: Stworzyliśmy „budżet pokoju” (Europejski Instrument na Rzecz Pokoju),
-        który finansuje wysiłek ukraiński
-    hybrid:
-      score: 1
-      evidence: podkreślił także konieczność wzmacniania UE wobec nowych zagrożeń,
-        m.in. wojny - również tej hybrydowej
-    enlargement:
-      score: 1
-      evidence: Ukraińcy walczą i umierają za to, żeby mieć prawo przystąpienia do
-        Unii Europejskiej
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wojna Rosji przeciw Ukrainie nie jest wyłącznie konfliktem terytorialnym,
+          ale walką Ukraińców o prawo do samostanowienia
+      defence:
+        score: 2
+        evidence: Stworzyliśmy „budżet pokoju” (Europejski Instrument na Rzecz Pokoju),
+          który finansuje wysiłek ukraiński
+      hybrid:
+        score: 1
+        evidence: podkreślił także konieczność wzmacniania UE wobec nowych zagrożeń,
+          m.in. wojny - również tej hybrydowej
+      enlargement:
+        score: 1
+        evidence: Ukraińcy walczą i umierają za to, żeby mieć prawo przystąpienia
+          do Unii Europejskiej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

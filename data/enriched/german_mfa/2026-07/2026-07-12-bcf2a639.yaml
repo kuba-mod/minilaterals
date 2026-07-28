@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Germany rhetorically supports the rule of law and international legal
       frameworks by insisting on the binding nature of the UNCLOS arbitration ruling.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Wir bekräftigen unser unerschütterliches Bekenntnis zur Aufrechterhaltung
-        eines freien, offenen, friedlichen, stabilen, regelbasierten und fest an das
-        Völkerrecht gebundenen indopazifischen Raums
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wir bekräftigen unser unerschütterliches Bekenntnis zur Aufrechterhaltung
+          eines freien, offenen, friedlichen, stabilen, regelbasierten und fest an
+          das Völkerrecht gebundenen indopazifischen Raums
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

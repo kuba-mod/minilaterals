@@ -18,10 +18,11 @@ extracted:
     defence: Germany rhetorically supports close cooperation and partnership within
       NATO during challenging geopolitical times.
   stances:
-    defence:
-      score: 1
-      evidence: als verlässliche Partner in der Europäischen Union und in der NATO
-        in geopolitisch herausfordernden Zeiten weiter gut und eng zusammenzuarbeiten
+    weimar:
+      defence:
+        score: 1
+        evidence: als verlässliche Partner in der Europäischen Union und in der NATO
+          in geopolitisch herausfordernden Zeiten weiter gut und eng zusammenzuarbeiten
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

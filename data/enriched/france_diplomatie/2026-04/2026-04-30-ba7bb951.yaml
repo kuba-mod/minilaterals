@@ -21,10 +21,16 @@ extracted:
     defence: France demonstrates a concrete commitment to collective security by offering
       its readiness to contribute to the defense of Saudi Arabia.
   stances:
-    defence:
-      score: 2
-      evidence: reaffirmed France’s solidarity with the Kingdom of Saudi Arabia in
-        this context and its readiness to contribute to its defence
+    weimar:
+      defence:
+        score: 2
+        evidence: reaffirmed France’s solidarity with the Kingdom of Saudi Arabia
+          in this context and its readiness to contribute to its defence
+    e3:
+      defence:
+        score: 2
+        evidence: reaffirmed France’s solidarity with the Kingdom of Saudi Arabia
+          in this context and its readiness to contribute to its defence
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

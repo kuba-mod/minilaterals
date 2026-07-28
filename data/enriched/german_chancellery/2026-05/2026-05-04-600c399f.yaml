@@ -16,11 +16,12 @@ extracted:
     green_transition: Germany is actively advancing the green transition by allocating
       substantial financial resources to reach climate neutrality.
   stances:
-    green_transition:
-      score: 2
-      evidence: Mit einem Sondervermögen von 500 Milliarden Euro soll eine umfassende
-        Modernisierung der Infrastruktur und ein beschleunigter Übergang zur Klimaneutralität
-        ermöglicht werden.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Mit einem Sondervermögen von 500 Milliarden Euro soll eine umfassende
+          Modernisierung der Infrastruktur und ein beschleunigter Übergang zur Klimaneutralität
+          ermöglicht werden.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

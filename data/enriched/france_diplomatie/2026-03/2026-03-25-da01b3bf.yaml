@@ -21,10 +21,11 @@ extracted:
       renewed multilateralism and reform of global governance to ensure fairness and
       stability.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: A new international order must emerge to produce a fairer and more
-        balanced system, underpinned by a renewed multilateralism.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: A new international order must emerge to produce a fairer and more
+          balanced system, underpinned by a renewed multilateralism.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

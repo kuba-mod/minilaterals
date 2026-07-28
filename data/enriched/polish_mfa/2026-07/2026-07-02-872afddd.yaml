@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Poland affirms support for multilateral cooperation and international
       dialogue, aligning with the foundational principles of European unity and security.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Our support for multilateral cooperation and international dialogue
-        is steadfast and solid, we share this approach with South African partners.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Our support for multilateral cooperation and international dialogue
+          is steadfast and solid, we share this approach with South African partners.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

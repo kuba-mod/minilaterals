@@ -33,22 +33,28 @@ extracted:
     green_transition: Germany aims to drive the expansion of a European hydrogen economy
       to ensure secure value creation.
   stances:
-    ukraine:
-      score: 2
-      evidence: At the summit in Ankara, we NATO partners pledged 140 billion euro
-        to Ukraine for defence
-    defence:
-      score: 1
-      evidence: counter Russia’s constant provocations with an enhanced deterrent
-        and defence capability
-    hybrid:
-      score: 1
-      evidence: We can learn from this in Europe, so as to equip ourselves better
-        to fight sabotage, cyberattacks and disinformation.
-    green_transition:
-      score: 1
-      evidence: resolutely drive forward the rapid expansion of key future sectors,
-        such as a productive European hydrogen economy
+    weimar:
+      ukraine:
+        score: 2
+        evidence: At the summit in Ankara, we NATO partners pledged 140 billion euro
+          to Ukraine for defence
+      defence:
+        score: 1
+        evidence: counter Russia’s constant provocations with an enhanced deterrent
+          and defence capability
+      hybrid:
+        score: 1
+        evidence: We can learn from this in Europe, so as to equip ourselves better
+          to fight sabotage, cyberattacks and disinformation.
+      green_transition:
+        score: 1
+        evidence: resolutely drive forward the rapid expansion of key future sectors,
+          such as a productive European hydrogen economy
+    e3:
+      defence:
+        score: 1
+        evidence: counter Russia’s constant provocations with an enhanced deterrent
+          and defence capability
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

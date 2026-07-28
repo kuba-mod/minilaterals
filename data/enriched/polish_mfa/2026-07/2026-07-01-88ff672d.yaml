@@ -18,10 +18,11 @@ extracted:
     rule_of_law: Poland supports the adherence to international legal norms and the
       principle of state sovereignty.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Rozmówcy potwierdzili wagę poszanowania zasady suwerenności państw
-        oraz respektowania międzynarodowych norm prawnych.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Rozmówcy potwierdzili wagę poszanowania zasady suwerenności państw
+          oraz respektowania międzynarodowych norm prawnych.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

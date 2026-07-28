@@ -21,10 +21,7 @@ extracted:
   positions:
     ukraine: Estonia is actively advancing the goal of long-term support for Ukraine
       by hosting a future recovery conference.
-  stances:
-    ukraine:
-      score: 2
-      evidence: Kuues Ukraina taastekonverents toimub 2027. aastal Tallinnas.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

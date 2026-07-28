@@ -20,11 +20,7 @@ extracted:
   positions:
     ukraine: Estonia rhetorically supports Ukraine by highlighting and condemning
       Russian aggression and civilian casualties.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Täna, 24. juuli hommikul korraldas Venemaa ulatusliku raketirünnaku
-        mitmete Ukraina linnade vastu.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

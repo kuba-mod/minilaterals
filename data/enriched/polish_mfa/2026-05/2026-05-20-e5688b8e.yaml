@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland stresses the fundamental importance of respecting international
       law, including the law of the sea and humanitarian principles.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Respecting international law, including international law of the sea
-        and international humanitarian law is the duty of all states.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Respecting international law, including international law of the
+          sea and international humanitarian law is the duty of all states.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -25,14 +25,15 @@ extracted:
     enlargement: Germany rhetorically supports the expansion of Armenia's relations
       with the European Union.
   stances:
-    ukraine:
-      score: 0
-      evidence: tauschten sich zur aktuellen Lage im Nahen Osten und zum Krieg Russlands
-        gegen die Ukraine sowie den Auswirkungen auf den Südkaukasus aus
-    enlargement:
-      score: 1
-      evidence: beiden betonten in diesem Zusammenhang die Chancen für den Ausbau
-        der bilateralen Beziehungen und der Beziehungen Armeniens mit der EU
+    weimar:
+      ukraine:
+        score: 0
+        evidence: tauschten sich zur aktuellen Lage im Nahen Osten und zum Krieg Russlands
+          gegen die Ukraine sowie den Auswirkungen auf den Südkaukasus aus
+      enlargement:
+        score: 1
+        evidence: beiden betonten in diesem Zusammenhang die Chancen für den Ausbau
+          der bilateralen Beziehungen und der Beziehungen Armeniens mit der EU
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

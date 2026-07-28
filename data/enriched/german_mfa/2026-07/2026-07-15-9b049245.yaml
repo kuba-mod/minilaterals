@@ -33,22 +33,28 @@ extracted:
     green_transition: Germany supports the rapid expansion of future industries, specifically
       the European hydrogen economy.
   stances:
-    ukraine:
-      score: 2
-      evidence: Wir haben der Ukraine als NATO -Partner beim Gipfel in Ankara 140
-        Milliarden Euro für die Verteidigung zugesagt
-    defence:
-      score: 2
-      evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
-        verstärken.
-    hybrid:
-      score: 1
-      evidence: Von dieser Erfahrung können wir in Europa lernen, um uns besser gegen
-        Sabotage, Cyberangriffe oder Desinformation zu wappnen.
-    green_transition:
-      score: 1
-      evidence: Der zügige Ausbau von Zukunftsbranchen, wie etwa einer leistungsfähigen
-        europäischen Wasserstoffwirtschaf
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir haben der Ukraine als NATO -Partner beim Gipfel in Ankara 140
+          Milliarden Euro für die Verteidigung zugesagt
+      defence:
+        score: 2
+        evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
+          verstärken.
+      hybrid:
+        score: 1
+        evidence: Von dieser Erfahrung können wir in Europa lernen, um uns besser
+          gegen Sabotage, Cyberangriffe oder Desinformation zu wappnen.
+      green_transition:
+        score: 1
+        evidence: Der zügige Ausbau von Zukunftsbranchen, wie etwa einer leistungsfähigen
+          europäischen Wasserstoffwirtschaf
+    e3:
+      defence:
+        score: 2
+        evidence: Deshalb werden wir als NATO -Partner weiter die Baltic Sentry Mission
+          verstärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -30,15 +30,12 @@ extracted:
     migration: Poland provides development aid and educational support to migrant
       children from neighboring Southeast Asian countries.
   stances:
-    indo_pacific:
-      score: 2
-      evidence: Trwają przygotowania do pierwszego spotkania w ramach Dialogu Strategicznego
-        w Tajlandii.
-    migration:
-      score: 2
-      evidence: Artur Harazim odwiedził również szkołę im. Janusza Korczaka w Bangkoku
-        dla dzieci migrantów z Mjanmy, Kambodży i Laosu, wspieranej w ramach projektów
-        Polskiej pomocy.
+    visegrad:
+      migration:
+        score: 2
+        evidence: Artur Harazim odwiedził również szkołę im. Janusza Korczaka w Bangkoku
+          dla dzieci migrantów z Mjanmy, Kambodży i Laosu, wspieranej w ramach projektów
+          Polskiej pomocy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

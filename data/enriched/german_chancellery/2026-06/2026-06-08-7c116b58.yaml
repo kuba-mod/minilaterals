@@ -25,14 +25,23 @@ extracted:
     hybrid: Germany is actively combatting cyber threats by establishing a dedicated
       AI Security Institute to analyze risks and set international standards.
   stances:
-    defence:
-      score: 2
-      evidence: hat der Nationale Sicherheitsrat unter anderem beschlossen, die sogenannten
-        Sicherstellungs- und Vorsorgegesetze zu überprüfen und sie an die aktuellen
-        sicherheits- und verteidigungspolitischen Herausforderungen anzupassen
-    hybrid:
-      score: 2
-      evidence: beschlossen, ein KI-Sicherheitsinstitut zu gründen
+    weimar:
+      defence:
+        score: 2
+        evidence: hat der Nationale Sicherheitsrat unter anderem beschlossen, die
+          sogenannten Sicherstellungs- und Vorsorgegesetze zu überprüfen und sie an
+          die aktuellen sicherheits- und verteidigungspolitischen Herausforderungen
+          anzupassen
+      hybrid:
+        score: 2
+        evidence: beschlossen, ein KI-Sicherheitsinstitut zu gründen
+    e3:
+      defence:
+        score: 2
+        evidence: hat der Nationale Sicherheitsrat unter anderem beschlossen, die
+          sogenannten Sicherstellungs- und Vorsorgegesetze zu überprüfen und sie an
+          die aktuellen sicherheits- und verteidigungspolitischen Herausforderungen
+          anzupassen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

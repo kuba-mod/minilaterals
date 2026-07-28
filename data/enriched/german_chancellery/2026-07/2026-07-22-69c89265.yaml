@@ -24,14 +24,11 @@ extracted:
     energy: Germany is reducing energy costs for businesses and citizens to improve
       international competitiveness.
   stances:
-    green_transition:
-      score: 2
-      evidence: Mit dem Investitions-Booster für E -Mobilität bei Unternehmen werden
-        betrieblich genutzte Elektrofahrzeuge gefördert.
-    energy:
-      score: 2
-      evidence: Die Bundesregierung hat die Energiekosten für die Wirtschaft sowie
-        für Bürgerinnen und Bürger spürbar und dauerhaft gesenkt.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Mit dem Investitions-Booster für E -Mobilität bei Unternehmen werden
+          betrieblich genutzte Elektrofahrzeuge gefördert.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

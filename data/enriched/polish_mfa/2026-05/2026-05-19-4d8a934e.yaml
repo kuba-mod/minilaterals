@@ -18,9 +18,10 @@ extracted:
     rule_of_law: Poland supports the promotion and defense of European values and
       democratic resilience.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: promowaniu i obronę europejskich wartości
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: promowaniu i obronę europejskich wartości
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

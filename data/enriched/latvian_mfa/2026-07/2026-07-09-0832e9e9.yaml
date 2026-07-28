@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Latvia supports the documentation and exposure of Russian human rights
       violations against Ukrainian children to advance accountability and a just peace.
-  stances:
-    ukraine:
-      score: 1
-      evidence: tika prezentēts neatkarīgo ekspertu ziņojums par cilvēktiesību un…
-        Krievijas Federācijas īstenoto Ukrainas bērnu militarizāciju un indoktrināciju
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

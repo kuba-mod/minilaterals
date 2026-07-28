@@ -22,10 +22,11 @@ extracted:
       emphasizing the importance of implementing a ceasefire agreement and facilitating
       border demarcation discussions.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: It reiterates its readiness to facilitate the two parties’ access
-        to the archives in its possession, linked to the demarcation of the border.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: It reiterates its readiness to facilitate the two parties’ access
+          to the archives in its possession, linked to the demarcation of the border.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

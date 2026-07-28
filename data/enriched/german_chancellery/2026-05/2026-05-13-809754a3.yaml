@@ -21,9 +21,11 @@ extracted:
     rule_of_law: Germany is strengthening its legal framework and democratic resilience
       by increasing minimum sentences to protect citizens from sexual violence.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Mit der Gesetzesänderung wird dieser Gefährlichkeit nun Rechnung getragen.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Mit der Gesetzesänderung wird dieser Gefährlichkeit nun Rechnung
+          getragen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

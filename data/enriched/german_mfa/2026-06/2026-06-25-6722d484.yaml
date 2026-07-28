@@ -18,10 +18,11 @@ extracted:
     defence: Germany supports a targeted military contribution for navigation safety
       but conditions it on the end of hostilities and parliamentary consent.
   stances:
-    defence:
-      score: -1
-      evidence: for us to do that, it also has to be clear that all hostilities have
-        ended
+    weimar:
+      defence:
+        score: -1
+        evidence: for us to do that, it also has to be clear that all hostilities
+          have ended
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

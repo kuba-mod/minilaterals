@@ -20,13 +20,14 @@ extracted:
     rule_of_law: Germany supports upholding international law and the rule of law
       as foundational principles for regional stability and global security.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The EU underlines the critical importance of upholding the freedoms,
-        rights and duties set out in UNCLOS, in particular the freedom of navigation
-        and overflight, including the right of transit passage, as essential to regional
-        stability, global security, and the maintenance of safe, free and open sea
-        routes.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The EU underlines the critical importance of upholding the freedoms,
+          rights and duties set out in UNCLOS, in particular the freedom of navigation
+          and overflight, including the right of transit passage, as essential to
+          regional stability, global security, and the maintenance of safe, free and
+          open sea routes.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

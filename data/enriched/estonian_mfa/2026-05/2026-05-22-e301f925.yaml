@@ -24,12 +24,13 @@ extracted:
     hybrid: Estonia highlights specific drone incidents as evidence of the need for
       and the effectiveness of NATO's response to hybrid challenges.
   stances:
-    defence:
-      score: 1
-      evidence: Euroopa jätkab suurema vastutuse võtmist ühise julgeoleku eest
-    hybrid:
-      score: 1
-      evidence: droonijuhtum Eestis näitab, et NATO töötab
+    baltic:
+      defence:
+        score: 1
+        evidence: Euroopa jätkab suurema vastutuse võtmist ühise julgeoleku eest
+      hybrid:
+        score: 1
+        evidence: droonijuhtum Eestis näitab, et NATO töötab
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France supports the struggle for democratic freedoms and women's
       rights in Iran through its recognition of Satrapi's activism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Marjane Satrapi porta aussi la cause du peuple iranien et l’étendard
-        du droit des femmes.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Marjane Satrapi porta aussi la cause du peuple iranien et l’étendard
+          du droit des femmes.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

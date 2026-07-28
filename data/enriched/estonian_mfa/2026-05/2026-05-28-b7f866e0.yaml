@@ -25,15 +25,11 @@ extracted:
     energy: Estonia emphasizes the importance of renewable energy and green technology
       in mitigating the climate crisis.
   stances:
-    green_transition:
-      score: 1
-      evidence: arutada, kuidas praegune geopoliitiline ja julgeolekuolukord mõjutab
-        globaalset kliimapoliitikat ja kliimarahastust ning kuidas olla tulemuslikum
-        sügisel toimuval COP31 kliimakonverentsil
-    energy:
-      score: 1
-      evidence: Käsitleti ka rohetehnoloogia ja taastuvenergia rolli kliimakriisi
-        leevendamisel
+    baltic:
+      energy:
+        score: 1
+        evidence: Käsitleti ka rohetehnoloogia ja taastuvenergia rolli kliimakriisi
+          leevendamisel
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

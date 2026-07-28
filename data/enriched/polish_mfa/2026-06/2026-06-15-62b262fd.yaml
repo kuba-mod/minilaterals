@@ -33,24 +33,30 @@ extracted:
     rule_of_law: Poland condemns Russian attacks on cultural heritage and calls for
       adherence to human rights standards within the context of international law.
   stances:
-    ukraine:
-      score: 2
-      evidence: Minister Sikorski called for a firm stance towards Russia as it fails
-        to display good will to enter meaningful peace talks.
-    hybrid:
-      score: 2
-      evidence: The minister emphasised that in order to stop Russia’s hybrid aggression
-        the EU member states must strengthen their intelligence cooperation, set up
-        a common data exchange system, and clearly identify the perpetrators.
-    enlargement:
-      score: 2
-      evidence: At the same time, Poland welcomed the opening of the first cluster
-        in negotiations with Ukraine, a milestone on its path to the EU.
-    rule_of_law:
-      score: 1
-      evidence: In particular, he condemned the destruction of the Kyiv Pechersk Lavra,
-        an Eastern Orthodox monastery complex from 11th century, listed as UNESCO
-        World Heritage Site.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Minister Sikorski called for a firm stance towards Russia as it
+          fails to display good will to enter meaningful peace talks.
+      hybrid:
+        score: 2
+        evidence: The minister emphasised that in order to stop Russia’s hybrid aggression
+          the EU member states must strengthen their intelligence cooperation, set
+          up a common data exchange system, and clearly identify the perpetrators.
+      enlargement:
+        score: 2
+        evidence: At the same time, Poland welcomed the opening of the first cluster
+          in negotiations with Ukraine, a milestone on its path to the EU.
+      rule_of_law:
+        score: 1
+        evidence: In particular, he condemned the destruction of the Kyiv Pechersk
+          Lavra, an Eastern Orthodox monastery complex from 11th century, listed as
+          UNESCO World Heritage Site.
+    visegrad:
+      enlargement:
+        score: 2
+        evidence: At the same time, Poland welcomed the opening of the first cluster
+          in negotiations with Ukraine, a milestone on its path to the EU.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

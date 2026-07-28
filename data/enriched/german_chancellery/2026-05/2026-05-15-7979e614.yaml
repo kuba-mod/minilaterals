@@ -18,10 +18,11 @@ extracted:
     green_transition: Germany is actively pursuing climate neutrality through the
       development of climate technology and carbon capture and storage regulations.
   stances:
-    green_transition:
-      score: 2
-      evidence: Genau daran arbeite die Bundesregierung, etwa durch die Regelungen
-        zur Abscheidung und Speicherung von CO 2 .
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Genau daran arbeite die Bundesregierung, etwa durch die Regelungen
+          zur Abscheidung und Speicherung von CO 2 .
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

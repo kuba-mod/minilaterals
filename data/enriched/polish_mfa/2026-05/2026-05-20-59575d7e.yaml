@@ -18,10 +18,12 @@ extracted:
     rule_of_law: Poland reinforces the importance of international law and human rights
       as fundamental obligations for all states.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Poszanowanie prawa międzynarodowego, w tym międzynarodowego prawa
-        morza i międzynarodowego prawa humanitarnego jest obowiązkiem wszystkich państw.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Poszanowanie prawa międzynarodowego, w tym międzynarodowego prawa
+          morza i międzynarodowego prawa humanitarnego jest obowiązkiem wszystkich
+          państw.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

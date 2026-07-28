@@ -22,10 +22,11 @@ extracted:
     green_transition: Poland actively advances green objectives by securing a framework
       agreement on critical minerals necessary for the clean energy transition.
   stances:
-    green_transition:
-      score: 2
-      evidence: It concerns securing critical minerals supply chains, including rare
-        earth metals, at the stages of extraction, processing, and recycling.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: It concerns securing critical minerals supply chains, including
+          rare earth metals, at the stages of extraction, processing, and recycling.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

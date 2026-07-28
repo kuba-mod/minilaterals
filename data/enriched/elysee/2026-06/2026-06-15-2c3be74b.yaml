@@ -22,11 +22,12 @@ extracted:
     ukraine: France indicates its intent to advance important dossiers related to
       global peace, coinciding with the invitation of Ukraine to the summit.
   stances:
-    ukraine:
-      score: 1
-      evidence: Nous allons essayer de faire avancer au maximum tous les dossiers
-        qui sont importants pour notre pays, notre continent, et aussi la paix et
-        la prospérité dans le monde
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Nous allons essayer de faire avancer au maximum tous les dossiers
+          qui sont importants pour notre pays, notre continent, et aussi la paix et
+          la prospérité dans le monde
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

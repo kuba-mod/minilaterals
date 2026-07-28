@@ -19,10 +19,7 @@ extracted:
   positions:
     ukraine: Estonia advocates for increased pressure on Russia to stop its brutal
       drone and missile attacks against Ukraine.
-  stances:
-    ukraine:
-      score: 1
-      evidence: rõhutab vajadust suurendada survet Venemaale
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

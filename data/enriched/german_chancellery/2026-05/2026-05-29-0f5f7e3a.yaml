@@ -29,18 +29,19 @@ extracted:
     enlargement: Germany actively supports the EU perspective and enlargement for
       Western Balkan countries through its participation in the EU-Westbalkan Summit.
   stances:
-    ukraine:
-      score: 1
-      evidence: Es wird auch um die Unterstützung der Ukraine sowie die euroatlantische
-        Sicherheit gehen.
-    defence:
-      score: 1
-      evidence: Es wird auch um die Unterstützung der Ukraine sowie die euroatlantische
-        Sicherheit gehen.
-    enlargement:
-      score: 2
-      evidence: Ziel ist es, die europäische Perspektive zu bekräftigen und die umfassende
-        Unterstützung der EU für den westlichen Balkan hervorzuheben.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Es wird auch um die Unterstützung der Ukraine sowie die euroatlantische
+          Sicherheit gehen.
+      defence:
+        score: 1
+        evidence: Es wird auch um die Unterstützung der Ukraine sowie die euroatlantische
+          Sicherheit gehen.
+      enlargement:
+        score: 2
+        evidence: Ziel ist es, die europäische Perspektive zu bekräftigen und die
+          umfassende Unterstützung der EU für den westlichen Balkan hervorzuheben.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,10 +20,7 @@ extracted:
   positions:
     ukraine: Estonia rhetorically supports the need for sustained and strong allied
       support for Ukraine's defense against aggression.
-  stances:
-    ukraine:
-      score: 1
-      evidence: vajab jätkuvalt liitlaste tugevat toetust
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

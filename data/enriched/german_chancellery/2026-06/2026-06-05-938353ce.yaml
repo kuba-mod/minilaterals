@@ -23,10 +23,11 @@ extracted:
       next steps and acknowledging the need for the EU to overcome its own failures
       in the process.
   stances:
-    enlargement:
-      score: 2
-      evidence: Gemeinsam mit Frankreichs Präsident Macron habe er einen konkreten
-        Vorschlag für die nächsten Schritte im Beitrittsprozess unterbreitet
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Gemeinsam mit Frankreichs Präsident Macron habe er einen konkreten
+          Vorschlag für die nächsten Schritte im Beitrittsprozess unterbreitet
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

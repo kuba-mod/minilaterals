@@ -22,10 +22,11 @@ extracted:
       in infrastructure are crucial for regional stability and connecting neighbors,
       which aligns with foundational European security principles.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: our neighbourhood requires investments even in difficult times, and
-        architecture can be the thread that connects us.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: our neighbourhood requires investments even in difficult times,
+          and architecture can be the thread that connects us.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,13 +21,14 @@ extracted:
     rule_of_law: Germany links the creation of livable communities to the maintenance
       of democratic acceptance and social cohesion.
   stances:
-    green_transition:
-      score: 2
-      evidence: mehr Grün in der Stadt oder eine klimafitte Infrastruktur
-    rule_of_law:
-      score: 1
-      evidence: lebenswerte Städte und Kommunen sind wichtig für das gesellschaftliche
-        Zusammenleben, für attraktive Arbeitsplätze und für die Akzeptanz der Demokratie
+    weimar:
+      green_transition:
+        score: 2
+        evidence: mehr Grün in der Stadt oder eine klimafitte Infrastruktur
+      rule_of_law:
+        score: 1
+        evidence: lebenswerte Städte und Kommunen sind wichtig für das gesellschaftliche
+          Zusammenleben, für attraktive Arbeitsplätze und für die Akzeptanz der Demokratie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

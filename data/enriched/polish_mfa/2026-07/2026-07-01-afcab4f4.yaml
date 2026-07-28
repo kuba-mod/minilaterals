@@ -22,10 +22,11 @@ extracted:
     rule_of_law: Poland stressed the importance of respecting state sovereignty and
       adhering to international legal norms in regional and global discussions.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The interlocutors reaffirmed the importance of respecting the rule
-        of the sovereignty of states and international legal norms.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The interlocutors reaffirmed the importance of respecting the rule
+          of the sovereignty of states and international legal norms.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

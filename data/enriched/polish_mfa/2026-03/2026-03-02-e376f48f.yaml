@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Poland strongly advocates for adherence to international law as foundational
       to achieving lasting security and stability in the region.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Poland unequivocally condemned Iran’s attacks on the territory of
-        the UAE and other countries in the region.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Poland unequivocally condemned Iran’s attacks on the territory of
+          the UAE and other countries in the region.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

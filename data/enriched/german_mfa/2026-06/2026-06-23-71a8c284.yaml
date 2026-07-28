@@ -21,11 +21,12 @@ extracted:
     rule_of_law: Germany emphasizes the necessity of common, universal rules to provide
       a secure framework for global action and economic stability.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Auf gemeinsame Regeln setzen. Dass ich das als Außenminister betonen
-        muss, sagt auch viel aus über die Welt, in der wir agieren. Gemeinsame Regeln,
-        die für alle gelten und einen sicheren Handlungsrahmen bieten.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Auf gemeinsame Regeln setzen. Dass ich das als Außenminister betonen
+          muss, sagt auch viel aus über die Welt, in der wir agieren. Gemeinsame Regeln,
+          die für alle gelten und einen sicheren Handlungsrahmen bieten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

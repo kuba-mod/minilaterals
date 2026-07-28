@@ -36,23 +36,34 @@ extracted:
       trade while emphasizing democratic resilience through support for neighboring
       states.
   stances:
-    defence:
-      score: 2
-      evidence: Europe must increase its military capabilities while using the European
-        defence industry’s potential to full advantage.
-    ukraine:
-      score: 2
-      evidence: we agreed on the undeniable importance of Europe's continued strong
-        support for Ukraine until a just and lasting peace is achieved
-    enlargement:
-      score: 2
-      evidence: The foreign ministers agreed that expanding the zone of stability
-        and consistently supporting countries aspiring to join the EU is currently
-        a geopolitical necessity.
-    rule_of_law:
-      score: 1
-      evidence: The foreign ministers also highlighted the key role of the European
-        Union in the peace process.
+    weimar:
+      defence:
+        score: 2
+        evidence: Europe must increase its military capabilities while using the European
+          defence industry’s potential to full advantage.
+      ukraine:
+        score: 2
+        evidence: we agreed on the undeniable importance of Europe's continued strong
+          support for Ukraine until a just and lasting peace is achieved
+      enlargement:
+        score: 2
+        evidence: The foreign ministers agreed that expanding the zone of stability
+          and consistently supporting countries aspiring to join the EU is currently
+          a geopolitical necessity.
+      rule_of_law:
+        score: 1
+        evidence: The foreign ministers also highlighted the key role of the European
+          Union in the peace process.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Europe must increase its military capabilities while using the European
+          defence industry’s potential to full advantage.
+      enlargement:
+        score: 2
+        evidence: The foreign ministers agreed that expanding the zone of stability
+          and consistently supporting countries aspiring to join the EU is currently
+          a geopolitical necessity.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

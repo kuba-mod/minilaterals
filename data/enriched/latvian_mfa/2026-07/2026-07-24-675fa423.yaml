@@ -20,11 +20,7 @@ extracted:
   positions:
     green_transition: Latvia rhetorically supports the necessity of inclusive societal
       engagement to achieve sustainable climate goals.
-  stances:
-    green_transition:
-      score: 1
-      evidence: akcentē visas sabiedrības iesaistes nozīmi ilgtspējīgu klimata pārmaiņu
-        risinājumu veidošanā
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

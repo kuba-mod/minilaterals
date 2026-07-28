@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland affirms the importance of democratic resilience and the rule
       of law by condemning human rights abuses in Russia.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The Republic of Poland strongly opposes all forms of human rights
-        violations.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The Republic of Poland strongly opposes all forms of human rights
+          violations.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -29,20 +29,21 @@ extracted:
     rule_of_law: Germany views the protection of the liberal-democratic basic order
       as a primary duty of the federal government.
   stances:
-    ukraine:
-      score: 1
-      evidence: Besonders seit Beginn des russischen Angriffskriegs gegen die Ukraine
-        hat Desinformation noch einmal deutlich zugenommen.
-    hybrid:
-      score: 2
-      evidence: eröffnete Bundesinnenminister Dobrindt am 16. Juni 2026 gemeinsam
-        mit Vertreterinnen und Vertretern von Sicherheitsbehörden des Bundes und der
-        Länder das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen ( GAZ Hybrid
-        )
-    rule_of_law:
-      score: 2
-      evidence: Im Sinne der wehrhaften Demokratie ist der Schutz der freiheitlich-demokratischen
-        Grundordnung für die Bundesregierung Auftrag und Pflicht zugleich.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Besonders seit Beginn des russischen Angriffskriegs gegen die Ukraine
+          hat Desinformation noch einmal deutlich zugenommen.
+      hybrid:
+        score: 2
+        evidence: eröffnete Bundesinnenminister Dobrindt am 16. Juni 2026 gemeinsam
+          mit Vertreterinnen und Vertretern von Sicherheitsbehörden des Bundes und
+          der Länder das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen ( GAZ
+          Hybrid )
+      rule_of_law:
+        score: 2
+        evidence: Im Sinne der wehrhaften Demokratie ist der Schutz der freiheitlich-demokratischen
+          Grundordnung für die Bundesregierung Auftrag und Pflicht zugleich.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

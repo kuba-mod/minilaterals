@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Poland emphasizes adherence to international law regarding military
       operations and diplomatic immunity.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The actions of the Russian Federation carry serious consequences under
-        international law, once again undermining its role as a permanent member of
-        the UN Security Council.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The actions of the Russian Federation carry serious consequences
+          under international law, once again undermining its role as a permanent
+          member of the UN Security Council.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

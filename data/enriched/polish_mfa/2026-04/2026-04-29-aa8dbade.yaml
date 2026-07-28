@@ -21,10 +21,11 @@ extracted:
     defence: Poland supports nuclear deterrence as a means to counteract aggression
       and ensure security, aligning with the goal of strengthening the eastern flank.
   stances:
-    defence:
-      score: 1
-      evidence: Polska będzie postrzegała politykę odstraszania jądrowego jako kluczowe
-        narzędzie zapewniania pokoju w Europie, przeciwdziałania agresji oraz przymusowi
+    weimar:
+      defence:
+        score: 1
+        evidence: Polska będzie postrzegała politykę odstraszania jądrowego jako kluczowe
+          narzędzie zapewniania pokoju w Europie, przeciwdziałania agresji oraz przymusowi
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

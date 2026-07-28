@@ -26,12 +26,17 @@ extracted:
     green_transition: Germany identifies energy and economic policy as primary agenda
       items for the bilateral talks.
   stances:
-    defence:
-      score: 0
-      evidence: über die Sicherheits- und Verteidigungspolitik
-    green_transition:
-      score: 0
-      evidence: über die Wirtschaftspolitik, über die Energiepolitik
+    weimar:
+      defence:
+        score: 0
+        evidence: über die Sicherheits- und Verteidigungspolitik
+      green_transition:
+        score: 0
+        evidence: über die Wirtschaftspolitik, über die Energiepolitik
+    e3:
+      defence:
+        score: 0
+        evidence: über die Sicherheits- und Verteidigungspolitik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

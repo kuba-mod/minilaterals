@@ -22,10 +22,11 @@ extracted:
       law by insisting that UN operations in Gaza adhere to international law and
       fundamental rights.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: respect of international law and humanitarian principles, territorial
-        integrity, respect of the fundamental rights of Palestinians
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: respect of international law and humanitarian principles, territorial
+          integrity, respect of the fundamental rights of Palestinians
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '1'

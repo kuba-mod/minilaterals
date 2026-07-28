@@ -17,11 +17,12 @@ extracted:
     defence: Poland actively advances European defense and eastern flank deterrence
       through record-high GDP spending and participation in the EU's SAFE program.
   stances:
-    defence:
-      score: 2
-      evidence: W 2025 roku łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7% PKB),
-        natomiast w 2026 roku budżet obronny (wraz z Funduszem Wsparcia Sił Zbrojnych)
-        ma osiągnąć ponad 200 mld zł, co stanowi ok. 4,8% PKB.
+    weimar:
+      defence:
+        score: 2
+        evidence: W 2025 roku łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7%
+          PKB), natomiast w 2026 roku budżet obronny (wraz z Funduszem Wsparcia Sił
+          Zbrojnych) ma osiągnąć ponad 200 mld zł, co stanowi ok. 4,8% PKB.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

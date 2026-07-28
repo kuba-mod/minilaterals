@@ -21,14 +21,15 @@ extracted:
     green_transition: Germany expresses a desire for closer cooperation in energy,
       aligning with goals of energy policy transition.
   stances:
-    defence:
-      score: 1
-      evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
-        Sicherheit noch enger zusammenarbeiten wollen
-    green_transition:
-      score: 1
-      evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
-        Sicherheit noch enger zusammenarbeiten wollen
+    weimar:
+      defence:
+        score: 1
+        evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
+          Sicherheit noch enger zusammenarbeiten wollen
+      green_transition:
+        score: 1
+        evidence: sie künftig insbesondere in den Bereichen Wirtschaft, Energie und
+          Sicherheit noch enger zusammenarbeiten wollen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

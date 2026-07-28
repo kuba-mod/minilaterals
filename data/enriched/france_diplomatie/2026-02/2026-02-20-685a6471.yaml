@@ -30,18 +30,19 @@ extracted:
     rule_of_law: France commits to promoting a just and lasting peace through continued
       diplomatic efforts alongside its partners.
   stances:
-    ukraine:
-      score: 2
-      evidence: The Minister reiterated France’s full support for Ukraine in its fight
-        to defend its sovereignty, independence and territorial integrity
-    enlargement:
-      score: 1
-      evidence: the importance of involving the Europeans in discussions on the parameters
-        directly affecting European security
-    rule_of_law:
-      score: 1
-      evidence: He said that France will continue its efforts alongside all its partners
-        to promote a just, lasting peace
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The Minister reiterated France’s full support for Ukraine in its
+          fight to defend its sovereignty, independence and territorial integrity
+      enlargement:
+        score: 1
+        evidence: the importance of involving the Europeans in discussions on the
+          parameters directly affecting European security
+      rule_of_law:
+        score: 1
+        evidence: He said that France will continue its efforts alongside all its
+          partners to promote a just, lasting peace
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

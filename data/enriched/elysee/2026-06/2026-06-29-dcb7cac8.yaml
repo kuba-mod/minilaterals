@@ -25,14 +25,20 @@ extracted:
     green_transition: France is pursuing energy and industrial partnerships with Oman
       involving key energy companies.
   stances:
-    defence:
-      score: 2
-      evidence: what we want to do with Thales, KNDS, Airbus Defence and Space, and
-        Airbus
-    green_transition:
-      score: 2
-      evidence: we signed this morning several contracts involving Suez, EDF, CMS,
-        AGM
+    weimar:
+      defence:
+        score: 2
+        evidence: what we want to do with Thales, KNDS, Airbus Defence and Space,
+          and Airbus
+      green_transition:
+        score: 2
+        evidence: we signed this morning several contracts involving Suez, EDF, CMS,
+          AGM
+    e3:
+      defence:
+        score: 2
+        evidence: what we want to do with Thales, KNDS, Airbus Defence and Space,
+          and Airbus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -36,24 +36,30 @@ extracted:
       its partnership with Australia to ensure a stable and inclusive Indo-Pacific
       region.
   stances:
-    defence:
-      score: 1
-      evidence: We have agreed to expand cooperation in fields such as national security
-        and policing.
-    hybrid:
-      score: 2
-      evidence: We will also seek to increase our collaboration to counter cyber crime
-        and drug trafficking, while reinforcing global rules and norms.
-    green_transition:
-      score: 1
-      evidence: The flagship 2023 Roadmap project, the Franco-Australian Indo-Pacific
-        Centre for Energy Transition, will continue as well as our dialogue on critical
-        minerals.
-    rule_of_law:
-      score: 1
-      evidence: The Ministers reaffirmed the dynamism of the France-Australian partnership,
-        which is based on shared values and a mutual commitment to an international
-        system underpinned by agreed rules and norms.
+    weimar:
+      defence:
+        score: 1
+        evidence: We have agreed to expand cooperation in fields such as national
+          security and policing.
+      hybrid:
+        score: 2
+        evidence: We will also seek to increase our collaboration to counter cyber
+          crime and drug trafficking, while reinforcing global rules and norms.
+      green_transition:
+        score: 1
+        evidence: The flagship 2023 Roadmap project, the Franco-Australian Indo-Pacific
+          Centre for Energy Transition, will continue as well as our dialogue on critical
+          minerals.
+      rule_of_law:
+        score: 1
+        evidence: The Ministers reaffirmed the dynamism of the France-Australian partnership,
+          which is based on shared values and a mutual commitment to an international
+          system underpinned by agreed rules and norms.
+    e3:
+      defence:
+        score: 1
+        evidence: We have agreed to expand cooperation in fields such as national
+          security and policing.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

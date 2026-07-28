@@ -23,14 +23,15 @@ extracted:
       Serbia and promotes stability in the Western Balkans, aligning with EU integration
       goals.
   stances:
-    defence:
-      score: 2
-      evidence: Insgesamt können unverändert bis zu 400 deutsche Soldatinnen und Soldaten
-        eingesetzt werden.
-    enlargement:
-      score: 1
-      evidence: Zentrales Anliegen der Bundesregierung ist eine nachhaltige und rechtsverbindliche
-        Normalisierung der Beziehungen zwischen Kosovo und Serbien.
+    weimar:
+      defence:
+        score: 2
+        evidence: Insgesamt können unverändert bis zu 400 deutsche Soldatinnen und
+          Soldaten eingesetzt werden.
+      enlargement:
+        score: 1
+        evidence: Zentrales Anliegen der Bundesregierung ist eine nachhaltige und
+          rechtsverbindliche Normalisierung der Beziehungen zwischen Kosovo und Serbien.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

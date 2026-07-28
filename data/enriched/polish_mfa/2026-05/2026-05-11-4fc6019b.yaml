@@ -24,13 +24,19 @@ extracted:
     rule_of_law: Poland emphasizes maintaining democratic resilience and stability
       through discussions on arms control and disarmament regimes.
   stances:
-    defence:
-      score: 1
-      evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
-        capabilities
-    rule_of_law:
-      score: 0
-      evidence: the future of the arms control and disarmament regime
+    weimar:
+      defence:
+        score: 1
+        evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
+          capabilities
+      rule_of_law:
+        score: 0
+        evidence: the future of the arms control and disarmament regime
+    visegrad:
+      defence:
+        score: 1
+        evidence: focused on key strategic issues, particularly enhancing NATO’s deterrence
+          capabilities
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

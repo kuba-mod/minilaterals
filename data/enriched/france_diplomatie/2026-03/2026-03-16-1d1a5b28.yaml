@@ -23,11 +23,12 @@ extracted:
     rule_of_law: France supports democratic resilience and stability by promoting
       adherence to international law and multilateral principles in Central Africa.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: They urged compliance with the values and principles of multilateralism,
-        and respect for national sovereignty and international cooperation with the
-        aim of ensuring peace and security.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: They urged compliance with the values and principles of multilateralism,
+          and respect for national sovereignty and international cooperation with
+          the aim of ensuring peace and security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

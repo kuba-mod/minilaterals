@@ -22,11 +22,12 @@ extracted:
     green_transition: Poland is implementing concrete investments in hybrid solar
       and wind farms and reforming energy laws to accelerate the green transition.
   stances:
-    green_transition:
-      score: 2
-      evidence: Inwestycje w OZE, takie jak farma fotowoltaiczna ORLEN w Kleczewie,
-        zwiększają produkcję czystej energii i wzmacniają bezpieczeństwo energetyczne
-        kraju.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Inwestycje w OZE, takie jak farma fotowoltaiczna ORLEN w Kleczewie,
+          zwiększają produkcję czystej energii i wzmacniają bezpieczeństwo energetyczne
+          kraju.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

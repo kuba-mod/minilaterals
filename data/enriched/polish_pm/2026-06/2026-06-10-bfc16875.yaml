@@ -30,18 +30,25 @@ extracted:
     rule_of_law: The government rhetorically defends republican values, equality,
       and the rule of law against political polarization and hate speech.
   stances:
-    defence:
-      score: 2
-      evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld zł
-    hybrid:
-      score: 2
-      evidence: Podejmowaliśmy natomiast decyzje w kraju i na forum europejskim, które
-        realnie wzmocniły ochronę polskiego terytorium przed nielegalną migracją
-    rule_of_law:
-      score: 1
-      evidence: Politycy powinni pozostawać wierni wartościom republikańskim, które
-        stanowią fundament Rzeczypospolitej, takim jak służba państwu, przestrzeganie
-        prawa oraz równość obywateli
+    weimar:
+      defence:
+        score: 2
+        evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld
+          zł
+      hybrid:
+        score: 2
+        evidence: Podejmowaliśmy natomiast decyzje w kraju i na forum europejskim,
+          które realnie wzmocniły ochronę polskiego terytorium przed nielegalną migracją
+      rule_of_law:
+        score: 1
+        evidence: Politycy powinni pozostawać wierni wartościom republikańskim, które
+          stanowią fundament Rzeczypospolitej, takim jak służba państwu, przestrzeganie
+          prawa oraz równość obywateli
+    visegrad:
+      defence:
+        score: 2
+        evidence: przyjął program modernizacji służb mundurowych o wartości 13 mld
+          zł
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

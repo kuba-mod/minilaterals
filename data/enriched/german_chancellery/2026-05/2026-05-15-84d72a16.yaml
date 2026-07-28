@@ -26,13 +26,14 @@ extracted:
     rule_of_law: Germany advocates for the principle of artistic freedom as a symbol
       of democratic values.
   stances:
-    ukraine:
-      score: 1
-      evidence: Es ist so wichtig, dass die Ukraine hier erlebt und gesehen werden
-        kann.
-    rule_of_law:
-      score: 1
-      evidence: Die Biennale ist somit auch sichtbares Symbol der gelebten Kunstfreiheit.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Es ist so wichtig, dass die Ukraine hier erlebt und gesehen werden
+          kann.
+      rule_of_law:
+        score: 1
+        evidence: Die Biennale ist somit auch sichtbares Symbol der gelebten Kunstfreiheit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

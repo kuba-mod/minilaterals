@@ -21,11 +21,12 @@ extracted:
       public awareness events and coordinating state and societal measures for crisis
       management.
   stances:
-    hybrid:
-      score: 2
-      evidence: Er umfasst alle staatlichen und gesellschaftlichen Maßnahmen, um die
-        Zivilbevölkerung im Krisen- oder Katastrophenfall zu schützen – von der Gefahrenabwehr
-        bis zur Wiederherstellung sicherer Lebensverhältnisse.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Er umfasst alle staatlichen und gesellschaftlichen Maßnahmen, um
+          die Zivilbevölkerung im Krisen- oder Katastrophenfall zu schützen – von
+          der Gefahrenabwehr bis zur Wiederherstellung sicherer Lebensverhältnisse.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

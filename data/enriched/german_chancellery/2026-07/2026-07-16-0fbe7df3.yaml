@@ -25,15 +25,16 @@ extracted:
     rule_of_law: Germany rhetorically supports international standards of governance
       and the rule of law in investment relations.
   stances:
-    green_transition:
-      score: 2
-      evidence: Algeria’s role as a reliable supplier and its strategy to develop
-        its renewable energy sector
-    rule_of_law:
-      score: 1
-      evidence: The Sides reaffirm their commitment to international standards of
-        investment governance, including transparency, non-discrimination and the
-        rule of law.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Algeria’s role as a reliable supplier and its strategy to develop
+          its renewable energy sector
+      rule_of_law:
+        score: 1
+        evidence: The Sides reaffirm their commitment to international standards of
+          investment governance, including transparency, non-discrimination and the
+          rule of law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

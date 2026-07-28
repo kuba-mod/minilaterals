@@ -21,11 +21,12 @@ extracted:
     rule_of_law: France emphasizes the importance of respecting international humanitarian
       law and condemning violence against civilians and aid workers.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We firmly condemn any violence against humanitarian workers and civilian
-        populations, which may constitute war crimes, and urge the parties to respect
-        international humanitarian law.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We firmly condemn any violence against humanitarian workers and
+          civilian populations, which may constitute war crimes, and urge the parties
+          to respect international humanitarian law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

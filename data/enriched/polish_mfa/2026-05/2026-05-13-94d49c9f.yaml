@@ -33,28 +33,37 @@ extracted:
     green_transition: Poland is developing its 'Baltic energy hub' to integrate renewable
       sources, including offshore wind farms, into its energy supply.
   stances:
-    defence:
-      score: 2
-      evidence: Poland’s security is being improved through armaments programmes,
-        which include the Orka (new-generation submarines), the Miecznik (multipurpose
-        frigates for the Polish Navy), and investments in the development of Polish
-        unmanned surface vehicles.
-    hybrid:
-      score: 2
-      evidence: The head of Polish diplomacy opined that the basin requires protection
-        from the clunker fleet of the often unseaworthy, uninsured, and stateless
-        tankers carrying Russian oil through its waters.
-    rule_of_law:
-      score: 2
-      evidence: I don’t understand why we ban dubious aircraft from our airports and
-        demand that cars be insured and certified roadworthy but refrain from putting
-        such restrictions on the clunker fleet - said Deputy Prime Minister Sikorski
-    green_transition:
-      score: 2
-      evidence: The Polish “Baltic energy hub” consists of LNG and LPG terminals,
-        the Naftoport oil terminal, as well as offshore platforms and gas pipelines.
-        Since 2026, the hub will also include wind farms currently under construction
-        in Poland’s exclusive economic zone.
+    weimar:
+      defence:
+        score: 2
+        evidence: Poland’s security is being improved through armaments programmes,
+          which include the Orka (new-generation submarines), the Miecznik (multipurpose
+          frigates for the Polish Navy), and investments in the development of Polish
+          unmanned surface vehicles.
+      hybrid:
+        score: 2
+        evidence: The head of Polish diplomacy opined that the basin requires protection
+          from the clunker fleet of the often unseaworthy, uninsured, and stateless
+          tankers carrying Russian oil through its waters.
+      rule_of_law:
+        score: 2
+        evidence: I don’t understand why we ban dubious aircraft from our airports
+          and demand that cars be insured and certified roadworthy but refrain from
+          putting such restrictions on the clunker fleet - said Deputy Prime Minister
+          Sikorski
+      green_transition:
+        score: 2
+        evidence: The Polish “Baltic energy hub” consists of LNG and LPG terminals,
+          the Naftoport oil terminal, as well as offshore platforms and gas pipelines.
+          Since 2026, the hub will also include wind farms currently under construction
+          in Poland’s exclusive economic zone.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Poland’s security is being improved through armaments programmes,
+          which include the Orka (new-generation submarines), the Miecznik (multipurpose
+          frigates for the Polish Navy), and investments in the development of Polish
+          unmanned surface vehicles.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

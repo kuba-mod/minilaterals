@@ -24,14 +24,20 @@ extracted:
     defence: Germany provides concrete military support to Ukraine via air defense
       capabilities.
   stances:
-    ukraine:
-      score: 1
-      evidence: Der Bundeskanzler bekräftigte, dass sich die Ukraine auf die fortgesetzte
-        Unterstützung Deutschlands verlassen kann.
-    defence:
-      score: 2
-      evidence: Der Präsident dankte dem Bundeskanzler für die deutsche Unterstützung,
-        insbesondere bei der Luftverteidigung.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Der Bundeskanzler bekräftigte, dass sich die Ukraine auf die fortgesetzte
+          Unterstützung Deutschlands verlassen kann.
+      defence:
+        score: 2
+        evidence: Der Präsident dankte dem Bundeskanzler für die deutsche Unterstützung,
+          insbesondere bei der Luftverteidigung.
+    e3:
+      defence:
+        score: 2
+        evidence: Der Präsident dankte dem Bundeskanzler für die deutsche Unterstützung,
+          insbesondere bei der Luftverteidigung.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

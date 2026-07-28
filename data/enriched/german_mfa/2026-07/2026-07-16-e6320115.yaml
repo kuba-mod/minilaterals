@@ -22,10 +22,11 @@ extracted:
     rule_of_law: Germany supports the restoration of freedom, dignity, and the establishment
       of impartial state institutions in Syria.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Syrien braucht funktionierende, professionelle und unparteiische staatliche
-        Institutionen für alle Syrerinnen und Syrer
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Syrien braucht funktionierende, professionelle und unparteiische
+          staatliche Institutionen für alle Syrerinnen und Syrer
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

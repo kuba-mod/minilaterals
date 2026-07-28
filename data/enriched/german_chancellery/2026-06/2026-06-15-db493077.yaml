@@ -23,11 +23,12 @@ extracted:
     green_transition: Germany is actively strengthening its energy partnerships with
       Turkey to enhance economic security.
   stances:
-    green_transition:
-      score: 1
-      evidence: Im Mittelpunkt der Reise stehen die deutsch-türkische Wirtschafts-
-        und Energiepartnerschaften, die wichtige Bausteine der deutschen Wirtschaftssicherheit
-        sein können.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Im Mittelpunkt der Reise stehen die deutsch-türkische Wirtschafts-
+          und Energiepartnerschaften, die wichtige Bausteine der deutschen Wirtschaftssicherheit
+          sein können.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -19,10 +19,11 @@ extracted:
     indo_pacific: The UK actively supports a free and open Indo-Pacific based on international
       law and the ASEAN Outlook.
   stances:
-    indo_pacific:
-      score: 2
-      evidence: 'ASEAN-UK Joint Ministerial Statement on Cooperation on the ASEAN
-        Outlook on the Indo-Pacific: Advancing Together'
+    aukus:
+      indo_pacific:
+        score: 2
+        evidence: 'ASEAN-UK Joint Ministerial Statement on Cooperation on the ASEAN
+          Outlook on the Indo-Pacific: Advancing Together'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

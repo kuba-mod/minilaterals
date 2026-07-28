@@ -18,10 +18,11 @@ extracted:
     defence: Germany intends to discuss international security policy, aligning rhetorically
       with the goal of collective security.
   stances:
-    defence:
-      score: 1
-      evidence: Fragen der Europa- und der internationalen Sicherheitspolitik im Mittelpunkt
-        stehen
+    weimar:
+      defence:
+        score: 1
+        evidence: Fragen der Europa- und der internationalen Sicherheitspolitik im
+          Mittelpunkt stehen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

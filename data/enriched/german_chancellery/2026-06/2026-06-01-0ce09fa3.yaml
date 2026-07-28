@@ -42,19 +42,25 @@ extracted:
     green_transition: Germany celebrates four decades of environmental policy and
       continued engagement for climate and nature protection.
   stances:
-    ukraine:
-      score: 1
-      evidence: wie wir unsere Expertise vor Ort in Tschernobyl einbringen, und entsprechende
-        Forderungen bei der IAEA platziert
-    defence:
-      score: 2
-      evidence: die veränderte Sicherheitslage einen ganz deutlichen Aufwuchs der
-        Bundeswehr verlangt, und sowohl qualitativ als auch quantitativ
-    green_transition:
-      score: 1
-      evidence: das Engagement der vielen naturverbundenen Menschen in Deutschland,
-        die sich Tag für Tag für unsere Umwelt, unsere Natur own unser Klima eingesetzt
-        haben
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wie wir unsere Expertise vor Ort in Tschernobyl einbringen, und
+          entsprechende Forderungen bei der IAEA platziert
+      defence:
+        score: 2
+        evidence: die veränderte Sicherheitslage einen ganz deutlichen Aufwuchs der
+          Bundeswehr verlangt, und sowohl qualitativ als auch quantitativ
+      green_transition:
+        score: 1
+        evidence: das Engagement der vielen naturverbundenen Menschen in Deutschland,
+          die sich Tag für Tag für unsere Umwelt, unsere Natur own unser Klima eingesetzt
+          haben
+    e3:
+      defence:
+        score: 2
+        evidence: die veränderte Sicherheitslage einen ganz deutlichen Aufwuchs der
+          Bundeswehr verlangt, und sowohl qualitativ als auch quantitativ
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

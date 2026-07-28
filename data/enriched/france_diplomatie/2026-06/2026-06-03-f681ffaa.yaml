@@ -22,9 +22,10 @@ extracted:
     rule_of_law: France highlighted the importance of combating anti-Semitism as a
       shared international concern.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: the common fight against anti-Semitism
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: the common fight against anti-Semitism
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

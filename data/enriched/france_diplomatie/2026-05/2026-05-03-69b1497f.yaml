@@ -23,14 +23,15 @@ extracted:
     rule_of_law: France strongly emphasizes that freedom of expression and press freedom
       are essential components of democracy and international law.
   stances:
-    hybrid:
-      score: 2
-      evidence: In October 2025, at the Paris Peace Forum, 34 States committed to
-        multilateral action to safeguard information integrity and media independence.
-    rule_of_law:
-      score: 2
-      evidence: The deliberate targeting of journalists, where established, constitutes
-        a war crime.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: In October 2025, at the Paris Peace Forum, 34 States committed to
+          multilateral action to safeguard information integrity and media independence.
+      rule_of_law:
+        score: 2
+        evidence: The deliberate targeting of journalists, where established, constitutes
+          a war crime.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

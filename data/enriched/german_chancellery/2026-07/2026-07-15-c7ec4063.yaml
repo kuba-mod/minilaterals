@@ -22,11 +22,12 @@ extracted:
       of gematik to increase operational stability and protect against dangers, aligning
       with goals to counter cyber threats.
   stances:
-    hybrid:
-      score: 1
-      evidence: die gematik erhält eine stärker steuernde Rolle mit einer neuen Betreiberfunktion
-        sowie erweiterten Befugnissen zur Gefahrenabwehr, um die Betriebsstabilität
-        zu erhöhen
+    weimar:
+      hybrid:
+        score: 1
+        evidence: die gematik erhält eine stärker steuernde Rolle mit einer neuen
+          Betreiberfunktion sowie erweiterten Befugnissen zur Gefahrenabwehr, um die
+          Betriebsstabilität zu erhöhen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

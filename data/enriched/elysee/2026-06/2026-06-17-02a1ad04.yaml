@@ -22,10 +22,11 @@ extracted:
     ukraine: France rhetorically supports advancing key subjects including Ukraine
       via the G7 framework.
   stances:
-    ukraine:
-      score: 1
-      evidence: Ces derniers jours, nous avons tenu ce G7 qui a permis d'avancer sur
-        beaucoup de sujets qui sont très importants pour nous. L'Ukraine
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Ces derniers jours, nous avons tenu ce G7 qui a permis d'avancer
+          sur beaucoup de sujets qui sont très importants pour nous. L'Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

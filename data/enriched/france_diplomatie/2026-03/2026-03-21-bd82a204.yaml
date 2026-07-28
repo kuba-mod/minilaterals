@@ -27,12 +27,13 @@ extracted:
     rule_of_law: The statement strongly affirms democratic resilience and international
       law by condemning attacks on sovereign nations' infrastructure and civilians.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We condemn in the strongest terms the regime’s reckless attacks against
-        civilians and civilian infrastructure, including energy infrastructure, in
-        Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, the United Arab Emirates, Jordan,
-        and Iraq, in line with UNSC Resolution 2817.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We condemn in the strongest terms the regime’s reckless attacks
+          against civilians and civilian infrastructure, including energy infrastructure,
+          in Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, the United Arab Emirates,
+          Jordan, and Iraq, in line with UNSC Resolution 2817.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

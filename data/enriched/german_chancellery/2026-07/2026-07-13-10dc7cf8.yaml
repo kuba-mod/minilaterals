@@ -29,14 +29,20 @@ extracted:
     defence: Germany affirms its commitment to providing security guarantees for a
       sovereign Ukraine even after a ceasefire.
   stances:
-    ukraine:
-      score: 2
-      evidence: Die Koalition der Willigen will den Friedensprozess der Ukraine weiter
-        voranbringen und den Druck auf Russland erhöhen.
-    defence:
-      score: 1
-      evidence: bekräftigt, auch nach einem Waffenstillstand zur Sicherheit der Ukraine
-        beizutragen
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die Koalition der Willigen will den Friedensprozess der Ukraine
+          weiter voranbringen und den Druck auf Russland erhöhen.
+      defence:
+        score: 1
+        evidence: bekräftigt, auch nach einem Waffenstillstand zur Sicherheit der
+          Ukraine beizutragen
+    e3:
+      defence:
+        score: 1
+        evidence: bekräftigt, auch nach einem Waffenstillstand zur Sicherheit der
+          Ukraine beizutragen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

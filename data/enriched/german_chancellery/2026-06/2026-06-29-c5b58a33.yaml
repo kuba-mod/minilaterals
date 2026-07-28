@@ -20,10 +20,11 @@ extracted:
     green_transition: Germany is implementing measures to reduce environmental waste
       by facilitating the disposal of e-cigarettes.
   stances:
-    green_transition:
-      score: 1
-      evidence: Damit E -Zigaretten nicht im Restmüll oder gar in der Umwelt landen,
-        wird das richtige Entsorgen einfacher.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Damit E -Zigaretten nicht im Restmüll oder gar in der Umwelt landen,
+          wird das richtige Entsorgen einfacher.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

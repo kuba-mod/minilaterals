@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: The United Kingdom actively advances the goal of sustained support for
       Ukraine to achieve a just and lasting peace.
-  stances:
-    ukraine:
-      score: 2
-      evidence: The United Kingdom remains resolute and unwavering in its commitment
-        to Ukraine
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

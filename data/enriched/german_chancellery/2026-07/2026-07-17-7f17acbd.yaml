@@ -20,11 +20,18 @@ extracted:
       through the deployment of a frigate and personnel to support the UNIFIL mission
       and train the Lebanese Navy.
   stances:
-    defence:
-      score: 2
-      evidence: Dazu gehören die Beteiligung mit einer Fregatte am UNIFIL -Marineverband,
-        mit Stabspersonal im UNIFIL -Hauptquartier sowie mit Ausbildungspersonal für
-        den Fähigkeitsaufbau der libanesischen Marine.
+    weimar:
+      defence:
+        score: 2
+        evidence: Dazu gehören die Beteiligung mit einer Fregatte am UNIFIL -Marineverband,
+          mit Stabspersonal im UNIFIL -Hauptquartier sowie mit Ausbildungspersonal
+          für den Fähigkeitsaufbau der libanesischen Marine.
+    e3:
+      defence:
+        score: 2
+        evidence: Dazu gehören die Beteiligung mit einer Fregatte am UNIFIL -Marineverband,
+          mit Stabspersonal im UNIFIL -Hauptquartier sowie mit Ausbildungspersonal
+          für den Fähigkeitsaufbau der libanesischen Marine.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -19,9 +19,10 @@ extracted:
     rule_of_law: France strongly supports the rule of law by condemning a crime and
       demanding justice for the victim.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: We condemn this crime in the strongest possible terms.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: We condemn this crime in the strongest possible terms.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

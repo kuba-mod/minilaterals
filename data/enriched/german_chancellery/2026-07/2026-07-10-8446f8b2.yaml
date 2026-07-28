@@ -27,14 +27,15 @@ extracted:
     rule_of_law: Germany links the financial viability of local communities and a
       functioning commonweal to the strengthening of democracy.
   stances:
-    green_transition:
-      score: 2
-      evidence: So stehen den Ländern 100 Milliarden Euro aus dem Sondervermögen Infrastruktur
-        und Klimaneutralität zur Verfügung.
-    rule_of_law:
-      score: 1
-      evidence: Finanziell ausreichend ausgestattete Kommunen und ein gut funktionierendes
-        Gemeinwesen stärken unsere Demokratie.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: So stehen den Ländern 100 Milliarden Euro aus dem Sondervermögen
+          Infrastruktur und Klimaneutralität zur Verfügung.
+      rule_of_law:
+        score: 1
+        evidence: Finanziell ausreichend ausgestattete Kommunen und ein gut funktionierendes
+          Gemeinwesen stärken unsere Demokratie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

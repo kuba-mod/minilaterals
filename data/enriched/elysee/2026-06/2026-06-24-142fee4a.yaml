@@ -31,16 +31,22 @@ extracted:
     defence: France advocates for a stronger European defense capability and increased
       cooperation between European partners within the Alliance.
   stances:
-    ukraine:
-      score: 1
-      evidence: évoqué la poursuite du soutien à l’Ukraine dans le prolongement des
-        initiatives annoncées lors du sommet du G7 et des travaux engagés dans le
-        cadre de la Coalition des volontaires pour doter l’Ukraine de garanties de
-        sécurité solides
-    defence:
-      score: 1
-      evidence: le développement des capacités européennes de défense et le renforcement
-        de la coopération entre partenaires européens
+    weimar:
+      ukraine:
+        score: 1
+        evidence: évoqué la poursuite du soutien à l’Ukraine dans le prolongement
+          des initiatives annoncées lors du sommet du G7 et des travaux engagés dans
+          le cadre de la Coalition des volontaires pour doter l’Ukraine de garanties
+          de sécurité solides
+      defence:
+        score: 1
+        evidence: le développement des capacités européennes de défense et le renforcement
+          de la coopération entre partenaires européens
+    e3:
+      defence:
+        score: 1
+        evidence: le développement des capacités européennes de défense et le renforcement
+          de la coopération entre partenaires européens
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

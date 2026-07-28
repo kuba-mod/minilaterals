@@ -22,11 +22,12 @@ extracted:
     ukraine: Germany supports the ongoing provision of security guarantees and assistance
       to Ukraine to achieve a just and lasting peace.
   stances:
-    ukraine:
-      score: 1
-      evidence: Austausch zu den Sicherheitsgarantien und die weitere Unterstützung
-        für die Ukraine sowie die Abstimmung über Wege zu einem gerechten und dauerhaften
-        Frieden für die Ukraine
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Austausch zu den Sicherheitsgarantien und die weitere Unterstützung
+          für die Ukraine sowie die Abstimmung über Wege zu einem gerechten und dauerhaften
+          Frieden für die Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

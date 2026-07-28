@@ -25,15 +25,22 @@ extracted:
     defence: France actively strengthens Ukraine's combat aviation and air defense
       capabilities, integrating industrial cooperation with the EU.
   stances:
-    ukraine:
-      score: 2
-      evidence: l’Ukraine et la République française réaffirment leur intention de
-        coopérer pour accélérer l’équipement des forces armées ukrainiennes
-    defence:
-      score: 2
-      evidence: La France et l’Ukraine conviennent d’accorder une priorité haute aux
-        projets capacitaires renforçant l’aviation de combat et la défense aérienne
-        et antimissile balistique de l’Ukraine
+    weimar:
+      ukraine:
+        score: 2
+        evidence: l’Ukraine et la République française réaffirment leur intention
+          de coopérer pour accélérer l’équipement des forces armées ukrainiennes
+      defence:
+        score: 2
+        evidence: La France et l’Ukraine conviennent d’accorder une priorité haute
+          aux projets capacitaires renforçant l’aviation de combat et la défense aérienne
+          et antimissile balistique de l’Ukraine
+    e3:
+      defence:
+        score: 2
+        evidence: La France et l’Ukraine conviennent d’accorder une priorité haute
+          aux projets capacitaires renforçant l’aviation de combat et la défense aérienne
+          et antimissile balistique de l’Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

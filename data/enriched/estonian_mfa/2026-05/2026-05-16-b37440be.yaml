@@ -23,14 +23,7 @@ extracted:
       Europe for the sake of security and stability.
     enlargement: Estonia supports the accession of Ukraine to the European Union as
       a matter of critical importance.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Ukraina integreerimine Euroopa Liiduga on otsustava tähtsusega nii
-        Euroopa julgeoleku kui ka rahvusvahelise stabiilsuse jaoks
-    enlargement:
-      score: 1
-      evidence: Ukraina integreerimine Euroopa Liiduga on otsustava tähtsusega
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -20,12 +20,7 @@ extracted:
     migration: Germany supports the documentation and remembrance of forced migration
       and expulsion in Europe, providing institutional resources to create a dedicated
       learning center.
-  stances:
-    migration:
-      score: 1
-      evidence: Ein Dokumentationszentrum Flucht, Vertreibung, Versöhnung dient seit
-        2021 als als Lern- und Erinnerungsort zu Flucht, Vertreibung und Zwangsmigration
-        sowohl in der Geschichte als auch in der Gegenwart.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

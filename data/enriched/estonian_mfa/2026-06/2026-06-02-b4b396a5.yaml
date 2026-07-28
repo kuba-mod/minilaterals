@@ -24,13 +24,7 @@ extracted:
       security.
     enlargement: Estonia actively supports Ukraine's EU membership, viewing it as
       essential for the security of all of Europe.
-  stances:
-    ukraine:
-      score: 1
-      evidence: vajadusele suurendada survet Venemaale
-    enlargement:
-      score: 1
-      evidence: Ukraina liitumine ELiga on kogu Euroopa julgeoleku huvides
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

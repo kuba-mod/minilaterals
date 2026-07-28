@@ -21,10 +21,11 @@ extracted:
     hybrid: Estonia is taking concrete diplomatic action to counter foreign disinformation
       campaigns.
   stances:
-    hybrid:
-      score: 2
-      evidence: andis üle noot järjepideva Eesti ja Balti riikide vastu suunatud desinformatsioonikampaania
-        kohta
+    baltic:
+      hybrid:
+        score: 2
+        evidence: andis üle noot järjepideva Eesti ja Balti riikide vastu suunatud
+          desinformatsioonikampaania kohta
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

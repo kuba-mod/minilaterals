@@ -17,9 +17,10 @@ extracted:
     green_transition: Germany identifies energy supply as a central field of action
       to restore economic competitiveness.
   stances:
-    green_transition:
-      score: 1
-      evidence: Energieversorgung sind zentrale Handlungsfelder
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Energieversorgung sind zentrale Handlungsfelder
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

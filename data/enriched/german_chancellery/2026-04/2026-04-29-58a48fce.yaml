@@ -20,10 +20,11 @@ extracted:
       accountability by establishing a permanent memorial to the victims of National
       Socialism.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Für den Wettbewerb und die anschließende Realisierung des Denkmals
-        stellt der Bund insgesamt fünf Millionen Euro zur Verfügung.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Für den Wettbewerb und die anschließende Realisierung des Denkmals
+          stellt der Bund insgesamt fünf Millionen Euro zur Verfügung.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

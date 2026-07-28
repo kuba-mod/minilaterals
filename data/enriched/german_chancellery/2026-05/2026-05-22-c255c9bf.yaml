@@ -18,9 +18,10 @@ extracted:
       financial subsidies for the purchase of electric cars, especially for low-to-middle
       income families.
   stances:
-    green_transition:
-      score: 2
-      evidence: Seit Dienstag können Förderanträge für Elektroautos gestellt werden.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Seit Dienstag können Förderanträge für Elektroautos gestellt werden.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

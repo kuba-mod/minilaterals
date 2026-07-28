@@ -20,10 +20,11 @@ extracted:
     hybrid: France aligns with the goal of combating foreign political interference
       by calling for an end to external interferences that fuel African conflicts.
   stances:
-    hybrid:
-      score: 1
-      evidence: d’en finir en particulier avec les ingérences extérieures qui nourrissent
-        beaucoup de conflits
+    weimar:
+      hybrid:
+        score: 1
+        evidence: d’en finir en particulier avec les ingérences extérieures qui nourrissent
+          beaucoup de conflits
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

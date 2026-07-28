@@ -25,13 +25,14 @@ extracted:
     enlargement: Poland discusses the expansion of the European Union as a key diplomatic
       topic.
   stances:
-    defence:
-      score: 2
-      evidence: omawiali możliwości rozwoju współpracy zbrojeniowej oraz w branży
-        kosmicznej
-    enlargement:
-      score: 1
-      evidence: okazją do omówienia tematów jakich jak [...] rozszerzenie UE
+    weimar:
+      defence:
+        score: 2
+        evidence: omawiali możliwości rozwoju współpracy zbrojeniowej oraz w branży
+          kosmicznej
+      enlargement:
+        score: 1
+        evidence: okazją do omówienia tematów jakich jak [...] rozszerzenie UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

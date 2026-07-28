@@ -25,17 +25,18 @@ extracted:
     hybrid: Germany is actively preparing for and countering increasing hybrid attacks
       as part of its national security strategy.
   stances:
-    ukraine:
-      score: 1
-      evidence: völkerrechtswidrige russische Angriffskrieg auf die Ukraine
-    defence:
-      score: 2
-      evidence: Der Bund wird zudem bis zum Jahr 2029 insgesamt zehn Milliarden Euro
-        in den Bevölkerungsschutz investieren.
-    hybrid:
-      score: 2
-      evidence: zunehmenden hybriden Angriffe. Die Bundesregierung handelt, um sich
-        auf den Ernstfall vorzubereiten.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: völkerrechtswidrige russische Angriffskrieg auf die Ukraine
+      defence:
+        score: 2
+        evidence: Der Bund wird zudem bis zum Jahr 2029 insgesamt zehn Milliarden
+          Euro in den Bevölkerungsschutz investieren.
+      hybrid:
+        score: 2
+        evidence: zunehmenden hybriden Angriffe. Die Bundesregierung handelt, um sich
+          auf den Ernstfall vorzubereiten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

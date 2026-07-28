@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Poland rhetorically supports democratic resilience by linking cultural
       identity to the survival of democratic structures.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Kultura nie jest uzupełnieniem polityki, lecz fundamentem, bez którego
-        budowla demokratyczna nie może przetrwać.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Kultura nie jest uzupełnieniem polityki, lecz fundamentem, bez którego
+          budowla demokratyczna nie może przetrwać.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

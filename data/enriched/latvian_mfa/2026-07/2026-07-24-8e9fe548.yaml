@@ -23,12 +23,10 @@ extracted:
     energy: Latvia supports targeting the Russian energy sector to reduce dependence
       and apply economic pressure.
   stances:
-    ukraine:
-      score: 2
-      evidence: Sankciju pakotne aptver individuālās un sektorālās sankcijas
-    energy:
-      score: 2
-      evidence: vērstas pret Krievijas enerģētikas, finanšu, tirdzniecības sektoriem
+    baltic:
+      energy:
+        score: 2
+        evidence: vērstas pret Krievijas enerģētikas, finanšu, tirdzniecības sektoriem
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

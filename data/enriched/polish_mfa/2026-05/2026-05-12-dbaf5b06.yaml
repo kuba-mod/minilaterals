@@ -31,20 +31,26 @@ extracted:
       in Europe, citing pro-democratic forces' victories as a factor influencing geopolitical
       outcomes.
   stances:
-    ukraine:
-      score: 2
-      evidence: 'Deputy Prime Minister Sikorski stressed that Poland will continue
-        to support Ukraine: It is important for the adversary to know that Ukraine
-        is willing to continue and we are willing to continue to support it.'
-    enlargement:
-      score: 2
-      evidence: At the bilateral level, the top diplomats also talked about the process
-        of Ukraine’s accession to the European Union.
-    rule_of_law:
-      score: 1
-      evidence: I think it is Ukraine stabilising the front and Europe overcoming
-        its paralysis thanks to the magnificent victory of prodemocratic forces in
-        Hungary that is forcing Putin to recalculate.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 'Deputy Prime Minister Sikorski stressed that Poland will continue
+          to support Ukraine: It is important for the adversary to know that Ukraine
+          is willing to continue and we are willing to continue to support it.'
+      enlargement:
+        score: 2
+        evidence: At the bilateral level, the top diplomats also talked about the
+          process of Ukraine’s accession to the European Union.
+      rule_of_law:
+        score: 1
+        evidence: I think it is Ukraine stabilising the front and Europe overcoming
+          its paralysis thanks to the magnificent victory of prodemocratic forces
+          in Hungary that is forcing Putin to recalculate.
+    visegrad:
+      enlargement:
+        score: 2
+        evidence: At the bilateral level, the top diplomats also talked about the
+          process of Ukraine’s accession to the European Union.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

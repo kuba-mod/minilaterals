@@ -36,20 +36,30 @@ extracted:
     rule_of_law: Poland stressed the importance of democratic resilience and rule
       of law by emphasizing the need for a united response to Russia's aggression.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
-        and united response
-    defence:
-      score: 0
-      evidence: as well as cooperation on security and defence.
-    enlargement:
-      score: 1
-      evidence: The visit also reaffirmed Poland’s support for Turkey’s European integration.
-    rule_of_law:
-      score: 0
-      evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
-        and united response
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
+          and united response
+      defence:
+        score: 0
+        evidence: as well as cooperation on security and defence.
+      enlargement:
+        score: 1
+        evidence: The visit also reaffirmed Poland’s support for Turkey’s European
+          integration.
+      rule_of_law:
+        score: 0
+        evidence: Russia’s illegal and aggressive war against Ukraine requires a strong
+          and united response
+    visegrad:
+      defence:
+        score: 0
+        evidence: as well as cooperation on security and defence.
+      enlargement:
+        score: 1
+        evidence: The visit also reaffirmed Poland’s support for Turkey’s European
+          integration.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

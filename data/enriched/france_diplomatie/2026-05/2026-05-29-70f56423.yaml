@@ -33,20 +33,26 @@ extracted:
       that the prize reflects shared commitment to intellectual excellence and democratic
       dialogue.
   stances:
-    defence:
-      score: 1
-      evidence: It is our common duty to advance the security, freedom and prosperity
-        of our continent.
-    hybrid:
-      score: 1
-      evidence: research and critical thinking on security, defence and international
-        cooperation are more essential than ever to renew and deepen the European
-        public debate.
-    rule_of_law:
-      score: 1
-      evidence: the Henrik Enderlein Prize is an expression of France’s and Germany’s
-        shared commitment to intellectual excellence, democratic dialogue and the
-        strengthening of a more united and resilient Europe.
+    weimar:
+      defence:
+        score: 1
+        evidence: It is our common duty to advance the security, freedom and prosperity
+          of our continent.
+      hybrid:
+        score: 1
+        evidence: research and critical thinking on security, defence and international
+          cooperation are more essential than ever to renew and deepen the European
+          public debate.
+      rule_of_law:
+        score: 1
+        evidence: the Henrik Enderlein Prize is an expression of France’s and Germany’s
+          shared commitment to intellectual excellence, democratic dialogue and the
+          strengthening of a more united and resilient Europe.
+    e3:
+      defence:
+        score: 1
+        evidence: It is our common duty to advance the security, freedom and prosperity
+          of our continent.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

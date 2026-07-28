@@ -22,9 +22,10 @@ extracted:
       of law by pledging to defend the freedom and openness of its society against
       terrorism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Wir werden die Freiheit unserer Gesellschaft verteidigen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wir werden die Freiheit unserer Gesellschaft verteidigen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

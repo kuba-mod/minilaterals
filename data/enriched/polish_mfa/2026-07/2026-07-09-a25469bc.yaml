@@ -25,14 +25,22 @@ extracted:
     defence: Poland seeks to develop cooperation in defense and perceives France as
       a partner with a similar view of security challenges.
   stances:
-    ukraine:
-      score: 1
-      evidence: Ministrowie dyskutowali także o bieżących wyzwaniach związanych z
-        bezpieczeństwem, w tym na Bliskim Wschodzie i w Ukrainie.
-    defence:
-      score: 1
-      evidence: Zadeklarowali kontynuację ścisłego dialogu politycznego i rozwój współpracy
-        w kluczowych obszarach, w tym m.in. gospodarce, obronności oraz kulturze.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Ministrowie dyskutowali także o bieżących wyzwaniach związanych
+          z bezpieczeństwem, w tym na Bliskim Wschodzie i w Ukrainie.
+      defence:
+        score: 1
+        evidence: Zadeklarowali kontynuację ścisłego dialogu politycznego i rozwój
+          współpracy w kluczowych obszarach, w tym m.in. gospodarce, obronności oraz
+          kulturze.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Zadeklarowali kontynuację ścisłego dialogu politycznego i rozwój
+          współpracy w kluczowych obszarach, w tym m.in. gospodarce, obronności oraz
+          kulturze.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

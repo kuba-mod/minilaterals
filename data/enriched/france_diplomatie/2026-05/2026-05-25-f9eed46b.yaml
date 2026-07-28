@@ -32,10 +32,11 @@ extracted:
       law by condemning violations of international humanitarian law and stressing
       the need for political solutions.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The ICG condemns violations of international humanitarian law in the
-        strongest terms.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The ICG condemns violations of international humanitarian law in
+          the strongest terms.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

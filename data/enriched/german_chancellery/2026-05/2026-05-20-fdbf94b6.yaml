@@ -22,11 +22,12 @@ extracted:
       capabilities through real-time simulations involving the military and security
       agencies.
   stances:
-    defence:
-      score: 2
-      evidence: Die Bundesregierung hat am 20. Mai 2026 eine Krisenreaktionsübung
-        zur Entführung eines zivilen Flugzeugs im deutschen Luftraum (sogenanntes
-        „Renegade“- Szenario) erfolgreich durchgeführt.
+    weimar:
+      defence:
+        score: 2
+        evidence: Die Bundesregierung hat am 20. Mai 2026 eine Krisenreaktionsübung
+          zur Entführung eines zivilen Flugzeugs im deutschen Luftraum (sogenanntes
+          „Renegade“- Szenario) erfolgreich durchgeführt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

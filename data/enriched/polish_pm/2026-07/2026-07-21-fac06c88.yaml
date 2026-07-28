@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Poland is pursuing domestic institutional reforms to ensure transparency,
       legal compliance, and the elimination of abuses within the healthcare system.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Będziemy pilnowali każdej godziny i każdego dnia, aby jak najszybciej,
-        ale zgodnie z regułami, doprowadzić do głosowania w Sejmie tych ustaw.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Będziemy pilnowali każdej godziny i każdego dnia, aby jak najszybciej,
+          ale zgodnie z regułami, doprowadzić do głosowania w Sejmie tych ustaw.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

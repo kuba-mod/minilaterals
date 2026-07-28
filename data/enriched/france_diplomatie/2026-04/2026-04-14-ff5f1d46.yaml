@@ -20,10 +20,11 @@ extracted:
     rule_of_law: The statement strongly emphasizes adherence to international humanitarian
       law and respect for national sovereignty.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Civilians and civilian infrastructure must be protected in accordance
-        with international humanitarian law.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Civilians and civilian infrastructure must be protected in accordance
+          with international humanitarian law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

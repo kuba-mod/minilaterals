@@ -25,12 +25,14 @@ extracted:
     rule_of_law: France emphasizes the importance of promoting democracy and rule
       of law in Europe.
   stances:
-    ukraine:
-      score: 1
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: together promoting a more sovereign, competitive and democratic Europe.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ''
+      rule_of_law:
+        score: 1
+        evidence: together promoting a more sovereign, competitive and democratic
+          Europe.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

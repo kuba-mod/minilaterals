@@ -22,9 +22,14 @@ extracted:
     defence: Germany is actively working to enhance its own defense capabilities and
       advocates for a more European-oriented NATO.
   stances:
-    defence:
-      score: 2
-      evidence: Wir wollen die NATO insgesamt europäischer machen.
+    weimar:
+      defence:
+        score: 2
+        evidence: Wir wollen die NATO insgesamt europäischer machen.
+    e3:
+      defence:
+        score: 2
+        evidence: Wir wollen die NATO insgesamt europäischer machen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,11 +20,12 @@ extracted:
     rule_of_law: France supports upholding international law and democratic norms
       by emphasizing full adherence to the NPT and IAEA safeguards.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We reaffirm that full compliance with the NPT and relevant safeguards
-        obligations is essential to ensuring international confidence in the peaceful
-        nature of nuclear activities.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We reaffirm that full compliance with the NPT and relevant safeguards
+          obligations is essential to ensuring international confidence in the peaceful
+          nature of nuclear activities.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

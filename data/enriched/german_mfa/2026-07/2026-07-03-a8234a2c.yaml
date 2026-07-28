@@ -26,15 +26,17 @@ extracted:
       environmental, social, and governance standards across the entire raw materials
       value chain.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: 'What makes Brazil such an important partner for Germany is that we
-        share the same interests and values: First, diversified and resilient trade
-        relationships. And second, reliable, long-term partnerships built on trust.'
-    green_transition:
-      score: 1
-      evidence: We are also committed to promoting high environmental, social, and
-        governance standards – across the entire value chain.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: 'What makes Brazil such an important partner for Germany is that
+          we share the same interests and values: First, diversified and resilient
+          trade relationships. And second, reliable, long-term partnerships built
+          on trust.'
+      green_transition:
+        score: 1
+        evidence: We are also committed to promoting high environmental, social, and
+          governance standards – across the entire value chain.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

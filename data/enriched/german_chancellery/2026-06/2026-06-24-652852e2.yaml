@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany rhetorically supports democratic resilience by engaging youth
       in discussions about growing extremism and European law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: So sprach Hille mit den Schülerinnen und Schülern über die EU in der
-        internationalen Politik, den wachsenden Extremismus
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: So sprach Hille mit den Schülerinnen und Schülern über die EU in
+          der internationalen Politik, den wachsenden Extremismus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

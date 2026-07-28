@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Estonia rhetorically supports Ukraine by condemning Russian aggression
       and its humanitarian impact.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Välisminister Margus Tsahkna sõnul kinnitab see brutaalne rünnak,
-        et Venemaa muutub sõja venimise ja strateegilise paigalseisu tõttu üha närvilisemaks.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

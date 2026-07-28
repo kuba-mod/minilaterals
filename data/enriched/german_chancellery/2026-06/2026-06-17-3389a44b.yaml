@@ -25,11 +25,12 @@ extracted:
       by acknowledging and rectifying historical injustices through the restitution
       of stolen cultural property.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Die Rückgaben stehen für die enge deutsch-polnische Zusammenarbeit
-        bei der Aufarbeitung historischen Unrechts und sind Ausdruck der deutschen
-        Verantwortung gegenüber Polen.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Die Rückgaben stehen für die enge deutsch-polnische Zusammenarbeit
+          bei der Aufarbeitung historischen Unrechts und sind Ausdruck der deutschen
+          Verantwortung gegenüber Polen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

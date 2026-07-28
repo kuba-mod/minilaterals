@@ -18,12 +18,14 @@ extracted:
     defence: Germany actively advances collective security by deploying a ship to
       the Mediterranean and promoting military hardware interoperability.
   stances:
-    defence:
-      score: 2
-      evidence: Deutschland bereit, die Freiheit der Seewege auch militärisch zu sichern.
-        Das sagte Bundeskanzler Friedrich Merz bei einer Pressekonferenz zum Besuch
-        des portugiesischen Ministerpräsidenten Luís Montenegro in Berlin. Ein erstes
-        Schiff sei bereits zur Vorstationierung ins östliche Mittelmeer unterwegs.
+    weimar:
+      defence:
+        score: 2
+        evidence: Deutschland bereit, die Freiheit der Seewege auch militärisch zu
+          sichern. Das sagte Bundeskanzler Friedrich Merz bei einer Pressekonferenz
+          zum Besuch des portugiesischen Ministerpräsidenten Luís Montenegro in Berlin.
+          Ein erstes Schiff sei bereits zur Vorstationierung ins östliche Mittelmeer
+          unterwegs.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

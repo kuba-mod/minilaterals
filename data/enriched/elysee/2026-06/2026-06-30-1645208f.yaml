@@ -21,9 +21,10 @@ extracted:
       as a fundamental human right, aligning with the broader objective of democratic
       resilience and rule of law.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: la France a accueilli le Congrès mondial pour la seconde fois
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: la France a accueilli le Congrès mondial pour la seconde fois
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

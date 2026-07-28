@@ -22,11 +22,12 @@ extracted:
     green_transition: France is advancing the green transition by ratifying an agreement
       to acquire a common platform for the carbon border adjustment mechanism.
   stances:
-    green_transition:
-      score: 2
-      evidence: un projet de loi autorisant la ratification de l’accord de passation
-        conjointe de marché en vue de l’acquisition d’une plateforme centrale commune
-        pour le mécanisme d’ajustement carbone aux frontières
+    weimar:
+      green_transition:
+        score: 2
+        evidence: un projet de loi autorisant la ratification de l’accord de passation
+          conjointe de marché en vue de l’acquisition d’une plateforme centrale commune
+          pour le mécanisme d’ajustement carbone aux frontières
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

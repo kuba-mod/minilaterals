@@ -19,10 +19,11 @@ extracted:
     hybrid: Poland is actively promoting its cybersecurity offerings as part of its
       bilateral cooperation strategy.
   stances:
-    hybrid:
-      score: 1
-      evidence: Wiceminister Wojciech Zajączkowski przedstawił polską ofertę w takich
-        sektorach jak cyberbezpieczeństwo
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Wiceminister Wojciech Zajączkowski przedstawił polską ofertę w takich
+          sektorach jak cyberbezpieczeństwo
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,10 +21,12 @@ extracted:
     rule_of_law: Germany is strengthening the rule of law by improving the efficiency
       and transparency of arbitration and judicial proceedings.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Die Bundesregierung hat den von Bundesjustizministerin Stefanie Hubig
-        vorgelegten Gesetzentwurf zur Modernisierung des Schiedsverfahrensrechts beschlossen.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Die Bundesregierung hat den von Bundesjustizministerin Stefanie
+          Hubig vorgelegten Gesetzentwurf zur Modernisierung des Schiedsverfahrensrechts
+          beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

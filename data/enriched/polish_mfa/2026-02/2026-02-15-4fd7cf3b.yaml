@@ -39,23 +39,30 @@ extracted:
       of law by discussing security issues and the need for a mature transatlantic
       conversation on NATO's future.
   stances:
-    ukraine:
-      score: 2
-      evidence: Europe is paying for this war. We are buying American weapons to be
-        delivered to Ukraine.
-    defence:
-      score: 2
-      evidence: I can say with full responsibility that the European SAFE programme
-        is exactly what the United States need from Europe— to restore its capabilities
-        for producing arms and ammunition, and to replace some US capabilities.
-    hybrid:
-      score: 1
-      evidence: Deputy Prime Minister Sikorski also pointed to the problem of the
-        instrumentalisation of migration.
-    rule_of_law:
-      score: 1
-      evidence: We have started a mature transatlantic conversation about the future
-        shape of NATO, about the future distribution of rights and responsibilities,
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Europe is paying for this war. We are buying American weapons to
+          be delivered to Ukraine.
+      defence:
+        score: 2
+        evidence: I can say with full responsibility that the European SAFE programme
+          is exactly what the United States need from Europe— to restore its capabilities
+          for producing arms and ammunition, and to replace some US capabilities.
+      hybrid:
+        score: 1
+        evidence: Deputy Prime Minister Sikorski also pointed to the problem of the
+          instrumentalisation of migration.
+      rule_of_law:
+        score: 1
+        evidence: We have started a mature transatlantic conversation about the future
+          shape of NATO, about the future distribution of rights and responsibilities,
+    visegrad:
+      defence:
+        score: 2
+        evidence: I can say with full responsibility that the European SAFE programme
+          is exactly what the United States need from Europe— to restore its capabilities
+          for producing arms and ammunition, and to replace some US capabilities.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

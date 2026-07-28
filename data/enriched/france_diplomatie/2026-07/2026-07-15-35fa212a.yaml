@@ -24,11 +24,18 @@ extracted:
     defence: France actively supports the security of the eastern flank through concrete
       military presence and participation in NATO Air Policing.
   stances:
-    defence:
-      score: 2
-      evidence: France is fully committed to the Baltic States’ security, particularly
-        through its military presence in Estonia and its regular participation in
-        the NATO Air Policing mission
+    weimar:
+      defence:
+        score: 2
+        evidence: France is fully committed to the Baltic States’ security, particularly
+          through its military presence in Estonia and its regular participation in
+          the NATO Air Policing mission
+    e3:
+      defence:
+        score: 2
+        evidence: France is fully committed to the Baltic States’ security, particularly
+          through its military presence in Estonia and its regular participation in
+          the NATO Air Policing mission
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

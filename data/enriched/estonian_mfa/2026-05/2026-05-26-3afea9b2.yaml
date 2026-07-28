@@ -24,15 +24,12 @@ extracted:
     hybrid: Estonia identifies Russia's rhetoric as part of a long-term pattern of
       systematic disinformation and political pressure.
   stances:
-    ukraine:
-      score: 1
-      evidence: Venemaa valeväidete eesmärk on juhtida tähelepanu kõrvale Ukrainalt
-        ja enda rasketelt rahvusvahelise õiguse rikkumistelt
-    hybrid:
-      score: 1
-      evidence: Tegemist on järjekordse sammuga Venemaa pikaajalises käitumismustris,
-        mis hõlmab süstemaatilist desinformatsiooni ja poliitilist surveavaldust Balti
-        riikide vastu.
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Tegemist on järjekordse sammuga Venemaa pikaajalises käitumismustris,
+          mis hõlmab süstemaatilist desinformatsiooni ja poliitilist surveavaldust
+          Balti riikide vastu.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

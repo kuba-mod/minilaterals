@@ -19,10 +19,11 @@ extracted:
     green_transition: Germany is pursuing an energy transition based on pragmatism,
       cost-efficiency, and security of supply to ensure affordable energy.
   stances:
-    green_transition:
-      score: 1
-      evidence: eine Energiewende im Geiste des Pragmatismus, eine Energiewende mit
-        dem Fokus auf Kosteneffizienz und Versorgungssicherheit.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: eine Energiewende im Geiste des Pragmatismus, eine Energiewende
+          mit dem Fokus auf Kosteneffizienz und Versorgungssicherheit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

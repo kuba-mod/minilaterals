@@ -29,18 +29,23 @@ extracted:
     hybrid: Poland identifies the need to be prepared for and protect against unconventional
       actions such as cyber attacks and drone incidents.
   stances:
-    ukraine:
-      score: 2
-      evidence: Zadaniem Europy jest w tej sytuacji takie wsparcie dla Ukrainy, żeby
-        ona mogła dalej skutecznie stawiać opór rosyjskiej agresji
-    defence:
-      score: 2
-      evidence: Polska systematycznie wzmacnia swoje zdolności obronne
-    hybrid:
-      score: 1
-      evidence: Polska wraz z pozostałymi państwami wschodniej flanki musi być przygotowana
-        na różne scenariusze, w tym prowokacje, incydenty z wykorzystaniem dronów
-        czy ataki w cyberprzestrzeni
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Zadaniem Europy jest w tej sytuacji takie wsparcie dla Ukrainy,
+          żeby ona mogła dalej skutecznie stawiać opór rosyjskiej agresji
+      defence:
+        score: 2
+        evidence: Polska systematycznie wzmacnia swoje zdolności obronne
+      hybrid:
+        score: 1
+        evidence: Polska wraz z pozostałymi państwami wschodniej flanki musi być przygotowana
+          na różne scenariusze, w tym prowokacje, incydenty z wykorzystaniem dronów
+          czy ataki w cyberprzestrzeni
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska systematycznie wzmacnia swoje zdolności obronne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

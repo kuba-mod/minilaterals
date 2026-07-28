@@ -19,10 +19,11 @@ extracted:
     rule_of_law: France advocates for the rule of law by calling for the prosecution
       of those responsible for attacks on civilian infrastructure.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France calls on the Israeli authorities to expel and prosecute those
-        responsible.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France calls on the Israeli authorities to expel and prosecute those
+          responsible.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

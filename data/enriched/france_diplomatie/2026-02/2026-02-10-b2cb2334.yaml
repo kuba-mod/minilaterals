@@ -19,9 +19,10 @@ extracted:
     rule_of_law: France affirms fundamental human rights and democratic principles
       by condemning the Iranian regime's actions against Narges Mohammadi.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: in defiance of the Iranian people’s fundamental rights
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: in defiance of the Iranian people’s fundamental rights
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

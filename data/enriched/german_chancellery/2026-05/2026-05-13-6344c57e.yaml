@@ -24,13 +24,14 @@ extracted:
     rule_of_law: Germany is strengthening legal protections and judicial mechanisms
       to ensure the fundamental right to a life free from violence.
   stances:
-    hybrid:
-      score: 2
-      evidence: Das Bundesministerium für Justiz und Verbraucherschutz hat ein digitales
-        Gewaltschutzgesetz vorgelegt.
-    rule_of_law:
-      score: 2
-      evidence: Die Bundesregierung hat einen neuen Gewaltschutz auf den Weg gebracht.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Das Bundesministerium für Justiz und Verbraucherschutz hat ein digitales
+          Gewaltschutzgesetz vorgelegt.
+      rule_of_law:
+        score: 2
+        evidence: Die Bundesregierung hat einen neuen Gewaltschutz auf den Weg gebracht.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

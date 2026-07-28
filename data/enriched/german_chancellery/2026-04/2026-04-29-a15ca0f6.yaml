@@ -18,10 +18,11 @@ extracted:
     hybrid: Germany is actively advancing the goal of coordinating action against
       cyber attacks by implementing binding security standards for networked products.
   stances:
-    hybrid:
-      score: 2
-      evidence: Das Kabinett hat den Entwurf des Gesetzes zur Durchführung des sogenannten
-        Cyber Resilience Act ( Cyber resilienz-Verordnung) beschlossen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Das Kabinett hat den Entwurf des Gesetzes zur Durchführung des sogenannten
+          Cyber Resilience Act ( Cyber resilienz-Verordnung) beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

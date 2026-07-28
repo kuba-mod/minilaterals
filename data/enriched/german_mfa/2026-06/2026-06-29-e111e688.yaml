@@ -25,14 +25,15 @@ extracted:
     rule_of_law: Germany emphasizes strengthening EU institutions and sovereignty
       to combat external pressures and improve internal efficiency.
   stances:
-    ukraine:
-      score: 2
-      evidence: One example would be the E3 format, where we are working with the
-        UK and France to try to bring about an end to the Ukraine war.
-    rule_of_law:
-      score: 2
-      evidence: We Europeans absolutely must become more independent, and for that
-        it is important for us in the EU to stick together.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: One example would be the E3 format, where we are working with the
+          UK and France to try to bring about an end to the Ukraine war.
+      rule_of_law:
+        score: 2
+        evidence: We Europeans absolutely must become more independent, and for that
+          it is important for us in the EU to stick together.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

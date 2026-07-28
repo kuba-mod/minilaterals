@@ -18,9 +18,10 @@ extracted:
     green_transition: Poland supports the development of sustainable aviation fuels,
       aligning with European green objectives.
   stances:
-    green_transition:
-      score: 1
-      evidence: rozwoju zrównoważonych paliw lotniczych
+    weimar:
+      green_transition:
+        score: 1
+        evidence: rozwoju zrównoważonych paliw lotniczych
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

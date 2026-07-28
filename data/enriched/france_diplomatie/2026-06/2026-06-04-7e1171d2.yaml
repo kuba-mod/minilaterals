@@ -22,11 +22,12 @@ extracted:
     rule_of_law: The joint initiative emphasizes the importance of culture and language
       as essential tools for affirming democratic values and promoting freedom.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France and Germany share the strong belief that culture and language
-        are essential levers of mutual understanding, the affirmation of democratic
-        values and the defence of freedom in the service of peace.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France and Germany share the strong belief that culture and language
+          are essential levers of mutual understanding, the affirmation of democratic
+          values and the defence of freedom in the service of peace.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

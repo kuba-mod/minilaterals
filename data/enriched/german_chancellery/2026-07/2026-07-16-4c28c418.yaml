@@ -22,10 +22,11 @@ extracted:
       through the creation of a concrete, mission-based Sustainability Action Plan
       aligned with the 17 Sustainable Development Goals.
   stances:
-    green_transition:
-      score: 2
-      evidence: bekennt sich die Bundesregierung zu den 17 Zielen der Agenda 2030
-        und hat die Erarbeitung eines Aktionsplans Nachhaltigkeit beschlossen
+    weimar:
+      green_transition:
+        score: 2
+        evidence: bekennt sich die Bundesregierung zu den 17 Zielen der Agenda 2030
+          und hat die Erarbeitung eines Aktionsplans Nachhaltigkeit beschlossen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

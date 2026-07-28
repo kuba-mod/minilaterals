@@ -25,12 +25,11 @@ extracted:
       an end to the war.
     defence: Estonia aims to strengthen European security and prepare for NATO summits.
   stances:
-    ukraine:
-      score: 1
-      evidence: arutada Venemaa edasist survestamist sõja lõpetamiseks
-    defence:
-      score: 1
-      evidence: ettevalmistusi NATO Ankara tippkohtumiseks ja Euroopa julgeoleku tugevdamist
+    baltic:
+      defence:
+        score: 1
+        evidence: ettevalmistusi NATO Ankara tippkohtumiseks ja Euroopa julgeoleku
+          tugevdamist
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

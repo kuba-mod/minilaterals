@@ -25,12 +25,10 @@ extracted:
     defence: Latvia is working with US partners to enhance defense cooperation and
       security.
   stances:
-    ukraine:
-      score: 1
-      evidence: atbalstu Ukrainai
-    defence:
-      score: 1
-      evidence: pārrunāja aizsardzības sadarbību
+    baltic:
+      defence:
+        score: 1
+        evidence: pārrunāja aizsardzības sadarbību
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

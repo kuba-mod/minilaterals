@@ -20,11 +20,12 @@ extracted:
     green_transition: France is actively advancing industrial decarbonization and
       ecological transition through state-funded innovative projects like Géotex.
   stances:
-    green_transition:
-      score: 2
-      evidence: Le chantier illustre la politique de réindustrialisation menée depuis
-        2017, avec un ancrage dans les territoires , tournée vers l'innovation et
-        la transition écologique .
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Le chantier illustre la politique de réindustrialisation menée depuis
+          2017, avec un ancrage dans les territoires , tournée vers l'innovation et
+          la transition écologique .
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

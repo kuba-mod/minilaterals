@@ -21,11 +21,12 @@ extracted:
     ukraine: Poland maintains and has even increased its humanitarian aid to Palestine
       despite the ongoing Russian aggression against Ukraine.
   stances:
-    ukraine:
-      score: 1
-      evidence: Zaangażowanie Polski w pomoc humanitarną i rozwojową dla Palestyny
-        nie zmalało po rosyjskiej agresji na Ukrainę w lutym 2022 roku. Wręcz przeciwnie
-        – znacząco wzrosło.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Zaangażowanie Polski w pomoc humanitarną i rozwojową dla Palestyny
+          nie zmalało po rosyjskiej agresji na Ukrainę w lutym 2022 roku. Wręcz przeciwnie
+          – znacząco wzrosło.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

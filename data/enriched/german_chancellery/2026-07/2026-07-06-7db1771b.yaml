@@ -24,15 +24,22 @@ extracted:
     defence: Germany is continuing strategic consultations regarding overall defense
       and the use of AI models.
   stances:
-    ukraine:
-      score: 1
-      evidence: Die Bundesregierung wird die Ukraine weiter entschlossen unterstützen
-        und den Druck auf Russland gemeinsam mit ihren Partnern weiter erhöhen.
-    defence:
-      score: 1
-      evidence: Darüber hinaus setzte der Nationale Sicherheitsrat die Beratung zum
-        strategischen Umgang mit fortgeschrittenen KI-Modellen sowie zum Thema der
-        Gesamtverteidigung fort.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Bundesregierung wird die Ukraine weiter entschlossen unterstützen
+          und den Druck auf Russland gemeinsam mit ihren Partnern weiter erhöhen.
+      defence:
+        score: 1
+        evidence: Darüber hinaus setzte der Nationale Sicherheitsrat die Beratung
+          zum strategischen Umgang mit fortgeschrittenen KI-Modellen sowie zum Thema
+          der Gesamtverteidigung fort.
+    e3:
+      defence:
+        score: 1
+        evidence: Darüber hinaus setzte der Nationale Sicherheitsrat die Beratung
+          zum strategischen Umgang mit fortgeschrittenen KI-Modellen sowie zum Thema
+          der Gesamtverteidigung fort.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -18,10 +18,11 @@ extracted:
     rule_of_law: France rhetorically supports the values of law and justice through
       the commendation of Pierre-François Veil's professional life.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: saluent la mémoire d’un homme qui aura servi le droit, la justice
-        et la mémoire avec une fidélité exemplaire
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: saluent la mémoire d’un homme qui aura servi le droit, la justice
+          et la mémoire avec une fidélité exemplaire
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

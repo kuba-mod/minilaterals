@@ -22,10 +22,11 @@ extracted:
       economic contracts and investment partnerships in renewable energy and hydrogen
       with Oman.
   stances:
-    green_transition:
-      score: 2
-      evidence: la signature de grands contrats économiques dans les domaines des
-        énergies renouvelables
+    weimar:
+      green_transition:
+        score: 2
+        evidence: la signature de grands contrats économiques dans les domaines des
+          énergies renouvelables
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

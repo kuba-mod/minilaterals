@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland is actively engaging with complex areas of international humanitarian
       and disaster law, reinforcing its commitment to global rule of law principles.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: The agenda focused on a draft Convention on Prevention and Punishment
-        of Crimes Against Humanity.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: The agenda focused on a draft Convention on Prevention and Punishment
+          of Crimes Against Humanity.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

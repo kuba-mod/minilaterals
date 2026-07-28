@@ -23,15 +23,16 @@ extracted:
     rule_of_law: Germany is taking legislative action to combat illegal employment
       and exploitation to protect workers and maintain legal standards.
   stances:
-    hybrid:
-      score: 2
-      evidence: Zoll und Bundeskriminalamt sollen deshalb zur effektiveren Bekämpfung
-        der Organisierten Kriminalität rechtlich, technisch und personell gestärkt
-        werden.
-    rule_of_law:
-      score: 2
-      evidence: Im letzten Jahr hat sie ein Gesetz verabschiedet, mit dem unter anderem
-        die Finanzkontrolle Schwarzarbeit (FKS) gestärkt wurde.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Zoll und Bundeskriminalamt sollen deshalb zur effektiveren Bekämpfung
+          der Organisierten Kriminalität rechtlich, technisch und personell gestärkt
+          werden.
+      rule_of_law:
+        score: 2
+        evidence: Im letzten Jahr hat sie ein Gesetz verabschiedet, mit dem unter
+          anderem die Finanzkontrolle Schwarzarbeit (FKS) gestärkt wurde.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

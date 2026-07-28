@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany rhetorically supports democratic resilience by condemning
       intolerance, discrimination, and Islamist terrorism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Gewalt beginnt nicht erst mit einem Anschlag. Gewalt beginnt mit Intoleranz,
-        mit Ausgrenzung, mit Diskriminierung
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Gewalt beginnt nicht erst mit einem Anschlag. Gewalt beginnt mit
+          Intoleranz, mit Ausgrenzung, mit Diskriminierung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

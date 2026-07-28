@@ -22,10 +22,16 @@ extracted:
     defence: Germany maintains a security partnership with Senegal and supports its
       role in ensuring stability in the Sahel region.
   stances:
-    defence:
-      score: 1
-      evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
-        auch künftig intensiv fortgesetzt werden solle
+    weimar:
+      defence:
+        score: 1
+        evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
+          auch künftig intensiv fortgesetzt werden solle
+    e3:
+      defence:
+        score: 1
+        evidence: Deutschland und Senegal pflegen eine Sicherheitspartnerschaft, die
+          auch künftig intensiv fortgesetzt werden solle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

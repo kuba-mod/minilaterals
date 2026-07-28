@@ -19,10 +19,7 @@ extracted:
   positions:
     ukraine: Estonia demonstrates sustained diplomatic support for Ukraine by refusing
       to evacuate its diplomats despite Russian threats.
-  stances:
-    ukraine:
-      score: 2
-      evidence: ei lahku Eesti diplomaadid Kiievist
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

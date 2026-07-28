@@ -18,10 +18,11 @@ extracted:
     rule_of_law: Germany supports the anchoring of democratic principles and human
       rights within the trade agreement framework.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Als zentrale gemeinsame Werte verankert das MERCOSUR -Abkommen die
-        Achtung der demokratischen Grundsätze, der Menschenrechte
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Als zentrale gemeinsame Werte verankert das MERCOSUR -Abkommen die
+          Achtung der demokratischen Grundsätze, der Menschenrechte
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

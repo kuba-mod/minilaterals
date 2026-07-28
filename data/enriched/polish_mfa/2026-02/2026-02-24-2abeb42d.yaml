@@ -32,23 +32,29 @@ extracted:
     rule_of_law: Poland emphasizes that democratic resilience and adherence to international
       law require enforceable consequences against non-compliant states.
   stances:
-    ukraine:
-      score: 2
-      evidence: 'We must continue to do so for as long as it takes – by consistently
-        implementing appropriate measures: targeting energy sector, asset freezes
-        and travel bans.'
-    hybrid:
-      score: 2
-      evidence: By using hybrid warfare tools, including acts of sabotage, it strives
-        to undermine the security in many OSCE participating states.
-    enlargement:
-      score: 1
-      evidence: We must continue our efforts towards a just and lasting peace for
-        Ukraine. One that does more than just silence the guns.
-    rule_of_law:
-      score: 2
-      evidence: Non-compliance with international obligations must carry enforceable
-        consequences.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 'We must continue to do so for as long as it takes – by consistently
+          implementing appropriate measures: targeting energy sector, asset freezes
+          and travel bans.'
+      hybrid:
+        score: 2
+        evidence: By using hybrid warfare tools, including acts of sabotage, it strives
+          to undermine the security in many OSCE participating states.
+      enlargement:
+        score: 1
+        evidence: We must continue our efforts towards a just and lasting peace for
+          Ukraine. One that does more than just silence the guns.
+      rule_of_law:
+        score: 2
+        evidence: Non-compliance with international obligations must carry enforceable
+          consequences.
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: We must continue our efforts towards a just and lasting peace for
+          Ukraine. One that does more than just silence the guns.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

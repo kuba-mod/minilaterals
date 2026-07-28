@@ -25,13 +25,15 @@ extracted:
     iran: Germany identifies the war in Iran as a significant crisis affecting regional
       and international stability.
   stances:
-    ukraine:
-      score: 1
-      evidence: Dies gilt für den Nahen und Mittleren Osten, dies gilt aber auch für
-        den russischen Angriffskrieg gegen die Ukraine.
-    iran:
-      score: 1
-      evidence: Wir mussten ihn wegen des Irankriegs verschieben.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Dies gilt für den Nahen und Mittleren Osten, dies gilt aber auch
+          für den russischen Angriffskrieg gegen die Ukraine.
+    e3:
+      iran:
+        score: 1
+        evidence: Wir mussten ihn wegen des Irankriegs verschieben.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -30,14 +30,27 @@ extracted:
     defence: Poland strongly advocates for increased defense spending and the development
       of deterrence capabilities against Russia.
   stances:
-    ukraine:
-      score: 1
-      evidence: szef polskiej dyplomacji uczestniczył w posiedzeniu Rady NATO-Ukraina
-    defence:
-      score: 2
-      evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
-        szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
-        do 5% PKB
+    weimar:
+      ukraine:
+        score: 1
+        evidence: szef polskiej dyplomacji uczestniczył w posiedzeniu Rady NATO-Ukraina
+      defence:
+        score: 2
+        evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+          szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+          do 5% PKB
+    e3:
+      defence:
+        score: 2
+        evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+          szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+          do 5% PKB
+    visegrad:
+      defence:
+        score: 2
+        evidence: Państwa NATO potwierdziły postępy w realizacji przyjętego na zeszłorocznym
+          szczycie Sojuszu w Hadze zobowiązania dotyczące zwiększenia wydatków obronnych
+          do 5% PKB
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

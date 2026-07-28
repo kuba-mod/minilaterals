@@ -38,29 +38,41 @@ extracted:
     rule_of_law: Poland emphasizes promoting Polish culture abroad and building soft
       power as key components of its foreign policy.
   stances:
-    ukraine:
-      score: 2
-      evidence: The Ukrainian people are fighting for the right to self-determination
-        and accession to the European Union.
-    defence:
-      score: 1
-      evidence: Most Europeans wanted the EU to take care of our defence, and it did.
-        We have launched a peace budget (the European Peace Facility) to financially
-        support Ukraine’s efforts
-    hybrid:
-      score: 1
-      evidence: Deputy Prime Minister Radosław Sikorski also emphasised the need to
-        strengthen the EU in the face of new threats, including war, both conventional
-        and hybrid, security, and migration.
-    enlargement:
-      score: 2
-      evidence: Ukraine exemplifies how important it is for people from outside Europe
-        to become part of it. Ukrainians are fighting and dying for the right to accede
-        to the European Union.
-    rule_of_law:
-      score: 1
-      evidence: The top diplomat stressed the importance of cultural diplomacy in
-        pursuing foreign policy.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The Ukrainian people are fighting for the right to self-determination
+          and accession to the European Union.
+      defence:
+        score: 1
+        evidence: Most Europeans wanted the EU to take care of our defence, and it
+          did. We have launched a peace budget (the European Peace Facility) to financially
+          support Ukraine’s efforts
+      hybrid:
+        score: 1
+        evidence: Deputy Prime Minister Radosław Sikorski also emphasised the need
+          to strengthen the EU in the face of new threats, including war, both conventional
+          and hybrid, security, and migration.
+      enlargement:
+        score: 2
+        evidence: Ukraine exemplifies how important it is for people from outside
+          Europe to become part of it. Ukrainians are fighting and dying for the right
+          to accede to the European Union.
+      rule_of_law:
+        score: 1
+        evidence: The top diplomat stressed the importance of cultural diplomacy in
+          pursuing foreign policy.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Most Europeans wanted the EU to take care of our defence, and it
+          did. We have launched a peace budget (the European Peace Facility) to financially
+          support Ukraine’s efforts
+      enlargement:
+        score: 2
+        evidence: Ukraine exemplifies how important it is for people from outside
+          Europe to become part of it. Ukrainians are fighting and dying for the right
+          to accede to the European Union.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

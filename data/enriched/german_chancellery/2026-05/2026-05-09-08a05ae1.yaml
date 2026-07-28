@@ -19,9 +19,10 @@ extracted:
     defence: Germany acknowledges its partnership with Hungary within NATO, aligning
       with the general goal of collective security.
   stances:
-    defence:
-      score: 1
-      evidence: Partner in der Europäischen Union und der NATO
+    weimar:
+      defence:
+        score: 1
+        evidence: Partner in der Europäischen Union und der NATO
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

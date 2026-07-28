@@ -20,10 +20,11 @@ extracted:
     hybrid: Latvia is taking active measures against foreign interference by declaring
       undesirable persons.
   stances:
-    hybrid:
-      score: 2
-      evidence: ārlietu ministre Baiba Braže ir pieņēmusi lēmumu Latvijas Republikai
-        nevēlamo personu (persona non grata)
+    baltic:
+      hybrid:
+        score: 2
+        evidence: ārlietu ministre Baiba Braže ir pieņēmusi lēmumu Latvijas Republikai
+          nevēlamo personu (persona non grata)
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

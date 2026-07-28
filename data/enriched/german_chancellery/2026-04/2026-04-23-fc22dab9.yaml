@@ -21,14 +21,15 @@ extracted:
     green_transition: Germany is actively promoting the transition to electric vehicles
       through tax advantages and purchase premiums.
   stances:
-    hybrid:
-      score: 1
-      evidence: KI verändert auch Online-Betrug. Wie gut sind Verbraucherinnen und
-        Verbraucher darauf vorbereitet?
-    green_transition:
-      score: 2
-      evidence: Die Bundesregierung fördert Elektroautos mit Steuervorteilen und rückwirkend
-        ab Januar 2026 auch wieder mit einer Kaufprämie.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: KI verändert auch Online-Betrug. Wie gut sind Verbraucherinnen und
+          Verbraucher darauf vorbereitet?
+      green_transition:
+        score: 2
+        evidence: Die Bundesregierung fördert Elektroautos mit Steuervorteilen und
+          rückwirkend ab Januar 2026 auch wieder mit einer Kaufprämie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

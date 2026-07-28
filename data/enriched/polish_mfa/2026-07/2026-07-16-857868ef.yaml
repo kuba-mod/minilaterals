@@ -29,16 +29,21 @@ extracted:
     rule_of_law: Poland discussed reforms intended to restore the rule of law within
       the Hungarian government.
   stances:
-    hybrid:
-      score: 1
-      evidence: skutków kampanii dezinformacyjnych prowadzonych przez Rosję i sposobów
-        ich zwalczania
-    enlargement:
-      score: 1
-      evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
-    rule_of_law:
-      score: 1
-      evidence: dyskutował o reformach przywracających państwo prawa
+    weimar:
+      hybrid:
+        score: 1
+        evidence: skutków kampanii dezinformacyjnych prowadzonych przez Rosję i sposobów
+          ich zwalczania
+      enlargement:
+        score: 1
+        evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
+      rule_of_law:
+        score: 1
+        evidence: dyskutował o reformach przywracających państwo prawa
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: W ramach konsultacji na temat rozszerzenia Unii Europejskiej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -25,14 +25,16 @@ extracted:
       to protect the force from extremist infiltration, thereby supporting democratic
       resilience.
   stances:
-    hybrid:
-      score: 2
-      evidence: zum Einsatz von Drohnen als Sensorträger, zur Detektion und Abwehr
-        von Drohnen, von denen Gefahren ausgehen; zur präventive Telekommunikationsüberwachung
-    rule_of_law:
-      score: 2
-      evidence: Um die Bundespolizei vor der Unterwanderung durch Extremisten zu schützen,
-        wird außerdem eine Zuverlässigkeitsüberprüfung für alle Personen eingeführt
+    weimar:
+      hybrid:
+        score: 2
+        evidence: zum Einsatz von Drohnen als Sensorträger, zur Detektion und Abwehr
+          von Drohnen, von denen Gefahren ausgehen; zur präventive Telekommunikationsüberwachung
+      rule_of_law:
+        score: 2
+        evidence: Um die Bundespolizei vor der Unterwanderung durch Extremisten zu
+          schützen, wird außerdem eine Zuverlässigkeitsüberprüfung für alle Personen
+          eingeführt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

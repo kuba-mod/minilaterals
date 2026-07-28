@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Latvia actively pushes for increased economic and diplomatic pressure
       on Russia through a new round of sanctions to support Ukraine.
-  stances:
-    ukraine:
-      score: 2
-      evidence: akcentē turpmāka spiediena palielināšanu uz Krieviju un aicina pēc
-        iespējas ātrāk vienoties par spēcīgu sankciju 21. kārtu
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

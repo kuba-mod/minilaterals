@@ -32,17 +32,18 @@ extracted:
     green_transition: Poland identifies significant potential for cooperation in the
       sector of renewable energy sources.
   stances:
-    ukraine:
-      score: 1
-      evidence: podkreślając znaczenie bezpieczeństwa, stabilności oraz przestrzegania
-        prawa międzynarodowego, zarówno w kontekście wojny w Ukrainie
-    rule_of_law:
-      score: 1
-      evidence: Rozmówcy potwierdzili przywiązanie do zasad prawa międzynarodowego
-    green_transition:
-      score: 1
-      evidence: Szczególny potencjał wskazano w sektorze energetycznym – w tym odnawialnych
-        źródeł energii
+    weimar:
+      ukraine:
+        score: 1
+        evidence: podkreślając znaczenie bezpieczeństwa, stabilności oraz przestrzegania
+          prawa międzynarodowego, zarówno w kontekście wojny w Ukrainie
+      rule_of_law:
+        score: 1
+        evidence: Rozmówcy potwierdzili przywiązanie do zasad prawa międzynarodowego
+      green_transition:
+        score: 1
+        evidence: Szczególny potencjał wskazano w sektorze energetycznym – w tym odnawialnych
+          źródeł energii
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

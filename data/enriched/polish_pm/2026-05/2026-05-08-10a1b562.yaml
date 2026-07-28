@@ -22,10 +22,11 @@ extracted:
     defence: Poland is actively advancing EU defense capabilities and eastern flank
       security through the creation and implementation of the SAFE program.
   stances:
-    defence:
-      score: 2
-      evidence: przeznaczymy ok. 43,7 mld euro, czyli ponad 180 mld zł z unijnego
-        programu SAFE, na rozwój i modernizację polskiej armii
+    weimar:
+      defence:
+        score: 2
+        evidence: przeznaczymy ok. 43,7 mld euro, czyli ponad 180 mld zł z unijnego
+          programu SAFE, na rozwój i modernizację polskiej armii
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

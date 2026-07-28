@@ -23,9 +23,10 @@ extracted:
       and international stability by noting the convergence of views on major crises
       and praising Switzerland's role in OSCE.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: noting their broad convergence of views.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: noting their broad convergence of views.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

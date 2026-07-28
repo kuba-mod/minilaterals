@@ -19,10 +19,7 @@ extracted:
   positions:
     ukraine: Estonia rhetorically supports the continued backing of Ukraine as a necessity
       for European security.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Ukraina toetamine on Euroopa enda julgeolekuhuvides
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

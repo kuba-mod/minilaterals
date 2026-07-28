@@ -19,10 +19,12 @@ extracted:
     green_transition: Germany is actively advancing climate neutrality and resilience
       through a dedicated funding program for urban and rural climate adaptation.
   stances:
-    green_transition:
-      score: 2
-      evidence: Mit dem Programm „Anpassung urbaner und ländlicher Räume an den Klimawandel“
-        werden Kommunen dabei unterstützt, öffentliche Räume widerstandsfähiger weiterzuentwickeln
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Mit dem Programm „Anpassung urbaner und ländlicher Räume an den
+          Klimawandel“ werden Kommunen dabei unterstützt, öffentliche Räume widerstandsfähiger
+          weiterzuentwickeln
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

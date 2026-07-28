@@ -24,11 +24,12 @@ extracted:
     rule_of_law: Poland stressed the necessity of international law adherence to counter
       contemporary challenges like revisionism and power politics.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: underlined the importance of cooperating to protect the principles
-        of international law in the face of contemporary challenges, such as revisionism
-        and power politics.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: underlined the importance of cooperating to protect the principles
+          of international law in the face of contemporary challenges, such as revisionism
+          and power politics.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

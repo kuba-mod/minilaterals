@@ -20,12 +20,13 @@ extracted:
     rule_of_law: Germany emphasizes that stability requires an inclusive transition
       process respecting all groups' rights and ensuring equal political participation.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: In our view, an inclusive transition process is key to stabilising
-        the country and giving it a peaceful future. This process must take into account
-        the rights of all regional, social, religious and ethnic groups in Syria and
-        must grant them equal political participation.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: In our view, an inclusive transition process is key to stabilising
+          the country and giving it a peaceful future. This process must take into
+          account the rights of all regional, social, religious and ethnic groups
+          in Syria and must grant them equal political participation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

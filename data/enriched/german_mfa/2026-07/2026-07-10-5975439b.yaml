@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany supports the rule of law by demanding accountability and
       respect for international humanitarian law in the Sudanese conflict.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: restore and to uphold accountability and respect for international
-        law
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: restore and to uphold accountability and respect for international
+          law
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

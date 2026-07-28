@@ -22,15 +22,16 @@ extracted:
       for fraud and combating the influence of criminal organizations on political
       processes.
   stances:
-    hybrid:
-      score: 2
-      evidence: Konieczne jest zdecydowane przeciwdziałanie takim zjawiskom poprzez
-        skuteczne regulacje oraz działania organów państwa.
-    rule_of_law:
-      score: 2
-      evidence: jeszcze wyraźniejsze zaostrzenie kar dla tych, którzy wykorzystując
-        marzenia ludzi, czasami ich naiwność, brak wiedzy, oszukują ich i narażają
-        państwo polskie, nasze bezpieczeństwo na szwank
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Konieczne jest zdecydowane przeciwdziałanie takim zjawiskom poprzez
+          skuteczne regulacje oraz działania organów państwa.
+      rule_of_law:
+        score: 2
+        evidence: jeszcze wyraźniejsze zaostrzenie kar dla tych, którzy wykorzystując
+          marzenia ludzi, czasami ich naiwność, brak wiedzy, oszukują ich i narażają
+          państwo polskie, nasze bezpieczeństwo na szwank
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

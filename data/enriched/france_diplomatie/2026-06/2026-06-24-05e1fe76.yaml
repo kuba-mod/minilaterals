@@ -22,10 +22,11 @@ extracted:
       and holding those responsible accountable for atrocities, aligning with the
       foundational principles of democratic resilience and rule of law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: uphold international humanitarian law, and honour their commitments
-        under the Jeddah Declaration.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: uphold international humanitarian law, and honour their commitments
+          under the Jeddah Declaration.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

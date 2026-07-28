@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Poland stresses the global importance of maintaining an international
       order based on multilateralism and respect for international law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The officials noted the importance of international order based on
-        multilateralism and respect for international law.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The officials noted the importance of international order based
+          on multilateralism and respect for international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

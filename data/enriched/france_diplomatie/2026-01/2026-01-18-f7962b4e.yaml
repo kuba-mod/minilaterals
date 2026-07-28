@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France emphasizes the importance of adhering to international law
       and UN resolutions regarding humanitarian access in Gaza.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: in accordance with international humanitarian law and United Nations
-        Security Council Resolution 2803
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: in accordance with international humanitarian law and United Nations
+          Security Council Resolution 2803
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

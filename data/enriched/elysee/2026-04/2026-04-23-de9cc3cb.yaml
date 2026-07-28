@@ -21,14 +21,15 @@ extracted:
     defence: France actively advances European security by deploying military assets,
       including a naval group, to the region.
   stances:
-    ukraine:
-      score: 1
-      evidence: le soutien à l'Ukraine
-    defence:
-      score: 2
-      evidence: nous avons renforcé notre dispositif de défense dans la région, avec
-        le déploiement rapide de moyens militaires, en particulier le groupe aéronaval
-        français
+    weimar:
+      ukraine:
+        score: 1
+        evidence: le soutien à l'Ukraine
+      defence:
+        score: 2
+        evidence: nous avons renforcé notre dispositif de défense dans la région,
+          avec le déploiement rapide de moyens militaires, en particulier le groupe
+          aéronaval français
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

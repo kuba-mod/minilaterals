@@ -21,9 +21,10 @@ extracted:
     green_transition: Germany is addressing energy and raw materials, which aligns
       with the energy policy aspects of the green transition.
   stances:
-    green_transition:
-      score: 0
-      evidence: Fragen zu Energie und Rohstoffen
+    weimar:
+      green_transition:
+        score: 0
+        evidence: Fragen zu Energie und Rohstoffen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

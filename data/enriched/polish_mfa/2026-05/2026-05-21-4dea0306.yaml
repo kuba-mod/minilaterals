@@ -22,17 +22,18 @@ extracted:
       security and deterrence goals.
     hybrid: Poland calls for an end to Russian disinformation and escalatory rhetoric.
   stances:
-    ukraine:
-      score: 1
-      evidence: Zgodnie z prawem międzynarodowym Ukraina ma prawo do obrony.
-    defence:
-      score: 1
-      evidence: Stanowczo sprzeciwiamy się kierowaniu gróźb wobec Łotwy lub innych
-        Sojuszników z NATO.
-    hybrid:
-      score: 1
-      evidence: Wzywamy stronę rosyjską do zaprzestania rozpowszechniania kłamstw
-        oraz formułowania eskalacyjnych wypowiedzi.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Zgodnie z prawem międzynarodowym Ukraina ma prawo do obrony.
+      defence:
+        score: 1
+        evidence: Stanowczo sprzeciwiamy się kierowaniu gróźb wobec Łotwy lub innych
+          Sojuszników z NATO.
+      hybrid:
+        score: 1
+        evidence: Wzywamy stronę rosyjską do zaprzestania rozpowszechniania kłamstw
+          oraz formułowania eskalacyjnych wypowiedzi.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

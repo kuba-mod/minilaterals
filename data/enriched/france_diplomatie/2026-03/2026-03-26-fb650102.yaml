@@ -25,15 +25,16 @@ extracted:
     rule_of_law: France emphasizes maintaining international security and adherence
       to rules regarding maritime navigation and sanctions enforcement.
   stances:
-    ukraine:
-      score: 1
-      evidence: Both also discussed the European Union’s support for Ukraine in the
-        face of Russian aggression.
-    rule_of_law:
-      score: 1
-      evidence: The meeting focused in particular on the situation in the Middle East,
-        its consequences for maritime security and freedom of navigation, and notably
-        on the situation in Lebanon.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Both also discussed the European Union’s support for Ukraine in
+          the face of Russian aggression.
+      rule_of_law:
+        score: 1
+        evidence: The meeting focused in particular on the situation in the Middle
+          East, its consequences for maritime security and freedom of navigation,
+          and notably on the situation in Lebanon.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

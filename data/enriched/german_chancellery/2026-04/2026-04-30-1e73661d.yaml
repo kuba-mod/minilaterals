@@ -18,10 +18,11 @@ extracted:
     defence: Germany is investing in the modernization and digitalization of its military
       capabilities to enhance deterrence.
   stances:
-    defence:
-      score: 2
-      evidence: Die vernetzte und digitalisierte Truppe schreckt mit modernster Aufklärungs-
-        und Drohnentechnik ab.
+    weimar:
+      defence:
+        score: 2
+        evidence: Die vernetzte und digitalisierte Truppe schreckt mit modernster
+          Aufklärungs- und Drohnentechnik ab.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

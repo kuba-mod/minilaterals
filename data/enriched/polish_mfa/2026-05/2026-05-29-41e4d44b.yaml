@@ -18,9 +18,11 @@ extracted:
     hybrid: Poland identifies cybersecurity as a key area of potential cooperation
       with Ghana, aligning with the goal of addressing cyber threats.
   stances:
-    hybrid:
-      score: 1
-      evidence: 'Szczególny potencjał współpracy dostrzeżono w sektorach: [...] cyberbezpieczeństwa.'
+    weimar:
+      hybrid:
+        score: 1
+        evidence: 'Szczególny potencjał współpracy dostrzeżono w sektorach: [...]
+          cyberbezpieczeństwa.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

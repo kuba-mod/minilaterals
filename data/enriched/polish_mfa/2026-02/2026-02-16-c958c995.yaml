@@ -41,12 +41,14 @@ extracted:
     rule_of_law: Poland strongly advocates for adherence to international law, citing
       ECHR judgments and demanding investigations into Navalny's death.
   stances:
-    ukraine:
-      score: 1
-      evidence: The repression inside Russia furthermore enables its aggression abroad.
-    rule_of_law:
-      score: 2
-      evidence: We underline that the Russian authorities remain solely responsible.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: The repression inside Russia furthermore enables its aggression
+          abroad.
+      rule_of_law:
+        score: 2
+        evidence: We underline that the Russian authorities remain solely responsible.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

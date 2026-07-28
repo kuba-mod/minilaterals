@@ -19,10 +19,11 @@ extracted:
     defence: Poland expresses a commitment to deepen cooperation with the US in the
       areas of security and defense.
   stances:
-    defence:
-      score: 1
-      evidence: potwierdzili wolę pogłębiania współpracy polsko-amerykańskiej w strategicznych
-        obszarach dotyczących bezpieczeństwa i obrony
+    weimar:
+      defence:
+        score: 1
+        evidence: potwierdzili wolę pogłębiania współpracy polsko-amerykańskiej w
+          strategicznych obszarach dotyczących bezpieczeństwa i obrony
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,10 +20,11 @@ extracted:
     green_transition: Poland is taking active operational and preventive measures
       to combat environmental crises resulting from drought and forest fires.
   stances:
-    green_transition:
-      score: 1
-      evidence: Wdrożyliśmy dodatkowe działania prewencyjne i uruchomiliśmy wzmożone
-        patrole
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Wdrożyliśmy dodatkowe działania prewencyjne i uruchomiliśmy wzmożone
+          patrole
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

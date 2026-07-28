@@ -34,10 +34,7 @@ extracted:
     iran: Estonia expresses concern regarding the regional destabilization involving
       Hezbollah and Israel, aligning with the goal of addressing destabilizing regional
       activity.
-  stances:
-    iran:
-      score: 1
-      evidence: Ühisavaldus olukorra kohta Hezbollah’ ja Iisraeli vahel
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

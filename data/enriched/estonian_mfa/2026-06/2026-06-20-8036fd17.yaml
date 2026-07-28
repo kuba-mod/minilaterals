@@ -22,9 +22,10 @@ extracted:
     defence: Estonia emphasizes the importance of security and deterrence, warning
       against neutral mediation roles that could be exploited by Russia.
   stances:
-    defence:
-      score: 1
-      evidence: osales Euroopa julgeoleku ja heidutuse teemalises vestlusringis
+    baltic:
+      defence:
+        score: 1
+        evidence: osales Euroopa julgeoleku ja heidutuse teemalises vestlusringis
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

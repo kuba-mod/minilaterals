@@ -27,17 +27,18 @@ extracted:
     rule_of_law: France emphasizes strengthening bilateral relations and economic
       stability through financial cooperation programs.
   stances:
-    green_transition:
-      score: 2
-      evidence: nine financing agreements were signed with AFD, amounting to EUR 262.2
-        million, to support development projects in the transport, energy, and housing
-        sectors.
-    rule_of_law:
-      score: 1
-      evidence: The Egyptian side reiterated its increasing prioritization of budget
-        support programs as a key financing modality to enhance macroeconomic stability
-        and ensure the efficient allocation of resources in line with national development
-        objectives.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: nine financing agreements were signed with AFD, amounting to EUR
+          262.2 million, to support development projects in the transport, energy,
+          and housing sectors.
+      rule_of_law:
+        score: 1
+        evidence: The Egyptian side reiterated its increasing prioritization of budget
+          support programs as a key financing modality to enhance macroeconomic stability
+          and ensure the efficient allocation of resources in line with national development
+          objectives.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -28,19 +28,20 @@ extracted:
     green_transition: Poland is actively pursuing cooperation with Mongolia in the
       field of green technologies and renewable energy sources.
   stances:
-    ukraine:
-      score: 2
-      evidence: bezpieczeństwo narodowe, które obecnie jest zagrożone przez wojnę
-        toczącą się tuż za naszą wschodnią granicą, za której wywołanie i ofiary z
-        nią związane ponosi Rosja i jej imperialistyczna polityka
-    defence:
-      score: 1
-      evidence: najwyższym priorytetem dla Polski [...] jest bezpieczeństwo narodowe
-    green_transition:
-      score: 1
-      evidence: zaangażowanie swoich rządów w rozwój dwustronnych relacji we wszystkich
-        sektorach, zwłaszcza w [...] zielonych technologiach, [...] odnawialnych źródłach
-        energii
+    weimar:
+      ukraine:
+        score: 2
+        evidence: bezpieczeństwo narodowe, które obecnie jest zagrożone przez wojnę
+          toczącą się tuż za naszą wschodnią granicą, za której wywołanie i ofiary
+          z nią związane ponosi Rosja i jej imperialistyczna polityka
+      defence:
+        score: 1
+        evidence: najwyższym priorytetem dla Polski [...] jest bezpieczeństwo narodowe
+      green_transition:
+        score: 1
+        evidence: zaangażowanie swoich rządów w rozwój dwustronnych relacji we wszystkich
+          sektorach, zwłaszcza w [...] zielonych technologiach, [...] odnawialnych
+          źródłach energii
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

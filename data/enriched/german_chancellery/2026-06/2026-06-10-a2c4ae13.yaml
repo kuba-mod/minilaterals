@@ -21,10 +21,11 @@ extracted:
     hybrid: Germany is strengthening its digital infrastructure to create a more resilient
       society, which aligns with the goal of countering hybrid threats and cyber attacks.
   stances:
-    hybrid:
-      score: 1
-      evidence: Leistungsfähige digitale Infrastrukturen sind die Grundlage für eine
-        moderne und resiliente Gesellschaft
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Leistungsfähige digitale Infrastrukturen sind die Grundlage für
+          eine moderne und resiliente Gesellschaft
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

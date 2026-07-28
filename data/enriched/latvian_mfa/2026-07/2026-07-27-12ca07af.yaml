@@ -22,9 +22,10 @@ extracted:
     defence: Latvia is coordinating with the US to discuss security and defense arrangements
       for Latvia and the Baltic region.
   stances:
-    defence:
-      score: 1
-      evidence: pārrunātu Latvijas un Baltijas drošības
+    baltic:
+      defence:
+        score: 1
+        evidence: pārrunātu Latvijas un Baltijas drošības
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

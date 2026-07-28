@@ -18,10 +18,11 @@ extracted:
     ukraine: Germany expresses a commitment to continue efforts toward achieving a
       just peace in Ukraine.
   stances:
-    ukraine:
-      score: 1
-      evidence: In den Bemühungen um einen gerechten Frieden in der Ukraine werde
-        man nicht nachlassen
+    weimar:
+      ukraine:
+        score: 1
+        evidence: In den Bemühungen um einen gerechten Frieden in der Ukraine werde
+          man nicht nachlassen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

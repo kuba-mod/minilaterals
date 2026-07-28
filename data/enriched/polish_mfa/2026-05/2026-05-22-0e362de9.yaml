@@ -23,16 +23,17 @@ extracted:
     defence: Poland actively advances collective security by leading in GDP-based
       defense spending and calling for a reinforced NATO Article 5 commitment.
   stances:
-    ukraine:
-      score: 1
-      evidence: Wszyscy mamy świadomość, że musimy wyciągnąć lekcje dla polityki zakupowej,
-        dla sztuki operacyjnej, dla szkoleń żołnierzy w świetle coraz lepiej wyglądającej
-        dla Ukrainy obrony przed rosyjską agresją.
-    defence:
-      score: 2
-      evidence: W 2025 r. łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7% PKB),
-        w 2026 r. budżet obronny (z Funduszem Wsparcia Sił Zbrojnych) osiągnie ponad
-        200 mld zł (46,5 mld EUR), co stanowi ok. 4,8% PKB.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wszyscy mamy świadomość, że musimy wyciągnąć lekcje dla polityki
+          zakupowej, dla sztuki operacyjnej, dla szkoleń żołnierzy w świetle coraz
+          lepiej wyglądającej dla Ukrainy obrony przed rosyjską agresją.
+      defence:
+        score: 2
+        evidence: W 2025 r. łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7% PKB),
+          w 2026 r. budżet obronny (z Funduszem Wsparcia Sił Zbrojnych) osiągnie ponad
+          200 mld zł (46,5 mld EUR), co stanowi ok. 4,8% PKB.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

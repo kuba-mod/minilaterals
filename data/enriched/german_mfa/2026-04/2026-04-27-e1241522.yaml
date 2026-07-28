@@ -21,10 +21,11 @@ extracted:
       and the rule of law by advocating for the universal application of the Non-Proliferation
       Treaty and UN reforms.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We want to ensure that the Non-Proliferation Treaty is universally
-        applied – even though this is becoming increasingly difficult.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We want to ensure that the Non-Proliferation Treaty is universally
+          applied – even though this is becoming increasingly difficult.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

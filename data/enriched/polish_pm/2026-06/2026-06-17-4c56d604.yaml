@@ -21,9 +21,10 @@ extracted:
     rule_of_law: Poland is advancing the rule of law by introducing legal mechanisms
       to monitor public spending and holding officials accountable for legal violations.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Jeśli okaże się, że złamano prawo, sprawą zajmie się prokuratura
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Jeśli okaże się, że złamano prawo, sprawą zajmie się prokuratura
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

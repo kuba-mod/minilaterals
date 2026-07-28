@@ -17,11 +17,12 @@ extracted:
       system to reduce nitrate pollution and protect groundwater and seas, aligning
       with EU green objectives.
   stances:
-    green_transition:
-      score: 2
-      evidence: Die Bundesregierung will das Düngerecht neu ausrichten und das Grundwasser,
-        Flüsse und Meere vor schädlichen Nährstoffeinträgen aus der Landwirtschaft
-        schützen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Die Bundesregierung will das Düngerecht neu ausrichten und das Grundwasser,
+          Flüsse und Meere vor schädlichen Nährstoffeinträgen aus der Landwirtschaft
+          schützen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

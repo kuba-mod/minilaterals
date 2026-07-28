@@ -20,11 +20,7 @@ extracted:
   positions:
     ukraine: Estonia supports sustained diplomatic and practical measures to pressure
       Russia and assist Ukraine.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Arutati ka võimalikke samme Venemaa täiendavaks survestamiseks ning
-        Ukraina toetamiseks.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

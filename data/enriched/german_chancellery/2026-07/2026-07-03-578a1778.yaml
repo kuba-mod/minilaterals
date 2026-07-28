@@ -26,15 +26,22 @@ extracted:
     defence: Germany supports increasing defense spending and enhancing the capacities
       of the defense industry within the NATO framework.
   stances:
-    ukraine:
-      score: 2
-      evidence: Eine Größenordnung von 30 bis 40 Milliarden Euro an bilateralen Hilfen
-        war da angedacht.
-    defence:
-      score: 2
-      evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine stärkere
-        Verantwortungsübernahme der europäischen Alliierten für die gemeinsame transatlantische
-        Sicherheit.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Eine Größenordnung von 30 bis 40 Milliarden Euro an bilateralen
+          Hilfen war da angedacht.
+      defence:
+        score: 2
+        evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine
+          stärkere Verantwortungsübernahme der europäischen Alliierten für die gemeinsame
+          transatlantische Sicherheit.
+    e3:
+      defence:
+        score: 2
+        evidence: Es geht also um die Erhöhung der Verteidigungsausgaben und eine
+          stärkere Verantwortungsübernahme der europäischen Alliierten für die gemeinsame
+          transatlantische Sicherheit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

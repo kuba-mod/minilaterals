@@ -32,21 +32,28 @@ extracted:
     rule_of_law: France stresses that the rule of law must be upheld to guarantee
       the security of its allies and the stability of the region.
   stances:
-    ukraine:
-      score: 1
-      evidence: France will continue to provide Ukraine with unwavering support.
-    defence:
-      score: 2
-      evidence: As a framework nation of NATO’s multinational battlegroup deployed
-        in Romania, France will continue to play a full role in the efforts to strengthen
-        NATO’s deterrence and defense posture.
-    hybrid:
-      score: 1
-      evidence: This latest irresponsible escalation is a flagrant violation of international
-        law.
-    rule_of_law:
-      score: 1
-      evidence: The security of our allies is our priority and must be guaranteed.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France will continue to provide Ukraine with unwavering support.
+      defence:
+        score: 2
+        evidence: As a framework nation of NATO’s multinational battlegroup deployed
+          in Romania, France will continue to play a full role in the efforts to strengthen
+          NATO’s deterrence and defense posture.
+      hybrid:
+        score: 1
+        evidence: This latest irresponsible escalation is a flagrant violation of
+          international law.
+      rule_of_law:
+        score: 1
+        evidence: The security of our allies is our priority and must be guaranteed.
+    e3:
+      defence:
+        score: 2
+        evidence: As a framework nation of NATO’s multinational battlegroup deployed
+          in Romania, France will continue to play a full role in the efforts to strengthen
+          NATO’s deterrence and defense posture.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

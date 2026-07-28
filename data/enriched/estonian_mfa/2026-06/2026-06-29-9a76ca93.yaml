@@ -25,14 +25,11 @@ extracted:
     energy: Estonia actively supports securing regional energy supply and critical
       infrastructure in Ukraine.
   stances:
-    ukraine:
-      score: 2
-      evidence: toetab taas Ukraina energiafondi (Ukraine Energy Support Fund) enam
-        kui saja tuhande euroga
-    energy:
-      score: 2
-      evidence: et aidata kaasa Ukraina energiataristu taastamisele ja varustuskindluse
-        tagamisele
+    baltic:
+      energy:
+        score: 2
+        evidence: et aidata kaasa Ukraina energiataristu taastamisele ja varustuskindluse
+          tagamisele
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

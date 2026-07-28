@@ -30,14 +30,15 @@ extracted:
     rule_of_law: France actively supports Armenia's democratic integrity and the conduct
       of free and fair elections through the provision of experts and equipment.
   stances:
-    hybrid:
-      score: 1
-      evidence: renforcement de sa résilience face aux menaces hybrides extérieures
-    rule_of_law:
-      score: 2
-      evidence: Nous continuerons à fournir un soutien à l’Arménie, notamment par
-        le biais d’experts, du renforcement des capacités, de la fourniture d’équipements
-        et de l’observation électorale
+    weimar:
+      hybrid:
+        score: 1
+        evidence: renforcement de sa résilience face aux menaces hybrides extérieures
+      rule_of_law:
+        score: 2
+        evidence: Nous continuerons à fournir un soutien à l’Arménie, notamment par
+          le biais d’experts, du renforcement des capacités, de la fourniture d’équipements
+          et de l’observation électorale
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

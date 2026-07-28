@@ -21,10 +21,11 @@ extracted:
     green_transition: Germany continues to support the transition to climate-neutral
       heating by providing funding for the replacement of old heating systems.
   stances:
-    green_transition:
-      score: 1
-      evidence: 'Die Bundesregierung setzt die Förderung fort : Die neuen Förderbedingungen
-        gelten bereits ab dem 21. Juli 2026.'
+    weimar:
+      green_transition:
+        score: 1
+        evidence: 'Die Bundesregierung setzt die Förderung fort : Die neuen Förderbedingungen
+          gelten bereits ab dem 21. Juli 2026.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

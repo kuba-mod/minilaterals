@@ -24,13 +24,10 @@ extracted:
     defence: Estonia is strengthening its defense capabilities by seeking access to
       Ukraine's rapidly evolving drone technology.
   stances:
-    ukraine:
-      score: 2
-      evidence: Eesti ja Ukraina vahel sõlmitud droonikokkulepe oluline samm, mis
-        tugevdab kahe riigi kaitsekoostööd
-    defence:
-      score: 2
-      evidence: võimaldab Eestile ligipääsu Ukraina kiiresti arenevale tehnoloogiale
+    baltic:
+      defence:
+        score: 2
+        evidence: võimaldab Eestile ligipääsu Ukraina kiiresti arenevale tehnoloogiale
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -24,13 +24,14 @@ extracted:
     rule_of_law: Poland affirms Ukraine's right to self-defense under international
       law against aggression.
   stances:
-    hybrid:
-      score: 1
-      evidence: We call on the Russian side to drop the practice of spreading lies
-        and making escalatory statements.
-    rule_of_law:
-      score: 1
-      evidence: Under international law, Ukraine has every right to defend itself.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: We call on the Russian side to drop the practice of spreading lies
+          and making escalatory statements.
+      rule_of_law:
+        score: 1
+        evidence: Under international law, Ukraine has every right to defend itself.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

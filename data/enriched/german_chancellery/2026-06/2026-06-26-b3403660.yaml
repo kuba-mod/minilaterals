@@ -26,12 +26,17 @@ extracted:
     defence: Germany is engaging in security and defense policy discussions and NATO
       summit preparations.
   stances:
-    ukraine:
-      score: 1
-      evidence: die weitere Unterstützung der Ukraine im Mittelpunkt stehen
-    defence:
-      score: 1
-      evidence: sicherheits- und verteidigungspolitische Themen
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die weitere Unterstützung der Ukraine im Mittelpunkt stehen
+      defence:
+        score: 1
+        evidence: sicherheits- und verteidigungspolitische Themen
+    e3:
+      defence:
+        score: 1
+        evidence: sicherheits- und verteidigungspolitische Themen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

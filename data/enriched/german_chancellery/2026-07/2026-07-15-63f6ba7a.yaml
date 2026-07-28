@@ -21,10 +21,12 @@ extracted:
     rule_of_law: Germany aims to strengthen the democratic community and trust in
       state institutions through administrative efficiency and modernization.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Vor allem geht es darum, das demokratische Gemeinwesen sowie das Vertrauen
-        in die Funktionsfähigkeit des Staates und seiner Institutionen zu stärken.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Vor allem geht es darum, das demokratische Gemeinwesen sowie das
+          Vertrauen in die Funktionsfähigkeit des Staates und seiner Institutionen
+          zu stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

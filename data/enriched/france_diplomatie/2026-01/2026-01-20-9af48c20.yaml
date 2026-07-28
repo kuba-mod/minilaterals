@@ -23,10 +23,12 @@ extracted:
     rule_of_law: France strongly supports democratic resilience and institutional
       reform in Madagascar, affirming support for free and transparent elections.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: it reaffirms its full support for continuing the process with a view
-        to holding free and transparent elections according to the established timetable.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: it reaffirms its full support for continuing the process with a
+          view to holding free and transparent elections according to the established
+          timetable.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

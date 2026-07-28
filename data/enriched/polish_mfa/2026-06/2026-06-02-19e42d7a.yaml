@@ -26,17 +26,18 @@ extracted:
     green_transition: Poland supports the Industrial Accelerator Act but cautions
       that emission criteria should not create divisions within the EU internal market.
   stances:
-    ukraine:
-      score: 2
-      evidence: konieczne jest dalsze wywierania presji na agresora, m.in. za pomocą
-        sankcji
-    enlargement:
-      score: 1
-      evidence: wyrazili również nadzieję na przełom w drodze Ukrainy do Unii Europejskiej
-    green_transition:
-      score: -1
-      evidence: należy zadbać, aby zawarte w dokumencie kryterium emisyjne nie powodowało
-        podziałów na rynku wewnętrznym UE
+    weimar:
+      ukraine:
+        score: 2
+        evidence: konieczne jest dalsze wywierania presji na agresora, m.in. za pomocą
+          sankcji
+      enlargement:
+        score: 1
+        evidence: wyrazili również nadzieję na przełom w drodze Ukrainy do Unii Europejskiej
+      green_transition:
+        score: -1
+        evidence: należy zadbać, aby zawarte w dokumencie kryterium emisyjne nie powodowało
+          podziałów na rynku wewnętrznym UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

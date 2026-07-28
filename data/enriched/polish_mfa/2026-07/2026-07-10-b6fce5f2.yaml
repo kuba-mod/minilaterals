@@ -22,10 +22,16 @@ extracted:
     defence: Poland supports strengthening bilateral cooperation to enhance European
       and national security.
   stances:
-    defence:
-      score: 1
-      evidence: współpracy dwustronnej w celu wzmocnienia bezpieczeństwa Polski, Francji
-        i Europy
+    weimar:
+      defence:
+        score: 1
+        evidence: współpracy dwustronnej w celu wzmocnienia bezpieczeństwa Polski,
+          Francji i Europy
+    visegrad:
+      defence:
+        score: 1
+        evidence: współpracy dwustronnej w celu wzmocnienia bezpieczeństwa Polski,
+          Francji i Europy
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

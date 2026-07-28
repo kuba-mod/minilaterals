@@ -24,14 +24,15 @@ extracted:
     rule_of_law: France condemns Russia's actions as violations of international law
       and acts of intimidation.
   stances:
-    ukraine:
-      score: 2
-      evidence: France reiterates its call for Russia to end its illegal war of aggression
-        in Ukraine.
-    rule_of_law:
-      score: 1
-      evidence: Each day, Russia’s actions demonstrate its cynicism and contempt for
-        international law.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: France reiterates its call for Russia to end its illegal war of
+          aggression in Ukraine.
+      rule_of_law:
+        score: 1
+        evidence: Each day, Russia’s actions demonstrate its cynicism and contempt
+          for international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

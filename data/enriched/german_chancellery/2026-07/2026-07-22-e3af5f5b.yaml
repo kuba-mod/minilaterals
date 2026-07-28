@@ -22,10 +22,16 @@ extracted:
     defence: Germany actively advances European collective security and the deterrence
       of the eastern flank through the stationing of a brigade in Lithuania.
   stances:
-    defence:
-      score: 2
-      evidence: Die Stationierung der deutschen Brigade in Litauen unterstreicht unser
-        gemeinsames Bekenntnis zur Sicherheit Europas.
+    weimar:
+      defence:
+        score: 2
+        evidence: Die Stationierung der deutschen Brigade in Litauen unterstreicht
+          unser gemeinsames Bekenntnis zur Sicherheit Europas.
+    e3:
+      defence:
+        score: 2
+        evidence: Die Stationierung der deutschen Brigade in Litauen unterstreicht
+          unser gemeinsames Bekenntnis zur Sicherheit Europas.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

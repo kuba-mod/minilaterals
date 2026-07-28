@@ -32,18 +32,23 @@ extracted:
     rule_of_law: The discussion covered general EU policy priorities related to sovereignty
       and strategic autonomy, which encompass rule of law principles.
   stances:
-    ukraine:
-      score: 1
-      evidence: ''
-    enlargement:
-      score: 1
-      evidence: ''
-    defence:
-      score: 0
-      evidence: security challenges in the North Sea
-    rule_of_law:
-      score: 0
-      evidence: ''
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ''
+      enlargement:
+        score: 1
+        evidence: ''
+      defence:
+        score: 0
+        evidence: security challenges in the North Sea
+      rule_of_law:
+        score: 0
+        evidence: ''
+    e3:
+      defence:
+        score: 0
+        evidence: security challenges in the North Sea
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

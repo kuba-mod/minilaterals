@@ -17,10 +17,11 @@ extracted:
       binding increases in GHG reduction quotas and incentives for green hydrogen
       and sustainable biofuels.
   stances:
-    green_transition:
-      score: 2
-      evidence: die nationale THG -Minderungsquote bis 2040 fortgeschrieben, sie steigt
-        von derzeit 10,6 Prozent schrittweise auf 65 Prozent.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: die nationale THG -Minderungsquote bis 2040 fortgeschrieben, sie
+          steigt von derzeit 10,6 Prozent schrittweise auf 65 Prozent.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

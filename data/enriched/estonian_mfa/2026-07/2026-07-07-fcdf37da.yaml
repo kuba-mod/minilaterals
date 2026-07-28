@@ -25,9 +25,10 @@ extracted:
     hybrid: Estonia actively engages in countering disinformation and security myths
       regarding the Baltic region.
   stances:
-    hybrid:
-      score: 1
-      evidence: vestlusringis Balti riikide julgeolekumüütidest
+    baltic:
+      hybrid:
+        score: 1
+        evidence: vestlusringis Balti riikide julgeolekumüütidest
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

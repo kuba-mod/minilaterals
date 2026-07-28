@@ -22,10 +22,11 @@ extracted:
       adherence to principles to address global crises and conflicts, particularly
       concerning maritime security and war consequences.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We are convinced that we now need the cooperation of the international
-        community to alleviate the war’s consequences more than ever before.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We are convinced that we now need the cooperation of the international
+          community to alleviate the war’s consequences more than ever before.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

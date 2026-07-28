@@ -30,15 +30,16 @@ extracted:
     rule_of_law: France emphasizes that the G7 must remain a key forum for dialogue
       to settle major crises in accordance with international law.
   stances:
-    ukraine:
-      score: 1
-      evidence: the G7’s members to reaffirm their unwavering support to the country
-        as it defends its freedom, its sovereignty and its territorial integrity.
-    rule_of_law:
-      score: 1
-      evidence: Jean-Noël Barrot reiterated his desire for the G7 to continue being
-        a key forum for dialogue and concertation to settle major crises in accordance
-        with international law.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: the G7’s members to reaffirm their unwavering support to the country
+          as it defends its freedom, its sovereignty and its territorial integrity.
+      rule_of_law:
+        score: 1
+        evidence: Jean-Noël Barrot reiterated his desire for the G7 to continue being
+          a key forum for dialogue and concertation to settle major crises in accordance
+          with international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

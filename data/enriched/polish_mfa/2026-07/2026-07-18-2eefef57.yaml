@@ -25,13 +25,19 @@ extracted:
     hybrid: Poland is actively developing cooperation with California in the field
       of cybersecurity.
   stances:
-    defence:
-      score: 1
-      evidence: rozmowa dotyczyła relacji transatlantyckich, podsumowania szczytu
-        NATO w Ankarze oraz wzmacniania relacji polsko-amerykańskich
-    hybrid:
-      score: 2
-      evidence: Polska i Kalifornia rozwijają współpracę, m.in. w obszarze cyberbezpieczeństwa
+    weimar:
+      defence:
+        score: 1
+        evidence: rozmowa dotyczyła relacji transatlantyckich, podsumowania szczytu
+          NATO w Ankarze oraz wzmacniania relacji polsko-amerykańskich
+      hybrid:
+        score: 2
+        evidence: Polska i Kalifornia rozwijają współpracę, m.in. w obszarze cyberbezpieczeństwa
+    visegrad:
+      defence:
+        score: 1
+        evidence: rozmowa dotyczyła relacji transatlantyckich, podsumowania szczytu
+          NATO w Ankarze oraz wzmacniania relacji polsko-amerykańskich
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

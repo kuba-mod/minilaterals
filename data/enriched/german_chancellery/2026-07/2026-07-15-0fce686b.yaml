@@ -20,11 +20,12 @@ extracted:
       to combat unserious cooperatives, aligning with the goal of democratic resilience
       and rule of law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: so sollen die Rechte und Pflichten des genossenschaftlichen Prüfungsverbandes
-        ausgeweitet sowie die Aufsicht des Staates über die genossenschaftlichen Prüfungsverbände
-        gestärkt werden
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: so sollen die Rechte und Pflichten des genossenschaftlichen Prüfungsverbandes
+          ausgeweitet sowie die Aufsicht des Staates über die genossenschaftlichen
+          Prüfungsverbände gestärkt werden
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

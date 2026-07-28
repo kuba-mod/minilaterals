@@ -30,19 +30,33 @@ extracted:
     rule_of_law: Poland stresses the importance of maintaining democratic resilience
       and stability to ensure European security.
   stances:
-    defence:
-      score: 2
-      evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
-        (approx. 4.7% of GDP) and the defence budget (including the Armed Forces Support
-        Fund) for 2026 is set at PLN 200 billion, that is approx. 4.8% of GDP.
-    enlargement:
-      score: 1
-      evidence: Deputy Prime Minister Sikorski said that procurement of defence products
-        financed under SAFE, Security Action for Europe, will further strengthen Poland’s
-        security.
-    rule_of_law:
-      score: 0
-      evidence: ''
+    weimar:
+      defence:
+        score: 2
+        evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
+          (approx. 4.7% of GDP) and the defence budget (including the Armed Forces
+          Support Fund) for 2026 is set at PLN 200 billion, that is approx. 4.8% of
+          GDP.
+      enlargement:
+        score: 1
+        evidence: Deputy Prime Minister Sikorski said that procurement of defence
+          products financed under SAFE, Security Action for Europe, will further strengthen
+          Poland’s security.
+      rule_of_law:
+        score: 0
+        evidence: ''
+    visegrad:
+      defence:
+        score: 2
+        evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
+          (approx. 4.7% of GDP) and the defence budget (including the Armed Forces
+          Support Fund) for 2026 is set at PLN 200 billion, that is approx. 4.8% of
+          GDP.
+      enlargement:
+        score: 1
+        evidence: Deputy Prime Minister Sikorski said that procurement of defence
+          products financed under SAFE, Security Action for Europe, will further strengthen
+          Poland’s security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

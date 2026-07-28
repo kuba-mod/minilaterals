@@ -21,11 +21,12 @@ extracted:
       maintaining a secure foundation for action and ensuring national interests are
       protected globally.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: We must invest, produce, carry out research and training together
-        with partners around the world. This means, among other things, playing by
-        shared rules.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: We must invest, produce, carry out research and training together
+          with partners around the world. This means, among other things, playing
+          by shared rules.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

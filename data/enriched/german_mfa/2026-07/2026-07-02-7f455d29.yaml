@@ -24,14 +24,20 @@ extracted:
     defence: Germany is coordinating with partners to increase pressure on Russia
       and will discuss support at the upcoming NATO summit.
   stances:
-    ukraine:
-      score: 1
-      evidence: Wir setzen unsere Unterstützung für die Ukraine in ihrem Abwehrkampf
-        fort.
-    defence:
-      score: 1
-      evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO -Gipfel
-        in Ankara gehen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir setzen unsere Unterstützung für die Ukraine in ihrem Abwehrkampf
+          fort.
+      defence:
+        score: 1
+        evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO
+          -Gipfel in Ankara gehen.
+    e3:
+      defence:
+        score: 1
+        evidence: Um diese Unterstützung wird es auch kommende Woche auf dem NATO
+          -Gipfel in Ankara gehen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -24,14 +24,20 @@ extracted:
       technical equipment to the public.
     hybrid: Germany is presenting its capabilities in the cyber and information space.
   stances:
-    defence:
-      score: 1
-      evidence: demonstrierten Soldatinnen und Soldaten, wie hier in Eckernförde,
-        ihren Arbeitsbereich
-    hybrid:
-      score: 1
-      evidence: präsentierten sich Fähigkeiten des Heeres, der Luftwaffe, der Marine
-        und des Cyber - und Informationsraums
+    weimar:
+      defence:
+        score: 1
+        evidence: demonstrierten Soldatinnen und Soldaten, wie hier in Eckernförde,
+          ihren Arbeitsbereich
+      hybrid:
+        score: 1
+        evidence: präsentierten sich Fähigkeiten des Heeres, der Luftwaffe, der Marine
+          und des Cyber - und Informationsraums
+    e3:
+      defence:
+        score: 1
+        evidence: demonstrierten Soldatinnen und Soldaten, wie hier in Eckernförde,
+          ihren Arbeitsbereich
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

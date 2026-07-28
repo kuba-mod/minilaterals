@@ -19,10 +19,12 @@ extracted:
       the implementation of international climate and environmental conventions within
       the trade agreement.
   stances:
-    green_transition:
-      score: 1
-      evidence: Das Nachhaltigkeitskapitel im Handelsteil enthält unter anderem Vereinbarungen
-        zur Umsetzung von wesentlichen internationalen Arbeits-, Umwelt- und Klimaübereinkommen.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Das Nachhaltigkeitskapitel im Handelsteil enthält unter anderem
+          Vereinbarungen zur Umsetzung von wesentlichen internationalen Arbeits-,
+          Umwelt- und Klimaübereinkommen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

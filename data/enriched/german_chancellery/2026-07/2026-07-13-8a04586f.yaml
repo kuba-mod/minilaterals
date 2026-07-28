@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany supports the strengthening of democratic institutions and
       good governance as a foundation for national and European stability.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: liberale und funktionierende Demokratien starke, handlungsfähige und
-        verantwortungsvoll geführte Institutionen brauchen
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: liberale und funktionierende Demokratien starke, handlungsfähige
+          und verantwortungsvoll geführte Institutionen brauchen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

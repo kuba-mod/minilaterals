@@ -24,10 +24,11 @@ extracted:
     defence: Estonia engaged with Swedish military and security leadership to discuss
       defense matters.
   stances:
-    defence:
-      score: 0
-      evidence: kohtumised Rootsi kaitseväe juhataja kindral Michael Claessoni, rahvusliku
-        julgeoleku nõuniku Niclas Kvarnströmi
+    baltic:
+      defence:
+        score: 0
+        evidence: kohtumised Rootsi kaitseväe juhataja kindral Michael Claessoni,
+          rahvusliku julgeoleku nõuniku Niclas Kvarnströmi
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

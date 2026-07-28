@@ -20,13 +20,14 @@ extracted:
     rule_of_law: Poland emphasizes the necessity of adhering to international treaties
       and laws in the face of Russian actions.
   stances:
-    ukraine:
-      score: 1
-      evidence: Wzywamy Rosję do natychmiastowego zaprzestania nieuzasadnionej i bezprawnej
-        agresji
-    rule_of_law:
-      score: 1
-      evidence: Wzywamy Rosję [...] do przestrzegania zobowiązań i traktatów międzynarodowych.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wzywamy Rosję do natychmiastowego zaprzestania nieuzasadnionej i
+          bezprawnej agresji
+      rule_of_law:
+        score: 1
+        evidence: Wzywamy Rosję [...] do przestrzegania zobowiązań i traktatów międzynarodowych.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

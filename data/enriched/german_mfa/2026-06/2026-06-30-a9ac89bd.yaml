@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany rhetorically supports the need for stability and strength
       in democracies facing internal and external pressures.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: In einer Zeit, in der Demokratien von innen und von außen unter Druck
-        stehen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: In einer Zeit, in der Demokratien von innen und von außen unter
+          Druck stehen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

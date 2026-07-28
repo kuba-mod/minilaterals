@@ -29,16 +29,23 @@ extracted:
     enlargement: Poland supports the EU's commitment to enlargement by criticizing
       Georgia for actions that have stalled its path toward European integration.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The new amendments extend state control over political and societal
-        activities in Georgia to an unprecedented level and infringe on the freedoms
-        of association and expression.
-    enlargement:
-      score: 1
-      evidence: Through those new regulations, the Georgian authorities consciously
-        breach the commitments undertaken by Georgia vis-à-vis the European Union,
-        in particular through the Association Agreement with the European Union.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The new amendments extend state control over political and societal
+          activities in Georgia to an unprecedented level and infringe on the freedoms
+          of association and expression.
+      enlargement:
+        score: 1
+        evidence: Through those new regulations, the Georgian authorities consciously
+          breach the commitments undertaken by Georgia vis-à-vis the European Union,
+          in particular through the Association Agreement with the European Union.
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Through those new regulations, the Georgian authorities consciously
+          breach the commitments undertaken by Georgia vis-à-vis the European Union,
+          in particular through the Association Agreement with the European Union.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

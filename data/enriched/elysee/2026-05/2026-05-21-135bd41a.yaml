@@ -32,9 +32,10 @@ extracted:
       qualifying historical crimes against humanity and framing this fight as a duty
       of the Republic.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: ce combat était celui de la République, encore et toujours
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: ce combat était celui de la République, encore et toujours
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

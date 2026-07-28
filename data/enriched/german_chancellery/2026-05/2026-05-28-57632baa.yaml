@@ -16,11 +16,12 @@ extracted:
     green_transition: Germany is actively advancing the green transition by providing
       financial subsidies for electric vehicles and facilitating local energy sharing.
   stances:
-    green_transition:
-      score: 2
-      evidence: Käuferinnen und Käufer können seit dem 20. Mai 2026 bis zu 6.000 Euro
-        Zuschuss online über das E -Auto-Förderportal beim Bundesamt für Wirtschaft
-        und Ausfuhrkontrolle (BAFA) beantragen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Käuferinnen und Käufer können seit dem 20. Mai 2026 bis zu 6.000
+          Euro Zuschuss online über das E -Auto-Förderportal beim Bundesamt für Wirtschaft
+          und Ausfuhrkontrolle (BAFA) beantragen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

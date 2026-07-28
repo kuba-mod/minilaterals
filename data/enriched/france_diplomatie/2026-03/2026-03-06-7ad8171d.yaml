@@ -36,27 +36,33 @@ extracted:
     rule_of_law: France emphasized working towards a more resilient and sovereign
       European Union, particularly concerning digital technology.
   stances:
-    ukraine:
-      score: 1
-      evidence: reaffirmed their long-term support for Ukraine, particularly in the
-        Coalition of the Willing, in the face of the war of aggression being waged
-        by Russia
-    defence:
-      score: 1
-      evidence: determination to strengthen the European defence technological and
-        industrial base
-    hybrid:
-      score: 0
-      evidence: signalled their concern over developments in the Middle East and the
-        risk of destabilization in the region
-    enlargement:
-      score: 1
-      evidence: opportunity to note similar views about EU enlargement
-    rule_of_law:
-      score: 1
-      evidence: The visit also confirmed the two countries’ commitment to work for
-        a more competitive, sovereign and resilient European Union, particularly as
-        far as digital technology and supply chains are concerned.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their long-term support for Ukraine, particularly in
+          the Coalition of the Willing, in the face of the war of aggression being
+          waged by Russia
+      defence:
+        score: 1
+        evidence: determination to strengthen the European defence technological and
+          industrial base
+      hybrid:
+        score: 0
+        evidence: signalled their concern over developments in the Middle East and
+          the risk of destabilization in the region
+      enlargement:
+        score: 1
+        evidence: opportunity to note similar views about EU enlargement
+      rule_of_law:
+        score: 1
+        evidence: The visit also confirmed the two countries’ commitment to work for
+          a more competitive, sovereign and resilient European Union, particularly
+          as far as digital technology and supply chains are concerned.
+    e3:
+      defence:
+        score: 1
+        evidence: determination to strengthen the European defence technological and
+          industrial base
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

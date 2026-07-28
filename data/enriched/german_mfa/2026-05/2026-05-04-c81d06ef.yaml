@@ -42,31 +42,38 @@ extracted:
     ukraine: Germany commits to joint responsibility with Greece in contributing to
       peace and security in Europe following Russia's war of aggression against Ukraine.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: As members of the United Nations we are fully committed to upholding
-        the rules based international order
-    defence:
-      score: 1
-      evidence: with the objective to strengthen our capabilities to respond to conventional
-        and hybrid threats and expand our efforts in defence procurement, logistics,
-        and crisis management.
-    hybrid:
-      score: 1
-      evidence: Defence, Civil Protection & Hybrid Threats
-    enlargement:
-      score: 0
-      evidence: ''
-    green_transition:
-      score: 0
-      evidence: ''
-    ukraine:
-      score: 1
-      evidence: Against the backdrop of fundamental geopolitical changes following
-        Russia’s war of aggression against Ukraine as well as instability arising
-        in the Near and Middle East, Greece and Germany are committed to jointly assume
-        responsibility and step up their efforts to contribute to peace and security
-        in Europe and beyond.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: As members of the United Nations we are fully committed to upholding
+          the rules based international order
+      defence:
+        score: 1
+        evidence: with the objective to strengthen our capabilities to respond to
+          conventional and hybrid threats and expand our efforts in defence procurement,
+          logistics, and crisis management.
+      hybrid:
+        score: 1
+        evidence: Defence, Civil Protection & Hybrid Threats
+      enlargement:
+        score: 0
+        evidence: ''
+      green_transition:
+        score: 0
+        evidence: ''
+      ukraine:
+        score: 1
+        evidence: Against the backdrop of fundamental geopolitical changes following
+          Russia’s war of aggression against Ukraine as well as instability arising
+          in the Near and Middle East, Greece and Germany are committed to jointly
+          assume responsibility and step up their efforts to contribute to peace and
+          security in Europe and beyond.
+    e3:
+      defence:
+        score: 1
+        evidence: with the objective to strengthen our capabilities to respond to
+          conventional and hybrid threats and expand our efforts in defence procurement,
+          logistics, and crisis management.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

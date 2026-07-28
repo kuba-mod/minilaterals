@@ -20,9 +20,10 @@ extracted:
     rule_of_law: France supports a middle path that respects international law and
       a multilateral order over hegemonic dominance.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: essayer d'être sur une voie médiane qui respecte le droit international
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: essayer d'être sur une voie médiane qui respecte le droit international
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

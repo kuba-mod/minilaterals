@@ -34,10 +34,11 @@ extracted:
     rule_of_law: France rhetorically affirms its commitment to the rule of law, justice,
       and the victory of republican spirit over arbitrary power.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: cette journée nationale réaffirme l’attachement de la Nation aux valeurs
-        des Lumières et de la République
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: cette journée nationale réaffirme l’attachement de la Nation aux
+          valeurs des Lumières et de la République
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

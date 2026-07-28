@@ -21,11 +21,12 @@ extracted:
     rule_of_law: Poland strongly supports the defense of democratic resilience and
       civil liberties, as demonstrated by welcoming Ales Bialatski's activities.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: We in Poland are impressed by your steadfast stance and modesty, and
-        above all, we are deeply grateful for your determination in the struggle for
-        human rights.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: We in Poland are impressed by your steadfast stance and modesty,
+          and above all, we are deeply grateful for your determination in the struggle
+          for human rights.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

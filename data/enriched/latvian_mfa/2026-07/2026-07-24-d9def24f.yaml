@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Latvia expresses strong condemnation of Russian aggression within Ukrainian
       territory.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Krievijas uzbrukumā iznīcināta Latvijas goda konsulāta ēka Slovjanskā,
-        Doņeckas apgabalā Ukrainā
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

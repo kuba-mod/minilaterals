@@ -21,10 +21,11 @@ extracted:
       threats by implementing EU-wide cyber sanctions against Russian individuals
       and entities.
   stances:
-    hybrid:
-      score: 2
-      evidence: Euroopa Liit kiitis täna, 13. juulil välisasjade nõukogul heaks seni
-        kõige ulatuslikuma Venemaa vastase kübersanktsioonide paketi.
+    baltic:
+      hybrid:
+        score: 2
+        evidence: Euroopa Liit kiitis täna, 13. juulil välisasjade nõukogul heaks
+          seni kõige ulatuslikuma Venemaa vastase kübersanktsioonide paketi.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

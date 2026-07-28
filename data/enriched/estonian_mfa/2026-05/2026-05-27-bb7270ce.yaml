@@ -26,12 +26,13 @@ extracted:
     hybrid: Estonia is seeking to establish new contacts and cooperation in the cyber
       domain to counter hybrid threats.
   stances:
-    defence:
-      score: 2
-      evidence: Eesti ja Tšehhi ettevõtted sõlmisid ärifoorumil kaitsekoostöö lepingu
-    hybrid:
-      score: 2
-      evidence: luua uusi kontakte eeskätt kaitse- ja kübervaldkonnas
+    baltic:
+      defence:
+        score: 2
+        evidence: Eesti ja Tšehhi ettevõtted sõlmisid ärifoorumil kaitsekoostöö lepingu
+      hybrid:
+        score: 2
+        evidence: luua uusi kontakte eeskätt kaitse- ja kübervaldkonnas
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

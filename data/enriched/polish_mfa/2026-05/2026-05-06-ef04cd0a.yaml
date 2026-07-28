@@ -18,10 +18,11 @@ extracted:
     rule_of_law: Poland rhetorically supports the defense of European values, specifically
       cooperation, responsibility, and the law, while criticizing authoritarian models.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: zaapelował też do studentów o obronę europejskich wartości – współpracy,
-        odpowiedzialności i prawa
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: zaapelował też do studentów o obronę europejskich wartości – współpracy,
+          odpowiedzialności i prawa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

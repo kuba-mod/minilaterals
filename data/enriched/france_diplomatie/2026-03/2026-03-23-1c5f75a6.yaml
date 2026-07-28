@@ -25,14 +25,15 @@ extracted:
     rule_of_law: France reaffirmed its commitment to Bosnia and Herzegovina's independence,
       sovereignty, and territorial integrity.
   stances:
-    enlargement:
-      score: 1
-      evidence: The Minister signalled his support for the prospect of Bosnia and
-        Herzegovina’s future in Europe
-    rule_of_law:
-      score: 1
-      evidence: the Minister reaffirmed France’s commitment to Bosnia and Herzegovina’s
-        independence, sovereignty and territorial integrity
+    weimar:
+      enlargement:
+        score: 1
+        evidence: The Minister signalled his support for the prospect of Bosnia and
+          Herzegovina’s future in Europe
+      rule_of_law:
+        score: 1
+        evidence: the Minister reaffirmed France’s commitment to Bosnia and Herzegovina’s
+          independence, sovereignty and territorial integrity
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

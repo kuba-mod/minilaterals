@@ -29,11 +29,12 @@ extracted:
     green_transition: France supports the monitoring of environmental changes through
       the scientific work of the Pic du Midi observatory.
   stances:
-    green_transition:
-      score: 1
-      evidence: contribue depuis plus de 150 ans à l’avancée des connaissances dans
-        l’astronomie, la physique des particules, l’étude de l’atmosphère et l’observation
-        du changement climatique
+    weimar:
+      green_transition:
+        score: 1
+        evidence: contribue depuis plus de 150 ans à l’avancée des connaissances dans
+          l’astronomie, la physique des particules, l’étude de l’atmosphère et l’observation
+          du changement climatique
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -41,26 +41,32 @@ extracted:
     rule_of_law: France does not explicitly address rule of law or democratic resilience
       in the provided text.
   stances:
-    ukraine:
-      score: 1
-      evidence: took stock of the priorities on the European agenda, particularly
-        as regards support for Ukraine
-    defence:
-      score: 1
-      evidence: The Minister welcomed Sweden’s choice of Naval Group’s Defence and
-        Intervention Frigate for modernizing its navy.
-    hybrid:
-      score: 0
-      evidence: ''
-    enlargement:
-      score: 0
-      evidence: ''
-    green_transition:
-      score: 0
-      evidence: ''
-    rule_of_law:
-      score: 0
-      evidence: ''
+    weimar:
+      ukraine:
+        score: 1
+        evidence: took stock of the priorities on the European agenda, particularly
+          as regards support for Ukraine
+      defence:
+        score: 1
+        evidence: The Minister welcomed Sweden’s choice of Naval Group’s Defence and
+          Intervention Frigate for modernizing its navy.
+      hybrid:
+        score: 0
+        evidence: ''
+      enlargement:
+        score: 0
+        evidence: ''
+      green_transition:
+        score: 0
+        evidence: ''
+      rule_of_law:
+        score: 0
+        evidence: ''
+    e3:
+      defence:
+        score: 1
+        evidence: The Minister welcomed Sweden’s choice of Naval Group’s Defence and
+          Intervention Frigate for modernizing its navy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

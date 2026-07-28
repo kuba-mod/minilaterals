@@ -18,10 +18,7 @@ extracted:
   positions:
     ukraine: The UK supports Ukraine by condemning Russian aggression and citing reports
       of civilian harm and identity erasure.
-  stances:
-    ukraine:
-      score: 1
-      evidence: The UK condemned Russia’s ongoing aerial attacks on Ukraine
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

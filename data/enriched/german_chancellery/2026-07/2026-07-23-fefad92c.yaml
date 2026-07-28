@@ -20,10 +20,11 @@ extracted:
     green_transition: Germany is actively promoting the transition to electric mobility
       and sustainable heating through targeted financial subsidies and social bonuses.
   stances:
-    green_transition:
-      score: 2
-      evidence: Fast 91.000 Anträge auf E-Auto-Förderung sind seit dem Start des Förderportals
-        bei der BAFA eingegangen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Fast 91.000 Anträge auf E-Auto-Förderung sind seit dem Start des
+          Förderportals bei der BAFA eingegangen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

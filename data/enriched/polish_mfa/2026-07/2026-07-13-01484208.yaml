@@ -37,23 +37,29 @@ extracted:
     rule_of_law: Poland demands accountability and punishment for those violating
       international humanitarian law against civilians.
   stances:
-    ukraine:
-      score: 2
-      evidence: Minister Sikorski also urged the EU to adopt the 21st package of sanctions
-        against Russia
-    defence:
-      score: 2
-      evidence: he noted the need to immediately provide Ukraine with air defence
-        systems
-    hybrid:
-      score: 1
-      evidence: Deputy Prime Minister Sikorski welcomed the Statement by the High
-        Representative Kaja Kallas on Russia’s malicious cyber activities targeting
-        the EU member states, including Poland
-    rule_of_law:
-      score: 1
-      evidence: Minister Sikorski stressed that the international community must respond
-        to the violations of the international humanitarian law
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Minister Sikorski also urged the EU to adopt the 21st package of
+          sanctions against Russia
+      defence:
+        score: 2
+        evidence: he noted the need to immediately provide Ukraine with air defence
+          systems
+      hybrid:
+        score: 1
+        evidence: Deputy Prime Minister Sikorski welcomed the Statement by the High
+          Representative Kaja Kallas on Russia’s malicious cyber activities targeting
+          the EU member states, including Poland
+      rule_of_law:
+        score: 1
+        evidence: Minister Sikorski stressed that the international community must
+          respond to the violations of the international humanitarian law
+    visegrad:
+      defence:
+        score: 2
+        evidence: he noted the need to immediately provide Ukraine with air defence
+          systems
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

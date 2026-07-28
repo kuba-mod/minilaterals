@@ -18,10 +18,11 @@ extracted:
     defence: France is actively advancing its military capabilities and modernization
       to meet contemporary security challenges.
   stances:
-    defence:
-      score: 2
-      evidence: un succès et un signal clair envoyé tout à la fois à nos alliés et
-        à nos adversaires
+    weimar:
+      defence:
+        score: 2
+        evidence: un succès et un signal clair envoyé tout à la fois à nos alliés
+          et à nos adversaires
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

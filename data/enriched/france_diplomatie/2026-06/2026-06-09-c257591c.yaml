@@ -26,10 +26,11 @@ extracted:
       for settler violence and demanding that Israel investigate all attacks and curb
       illegal settlements.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: We continue to urge the Government of Israel to take action to ensure
-        meaningful accountability for violence in the West Bank.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: We continue to urge the Government of Israel to take action to ensure
+          meaningful accountability for violence in the West Bank.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -19,10 +19,11 @@ extracted:
     rule_of_law: France emphasizes adherence to international law regarding civilian
       infrastructure and supports democratic resilience through condemnation of attacks.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: calls on all nations to abide by their obligations in this regard,
-        particularly with respect to humanitarian law
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: calls on all nations to abide by their obligations in this regard,
+          particularly with respect to humanitarian law
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'
