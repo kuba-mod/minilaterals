@@ -804,10 +804,13 @@ def build_convergence_clusters(events: list[dict], window_days: int = 7) -> list
             actors_in_cluster = {x["actor"] for x in cluster_items}
 
             dates = [x["date"] for x in cluster_items]
-            # Group items by actor for template rendering
+            # Group items by actor for template rendering, resolving each item's
+            # stance here rather than in the template: stances are keyed by
+            # grouping then topic, and a template reaching into that shape gets
+            # no error when it guesses wrong — the chip just silently vanishes.
             by_actor: dict[str, list] = defaultdict(list)
             for x in cluster_items:
-                by_actor[x["actor"]].append(x)
+                by_actor[x["actor"]].append({**x, "stance": event_stances(x["event"]).get(area)})
 
             clusters.append(
                 {
