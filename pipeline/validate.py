@@ -50,8 +50,11 @@ def _load_grouping_vocab() -> tuple[set[str], set[str]]:
         raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
     except OSError:
         return set(), set()
-    actors = {c for g in raw.values() for c in (g.get("members") or [])}
-    issues = {t for g in raw.values() for t in (g.get("topics") or [])}
+    # `topics` marks a grouping as tracked by the pipeline; the file also holds
+    # hub-page placeholders, whose members must not widen the actor enum.
+    tracked = [g for g in raw.values() if isinstance(g, dict) and g.get("topics")]
+    actors = {c for g in tracked for c in (g.get("members") or [])}
+    issues = {t for g in tracked for t in g["topics"]}
     return actors, issues
 
 
@@ -104,24 +107,40 @@ def _validate_list_file(path: Path, schema: type[BaseModel]) -> list[str]:
 
 
 def _validate_goals(path: Path) -> list[str]:
+    """Every tracked grouping's `goals` must match its `topics` exactly.
+
+    Goals are per grouping, not per topic — `defence` means something different
+    to AUKUS than to the Weimar Triangle. A topic added to a grouping without a
+    goal sentence (or a leftover sentence for a dropped topic) fails here.
+    """
     if not path.exists():
         return []
     try:
-        data = _load_yaml(path)
+        raw = _load_yaml(path)
     except yaml.YAMLError as exc:
         return [f"{_rel(path)}: invalid YAML — {exc}"]
-    if not isinstance(data, dict):
-        return [f"{_rel(path)}: expected a mapping, got {type(data).__name__}"]
+    if not isinstance(raw, dict):
+        return [f"{_rel(path)}: expected a mapping, got {type(raw).__name__}"]
     errors = []
-    extra_keys = set(data) - KNOWN_ISSUE_AREAS
-    missing_keys = KNOWN_ISSUE_AREAS - set(data)
-    if extra_keys:
-        errors.append(f"{_rel(path)}: unknown issue-area keys {sorted(extra_keys)}")
-    if missing_keys:
-        errors.append(f"{_rel(path)}: missing issue-area keys {sorted(missing_keys)}")
-    for key, value in data.items():
-        if not isinstance(value, str):
-            errors.append(f"{_rel(path)}[{key}]: expected a string, got {type(value).__name__}")
+    for key, g in raw.items():
+        if not isinstance(g, dict):
+            continue
+        topics = set(g.get("topics") or [])
+        if not topics:
+            if g.get("goals"):
+                errors.append(f"{_rel(path)}: {key} has goals but no topics — it is not tracked")
+            continue
+        goals = g.get("goals")
+        if not isinstance(goals, dict):
+            errors.append(f"{_rel(path)}: {key} is tracked but has no `goals` mapping")
+            continue
+        for extra in sorted(set(goals) - topics):
+            errors.append(f"{_rel(path)}: {key}.goals has {extra!r}, which is not one of its topics")
+        for missing in sorted(topics - set(goals)):
+            errors.append(f"{_rel(path)}: {key}.goals is missing a sentence for topic {missing!r}")
+        for topic, value in goals.items():
+            if not isinstance(value, str) or not value.strip():
+                errors.append(f"{_rel(path)}: {key}.goals[{topic}] expected a non-empty string")
     return errors
 
 
@@ -187,7 +206,7 @@ def validate_all(
     if milestones_path.exists():
         errors.extend(_validate_list_file(milestones_path, MilestoneSchema))
 
-    errors.extend(_validate_goals(data_dir / "goals.yaml"))
+    errors.extend(_validate_goals(GROUPINGS_PATH))
 
     for f in sorted(glob.glob(str(data_dir / "runs" / "*.yaml"))):
         err = _validate_file(Path(f), RunLogSchema)

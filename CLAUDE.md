@@ -28,9 +28,11 @@ uv run python -m pipeline.render --as-of 2026-06-24   # render a past edition
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
 
-# Lint — CI (.github/workflows/lint.yml) runs BOTH of these; `check` passing alone isn't green
+# Lint + schema checks — all three are enforced in CI via .github/workflows/lint.yml,
+# and each fails independently; `ruff check` passing alone isn't green
 uv run ruff check .
 uv run ruff format --check .                 # or `ruff format .` to fix in place
+uv run python -m pipeline.validate           # YAML schemas
 ```
 
 ## Architecture
@@ -68,8 +70,7 @@ Sources (RSS/HTML/API)
 | `pipeline/migrate_groupings.py` | One-off LLM-free backfill of the per-grouping relevance flags across `data/enriched/` |
 | `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
 | `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `meetings.html` exists but isn't currently rendered |
-| `data/groupings.yaml` | The minilateral definitions (members + tracked topics); single source of truth for the actor/issue-area vocabulary |
-| `data/goals.yaml` | Per-topic reference goal sentences each stance is rated against (was `weimar_goals.yaml`) |
+| `data/groupings.yaml` | The minilateral definitions: members, tracked `topics`, and `goals` — a reference sentence **per grouping per topic**, since `defence` means something different to AUKUS than to the Weimar Triangle. Single source of truth for the actor/issue-area vocabulary. Replaces the per-topic `data/goals.yaml` |
 | `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
 | `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`); still loaded for the `meetings_count` stat, not for a rendered page |
 | `data/annual.yaml` | Activity scores 1991–2026 (fed the bar chart on the currently-unrendered `/meetings/` page) |
@@ -81,7 +82,7 @@ Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` side
 - `weimar_relevant: true` — any MFA-sourced item touching a Weimar-tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar countries and a tracked issue area, or all 3 Weimar actors present, or an explicit Weimar/trilateral mention
 - `{grouping}_relevant` — the same single-tier relevance computed **per grouping** for each format in `data/groupings.yaml` (`weimar_relevant`, `e3_relevant`, `visegrad_relevant`, `baltic_relevant`, `aukus_relevant`) — one flat boolean per grouping, no separate "strong signal" tier. Relevance is scoped to each grouping's member set, so a widened actor vocabulary can't leak relevance across formats (e.g. a `{UK, US}` item never becomes `weimar_relevant`). Computed by `_grouping_relevance()` in `enrich.py`
 - `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
-- `extracted.stances` — per-topic `{score: -2..+2, evidence: "…"}` rating the country's stance against the agreed Weimar goal; drives all convergence scoring
+- `extracted.stances` — `{grouping: {topic: {score: -2..+2, evidence: "…"}}}` rating the country's stance against **that grouping's** goal for the topic. Keyed by grouping because ~25% of events are relevant to two groupings that both track the scored topic, and those two ratings answer different questions. `render.py` reads the `weimar` block via `event_stances()`; a per-grouping view uses the same accessor with its own key
 - `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py`; the prompt has a real lineage (`"1"` regex-classification → `"2"` LLM classification at PR #35 → `"3"` shape hardening → `"4"` multilingual → `"5"` multi-grouping: 12-country actors, topic union, `explicit_formats` → `"6"` clearer `explicit_formats` instruction with a per-format legend), keyed by `sha256[:8]` of the prompt surface. **Bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together when a prompt changes** — `test_prompt_surface_in_sync` fails until you do, so ratings can't be stamped with a stale version
 - `_file_path` — added at load time by `render.py` (not stored in YAML)
 
@@ -154,7 +155,7 @@ Weimar's pattern — foreign ministry *and* head-of-government office, both know
 1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). If the source has an RSS/Atom feed, subclass `FeedIngester` (`pipeline/sources/feedbase.py`) and set only `source_name` + `source_lang` + `feed_url`; gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and set `source_name` + `news_url`
 2. If the ingester fetches a per-article page to get body text, gate that fetch on `self.already_ingested(url, title)` and bump `self.known_skipped` when it fires — see "Fetch politeness" below
 3. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-4. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` (and `NATIVE_LANG`) in `base.py`. If the source's country isn't already a member of some grouping, add it (and any new tracked topic + goal sentence) to `data/groupings.yaml` and `data/goals.yaml`
+4. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` (and `NATIVE_LANG`) in `base.py`. If the source's country isn't already a member of some grouping, add it — plus any new tracked topic and its `goals` sentence — to `data/groupings.yaml`
 5. Add a row to the sources table in `pipeline/templates/sources.html` (only needed once the source's grouping is surfaced on the site)
 
 ## Fetch politeness

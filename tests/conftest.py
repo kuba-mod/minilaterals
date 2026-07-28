@@ -60,7 +60,8 @@ def event_dict(
         "source_url": source_url,
     }
     if stances is not None:
-        d["extracted"] = {"stances": stances}
+        # Stances are keyed by grouping, then topic (see data/groupings.yaml).
+        d["extracted"] = {"stances": {"weimar": stances}}
     return d
 
 
