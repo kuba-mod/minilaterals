@@ -1,0 +1,147 @@
+{# A grouping that has no ingesters yet: the tracker's own chrome, with the
+   panels it will fill shown empty rather than faked. Everything factual on the
+   page — purpose, instrument, members, topics — comes from data/groupings.yaml.
+   Only the Weimar Triangle has real data; see hub.html for the live card. #}
+{% extends "base.html" %}
+{% block title %}{{ g.name }} — a minilateral coordination tracker{% endblock %}
+
+{% block meta_description %}
+<meta name="description" content="{{ g.purpose }}">
+{% endblock %}
+
+{% block og_tags %}{% endblock %}
+
+{% block hdr_meta %}
+<div class="hdr-meta"><a href="{{ hub_url }}">All minilaterals</a> &nbsp;·&nbsp; <a href="{{ methodology_url }}">Methodology</a></div>
+{% endblock %}
+
+{% block site_title %}<h1 class="site-title">{{ g.name }}</h1>{% endblock %}
+{% block site_tagline %}<p class="site-tagline">{{ g.purpose }}</p>{% endblock %}
+
+{% block nav %}
+<div class="nav-wrap">
+  <nav>
+    <a href="{{ hub_url }}">&larr; All minilaterals</a>
+    <a href="{{ weimar_url }}">Weimar Triangle tracker</a>
+    <a href="{{ methodology_url }}">Methodology</a>
+  </nav>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="gp-notice">
+  <strong>No tracker yet.</strong>
+  {% if g.inactive %}
+  This format is {{ g.status }}, so nothing is being collected for it. The page records what it was set up to do.
+  {% else %}
+  Nothing is ingested for this grouping yet, so the panels below are empty. They fill in once its sources are collected and enriched.
+  {% endif %}
+</div>
+
+<div class="section-head" style="margin-top:0">
+  What this grouping is for
+  <span>The objective its members agreed, and the instrument that established it — not a description of what it does.</span>
+</div>
+
+<div class="gp-purpose">
+  <p>{{ g.purpose }}</p>
+  <div class="gp-agreed">Agreed in {{ g.agreed }}</div>
+</div>
+
+<div class="section-head">
+  Members
+  <span>Each will get its own column here, as France, Germany and Poland have on the Weimar Triangle tracker.</span>
+</div>
+
+<div class="country-cards">
+  {% for c in g.members %}
+  <div class="country-card gp-member">
+    <div class="cc-flag"><img class="gp-flag" src="https://flagcdn.com/{{ c.code }}.svg" alt=""></div>
+    <div class="cc-body">
+      <div class="cc-name">{{ c.name }}</div>
+      <div class="cc-stat">No statements collected</div>
+      <div class="cc-ministry">Sources not yet configured</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="section-head">
+  What would be tracked
+  <span>The issue areas this format has a stated objective on. A statement is scored &minus;2 to +2 against that objective, the same way the Weimar Triangle's are.</span>
+</div>
+
+<div class="gp-goals">
+  {% for tag, goal in g.tags.items() %}
+  <div class="gp-goal">
+    <div class="gp-goal-tag">{{ tag }}</div>
+    <p>{{ goal }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="section-head">
+  Positional comparison
+  <span>Where each member's statements on one topic in one week would sit side by side, with a score for how closely they align.</span>
+</div>
+
+<div class="gp-empty">
+  <div class="gp-empty-grid">
+    {% for c in g.members %}
+    <div class="gp-empty-col">
+      <div class="gp-empty-head">{{ c.name }}</div>
+      <div class="gp-empty-line"></div>
+      <div class="gp-empty-line gp-empty-line--short"></div>
+      <div class="gp-empty-line"></div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="gp-empty-note">Awaiting the first collected statements.</p>
+</div>
+
+<div class="gp-cta">
+  <a href="{{ weimar_url }}">See what this looks like with real data &rarr;</a>
+</div>
+
+<style>
+.gp-notice {
+  border: 1px solid var(--rule); border-left: 3px solid var(--hl);
+  background: var(--bg-alt, transparent);
+  padding: 14px 18px; margin-bottom: 34px; border-radius: 4px;
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 13.5px; line-height: 1.6;
+}
+.gp-purpose { margin-bottom: 8px; }
+.gp-purpose p { font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.55; margin: 0 0 10px; }
+.gp-agreed { font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; color: var(--muted); }
+.gp-member { cursor: default; }
+.gp-flag { width: 28px; height: 21px; object-fit: cover; border-radius: 2px; }
+.gp-goals { display: grid; gap: 14px; }
+.gp-goal { border-left: 2px solid var(--rule); padding-left: 16px; }
+.gp-goal-tag {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--hl); margin-bottom: 5px;
+}
+.gp-goal p { font-family: 'Newsreader', serif; font-size: 16px; line-height: 1.5; margin: 0; }
+.gp-empty { border: 1px dashed var(--rule); border-radius: 6px; padding: 22px; }
+.gp-empty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 22px; }
+.gp-empty-head {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 600;
+  color: var(--muted); margin-bottom: 12px;
+}
+.gp-empty-line { height: 9px; border-radius: 3px; background: var(--rule); opacity: .5; margin-bottom: 8px; }
+.gp-empty-line--short { width: 62%; }
+.gp-empty-note {
+  font-family: 'IBM Plex Sans', sans-serif; font-size: 12.5px; color: var(--muted);
+  margin: 18px 0 0; text-align: center;
+}
+.gp-cta { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--rule); font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; }
+</style>
+
+{% endblock %}
+
+{% block footer %}
+<footer>
+  <a href="{{ hub_url }}">All minilaterals</a> &middot; built {{ now }} &middot; <a href="{{ methodology_url }}">Methodology &amp; sources</a>
+</footer>
+{% endblock %}
