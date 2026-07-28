@@ -224,8 +224,7 @@
           </div>
           {% set _positions = item.event.extracted.positions if item.event.extracted else none %}
           {% set _pos = (_positions.get(cluster.area) if _positions else none) or (item.event.extracted.position if item.event.extracted else none) %}
-          {% set _stances = item.event.extracted.stances if item.event.extracted else none %}
-          {% set _stance = _stances.get(cluster.area) if _stances else none %}
+          {% set _stance = item.stance %}
           {% if _pos %}
           <div class="actor-event-pos" style="border-color:{{ actor_colors[actor] }}">
             {{ _pos }}
