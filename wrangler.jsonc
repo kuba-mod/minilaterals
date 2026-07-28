@@ -35,14 +35,13 @@
   // shared VOTES namespace's daily write budget, on top of the per-IP vote
   // dedup. Read defensively in the Worker, so its absence (e.g. `wrangler dev`)
   // just disables limiting rather than erroring. `period` must be 10 or 60.
-  "unsafe": {
-    "bindings": [
-      {
-        "name": "RATE_LIMITER",
-        "type": "ratelimit",
-        "namespace_id": "1001",
-        "simple": { "limit": 30, "period": 60 }
-      }
-    ]
-  }
+  // "namespace_id" names the counter within this Worker — a label we pick, not
+  // a reference to anything provisioned in the Cloudflare account.
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ]
 }
