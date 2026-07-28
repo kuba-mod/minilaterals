@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister for Europe and Foreign Affairs
+  topics:
+  - indo_pacific
+  location: null
+  position: France is advancing its strategic engagement in the Indo-Pacific by seeking
+    to ratify an investment protection agreement with Vietnam.
+  positions:
+    indo_pacific: France is actively strengthening its economic and strategic presence
+      in the Indo-Pacific region through a modernized legal framework for investments
+      in Vietnam.
+  stances:
+    indo_pacific:
+      score: 2
+      evidence: Il s’inscrit dans le contexte du renforcement de l’engagement de l’Union
+        européenne et de la France dans la région indopacifique
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

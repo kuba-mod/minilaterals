@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - rule_of_law
+  location: Paderborn, Germany
+  position: Chancellor Merz emphasizes the need for further European integration and
+    national reforms to strengthen both Europe and Germany, while condemning intolerance
+    and terrorism.
+  positions:
+    rule_of_law: Germany rhetorically supports democratic resilience by condemning
+      intolerance, discrimination, and Islamist terrorism.
+  stances:
+    rule_of_law:
+      score: 1
+      evidence: Gewalt beginnt nicht erst mit einem Anschlag. Gewalt beginnt mit Intoleranz,
+        mit Ausgrenzung, mit Diskriminierung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President Emmanuel Macron
+  - elected officials of the department
+  topics:
+  - green_transition
+  location: Gironde, France
+  position: President Emmanuel Macron visited Gironde to support emergency services
+    and reiterate the state's commitment to combating an intense season of forest
+    fires.
+  positions:
+    green_transition: France is actively deploying state resources to manage the impacts
+      of climate-driven environmental crises, specifically forest fires.
+  stances:
+    green_transition:
+      score: 2
+      evidence: Il a réaffirmé le plein engagement de l’État pour faire face à la
+        saison exceptionnellement intense de feux de forêt sur le territoire national.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

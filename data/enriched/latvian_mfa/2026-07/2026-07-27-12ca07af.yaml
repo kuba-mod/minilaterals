@@ -1,0 +1,31 @@
+actors:
+- LV
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - US Congress delegation (CODEL)
+  topics:
+  - defence
+  location: null
+  position: Latvia discussed security and innovation cooperation with a US Congress
+    delegation, focusing on Baltic security.
+  positions:
+    defence: Latvia is coordinating with the US to discuss security and defense arrangements
+      for Latvia and the Baltic region.
+  stances:
+    defence:
+      score: 1
+      evidence: pārrunātu Latvijas un Baltijas drošības
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

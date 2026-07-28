@@ -1,0 +1,25 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - Dariusz Klimczak
+  - Tomasz Siemoniak
+  topics: []
+  location: Głuchołazy, Poland
+  position: Poland is investing heavily in the reconstruction of flood-damaged infrastructure
+    and providing financial aid to affected residents, specifically in Głuchołazy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions

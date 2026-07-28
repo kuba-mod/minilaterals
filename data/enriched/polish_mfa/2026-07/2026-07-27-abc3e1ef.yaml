@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Poland categorically rejects Russian claims regarding territorial ambitions
+    in Ukraine and affirms its support for Ukraine's sovereignty and territorial integrity.
+  positions:
+    ukraine: Poland rhetorically supports Ukraine's sovereignty and recognizes its
+      internationally established borders.
+    hybrid: Poland identifies Russian claims as a disinformation campaign and part
+      of an information war intended to divide European nations.
+  stances:
+    ukraine:
+      score: 1
+      evidence: Polska w pełni uznaje, szanuje oraz niezmiennie wspiera integralność
+        terytorialną i suwerenność Ukrainy
+    hybrid:
+      score: 1
+      evidence: Sugestie Moskwy o rzekomych planach aneksji zachodnich ziem Ukrainy
+        między innymi przez Polskę stanowią prymitywną próbę dezinformacji i są stałym
+        elementem wojny informacyjnej.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '6'
+  environment: github_actions
