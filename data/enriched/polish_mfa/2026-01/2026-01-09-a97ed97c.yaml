@@ -24,11 +24,12 @@ extracted:
     rule_of_law: Poland strongly advocates for upholding democratic values and addressing
       historical injustices through memorialization and education in Germany.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Deputy Minister Mościcka-Dendys referred to the Bundestag resolution
-        from December last year to establish a permanent memorial in Berlin commemorating
-        the Polish victims of World War II and German occupation.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Deputy Minister Mościcka-Dendys referred to the Bundestag resolution
+          from December last year to establish a permanent memorial in Berlin commemorating
+          the Polish victims of World War II and German occupation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -22,9 +22,10 @@ extracted:
     rule_of_law: Germany highlights the value of democratic resilience and the necessity
       of a meticulous, compromise-driven democratic process.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: eine hochentwickelte Demokratie ist ein kunstvolles Gewächs
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: eine hochentwickelte Demokratie ist ein kunstvolles Gewächs
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

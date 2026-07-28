@@ -27,18 +27,19 @@ extracted:
     enlargement: Poland is engaging in discussions regarding the European Union's
       enlargement process.
   stances:
-    ukraine:
-      score: 1
-      evidence: Rozmówcy zgodnie podkreślili znaczenie wypracowanych podczas wydarzenia
-        ustaleń dla Ukrainy.
-    defence:
-      score: 2
-      evidence: zachęcając partnerów do zapoznania się m.in. z ofertą polskiego przemysłu
-        zbrojeniowego
-    enlargement:
-      score: 0
-      evidence: omówiono najważniejsze kwestie z agendy europejskiej, w tym [...]
-        unijnego procesu rozszerzenia
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Rozmówcy zgodnie podkreślili znaczenie wypracowanych podczas wydarzenia
+          ustaleń dla Ukrainy.
+      defence:
+        score: 2
+        evidence: zachęcając partnerów do zapoznania się m.in. z ofertą polskiego
+          przemysłu zbrojeniowego
+      enlargement:
+        score: 0
+        evidence: omówiono najważniejsze kwestie z agendy europejskiej, w tym [...]
+          unijnego procesu rozszerzenia
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

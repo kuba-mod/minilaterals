@@ -21,10 +21,11 @@ extracted:
       of law by honoring a defender of secularism and republican values who resisted
       totalitarianism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: C'est le courage et l'engagement de deux vies au service de la vérité,
-        de la liberté et de la République qui sont ainsi honorés.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: C'est le courage et l'engagement de deux vies au service de la vérité,
+          de la liberté et de la République qui sont ainsi honorés.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,12 +22,13 @@ extracted:
     rule_of_law: France supports the rule of law by emphasizing enhanced cross-border
       cooperation and addressing illegal economic activities like gold mining.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: the ratification of the border protocol signed in 2021 will represent
-        a major step forward and will help increase the effectiveness of cooperation
-        in the fight against illicit cross-border activities, in particular illegal
-        gold mining.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: the ratification of the border protocol signed in 2021 will represent
+          a major step forward and will help increase the effectiveness of cooperation
+          in the fight against illicit cross-border activities, in particular illegal
+          gold mining.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

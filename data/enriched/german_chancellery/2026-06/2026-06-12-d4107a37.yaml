@@ -21,9 +21,10 @@ extracted:
       and legal certainty in migration management, aligning with the goal of democratic
       resilience and the rule of law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Das neue System bringt Ordnung, Sicherheit und Rechtssicherheit
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Das neue System bringt Ordnung, Sicherheit und Rechtssicherheit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

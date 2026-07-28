@@ -36,26 +36,35 @@ extracted:
     rule_of_law: The Polish representative emphasizes upholding democratic resilience
       through adherence to NATO commitments and sanctions enforcement.
   stances:
-    ukraine:
-      score: 2
-      evidence: Russian attacks on Ukraine’s energy infrastructure prove that Russia
-        is not interested in making peace. Therefore, we should continue to help Ukraine
-        and put pressure on the aggressor
-    defence:
-      score: 2
-      evidence: We need to fulfil our commitments to NATO, including by allocating
-        adequate resources for armaments. Poland can act as a role model.
-    hybrid:
-      score: 1
-      evidence: also in the context of Russia’s aggression against Ukraine and the
-        situation in Belarus.
-    enlargement:
-      score: 1
-      evidence: ''
-    rule_of_law:
-      score: 1
-      evidence: We need to impose sanctions on refineries that process Russian oil.
-        This would supplement the sanctions we have on the clunker fleet
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Russian attacks on Ukraine’s energy infrastructure prove that Russia
+          is not interested in making peace. Therefore, we should continue to help
+          Ukraine and put pressure on the aggressor
+      defence:
+        score: 2
+        evidence: We need to fulfil our commitments to NATO, including by allocating
+          adequate resources for armaments. Poland can act as a role model.
+      hybrid:
+        score: 1
+        evidence: also in the context of Russia’s aggression against Ukraine and the
+          situation in Belarus.
+      enlargement:
+        score: 1
+        evidence: ''
+      rule_of_law:
+        score: 1
+        evidence: We need to impose sanctions on refineries that process Russian oil.
+          This would supplement the sanctions we have on the clunker fleet
+    visegrad:
+      defence:
+        score: 2
+        evidence: We need to fulfil our commitments to NATO, including by allocating
+          adequate resources for armaments. Poland can act as a role model.
+      enlargement:
+        score: 1
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

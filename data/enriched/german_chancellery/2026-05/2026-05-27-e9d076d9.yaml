@@ -20,10 +20,11 @@ extracted:
     green_transition: Germany is pursuing joint goals and exchange in the development
       of energy technologies.
   stances:
-    green_transition:
-      score: 1
-      evidence: Bei der Reise geht es um gemeinsame Ziele, zum Beispiel bei der Entwicklung
-        von Energietechnologien, und den Austausch darüber.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Bei der Reise geht es um gemeinsame Ziele, zum Beispiel bei der
+          Entwicklung von Energietechnologien, und den Austausch darüber.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

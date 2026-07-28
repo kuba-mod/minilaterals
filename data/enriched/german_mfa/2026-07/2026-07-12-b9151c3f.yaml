@@ -22,11 +22,12 @@ extracted:
       by supporting inclusive elections and providing financial aid for vulnerable
       populations and civil society.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Germany is working to ensure that a democratic transitional period
-        comes to a successful conclusion with the holding of free, transparent and
-        inclusive parliamentary and presidential elections.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Germany is working to ensure that a democratic transitional period
+          comes to a successful conclusion with the holding of free, transparent and
+          inclusive parliamentary and presidential elections.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '1'

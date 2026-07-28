@@ -19,10 +19,11 @@ extracted:
     green_transition: Germany is advancing green objectives by implementing higher
       recycling quotas and promoting recyclable packaging design.
   stances:
-    green_transition:
-      score: 2
-      evidence: Ab 2028 werden für die dualen Systeme für Kunststoffabfälle erhöhte
-        Recycling quoten von 75 Prozent gelten.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Ab 2028 werden für die dualen Systeme für Kunststoffabfälle erhöhte
+          Recycling quoten von 75 Prozent gelten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

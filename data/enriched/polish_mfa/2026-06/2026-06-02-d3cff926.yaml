@@ -23,14 +23,15 @@ extracted:
     hybrid: Poland seeks to expand bilateral cooperation with Mexico in the field
       of cybersecurity.
   stances:
-    ukraine:
-      score: 2
-      evidence: wystawę Camas vacías („Puste łóżka”), poświęconą problemowi nielegalnych
-        deportacji i przymusowych przesiedleń ukraińskich dzieci przez Rosję
-    hybrid:
-      score: 1
-      evidence: omówili perspektywy współpracy dwustronnej w takich dziedzinach, jak
-        nowe technologie i cyberbezpieczeństwo
+    weimar:
+      ukraine:
+        score: 2
+        evidence: wystawę Camas vacías („Puste łóżka”), poświęconą problemowi nielegalnych
+          deportacji i przymusowych przesiedleń ukraińskich dzieci przez Rosję
+      hybrid:
+        score: 1
+        evidence: omówili perspektywy współpracy dwustronnej w takich dziedzinach,
+          jak nowe technologie i cyberbezpieczeństwo
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

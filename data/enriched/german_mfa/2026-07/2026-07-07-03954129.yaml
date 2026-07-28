@@ -20,10 +20,16 @@ extracted:
     defence: Germany supports collective security through a security partnership with
       Israel and coordination with NATO.
   stances:
-    defence:
-      score: 1
-      evidence: Wir sind aber auch durch eine gegenseitige Sicherheitspartnerschaft
-        verbunden.
+    weimar:
+      defence:
+        score: 1
+        evidence: Wir sind aber auch durch eine gegenseitige Sicherheitspartnerschaft
+          verbunden.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir sind aber auch durch eine gegenseitige Sicherheitspartnerschaft
+          verbunden.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

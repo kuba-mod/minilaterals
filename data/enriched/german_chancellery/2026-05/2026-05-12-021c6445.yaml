@@ -22,13 +22,14 @@ extracted:
     rule_of_law: Germany is actively integrating the fight against all forms of antisemitism
       into the new EU funding program to strengthen democratic resilience.
   stances:
-    hybrid:
-      score: 1
-      evidence: ein Gegengewicht zur monopolartigen Dominanz großer Online-Plattformen
-        bilden
-    rule_of_law:
-      score: 2
-      evidence: in diesem Förderprogramm den Kampf gegen Antisemitismus zu verankern
+    weimar:
+      hybrid:
+        score: 1
+        evidence: ein Gegengewicht zur monopolartigen Dominanz großer Online-Plattformen
+          bilden
+      rule_of_law:
+        score: 2
+        evidence: in diesem Förderprogramm den Kampf gegen Antisemitismus zu verankern
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

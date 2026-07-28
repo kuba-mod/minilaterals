@@ -23,10 +23,11 @@ extracted:
     rule_of_law: Germany commemorates a historical struggle for democratic freedom
       and rights, aligning with the goal of affirming democratic resilience.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Gedenkveranstaltung der Bundesregierung zum 73. Jahrestag des Volksaufstandes
-        vom 17. Juni 1953
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Gedenkveranstaltung der Bundesregierung zum 73. Jahrestag des Volksaufstandes
+          vom 17. Juni 1953
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,13 +22,14 @@ extracted:
     hybrid: Poland is prioritizing the protection of its cyberspace against hostile
       attacks.
   stances:
-    defence:
-      score: 2
-      evidence: Na rozwój i modernizację naszej armii przeznaczymy ok. 43,7 mld euro,
-        czyli ponad 180 mld zł.
-    hybrid:
-      score: 2
-      evidence: Obecnie szczególnie ważnym zadaniem jest ochrona polskiej cyberprzestrzeni.
+    weimar:
+      defence:
+        score: 2
+        evidence: Na rozwój i modernizację naszej armii przeznaczymy ok. 43,7 mld
+          euro, czyli ponad 180 mld zł.
+      hybrid:
+        score: 2
+        evidence: Obecnie szczególnie ważnym zadaniem jest ochrona polskiej cyberprzestrzeni.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

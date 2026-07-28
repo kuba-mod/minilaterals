@@ -24,14 +24,15 @@ extracted:
     rule_of_law: Germany affirms the importance of international law and democratic
       resilience by criticizing Russia's actions in the UN Security Council.
   stances:
-    ukraine:
-      score: 1
-      evidence: We have witnessed Russia’s illegal war against Ukraine for over four
-        years now.
-    rule_of_law:
-      score: 1
-      evidence: In the very body in which states should jointly strive for peace through
-        diplomacy, Russia is openly threatening a NATO ally with violence.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: We have witnessed Russia’s illegal war against Ukraine for over
+          four years now.
+      rule_of_law:
+        score: 1
+        evidence: In the very body in which states should jointly strive for peace
+          through diplomacy, Russia is openly threatening a NATO ally with violence.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

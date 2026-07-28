@@ -26,14 +26,15 @@ extracted:
     rule_of_law: Poland addressed issues related to human rights and rule of law by
       opening an exhibition on illegal deportations of Ukrainian children.
   stances:
-    ukraine:
-      score: 0
-      evidence: the war in Ukraine
-    rule_of_law:
-      score: 0
-      evidence: opening an exhibition titled Camas vacías (Empty beds) at the Senate
-        focusing on the issue of illegal deportations and forced resettlements of
-        Ukrainian children by Russia.
+    weimar:
+      ukraine:
+        score: 0
+        evidence: the war in Ukraine
+      rule_of_law:
+        score: 0
+        evidence: opening an exhibition titled Camas vacías (Empty beds) at the Senate
+          focusing on the issue of illegal deportations and forced resettlements of
+          Ukrainian children by Russia.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

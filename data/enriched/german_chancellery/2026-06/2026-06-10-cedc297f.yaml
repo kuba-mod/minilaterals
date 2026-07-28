@@ -25,15 +25,22 @@ extracted:
     green_transition: Germany is committing to concrete measures to promote sustainable
       aviation through renewable fuels and climate-neutral airport operations.
   stances:
-    defence:
-      score: 1
-      evidence: Die Industrie leistet einen wichtigen Beitrag zu einem starken und
-        leistungsfähigen Industriestandort Deutschland und auch dazu, dass die Bundeswehr
-        ihre Aufgaben erfüllen kann und einsatzbereit ist.
-    green_transition:
-      score: 2
-      evidence: Die Strategie sieht auch vor, die Bedingungen für die Verwendung von
-        erneuerbaren Kraftstoffen für die Luftfahrt zu verbessern
+    weimar:
+      defence:
+        score: 1
+        evidence: Die Industrie leistet einen wichtigen Beitrag zu einem starken und
+          leistungsfähigen Industriestandort Deutschland und auch dazu, dass die Bundeswehr
+          ihre Aufgaben erfüllen kann und einsatzbereit ist.
+      green_transition:
+        score: 2
+        evidence: Die Strategie sieht auch vor, die Bedingungen für die Verwendung
+          von erneuerbaren Kraftstoffen für die Luftfahrt zu verbessern
+    e3:
+      defence:
+        score: 1
+        evidence: Die Industrie leistet einen wichtigen Beitrag zu einem starken und
+          leistungsfähigen Industriestandort Deutschland und auch dazu, dass die Bundeswehr
+          ihre Aufgaben erfüllen kann und einsatzbereit ist.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

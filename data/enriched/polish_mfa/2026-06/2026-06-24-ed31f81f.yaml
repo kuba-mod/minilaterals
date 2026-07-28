@@ -21,10 +21,11 @@ extracted:
       to build a space of peace and security, aligning with general collective security
       goals.
   stances:
-    defence:
-      score: 1
-      evidence: istnieje potrzeba identyfikacji obszarów odpowiedzialnej i przewidywalnej
-        współpracy z partnerami, którzy budują przestrzeń pokoju i bezpieczeństwa
+    weimar:
+      defence:
+        score: 1
+        evidence: istnieje potrzeba identyfikacji obszarów odpowiedzialnej i przewidywalnej
+          współpracy z partnerami, którzy budują przestrzeń pokoju i bezpieczeństwa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,10 +20,11 @@ extracted:
     green_transition: Germany is regulating the use of electric micro-mobility vehicles
       to ensure safety and legal accountability as their adoption grows.
   stances:
-    green_transition:
-      score: 1
-      evidence: In Deutschland sind im Jahr 2023 laut Gesamtverband der deutschen
-        Versicherungswirtschaft rund 990.000 versicherte E - Scooter gemeldet gewesen
+    weimar:
+      green_transition:
+        score: 1
+        evidence: In Deutschland sind im Jahr 2023 laut Gesamtverband der deutschen
+          Versicherungswirtschaft rund 990.000 versicherte E - Scooter gemeldet gewesen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

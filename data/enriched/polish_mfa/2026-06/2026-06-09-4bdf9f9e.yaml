@@ -26,17 +26,18 @@ extracted:
       Russian and Belarusian hybrid activities and disinformation.
     enlargement: Poland participated in discussions regarding EU enlargement policy.
   stances:
-    defence:
-      score: 1
-      evidence: Rosja pozostaje głównym zagrożeniem dla Europy
-    hybrid:
-      score: 1
-      evidence: budowa odporności na rosyjskie i białoruskie działania hybrydowe,
-        w tym w obszarze dezinformacji, wymaga wspólnych wysiłków całej europejskiej
-        wspólnoty
-    enlargement:
-      score: 0
-      evidence: polityką rozszerzenia UE
+    weimar:
+      defence:
+        score: 1
+        evidence: Rosja pozostaje głównym zagrożeniem dla Europy
+      hybrid:
+        score: 1
+        evidence: budowa odporności na rosyjskie i białoruskie działania hybrydowe,
+          w tym w obszarze dezinformacji, wymaga wspólnych wysiłków całej europejskiej
+          wspólnoty
+      enlargement:
+        score: 0
+        evidence: polityką rozszerzenia UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

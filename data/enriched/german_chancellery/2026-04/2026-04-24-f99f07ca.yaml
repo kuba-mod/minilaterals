@@ -20,13 +20,14 @@ extracted:
     enlargement: Germany supports a closer integration of Ukraine into the European
       Union.
   stances:
-    ukraine:
-      score: 1
-      evidence: hat nach dem Europäischen Rat auf Zypern die weitere Unterstützung
-        der EU für die Ukraine angekündigt
-    enlargement:
-      score: 1
-      evidence: Engere Anbindung der Ukraine an EU
+    weimar:
+      ukraine:
+        score: 1
+        evidence: hat nach dem Europäischen Rat auf Zypern die weitere Unterstützung
+          der EU für die Ukraine angekündigt
+      enlargement:
+        score: 1
+        evidence: Engere Anbindung der Ukraine an EU
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

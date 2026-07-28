@@ -33,24 +33,30 @@ extracted:
     rule_of_law: France affirms its belief in the rule of law and the protection of
       democratic values.
   stances:
-    defence:
-      score: 1
-      evidence: approfondir leur coopération dans les domaines du commerce, de la
-        défense
-    hybrid:
-      score: 1
-      evidence: marqué par le retour des rapports de force, par la contestation des
-        règles communes, par la coercition économique, par les ingérences, les luttes
-        informationnelles
-    green_transition:
-      score: 1
-      evidence: approfondir leur coopération dans les domaines [...] de la transition
-        énergétique
-    rule_of_law:
-      score: 1
-      evidence: nous croyons dans l'État de droit, dans l'ordre international, dans
-        la science, dans le changement climatique et ce qu'il implique, dans le respect
-        de nos valeurs démocratiques et leur protection
+    weimar:
+      defence:
+        score: 1
+        evidence: approfondir leur coopération dans les domaines du commerce, de la
+          défense
+      hybrid:
+        score: 1
+        evidence: marqué par le retour des rapports de force, par la contestation
+          des règles communes, par la coercition économique, par les ingérences, les
+          luttes informationnelles
+      green_transition:
+        score: 1
+        evidence: approfondir leur coopération dans les domaines [...] de la transition
+          énergétique
+      rule_of_law:
+        score: 1
+        evidence: nous croyons dans l'État de droit, dans l'ordre international, dans
+          la science, dans le changement climatique et ce qu'il implique, dans le
+          respect de nos valeurs démocratiques et leur protection
+    e3:
+      defence:
+        score: 1
+        evidence: approfondir leur coopération dans les domaines du commerce, de la
+          défense
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

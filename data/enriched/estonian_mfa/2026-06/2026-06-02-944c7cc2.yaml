@@ -18,12 +18,7 @@ extracted:
   positions:
     migration: Estonia is strengthening the control of the EU's external border by
       refusing non-biometric Russian passports.
-  stances:
-    migration:
-      score: 2
-      evidence: ei tunnusta Eesti Vabariik Venemaa Föderatsiooni mittebiomeetrilisi
-        diplomaatilisi ega teenistuspasse Euroopa Liidu välispiiri ületamiseks ega
-        viisa taotlemiseks
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

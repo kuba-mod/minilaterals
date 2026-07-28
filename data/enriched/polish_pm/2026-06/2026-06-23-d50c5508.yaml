@@ -22,10 +22,11 @@ extracted:
     ukraine: Poland maintains support for Ukraine and seeks to preserve the strategic
       relationship despite current diplomatic tensions and historical grievances.
   stances:
-    ukraine:
-      score: 1
-      evidence: W długoterminowym interesie Polski jest budowanie relacji z Ukrainą
-        na wizji przyszłości
+    weimar:
+      ukraine:
+        score: 1
+        evidence: W długoterminowym interesie Polski jest budowanie relacji z Ukrainą
+          na wizji przyszłości
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

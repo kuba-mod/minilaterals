@@ -20,9 +20,10 @@ extracted:
     green_transition: Germany is implementing energy cost reliefs and supporting industrial
       energy transitions to maintain international competitiveness.
   stances:
-    green_transition:
-      score: 1
-      evidence: Die Bundesregierung reduziert die Energiekosten spürbar und dauerhaft.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Die Bundesregierung reduziert die Energiekosten spürbar und dauerhaft.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

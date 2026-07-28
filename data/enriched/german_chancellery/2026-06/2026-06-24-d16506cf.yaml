@@ -23,11 +23,12 @@ extracted:
       a public space of remembrance to highlight the dangers of state arbitrariness
       and intolerance.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Das Mahnmal schließt eine Lücke in unserer Erinnerungskultur und stärkt
-        das Bewusstsein für die Gefahren der Intoleranz, Ausgrenzung und staatlicher
-        Willkür.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Das Mahnmal schließt eine Lücke in unserer Erinnerungskultur und
+          stärkt das Bewusstsein für die Gefahren der Intoleranz, Ausgrenzung und
+          staatlicher Willkür.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

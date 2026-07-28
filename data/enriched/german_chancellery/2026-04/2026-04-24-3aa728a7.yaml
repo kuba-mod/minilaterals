@@ -22,14 +22,15 @@ extracted:
     rule_of_law: Germany emphasizes the need for the rule of law to have the necessary
       tools to combat the increase in online fraud and hate crime.
   stances:
-    hybrid:
-      score: 2
-      evidence: ein Gesetzentwurf verabschiedet wurde, der die Aufklärung von Kriminalität
-        im Internet erleichtern wird
-    rule_of_law:
-      score: 1
-      evidence: muss der Rechtsstaat die Werkzeuge in die Hand bekommen, um dagegen
-        vorgehen zu können
+    weimar:
+      hybrid:
+        score: 2
+        evidence: ein Gesetzentwurf verabschiedet wurde, der die Aufklärung von Kriminalität
+          im Internet erleichtern wird
+      rule_of_law:
+        score: 1
+        evidence: muss der Rechtsstaat die Werkzeuge in die Hand bekommen, um dagegen
+          vorgehen zu können
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany supports the adherence to international humanitarian law
       and the restoration of accountability and the rule of law in Sudan.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Alle Konfliktparteien müssen das humanitäre Völkerrecht und alle menschenrechtlichen
-        Normen... in vollem Umfang einhalten.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Alle Konfliktparteien müssen das humanitäre Völkerrecht und alle
+          menschenrechtlichen Normen... in vollem Umfang einhalten.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

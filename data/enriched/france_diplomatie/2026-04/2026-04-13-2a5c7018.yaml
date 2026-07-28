@@ -31,20 +31,27 @@ extracted:
       for restoring freedom of navigation in key waterways and supporting democratic
       stability through ceasefire agreements.
   stances:
-    defence:
-      score: 1
-      evidence: They discussed the prospects for strengthening bilateral cooperation,
-        particularly in green industries, defense and the space industry, as well
-        as NATO’s commitment to Arctic security.
-    green_transition:
-      score: 1
-      evidence: The Minister highlighted France’s commitment to the close partnership
-        between the EU and Norway.
-    rule_of_law:
-      score: 1
-      evidence: They also agreed on the need to restore the freedom of navigation
-        in the Strait of Hormuz, in accordance with the Law of the Sea, and to include
-        Lebanon in the terms of the U.S.-Iran ceasefire.
+    weimar:
+      defence:
+        score: 1
+        evidence: They discussed the prospects for strengthening bilateral cooperation,
+          particularly in green industries, defense and the space industry, as well
+          as NATO’s commitment to Arctic security.
+      green_transition:
+        score: 1
+        evidence: The Minister highlighted France’s commitment to the close partnership
+          between the EU and Norway.
+      rule_of_law:
+        score: 1
+        evidence: They also agreed on the need to restore the freedom of navigation
+          in the Strait of Hormuz, in accordance with the Law of the Sea, and to include
+          Lebanon in the terms of the U.S.-Iran ceasefire.
+    e3:
+      defence:
+        score: 1
+        evidence: They discussed the prospects for strengthening bilateral cooperation,
+          particularly in green industries, defense and the space industry, as well
+          as NATO’s commitment to Arctic security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

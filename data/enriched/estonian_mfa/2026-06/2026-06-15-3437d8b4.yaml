@@ -21,11 +21,12 @@ extracted:
     hybrid: Estonia is actively advancing the goal of countering hybrid threats by
       hosting a global gathering of cyber diplomacy experts.
   stances:
-    hybrid:
-      score: 2
-      evidence: Tallinn muutub sel nädalal üleilmse küberdiplomaatia keskpunktiks,
-        kui 7. Tallinna küberdiplomaatia Suvekooli koguneb 60 diplomaati ja kübereksperti
-        üle maailma.
+    baltic:
+      hybrid:
+        score: 2
+        evidence: Tallinn muutub sel nädalal üleilmse küberdiplomaatia keskpunktiks,
+          kui 7. Tallinna küberdiplomaatia Suvekooli koguneb 60 diplomaati ja kübereksperti
+          üle maailma.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

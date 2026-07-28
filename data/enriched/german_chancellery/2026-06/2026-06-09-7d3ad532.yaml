@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany is actively combatting domestic extremism to protect democratic
       resilience and the rule of law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Wir stellen uns gegen jede Form von Extremismus und bauen deswegen
-        unsere Instrumente gegen die extremistische Bedrohung weiter aus
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wir stellen uns gegen jede Form von Extremismus und bauen deswegen
+          unsere Instrumente gegen die extremistische Bedrohung weiter aus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

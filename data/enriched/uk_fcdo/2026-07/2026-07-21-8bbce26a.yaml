@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: The UK supports the restoration of democratic resilience and the
       rule of law in Haiti as a foundation for peace.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: The UK remains committed to supporting a Haitian-led pathway to sustainable
-        peace
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

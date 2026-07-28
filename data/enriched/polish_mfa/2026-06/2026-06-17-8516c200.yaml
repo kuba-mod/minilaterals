@@ -27,13 +27,14 @@ extracted:
     hybrid: Poland supports coordinated actions to increase the resilience of regional
       states against hybrid threats.
   stances:
-    defence:
-      score: 2
-      evidence: przygotowanie dwóch raportów poświęconych bezpieczeństwu regionu Morza
-        Bałtyckiego
-    hybrid:
-      score: 1
-      evidence: wzmacniania odporności państw regionu wobec zagrożeń hybrydowych
+    weimar:
+      defence:
+        score: 2
+        evidence: przygotowanie dwóch raportów poświęconych bezpieczeństwu regionu
+          Morza Bałtyckiego
+      hybrid:
+        score: 1
+        evidence: wzmacniania odporności państw regionu wobec zagrożeń hybrydowych
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

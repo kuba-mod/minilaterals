@@ -24,15 +24,21 @@ extracted:
     hybrid: Poland is committing resources and modernization to combat modern hybrid
       threats, specifically cyber and drone-related risks.
   stances:
-    defence:
-      score: 2
-      evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
-        samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
-    hybrid:
-      score: 2
-      evidence: SOP będzie wzmacniana m.in. w ramach Programu Modernizacji Służb Mundurowych
-        na lata 2026–2029. Budżet formacji ma wzrosnąć o 125% i osiągnąć poziom blisko
-        500 mln zł.
+    weimar:
+      defence:
+        score: 2
+        evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
+          samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
+      hybrid:
+        score: 2
+        evidence: SOP będzie wzmacniana m.in. w ramach Programu Modernizacji Służb
+          Mundurowych na lata 2026–2029. Budżet formacji ma wzrosnąć o 125% i osiągnąć
+          poziom blisko 500 mln zł.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska dołączyła dziś do elitarnego grona 20 państw posiadających
+          samoloty F-35 – jako pierwsze państwo wschodniej flanki NATO.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

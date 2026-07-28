@@ -35,25 +35,31 @@ extracted:
     rule_of_law: The statement emphasizes protecting European values, including the
       rule of law and transparent electoral processes, as a core security objective.
   stances:
-    ukraine:
-      score: 1
-      evidence: Our overarching goal is to protect European values, including the
-        rule of law and transparent electoral processes, and to secure a just and
-        lasting peace in Ukraine that would strengthen Europe’s security.
-    defence:
-      score: 2
-      evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
-        defence cooperation agreement.
-    hybrid:
-      score: 1
-      evidence: Russia’s aggressive actions, including in particular hybrid and disinformation
-        activities, are also aimed at us. They seek to sow social division, undermine
-        public order, and erode trust in the state and its institutions.
-    rule_of_law:
-      score: 1
-      evidence: Our overarching goal is to protect European values, including the
-        rule of law and transparent electoral processes, and to secure a just and
-        lasting peace in Ukraine that would strengthen Europe’s security.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Our overarching goal is to protect European values, including the
+          rule of law and transparent electoral processes, and to secure a just and
+          lasting peace in Ukraine that would strengthen Europe’s security.
+      defence:
+        score: 2
+        evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
+          defence cooperation agreement.
+      hybrid:
+        score: 1
+        evidence: Russia’s aggressive actions, including in particular hybrid and
+          disinformation activities, are also aimed at us. They seek to sow social
+          division, undermine public order, and erode trust in the state and its institutions.
+      rule_of_law:
+        score: 1
+        evidence: Our overarching goal is to protect European values, including the
+          rule of law and transparent electoral processes, and to secure a just and
+          lasting peace in Ukraine that would strengthen Europe’s security.
+    visegrad:
+      defence:
+        score: 2
+        evidence: We are satisfied to note the conclusion on 17 June of a new Polish–German
+          defence cooperation agreement.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

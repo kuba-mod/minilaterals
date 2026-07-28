@@ -22,11 +22,12 @@ extracted:
       key contemporary challenges to be addressed through scientific research and
       education.
   stances:
-    green_transition:
-      score: 1
-      evidence: 'pour répondre aux grands défis contemporains : changement climatique,
-        sécurité alimentaire, santé mondiale, biodiversité, transition énergétique
-        et transformation numérique.'
+    weimar:
+      green_transition:
+        score: 1
+        evidence: 'pour répondre aux grands défis contemporains : changement climatique,
+          sécurité alimentaire, santé mondiale, biodiversité, transition énergétique
+          et transformation numérique.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

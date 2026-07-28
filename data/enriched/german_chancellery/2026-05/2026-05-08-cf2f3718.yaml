@@ -18,10 +18,11 @@ extracted:
       labor market aligns with the broader goal of facilitating mobility and institutional
       openness, although it focuses on labor rather than political accession.
   stances:
-    enlargement:
-      score: 1
-      evidence: brauchen wir neben attraktiven Ausbildungsbedingungen in Deutschland
-        auch qualifizierte Fachkräfte aus dem Ausland
+    weimar:
+      enlargement:
+        score: 1
+        evidence: brauchen wir neben attraktiven Ausbildungsbedingungen in Deutschland
+          auch qualifizierte Fachkräfte aus dem Ausland
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

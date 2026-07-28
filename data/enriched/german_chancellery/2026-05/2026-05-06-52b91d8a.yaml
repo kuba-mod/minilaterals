@@ -21,14 +21,15 @@ extracted:
     defence: Germany focuses on strengthening deterrence and defense capabilities
       through NATO to ensure European security.
   stances:
-    ukraine:
-      score: 1
-      evidence: Laut Bericht geht die größte Bedrohung weiterhin von Russland aus,
-        das seinen Angriffskrieg gegen die Ukraine mit unverminderter Härte fortführt
-    defence:
-      score: 2
-      evidence: Der sicherheitspolitische Schwerpunkt der Bundesregierung liegt auf
-        der Stärkung der Abschreckungs- und Verteidigungsfähigkeit.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Laut Bericht geht die größte Bedrohung weiterhin von Russland aus,
+          das seinen Angriffskrieg gegen die Ukraine mit unverminderter Härte fortführt
+      defence:
+        score: 2
+        evidence: Der sicherheitspolitische Schwerpunkt der Bundesregierung liegt
+          auf der Stärkung der Abschreckungs- und Verteidigungsfähigkeit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

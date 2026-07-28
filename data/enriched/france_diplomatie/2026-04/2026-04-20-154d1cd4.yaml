@@ -25,15 +25,16 @@ extracted:
     rule_of_law: France emphasizes support for the rule of law by commending President
       Bayr's commitment to the European Court of Human Rights' independence.
   stances:
-    hybrid:
-      score: 1
-      evidence: The Minister applauded the Parliamentary Assembly’s contributions
-        to the Council of Europe’s work on combatting foreign interference and information
-        manipulation.
-    rule_of_law:
-      score: 1
-      evidence: The Minister commended President Bayr on her commitment to the European
-        Court of Human Rights’ independence
+    weimar:
+      hybrid:
+        score: 1
+        evidence: The Minister applauded the Parliamentary Assembly’s contributions
+          to the Council of Europe’s work on combatting foreign interference and information
+          manipulation.
+      rule_of_law:
+        score: 1
+        evidence: The Minister commended President Bayr on her commitment to the European
+          Court of Human Rights’ independence
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

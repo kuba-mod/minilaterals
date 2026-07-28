@@ -27,12 +27,10 @@ extracted:
     indo_pacific: Estonia is increasing its diplomatic and technical presence and
       engagement in the Indo-Pacific region.
   stances:
-    hybrid:
-      score: 2
-      evidence: laiendame küber- ja digikoostööd Vaikse ookeani piirkonnaga
-    indo_pacific:
-      score: 2
-      evidence: viibis 20.–23. juulil visiidil Paapua Uus-Guineas
+    baltic:
+      hybrid:
+        score: 2
+        evidence: laiendame küber- ja digikoostööd Vaikse ookeani piirkonnaga
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

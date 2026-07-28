@@ -100,3 +100,41 @@ def test_multiple_areas_produce_separate_clusters():
     clusters = build_convergence_clusters(events)
     areas = {c["area"] for c in clusters}
     assert areas == {"ukraine", "defence"}
+
+
+def test_cluster_items_carry_the_stance_the_template_renders():
+    """The per-item chip and evidence quote come off `item.stance`.
+
+    They used to be dug out of `extracted.stances[area]` in index.html. Once
+    stances were keyed by grouping that lookup returned nothing — and a Jinja
+    lookup that misses raises no error, so the chips silently disappeared from
+    every cluster while the cluster's own score badge kept working. Resolving
+    the stance in render.py keeps the shape in one place.
+    """
+    events = [
+        event_dict(
+            source_name="german_mfa",
+            date="2026-06-10",
+            file_path="a.yaml",
+            stances={"ukraine": {"score": 2, "evidence": "liefert Patriot-Systeme"}},
+        ),
+        event_dict(
+            source_name="france_diplomatie",
+            date="2026-06-15",
+            file_path="b.yaml",
+            stances={"ukraine": {"score": 1, "evidence": "soutien à l'Ukraine"}},
+        ),
+    ]
+    (cluster,) = build_convergence_clusters(events)
+    by_actor = cluster["by_actor"]
+    assert by_actor["DE"][0]["stance"] == {"score": 2, "evidence": "liefert Patriot-Systeme"}
+    assert by_actor["FR"][0]["stance"] == {"score": 1, "evidence": "soutien à l'Ukraine"}
+
+
+def test_cluster_item_stance_is_none_when_the_event_has_no_rating():
+    events = [
+        event_dict(source_name="german_mfa", date="2026-06-10", file_path="a.yaml"),
+        event_dict(source_name="france_diplomatie", date="2026-06-15", file_path="b.yaml"),
+    ]
+    (cluster,) = build_convergence_clusters(events)
+    assert cluster["by_actor"]["DE"][0]["stance"] is None

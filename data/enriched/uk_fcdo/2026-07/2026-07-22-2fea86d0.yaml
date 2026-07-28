@@ -20,10 +20,11 @@ extracted:
     indo_pacific: The United Kingdom supports the goal of a free and open Indo-Pacific
       and the upholding of international law.
   stances:
-    indo_pacific:
-      score: 1
-      evidence: The Foreign Secretary's opening remarks at the ASEAN-UK Post-Ministerial
-        Conference in Manila
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: The Foreign Secretary's opening remarks at the ASEAN-UK Post-Ministerial
+          Conference in Manila
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

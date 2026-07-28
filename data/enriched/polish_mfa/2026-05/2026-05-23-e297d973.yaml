@@ -26,16 +26,17 @@ extracted:
     rule_of_law: Poland aligns with the goal of establishing a state based on the
       rule of law and freedom from corruption in Ukraine.
   stances:
-    ukraine:
-      score: 1
-      evidence: To nie jest wojna o NATO. To wojna o dążenie Ukrainy do dołączenia
-        do Europy
-    enlargement:
-      score: 1
-      evidence: To wojna o dążenie Ukrainy do dołączenia do Europy
-    rule_of_law:
-      score: 1
-      evidence: do życia w kraju wolnym od korupcji, opartym na praworządności
+    weimar:
+      ukraine:
+        score: 1
+        evidence: To nie jest wojna o NATO. To wojna o dążenie Ukrainy do dołączenia
+          do Europy
+      enlargement:
+        score: 1
+        evidence: To wojna o dążenie Ukrainy do dołączenia do Europy
+      rule_of_law:
+        score: 1
+        evidence: do życia w kraju wolnym od korupcji, opartym na praworządności
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany is strengthening its domestic rule of law and market oversight
       by empowering the Federal Cartel Office to combat abusive pricing practices.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Das soll die Verlässlichkeit und Transparenz an den Tankstellen erhöhen
-        und das Bundeskartellamt stärken.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Das soll die Verlässlichkeit und Transparenz an den Tankstellen
+          erhöhen und das Bundeskartellamt stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

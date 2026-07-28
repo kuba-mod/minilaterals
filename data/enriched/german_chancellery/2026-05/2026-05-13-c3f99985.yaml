@@ -19,9 +19,10 @@ extracted:
       to provide better protection against violence and ensure stricter punishment
       for severe crimes.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Die Bundesregierung schafft Rechtsklarheit.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Die Bundesregierung schafft Rechtsklarheit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

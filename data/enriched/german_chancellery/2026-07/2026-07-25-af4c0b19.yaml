@@ -26,11 +26,12 @@ extracted:
     rule_of_law: Germany demonstrates democratic resilience by seriously confronting
       its past and the crimes of the 20th century.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Die Bayreuther Festspiele sind damit selbst ein Beispiel für die Bereitschaft
-        unseres Landes geworden, sich der eigenen Vergangenheit ernsthaft zu stellen
-        und dauerhafte Schlussfolgerungen aus ihr zu ziehen.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Die Bayreuther Festspiele sind damit selbst ein Beispiel für die
+          Bereitschaft unseres Landes geworden, sich der eigenen Vergangenheit ernsthaft
+          zu stellen und dauerhafte Schlussfolgerungen aus ihr zu ziehen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

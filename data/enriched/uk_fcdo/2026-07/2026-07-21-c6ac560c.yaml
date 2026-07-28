@@ -19,10 +19,11 @@ extracted:
     iran: The United Kingdom addresses destabilising regional activity by condemning
       Houthi threats against Saudi Arabia.
   stances:
-    iran:
-      score: 1
-      evidence: recent Houthi threats against Saudi Arabia, including plans to impose
-        a maritime blockade
+    e3:
+      iran:
+        score: 1
+        evidence: recent Houthi threats against Saudi Arabia, including plans to impose
+          a maritime blockade
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

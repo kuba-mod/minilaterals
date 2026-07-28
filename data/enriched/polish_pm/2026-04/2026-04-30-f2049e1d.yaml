@@ -18,10 +18,11 @@ extracted:
     green_transition: Poland is actively implementing energy and climate policies,
       including clean energy investments and the removal of illegal waste.
   stances:
-    green_transition:
-      score: 2
-      evidence: zwiększenie inwestycji w czystą energię, odroczenie systemu ETS2,
-        działania na rzecz usuwania nielegalnych i niebezpiecznych odpadów
+    weimar:
+      green_transition:
+        score: 2
+        evidence: zwiększenie inwestycji w czystą energię, odroczenie systemu ETS2,
+          działania na rzecz usuwania nielegalnych i niebezpiecznych odpadów
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

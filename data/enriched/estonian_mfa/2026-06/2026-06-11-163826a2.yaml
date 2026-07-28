@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Estonia seeks to increase pressure on Russia through coordinated sanctions
       to raise the cost of aggression.
-  stances:
-    ukraine:
-      score: 2
-      evidence: Eesti jätkab tööd selle nimel, et agressiooni hind ja surve Venemaale
-        oleks võimalikult kõrge.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

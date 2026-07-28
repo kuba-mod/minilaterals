@@ -26,15 +26,16 @@ extracted:
     rule_of_law: Poland supported general cooperation areas including combating smuggling
       and preventing illegal migration, which aligns with rule of law principles.
   stances:
-    hybrid:
-      score: 1
-      evidence: The officials emphasised the need to counter disinformation and external
-        interference in states’ information environments (FIMI, or Foreign Information
-        Manipulation and Interference).
-    rule_of_law:
-      score: 1
-      evidence: Potential areas of cooperation included border‑control mechanisms,
-        counterterrorism, combating smuggling, and preventing illegal migration.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: The officials emphasised the need to counter disinformation and
+          external interference in states’ information environments (FIMI, or Foreign
+          Information Manipulation and Interference).
+      rule_of_law:
+        score: 1
+        evidence: Potential areas of cooperation included border‑control mechanisms,
+          counterterrorism, combating smuggling, and preventing illegal migration.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

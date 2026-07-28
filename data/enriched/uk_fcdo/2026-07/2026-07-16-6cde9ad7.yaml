@@ -19,11 +19,7 @@ extracted:
   positions:
     hybrid: The UK is taking concrete action against hybrid threats through the National
       Security (State Threats) Act 2026 and joint cyber sanctions with the EU.
-  stances:
-    hybrid:
-      score: 2
-      evidence: Ambassador Holland updates on the National Security (State Threats)
-        Act 2026 and the recent UK and EU joint cyber sanctions package.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

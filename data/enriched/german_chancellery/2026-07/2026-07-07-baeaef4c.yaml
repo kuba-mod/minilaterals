@@ -25,13 +25,18 @@ extracted:
     green_transition: Germany is pursuing strategic cooperation and investment in
       energy and critical minerals.
   stances:
-    defence:
-      score: 2
-      evidence: 'key areas of cooperation will include: (I) Security and Defence'
-    green_transition:
-      score: 2
-      evidence: 'key areas of cooperation will include: (III) Supply Chains and Critical
-        Minerals; (IV) Energy'
+    weimar:
+      defence:
+        score: 2
+        evidence: 'key areas of cooperation will include: (I) Security and Defence'
+      green_transition:
+        score: 2
+        evidence: 'key areas of cooperation will include: (III) Supply Chains and
+          Critical Minerals; (IV) Energy'
+    e3:
+      defence:
+        score: 2
+        evidence: 'key areas of cooperation will include: (I) Security and Defence'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

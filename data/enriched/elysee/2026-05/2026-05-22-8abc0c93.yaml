@@ -31,10 +31,11 @@ extracted:
     rule_of_law: France aligns with the rule of law by emphasizing that Israeli settlements
       are illegal under international law.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: 'Le droit international est clair : les colonies israéliennes en Cisjordanie
-        sont illégales.'
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: 'Le droit international est clair : les colonies israéliennes en
+          Cisjordanie sont illégales.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,9 +21,10 @@ extracted:
     rule_of_law: Poland strongly supports the democratic aspirations of the Cuban
       people and advocates for their right to self-determination.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We support the democratic aspirations of the people of Cuba
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We support the democratic aspirations of the people of Cuba
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

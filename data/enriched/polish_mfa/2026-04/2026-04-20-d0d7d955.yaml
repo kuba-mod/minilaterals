@@ -34,24 +34,35 @@ extracted:
     rule_of_law: Poland stresses the importance of general EU policy cooperation to
       strengthen democratic resilience and institutional frameworks.
   stances:
-    ukraine:
-      score: 2
-      evidence: most notably in security, which includes support for Ukraine and deterrence
-        of Russia
-    defence:
-      score: 2
-      evidence: most notably in security, which includes support for Ukraine and deterrence
-        of Russia
-    enlargement:
-      score: 1
-      evidence: in EU policy, in such fields as the future Multiannual Financial Framework,
-        the enlargement process as well as strengthening the common market and EU’s
-        competitiveness
-    rule_of_law:
-      score: 1
-      evidence: in EU policy, in such fields as the future Multiannual Financial Framework,
-        the enlargement process as well as strengthening the common market and EU’s
-        competitiveness
+    weimar:
+      ukraine:
+        score: 2
+        evidence: most notably in security, which includes support for Ukraine and
+          deterrence of Russia
+      defence:
+        score: 2
+        evidence: most notably in security, which includes support for Ukraine and
+          deterrence of Russia
+      enlargement:
+        score: 1
+        evidence: in EU policy, in such fields as the future Multiannual Financial
+          Framework, the enlargement process as well as strengthening the common market
+          and EU’s competitiveness
+      rule_of_law:
+        score: 1
+        evidence: in EU policy, in such fields as the future Multiannual Financial
+          Framework, the enlargement process as well as strengthening the common market
+          and EU’s competitiveness
+    visegrad:
+      defence:
+        score: 2
+        evidence: most notably in security, which includes support for Ukraine and
+          deterrence of Russia
+      enlargement:
+        score: 1
+        evidence: in EU policy, in such fields as the future Multiannual Financial
+          Framework, the enlargement process as well as strengthening the common market
+          and EU’s competitiveness
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

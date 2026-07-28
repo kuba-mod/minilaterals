@@ -24,15 +24,17 @@ extracted:
     rule_of_law: Germany emphasizes the need to strengthen institutions and uphold
       democratic resilience within the EU.
   stances:
-    ukraine:
-      score: 1
-      evidence: And we want to secure peace in Europe by maintaining our decisive
-        support for Ukraine as it defends itself against Russia’s illegal war of aggression.
-    rule_of_law:
-      score: 1
-      evidence: We want to strengthen the institutions by overcoming the manoeuvring
-        of recent years by individual countries to block processes out of a lack of
-        solidarity.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: And we want to secure peace in Europe by maintaining our decisive
+          support for Ukraine as it defends itself against Russia’s illegal war of
+          aggression.
+      rule_of_law:
+        score: 1
+        evidence: We want to strengthen the institutions by overcoming the manoeuvring
+          of recent years by individual countries to block processes out of a lack
+          of solidarity.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

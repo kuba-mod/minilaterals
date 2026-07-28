@@ -22,9 +22,10 @@ extracted:
     rule_of_law: France supports the promotion of democratic expression and the rule
       of law in Palestine through the electoral process.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: democratic expression is possible through the ballot box in Palestine
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: democratic expression is possible through the ballot box in Palestine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

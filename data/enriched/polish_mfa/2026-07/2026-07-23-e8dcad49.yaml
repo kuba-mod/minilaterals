@@ -23,17 +23,7 @@ extracted:
       corridors to protect global supply chains.
     iran: Poland highlights the destabilizing regional impact of conflicts in the
       Persian Gulf, specifically referencing the blockade of the Strait of Hormuz.
-  stances:
-    indo_pacific:
-      score: 1
-      evidence: wyrażamy zdecydowany sprzeciw wobec wszelkich gróźb formułowanych
-        ostatnio przez Huti, roszczących sobie prawo do wpływania na swobodę żeglugi
-        w tym kluczowym korytarzu międzynarodowym
-    iran:
-      score: 1
-      evidence: Konflikt w Zatoce Perskiej oraz będąca jego bezpośrednim następstwem
-        blokada cieśniny Ormuz już wcześniej poważnie zagroziły światowym szlakom
-        handlowym
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

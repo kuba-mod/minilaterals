@@ -22,10 +22,12 @@ extracted:
     hybrid: France actively opposes Russian cyber attacks and expresses determination
       to pre-empt and respond to these hybrid threats alongside partners.
   stances:
-    hybrid:
-      score: 2
-      evidence: France remains determined to use every means at its disposal to pre-empt,
-        discourage and respond to the destabilizing actions of which it is the target.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: France remains determined to use every means at its disposal to
+          pre-empt, discourage and respond to the destabilizing actions of which it
+          is the target.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

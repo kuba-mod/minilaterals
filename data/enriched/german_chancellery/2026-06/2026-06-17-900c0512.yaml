@@ -22,10 +22,11 @@ extracted:
       by investing millions in memorials and archives to process the injustice of
       the SED dictatorship.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Der Bund wendet für die Aufarbeitung der SED-Diktatur rund 16 Millionen
-        Euro jährlich auf.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Der Bund wendet für die Aufarbeitung der SED-Diktatur rund 16 Millionen
+          Euro jährlich auf.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

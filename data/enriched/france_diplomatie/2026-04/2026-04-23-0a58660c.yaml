@@ -26,16 +26,17 @@ extracted:
     rule_of_law: France and Mexico jointly advanced an initiative to regulate the
       use of the veto at the United Nations Security Council concerning mass atrocities.
   stances:
-    green_transition:
-      score: 1
-      evidence: The ministers discussed our two countries’ shared priorities in terms
-        of protecting the environment, in particular the oceans.
-    rule_of_law:
-      score: 2
-      evidence: Convinced of the appropriateness of the Franco-Mexican initiative
-        to regulate the use of the veto at the United Nations Security Council in
-        the case of mass atrocities, the ministers agreed to continue their joint
-        efforts with a view to garnering further support.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: The ministers discussed our two countries’ shared priorities in
+          terms of protecting the environment, in particular the oceans.
+      rule_of_law:
+        score: 2
+        evidence: Convinced of the appropriateness of the Franco-Mexican initiative
+          to regulate the use of the veto at the United Nations Security Council in
+          the case of mass atrocities, the ministers agreed to continue their joint
+          efforts with a view to garnering further support.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

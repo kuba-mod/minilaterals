@@ -19,10 +19,7 @@ extracted:
   positions:
     enlargement: Estonia views the start of EU accession negotiations for Ukraine
       and Moldova as an important step toward their integration.
-  stances:
-    enlargement:
-      score: 1
-      evidence: on see kauaoodatud ja oluline samm nende riikide ELiga ühinemise teel
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

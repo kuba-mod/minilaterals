@@ -20,13 +20,14 @@ extracted:
     green_transition: Germany has established a significant special fund for infrastructure
       and climate protection.
   stances:
-    defence:
-      score: 2
-      evidence: Im Fokus stehen Investitionen in Verteidigung
-    green_transition:
-      score: 2
-      evidence: Das Sondervermögen Infrastruktur und Klimaschutz mit 500 Milliarden
-        Euro ist nun angelaufen.
+    weimar:
+      defence:
+        score: 2
+        evidence: Im Fokus stehen Investitionen in Verteidigung
+      green_transition:
+        score: 2
+        evidence: Das Sondervermögen Infrastruktur und Klimaschutz mit 500 Milliarden
+          Euro ist nun angelaufen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

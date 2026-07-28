@@ -21,10 +21,11 @@ extracted:
     green_transition: Poland actively advances climate neutrality and industrial green
       objectives by exporting SME-led green technologies and pursuing hydrogen cooperation.
   stances:
-    green_transition:
-      score: 2
-      evidence: The programme aims to support the international transfer of green
-        technologies supplied by Polish small and medium-sized enterprises.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: The programme aims to support the international transfer of green
+          technologies supplied by Polish small and medium-sized enterprises.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: The visit emphasized building resilience to threats and managing
       crisis situations, aligning with the goal of democratic resilience and security.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: on the prospects of working together on building resilience to threats
-        and managing crisis situations.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: on the prospects of working together on building resilience to threats
+          and managing crisis situations.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

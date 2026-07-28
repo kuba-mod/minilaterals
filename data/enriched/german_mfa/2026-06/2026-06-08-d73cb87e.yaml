@@ -28,14 +28,15 @@ extracted:
     rule_of_law: Germany emphasizes the foundational importance of international law
       and rules-based order in addressing global security challenges.
   stances:
-    ukraine:
-      score: 1
-      evidence: Ministers unequivocally condemned Russia’s illegal war of aggression
-        against Ukraine and demanded its complete and unconditional withdrawal.
-    rule_of_law:
-      score: 1
-      evidence: Underlined the pivotal role of international law as the foundation
-        of the international order
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Ministers unequivocally condemned Russia’s illegal war of aggression
+          against Ukraine and demanded its complete and unconditional withdrawal.
+      rule_of_law:
+        score: 1
+        evidence: Underlined the pivotal role of international law as the foundation
+          of the international order
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

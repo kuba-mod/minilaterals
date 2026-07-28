@@ -23,10 +23,11 @@ extracted:
     defence: Estonia engaged in geopolitical discussions and border security consultations
       with Norwegian officials.
   stances:
-    defence:
-      score: 1
-      evidence: osales Kirkenesi konverentsi vestlusringis „Deep dive into geopolitics“,
-        külastas Norra ja Venemaa piiripunkti
+    baltic:
+      defence:
+        score: 1
+        evidence: osales Kirkenesi konverentsi vestlusringis „Deep dive into geopolitics“,
+          külastas Norra ja Venemaa piiripunkti
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

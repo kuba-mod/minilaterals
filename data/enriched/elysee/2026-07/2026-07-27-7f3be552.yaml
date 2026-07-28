@@ -22,10 +22,11 @@ extracted:
     green_transition: France is actively deploying state resources to manage the impacts
       of climate-driven environmental crises, specifically forest fires.
   stances:
-    green_transition:
-      score: 2
-      evidence: Il a réaffirmé le plein engagement de l’État pour faire face à la
-        saison exceptionnellement intense de feux de forêt sur le territoire national.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Il a réaffirmé le plein engagement de l’État pour faire face à la
+          saison exceptionnellement intense de feux de forêt sur le territoire national.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

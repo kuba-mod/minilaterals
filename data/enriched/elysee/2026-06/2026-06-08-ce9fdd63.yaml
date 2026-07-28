@@ -21,10 +21,11 @@ extracted:
     green_transition: France is actively advancing industrial modernization and digitalization
       of production sites as part of its broader industrial strategy.
   stances:
-    green_transition:
-      score: 2
-      evidence: le projet de modernisation engagé par l’entreprise en 2021 et soutenu
-        dans le cadre de France 2030
+    weimar:
+      green_transition:
+        score: 2
+        evidence: le projet de modernisation engagé par l’entreprise en 2021 et soutenu
+          dans le cadre de France 2030
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

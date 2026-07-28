@@ -21,9 +21,10 @@ extracted:
     green_transition: Germany aims for a pragmatic and realistic energy policy to
       support industrial competitiveness.
   stances:
-    green_transition:
-      score: 1
-      evidence: eine pragmatische und realistische Energiepolitik
+    weimar:
+      green_transition:
+        score: 1
+        evidence: eine pragmatische und realistische Energiepolitik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

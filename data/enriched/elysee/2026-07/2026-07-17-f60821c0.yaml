@@ -26,15 +26,22 @@ extracted:
       ensure the EU's competitiveness and global influence, aligning with industrial
       goals.
   stances:
-    defence:
-      score: 2
-      evidence: Les deux pays reconnaissent le rôle crucial joué par IRIS² dans la
-        mise en place d’une infrastructure spatiale européenne résiliente, intégrée
-        et robuste.
-    green_transition:
-      score: 1
-      evidence: Cela suppose un secteur industriel robuste, or celui-ci subit actuellement
-        de fortes pressions.
+    weimar:
+      defence:
+        score: 2
+        evidence: Les deux pays reconnaissent le rôle crucial joué par IRIS² dans
+          la mise en place d’une infrastructure spatiale européenne résiliente, intégrée
+          et robuste.
+      green_transition:
+        score: 1
+        evidence: Cela suppose un secteur industriel robuste, or celui-ci subit actuellement
+          de fortes pressions.
+    e3:
+      defence:
+        score: 2
+        evidence: Les deux pays reconnaissent le rôle crucial joué par IRIS² dans
+          la mise en place d’une infrastructure spatiale européenne résiliente, intégrée
+          et robuste.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

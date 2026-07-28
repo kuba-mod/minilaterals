@@ -21,10 +21,7 @@ extracted:
   positions:
     ukraine: Estonia emphasizes that Russia's aggression in Ukraine is a violation
       of international law.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Venemaa jätkab oma sõjaga rahvusvahelise õiguse räiget rikkumist
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

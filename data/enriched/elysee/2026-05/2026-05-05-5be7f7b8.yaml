@@ -23,13 +23,14 @@ extracted:
     defence: France has actively established and strengthened military relations with
       Armenia.
   stances:
-    enlargement:
-      score: 1
-      evidence: dans le contexte du rapprochement engagé entre l’Arménie et l’Union
-        européenne
-    defence:
-      score: 2
-      evidence: la France a décidé de construire une relation militaire
+    weimar:
+      enlargement:
+        score: 1
+        evidence: dans le contexte du rapprochement engagé entre l’Arménie et l’Union
+          européenne
+      defence:
+        score: 2
+        evidence: la France a décidé de construire une relation militaire
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

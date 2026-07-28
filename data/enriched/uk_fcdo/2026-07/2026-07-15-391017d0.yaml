@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: The UK supports the rule of law and democratic resilience through
       its commitment to the Colombian peace process.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: The UK reaffirms its full commitment to implementation of the 2016
-        Peace Agreement in Colombia
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

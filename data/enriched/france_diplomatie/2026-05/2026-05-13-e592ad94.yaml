@@ -22,12 +22,13 @@ extracted:
       criminal justice system rooted in the rule of law and human rights as part of
       counter-terrorism efforts.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France supports a holistic approach to counter-terrorism, including
-        in particular capacity-building for States and the development of a criminal
-        justice system rooted in the rule of law and respect for human rights, which
-        are an integral part of preventing violent extremism.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France supports a holistic approach to counter-terrorism, including
+          in particular capacity-building for States and the development of a criminal
+          justice system rooted in the rule of law and respect for human rights, which
+          are an integral part of preventing violent extremism.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

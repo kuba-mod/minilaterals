@@ -21,13 +21,14 @@ extracted:
     defence: France advocates for European strategic autonomy and assumes leadership
       for security in Romania to ensure eastern flank stability.
   stances:
-    ukraine:
-      score: 2
-      evidence: On va dans un instant tenir une réunion de soutien à l'Ukraine.
-    defence:
-      score: 2
-      evidence: La France est nation-cadre pour la sécurité de la Roumanie et donc,
-        nous prendrons nos responsabilités.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: On va dans un instant tenir une réunion de soutien à l'Ukraine.
+      defence:
+        score: 2
+        evidence: La France est nation-cadre pour la sécurité de la Roumanie et donc,
+          nous prendrons nos responsabilités.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

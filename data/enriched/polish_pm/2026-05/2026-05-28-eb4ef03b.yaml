@@ -22,16 +22,17 @@ extracted:
     rule_of_law: Poland emphasizes the importance of democratic resilience by prohibiting
       the political exploitation of crisis situations to undermine state services.
   stances:
-    hybrid:
-      score: 2
-      evidence: Każdy, kto przez fałszywe alarmy i sabotaż naraża ludzkie życie oraz
-        dezorganizuje pracę strażaków, zostanie zidentyfikowany i trafi do więzienia
-        na długie lata
-    rule_of_law:
-      score: 1
-      evidence: Donald Tusk zaapelował także o odpowiedzialność i niewykorzystywanie
-        sytuacji kryzysowych do podważania zaufania do służb państwowych i w celach
-        politycznych
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Każdy, kto przez fałszywe alarmy i sabotaż naraża ludzkie życie
+          oraz dezorganizuje pracę strażaków, zostanie zidentyfikowany i trafi do
+          więzienia na długie lata
+      rule_of_law:
+        score: 1
+        evidence: Donald Tusk zaapelował także o odpowiedzialność i niewykorzystywanie
+          sytuacji kryzysowych do podważania zaufania do służb państwowych i w celach
+          politycznych
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

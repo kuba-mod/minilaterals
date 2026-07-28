@@ -19,11 +19,7 @@ extracted:
   positions:
     rule_of_law: The UK supports democratic resilience and stability in Bosnia and
       Herzegovina by addressing the legacies of the Srebrenica genocide.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: underlines the UK's support for BiH’s stability, sovereignty and territorial
-        integrity, and for addressing the lasting legacies
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

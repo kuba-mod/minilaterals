@@ -18,10 +18,11 @@ extracted:
     defence: France is actively advancing European defence capabilities through a
       concrete bilateral nuclear cooperation initiative with Sweden.
   stances:
-    defence:
-      score: 2
-      evidence: La France et la Suède ont réuni, ce jeudi 23 avril à Paris, leur premier
-        groupe de pilotage nucléaire
+    weimar:
+      defence:
+        score: 2
+        evidence: La France et la Suède ont réuni, ce jeudi 23 avril à Paris, leur
+          premier groupe de pilotage nucléaire
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

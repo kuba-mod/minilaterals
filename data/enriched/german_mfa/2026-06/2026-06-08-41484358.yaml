@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Germany strongly affirms the importance of upholding international
       law and multilateral institutions in addressing global crises.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Russia’s war of aggression is directed not only at Ukraine, but also
-        against the entire Euro-Atlantic security architecture, and against core tenets
-        of international law.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Russia’s war of aggression is directed not only at Ukraine, but
+          also against the entire Euro-Atlantic security architecture, and against
+          core tenets of international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,9 +21,10 @@ extracted:
     ukraine: Germany supports the goal of long-term support for Ukraine, emphasizing
       that strength and pressure on Russia are necessary for a resolution.
   stances:
-    ukraine:
-      score: 1
-      evidence: Die Bundesregierung wird weiterhin die Ukraine unterstützen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Bundesregierung wird weiterhin die Ukraine unterstützen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

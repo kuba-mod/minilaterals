@@ -23,12 +23,13 @@ extracted:
       and democratic order in Haiti by calling on all actors to work together with
       interim authorities.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: It calls on all political actors and all components of civil society
-        to work together with the interim authorities to promote stability, security
-        and a return to constitutional and democratic order in Haiti through free,
-        inclusive elections.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: It calls on all political actors and all components of civil society
+          to work together with the interim authorities to promote stability, security
+          and a return to constitutional and democratic order in Haiti through free,
+          inclusive elections.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

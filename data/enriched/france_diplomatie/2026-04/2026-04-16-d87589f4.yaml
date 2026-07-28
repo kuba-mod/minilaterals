@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France supports the rule of law by committing to continued deep cooperation
       with Colombia on tackling drug trafficking and organized crime.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The two ministers agreed to continue deepening their cooperation in
-        this field.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The two ministers agreed to continue deepening their cooperation
+          in this field.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

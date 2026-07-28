@@ -23,11 +23,12 @@ extracted:
     hybrid: Poland is actively combating hybrid threats in the form of targeted provocations
       and disinformation to protect state security and stability.
   stances:
-    hybrid:
-      score: 2
-      evidence: Wszystkie służby mają dołożyć wszelkich starań, aby zidentyfikować
-        osoby odpowiedzialne za te działania i jak najszybciej doprowadzić do ich
-        zatrzymania.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Wszystkie służby mają dołożyć wszelkich starań, aby zidentyfikować
+          osoby odpowiedzialne za te działania i jak najszybciej doprowadzić do ich
+          zatrzymania.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

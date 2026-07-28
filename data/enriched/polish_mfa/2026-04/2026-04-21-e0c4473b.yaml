@@ -23,10 +23,11 @@ extracted:
       draft convention as a sound foundation for enhancing criminal liability and
       prevention mechanisms related to crimes against humanity.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Poland regards the draft convention prepared by the International
-        Law Commission as a sound basis for further negotiations.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Poland regards the draft convention prepared by the International
+          Law Commission as a sound basis for further negotiations.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -29,9 +29,10 @@ extracted:
     green_transition: France supports the creation of conditions for sustainable and
       shared growth, aligning with the objective of a green transition.
   stances:
-    green_transition:
-      score: 1
-      evidence: créer les conditions d’une croissance équilibrée, durable et partagée
+    weimar:
+      green_transition:
+        score: 1
+        evidence: créer les conditions d’une croissance équilibrée, durable et partagée
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -25,9 +25,11 @@ extracted:
     rule_of_law: France advances democratic resilience by advocating for open and
       free science as a fundamental pillar of democracy.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: a science ouverte et libre qui constitue l’un des ciments de nos démocraties
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: a science ouverte et libre qui constitue l’un des ciments de nos
+          démocraties
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -20,12 +20,13 @@ extracted:
       by calling on Russian authorities to release political prisoners and abandon
       legal proceedings against them.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France calls on the Russian authorities to comply with their international
-        obligations as regards guaranteeing fundamental freedoms and rights, release
-        all persons held for political reasons and immediately, unconditionally abandon
-        the legal proceedings begun against them.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France calls on the Russian authorities to comply with their international
+          obligations as regards guaranteeing fundamental freedoms and rights, release
+          all persons held for political reasons and immediately, unconditionally
+          abandon the legal proceedings begun against them.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

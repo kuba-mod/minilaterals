@@ -25,18 +25,19 @@ extracted:
     rule_of_law: France strongly condemns Russia's violations of international law,
       including threats to civilians and attacks on journalists.
   stances:
-    ukraine:
-      score: 2
-      evidence: The Director General reiterated Ukraine’s right to defend itself against
-        Russian aggression and stressed that France would continue to stand with Ukraine
-        and to support it on every level to preserve its sovereignty and territorial
-        integrity.
-    rule_of_law:
-      score: 2
-      evidence: The Director General stressed that these unacceptable threats to civilians
-        and the diplomatic corps illustrate yet again Russia’s contempt for the law,
-        particularly humanitarian law, as well as diplomatic agreements, and that
-        France will not give in to them.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The Director General reiterated Ukraine’s right to defend itself
+          against Russian aggression and stressed that France would continue to stand
+          with Ukraine and to support it on every level to preserve its sovereignty
+          and territorial integrity.
+      rule_of_law:
+        score: 2
+        evidence: The Director General stressed that these unacceptable threats to
+          civilians and the diplomatic corps illustrate yet again Russia’s contempt
+          for the law, particularly humanitarian law, as well as diplomatic agreements,
+          and that France will not give in to them.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

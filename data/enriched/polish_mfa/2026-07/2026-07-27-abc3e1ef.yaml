@@ -23,15 +23,16 @@ extracted:
     hybrid: Poland identifies Russian claims as a disinformation campaign and part
       of an information war intended to divide European nations.
   stances:
-    ukraine:
-      score: 1
-      evidence: Polska w pełni uznaje, szanuje oraz niezmiennie wspiera integralność
-        terytorialną i suwerenność Ukrainy
-    hybrid:
-      score: 1
-      evidence: Sugestie Moskwy o rzekomych planach aneksji zachodnich ziem Ukrainy
-        między innymi przez Polskę stanowią prymitywną próbę dezinformacji i są stałym
-        elementem wojny informacyjnej.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska w pełni uznaje, szanuje oraz niezmiennie wspiera integralność
+          terytorialną i suwerenność Ukrainy
+      hybrid:
+        score: 1
+        evidence: Sugestie Moskwy o rzekomych planach aneksji zachodnich ziem Ukrainy
+          między innymi przez Polskę stanowią prymitywną próbę dezinformacji i są
+          stałym elementem wojny informacyjnej.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

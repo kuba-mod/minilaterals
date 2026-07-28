@@ -26,19 +26,21 @@ extracted:
     green_transition: Poland is investing in offshore wind farms to increase the share
       of renewable energy in its national power grid.
   stances:
-    defence:
-      score: 2
-      evidence: 'Poprawy bezpieczeństwa Polski jest możliwa dzięki programom zbrojeniowym,
-        takim jak: „Orka” (dotyczącym okrętów podwodnych nowej generacji), „Miecznik”
-        (dotyczącym budowy wielozadaniowych fregat dla Marynarki Wojennej RP) i inwestycjom
-        w rozwój polskich bezzałogowych pojazdów nawodnych.'
-    hybrid:
-      score: 2
-      evidence: Kolejne statki są obejmowane unijnymi sankcjami. Obecnie to 632 jednostki.
-    green_transition:
-      score: 2
-      evidence: W 2026 r. dołączą do niego morskie farmy wiatrowe budowane w polskiej
-        wyłącznej strefie ekonomicznej.
+    weimar:
+      defence:
+        score: 2
+        evidence: 'Poprawy bezpieczeństwa Polski jest możliwa dzięki programom zbrojeniowym,
+          takim jak: „Orka” (dotyczącym okrętów podwodnych nowej generacji), „Miecznik”
+          (dotyczącym budowy wielozadaniowych fregat dla Marynarki Wojennej RP) i
+          inwestycjom w rozwój polskich bezzałogowych pojazdów nawodnych.'
+      hybrid:
+        score: 2
+        evidence: Kolejne statki są obejmowane unijnymi sankcjami. Obecnie to 632
+          jednostki.
+      green_transition:
+        score: 2
+        evidence: W 2026 r. dołączą do niego morskie farmy wiatrowe budowane w polskiej
+          wyłącznej strefie ekonomicznej.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

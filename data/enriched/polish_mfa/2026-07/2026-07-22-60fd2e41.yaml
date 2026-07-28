@@ -23,10 +23,11 @@ extracted:
     ukraine: Poland continues to provide development cooperation and support to Ukraine
       as part of its strategic priorities.
   stances:
-    ukraine:
-      score: 2
-      evidence: 'Polska współpraca rozwojowa w 2026 roku obejmuje przede wszystkim
-        działania na rzecz: Ukrainy'
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 'Polska współpraca rozwojowa w 2026 roku obejmuje przede wszystkim
+          działania na rzecz: Ukrainy'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

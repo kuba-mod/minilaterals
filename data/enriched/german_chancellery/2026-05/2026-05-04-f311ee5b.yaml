@@ -17,9 +17,10 @@ extracted:
     rule_of_law: Germany is advancing social standards and fair competition by mandating
       collective agreement conditions for federal procurement.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Tarifverträge seien „die Basis für anständige Löhne und gute Arbeitsbedingungen“
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Tarifverträge seien „die Basis für anständige Löhne und gute Arbeitsbedingungen“
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

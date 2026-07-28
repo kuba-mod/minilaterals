@@ -38,26 +38,34 @@ extracted:
     rule_of_law: Poland emphasizes that European development must be founded on democratic
       principles and the rule of law.
   stances:
-    ukraine:
-      score: 1
-      evidence: It is about Ukraine's aspirations to join Europe - to live in a country
-        that is free from corruption, based on the rule of law, shifting from poverty
-        to prosperity.
-    defence:
-      score: 1
-      evidence: The sessions addrssed security and defence in a new era
-    hybrid:
-      score: 0
-      evidence: This war is not about NATO. It is about Ukraine's aspirations to join
-        Europe - to live in a country that is free from corruption, based on the rule
-        of law, shifting from poverty to prosperity.
-    enlargement:
-      score: 1
-      evidence: It is about Ukraine's aspirations to join Europe
-    rule_of_law:
-      score: 1
-      evidence: to live in a country that is free from corruption, based on the rule
-        of law, shifting from poverty to prosperity.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: It is about Ukraine's aspirations to join Europe - to live in a
+          country that is free from corruption, based on the rule of law, shifting
+          from poverty to prosperity.
+      defence:
+        score: 1
+        evidence: The sessions addrssed security and defence in a new era
+      hybrid:
+        score: 0
+        evidence: This war is not about NATO. It is about Ukraine's aspirations to
+          join Europe - to live in a country that is free from corruption, based on
+          the rule of law, shifting from poverty to prosperity.
+      enlargement:
+        score: 1
+        evidence: It is about Ukraine's aspirations to join Europe
+      rule_of_law:
+        score: 1
+        evidence: to live in a country that is free from corruption, based on the
+          rule of law, shifting from poverty to prosperity.
+    visegrad:
+      defence:
+        score: 1
+        evidence: The sessions addrssed security and defence in a new era
+      enlargement:
+        score: 1
+        evidence: It is about Ukraine's aspirations to join Europe
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

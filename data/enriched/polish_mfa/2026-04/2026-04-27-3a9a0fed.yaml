@@ -30,21 +30,22 @@ extracted:
     enlargement: Poland actively supports and provides administrative guidance for
       the EU accession of Ukraine and Western Balkan states.
   stances:
-    ukraine:
-      score: 2
-      evidence: państwa przystąpiły do unijnego programu wsparcia integracji Ukraine2EU
-    defence:
-      score: 1
-      evidence: państwa Unii Europejskiej powinny zwiększyć inwestycje w przemysł
-        obronny
-    hybrid:
-      score: 1
-      evidence: stawiały czoła nowym i pojawiającym się wyzwaniom, czy to zagrożeniom
-        hybrydowym
-    enlargement:
-      score: 2
-      evidence: Polska doradza ukraińskim organom administracji publicznej we wprowadzaniu
-        reform związanych z UE
+    weimar:
+      ukraine:
+        score: 2
+        evidence: państwa przystąpiły do unijnego programu wsparcia integracji Ukraine2EU
+      defence:
+        score: 1
+        evidence: państwa Unii Europejskiej powinny zwiększyć inwestycje w przemysł
+          obronny
+      hybrid:
+        score: 1
+        evidence: stawiały czoła nowym i pojawiającym się wyzwaniom, czy to zagrożeniom
+          hybrydowym
+      enlargement:
+        score: 2
+        evidence: Polska doradza ukraińskim organom administracji publicznej we wprowadzaniu
+          reform związanych z UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

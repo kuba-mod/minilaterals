@@ -22,11 +22,12 @@ extracted:
       restrict citizenship for those who commit fraud, reflecting a domestic focus
       on legal order and administrative efficiency.
   stances:
-    rule_of_law:
-      score: 0
-      evidence: Einbürgerung für die Dauer von zehn Jahren ausgeschlossen werden,
-        wenn sie unanfechtbar zurückgenommen oder im Einbürgerungsverfahren z.B. mit
-        Arglist, Drohung oder Bestechung falsche Angaben unterliegt
+    weimar:
+      rule_of_law:
+        score: 0
+        evidence: Einbürgerung für die Dauer von zehn Jahren ausgeschlossen werden,
+          wenn sie unanfechtbar zurückgenommen oder im Einbürgerungsverfahren z.B.
+          mit Arglist, Drohung oder Bestechung falsche Angaben unterliegt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

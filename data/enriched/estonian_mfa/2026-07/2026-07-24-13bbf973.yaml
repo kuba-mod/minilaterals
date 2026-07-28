@@ -28,10 +28,11 @@ extracted:
     defence: Estonia supports the strengthening of NATO deterrence and defense capabilities
       and bilateral cooperation with the US.
   stances:
-    defence:
-      score: 1
-      evidence: NATO heidutus- ja kaitsevõime tugevdamine ning atlandiüleste suhete
-        tugevdamine, sh Eesti-USA kahepoolne koostöö
+    baltic:
+      defence:
+        score: 1
+        evidence: NATO heidutus- ja kaitsevõime tugevdamine ning atlandiüleste suhete
+          tugevdamine, sh Eesti-USA kahepoolne koostöö
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

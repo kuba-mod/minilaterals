@@ -33,17 +33,25 @@ extracted:
     rule_of_law: France rhetorically supports the maintenance of an international
       order based on the rule of law.
   stances:
-    defence:
-      score: 2
-      evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
-        auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
-        marque la première étape opérationnelle de la coopération stratégique franco-allemande
-    hybrid:
-      score: 1
-      evidence: le continent européen est confronté à la guerre et à des menaces hybrides
-    rule_of_law:
-      score: 1
-      evidence: contribuer à un ordre international fondé sur des règles de droit
+    weimar:
+      defence:
+        score: 2
+        evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
+          auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
+          marque la première étape opérationnelle de la coopération stratégique franco-allemande
+      hybrid:
+        score: 1
+        evidence: le continent européen est confronté à la guerre et à des menaces
+          hybrides
+      rule_of_law:
+        score: 1
+        evidence: contribuer à un ordre international fondé sur des règles de droit
+    e3:
+      defence:
+        score: 2
+        evidence: le déploiement d’un Rafale des forces aériennes stratégiques françaises
+          auprès de la 31e escadre aérienne tactique allemande « Boelcke » à Nörvenich
+          marque la première étape opérationnelle de la coopération stratégique franco-allemande
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -18,10 +18,11 @@ extracted:
     rule_of_law: Poland emphasizes the importance of honest historical memory and
       combating the manipulation of history as a foundation for international understanding.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Stanisław Aronson wielokrotnie przestrzegał przed nienawiścią i manipulowaniem
-        pamięcią historyczną
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Stanisław Aronson wielokrotnie przestrzegał przed nienawiścią i
+          manipulowaniem pamięcią historyczną
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

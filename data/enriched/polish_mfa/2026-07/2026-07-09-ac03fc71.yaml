@@ -30,18 +30,24 @@ extracted:
     ukraine: Poland highlights current security risks in Ukraine as a key area for
       discussion with its strategic partner France.
   stances:
-    defence:
-      score: 1
-      evidence: We’ll have to build a stronger European security architecture with
-        France and Poland as core pillars.
-    rule_of_law:
-      score: 1
-      evidence: the head of French diplomacy spoke about security and pointed out
-        that European countries must stay united.
-    ukraine:
-      score: 0
-      evidence: The ministers also discussed current security risks, including in
-        the Middle East and Ukraine.
+    weimar:
+      defence:
+        score: 1
+        evidence: We’ll have to build a stronger European security architecture with
+          France and Poland as core pillars.
+      rule_of_law:
+        score: 1
+        evidence: the head of French diplomacy spoke about security and pointed out
+          that European countries must stay united.
+      ukraine:
+        score: 0
+        evidence: The ministers also discussed current security risks, including in
+          the Middle East and Ukraine.
+    visegrad:
+      defence:
+        score: 1
+        evidence: We’ll have to build a stronger European security architecture with
+          France and Poland as core pillars.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -18,10 +18,11 @@ extracted:
     defence: Germany is actively advancing defense capabilities through massive investments
       and the introduction of a new military service.
   stances:
-    defence:
-      score: 2
-      evidence: massive Investitionen in die Verteidigung, die Einführung des neuen
-        Wehrdienstes
+    weimar:
+      defence:
+        score: 2
+        evidence: massive Investitionen in die Verteidigung, die Einführung des neuen
+          Wehrdienstes
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

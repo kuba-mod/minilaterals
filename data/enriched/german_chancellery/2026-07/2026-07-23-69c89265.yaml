@@ -24,13 +24,11 @@ extracted:
     energy: Germany has implemented significant measures to reduce energy costs for
       businesses and citizens to enhance competitiveness.
   stances:
-    green_transition:
-      score: 2
-      evidence: Mit dem Investitions-Booster für E -Mobilität bei Unternehmen werden
-        betrieblich genutzte Elektrofahrzeuge gefördert.
-    energy:
-      score: 2
-      evidence: So wurden 2026 die Energiekosten um zehn Milliarden Euro im Jahr verringert.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Mit dem Investitions-Booster für E -Mobilität bei Unternehmen werden
+          betrieblich genutzte Elektrofahrzeuge gefördert.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

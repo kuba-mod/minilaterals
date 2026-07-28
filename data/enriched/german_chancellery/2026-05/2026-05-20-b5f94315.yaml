@@ -21,10 +21,11 @@ extracted:
       of key technologies like microelectronics, aligning with the goal of a clean
       industrial transition.
   stances:
-    green_transition:
-      score: 1
-      evidence: Künstliche Intelligenz und die Mikroelektronik seien die Schlüsseltechnologien
-        für die Elektro- und Metallindustrie
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Künstliche Intelligenz und die Mikroelektronik seien die Schlüsseltechnologien
+          für die Elektro- und Metallindustrie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

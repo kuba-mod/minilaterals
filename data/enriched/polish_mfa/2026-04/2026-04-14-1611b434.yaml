@@ -26,16 +26,17 @@ extracted:
     rule_of_law: Poland stressed the need for cooperation in maintaining democratic
       resilience by addressing organized crime and foreign interference.
   stances:
-    hybrid:
-      score: 1
-      evidence: In addition to stressing the significance of bolstering cybersecurity
-        and fighting hybrid threats, the diplomats declared their willingness to cooperate
-        to counter disinformation.
-    rule_of_law:
-      score: 1
-      evidence: The deputy ministers highlighted the major challenges these regions
-        face, namely organised crime and foreign interference, including interference
-        in the information space.
+    weimar:
+      hybrid:
+        score: 1
+        evidence: In addition to stressing the significance of bolstering cybersecurity
+          and fighting hybrid threats, the diplomats declared their willingness to
+          cooperate to counter disinformation.
+      rule_of_law:
+        score: 1
+        evidence: The deputy ministers highlighted the major challenges these regions
+          face, namely organised crime and foreign interference, including interference
+          in the information space.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

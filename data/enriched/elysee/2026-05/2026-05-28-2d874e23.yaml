@@ -29,21 +29,29 @@ extracted:
       mining as part of its bilateral investment strategy.
     rule_of_law: France rhetorically supports a global system based on rules and multilateralism.
   stances:
-    defence:
-      score: 2
-      evidence: ils ont encouragé leurs ministres respectifs à approfondir encore
-        la coopération dans le domaine de l’armement, notamment grâce au renforcement
-        des capacités, au développement conjoint et à la coopération dans l’industrie
-        de la défense
-    green_transition:
-      score: 1
-      evidence: Ils ont soutenu la réalisation de projets d’intérêt commun et d'investissements
-        réciproques dans les secteurs du transport, de la santé, de la transition
-        énergétique
-    rule_of_law:
-      score: 1
-      evidence: Leur coopération repose sur la confiance mutuelle et un attachement
-        fort au multilatéralisme fondé sur des règles
+    weimar:
+      defence:
+        score: 2
+        evidence: ils ont encouragé leurs ministres respectifs à approfondir encore
+          la coopération dans le domaine de l’armement, notamment grâce au renforcement
+          des capacités, au développement conjoint et à la coopération dans l’industrie
+          de la défense
+      green_transition:
+        score: 1
+        evidence: Ils ont soutenu la réalisation de projets d’intérêt commun et d'investissements
+          réciproques dans les secteurs du transport, de la santé, de la transition
+          énergétique
+      rule_of_law:
+        score: 1
+        evidence: Leur coopération repose sur la confiance mutuelle et un attachement
+          fort au multilatéralisme fondé sur des règles
+    e3:
+      defence:
+        score: 2
+        evidence: ils ont encouragé leurs ministres respectifs à approfondir encore
+          la coopération dans le domaine de l’armement, notamment grâce au renforcement
+          des capacités, au développement conjoint et à la coopération dans l’industrie
+          de la défense
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

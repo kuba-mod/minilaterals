@@ -34,22 +34,29 @@ extracted:
     rule_of_law: Germany views the defense of democratic values and established global
       rules as foundational to Europe's future stability and security.
   stances:
-    defence:
-      score: 1
-      evidence: 'Fortunately, new options are now available to us in this regard:
-        in joint procurement, in European funding and in building a robust defence
-        industry.'
-    hybrid:
-      score: 1
-      evidence: Russia’s war of aggression against Ukraine, the situation in the Middle
-        East and Iran’s blockade of the Strait of Hormuz show that our security, economic
-        stability and open trade routes are inextricably linked.
-    enlargement:
-      score: 1
-      evidence: From Albania to Ukraine, we must offer credible prospects for accession.
-    rule_of_law:
-      score: 1
-      evidence: Greece is the cradle of essential values that shape Europe today.
+    weimar:
+      defence:
+        score: 1
+        evidence: 'Fortunately, new options are now available to us in this regard:
+          in joint procurement, in European funding and in building a robust defence
+          industry.'
+      hybrid:
+        score: 1
+        evidence: Russia’s war of aggression against Ukraine, the situation in the
+          Middle East and Iran’s blockade of the Strait of Hormuz show that our security,
+          economic stability and open trade routes are inextricably linked.
+      enlargement:
+        score: 1
+        evidence: From Albania to Ukraine, we must offer credible prospects for accession.
+      rule_of_law:
+        score: 1
+        evidence: Greece is the cradle of essential values that shape Europe today.
+    e3:
+      defence:
+        score: 1
+        evidence: 'Fortunately, new options are now available to us in this regard:
+          in joint procurement, in European funding and in building a robust defence
+          industry.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

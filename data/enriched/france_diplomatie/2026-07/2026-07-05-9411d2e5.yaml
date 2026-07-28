@@ -23,10 +23,12 @@ extracted:
       threats like organized crime and drug trafficking, which supports foundational
       elements of rule of law.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: The conference was a highlight in the mobilization of all state actors
-        and all the regional organizations responsible for combating illicit trafficking.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: The conference was a highlight in the mobilization of all state
+          actors and all the regional organizations responsible for combating illicit
+          trafficking.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

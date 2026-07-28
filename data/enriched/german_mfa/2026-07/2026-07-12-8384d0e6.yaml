@@ -33,10 +33,11 @@ extracted:
     rule_of_law: Germany strongly supports upholding international law, particularly
       regarding maritime disputes and freedom of navigation in the South China Sea.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: We reaffirm that maritime disputes must be resolved peacefully and
-        in accordance with UNCLOS .
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: We reaffirm that maritime disputes must be resolved peacefully and
+          in accordance with UNCLOS .
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

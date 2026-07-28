@@ -21,12 +21,20 @@ extracted:
     defence: Germany is systematically integrating security and defense startups into
       its national funding strategy to enhance capabilities.
   stances:
-    defence:
-      score: 2
-      evidence: Die wichtigen Bereiche der Sicherheit und Verteidigung werden erstmals
-        in der Strategie systematisch erfasst. Startups und junge Unternehmen aus
-        diesen Bereichen erhalten so beispielsweise gleichberechtigten Zugang zu der
-        Startup - und Scaleup -Förderung.
+    weimar:
+      defence:
+        score: 2
+        evidence: Die wichtigen Bereiche der Sicherheit und Verteidigung werden erstmals
+          in der Strategie systematisch erfasst. Startups und junge Unternehmen aus
+          diesen Bereichen erhalten so beispielsweise gleichberechtigten Zugang zu
+          der Startup - und Scaleup -Förderung.
+    e3:
+      defence:
+        score: 2
+        evidence: Die wichtigen Bereiche der Sicherheit und Verteidigung werden erstmals
+          in der Strategie systematisch erfasst. Startups und junge Unternehmen aus
+          diesen Bereichen erhalten so beispielsweise gleichberechtigten Zugang zu
+          der Startup - und Scaleup -Förderung.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

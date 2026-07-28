@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany stresses that maintaining adherence to international law
       and democratic principles is crucial for global economic stability and cooperation.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: it demonstrates that we will stand together as democracies committed
-        to the rule of law and unite our societies that are built on the same values.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: it demonstrates that we will stand together as democracies committed
+          to the rule of law and unite our societies that are built on the same values.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

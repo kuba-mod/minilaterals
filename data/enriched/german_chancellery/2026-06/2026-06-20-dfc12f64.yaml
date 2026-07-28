@@ -28,9 +28,14 @@ extracted:
     defence: Germany mentions internal and external security as part of its current
       political discourse.
   stances:
-    defence:
-      score: 0
-      evidence: innere und äußere Sicherheit
+    weimar:
+      defence:
+        score: 0
+        evidence: innere und äußere Sicherheit
+    e3:
+      defence:
+        score: 0
+        evidence: innere und äußere Sicherheit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

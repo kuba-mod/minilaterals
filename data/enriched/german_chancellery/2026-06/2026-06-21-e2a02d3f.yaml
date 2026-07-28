@@ -21,10 +21,16 @@ extracted:
     defence: Germany rhetorically supports the value of military service and the role
       of the Bundeswehr by honoring active and former soldiers.
   stances:
-    defence:
-      score: 1
-      evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
-        und höchste Wertschätzung entgegenbringen.
+    weimar:
+      defence:
+        score: 1
+        evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
+          und höchste Wertschätzung entgegenbringen.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir wollen unseren Veteraninnen und Veteranen Anerkennung, Respekt
+          und höchste Wertschätzung entgegenbringen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -25,12 +25,10 @@ extracted:
     defence: Latvia emphasizes the importance of security and defense cooperation
       in the Baltic region.
   stances:
-    ukraine:
-      score: 1
-      evidence: pārrunātu Latvijas un Baltijas drošības… [support for Ukraine]
-    defence:
-      score: 1
-      evidence: pārrunātu Latvijas un Baltijas drošības
+    baltic:
+      defence:
+        score: 1
+        evidence: pārrunātu Latvijas un Baltijas drošības
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

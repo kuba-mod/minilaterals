@@ -25,15 +25,16 @@ extracted:
     rule_of_law: Germany views the preservation of historical archives as a fundamental
       state task essential for the maintenance of democracy.
   stances:
-    hybrid:
-      score: 2
-      evidence: Gerade in Zeiten, in denen historische Fakten zunehmend infrage gestellt
-        werden, sind Archive, Bibliotheken und Museen als Orte der Überlieferung für
-        unsere Demokratie wichtiger denn je.
-    rule_of_law:
-      score: 2
-      evidence: Es ist unsere gesamtstaatliche Aufgabe, dieses Erbe für kommende Generationen
-        zu bewahren und für die Gesellschaft zugänglich zu machen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Gerade in Zeiten, in denen historische Fakten zunehmend infrage
+          gestellt werden, sind Archive, Bibliotheken und Museen als Orte der Überlieferung
+          für unsere Demokratie wichtiger denn je.
+      rule_of_law:
+        score: 2
+        evidence: Es ist unsere gesamtstaatliche Aufgabe, dieses Erbe für kommende
+          Generationen zu bewahren und für die Gesellschaft zugänglich zu machen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

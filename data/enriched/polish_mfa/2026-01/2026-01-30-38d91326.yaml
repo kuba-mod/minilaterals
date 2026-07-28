@@ -21,11 +21,12 @@ extracted:
     rule_of_law: Poland supports foundational European values such as democracy, equality,
       and human dignity through its engagement with partners like Luxembourg.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Minister Sikorski thanked Minister Bettel for his engagement in promoting
-        European values, including measures against discrimination and initiatives
-        fostering respect for the principles of equality and human dignity.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Minister Sikorski thanked Minister Bettel for his engagement in
+          promoting European values, including measures against discrimination and
+          initiatives fostering respect for the principles of equality and human dignity.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

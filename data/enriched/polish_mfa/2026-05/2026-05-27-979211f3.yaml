@@ -22,11 +22,12 @@ extracted:
     ukraine: Poland supports the EU's efforts to provide assistance to Ukraine and
       maintain pressure on Russian aggression.
   stances:
-    ukraine:
-      score: 1
-      evidence: omówili kluczowe kwestie znajdujące się obecnie na agendzie polityki
-        zagranicznej UE, przede wszystkim agresję Rosji na Ukrainę, wsparcie dla Ukrainy
-        i metody zwiększenia presji na Rosję
+    weimar:
+      ukraine:
+        score: 1
+        evidence: omówili kluczowe kwestie znajdujące się obecnie na agendzie polityki
+          zagranicznej UE, przede wszystkim agresję Rosji na Ukrainę, wsparcie dla
+          Ukrainy i metody zwiększenia presji na Rosję
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

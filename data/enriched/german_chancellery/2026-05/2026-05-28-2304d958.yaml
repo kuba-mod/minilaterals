@@ -18,9 +18,10 @@ extracted:
     defence: Germany rhetorically supports the strengthening of security cooperation
       through NATO.
   stances:
-    defence:
-      score: 1
-      evidence: auch im Rahmen der EU und der NATO
+    weimar:
+      defence:
+        score: 1
+        evidence: auch im Rahmen der EU und der NATO
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

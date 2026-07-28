@@ -23,11 +23,12 @@ extracted:
     rule_of_law: Poland strongly affirms that democratic resilience requires cultural
       identity to prevent populism and authoritarian influence.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Without identity, democracy is merely an empty form that can easily
-        be filled with populism tailored to the needs of authoritarianism said Deputy
-        Foreign Minister Artur Harazim.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Without identity, democracy is merely an empty form that can easily
+          be filled with populism tailored to the needs of authoritarianism said Deputy
+          Foreign Minister Artur Harazim.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

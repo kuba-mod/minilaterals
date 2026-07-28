@@ -26,13 +26,15 @@ extracted:
     hybrid: Germany identifies and criticizes Russian propaganda and the exploitation
       of peace desires as deceptive tactics.
   stances:
-    ukraine:
-      score: 1
-      evidence: Dieser Angriffskrieg wird unsere unerschütterliche Unterstützung für
-        die Freiheit und Souveränität der Ukraine nur noch verstärken.
-    hybrid:
-      score: 1
-      evidence: Der im Übrigen den ganzen Widerspruch der russischen Propaganda entlarvt
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Dieser Angriffskrieg wird unsere unerschütterliche Unterstützung
+          für die Freiheit und Souveränität der Ukraine nur noch verstärken.
+      hybrid:
+        score: 1
+        evidence: Der im Übrigen den ganzen Widerspruch der russischen Propaganda
+          entlarvt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

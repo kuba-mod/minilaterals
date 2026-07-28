@@ -36,24 +36,25 @@ extracted:
     rule_of_law: Germany affirms the rule of law and democratic resilience as essential
       for European security.
   stances:
-    ukraine:
-      score: 2
-      evidence: ''
-    defence:
-      score: 2
-      evidence: ''
-    hybrid:
-      score: 2
-      evidence: ''
-    enlargement:
-      score: 2
-      evidence: ''
-    green_transition:
-      score: 2
-      evidence: ''
-    rule_of_law:
-      score: 2
-      evidence: ''
+    weimar:
+      ukraine:
+        score: 2
+        evidence: ''
+      defence:
+        score: 2
+        evidence: ''
+      hybrid:
+        score: 2
+        evidence: ''
+      enlargement:
+        score: 2
+        evidence: ''
+      green_transition:
+        score: 2
+        evidence: ''
+      rule_of_law:
+        score: 2
+        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

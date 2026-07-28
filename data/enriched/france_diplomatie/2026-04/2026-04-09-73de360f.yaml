@@ -21,11 +21,12 @@ extracted:
       by condemning military actions that jeopardize ceasefires and calling for adherence
       to diplomatic agreements.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: These strikes are especially unacceptable because they jeopardize
-        the temporary ceasefire between the United States and Iran the day after it
-        was concluded.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: These strikes are especially unacceptable because they jeopardize
+          the temporary ceasefire between the United States and Iran the day after
+          it was concluded.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany is establishing a legal framework to implement EU regulations
       that protect fundamental rights and ensure the rule of law in the use of AI.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Sie soll Innovation fördern, Grundrechte schützen und Vertrauen in
-        KI stärken.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Sie soll Innovation fördern, Grundrechte schützen und Vertrauen
+          in KI stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

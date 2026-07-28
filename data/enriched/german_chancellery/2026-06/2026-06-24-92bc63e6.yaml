@@ -22,10 +22,11 @@ extracted:
       it is easing the timeline for data centers to reach 100% renewable energy to
       remain pragmatic and business-friendly.
   stances:
-    green_transition:
-      score: 1
-      evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen –
-        und leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Der Gesetzentwurf soll insgesamt zu mehr Energieeffizienz führen
+          – und leistet damit einen wirksamen Beitrag zum Erreichen der Klimaschutzziele.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

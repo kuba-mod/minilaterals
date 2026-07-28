@@ -23,14 +23,15 @@ extracted:
     enlargement: Poland supports EU accession for Ukraine and the Western Balkans,
       provided the process is merit-based and considers member state sensitivities.
   stances:
-    ukraine:
-      score: 2
-      evidence: Wezwał do szybkiego wdrożenia pożyczki dla Ukrainy w wysokości 90
-        miliardów euro
-    enlargement:
-      score: 1
-      evidence: rozszerzenie musi pozostać procesem opartym na podstawach merytorycznych
-        i uwzględniającym wrażliwości państw członkowskich
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wezwał do szybkiego wdrożenia pożyczki dla Ukrainy w wysokości 90
+          miliardów euro
+      enlargement:
+        score: 1
+        evidence: rozszerzenie musi pozostać procesem opartym na podstawach merytorycznych
+          i uwzględniającym wrażliwości państw członkowskich
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

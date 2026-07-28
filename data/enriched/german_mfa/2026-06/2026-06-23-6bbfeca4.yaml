@@ -25,14 +25,15 @@ extracted:
       and combating disinformation against false narratives promoting premature peace
       talks.
   stances:
-    ukraine:
-      score: 2
-      evidence: it is all the more true that this war of aggression will only strengthen
-        our unwavering support for the freedom and sovereignty of Ukraine.
-    rule_of_law:
-      score: 1
-      evidence: These false prophets try to convince us that we only need to silence
-        the weapons, to commence talks, for peace to descend almost automatically.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: it is all the more true that this war of aggression will only strengthen
+          our unwavering support for the freedom and sovereignty of Ukraine.
+      rule_of_law:
+        score: 1
+        evidence: These false prophets try to convince us that we only need to silence
+          the weapons, to commence talks, for peace to descend almost automatically.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

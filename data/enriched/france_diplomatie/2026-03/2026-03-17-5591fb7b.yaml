@@ -25,19 +25,20 @@ extracted:
       impunity by utilizing international frameworks and national strategies against
       cyber threats.
   stances:
-    hybrid:
-      score: 2
-      evidence: The EU is imposing these restrictive measures on the private cyber
-        offensive ecosystem that equips the malicious actors targeting France and
-        Europe.
-    rule_of_law:
-      score: 2
-      evidence: In keeping with the implementation of the new French national cybersecurity
-        strategy, France is committed to using all the levers at its disposal at both
-        the national and European levels in order to combat impunity and force the
-        adversaries targeting us in cyberspace to pay the price, together with our
-        partners and in accordance with the UN Framework of Responsible State Behavior
-        in Cyberspace.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: The EU is imposing these restrictive measures on the private cyber
+          offensive ecosystem that equips the malicious actors targeting France and
+          Europe.
+      rule_of_law:
+        score: 2
+        evidence: In keeping with the implementation of the new French national cybersecurity
+          strategy, France is committed to using all the levers at its disposal at
+          both the national and European levels in order to combat impunity and force
+          the adversaries targeting us in cyberspace to pay the price, together with
+          our partners and in accordance with the UN Framework of Responsible State
+          Behavior in Cyberspace.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

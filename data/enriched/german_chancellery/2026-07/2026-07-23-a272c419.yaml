@@ -20,10 +20,11 @@ extracted:
     iran: Germany opposes destabilizing regional activity by addressing and condemning
       Houthi attacks in the Red Sea.
   stances:
-    iran:
-      score: 1
-      evidence: Die Bundesregierung verurteilt die Angriffe der Huthi auf saudische
-        Schiffe im Roten Meer auf das Schärfste.
+    e3:
+      iran:
+        score: 1
+        evidence: Die Bundesregierung verurteilt die Angriffe der Huthi auf saudische
+          Schiffe im Roten Meer auf das Schärfste.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

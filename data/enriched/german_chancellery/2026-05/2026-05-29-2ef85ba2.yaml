@@ -23,14 +23,15 @@ extracted:
     green_transition: Germany is updating its building legislation to allow municipalities
       to create more green spaces to combat heat and heavy rain.
   stances:
-    hybrid:
-      score: 2
-      evidence: wurde im Kabinett der Gesetzentwurf für das Cybersicherheitsgesetz
-        beschlossen
-    green_transition:
-      score: 1
-      evidence: Um sich besser gegen Starkregen oder Hitze zu wappnen, können Kommunen
-        im gesamten Stadtgebiet mehr Grün schaffen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: wurde im Kabinett der Gesetzentwurf für das Cybersicherheitsgesetz
+          beschlossen
+      green_transition:
+        score: 1
+        evidence: Um sich besser gegen Starkregen oder Hitze zu wappnen, können Kommunen
+          im gesamten Stadtgebiet mehr Grün schaffen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

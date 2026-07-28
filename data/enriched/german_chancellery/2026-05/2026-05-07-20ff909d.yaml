@@ -21,14 +21,15 @@ extracted:
     rule_of_law: Germany rhetorically supports the defense of human rights, the rule
       of law, and democratic resilience against hatred and exclusion.
   stances:
-    hybrid:
-      score: 2
-      evidence: Dabei wird sie sich auch kritisch mit Geschichtsmythen der aktuellen
-        russischen Regierung auseinandersetzen.
-    rule_of_law:
-      score: 1
-      evidence: Freiheit, Rechtsstaatlichkeit und Menschenrechte keine Selbstverständlichkeit
-        sind, sondern immer wieder neu verteidigt werden müssen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Dabei wird sie sich auch kritisch mit Geschichtsmythen der aktuellen
+          russischen Regierung auseinandersetzen.
+      rule_of_law:
+        score: 1
+        evidence: Freiheit, Rechtsstaatlichkeit und Menschenrechte keine Selbstverständlichkeit
+          sind, sondern immer wieder neu verteidigt werden müssen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

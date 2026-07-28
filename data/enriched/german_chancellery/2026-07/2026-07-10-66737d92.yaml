@@ -20,11 +20,12 @@ extracted:
       showed it failed to achieve energy saving and boiler replacement goals, potentially
       diverging from strict green objectives in favor of deregulation.
   stances:
-    green_transition:
-      score: -1
-      evidence: Eine Evaluation von 2020 zeigte hingegen, dass die Anzahl der Kesseltausche
-        und die Energieeinsparungen deutlich hinter den Zielen des Aktionsplans zurückgeblieben
-        sind.
+    weimar:
+      green_transition:
+        score: -1
+        evidence: Eine Evaluation von 2020 zeigte hingegen, dass die Anzahl der Kesseltausche
+          und die Energieeinsparungen deutlich hinter den Zielen des Aktionsplans
+          zurückgeblieben sind.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

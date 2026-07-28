@@ -21,10 +21,11 @@ extracted:
     rule_of_law: Germany emphasizes the commitment of state institutions to defend
       the rule of law and democratic freedoms against intolerance and violence.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Wir, die Vertreter der staatlichen Institutionen, werden alles tun,
-        um die Freiheit unseres Landes und unserer Gesellschaft zu schützen
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wir, die Vertreter der staatlichen Institutionen, werden alles tun,
+          um die Freiheit unseres Landes und unserer Gesellschaft zu schützen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

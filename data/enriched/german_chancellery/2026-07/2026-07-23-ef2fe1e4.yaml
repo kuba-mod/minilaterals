@@ -20,10 +20,11 @@ extracted:
       neutrality by legally mandating the repairability of goods and extending warranty
       periods.
   stances:
-    green_transition:
-      score: 2
-      evidence: Ziel ist es, einen nachhaltigen Konsum und eine Kultur des Reparierens
-        zu fördern.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Ziel ist es, einen nachhaltigen Konsum und eine Kultur des Reparierens
+          zu fördern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

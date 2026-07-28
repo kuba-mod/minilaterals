@@ -20,10 +20,11 @@ extracted:
     rule_of_law: Germany actively advances democratic resilience by investing in sites
       that promote critical thinking and historical accountability.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Wo einst Ausgrenzung und Gleichschaltung geplant waren, entstehen
-        nun Räume für freie Kunst, kritisches Denken und demokratischen Dialog.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Wo einst Ausgrenzung und Gleichschaltung geplant waren, entstehen
+          nun Räume für freie Kunst, kritisches Denken und demokratischen Dialog.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,10 +22,11 @@ extracted:
       and calling for peace to prevent global consequences, aligning with foundational
       European security principles.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: At the same time, the ministers called for a peaceful resolution of
-        the conflict and its swiftest possible deescalation.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: At the same time, the ministers called for a peaceful resolution
+          of the conflict and its swiftest possible deescalation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

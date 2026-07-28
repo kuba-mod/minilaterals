@@ -30,17 +30,23 @@ extracted:
     rule_of_law: Germany celebrates the restoration of democratic resilience and the
       rule of law in Hungary.
   stances:
-    ukraine:
-      score: 1
-      evidence: Angesichts der Bedrohung der NATO durch Russland und Moskaus Krieg
-        gegen die Ukraine sei ein enges Zusammenrücken unerlässlich.
-    defence:
-      score: 1
-      evidence: dass diese Europäische Union einen guten Weg nimmt im Hinblick auf
-        Wachstum, Beschäftigung, Wettbewerbsfähigkeit und Verteidigungsfähigkeit.
-    rule_of_law:
-      score: 2
-      evidence: Demokratie und Rechtsstaatlichkeit in Ungarn sind wieder gestärkt.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Angesichts der Bedrohung der NATO durch Russland und Moskaus Krieg
+          gegen die Ukraine sei ein enges Zusammenrücken unerlässlich.
+      defence:
+        score: 1
+        evidence: dass diese Europäische Union einen guten Weg nimmt im Hinblick auf
+          Wachstum, Beschäftigung, Wettbewerbsfähigkeit und Verteidigungsfähigkeit.
+      rule_of_law:
+        score: 2
+        evidence: Demokratie und Rechtsstaatlichkeit in Ungarn sind wieder gestärkt.
+    e3:
+      defence:
+        score: 1
+        evidence: dass diese Europäische Union einen guten Weg nimmt im Hinblick auf
+          Wachstum, Beschäftigung, Wettbewerbsfähigkeit und Verteidigungsfähigkeit.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

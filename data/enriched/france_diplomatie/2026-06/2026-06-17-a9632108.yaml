@@ -25,12 +25,13 @@ extracted:
       through calls for effective public health measures like contact tracing and
       border surveillance.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Containing and ending the outbreak will depend on effective contact
-        tracing, infection prevention and control, quarantine and isolation practices,
-        laboratory testing, cross-border preparedness, border surveillance and community
-        engagement.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Containing and ending the outbreak will depend on effective contact
+          tracing, infection prevention and control, quarantine and isolation practices,
+          laboratory testing, cross-border preparedness, border surveillance and community
+          engagement.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

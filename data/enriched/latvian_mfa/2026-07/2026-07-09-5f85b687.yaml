@@ -24,12 +24,10 @@ extracted:
     defence: Latvia emphasizes the critical importance of NATO's Article 5 collective
       defense obligation.
   stances:
-    ukraine:
-      score: 1
-      evidence: vienojās turpināt atbalstu Ukrainai šogad
-    defence:
-      score: 1
-      evidence: sabiedrotie apstiprināja kolektīvās aizsardzības – 5. panta – nozīmi
+    baltic:
+      defence:
+        score: 1
+        evidence: sabiedrotie apstiprināja kolektīvās aizsardzības – 5. panta – nozīmi
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

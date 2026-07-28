@@ -31,17 +31,22 @@ extracted:
     hybrid: Germany explicitly identifies Russian hybrid attacks and infrastructure
       sabotage as concrete threats to security.
   stances:
-    ukraine:
-      score: 1
-      evidence: Wohin dieser russische Revisionismus führen kann, erleben wir seit
-        über vier Jahren Tag für Tag in der Ukraine.
-    defence:
-      score: 1
-      evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
-    hybrid:
-      score: 1
-      evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
-        Unterwasserkabel in der Ostsee.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wohin dieser russische Revisionismus führen kann, erleben wir seit
+          über vier Jahren Tag für Tag in der Ukraine.
+      defence:
+        score: 1
+        evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
+      hybrid:
+        score: 1
+        evidence: Russland führt hybride Angriffe im Internet durch. Russland zerstört
+          Unterwasserkabel in der Ostsee.
+    e3:
+      defence:
+        score: 1
+        evidence: Die Sicherheit des Baltikums ist auch die Sicherheit Deutschlands
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

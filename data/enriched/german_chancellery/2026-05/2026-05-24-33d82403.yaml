@@ -29,10 +29,11 @@ extracted:
     rule_of_law: Germany supports the rule of law and international legal standards
       by declaring Israeli settlements in the West Bank illegal.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: 'International law is clear: Israeli settlements in the West Bank
-        are illegal.'
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: 'International law is clear: Israeli settlements in the West Bank
+          are illegal.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

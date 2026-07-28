@@ -18,10 +18,11 @@ extracted:
       three billion euros in funding to incentivize the purchase and leasing of electric
       vehicles.
   stances:
-    green_transition:
-      score: 2
-      evidence: Insgesamt werden von der Bundesregierung für das Programm drei Milliarden
-        Euro aus dem Klima- und Transformationsfonds bereitgestellt.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Insgesamt werden von der Bundesregierung für das Programm drei Milliarden
+          Euro aus dem Klima- und Transformationsfonds bereitgestellt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

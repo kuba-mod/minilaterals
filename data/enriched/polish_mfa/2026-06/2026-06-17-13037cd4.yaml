@@ -33,21 +33,31 @@ extracted:
     rule_of_law: Poland stresses the importance of open dialogue to resolve difficult
       bilateral issues.
   stances:
-    ukraine:
-      score: 2
-      evidence: The Russian aggression against Ukraine is a test of our responsibility
-        and far-sightedness. We will continue to support Ukraine together
-    defence:
-      score: 1
-      evidence: We will continue to support Ukraine together and to boost the security
-        not only of the eastern flank but of the entire Community.
-    enlargement:
-      score: 1
-      evidence: They also discussed transatlantic relations, cooperation in NATO,
-        the future and enlargement of the European Union
-    rule_of_law:
-      score: 1
-      evidence: What matters is that we are able to discuss them openly.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: The Russian aggression against Ukraine is a test of our responsibility
+          and far-sightedness. We will continue to support Ukraine together
+      defence:
+        score: 1
+        evidence: We will continue to support Ukraine together and to boost the security
+          not only of the eastern flank but of the entire Community.
+      enlargement:
+        score: 1
+        evidence: They also discussed transatlantic relations, cooperation in NATO,
+          the future and enlargement of the European Union
+      rule_of_law:
+        score: 1
+        evidence: What matters is that we are able to discuss them openly.
+    visegrad:
+      defence:
+        score: 1
+        evidence: We will continue to support Ukraine together and to boost the security
+          not only of the eastern flank but of the entire Community.
+      enlargement:
+        score: 1
+        evidence: They also discussed transatlantic relations, cooperation in NATO,
+          the future and enlargement of the European Union
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

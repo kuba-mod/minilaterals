@@ -24,9 +24,10 @@ extracted:
       speeding up investigations, and strengthening criminal sanctions against child
       predators.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: accélérer la conduite des enquêtes et durcir la répression
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: accélérer la conduite des enquêtes et durcir la répression
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

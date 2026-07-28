@@ -24,12 +24,14 @@ extracted:
     defence: The UK emphasizes that Russian military actions increase the risk of
       miscalculation and escalation across Europe, aligning with the need for deterrence.
   stances:
-    ukraine:
-      score: 1
-      evidence: Russia’s missile and drone attacks endanger civilians
-    defence:
-      score: 1
-      evidence: increase the risk of miscalculation and escalation across Europe
+    e3:
+      defence:
+        score: 1
+        evidence: increase the risk of miscalculation and escalation across Europe
+    aukus:
+      defence:
+        score: 1
+        evidence: increase the risk of miscalculation and escalation across Europe
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -21,10 +21,11 @@ extracted:
       by demanding respect for binding arbitration and the UN Convention on the Law
       of the Sea.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: bekennt sich weiterhin fest zu sicheren, freien und offenen Seewegen
-        im Indopazifik und darüber hinaus
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: bekennt sich weiterhin fest zu sicheren, freien und offenen Seewegen
+          im Indopazifik und darüber hinaus
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

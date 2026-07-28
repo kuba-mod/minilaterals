@@ -21,10 +21,11 @@ extracted:
       the establishment of a significant special fund for infrastructure and climate
       neutrality.
   stances:
-    green_transition:
-      score: 2
-      evidence: Zudem hat die Bundesregierung das Sondervermögen für Infrastruktur
-        und Klimaneutralität in Höhe von 500 Milliarden Euro aufgelegt.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Zudem hat die Bundesregierung das Sondervermögen für Infrastruktur
+          und Klimaneutralität in Höhe von 500 Milliarden Euro aufgelegt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

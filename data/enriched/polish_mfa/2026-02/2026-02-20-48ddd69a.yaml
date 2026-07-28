@@ -21,11 +21,12 @@ extracted:
     rule_of_law: Poland strongly supports the establishment of an independent State
       of Palestine next to Israel, adhering to international law principles.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Poland consistently opts for the adoption of a two-State solution
-        and the establishment of an independent State of Palestine next to the State
-        of Israel. That solution is compliant with international law.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Poland consistently opts for the adoption of a two-State solution
+          and the establishment of an independent State of Palestine next to the State
+          of Israel. That solution is compliant with international law.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

@@ -19,10 +19,7 @@ extracted:
   positions:
     ukraine: Latvia supports the EU's coordinated response to Russian aggression against
       Ukraine.
-  stances:
-    ukraine:
-      score: 1
-      evidence: diskutēs par Krievijas agresiju pret Ukrainu
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

@@ -57,7 +57,9 @@ class ExtractedSchema(BaseModel):
     location: str | None = None
     position: str
     positions: dict[str, str] = Field(default_factory=dict)
-    stances: dict[str, StanceSchema] = Field(default_factory=dict)
+    # Keyed by grouping, then topic: the same topic is rated against a different
+    # goal per grouping, so one event can carry several ratings for it.
+    stances: dict[str, dict[str, StanceSchema]] = Field(default_factory=dict)
 
 
 class EnrichedBySchema(BaseModel):

@@ -25,11 +25,12 @@ extracted:
       implementing a comprehensive program of immediate measures to protect federal
       IT systems from cyber attacks and espionage.
   stances:
-    hybrid:
-      score: 2
-      evidence: Mit dem Programm zur Steigerung der Cyber sicherheit in der Bundesverwaltung,
-        kurz CyberGovSecure , hat das Kabinett eine Bündelung von Sofortmaßnahmen
-        beschlossen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Mit dem Programm zur Steigerung der Cyber sicherheit in der Bundesverwaltung,
+          kurz CyberGovSecure , hat das Kabinett eine Bündelung von Sofortmaßnahmen
+          beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

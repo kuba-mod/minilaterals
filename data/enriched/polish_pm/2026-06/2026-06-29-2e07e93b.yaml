@@ -23,10 +23,16 @@ extracted:
       through a major strategic defense acquisition and industrial partnership with
       Sweden.
   stances:
-    defence:
-      score: 2
-      evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
-        Wojennej RP w ramach programu „Orka”
+    weimar:
+      defence:
+        score: 2
+        evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
+          Wojennej RP w ramach programu „Orka”
+    visegrad:
+      defence:
+        score: 2
+        evidence: podpisanie umowy na zakup trzech okrętów podwodnych A26 dla Marynarki
+          Wojennej RP w ramach programu „Orka”
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

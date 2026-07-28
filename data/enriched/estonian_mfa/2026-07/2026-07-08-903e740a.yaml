@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Estonia supports the diplomatic isolation of Russia following its aggression
       against Ukraine and opposes any measures that normalize the regime.
-  stances:
-    ukraine:
-      score: 1
-      evidence: vastutustundetu otsusega, mis normaliseerib agressiooni ja aitab murendada
-        Venemaa rahvusvahelist isolatsiooni
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

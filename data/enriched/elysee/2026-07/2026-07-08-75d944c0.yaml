@@ -20,10 +20,18 @@ extracted:
       combat unit and providing training capacities to the NATO multinational tactical
       group in Finland.
   stances:
-    defence:
-      score: 2
-      evidence: La France contribuera par des déploiements de forces terrestres aux
-        rotations des Forces terrestres avancées Finlande, incluant une unité de combat
+    weimar:
+      defence:
+        score: 2
+        evidence: La France contribuera par des déploiements de forces terrestres
+          aux rotations des Forces terrestres avancées Finlande, incluant une unité
+          de combat
+    e3:
+      defence:
+        score: 2
+        evidence: La France contribuera par des déploiements de forces terrestres
+          aux rotations des Forces terrestres avancées Finlande, incluant une unité
+          de combat
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

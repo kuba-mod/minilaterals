@@ -18,10 +18,11 @@ extracted:
       laws to speed up the construction of high-voltage grids and supporting renewable
       energy integration.
   stances:
-    green_transition:
-      score: 2
-      evidence: das neue Gesetz dem Netzausbau in Deutschland neue Impulse gebe und
-        die Energiewende konsequent fortführe
+    weimar:
+      green_transition:
+        score: 2
+        evidence: das neue Gesetz dem Netzausbau in Deutschland neue Impulse gebe
+          und die Energiewende konsequent fortführe
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

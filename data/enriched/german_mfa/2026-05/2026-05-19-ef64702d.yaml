@@ -32,17 +32,18 @@ extracted:
     rule_of_law: Germany stresses the importance of democratic resilience and security
       by highlighting the necessity of protecting energy systems from deliberate attacks.
   stances:
-    ukraine:
-      score: 2
-      evidence: Germany is Ukraine’s largest supporter in the energy sector.
-    hybrid:
-      score: 2
-      evidence: Sightings of Russian drones, acts of sabotage and hybrid warfare leave
-        us in no doubt that we need to protect our critical infrastructure more than
-        ever today.
-    rule_of_law:
-      score: 1
-      evidence: When we talk about energy, we are talking about security.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Germany is Ukraine’s largest supporter in the energy sector.
+      hybrid:
+        score: 2
+        evidence: Sightings of Russian drones, acts of sabotage and hybrid warfare
+          leave us in no doubt that we need to protect our critical infrastructure
+          more than ever today.
+      rule_of_law:
+        score: 1
+        evidence: When we talk about energy, we are talking about security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

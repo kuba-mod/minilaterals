@@ -26,20 +26,21 @@ extracted:
     green_transition: Poland is diversifying its energy sources through LNG and civil
       nuclear energy to ensure energy security and production capacity.
   stances:
-    defence:
-      score: 2
-      evidence: zobowiązały się do poszukiwania nowych możliwości pogłębiania współpracy
-        transatlantyckiej w obszarze przemysłów obronnych z myślą o zwiększaniu interoperacyjności,
-        rozwijaniu zdolności obronnych Polski
-    hybrid:
-      score: 1
-      evidence: ochronę krytycznej infrastruktury technologicznej przed zewnętrzną
-        ingerencją
-    green_transition:
-      score: 1
-      evidence: wspieranie realizacji projektów w dziedzinie cywilnej energetyki jądrowej
-        z udziałem amerykańskich przedsiębiorstw w celu zwiększania mocy produkcyjnych
-        energii elektrycznej w Polsce
+    weimar:
+      defence:
+        score: 2
+        evidence: zobowiązały się do poszukiwania nowych możliwości pogłębiania współpracy
+          transatlantyckiej w obszarze przemysłów obronnych z myślą o zwiększaniu
+          interoperacyjności, rozwijaniu zdolności obronnych Polski
+      hybrid:
+        score: 1
+        evidence: ochronę krytycznej infrastruktury technologicznej przed zewnętrzną
+          ingerencją
+      green_transition:
+        score: 1
+        evidence: wspieranie realizacji projektów w dziedzinie cywilnej energetyki
+          jądrowej z udziałem amerykańskich przedsiębiorstw w celu zwiększania mocy
+          produkcyjnych energii elektrycznej w Polsce
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

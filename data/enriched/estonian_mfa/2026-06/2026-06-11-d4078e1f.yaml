@@ -21,11 +21,7 @@ extracted:
   positions:
     ukraine: Estonia supports sustained diplomatic and international coordination
       to assist Ukraine and hold Russia accountable.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Arutelude keskmes olid Ukraina jätkuv toetamine rahvusvahelistes organisatsioonides,
-        Venemaa isoleerimine ja vastutusele võtmine
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

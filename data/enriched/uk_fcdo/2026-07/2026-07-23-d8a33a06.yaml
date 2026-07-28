@@ -19,10 +19,7 @@ extracted:
   positions:
     rule_of_law: The UK rhetorically supports the preservation of the UN Charter and
       international law as the foundation for global security.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: uphold the Charter and pursue peace through multilateralism
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

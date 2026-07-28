@@ -1,41 +1,145 @@
-# Minilateral groupings tracked by the pipeline.
+# Minilateral groupings tracked by the pipeline — members, topics, and the goal
+# each country's stance is scored against.
 #
-# Each grouping declares its member country codes and the issue areas (topics)
-# it tracks. This is the single source of truth consumed by:
-#   - pipeline/enrich.py  — per-grouping relevance/signal computation and the
-#                           actor/topic vocabulary offered to the LLM
-#   - pipeline/validate.py — the set of known actor codes and issue areas
+# Read by two consumers, and everything in here is read by at least one of them;
+# nothing is documentation-only.
 #
-# `weimar` is listed first and maps onto the legacy weimar_relevant /
-# trilateral_signal fields for backward compatibility; the others emit
-# {key}_relevant / {key}_signal booleans.
+#   pipeline/enrich.py   `goals` per grouping, as the goal each country's stance
+#                        is scored against (-2..+2), plus `members`/`topics` for
+#                        per-grouping relevance and the actor and issue-area
+#                        vocabulary offered to the LLM.
+#   pipeline/validate.py derives the known-actor and known-issue-area enums from
+#                        the entries that carry `topics`, and checks each one's
+#                        `goals` keys match its `topics` exactly.
 #
-# The UNION of every grouping's `topics` is the global issue-area enum. Goal
-# sentences for each topic live in data/goals.yaml (topic-level, shared across
-# groupings that track the topic). Topic assignments below are editable
-# judgment calls, not fixed policy.
+# `topics` is what marks an entry as wired into the pipeline: adding it widens
+# what the LLM is asked to classify, so it is a pipeline change, not an editorial
+# one — see "Adding a new source" in CLAUDE.md.
+#
+# GOALS ARE PER GROUPING, NOT PER TOPIC. `defence` is tracked by all five formats
+# and means something different in each — a European pillar weighted to the
+# eastern flank for Weimar, keeping the UK bound in for the E3, national build-up
+# for the V4, permanent allied presence for the Baltic Three, and industrial
+# integration for AUKUS. Stances are therefore keyed by (grouping, topic): an
+# event relevant to two groupings that both track a topic carries one rating per
+# grouping, because those two ratings answer different questions. This replaces
+# data/goals.yaml, which held one sentence per topic shared across every
+# grouping that tracked it.
+#
+# NOTE: goal text is data, not prompt surface, so editing a sentence here does
+# NOT move PROMPT_SURFACE_SHA or PROMPT_VERSION. Ratings already stored were made
+# against the wording current at the time; re-rate with
+# `pipeline.enrich --stances-only` when a change needs to apply retroactively.
 
 weimar:
-  name: Weimar Triangle
+  name: "Weimar Triangle"
   members: [DE, FR, PL]
   topics: [ukraine, defence, hybrid, enlargement, green_transition, rule_of_law]
+  goals:
+    ukraine:
+      >-
+        Sustained Franco-German-Polish support for Ukraine — military, economic and
+        diplomatic — until a just and lasting peace, with the three arriving at EU
+        tables having already settled a common line.
+    defence:
+      >-
+        A European defence pillar complementary to NATO, weighted towards the eastern
+        flank: joint capability development and mobility between the Union's three
+        largest continental armies.
+    hybrid:
+      >-
+        Joint response to hybrid pressure from Russia and Belarus — disinformation,
+        cyber attack, sabotage, and the instrumentalisation of migrants against Poland's
+        eastern border.
+    enlargement:
+      >-
+        EU accession for Ukraine, Moldova and the Western Balkans, together with the
+        institutional reform the Union needs before it can absorb them.
+    green_transition:
+      >-
+        Aligning the three economies behind the Clean Industrial Deal and climate
+        neutrality without splitting over who carries the industrial cost of the
+        transition.
+    rule_of_law:
+      >-
+        The rule of law and democratic resilience inside the Union treated as a security
+        question rather than only a legal one.
 
 e3:
-  name: E3
+  name: "E3"
   members: [DE, FR, UK]
   topics: [iran, defence]
+  goals:
+    iran:
+      >-
+        Preventing Iran from acquiring nuclear weapons — verifiable limits on enrichment
+        and full IAEA access, backed by the willingness to use the snapback the three
+        hold as JCPOA participants.
+    defence:
+      >-
+        Keeping the United Kingdom bound into European security outside the EU framework
+        — coordination between the continent's two nuclear powers and its largest
+        defence spenders.
 
 visegrad:
-  name: Visegrád Group
+  name: "Visegrád Group"
   members: [PL, CZ, SK, HU]
   topics: [migration, enlargement, defence, energy]
+  goals:
+    migration:
+      >-
+        Control of the EU's external border and resistance to mandatory relocation, with
+        asylum policy set nationally rather than by qualified majority.
+    enlargement:
+      >-
+        Accession for the Western Balkans — the V4's own accession experience applied to
+        its southern neighbourhood.
+    defence:
+      >-
+        Higher national defence spending and a credible NATO presence in Central Europe,
+        pursued through each capital's own build-up rather than joint V4 capability.
+    energy:
+      >-
+        Diversification away from Russian oil and gas through north-south
+        interconnection, LNG and nuclear — an objective the four share while differing
+        sharply on its pace.
 
 baltic:
-  name: Baltic Three
+  name: "Baltic Three"
   members: [EE, LV, LT]
   topics: [defence, hybrid, energy]
+  goals:
+    defence:
+      >-
+        A permanent, division-scale allied presence on Baltic territory and spending
+        well above the NATO floor — deterrence by denial, not reinforcement after the
+        fact.
+    hybrid:
+      >-
+        Collective resilience against Russian and Belarusian hybrid pressure — border
+        provocations, GPS jamming, undersea cable and pipeline sabotage, and information
+        operations aimed at Russian-speaking minorities.
+    energy:
+      >-
+        Complete energy separation from Russia: desynchronisation from the BRELL grid,
+        synchronisation with continental Europe, and regional LNG and interconnection.
 
 aukus:
-  name: AUKUS
+  name: "AUKUS"
   members: [AU, UK, US]
   topics: [indo_pacific, submarines, defence]
+  goals:
+    indo_pacific:
+      >-
+        An Indo-Pacific in which no single power can coerce its neighbours — upholding
+        UNCLOS, freedom of navigation, and peaceful settlement of maritime disputes.
+    submarines:
+      >-
+        Delivering Australia a conventionally-armed, nuclear-powered submarine fleet on
+        the Optimal Pathway schedule — Virginia-class transfers from the early 2030s,
+        then SSN-AUKUS — without weakening non-proliferation norms.
+    defence:
+      >-
+        Deep trilateral defence-industrial integration: Pillar II work on cyber, AI,
+        quantum, hypersonics and undersea capability, plus the export-control reform
+        that lets technology actually move between the three.

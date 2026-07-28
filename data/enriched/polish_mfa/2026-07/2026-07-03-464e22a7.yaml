@@ -23,14 +23,15 @@ extracted:
     defence: Poland rhetorically supports military cooperation and stability in the
       region to ensure European security.
   stances:
-    ukraine:
-      score: 2
-      evidence: zaangażowanie rodzimych przedsiębiorstw w powojenną rekonstrukcję
-        kraju
-    defence:
-      score: 1
-      evidence: Minister Radosław Sikorski potwierdził wsparcie dla Ukrainy w jej
-        walce z agresorem
+    weimar:
+      ukraine:
+        score: 2
+        evidence: zaangażowanie rodzimych przedsiębiorstw w powojenną rekonstrukcję
+          kraju
+      defence:
+        score: 1
+        evidence: Minister Radosław Sikorski potwierdził wsparcie dla Ukrainy w jej
+          walce z agresorem
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

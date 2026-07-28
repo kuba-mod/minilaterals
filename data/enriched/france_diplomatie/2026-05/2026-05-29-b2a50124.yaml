@@ -22,12 +22,13 @@ extracted:
     rule_of_law: France supports maintaining peace through negotiation, specifically
       calling for adherence to a ceasefire between Israel and Lebanon.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The two ministers also stressed the need for the ceasefire between
-        Israel and Lebanon that came into force on 17 April to be fully observed,
-        in order to enable a definitive political solution to the conflict through
-        negotiation.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The two ministers also stressed the need for the ceasefire between
+          Israel and Lebanon that came into force on 17 April to be fully observed,
+          in order to enable a definitive political solution to the conflict through
+          negotiation.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

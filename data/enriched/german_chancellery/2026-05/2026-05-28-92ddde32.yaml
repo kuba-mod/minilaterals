@@ -18,10 +18,11 @@ extracted:
       accessibility as a legal right and mandating accessible information for all
       citizens.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Barrierefreiheit ist ein verbrieftes Recht, das sich unter anderem
-        aus Artikel 9 der UN -Behindertenrechtskonvention ergibt.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Barrierefreiheit ist ein verbrieftes Recht, das sich unter anderem
+          aus Artikel 9 der UN -Behindertenrechtskonvention ergibt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -27,11 +27,12 @@ extracted:
       and promoting mutual respect through tangible actions like returning stolen
       cultural artifacts.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: These returns reflect the close cooperation between Germany and Poland
-        on confronting historical injustice and are an expression of Germany’s responsibility
-        towards Poland.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: These returns reflect the close cooperation between Germany and
+          Poland on confronting historical injustice and are an expression of Germany’s
+          responsibility towards Poland.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

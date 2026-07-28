@@ -30,13 +30,19 @@ extracted:
     defence: Germany commits to increasing defense spending to 3.5 percent by 2029
       to strengthen the European pillar of NATO.
   stances:
-    ukraine:
-      score: 1
-      evidence: die weitere Unterstützung der Ukraine gegen den russischen Angriffskrieg
-    defence:
-      score: 2
-      evidence: Wir steigern unsere Verteidigungsausgaben auf 3,5 Prozent. Die Bundesregierung
-        will diese Marke schon 2029 erreichen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die weitere Unterstützung der Ukraine gegen den russischen Angriffskrieg
+      defence:
+        score: 2
+        evidence: Wir steigern unsere Verteidigungsausgaben auf 3,5 Prozent. Die Bundesregierung
+          will diese Marke schon 2029 erreichen.
+    e3:
+      defence:
+        score: 2
+        evidence: Wir steigern unsere Verteidigungsausgaben auf 3,5 Prozent. Die Bundesregierung
+          will diese Marke schon 2029 erreichen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,11 +22,12 @@ extracted:
     ukraine: Germany rhetorically supports a lasting peace and expresses readiness
       to contribute to Ukraine's security even after a ceasefire.
   stances:
-    ukraine:
-      score: 1
-      evidence: Bundeskanzler Friedrich Merz betonte erneut die Bereitschaft aller
-        Beteiligten, auch nach einem Waffenstillstand zur Sicherheit der Ukraine beitragen
-        zu wollen.
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Bundeskanzler Friedrich Merz betonte erneut die Bereitschaft aller
+          Beteiligten, auch nach einem Waffenstillstand zur Sicherheit der Ukraine
+          beitragen zu wollen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

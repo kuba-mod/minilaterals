@@ -25,12 +25,13 @@ extracted:
       in strategic lithium mining to support the production of electric vehicle batteries
       and achieve decarbonization.
   stances:
-    green_transition:
-      score: 2
-      evidence: la mine de lithium d'Imerys à Échassières. À partir de 2030 , ce projet
-        permettra l'équipement de 700 000 batteries de véhicules électriques par an
-        et générera près de 3 200 emplois directs et indirects , en cohérence avec
-        l'impératif de décarbonation
+    weimar:
+      green_transition:
+        score: 2
+        evidence: la mine de lithium d'Imerys à Échassières. À partir de 2030 , ce
+          projet permettra l'équipement de 700 000 batteries de véhicules électriques
+          par an et générera près de 3 200 emplois directs et indirects , en cohérence
+          avec l'impératif de décarbonation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,13 +22,14 @@ extracted:
     green_transition: Poland intends to act as a political duo with Italy to influence
       the EU emissions trading system.
   stances:
-    ukraine:
-      score: 2
-      evidence: Nasze firmy i instytucje będą razem pracowały, aby pomoc dla Ukrainy
-        była rozbudowywana już teraz.
-    green_transition:
-      score: 1
-      evidence: W sprawie ETS będziemy działać razem
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Nasze firmy i instytucje będą razem pracowały, aby pomoc dla Ukrainy
+          była rozbudowywana już teraz.
+      green_transition:
+        score: 1
+        evidence: W sprawie ETS będziemy działać razem
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

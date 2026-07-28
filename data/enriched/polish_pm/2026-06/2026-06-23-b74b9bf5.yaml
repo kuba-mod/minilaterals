@@ -25,16 +25,23 @@ extracted:
     green_transition: Poland recognizes climate policy as a primary area for cooperation
       among regional partners.
   stances:
-    defence:
-      score: 1
-      evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
-        migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
-        między państwami regionu.
-    green_transition:
-      score: 1
-      evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
-        migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
-        między państwami regionu.
+    weimar:
+      defence:
+        score: 1
+        evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
+          migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
+          między państwami regionu.
+      green_transition:
+        score: 1
+        evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
+          migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
+          między państwami regionu.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna,
+          migracja, polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy
+          między państwami regionu.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

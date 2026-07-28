@@ -22,10 +22,11 @@ extracted:
     iran: France is addressing destabilizing behavior by Iran by condemning violations
       of international law and diplomatic protections.
   stances:
-    iran:
-      score: 1
-      evidence: condemned this premeditated, deliberate attack in the strongest possible
-        terms
+    e3:
+      iran:
+        score: 1
+        evidence: condemned this premeditated, deliberate attack in the strongest
+          possible terms
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

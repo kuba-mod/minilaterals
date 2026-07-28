@@ -22,14 +22,15 @@ extracted:
     rule_of_law: Germany emphasizes the necessity of a strong, independent media landscape
       to maintain a democratic public sphere.
   stances:
-    hybrid:
-      score: 1
-      evidence: Angesichts der globalen Wirkmacht von Big-Tech-Akteuren wird uns das
-        nur durch eine dauerhafte Zusammenarbeit gelingen.
-    rule_of_law:
-      score: 1
-      evidence: brauchen wir einen starken, unabhängigen Kultur- und Medienraum in
-        Europa
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Angesichts der globalen Wirkmacht von Big-Tech-Akteuren wird uns
+          das nur durch eine dauerhafte Zusammenarbeit gelingen.
+      rule_of_law:
+        score: 1
+        evidence: brauchen wir einen starken, unabhängigen Kultur- und Medienraum
+          in Europa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

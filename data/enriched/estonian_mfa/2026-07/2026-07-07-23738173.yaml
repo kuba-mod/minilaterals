@@ -25,13 +25,11 @@ extracted:
     defence: Estonia is providing concrete military support through a bilateral drone
       agreement with Ukraine.
   stances:
-    ukraine:
-      score: 2
-      evidence: ettevalmistused 2027. aasta 28. ja 29. jaanuaril Tallinnas toimuvaks
-        Ukraina taastekonverentsiks (Ukraine Recovery Conference) on juba alanud
-    defence:
-      score: 2
-      evidence: Tsahkna kohtus Zelenskõiga ka Eesti ja Ukraina droonikokkuleppe allkirjastamisel
+    baltic:
+      defence:
+        score: 2
+        evidence: Tsahkna kohtus Zelenskõiga ka Eesti ja Ukraina droonikokkuleppe
+          allkirjastamisel
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

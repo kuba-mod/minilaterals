@@ -26,17 +26,18 @@ extracted:
     enlargement: Poland strongly supports and celebrates the progress of Ukraine's
       EU accession process.
   stances:
-    ukraine:
-      score: 2
-      evidence: zaapelował także o szybkie przyjęcie 21. pakietu sankcji gospodarczych
-    hybrid:
-      score: 2
-      evidence: Radosław Sikorski zaprezentował unijnym ministrom kluczowy dokument
-        opracowany przez Polski Instytut Spraw Międzynarodowych (PISM)
-    enlargement:
-      score: 1
-      evidence: Polska z satysfakcją odnotowała otwarcie pierwszego klastra w negocjacjach
-        akcesyjnych z Ukrainą
+    weimar:
+      ukraine:
+        score: 2
+        evidence: zaapelował także o szybkie przyjęcie 21. pakietu sankcji gospodarczych
+      hybrid:
+        score: 2
+        evidence: Radosław Sikorski zaprezentował unijnym ministrom kluczowy dokument
+          opracowany przez Polski Instytut Spraw Międzynarodowych (PISM)
+      enlargement:
+        score: 1
+        evidence: Polska z satysfakcją odnotowała otwarcie pierwszego klastra w negocjacjach
+          akcesyjnych z Ukrainą
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

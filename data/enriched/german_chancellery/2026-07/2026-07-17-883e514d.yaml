@@ -28,14 +28,20 @@ extracted:
     defence: Germany is actively deepening defense cooperation with France, specifically
       by increasing Bundeswehr support for French strategic deterrence.
   stances:
-    ukraine:
-      score: 2
-      evidence: beim NATO-Gipfel in Ankara beschlossen wurde, die Ukraine in diesem
-        und im nächsten Jahr mit jeweils mehr als 70 Milliarden Euro zu unterstützen
-    defence:
-      score: 2
-      evidence: Die strategische Abschreckung Frankreichs wird mehr und mehr von der
-        Bundeswehr unterstützt
+    weimar:
+      ukraine:
+        score: 2
+        evidence: beim NATO-Gipfel in Ankara beschlossen wurde, die Ukraine in diesem
+          und im nächsten Jahr mit jeweils mehr als 70 Milliarden Euro zu unterstützen
+      defence:
+        score: 2
+        evidence: Die strategische Abschreckung Frankreichs wird mehr und mehr von
+          der Bundeswehr unterstützt
+    e3:
+      defence:
+        score: 2
+        evidence: Die strategische Abschreckung Frankreichs wird mehr und mehr von
+          der Bundeswehr unterstützt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

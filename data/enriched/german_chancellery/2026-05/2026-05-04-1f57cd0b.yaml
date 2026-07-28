@@ -21,9 +21,11 @@ extracted:
       ELSA program and the modernization of Taurus missiles to address capability
       gaps and ensure eastern flank deterrence.
   stances:
-    defence:
-      score: 2
-      evidence: Deutschland in der Entwicklung der eigenen Systeme mit Nachdruck umsetzen
+    weimar:
+      defence:
+        score: 2
+        evidence: Deutschland in der Entwicklung der eigenen Systeme mit Nachdruck
+          umsetzen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

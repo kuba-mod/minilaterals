@@ -19,10 +19,11 @@ extracted:
       implementing a new law to strengthen cybersecurity and enable active prevention
       and mitigation of cyberattacks.
   stances:
-    hybrid:
-      score: 2
-      evidence: Die Bundesregierung hat heute den Entwurf eines Gesetzes zur Stärkung
-        der Cybersicherheit beschlossen.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Die Bundesregierung hat heute den Entwurf eines Gesetzes zur Stärkung
+          der Cybersicherheit beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

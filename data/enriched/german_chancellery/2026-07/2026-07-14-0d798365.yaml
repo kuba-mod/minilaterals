@@ -20,10 +20,11 @@ extracted:
     green_transition: Germany is taking concrete action to improve disaster preparedness
       and population warning systems in response to climate-related natural catastrophes.
   stances:
-    green_transition:
-      score: 2
-      evidence: Um sich besser auf künftige Naturkatastrophen vorzubereiten, hat auch
-        der Bund aus dem damaligen Geschehen die richtigen Schlüsse gezogen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Um sich besser auf künftige Naturkatastrophen vorzubereiten, hat
+          auch der Bund aus dem damaligen Geschehen die richtigen Schlüsse gezogen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -22,14 +22,15 @@ extracted:
     green_transition: Germany is actively advancing the green transition by hosting
       a summit to accelerate the construction of offshore wind energy plants.
   stances:
-    defence:
-      score: 2
-      evidence: Sicherheit in der Nordsee. Auch das wird ein Thema unserer Gespräche
-        heute hier in Hamburg sein.
-    green_transition:
-      score: 2
-      evidence: den Bau neuer Windenergieanlagen auf See - sogenannte Offshore-Anlagen
-        - zügig voranzubringen
+    weimar:
+      defence:
+        score: 2
+        evidence: Sicherheit in der Nordsee. Auch das wird ein Thema unserer Gespräche
+          heute hier in Hamburg sein.
+      green_transition:
+        score: 2
+        evidence: den Bau neuer Windenergieanlagen auf See - sogenannte Offshore-Anlagen
+          - zügig voranzubringen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

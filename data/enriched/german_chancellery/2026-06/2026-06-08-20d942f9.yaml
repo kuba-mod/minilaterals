@@ -22,10 +22,11 @@ extracted:
       reducing bureaucracy and increasing transparency and efficiency in government
       services.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Für Bundesminister Karsten Wildberger ist Staatsmodernisierung eine
-        Frage des Vertrauens – das Fundament der Demokratie.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Für Bundesminister Karsten Wildberger ist Staatsmodernisierung eine
+          Frage des Vertrauens – das Fundament der Demokratie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -21,10 +21,16 @@ extracted:
     defence: Germany supports collective security and deterrence through the framework
       of NATO.
   stances:
-    defence:
-      score: 1
-      evidence: Zusammenarbeit im Rahmen der Europäischen Union und der NATO zum Wohle
-        unserer Länder sowie für die Sicherheit in Europa
+    weimar:
+      defence:
+        score: 1
+        evidence: Zusammenarbeit im Rahmen der Europäischen Union und der NATO zum
+          Wohle unserer Länder sowie für die Sicherheit in Europa
+    e3:
+      defence:
+        score: 1
+        evidence: Zusammenarbeit im Rahmen der Europäischen Union und der NATO zum
+          Wohle unserer Länder sowie für die Sicherheit in Europa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

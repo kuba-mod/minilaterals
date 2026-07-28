@@ -18,10 +18,11 @@ extracted:
       CO2 reduction program, a long-term infrastructure investment fund, and new hydrogen
       legislation.
   stances:
-    green_transition:
-      score: 2
-      evidence: Das Bundeskabinett hat ein Klimaschutzprogramm verabschiedet, um bis
-        2030 25 Millionen Tonnen CO2 einzusparen.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Bundeskabinett hat ein Klimaschutzprogramm verabschiedet, um
+          bis 2030 25 Millionen Tonnen CO2 einzusparen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

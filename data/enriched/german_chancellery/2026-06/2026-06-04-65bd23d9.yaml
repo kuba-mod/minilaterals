@@ -19,10 +19,11 @@ extracted:
     rule_of_law: Germany aligns with the goal of democratic resilience by committing
       to strengthen its own steady democracy.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Die Bundesregierung stärkt den sozialen Zusammenhalt und die standhafte
-        Demokratie.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Die Bundesregierung stärkt den sozialen Zusammenhalt und die standhafte
+          Demokratie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

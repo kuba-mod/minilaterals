@@ -21,9 +21,10 @@ extracted:
       force in international relations, referencing historical failures and successes
       in maintaining global order.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Justice without force is powerless. Force without justice is tyranny.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Justice without force is powerless. Force without justice is tyranny.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

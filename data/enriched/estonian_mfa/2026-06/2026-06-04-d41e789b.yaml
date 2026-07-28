@@ -18,10 +18,7 @@ extracted:
     markets during an OECD ministerial meeting on industrial policy.
   positions:
     ukraine: Estonia rhetorically supports continued assistance to Ukraine.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Eesti rõhutas OECD ministrite kohtumisel toetust Ukrainale
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

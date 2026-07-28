@@ -24,13 +24,10 @@ extracted:
     energy: Estonia supports maintaining the oil price cap to reduce Russian state
       budget revenues.
   stances:
-    ukraine:
-      score: 2
-      evidence: Eesti juhtimisel käsitletakse paketis Ukraina-vastases sõjas osalenud
-        Vene võitlejate pääsu piiramist Schengeni alale.
-    energy:
-      score: 2
-      evidence: nafta hinnalae külmutamine praegusel tasemel järgmiseks aastaks
+    baltic:
+      energy:
+        score: 2
+        evidence: nafta hinnalae külmutamine praegusel tasemel järgmiseks aastaks
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

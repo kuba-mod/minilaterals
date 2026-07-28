@@ -21,13 +21,15 @@ extracted:
     rule_of_law: Germany emphasizes that the deployment of digital tools must remain
       within the legal boundaries of a constitutional state.
   stances:
-    hybrid:
-      score: 2
-      evidence: Das Gesetzespaket zum Ausbau der digitalen Ermittlungsbefugnisse dient
-        dazu, die Polizei- und Strafverfolgungsbehörden zu stärken.
-    rule_of_law:
-      score: 1
-      evidence: Nicht alles was technisch möglich ist, ist in einem Rechtsstaat zulässig.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Das Gesetzespaket zum Ausbau der digitalen Ermittlungsbefugnisse
+          dient dazu, die Polizei- und Strafverfolgungsbehörden zu stärken.
+      rule_of_law:
+        score: 1
+        evidence: Nicht alles was technisch möglich ist, ist in einem Rechtsstaat
+          zulässig.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

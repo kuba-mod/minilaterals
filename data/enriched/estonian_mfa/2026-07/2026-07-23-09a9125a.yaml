@@ -21,11 +21,7 @@ extracted:
   positions:
     ukraine: Estonia actively supports Ukraine by advocating for a forceful international
       response to Russian aggression and seeking ways to increase pressure on Russia.
-  stances:
-    ukraine:
-      score: 2
-      evidence: rahvusvaheline kogukond peab Venemaa rünnakutele Mustal merel jõuliselt
-        reageerima
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

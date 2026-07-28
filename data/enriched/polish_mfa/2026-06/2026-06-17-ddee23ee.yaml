@@ -25,14 +25,15 @@ extracted:
     rule_of_law: Poland emphasizes the necessity of judicial and administrative reforms
       as a prerequisite for EU membership.
   stances:
-    enlargement:
-      score: 2
-      evidence: Oferujemy konkretne programy, które pomogą wdrażać europejskie standardy
-        lokalnym instytucjom.
-    rule_of_law:
-      score: 1
-      evidence: kluczowe będzie teraz skupienie się na efektywnym wdrażaniu reform,
-        w tym administracji samorządowej i sądownictwa.
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Oferujemy konkretne programy, które pomogą wdrażać europejskie standardy
+          lokalnym instytucjom.
+      rule_of_law:
+        score: 1
+        evidence: kluczowe będzie teraz skupienie się na efektywnym wdrażaniu reform,
+          w tym administracji samorządowej i sądownictwa.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

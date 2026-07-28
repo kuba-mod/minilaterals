@@ -25,14 +25,20 @@ extracted:
     green_transition: Germany is advancing the green transition by accelerating the
       electrification of railway lines and promoting sustainable transport infrastructure.
   stances:
-    defence:
-      score: 2
-      evidence: Das gilt auch für den Bau neuer Straßen, die im Bundesverkehrswegeplan
-        im weiteren Bedarf liegen – soweit sie von militärischer Relevanz sind.
-    green_transition:
-      score: 2
-      evidence: Zudem ist geplant, bei der Elektrifizierung von Bahnstrecken künftig
-        schneller voranzukommen.
+    weimar:
+      defence:
+        score: 2
+        evidence: Das gilt auch für den Bau neuer Straßen, die im Bundesverkehrswegeplan
+          im weiteren Bedarf liegen – soweit sie von militärischer Relevanz sind.
+      green_transition:
+        score: 2
+        evidence: Zudem ist geplant, bei der Elektrifizierung von Bahnstrecken künftig
+          schneller voranzukommen.
+    e3:
+      defence:
+        score: 2
+        evidence: Das gilt auch für den Bau neuer Straßen, die im Bundesverkehrswegeplan
+          im weiteren Bedarf liegen – soweit sie von militärischer Relevanz sind.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

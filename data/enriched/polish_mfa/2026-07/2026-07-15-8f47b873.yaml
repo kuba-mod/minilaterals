@@ -21,10 +21,11 @@ extracted:
       morality as fundamental components of political leadership and international
       relations.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Chcemy przywódców, którzy mają własne wyobrażenie wolności, godności,
-        odpowiedzialności, sprawiedliwości i patriotyzmu.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Chcemy przywódców, którzy mają własne wyobrażenie wolności, godności,
+          odpowiedzialności, sprawiedliwości i patriotyzmu.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

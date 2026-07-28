@@ -28,19 +28,30 @@ extracted:
     rule_of_law: Poland emphasizes the need for cooperation to improve overall security
       and democratic resilience in Europe.
   stances:
-    defence:
-      score: 1
-      evidence: Our relations are crucial for improving the security in the region
-        and in Europe as a whole, especially in the context of protecting the EU’s
-        and NATO’s Eastern flank.
-    enlargement:
-      score: 1
-      evidence: interlocutors backed staying the course of Ukrainian integration with
-        the European Union
-    rule_of_law:
-      score: 1
-      evidence: Our relations are crucial for improving the security in the region
-        and in Europe as a whole
+    weimar:
+      defence:
+        score: 1
+        evidence: Our relations are crucial for improving the security in the region
+          and in Europe as a whole, especially in the context of protecting the EU’s
+          and NATO’s Eastern flank.
+      enlargement:
+        score: 1
+        evidence: interlocutors backed staying the course of Ukrainian integration
+          with the European Union
+      rule_of_law:
+        score: 1
+        evidence: Our relations are crucial for improving the security in the region
+          and in Europe as a whole
+    visegrad:
+      defence:
+        score: 1
+        evidence: Our relations are crucial for improving the security in the region
+          and in Europe as a whole, especially in the context of protecting the EU’s
+          and NATO’s Eastern flank.
+      enlargement:
+        score: 1
+        evidence: interlocutors backed staying the course of Ukrainian integration
+          with the European Union
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

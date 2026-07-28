@@ -27,13 +27,19 @@ extracted:
     enlargement: Poland supports Ukraine's integration into a united Europe based
       on historical understanding and reconciliation.
   stances:
-    ukraine:
-      score: 2
-      evidence: W Gdańsku rozpoczęła się dwudniowa Konferencja na rzecz Odbudowy Ukrainy
-        (Ukraine Recovery Conference – URC) współorganizowana przez Polskę oraz Ukrainę.
-    enlargement:
-      score: 1
-      evidence: Ukraina słusznie chce być częścią zjednoczonej Europy.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: W Gdańsku rozpoczęła się dwudniowa Konferencja na rzecz Odbudowy
+          Ukrainy (Ukraine Recovery Conference – URC) współorganizowana przez Polskę
+          oraz Ukrainę.
+      enlargement:
+        score: 1
+        evidence: Ukraina słusznie chce być częścią zjednoczonej Europy.
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Ukraina słusznie chce być częścią zjednoczonej Europy.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

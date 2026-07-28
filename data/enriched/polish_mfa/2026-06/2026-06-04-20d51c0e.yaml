@@ -29,22 +29,24 @@ extracted:
     rule_of_law: Poland emphasized the importance of protecting international law
       against revisionist actions and the policy of force.
   stances:
-    ukraine:
-      score: 1
-      evidence: wymienili także poglądy na temat najważniejszych kwestii regionalnych
-        i globalnych, w tym wojny w Ukrainie
-    hybrid:
-      score: 1
-      evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
-        jak [...] cyberbezpieczeństwo
-    green_transition:
-      score: 1
-      evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
-        jak „zielone” technologie
-    rule_of_law:
-      score: 1
-      evidence: podkreślili znaczenie współpracy na rzecz ochrony zasad prawa międzynarodowego
-        wobec współczesnych wyzwań, w tym działań rewizjonistycznych i polityki siły
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wymienili także poglądy na temat najważniejszych kwestii regionalnych
+          i globalnych, w tym wojny w Ukrainie
+      hybrid:
+        score: 1
+        evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
+          jak [...] cyberbezpieczeństwo
+      green_transition:
+        score: 1
+        evidence: możliwość rozszerzenia współpracy dwustronnej o nowe obszary, takie
+          jak „zielone” technologie
+      rule_of_law:
+        score: 1
+        evidence: podkreślili znaczenie współpracy na rzecz ochrony zasad prawa międzynarodowego
+          wobec współczesnych wyzwań, w tym działań rewizjonistycznych i polityki
+          siły
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

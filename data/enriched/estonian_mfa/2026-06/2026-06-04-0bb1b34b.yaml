@@ -21,10 +21,11 @@ extracted:
     defence: Estonia is strengthening its national oversight and alignment with international
       export controls for strategic goods, contributing to collective security.
   stances:
-    defence:
-      score: 1
-      evidence: rahvusvahelise ekspordikontrolli arengutest, komisjoni tööst ja riikliku
-        järelevalve tugevdamisest
+    baltic:
+      defence:
+        score: 1
+        evidence: rahvusvahelise ekspordikontrolli arengutest, komisjoni tööst ja
+          riikliku järelevalve tugevdamisest
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

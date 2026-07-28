@@ -22,11 +22,12 @@ extracted:
     rule_of_law: The joint initiative emphasizes that culture and language play a
       crucial role in promoting mutual understanding and defending democratic values.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Germany and France share the conviction that culture and language
-        play a crucial role in promoting mutual understanding, strengthening democratic
-        values and defending freedom in the service of peace.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Germany and France share the conviction that culture and language
+          play a crucial role in promoting mutual understanding, strengthening democratic
+          values and defending freedom in the service of peace.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

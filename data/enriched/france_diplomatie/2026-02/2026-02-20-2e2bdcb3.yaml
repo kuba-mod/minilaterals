@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France signals joint commitment with Andorra to upholding international
       law and effective multilateralism.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: they signalled their joint commitment to compliance with international
-        law, effective multilateralism and Francophonie.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: they signalled their joint commitment to compliance with international
+          law, effective multilateralism and Francophonie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

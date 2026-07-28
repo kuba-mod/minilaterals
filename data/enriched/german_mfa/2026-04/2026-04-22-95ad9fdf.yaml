@@ -29,19 +29,20 @@ extracted:
     rule_of_law: Germany supports democratic resilience and the rule of law by condemning
       Russia's war crimes and emphasizing Ukraine's capacity for innovation.
   stances:
-    ukraine:
-      score: 2
-      evidence: the solidarity and full support of Germany and the EU , which we intend
-        to maintain unwaveringly and with firm resolve.
-    hybrid:
-      score: 1
-      evidence: Russia’s aggressive, imperial revisionism has an impact beyond Ukraine
-        and also poses a direct threat to us in Germany and in the EU .
-    rule_of_law:
-      score: 1
-      evidence: it was once again very clear that amid all the horrors that Putin’s
-        Russia is inflicting on Ukraine, the Ukrainian people continue to demonstrate
-        unbelievable resilience
+    weimar:
+      ukraine:
+        score: 2
+        evidence: the solidarity and full support of Germany and the EU , which we
+          intend to maintain unwaveringly and with firm resolve.
+      hybrid:
+        score: 1
+        evidence: Russia’s aggressive, imperial revisionism has an impact beyond Ukraine
+          and also poses a direct threat to us in Germany and in the EU .
+      rule_of_law:
+        score: 1
+        evidence: it was once again very clear that amid all the horrors that Putin’s
+          Russia is inflicting on Ukraine, the Ukrainian people continue to demonstrate
+          unbelievable resilience
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

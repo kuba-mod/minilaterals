@@ -21,10 +21,11 @@ extracted:
     rule_of_law: France emphasizes the importance of the republican order, public
       trust, and state protection as pillars of national stability.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: l’ordre républicain exige aussi de retisser la confiance, de garantir
-        l’égalité et de faire sentir partout la présence protectrice de l’État
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: l’ordre républicain exige aussi de retisser la confiance, de garantir
+          l’égalité et de faire sentir partout la présence protectrice de l’État
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

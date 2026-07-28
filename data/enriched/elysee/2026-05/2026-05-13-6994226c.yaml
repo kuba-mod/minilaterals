@@ -24,12 +24,13 @@ extracted:
     rule_of_law: France emphasizes the primacy of international law, the UN Charter,
       and the prevention of mass atrocities as the foundation for peace.
   stances:
-    defence:
-      score: 1
-      evidence: Ils soutiennent le renforcement des capacités des armées africaines
-    rule_of_law:
-      score: 1
-      evidence: fondé sur le droit international et la Charte des Nations Unies
+    weimar:
+      defence:
+        score: 1
+        evidence: Ils soutiennent le renforcement des capacités des armées africaines
+      rule_of_law:
+        score: 1
+        evidence: fondé sur le droit international et la Charte des Nations Unies
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -31,12 +31,17 @@ extracted:
     defence: Germany is actively increasing defense expenditures and pursuing collaborative
       military projects to strengthen European and transatlantic security.
   stances:
-    ukraine:
-      score: 2
-      evidence: eine stärkere Unterstützung der Ukraine
-    defence:
-      score: 2
-      evidence: Das betreffe vor allem die Erhöhung der Verteidigungsausgaben.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: eine stärkere Unterstützung der Ukraine
+      defence:
+        score: 2
+        evidence: Das betreffe vor allem die Erhöhung der Verteidigungsausgaben.
+    e3:
+      defence:
+        score: 2
+        evidence: Das betreffe vor allem die Erhöhung der Verteidigungsausgaben.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

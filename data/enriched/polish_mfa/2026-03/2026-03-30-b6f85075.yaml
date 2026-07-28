@@ -32,25 +32,37 @@ extracted:
     rule_of_law: Poland emphasizes the importance of active approaches to enhance
       security in response to aggressive acts.
   stances:
-    defence:
-      score: 1
-      evidence: In this context, projects carried out by the Baltic countries and
-        NATO’s whole eastern flank play a vital role that is complementary to building
-        national resilience and allied deterrence capabilities.
-    hybrid:
-      score: 1
-      evidence: In the face of growing instability in other parts of the world, mobilising
-        national and European resources is necessary to increase Europe’s defence
-        potential
-    enlargement:
-      score: 0
-      evidence: The officials also pointed out that bilateral cooperation may contribute
-        to the strengthening of European defence potential of Poland and Finland and
-        holds promising prospects for the future.
-    rule_of_law:
-      score: 1
-      evidence: They acknowledged that amid Russia’s aggressive acts only active approach
-        can enhance our security.
+    weimar:
+      defence:
+        score: 1
+        evidence: In this context, projects carried out by the Baltic countries and
+          NATO’s whole eastern flank play a vital role that is complementary to building
+          national resilience and allied deterrence capabilities.
+      hybrid:
+        score: 1
+        evidence: In the face of growing instability in other parts of the world,
+          mobilising national and European resources is necessary to increase Europe’s
+          defence potential
+      enlargement:
+        score: 0
+        evidence: The officials also pointed out that bilateral cooperation may contribute
+          to the strengthening of European defence potential of Poland and Finland
+          and holds promising prospects for the future.
+      rule_of_law:
+        score: 1
+        evidence: They acknowledged that amid Russia’s aggressive acts only active
+          approach can enhance our security.
+    visegrad:
+      defence:
+        score: 1
+        evidence: In this context, projects carried out by the Baltic countries and
+          NATO’s whole eastern flank play a vital role that is complementary to building
+          national resilience and allied deterrence capabilities.
+      enlargement:
+        score: 0
+        evidence: The officials also pointed out that bilateral cooperation may contribute
+          to the strengthening of European defence potential of Poland and Finland
+          and holds promising prospects for the future.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

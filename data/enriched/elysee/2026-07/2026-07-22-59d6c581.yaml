@@ -21,11 +21,7 @@ extracted:
   positions:
     indo_pacific: France is actively strengthening strategic ties and alliances with
       a key Indo-Pacific partner, South Korea, through a high-level joint summit.
-  stances:
-    indo_pacific:
-      score: 2
-      evidence: Le Président de la République française, Emmanuel Macron, et le Président
-        de la République de Corée, Lee Jae-myung, coprésideront le Sommet Lumière
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

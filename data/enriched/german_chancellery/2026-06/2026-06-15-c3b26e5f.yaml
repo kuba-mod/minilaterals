@@ -23,9 +23,10 @@ extracted:
     ukraine: Germany notes a new positive dynamic in the war in Ukraine and intends
       to discuss it with the US President.
   stances:
-    ukraine:
-      score: 1
-      evidence: Auch beim Krieg in der Ukraine zeige sich eine neue positive Dynamik
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Auch beim Krieg in der Ukraine zeige sich eine neue positive Dynamik
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -23,10 +23,11 @@ extracted:
       and efficiency, aligning with the general goal of reinforcing the rule of law
       and legal infrastructure.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Eine Neuregelung zur Veröffentlichung von Schiedssprüchen zielt auf
-        mehr Transparenz schiedsrechtlicher Rechtsprechung in Deutschland.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Eine Neuregelung zur Veröffentlichung von Schiedssprüchen zielt
+          auf mehr Transparenz schiedsrechtlicher Rechtsprechung in Deutschland.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

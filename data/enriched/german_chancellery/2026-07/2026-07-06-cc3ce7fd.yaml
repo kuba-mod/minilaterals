@@ -22,10 +22,11 @@ extracted:
     green_transition: Germany is actively advancing the green transition by providing
       tax exemptions and subsidies to accelerate the adoption of electric vehicles.
   stances:
-    green_transition:
-      score: 2
-      evidence: Reine Elektrofahrzeuge sollen auch über 2025 hinaus von der Kfz -Steuer
-        ausgenommen werden.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Reine Elektrofahrzeuge sollen auch über 2025 hinaus von der Kfz
+          -Steuer ausgenommen werden.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

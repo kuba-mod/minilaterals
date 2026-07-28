@@ -29,17 +29,18 @@ extracted:
     green_transition: Poland promotes its energy stability achieved through diversification
       and the promotion of nuclear energy.
   stances:
-    ukraine:
-      score: 1
-      evidence: rozmawiali również o wsparciu walczącej Ukrainy
-    defence:
-      score: 1
-      evidence: Podkreślili szczególną rolę Polski w europejskich działaniach na rzecz
-        bezpieczeństwa w regionie
-    green_transition:
-      score: 1
-      evidence: roli MAE w zakresie bezpieczeństwa dostaw surowców krytycznych i promocji
-        energii jądrowej
+    weimar:
+      ukraine:
+        score: 1
+        evidence: rozmawiali również o wsparciu walczącej Ukrainy
+      defence:
+        score: 1
+        evidence: Podkreślili szczególną rolę Polski w europejskich działaniach na
+          rzecz bezpieczeństwa w regionie
+      green_transition:
+        score: 1
+        evidence: roli MAE w zakresie bezpieczeństwa dostaw surowców krytycznych i
+          promocji energii jądrowej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

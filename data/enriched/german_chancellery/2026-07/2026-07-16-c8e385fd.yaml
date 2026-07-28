@@ -26,15 +26,16 @@ extracted:
     rule_of_law: Germany supports the improvement of legal certainty and transparent
       processes to strengthen bilateral investment relations.
   stances:
-    green_transition:
-      score: 2
-      evidence: Man wolle auch den Export von Wasserstoff aus Algerien weiter voranbringen
-        – gemeinsam mit Italien mit der Fortentwicklung eines südlichen Wasserstoffkorridors.
-    rule_of_law:
-      score: 1
-      evidence: Beide Länder wollen unter anderem das Investitionsklima und die Rechtssicherheit
-        weiter verbessern, um die bilateralen Handels- und Investitionsbeziehungen
-        weiter zu stärken.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Man wolle auch den Export von Wasserstoff aus Algerien weiter voranbringen
+          – gemeinsam mit Italien mit der Fortentwicklung eines südlichen Wasserstoffkorridors.
+      rule_of_law:
+        score: 1
+        evidence: Beide Länder wollen unter anderem das Investitionsklima und die
+          Rechtssicherheit weiter verbessern, um die bilateralen Handels- und Investitionsbeziehungen
+          weiter zu stärken.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

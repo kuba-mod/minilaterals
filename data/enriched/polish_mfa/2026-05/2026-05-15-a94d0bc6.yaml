@@ -27,20 +27,22 @@ extracted:
     rule_of_law: Poland rhetorically supports the redefinition and strengthening of
       democracy through the New Democratic Pact.
   stances:
-    ukraine:
-      score: 2
-      evidence: Polska, wraz z 36 innymi państwami oraz Unią Europejską, przystąpiła
-        do rezolucji Komitetu Ministrów dotyczącej utworzenia Poszerzonego Porozumienia
-        Częściowego w sprawie Komitetu Zarządzającego Specjalnego Trybunału ds. Zbrodni
-        Agresji przeciwko Ukrainie.
-    hybrid:
-      score: 1
-      evidence: omawiano walkę z dezinformacją i zagranicznymi manipulacjami informacją
-        (FIMI)
-    rule_of_law:
-      score: 1
-      evidence: 'wiceminister wyraził poparcie Polski dla wizji zawartej w Nowym Pakcie
-        Demokratycznym: wspólnych działaniach na rzecz redefinicji i wzmocnienia demokracji.'
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polska, wraz z 36 innymi państwami oraz Unią Europejską, przystąpiła
+          do rezolucji Komitetu Ministrów dotyczącej utworzenia Poszerzonego Porozumienia
+          Częściowego w sprawie Komitetu Zarządzającego Specjalnego Trybunału ds.
+          Zbrodni Agresji przeciwko Ukrainie.
+      hybrid:
+        score: 1
+        evidence: omawiano walkę z dezinformacją i zagranicznymi manipulacjami informacją
+          (FIMI)
+      rule_of_law:
+        score: 1
+        evidence: 'wiceminister wyraził poparcie Polski dla wizji zawartej w Nowym
+          Pakcie Demokratycznym: wspólnych działaniach na rzecz redefinicji i wzmocnienia
+          demokracji.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

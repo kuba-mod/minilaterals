@@ -34,20 +34,21 @@ extracted:
     rule_of_law: The ministers discussed general cooperation areas including educational,
       linguistic, and cultural matters, which contribute to democratic resilience.
   stances:
-    ukraine:
-      score: 1
-      evidence: discussed France and Italy’s continued support for Ukraine
-    enlargement:
-      score: 1
-      evidence: reiterated their joint commitment to the stability of the Western
-        Balkans and their future in Europe
-    green_transition:
-      score: 0
-      evidence: discuss environmental and health issues, as well as concerted water
-        management
-    rule_of_law:
-      score: 0
-      evidence: educational, linguistic and cultural cooperation
+    weimar:
+      ukraine:
+        score: 1
+        evidence: discussed France and Italy’s continued support for Ukraine
+      enlargement:
+        score: 1
+        evidence: reiterated their joint commitment to the stability of the Western
+          Balkans and their future in Europe
+      green_transition:
+        score: 0
+        evidence: discuss environmental and health issues, as well as concerted water
+          management
+      rule_of_law:
+        score: 0
+        evidence: educational, linguistic and cultural cooperation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

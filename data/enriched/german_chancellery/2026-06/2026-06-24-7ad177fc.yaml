@@ -28,11 +28,18 @@ extracted:
     defence: Germany supports the development of a stronger European presence within
       NATO and advocates for close cooperation in defence industrial efforts.
   stances:
-    defence:
-      score: 1
-      evidence: their strong determination to build a stronger Europe in a stronger
-        NATO and to pursue their respective defence industrial endeavors in the closest
-        possible cooperation
+    weimar:
+      defence:
+        score: 1
+        evidence: their strong determination to build a stronger Europe in a stronger
+          NATO and to pursue their respective defence industrial endeavors in the
+          closest possible cooperation
+    e3:
+      defence:
+        score: 1
+        evidence: their strong determination to build a stronger Europe in a stronger
+          NATO and to pursue their respective defence industrial endeavors in the
+          closest possible cooperation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -23,13 +23,7 @@ extracted:
       necessary for the global transition to clean energy.
     rule_of_law: The UK emphasizes the importance of transparency, accountability,
       and legal frameworks in the governance of natural resources to prevent instability.
-  stances:
-    green_transition:
-      score: 1
-      evidence: strengthen critical minerals governance
-    rule_of_law:
-      score: 1
-      evidence: strengthen critical minerals governance
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

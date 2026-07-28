@@ -28,16 +28,17 @@ extracted:
     rule_of_law: Germany identifies the rule of law and anti-corruption measures as
       necessary prerequisites for EU membership.
   stances:
-    ukraine:
-      score: 1
-      evidence: Die EU müsse glaubwürdige Perspektiven bieten
-    enlargement:
-      score: -1
-      evidence: Einen schnellen EU -Beitritt der Ukraine bezeichnete er als unrealistisch.
-    rule_of_law:
-      score: 1
-      evidence: Neben einem stabilen Friedenszustand nannte er weitere Voraussetzungen
-        wie Rechtsstaatlichkeit, Korruptionsbekämpfung
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die EU müsse glaubwürdige Perspektiven bieten
+      enlargement:
+        score: -1
+        evidence: Einen schnellen EU -Beitritt der Ukraine bezeichnete er als unrealistisch.
+      rule_of_law:
+        score: 1
+        evidence: Neben einem stabilen Friedenszustand nannte er weitere Voraussetzungen
+          wie Rechtsstaatlichkeit, Korruptionsbekämpfung
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

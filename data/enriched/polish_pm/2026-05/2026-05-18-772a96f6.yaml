@@ -20,10 +20,11 @@ extracted:
       by investing in high-tech military maintenance capabilities and strengthening
       the transatlantic alliance.
   stances:
-    defence:
-      score: 2
-      evidence: Polska będzie pierwszym państwem w Europie i trzecim na świecie, który
-        posiada autoryzowane centrum serwisowe silników do czołgów Abrams.
+    weimar:
+      defence:
+        score: 2
+        evidence: Polska będzie pierwszym państwem w Europie i trzecim na świecie,
+          który posiada autoryzowane centrum serwisowe silników do czołgów Abrams.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

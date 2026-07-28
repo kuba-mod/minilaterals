@@ -25,14 +25,20 @@ extracted:
     enlargement: Poland supports Ukraine's EU membership provided that it meets the
       same standards and criteria as all other candidate states.
   stances:
-    ukraine:
-      score: 1
-      evidence: w interesie Polski leży skuteczne wspieranie Ukrainy w jej obronie
-        przed rosyjską agresją
-    enlargement:
-      score: -1
-      evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
-        ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
+    weimar:
+      ukraine:
+        score: 1
+        evidence: w interesie Polski leży skuteczne wspieranie Ukrainy w jej obronie
+          przed rosyjską agresją
+      enlargement:
+        score: -1
+        evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
+          ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
+    visegrad:
+      enlargement:
+        score: -1
+        evidence: będzie wspierać Ukrainę w drodze do członkostwa w Unii Europejskiej,
+          ale wyłącznie na zasadach obowiązujących wszystkie państwa kandydujące
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

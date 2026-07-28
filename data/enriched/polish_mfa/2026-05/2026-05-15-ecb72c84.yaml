@@ -29,18 +29,19 @@ extracted:
     rule_of_law: Poland stresses that human rights, democracy, and the rule of law
       are foundational values that must be protected against aggression.
   stances:
-    ukraine:
-      score: 2
-      evidence: Polska strongly supports the establishment of the Special Tribunal
-        for the Crime of Aggression against Ukraine
-    hybrid:
-      score: 1
-      evidence: The session also addressed combating disinformation and foreign information
-        manipulation and interference (FIMI).
-    rule_of_law:
-      score: 1
-      evidence: Human rights, democracy, and the rule of law are being undermined
-        or attacked.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polska strongly supports the establishment of the Special Tribunal
+          for the Crime of Aggression against Ukraine
+      hybrid:
+        score: 1
+        evidence: The session also addressed combating disinformation and foreign
+          information manipulation and interference (FIMI).
+      rule_of_law:
+        score: 1
+        evidence: Human rights, democracy, and the rule of law are being undermined
+          or attacked.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

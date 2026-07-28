@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Germany actively promotes democratic resilience and the rule of law
       by advocating for free and inclusive national elections in Libya.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Deutschland setzt sich dafür ein, dass die demokratische Übergangsphase
-        mit freien, transparenten und inklusiven Parlaments- und Präsidialwahlen erfolgreich
-        vollendet wird.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Deutschland setzt sich dafür ein, dass die demokratische Übergangsphase
+          mit freien, transparenten und inklusiven Parlaments- und Präsidialwahlen
+          erfolgreich vollendet wird.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

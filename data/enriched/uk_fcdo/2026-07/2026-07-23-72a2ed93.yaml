@@ -18,11 +18,7 @@ extracted:
   positions:
     rule_of_law: The UK rhetorically supports the promotion of democratic governance
       and human rights in Kyrgyzstan.
-  stances:
-    rule_of_law:
-      score: 1
-      evidence: The Office’s contributions to border security, democratic governance,
-        human rights, economic resilien…
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

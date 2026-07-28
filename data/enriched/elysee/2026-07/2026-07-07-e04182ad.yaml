@@ -24,9 +24,10 @@ extracted:
     rule_of_law: France is acting to appoint a Defender of Rights, which aligns with
       maintaining the rule of law and democratic resilience.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: nommer M. François-Noël Buffet en qualité de Défenseur des droits
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: nommer M. François-Noël Buffet en qualité de Défenseur des droits
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

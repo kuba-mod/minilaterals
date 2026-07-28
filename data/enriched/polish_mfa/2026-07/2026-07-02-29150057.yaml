@@ -19,10 +19,11 @@ extracted:
     green_transition: Poland identifies the energy transition as a key area for promising
       bilateral economic cooperation and investment.
   stances:
-    green_transition:
-      score: 1
-      evidence: Sektory takie jak górnictwo i przetwórstwo, surowce krytyczne, transformacja
-        energetyczna oraz logistyka oferują obiecujące możliwości
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Sektory takie jak górnictwo i przetwórstwo, surowce krytyczne, transformacja
+          energetyczna oraz logistyka oferują obiecujące możliwości
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

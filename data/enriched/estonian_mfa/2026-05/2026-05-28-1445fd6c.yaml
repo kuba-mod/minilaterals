@@ -19,11 +19,7 @@ extracted:
   positions:
     ukraine: Estonia advocates for the continued implementation of the EU's strategy
       to support Ukraine and pressure Russia.
-  stances:
-    ukraine:
-      score: 1
-      evidence: Euroopa senine kahepunktiline Ukraina toetamisest ja Venemaa survestamisest
-        koosnev rahuplaan on hästi töötanud ning ainuõige on sellega jätkata
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

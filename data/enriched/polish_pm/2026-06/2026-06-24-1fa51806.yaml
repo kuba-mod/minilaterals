@@ -27,15 +27,22 @@ extracted:
     defence: Poland actively advances European security through record-breaking defense
       expenditures and calls for increased NATO capabilities.
   stances:
-    ukraine:
-      score: 2
-      evidence: jutro w Gdańsku rozpocznie się Konferencja Odbudowy Ukrainy z udziałem
-        wielu przywódców, dyplomatów i firm
-    defence:
-      score: 2
-      evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
-        czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
-        7 procent PKB
+    weimar:
+      ukraine:
+        score: 2
+        evidence: jutro w Gdańsku rozpocznie się Konferencja Odbudowy Ukrainy z udziałem
+          wielu przywódców, dyplomatów i firm
+      defence:
+        score: 2
+        evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
+          czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
+          7 procent PKB
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska już teraz przyczynia się do umacniania bezpieczeństwa europejskiego,
+          czego dowodem są rekordowe wydatki na obronność – obecnie na poziomie prawie
+          7 procent PKB
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

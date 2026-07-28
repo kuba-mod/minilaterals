@@ -19,11 +19,12 @@ extracted:
     rule_of_law: France affirms its commitment to international law and democratic
       principles regarding the Israeli-Palestinian conflict.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France will remain committed to a just and lasting peace in the region
-        in accordance with Security Council resolutions and the principles set forth
-        in the New York Declaration.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France will remain committed to a just and lasting peace in the
+          region in accordance with Security Council resolutions and the principles
+          set forth in the New York Declaration.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

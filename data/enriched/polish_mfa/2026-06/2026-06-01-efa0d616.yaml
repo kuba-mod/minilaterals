@@ -20,12 +20,14 @@ extracted:
     rule_of_law: Poland stressed the need for joint international action to protect
       fundamental principles like sovereignty and territorial integrity.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: Deputy Minister Bartoszewski stressed that the international community
-        has been experiencing changes which call for joint action on fundamental matters
-        such as the protection of the international law, insisting on the sovereignty
-        and territorial integrity of states, and the inviolability of their borders.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Deputy Minister Bartoszewski stressed that the international community
+          has been experiencing changes which call for joint action on fundamental
+          matters such as the protection of the international law, insisting on the
+          sovereignty and territorial integrity of states, and the inviolability of
+          their borders.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

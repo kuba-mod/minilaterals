@@ -55,18 +55,45 @@ from pipeline.sources.base import KNOWN_ACTOR_SOURCES
 ROOT = Path(__file__).parent.parent
 EVENTS_DIR = ROOT / "data" / "events"
 ENRICHED_DIR = ROOT / "data" / "enriched"
-GOALS_PATH = ROOT / "data" / "goals.yaml"
 GROUPINGS_PATH = ROOT / "data" / "groupings.yaml"
 
 
-def _load_goals() -> dict[str, str]:
+def _load_config() -> dict:
     try:
-        return yaml.safe_load(GOALS_PATH.read_text(encoding="utf-8")) or {}
+        return yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
     except Exception:
         return {}
 
 
+def _load_goals() -> dict[str, dict[str, str]]:
+    """Reference goal sentences, keyed by grouping then topic.
+
+    `defence` means something different to AUKUS than to the Weimar Triangle, so
+    there is no single sentence per topic — which is why stances are keyed by
+    (grouping, topic) rather than topic alone.
+    """
+    return {k: g["goals"] for k, g in _load_config().items() if isinstance(g, dict) and g.get("goals")}
+
+
 GOALS = _load_goals()
+
+
+class NoAliasDumper(yaml.SafeDumper):
+    """Never emit YAML anchors/aliases.
+
+    Two groupings can hold identical stance ratings for a topic — the same score
+    and the same evidence quote — without those being the *same* rating. Left to
+    itself PyYAML would collapse them into `&id001` / `*id001`, so re-rating one
+    grouping would silently rewrite the other's. They are independent
+    judgements against different goals, so they are written out independently.
+    """
+
+    def ignore_aliases(self, data):
+        return True
+
+
+def dump_yaml(data) -> str:
+    return yaml.dump(data, Dumper=NoAliasDumper, allow_unicode=True, sort_keys=False)
 
 
 class Grouping:
@@ -81,8 +108,20 @@ class Grouping:
 
 
 def _load_groupings() -> dict[str, Grouping]:
-    raw = yaml.safe_load(GROUPINGS_PATH.read_text(encoding="utf-8")) or {}
-    return {key: Grouping(key, g.get("name", key), g.get("members", []), g.get("topics", [])) for key, g in raw.items()}
+    """The groupings the pipeline classifies against.
+
+    The file also carries hub-page placeholders that nothing ingests yet;
+    `topics` is what marks an entry as wired into the pipeline.
+    Loading those too would widen the actor vocabulary and issue-area enum
+    offered to the LLM, and emit a relevance flag per placeholder — see the
+    file header.
+    """
+    raw = _load_config()
+    return {
+        key: Grouping(key, g.get("name", key), g.get("members", []), g["topics"])
+        for key, g in raw.items()
+        if isinstance(g, dict) and g.get("topics")
+    }
 
 
 GROUPINGS = _load_groupings()
@@ -108,12 +147,14 @@ FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for 
 #   "4"  434962fe  native-language inputs (de/fr/pl); output English, evidence verbatim
 #   "5"  c6353f81  multi-grouping: 12-country actors, topic union, explicit_formats
 #   "6"  f5697563  explicit_formats legend + explicit-naming-vs-mere-involvement clarification
+#   "7"  83172f45  per-grouping goals: extraction drops stances, one stance call
+#                   per relevant grouping against that grouping's own goals
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "6"
-PROMPT_SURFACE_SHA = "f5697563"
+PROMPT_VERSION = "7"
+PROMPT_SURFACE_SHA = "83172f45"
 
 
 def prompt_surface_sha() -> str:
@@ -140,7 +181,7 @@ SYSTEM_PROMPT = (
 )
 
 STANCE_RUBRIC = """\
-Stance scale (integer, rating the country's stance against the shared goal for that topic):
+Stance scale (integer, rating the country's stance against that grouping's goal for the topic):
  +2 = actively advances the goal: concrete commitments, resources, initiatives
       (e.g. "provides EUR 5bn in military aid", "will host a summit on X")
  +1 = supports the goal rhetorically, no new commitments
@@ -166,13 +207,8 @@ Source country: {source}
 Title: {title}
 Text: {text}
 
-Shared minilateral goals — frame topic entries against these:
-{goals_block}
-
 Minilateral format keys (for "explicit_formats" below):
 {format_hints_block}
-
-{stance_rubric}
 
 Return JSON with exactly these fields:
 {{
@@ -185,16 +221,17 @@ Return JSON with exactly these fields:
   "position": "one sentence: overall position/action by {source}",
   "positions_by_topic": {{
     "<topic>": {{
-      "position": "one sentence: how {source}'s stance advances, aligns with, or departs from the shared goal for this topic",
-      "stance": <integer -2 to +2 from the stance scale>,
-      "evidence": "shortest verbatim quote from the text that justifies the stance rating"
+      "position": "one sentence: what position {source} takes, or what action it announces, on this topic"
     }}
   }}
 }}
 Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned."""
 
 STANCE_BACKFILL_PROMPT = """\
-Rate this government press release against shared minilateral policy goals.
+Rate this government press release against the {grouping}'s policy goals.
+
+These goals are specific to the {grouping}. The same topic can mean something
+different to another grouping, so rate ONLY against the goals given below.
 
 The press release may be written in a European language or English. The
 "evidence" fields must stay verbatim quotes in the original language of the text.
@@ -203,7 +240,7 @@ Source country: {source}
 Title: {title}
 Text: {text}
 
-Shared goals:
+{grouping} goals:
 {goals_block}
 
 {stance_rubric}
@@ -505,12 +542,12 @@ def _clean_stance(value) -> int | None:
     return s
 
 
-def _clean_evidence(evidence, topic: str) -> str:
+def _clean_evidence(evidence, topic: str, grouping: str) -> str:
     """Drop evidence the model copied from the goal statement instead of the text."""
     ev = (evidence or "").strip()
     if not ev:
         return ""
-    goal = GOALS.get(topic, "")
+    goal = GOALS.get(grouping, {}).get(topic, "")
     if ev and (ev in goal or goal.strip() in ev):
         return ""
     return ev
@@ -543,14 +580,14 @@ def _extract(provider, raw_path: Path) -> bool:
     source_name = data.get("source_name", "unknown")
     source_label = SOURCE_LABELS.get(source_name, source_name)
 
-    goals_block = "\n".join(f"- {topic}: {GOALS[topic].strip()}" for topic in ALL_TOPICS if topic in GOALS)
+    # No goals or stance rubric here: extraction no longer rates stances, since
+    # the goal a rating is measured against depends on the grouping (see
+    # `_rate_stances`), which isn't known until relevance is computed.
     prompt = EXTRACTION_PROMPT.format(
         source=source_label,
         title=data.get("title", "")[:300],
         text=(data.get("text", "") or "")[:3000],
-        goals_block=goals_block,
         format_hints_block=FORMAT_HINTS_BLOCK,
-        stance_rubric=STANCE_RUBRIC,
         actor_codes=", ".join(_ACTOR_ORDER),
         topic_list=", ".join(ALL_TOPICS),
     )
@@ -572,9 +609,10 @@ def _extract(provider, raw_path: Path) -> bool:
                     return False
         assert extracted is not None
 
-        # Build per-topic positions + stances: topic-specific text and a -2..+2
-        # stance rating with evidence quote. A topic listed in "topics" without a
-        # usable position entry is treated as an extraction failure (see below).
+        # Build per-topic positions. A topic listed in "topics" without a usable
+        # position entry is treated as an extraction failure (see below). Stances
+        # are NOT produced here — they need a grouping's own goals, and which
+        # groupings apply isn't known until relevance is computed below.
         positions_by_topic = extracted.get("positions_by_topic") or {}
         extracted["positions"] = {}
         extracted["stances"] = {}
@@ -585,12 +623,6 @@ def _extract(provider, raw_path: Path) -> bool:
             if not isinstance(entry, dict):
                 raise ValueError(f"missing positions_by_topic entry for topic {topic!r}")
             pos_text = (entry.get("position") or "").strip()
-            stance = _clean_stance(entry.get("stance"))
-            if stance is not None:
-                extracted["stances"][topic] = {
-                    "score": stance,
-                    "evidence": _clean_evidence(entry.get("evidence"), topic),
-                }
             if not pos_text:
                 raise ValueError(f"empty position for topic {topic!r}")
             extracted["positions"][topic] = pos_text
@@ -621,13 +653,22 @@ def _extract(provider, raw_path: Path) -> bool:
                 "environment": _environment(),
             },
         }
+        # One stance call per relevant grouping, each against that grouping's own
+        # goals. Usually one; ~a quarter of events are relevant to two.
+        for key in _relevant_groupings(relevance):
+            topics = _stance_topics(key, llm_topics)
+            if topics:
+                rated = _rate_stances(provider, source_label, data.get("title", ""), data.get("text", ""), key, topics)
+                if rated:
+                    extracted["stances"][key] = rated
+
         EnrichedEventSchema.model_validate(enriched_data)
 
         rel = raw_path.relative_to(EVENTS_DIR)
         enriched_path = ENRICHED_DIR / rel
         enriched_path.parent.mkdir(parents=True, exist_ok=True)
         enriched_path.write_text(
-            yaml.dump(enriched_data, allow_unicode=True, sort_keys=False),
+            dump_yaml(enriched_data),
             encoding="utf-8",
         )
         matched = [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
@@ -649,11 +690,13 @@ def _find_stance_pending(limit: int | None = None) -> list[Path]:
         except Exception:
             continue
         extracted = (d or {}).get("extracted") or {}
-        topics = [t for t in (extracted.get("topics") or []) if t in GOALS]
-        if not topics:
-            continue
+        topics = [t for t in (extracted.get("topics") or []) if t != "other"]
         stances = extracted.get("stances") or {}
-        if all(t in stances for t in topics):
+        wanted = {key: _stance_topics(key, topics) for key in _relevant_groupings(d or {})}
+        wanted = {k: v for k, v in wanted.items() if v}
+        if not wanted:
+            continue
+        if all(all(t in (stances.get(k) or {}) for t in ts) for k, ts in wanted.items()):
             continue
         pending.append(f)
         if limit and len(pending) >= limit:
@@ -661,11 +704,62 @@ def _find_stance_pending(limit: int | None = None) -> list[Path]:
     return pending
 
 
+def _rate_stances(provider, source_label: str, title: str, text: str, grouping: str, topics: list[str]) -> dict:
+    """Rate one grouping's topics against that grouping's own goals.
+
+    Returns {topic: {score, evidence}}. Separate from extraction because the goal
+    a stance is measured against only becomes unambiguous once relevance is
+    known: an event relevant to both weimar and e3 gets one call per grouping,
+    since "defence" asks a different question of each.
+    """
+    goals_block = "\n".join(f"- {t}: {GOALS[grouping][t].strip()}" for t in topics)
+    prompt = STANCE_BACKFILL_PROMPT.format(
+        source=source_label,
+        title=title[:300],
+        text=(text or "")[:3000],
+        grouping=GROUPINGS[grouping].name,
+        goals_block=goals_block,
+        stance_rubric=STANCE_RUBRIC,
+        topics=", ".join(topics),
+    )
+    ratings = None
+    for attempt in range(2):
+        raw = provider.call(prompt)
+        try:
+            ratings = _parse_json(raw)
+            break
+        except json.JSONDecodeError as exc:
+            if attempt == 0:
+                print(f"  ~ retry stances [{grouping}]: {exc}")
+            else:
+                print(f"  ! JSON error rating [{grouping}]: {exc} — raw: {raw[:120]}")
+                return {}
+    out = {}
+    for topic in topics:
+        entry = ratings.get(topic) if isinstance(ratings, dict) else None
+        if not isinstance(entry, dict):
+            continue
+        score = _clean_stance(entry.get("stance"))
+        if score is None:
+            continue
+        out[topic] = {"score": score, "evidence": _clean_evidence(entry.get("evidence"), topic, grouping)}
+    return out
+
+
+def _stance_topics(grouping: str, topics: list[str]) -> list[str]:
+    """The subset of an event's topics that `grouping` actually tracks."""
+    return [t for t in topics if t in GOALS.get(grouping, {})]
+
+
+def _relevant_groupings(relevance: dict) -> list[str]:
+    return [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
+
+
 def _backfill_stances(provider, enriched_path: Path) -> bool:
     """Add stance ratings to an already-enriched event, reading the raw text."""
     enriched = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
     extracted = enriched.get("extracted") or {}
-    topics = [t for t in (extracted.get("topics") or []) if t in GOALS]
+    topics = [t for t in (extracted.get("topics") or []) if t != "other"]
 
     raw_path = EVENTS_DIR / enriched_path.relative_to(ENRICHED_DIR)
     if not raw_path.exists():
@@ -674,43 +768,15 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_label = SOURCE_LABELS.get(data.get("source_name", ""), "unknown")
 
-    goals_block = "\n".join(f"- {t}: {GOALS[t].strip()}" for t in topics)
-    prompt = STANCE_BACKFILL_PROMPT.format(
-        source=source_label,
-        title=data.get("title", "")[:300],
-        text=(data.get("text", "") or "")[:3000],
-        goals_block=goals_block,
-        stance_rubric=STANCE_RUBRIC,
-        topics=", ".join(topics),
-    )
-
+    stances = extracted.get("stances") or {}
     try:
-        ratings = None
-        for attempt in range(2):
-            raw = provider.call(prompt)
-            try:
-                ratings = _parse_json(raw)
-                break
-            except json.JSONDecodeError as exc:
-                if attempt == 0:
-                    print(f"  ~ retry {enriched_path.name}: {exc}")
-                else:
-                    print(f"  ! JSON error for {enriched_path.name}: {exc} — raw: {raw[:120]}")
-                    return False
-        assert ratings is not None
-
-        stances = extracted.get("stances") or {}
-        for topic in topics:
-            entry = ratings.get(topic)
-            if not isinstance(entry, dict):
+        for key in _relevant_groupings(enriched):
+            wanted = _stance_topics(key, topics)
+            if not wanted or all(t in (stances.get(key) or {}) for t in wanted):
                 continue
-            stance = _clean_stance(entry.get("stance"))
-            if stance is None:
-                continue
-            stances[topic] = {
-                "score": stance,
-                "evidence": _clean_evidence(entry.get("evidence"), topic),
-            }
+            rated = _rate_stances(provider, source_label, data.get("title", ""), data.get("text", ""), key, wanted)
+            if rated:
+                stances[key] = {**(stances.get(key) or {}), **rated}
         if not stances:
             print(f"  ! No usable ratings for {enriched_path.name}")
             return False
@@ -725,10 +791,10 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
         }
         EnrichedEventSchema.model_validate(enriched)
         enriched_path.write_text(
-            yaml.dump(enriched, allow_unicode=True, sort_keys=False),
+            dump_yaml(enriched),
             encoding="utf-8",
         )
-        summary = "  ".join(f"{t}:{s['score']:+d}" for t, s in stances.items())
+        summary = "  ".join(f"{k}/{t}:{v['score']:+d}" for k, topics_ in stances.items() for t, v in topics_.items())
         print(f"  + [{data.get('source_name')}] {data.get('date')} {summary}")
         return True
     except Exception as exc:

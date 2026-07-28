@@ -22,10 +22,11 @@ extracted:
     ukraine: Germany rhetorically supports the continued comprehensive assistance
       to Ukraine and the pursuit of a just peace.
   stances:
-    ukraine:
-      score: 1
-      evidence: die Ukraine weiter umfassend zu unterstützen und den Druck auf Russland
-        zu erhöhen
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die Ukraine weiter umfassend zu unterstützen und den Druck auf Russland
+          zu erhöhen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

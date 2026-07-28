@@ -20,11 +20,12 @@ extracted:
     rule_of_law: Germany advances the rule of law by implementing legal frameworks
       to effectively enforce protection orders and combat domestic violence.
   stances:
-    rule_of_law:
-      score: 2
-      evidence: Der Bundesrat hat den Gesetzentwurf der Bundesregierung zur Einführung
-        der elektronischen Aufenthaltsüberwachung und der Täterarbeit im Gewaltschutzgesetz
-        beschlossen.
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Der Bundesrat hat den Gesetzentwurf der Bundesregierung zur Einführung
+          der elektronischen Aufenthaltsüberwachung und der Täterarbeit im Gewaltschutzgesetz
+          beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

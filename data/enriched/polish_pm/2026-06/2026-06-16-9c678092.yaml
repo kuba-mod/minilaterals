@@ -29,15 +29,23 @@ extracted:
     green_transition: Poland is advancing the green transition by reactivating the
       production of electric vehicles with significant funding.
   stances:
-    defence:
-      score: 2
-      evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia działań
-        na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy USA
-    green_transition:
-      score: 2
-      evidence: Obecny rząd zakończył przygotowania do reaktywacji projektu realizowanego
-        przez spółkę ElectroMobility Poland, pozyskał nowego partnera oraz zabezpieczył
-        4,5 mld zł finansowania z Krajowego Planu Odbudowy
+    weimar:
+      defence:
+        score: 2
+        evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia
+          działań na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy
+          USA
+      green_transition:
+        score: 2
+        evidence: Obecny rząd zakończył przygotowania do reaktywacji projektu realizowanego
+          przez spółkę ElectroMobility Poland, pozyskał nowego partnera oraz zabezpieczył
+          4,5 mld zł finansowania z Krajowego Planu Odbudowy
+    visegrad:
+      defence:
+        score: 2
+        evidence: Rada Ministrów upoważniła Ministra Obrony Narodowej do podjęcia
+          działań na rzecz utworzenia w Polsce stałej bazy wojskowej dla żołnierzy
+          USA
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

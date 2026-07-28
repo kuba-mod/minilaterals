@@ -34,9 +34,14 @@ extracted:
     defence: Germany rhetorically supports the strengthening of its armed forces as
       part of its current political agenda.
   stances:
-    defence:
-      score: 1
-      evidence: Stärkung der Bundeswehr
+    weimar:
+      defence:
+        score: 1
+        evidence: Stärkung der Bundeswehr
+    e3:
+      defence:
+        score: 1
+        evidence: Stärkung der Bundeswehr
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

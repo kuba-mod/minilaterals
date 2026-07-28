@@ -25,13 +25,18 @@ extracted:
     defence: Poland highlights the integrated effort of the military and police to
       maintain national security given its geographical location.
   stances:
-    migration:
-      score: 2
-      evidence: mamy najbezpieczniejszą, szczelną granicę, przez którą nikt nieproszony
-        nie może się już przemknąć
-    defence:
-      score: 1
-      evidence: To wszystko dzięki wysiłkowi wojska, Straży Granicznej, jak i Policji
+    visegrad:
+      migration:
+        score: 2
+        evidence: mamy najbezpieczniejszą, szczelną granicę, przez którą nikt nieproszony
+          nie może się już przemknąć
+      defence:
+        score: 1
+        evidence: To wszystko dzięki wysiłkowi wojska, Straży Granicznej, jak i Policji
+    weimar:
+      defence:
+        score: 1
+        evidence: To wszystko dzięki wysiłkowi wojska, Straży Granicznej, jak i Policji
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

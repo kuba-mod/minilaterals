@@ -20,11 +20,12 @@ extracted:
       sovereignty, and adhering to international law by calling for an end to military
       escalation.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: France calls on all the parties to strictly abide by the current ceasefire
-        and to refrain from any actions that would be liable to spark a new military
-        escalation
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France calls on all the parties to strictly abide by the current
+          ceasefire and to refrain from any actions that would be liable to spark
+          a new military escalation
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

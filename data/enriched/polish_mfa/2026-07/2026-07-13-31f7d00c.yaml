@@ -19,10 +19,11 @@ extracted:
     hybrid: Poland actively advances the goal of combating hybrid threats through
       the support of cyber sanctions and the strengthening of national cyber defense.
   stances:
-    hybrid:
-      score: 2
-      evidence: 'Polska aktywnie działa na rzecz: ochrony krajowej infrastruktury
-        krytycznej, budowania odporności, wzmacniania cyberoobrony.'
+    weimar:
+      hybrid:
+        score: 2
+        evidence: 'Polska aktywnie działa na rzecz: ochrony krajowej infrastruktury
+          krytycznej, budowania odporności, wzmacniania cyberoobrony.'
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

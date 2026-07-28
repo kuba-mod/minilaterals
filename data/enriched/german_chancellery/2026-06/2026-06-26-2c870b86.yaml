@@ -21,9 +21,10 @@ extracted:
     green_transition: Germany is aligning industrial growth and infrastructure speed
       with its commitment to climate targets and the European green transition.
   stances:
-    green_transition:
-      score: 1
-      evidence: Dabei bekennt sich die Bundesregierung klar zu ihren Klimazielen.
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Dabei bekennt sich die Bundesregierung klar zu ihren Klimazielen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

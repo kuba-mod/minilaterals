@@ -22,10 +22,16 @@ extracted:
     defence: Germany is actively advancing collective security and defense industry
       cooperation through a strategic partnership with Canada and Norway.
   stances:
-    defence:
-      score: 2
-      evidence: ein starkes Zeichen der transatlantischen und europäischen Zusammenarbeit
-        in der Verteidigungsindustrie
+    weimar:
+      defence:
+        score: 2
+        evidence: ein starkes Zeichen der transatlantischen und europäischen Zusammenarbeit
+          in der Verteidigungsindustrie
+    e3:
+      defence:
+        score: 2
+        evidence: ein starkes Zeichen der transatlantischen und europäischen Zusammenarbeit
+          in der Verteidigungsindustrie
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

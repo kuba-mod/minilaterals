@@ -22,10 +22,11 @@ extracted:
     rule_of_law: Poland emphasizes the importance of respecting international law
       and maintaining security in the region.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: The interlocutors reaffirmed their commitment to the principles of
-        international law as well as the significance of stability and security.
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The interlocutors reaffirmed their commitment to the principles
+          of international law as well as the significance of stability and security.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

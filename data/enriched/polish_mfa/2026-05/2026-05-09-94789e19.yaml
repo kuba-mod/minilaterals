@@ -28,20 +28,21 @@ extracted:
     rule_of_law: Poland recognizes the rule of law and democracy as the essential
       foundations of European security and prosperity.
   stances:
-    ukraine:
-      score: 2
-      evidence: przyjmując milion uchodźców z Ukrainy
-    defence:
-      score: 2
-      evidence: Polska przeznacza 200 mld PLN na obronność a w Warszawie znajduje
-        się siedziba Frontexu
-    green_transition:
-      score: 1
-      evidence: Wspieramy rozwój OZE, niezależnych od importu paliw z zagranicy
-    rule_of_law:
-      score: 1
-      evidence: Wspólnota europejska opiera się na wartościach – demokracji, wolności
-        i rządach prawa
+    weimar:
+      ukraine:
+        score: 2
+        evidence: przyjmując milion uchodźców z Ukrainy
+      defence:
+        score: 2
+        evidence: Polska przeznacza 200 mld PLN na obronność a w Warszawie znajduje
+          się siedziba Frontexu
+      green_transition:
+        score: 1
+        evidence: Wspieramy rozwój OZE, niezależnych od importu paliw z zagranicy
+      rule_of_law:
+        score: 1
+        evidence: Wspólnota europejska opiera się na wartościach – demokracji, wolności
+          i rządach prawa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -18,9 +18,10 @@ extracted:
     green_transition: Germany is prioritizing short-term economic relief through fuel
       tax cuts over immediate climate-neutral energy policy goals.
   stances:
-    green_transition:
-      score: -1
-      evidence: wird die Mineralölsteuer für zwei Monate gesenkt
+    weimar:
+      green_transition:
+        score: -1
+        evidence: wird die Mineralölsteuer für zwei Monate gesenkt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

@@ -16,11 +16,12 @@ extracted:
     ukraine: Germany is actively advancing long-term support for Ukraine by coordinating
       high-value humanitarian goods and medical transports.
   stances:
-    ukraine:
-      score: 2
-      evidence: Seit Beginn des russischen Angriffskrieges gegen die Ukraine wurden
-        staatliche Hilfsgüter und Großspenden im Wert von rund 259 Millionen Euro
-        über den UCPM ( Union Civil Protection Mechanism ) in die Ukraine gebracht.
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Seit Beginn des russischen Angriffskrieges gegen die Ukraine wurden
+          staatliche Hilfsgüter und Großspenden im Wert von rund 259 Millionen Euro
+          über den UCPM ( Union Civil Protection Mechanism ) in die Ukraine gebracht.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

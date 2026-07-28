@@ -22,9 +22,10 @@ extracted:
       transition of the air policing mission to an air defense mission to enhance
       security on the eastern flank.
   stances:
-    defence:
-      score: 2
-      evidence: NATO õhuturbemissiooni Eestis muutumine õhukaitsemissiooniks
+    baltic:
+      defence:
+        score: 2
+        evidence: NATO õhuturbemissiooni Eestis muutumine õhukaitsemissiooniks
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

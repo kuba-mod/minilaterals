@@ -22,9 +22,11 @@ extracted:
       100 billion PLN in railway infrastructure to make rail the preferred mode of
       transport.
   stances:
-    green_transition:
-      score: 2
-      evidence: Obecnie na rozwój infrastruktury kolejowej przeznaczamy 100 mld zł.
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Obecnie na rozwój infrastruktury kolejowej przeznaczamy 100 mld
+          zł.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

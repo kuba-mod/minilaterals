@@ -20,9 +20,10 @@ extracted:
     rule_of_law: Poland rhetorically supports the primacy of individual freedom and
       the moral distinction between democracy and tyranny.
   stances:
-    rule_of_law:
-      score: 1
-      evidence: he saw individual freedom as a universal human right
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: he saw individual freedom as a universal human right
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

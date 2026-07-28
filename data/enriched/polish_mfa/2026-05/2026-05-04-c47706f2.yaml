@@ -24,16 +24,17 @@ extracted:
     hybrid: Poland is taking a leading role in the EU in detecting and reporting trade
       irregularities to prevent the circumvention of sanctions.
   stances:
-    ukraine:
-      score: 2
-      evidence: koncentrują się na skutecznym wdrażaniu sankcji Unii Europejskiej
-        i krajowych związanych z rosyjską agresją na Ukrainę oraz udziałem w niej
-        Białorusi
-    hybrid:
-      score: 2
-      evidence: liczba polskich zgłoszeń celnych w systemie RIF, służącym ostrzeganiu
-        o nieprawidłowościach, wyniosła 180. Stanowi to aż 55,9% wszystkich zgłoszeń
-        dokonanych przez państwa członkowskie UE
+    weimar:
+      ukraine:
+        score: 2
+        evidence: koncentrują się na skutecznym wdrażaniu sankcji Unii Europejskiej
+          i krajowych związanych z rosyjską agresją na Ukrainę oraz udziałem w niej
+          Białorusi
+      hybrid:
+        score: 2
+        evidence: liczba polskich zgłoszeń celnych w systemie RIF, służącym ostrzeganiu
+          o nieprawidłowościach, wyniosła 180. Stanowi to aż 55,9% wszystkich zgłoszeń
+          dokonanych przez państwa członkowskie UE
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

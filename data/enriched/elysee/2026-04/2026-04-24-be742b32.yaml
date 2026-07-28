@@ -18,11 +18,12 @@ extracted:
     defence: France actively advances European defense capabilities by providing advanced
       military equipment and coordinated security actions.
   stances:
-    defence:
-      score: 2
-      evidence: nous avons notre système de protection aérienne, nous avons nos rafales,
-        nous avons de nouveaux systèmes de dernière génération et nous avons contribué
-        concrètement, dès les premiers instants, à leur défense.
+    weimar:
+      defence:
+        score: 2
+        evidence: nous avons notre système de protection aérienne, nous avons nos
+          rafales, nous avons de nouveaux systèmes de dernière génération et nous
+          avons contribué concrètement, dès les premiers instants, à leur défense.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

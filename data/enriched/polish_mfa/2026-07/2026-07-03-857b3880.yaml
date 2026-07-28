@@ -18,10 +18,11 @@ extracted:
     green_transition: Poland is promoting economic cooperation in the waste management
       sector, which aligns with environmental objectives.
   stances:
-    green_transition:
-      score: 1
-      evidence: spotkania z przedstawicielami polskich firm z sektorów technologii
-        medycznych, fintech, IT i gospodarki odpadami
+    weimar:
+      green_transition:
+        score: 1
+        evidence: spotkania z przedstawicielami polskich firm z sektorów technologii
+          medycznych, fintech, IT i gospodarki odpadami
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '4'

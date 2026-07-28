@@ -25,12 +25,10 @@ extracted:
     defence: Estonia emphasizes the importance of European security and the isolation
       of Russia.
   stances:
-    ukraine:
-      score: 1
-      evidence: Ukraina toetamist
-    defence:
-      score: 1
-      evidence: arutati Euroopa julgeolekut... ja Venemaa jätkuvat isoleerimist
+    baltic:
+      defence:
+        score: 1
+        evidence: arutati Euroopa julgeolekut... ja Venemaa jätkuvat isoleerimist
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

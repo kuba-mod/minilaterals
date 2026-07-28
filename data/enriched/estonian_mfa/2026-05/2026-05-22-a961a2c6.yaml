@@ -26,14 +26,15 @@ extracted:
     defence: Estonia condemns Russian threats to use force against Latvia and other
       regional nations, aligning with collective security goals.
   stances:
-    hybrid:
-      score: 1
-      evidence: Põhja- ja Baltimaade välisministrid lükkavad kindlalt tagasi Venemaa
-        räige desinformatsioonikampaania ja valeväited
-    defence:
-      score: 1
-      evidence: Mõistame teravalt hukka Venemaa ähvardused kasutada jõudu Läti ja
-        teiste piirkonna riikide vastu.
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Põhja- ja Baltimaade välisministrid lükkavad kindlalt tagasi Venemaa
+          räige desinformatsioonikampaania ja valeväited
+      defence:
+        score: 1
+        evidence: Mõistame teravalt hukka Venemaa ähvardused kasutada jõudu Läti ja
+          teiste piirkonna riikide vastu.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '6'

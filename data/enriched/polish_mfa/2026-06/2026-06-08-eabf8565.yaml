@@ -25,13 +25,14 @@ extracted:
     rule_of_law: Poland stresses the need for Western legal frameworks to adapt effectively
       to contemporary digital threats, including those posed by AI.
   stances:
-    hybrid:
-      score: 2
-      evidence: Russia wages a full-scale cognitive war against Poland.
-    rule_of_law:
-      score: 2
-      evidence: The law cannot lag behind technology—it must provide a concrete response
-        to the full spectrum of contemporary digital threats.
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Russia wages a full-scale cognitive war against Poland.
+      rule_of_law:
+        score: 2
+        evidence: The law cannot lag behind technology—it must provide a concrete
+          response to the full spectrum of contemporary digital threats.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'
