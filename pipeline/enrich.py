@@ -585,8 +585,8 @@ def _extract(provider, raw_path: Path) -> bool:
     # `_rate_stances`), which isn't known until relevance is computed.
     prompt = EXTRACTION_PROMPT.format(
         source=source_label,
-        title=data.get("title", "")[:300],
-        text=(data.get("text", "") or "")[:3000],
+        title=data.get("title", ""),
+        text=data.get("text", "") or "",
         format_hints_block=FORMAT_HINTS_BLOCK,
         actor_codes=", ".join(_ACTOR_ORDER),
         topic_list=", ".join(ALL_TOPICS),
@@ -715,8 +715,8 @@ def _rate_stances(provider, source_label: str, title: str, text: str, grouping: 
     goals_block = "\n".join(f"- {t}: {GOALS[grouping][t].strip()}" for t in topics)
     prompt = STANCE_BACKFILL_PROMPT.format(
         source=source_label,
-        title=title[:300],
-        text=(text or "")[:3000],
+        title=title,
+        text=text or "",
         grouping=GROUPINGS[grouping].name,
         goals_block=goals_block,
         stance_rubric=STANCE_RUBRIC,
