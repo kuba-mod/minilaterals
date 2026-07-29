@@ -10,7 +10,8 @@
 //   voter:{slug}:{ip}      -> ISO timestamp; presence means this IP's vote for
 //                             this slug is already counted, so a repeat visit
 //                             (or a re-click after a page reload) can't
-//                             inflate the count — see clientIp() below
+//                             inflate the count — see clientIp() below.
+//                             Expires on its own, see VOTER_MARKER_TTL_SECONDS
 //   notify:{slug}:{email}  -> ISO timestamp of signup (also dedupes re-signups)
 //
 // KV has no atomic increment, so a vote count is a read-then-write and can
@@ -44,6 +45,18 @@
 // from the real namespace regardless of hostname.)
 
 const PRODUCTION_HOSTNAME = "minilaterals.com"; // keep in sync with wrangler.jsonc's routes
+
+// How long a voter:{slug}:{ip} marker lives. An IP address is personal data, so
+// the marker carries a retention limit rather than sitting in KV indefinitely:
+// KV expires it on its own, with no cleanup job to forget to run. The privacy
+// note on the hub page states this window, so the two must move together.
+//
+// The tradeoff is deliberate: once a marker expires that IP can vote for the
+// same grouping again. Six months is well past the point where a second vote
+// from the same household would tell us anything new, and this was never a
+// ballot — it's an interest gauge with `vote_report.py --reset` behind it.
+// The votes:{slug} counter itself holds no personal data and does not expire.
+const VOTER_MARKER_TTL_SECONDS = 180 * 24 * 60 * 60; // 180 days
 
 function keyPrefix(request) {
   const hostname = new URL(request.url).hostname;
@@ -123,7 +136,9 @@ async function handleVote(request, env) {
       // legitimate cases like two people sharing a home/office IP).
       return json({ ok: true });
     }
-    await env.VOTES.put(voterKey, new Date().toISOString());
+    await env.VOTES.put(voterKey, new Date().toISOString(), {
+      expirationTtl: VOTER_MARKER_TTL_SECONDS,
+    });
 
     const countKey = `${prefix}votes:${slug}`;
     const next = parseInt((await env.VOTES.get(countKey)) || "0", 10) + 1;
