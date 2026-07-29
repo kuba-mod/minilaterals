@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is implementing a series of new national laws and EU-aligned regulations
+    focusing on AI transparency, environmental sustainability, infrastructure, and
+    healthcare.
+  positions:
+    green_transition: Germany is introducing new regulations to reduce packaging waste,
+      limit hazardous plastics, and establish a right to repair for electronic devices
+      to reduce e-waste.
+    energy: Germany has enacted the Power Supply Security and Capacity Act to ensure
+      the long-term reliability and availability of flexible capacities in the electricity
+      market.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Wer Verpackungen auf den Markt bringt, muss dazu beitragen, Verpackungsabfälle
+          zu vermeiden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

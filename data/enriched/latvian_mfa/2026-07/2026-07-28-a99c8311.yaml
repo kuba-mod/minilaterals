@@ -1,0 +1,22 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Raimonds Jansons
+  - Iliana Iotova
+  topics: []
+  location: Bulgaria
+  position: Latvia has accredited its new Ambassador, Raimonds Jansons, to Bulgaria.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

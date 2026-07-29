@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - President Karol Nawrocki
+  - Jarosław Kaczyński
+  - Minister M. Kierwiński
+  - Minister W. Żurek
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Prime Minister Donald Tusk condemns acts of violence against Ukrainians
+    and citizens, criticizes the President's legal challenge to the windfall tax on
+    fuel companies, and pledges support for law enforcement.
+  positions:
+    ukraine: Poland condemns violent attacks against Ukrainian citizens and emphasizes
+      the national heritage of solidarity toward Ukraine.
+    energy: The government advocates for a windfall tax on fuel companies to fund
+      lower fuel prices for drivers and criticizes the President for blocking this
+      measure.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wielkim dziedzictwem narodowym Polski jest solidarność i jej niezwykły
+          wymiar w pierwszych dniach rosyjskiej wojny.
+    visegrad:
+      energy:
+        score: 0
+        evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

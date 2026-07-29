@@ -1,0 +1,57 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Premierminister Martin
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  - energy
+  location: Dublin, Ireland
+  position: Germany seeks a more realistic and reduced EU budget, increased European
+    competitiveness, and dynamic progress on EU enlargement.
+  positions:
+    ukraine: Germany supports the goal of providing Ukraine with rapid opportunities
+      to approach EU membership, including a proposed associated membership as an
+      intermediate step.
+    enlargement: Germany advocates for more momentum in the enlargement process and
+      specifically supports Montenegro's accession by the end of the decade without
+      tying it to other candidates.
+    green_transition: Germany emphasizes that decarbonization and competitiveness
+      go hand-in-hand and suggests prioritizing energy and decarbonization projects
+      over new environmental protection projects to speed up implementation.
+    energy: Germany views the energy crisis as a primary driver for the urgent need
+      to improve European economic strength and competitiveness.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Sie verdienen unsere unerschütterliche Unterstützung sowie unser
+          Engagement, ihnen zu helfen, einen gerechten Frieden zu erreichen.
+      enlargement:
+        score: 2
+        evidence: 'Wir wollen der Ukraine rasch auch Möglichkeiten geben, an die Europäische
+          Union heranzukommen. Ich habe ja einen Vorschlag dazu gemacht: eine assoziierte
+          Mitgliedschaft als einen realistischen ersten Zwischenschritt auf dem Weg
+          zur Mitgliedschaft.'
+      green_transition:
+        score: 1
+        evidence: Wettbewerbsfähigkeit und Dekarbonisierung gehören jetzt prioritär
+          auf die Tagesordnung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

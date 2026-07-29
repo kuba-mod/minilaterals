@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Micheál Martin
+  topics:
+  - ukraine
+  - enlargement
+  - energy
+  location: Dublin, Ireland
+  position: Germany expresses strong support for Ireland's EU Council Presidency and
+    seeks a more realistic, budget-constrained approach to the Multiannual Financial
+    Framework while pushing for competitiveness and EU enlargement.
+  positions:
+    ukraine: Germany supports providing the Ukraine with possibilities to approach
+      the EU, proposing associated membership as a realistic first step.
+    enlargement: Germany advocates for more dynamism in the enlargement process, specifically
+      supporting Montenegro's membership by the end of the decade.
+    energy: Germany emphasizes that the energy crisis necessitates a rapid implementation
+      of the competitiveness agenda and digitalization/decarbonization projects.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir wollen der Ukraine rasch auch Möglichkeiten geben, an die Europäische
+          Union heranzukommen.
+      enlargement:
+        score: 1
+        evidence: Wir wollen der Ukraine rasch auch Möglichkeiten geben, an die Europäische
+          Union heranzukommen. Auch Moldau... sollte daher im Beitrittsprozess weiter
+          voranschreiten... Den Beitritt der Westbalkanstaaten müssen wir vorantreiben.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

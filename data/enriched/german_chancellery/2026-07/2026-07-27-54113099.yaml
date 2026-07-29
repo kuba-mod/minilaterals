@@ -1,0 +1,52 @@
+actors:
+- DE
+- FR
+issue_areas:
+- hybrid
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Buschow
+  - Kornelius
+  - Bundeskanzler
+  - Emmanuel Macron
+  - Pedro Sánchez
+  - Stefanie Hubig
+  - Sophie Koch
+  - Steffen Bilger
+  - Carsten Linnemann
+  - Philipp Amthor
+  topics:
+  - hybrid
+  - green_transition
+  location: Berlin, Germany
+  position: Germany is providing technical and personnel assistance to France and
+    Spain to combat wildfires and is addressing domestic security following a terror
+    attack in Berlin.
+  positions:
+    hybrid: Germany acknowledges a situation of hybrid threats, which served as the
+      basis for increasing the national threat level.
+    green_transition: Germany emphasizes the necessity of climate adaptation measures,
+      such as forest restructuring, to mitigate the increasing risk of extreme weather
+      events and wildfires.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Wir beobachten zunehmend Angriffe. Das hatte ich vergangene Woche
+          schon ausgeführt. Daher kam es zu dieser Hochstufung.
+      green_transition:
+        score: 1
+        evidence: der Bundesumweltminister und unser Haus haben natürlich darauf hingewiesen,
+          dass jetzt Extremwetterlagen aufgrund des fortschreitenden Klimawandels
+          zunehmen können und wir deshalb Anpassungsmaßnahmen vornehmen müssen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom expresses concern regarding the democratic governance,
+    civic space, and human rights situation in Nicaragua following declarations about
+    elections.
+  positions:
+    rule_of_law: The United Kingdom is monitoring the impact of Nicaraguan authorities'
+      declarations on democratic processes and human rights.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
