@@ -202,6 +202,10 @@ a:hover { color: var(--hl); }
   padding: 4px 2px;
 }
 .hub-notify-done { font-family: var(--font-sans); font-size: 12.5px; color: var(--muted); margin-top: 9px; }
+.hub-notify-privacy {
+  flex-basis: 100%; font-family: var(--font-sans); font-size: 11px;
+  line-height: 1.45; color: var(--muted);
+}
 
 /* ── Footer ── */
 .hub-footer {
@@ -209,6 +213,10 @@ a:hover { color: var(--hl); }
   padding: 28px 56px 56px; font-family: var(--font-sans); font-size: 13px; color: var(--muted);
 }
 .hub-footer a { color: var(--hl); }
+.hub-privacy {
+  margin-top: 14px; max-width: 760px; font-size: 12px; line-height: 1.6; color: var(--muted);
+}
+.hub-privacy strong { font-weight: 600; color: var(--ink-soft); }
 
 /* ── Mobile ── */
 @media (max-width: 820px) {
@@ -304,7 +312,18 @@ a:hover { color: var(--hl); }
   </div>
 </main>
 
-<footer class="hub-footer">minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/">methodology &amp; sources</a></footer>
+<footer class="hub-footer">
+  minilaterals &middot; a coordination tracker &middot; <a href="{{ base_path }}/sources/">methodology &amp; sources</a>
+  {# The 180-day figure is VOTER_MARKER_TTL_SECONDS in worker/index.js — the two must move together. #}
+  <p class="hub-privacy">
+    <strong>Privacy.</strong> Voting stores your IP address for up to 180 days, so one vote can't be
+    counted twice; it is then deleted automatically, and never used for anything else. Your browser also
+    remembers which groupings you voted for, so the page can show that back to you. If you ask to be
+    notified, your email address is kept only to send that one announcement and is never shared or sold.
+    There are no analytics or advertising cookies. Fonts and flag images load from Google Fonts and
+    flagcdn.com, which see your IP address as with any external asset.
+  </p>
+</footer>
 
 <script>
 (function () {
@@ -316,6 +335,9 @@ a:hover { color: var(--hl); }
         '<input type="email" placeholder="you@example.com" required>' +
         '<button type="submit">Notify me</button>' +
         '<button type="button" class="hub-notify-skip">No thanks</button>' +
+        '<span class="hub-notify-privacy">' +
+          "Used only to tell you when this grouping ships. Never shared, never a newsletter." +
+        "</span>" +
       "</form>"
     );
   }
