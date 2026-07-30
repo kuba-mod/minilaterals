@@ -1,0 +1,31 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Minister of Foreign Affairs of the United Kingdom
+  - Minister of Foreign Affairs of the Kingdom of Spain
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: The United Kingdom committed to co-leading the green transition and strengthening
+    clean energy cooperation with Spain to address the climate crisis.
+  positions:
+    green_transition: The UK considers the climate crisis an urgent policy priority
+      and commits to co-leading the green transition and advancing international climate
+      action.
+    energy: The UK intends to strengthen cooperation with Spain regarding clean energy.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

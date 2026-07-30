@@ -1,0 +1,30 @@
+actors:
+- FR
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Minister of Foreign Affairs of the United Kingdom
+  - Minister of Foreign Affairs of France
+  topics:
+  - green_transition
+  location: null
+  position: The United Kingdom is cooperating with France to strengthen the prevention
+    and response to climate-related risks and advocating for increased international
+    action on climate change.
+  positions:
+    green_transition: The United Kingdom commits to strengthening cooperation with
+      France to anticipate and respond to wildfires and calls for global action to
+      tackle climate change.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

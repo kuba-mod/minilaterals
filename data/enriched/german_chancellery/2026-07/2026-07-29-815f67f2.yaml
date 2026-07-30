@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  topics:
+  - migration
+  location: null
+  position: Germany's cabinet has approved a draft law to implement artificial intelligence
+    in migration administration to make asylum and residence procedures more efficient
+    and digital.
+  positions:
+    migration: Germany intends to use AI to optimize the processing of asylum and
+      residence applications while ensuring that final decisions remain the responsibility
+      of human officials.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Katharina Reiche
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is reforming its energy policy through the EEG amendment and a
+    grid connection package to prioritize cost-efficiency, grid stability, and market-based
+    investments in renewable energy.
+  positions:
+    green_transition: Germany maintains its goal of generating 80 percent of its electricity
+      from renewable sources by 2030 to ensure independence from fossil fuels.
+    energy: The government is shifting from a comprehensive state subsidy system toward
+      a market-based framework that aligns the expansion of wind and solar energy
+      with actual grid needs.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: So sollen weiter bis 2030 80 Prozent Strom aus Erneuerbaren Energien
+          gewonnen werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,49 @@
+actors:
+- PL
+- UK
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Representatives of the Ministry of Foreign Affairs
+  - Representatives of the Ministry of Digital Affairs
+  - Representatives of NASK
+  - Representatives of the FCDO
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Poland is strengthening cooperation with the United Kingdom to combat
+    foreign information manipulation and interference (FIMI) through a new roadmap
+    for analytical cooperation.
+  positions:
+    hybrid: Poland is establishing deeper analytical cooperation, data exchange, and
+      expert visits with the UK to detect and report disinformation.
+    defence: Poland is implementing the first document resulting from the Polish-British
+      security and defense cooperation treaty.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: podpisali dokument określający kierunki współpracy w obszarze zwalczania
+          FIMI (Foreign Information Manipulation and Interference – zagranicznej manipulacji
+          i ingerencji w środowisku informacyjnym)
+      defence:
+        score: 0
+        evidence: ''
+    visegrad:
+      defence:
+        score: 1
+        evidence: podpisali dokument określający kierunki współpracy w obszarze zwalczania
+          FIMI
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

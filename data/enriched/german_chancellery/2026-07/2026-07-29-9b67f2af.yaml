@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is implementing the new Building Modernization Act to make climate
+    protection more pragmatic and flexible by allowing homeowners to choose their
+    heating technology.
+  positions:
+    green_transition: Germany is replacing the Building Energy Act with a more technology-open
+      approach to achieve climate neutrality in heating by 2045 while increasing planning
+      security for owners.
+    energy: The government is removing the fixed 65 percent renewable energy requirement
+      for heating and introducing a gradual transition to bio-fuels and green gas
+      quotas.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Brennstoffe für Heizungen müssen ab 2045 komplett klimaneutral sein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

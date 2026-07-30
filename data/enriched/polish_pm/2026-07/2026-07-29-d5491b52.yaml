@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Barbara Mróz-Gorgoń
+  topics: []
+  location: null
+  position: Poland has appointed a Government Plenipotentiary for the Promotion of
+    the Polish Brand to coordinate a unified national branding strategy and improve
+    the country's international reputation and investment attractiveness.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

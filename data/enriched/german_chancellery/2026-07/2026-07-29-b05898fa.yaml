@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany is expanding and extending the Electric Mobility Act to provide
+    more incentives for e-vehicles and support the transition to climate-friendly
+    mobility.
+  positions:
+    green_transition: The German government is amending the Electric Mobility Act
+      to extend its duration, expand its scope to buses and heavy vehicles, and allow
+      municipalities to offer more benefits such as free residential parking for e-vehicles.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: im Kabinett die Novelle des Elektromobilitätsgesetzes beschlossen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

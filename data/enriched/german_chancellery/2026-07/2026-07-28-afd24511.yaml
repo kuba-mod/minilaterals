@@ -1,0 +1,55 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Micheál Martin
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  - energy
+  location: Dublin, Ireland
+  position: Germany supports the Irish EU Council Presidency and seeks a more competitive,
+    fiscally disciplined Europe with a focus on strategic enlargement and economic
+    strength.
+  positions:
+    ukraine: Germany advocates for providing an associated membership as a realistic
+      intermediate step toward full EU membership for Ukraine.
+    enlargement: Germany seeks more dynamism in the enlargement process, specifically
+      proposing that Montenegro should become a member by the end of the decade without
+      being delayed by other candidates.
+    green_transition: Germany prioritizes decarbonization and the acceleration of
+      energy projects, suggesting that such projects could temporarily take precedence
+      over new environmental protection projects to ensure competitiveness.
+    energy: Germany emphasizes the need to implement energy and digitalization projects
+      quickly to maintain economic strength in the face of global crises.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir wollen der Ukraine rasch auch Möglichkeiten geben, an die Europäische
+          Union heranzukommen.
+      enlargement:
+        score: 2
+        evidence: Montenegro sollte bis zum Ende des Jahrzehnts Mitglied der Europäischen
+          Union werden.
+      green_transition:
+        score: 1
+        evidence: Wettbewerbsfähigkeit und Dekarbonisierung gehören jetzt prioritär
+          auf die Tagesordnung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
