@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  - German Bundestag
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is providing approximately four billion euros in financial support
+    to its states and municipalities through 2029 to enable investments in infrastructure
+    and public services.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

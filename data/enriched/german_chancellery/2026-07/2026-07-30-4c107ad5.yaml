@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: Hamburg, Germany
+  position: Germany is providing up to 60 million euros to fund the expansion and
+    renovation of the Kampnagel International Production House in Hamburg to support
+    the independent arts scene.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

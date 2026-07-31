@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom supports the OSCE Mission to Serbia's efforts regarding
+    democratic governance and the rule of law.
+  positions:
+    rule_of_law: The UK commends the OSCE Mission to Serbia's continued focus on the
+      rule of law.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

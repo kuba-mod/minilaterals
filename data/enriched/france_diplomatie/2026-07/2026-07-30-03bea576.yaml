@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Almassadam Satkaliyev, Chairman of the Agency of the Republic of Kazakhstan for
+    Atomic Energy
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs of France
+  - Nicolas Forissier, Minister Delegate for Foreign Trade and Economic Attractiveness
+  - Anne-Isabelle Etienvre, Director-General of the CEA
+  topics:
+  - energy
+  location: null
+  position: France reaffirms its long-term energy cooperation with Kazakhstan and
+    reviews scientific and industrial progress in peaceful nuclear energy.
+  positions:
+    energy: France is strengthening its strategic partnership with Kazakhstan through
+      the development of peaceful uses of nuclear energy and industrial cooperation.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

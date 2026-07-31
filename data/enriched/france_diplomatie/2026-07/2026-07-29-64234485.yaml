@@ -1,0 +1,39 @@
+actors:
+- FR
+- UK
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Edward Samuel Miliband
+  - Jean-Noël Barrot
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: France and the United Kingdom commit to strengthening bilateral and multilateral
+    cooperation to address climate-related risks, specifically wildfires, and to accelerate
+    the global transition to low-carbon economies.
+  positions:
+    green_transition: France advocates for the adherence to the 1.5°C temperature
+      goal of the Paris Agreement, the reduction of methane emissions, and the implementation
+      of high-integrity carbon markets.
+    energy: France emphasizes the necessity of transitioning away from fossil fuels
+      to secure energy supplies and safeguard societal stability.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: reaffirm their support for the United Nations Framework Convention
+          on Climate Change and the Paris Agreement and its temperatures goals
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

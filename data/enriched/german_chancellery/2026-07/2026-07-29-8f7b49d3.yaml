@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Minister of Transport
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is implementing the Infrastructure Future Act to accelerate the
+    planning and approval processes for the construction and renovation of rail, road,
+    and water transport networks.
+  positions:
+    green_transition: Germany is streamlining environmental impact assessments for
+      short railway electrification projects and balancing nature conservation with
+      urgent infrastructure needs.
+    energy: Germany is introducing the possibility of substitute cash payments instead
+      of compensatory measures for energy infrastructure projects.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das 500 Milliarden Euro starke Sondervermögen sorgt für die hohen
+          Investitionen von Bund, Ländern und Kommunen. Das Geld soll insbesondere
+          in moderne Schulen und Kitas, Bahnstrecken und Straßen sowie für Forschung
+          und Digitalisierung investiert werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

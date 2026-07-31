@@ -1,0 +1,59 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+- migration
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Meyer (Deputy Government Spokesperson)
+  - Singer (BMI)
+  - Lenz (BMBFSFJ)
+  - Dr. Hosemann (BMJV)
+  - Lorenzat (BMWE)
+  - Köppl (BMUKN)
+  - Deschauer (AA)
+  - Harmsen (BMF)
+  - Buschow (Chair)
+  topics:
+  - green_transition
+  - energy
+  - migration
+  - iran
+  location: null
+  position: The German government announced several legislative initiatives focused
+    on modernizing migration administration, transitioning to a market-based renewable
+    energy system, and improving conditions for researchers.
+  positions:
+    green_transition: Germany aims to generate 80 percent of its electricity from
+      renewable sources by 2030 and is updating the Electromobility Act to further
+      incentivize the shift to climate-friendly mobility.
+    energy: The government is implementing a system shift in the Renewable Energy
+      Act (EEG) and a grid connection package to make the expansion of renewables
+      more cost-efficient and market-driven.
+    migration: Germany is introducing a law to employ artificial intelligence in migration
+      management to make asylum and residence procedures more efficient and legally
+      secure.
+    iran: The government is closely monitoring the volatile oil price developments
+      driven by geopolitical tensions, specifically mentioning the situation in Iran.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Wir wollen bis 2030 80 Prozent des Stroms aus erneuerbaren Energien
+          gewinnen.
+    e3:
+      iran:
+        score: 0
+        evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

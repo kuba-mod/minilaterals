@@ -1,0 +1,51 @@
+actors:
+- FR
+- UK
+issue_areas:
+- ukraine
+- green_transition
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Ed Miliband
+  topics:
+  - ukraine
+  - green_transition
+  - iran
+  location: Paris, France
+  position: France reaffirmed its strong bilateral coordination with the United Kingdom
+    on international security, the conflict in Ukraine, Middle East stability, and
+    climate resilience.
+  positions:
+    ukraine: France and the UK expressed resolute support for Ukraine and a determination
+      to increase pressure on Russia's war effort, specifically by targeting the shadow
+      fleet.
+    green_transition: France agreed to intensify operational cooperation and accelerate
+      international efforts to strengthen climate resilience.
+    iran: France highlighted the importance of Franco-British cooperation to support
+      freedom of navigation in the Strait of Hormuz and called for a diplomatic resolution
+      to the conflict.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their resolute support for Ukraine
+      green_transition:
+        score: 1
+        evidence: calling, among other things, for their operational cooperation to
+          be intensified in view of the climate risks
+    e3:
+      iran:
+        score: 0
+        evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

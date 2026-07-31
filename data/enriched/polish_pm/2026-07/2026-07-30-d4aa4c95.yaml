@@ -1,0 +1,50 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Marcin Kierwiński
+  - Ireneusz Nowak
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: Tarnawa-Kolonia, Poland
+  position: Poland condemns the violation of its airspace by a Russian missile and
+    reaffirms its commitment to supporting Ukraine's defense to ensure its own national
+    security.
+  positions:
+    ukraine: Poland will continue to closely cooperate with and support Ukraine's
+      defense, viewing its success as vital to Polish security.
+    defence: Poland has placed its air defense systems on high alert and is refining
+      its civil warning procedures following the detection of a Russian Kh-101 cruise
+      missile.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska będzie nadal ściśle współpracować z Ukrainą w kwestiach bezpieczeństwa
+      defence:
+        score: 0
+        evidence: ''
+    visegrad:
+      defence:
+        score: 1
+        evidence: generał Ireneusz Nowak postawił w stan gotowości wszystkie systemy
+          obrony powietrznej, uruchamiając krajowe i sojusznicze służby związane z
+          ochroną przestrzeni lotniczej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
