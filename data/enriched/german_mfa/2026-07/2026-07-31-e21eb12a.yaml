@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wadephul
+  - José Manuel Albares
+  - Nasser Bourita
+  topics:
+  - migration
+  location: null
+  position: Germany emphasizes the importance of securing the EU's external borders
+    and supports Spain in regaining control over the situation in Ceuta through cooperation
+    with Morocco.
+  positions:
+    migration: Germany advocates for the immediate restoration of border control in
+      Ceuta and the swift repatriation of migrants to protect the Schengen area.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - hybrid
+  - migration
+  location: null
+  position: Estonia intends to respond quickly and decisively to migration pressure,
+    viewing illegal migration as a tool of hybrid pressure against Europe.
+  positions:
+    hybrid: Estonia views illegal migration not merely as a migration issue, but as
+      a form of hybrid pressure against Europe.
+    migration: Estonia will respond decisively to migration pressure and refuses to
+      let its territory become a transit corridor for illegal migration.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Ebaseaduslik ränne ei ole enam pelgalt rändeküsimus, vaid osa hübriidsurvest
+          Euroopa vastu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

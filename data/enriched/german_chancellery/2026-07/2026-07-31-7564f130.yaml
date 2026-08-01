@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - migration
+  location: null
+  position: Germany has enacted a law to prevent fraudulent paternity recognitions
+    used to illegally obtain residency and social benefits.
+  positions:
+    migration: Germany is requiring approval from immigration authorities for paternity
+      recognitions where a residency disparity exists to combat the abuse of family
+      reunification laws.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

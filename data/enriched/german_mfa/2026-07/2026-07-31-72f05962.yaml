@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - hybrid
+  location: null
+  position: Germany and its partners warn against the use of North Korean IT professionals
+    who use fraudulent identities to fund illegal weapons programs through remote
+    work.
+  positions:
+    hybrid: Germany warns of the threat posed by North Korean IT workers engaging
+      in data theft, cryptocurrency theft, and sanctions evasion using sophisticated
+      methods including AI.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

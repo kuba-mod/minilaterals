@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Magnus Brunner
+  topics:
+  - migration
+  location: null
+  position: Germany emphasizes the necessity of securing EU external borders and expects
+    Spain and Morocco to manage the migration situation in Ceuta and implement return
+    policies.
+  positions:
+    migration: Germany demands that EU member states fulfill their duty to protect
+      external borders and calls for the immediate implementation of the return regulation
+      and the repatriation of migrants by Morocco.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

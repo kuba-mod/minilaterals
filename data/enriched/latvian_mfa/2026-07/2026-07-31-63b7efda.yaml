@@ -1,0 +1,21 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics: []
+  location: Riga, Latvia
+  position: Latvia is organizing the 5th Forum of Latvian Professionals Working in
+    International Organizations to facilitate networking and professional exchange.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
