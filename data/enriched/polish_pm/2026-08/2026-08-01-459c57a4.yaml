@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes the historical lesson of the Warsaw Uprising to underscore
+    the necessity of maintaining national strength and unity in the face of current
+    external threats.
+  positions:
+    defence: Poland asserts the need to care for the country's strength given the
+      brutal war occurring near its border and threats to its values.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: To prawdziwe zobowiązanie, by dbać o siłę Polski w tym trudnym czasie
+    visegrad:
+      defence:
+        score: 1
+        evidence: To prawdziwe zobowiązanie, by dbać o siłę Polski w tym trudnym czasie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
