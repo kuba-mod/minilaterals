@@ -1,0 +1,22 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Chancellor Vseviov
+  topics: []
+  location: Estonia
+  position: Estonia is strengthening ties with young people of Estonian descent living
+    abroad through a summer school program organized by the Ministry of Foreign Affairs.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Iryna Vereshchuk
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland reaffirms its continued support for Ukraine and seeks to deepen
+    bilateral cooperation across historical, industrial, defense, and economic dimensions.
+  positions:
+    ukraine: Poland maintains that its ongoing support for Ukraine in the war against
+      Russia is in the interest of both nations.
+    defence: Poland aims to intensify industrial and defense cooperation with Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: trwające polskie wsparcie dla Ukrainy w wojnie z Rosją pozostaje
+          w interesie obu naszych państw
+      defence:
+        score: 1
+        evidence: Rozmówcy podnieśli też temat potencjału intensyfikacji współpracy
+          przemysłowej i obronnej
+    visegrad:
+      defence:
+        score: 1
+        evidence: trwające polskie wsparcie dla Ukrainy w wojnie z Rosją pozostaje
+          w interesie obu naszych państw
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
