@@ -49,10 +49,6 @@ extracted:
         score: 2
         evidence: Wir wollen bis 2030 80 Prozent des Stroms aus erneuerbaren Energien
           gewinnen.
-    e3:
-      iran:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '7'

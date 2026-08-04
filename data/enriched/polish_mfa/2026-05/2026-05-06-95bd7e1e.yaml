@@ -42,9 +42,6 @@ extracted:
         evidence: Deputy Prime Minister Sikorski said that procurement of defence
           products financed under SAFE, Security Action for Europe, will further strengthen
           Poland’s security.
-      rule_of_law:
-        score: 0
-        evidence: ''
     visegrad:
       defence:
         score: 2

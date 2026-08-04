@@ -29,9 +29,6 @@ extracted:
         score: 1
         evidence: as well as the role of strategic communication and countering disinformation
           in today’s diplomacy.
-      rule_of_law:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

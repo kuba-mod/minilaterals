@@ -24,11 +24,6 @@ extracted:
     hybrid: Germany warns of the threat posed by North Korean IT workers engaging
       in data theft, cryptocurrency theft, and sanctions evasion using sophisticated
       methods including AI.
-  stances:
-    weimar:
-      hybrid:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '7'

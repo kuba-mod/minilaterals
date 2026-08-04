@@ -27,11 +27,6 @@ extracted:
   positions:
     green_transition: The text mentions setting priorities but does not provide specific
       details or commitments regarding the green transition goal.
-  stances:
-    weimar:
-      green_transition:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

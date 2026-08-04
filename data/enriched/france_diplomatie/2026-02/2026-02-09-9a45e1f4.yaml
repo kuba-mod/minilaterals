@@ -40,9 +40,6 @@ extracted:
         evidence: The two Ministers also discussed expanding bilateral relations,
           particularly in the areas of business, defense, hybrid threats and critical
           minerals.
-      green_transition:
-        score: 0
-        evidence: ''
     e3:
       defence:
         score: 1

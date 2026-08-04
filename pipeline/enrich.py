@@ -149,12 +149,14 @@ FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for 
 #   "6"  f5697563  explicit_formats legend + explicit-naming-vs-mere-involvement clarification
 #   "7"  83172f45  per-grouping goals: extraction drops stances, one stance call
 #                   per relevant grouping against that grouping's own goals
+#   "8"  ee238d06  unrated ≠ neutral: omit a topic with no quotable stance
+#                   instead of emitting stance 0 with null evidence
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "7"
-PROMPT_SURFACE_SHA = "83172f45"
+PROMPT_VERSION = "8"
+PROMPT_SURFACE_SHA = "ee238d06"
 
 
 def prompt_surface_sha() -> str:
@@ -186,15 +188,20 @@ Stance scale (integer, rating the country's stance against that grouping's goal 
       (e.g. "provides EUR 5bn in military aid", "will host a summit on X")
  +1 = supports the goal rhetorically, no new commitments
       (e.g. "reiterates continued support", "stresses the importance of X")
-  0 = neutral: merely mentions the topic without taking a stance
+  0 = neutral: takes a position on the topic that neither advances nor
+      undermines the goal (e.g. "notes the discussion took place")
  -1 = hedges or conditions the goal: partial support with significant caveats
       (e.g. "supports X but only if...", "questions the timeline")
  -2 = opposes or undermines the goal
       (e.g. "calls for a halt to weapons deliveries")
 
 The "evidence" field MUST be a verbatim quote copied from the press release text
-above — never from the goal statements. If the text contains no quote that supports
-a stance on a topic, use stance 0 and evidence null."""
+above — never from the goal statements. Every rating needs one, including a 0.
+
+If the text contains no quote that supports ANY rating on a topic — including
+because the text touches the topic but says nothing bearing on THIS grouping's
+goal for it — OMIT that topic from your JSON entirely. Do not emit stance 0 for
+it: 0 means "this country took a neutral position", not "I found nothing"."""
 
 EXTRACTION_PROMPT = """\
 Extract a structured summary from this press release.
@@ -742,7 +749,18 @@ def _rate_stances(provider, source_label: str, title: str, text: str, grouping: 
         score = _clean_stance(entry.get("stance"))
         if score is None:
             continue
-        out[topic] = {"score": score, "evidence": _clean_evidence(entry.get("evidence"), topic, grouping)}
+        evidence = _clean_evidence(entry.get("evidence"), topic, grouping)
+        # A 0 with no quote behind it is the model saying "I found nothing to
+        # rate", not "this country is neutral" — the rubric asks it to omit the
+        # topic instead, and this is the net for when it doesn't. Storing it
+        # would drag the cluster mean toward Noncommittal on the strength of an
+        # absence, and render an unauditable "+0 neutral" badge. Dropping the
+        # topic leaves it unrated, which `--stances-only` will retry.
+        # A *nonzero* score with empty evidence is a different case — a real
+        # claim with lost provenance — so it is kept.
+        if score == 0 and not evidence:
+            continue
+        out[topic] = {"score": score, "evidence": evidence}
     return out
 
 

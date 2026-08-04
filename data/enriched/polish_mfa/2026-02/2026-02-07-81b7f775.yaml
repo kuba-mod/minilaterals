@@ -47,9 +47,6 @@ extracted:
         score: 1
         evidence: Critical minerals cannot be used for blackmail, and their production
           should be geographically more diversified.
-      enlargement:
-        score: 0
-        evidence: ''
       green_transition:
         score: 1
         evidence: The United States, in cooperation with its closest allies, is taking
@@ -63,9 +60,6 @@ extracted:
         score: 1
         evidence: He also expressed his belief that transatlantic cooperation on security
           and the economy is evidence of the enduring bonds between the US and Europe.
-      enlargement:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

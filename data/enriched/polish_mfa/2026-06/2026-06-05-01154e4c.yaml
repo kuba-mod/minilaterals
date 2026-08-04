@@ -44,9 +44,6 @@ extracted:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
           and its significance in the face of regional security challenges
-      enlargement:
-        score: 0
-        evidence: ''
       rule_of_law:
         score: 1
         evidence: mutual relations must be built on historical truth, respect for
@@ -56,9 +53,6 @@ extracted:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
           and its significance in the face of regional security challenges
-      enlargement:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

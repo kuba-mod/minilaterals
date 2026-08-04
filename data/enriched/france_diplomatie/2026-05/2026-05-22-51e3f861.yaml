@@ -50,18 +50,6 @@ extracted:
         score: 1
         evidence: The Minister welcomed Sweden’s choice of Naval Group’s Defence and
           Intervention Frigate for modernizing its navy.
-      hybrid:
-        score: 0
-        evidence: ''
-      enlargement:
-        score: 0
-        evidence: ''
-      green_transition:
-        score: 0
-        evidence: ''
-      rule_of_law:
-        score: 0
-        evidence: ''
     e3:
       defence:
         score: 1

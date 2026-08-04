@@ -77,6 +77,8 @@ PROMPT_LINEAGE = {
     "434962fe": "4",  # native-language inputs (this branch)
     "c6353f81": "5",  # multi-grouping: 12-country actors, topic union, explicit_formats
     "f5697563": "6",  # explicit_formats legend + naming-vs-involvement clarification
+    "83172f45": "7",  # per-grouping goals: one stance call per relevant grouping
+    "ee238d06": "8",  # unrated ≠ neutral: omit topics with no quotable stance
 }
 
 
