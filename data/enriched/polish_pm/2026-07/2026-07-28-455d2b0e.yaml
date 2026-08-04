@@ -35,10 +35,6 @@ extracted:
         score: 1
         evidence: Wielkim dziedzictwem narodowym Polski jest solidarność i jej niezwykły
           wymiar w pierwszych dniach rosyjskiej wojny.
-    visegrad:
-      energy:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '7'

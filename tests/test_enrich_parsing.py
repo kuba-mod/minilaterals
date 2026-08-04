@@ -122,3 +122,60 @@ def test_clean_evidence_drops_substring_of_goal(monkeypatch):
 def test_clean_evidence_empty_input():
     assert _clean_evidence(None, "ukraine", "weimar") == ""
     assert _clean_evidence("   ", "ukraine", "weimar") == ""
+
+
+# --- _rate_stances: unrated is not neutral ----------------------------------
+
+
+class _OneShotProvider:
+    def __init__(self, payload):
+        self.payload = payload
+
+    def call(self, prompt):  # noqa: ARG002
+        return json.dumps(self.payload)
+
+
+def _rate(payload, topics, monkeypatch, goals=None):
+    monkeypatch.setattr(enrich, "GOALS", goals or {"weimar": {t: f"goal for {t}" for t in topics}})
+    monkeypatch.setattr(
+        enrich, "GROUPINGS", {"weimar": enrich.Grouping("weimar", "Weimar Triangle", ["DE", "FR", "PL"], topics)}
+    )
+    return enrich._rate_stances(_OneShotProvider(payload), "Poland", "t", "body", "weimar", topics)
+
+
+def test_rate_stances_drops_neutral_without_evidence(monkeypatch):
+    # score 0 + no quote is the model saying "found nothing", not "neutral" —
+    # storing it would drag the cluster mean on the strength of an absence.
+    out = _rate({"defence": {"stance": 0, "evidence": None}}, ["defence"], monkeypatch)
+    assert out == {}
+
+
+def test_rate_stances_keeps_neutral_with_evidence(monkeypatch):
+    out = _rate({"defence": {"stance": 0, "evidence": "rozmowy się odbyły"}}, ["defence"], monkeypatch)
+    assert out == {"defence": {"score": 0, "evidence": "rozmowy się odbyły"}}
+
+
+def test_rate_stances_keeps_nonzero_without_evidence(monkeypatch):
+    # A nonzero score is a real claim with lost provenance, not an absence.
+    out = _rate({"defence": {"stance": 1, "evidence": ""}}, ["defence"], monkeypatch)
+    assert out == {"defence": {"score": 1, "evidence": ""}}
+
+
+def test_rate_stances_drops_neutral_whose_evidence_was_goal_copy(monkeypatch):
+    goals = {"weimar": {"defence": "A European defence pillar complementary to NATO"}}
+    out = _rate(
+        {"defence": {"stance": 0, "evidence": "A European defence pillar complementary to NATO"}},
+        ["defence"],
+        monkeypatch,
+        goals=goals,
+    )
+    assert out == {}
+
+
+def test_rate_stances_drops_only_the_unrated_topic(monkeypatch):
+    payload = {
+        "ukraine": {"stance": 2, "evidence": "przekażemy 5 mld"},
+        "defence": {"stance": 0, "evidence": None},
+    }
+    out = _rate(payload, ["ukraine", "defence"], monkeypatch)
+    assert set(out) == {"ukraine"}

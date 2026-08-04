@@ -35,9 +35,6 @@ extracted:
         evidence: podpisali dokument określający kierunki współpracy w obszarze zwalczania
           FIMI (Foreign Information Manipulation and Interference – zagranicznej manipulacji
           i ingerencji w środowisku informacyjnym)
-      defence:
-        score: 0
-        evidence: ''
     visegrad:
       defence:
         score: 1

@@ -51,9 +51,6 @@ extracted:
         score: 1
         evidence: China’s trade and industrial policy is distorting global markets
           to a massive degree. And this approach is set to intensify.
-      enlargement:
-        score: 0
-        evidence: ''
       rule_of_law:
         score: 1
         evidence: The freedom of Europe.

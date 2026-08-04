@@ -53,9 +53,6 @@ extracted:
         score: 1
         evidence: Deputy foreign ministers discussed current regional challenges and
           the need to continuously put international pressure on Russia.
-      enlargement:
-        score: 0
-        evidence: ''
       rule_of_law:
         score: 1
         evidence: The ministers stressed the strategic importance of Polish–Ukrainian
@@ -67,9 +64,6 @@ extracted:
         evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
           military cooperation, including cooperation in the unmanned aerial systems
           (drones) sector.
-      enlargement:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '3'

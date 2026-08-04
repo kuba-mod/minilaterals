@@ -41,10 +41,6 @@ extracted:
         score: 1
         evidence: calling, among other things, for their operational cooperation to
           be intensified in view of the climate risks
-    e3:
-      iran:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '7'

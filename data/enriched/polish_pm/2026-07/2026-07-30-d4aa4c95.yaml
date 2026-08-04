@@ -35,9 +35,6 @@ extracted:
       ukraine:
         score: 1
         evidence: Polska będzie nadal ściśle współpracować z Ukrainą w kwestiach bezpieczeństwa
-      defence:
-        score: 0
-        evidence: ''
     visegrad:
       defence:
         score: 1

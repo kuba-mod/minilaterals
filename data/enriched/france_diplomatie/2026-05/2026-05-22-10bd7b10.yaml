@@ -42,9 +42,6 @@ extracted:
       defence:
         score: 0
         evidence: security challenges in the North Sea
-      rule_of_law:
-        score: 0
-        evidence: ''
     e3:
       defence:
         score: 0

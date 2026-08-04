@@ -23,11 +23,6 @@ extracted:
     ukraine: Estonia condemns the Russian missile strike on Polish territory as part
       of the broader aggression against Ukraine.
     defence: Estonia stands in solidarity with Poland's security and territorial integrity.
-  stances:
-    baltic:
-      defence:
-        score: 0
-        evidence: ''
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '7'
