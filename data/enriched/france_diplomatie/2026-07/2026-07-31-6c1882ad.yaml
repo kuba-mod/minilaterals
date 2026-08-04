@@ -18,7 +18,16 @@ extracted:
   positions:
     defence: France remains ready to contribute to the defence of Egypt and its Middle
       Eastern partners.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: remains active and ready to contribute to their defence
+    e3:
+      defence:
+        score: 0
+        evidence: remains active and ready to contribute to their defence
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions

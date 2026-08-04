@@ -41,19 +41,25 @@ extracted:
       ukraine:
         score: 1
         evidence: We’re continuing to support Ukraine’s battle to defend itself with
-          substantial economic and military resources as it is also defending our
-          freedom at the end of the day.
+          substantial economic and military resources
       defence:
         score: 1
-        evidence: We’re currently not keeping pace with developments in AI and the
-          digital economy.
+        evidence: A single market for defence equipment could provide a significant
+          boost to cooperation in planning, development and procurement across Europe.
       hybrid:
         score: 1
         evidence: China’s trade and industrial policy is distorting global markets
           to a massive degree. And this approach is set to intensify.
       rule_of_law:
         score: 1
-        evidence: The freedom of Europe.
+        evidence: We therefore want to strengthen the rule of law in concrete terms
+          – within the framework of the negotiations on the next multiannual financial
+          framework, and also by strengthening Article 7 of the Treaty on European
+          Union.
+      enlargement:
+        score: 2
+        evidence: I propose structuring the path to the admission of new member states
+          as a step-by-step process in the future.
     e3:
       defence:
         score: 1
@@ -61,5 +67,5 @@ extracted:
           digital economy.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '3'
-  environment: local
+  prompt_version: '8'
+  environment: github_actions

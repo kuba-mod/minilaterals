@@ -33,8 +33,14 @@ extracted:
   stances:
     weimar:
       ukraine:
+        score: 2
+        evidence: Po tym zdarzeniu będziemy rozważali dalsze wsparcie dla Ukrainy,
+          żeby Ukraina nie przegrała tej wojny.
+      defence:
         score: 1
-        evidence: Polska będzie nadal ściśle współpracować z Ukrainą w kwestiach bezpieczeństwa
+        evidence: generał Ireneusz Nowak postawił w stan gotowości wszystkie systemy
+          obrony powietrznej, uruchamiając krajowe i sojusznicze służby związane z
+          ochroną przestrzeni lotniczej
     visegrad:
       defence:
         score: 1
@@ -43,5 +49,5 @@ extracted:
           ochroną przestrzeni lotniczej
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions

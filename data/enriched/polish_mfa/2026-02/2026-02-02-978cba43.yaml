@@ -41,14 +41,13 @@ extracted:
     weimar:
       ukraine:
         score: 2
-        evidence: Deputy Foreign Minister Bosacki confirmed that Poland can offer
-          concrete support for Kyiv, referring to recent actions of the Government
-          Agency for Strategic Reserves, and the “Warmth from Poland for Kyiv” campaign.
+        evidence: Poland can offer concrete support for Kyiv, referring to recent
+          actions of the Government Agency for Strategic Reserves, and the “Warmth
+          from Poland for Kyiv” campaign
       defence:
-        score: 2
-        evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
-          military cooperation, including cooperation in the unmanned aerial systems
-          (drones) sector.
+        score: 1
+        evidence: enhancing the Polish–Ukrainian military cooperation, including cooperation
+          in the unmanned aerial systems (drones) sector
       hybrid:
         score: 1
         evidence: Deputy foreign ministers discussed current regional challenges and
@@ -61,10 +60,9 @@ extracted:
     visegrad:
       defence:
         score: 2
-        evidence: The meeting also focused on the outlook for enhancing the Polish–Ukrainian
-          military cooperation, including cooperation in the unmanned aerial systems
-          (drones) sector.
+        evidence: enhancing the Polish–Ukrainian military cooperation, including cooperation
+          in the unmanned aerial systems (drones) sector
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '3'
-  environment: local
+  prompt_version: '8'
+  environment: github_actions

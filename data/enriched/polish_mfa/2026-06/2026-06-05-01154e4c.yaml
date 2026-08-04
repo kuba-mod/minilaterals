@@ -36,10 +36,8 @@ extracted:
   stances:
     weimar:
       ukraine:
-        score: 2
-        evidence: emphasising that the Ukrainian president’s decision caused pain
-          and indignation in the Polish society, which has been supporting Ukraine
-          in its fight since the onset of the Russian aggression.
+        score: 1
+        evidence: confirmed the strategic character of Poland–Ukraine cooperation
       defence:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
@@ -52,8 +50,9 @@ extracted:
       defence:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
-          and its significance in the face of regional security challenges
+          and its significance in the face of regional security challenges and Russia’s
+          ongoing aggression against Ukraine
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '3'
-  environment: local
+  prompt_version: '8'
+  environment: github_actions

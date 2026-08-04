@@ -27,9 +27,9 @@ extracted:
     weimar:
       hybrid:
         score: 1
-        evidence: as well as the role of strategic communication and countering disinformation
-          in today’s diplomacy.
+        evidence: the role of strategic communication and countering disinformation
+          in today’s diplomacy
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '3'
-  environment: local
+  prompt_version: '8'
+  environment: github_actions

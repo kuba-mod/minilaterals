@@ -31,15 +31,13 @@ extracted:
   stances:
     weimar:
       defence:
-        score: 1
-        evidence: The two Ministers also discussed expanding bilateral relations,
-          particularly in the areas of business, defense, hybrid threats and critical
-          minerals.
+        score: 0
+        evidence: discussed expanding bilateral relations, particularly in the areas
+          of business, defense
       hybrid:
-        score: 1
-        evidence: The two Ministers also discussed expanding bilateral relations,
-          particularly in the areas of business, defense, hybrid threats and critical
-          minerals.
+        score: 0
+        evidence: discussed expanding bilateral relations, particularly in the areas
+          of business, defense, hybrid threats
     e3:
       defence:
         score: 1
@@ -48,5 +46,5 @@ extracted:
           minerals.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '3'
-  environment: local
+  prompt_version: '8'
+  environment: github_actions

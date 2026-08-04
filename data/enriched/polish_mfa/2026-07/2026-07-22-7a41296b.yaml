@@ -42,5 +42,5 @@ extracted:
           FIMI
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions

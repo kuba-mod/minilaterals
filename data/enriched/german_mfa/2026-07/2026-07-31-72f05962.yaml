@@ -24,7 +24,15 @@ extracted:
     hybrid: Germany warns of the threat posed by North Korean IT workers engaging
       in data theft, cryptocurrency theft, and sanctions evasion using sophisticated
       methods including AI.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Gemeinsamer Warnhinweis Japans, der Vereinigten Staaten von Amerika,
+          der Republik Korea, Australiens, Deutschlands, Frankreichs, Italiens, Kanadas,
+          Neuseelands, der Niederlande und des Vereinigten Königreichs Nordkorea stützt
+          sich auf ein Netzwerk qualifizierter IT-Fachkräfte
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions

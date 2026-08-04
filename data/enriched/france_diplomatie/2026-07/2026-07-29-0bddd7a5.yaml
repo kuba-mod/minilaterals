@@ -41,7 +41,13 @@ extracted:
         score: 1
         evidence: calling, among other things, for their operational cooperation to
           be intensified in view of the climate risks
+    e3:
+      iran:
+        score: 0
+        evidence: highlighted the role of Franco-British cooperation in the implementation
+          of the multinational mission to support freedom of navigation in the Strait
+          of Hormuz
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions

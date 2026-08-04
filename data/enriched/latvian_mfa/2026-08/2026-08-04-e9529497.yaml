@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - enlargement
+  location: Moldova
+  position: Latvia continues to provide political and practical support for Moldova's
+    integration into the European Union.
+  positions:
+    enlargement: Latvia supports the integration of Moldova into the European Union
+      through political and practical means.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

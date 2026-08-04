@@ -1,5 +1,5 @@
 date: '2026-08-04'
-run_at: '2026-08-04T04:11:18Z'
+run_at: '2026-08-04T08:20:24Z'
 sources:
 - source: german_mfa
   fetched: 0
@@ -9,8 +9,8 @@ sources:
   error: null
 - source: france_diplomatie
   fetched: 10
-  new: 1
-  skipped: 9
+  new: 0
+  skipped: 10
   known: 0
   error: null
 - source: polish_mfa
@@ -20,10 +20,10 @@ sources:
   known: 10
   error: null
 - source: german_chancellery
-  fetched: 2
-  new: 2
+  fetched: 0
+  new: 0
   skipped: 0
-  known: 9
+  known: 11
   error: null
 - source: elysee
   fetched: 0
@@ -39,8 +39,8 @@ sources:
   error: null
 - source: uk_fcdo
   fetched: 20
-  new: 1
-  skipped: 19
+  new: 0
+  skipped: 20
   known: 0
   error: null
 - source: us_state
@@ -57,19 +57,19 @@ sources:
   error: null
 - source: estonian_mfa
   fetched: 100
-  new: 1
-  skipped: 99
+  new: 0
+  skipped: 100
   known: 0
   error: null
 - source: latvian_mfa
   fetched: 20
-  new: 0
-  skipped: 20
+  new: 1
+  skipped: 19
   known: 0
   error: null
 totals:
-  fetched: 152
-  new: 5
-  skipped: 147
-  known: 159
+  fetched: 150
+  new: 1
+  skipped: 149
+  known: 161
   errors: 0

@@ -49,7 +49,13 @@ extracted:
         score: 2
         evidence: Wir wollen bis 2030 80 Prozent des Stroms aus erneuerbaren Energien
           gewinnen.
+    e3:
+      iran:
+        score: 0
+        evidence: Marktentwicklungen und auch die Ölpreisentwicklungen aufgrund der
+          Entwicklung insbesondere im Iran, aber auch aufgrund anderer geopolitischer
+          Entwicklung teilweise gerade sehr sprunghaft sind
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '8'
   environment: github_actions
