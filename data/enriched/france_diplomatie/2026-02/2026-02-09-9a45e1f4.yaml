@@ -3,7 +3,6 @@ actors:
 issue_areas:
 - defence
 - hybrid
-- green_transition
 weimar_relevant: true
 e3_relevant: true
 visegrad_relevant: false
@@ -17,7 +16,6 @@ extracted:
   topics:
   - defence
   - hybrid
-  - green_transition
   location: null
   position: France discussed expanding bilateral relations with Malaysia across several
     key areas including business, defense, hybrid threats, and critical minerals.
@@ -26,8 +24,6 @@ extracted:
       on the topic of defense with Malaysia.
     hybrid: France emphasizes coordinated action against hybrid threats as part of
       its expanded bilateral cooperation goals with Malaysia.
-    green_transition: Green transition is not explicitly mentioned as a topic of discussion
-      between France and Malaysia.
   stances:
     weimar:
       defence:

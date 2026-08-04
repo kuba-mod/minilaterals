@@ -3,7 +3,6 @@ actors:
 issue_areas:
 - ukraine
 - defence
-- enlargement
 - rule_of_law
 weimar_relevant: true
 e3_relevant: false
@@ -18,7 +17,6 @@ extracted:
   topics:
   - ukraine
   - defence
-  - enlargement
   - rule_of_law
   location: null
   position: Poland emphasized the importance of historical truth and dialogue in relations
@@ -29,8 +27,6 @@ extracted:
       truth.
     defence: Poland reaffirmed the strategic importance of cooperation with Ukraine
       regarding regional security challenges.
-    enlargement: The text does not provide specific information on EU enlargement
-      goals.
     rule_of_law: Poland stresses that bilateral relations must be built upon historical
       truth and respect for victims, foundational elements of the rule of law.
   stances:

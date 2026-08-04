@@ -4,8 +4,6 @@ issue_areas:
 - rule_of_law
 - defence
 - hybrid
-- enlargement
-- green_transition
 - ukraine
 weimar_relevant: true
 e3_relevant: true
@@ -21,8 +19,6 @@ extracted:
   - rule_of_law
   - defence
   - hybrid
-  - enlargement
-  - green_transition
   - ukraine
   location: null
   position: Germany and Greece are upgrading their partnership to a new level by establishing
@@ -35,10 +31,6 @@ extracted:
       joint efforts in procurement, logistics, and crisis management.
     hybrid: The statement calls for coordinated action against hybrid threats as part
       of strengthening defense and security cooperation.
-    enlargement: The statement does not explicitly address the EU enlargement process
-      or Western Balkans accession.
-    green_transition: The statement focuses on economic resilience and digital transformation
-      but does not specifically mention climate neutrality or green industrial policy.
     ukraine: Germany commits to joint responsibility with Greece in contributing to
       peace and security in Europe following Russia's war of aggression against Ukraine.
   stances:

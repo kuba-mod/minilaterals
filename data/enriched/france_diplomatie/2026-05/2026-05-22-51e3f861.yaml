@@ -3,10 +3,6 @@ actors:
 issue_areas:
 - ukraine
 - defence
-- hybrid
-- enlargement
-- green_transition
-- rule_of_law
 weimar_relevant: true
 e3_relevant: true
 visegrad_relevant: false
@@ -20,10 +16,6 @@ extracted:
   topics:
   - ukraine
   - defence
-  - hybrid
-  - enlargement
-  - green_transition
-  - rule_of_law
   location: Helsingborg, Sweden
   position: France reaffirmed its strategic partnership with Sweden and emphasized
     joint efforts on European security, the Ukraine crisis, and the broader European
@@ -33,13 +25,6 @@ extracted:
       European agenda.
     defence: France highlights mutual trust and cooperation through defense industry
       choices between France and Sweden.
-    hybrid: France does not explicitly address hybrid threats in the provided text.
-    enlargement: France does not explicitly address EU enlargement in the provided
-      text.
-    green_transition: France does not explicitly address green transition goals in
-      the provided text.
-    rule_of_law: France does not explicitly address rule of law or democratic resilience
-      in the provided text.
   stances:
     weimar:
       ukraine:

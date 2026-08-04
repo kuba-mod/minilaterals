@@ -40,6 +40,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -151,12 +152,15 @@ FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for 
 #                   per relevant grouping against that grouping's own goals
 #   "8"  ee238d06  unrated ≠ neutral: omit a topic with no quotable stance
 #                   instead of emitting stance 0 with null evidence
+#   "9"  6ea9d3d1  topics are a selection, not a checklist: a topic the text
+#                   does not cover is left out instead of listed with a
+#                   position that reports its absence
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "8"
-PROMPT_SURFACE_SHA = "ee238d06"
+PROMPT_VERSION = "9"
+PROMPT_SURFACE_SHA = "6ea9d3d1"
 
 
 def prompt_surface_sha() -> str:
@@ -223,7 +227,7 @@ Return JSON with exactly these fields:
   "participants": ["list of named officials or roles mentioned"],
   "actors": ["a flat array of the country codes ({actor_codes}) that this item represents or discusses; [] if none; never nest arrays or add other values"],
   "explicit_formats": ["a flat array of format keys from the list above, ONLY if the text itself names that format (e.g. says 'the E3', 'AUKUS', 'Weimar Triangle') — NOT just because the format's member countries happen to be discussed; [] if the text never names a format by its own name"],
-  "topics": ["list from: {topic_list}"],
+  "topics": ["a SELECTION from: {topic_list} — include a topic ONLY if the text takes a position on it or announces an action on it. This is not a checklist: leave out every topic the text does not cover, and do not list a topic in order to report that it is absent. Most press releases cover one or two topics; [] if none"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
   "positions_by_topic": {{
@@ -232,7 +236,12 @@ Return JSON with exactly these fields:
     }}
   }}
 }}
-Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned."""
+Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned.
+
+Every "position" must state what {source} actually said or did. Never write a
+position describing what the text lacks ("does not address X", "the text does not
+provide details on X") — if that is the only thing you could write for a topic,
+that topic does not belong in "topics" at all. Leave it out of both."""
 
 STANCE_BACKFILL_PROMPT = """\
 Rate this government press release against the {grouping}'s policy goals.
@@ -533,6 +542,57 @@ def _find_pending(limit: int | None = None) -> list[Path]:
     return pending
 
 
+# A per-topic "position" that describes what the *press release* lacks rather
+# than what the country said. The model produces these when it treats the topic
+# vocabulary as a checklist to fill in rather than a list to select from — see
+# `_drop_absent_topics`.
+#
+# Scoped deliberately tightly. The verbs here take a subject matter as their
+# object ("does not address enlargement"), so they read as meta-commentary; the
+# broader ones a real position could use ("does not provide weapons", "does not
+# tolerate breaches of international law") are only matched with an explicitly
+# meta object like "information" or "a specific commitment". A false positive
+# would silently delete a genuine —2 position, so the rule errs toward keeping.
+_ABSENCE_PATTERNS = [
+    r"\bdoes not (?:explicitly |specifically |directly )?(?:address|mention|discuss|specify|elaborate)\b",
+    r"\bdoes not (?:provide|contain|include|state|take|offer)\b[^.]{0,40}?"
+    r"\b(?:information|details?|specifics?|commitments?|stance|position)\b",
+    r"\bno (?:explicit|specific|clear) (?:statement|position|stance|mention|commitment|reference)\b",
+    # Either anchored to the source ("not mentioned in the text") or hedged with
+    # explicitly/specifically, which in a position summary only ever introduces
+    # an absence — a real position states what was said, not what wasn't.
+    r"\b(?:is |are |was |were )?not (?:explicitly |specifically )?"
+    r"(?:mentioned|addressed|discussed|specified|covered|raised)\b[^.]{0,30}?"
+    r"\b(?:in the (?:text|statement|press release|provided text|article)|provided text)\b",
+    r"\b(?:is |are |was |were )not (?:explicitly|specifically|directly) "
+    r"(?:mentioned|addressed|discussed|specified|covered|raised)\b",
+]
+_ABSENCE_RE = re.compile("|".join(_ABSENCE_PATTERNS), re.IGNORECASE)
+
+
+def asserts_absence(position: str) -> bool:
+    """True if a per-topic position says the text lacks a position, not what it is."""
+    return bool(_ABSENCE_RE.search(position or ""))
+
+
+def _drop_absent_topics(topics: list[str], positions: dict[str, str]) -> tuple[list[str], list[str]]:
+    """Remove topics whose position asserts the text says nothing about them.
+
+    `topics` is meant to be a *selection* from the vocabulary, but the model
+    sometimes enumerates the whole list and marks the misses in prose ("France
+    does not explicitly address hybrid threats in the provided text"). Left in,
+    such a topic propagates everywhere: it lands in `issue_areas` (so the event
+    joins a convergence cluster for a topic it never discusses), it feeds
+    `_grouping_relevance`, and `_stance_topics` asks the model to rate it on
+    every backfill run — which it declines, forever, since there is nothing
+    there to rate.
+
+    Returns (kept topics, dropped topics).
+    """
+    kept = [t for t in topics if not asserts_absence(positions.get(t, ""))]
+    return kept, [t for t in topics if t not in kept]
+
+
 def _clean_stance(value) -> int | None:
     """Coerce an LLM stance value to an int in [-2, 2], or None if not provided.
 
@@ -633,6 +693,17 @@ def _extract(provider, raw_path: Path) -> bool:
             if not pos_text:
                 raise ValueError(f"empty position for topic {topic!r}")
             extracted["positions"][topic] = pos_text
+
+        # `topics` is a selection, not a checklist: drop any the model listed and
+        # then described as absent from the text. Done before anything reads
+        # `llm_topics`, so `issue_areas`, relevance and the stance calls below all
+        # see the corrected list.
+        llm_topics, absent = _drop_absent_topics(llm_topics, extracted["positions"])
+        if absent:
+            print(f"  ~ dropped topics with no position in the text: {absent}")
+            for topic in absent:
+                extracted["positions"].pop(topic, None)
+            extracted["topics"] = [t for t in (extracted.get("topics") or []) if t not in absent]
 
         if "positions_by_topic" in extracted:
             del extracted["positions_by_topic"]

@@ -2,8 +2,6 @@ actors:
 - PL
 issue_areas:
 - ukraine
-- enlargement
-- rule_of_law
 weimar_relevant: true
 e3_relevant: false
 visegrad_relevant: true
@@ -20,18 +18,12 @@ extracted:
   - foreign ministers of Slovakia
   topics:
   - ukraine
-  - enlargement
-  - rule_of_law
   location: Cyprus
   position: Poland participated in discussions on key EU foreign policy issues, focusing
     heavily on Russia's aggression against Ukraine and the Middle East.
   positions:
     ukraine: Poland is actively involved in discussing support for Ukraine and increasing
       pressure on Russia.
-    enlargement: The text mentions the general EU foreign policy agenda but does not
-      provide a specific stance or commitment regarding enlargement.
-    rule_of_law: Poland's participation in discussions implies an adherence to democratic
-      principles and international law, though no explicit statement is made.
   stances:
     weimar:
       ukraine:

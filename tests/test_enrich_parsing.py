@@ -179,3 +179,62 @@ def test_rate_stances_drops_only_the_unrated_topic(monkeypatch):
     }
     out = _rate(payload, ["ukraine", "defence"], monkeypatch)
     assert set(out) == {"ukraine"}
+
+
+# --- asserts_absence / _drop_absent_topics ----------------------------------
+
+
+@pytest.mark.parametrize(
+    "position",
+    [
+        "France does not explicitly address hybrid threats in the provided text.",
+        "The text does not provide specific information on EU enlargement goals.",
+        "The statement focuses on economic resilience but does not specifically mention climate neutrality.",
+        "Green transition is not explicitly mentioned as a topic of discussion between France and Malaysia.",
+        "Poland's participation implies adherence to democratic principles, though no explicit statement is made.",
+        "The text mentions the agenda but does not provide a specific stance regarding enlargement.",
+    ],
+)
+def test_asserts_absence_catches_meta_commentary(position):
+    assert enrich.asserts_absence(position)
+
+
+@pytest.mark.parametrize(
+    "position",
+    [
+        # The critical negatives: real positions that happen to contain "does not".
+        # Deleting one of these would silently discard a genuine negative stance.
+        "Germany emphasizes that the G7 is a community of values that does not tolerate breaches of international law.",
+        "France does not provide weapons to the parties to the conflict.",
+        "Poland does not accept the proposed migration pact.",
+        "Germany will not support further accession talks until the reforms land.",
+        "France stresses continued support for Ukraine as a key priority.",
+        "",
+    ],
+)
+def test_asserts_absence_leaves_real_positions_alone(position):
+    assert not enrich.asserts_absence(position)
+
+
+def test_drop_absent_topics_splits_kept_and_dropped():
+    positions = {
+        "ukraine": "France stresses continued support for Ukraine.",
+        "defence": "France highlights defence industry cooperation with Sweden.",
+        "hybrid": "France does not explicitly address hybrid threats in the provided text.",
+        "rule_of_law": "France does not explicitly address rule of law in the provided text.",
+    }
+    kept, dropped = enrich._drop_absent_topics(list(positions), positions)
+    assert kept == ["ukraine", "defence"]
+    assert dropped == ["hybrid", "rule_of_law"]
+
+
+def test_drop_absent_topics_keeps_everything_when_all_real():
+    positions = {"ukraine": "France pledges EUR 5bn.", "defence": "France signs a frigate deal."}
+    kept, dropped = enrich._drop_absent_topics(list(positions), positions)
+    assert kept == ["ukraine", "defence"]
+    assert dropped == []
+
+
+def test_drop_absent_topics_tolerates_missing_position():
+    kept, dropped = enrich._drop_absent_topics(["ukraine"], {})
+    assert (kept, dropped) == (["ukraine"], [])
