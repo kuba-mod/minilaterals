@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  - Federal Network Agency (BNetzA)
+  topics:
+  - green_transition
+  - energy
+  - ukraine
+  location: null
+  position: Germany is ensuring a stable and secure electricity supply through the
+    expansion of renewables, the creation of a capacity market, and the reduction
+    of energy dependencies.
+  positions:
+    green_transition: Germany aims to increase the share of electricity from renewable
+      sources to 80 percent by 2030.
+    energy: The government is implementing the Electricity Supply Security and Capacity
+      Act (StromVKG) to ensure flexible capacities and stabilizing the grid via the
+      Netzanschlusspaket.
+    ukraine: Germany is diversifying its energy sources to avoid unilateral dependencies
+      on gas, a lesson learned from the Russian war of aggression against Ukraine.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Bis 2030 sollen 80 Prozent Strom aus erneuerbaren Energien gewonnen
+          werden.
+      ukraine:
+        score: 1
+        evidence: Das war eine der wichtigsten Lehren aus dem russischen Angriffskrieg
+          gegen die Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

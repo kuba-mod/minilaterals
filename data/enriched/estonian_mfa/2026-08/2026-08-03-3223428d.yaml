@@ -1,0 +1,36 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Estonia publishes a public opinion survey identifying regional cooperation,
+    NATO collective defense, and economic support for businesses abroad as top foreign
+    policy priorities.
+  positions:
+    ukraine: Supporting Ukraine is identified as a priority foreign policy direction
+      for a significant portion of the Estonian population.
+    defence: Strengthening NATO collective defense is one of the most important foreign
+      policy directions for the Estonian population.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: NATO kollektiivkaitse tugevdamine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Damietta, Egypt
+  position: France condemns the drone attack on ships in Damietta and reaffirms its
+    commitment to Egypt's security and territorial integrity.
+  positions:
+    defence: France remains ready to contribute to the defence of Egypt and its Middle
+      Eastern partners.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: ''
+    e3:
+      defence:
+        score: 0
+        evidence: ''
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '7'
+  environment: github_actions
