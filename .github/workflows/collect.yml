@@ -22,6 +22,10 @@ on:
         description: 'Cut a new edition (bump cutoff to today, render, deploy)'
         type: boolean
         default: false
+      reextract:
+        description: 'Re-extract the events stuck pending a stance rating (one-off repair; no effect on ingest or the cutoff)'
+        type: boolean
+        default: false
       backfill_since:
         description: 'Backfill: re-ingest from this date (YYYY-MM-DD). Paginates source archives instead of only the feed head; already-ingested items are skipped by filename dedup.'
         type: string
@@ -102,6 +106,21 @@ jobs:
         # failure here is surfaced instead of silently succeeding.
         continue-on-error: true
 
+      - name: Re-extract stance-pending sidecars
+        id: reextract
+        # Off by default: only runs on a manual dispatch with reextract=true.
+        # Repairs the events `--stances-only` can never finish — a sidecar whose
+        # topic list is wrong keeps being asked for a rating the model keeps
+        # declining, and re-rating cannot fix it because the fix is to re-decide
+        # what the event is about. Scoped to that set rather than every sidecar
+        # predating the current prompt: `--reextract` on its own would re-run the
+        # whole corpus, which is a much larger bill for no benefit here.
+        # Each re-extract re-rates its own stances inline, so this runs before
+        # the stance backfill below.
+        if: ${{ inputs.reextract }}
+        run: uv run python -m pipeline.enrich --reextract --stance-pending
+        continue-on-error: true
+
       - name: Backfill stances
         id: stances
         run: uv run python -m pipeline.enrich --stances-only --limit 200
@@ -172,6 +191,7 @@ jobs:
           ai_failed=false
           for step in \
             "enrich=${{ steps.enrich.outcome }}" \
+            "reextract=${{ steps.reextract.outcome }}" \
             "stances=${{ steps.stances.outcome }}" \
             "commentary=${{ steps.comment.outcome }}"; do
             name="${step%%=*}"; outcome="${step#*=}"
