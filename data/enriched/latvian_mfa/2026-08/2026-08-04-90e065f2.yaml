@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet of Ministers
+  - Ministry of Foreign Affairs
+  - Ministry of Agriculture
+  - Ministry of Finance
+  - Ministry of Economics
+  topics:
+  - ukraine
+  location: null
+  position: Latvia has approved a national position for the further expansion of sanctions
+    against Russia and Belarus.
+  positions:
+    ukraine: Latvia is strengthening its sanctions regime against Russia and Belarus
+      to support the broader effort related to the conflict in Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -35,6 +35,12 @@ extracted:
         score: 1
         evidence: Wielkim dziedzictwem narodowym Polski jest solidarność i jej niezwykły
           wymiar w pierwszych dniach rosyjskiej wojny.
+    visegrad:
+      energy:
+        score: 0
+        evidence: Kiedy wybuchła wojna na Bliskim Wschodzie zareagowaliśmy szybko
+          i stanowczo - obniżka VAT, akcyzy, regulowane ceny i pełna dyscyplina spółek
+          skarbu państwa
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'

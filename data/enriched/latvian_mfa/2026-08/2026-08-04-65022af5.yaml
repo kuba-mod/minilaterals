@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Ukrainian government officials
+  topics:
+  - ukraine
+  location: Ukraine
+  position: Latvia's Foreign Minister is conducting a working visit to Ukraine to
+    meet with state officials.
+  positions:
+    ukraine: Latvia is engaging in direct diplomatic dialogue with Ukrainian officials
+      through a working visit.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+- US
+issue_areas:
+- migration
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Wefers
+  - Dobrindt
+  - Wadephul
+  - Bilger
+  - Flasbarth
+  topics:
+  - migration
+  - energy
+  location: null
+  position: Germany emphasizes a coordinated European approach to migration and infrastructure
+    resilience while supporting international efforts for peace in Gaza.
+  positions:
+    migration: Germany views the protection of EU external borders as a top priority
+      and advocates for a joint European solution to combat irregular migration.
+    energy: Germany is preparing a state instrument for gas storage capacity to protect
+      against external energy supply shocks, while maintaining regular market-based
+      winter precautions.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
