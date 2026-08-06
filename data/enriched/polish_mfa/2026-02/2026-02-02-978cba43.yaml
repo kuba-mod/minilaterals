@@ -60,8 +60,8 @@ extracted:
     visegrad:
       defence:
         score: 2
-        evidence: enhancing the Polish–Ukrainian military cooperation, including cooperation
-          in the unmanned aerial systems (drones) sector
+        evidence: the outlook for enhancing the Polish–Ukrainian military cooperation,
+          including cooperation in the unmanned aerial systems (drones) sector
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'

@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Council of Ministers
+  - Ministry of Foreign Affairs
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland has adopted the National Action Plan for the implementation of
+    the UN Guiding Principles on Business and Human Rights for 2026-2029.
+  positions:
+    rule_of_law: Poland aims to strengthen human rights protections in the context
+      of economic activity and support responsible business conduct through a new
+      National Action Plan.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Rada Ministrów przyjęła Krajowy Plan Działania na rzecz wdrażania
+          Wytycznych ONZ dotyczących biznesu i praw człowieka na lata 2026-2029
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

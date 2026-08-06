@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - President Nawrocki
+  topics:
+  - rule_of_law
+  - energy
+  - green_transition
+  location: null
+  position: The Polish Prime Minister is addressing constitutional conflicts regarding
+    judicial appointments and ensuring national energy security during extreme weather.
+  positions:
+    rule_of_law: The Prime Minister is asserting the constitutional requirement for
+      the countersignature of presidential nominations for judicial assessors to prevent
+      illegal appointments.
+    energy: Poland is maintaining a stable energy system through a diversified model
+      and cooperation with the European energy market to prevent blackouts during
+      heatwaves.
+    green_transition: Poland is leveraging photovoltaics for system security and intends
+      to further invest in onshore and offshore wind energy.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Staram się bez emocji rozwiązywać problemy wynikające z niekonstytucyjnych
+          działań
+      green_transition:
+        score: 1
+        evidence: Polska rozwija zdywersyfikowany model energetyczny, oparty na różnych
+          źródłach energii, w tym OZE.
+    visegrad:
+      energy:
+        score: 1
+        evidence: Polska rozwija zdywersyfikowany model energetyczny, oparty na różnych
+          źródłach energii, w tym OZE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

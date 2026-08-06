@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: Beirut, Lebanon
+  position: France expresses solidarity with the victims of the Beirut port explosion
+    and demands a transparent judicial investigation to ensure accountability.
+  positions:
+    rule_of_law: France insists that independent and impartial trials must be conducted
+      to establish liability for the Beirut explosion.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: The judicial investigation must continue unimpeded.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

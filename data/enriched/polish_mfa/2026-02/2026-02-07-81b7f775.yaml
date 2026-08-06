@@ -49,7 +49,7 @@ extracted:
           should be geographically more diversified.
       green_transition:
         score: 1
-        evidence: the United States has proposed a major international initiative
+        evidence: The United States has proposed a major international initiative
           whose goals Poland and the rest of the European Union support
       rule_of_law:
         score: 1

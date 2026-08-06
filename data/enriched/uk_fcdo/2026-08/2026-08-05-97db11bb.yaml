@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Jess Jambert-Gray, Deputy Political Coordinator
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom reaffirms its commitment to collaborating with international
+    partners to combat terrorism and protect international peace and security.
+  positions:
+    defence: The UK emphasizes the importance of collective action and international
+      cooperation to address the threats posed by terrorist acts.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

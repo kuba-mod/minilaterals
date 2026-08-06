@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of Foreign Affairs
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Poland emphasizes the need for solidarity with security services and the
+    communication of Russian hybrid threats to international allies.
+  positions:
+    hybrid: The Ministry of Foreign Affairs informs international allies about hostile
+      hybrid actions by the Russian Federation and opposes the relativization of these
+      threats.
+    defence: Poland asserts that state security facts should not be subject to current
+      political polemics and calls for solidarity with the security services.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: informowanie naszych międzynarodowych sojuszników o wszelkich przejawach
+          wrogich działań hybrydowych, które godzą w bezpieczeństwo Rzeczypospolitej
+          Polskiej
+    visegrad:
+      defence:
+        score: 1
+        evidence: informowanie naszych międzynarodowych sojuszników o wszelkich przejawach
+          wrogich działań hybrydowych, które godzą w bezpieczeństwo Rzeczypospolitej
+          Polskiej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
