@@ -1,0 +1,42 @@
+# Measured prompt-evaluation results, one entry per PROMPT_VERSION.
+#
+# Written by `python -m pipeline.evaluate --record`. This file is the record a
+# claim about a prompt change has to cite: tests/test_evaluate.py fails if
+# enrich.PROMPT_VERSION has no entry here, so a prompt cannot be revised without
+# the revision being measured first.
+#
+# prompt_surface_sha is the hash of the prompt templates; rendered_surface_sha
+# covers the goal sentences, format legend, topic list and actor codes that get
+# interpolated into them. The second can move while the first stands still — a
+# goals edit in data/groupings.yaml does exactly that — so two entries are only
+# strictly comparable when both match.
+'8':
+  prompt_surface_sha: ee238d06
+  rendered_surface_sha: 52cb5d9b
+  model: gemma4:latest
+  provider: ollama
+  cases: 46
+  repeats: 3
+  recorded_at: '2026-08-07'
+  notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yml run
+    31216887818, flip rate 0.042 across the 3 repeats. Headline finding: abstention_recall
+    0.220 — the v8 ''omit rather than score 0'' instruction is followed less than
+    a quarter of the time.'
+  metrics:
+    relevance_accuracy: 0.943
+    actors_exact: 0.911
+    actors_f1: 0.947
+    formats_exact: 0.848
+    topics_f1: 0.788
+    stance_exact: 0.598
+    stance_within_1: 0.957
+    stance_mae: 0.47
+    sign_agreement: 0.812
+    abstention_recall: 0.22
+    abstention_precision: 1.0
+    goal_discrimination: 0.583
+    stance_coverage: 0.994
+    evidence_verbatim: 0.941
+    evidence_goal_copy: 0.0
+    retry_rate: 0.0
+    parse_failure_rate: 0.0
