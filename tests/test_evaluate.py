@@ -451,3 +451,12 @@ def test_stance_forced_rates_labelled_topics_despite_classification_miss():
     forced = evaluate.run_case(FakeProvider([extraction, stance]), case, stance_forced=True)
     assert forced["asked"] == {"weimar": ["ukraine"]}
     assert _score(case, forced)["stance_exact"] == 1.0
+
+
+def test_fractional_denominators_are_rounded_for_display():
+    # Denominators are means across repeats, so "2.33 omissions per run" is a real
+    # value — but the column exists to show resolution, not to report thirds.
+    assert evaluate._fmt_n(2.33333) == "2"
+    assert evaluate._fmt_n(79.6667) == "80"
+    assert evaluate._fmt_n(0) == "—"
+    assert evaluate._fmt_n(None) == "—"
