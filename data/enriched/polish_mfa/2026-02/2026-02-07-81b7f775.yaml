@@ -49,7 +49,7 @@ extracted:
           should be geographically more diversified.
       green_transition:
         score: 1
-        evidence: The United States has proposed a major international initiative
+        evidence: the United States has proposed a major international initiative
           whose goals Poland and the rest of the European Union support
       rule_of_law:
         score: 1
@@ -58,8 +58,8 @@ extracted:
     visegrad:
       defence:
         score: 1
-        evidence: Also emphasised was the need to continue supporting Ukraine in its
-          armed struggle.
+        evidence: emphasised was the need to continue supporting Ukraine in its armed
+          struggle
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'

@@ -38,6 +38,10 @@ extracted:
         score: 0
         evidence: discussed expanding bilateral relations, particularly in the areas
           of business, defense, hybrid threats
+      green_transition:
+        score: 0
+        evidence: discussed expanding bilateral relations, particularly in the areas
+          of business, defense, hybrid threats and critical minerals
     e3:
       defence:
         score: 1

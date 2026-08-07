@@ -1,0 +1,54 @@
+actors:
+- DE
+- FR
+issue_areas:
+- hybrid
+- energy
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wefers
+  - SRS Hille
+  - Kaminski
+  - Reck
+  - Lorenzat
+  - Schulz
+  - Sachter
+  topics:
+  - hybrid
+  - energy
+  - defence
+  location: Bonn, Germany
+  position: The German government is addressing domestic security incidents involving
+    drones, monitoring Russian disinformation campaigns, and managing energy and industrial
+    stability.
+  positions:
+    hybrid: Germany is monitoring the 'Matryoshka' disinformation campaign and utilizing
+      EU sanction instruments and the Digital Services Act to counter foreign interference
+      in democratic processes.
+    energy: Germany is monitoring gas storage levels and river water levels to ensure
+      energy security and the continued supply of oil and fuels.
+    defence: Germany and France intend to continue their joint ownership and strategic
+      development of KNDS.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Ganz generell sehen wir aber natürlich, dass Russland jeden Tag
+          in irgendeiner Art und Weise versucht, hybrid und über verschiedene Maßnahmen
+          Einfluss hier in Deutschland zu nehmen
+    e3:
+      defence:
+        score: 0
+        evidence: Wir wollen zusammen mit Frankreich die Zukunft von KNDS als künftigen
+          gemeinsamen Anteilseigner mit gleichen Rechten gestalten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Kulturstaatsminister
+  topics: []
+  location: null
+  position: Germany supports the implementation of new EU AI transparency obligations
+    to increase trust in digital content while protecting artistic and press freedom.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

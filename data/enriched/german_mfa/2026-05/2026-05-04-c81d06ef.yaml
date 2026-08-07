@@ -48,17 +48,27 @@ extracted:
         evidence: shared values of freedom and democracy, human rights and the respect
           for the rule of law
       defence:
-        score: 1
-        evidence: expand our efforts in defence procurement, logistics, and crisis
-          management
+        score: 2
+        evidence: 'agree to work towards an agenda for a Partnership for Strategic
+          Cooperation between Greece and Germany, jointly addressing the following
+          pillars: ... II. Defence, Civil Protection & Hybrid Threats, Law Enforcement
+          , with the objective to strengthen our capabilities to respond to conventional
+          and hybrid threats and expand our efforts in defence procurement, logistics,
+          and crisis management.'
       hybrid:
-        score: 1
-        evidence: strengthen our capabilities to respond to conventional and hybrid
-          threats
+        score: 2
+        evidence: 'agree to work towards an agenda for a Partnership for Strategic
+          Cooperation between Greece and Germany, jointly addressing the following
+          pillars: ... II. Defence, Civil Protection & Hybrid Threats, Law Enforcement
+          , with the objective to strengthen our capabilities to respond to conventional
+          and hybrid threats'
       ukraine:
         score: 1
         evidence: Against the backdrop of fundamental geopolitical changes following
-          Russia’s war of aggression against Ukraine
+          Russia’s war of aggression against Ukraine as well as instability arising
+          in the Near and Middle East, Greece and Germany are committed to jointly
+          assume responsibility and step up their efforts to contribute to peace and
+          security in Europe and beyond.
       green_transition:
         score: 1
         evidence: harness new technologies for governance, business and socially just

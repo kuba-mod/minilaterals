@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster
+  - UK Deputy Permanent Representative to the UN
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom urges the transitional government of South Sudan to
+    cooperate fully with the United Nations Mission in South Sudan (UNMISS).
+  positions:
+    rule_of_law: The UK calls for full cooperation with international monitoring and
+      peace-keeping efforts to ensure stability and governance in South Sudan.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

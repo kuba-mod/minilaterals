@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Foreign Minister of Latvia
+  topics:
+  - ukraine
+  location: Odessa and Kyiv, Ukraine
+  position: Latvia emphasizes its close cooperation with Ukraine and supports its
+    future integration into the EU and NATO.
+  positions:
+    ukraine: Latvia reaffirms its commitment to a common future for Ukraine within
+      the European Union and NATO.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

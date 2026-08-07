@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Keiko Sofía Fujimori Higuchi
+  topics: []
+  location: null
+  position: Germany congratulates the President of Peru on her inauguration and expresses
+    a desire to further deepen friendly relations based on shared democratic values.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
