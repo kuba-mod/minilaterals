@@ -1,0 +1,457 @@
+# Stance rating against each grouping's own goal, including the prompt-v8 rule:
+# a topic the text touches but says nothing goal-bearing about must be OMITTED,
+# not scored 0. Those are the `null` labels — they are the only direct measurement
+# of whether v8 did what its CLAUDE.md entry claims.
+cases:
+- id: pl-ukraine-recovery-conference
+  provenance: data/events/polish_pm/2026-06/2026-06-25-95874636.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-06-25'
+  title: 'Premier: Odbudowa Ukrainy będzie możliwa dzięki naszej solidarności'
+  text: W Gdańsku rozpoczęła się dwudniowa Konferencja na rzecz Odbudowy Ukrainy (Ukraine
+    Recovery Conference – URC) współorganizowana przez Polskę oraz Ukrainę. Jestem
+    dumny, że tak wielu z was, pań i panów premierów, prezydentów, przewodniczących,
+    przedsiębiorców, menedżerów przybyło do Gdańska. Tysiące ludzi przez dwa dni będą
+    przygotowywać wspólnie wielki projekt - projekt odbudowy Ukrainy po wojnie - powiedział
+    Premier Donald Tusk podczas sesji otwierającej URC. Konferencja stanowi kontynuację
+    międzynarodowego formatu zainicjowanego przez państwa G7 oraz platformę darczyńców
+    dla Ukrainy. Jej celem jest koordynacja działań na rzecz odbudowy kraju oraz mobilizacja
+    inwestycji niezbędnych do realizacji tego procesu. Oczekujemy podpisania ponad
+    160 umów wartych 10 mld euro - zapowiedziała Premier Ukrainy Julia Swyrydenko.
+    Wskazała, że będą one miały wpływ na wiele wymiarów – rozwój regionalny, biznesowy,
+    a także obronny. Premier Tusk zwrócił uwagę na historyczne wyzwania stojące dziś
+    przed Europą i światem zachodnim – zjednoczenie Europy i wolnego świata wobec
+    agresji oraz niepewności, która w ostatnich latach ogarnęła znaczną część globu.
+    Wskazał, że dziś wszyscy wierzymy, że Ukraina oprze się rosyjskiej agresji, a
+    odbudowa Ukrainy będzie możliwa dzięki naszej solidarności. Nasze wsparcie dla
+    Ukrainy jest konsekwentne i niezłomne, aby pomóc osiągnąć sprawiedliwy i trwały
+    pokój -  oświadczył szef Rady Europejskiej Antonio Costa. Do Ukrainy trafi pierwsza
+    płatność na kwotę 3,2 mld euro z unijnej pożyczki o wartości 90 mld euro. W dalszym
+    ciągu wzywamy wszystkich naszych partnerów, żeby utrzymali swoje wsparcie, bowiem
+    silna, niezależna Ukraina leży w naszym interesie - zaapelowała Przewodnicząca
+    Komisji Europejskiej Ursula von der Leyen. Ambicją Unii Europejskiej jest nie
+    tylko pomagać Ukrainie i Europie, ale pomagać Ukrainie rosnąć, bogacić się jako
+    wolny europejski kraj – dlatego UE stała się tam największym inwestorem. Wybór
+    Gdańska jako miejsca tego wyjątkowego spotkania nie był przypadkowy. Miasto ma
+    szczególny wymiar symboliczny. To tu rozpoczęło się największe nieszczęście współczesnej
+    Europy, jakim była II wojna światowa. Tu na własne oczy można zobaczyć, co to
+    znaczy cud odbudowy Gdańsk został podniesiony z ruin i stał się jednym z najbardziej
+    spektakularnych przykładów rekonstrukcji na świecie. Odbudowa objęła nie tylko
+    zabytkową tkankę miejską, lecz także ducha i tożsamość miasta. Ukraina słusznie
+    chce być częścią zjednoczonej Europy. Zawsze warunkiem prawdziwego, pełnego zjednoczenia
+    było rozumienie własnej historii. I autentyczna zdolność i gotowość do pojednania
+    To właśnie w Gdańsku rozpoczęła się wojna, która podzieliła narody Europy i wydawała
+    się na trwałe przekreślić możliwość porozumienia między nimi. Dziś Polacy, Niemcy,
+    Francuzi, Brytyjczycy są partnerami, sojusznikami, co pokazuje, że można uczciwie
+    i zgodnie z prawdą historyczną rozmawiać o przeszłości, by nasza przyszłość wyglądała
+    inaczej. Przyszłość możemy zbudować tylko na prawdzie, na wzajemnym szacunku,
+    na rozumieniu historii. Solidarność, która narodziła się w Gdańsku, może być naszą
+    rzeczywistością, jeśli otworzymy swoje serca i umysły na przeszłość, ale przede
+    wszystkim na przyszłość Podczas Konferencji zostaną podpisane umowy między podmiotami
+    polskimi i ukraińskimi, które posłużą zacieśnianiu relacji gospodarczych. Na marginesie
+    URC odbywają się spotkania dwustronne Premiera z liderami państw, m.in.Prezesem
+    Banku Światowego Ajay Banga, z Kanclerzem Austrii Christianem Stockerem oraz Premierem
+    Bułgarii Rumenem Radewem.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        ukraine: 2
+  notes: '+2: Poland co-hosts the Ukraine Recovery Conference and 160 agreements worth
+    EUR 10bn are expected. Concrete initiative and resources, not rhetoric.'
+- id: pl-europe-pressure-on-russia
+  provenance: data/events/polish_pm/2026-06/2026-06-19-f256ca8a.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-06-19'
+  title: Europa zwiększa presję na Rosję i wzmacnia wsparcie dla Ukrainy
+  text: Podczas obrad Rady Europejskiej unijni liderzy omówili aktualną sytuację na
+    Ukrainie oraz związane z nią wyzwania dla bezpieczeństwa Europy. Sukcesy Ukrainy
+    w głębokich uderzeniach, m.in. na Moskwę, wzbudziły szerokie uznanie. Z jednej
+    strony jest poczucie, że nasza pomoc przynosi efekty, z drugiej zaś zdajemy sobie
+    sprawę, że im trudniejsza sytuacja Rosji, tym większe ryzyko działań niekonwencjonalnych
+    wobec państw UE - powiedział Premier D. Tusk podczas konferencji prasowej w Brukseli.
+    Rosja nie wykazuje obecnie realnej woli zakończenia konfliktu. Wśród europejskich
+    liderów nie ma już przekonania, że Władimir Putin chce rozmów pokojowych. Nic
+    nie wskazuje na to, żeby Rosja była zainteresowana jakimikolwiek negocjacjami.
+     Zadaniem Europy jest w tej sytuacji takie wsparcie dla Ukrainy, żeby ona mogła
+    dalej skutecznie stawiać opór rosyjskiej agresji Rada Europejska podjęła decyzję
+    o przedłużeniu sankcji na Rosję już nie o sześć, a o dwanaście miesięcy. Ustalone
+    zostały również elementy kolejnego pakietu sankcji. Jako Europa będziemy szukali
+    kolejnych skutecznych sposobów na uderzenie we flotę cieni. Dodatkowo w 21. pakiecie
+    sankcji będziemy uderzać w platformy kryptowalutowe, które współpracują z rosyjskim
+    reżimem Rosja pozostaje szczególnie aktywna na rynku kryptowalut. Środki pozyskiwane
+    w ten sposób mogą następnie zasilać rosyjską machinę wojenną, finansując produkcję
+    rakiet i dronów wykorzystywanych do ataków na Ukrainę. Przywódcy państw członkowskich
+    poruszyli kwestię reprezentacji Unii Europejskiej w potencjalnych przyszłych rozmowach
+    pokojowych dotyczących wojny rosyjsko-ukraińskiej oraz spotkań organizowanych
+    w mniejszych formatach - E3 czy E5. Żaden taki format nie może uzurpować sobie
+    prawa do reprezentowania całej Unii Europejskiej. Od tego są instytucje i traktaty.
+    Polska nie będzie respektowała żadnych ustaleń, które będą podjęte bez jej udziału
+    Wszelkie decyzje dotyczące ewentualnego zawieszenia broni oraz przyszłego pokoju
+    między Ukrainą a Rosją powinny być podejmowane zgodnie z obowiązującymi traktatami,
+    z udziałem wszystkich państw, których bezpieczeństwo będzie zależeć od tych rozstrzygnięć.
+    Polska wraz z pozostałymi państwami wschodniej flanki musi być przygotowana na
+    różne scenariusze, w tym prowokacje, incydenty z wykorzystaniem dronów czy ataki
+    w cyberprzestrzeni. Aby się przed tym chronić, Polska systematycznie wzmacnia
+    swoje zdolności obronne. Nie, nie lękajmy się. Polska jest coraz lepiej przygotowana
+    na wszystkie możliwe zdarzenia Europejscy przywódcy mają dziś świadomość, że sytuacja
+    może w najbliższym czasie stać się jeszcze bardziej poważna wraz z przedłużającą
+    się wojną. Osiągnęliśmy sukces – przyjęliśmy nową strategię Unii Europejskiej,
+    która zakłada zwiększenie wsparcia finansowego dla ochrony wschodniej flanki oraz
+    rozwój programu bezpieczeństwa dronowego Inicjatywa „Straż Flanki Wschodniej”,
+    realizowana przez kilka państw członkowskich, będzie mogła liczyć na wsparcie
+    całej Unii Europejskiej. Równolegle rozwijany będzie wspólny europejski program
+    dotyczący bezpieczeństwa dronowego.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        ukraine: 2
+  notes: '+2: the European Council takes decisions on continued support; Tusk frames
+    sustaining Ukraine''s resistance as Europe''s task.'
+- id: pl-eastern-flank-summit
+  provenance: data/events/polish_pm/2026-06/2026-06-25-b855b872.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-06-25'
+  title: Rosja największym zagrożeniem. Razem jesteśmy silniejsi
+  text: Równocześnie z Konferencją Odbudowy Ukrainy w Gdańsku odbył się Szczyt Wschodniej
+    Flanki z udziałem prezydentów Litwy i Rumunii oraz premierów Finlandii, Estonii,
+    Łotwy, Szwecji. W rozmowach uczestniczyli także przedstawiciele instytucji europejskich.
+    Polska od lat nalegała, aby obrona wschodniej flanki była odpowiedzialnością całej
+    UE. Dlatego dziś w tym gronie rozmawialiśmy z szefową Komisji Europejskiej i komisarzem
+    ds. obrony - powiedział Premier Donald Tusk podczas wspólnego oświadczenia liderów
+    państw wschodniej flanki. Podkreślił również znaczenie utrzymania silnych więzi
+    transatlantyckich oraz współpracy obronnej ze Stanami Zjednoczonymi. Nie mamy
+    wątpliwości, że obecność i współpraca z USA dobrze służy bezpieczeństwu Europy
+    i państw wschodniej flanki Szczyt w Gdańsku to kolejne spotkanie liderów państw.
+    Pierwsze odbyło się w Helsinkach w 2025 roku. Ustanowiliśmy ten format wspólnie
+    wraz z krajami flanki wschodniej w zeszłym roku w Helsinkach. W tej chwili spotykamy
+    się po raz drugi i ważne jest, abyśmy kontynuowali te prace - powiedział Premier
+    Finlandii Petteri Orpo. Celem spotkań przywódców wschodniej flanki jest koordynacja
+    działań i polityki państw regionu zagrożonych przez agresywne działania Rosji.
+    Podzielamy bez wyjątku opinię, że sytuacja jest bardzo niestabilna. Można spodziewać
+    się rozmaitego typu eskalacji w najbliższych tygodniach i miesiącach. Będziemy
+    chcieli przygotować się jako grupa państw bezpośrednio wystawionych na to ryzyko,
+    bo graniczących z Rosją, Białorusią, Ukrainą Premier Rumunii Nicușor Dan podkreślił,
+    że jedność powinna dotyczyć północy i południa, powinna sięgać od wschodu do zachodu
+    i obejmować także basen Morza Czarnego. Potrzebne są nam mechanizmy niezbędne
+    do planowania i przygotowania obywateli. Robimy coś więcej niż ochrona terytorium.
+    Chronimy zasady, które łączą nasze kraje. Bezpieczeństwo flanki stanowi o naszym
+    bezpieczeństwie. Nie odwlekajmy tego. - powiedział Prezydent Litwy Gitanas Nauseda.
+    Podkreślono też wkład poszczególnych państw w działania obronne. Szwedzkie władze
+    wciąż działają w sposób zdecydowany wobec floty cieni, podtrzymując prawo międzynarodowe.
+    Bronimy zasobów morskich znajdujących się na flance wschodniej, na Morzu Bałtyckim
+    Stwierdził, że „potrzebujemy siły, aby zapewnić pokój”, a flanka wschodnia pokazuje,
+    jak to robić. Polska pozostaje jednym z liderów wśród państw pod względem poziomu
+    wydatków przeznaczanych na obronę i bezpieczeństwo, co znacząco umacnia nasze
+    relacje z Amerykanami. Na obronę bezpośrednio i na rzeczy związane z obroną to
+    będzie 7%, więc udział rzeczywiście bardzo duży, bardzo solidny Podnoszenie nakładów
+    na obronność jest istotne we wszystkich państwach regionu. Ostatnie 6 miesięcy
+    to czas podejmowania wielu ważnych działań dla wzmocnienia obronności i bezpieczeństwa.
+    5,4% PKB to jest poziom wydatków Estonii na obronność - deklarował Premier Estonii
+    Kristen Michal. Kraje położone na flance wschodniej ponoszą największy ciężar
+    inwestycji w obronność na rzecz całej Europy. Te kraje przeznaczają największą
+    część swojego PKB na obronność, biorąc odpowiedzialność za bezpieczeństwo całego
+    regionu. Jeśli spojrzeć na program SAFE, to 76 mld euro z tego projektu wykorzystują
+    właśnie kraje flanki wschodniej. To dzieje się w imię solidarności całej Europy
+    Na potrzebę zaangażowania i podjęcia wysiłku finansowego na rzecz bezpieczeństwa
+    Europy i solidarności wskazali wszyscy uczestnicy spotkania. Państwa sygnatariusze
+    przyjęły wspólną deklarację, w której podkreśliły konieczność dalszego, szerokiego
+    wsparcia dla Ukrainy – militarnego, finansowego i politycznego – oraz poparły
+    jej integrację ze strukturami euroatlantyckimi. Zadeklarowano również rozwój wspólnych
+    projektów obronnych, modernizację infrastruktury oraz zwiększanie wydatków na
+    bezpieczeństwo. Spotkanie w Gdańsku zakończyło się potwierdzeniem jedności i solidarności
+    państw wschodniej flanki oraz pełnego wsparcia ze strony Unii Europejskiej dla
+    działań wzmacniających bezpieczeństwo regionu.
+  expect:
+    actors:
+    - PL
+    - LT
+    - EE
+    - LV
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    - baltic
+    stances:
+      weimar:
+        defence: 2
+      visegrad:
+        defence: 1
+      baltic:
+        defence: 1
+  notes: Eastern Flank Summit in Gdańsk. +2 against the Weimar goal (eastern-flank-weighted
+    European defence, a format Poland says it co-founded) but +1 against the V4 goal,
+    which is about each capital's own national build-up — a different question the
+    same text answers less strongly. Deliberately a goal-discrimination case as well.
+- id: pl-renewables-energy-security
+  provenance: data/events/polish_pm/2026-07/2026-07-04-b8ebd658.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-07-04'
+  title: Rozwój OZE to inwestycja w bezpieczeństwo Polski i czystą energię
+  text: Rozwój energetyki opartej na odnawialnych źródłach energii jest jednym z kluczowych
+    kierunków polityki gospodarczej Polski. Inwestycje w OZE, takie jak farma fotowoltaiczna
+    ORLEN w Kleczewie, zwiększają produkcję czystej energii i wzmacniają bezpieczeństwo
+    energetyczne kraju. To jest przedsięwzięcie o niezwykle praktycznym znaczeniu.
+    Stąd płynie prąd, który wystarczy dla ok. 100 tys. gospodarstw domowych Farma
+    w Kleczewie została rozbudowana w latach 2024-2026, dzięki czemu dziś jej łączna
+    moc wynosi prawie 270 MW. Postanowiliśmy podwoić wielkość tej instalacji fotowoltaicznej.
+    Dzięki temu mamy teraz prawie 500 tys. paneli na powierzchni ponad 400 hektarów
+    Przed rozbudową inwestycji w Kleczewie konieczne było uporządkowanie kwestii związanych
+    z jej wcześniejszą realizacją. Działania rządu objęły weryfikację kosztów projektu
+    oraz odzyskiwanie części środków, które zostały wcześniej nieefektywnie wydatkowane.
+    Poprzedni rząd rozpoczął tę inwestycję w sposób niekompetentny. Musieliśmy wyczyścić
+    ten bałagan, który miał kosztować państwo 800 mln zł więcej niż powinien Projekt
+    ORLEN w Kleczewie ma charakter hybrydowy – łączy farmę fotowoltaiczną i wiatrową,
+    co zwiększa stabilność produkcji energii oraz efektywność wykorzystania odnawialnych
+    źródeł energii. Minister Energii Miłosz Motyka podkreślił, że dzięki rządowym
+    zmianom w prawie energetycznym oraz inwestycjom w infrastrukturę sieciową nowe
+    instalacje OZE mogą być sprawniej przyłączane do sieci elektroenergetycznej. To
+    element największej reformy prawa energetycznego w historii Polski. Inwestycje
+    w polską energetykę i w nowe mocne niskoemisyjne, to inwestycja także w polskie
+    firmy Instalacja w Kleczewie powstała na terenach pogórniczych, co pokazuje, że
+    zdegradowane obszary mogą z powodzeniem zyskiwać nowe funkcje i być racjonalnie
+    wykorzystywane na potrzeby nowoczesnej, zielonej energetyki. Zagospodarowanie
+    terenów pokopalnianych do produkcji czystej energii jest niezwykle ważne. Region
+    koniński był ważnym producentem energii i powinien nim pozostać. To miejsce, które
+    ma odpowiednią infrastrukturę, ale też kapitał ludzki od lat produkujący energię
+    na potrzeby krajowe – podkreśliła Minister Klimatu i Środowiska Paulina Hennig-Kloska.
+    Transformacja regionów pogórniczych powinna odbywać się z uwzględnieniem potrzeb
+    mieszkańców i pracowników. Jej celem jest wsparcie procesu przekwalifikowania
+    osób dotychczas zatrudnionych w sektorze węgla brunatnego, rozwój nowych kompetencji
+    zawodowych oraz tworzenie warunków sprzyjających rozwojowi małych i średnich firm.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - green_transition
+    - energy
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        green_transition: 2
+      visegrad:
+        energy: 2
+  notes: '+2 on both: a 270 MW solar farm doubled in size, ~500k panels. Concrete
+    resources advancing both the Weimar climate-neutrality goal and the V4 diversification
+    goal.'
+- id: de-disinformation-explainer
+  provenance: data/events/german_chancellery/2026-06/2026-06-24-bee9777d.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-06-24'
+  title: Desinformation besser erkennen Was ist Desinformation?
+  text: 'Gerade in Krisenzeiten häuft sich Desinformation. Unter Desinformation versteht
+    man die absichtliche Verbreitung falscher oder irreführender Information. Ziel
+    ist es, Meinungen zu beeinflussen, um so einer Person, einer sozialen Gruppe,
+    einer Organisation oder einem Land zu schaden. Der Begriff „Desinformation” beschreibt
+    also zwei Dinge: Die manipulierte Information und die Absicht, die hinter ihrer
+    Verbreitung steckt. Die manipulierte Information kann in ganz unterschiedlichen
+    Formen auftauchen. Etwa als Internet-Artikel, der vorgibt, von einem etablierten
+    Medium zu stammen und falsche Behauptungen verbreitet – ein Beispiel dafür ist
+    die sogenannte Doppelgänger-Kampagne . Genauso gut kann es aber auch ein KI -generiertes
+    Deepfake -Video sein oder eine frei erfundene Meldung in Messenger -Kanälen. Oft
+    setzt Desinformation auf emotionalisierende Inhalte oder alte Verschwörungstheorien,
+    die neu aufbereitet werden. Die manipulierte Information muss also weder neu noch
+    besonders kreativ sein, um Aufmerksamkeit zu bekommen. Was sind Deepfakes ? Deepfakes
+    sind täuschend echte Foto-, Video- oder Audioinhalte, die mit künstlicher Intelligenz
+    hergestellt werden. Desinformation ist kein neues Phänomen. Durch soziale Medien
+    verbreitet sie sich heute aber viel schneller und effektiver. Besonders seit Beginn
+    des russischen Angriffskriegs gegen die Ukraine hat Desinformation noch einmal
+    deutlich zugenommen. Ausländische Akteure setzen sie ein, um Menschen zu verunsichern
+    und das Vertrauen in die Demokratie zu schwächen. Deshalb sind insbesondere die
+    Institutionen – wie Staat, Wissenschaft und Medien – die das Rückgrat der demokratischen
+    Gesellschaft bilden, häufige Angriffsziele. Für diese Art ausländischer Desinformationskampagnen
+    hat sich der Begriff FIMI ( Foreign Information Manipulation and Interference
+    ) etabliert. Im Sinne der wehrhaften Demokratie ist der Schutz der freiheitlich-demokratischen
+    Grundordnung für die Bundesregierung Auftrag und Pflicht zugleich. Deshalb begegnet
+    sie ausländischen Desinformationskampagnen auf mehreren Ebenen: Die Federführung
+    liegt beim Bundesministerium des Inneren , da es sich bei Desinformation um eine
+    hybride Bedrohung handelt. Grundsätzlich sind hierbei aber alle Ressorts der Bundesregierung
+    sowie deren Geschäftsbereiche beteiligt. Von hoher Bedeutung ist zudem die Vernetzung
+    von Bund und Ländern einschließlich ihrer Kommunen und den Sicherheitsbehörden
+    sowie der Austausch mit der Zivilgesellschaft. Um zukünftig noch besser gewappnet
+    zu sein, eröffnete Bundesinnenminister Dobrindt am 16. Juni 2026 gemeinsam mit
+    Vertreterinnen und Vertretern von Sicherheitsbehörden des Bundes und der Länder
+    das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen ( GAZ Hybrid ). Das Ziel
+    von GAZ Hybrid ist es, Spionage, Sabotage, Desinformation und weitere Formen hybrider
+    Bedrohungen zu erkennen und zu bekämpfen. Einen umfassenden Überblick über die
+    wichtigsten Maßnahmen von Bund und Ländern bietet der „ Gemeinsame Aktionsplan
+    von Bund und Ländern gegen Desinformation und für eine wehrhafte Demokratie“.
+    Dazu zählt unter anderem die frühzeitige Erkennung von ausländischer Informationsmanipulation,
+    zur Stärkung der gesellschaftlichen Resilienz und zur Intensivierung von Austausch
+    und Forschung. Die ausländischen Akteure, die Deutschland mit Desinformation angreifen,
+    greifen auch internationale Partner an. Pro-russische Desinformationskampagnen
+    tauchen in vielen Staaten auf, die die Ukraine unterstützen. Daher steht die Bundesregierung
+    mit diesen Staaten im engen Austausch zum Umgang mit Desinformation – etwa im
+    Rahmen des Weimarer Dreiecks mit Frankreich und Polen, der EU , der NATO oder
+    den Vereinten Nationen. In ganz Deutschland suchen Menschen nach neuen Wegen,
+    dieser Bedrohung zu begegnen: Journalistinnen und Journalisten, Lehrkräfte, Forschende.
+    Aber auch Bürgerinnen und Bürger leisten einen Beitrag, indem sie die Desinformationen
+    an Social-Media -Plattformen oder Faktenchecker melden. Sie alle haben sich zum
+    Ziel gesetzt die Demokratie zu schützen. Was können wir selbst gegen Desinformation
+    tun? Drei Schritte zum Umgang mit Desinformation: Prüfen, Recherchieren; Teilen
+    oder Melden Prüfen: Ruhe bewahren! Oft schwer, aber ganz  wichtig / W erde ich
+    gerade manipuliert? Nur weil es ärgerlich, verängstigend oder lustig ist – ist
+    es noch lange nicht wahr / Ist die Quelle seriös? Recherchieren: Findet sich die
+    Meldung auch in anderen Medien? Nutzen Sie Faktenchecks: D iverse Organisationen
+    überprüfen Meldungen und stellen diese, wenn nötig, richtig Teilen oder Melden:
+    Wenn die Meldung stimmt: Spricht nichts dagegen, sie zu teilen. Wenn Sie glauben
+    Desinformation gefunden zu haben: M elden Sie diese besser an Faktenchecker, aber
+    auch direkt an die Plattformen selbst'
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics:
+    - hybrid
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        hybrid: null
+  notes: 'The cleanest v8 null in the set: a civic explainer defining what disinformation
+    is. Squarely on the hybrid topic, but Germany takes no position and announces
+    no action, so there is no quote to rate. Pre-v8 this shape produced score 0 with
+    empty evidence and dragged cluster means toward Noncommittal.'
+- id: ee-globsec-putin-regime
+  provenance: data/events/estonian_mfa/2026-05/2026-05-23-e97d833c.yaml
+  source_name: estonian_mfa
+  source_lang: et
+  date: '2026-05-23'
+  title: 'Välisminister Tsahkna julgeolekukonverentsil GLOBSEC: me ei tohi karta Putini
+    režiimi lõppu'
+  text: Välisminister Margus Tsahkna osales Prahas rahvusvahelisel julgeolekukonverentsil
+    GLOBSEC, kus ta rõhutas, et Ukraina toetamine on Euroopa enda julgeolekuhuvides.
+  expect:
+    actors:
+    - EE
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant: []
+    stances: {}
+  notes: A 162-character feed stub. ukraine is not a Baltic Three topic, so nothing
+    is rated and every flag is false — the shortest item in the set, testing that
+    thin text produces abstention rather than invention.
+- id: pl-mfa-statement-religious-freedom
+  provenance: data/events/polish_mfa/2026-05/2026-05-07-ae5ffcc9.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-07'
+  title: Oświadczenie MSZ
+  text: Artykuł 18 Powszechnej Deklaracji Praw Człowieka uchwalonej przez Zgromadzenie
+    Ogólne Narodów Zjednoczonych w 1948 roku stanowi, że „każdy ma prawo do wolności
+    myśli, sumienia i religii.” Przystępując do ONZ, Izrael przyjął wartości tej organizacji
+    wyrażone w Deklaracji. Ta sama zasada wolności religijnej znalazła odzwierciedlenie
+    w Deklaracji Niepodległości Izraela przyjętej również w 1948 roku. Do grona sygnatariuszy
+    należy natomiast Liban, na terytorium którego doszło do incydentu. Obowiązek zapewnienia
+    poszanowania tego prawa o fundamentalnym znaczeniu dla godności człowieka spoczywa
+    na każdym państwie. W Polsce znieważanie czyichkolwiek uczuć religijnych jest
+    czynem karalnym. Kolejny incydent z udziałem przedstawiciela Państwa Izrael, naruszający
+    uczucia religijne chrześcijan, nie tworzy atmosfery sprzyjającej pokojowi na Bliskim
+    Wschodzie i rozwojowi współpracy. MSZ RP niezmiennie potępia przejawy wszelkiej
+    dyskryminacji religijnej na świecie.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: Polish MFA on religious freedom and an incident in Lebanon. Rule-of-law adjacent
+    in vocabulary, but the Weimar goal is about the rule of law inside the Union —
+    a distinction the model has to actually read rather than keyword-match.
+- id: fr-nairobi-declaration
+  provenance: data/events/elysee/2026-05/2026-05-12-e752dfd0.yaml
+  source_name: elysee
+  source_lang: fr
+  date: '2026-05-12'
+  title: Déclaration de Nairobi pour la paix et la securité en Afriqu
+  text: 'Réunis à l''occasion du segment du Sommet Africa Forward consacré aux questions
+    de paix et de sécurité le 12 mai 2026 à Nairobi ; Considérant que l''instabilité du
+    monde, les remises en cause du multilatéralisme et du droit international et l''intensification
+    de la concurrence entre puissances menacent la paix, la sécurité et le développement
+    durable en Afrique ; Les co-présidents français et kenyan ainsi que les chefs
+    d''État et de gouvernement participants réaffirment les principes suivants : -
+    Ils rappellent leur conviction qu''un multilatéralisme efficace et inclusif, fondé sur
+    le droit international et la Charte des Nations Unies, et dont l''Union africaine
+    et les organisations sous-régionales africaines sont l''expression à l''échelle
+    continentale, sont constitutifs d''un état de paix durable. - Ils défendent une
+    gouvernance mondiale renouvelée, capable de répondre aux défis du XXIe siècle.
+    Ils reconnaissent l''urgence d''une réforme globale du Conseil de sécurité des
+    Nations Unies pour le rendre plus efficace et représentatif, en phase avec les
+    objectifs de la Position africaine commune, notamment le Consensus d''Ezulwini
+    et la Déclaration de Syrte, et réaffirment leur détermination à œuvrer de concert
+    à cette fin. - Ils affirment qu''un usage responsable du véto contribue à renforcer
+    la crédibilité et l''autorité morale du Conseil de sécurité de I''ONU, et appellent
+    les membres permanents du Conseil de sécurité à s''abstenir d''utiliser le véto
+    en cas d''atrocités de masse, lorsque des crimes de génocide, des crimes contre
+    l''humanité et des crimes de guerre à grande échelle sont commis. - Ils appuient
+    les opérations de paix africaines et appellent à la mise en œuvre de la résolution
+    2719 du Conseil de sécurité des Nations Unies, sans préjudice de la primauté du
+    Conseil de sécurité, pour en assurer l''opérationnalisation et le financement
+    adéquat, prévisible et durable. - Ils soutiennent le renforcement des capacités
+    des armées africaines dans le respect du principe de souveraineté et de l''architecture
+    africaine de paix et de sécurité sur lesquels repose la stabilité du continent.
+    - Ils rejettent les ingérences extérieures qui sapent les efforts visant à réaliser
+    les aspirations de l''Agenda 2063 de l''UA, et la privatisation de la sécurité,
+    conformément aux statuts pertinents de l''OUA/UA sur l''élimination du mercenariat
+    en Afrique. - Ils réaffirment que les Africains doivent rester parties prenantes
+    aux médiations sur les crises qui les affectent et rappellent la centralité de
+    l''Union africaine, des Communautés économiques régionales et des Mécanismes régionaux
+    (RM) pour offrir une plateforme de médiation inclusive et construire une paix
+    durable. - Ils réaffirment la primauté des solutions politiques négociées fondées
+    sur le respect du droit international, de la souveraineté et de l''intégrité territoriale
+    des États, pour le règlement des crises. Ils réaffirment leur engagement à respecter
+    le droit international humanitaire dans les conflits armés qui affectent la région
+    et appellent tous les États à se joindre a l''initiative mondiale visant à revitaliser
+    l''engagement politique en faveur du droit international humanitaire. - Ils expriment
+    leur profonde préoccupation face à la menace persistante du terrorisme et de l''extrémisme
+    violent sur le continent et leur solidarité avec les personnes qui en sont victimes.
+    Ils soulignent l''importance d''une approche globale, combinant mesures sécuritaires
+    et réponses politiques, sociales et économiques pour traiter durablement ces phénomènes.
+    - Ils rappellent que face aux crises, l''aide humanitaire reste essentielle pour
+    répondre aux urgences et protéger les populations les plus vulnérables, les médiations
+    inclusives permettent de rétablir le dialogue, de prévenir l''escalade des tensions
+    et de promouvoir des solutions durables et le financement du développement est
+    un levier clé pour s''attaquer durablement aux causes profondes et renforcer la
+    résilience. - Ils appellent au renforcement des capacités institutionnelles et
+    des mécanismes de sécurité collective pour faire face aux conflits en cours au
+    Soudan, au Soudan du Sud, dans la région des Grands Lacs, en Somalie et dans la
+    région du Sahel par la cessation des hostilités, le dialogue inclusif, la lutte
+    contre le terrorisme, le renforcement des capacités et la stabilisation régionale.
+    -  Ils soulignent le lien entre la sécurité et la croissance économique inclusive,
+    l''autonomisation des jeunes, l''éducation, la résilience climatique et l''engagement
+    des populations diasporiques'
+  expect:
+    actors:
+    - FR
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: French-language declaration on peace and security in Africa. Dense security
+    language, no tracked issue area.

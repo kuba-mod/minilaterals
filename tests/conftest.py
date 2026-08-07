@@ -16,6 +16,23 @@ from pipeline.sources.base import Event
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+class FakeProvider:
+    """Returns canned responses in sequence; records prompts it was called with.
+
+    The LLM is isolated behind `.call(prompt) -> str`, so this stands in for a real
+    provider anywhere enrichment or evaluation is exercised end to end.
+    """
+
+    def __init__(self, responses: list[str], model: str = "fake-model:test"):
+        self._responses = list(responses)
+        self.prompts: list[str] = []
+        self.model = model
+
+    def call(self, prompt: str) -> str:
+        self.prompts.append(prompt)
+        return self._responses.pop(0) if self._responses else "{}"
+
+
 def make_event(
     *,
     source_name: str = "german_mfa",
