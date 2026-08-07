@@ -151,12 +151,15 @@ FORMAT_HINTS_BLOCK = "\n".join(f"- {key}: {g.name} ({'/'.join(g.members)})" for 
 #                   per relevant grouping against that grouping's own goals
 #   "8"  ee238d06  unrated ≠ neutral: omit a topic with no quotable stance
 #                   instead of emitting stance 0 with null evidence
+#   "9"  6ea9d3d1  topics are a selection, not a checklist: a topic the text
+#                   does not cover is left out instead of listed with a
+#                   position that reports its absence
 # BUMP PROMPT_VERSION and PROMPT_SURFACE_SHA together whenever the prompt surface
 # changes — test_prompt_surface_in_sync fails until you do, so ratings never get
 # mislabelled with a stale version. pipeline.migrate_provenance holds the full
 # hash→version map for backfilling historical sidecars.
-PROMPT_VERSION = "8"
-PROMPT_SURFACE_SHA = "ee238d06"
+PROMPT_VERSION = "9"
+PROMPT_SURFACE_SHA = "6ea9d3d1"
 
 
 def prompt_surface_sha() -> str:
@@ -223,7 +226,7 @@ Return JSON with exactly these fields:
   "participants": ["list of named officials or roles mentioned"],
   "actors": ["a flat array of the country codes ({actor_codes}) that this item represents or discusses; [] if none; never nest arrays or add other values"],
   "explicit_formats": ["a flat array of format keys from the list above, ONLY if the text itself names that format (e.g. says 'the E3', 'AUKUS', 'Weimar Triangle') — NOT just because the format's member countries happen to be discussed; [] if the text never names a format by its own name"],
-  "topics": ["list from: {topic_list}"],
+  "topics": ["a SELECTION from: {topic_list} — include a topic ONLY if the text takes a position on it or announces an action on it. This is not a checklist: leave out every topic the text does not cover, and do not list a topic in order to report that it is absent. Most press releases cover one or two topics; [] if none"],
   "location": "city and country if mentioned, else null",
   "position": "one sentence: overall position/action by {source}",
   "positions_by_topic": {{
@@ -232,7 +235,12 @@ Return JSON with exactly these fields:
     }}
   }}
 }}
-Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned."""
+Include in positions_by_topic ONLY the topics listed in "topics". Omit topics not mentioned.
+
+Every "position" must state what {source} actually said or did. Never write a
+position describing what the text lacks ("does not address X", "the text does not
+provide details on X") — if that is the only thing you could write for a topic,
+that topic does not belong in "topics" at all. Leave it out of both."""
 
 STANCE_BACKFILL_PROMPT = """\
 Rate this government press release against the {grouping}'s policy goals.
@@ -687,6 +695,60 @@ def _extract(provider, raw_path: Path) -> bool:
         return False
 
 
+def _find_stale_extractions(limit: int | None = None) -> list[Path]:
+    """Raw events whose sidecar was extracted by an older prompt, newest first.
+
+    How a prompt improvement reaches data already on disk. Classification is the
+    model's job (design principle #5), so a sidecar written by prompt "8" is not
+    something to repair field-by-field in Python — it is re-extracted by the
+    current prompt and overwritten wholesale. Selection reads only
+    `enriched_by.prompt_version`, the provenance stamp; nothing here inspects the
+    press release or the extracted text.
+
+    A sidecar with no `enriched_by` block predates provenance tracking and is
+    treated as stale. Sidecars with no extraction yet are `_find_pending`'s job.
+    """
+    return _stale_from(sorted(ENRICHED_DIR.glob("**/*.yaml"), key=lambda p: p.name, reverse=True), limit)
+
+
+def _find_stance_pending_raw(limit: int | None = None) -> list[Path]:
+    """Raw events behind the sidecars `--stances-only` can never finish.
+
+    A sidecar carrying a topic the model won't rate is selected by
+    `_find_stance_pending()` on every backfill run, asked again, and declines
+    again — nothing is written, so it is selected again tomorrow. Usually the
+    topic itself is the error (the pre-`"9"` checklist artefact), which no amount
+    of re-rating can fix, because the fix is to re-decide what the event is
+    about. Re-extracting exactly this set repairs it without touching the rest of
+    the corpus.
+
+    Selection is by data shape — a topic with no rating — never by reading the
+    press release or the extracted text.
+    """
+    return _stale_from(_find_stance_pending(), limit, require_stale=False)
+
+
+def _stale_from(sidecars: list[Path], limit: int | None, require_stale: bool = True) -> list[Path]:
+    """Shared body: sidecars → their raw events, skipping ones nothing can re-run."""
+    stale = []
+    for f in sidecars:
+        try:
+            d = yaml.safe_load(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if not d or d.get("extracted") is None:
+            continue
+        if require_stale and (d.get("enriched_by") or {}).get("prompt_version") == PROMPT_VERSION:
+            continue
+        raw_path = EVENTS_DIR / f.relative_to(ENRICHED_DIR)
+        if not raw_path.exists():
+            continue
+        stale.append(raw_path)
+        if limit and len(stale) >= limit:
+            break
+    return stale
+
+
 def _find_stance_pending(limit: int | None = None) -> list[Path]:
     """Enriched files that have positions but no stance ratings yet, newest first
     (recent events drive the visible clusters and timeline)."""
@@ -829,7 +891,46 @@ def main() -> None:
         action="store_true",
         help="Backfill stance ratings for already-enriched events that lack them",
     )
+    parser.add_argument(
+        "--reextract",
+        action="store_true",
+        help=f"Re-extract events whose sidecar predates prompt {PROMPT_VERSION!r} (overwrites them)",
+    )
+    parser.add_argument(
+        "--stance-pending",
+        action="store_true",
+        help="With --reextract: repair only the events --stances-only can never finish",
+    )
     args = parser.parse_args()
+
+    if args.reextract:
+        if args.stance_pending:
+            stale = _find_stance_pending_raw(limit=args.limit)
+            label = "Stance-pending re-extraction"
+        else:
+            stale = _find_stale_extractions(limit=args.limit)
+            label = f"Stale extractions (prompt != {PROMPT_VERSION!r})"
+        print(f"{label}: {len(stale)} items")
+        if not stale:
+            print("Nothing to do.")
+            return
+        if args.dry_run:
+            for path in stale:
+                print(f"  {path.relative_to(EVENTS_DIR)}")
+            return
+        provider = _build_provider()
+        ok = failed = 0
+        for i, path in enumerate(tqdm(stale, desc="Re-extracting", unit="item")):
+            if _extract(provider, path):
+                ok += 1
+            else:
+                failed += 1
+            if i < len(stale) - 1:
+                time.sleep(0.2)
+        print(f"\nRe-extraction complete: {ok} ok, {failed} failed")
+        if failed:
+            sys.exit(1)
+        return
 
     if args.stances_only:
         pending = _find_stance_pending(limit=args.limit)
