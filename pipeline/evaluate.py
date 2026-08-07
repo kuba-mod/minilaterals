@@ -467,6 +467,13 @@ def aggregate(per_run: list[dict[str, float]]) -> dict[str, dict]:
     return out
 
 
+def _fmt_n(count: float | None) -> str:
+    """Denominators are means across repeats, so they can come out fractional
+    (2.33 omissions per run). Rounded for display — the column says how much
+    resolution a metric has, and a third of a decision is not a useful digit."""
+    return "—" if not count else f"{count:.0f}"
+
+
 def noise_floor(key: str, denominators: dict[str, float] | None, flip: float | None) -> float:
     """Smallest delta this metric can actually resolve.
 
@@ -504,7 +511,7 @@ def format_table(
             if abs(diff) <= noise_floor(key, denominators, noise) and mark:
                 mark = " within noise"
             delta = f"{diff:+.3f}{mark}"
-        rows.append((key, f"{value:.3f}", "—" if not count else f"{count:g}", spread, delta))
+        rows.append((key, f"{value:.3f}", _fmt_n(count), spread, delta))
 
     widths = [max(len(r[i]) for r in rows) for i in range(5)]
     lines = []
@@ -545,7 +552,7 @@ def format_markdown(
             if abs(diff) <= noise_floor(key, denominators, noise) and mark:
                 mark = " (within noise)"
             delta = f"{diff:+.3f}{mark}"
-        lines.append(f"| {key} | {stats['mean']:.3f} | {'—' if not count else f'{count:g}'} | {spread} | {delta} |")
+        lines.append(f"| {key} | {stats['mean']:.3f} | {_fmt_n(count)} | {spread} | {delta} |")
     if not base_metrics:
         lines += ["", f"_No recorded baseline for prompt_version {meta['prompt_version']}._"]
     return "\n".join(lines)
