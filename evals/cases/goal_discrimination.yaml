@@ -1,0 +1,100 @@
+# One event, two groupings that both track the topic, different correct answers.
+# The goal_discrimination metric is computed over EVERY case in evals/cases/, not
+# just this file — pl-eastern-flank-summit, visegrad-named-bosacki-budapest-en and
+# the treaty-anniversary pair all carry two groupings too. These two are the ones
+# whose whole reason for existing is the contrast.
+# This is the prompt-v7 premise under test: `defence` asks a different question of
+# the E3 (keep the UK bound into European security) than of AUKUS (trilateral
+# defence-industrial integration), so an identical score-and-quote pair across the
+# two is a failure even when each score looks individually plausible.
+# data/enriched/uk_fcdo/2026-07/2026-07-22-987e3337.yaml shows the live corpus
+# doing exactly that.
+cases:
+- id: uk-osce-aerial-attacks
+  provenance: data/events/uk_fcdo/2026-07/2026-07-22-987e3337.yaml
+  source_name: uk_fcdo
+  source_lang: en
+  date: '2026-07-22'
+  title: 'Russia’s aerial attacks increase the risk of wider escalation: UK statement
+    to the OSCE'
+  text: UK Senior Military Adviser, Colonel Joby Rimmer, warns that Russia’s missile
+    and drone attacks endanger civilians, violate neighbouring states’ airspace and
+    increase the risk of miscalculation and escalation across Europe.
+  expect:
+    actors:
+    - UK
+    explicit_formats: []
+    topics:
+    - ukraine
+    - defence
+    relevant:
+    - e3
+    - aukus
+    stances:
+      e3:
+        defence: 1
+      aukus:
+        defence: null
+  notes: 'The live corpus rates this +1 with an identical quote for BOTH e3 and aukus.
+    e3/defence is defensible — escalation across Europe speaks to keeping the UK bound
+    into European security. aukus/defence must be null: nothing here touches defence-industrial
+    integration, Pillar II, or export-control reform.'
+- id: pl-fr-heads-of-missions
+  provenance: data/events/polish_mfa/2026-07/2026-07-09-a25469bc.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-07-09'
+  title: Minister Jean-Noël Barrot gościem honorowym Narady Kierowników Placówek Zagranicznych
+    RP
+  text: Podczas spotkania dwustronnego wicepremier Radosław Sikorski i minister Jean-Noël
+    Barrot omówili bieżące sprawy dotyczące bezpieczeństwa, polityki europejskiej
+    oraz współpracy bilateralnej między Warszawą a Paryżem. Zadeklarowali kontynuację
+    ścisłego dialogu politycznego i rozwój współpracy w kluczowych obszarach, w tym
+    m.in. gospodarce, obronności oraz kulturze. Szef polskiej dyplomacji podkreślał,
+    że Francja jest naszym strategicznym partnerem w Europie, o podobnej percepcji
+    wyzwań bezpieczeństwa i procesów zachodzących na płaszczyźnie europejskiej. Ministrowie
+    omówili też kwestie związane z realizacją nowych inwestycji infrastrukturalnych
+    i przemysłowych. Wicepremier Sikorski zaznaczył, że Polskę i Francję łączą silne
+    relacje gospodarcze. Francja jest naszym trzecim najważniejszym partnerem handlowym
+    i czwartym inwestorem w Polsce. Francuskie firmy utrzymują 227 tysięcy miejsc
+    pracy w Polsce. Jesteśmy bardzo zainteresowani pogłębianiem dialogu z Francją.
+    Jest naszym strategicznym partnerem w Europie i Trójkącie Weimarskim powiedział
+    wicepremier Radosław Sikorski. Polskie przedsiębiorstwa także coraz częściej prowadzą
+    działalność na francuskim rynku. Inwestują głównie w sektorze motoryzacyjnym,
+    produkcji przemysłowej, budownictwie i usługach informacyjnych. Ważnym elementem
+    spotkania była kwestia koordynacji współpracy na forum organizacji międzynarodowych.
+    Wicepremier Sikorski apelował o poparcie polskich starań o stały udział w pracach
+    Grupy G20. Ministrowie dyskutowali także o bieżących wyzwaniach związanych z bezpieczeństwem,
+    w tym na Bliskim Wschodzie i w Ukrainie. W swoim wystąpieniu dla kierowników placówek
+    zagranicznych minister Jean-Noël Barrot przedstawił francuską perspektywę wobec
+    najważniejszych wyzwań stojących przed Europą i wspólnotą transatlantycką. Szef
+    francuskiej dyplomacji mówił o kwestiach związanych z bezpieczeństwem i zaznaczył,
+    że konieczne jest utrzymanie jedności państw europejskich. W swoim wystąpieniu
+    podkreślał też wagę relacji łączących Polskę i Francję. Przyszłość Europy jest
+    w rękach Europejczyków. Francja i Polska mają wyjątkową odpowiedzialność za to,
+    jak będzie wyglądać jutro naszego kontynentu. Takie jest przesłanie Traktatu z
+    Nancy. Wspólnie musimy budować silniejszą europejską architekturę bezpieczeństwa,
+    której fundamentem będzie współpraca Francji i Polski. Nie chodzi o podział na
+    starą i nową Europę. Chodzi o wybór między pokojem a wojną, między wolnością a
+    niewolą Poprzednia wizyta francuskiego ministra spraw zagranicznych na polskiej
+    Naradzie Kierowników Placówek Dyplomatycznych miała miejsce w 2012 r. Gościem
+    honorowym był wtedy minister Laurent Fabius. Z kolei w styczniu 2025 r. wicepremier
+    Radosław Sikorski uczestniczył w Paryżu w Konferencji Ambasadorów Francji.
+  expect:
+    actors:
+    - PL
+    - FR
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        defence: 1
+      visegrad:
+        defence: null
+  notes: Polish-language counterpart of fr-pl-no-format-named. Only the Weimar Triangle
+    tracks this pairing, so it anchors the single-grouping baseline that the two-grouping
+    cases are compared against.

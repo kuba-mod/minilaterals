@@ -172,6 +172,26 @@ def prompt_surface_sha() -> str:
     return hashlib.sha256(blob.encode()).hexdigest()[:8]
 
 
+def rendered_surface_sha() -> str:
+    """sha256[:8] over everything interpolated *into* the prompts at call time.
+
+    PROMPT_SURFACE_SHA covers the prompt templates only, so the goal sentences in
+    data/groupings.yaml, the format legend, the topic vocabulary and the actor
+    codes can all change what the model actually reads without moving it (see the
+    note at the top of data/groupings.yaml). Evaluations record this alongside
+    PROMPT_SURFACE_SHA so two runs can be told apart when the templates are
+    identical but the data behind them is not.
+    """
+    parts = {
+        "GOALS": json.dumps(GOALS, sort_keys=True, ensure_ascii=False),
+        "FORMAT_HINTS_BLOCK": FORMAT_HINTS_BLOCK,
+        "ALL_TOPICS": ",".join(ALL_TOPICS),
+        "ACTOR_CODES": ",".join(_ACTOR_ORDER),
+    }
+    blob = "".join(f"{k}={parts[k]}" for k in sorted(parts))
+    return hashlib.sha256(blob.encode()).hexdigest()[:8]
+
+
 def _environment() -> str:
     """Where this enrichment ran — GitHub Actions sets GITHUB_ACTIONS=true."""
     return "github_actions" if os.environ.get("GITHUB_ACTIONS") == "true" else "local"
@@ -582,78 +602,130 @@ def _validate_llm_shape(extracted: dict) -> None:
         raise ValueError(f"explicit_formats must be a flat array of strings, got {formats!r}")
 
 
-def _extract(provider, raw_path: Path) -> bool:
-    data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
-    source_name = data.get("source_name", "unknown")
-    source_label = SOURCE_LABELS.get(source_name, source_name)
+def build_extraction_prompt(source_name: str, title: str, text: str) -> str:
+    """The extraction prompt as the model actually receives it.
 
+    Split out so an evaluation can render the exact prompt the pipeline sends
+    without a provider — and so there is only one place that fills the template.
+    """
     # No goals or stance rubric here: extraction no longer rates stances, since
     # the goal a rating is measured against depends on the grouping (see
     # `_rate_stances`), which isn't known until relevance is computed.
-    prompt = EXTRACTION_PROMPT.format(
-        source=source_label,
-        title=data.get("title", ""),
-        text=data.get("text", "") or "",
+    return EXTRACTION_PROMPT.format(
+        source=SOURCE_LABELS.get(source_name, source_name),
+        title=title,
+        text=text or "",
         format_hints_block=FORMAT_HINTS_BLOCK,
         actor_codes=", ".join(_ACTOR_ORDER),
         topic_list=", ".join(ALL_TOPICS),
     )
 
-    raw = ""
+
+def classify(provider, source_name: str, title: str, text: str, label: str = "") -> dict:
+    """Model call → parse → reshape positions → normalise actors/formats → relevance.
+
+    The classification half of enrichment with no disk I/O, so `_extract` and
+    `pipeline.evaluate` exercise the same code rather than the eval re-implementing
+    prompt construction and drifting from it.
+
+    Returns the enriched top-level fields (`actors`, `issue_areas`, the per-grouping
+    `{key}_relevant` flags, and `extracted` — with an empty `stances` dict the caller
+    fills in), followed by two keys that are diagnostics rather than stored fields and
+    which `_extract` drops before writing: `attempts`, the number of model calls it
+    took, and `explicit_formats`, which is consumed by relevance rather than persisted
+    but is worth grading on its own (see pipeline.evaluate). Raises ValueError or
+    json.JSONDecodeError if the output is unusable after the retry.
+    """
+    prompt = build_extraction_prompt(source_name, title, text)
+    tag = label or source_name
+
+    extracted = None
+    attempts = 0
+    for attempt in range(2):
+        raw = provider.call(prompt)
+        attempts += 1
+        try:
+            extracted = _parse_json(raw)
+            _validate_llm_shape(extracted)
+            break
+        except (json.JSONDecodeError, ValueError) as exc:
+            if attempt == 0:
+                print(f"  ~ retry {tag}: {exc}")
+            else:
+                print(f"  ! invalid LLM output for {tag}: {exc} — raw: {raw[:120]}")
+                raise
+    assert extracted is not None
+
+    # Build per-topic positions. A topic listed in "topics" without a usable
+    # position entry is treated as an extraction failure. Stances are NOT produced
+    # here — they need a grouping's own goals, and which groupings apply isn't
+    # known until relevance is computed below.
+    positions_by_topic = extracted.get("positions_by_topic") or {}
+    extracted["positions"] = {}
+    extracted["stances"] = {}
+
+    llm_topics = [t for t in (extracted.get("topics") or []) if t != "other"]
+    for topic in llm_topics:
+        entry = positions_by_topic.get(topic)
+        if not isinstance(entry, dict):
+            raise ValueError(f"missing positions_by_topic entry for topic {topic!r}")
+        pos_text = (entry.get("position") or "").strip()
+        if not pos_text:
+            raise ValueError(f"empty position for topic {topic!r}")
+        extracted["positions"][topic] = pos_text
+
+    if "positions_by_topic" in extracted:
+        del extracted["positions_by_topic"]
+
+    # Classify from the model's own reading of the item: which member countries
+    # are involved, which minilateral formats it explicitly names, and which issue
+    # areas it touches. Relevance is then a fixed rule over those signals, computed
+    # per grouping (see _grouping_relevance) so a widened actor vocabulary can't
+    # leak relevance across formats. Pulled out of `extracted` (not part of
+    # ExtractedSchema) since they're promoted to top-level enriched fields instead.
+    actors = _normalize_actors(extracted.pop("actors", None), source_name)
+    explicit_formats = _normalize_formats(extracted.pop("explicit_formats", None))
+    ExtractedSchema.model_validate(extracted)
+    relevance = _grouping_relevance(actors, explicit_formats, llm_topics, source_name)
+
+    return {
+        "actors": actors,
+        "issue_areas": llm_topics,
+        **relevance,
+        "extracted": extracted,
+        "attempts": attempts,
+        "explicit_formats": sorted(explicit_formats),
+    }
+
+
+def _extract(provider, raw_path: Path) -> bool:
+    data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
+    source_name = data.get("source_name", "unknown")
+    source_label = SOURCE_LABELS.get(source_name, source_name)
+
+    # classify() already logged why it gave up, so this just stops the item
+    # rather than reporting the same failure a second time.
     try:
-        extracted = None
-        for attempt in range(2):
-            raw = provider.call(prompt)
-            try:
-                extracted = _parse_json(raw)
-                _validate_llm_shape(extracted)
-                break
-            except (json.JSONDecodeError, ValueError) as exc:
-                if attempt == 0:
-                    print(f"  ~ retry {raw_path.name}: {exc}")
-                else:
-                    print(f"  ! invalid LLM output for {raw_path.name}: {exc} — raw: {raw[:120]}")
-                    return False
-        assert extracted is not None
+        classified = classify(
+            provider,
+            source_name,
+            data.get("title", ""),
+            data.get("text", "") or "",
+            label=raw_path.name,
+        )
+    except (json.JSONDecodeError, ValueError):
+        return False
 
-        # Build per-topic positions. A topic listed in "topics" without a usable
-        # position entry is treated as an extraction failure (see below). Stances
-        # are NOT produced here — they need a grouping's own goals, and which
-        # groupings apply isn't known until relevance is computed below.
-        positions_by_topic = extracted.get("positions_by_topic") or {}
-        extracted["positions"] = {}
-        extracted["stances"] = {}
-
-        llm_topics = [t for t in (extracted.get("topics") or []) if t != "other"]
-        for topic in llm_topics:
-            entry = positions_by_topic.get(topic)
-            if not isinstance(entry, dict):
-                raise ValueError(f"missing positions_by_topic entry for topic {topic!r}")
-            pos_text = (entry.get("position") or "").strip()
-            if not pos_text:
-                raise ValueError(f"empty position for topic {topic!r}")
-            extracted["positions"][topic] = pos_text
-
-        if "positions_by_topic" in extracted:
-            del extracted["positions_by_topic"]
-
-        # Classify from the model's own reading of the item: which member
-        # countries are involved, which minilateral formats it explicitly names,
-        # and which issue areas it touches. Relevance is then a fixed rule over
-        # those signals, computed per grouping (see _grouping_relevance) so a
-        # widened actor vocabulary can't leak relevance across formats. Pulled out
-        # of `extracted` (not part of ExtractedSchema) since they're promoted to
-        # top-level enriched fields instead.
-        actors = _normalize_actors(extracted.pop("actors", None), source_name)
-        explicit_formats = _normalize_formats(extracted.pop("explicit_formats", None))
-        ExtractedSchema.model_validate(extracted)
-        relevance = _grouping_relevance(actors, explicit_formats, llm_topics, source_name)
+    try:
+        classified.pop("attempts", None)
+        classified.pop("explicit_formats", None)
+        extracted = classified["extracted"]
+        actors = classified["actors"]
+        llm_topics = classified["issue_areas"]
+        relevance = {k: v for k, v in classified.items() if k.endswith("_relevant")}
 
         enriched_data = {
-            "actors": actors,
-            "issue_areas": llm_topics,
-            **relevance,
-            "extracted": extracted,
+            **classified,
             "enriched_by": {
                 "model_id": provider.model,
                 "prompt_version": PROMPT_VERSION,

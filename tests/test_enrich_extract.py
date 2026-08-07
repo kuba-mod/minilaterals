@@ -13,6 +13,7 @@ import pytest
 import yaml
 
 from pipeline import enrich
+from tests.conftest import FakeProvider
 
 
 def test_prompt_surface_in_sync():
@@ -24,19 +25,6 @@ def test_prompt_surface_in_sync():
         f"{enrich.prompt_surface_sha()!r}, and add the new hash to "
         "migrate_provenance.PROMPT_LINEAGE."
     )
-
-
-class FakeProvider:
-    """Returns canned responses in sequence; records prompts it was called with."""
-
-    def __init__(self, responses: list[str], model: str = "fake-model:test"):
-        self._responses = list(responses)
-        self.prompts: list[str] = []
-        self.model = model
-
-    def call(self, prompt: str) -> str:
-        self.prompts.append(prompt)
-        return self._responses.pop(0) if self._responses else "{}"
 
 
 @pytest.fixture

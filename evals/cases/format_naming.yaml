@@ -1,0 +1,565 @@
+# The prompt-v6 claim: `explicit_formats` should fire only when the text NAMES a
+# format, not when its member countries merely appear. Half of these are traps —
+# the city of Weimar, a German minister called Weimer, and NB8 (a hub
+# placeholder, deliberately not a tracked format key). A model that pattern-matches
+# on the string "Weimar" scores badly here and nowhere else.
+cases:
+- id: weimar-named-georgia-statement
+  provenance: data/events/polish_mfa/2026-03/2026-03-10-b40fe37a.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-03-10'
+  title: Georgia - Joint Ministerial Statement by the Foreign Ministers of France,
+    Germany and Poland on the adoption of legislative amendments on foreign funding
+    and political activities
+  text: We, the Foreign Ministers of the Weimar Triangle, regret the adoption on March
+    4th by the Georgian Parliament of new legislation on foreign funding and political
+    activities, which is proof of a further repressive approach adopted by the Georgian
+    authorities in relation to civil society. We fully endorse the statement made
+    by the High Representative of the Union for Foreign Affairs and Security Policy
+    on 6 March 2026. The new amendments extend state control over political and societal
+    activities in Georgia to an unprecedented level and infringe on the freedoms of
+    association and expression. They weaken rule of law, put further pressure on independent
+    civil society, including independent media, human rights defenders or individual
+    experts and service providers. Through those new regulations, the Georgian authorities
+    consciously breach the commitments undertaken by Georgia vis-à-vis the European
+    Union, in particular through the Association Agreement with the European Union.
+    We recall that it was Georgian government’s course of action since 2024 that has
+    brought the EU accession process to a de facto halt, as determined by the European
+    Council’s conclusions in 2024 and assessed by the European Commission in its Enlargement
+    Report in 2025. We reaffirm our steadfast support for the Georgian people and
+    civil society organisations who have been steadily working for the democratic
+    and European future of Georgia. We also reaffirm our support to Georgia’s sovereignty
+    and territorial integrity within its internationally recognised borders.
+  expect:
+    actors:
+    - PL
+    - FR
+    - DE
+    explicit_formats:
+    - weimar
+    topics:
+    - rule_of_law
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        rule_of_law: 1
+  notes: Opens 'We, the Foreign Ministers of the Weimar Triangle' — the clearest possible
+    positive. If this one misses, explicit_formats is broken outright.
+- id: weimar-named-india-meeting
+  provenance: data/events/polish_mfa/2026-01/2026-01-07-80eab241.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-01-07'
+  title: Meeting of Weimar Triangle and India foreign ministers
+  text: During the Paris meeting, the Weimar Triangle foreign ministers, Radosław
+    Sikorski, Jean-Noël Barrot, and Johann Wadephul, discussed the progress of Ukraine
+    peace negotiations. They stressed that Europe, working closely with the US administration,
+    should engage actively in forging peace solutions that comply with the rules of
+    international law. “Diplomacy has accelerated. Two days ago, international security
+    advisers met in Kyiv. Yesterday, the Coalition of the Willing gathered in Paris,
+    and today, the Weimar Triangle is joined for talks by the world’s most populous
+    country, India,” said Deputy Prime Minister Sikorski. The top diplomats concluded
+    that Russia’s repeated attacks on people living in Ukraine call for the pressure
+    on Russia to be sustained through another round of sanctions, including on the
+    energy and the financial sectors. The ministers agreed that combatting the Russian
+    clunker fleet should be a priority. Also discussed were the relations between
+    the European Union and India, including a plan to bring the sphere of security
+    and defence under the EU–India Partnership. As a result, Brussels and New Delhi
+    may align their stances on Russia’s aggression against Ukraine. Another important
+    item on the agenda was the reduction of Russian oil imports by India so as to
+    prevent the aggressor from financing its war machine and continuing to disregard
+    the universal standards of international law. The ministers also talked about
+    a Free Trade Agreement (FTA) between the European Union and India. “We want the
+    negotiated agreement to take into account not only the surging trade between Europe
+    and India, but also questions that matter for businesses and ordinary people,”
+    Deputy Prime Minister Sikorski said. Poland’s top diplomat reiterated that the
+    European Union remains India’s largest trade partner. The Weimar Triangle was
+    established in 1991 by the foreign ministers of Poland, France, and Germany with
+    a view to overcoming European divides and bringing Poland closer to the European
+    and Euro-Atlantic structures. At present, the format is a platform for the governments
+    in Warsaw, Paris, and Berlin to pursue dialogue and seek joint solutions to European
+    policy issues.
+  expect:
+    actors:
+    - PL
+    - FR
+    - DE
+    explicit_formats:
+    - weimar
+    topics:
+    - ukraine
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        ukraine: 1
+  notes: Names the Weimar Triangle twice and also the Coalition of the Willing, which
+    is an untracked hub placeholder and must not appear in explicit_formats.
+- id: weimar-the-city-not-the-format
+  provenance: data/events/german_chancellery/2026-06/2026-06-17-f1219710.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-06-17'
+  title: 'Kulturstaatsminister Wolfram Weimer besucht Weimar: Finanzierungsabkommen
+    für die Klassik Stiftung Weimar unterzeichnet – Spatenstich für Werkstattneubau
+    des Deutschen Nationaltheaters Weimar'
+  text: 'Im Rahmen seiner einwöchigen Kulturbautenreise hat Staatsminister Wolfram
+    Weimer, Beauftragter der Bundesregierung für Kultur und Medien, heute die Kulturhauptstadt
+    Weimar besucht. Gemeinsam mit Thüringens Kulturminister Christian Tischner und
+    Weimars Oberbürgermeister Peter Kleine unterzeichnete er im Beisein von Präsidentin
+    der Klassik Stiftung Weimar, Dr. Ulrike Lorenz, das Finanzierungsabkommen für
+    die Klassik Stiftung Weimar für die Jahre 2027 bis 2031. Die Unterzeichnung fand
+    in den restaurierten Dichterzimmern des Residenzschlosses Weimar statt. Am Nachmittag
+    folgte der erste Spatenstich für den Werkstattneubau des Deutschen Nationaltheaters
+    Weimar. Die Klassik Stiftung Weimar zählt zu den größten und bedeutendsten Kulturstiftungen
+    in der Bundesrepublik. Sie ist nicht nur für zwölf UNESCO-Welterbestätten in und
+    um Weimar verantwortlich, sondern auch für singuläre Sammlungen wie die handschriftlichen
+    Nachlässe Johann Wolfgang von Goethes und Friedrich Nietzsches oder die von Lucas
+    Cranach illustrierte Lutherbibel verantwortlich, die zum Weltdokumentenerbe zählen.
+    Mit dem Abkommen setzen die Zuwendungsgeber und Stiftungsträger Bund, Freistaat
+    Thüringen und Stadt Weimar wieder ein gemeinsames Zeichen für die nachhaltige
+    Sicherung des kulturellen Erbes in Weimar. Die Vereinbarung bildet die Grundlage
+    für die Fortführung der Arbeit der Klassik Stiftung Weimar auf hohem Niveau sowie
+    die Erhaltung und Weiterentwicklung ihrer bedeutenden Sammlungen, Museen, Archive
+    und historischen Liegenschaften für kommende Generationen. Gemäß dem Abkommen
+    beabsichtigen Bund und Land, der Klassik Stiftung Weimar von 2027 bis 2031 jährlich
+    jeweils 15,09 Millionen Euro für die institutionelle Förderung zur Verfügung zu
+    stellen. Die Stadt Weimar wird jährlich 2,25 Millionen Euro beitragen. Die institutionelle
+    Förderung beläuft sich folglich auf eine Gesamtsumme von 32,43 Millionen Euro
+    pro Jahr. Darüber hinaus sollen weitere jährliche Zuwendungen für große Investitionen
+    bereitgestellt werden. Bei seinem Besuch informierte sich Kulturstaatsminister
+    Weimer gemeinsam mit Minister Tischner, Oberbürgermeister Kleine und Dr. Lorenz
+    über zentrale Orte und aktuelle Vorhaben der Klassik Stiftung Weimar. Zu den Stationen
+    zählten das Goethe-Nationalmuseum, das Goethe- und Schiller-Archiv sowie die Baustelle
+    des Residenzschlosses Weimar. Kulturstaatsminister Wolfram Weimer sagte vorab:
+    „Mit der Unterzeichnung des gemeinsamen Finanzierungsabkommens für die Klassik
+    Stiftung Weimar setzen wir ein starkes Zeichen für die nachhaltige Sicherung unseres
+    kulturellen Erbes und schaffen eine verlässliche Grundlage, für den Erhalt bedeutsamer
+    Kultureinrichtungen in Deutschland. Die nun beginnende Generalsanierung des Deutschen
+    Nationaltheaters ist zugleich eine Investition in die Zukunft: in einen Ort, der
+    Menschen zusammenführt, künstlerischen Austauschs ermöglicht und kreative Impulse
+    weit über Thüringen hinaus sendet. Ein Ort der Identität stiftet.“ Thüringens
+    Kulturminister Christian Tischner fügte hinzu: „Der heutige Besuch verbindet zwei
+    zentrale kulturpolitische Vorhaben in Weimar: die verlässliche Finanzierung der
+    Klassik Stiftung Weimar und den nächsten sichtbaren Schritt für die Zukunft des
+    Deutschen Nationaltheaters. Beides zeigt: Kultur braucht Planungssicherheit, starke
+    Partnerschaften und moderne Infrastruktur. Thüringen steht zu seiner Verantwortung
+    für diese herausragenden Einrichtungen und für Weimar als lebendigen Ort von Kultur,
+    Forschung und gesellschaftlichem Dialog.“ Dr. Ulrike Lorenz, Präsidentin der Klassik
+    Stiftung Weimar, betonte: „Wir sind dankbar, dass unsere Träger ein so positives
+    Signal für die Klassik Stiftung Weimar setzen. Der Finanzierungsrahmen ermöglicht
+    uns, die Schauplätze und Sammlungen des deutschen Weltkulturerbes weiter zu erhalten
+    und für die Existenzfragen des 21. Jahrhunderts aufzuschließen. Das heißt in den
+    nächsten Jahren vor allem auch, die digitale Transformation voranzutreiben und
+    Goethes Wohnhaus mit neuen Vermittlungsansätzen einem breiten Publikum nachhaltig
+    nahe zu bringen. Gemeinsam mit Bund, Land und Stadt für die Zukunft unserer Herkunft
+    und die Herkunft unserer Zukunft zu sorgen, macht uns stark.“ Weimars Oberbürgermeister
+    Peter Kleine erklärte: „Dieser 17. Juni ist ein wichtiger Tag für die Kulturstadt
+    Weimar. Die Klassik Stiftung Weimar erhält mit der Fortschreibung der Finanzierungsvereinbarung
+    die nötige Planungssicherheit für ihre wichtige Kultur- und Bindungsarbeit. Zugleich
+    wird sie in die Lage versetzt, für die Touristen der Stadt weiterhin nachhaltige
+    Besuchermagnete anzubieten bzw. Reiseanlässe zu schaffen. Ich danke dem Bund und
+    dem Land, dass sie die Stiftung auch in den nächsten Jahren auf sehr hohem Niveau
+    unterstützen. Die Stadt Weimar erhöht (vorbehaltlich des noch zu treffenden Stadtratsbeschlusses)
+    dagegen erstmals seit über 20 Jahren ihren finanziellen Anteil. Dies ist ebenfalls
+    ein wichtiges Signal. Auch der Spatenstich für den Werkstattneubau des DNT - als
+    erstes Teilprojekts im Rahmen der Generalsanierung - markiert für uns eine bedeutende
+    Wegmarke. Die Fertigstellung des Werkstattgebäudes ist dringend notwendig, um
+    mit den Sanierungsarbeiten am Haupthauses ab 2029 beginnen zu können. Angesicht
+    der stetig steigenden Baupreise dürfen wir keine mehr Zeit verlieren.“ Am Nachmittag
+    besuchte Kulturstaatsminister Weimer das Deutsche Nationaltheater (DNT) und die
+    Staatskapelle Weimar. Dort informierte er sich gemeinsam mit Minister Tischner,
+    Oberbürgermeister Kleine, Vertreterinnen und Vertretern der Stadt Weimar sowie
+    der Teamintendanz des DNT über die Generalsanierung des Hauses. Anschließend fand
+    in der Lützendorfer Straße auf dem Gelände im Norden Weimars der erste Spatenstich
+    für den Neubau der Werkstätten des Theaters statt. Die Errichtung des neuen Werkstattgebäudes
+    markiert den Anfang der umfassenden Generalsanierung des Deutschen Nationaltheaters
+    Weimar. Der Neubau wird auf die Anforderungen eines modernen Theaterbetriebs ausgerichtet
+    und schafft unter anderem Räumlichkeiten für den Malsaal, die Tischlerei und die
+    Schreinerei. Mit diesem Schritt werden die Voraussetzungen dafür geschaffen, dass
+    das Hauptgebäude am Theaterplatz technisch modernisiert und das Theatererlebnis
+    für die Besucherinnen und Besucher nach Abschluss der Sanierungsarbeiten auf ein
+    neues hohes Niveau gehoben werden kann. Die Teamintendanz des DNT, bestehend aus
+    Valentin Schwarz, Dorian Dreher und Timon Jansen, erklärte: „Mit dem symbolischen
+    ersten Spatenstich für den Werkstattneubau geht die Generalsanierung des DNT in
+    die Ausführungsphase und damit in die nächste Etappe auf dem Weg zum Theater der
+    Zukunft. Der Neubau der Theaterwerkstätten sichert uns zukunftsfähige Arbeitsplätze.
+    Wir verfügen über eine wertvolle Manufaktur, in der jedes Bühnenbild vor Ort in
+    Weimar gefertigt wird - just-in-time. Diese Aufgabe können wir mit der neuen Werkstatt
+    auch in den kommenden Jahrzehnten gewährleisten. Mit der voraussichtlichen Fertigstellung
+    im Jahr 2029 sind die funktionalen Voraussetzungen gegeben, um mit dem Bau am
+    Haupthaus zu beginnen und auch im Interimsbetrieb grandiose Bühnenbilder fertigen
+    zu können. Dieser reibungslose Übergang des Spielbetriebs ermöglicht es uns als
+    Teamintendanz, unsere Mitarbeitenden in dieser Phase wertschätzend baulich zu
+    unterstützen und Aufführungen an verschiedenen Orten der Theaterstadt Weimar zu
+    erleben. Somit können wir Theatererlebnisse am DNT lückenlos und hochwertig für
+    die Stadtgesellschaft zur Verfügung stellen. Dafür allen Projektverantwortlichen
+    unser großer Dank!“ Die Fertigstellung des Werkstattgebäudes ist für das Jahr
+    2029 geplant. Sie ist eine unabdingbare Voraussetzung für den Auszug der Werkstätten
+    aus dem Haupthaus und damit für den Beginn der Sanierungsmaßnahmen am historischen
+    Theatergebäude in der Innenstadt. Die Gesamtkosten der Maßnahme wurden mit dem
+    Finanzierungsabkommen vom 08.04.2024 auf 167 Millionen Euro festgelegt. Bund und
+    Land beteiligen sich hälftig jeweils mit 83,5 Millionen Euro. Das Deutsche Nationaltheater
+    Weimar zählt zu den bedeutenden Orten deutscher Geschichte und Kultur. Unter der
+    Leitung von Johann Wolfgang von Goethe wurde hier Anfang des 19. Jahrhunderts
+    Literatur- und Schauspielgeschichte geschrieben. 1919 wurde im Deutschen Nationaltheater
+    die Verfassung der ersten Demokratie auf deutschem Boden verabschiedet. Die Förderung
+    der Generalsanierung durch Bund und Land unterstreicht die nationale und internationale
+    Bedeutung Weimars als Kultur- und Theaterstandort. Pressekontakte Der Beauftragte
+    der Bundesregierung für Kultur und Medien Pressestelle E-Mail: presse@bkm-info.bund.de
+    Thüringer Ministerium für Bildung, Wissenschaft und Kultur Maria-Theresa Meißner
+    Pressestelle Bereich Kultur Telefon: 0361 573411-608 E-Mail: Maria-Theresa.Meissner@tmbwk.thueringen.de
+    E-Mail: pressestelle@tmbwk.thueringen.de Felix Voigt Pressesprecher Telefon: E-Mail:
+    felix.voigt@tmbwk.thueringen.de Klassik Stiftung Weimar Elke Siedhoff-Müller Stabsreferatsleitung
+    Kommunikation, Öffentlichkeitsarbeit, Marketing Telefon: 03643 545-113 E-Mail:
+    Elke.Siedhoff-Mueller@klassik-stiftung.de Stadt Weimar Andy Faupel Pressesprecher
+    Telefon: 03643 762-653 E-Mail: andy.faupel@stadtweimar.de Deutsches Nationaltheater
+    und Staatskapelle Weimar Pressekontakt E-Mail: presse@nationaltheater-weimar.de'
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: THE trap case. 'Weimar' appears roughly a dozen times — as the city, the
+    Klassik Stiftung, the national theatre — and the minister is called Wolfram Weimer.
+    A string match scores this weimar_relevant; the correct answer is every flag false.
+- id: weimer-the-minister-not-the-format
+  provenance: data/events/german_chancellery/2026-06/2026-06-15-15f74ad0.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-06-15'
+  title: 'Orte, die Identität stiften: Staatsminister Weimer geht vom 15. bis zum
+    19. Juni auf Kulturbautenreise'
+  text: 'Im Rahmen einer einwöchigen Reise besucht der Staatsminister für Kultur und
+    Medien, Wolfram Weimer, ausgewählte Kulturbauten in Deutschland. Ziel ist, die
+    herausragende Bedeutung für die kulturelle Identität Deutschlands sichtbar zu
+    machen und zugleich ein Zeichen für die Vielfalt der Kulturlandschaft zu setzen,
+    die weit über die großen Städte hinausreicht. Im Vorfeld sagte Staatsminister
+    Weimer: „Ich freue mich auf einen einzigartigen kulturellen Roadtrip, der mich
+    zu beeindruckenden Orten in Deutschland führen wird. Ich kann nur jeden ermutigen,
+    sich ebenfalls auf Entdeckungsreise zu begeben!“ Er fügte hinzu: „Kulturbauten
+    erzählen die Geschichte unseres Landes. Sie bewahren Erinnerungen, stiften Identität
+    und schaffen Orte der Begegnung – nicht nur in den großen Städten. Gerade in kleineren
+    Gemeinden tragen Museen, Klöster und Schlösser wesentlich zum kulturellen Leben
+    und zum gesellschaftlichen Zusammenhalt bei. Diese Leistungen verdienen Sichtbarkeit
+    und Anerkennung.“ Zu Beginn der Reise besucht Staatsminister Weimer in Bayern
+    die Klöster Wettenhausen, Weißenohe und Waldsassen, die – auch wenn teilweise
+    dort kein klösterliches Leben mehr stattfindet – auf eine teils mehr als tausendjährige
+    Geschichte zurückblicken. In Weißenohe wird zudem ein symbolischer Förderbescheid
+    in Höhe von 5,3 Millionen Euro übergeben. Damit wird die Sanierung des Рrälatenbaus
+    unterstützt, der zukünftig als Chorakademie genutzt werden soll. Am Dienstag erhält
+    auch die Kaiser-Wilhelm-Gedächtnis-Kirche in Berlin einen symbolischen Förderbescheid
+    in Höhe von 9 Millionen Euro. Damit wird die Sanierung des denkmalgeschützten
+    Kirchengebäudes, entworfen von Egon Eiermann im Stil der Moderne. unterstützt.
+    Hierzu gehört auch die Instandsetzung der Betonfassade sowie die Restaurierung
+    der wertvollen Dickglas-Elemente. Darüber hinaus besichtigt Staatsminister Weimer
+    die historische Turmruine. Gemeinsam mit Thüringens Minister für Bildung, Wissenschaft
+    und Kultur, Christian Tischner, nimmt Staatsminister Weimer am Mittwoch am Spatenstich
+    für den Werkstattneubau des Deutschen Nationaltheaters in Weimar teil. Des Weiteren
+    wird ein Finanzierungsabkommen der Klassik Stiftung Weimar in Höhe von 75,45 Millionen
+    Euro über einen Zeitraum von fünf Jahren unterzeichnet. In Sachsen-Anhalt besucht
+    er am Donnerstag zusammen mit dem Staatsminister und Minister für Kultur des Landes
+    Sachsen-Anhalt, Rainer Robra, die Künstlerwerkstätten der Design Akademie Saaleck
+    in Naumburg sowie die feierliche Grundsteinlegung für das neue Dokumentationszentrum
+    vor Ort. Im Anschluss folgt ein Austausch mit Vertreterinnen und Vertretern der
+    Kulturinstitutionen aus Sachsen-Anhalt über aktuelle kulturpolitische Herausforderungen
+    und Perspektiven. Des Weiteren legt Staatsminister Weimer gemeinsam mit dem Regionalbischof
+    Dr. Dr. h. c. Schneider einen Kranz zum Gedenken an Oskar Brüsewitz nieder. Den
+    Abschluss der Reise am Freitag bildet ein Rundgang durch das Thüringer Landesmuseum
+    auf der Heidecksburg. Mit seiner Reise möchte Staatsminister Weimer die historischen
+    und kulturellen Bauwerke Deutschland würdigen sowie die Arbeit der Kulturinstitutionen.
+    Viele dieser Orte prägen seit Jahrhunderten das Erscheinungsbild ihrer Regionen
+    und sind zugleich wichtige Anziehungspunkte für Bildung und Tourismus. Die Stärkung
+    der kulturellen Infrastruktur zählt zu den zentralen Anliegen der Bundesregierung.
+    Mit nachhaltigen Investitionen unterstützt der Bund kulturelle Einrichtungen und
+    Kulturdenkmäler von nationaler Bedeutung. Weitere Informationen rund um die BKM-Förderung
+    von Kulturbauten finden Sie unter www.kulturstaatsminister.de/kulturbauten-und-kulturgutschutz/kulturbauten
+    .'
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: 'Second trap from the same run of cultural-policy releases: Staatsminister
+    Weimer on a tour of cultural buildings. No format, no tracked topic.'
+- id: e3-named-iran-attacks-en
+  provenance: data/events/german_mfa/2026-07/2026-07-12-0d2619e0.yaml
+  source_name: german_mfa
+  source_lang: en
+  date: '2026-07-12'
+  title: E3 Foreign Ministers‘ Statement on Iranian Attacks
+  text: We condemn Iran’s reckless attacks on commercial shipping in the Strait of
+    Hormuz and countries in the region including Qatar, Kuwait, Bahrain, Oman and
+    Jordan. Respect for sovereignty over territorial seas and freedom of navigation
+    are fundamental principles of international law. We reaffirm our continued support
+    for the swift and full resumption of international shipping through the Strait
+    of Hormuz and express full solidarity with our Gulf and regional partners. We
+    also call for the resumption of the ceasefire and of negotiations.
+  expect:
+    actors:
+    - DE
+    - FR
+    - UK
+    explicit_formats:
+    - e3
+    topics:
+    - iran
+    relevant:
+    - e3
+    stances:
+      e3:
+        iran: null
+  notes: 'Titled ''E3 Foreign Ministers'' Statement''. The null matters: the E3''s
+    iran goal is about nuclear enrichment and snapback, and this statement is entirely
+    about shipping in the Strait of Hormuz — topic present, nothing bearing on the
+    goal. Exactly the case prompt v8 says should be omitted rather than scored 0.'
+- id: e3-named-iran-attacks-de
+  provenance: data/events/german_mfa/2026-07/2026-07-12-b448737b.yaml
+  source_name: german_mfa
+  source_lang: de
+  date: '2026-07-12'
+  title: E3-Außenministererklärung zu den iranischen Angriffen
+  text: Wir verurteilen die ruchlosen Angriffe Irans auf die Handelsschifffahrt in
+    der Straße von Hormus und auf Länder in der Region, darunter Katar, Kuwait, Oman
+    und Jordanien. Die Achtung der Souveränität über Küstenmeere sowie die Freiheit
+    der Schifffahrt sind grundlegende Prinzipien des Völkerrechts. Wir bekräftigen
+    unsere fortwährende Unterstützung für eine rasche und vollständige Wiederaufnahme
+    der internationalen Schifffahrt durch die Straße von Hormus und verleihen unserer
+    uneingeschränkten Solidarität mit unseren Partnern unter den Golfstaaten und in
+    der Region Ausdruck. Wir fordern ferner die Wiederherstellung des Waffenstillstands
+    und die Wiederaufnahme der Verhandlungen.
+  expect:
+    actors:
+    - DE
+    - FR
+    - UK
+    explicit_formats:
+    - e3
+    topics:
+    - iran
+    relevant:
+    - e3
+    stances:
+      e3:
+        iran: null
+  notes: German-language version of e3-named-iran-attacks-en, same day, same ministry.
+    'E3-Außenministererklärung' — tests that the format legend survives translation.
+- id: visegrad-named-v4-power
+  provenance: data/events/polish_pm/2026-06/2026-06-23-b74b9bf5.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-06-23'
+  title: 'Premier: Grupa Wyszehradzka będzie jedną z największych potęg'
+  text: Współpraca w ramach Grupy Wyszehradzkiej może wzmocnić wpływ państw regionu
+    na kluczowe wydarzenia i decyzje podejmowane w Europie. Każde z naszych państw
+    może ponownie odgrywać ważną rolę w kształtowaniu wydarzeń w Europie. Dzięki temu
+    możliwa jest także współpraca ponad istniejącymi różnicami, w sprawach istotnych
+    dla naszych krajów i całego regionu Współpraca w ramach V4 przynosi najlepsze
+    rezultaty wtedy, gdy opiera się na wzajemnym zaufaniu oraz przekonaniu o dobrych
+    intencjach partnerów. Jeśli zawsze będziemy rozumieli, że to, co nas łączy niezależnie
+    od konfliktów, jest silniejsze niż to, co nas dzieli, to Europa zacznie nas słuchać
+    Obszary takie jak bezpieczeństwo energetyczne, polityka klimatyczna, migracja,
+    polityka spójności czy rolnictwo pozostają ważnymi obszarami współpracy między
+    państwami regionu. Wtedy, kiedy V4 był lojalny i solidarny, dawał też takie światło
+    nadziei wszystkim państwom ze wschodniej flanki, wszystkim tzw. nowym członkom
+    Unii Europejskiej. Nie widzę żadnego powodu, żeby znowu V4 był takim drogowskazem
+    dla tych wszystkich, którzy w konfrontacji z Niemcami, z Francją, z biurokracją
+    brukselską w samotności nie mają szans Wspólne działania krajów Grupy Wyszehradzkiej
+    mogą wzmacniać pozycję Europy Środkowo-Wschodniej w Unii Europejskiej oraz przyczyniać
+    się do skuteczniejszego reprezentowania interesów regionu na forum europejskim.
+    Gdy Grupa Wyszehradzka była jak jedna pięść, to byliśmy w stanie nie tylko wpływać,
+    ale również narzucać decyzje w Europie Dzisiejsze spotkanie pod Budapesztem to
+     pierwszy formalny szczyt Grupy Wyszehradzkiej od 2024 roku. Ostatni szczyt V4
+    z udziałem szefów rządów odbył się w lutym 2024 r. w Pradze.
+  expect:
+    explicit_formats:
+    - visegrad
+    topics:
+    - energy
+    - migration
+    - green_transition
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      visegrad:
+        energy: 1
+        migration: null
+      weimar:
+        green_transition: null
+  notes: 'Names both ''Grupa Wyszehradzka'' and ''V4''. actors is unscored on purpose:
+    the text discusses the group without naming CZ/SK/HU, so both [PL] and the full
+    membership are defensible readings and grading it would measure a coin flip. migration
+    is a null — listed as an area of cooperation with no position taken on the V4''s
+    border goal.'
+  unscored:
+  - actors
+- id: visegrad-named-bosacki-budapest-en
+  provenance: data/events/polish_mfa/2026-07/2026-07-16-c1f99353.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-07-16'
+  title: Secretary of State Marcin Bosacki visits Budapest
+  text: The deputy head of Polish diplomacy participated in a panel discussion “Europe
+    under double strategic pressure” at the Budapest Energy and Security Talks, which
+    is a leading international strategy conference in Hungary, aiming to provide a
+    platform for dialogue on the most important security and energy challenges ahead
+    of the transatlantic community. Deputy Minister Marcin Bosacki held talks focused
+    on EU enlargement with Secretary of State at the Hungarian MFA Krisztián Mészáros.
+    Deputy Minister Bosacki’s Budapest visit featured discussions on the reforms aimed
+    at restoring the rule of law, currently implemented by the Tisza government. Additionally,
+    the deputy head of Polish diplomacy gave an interview to HVG, Hungary’s leading
+    and one of the most independent media outlets. He shared the Polish perspective
+    on the Polish–Hungarian relations and the future of the Visegrád Group. Deputy
+    Minister Bosacki also answered questions concerning the long-term threat to European
+    security brought about by Russia’s policies, the consequences of Russian disinformation
+    campaigns, and ways to counter them.
+  expect:
+    actors:
+    - PL
+    - HU
+    explicit_formats:
+    - visegrad
+    topics:
+    - enlargement
+    - rule_of_law
+    - energy
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        enlargement: 1
+        rule_of_law: 1
+      visegrad:
+        enlargement: 1
+        energy: null
+  notes: 'Names ''the future of the Visegrád Group''. Also a goal-discrimination case:
+    enlargement means EU accession for Ukraine/Moldova/the Balkans to the Weimar Triangle
+    but Western-Balkans-only to the V4, and energy appears merely as a conference
+    title.'
+- id: visegrad-named-bosacki-budapest-pl
+  provenance: data/events/polish_mfa/2026-07/2026-07-16-857868ef.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-07-16'
+  title: Wizyta sekretarza stanu Marcina Bosackiego w Budapeszcie
+  text: Wiceszef polskiej dyplomacji wziął udział w panelu „Europe under double strategic
+    pressure” w ramach konferencji Budapest Energy and Security Talks. To wiodąca
+    międzynarodowa konferencja strategiczna na Węgrzech, która stanowi platformę dialogu
+    w odniesieniu do najważniejszych wyzwań z zakresu bezpieczeństwa i polityki energetycznej
+    stojących przed wspólnotą transatlantycką. W ramach konsultacji na temat rozszerzenia
+    Unii Europejskiej wiceminister Marcin Bosacki rozmawiał z sekretarzem stanu węgierskiego
+    MSZ Krisztiánem Mészárosem. Podczas pobytu w Budapeszcie wiceminister Bosacki
+    dyskutował o reformach przywracających państwo prawa, przeprowadzanych przez rząd
+    Tiszy. Ponadto wiceszef polskiej dyplomacji udzielił wywiadu dla wiodącego i jednego
+    z najbardziej niezależnych portali informacyjnych na Węgrzech HVG, przedstawiając
+    m.in. polski punkt widzenia na temat relacji polsko-węgierskich oraz przyszłości
+    Grupy Wyszehradzkiej. Wiceminister Bosacki odpowiadał także na pytania dotyczące
+    długoterminowego zagrożenia dla bezpieczeństwa europejskiego wynikającego z polityki
+    Rosji czy też skutków kampanii dezinformacyjnych prowadzonych przez Rosję i sposobów
+    ich zwalczania.
+  expect:
+    actors:
+    - PL
+    - HU
+    explicit_formats:
+    - visegrad
+    topics:
+    - enlargement
+    - rule_of_law
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        enlargement: 1
+        rule_of_law: 1
+      visegrad:
+        enlargement: 1
+  notes: Polish-language counterpart of visegrad-named-bosacki-budapest-en.
+- id: nb8-is-not-a-tracked-format
+  provenance: data/events/estonian_mfa/2026-05/2026-05-26-7c98cf5e.yaml
+  source_name: estonian_mfa
+  source_lang: et
+  date: '2026-05-26'
+  title: Tallinnas toimus NB8 digi- ja küberjulgeolekusaadikute kohtumine
+  text: Eile, 25. mail kogunesid Tallinnas Põhjala-Balti (NB8) riikide digi- ja küberjulgeoleku
+    erisaadikud, et arutada regionaalse koostöö tihendamist ning jagada kogemusi küberohtude
+    ennetamisel ja tõrjumisel.
+  expect:
+    actors:
+    - EE
+    explicit_formats: []
+    topics:
+    - hybrid
+    relevant:
+    - baltic
+    stances:
+      baltic:
+        hybrid: 1
+  notes: Names NB8, which is a hub placeholder with no `topics` and therefore invisible
+    to the pipeline. explicit_formats must stay empty — the trap is emitting 'baltic'
+    because an unfamiliar Nordic-Baltic format was named.
+- id: fr-pl-no-format-named
+  provenance: data/events/polish_mfa/2026-07/2026-07-09-ac03fc71.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-07-09'
+  title: Minister Jean-Noël Barrot as Polish Heads of Missions Conference guest of
+    honour
+  text: During bilateral talks, Deputy Prime Minister Radosław Sikorski and Minister
+    Jean-Noël Barrot discussed current security challenges, European policy, and bilateral
+    cooperation between Warsaw and Paris. They pledged to continue a close political
+    dialogue and enhance cooperation in key areas, including economy, defence, and
+    culture. Poland’s top diplomat stressed that France is our strategic European
+    partner with a similar perception of security challenges and ongoing processes
+    in Europe. The ministers also discussed the implementation of new infrastructural
+    and industrial investments. Deputy Prime Minister Sikorski emphasised that Poland
+    and France are bound by strong economic ties. France is our third-largest trading
+    partner and fourth-largest investor in Poland. French companies provide 227,000
+    jobs in Poland. We are very interested in deepening our dialogue with France.
+    France is our strategic partner in Europe and in the Weimar Triangle said Deputy
+    Prime Minister Radosław Sikorski. The number of Polish businesses operating in
+    the French market is also increasing. They invest mainly in the automotive, industry,
+    construction, and IT sectors. A coordinated cooperation within international organisations
+    was high on the meeting’s agenda. Deputy Prime Minister Sikorski appealed for
+    support for Poland’s efforts to become a permanent member of the G20. The ministers
+    also discussed current security risks, including in the Middle East and Ukraine.
+    In his address to heads of missions, Minister Jean-Noël Barrot presented France’s
+    perspective on the key challenges facing Europe and the transatlantic community.
+    The head of French diplomacy spoke about security and pointed out that European
+    countries must stay united. In his speech, he emphasised the importance of relations
+    between Poland and France. The future of Europe belongs to Europeans. France and
+    Poland have a special responsibility for this future. Those are the words of the
+    Treaty of Nancy. We’ll have to build a stronger European security architecture
+    with France and Poland as core pillars. It is not a question of old versus new
+    Europe. It’s about peace and war, about freedom versus slavery Previously, a French
+    foreign minister took part in the Polish Heads of Missions Conference in 2012,
+    when Minister Laurent Fabius was the Conference’s guest of honour. In January
+    2025, it was Deputy Prime Minister Radosław Sikorski who participated in the French
+    Ambassadors’ Conference in Paris.
+  expect:
+    actors:
+    - PL
+    - FR
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        defence: 1
+      visegrad:
+        defence: null
+  notes: Two Weimar Triangle members in bilateral talks on security and defence, with
+    the format never named. weimar_relevant is true via the 2+-member rule, but explicit_formats
+    must be empty — the inverse of the trap cases above.
