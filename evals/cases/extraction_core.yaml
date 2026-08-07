@@ -1,0 +1,770 @@
+# Ordinary items across the four scraped languages and all five tracked
+# groupings. These carry the weight of the actors/topics/relevance metrics:
+# nothing here is a trick, so a regression on this file is a regression on the
+# everyday path.
+cases:
+- id: de-pl-treaty-anniversary-en
+  provenance: data/events/german_mfa/2026-06/2026-06-17-37a32fc7.yaml
+  source_name: german_mfa
+  source_lang: en
+  date: '2026-06-17'
+  title: Joint Declaration by the Foreign Ministers of the Federal Republic of Germany
+    and the Republic of Poland on the 35th anniversary of the signing of the Treaty
+    between the Federal Republic of Germany and the Republic of Poland on Good-Neighbourliness,
+    Friendship and Cooperation
+  text: The signing of the Treaty on Good-Neighbourliness, Friendship and Cooperation
+    35 years ago marked a turning point in German-Polish relations, on which we look
+    back with pride. Today, Germany and Poland are not only neighbours and friends,
+    but close equal partners and reliable allies, firmly anchored together in European
+    and Euro-Atlantic structures. Not only was the Treaty an important part of the
+    process of German-Polish reconciliation following long periods of division and
+    mistrust, it also marked the starting point for profound, trust-based cooperation
+    on all levels of our society. The institutional and legal regulations established
+    35 years ago laid the foundations for today’s unprecedented level of German-Polish
+    cooperation, which we primarily owe to the dedicated people in our countries.
+    Since then, our countries have changed profoundly. Above all, we find ourselves
+    in a fundamentally changed geopolitical environment, particularly in view of Russia’s
+    comprehensive attack on Ukraine. In awareness of the tragic history of the 20th
+    century, we bear a special responsibility for our region and our continent as
+    allies in NATO and partners in the European Union. Russia’s aggression against
+    Ukraine means that we face new political realities. Our response to it has become
+    the yardstick of our responsibility and ability to act. Our joint commitment to
+    strengthening European security is now a geopolitical necessity. The German-Polish
+    contribution to securing the eastern flank is a good example of this. We welcome
+    the signing of the new German-Polish Agreement on Defence Cooperation. It is testament
+    to our determination to act together. The German-Polish partnership is, and will
+    remain, a cornerstone of a strong, united Europe and a NATO that is able to defend
+    itself. Russia’s aggressive actions, in particular those of a hybrid nature and
+    in the field of disinformation, are also aimed at us. Their goal is to divide
+    our societies, to destroy public order and to undermine trust in the state and
+    its institutions. We will not be intimidated. We will successfully enhance our
+    resilience and inform our societies. Our overarching aim remains the protection
+    of European values, including the rule of law and free elections, and ultimately
+    a lasting and just peace in Ukraine that strengthens European security. We take
+    the lessons of the past seriously. “Never again should there be war” is not a
+    hollow phrase, but a duty to future generations. In awareness of German guilt,
+    our tragic history will always serve as a warning to us. Eighty-one years after
+    the end of the Second World War, the last survivors are leaving us. We firmly
+    believe that history can unite people. This requires mutual empathy, but also
+    concrete measures in the spirit of the Joint Declaration of 1 December 2025 that
+    go beyond mere symbolics. We welcome the steps being undertaken to erect a memorial
+    in central Berlin to the Polish people – victims of the Second World War and Nazi
+    tyranny between 1939 and 1945 – and look forward to the outcome of the design
+    competition towards the end of the year. We welcome the Federal Government’s decisions
+    to date on returning stolen cultural property that belongs to Poland. Further
+    returns will follow. Our economic cooperation is a source of particular satisfaction
+    for us. Trade between Poland and Germany has multiplied in the past decades. Germany
+    is among the three largest economies in the world. Poland is on the verge of becoming
+    one of the 20 largest economies. The structure and profile of our trade relations
+    have fundamentally changed. This helps to foster mutual prosperity, the creation
+    of new jobs and the development of civil-society ties. However, we need new impetus
+    in order to make full use of the societal and economic potential. Our companies
+    and citizens await the further development of cross-border infrastructure and
+    the expansion of transport connections. Not only will this make them more mobile
+    and facilitate trade, it will also strengthen our military potential. We also
+    advocate more partnerships, especially in the fields in which our two countries
+    see a particular need for action, ranging from dual-use technologies and digitalisation
+    to the development of artificial intelligence. The European Union is the linchpin
+    of our cooperation. Strengthening and stabilising it is in our strategic interest.
+    In this regard, we would like to make a joint contribution to the future of the
+    European Union. Given the increasing challenges, we are in no doubt that the European
+    Union will become our most important source of protection and our most crucial
+    instrument for asserting our interests at global level. Like the Treaty on Good-Neighbourliness,
+    Friendship and Cooperation, the Weimar Triangle also turns 35 this year. More
+    than any other political format, it stands for the regained unity and the solidarity
+    in Europe. We are in agreement as regards continuing to use the Weimar Triangle
+    for joint impetus in foreign and EU policy and in strengthening cohesion in the
+    European Union. We also welcome the intensive interministerial cooperation in
+    the Weimar format. The perception of German-Polish relations has fundamentally
+    changed. We face different challenges today to those we faced in 1991. Poland
+    and Germany can do more – our freedom, security and prosperity are at stake. As
+    neighbours, friends and allies, we bear responsibility for the future. We will
+    rise to this challenge by jointly ensuring that our future relations are even
+    closer, doing so responsibly, sincerely and in a spirit of partnership in the
+    interests of Europe as a whole.
+  expect:
+    actors:
+    - DE
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    - defence
+    relevant:
+    - weimar
+    - e3
+    stances:
+      weimar:
+        ukraine: 1
+        defence: 1
+      e3:
+        defence: null
+  notes: German-Polish 35th anniversary declaration. Two Weimar Triangle members and
+    tracked topics, but the Weimar Triangle is never named — relevance comes from
+    the 2+-member rule, not an explicit mention.
+- id: de-pl-treaty-anniversary-pl
+  provenance: data/events/polish_mfa/2026-06/2026-06-17-4d129cc7.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-06-17'
+  title: Wspólne oświadczenie Rzeczypospolitej Polskiej i Republiki Federalnej Niemiec
+    z okazji 35-tej rocznicy podpisania Traktatu o dobrym sąsiedztwie i przyjaznej
+    współpracy
+  text: 'Polska i Niemcy są dzisiaj nie tylko sąsiadami i przyjaciółmi, ale też bliskimi,
+    równoprawnymi partnerami i wiarygodnymi sojusznikami, trwale zakotwiczonymi w
+    strukturach europejskich i euroatlantyckich. Po długim czasie podziałów i nieufności
+    Traktat, stał się nie tylko ważnym elementem w procesie polsko-niemieckiego pojednania,
+    ale także początkiem pogłębionej, pełnej zaufania współpracy na wszystkich płaszczyznach.
+    Stworzone 35 lat temu ramy instytucjonalno-prawne umożliwiły bezprecedensowy rozwój
+    współpracy polsko-niemieckiej, co zawdzięczamy przede wszystkim zaangażowaniu
+    społeczeństw naszych krajów. Od tego czasu oba nasze państwa zasadniczo się zmieniły.
+    Przede wszystkim jednak,  na skutek pełnoskalowego ataku Rosji na Ukrainę, fundamentalnie
+    zmieniło się nasze otoczenie geopolityczne. Pomni tragicznej historii XX w. jako
+    sojusznicy w NATO, partnerzy w UE ponosimy szczególną odpowiedzialność za nasz
+    region i kontynent. Rosyjska agresja przeciwko Ukrainie postawiła nas w nowej
+    rzeczywistości politycznej. Jest probierzem naszej odpowiedzialności i skuteczności.
+    Wspólne zaangażowane we wzmocnienie bezpieczeństwa Europy to dziś geopolityczna
+    konieczność. Polsko-niemiecki wkład w bezpieczeństwo wschodniej flanki jest tego
+    dobrym przykładem. Z satysfakcją odnotowujemy zawarcie w dniu 17 czerwca br. nowej
+    polsko-niemieckiej umowy o współpracy w dziedzinie obronności. Potwierdza to naszą
+    determinację do podejmowania wspólnych działań. Polsko-niemieckie partnerstwo
+    pozostaje filarem silnej, zjednoczonej Europy i wiarygodnego NATO. Agresywne działania
+    Rosji, zwłaszcza o charakterze hybrydowym i dezinformacyjnym, wymierzone są także
+    przeciwko nam. Mają na celu wywołanie podziałów społecznych, niszczenie porządku
+    publicznego, podważanie zaufania do państwa i jego instytucji. Nie damy się zastraszyć.
+    Będziemy skutecznie wzmacniać naszą odporność i edukować nasze społeczeństwa.
+    Naszym nadrzędnym celem pozostaje ochrona europejskich wartości, w tym rządów
+    państwa prawa i transparentnych procesów wyborczych, a wreszcie trwały i sprawiedliwy
+    pokój na Ukrainie, wzmacniający bezpieczeństwo Europy. Poważnie traktujemy lekcję
+    wynikającą z historii. „Nigdy więcej wojny” to nie jest puste hasło, lecz zobowiązanie
+    wobec przyszłych pokoleń. W przeświadczeniu niemieckich win, uznajemy tragiczny
+    rozdział naszej historii za wieczną przestrogę. 81 lat po zakończeniu II wojny
+    światowej odchodzą ostatni świadkowie tamtych wydarzeń. Wierzymy, że historia
+    może nie tylko dzielić, ale też łączyć. Do tego potrzeba wzajemnego wyczucia,
+    wrażliwości, ale także konkretnych działań, w duchu wspólnego oświadczenia z 1
+    grudnia 2025 roku, które wykraczają poza sferę symbolicznych gestów. Z zadowoleniem
+    odnotowujemy kolejne kroki na drodze do budowy w centrum Berlina pomnika poświęconego
+    obywatelom polskim – ofiarom II wojny światowej i nazistowskiego terroru w latach
+    1939–1945 i czekamy z niecierpliwością na wyniki konkursu pod koniec tego roku.
+    Doceniamy dotychczasowe decyzje rządu federalnego na rzecz zwrotu do Polski zagrabionych
+    dóbr kultury. Wkrótce powinny nastąpić kolejne. Nasza współpraca gospodarcza daje
+    nam szczególne powody do satysfakcji. Obroty handlowe między Polską a Niemcami
+    uległy w ostatnich dekadach zwielokrotnieniu. Niemcy zajmują 3 miejsce na liście
+    największych gospodarek świata, Polska aspiruje do pierwszej 20-tki. Istotnie
+    zmieniła się struktura i charakter naszych kontaktów handlowych. Przekłada się
+    to na wspólny dobrobyt, powstawanie nowych miejsc pracy i rozwój więzi społecznych.
+    Do pełnego uwolnienia potencjału społeczno-gospodarczego potrzebujemy nowych impulsów.
+    Nasi przedsiębiorcy i obywatele czekają na rozwój infrastruktury transgranicznej
+    i rozbudowę sieci komunikacyjnej. Zwiększy to nie tylko ich mobilność społeczną
+    i ułatwi handel, ale też wzmocni nasz potencjał militarny. Opowiadamy się za rozbudową
+    sieci partnerstw, zwłaszcza w tych obszarach, gdzie oba nasze kraje mają szczególnie
+    dużo zaległości – od technologii podwójnego zastosowania po cyfryzację czy rozwój
+    sztucznej inteligencji. Unia Europejska pozostaje osią naszej współpracy. Jej
+    wzmocnienie i stabilność to nasz strategiczny interes. W tym duchu pragniemy wnosić
+    wspólny wkład w kształtowanie przyszłości Unii Europejskiej. Nie mamy wątpliwości,
+    że w obliczu narastających napięć Unia Europejska staje się dla nas kluczowym
+    narzędziem służącym na poziomie globalnym ochronie i realizacji naszych interesów.
+    Trójkąt Weimarski, podobnie jak Traktat, obchodzi w tym roku jubileusz 35-lecia.
+    Jak żaden inny format uosabia on odzyskanie jedności i solidarności Europy. Jesteśmy
+    zgodni, że Trójkąt Weimarski może nadal generować wspólne impulsy w polityce zagranicznej
+    i europejskiej oraz wzmacniać spójność Unii Europejskiej. Z satysfakcją odnotowujemy
+    w tym kontekście rozwój współpracy sektorowej. Optyka relacji polsko-niemieckich
+    istotnie się zmieniła. Stoimy dzisiaj przed innymi wyzwaniami niż w 1991 roku.
+    Polskę i Niemcy stać na więcej – stawką jest nasza wolność, bezpieczeństwo, dobrobyt.
+    Jesteśmy odpowiedzialni za przyszłość – jako sąsiedzi, partnerzy, sojusznicy.
+    Musimy zdać ten egzamin, budując przyszłość wzajemnych relacji: odpowiedzialnie,
+    uczciwie i po partnersku i interesie całej Europy.'
+  expect:
+    actors:
+    - DE
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        ukraine: 1
+        defence: 1
+      visegrad:
+        defence: null
+  notes: 'The Polish-language counterpart of de-pl-treaty-anniversary-en, published
+    the same day by the other ministry. The Weimar scores should match its English
+    twin — a gap there is a language-handling defect. The second grouping differs
+    by design: the German ministry''s version reaches the E3 and the Polish ministry''s
+    reaches the V4, because the known-actor clause is scoped to the source''s own
+    memberships.'
+- id: fr-uk-barrot-miliband
+  provenance: data/events/france_diplomatie/2026-07/2026-07-29-0bddd7a5.yaml
+  source_name: france_diplomatie
+  source_lang: en
+  date: '2026-07-29'
+  title: United Kingdom - Jean-Noël Barrot's meeting with Ed Miliband
+  text: M. Jean-Noël Barrot, Minister for Europe and Foreign Affairs, had a meeting
+    with Mr Ed Miliband, Secretary of State for Foreign, Commonwealth and Development
+    Affairs of the United Kingdom, in Paris on 29 July. This first visit to France
+    by Mr Miliband, a week after his appointment at the head of the Foreign, Commonwealth
+    and Development Office (FCDO), shows the richness of our bilateral relationship
+    and the importance of our coordination on the major international issues. Building
+    on the Coalition of the Willing summit of 13 July, the two ministers reaffirmed
+    their resolute support for Ukraine and their determination to step up pressure
+    on the Russian war effort, particularly by fighting the shadow fleet. On the Middle
+    East, they highlighted the role of Franco-British cooperation in the implementation
+    of the multinational mission to support freedom of navigation in the Strait of
+    Hormuz, while calling for the conflict to be resolved diplomatically. The ministers
+    adopted a joint statement calling, among other things, for their operational cooperation
+    to be intensified in view of the climate risks and for international efforts aimed
+    at strengthening climate resilience in every sphere to be accelerated.
+  expect:
+    actors:
+    - FR
+    - UK
+    explicit_formats: []
+    topics:
+    - ukraine
+    - iran
+    relevant:
+    - weimar
+    - e3
+    stances:
+      weimar:
+        ukraine: 1
+      e3:
+        iran: null
+  notes: 'Names the Coalition of the Willing, which is a hub placeholder rather than
+    a tracked format, so explicit_formats stays empty. e3/iran is a null: the Strait
+    of Hormuz mission has nothing to do with the E3''s nuclear-enrichment goal.'
+- id: fr-uk-hormuz-declaration
+  provenance: data/events/elysee/2026-07/2026-07-03-a939d615.yaml
+  source_name: elysee
+  source_lang: fr
+  date: '2026-07-03'
+  title: Déclaration conjointe du Président de la République française et du Premier
+    ministre britannique.
+  text: Le détroit d'Ormuz est une artère vitale pour l'économie mondiale. Rétablir
+    un transit sûr pour les navires de toutes les nations à travers le détroit est
+    un sujet de préoccupation mondiale. Le Sultanat d'Oman a accepté de travailler
+    avec la France et le Royaume-Uni pour garantir que ses eaux territoriales souveraines
+    soient sûres pour la navigation. La France et le Royaume-Uni se tiennent également
+    prêts à déployer la mission militaire multinationale plus large pour soutenir
+    la liberté de navigation dans le détroit d'Ormuz. La France et le Royaume-Uni
+    réaffirment leur engagement commun en faveur de la stabilité régionale, du respect
+    de la souveraineté de tous les États, ainsi que leur volonté de maintenir une
+    coopération étroite avec leurs partenaires afin de préserver la sécurité mondiale,
+    la liberté de navigation et le droit international.
+  expect:
+    actors:
+    - FR
+    - UK
+    explicit_formats: []
+    topics:
+    - iran
+    relevant:
+    - e3
+    stances:
+      e3:
+        iran: null
+  notes: French-language FR/UK joint declaration on the Strait of Hormuz. Same null
+    as fr-uk-barrot-miliband and for the same reason — freedom of navigation is not
+    the E3's iran goal.
+- id: de-cyber-security-cabinet
+  provenance: data/events/german_chancellery/2026-05/2026-05-27-ff0cd70f.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-05-27'
+  title: Im Kabinett beschlossen Stärkung der Cybersicherheit
+  text: Für Erkennung und Abwehr von Cyberangriffen sollen angemessene und rechtssichere
+    gesetzliche Grundlagen geschaffen werden. Die Sicherheit und Handlungsfähigkeit
+    von Staat, Wirtschaft und Gesellschaft in einem modernen, hoch technologisierten
+    und digitalisierten Industrieland wie Deutschland beruhen in hohem Maße auf funktionierenden
+    digitalen Prozessen und Infrastrukturen. Seit Jahren steigt jedoch die Zahl von
+    Cyber angriffen durch staatliche und nichtstaatliche Akteure. Deutschland ist
+    als führende Wirtschaftsnation in Europa verstärkt im Fokus hochprofessioneller
+    Cyber angriffe mit großem Schadenspotenzial. Angesichts der geopolitischen Lage
+    gewinnen zudem auch hybride Bedrohungen zunehmend an Bedeutung. Dieser sicherheitspolitischen
+    Herausforderung begegnet die Bundesregierung, indem sie die Erkennung und Abwehr
+    von Cyber angriffen ausbaut und hierzu wirksame, angemessene und rechtssichere
+    gesetzliche Grundlagen schafft. Einen entsprechenden Gesetzentwurf hat sie nun
+    beschlossen. Bundesinnenminister Alexander Dobrindt erklärte in der Pressemitteilung
+    des BMI , dass „bisher bei Angriffen reagiert wurde, in dem versucht wurde die
+    Angriffe in schadlose Bereiche des Netzes umzuleiten. Zukünftig werden wir den
+    Angreifer ins Visier nehmen seine Server, seine Software, seine Strategie.“ Mit
+    dem Gesetzentwurf zur Stärkung der Cybersicherheit werden die Sicherheitsbehörden
+    in die Situation versetzt, dass sie das, was sie heute technisch können, auch
+    rechtlich sicher anwenden können. Damit soll die Aufklärung und die Erkennung
+    konkreter Angriffe und langfristig laufender Angriffskampagnen verbessert werden.
+    Zudem soll die Entdeckung konkreter Vorbereitungshandlungen durch das Bundesamt
+    für Sicherheit in der Informationstechnik ( BSI ) ausgebaut werden. Insbesondere
+    gegen groß angelegte Cyber angriffe mit hohem Schadenspotenzial bieten präventive
+    Maßnahmen in den eigenen IT -Systemen allein keinen hinreichenden Schutz. Es müssen
+    daher für die Polizeien des Bundes und das BSI ergänzend Möglichkeiten zur Unterbindung
+    solcher Cyber angriffe geschaffen werden, um gravierende Folgeschäden abwenden
+    oder minimieren zu können.
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics:
+    - hybrid
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        hybrid: 1
+  notes: 'Single-country German cabinet decision on cyber defence. Relevant only via
+    the known-actor clause (design principle #3), and the text explicitly names hybrid
+    threats, so hybrid is not a stretch.'
+- id: baltic-three-moscow-demarche
+  provenance: data/events/latvian_mfa/2026-07/2026-07-10-0e32416a.yaml
+  source_name: latvian_mfa
+  source_lang: lv
+  date: '2026-07-10'
+  title: Baltijas valstu vēstniecību pārstāvji Maskavā veic kopīgu demaršu Krievijas
+    Ārlietu ministrijā
+  text: Šodien, 2026. gada 10. jūlijā, Latvijas, Igaunijas un Lietuvas vēstniecību
+    Maskavā pagaidu pilnvarotie lietveži kopīgā demaršā Krievijas Federācijas Ārlietu…
+  expect:
+    actors:
+    - LV
+    - EE
+    - LT
+    explicit_formats: []
+    topics: []
+    relevant:
+    - baltic
+    stances: {}
+  notes: All three Baltic Three members act jointly, so baltic_relevant is true through
+    the all-members-present clause even with no tracked topic. The RSS body is truncated
+    mid-sentence, which is normal for this source and limits what any prompt can extract.
+- id: ee-ukraine-eu-accession
+  provenance: data/events/estonian_mfa/2026-06/2026-06-02-b4b396a5.yaml
+  source_name: estonian_mfa
+  source_lang: et
+  date: '2026-06-02'
+  title: 'Välisminister Tsahkna Ukraina peaministrile: Ukraina liitumine ELiga on
+    kogu Euroopa julgeoleku huvides'
+  text: Täna, 2. juunil kohtus välisminister Margus Tsahkna Tallinnas Eesti peaministri
+    korraldatud õhtusöögil Ukraina peaministri Julija Svõrõdenkoga. Arutelu keskendus
+    Ukraina julgeolekule, Euroopa Liidu laienemisele ning vajadusele suurendada survet
+    Venemaale.
+  expect:
+    actors:
+    - EE
+    explicit_formats: []
+    topics:
+    - ukraine
+    - enlargement
+    relevant: []
+    stances: {}
+  notes: 'An Estonian MFA item on Ukraine and EU enlargement that is correctly relevant
+    to NOTHING: the Baltic Three track defence/hybrid/energy, and neither of this
+    item''s topics is among them. Catches a model that treats ''important foreign
+    policy'' as relevance.'
+- id: ee-us-congress-delegation
+  provenance: data/events/estonian_mfa/2026-07/2026-07-24-13bbf973.yaml
+  source_name: estonian_mfa
+  source_lang: et
+  date: '2026-07-24'
+  title: 'Asekantsler Martin Roger: USA Kongressi toetus on aidanud tugevdada Eesti
+    julgeolekut'
+  text: Välisministeeriumi poliitikaküsimuste asekantsler Martin Roger kohtus 24.
+    juulil Eestis visiidil viibiva Ameerika Ühendriikide Kongressi delegatsiooniga,
+    kuhu kuuluvad esindajatekoja kaitsevaldkonna teemadega tegelevad rahvaesindajad
+    Ken Calvert, Betty McCollum, Jake Ellzey, John Rutherford, Scott Franklin, Nick
+    LaLota ning Norma Torres. Kohtumisel olid kõne all piirkonna julgeolekuolukord,
+    NATO heidutus- ja kaitsevõime tugevdamine ning atlandiüleste suhete tugevdamine,
+    sh Eesti-USA kahepoolne koostöö.
+  expect:
+    actors:
+    - EE
+    - US
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - baltic
+    stances:
+      baltic:
+        defence: 1
+  notes: US is an AUKUS member and defence is an AUKUS topic, but one member actor
+    is not two and estonian_mfa is not an AUKUS source — so aukus_relevant must stay
+    false. Tests that the per-grouping membership scoping actually holds.
+- id: lv-moldova-eu-integration
+  provenance: data/events/latvian_mfa/2026-08/2026-08-04-e9529497.yaml
+  source_name: latvian_mfa
+  source_lang: lv
+  date: '2026-08-04'
+  title: 'Baiba Braže Moldovā: Latvija turpinās politiski un praktiski atbalstīt Moldovas
+    eirointegrāciju'
+  text: 2026. gada 3. augustā ārlietu ministre Baiba Braže darba vizītē Moldovā tikās
+    ar valsts augstākajām amatpersonām, lai pārrunātu Moldovas integrāciju Eiropas…
+  expect:
+    actors:
+    - LV
+    explicit_formats: []
+    topics:
+    - enlargement
+    relevant: []
+    stances: {}
+  notes: 'Same shape as ee-ukraine-eu-accession: a Baltic MFA on enlargement, which
+    the Baltic Three do not track. All flags false.'
+- id: uk-osce-russia-sovereignty
+  provenance: data/events/uk_fcdo/2026-07/2026-07-30-425c98c5.yaml
+  source_name: uk_fcdo
+  source_lang: en
+  date: '2026-07-30'
+  title: 'Russia’s history of disregarding the sovereignty and territorial integrity
+    of its neighbours: UK statement to the OSCE'
+  text: Ambassador Holland argued that Russia’s war against Ukraine reflects a long-standing
+    pattern of challenging the sovereignty and territorial integrity of neighbouring
+    states. Russia’s actions in Ukraine, Moldova and Georgia d…
+  expect:
+    actors:
+    - UK
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant: []
+    stances: {}
+  notes: 'A one-sentence FCDO feed summary. ukraine is not tracked by either grouping
+    the UK belongs to (E3: iran/defence; AUKUS: indo_pacific/submarines/defence),
+    so all flags are false. Judgement call: the text is about sovereignty rather than
+    defence capability — review this label first if uk_fcdo cases look systematically
+    wrong.'
+- id: pl-fac-brussels-sanctions
+  provenance: data/events/polish_mfa/2026-05/2026-05-11-780db6ff.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-05-11'
+  title: Deputy Minister Bosacki takes part in Foreign Affairs Council (FAC) in Brussels
+  text: Besides the sanctions, the 11 May talks focused on Russia’s ongoing aggression
+    against Ukraine, the situation in the Middle East, and the EU’s relations with
+    Western Balkan countries. Also, informal meetings with foreign ministers of Western
+    Balkan countries and Canada’s Foreign Minister Anita Anand were held in Brussels.
+    In a discussion on Russia’s aggression against Ukraine, Deputy Minister Bosacki
+    underlined that Russia’s goals have not changed, although it is incapable of achieving
+    them through war. He called for prompt launching of the EUR 90 billion loan for
+    Ukraine, which is necessary to strengthen Ukraine’s Armed Forces and keep the
+    Ukrainian state operational. He also highlighted the importance of keeping the
+    sanctions pressure on Russia, including energy sanctions. The deputy head of Polish
+    diplomacy called for the urgent opening of the first negotiating cluster with
+    Ukraine (Fundamentals), whilst emphasising that enlargement must remain a process
+    based on substantive grounds and taking into account the vulnerabilities of the
+    member states (including those relating to agriculture and transport). During
+    the meeting, the Council imposed sanctions on further 16 individuals and seven
+    entities responsible for regular unlawful deportation, forced resettlement, and
+    assimilation of Ukrainian children as well as their illegal adoption and transfer
+    to the Russian Federation. Talking on the situation in the Middle East, the ministers
+    emphasised the crucial importance of swiftly restoring freedom of navigation through
+    the Strait of Hormuz and reaching a lasting ceasefire. They spoke in favour of
+    strengthening relations with the Gulf states. The participants criticised Israel’s
+    violation of the ceasefire reached with Hamas on 9 October 2025 and voiced their
+    concerns about the number of civilian casualties in Lebanon. The Council also
+    expressed its support for imposing sanctions on illegal Israeli settlers in the
+    West Bank. During an informal meeting with the foreign ministers of the Western
+    Balkans, Poland’s Deputy Foreign Minister Bosacki urged his partners to fully
+    align with the EU’s priorities in foreign and security policies. He stressed that
+    it is a prerequisite for a future EU membership. During the meeting with Canada’s
+    foreign minister, it was confirmed that the EU and Canada share the same position
+    on key foreign policy issues, including Russia’s aggression against Ukraine. ***
+    Foreign Affairs Council is responsible for the EU’s foreign policy, and manages
+    its diplomatic relations with the rest of the world. It decides on security and
+    defence matters, concludes trade agreements, and establishes international partnerships.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    - enlargement
+    - energy
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        ukraine: 2
+        enlargement: 2
+      visegrad:
+        energy: 1
+        enlargement: 1
+  notes: Calls for a concrete EUR 90bn loan and the opening of Ukraine's first negotiating
+    cluster — concrete asks, hence +2 rather than +1 on both Weimar topics.
+- id: fr-summons-russian-ambassador
+  provenance: data/events/france_diplomatie/2026-05/2026-05-29-1ee5b572.yaml
+  source_name: france_diplomatie
+  source_lang: en
+  date: '2026-05-29'
+  title: Russia – Summoning of the Ambassador
+  text: The Ministry for Europe and Foreign Affairs summoned  the Russian Ambassador
+    to France on May 29 at the Minister’s request. He was received by the Ministry’s
+    Director General for Political Affairs. The purpose of this summons was to strongly
+    condemn the Russian Foreign Minister’s statement of May 25, in which he warned
+    civilians and foreigners in Kyiv, including the staff of diplomatic missions and
+    international organizations, to leave the city. The Director General stressed
+    that these unacceptable threats to civilians and the diplomatic corps illustrate
+    yet again Russia’s contempt for the law, particularly humanitarian law, as well
+    as diplomatic agreements, and that France will not give in to them. France will
+    remain in Kyiv. He also stressed that these statements would in no way exempt
+    Russia from its obligations under international law. He strongly condemned the
+    Russian airstrikes that have hit journalists in Ukraine, including a fourth French
+    journalist, Antoni Lallican, who was killed in a Russian airstrike on October
+    3, 2025. This summons also came in the wake of the massive Russian airstrikes
+    on May 23 and 24 that targeted the Ukrainian population and civilian infrastructure,
+    and involved the third use of an Oreshnik ballistic missile capable of carrying
+    nuclear warheads – the latest irresponsible escalation on the part of Moscow.
+    The Director General told the Ambassador that these attacks, carried out in violation
+    of international law and resulting in civilian losses, are absolutely unacceptable.
+    On this occasion, the Director General also strongly condemned the unacceptable
+    incursion of Russian drones into Romanian airspace in the early hours of May 29,
+    in the course of another attack in its war of aggression against Ukraine. This
+    latest irresponsible escalation, a flagrant violation of international law, shows
+    yet again that Russia’s war of aggression against Ukraine is a threat to the security
+    of Europe and NATO as a whole. The Director General reiterated Ukraine’s right
+    to defend itself against Russian aggression and stressed that France would continue
+    to stand with Ukraine and to support it on every level to preserve its sovereignty
+    and territorial integrity. He also repeated France’s call to Russia to end its
+    illegal war of aggression against Ukraine and to engage in genuine negotiations
+    to achieve a just and lasting peace.
+  expect:
+    actors:
+    - FR
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        ukraine: 2
+  notes: '''France will remain in Kyiv'' plus a formal summons is action, not rhetoric.'
+- id: pl-sanctions-taskforce
+  provenance: data/events/polish_mfa/2026-05/2026-05-04-c47706f2.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-04'
+  title: Wicepremier Radosław Sikorski podsumował działania międzyresortowego zespołu
+    ds. sankcji
+  text: Prace zespołu, koordynowane przez Ministerstwo Spraw Zagranicznych, koncentrują
+    się na skutecznym wdrażaniu sankcji Unii Europejskiej i krajowych związanych z
+    rosyjską agresją na Ukrainę oraz udziałem w niej Białorusi. Polska kładzie szczególny
+    nacisk na efektywne przeciwdziałanie naruszaniu i obchodzeniu środków ograniczających
+    poprzez zacieśnioną współpracę resortów, organów wymiaru sprawiedliwości, nadzoru
+    finansowego oraz służb. Ministerstwo Finansów i Krajową Administrację Skarbową
+    reprezentowali Pan Marcin Łoboda, Szef KAS oraz Pan Zbigniew Stawicki, Zastępca
+    Szefa KAS. KAS odgrywa kluczową rolę w egzekwowaniu sankcji unijnych i krajowych
+    zastosowanych wobec Federacji Rosyjskiej i Białorusi. Działania KAS w zakresie
+    przestrzegania nałożonych ograniczeń obejmują kontrole, postępowania administracyjne
+    dotyczące wymierzania kar pieniężnych, zawiadomienia organów ścigania w przypadku
+    podejrzenia omijania sankcji oraz wnioski Szefa KAS o wpisy na polską listę sankcyjną
+    osób/podmiotów prowadzoną przez MSWiA. W wyniku prowadzonych działań majątki osób
+    i instytucji objętych restrykcjami są na bieżąco identyfikowane i zamrażane –
+    dotychczas łączna kwota zamrożonych aktywów wyniosła 546,2 mln euro. Równolegle
+    prowadzone są intensywne kontrole celno-skarbowe, które stawiają Polskę w roli
+    lidera monitorowania obrotu towarowego w Unii Europejskiej. W II półroczu 2025
+    r. liczba polskich zgłoszeń celnych w systemie RIF, służącym ostrzeganiu o nieprawidłowościach,
+    wyniosła 180. Stanowi to aż 55,9% wszystkich zgłoszeń dokonanych przez państwa
+    członkowskie UE, co bezpośrednio przekłada się na skuteczność kontroli transgranicznych
+    w całej Wspólnocie. Egzekwowanie przepisów sankcyjnych wiąże się z surowymi konsekwencjami
+    finansowymi i karnymi. Do 22 kwietnia 2026 r. wydano 138 decyzji o nałożeniu kar
+    pieniężnych na łączną kwotę ponad 74,4 mln zł. Osoby naruszające sankcje podlegają
+    również odpowiedzialności karnej – w I kwartale 2026 r. w toku było 191 spraw,
+    w których postawiono zarzuty 122 osobom. Dotychczas skierowano 13 aktów oskarżenia,
+    a w 10 sprawach zapadły już prawomocne orzeczenia sądowe. Dopełnieniem unijnych
+    środków ograniczających jest polska lista sankcyjna prowadzona przez Ministra
+    Spraw Wewnętrznych i Administracji, na której figuruje obecnie 548 osób i podmiotów
+    wspierających agresję rosyjską. Ministrowie Marcin Łoboda oraz Zbigniew Stawicki
+    poinformowali, że organy KAS cały czas prowadzą intensywne, obejmujące wiele obszarów,
+    branż i zagadnień, analizy przestrzegania ograniczeń związanych z sankcjami. W
+    przypadku stwierdzenia kolejnych przypadków łamania sankcji, podejmowane będą
+    działania zapobiegające tym naruszeniom. Podstawę działań Rzeczypospolitej Polskiej
+    stanowią rozporządzenia Rady UE nr 833/2014, nr 269/2014, nr 765/2006 oraz przepisy
+    ustawy z dnia 13 kwietnia 2022 r. o szczególnych rozwiązaniach w zakresie przeciwdziałania
+    wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    relevant:
+    - weimar
+    stances:
+      weimar:
+        ukraine: 2
+  notes: Polish-language item on the machinery of sanctions enforcement — concrete
+    institutional action in support of the Ukraine goal.
+- id: pl-hu-consultations-en
+  provenance: data/events/polish_mfa/2026-05/2026-05-20-354d1400.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-05-20'
+  title: Polish-Hungarian consultations in Warsaw
+  text: Poland’s top diplomat Radosław Sikorski reaffirmed our support for Péter Magyar’s
+    government’s efforts to unlock European funds for Hungary and stressed the importance
+    of the rule of law and restoring trust in public institutions in this context.
+    The talks also covered energy resources. Deputy Prime Minister Sikorski stressed
+    that Poland can be Hungary’s major partner is its search for alternative sources
+    of supplies and gaining independence from Russian raw materials. The meeting between
+    the foreign ministers of Poland and Hungary in Warsaw was a milestone in building
+    new relations between the two countries and identifying areas of mutual interest.
+    The ministers agreed on the need to enhance cooperation in regional formats, including
+    within the Visegrad Group. The talks were held as part of Prime Minister Péter
+    Magyar’s first official foreign visit since taking office, during which he has
+    travelled to Poland on 19–21 May 2026. The broad composition of the Hungarian
+    government delegation—including, among others, the head of the Prime Minister’s
+    Office and the ministers responsible for defence, the economy, energy, agriculture,
+    and culture—is a token of Budapest’s willingness to rebuild good bilateral relations
+    with Warsaw, based on mutual respect and trust.
+  expect:
+    actors:
+    - PL
+    - HU
+    explicit_formats:
+    - visegrad
+    topics:
+    - rule_of_law
+    - energy
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        rule_of_law: 1
+      visegrad:
+        energy: 1
+  notes: 'Names the Visegrad Group explicitly. Note what is absent: the V4 does not
+    track rule_of_law, so that topic is rated for the Weimar Triangle only — the same
+    text yields a different set of questions per grouping.'
+- id: pl-hu-consultations-pl
+  provenance: data/events/polish_mfa/2026-05/2026-05-20-09ab3350.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-20'
+  title: Polsko-węgierskie konsultacje w Warszawie
+  text: Szef polskiej dyplomacji Radosław Sikorski wyraził wsparcie dla ambicji rządu
+    Pétera Magyara w zakresie odblokowania funduszy europejskich dla Węgier, podkreślając
+    w tym kontekście znaczenie praworządności i przywracania zaufania do instytucji
+    publicznych. W rozmowie podniesiono także kwestię surowców energetycznych. Wicepremier
+    Sikorski zwrócił uwagę, że Polska może być ważnym partnerem Węgier w poszukiwaniu
+    alternatywnych źródeł dostaw i uniezależnianiu się od rosyjskich surowców. Spotkanie
+    szefów dyplomacji Polski i Węgier w Warszawie było ważnym elementem budowania
+    nowych relacji między oboma państwami oraz tworzenia mapy wspólnych interesów.
+    Ministrowie zgodzili się co do potrzeby zacieśniania współdziałania w formatach
+    regionalnych, w tym w ramach Grupy Wyszehradzkiej. Rozmowy odbyły się w ramach
+    pierwszej od objęcia urzędu oficjalnej wizyty zagranicznej premiera Węgier Pétera
+    Magyara w Polsce, zaplanowanej w dniach 19–21 maja br. Szeroki skład węgierskiej
+    delegacji rządowej – obejmujący m.in. szefa kancelarii premiera oraz ministrów
+    odpowiedzialnych za obronność, gospodarkę, energetykę, rolnictwo i kulturę – stanowi
+    jednoznaczne potwierdzenie woli Budapesztu do odbudowy dobrych relacji bilateralnych
+    z Warszawą, opartych na wzajemnym szacunku i zaufaniu.
+  expect:
+    actors:
+    - PL
+    - HU
+    explicit_formats:
+    - visegrad
+    topics:
+    - rule_of_law
+    - energy
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        rule_of_law: 1
+      visegrad:
+        energy: 1
+  notes: Polish-language counterpart of pl-hu-consultations-en.
+- id: pl-de-joint-statement-anniversary
+  provenance: data/events/polish_mfa/2026-06/2026-06-17-41cbe1f5.yaml
+  source_name: polish_mfa
+  source_lang: en
+  date: '2026-06-17'
+  title: Joint Statement by the Republic of Poland and the Federal Republic of Germany
+    on the 35th Signing Anniversary on Good Neighbourly Relations and Friendly Cooperation
+  text: 'Today, Poland and Germany are not only neighbours and friends but also close
+    partners on equal terms and trustworthy allies, permanently rooted in the European
+    and Euro-Atlantic structures. Following a long period of mutual division and distrust,
+    the Treaty not only became material for the Polish–German reconciliation but also
+    initiated enhanced, trust-based cooperation across all areas. The institutional
+    and legal framework established 35 years ago enabled the unprecedented development
+    of Polish–German cooperation, driven primarily by the commitment of the two societies.
+    Our states have since changed fundamentally. But above all, Russia’s full-scale
+    aggression on Ukraine has fundamentally altered our geopolitical setting. Mindful
+    of the tragic history of the 20th century, as NATO allies and partners in the
+    EU, we are particularly responsible for our region and continent. The Russian
+    aggression against Ukraine has put us in a new political reality. It has been
+    a touchstone of our responsibility and effectiveness. Joint commitment towards
+    enhancing Europe’s security is today’s geopolitical must. It is well exemplified
+    by the Polish–German contribution to the security of the eastern flank. We are
+    satisfied to note the conclusion on 17 June of a new Polish–German defence cooperation
+    agreement. It testifies to our determination to act together. The Polish–German
+    partnership remains a pillar of a strong, united Europe and a credible NATO. Russia’s
+    aggressive actions, including in particular hybrid and disinformation activities,
+    are also aimed at us. They seek to sow social division, undermine public order,
+    and erode trust in the state and its institutions. We will not be intimidated.
+    We will effectively boost our resilience and educate our societies. Our overarching
+    goal is to protect European values, including the rule of law and transparent
+    electoral processes, and to secure a just and lasting peace in Ukraine that would
+    strengthen Europe’s security. We take the lessons history has taught us seriously.
+    “No more war” is not an empty slogan but a commitment to future generations. Recognising
+    Germany’s guilt, we regard this tragic chapter of our history as an enduring warning.
+    Eighty-one years after the end of World War II, the last witnesses of those events
+    are passing away. We believe that history can not only divide but also unite.
+    That requires mutual understanding, sensitivity, and concrete steps, in a spirit
+    of the joint declaration of 1 December 2025, ones that go beyond the sphere of
+    symbolic gestures. We welcome new developments in the process to erect a memorial
+    in central Berlin to Polish citizens who were victims of World War II and the
+    Nazi terror of 1939–1945 and we eagerly await the outcome of the procedure later
+    this year. We appreciate the Federal Government’s decisions taken so far to return
+    looted cultural property to Poland. We expect more to come soon. Our economic
+    cooperation gives us special reasons to be satisfied. Trade between Poland and
+    Germany has grown multiple times in recent decades. Germany ranks third among
+    the world’s largest economies, while Poland aspires to join the top 20. The structure
+    and nature of our trade relations have significantly evolved. This translates
+    into sharing prosperity, creating new jobs, and cementing social ties. To fully
+    unleash our socioeconomic potential, we need a new impetus. Entrepreneurs and
+    citizens in both countries are looking forward to improving cross-border infrastructure
+    and expanding the transport network, which will not only increase social mobility
+    and promote trade between Poland and Germany, but also strengthen our military
+    capabilities. We support reinforcing the network of partnerships, especially in
+    the areas where both countries are falling behind, from dual-use technologies
+    to digitalisation to artificial intelligence. The European Union remains at the
+    heart of our cooperation. An ever-stronger and stable Union is in our strategic
+    interest. In this spirit, we wish to jointly contribute to shaping the future
+    of the European Union. We are convinced that as tensions grow, the European Union
+    is becoming a primary vehicle for the protection and pursuit of our interests
+    on a global scale. Like the Treaty, the Weimar Triangle also sees its 35th anniversary
+    in 2026. This format is second to none in embodying Europe’s regained unity and
+    solidarity. We both believe that the Weimar Triangle is still capable of spurring
+    joint initiatives in foreign and European politics and fostering greater cohesion
+    within the European Union. In this context, we are pleased to note increased sectoral
+    cooperation. The perspective on Polish–German relations has changed substantially.
+    The challenges we face today are different than back in 1991. Poland and Germany
+    are capable of more: our liberty, security, and prosperity are at stake. As neighbours,
+    partners, and allies, we hold the future in our hands. This is a test we must
+    pass by building our future relations responsibly, fairly, in the spirit of partnership,
+    and in the interest of the whole of Europe.'
+  expect:
+    actors:
+    - PL
+    - DE
+    explicit_formats: []
+    topics:
+    - ukraine
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        ukraine: 1
+        defence: 1
+      visegrad:
+        defence: null
+  notes: The Polish MFA's own text for the same anniversary as de-pl-treaty-anniversary-en
+    — a different document, not a translation.

@@ -1,0 +1,371 @@
+# Items that must land with every {grouping}_relevant flag false. All nine come from
+# known-actor sources, so the only thing keeping them out of the site is the model
+# declining to attach a tracked topic — which is exactly what design principle #3
+# trades away for recall. The hard ones name a tracked-sounding term in passing
+# (cyber-security as a trade sector, a road called "of great international
+# significance", two Weimar Triangle members opening cultural institutes together).
+cases:
+- id: pl-papal-visit-preparations
+  provenance: data/events/polish_mfa/2026-08/2026-08-05-562fb879.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-08-05'
+  title: Przygotowania do wizyty papieża Leona XIV w Polsce
+  text: 'Wizyta papieska to wydarzenie, które będzie realizowane wspólnie przez stronę
+    rządową i kościelną. Formalne zaproszenia do Polski zostały przekazane Papieżowi
+    Leonowi XIV zarówno przez stronę państwową – w imieniu Rzeczypospolitej przez
+    prezydentów Andrzeja Dudę i Karola Nawrockiego oraz premiera Donalda Tuska, jak
+    i kościelną, reprezentowaną przez Prezydium Konferencji Episkopatu Polski. Ze
+    względu na międzynarodowy charakter wizyty Ojca Świętego Ministerstwo Spraw Zagranicznych
+    obejmie rolę koordynacyjną przygotowań po stronie rządowej. Termin pielgrzymki
+    nie jest jeszcze znany. Po jego ustaleniu zostanie powołany Zespół do spraw organizacji
+    pielgrzymki, w skład którego wejdą przedstawiciele odpowiednich podmiotów kościelnych
+    i państwowych. Do tej pory Polskę odwiedziło trzech papieży, łącznie 11 razy.
+    Jan Paweł II - 9 razy (w latach: 1979, 1983, 1987, 1991, 1995, 1997, 1999, 2002),
+    Benedykt XVI w 2006 roku, a podczas Światowych Dni Młodzieży w 2016 roku wizytę
+    w Polsce złożył papież Franciszek.'
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: MFA coordinating a papal visit. Foreign-ministry output with no tracked topic.
+- id: pl-ashanti-king-visit
+  provenance: data/events/polish_mfa/2026-05/2026-05-29-41e4d44b.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-29'
+  title: Król Aszanti z wizytą w Polsce
+  text: 'Podczas rozmowy wiceminister Zajączkowski podkreślił rosnące znaczenie Ghany
+    jako stabilnego i demokratycznego partnera gospodarczego oraz bramy do rynków
+    Afryki Zachodniej. W Ghanie działa sekretariat Afrykańskiej Kontynentalnej Strefy
+    Wolnego Handlu (African Continental Free Trade Area), który wspiera integrację
+    gospodarczą na kontynencie. Wiceminister wskazał, że coraz więcej polskich przedsiębiorstw
+    szuka możliwości rozwoju poza Europą, a Afryka staje się jednym z najbardziej
+    perspektywicznych kierunków ekspansji. Szczególny potencjał współpracy dostrzeżono
+    w sektorach: rolno-spożywczym, maszynowym, transportowym, cyfrowym oraz cyberbezpieczeństwa.
+    Rozmowy dotyczyły również współpracy akademickiej. Uczestnicy spotkania rozmawiali
+    o programach wymiany studentów, naukowców i lekarzy oraz rozwoju kontaktów kulturalnych.
+    Podkreślali, że są zainteresowani dalszym wzmacnianiem relacji politycznych i
+    gospodarczych, które mogą otworzyć nowe możliwości dla obu państw.'
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: 'Hard negative: lists ''cyberbezpieczeństwa'' among sectors of commercial
+    cooperation with Ghana. A model that tags hybrid on the keyword flips this to
+    weimar_relevant.'
+- id: de-driving-licence-reform
+  provenance: data/events/german_chancellery/2026-06/2026-06-10-6bc5a83e.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-06-10'
+  title: Im Kabinett beschlossen Reform für einen bezahlbaren und modernen Führerschein
+  text: 'Die Digitalisierung der Theorie soll Kosten senken und Zeit sparen. Günstiger,
+    digitaler, moderner: So soll künftig der Erwerb des Führerscheins ausgestaltet
+    sein. Wichtiges Ziel ist, die hohen Durchschnittspreise von etwa 3.400 Euro zu
+    senken. Das soll vor allem durch mehr Digitalisierung und Transparenz erreicht
+    werden. Dabei bleiben die Qualität der Ausbildung und das hohe Sicherheitsniveau
+    erhalten. Schwerpunkt der Reform sind konkrete Verbesserungen für Fahrschülerinnen
+    und Fahrschüler, beispielsweise durch einen digitalen und effizienteren Theorieunterricht.
+    Zugleich sollen die Fahrschulen entlastet werden, insbesondere durch weniger bürokratische
+    Hürden. Bundesverkehrsminister Patrick Schnieder betonte: „Unser Ziel ist klar:
+    Eine moderne und sichere Fahrausbildung für alle. Mobilität ist Teil der öffentlichen
+    Daseinsvorsorge – sie darf kein Privileg sein.“ Für den Start der Reform der Fahrschulausbildung
+    hat das Bundeskabinett einen Gesetzentwurf zur Änderung des Fahrlehrergesetzes
+    und anderer straßenverkehrsrechtlicher Gesetze beschlossen. Ein weiterer Baustein
+    der Reform ist die Verordnung zur Modernisierung der Fahrschulausbildung. Sie
+    wurde am 10. Juni im Kabinett beschlossen. Beides befindet sich nun im parlamentarischen
+    Verfahren. Der Bürokratierückbau ist eines der Kernanliegen der Bundesregierung
+    ist und bildet daher auch einen zentralen Bestandteil dieser Reform. Die Fahrlehrerschaft
+    wird spürbar von Bürokratie befreit, vor allem von umfangreichen Dokumentations-
+    und Aufzeichnungspflichten. Durch den Abbau starrer organisatorischer Vorgaben
+    erhalten die Fahrschulen mehr Gestaltungsspielraum. Darüber hinaus sind unter
+    anderem folgende Maßnahmen geplant:'
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: Domestic cabinet decision on driving-licence costs.
+- id: de-vocational-training-initiative
+  provenance: data/events/german_chancellery/2026-06/2026-06-01-75922f0d.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-06-01'
+  title: Start der Initiative „Sommer der Berufsausbildung“ Berufsausbildung eröffnet
+    vielfältige Perspektiven
+  text: 'Mit einer Ausbildung sammeln junge Menschen praktische Erfahrungen und schaffen
+    die Grundlage für ihre berufliche Zukunft. Foto: picture alliance / Rupert Oberhäuser
+    Viele junge Menschen, die in diesem Sommer ihren Schulabschluss machen, stehen
+    vor der Frage, wie es nach der Schule für sie weitergehen soll. Bundeskanzler
+    Friedrich Merz ermuntert alle, die in dieser Frage noch unentschlossen sind, sich
+    für eine berufliche Ausbildung zu entscheiden. In seiner Videobotschaft zum Start
+    der Initiative „Sommer der Berufsausbildung“ hebt der Bundeskanzler die Vorteile
+    einer dualen Ausbildung hervor. Nach einer beruflichen Ausbildung stünden viele
+    Wege offen – vom direkten Berufseinstieg über eine Meisterqualifikation bis hin
+    zur Selbstständigkeit oder Studium. Fachkräfte würden in nahezu allen Branchen
+    dringend gesucht. „Sicher ist: Unser Land braucht Sie!“, sagte Merz. Mit einer
+    Ausbildung könnten junge Menschen etwas bewegen – Verantwortung übernehmen, die
+    Zukunft des Landes mitgestalten und von guten Beschäftigungsperspektiven profitieren.
+    Der „Sommer der Berufsausbildung“ macht auch auf die vielfältigen Möglichkeiten
+    einer beruflichen Ausbildung aufmerksam. Mit mehr als 300 anerkannten Ausbildungsberufen
+    stehen jungen Menschen zahlreiche Wege offen. „Gehen Sie auf die Ausbildungsbetriebe
+    zu, die Sie interessieren“, appellierte der Bundeskanzler an die Jugendlichen.
+    „Man freut sich dort auf Sie! Auf die neuen Ideen und die neuen Perspektiven,
+    die Sie mitbringen.“ Wer noch unsicher ist, welcher Ausbildungsberuf der richtige
+    ist, kann sich an die Agenturen für Arbeit oder die jeweiligen Kammern (wie die
+    Handwerkskammern, Industrie- und Handelskammern, Landwirtschaftskammern, Ärztekammern)
+    und Jugendberufsagenturen vor Ort wenden. Dort gibt es Hilfe, den passenden Ausbildungsplatz
+    zu finden und auch Unterstützung bei der Bewerbung. Der „Sommer der Berufsausbildung“
+    richtet sich besonders an Jugendliche und Eltern, aber auch an Betriebe, die Ausbildungsplätze
+    anbieten. Von Juni bis Oktober informiert der „Sommer der Berufsausbildung“ –
+    auf Social Media und in zahlreichen Veranstaltungen auf Bundes-, Landes- und regionaler
+    Ebene – über die Chancen und Möglichkeiten einer Berufsausbildung. Ziel ist es,
+    möglichst viele junge Menschen und Betriebe zusammenzubringen. Im Mittelpunkt
+    stehen die Berufsorientierung, die Attraktivität der Ausbildung, die Vielfalt
+    der Ausbildungsberufe und die Vermittlung freier Ausbildungsplätze. Die Partner
+    der „Allianz für Aus- und Weiterbildung“ haben für 2026 bereits zum siebten Mal
+    den „Sommer der Berufsausbildung“ ausgerufen. Der Allianz gehören Verbände, Ministerien,
+    Gewerkschaften und Arbeitgeber an. Ihr gemeinsames Ziel ist es, möglichst viele
+    junge Menschen für eine duale Berufsausbildung zu gewinnen. Für ihre Arbeit bis
+    Ende 2029 haben die Partner drei Schwerpunkte festgelegt:'
+  expect:
+    actors:
+    - DE
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: Domestic skills initiative, Chancellor quoted. Known-actor source, no tracked
+    topic.
+- id: pl-kaszubska-road-completed
+  provenance: data/events/polish_pm/2026-06/2026-06-24-009fbee1.yaml
+  source_name: polish_pm
+  source_lang: pl
+  date: '2026-06-24'
+  title: Zakończenie budowy Trasy Kaszubskiej - historyczny moment dla Pomorza i całego
+    północnego wybrzeża
+  text: Już w najbliższy piątek kierowcy skorzystają z ostatniego brakującego odcinka
+    drogi ekspresowej S6 między Słupskiem a Leśnicami koło Lęborka. Udostępnienie
+    trasy oznacza zakończenie budowy jednej z najważniejszych arterii komunikacyjnych
+    północnej Polski, łączącej Szczecin, Koszalin, Słupsk, Gdynię i Gdańsk. Na pewno
+    dobrze rozumiecie moje emocje związane z tym miejscem, długo czekaliśmy na dokończenie
+    Trasy Kaszubskiej - to jest droga o wielkim znaczeniu też międzynarodowym. - powiedział
+    Premier Donald Tusk podczas konferencji prasowej. Droga ekspresowa S6 od marca
+    2025 roku nosi nazwę Trasy Kaszubskiej. Droga od Gdańska do Szczecina, od Wisły
+    do Odry jest też przypomnieniem, że kiedyś Kaszuby to było to Pomorze Wielkie.
+    Cieszę się, że wszyscy moi ziomkowie będą dzisiaj z wielką satysfakcją przyjmowali
+    te informacje. Dzięki temu wszyscy będą pamiętali, że to oni byli gospodarzami
+    tej ziemi od Szczecina po Gdańsk Otwarcie ostatniego odcinka S6 znacząco ułatwi
+    codzienne podróże tysiącom kierowców i pasażerów, a także usprawni ruch w okresie
+    rozpoczynających się wakacji. W piątek mamy koniec roku szkolnego i początek wakacyjnych
+    wyjazdów, a to właśnie z drogi ekspresowej S6 zjeżdża się do najpopularniejszych
+    polskich kurortów nad Bałtykiem. Zyska na tym turystyka, branża turystyczna, przedsiębiorcy.
+    To jest droga o ogromnym potencjale gospodarczym - mówił Minister Infrastruktury
+    Dariusz Klimczak. Droga ekspresowa S6 pełni kluczową funkcję w obsłudze transportu
+    do polskich portów morskich, łącząc Świnoujście i Szczecin z portami Trójmiasta.
+    Jest również częścią europejskiego korytarza transportowego biegnącego od Rygi
+    do Lubeki. Jej znaczenie wykracza jednak poza kwestie gospodarcze – będzie także
+    ważnym elementem systemu bezpieczeństwa państwa. Dzięki wybudowaniu całej S6 dajemy
+    tlen całemu regionowi i wzmacniamy pozycję Polski na transeuropejskiej sieci drogowej.
+    To jest bardzo dobra wiadomość dla polskiej gospodarki Polska od lat jest przykładem
+    dla innych państw regionu w zakresie rozwoju nowoczesnej infrastruktury transportowej.
+    Nasze autostrady i drogi ekspresowe należą dziś do najlepszych w Europie. Ten
+    odcinek Trasy Kaszubskiej potwierdza bardzo wysoką jakość i to, że nasze aspiracje
+    są uzasadnione.  Mamy prawo do dumy z tego, co Polska osiągnęła przez te lata,
+    także jeśli chodzi o infrastrukturę Widoczne jest znaczące ożywienie budowy dróg
+    i kolei. Od początku rządu otwarto prawie 700 km odcinków nowych dróg. Szef rządu
+    skomentował również kolejne doniesienia medialne oraz wypowiedzi byłego chirurga
+    Szpitala Południowego dotyczących sytuacji w placówce oraz możliwych nieprawidłowości
+    skutkujących zgonami pacjentów. Niezależnie od tego czy to się komuś opłaca czy
+    nie - będziemy wyjaśniali każdy element sprawy Szpitala Południowego i tam, gdzie
+    jest potrzebna prokuratura, ona jest i działa Premier pozostaje w stałym kontakcie
+    z Prokuratorem Generalnym Waldemarem Żurkiem, którego zobowiązał do osobistego
+    nadzoru nad wszystkimi wątkami tej sprawy. Szef rządu wyraził nadzieję, że przesłuchanie
+    chirurga przyniesie więcej konkretnych informacji i pozwoli wyjaśnić kluczowe
+    okoliczności sprawy. Nie jest moim zadaniem ocenianie wiarygodności wypowiedzi
+    w tych czy innych audycjach bohaterów tej sprawy. To nie jest moje zadanie. Ja
+    mam swoją opinię na temat wiarygodności niektórych źródeł, ale sprawa jest zbyt
+    poważna. Zarzuty są bardzo poważne Prezes Rady Ministrów zapowiedział, że nie
+    będzie uczestniczył w nagonce na żadną ze stron sporu. Jednocześnie zapewnił,
+    że wszelkie nieprawidłowości zostaną dokładnie zbadane, a osoby odpowiedzialne
+    poniosą konsekwencje. W kwestii Szpitala Południowego nie będzie żadnej litości
+    dla tych, którzy dopuścili się ewentualnych przestępstw albo wykroczeń o charakterze
+    moralnym, to także znajdzie swój finał Potwierdzić mają to wyniki kontroli Najwyższej
+    Izby Kontroli, śledztwa prokuratury oraz prowadzonego audytu. Wyjaśniane będą
+    także kwestie związane z tzw. kominami płacowymi oraz wyceną niektórych procedur
+    medycznych w szpitalach. W interesie lekarzy jest bardzo szybkie doprowadzenie
+    sytuacji w ochronie zdrowia i w polskich szpitalach do akceptowalnej nowej normy.
+    Tak, żeby ludzie mieli zaufanie do tego, co robią lekarze, bo zaufanie jest niezbędne
+    przy leczeniu ludzi. Żeby ludzie też mieli przekonanie, że szpital to nie jest
+    miejsce finansowych przekrętów czy nadużyć W to zadanie Premier będzie osobiście
+    zaangażowany. Premier Donald Tusk odniósł się również do rozpoczynającej się jutro
+    w Gdańsku Konferencji Odbudowy Ukrainy oraz napięć w relacjach między prezydentami
+    Polski i Ukrainy. Moim zadaniem było doprowadzenie do finału, aby ta konferencja
+    odbyła się nie tylko zgodnie z planem, ale z szansami na sukces. Mam nadzieję,
+    że ta konferencja także będzie pewnym krokiem, żeby obniżyć eskalację emocji.
+    To na pewno nie jest potrzebne ani nam, Polakom, ani Ukraińcom Podczas konferencji
+    odbędzie się również szczyt państw wschodniej flanki NATO. Rozmowy będą dotyczyć
+    kwestii bezpieczeństwa i współpracy. Z kolei dziś Premier będzie uczestniczył
+    w spotkaniu grupy E5 z udziałem Francji, Włoch, Wielkiej Brytanii i Niemiec. Zapowiedział,
+    że będzie informował europejskich partnerów o sytuacji związanej z decyzją ukraińskiego
+    Prezydenta o nadaniu jednej z jednostek wojskowych imienia bohaterów UPA. To decyzja
+    nieakceptowalna z polskiej perspektywy, którą nasi europejscy partnerzy rozumieją
+    coraz lepiej.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: 'Hard negative: a domestic road opening the PM calls ''of great international
+    significance''. Infrastructure language is not military mobility.'
+- id: fr-charlie-dalin-obituary
+  provenance: data/events/elysee/2026-06/2026-06-11-2e41681e.yaml
+  source_name: elysee
+  source_lang: fr
+  date: '2026-06-11'
+  title: Disparition de Charlie Dalin.
+  text: 'Navigateur, ingénieur naval, vainqueur du Vendée Globe, Charlie Dalin avait
+    conquis la France par son talent, sa ténacité et cette force silencieuse qui faisait
+    de lui l’un des plus grands marins de sa génération. Sa disparition est celle
+    d’un champion d’exception qui avait fait de l’océan son horizon. Né au Havre le
+    10 mai 1984, Charlie Dalin grandit face à la Manche, dans une ville ouverte sur
+    les vents, les départs et les rêves de large. À six ans, il découvrit l’Optimist,
+    puis la voile légère avec le désir, un jour d’y inscrire sa propre route. Cette
+    passion devint une vocation. Formé à l’ingénierie navale à Southampton, passé
+    par des cabinets d’architectes et des chantiers navals en Suède, en Thaïlande
+    et en Australie, Charlie Dalin pensait les bateaux autant qu’il les menait. Revenu
+    en France, il rejoignit l’équipe technique d’Armel Le Cléac’h, avant de lancer
+    son propre projet. Deuxième de la Mini-Transat en 2009, puis admis au Pôle d’entraînement
+    de Port-la-Forêt, en sept saisons, il signa cinq podiums sur la Solitaire du Figaro.
+    Lors de l’édition 2020-2021, Charlie Dalin avait été le premier à franchir la
+    ligne d’arrivée aux Sables-d’Olonne, avant d’être classé deuxième. Il se fit une
+    promesse de gagner l’édition suivante. Le 10 novembre 2024, il prit le départ
+    du Vendée Globe. Fidèle à sa réserve, il mena son combat contre la maladie comme
+    il menait ses courses : avec courage et pudeur. Dans les mers du Sud, il livra
+    un duel magnifique avec Yoann Richomme. En décembre, dans l’océan Indien, son
+    choix audacieux de se placer en avant d’une immense dépression disait tout de
+    lui : l’intelligence de la mer, le sang-froid, l’audace maîtrisée. Revenu du large
+    le 14 janvier 2025, il entra dans le chenal des Sables-d’Olonne en vainqueur.
+    En 64 jours, 19 heures, 22 minutes et 49 secondes, il établissait un record historique
+    et offrit à la France un moment de bonheur sportif et de fierté populaire. La
+    révélation de la condition médicale du champion donna à son exploit une profondeur
+    plus grande encore. Charlie Dalin n’avait pas voulu que la maladie vole la lumière
+    de sa victoire mais que l’on voie d’abord la mer, le bateau, l’arrivée, la joie
+    simple d’un marin ayant rejoint son rêve. Le Président de la République et son
+    épouse saluent la mémoire d’un immense marin, une force du destin qui aura porté
+    très haut les couleurs de notre pays sur toutes les mers du monde. Ils adressent
+    à son épouse Perrine, à son fils Oscar, à sa famille, à ses proches, à ses compagnons
+    de mer et à la grande famille de la voile leurs condoléances les plus émues.'
+  expect:
+    actors:
+    - FR
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: Élysée obituary for a sailor. French-language, known-actor, entirely off-topic.
+- id: uk-ambassador-zimbabwe
+  provenance: data/events/uk_fcdo/2026-08/2026-08-04-cd23e685.yaml
+  source_name: uk_fcdo
+  source_lang: en
+  date: '2026-08-04'
+  title: 'Change of His Majesty’s Ambassador to Zimbabwe: Gill Lever'
+  text: Mrs Gill Lever OBE has been appointed His Majesty’s Ambassador to the Republic
+    of Zimbabwe in succession to Mr Peter Vowles.
+  expect:
+    actors:
+    - UK
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: Routine ambassadorial appointment, two sentences long.
+- id: de-fr-cultural-institutes
+  provenance: data/events/german_mfa/2026-06/2026-06-04-a1cd6e85.yaml
+  source_name: german_mfa
+  source_lang: en
+  date: '2026-06-04'
+  title: Germany and France celebrate the opening of two new Franco-German cultural
+    institutes in Córdoba and Glasgow
+  text: 'Establishing Franco-German cultural institutes is one of the 15 priority
+    projects of the Treaty of Aachen, which was signed by Germany and France on 22
+    January 2019. Through this joint initiative, our two countries are working together
+    to create innovative cultural spaces which boost the attractiveness of our respective
+    networks, promote intercultural dialogue and inject life into the democratic and
+    humanistic values that form the basis of our partnership. Seven years after the
+    Treaty of Aachen was signed, three Franco-German cultural institutes have already
+    been opened: in Palermo in 2021 and in Ramallah and Atlanta in 2022. We are now
+    continuing this momentum with the inauguration of two further cultural centres.
+    On 27 May, the Franco-German cultural institute in Córdoba (Argentina) was opened.
+    This was preceded by a year of conversion work at the Alliance Française in Córdoba,
+    which now also houses the Goethe-Institut. A further Kultur Ensemble is due to
+    open in Glasgow (United Kingdom) on 3 June, following many years of cooperation
+    between the Institut français d’Écosse, the Alliance Française Glasgow and the
+    Goethe-Institut. In addition, thanks to the bilateral agreement signed on 16 April
+    2026 between the French and the Kyrgyz governments, it is now possible to look
+    to opening another joint cultural centre in Bishkek towards the end of this year.
+    These launches illustrate the momentum that is being generated in the sphere of
+    Franco-German cultural cooperation and the joint desire to create new spaces for
+    dialogue, creativity and open debate on today’s societies. Germany and France
+    share the conviction that culture and language play a crucial role in promoting
+    mutual understanding, strengthening democratic values and defending freedom in
+    the service of peace. In an international environment dominated by tensions and
+    isolationist tendencies, the opening of the Franco-German cultural institutes
+    stands for a common objective: to design a European space for cultural cooperation
+    directed towards young people and embodying a resolutely globally minded approach.
+    The values of diversity, plurality and openness form the foundation of European
+    culture and our Franco-German cooperation, which is now closer than ever.'
+  expect:
+    actors:
+    - DE
+    - FR
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: 'Hard negative worth more than the others: TWO Weimar Triangle members, a
+    named treaty (Aachen), and joint action — but the subject is cultural institutes.
+    The 2+-member rule only fires alongside a tracked topic, so every flag must stay
+    false.'
+- id: pl-european-order-buzek-walesa
+  provenance: data/events/polish_mfa/2026-05/2026-05-19-4d8a934e.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-19'
+  title: Jerzy Buzek i Lech Wałęsa odznaczeni nowym orderem Parlamentu Europejskiego
+  text: 'Lech Wałęsa otrzymał tytuł Wybitnego Członka Europejskiego Orderu Zasługi,
+    a Jerzego Buzka wyróżniono tytułem Honorowego Członka Europejskiego Orderu Zasługi.
+    Ludzie muszą widzieć, że Unia Europejska daje bezpieczeństwo, pracę i dobrobyt.
+    I ludzie muszą wierzyć w Europę — a ta zawsze była silna wtedy, gdy potrafiła
+    wyobrazić sobie lepszą przyszłość — i wspólnie, solidarnie ją budować. Dlatego
+    marzmy odważnie i działajmy odpowiedzialnie zaapelował były premier Jerzy Buzek
+    odbierając odznaczenie. Prezydium Parlamentu Europejskiego uhonorowywało osiągnięcia
+    osób, które wniosły znaczący wkład w integrację europejską oraz w promowanie i
+    obronę europejskich wartości. Były Prezydent Lech Wałęsa przyjął order jako uznanie
+    dla zwycięskiej walki ruchu Solidarność. Zależy mi na tym, aby Unia i „pokolenie
+    posolidarnościowe” odniosło sukces podkreślił Lech Wałęsa w swoim przemówieniu.
+    Europejski Order Zasługi ( European Order of Merit ) został ustanowiony przez
+    Prezydium Parlamentu Europejskiego w przededniu 75. rocznicy Deklaracji Schumana.
+    Kandydatury zgłaszali szefowie państw i rządów krajów członkowskich, przewodniczący
+    parlamentów narodowych oraz szefów instytucji UE. Order przyznawany jest w trzech
+    kategoriach:'
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics: []
+    relevant: []
+    stances: {}
+  notes: European Parliament honours. Talks about European integration and security
+    in general terms without taking a position on any tracked issue area.
