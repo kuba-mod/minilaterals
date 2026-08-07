@@ -100,6 +100,10 @@ def _score(case, pred):
     return evaluate.score_run([case], {case.id: pred})[0]
 
 
+def _denoms(case, pred):
+    return evaluate.score_run([case], {case.id: pred})[1]
+
+
 def test_set_fields_exact_and_f1():
     case = _case(actors=["DE", "FR"], topics=["ukraine", "defence"])
     metrics = _score(case, _pred(actors=["DE", "FR"], topics=["ukraine"]))
@@ -288,6 +292,59 @@ def test_table_flags_deltas_inside_the_noise_floor():
     agg = evaluate.aggregate([{"stance_exact": 0.62}])
     table = evaluate.format_table(agg, {"metrics": {"stance_exact": 0.60}}, noise=0.1)
     assert "within noise" in table
+
+
+# --- noise floor ------------------------------------------------------------
+
+
+def test_noise_floor_uses_the_flip_rate_when_the_denominator_is_large():
+    assert evaluate.noise_floor("stance_exact", {"stance_exact": 200}, 0.04) == pytest.approx(0.04)
+
+
+def test_noise_floor_uses_1_over_n_for_small_denominators():
+    # A metric over 8 decisions moves in steps of 0.125 and cannot resolve less.
+    assert evaluate.noise_floor("goal_discrimination", {"goal_discrimination": 8}, 0.04) == pytest.approx(0.125)
+
+
+def test_noise_floor_survives_missing_inputs():
+    assert evaluate.noise_floor("x", None, None) == 0.0
+    assert evaluate.noise_floor("x", {"x": 0}, 0.04) == pytest.approx(0.04)
+
+
+def test_small_denominator_delta_is_not_flagged_as_a_regression():
+    """The case that forced this: goal_discrimination fell 0.125 between two runs of
+    an UNCHANGED prompt, purely because one pair out of eight flipped."""
+    agg = evaluate.aggregate([{"goal_discrimination": 0.458}])
+    baseline = {"metrics": {"goal_discrimination": 0.583}}
+    table = evaluate.format_table(agg, baseline, noise=0.042, denominators={"goal_discrimination": 8})
+    assert "within noise" in table
+    assert "worse" not in table
+
+    # With a big enough denominator the same delta is a real regression.
+    big = evaluate.format_table(agg, baseline, noise=0.042, denominators={"goal_discrimination": 400})
+    assert "worse" in big
+
+
+def test_denominators_are_reported_per_metric():
+    case = _case(stances={"weimar": {"ukraine": 2, "defence": 1}})
+    pred = _pred(
+        asked={"weimar": ["ukraine", "defence"]},
+        stances={"weimar": {"ukraine": {"score": 2, "evidence": "body"}, "defence": {"score": 1, "evidence": "text"}}},
+    )
+    denoms = _denoms(case, pred)
+    assert denoms["stance_exact"] == 2
+    assert denoms["stance_within_1"] == 2
+    # A metric with nothing to score is absent from both maps rather than
+    # reported as 0, so it never lands in the table with a meaningless value.
+    assert "relevance_accuracy" not in _score(case, pred)
+    assert "relevance_accuracy" not in denoms
+
+
+def test_table_shows_the_denominator_column():
+    agg = evaluate.aggregate([{"stance_exact": 0.6}])
+    table = evaluate.format_table(agg, None, noise=None, denominators={"stance_exact": 42})
+    assert " n " in table.splitlines()[0]
+    assert "42" in table
 
 
 def test_record_baseline_round_trips(tmp_path):

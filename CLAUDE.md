@@ -142,6 +142,8 @@ Two things the scoring is deliberate about. A labelled pair that classification 
 
 The two low numbers are the ones worth acting on, and both are prompt problems rather than harness problems. Neither should be described as solved in this file until a re-run says so.
 
+An **independent replication** on the same prompt (run 31217775681) put 16 of the 17 metrics within noise, so the baseline is reproducible. The exception is instructive: `goal_discrimination` swung −0.125 with nothing changed, because its denominator is only ~8 pairs and one flip is worth 0.125. Two consequences, both now handled. `noise_floor()` takes a metric's noise as **max(whole-run flip rate, 1/n)** — a metric measured over n decisions moves in steps of 1/n and cannot resolve less, however stable the model is — and every table reports its **n** so a value is never read without its resolution. And the gold set needs more two-grouping cases before `goal_discrimination` is worth much: at n≈8 it can only really distinguish "usually" from "rarely".
+
 Reporting is **advisory**: a poor score prints and exits 0. 46 cases and a nondeterministic model make a hard threshold flaky, so the run reports and a human decides; `--fail-under KEY=VALUE` opts into a gate locally. Note that `PROMPT_SURFACE_SHA` covers the prompt *templates* only — the goal sentences, format legend, topic list and actor codes interpolated into them can change what the model reads without moving it, so each baseline also records `rendered_surface_sha()` and the report says so when only that has moved.
 
 ## Terminology

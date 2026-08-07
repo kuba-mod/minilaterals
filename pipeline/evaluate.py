@@ -248,8 +248,13 @@ class Tally:
         return None if not d else self.counts.get(num, 0) / d
 
 
-def score_run(cases: list[Case], predictions: dict[str, dict]) -> tuple[dict[str, float], Tally]:
-    """Score one complete pass over the gold set."""
+def score_run(cases: list[Case], predictions: dict[str, dict]) -> tuple[dict[str, float], dict[str, float], Tally]:
+    """Score one complete pass over the gold set.
+
+    Returns (metrics, denominators, tally). The denominators travel with the
+    metrics because a value alone cannot say how much noise it carries — see
+    `noise_floor`.
+    """
     t = Tally()
 
     for case in cases:
@@ -349,6 +354,32 @@ def score_run(cases: list[Case], predictions: dict[str, dict]) -> tuple[dict[str
                 if not enrich._clean_evidence(quote, topic, g):
                     t.add("evidence_goal_copies")
 
+    # metric -> (numerator key, denominator key). The denominator is reported
+    # alongside the value because a metric can only resolve differences down to
+    # 1/n: goal_discrimination runs over a handful of pairs, so one flip moves it
+    # by more than the whole-run flip rate and would otherwise read as a
+    # regression on an unchanged prompt.
+    ratios = {
+        "relevance_accuracy": ("relevance_hits", "relevance_total"),
+        "actors_exact": ("actors_exact", "actors_total"),
+        "formats_exact": ("explicit_formats_exact", "explicit_formats_total"),
+        "stance_exact": ("stance_exact_hits", "stance_scored_total"),
+        "stance_within_1": ("stance_within1_hits", "stance_scored_total"),
+        "stance_mae": ("stance_abs_err", "stance_present"),
+        "sign_agreement": ("sign_hits", "stance_present"),
+        "abstention_recall": ("abstain_hit", "abstain_gold"),
+        "abstention_precision": ("abstain_hit", "abstain_pred"),
+        "goal_discrimination": ("discrim_hits", "discrim_total"),
+        "stance_coverage": ("stance_asked", "stance_labelled"),
+        "evidence_verbatim": ("evidence_verbatim_hits", "evidence_total"),
+        "evidence_goal_copy": ("evidence_goal_copies", "evidence_total"),
+        "retry_rate": ("retried", "cases"),
+        "parse_failure_rate": ("parse_failures", "cases"),
+    }
+    denominators = {k: t.counts.get(den, 0) for k, (_, den) in ratios.items()}
+    denominators["actors_f1"] = t.counts.get("actors_gold", 0)
+    denominators["topics_f1"] = t.counts.get("topics_gold", 0)
+
     metrics = {
         "relevance_accuracy": t.ratio("relevance_hits", "relevance_total"),
         "actors_exact": t.ratio("actors_exact", "actors_total"),
@@ -368,7 +399,8 @@ def score_run(cases: list[Case], predictions: dict[str, dict]) -> tuple[dict[str
         "retry_rate": t.ratio("retried", "cases"),
         "parse_failure_rate": t.ratio("parse_failures", "cases"),
     }
-    return {k: v for k, v in metrics.items() if v is not None}, t
+    kept = {k: v for k, v in metrics.items() if v is not None}
+    return kept, {k: denominators.get(k, 0) for k in kept}, t
 
 
 def _micro_f1(t: Tally, fieldname: str) -> float | None:
@@ -435,23 +467,46 @@ def aggregate(per_run: list[dict[str, float]]) -> dict[str, dict]:
     return out
 
 
-def format_table(agg: dict[str, dict], baseline: dict | None, noise: float | None) -> str:
+def noise_floor(key: str, denominators: dict[str, float] | None, flip: float | None) -> float:
+    """Smallest delta this metric can actually resolve.
+
+    Two sources of noise. The whole-run flip rate covers model nondeterminism, and
+    1/n covers granularity: a metric measured over n decisions moves in steps of
+    1/n, so a metric with a small denominator cannot express a smaller difference
+    than that no matter how stable the model is. goal_discrimination is the case
+    that forced this — it runs over a handful of pairs, so a single flip moves it
+    by ~0.125 and read as a regression against an unchanged prompt.
+    """
+    floor = flip or 0.0
+    n = (denominators or {}).get(key) or 0
+    if n:
+        floor = max(floor, 1 / n)
+    return floor
+
+
+def format_table(
+    agg: dict[str, dict],
+    baseline: dict | None,
+    noise: float | None,
+    denominators: dict[str, float] | None = None,
+) -> str:
     base_metrics = (baseline or {}).get("metrics") or {}
-    rows = [("metric", "value", "range", "vs baseline")]
+    rows = [("metric", "value", "n", "range", "vs baseline")]
     for key, stats in agg.items():
         value = stats["mean"]
         spread = "—" if stats["min"] == stats["max"] else f"{stats['min']:.3f}–{stats['max']:.3f}"
+        count = (denominators or {}).get(key)
         delta = "—"
         if key in base_metrics:
             diff = value - base_metrics[key]
             better = diff < 0 if key in LOWER_IS_BETTER else diff > 0
             mark = "" if abs(diff) < 1e-9 else (" better" if better else " worse")
-            if noise is not None and abs(diff) <= noise and mark:
+            if abs(diff) <= noise_floor(key, denominators, noise) and mark:
                 mark = " within noise"
             delta = f"{diff:+.3f}{mark}"
-        rows.append((key, f"{value:.3f}", spread, delta))
+        rows.append((key, f"{value:.3f}", "—" if not count else f"{count:g}", spread, delta))
 
-    widths = [max(len(r[i]) for r in rows) for i in range(4)]
+    widths = [max(len(r[i]) for r in rows) for i in range(5)]
     lines = []
     for i, row in enumerate(rows):
         lines.append("  ".join(cell.ljust(widths[j]) for j, cell in enumerate(row)).rstrip())
@@ -460,7 +515,13 @@ def format_table(agg: dict[str, dict], baseline: dict | None, noise: float | Non
     return "\n".join(lines)
 
 
-def format_markdown(agg: dict[str, dict], baseline: dict | None, noise: float | None, meta: dict) -> str:
+def format_markdown(
+    agg: dict[str, dict],
+    baseline: dict | None,
+    noise: float | None,
+    meta: dict,
+    denominators: dict[str, float] | None = None,
+) -> str:
     base_metrics = (baseline or {}).get("metrics") or {}
     lines = [
         "## Prompt evaluation",
@@ -470,20 +531,21 @@ def format_markdown(agg: dict[str, dict], baseline: dict | None, noise: float | 
         f"model `{meta['model']}` · {meta['cases']} cases × {meta['repeats']} repeat(s)"
         + (f" · flip rate {noise:.3f}" if noise is not None else ""),
         "",
-        "| metric | value | range | vs baseline |",
-        "| --- | --- | --- | --- |",
+        "| metric | value | n | range | vs baseline |",
+        "| --- | --- | --- | --- | --- |",
     ]
     for key, stats in agg.items():
         spread = "—" if stats["min"] == stats["max"] else f"{stats['min']:.3f}–{stats['max']:.3f}"
+        count = (denominators or {}).get(key)
         delta = "—"
         if key in base_metrics:
             diff = stats["mean"] - base_metrics[key]
             better = diff < 0 if key in LOWER_IS_BETTER else diff > 0
             mark = "" if abs(diff) < 1e-9 else (" ✅" if better else " ⚠️")
-            if noise is not None and abs(diff) <= noise and mark:
+            if abs(diff) <= noise_floor(key, denominators, noise) and mark:
                 mark = " (within noise)"
             delta = f"{diff:+.3f}{mark}"
-        lines.append(f"| {key} | {stats['mean']:.3f} | {spread} | {delta} |")
+        lines.append(f"| {key} | {stats['mean']:.3f} | {'—' if not count else f'{count:g}'} | {spread} | {delta} |")
     if not base_metrics:
         lines += ["", f"_No recorded baseline for prompt_version {meta['prompt_version']}._"]
     return "\n".join(lines)
@@ -600,16 +662,23 @@ def main() -> None:
 
     runs: list[dict[str, dict]] = []
     per_run: list[dict[str, float]] = []
+    per_run_denoms: list[dict[str, float]] = []
     for repeat in range(args.repeats):
         label = f"Eval {repeat + 1}/{args.repeats}" if args.repeats > 1 else "Eval"
         predictions = {
             c.id: run_case(provider, c, stance_forced=args.stance_forced) for c in tqdm(cases, desc=label, unit="case")
         }
         runs.append(predictions)
-        metrics, _ = score_run(cases, predictions)
+        metrics, denominators, _ = score_run(cases, predictions)
         per_run.append(metrics)
+        per_run_denoms.append(denominators)
 
     agg = aggregate(per_run)
+    # Denominators are all but identical across repeats; the mean keeps a rare
+    # difference (a parse failure dropping a case) from misreporting either run.
+    denoms = {
+        k: statistics.fmean([d[k] for d in per_run_denoms if k in d]) for k in {k for d in per_run_denoms for k in d}
+    }
     noise = flip_rate(cases, runs)
     baselines = load_baselines()
     baseline = baselines.get(str(enrich.PROMPT_VERSION))
@@ -627,7 +696,7 @@ def main() -> None:
     }
 
     print()
-    print(format_table(agg, baseline, noise))
+    print(format_table(agg, baseline, noise, denoms))
     if noise is not None:
         print(
             f"\nflip rate across {args.repeats} runs: {noise:.3f} — deltas smaller than this are noise, not movement."
@@ -647,7 +716,7 @@ def main() -> None:
         print(f"\nNo baseline recorded for prompt_version {enrich.PROMPT_VERSION}. Record this run with --record.")
 
     if args.summary:
-        markdown = format_markdown(agg, baseline, noise, meta)
+        markdown = format_markdown(agg, baseline, noise, meta, denoms)
         print("\n" + markdown)
         summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
         if summary_path:
@@ -657,7 +726,14 @@ def main() -> None:
     if args.json_path:
         Path(args.json_path).write_text(
             json.dumps(
-                {"meta": meta, "metrics": agg, "flip_rate": noise, "per_run": per_run, "predictions": runs},
+                {
+                    "meta": meta,
+                    "metrics": agg,
+                    "denominators": denoms,
+                    "flip_rate": noise,
+                    "per_run": per_run,
+                    "predictions": runs,
+                },
                 indent=2,
                 ensure_ascii=False,
             ),
