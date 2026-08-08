@@ -1,0 +1,50 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor
+  - Federal Minister of the Interior Alexander Dobrindt
+  topics:
+  - defence
+  - hybrid
+  - ukraine
+  location: null
+  position: Germany is strengthening its national security architecture through legislative
+    reforms and the establishment of specialized centers to combat hybrid threats
+    and drone attacks.
+  positions:
+    defence: Germany is enhancing the protection of critical infrastructure and expanding
+      the powers of the Federal Police and the capabilities of the Bundeswehr for
+      drone defense.
+    hybrid: The government has established the Joint Center for the Defense of Hybrid
+      Threats (GAZ Hybrid) and the Joint Drone Defense Center (GDAZ) to counter espionage,
+      sabotage, and disinformation.
+    ukraine: Germany notes an increase in illegal drone flights over critical infrastructure
+      since the start of Russia's war of aggression against Ukraine.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: am 16. Juni 2026 gemeinsam mit Vertreterinnen und Vertretern von
+          Sicherheitsbehörden des Bundes und der Länder das Gemeinsame Zentrum zur
+          Abwehr hybrider Bedrohungen (GAZ Hybrid) eröffnet
+    e3:
+      defence:
+        score: 0
+        evidence: Es bringt sich aktiv in nationale, europäische und internationale
+          Netzwerke ein – für eine leistungsfähige, moderne und resiliente Drohnenabwehr
+          in Deutschland.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

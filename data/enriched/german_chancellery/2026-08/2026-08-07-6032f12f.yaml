@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor
+  - Federal Minister Dobrindt
+  - members of the Federal Government
+  topics:
+  - hybrid
+  location: null
+  position: The National Security Council convened to discuss and coordinate the government's
+    response to an incident at Leipzig/Halle Airport.
+  positions:
+    hybrid: The German government is conducting high-level consultations regarding
+      the event at Leipzig/Halle Airport.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: hat sich zu dem Ereignis am Flughafen Leipzig/Halle am 4. August
+          2026 ausgetauscht
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

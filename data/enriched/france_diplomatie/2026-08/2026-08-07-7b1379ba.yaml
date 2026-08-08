@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France, alongside Germany, Italy, and the UK, reaffirms its full support
+    for Georgia's sovereignty and territorial integrity while condemning Russia's
+    military presence and annexation efforts in Abkhazia and South Ossetia.
+  positions:
+    defence: France condemns Russia's ongoing militarization of Georgia's occupied
+      territories as a serious threat to regional and European stability.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Russia's ongoing militarization of Georgia's occupied territories
+          poses a serious threat to the security of Georgia and to regional and European
+          stability.
+    e3:
+      defence:
+        score: 1
+        evidence: Joint Statement by France, Germany, Italy and the United Kingdom
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
