@@ -223,6 +223,54 @@ def test_backfill_stances_adds_ratings(data_tree):
     )
     response = json.dumps({"ukraine": {"stance": 1, "evidence": "announced further aid"}})
 
-    assert enrich._backfill_stances(FakeProvider([response]), enriched_path) is True
+    assert enrich._backfill_stances(FakeProvider([response]), enriched_path) == "ok"
     updated = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
     assert updated["extracted"]["stances"]["weimar"]["ukraine"]["score"] == 1
+
+
+def test_backfill_stances_reports_nothing_to_rate_as_empty_not_error(data_tree):
+    """An event the model finds no quotable stance in is the documented outcome
+    of prompt version "8" — it must not be counted as a failure, or the daily
+    healthcheck alerts forever on events that will never rate."""
+    events_dir, enriched_dir = data_tree
+    raw = _write_raw(events_dir)
+    enriched_path = enriched_dir / raw.relative_to(events_dir)
+    enriched_path.parent.mkdir(parents=True, exist_ok=True)
+    enriched_path.write_text(
+        yaml.dump(
+            {
+                "actors": ["DE"],
+                "issue_areas": ["ukraine"],
+                "weimar_relevant": True,
+                "extracted": {"topics": ["ukraine"], "position": "x", "positions": {"ukraine": "x"}, "stances": {}},
+            },
+            allow_unicode=True,
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    # Prompt "8" asks for omission when there is nothing quotable to rate.
+    response = json.dumps({})
+
+    assert enrich._backfill_stances(FakeProvider([response]), enriched_path) == "empty"
+
+
+def test_backfill_stances_reports_missing_raw_event_as_error(data_tree):
+    _events_dir, enriched_dir = data_tree
+    enriched_path = enriched_dir / "german_mfa" / "2026-01" / "2026-01-05-deadbeef.yaml"
+    enriched_path.parent.mkdir(parents=True, exist_ok=True)
+    enriched_path.write_text(
+        yaml.dump(
+            {
+                "actors": ["DE"],
+                "issue_areas": ["ukraine"],
+                "weimar_relevant": True,
+                "extracted": {"topics": ["ukraine"], "position": "x", "positions": {"ukraine": "x"}, "stances": {}},
+            },
+            allow_unicode=True,
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    assert enrich._backfill_stances(FakeProvider([]), enriched_path) == "error"

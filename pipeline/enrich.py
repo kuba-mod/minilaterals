@@ -773,8 +773,16 @@ def _relevant_groupings(relevance: dict) -> list[str]:
     return [k for k in GROUPINGS if relevance.get(f"{k}_relevant")]
 
 
-def _backfill_stances(provider, enriched_path: Path) -> bool:
-    """Add stance ratings to an already-enriched event, reading the raw text."""
+def _backfill_stances(provider, enriched_path: Path) -> str:
+    """Add stance ratings to an already-enriched event, reading the raw text.
+
+    Returns one of three outcomes, deliberately distinct: `"ok"` (ratings
+    written), `"empty"` (the model found nothing quotable to rate — the normal
+    outcome since prompt version "8", not a failure), or `"error"` (the raw
+    event is missing, or the call/validation/write blew up). Only `"error"`
+    should reach the exit code: a run that trips the healthcheck every day
+    because some events genuinely carry no stance is an alert that means
+    nothing."""
     enriched = yaml.safe_load(enriched_path.read_text(encoding="utf-8"))
     extracted = enriched.get("extracted") or {}
     topics = [t for t in (extracted.get("topics") or []) if t != "other"]
@@ -782,7 +790,7 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
     raw_path = EVENTS_DIR / enriched_path.relative_to(ENRICHED_DIR)
     if not raw_path.exists():
         print(f"  ! No raw event for {enriched_path.name}")
-        return False
+        return "error"
     data = yaml.safe_load(raw_path.read_text(encoding="utf-8"))
     source_label = SOURCE_LABELS.get(data.get("source_name", ""), "unknown")
 
@@ -796,8 +804,8 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
             if rated:
                 stances[key] = {**(stances.get(key) or {}), **rated}
         if not stances:
-            print(f"  ! No usable ratings for {enriched_path.name}")
-            return False
+            print(f"  - No quotable stance in {enriched_path.name}")
+            return "empty"
 
         extracted["stances"] = stances
         enriched["extracted"] = extracted
@@ -814,10 +822,10 @@ def _backfill_stances(provider, enriched_path: Path) -> bool:
         )
         summary = "  ".join(f"{k}/{t}:{v['score']:+d}" for k, topics_ in stances.items() for t, v in topics_.items())
         print(f"  + [{data.get('source_name')}] {data.get('date')} {summary}")
-        return True
+        return "ok"
     except Exception as exc:
         print(f"  ! Error for {enriched_path.name}: {exc}")
-        return False
+        return "error"
 
 
 def main() -> None:
@@ -842,16 +850,19 @@ def main() -> None:
                 print(f"  {path.relative_to(ENRICHED_DIR)}")
             return
         provider = _build_provider()
-        ok = failed = 0
+        counts = {"ok": 0, "empty": 0, "error": 0}
         for i, path in enumerate(tqdm(pending, desc="Stance backfill", unit="item")):
-            if _backfill_stances(provider, path):
-                ok += 1
-            else:
-                failed += 1
+            counts[_backfill_stances(provider, path)] += 1
             if i < len(pending) - 1:
                 time.sleep(0.2)
-        print(f"\nStance backfill complete: {ok} ok, {failed} failed")
-        if failed:
+        print(
+            f"\nStance backfill complete: {counts['ok']} ok, {counts['empty']} nothing to rate, {counts['error']} failed"
+        )
+        # Only real failures are failures. An event the model finds no quotable
+        # stance in is the documented outcome of prompt version "8", and it stays
+        # pending forever, so counting it here would trip the daily healthcheck
+        # every run from now on.
+        if counts["error"]:
             sys.exit(1)
         return
 
