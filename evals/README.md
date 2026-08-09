@@ -144,7 +144,24 @@ source if its evidence is a real quote.
 
 `baselines.yaml` holds one entry per `PROMPT_VERSION`;
 `tests/test_evaluate.py::test_prompt_version_has_baseline` fails until the current
-version has one. Two hashes travel with each entry, and both must match before two
+version has one.
+
+**What the `vs baseline` column compares against.** `select_baseline()` prefers the
+version being measured — that is the replication case, and the delta is pure noise.
+When that version has no entry yet, it falls back to the newest recorded version
+below it. That fallback is the important one: the first measurement of a new prompt
+is by definition the run with no entry of its own, so keying the column strictly on
+the current version blanks it out precisely when a reviewer needs the number. The
+report names the version it compared against, and versions sort numerically, so
+`"10"` follows `"9"`.
+
+(Bumping `PROMPT_VERSION` only *after* the eval has run would be the other way to
+get a populated column, and it is worse: `PROMPT_VERSION` and `PROMPT_SURFACE_SHA`
+have to move together — `test_prompt_surface_in_sync` enforces it — so a run with
+the new prompt under the old version either fails that test or records the new
+prompt's numbers under the old version's name.)
+
+Two hashes travel with each entry, and both must match before two
 entries are strictly comparable:
 
 - `prompt_surface_sha` — the prompt **templates**.
