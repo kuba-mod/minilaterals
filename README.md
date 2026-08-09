@@ -15,7 +15,7 @@ Sources (RSS / HTML / API)
   → render    templates + stance scoring produce the static site
 ```
 
-A scheduled job runs the full pipeline daily and commits the new data and pages back to the repository.
+A scheduled job runs ingest and enrich daily and commits the new data back to the repository. It doesn't render — the commit to `main` triggers the hosting build, which renders the site from source.
 
 ### Measuring alignment
 
@@ -41,7 +41,7 @@ The enrichment step runs on Ollama (a local model in dev, Ollama Cloud in CI; a 
 ## A few design choices
 
 - **Files as the database.** Every event is a human-readable file. Diffs show exactly what changed each day, and history is the audit log. Trade-off: querying means loading everything into memory, which is fine at this scale.
-- **Topic grouping first, alignment scoring second.** Fast keyword matching decides *which events belong to a topic*; the LLM stance step decides *how aligned the positions are*. Two separate concerns kept deliberately separate.
+- **Classification first, alignment scoring second.** An LLM decides *which countries and topics an event covers*; a second LLM step decides *how aligned the positions are*, rating each against the shared goal. Two separate concerns kept deliberately separate — and both the model's. An earlier version used keyword matching for the first step; it missed inflections, synonyms and paraphrase, and could not read the German, French and Polish sources at all, so there is deliberately no keyword fallback.
 - **One-sentence positions.** Each country's stance is summarised in a single sentence — enough for a side-by-side view without trying to replace the source article.
 - **Static site, mostly no backend.** Zero hosting cost and almost nothing to attack, at the cost of no server-side search or dynamic filtering — except a small Worker API (`worker/index.js`) for the hub page's vote-for-the-next-grouping feature, the one place the site needs to persist visitor input.
 
@@ -49,12 +49,14 @@ The enrichment step runs on Ollama (a local model in dev, Ollama Cloud in CI; a 
 
 The site is a Cloudflare Worker (Static Assets) defined in `wrangler.jsonc`, deployed through Cloudflare **Workers Builds** (the dashboard Git integration). Which command runs depends on the branch, giving branch→preview / merge→production:
 
-- **`main`** → `wrangler deploy` → binds the `minilaterals.com/weimar-triangle*` route (production).
+- **`main`** → `wrangler deploy` → binds the `minilaterals.com/*` route (production), covering both the hub page at the root and the tracker under `/weimar-triangle/`.
 - **Any other branch** → `wrangler versions upload` → a versioned `*.workers.dev` preview URL, without touching production traffic or the route.
 
 So pushing a feature branch publishes a preview (Cloudflare comments the URL on the PR), and merging to `main` promotes it live. The daily pipeline commits to `main`, so each data update also triggers a production deploy.
 
-Dashboard settings (Workers & Pages → `minilaterals` → Settings → Builds): build command empty (the site in `docs/` is committed, not built here), deploy command `npx wrangler deploy`, non-production deploy command `npx wrangler versions upload`, production branch `main`, and non-production branch deploys enabled.
+Dashboard settings (Workers & Pages → `minilaterals` → Settings → Builds): build command `bash scripts/cf-build.sh`, deploy command `npx wrangler deploy`, non-production deploy command `npx wrangler versions upload`, production branch `main`, and non-production branch deploys enabled.
+
+**The build command is load-bearing.** `docs/` is a build artifact — gitignored, never committed — so `scripts/cf-build.sh` rendering it from source on every push is the only thing that produces a site to deploy. If that command is ever cleared, Cloudflare deploys an empty tree.
 
 ## A note on the data
 
