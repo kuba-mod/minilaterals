@@ -460,3 +460,52 @@ def test_fractional_denominators_are_rounded_for_display():
     assert evaluate._fmt_n(79.6667) == "80"
     assert evaluate._fmt_n(0) == "—"
     assert evaluate._fmt_n(None) == "—"
+
+
+# --- select_baseline: what the delta column compares against -----------------
+
+
+def test_baseline_prefers_the_version_being_measured():
+    baselines = {"8": {"metrics": {"topics_f1": 0.7}}, "9": {"metrics": {"topics_f1": 0.8}}}
+    entry, version = evaluate.select_baseline(baselines, "9")
+    assert version == "9"
+    assert entry["metrics"]["topics_f1"] == 0.8
+
+
+def test_baseline_falls_back_to_the_predecessor():
+    # The run that matters most is the first measurement of a new prompt, which
+    # by definition has no entry of its own. Comparing it against nothing empties
+    # the delta column exactly when a reviewer needs it.
+    baselines = {"7": {"metrics": {"topics_f1": 0.6}}, "8": {"metrics": {"topics_f1": 0.7}}}
+    entry, version = evaluate.select_baseline(baselines, "9")
+    assert version == "8"
+    assert entry["metrics"]["topics_f1"] == 0.7
+
+
+def test_baseline_is_none_when_nothing_precedes_this_version():
+    assert evaluate.select_baseline({}, "9") == (None, None)
+    assert evaluate.select_baseline({"10": {"metrics": {}}}, "9") == (None, None)
+
+
+def test_baseline_orders_versions_numerically_not_lexically():
+    # "10" must come after "9", not before it as a string sort would have it.
+    baselines = {"9": {"metrics": {"topics_f1": 0.8}}, "10": {"metrics": {"topics_f1": 0.9}}}
+    entry, version = evaluate.select_baseline(baselines, "11")
+    assert version == "10"
+    assert entry["metrics"]["topics_f1"] == 0.9
+
+
+def test_markdown_names_the_version_it_compared_against():
+    agg = {"topics_f1": {"mean": 0.805, "min": 0.8, "max": 0.81}}
+    meta = {
+        "prompt_version": "9",
+        "prompt_surface_sha": "6ea9d3d1",
+        "rendered_surface_sha": "52cb5d9b",
+        "model": "gemma4:latest",
+        "cases": 46,
+        "repeats": 3,
+    }
+    baseline = {"metrics": {"topics_f1": 0.788}}
+    md = evaluate.format_markdown(agg, baseline, 0.030, meta, {"topics_f1": 48}, "8")
+    assert "+0.017" in md
+    assert "compared against version 8" in md
