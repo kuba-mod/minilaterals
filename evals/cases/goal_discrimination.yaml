@@ -95,6 +95,16 @@ cases:
         defence: 1
       visegrad:
         defence: null
-  notes: Polish-language counterpart of fr-pl-no-format-named. Only the Weimar Triangle
-    tracks this pairing, so it anchors the single-grouping baseline that the two-grouping
-    cases are compared against.
+  notes: >-
+    Polish-language counterpart of fr-pl-no-format-named. A PL-FR bilateral, so only
+    the Weimar Triangle tracks the pairing — but visegrad_relevant still fires, and
+    correctly, because relevance is not scoped by pairing. polish_mfa is a known-actor
+    source (design principle #3), PL is a V4 member, and defence is a V4-tracked topic,
+    which is the third clause of _grouping_relevance(). This is the accepted false
+    positive that principle names, and the case exists to pin how it is contained. The
+    V4 defence goal is national build-up and NATO presence in Central Europe, which a
+    PL-FR meeting on European security architecture says nothing about, so the stance
+    is correctly null and the event contributes nothing to a V4 defence cluster.
+    Relevance over-fires, the stance layer catches it. That also makes this a
+    goal_discrimination pair (weimar 1 vs visegrad omitted), not the single-grouping
+    baseline the note here used to claim.
