@@ -36,7 +36,11 @@ on:
     paths:
       - 'pipeline/enrich.py'
       - 'pipeline/evaluate.py'
-      - 'evals/**'
+      # Scoped to the gold set and the baselines rather than all of evals/, so
+      # documentation next to them (evals/README.md) doesn't spend ~300 model
+      # calls to re-measure a prompt nobody touched.
+      - 'evals/cases/**'
+      - 'evals/baselines.yaml'
       - 'data/groupings.yaml'
       - '.github/workflows/eval.yml'
 
