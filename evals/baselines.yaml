@@ -40,3 +40,44 @@
     evidence_goal_copy: 0.0
     retry_rate: 0.0
     parse_failure_rate: 0.0
+'9':
+  prompt_surface_sha: 6ea9d3d1
+  rendered_surface_sha: 52cb5d9b
+  model: gemma4:latest
+  provider: ollama
+  cases: 46
+  repeats: 3
+  recorded_at: '2026-08-09'
+  notes: 'topics stated as a selection rather than a checklist. eval.yml run 31318334552,
+    flip rate 0.030. Same 46 cases and same rendered surface as ''8'', so the two are
+    strictly comparable. Almost nothing moved beyond its noise floor: topics_f1 +0.017
+    and abstention_recall +0.071 are both in the intended direction but below their
+    floors (0.030 and 0.077), stance_exact +0.035 clears its floor marginally, and
+    goal_discrimination -0.208 (n=8, floor 0.125) is the one move beyond a floor in
+    the wrong direction — on the metric a same-prompt replication already swung -0.125.
+    Read as: no measured regression in classification, and no measured confirmation
+    of the fix either. The gold set sees the checklist failure only indirectly, as
+    precision loss inside topics_f1 (n=48): no case is drawn from the over-tagged
+    events and none expects more than 3 topics, so a metric that moves in steps of
+    0.021 is not the instrument for it. The evidence for the change is the corpus —
+    94 of 1,488 extracted sidecars carry 4+ topics, 16 carry all six, 12 stored
+    positions assert an absence, and 15 events are stance-pending on a rating the
+    model will never give.'
+  metrics:
+    relevance_accuracy: 0.9464
+    actors_exact: 0.9111
+    actors_f1: 0.9467
+    formats_exact: 0.8478
+    topics_f1: 0.8046
+    stance_exact: 0.6325
+    stance_within_1: 0.9487
+    stance_mae: 0.4444
+    sign_agreement: 0.8205
+    abstention_recall: 0.2906
+    abstention_precision: 1.0
+    goal_discrimination: 0.375
+    stance_coverage: 0.9748
+    evidence_verbatim: 0.9395
+    evidence_goal_copy: 0.0
+    retry_rate: 0.0
+    parse_failure_rate: 0.0
