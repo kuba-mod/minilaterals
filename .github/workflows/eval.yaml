@@ -42,7 +42,7 @@ on:
       - 'evals/cases/**'
       - 'evals/baselines.yaml'
       - 'data/groupings.yaml'
-      - '.github/workflows/eval.yml'
+      - '.github/workflows/eval.yaml'
 
 permissions:
   contents: read

@@ -18,7 +18,7 @@
   cases: 46
   repeats: 3
   recorded_at: '2026-08-07'
-  notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yml run
+  notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yaml run
     31216887818, flip rate 0.042 across the 3 repeats. Headline finding: abstention_recall
     0.220 — the v8 ''omit rather than score 0'' instruction is followed less than
     a quarter of the time.'
