@@ -1,0 +1,107 @@
+name: Prompt eval
+
+# Scores the enrichment prompts against the labelled gold set in evals/cases/ and
+# posts the table to the job summary. This is the only workflow that spends model
+# calls outside the daily collector, so it deliberately does NOT run on every push:
+# dispatch it by hand, or let it fire when something that changes what the model
+# reads is touched — the prompts themselves, the harness, the cases, or the goal
+# sentences interpolated into the stance prompt.
+#
+# Advisory by design: a poor score reports and exits 0, because 46 cases and a
+# nondeterministic model make a hard threshold flaky (the run prints a flip rate so
+# a delta can be judged against its own noise floor). Only a crash turns this red.
+# Use the `record` input after a deliberate prompt change to print the YAML block
+# for evals/baselines.yaml.
+#
+# Cost is roughly (cases x ~2 calls x repeats); at the default 3 repeats that is
+# ~300 gemma4 calls per run.
+
+on:
+  workflow_dispatch:
+    inputs:
+      repeats:
+        description: 'Runs per case (higher = tighter noise estimate)'
+        required: false
+        default: '3'
+      limit:
+        description: 'Cap the number of cases (blank = all)'
+        required: false
+        default: ''
+      record:
+        description: 'Print the baselines.yaml block for this run'
+        type: boolean
+        required: false
+        default: false
+  push:
+    paths:
+      - 'pipeline/enrich.py'
+      - 'pipeline/evaluate.py'
+      # Scoped to the gold set and the baselines rather than all of evals/, so
+      # documentation next to them (evals/README.md) doesn't spend ~300 model
+      # calls to re-measure a prompt nobody touched.
+      - 'evals/cases/**'
+      - 'evals/baselines.yaml'
+      - 'data/groupings.yaml'
+      - '.github/workflows/eval.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eval-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    env:
+      # Same provider wiring as collect.yml, so the eval measures the model that
+      # actually enriches the corpus rather than a stand-in.
+      ENRICH_PROVIDER: ${{ vars.ENRICH_PROVIDER || '' }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+      OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
+      OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:latest' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install uv && uv sync
+
+      # Free check: renders every prompt without a provider, so a malformed case
+      # fails here in seconds instead of part-way through the paid run below.
+      - name: Render prompts
+        run: uv run python -m pipeline.evaluate --dry-run
+
+      - name: Evaluate
+        run: |
+          set -euo pipefail
+          args=(--repeats "${{ inputs.repeats || '3' }}" --summary --json eval-results.json)
+          if [ -n "${{ inputs.limit }}" ]; then
+            args+=(--limit "${{ inputs.limit }}")
+          fi
+          if [ "${{ inputs.record }}" = "true" ]; then
+            args+=(--record "workflow run ${{ github.run_id }} on ${{ github.sha }}")
+          fi
+          uv run python -m pipeline.evaluate "${args[@]}"
+
+      # The workflow has no write permission, so a recorded baseline is printed
+      # rather than committed — copy it into evals/baselines.yaml in a PR, where it
+      # gets reviewed like any other change.
+      - name: Print recorded baseline
+        if: ${{ inputs.record == true }}
+        run: |
+          echo '--- evals/baselines.yaml ---'
+          cat evals/baselines.yaml
+
+      - name: Upload results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: eval-results.json
+          if-no-files-found: ignore
