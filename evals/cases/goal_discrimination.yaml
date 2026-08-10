@@ -1,14 +1,21 @@
 # One event, two groupings that both track the topic, different correct answers.
 # The goal_discrimination metric is computed over EVERY case in evals/cases/, not
 # just this file — pl-eastern-flank-summit, visegrad-named-bosacki-budapest-en and
-# the treaty-anniversary pair all carry two groupings too. These two are the ones
-# whose whole reason for existing is the contrast.
+# the treaty-anniversary pair all carry two groupings too. These two [now four] are
+# the ones whose whole reason for existing is the contrast.
 # This is the prompt-v7 premise under test: `defence` asks a different question of
 # the E3 (keep the UK bound into European security) than of AUKUS (trilateral
 # defence-industrial integration), so an identical score-and-quote pair across the
 # two is a failure even when each score looks individually plausible.
 # data/enriched/uk_fcdo/2026-07/2026-07-22-987e3337.yaml shows the live corpus
 # doing exactly that.
+#
+# pl-defence24-days and pl-ukraine-accession-talks were added to grow this metric's
+# denominator (n=8 at prompt v8, one flip = 0.125 — see evals/README.md) beyond the
+# `defence`-topic pairs above: both are single-country Polish MFA items scored
+# against the Weimar Triangle and the Visegrád Group's *differently worded* goals
+# for a topic they both track, rather than the actor-overlap pattern the other four
+# cases use to reach two groupings.
 cases:
 - id: uk-osce-aerial-attacks
   provenance: data/events/uk_fcdo/2026-07/2026-07-22-987e3337.yaml
@@ -98,3 +105,100 @@ cases:
   notes: Polish-language counterpart of fr-pl-no-format-named. Only the Weimar Triangle
     tracks this pairing, so it anchors the single-grouping baseline that the two-grouping
     cases are compared against.
+- id: pl-defence24-days
+  provenance: data/events/polish_mfa/2026-05/2026-05-06-0327a936.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-06'
+  title: Wicepremier Radosław Sikorski na Defence24 Days
+  text: Podczas konferencji wicepremier Radosław Sikorski podkreślił, że stanowisko
+    Polski w zakresie bezpieczeństwa jest jednym z najważniejszych w Europie. Szef
+    polskiego MSZ przypomniał, że jesteśmy liderem pod względem udziału PKB przeznaczonego
+    na obronność. W 2025 roku łączne wydatki wyniosły ponad 186,5 mld zł (ok. 4,7%
+    PKB), natomiast w 2026 roku budżet obronny (wraz z Funduszem Wsparcia Sił Zbrojnych)
+    ma osiągnąć ponad 200 mld zł, co stanowi ok. 4,8% PKB. Wicepremier Sikorski zaznaczył,
+    że wzmocnieniem polskiego bezpieczeństwa będzie też zakup uzbrojenia ze środków
+    w ramach programu SAFE, czyli unijnego programu wsparcia dla obronności. Polska
+    przystąpiła do programu jako pierwsze państw we Wspólnocie i jest największym
+    beneficjentem programu. W ramach programu SAFE Polska ma otrzymać nawet 43,7
+    mld euro w niskooprocentowanych pożyczkach. Do Polski trafią olbrzymie pieniądze
+    w dodatku do naszego już dużego budżetu obronnego. Musimy za te pieniądze dać
+    Wojsku Polskiemu to co najlepsze, najnowocześniejsze, to co najskuteczniej odstraszy
+    wrogów, których niestety mamy za naszą wschodnią granicą Wicepremier odniósł
+    się także do zmian dotyczących obecności amerykańskich żołnierzy w Europie. Podkreślił,
+    że polskim interesie jest, żeby amerykańskich żołnierzy w Europie było jak najwięcej,
+    a najlepiej w Polsce. Defence24 Days to kluczowe forum dotyczące obronności i
+    przemysłu obronnego. W panelach, poza wicepremierem Radosławem Sikorskim, uczestniczyły
+    delegacje z kilkudziesięciu krajów partnerskich, przedstawiciele administracji
+    publicznej, eksperci wojskowi oraz przedsiębiorcy związani z sektorem zbrojeniowym.
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        defence: null
+      visegrad:
+        defence: 2
+  notes: 'A single-country readout of Poland''s own defence budget (4.8% of GDP)
+    and SAFE-programme procurement — no DE/FR, no European/joint framing at all.
+    That is exactly the V4 goal (''higher national defence spending... pursued through
+    each capital''s own build-up rather than joint V4 capability''), so visegrad/defence
+    is a clean +2. It says nothing about a European pillar or joint capability with
+    Germany and France, so weimar/defence must be null rather than borrowing the
+    same quote — the inverse pairing from pl-eastern-flank-summit, where Weimar scored
+    higher than the V4 on the same topic.'
+- id: pl-ukraine-accession-talks
+  provenance: data/events/polish_mfa/2026-05/2026-05-12-18fa974c.yaml
+  source_name: polish_mfa
+  source_lang: pl
+  date: '2026-05-12'
+  title: Spotkanie szefów dyplomacji Polski i Ukrainy
+  text: 'Szefowie dyplomacji Polski i Ukrainy rozmawiali o możliwościach wzmocnienia
+    bezpieczeństwa i stabilności w regionie.  Podczas sesji ministerialnej minister
+    Andrij Sybiha mówił o sytuacji na froncie i zapewniał, że Kijów jest zainteresowany
+    trwałym i długoterminowym zawieszeniem broni. Utrzymujemy pozycję, zamykamy przestrzeń
+    powietrzną [dla rosyjskich dronów] i bardzo skutecznie wykorzystujemy nasze specjalne
+    sankcje i inne operacje. I to naprawdę działa – mówił minister Sybiha i dodał,
+    że konieczne jest utrzymanie presji na Rosję, zapewnienie zaangażowania USA i
+    podniesienie ceny, jaką Rosja zapłaci za dalszą agresję. Z kolei wicepremier
+    Sikorski zapewniał, że Polska nadal będzie wspierać Ukrainę: Ważne jest aby przeciwnik
+    wiedział, że Ukraina jest gotowa walczyć dalej, a my jesteśmy gotowi nadal ją
+    wspierać. Myślę, że to właśnie stabilizacja sytuacji na froncie przez Ukrainę
+    oraz przełamanie paraliżu w Europie – dzięki wspaniałemu zwycięstwu sił prodemokratycznych
+    na Węgrzech – zmuszają Putina do ponownego przemyślenia sytuacji. Musi on teraz
+    rozważyć, czy będzie w stanie kontynuować tę wojnę przez kolejne dwa lata Podczas
+    rozmów bilateralnych ministrowie rozmawiali o procesie akcesji Ukrainy do Unii
+    Europejskiej. Omówili postępy reform, które są niezbędne do realizacji przez
+    Ukrainę kolejnych etapów integracji. Podczas spotkania szefowie dyplomacji rozmawiali
+    również o klimacie inwestycyjnym na Ukrainie, przede wszystkim sytuacji polskich
+    przedsiębiorców, którzy prowadzą tam działalność. Ministrowie omówili główne
+    wyzwania i szanse dotyczące dalszego rozwoju polskich inwestycji na Ukrainie.'
+  expect:
+    actors:
+    - PL
+    explicit_formats: []
+    topics:
+    - ukraine
+    - enlargement
+    relevant:
+    - weimar
+    - visegrad
+    stances:
+      weimar:
+        ukraine: 1
+        enlargement: 1
+      visegrad:
+        enlargement: null
+  notes: 'enlargement is tracked by both groupings but means something different:
+    the Weimar goal covers EU accession for Ukraine (among others); the V4 goal is
+    specifically Western Balkans accession, applying the V4''s own experience to
+    its southern neighbourhood. This item is entirely about Ukraine''s accession
+    process (reform progress discussed bilaterally) — nothing about the Balkans —
+    so weimar/enlargement is a defensible +1 and visegrad/enlargement must be null.
+    visegrad has no ukraine topic at all, so only weimar rates that one.'
