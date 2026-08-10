@@ -455,3 +455,52 @@ cases:
     stances: {}
   notes: French-language declaration on peace and security in Africa. Dense security
     language, no tracked issue area.
+- id: de-fr-defence-council-preview
+  provenance: data/events/german_chancellery/2026-07/2026-07-10-b008fbea.yaml
+  source_name: german_chancellery
+  source_lang: de
+  date: '2026-07-10'
+  title: 26. Deutsch-Französischer Ministerrat und Deutsch-Französischer Verteidigungs-
+    und Sicherheitsrat
+  text: Am 17. Juli 2026 findet der Deutsch-Französische Ministerrat statt. Bereits
+    am Vorabend trifft Bundeskanzler Friedrich Merz mit dem französischen Staatspräsidenten
+    Emmanuel Macron zusammen. Hier sind kurze Pressestatements geplant. Anschließend
+    gibt es ein Delegationsgespräch und ein gemeinsames Abendessen. Am 17. Juli 2026
+    ist für 09:00 Uhr eine Sitzung des Deutsch-Französischen Verteidigungs- und Sicherheitsrats
+    unter Leitung von Bundeskanzler Merz und Staatspräsident Macron auf dem Fliegerhorst
+    Nörvenich geplant. Im Vordergrund stehen sicherheitspolitische Themen sowie Fragen
+    der strategischen Zusammenarbeit. Parallel dazu kommen die weiteren teilnehmenden
+    Bundesministerinnen und -minister mit ihren franz ö sischen Counterparts auf Schloss
+    Augustusburg in Br ü hl zu bilateralen Gespr ä chen zusammen. Staatspräsident Macron
+    wird um 11:00 Uhr auf Schloss Augustusburg in Brühl durch Bundeskanzler Friedrich
+    Merz offiziell mit militärischen Ehren begrüßt. Anschließend tagt der Deutsch-Französische
+    Ministerrat. Hier werden Wirtschaft und Wettbewerbsfähigkeit sowie der gesellschaftliche
+    Austausch und Resilienz im Fokus der Gespräche stehen. Weiterhin wird der Ministerrat
+    über gemeinsame deutsch-französische Impulse für eine Reihe von Themen auf EU-Ebene
+    beraten. Zum Abschluss des Deutsch-Französischen Ministerrats ist für 15:00 Uhr
+    eine gemeinsame Pressekonferenz von Bundeskanzler Merz und Staatspräsident Macron
+    vorgesehen.
+  expect:
+    actors:
+    - DE
+    - FR
+    explicit_formats: []
+    topics:
+    - defence
+    relevant:
+    - weimar
+    - e3
+    stances:
+      weimar:
+        defence: null
+      e3:
+        defence: null
+  notes: 'A pure calendar preview: it names the Franco-German Defence and Security
+    Council and previews its agenda ("sicherheitspolitische Themen") but announces
+    no decision, position, or commitment — the substantive council conclusions came
+    two weeks later. Two members apiece put it in front of both weimar and e3, and
+    both should land null: there is nothing here to rate against either goal, only
+    a schedule. A double abstention rather than a discrimination case (same value
+    on both sides), but it still grows abstention_recall''s n (14 at prompt v8 — see
+    evals/README.md) with a real, non-contrived example of the everyday "nothing
+    to quote yet" shape.'
