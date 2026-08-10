@@ -21,7 +21,13 @@ from .base import BaseIngester, Event
 # relevant post type, e.g. https://www.state.gov/wp-json/wp/v2/state_press_release
 # — found via GET .../wp-json/wp/v2/types, whose entries carry a rest_base).
 
-_HEADERS = {"User-Agent": "minilaterals.com diplomatic tracker (+https://minilaterals.com)"}
+# Accept: application/json is a standard declaration for a REST client, not a
+# browser-impersonation header — see design principle #10 in CLAUDE.md, which
+# rules out disguising what this actually is.
+_HEADERS = {
+    "User-Agent": "minilaterals.com diplomatic tracker (+https://minilaterals.com)",
+    "Accept": "application/json",
+}
 
 _MAX_TEXT = 5000
 _PER_PAGE = 20
