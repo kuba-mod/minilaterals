@@ -24,6 +24,9 @@ ITEM_2 = {
 }
 
 
+_NOT_JSON = object()
+
+
 class _StubWPRest(WPRestIngester):
     source_name = "stub_wprest"
     source_lang = "en"
@@ -31,15 +34,19 @@ class _StubWPRest(WPRestIngester):
 
 
 class FakeResponse:
-    def __init__(self, payload, status_code=200):
+    def __init__(self, payload, status_code=200, text=None, headers=None):
         self._payload = payload
         self.status_code = status_code
+        self.text = text or ""
+        self.headers = headers or {}
 
     def raise_for_status(self):
         if self.status_code >= 400:
             raise requests.exceptions.HTTPError(f"{self.status_code}")
 
     def json(self):
+        if self._payload is _NOT_JSON:
+            raise ValueError("Expecting value")
         return self._payload
 
 
@@ -104,6 +111,27 @@ def test_status_400_ends_pagination_without_error(capsys):
         events = list(ingester.fetch())
     assert [e.title for e in events] == ["Deputy Secretary Landau’s Travel"]
     assert "error" not in capsys.readouterr().out.lower()
+
+
+def test_non_json_response_logs_status_content_type_and_body_preview(capsys):
+    # The real-world case this guards: a bot-challenge interstitial (Akamai/
+    # Cloudflare "Just a moment...") returns 200 with HTML specifically so
+    # status-code checks don't catch it — seen live from a GitHub Actions
+    # runner IP against state.gov's wp-json endpoint (browsers pass fine).
+    challenge = FakeResponse(
+        _NOT_JSON,
+        status_code=200,
+        text="<html><body>Just a moment...</body></html>",
+        headers={"Content-Type": "text/html; charset=UTF-8"},
+    )
+    with patch("pipeline.sources.wprest.requests.get", return_value=challenge):
+        events = list(_StubWPRest().fetch())
+    assert events == []
+    out = capsys.readouterr().out
+    assert "not JSON" in out
+    assert "status=200" in out
+    assert "text/html" in out
+    assert "Just a moment" in out
 
 
 def test_request_exception_logs_error_and_yields_nothing(capsys):

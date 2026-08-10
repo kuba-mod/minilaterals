@@ -115,6 +115,16 @@ class WPRestIngester(BaseIngester):
         try:
             items = r.json()
         except ValueError:
-            print(f"[{self.source_name}] REST response was not JSON ({self.rest_url})")
+            # A 2xx response that isn't JSON is the classic signature of a
+            # bot-challenge interstitial (Akamai/Cloudflare "Just a moment...")
+            # that returns 200 specifically so status-code checks don't catch
+            # it. Log enough of the body to tell that apart from a genuine API
+            # shape change without a second round trip.
+            content_type = r.headers.get("Content-Type", "")
+            preview = r.text[:300].replace("\n", " ")
+            print(
+                f"[{self.source_name}] REST response was not JSON ({self.rest_url}), "
+                f"status={r.status_code}, content-type={content_type!r}, body preview: {preview!r}"
+            )
             return None
         return items if isinstance(items, list) else None
