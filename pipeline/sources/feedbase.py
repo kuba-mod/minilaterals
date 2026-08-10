@@ -66,6 +66,12 @@ class FeedIngester(BaseIngester):
     # if it ever needs a different label.
     collection_method = "rss"
 
+    # Set by _download() on every real fetch, for the diagnostic in parse_feed()
+    # below — distinguishes a genuinely empty feed from a WAF/challenge page
+    # that 200s but isn't XML. None when parse_feed() is driven directly from a
+    # test fixture (no _download() call happened).
+    _last_content_type: str | None = None
+
     def fetch(self) -> Iterator[Event]:
         yield from self.parse_feed(self._download())
 
@@ -82,6 +88,7 @@ class FeedIngester(BaseIngester):
         except Exception as exc:  # noqa: BLE001 — surfaced by run_ingester
             print(f"[{self.source_name}] feed error: {exc}")
             return b""
+        self._last_content_type = r.headers.get("Content-Type", "")
         return r.content
 
     def parse_feed(self, feed) -> Iterator[Event]:
@@ -93,7 +100,17 @@ class FeedIngester(BaseIngester):
             feed = feedparser.parse(feed)
         entries = getattr(feed, "entries", [])
         if not entries:
-            print(f"[{self.source_name}] feed yielded no entries ({self.feed_url})")
+            # A 200 response with zero entries is ambiguous on its own: it could be
+            # a genuinely empty feed, a wrong/orphaned URL, or (commonly, for
+            # government sites behind a WAF) a bot-challenge page that isn't XML
+            # at all. Surface enough to tell those apart without a second round
+            # trip — see the us_state investigation this was added for.
+            detail = ""
+            if self._last_content_type is not None:
+                detail += f", content-type={self._last_content_type!r}"
+            if getattr(feed, "bozo", False):
+                detail += f", parse error: {feed.get('bozo_exception')}"
+            print(f"[{self.source_name}] feed yielded no entries ({self.feed_url}){detail}")
             return
         for entry in entries:
             title = (entry.get("title") or "").strip()
