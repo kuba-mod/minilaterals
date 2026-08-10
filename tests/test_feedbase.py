@@ -135,3 +135,19 @@ def test_download_returns_empty_bytes_on_request_failure():
     with patch("pipeline.sources.feedbase.requests.get", side_effect=requests.exceptions.Timeout("boom")):
         result = _StubFeed()._download()
     assert result == b""
+
+
+def test_empty_entries_diagnostic_reports_content_type(capsys):
+    # A WAF/bot-challenge page typically 200s as text/html rather than XML, and
+    # parses to zero entries indistinguishably from a genuinely empty feed
+    # unless the content-type is surfaced — see feedbase.py's parse_feed().
+    with patch("pipeline.sources.feedbase.requests.get") as mock_get:
+        mock_get.return_value.content = b"<html><body>Are you a robot?</body></html>"
+        mock_get.return_value.headers = {"Content-Type": "text/html; charset=utf-8"}
+        mock_get.return_value.raise_for_status.return_value = None
+        ing = _StubFeed()
+        list(ing.fetch())
+    out = capsys.readouterr().out
+    assert "stub_feed" in out
+    assert "no entries" in out
+    assert "text/html" in out
