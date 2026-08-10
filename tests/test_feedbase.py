@@ -78,19 +78,20 @@ def test_empty_feed_yields_nothing():
 
 
 def test_new_sources_registered():
-    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government) and
-    # lithuanian_mfa (Cloudflare bot-protection) are paused — see the comment
-    # in pipeline/sources/__init__.py — pending working/reachable feeds.
+    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government), lithuanian_mfa
+    # (Cloudflare bot-protection), and us_state (state.gov blocks GitHub
+    # Actions' runner IPs on the wp-json endpoint that actually has the data —
+    # confirmed live, see the comment in pipeline/sources/__init__.py) are
+    # paused pending working/reachable feeds.
     names = {c.source_name for c in ALL_INGESTERS}
     for expected in (
         "uk_fcdo",
-        "us_state",
         "australia_dfat",
         "estonian_mfa",
         "latvian_mfa",
     ):
         assert expected in names
-    for paused in ("czech_mfa", "slovak_mfa", "hungary_government", "lithuanian_mfa"):
+    for paused in ("czech_mfa", "slovak_mfa", "hungary_government", "lithuanian_mfa", "us_state"):
         assert paused not in names
 
 

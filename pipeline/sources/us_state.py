@@ -8,10 +8,14 @@ from .wprest import WPRestIngester
 # "Custom Report Excerpts" feed, not connected to press releases post-CMS-
 # migration, and state.gov doesn't advertise any working replacement feed
 # (its own <link rel="alternate"> tags all point back at the same dead one).
-# Confirmed live: the WordPress REST API is reachable and DOES serve press
-# releases, under the state_press_release custom post type (found via
+# Confirmed live: the WordPress REST API DOES serve press releases, under the
+# state_press_release custom post type (found via
 # https://www.state.gov/wp-json/wp/v2/types, which lists each type's
-# rest_base) — see WPRestIngester.
+# rest_base) — see WPRestIngester. NOT currently registered in ALL_INGESTERS,
+# though: that same endpoint returns a 200 "Technical Difficulties" HTML page
+# instead of JSON when fetched from GitHub Actions' runner IPs, while the
+# identical URL returns real JSON from a browser — see design principle #10
+# and the comment in pipeline/sources/__init__.py.
 REST_URL = "https://www.state.gov/wp-json/wp/v2/state_press_release"
 
 
