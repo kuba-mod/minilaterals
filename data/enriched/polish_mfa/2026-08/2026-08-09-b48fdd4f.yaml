@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs of the Republic of Poland
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland expresses solidarity with Belarusian civil society and advocates
+    for a sovereign, democratic Belarus based on respect for human rights.
+  positions:
+    rule_of_law: Poland calls for the release and rehabilitation of prisoners of conscience
+      and the respect of citizens' rights as norms of a democratic state.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Otwarty dialog z własnymi obywatelami, pełne poszanowanie ich praw,
+          uwolnienie i rehabilitacja wszystkich więźniów sumienia są normą demokratycznego
+          państwa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
