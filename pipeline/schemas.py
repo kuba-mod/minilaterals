@@ -30,7 +30,7 @@ class RawEventSchema(BaseModel):
     # Provenance. Optional/defaulted so events written before provenance
     # tracking (and any not-yet-backfilled file) still validate; new events
     # always carry both. collection: "native" | "fallback"; collection_method:
-    # "rss" | "html" | "wayback" | "backfill" (legacy seed).
+    # "rss" | "html" | "api" | "wayback" | "backfill" (legacy seed).
     collection: str | None = None
     collection_method: str | None = None
     source_published_at: str
