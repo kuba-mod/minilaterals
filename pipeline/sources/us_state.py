@@ -1,14 +1,21 @@
 from __future__ import annotations
 
-from .feedbase import FeedIngester
+from .wprest import WPRestIngester
 
-# U.S. Department of State — AUKUS member. state.gov switched its content type
-# from a "press-releases" taxonomy to a "releases" custom post type; the
-# site-wide feed (confirmed via the page's <link rel="alternate"> tag) is here.
-FEED_URL = "https://www.state.gov/feed/"
+# U.S. Department of State — AUKUS member. The sitewide /feed/ RSS endpoint
+# looked plausible (a real, well-formed <channel>) but has 200'd with zero
+# <item> elements in every collect run since it was wired up — it's a stale
+# "Custom Report Excerpts" feed, not connected to press releases post-CMS-
+# migration, and state.gov doesn't advertise any working replacement feed
+# (its own <link rel="alternate"> tags all point back at the same dead one).
+# Confirmed live: the WordPress REST API is reachable and DOES serve press
+# releases, under the state_press_release custom post type (found via
+# https://www.state.gov/wp-json/wp/v2/types, which lists each type's
+# rest_base) — see WPRestIngester.
+REST_URL = "https://www.state.gov/wp-json/wp/v2/state_press_release"
 
 
-class USStateIngester(FeedIngester):
+class USStateIngester(WPRestIngester):
     source_name = "us_state"
     source_lang = "en"
-    feed_url = FEED_URL
+    rest_url = REST_URL
