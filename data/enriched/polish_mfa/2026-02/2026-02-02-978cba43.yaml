@@ -46,11 +46,11 @@ extracted:
           from Poland for Kyiv” campaign
       defence:
         score: 1
-        evidence: outlook for enhancing the Polish–Ukrainian military cooperation,
-          including cooperation in the unmanned aerial systems (drones) sector
+        evidence: enhancing the Polish–Ukrainian military cooperation, including cooperation
+          in the unmanned aerial systems (drones) sector
       hybrid:
         score: 1
-        evidence: the need to continuously put international pressure on Russia
+        evidence: need to continuously put international pressure on Russia
       rule_of_law:
         score: 1
         evidence: The ministers stressed the strategic importance of Polish–Ukrainian
