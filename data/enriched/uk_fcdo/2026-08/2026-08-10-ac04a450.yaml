@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom expresses grave concern over the systematic ill-treatment
+    of prisoners of war and civilian detainees by Russian authorities in Ukraine.
+  positions:
+    ukraine: The UK condemns the Russian authorities' systematic ill-treatment of
+      prisoners of war and civilian detainees and calls for adherence to international
+      humanitarian law.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
