@@ -183,7 +183,7 @@
 
   <div id="clusters-container">
   {% for cluster in clusters %}
-  <div class="cluster" id="cluster-{{ cluster.area }}">
+  <div class="cluster{% if cluster.stale %} is-stale{% endif %}" id="cluster-{{ cluster.area }}">
     <div class="cluster-head">
       <span class="tag" style="color:var(--accent); border-color: var(--accent-dim); background: var(--accent-faint)">
         {{ cluster.area_label }}
@@ -198,8 +198,14 @@
         {%- endfor %}
       </span>
       {% endif %}
+      {% if cluster.stale %}
+      <span class="tag" style="color:#8a6320; border-color:#8a632044; background:#8a632014; margin-left:4px"
+        title="No capital has published on {{ cluster.area_label }} since {{ cluster.date_to }} — this is the last time two or more aligned, not this edition's news.">
+        Not from this edition
+      </span>
+      {% endif %}
       <span class="date-range">
-        {% if cluster.date_from == cluster.date_to %}{{ cluster.date_to }}{% else %}{{ cluster.date_from }} – {{ cluster.date_to }}{% endif %}
+        {% if cluster.stale %}Last active: {% endif %}{% if cluster.date_from == cluster.date_to %}{{ cluster.date_to }}{% else %}{{ cluster.date_from }} – {{ cluster.date_to }}{% endif %}
       </span>
     </div>
 
@@ -286,7 +292,7 @@
   <h3>About this tracker</h3>
   <div class="about-stats">
     <div><strong>{{ total_all }}</strong> total events ingested from {{ source_count }} official feeds — each country's foreign ministry and executive office.</div>
-    <div><strong>{{ clusters|length }}</strong> active topic clusters in the current 7-day window.</div>
+    <div><strong>{{ clusters|rejectattr("stale")|list|length }}</strong> of {{ clusters|length }} topic clusters active in the last {{ cluster_stale_days }} days — the rest show capitals' last alignment on a quiet topic.</div>
     <div><strong>{{ meetings_count }}</strong> trilateral meetings since 1991, tracked in our records.</div>
   </div>
 </div>
