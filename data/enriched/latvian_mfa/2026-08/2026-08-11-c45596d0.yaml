@@ -1,0 +1,31 @@
+actors:
+- LV
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Latvia joined a US-initiated joint statement regarding warnings about
+    ballistic missile launches.
+  positions:
+    defence: Latvia supports the joint initiative on ballistic missile launch warnings
+      to enhance security.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Latvija un vairākas citas valstis* ir pievienojušās Amerikas Savienot
+          Valstu (ASV) iniciētam kopīgajam paziņojumam
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

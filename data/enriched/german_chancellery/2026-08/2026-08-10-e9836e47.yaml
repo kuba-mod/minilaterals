@@ -1,0 +1,59 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Dr. Kock (BMI)
+  - Müller (BMVg)
+  - Alexander Dobrindt (Federal Minister of the Interior)
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Germany is strengthening its domestic drone defense capabilities, continuing
+    military support for Ukraine, and reforming its intelligence services to counter
+    hybrid threats.
+  positions:
+    ukraine: Germany remains a major military supporter of Ukraine, focusing on the
+      continuous delivery of Patriot missiles and air defense systems through various
+      funding and coalition clusters.
+    defence: The government is investing in state-of-the-art military hardware and
+      digitalization to ensure the Bundeswehr is capable of deterring attacks by 2029.
+    hybrid: Germany is countering hybrid threats by establishing a Joint Drone Defense
+      Center and reforming intelligence laws to create more effective, centralized
+      control structures.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: wir haben jüngst angekündigt, dass wir in den nächsten vier Jahren
+          mehrere Hundert Patriot-Lenkflugkörper an die Ukraine liefern werden
+      defence:
+        score: 1
+        evidence: Wir investieren Mittel aus dem Sondervermögen in den F-35 ‑ es ist,
+          wie gesagt, das modernste Luftfahrzeug, das man aktuell kaufen kann
+      hybrid:
+        score: 2
+        evidence: Als Stichworte nenne ich das Gemeinsame Drohnenabwehrzentrum und
+          das Gemeinsame Abwehrzentrum Hybrid, die sich genau mit diesen Thematiken
+          übergreifend auseinandersetzen
+    e3:
+      defence:
+        score: 0
+        evidence: Deutschland ist seit 2025 der größte Unterstützer der Ukraine mit
+          militärischer Ausstattung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

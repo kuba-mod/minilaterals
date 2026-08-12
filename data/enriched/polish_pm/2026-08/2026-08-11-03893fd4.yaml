@@ -1,0 +1,36 @@
+actors:
+- PL
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Łódź, Poland
+  position: Poland is modernizing its armed forces through the purchase of US Apache
+    helicopters and the establishment of a European-scale service center in Łódź.
+  positions:
+    defence: Poland is investing approximately 10 billion dollars in US Apache helicopters
+      and developing a domestic service center to build the most modern army in Europe.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: budujemy najnowocześniejszą armię w Europie, zdolną do obrony naszych
+          granic
+    visegrad:
+      defence:
+        score: 2
+        evidence: Łódzkie centrum serwisowe będzie mogło obsługiwać co najmniej 96
+          śmigłowców, które Polska zamówiła w USA za ok. 10 mld dolarów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

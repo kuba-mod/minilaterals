@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Maciej Berek
+  - Joanna Knapińska
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland will strictly prosecute any misuse of public funds intended for
+    flood relief and has announced a change in the government's oversight leadership.
+  positions:
+    rule_of_law: The Polish government is initiating strict legal actions and audits
+      through the CBA and prosecutors to ensure the lawful distribution of flood aid.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: w każdej sytuacji, w której doszło do nadużycia, państwo będzie
+          działało bezwzględnie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

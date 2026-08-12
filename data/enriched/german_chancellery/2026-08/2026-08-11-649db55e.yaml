@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Kulturstaatsminister Weimer
+  topics:
+  - rule_of_law
+  location: Rome, Italy
+  position: Germany has awarded the Johanna and Eduard Arnhold Scholarship to artist
+    Gabriele Stötzer to honor work that promotes democratic values and freedom.
+  positions:
+    rule_of_law: Germany emphasizes the importance of democratic self-assertion and
+      civil society responsibility in the face of authoritarian tendencies.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Kulturstaatsminister Weimer hat das Johanna und Eduard Arnhold-Stipendium
+          im vergangenen Jahr ins Leben gerufen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
