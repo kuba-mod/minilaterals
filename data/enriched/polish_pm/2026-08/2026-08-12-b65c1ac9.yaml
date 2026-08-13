@@ -1,0 +1,63 @@
+actors:
+- PL
+- EE
+- LV
+- LT
+issue_areas:
+- defence
+- submarines
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister of Poland
+  - Wojciech Balczun
+  - Magdalena Sobkowiak-Czarnecka
+  topics:
+  - defence
+  - submarines
+  - energy
+  location: Gdynia, Poland
+  position: Poland aims to become a maritime power by investing heavily in domestic
+    shipbuilding, naval modernization, and strategic regional cooperation to ensure
+    Baltic security.
+  positions:
+    defence: Poland is strengthening its naval capabilities through the 'Miecznik'
+      frigate program and deepening military cooperation with Nordic and Baltic states.
+    submarines: The 'Orka' submarine program will, alongside frigates, form the main
+      combat force of the Polish Navy to deter potential aggressors.
+    energy: Poland is developing its maritime energy infrastructure, including wind
+      power and a nuclear power plant.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: realne wzmocnienie bezpieczeństwa Bałtyku
+    visegrad:
+      defence:
+        score: 2
+        evidence: W sumie program „Miecznik” to 15 mld zł.
+      energy:
+        score: 2
+        evidence: rozwijamy porty, energetykę wiatrową, przemysł stoczniowy, gazoporty
+          i terminale, a także realizujemy strategiczne inwestycje, takie jak elektrownia
+          jądrowa.
+    baltic:
+      defence:
+        score: 2
+        evidence: Program „Miecznik” to nie tylko znaczący skok technologiczny, ale
+          przede wszystkim realne wzmocnienie bezpieczeństwa Bałtyku
+      energy:
+        score: 1
+        evidence: rozwijamy porty, energetykę wiatrową, przemysł stoczniowy, gazoporty
+          i terminale, a także realizujemy strategiczne inwestycje, takie jak elektrownia
+          jądrowa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

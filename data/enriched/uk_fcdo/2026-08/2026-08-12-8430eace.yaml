@@ -1,0 +1,26 @@
+actors:
+- UK
+- AU
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - High Representative of the European Union
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom, alongside international partners, condemns the use
+    of the death penalty in Iran.
+  positions:
+    iran: The United Kingdom calls for an immediate halt to executions in Iran.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

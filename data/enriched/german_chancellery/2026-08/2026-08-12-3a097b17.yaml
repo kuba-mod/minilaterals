@@ -1,0 +1,39 @@
+actors:
+- DE
+- PL
+- LT
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  topics:
+  - defence
+  location: Stettin, Germany
+  position: Germany, together with Poland and Denmark, has decided to invite Lithuania
+    to join the Multinational Corps Northeast as a fourth framework nation to strengthen
+    NATO's northeastern flank.
+  positions:
+    defence: Germany aims to enhance deterrence and defense capabilities on NATO's
+      eastern flank by integrating Lithuania into the Multinational Corps Northeast.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: will Deutschland Litauen als vierte Rahmennation einladen, das Multinationale
+          Korps Nordost in Stettin zu verstärken
+    e3:
+      defence:
+        score: 0
+        evidence: Zusammen mit Polen und Dänemark will Deutschland Litauen als vierte
+          Rahmennation einladen, das Multinationale Korps Nordost in Stettin zu verstärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

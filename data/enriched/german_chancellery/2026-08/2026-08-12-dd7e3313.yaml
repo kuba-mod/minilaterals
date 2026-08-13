@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  - Federal Ministry of Agriculture
+  topics:
+  - green_transition
+  location: null
+  position: Germany has approved a draft law to implement the EU Deforestation Regulation
+    (EUDR) to ensure only deforestation-free and legally produced goods enter or leave
+    the EU market.
+  positions:
+    green_transition: Germany is implementing the EUDR to combat global deforestation
+      and protect biodiversity by enforcing due diligence for specific raw materials
+      like wood, cocoa, and soy.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Dazu dient ein jetzt beschlossener Gesetzentwurf des Kabinetts.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

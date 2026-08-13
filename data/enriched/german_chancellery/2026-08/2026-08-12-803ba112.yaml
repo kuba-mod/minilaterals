@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: Germany is reforming its child and youth welfare system to prioritize
+    structural, infrastructure-based support over individual case assistance to increase
+    efficiency and reduce bureaucracy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

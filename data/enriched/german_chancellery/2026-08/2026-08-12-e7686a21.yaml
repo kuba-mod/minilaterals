@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  - Cabinet
+  - Deutsche Bundesbank
+  topics: []
+  location: null
+  position: The German government is introducing the 'Frühstartrente' to provide children
+    with state-funded seed capital for private, capital-market-based retirement savings.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

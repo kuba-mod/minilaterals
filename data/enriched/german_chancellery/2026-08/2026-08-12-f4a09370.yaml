@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesfinanzminister Klingbeil
+  topics: []
+  location: null
+  position: Germany is strengthening the customs administration through the Customs
+    Finance Justice Act to more effectively combat financial crime, money laundering,
+    and organized crime.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

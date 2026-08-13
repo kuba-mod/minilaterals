@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundesnachrichtendienst
+  - Bundesamt für Verfassungsschutz
+  - Unabhängiger Kontrollrat
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany is reforming its intelligence laws to modernize the powers of
+    the BND and BfV to better protect the state against domestic and foreign threats.
+  positions:
+    hybrid: Germany is updating intelligence capabilities to counter hybrid attacks
+      and cyber threats, including the use of AI for data analysis and active protective
+      measures.
+    defence: The government is strengthening national security by expanding the surveillance
+      and data storage powers of its intelligence services to align with international
+      partners.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Staatliche Souveränität und unser Gemeinwesen sind vermehrt mit
+          Bedrohungen aus dem In- und Ausland, etwa durch Spionage, Sabotage oder
+          hybride Angriffe, konfrontiert.
+    e3:
+      defence:
+        score: 1
+        evidence: Dadurch kommt Deutschland wieder auf Augenhöhe mit seinen Partnern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

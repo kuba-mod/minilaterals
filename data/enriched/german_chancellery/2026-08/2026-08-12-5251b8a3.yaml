@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Nina Warken
+  - Alexander Dobrindt
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany is reforming its intelligence laws to expand the operational capabilities
+    and surveillance powers of the BND and BfV to counter modern security threats.
+  positions:
+    hybrid: Germany is increasing the technical surveillance and active intervention
+      capabilities of its intelligence services to protect against hybrid attacks
+      on its society and security.
+    defence: The government is strengthening the security architecture by granting
+      intelligence services the power to conduct active measures, such as sabotaging
+      foreign IT systems and servers.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Sabotage, Spionage, Cyberangriffe und verdeckte Aktionen fremder
+          Mächte erfordern neue Antworten. Mit der Reform der Nachrichtendienste hin
+          zu echten Geheimdiensten stärken wir tragende Säulen unserer Sicherheitsarchitektur.
+    e3:
+      defence:
+        score: 1
+        evidence: In Zukunft sollen unsere Dienste auf Höhe der Zeit und auf Augenhöhe
+          mit unseren Partnern agieren können.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
