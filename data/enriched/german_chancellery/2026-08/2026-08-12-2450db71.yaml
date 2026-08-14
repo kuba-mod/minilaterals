@@ -1,0 +1,66 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- green_transition
+- energy
+- indo_pacific
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Koufen (BMZ)
+  - Dr. Rüll (BMF)
+  - Dr. Kock (BMI)
+  - Giese (AA)
+  - Haufe (BMUKN)
+  - Büddicker (BMV)
+  - Dr. Valdés Cifuentes (BMJV)
+  - Ungrad (BMWE)
+  - Hauck (BMLEH)
+  - Müller (BMVg)
+  - Teichmann (BMBFSFJ)
+  topics:
+  - hybrid
+  - green_transition
+  - energy
+  - indo_pacific
+  - migration
+  location: null
+  position: The German government announces various domestic legislative reforms and
+    outlines strategic priorities for international cooperation in energy, climate
+    adaptation, and migration management.
+  positions:
+    hybrid: Germany is monitoring a foreign disinformation campaign named 'Matrjoschka'
+      and strengthening the operational capabilities of its intelligence services
+      to counter hybrid threats.
+    green_transition: Germany aims to balance climate protection with economic prosperity
+      through a comprehensive climate protection program and the implementation of
+      a comprehensive CO2 pricing system.
+    energy: Germany is focusing on expanding cooperation in renewable energies and
+      a socially just energy transition, specifically targeting Indonesia as a focus
+      country.
+    indo_pacific: Germany is strengthening economic ties and private sector involvement
+      in Southeast Asia, particularly through a ministerial visit to Indonesia.
+    migration: Germany is implementing the Common European Asylum System and intends
+      to resume Dublin transfers to Italy and returns to Afghanistan.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Das Bundesamt für Verfassungsschutz hat heute offiziell vor einer
+          neuartigen ausländischen Desinformationskampagne unter dem Namen „Matrjoschka“
+          gewarnt.
+      green_transition:
+        score: 1
+        evidence: Die Bundesregierung hat ein umfassendes Klimaschutzprogramm beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

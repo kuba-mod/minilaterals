@@ -1,0 +1,51 @@
+actors:
+- PL
+- US
+issue_areas:
+- energy
+- rule_of_law
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Maciej Berek
+  - Joanna Knapińska
+  topics:
+  - energy
+  - rule_of_law
+  - hybrid
+  location: Warsaw, Poland
+  position: Poland is implementing fuel price reductions, seeking to reform the Constitutional
+    Tribunal, and countering Russian intelligence operations on its soil.
+  positions:
+    energy: The government is lowering the VAT on fuels from 23% to 8% to reduce prices
+      for citizens.
+    rule_of_law: The government aims to restore the Constitutional Tribunal's functionality
+      and independence from political influence.
+    hybrid: Poland is intensifying security services' actions to prevent Russian-ordered
+      assassinations and threats on its territory.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Trybunał musi zostać uzdrowiony, aby mógł ponownie pełnić swoją
+          konstytucyjną funkcję
+      hybrid:
+        score: 2
+        evidence: nasze służby będą intensyfikować działania, aby zapobiegać takim
+          zagrożeniom
+    visegrad:
+      energy:
+        score: 0
+        evidence: Przedłużająca się wojna na Bliskim Wschodzie powoduje wzrost cen
+          paliw na całym świecie, w tym w Polsce.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

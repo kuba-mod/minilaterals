@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France, chairing the International Contact Group, urges the DRC to implement
+    the FDLR disarmament protocol and calls for immediate de-escalation and respect
+    for international humanitarian law in the Great Lakes region.
+  positions:
+    defence: France demands the effective neutralization of the FDLR and warns that
+      any operational collaboration between the DRC and FDLR violates the Washington
+      Accords.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: The United States, Belgium, Canada, Denmark, the European Union,
+          France, Germany, the Netherlands, Sweden, Switzerland, and the United Kingdom,
+          as members of the International Contact Group (ICG) for the Great Lakes
+          region, chaired by France, issue the following statement
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

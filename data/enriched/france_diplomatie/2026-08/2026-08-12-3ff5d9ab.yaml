@@ -1,0 +1,34 @@
+actors:
+- DE
+- FR
+- UK
+- CZ
+- SK
+- EE
+- LV
+- LT
+- AU
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - High Representative of the European Union
+  topics:
+  - iran
+  location: null
+  position: France and its partners strongly condemn Iran's use of the death penalty
+    against protesters and demand an immediate end to these executions.
+  positions:
+    iran: France calls on the Iranian regime to end the use of the death penalty,
+      release arbitrarily detained individuals, and respect human rights.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
