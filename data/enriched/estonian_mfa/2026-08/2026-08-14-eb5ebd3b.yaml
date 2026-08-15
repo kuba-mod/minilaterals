@@ -1,0 +1,39 @@
+actors:
+- EE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Estonia focused its foreign policy on enhancing security, increasing international
+    influence, and supporting domestic businesses in foreign markets.
+  positions:
+    defence: Estonia worked with NATO allies to raise defense spending targets to
+      5% of GDP and conducted Article 4 consultations.
+    hybrid: Estonia strengthened sanctions against Russia and measures against its
+      shadow fleet following violations of Estonian airspace.
+  stances:
+    baltic:
+      defence:
+        score: 2
+        evidence: NATO liitlaste kokkulepe tõsta kaitsekulutuste sihttase 5 protsendini
+          SKP-st
+      hybrid:
+        score: 2
+        evidence: Venemaa-vastaste sanktsioonide ja varilaevastiku vastaste meetmete
+          tugevdamine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

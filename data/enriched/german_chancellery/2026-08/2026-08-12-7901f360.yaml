@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Klingbeil
+  - Alexander Dobrindt
+  - Stefanie Hubig
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany has adopted a joint action plan to strengthen the legal, technical,
+    and personnel capacities of Customs and the Federal Criminal Police Office to
+    combat organized crime.
+  positions:
+    rule_of_law: Germany aims to protect the rule of law by intensifying the fight
+      against organized crime, improving inter-agency data exchange through AI, and
+      increasing the seizure of criminal assets.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: hat das Bundeskabinett einen gemeinsamen Aktionsplan beschlossen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

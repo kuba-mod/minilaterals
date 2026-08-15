@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ms Louise Cantillon
+  topics: []
+  location: null
+  position: The United Kingdom has appointed Ms Louise Cantillon as the British High
+    Commissioner to New Zealand and Governor of the Pitcairn, Henderson, Ducie and
+    Oeno Islands.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

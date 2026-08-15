@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Theresa Lazaro
+  - Kao Kim Hourn
+  topics:
+  - indo_pacific
+  location: Manila, Philippines
+  position: Poland has joined the Treaty of Amity and Cooperation in Southeast Asia
+    to strengthen its presence in the Indo-Pacific and diversify its foreign policy.
+  positions:
+    indo_pacific: Poland aims to strengthen its presence in the Indo-Pacific region
+      and develop economic and sectoral cooperation with ASEAN states.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

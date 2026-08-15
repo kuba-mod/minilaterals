@@ -1,0 +1,44 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - Government
+  - Parliament
+  - Constitutional Council
+  topics:
+  - defence
+  location: null
+  position: France is implementing several key legislative reforms validated by the
+    Constitutional Council, focusing on national security, military capabilities,
+    end-of-life care, and the protection of minors online.
+  positions:
+    defence: France is doubling its military budget over ten years to ensure it maintains
+      the most effective army in Europe amidst an uncertain geopolitical climate.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: cette loi, qui concrétise le doublement en dix ans du budget des
+          armées, permettra à la France de continuer à disposer de l’armée la plus
+          efficace d’Europe, au bénéfice de la sécurité de ses concitoyens comme de
+          celle du continent
+    e3:
+      defence:
+        score: 1
+        evidence: permettra à la France de continuer à disposer de l’armée la plus
+          efficace d’Europe, au bénéfice de la sécurité de ses concitoyens comme de
+          celle du continent
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
