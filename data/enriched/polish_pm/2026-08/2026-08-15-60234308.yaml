@@ -1,0 +1,59 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister
+  topics:
+  - ukraine
+  - defence
+  - migration
+  location: Gdynia, Poland
+  position: 'Poland is strengthening its national security based on four pillars:
+    secure borders, strategic alliances, a modern military, and a strong economy.'
+  positions:
+    ukraine: Poland views supporting Ukraine in its war against Russia as an investment
+      in its own national security.
+    defence: Poland is investing heavily in its army and navy to create one of the
+      largest and most modern forces in Europe.
+    migration: Poland is committed to maintaining secure and tight borders to effectively
+      stop illegal crossings.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wsparcie Ukrainy w wojnie z Rosją, które jest inwestycją w bezpieczeństwo
+          Polski
+      defence:
+        score: 2
+        evidence: rozszerzone umowy o bezpieczeństwie i współpracy w dziedzinie militarnej,
+          m.in. z Holandią czy Niemcami
+    e3:
+      defence:
+        score: 2
+        evidence: z Francją traktat w Nancy i z Wielką Brytanią, traktat z Nordholt
+    visegrad:
+      defence:
+        score: 2
+        evidence: wielkie inwestycje w armię i marynarkę wojenną. Polskie wojsko będzie
+          już wkrótce największe w Europie
+      migration:
+        score: 2
+        evidence: osoby, które próbują nielegalnie przekroczyć naszą granicę, zostaną
+          skutecznie powstrzymane
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
