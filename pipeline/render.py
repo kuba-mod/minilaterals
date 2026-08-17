@@ -220,6 +220,14 @@ LOW_CONFIDENCE_N = 4
 # feed) doesn't read as a conspicuous gap at the left edge of the chart.
 TIMELINE_WEEKS = 12
 
+# A convergence cluster is the most recent time 2+ actors overlapped on a
+# topic — however long ago that was (see build_convergence_clusters) — so it
+# can be older than the score-density heatmap's most recent columns, which
+# only count statements landing in the last couple of weeks. Flag a cluster
+# "stale" past this many days so the template can mark it as past activity
+# rather than reading as this edition's news.
+CLUSTER_STALE_DAYS = 14
+
 COLOR_GREEN = "#4d6b38"
 COLOR_GREEN_LIGHT = "#6d8a4c"  # +1 row on the score-density heatmap — a lighter
 # shade than +2's COLOR_GREEN, so "supports" reads as related to but weaker
@@ -1032,6 +1040,7 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
             "actor_labels": ACTOR_LABELS,
             "actor_colors": ACTOR_COLORS,
             "issue_labels": ISSUE_LABELS,
+            "cluster_stale_days": CLUSTER_STALE_DAYS,
             "era_colors": ERA_COLORS,
             "era_labels": ERA_LABELS,
             "type_colors": TYPE_COLORS,
@@ -1058,6 +1067,8 @@ def render(output_dir: str = "docs", as_of: str | None = None) -> None:
         # whose events lack stances scores None and renders without a badge.
         cluster["convergence"] = score_cluster_stances(cluster)
         cluster["commentary"] = commentary.get(cluster_key(cluster))
+        days_stale = (edition_dt.date() - datetime.strptime(cluster["date_to"], "%Y-%m-%d").date()).days
+        cluster["stale"] = days_stale > CLUSTER_STALE_DAYS
 
     # Score-density heatmap: one column per calendar week, one row per stance
     # level (+2..-2), coloured by backing/neutral/opposing and sized by count.
