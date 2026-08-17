@@ -1,0 +1,22 @@
+actors:
+- PL
+- HU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: Budapest, Hungary
+  position: The Polish Embassy in Budapest is notifying the public and media about
+    potential congestion on its information hotline.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
