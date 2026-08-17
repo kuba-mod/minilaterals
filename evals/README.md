@@ -26,9 +26,13 @@ delta, and the report marks it `within noise`.
 
 ## The metrics
 
-`n` values below are for the current 46-case gold set. Ones marked ~ depend on
-what the model predicted, so they shift slightly run to run. Noise floors assume
-the measured flip rate of 0.042 (prompt v8, gemma4, 3 repeats).
+`n` values below are for the 46-case gold set the v8 baseline in `baselines.yaml`
+was measured against. The gold set has since grown to 50 cases — three added
+specifically to raise `goal_discrimination`'s and `abstention_recall`'s `n` (see
+those sections below) — so a fresh `--repeats 3 --record` run will show larger
+denominators than the table here until the baseline is re-recorded. Ones marked ~
+depend on what the model predicted, so they shift slightly run to run. Noise floors
+assume the measured flip rate of 0.042 (prompt v8, gemma4, 3 repeats).
 
 ### Classification — is the event tagged correctly?
 
@@ -87,7 +91,7 @@ only direct measurement.
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `abstention_recall` | correct omissions / topics that should be omitted | 14 | **0.071** |
+| `abstention_recall` | correct omissions / topics that should be omitted | 14 (~18 on the 50-case set) | **0.071** |
 | `abstention_precision` | correct omissions / **all** omissions the model made | ~3 | **0.333** |
 
 Recall answers "when it should stay quiet, does it?"; precision answers "when it
@@ -100,11 +104,17 @@ the number of omissions the model actually made — about 3 at v8 — so it read
 1.000 until it abruptly doesn't, and it cannot resolve a change smaller than a
 third. Do not quote it as evidence of anything without its `n`.
 
+`pl-defence24-days`, `pl-ukraine-accession-talks` and `de-fr-defence-council-preview`
+(added after the v8 baseline was recorded — see "Recorded baseline" below) add four
+more gold `null` labels, three of them real single-country MFA items rather than
+constructed traps. `abstention_recall`'s `n` should rise to about 18 assuming
+classification still surfaces the relevant pairs; it isn't yet re-measured.
+
 ### Goal discrimination — the prompt-v7 premise
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `goal_discrimination` | topics rated differently for two groupings / topics that should be | 8 | **0.125** |
+| `goal_discrimination` | topics rated differently for two groupings / topics that should be | 8 (~10 on the 50-case set) | **0.125** |
 
 One topic can mean different things to different formats — `defence` measured
 against AUKUS's goal is not `defence` measured against the Weimar Triangle's — so
@@ -115,7 +125,14 @@ and one flip is worth 0.125. An independent replication moved it −0.125 on an
 unchanged prompt, which is what forced `noise_floor()` to include the 1/n term.
 
 At n≈8 this metric distinguishes "usually" from "rarely" and nothing finer. More
-two-grouping cases are the single highest-value addition to the gold set.
+two-grouping cases are the single highest-value addition to the gold set — this is
+why `pl-defence24-days` (weimar/visegrad on `defence`, single-country Polish MFA
+item) and `pl-ukraine-accession-talks` (weimar/visegrad on `enlargement`) were
+added to `goal_discrimination.yaml`: both reach two groupings through the
+known-actor single-country rule rather than multi-country overlap, which the
+existing six cases hadn't covered. `n` should rise to about 10 once re-measured;
+even that is still small enough that a single flip is worth 0.100, so this metric
+stays directional rather than a hard gate for the foreseeable future.
 
 ### Coverage and mechanical checks
 
