@@ -1,0 +1,24 @@
+actors:
+- PL
+- HU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wojciech Zajączkowski
+  - Teresa Kubas-Hul
+  topics: []
+  location: Hungary
+  position: Poland is coordinating medical and consular assistance and the repatriation
+    of its citizens injured in a bus accident in Hungary.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

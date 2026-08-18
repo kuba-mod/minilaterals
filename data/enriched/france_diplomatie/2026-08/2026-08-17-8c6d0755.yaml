@@ -1,0 +1,38 @@
+actors:
+- FR
+issue_areas:
+- migration
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Rabab Fatima
+  topics:
+  - migration
+  - rule_of_law
+  location: null
+  position: France reaffirms its solidarity with the Afghan people and refuses to
+    normalize relations with the Taliban until they comply with international obligations
+    regarding human rights and inclusive governance.
+  positions:
+    migration: France continues to protect and welcome Afghan citizens forced to flee
+      their country, having hosted over 17,000 people since 2021.
+    rule_of_law: France condemns the systemic oppression of women and girls and supports
+      an independent international mechanism to document and investigate serious human
+      rights crimes in Afghanistan.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: secured the creation by the Human Rights Council in Geneva of an
+          independent international mechanism to document and investigate the most
+          serious crimes committed in Afghanistan
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
