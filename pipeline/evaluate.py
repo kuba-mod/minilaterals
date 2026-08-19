@@ -456,6 +456,32 @@ def load_baselines(path: Path | None = None) -> dict:
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
 
+def _version_key(version: str) -> tuple[int, str]:
+    """Sort "10" after "9" while still ordering any non-numeric key sensibly."""
+    return (int(version), "") if version.isdigit() else (sys.maxsize, version)
+
+
+def select_baseline(baselines: dict, version: str) -> tuple[dict | None, str | None]:
+    """The entry to compare this run against, and which version it came from.
+
+    The version being measured is preferred, which is what a replication wants.
+    But the run that matters most — the first measurement of a *new* prompt — is
+    by definition the one with no entry of its own, and comparing it against
+    nothing renders the whole delta column as "—" precisely when a reviewer needs
+    it. So fall back to the newest recorded version below this one: on a prompt
+    bump that is the predecessor, and its delta is the change under review.
+
+    Returns (None, None) when nothing recorded precedes this version.
+    """
+    if version in baselines:
+        return baselines[version], version
+    earlier = [v for v in baselines if _version_key(v) < _version_key(version)]
+    if not earlier:
+        return None, None
+    previous = max(earlier, key=_version_key)
+    return baselines[previous], previous
+
+
 def aggregate(per_run: list[dict[str, float]]) -> dict[str, dict]:
     """mean/min/max per metric across repeats."""
     keys = [k for k in METRIC_ORDER if any(k in m for m in per_run)]
@@ -528,6 +554,7 @@ def format_markdown(
     noise: float | None,
     meta: dict,
     denominators: dict[str, float] | None = None,
+    baseline_version: str | None = None,
 ) -> str:
     base_metrics = (baseline or {}).get("metrics") or {}
     lines = [
@@ -554,7 +581,14 @@ def format_markdown(
             delta = f"{diff:+.3f}{mark}"
         lines.append(f"| {key} | {stats['mean']:.3f} | {_fmt_n(count)} | {spread} | {delta} |")
     if not base_metrics:
-        lines += ["", f"_No recorded baseline for prompt_version {meta['prompt_version']}._"]
+        lines += ["", f"_No recorded baseline for prompt_version {meta['prompt_version']}, or any version below it._"]
+    elif baseline_version and baseline_version != str(meta["prompt_version"]):
+        lines += [
+            "",
+            f"_No baseline for prompt_version {meta['prompt_version']} yet — compared against version "
+            f"{baseline_version}, the newest recorded version below it. The prompt surface differs by design; "
+            "that difference is what the deltas measure._",
+        ]
     return "\n".join(lines)
 
 
@@ -688,7 +722,8 @@ def main() -> None:
     }
     noise = flip_rate(cases, runs)
     baselines = load_baselines()
-    baseline = baselines.get(str(enrich.PROMPT_VERSION))
+    baseline, baseline_version = select_baseline(baselines, str(enrich.PROMPT_VERSION))
+    is_predecessor = baseline is not None and baseline_version != str(enrich.PROMPT_VERSION)
 
     meta = {
         "prompt_version": enrich.PROMPT_VERSION,
@@ -708,7 +743,20 @@ def main() -> None:
         print(
             f"\nflip rate across {args.repeats} runs: {noise:.3f} — deltas smaller than this are noise, not movement."
         )
-    if baseline and baseline.get("prompt_surface_sha") != meta["prompt_surface_sha"]:
+    if is_predecessor:
+        print(
+            f"\nNo baseline for prompt_version {enrich.PROMPT_VERSION} yet — the column above compares against "
+            f"version {baseline_version}, the newest recorded version below it. The prompt surface differs by "
+            "design; that difference is the change being measured."
+        )
+        if baseline.get("rendered_surface_sha") != meta["rendered_surface_sha"]:
+            print(
+                "  Caveat: rendered_surface_sha moved too, so the data interpolated into the prompt (goal "
+                "sentences, format legend, topic list) changed as well and the deltas are not attributable to "
+                "the prompt edit alone."
+            )
+        print("  Record this run with --record.")
+    elif baseline and baseline.get("prompt_surface_sha") != meta["prompt_surface_sha"]:
         print(
             f"\nNOTE: the baseline for version {enrich.PROMPT_VERSION} was recorded against prompt surface "
             f"{baseline.get('prompt_surface_sha')}, not {meta['prompt_surface_sha']} — the prompt changed "
@@ -723,7 +771,7 @@ def main() -> None:
         print(f"\nNo baseline recorded for prompt_version {enrich.PROMPT_VERSION}. Record this run with --record.")
 
     if args.summary:
-        markdown = format_markdown(agg, baseline, noise, meta, denoms)
+        markdown = format_markdown(agg, baseline, noise, meta, denoms, baseline_version)
         print("\n" + markdown)
         summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
         if summary_path:
