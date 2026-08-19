@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Baiba Braže
+  - Minister of Foreign Affairs
+  topics:
+  - rule_of_law
+  location: null
+  position: Latvia emphasizes that strong and well-governed Eastern Partnership countries
+    are essential for European security.
+  positions:
+    rule_of_law: Latvia supports the role of supreme audit institutions in ensuring
+      good governance and stability in Eastern Partnership countries.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  topics:
+  - ukraine
+  - migration
+  location: null
+  position: Germany reaffirms its commitment as an essential partner to international
+    aid organizations, emphasizing that humanitarian aid is both a moral imperative
+    and a strategic security and economic interest.
+  positions:
+    ukraine: Germany provides aid to Ukraine to counter the devastating consequences
+      of the Russian war of aggression and Putin's depopulation strategy.
+    migration: Germany views humanitarian aid as a means to reduce the causes of flight
+      by creating perspectives and strengthening stability.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: In der Ukraine leiden Menschen jeden Tag unter dem russischen Angriffskrieg
+          und seinen verheerenden Folgen – hier helfen wir, damit Putins Entvölkerungsstrategie
+          nicht aufgeht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

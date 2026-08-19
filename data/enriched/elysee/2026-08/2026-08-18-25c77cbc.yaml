@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Spouse of the President of the Republic
+  - Yvette Roudy
+  topics: []
+  location: null
+  position: The President of the Republic and his spouse pay tribute to the memory
+    of Yvette Roudy, a pioneer of feminism and equality in France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

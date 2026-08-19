@@ -1,0 +1,46 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Stéphane Bern
+  topics:
+  - ukraine
+  - defence
+  location: Bormes-les-Mimosas, France
+  position: President Macron emphasizes the continuity of French courage and commitment
+    to liberty through the commemoration of the liberation of Bormes-les-Mimosas and
+    the announcement of increased military investment.
+  positions:
+    ukraine: France positions itself as a power of liberty by leading a coalition
+      of volunteers for Ukraine.
+    defence: France is doubling its military budget and investing 36 billion euros
+      between 2026-2030 to enhance capabilities in cyber, drones, and innovation.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Elle l'est pour le continent européen en ayant pris la tête de cette
+          coalition des volontaires pour l'Ukraine.
+      defence:
+        score: 2
+        evidence: permettra 36 milliards d'euros d'investissements nouveaux pour nos
+          armées sur la période 2026-2030
+    e3:
+      defence:
+        score: 0
+        evidence: Ayez confiance dans l'Europe qui est aussi la source de notre indépendance
+          et qui nous permettra ensemble de tenir dans ce monde disloqué
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,47 @@
+actors:
+- PL
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  - energy
+  location: Warsaw, Poland
+  position: Poland is accelerating strategic infrastructure investments to establish
+    a leading role in the Baltic region for both defense and economic purposes.
+  positions:
+    defence: Poland is strengthening its maritime capabilities through the Miecznik
+      frigate program and accelerating key infrastructure projects to enhance national
+      security.
+    energy: Poland is speeding up investments related to its nuclear program and the
+      construction of a nuclear power plant in Pomerania.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: radykalnie przyspieszymy proces przygotowania i realizacji kluczowych
+          inwestycji infrastrukturalnych, które mają wpływ na obronność i gospodarkę
+          Polski
+    visegrad:
+      defence:
+        score: 2
+        evidence: Dzisiaj przyjmiemy projekt ustawy, zgodnie z którym radykalnie przyspieszymy
+          proces przygotowania i realizacji kluczowych inwestycji infrastrukturalnych,
+          które mają wpływ na obronność i gospodarkę Polski
+      energy:
+        score: 2
+        evidence: Przyspieszone zostaną także inwestycje związane z programem jądrowym
+          i budową elektrowni jądrowej na Pomorzu.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

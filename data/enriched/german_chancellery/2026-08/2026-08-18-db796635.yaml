@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has implemented a new law to accelerate the cross-border request
+    and transfer of electronic evidence within the EU to combat transnational crime.
+  positions:
+    rule_of_law: Germany is enhancing judicial cooperation and law enforcement capabilities
+      by allowing direct requests for digital evidence from providers in other EU
+      member states.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Das deutsche Gesetz zur Umsetzung der europäischen Richtlinie ist
+          am 18. August 2026 in Kraft getreten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
