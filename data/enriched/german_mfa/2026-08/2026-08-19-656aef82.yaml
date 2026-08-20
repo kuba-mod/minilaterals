@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Dr. Lars Castellucci, Federal Government Commissioner for Human Rights Policy
+    and Humanitarian Aid
+  topics: []
+  location: null
+  position: Germany reaffirms its commitment to humanitarian aid by providing over
+    one billion euros this year and calling for the protection of aid workers and
+    adherence to international humanitarian law.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

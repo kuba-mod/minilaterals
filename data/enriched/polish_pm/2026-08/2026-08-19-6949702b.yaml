@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Andrzej Domański
+  topics:
+  - defence
+  location: null
+  position: Poland plans to reform its tax system starting in 2027 to reduce the burden
+    on the middle class by increasing taxes on high-earners and large corporations.
+  positions:
+    defence: The government notes that the middle class currently bears a significant
+      portion of the funding for state expenditures on defense.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: klasie średniej, na której barkach w dużej mierze spoczywa finansowanie
+          państwa i wydatków na obronność
+    visegrad:
+      defence:
+        score: 1
+        evidence: klasie średniej, na której barkach w dużej mierze spoczywa finansowanie
+          państwa i wydatków na obronność
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

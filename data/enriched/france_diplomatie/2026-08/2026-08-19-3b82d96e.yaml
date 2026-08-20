@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot
+  - Ambassador of the Islamic Republic of Iran
+  topics:
+  - iran
+  location: null
+  position: France has declared two employees of the Iranian Embassy persona non grata
+    in response to an attack on French diplomatic staff in Iran.
+  positions:
+    iran: France is expelling two Iranian diplomats following a serious attack by
+      Iranian security services against French Embassy employees in Iran.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: declare two employees of the Iranian Embassy in France persona non
+          grata
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

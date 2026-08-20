@@ -1,0 +1,65 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- indo_pacific
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Wadephul (Foreign Minister)
+  - Ignazio Cassis (Swiss Foreign Minister)
+  - Klingbeil (Vice Chancellor and Finance Minister)
+  - Fichtner
+  - Kock (Interior Ministry)
+  - Müller
+  - Deschauer
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - indo_pacific
+  - migration
+  location: null
+  position: The German government provides updates on domestic climate adaptation,
+    diplomatic relations with Switzerland and Italy, and its continued support for
+    Ukraine and security cooperation in the Indo-Pacific.
+  positions:
+    ukraine: Germany remains committed to supporting Ukraine and will not be intimidated
+      by Russian threats.
+    defence: Germany continues to provide military support to Ukraine while balancing
+      transparency with security needs.
+    green_transition: The government is discussing a Basic Law amendment to better
+      structure climate adaptation and heat protection measures across federal, state,
+      and municipal levels.
+    energy: Germany maintains stable gas supply security through LNG terminals and
+      is transitioning its energy supply to be climate-neutral.
+    indo_pacific: Germany maintains close and trusting bilateral security cooperation
+      with South Korea and supports regional stability.
+    migration: Germany emphasizes close and trusting cooperation with Italy within
+      the framework of the Common European Asylum System.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wir lassen uns auch in unserer Unterstützung für die Ukraine nicht
+          einschüchtern
+      green_transition:
+        score: 1
+        evidence: dass wir bei der Energieversorgung in Deutschland auf einem guten
+          Pfad sind, sie klimaneutral umzustellen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

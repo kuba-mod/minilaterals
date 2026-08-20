@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Tiina Intelmann
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  location: null
+  position: Estonia's ambassador to Ukraine, Tiina Intelmann, presented her credentials
+    to President Volodymyr Zelenskyy.
+  positions:
+    ukraine: Estonia has formally appointed and credentialed its ambassador to Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
