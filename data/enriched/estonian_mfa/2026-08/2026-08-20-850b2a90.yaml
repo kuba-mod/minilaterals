@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia commemorates the 35th anniversary of the restoration of its independence,
+    emphasizing that freedom is a value that must be defended daily.
+  positions:
+    defence: Estonia asserts that freedom is a value that requires constant protection
+      and defense.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: vabadus on väärtus, mida tuleb kaitsta iga päev
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

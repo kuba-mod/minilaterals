@@ -1,0 +1,54 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+- hybrid
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Sebastian Hille (Deputy Government Spokesperson)
+  - Giese (Representative of the Foreign Office)
+  - Ungrad (Representative of the Ministry of Economics)
+  - Bowinkelmann (Representative of the Ministry of the Interior)
+  topics:
+  - defence
+  - hybrid
+  - energy
+  - migration
+  location: Berlin, Germany
+  position: Germany emphasizes strengthening its economic competitiveness, condemns
+    Israeli settlement expansion in the West Bank, supports the International Criminal
+    Court against US sanctions, and monitors hybrid threats from Russia.
+  positions:
+    defence: Germany maintains a naval presence in the Mediterranean for tactical
+      exercises and operational readiness.
+    hybrid: Germany is highly vigilant against hybrid threats, specifically the recruitment
+      of low-level agents by Russia for espionage or attacks.
+    energy: Germany is prioritizing winter gas supply security by urging traders to
+      fill storage and diversifying LNG sources.
+    migration: Germany continues to coordinate with Italy on the implementation of
+      the common European asylum system and the Dublin Agreement.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Wir beobachten dieses Phänomen schon geraume Zeit. Vor allen Dingen
+          die Nachrichtendienste, der Verfassungsschutz und die Sicherheitsbehörden
+          beobachten dieses Phänomen.
+    e3:
+      defence:
+        score: 0
+        evidence: Wie Sie wissen, haben wir derzeit zwei Boote im Mittelmeer, die
+          dort in die taktischen Übungen eingebunden sind.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

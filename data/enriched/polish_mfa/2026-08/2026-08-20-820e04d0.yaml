@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador of Israel in Warsaw
+  - Ministry of Foreign Affairs
+  topics: []
+  location: Warsaw, Poland
+  position: Poland criticizes the lack of progress in investigating a 2024 tragedy
+    and demands full cooperation and accountability from the Israeli side.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

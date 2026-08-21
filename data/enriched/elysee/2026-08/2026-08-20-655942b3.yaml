@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - leaders of Germany
+  - leaders of Belgium
+  - leaders of Canada
+  - leaders of France
+  - leaders of Italy
+  - leaders of Norway
+  - leaders of the Netherlands
+  - leaders of the United Kingdom
+  topics: []
+  location: null
+  position: France, alongside other partners, condemns the Israeli government's E1
+    settlement project as illegal under international law and a threat to the two-state
+    solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

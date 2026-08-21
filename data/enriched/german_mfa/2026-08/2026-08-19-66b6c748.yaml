@@ -1,0 +1,65 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Ignazio Cassis
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  - energy
+  location: Bern, Switzerland
+  position: Germany seeks to strengthen its European partnerships and diversify economic
+    dependencies to increase resilience in a more hostile geopolitical environment.
+  positions:
+    ukraine: Germany supports Ukraine with military aid and defends international
+      law against Russian aggression.
+    defence: Germany is committed to strengthening NATO and aims to reach the 5% defense
+      spending target ahead of schedule.
+    hybrid: Germany recognizes the vulnerability of strategic supply routes and the
+      threat of hybrid attacks on critical infrastructure.
+    green_transition: Germany views the energy transition as a challenging process
+      that requires innovation and international cooperation.
+    energy: Germany is pursuing the diversification of energy sources to reduce economic
+      vulnerabilities and dependencies.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: gemeinsam die Ukraine mit militärischer Unterstützung im Umfang
+          von mindestens 70 Milliarden Euro jeweils in diesem und im nächsten Jahr
+          zu unterstützen
+      defence:
+        score: 1
+        evidence: Das 5%-Ziel werden wir noch deutlich vor der Zeit erreichen.
+      hybrid:
+        score: 1
+        evidence: Wo Russland und andere feindlich gesinnte Akteure hybrid gegen unsere
+          Interessen vorgehen.
+      green_transition:
+        score: 1
+        evidence: die nicht immer einfache Energiewende strapaziert sowohl ihre Befürworter
+          als auch ihre Gegner
+    e3:
+      defence:
+        score: 0
+        evidence: Da setzen wir selbstverständlich auf die NATO .
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- FR
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the International Criminal Court
+  - member of the Court’s Office of the Prosecutor
+  - Minister for Europe and Foreign Affairs
+  - Deputy Prosecutor
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns US sanctions against the International Criminal Court
+    and reaffirms its unwavering support for the Court's independence and mission.
+  positions:
+    rule_of_law: France views US coercive measures against the ICC as an attack on
+      judicial independence and the Rome Statute.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France condemns all forms of threats and coercive measures against
+          the Court, its staff and the civil society organizations that support it.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

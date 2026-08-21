@@ -1,0 +1,31 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of Foreign Affairs
+  topics:
+  - hybrid
+  location: null
+  position: Latvia has added Russian citizen Sergei Bochkaryov to the list of persons
+    persona non grata and banned his entry into the country.
+  positions:
+    hybrid: Latvia is taking restrictive measures against a Russian citizen by declaring
+      him persona non grata.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: iekļaut Krievijas pilsoni Sergeju Bočkarjovu Latvijas Republikai
+          nevēlamo personu sarakstā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

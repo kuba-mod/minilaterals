@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Dr. Wolfram Weimer, Staatsminister für Kultur und Medien
+  - Prof. Manos Tsangaris, Präsident der Akademie der Künste
+  - Andrea Gebhard, Präsidentin der Bundesarchitektenkammer
+  - Dr. Gerhard Feige, Bischof des Bistums Magdeburg
+  - Prof. Dr. Maria Böhmer, Präsidentin der Deutschen UNESCO-Kommission
+  - Boris Kochan, Präsident Deutscher Designtag e.V.
+  - Olaf Zimmermann, Geschäftsführer Deutscher Kulturrat e.V.
+  - Menekse Wenzler, Präsidentin Deutscher Museumsbund e.V.
+  - Burkhard Jung, Präsident des Deutschen Städtetages
+  - Prof. Dr. Meike Hopp, Vorständin Deutsches Zentrum Kulturgutverluste
+  - Karsten Wolkenhauer, Kirchenpräsident der Evangelischen Landeskirche Anhalts
+  - Lutz Dietzold, Geschäftsführer des German Design Council – Rat für Formgebung
+  - Paul Spies, Präsident ICOM Deutschland e.V.
+  - Holger Schwannecke, Generalsekretär Zentralverband des Deutschen Handwerks
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany, through a broad coalition of cultural and social institutions,
+    has signed the Bauhaus Manifesto 2026 to defend freedom of artistic thought and
+    democratic values against populist and anti-democratic attacks.
+  positions:
+    rule_of_law: Germany emphasizes that cultural innovation and the principles of
+      the Bauhaus are essential for the development and defense of a democratic, humanist
+      society against anti-democratic forces.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: das Manifest ist ein Plädoyer dafür, die Prinzipien des Bauhauses
+          gegen demokratiefeindliche Angriffe zu verteidigen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
