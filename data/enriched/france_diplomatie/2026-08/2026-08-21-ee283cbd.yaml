@@ -1,0 +1,31 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - spokespeople for the Foreign Ministries of France and Germany
+  topics:
+  - rule_of_law
+  location: null
+  position: France, together with Germany, condemns the conviction of Chow Hang-tung
+    and calls for her immediate release and the respect of civil rights in Hong Kong.
+  positions:
+    rule_of_law: France asserts that peaceful advocacy for human rights is not a crime
+      and urges Beijing and Hong Kong to respect civil rights and freedoms.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Peaceful advocacy for human rights does not constitute a crime.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

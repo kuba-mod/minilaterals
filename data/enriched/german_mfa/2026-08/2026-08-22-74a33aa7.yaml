@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Thomas Rachel, Federal Government Commissioner for Freedom of Religion and Belief
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany reaffirms its uncompromising commitment to the universal and indivisible
+    human right to freedom of religion and belief and expresses solidarity with victims
+    of religious violence.
+  positions:
+    rule_of_law: Germany emphasizes that freedom of religion and belief is a guaranteed
+      right under international law and the German Basic Law, calling for the protection
+      of those targeted by discrimination and violence.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Meine Entschlossenheit möchte ich ausdrücklich bekräftigen, weiterhin
+          kompromisslos für das universelle und unteilbare Menschenrecht auf Religions-
+          und Weltanschauungsfreiheit einzutreten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

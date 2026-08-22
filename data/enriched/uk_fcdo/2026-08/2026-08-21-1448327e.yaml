@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Baroness Winterton of Doncaster
+  topics:
+  - rule_of_law
+  - indo_pacific
+  location: Hong Kong
+  position: The United Kingdom expresses concern and responds to the guilty verdicts
+    against Hong Kong Alliance leaders under the national security law.
+  positions:
+    rule_of_law: The UK opposes the use of the national security law to convict activists
+      Lee Cheuk-yan and Chow Hang-tung.
+    indo_pacific: The UK Minister for the Indo-Pacific is monitoring the legal situation
+      and human rights developments in Hong Kong.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

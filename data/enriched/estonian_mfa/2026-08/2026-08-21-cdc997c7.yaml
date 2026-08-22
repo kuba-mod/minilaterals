@@ -1,0 +1,23 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics: []
+  location: Toronto, Canada
+  position: Estonia views the opening of the international Estonian CENTRE in Toronto
+    as a sign of the vitality of the Estonian diaspora and their commitment to preserving
+    Estonian language and culture.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

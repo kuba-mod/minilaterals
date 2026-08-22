@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Spokespersons of the Foreign Ministries of Germany and France
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany, together with France, deeply regrets the conviction of Chow Hang-tung
+    and demands her immediate release.
+  positions:
+    rule_of_law: Germany calls on the authorities in Beijing and Hong Kong to respect
+      all civil rights and freedoms and asserts that peaceful advocacy for human rights
+      is not a criminal offense.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: rufen die Behörden in Peking und Hongkong nachdrücklich dazu auf,
+          alle bürgerlichen Rechte und Freiheiten zu achten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

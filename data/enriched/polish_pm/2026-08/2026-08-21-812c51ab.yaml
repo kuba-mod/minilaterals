@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Prime Minister
+  - Andrzej Domański
+  topics:
+  - defence
+  - energy
+  location: null
+  position: The Polish government is prioritizing national security, healthcare reform,
+    and strategic investments while maintaining fiscal responsibility and budget neutrality
+    through tax adjustments.
+  positions:
+    defence: Poland is prioritizing security as its top budget priority, allocating
+      5% of GDP to defense and border protection.
+    energy: The government is investing in energy projects to reduce energy costs
+      for citizens.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Nasze 5% PKB na obronność, to średnio dwa razy więcej niż inni członkowie
+          NATO
+    visegrad:
+      defence:
+        score: 2
+        evidence: Nasze 5% PKB na obronność, to średnio dwa razy więcej niż inni członkowie
+          NATO
+      energy:
+        score: 1
+        evidence: Inwestycje w energetykę przyczynią się także do obniżenia kosztów
+          energii
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

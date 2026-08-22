@@ -1,0 +1,24 @@
+actors:
+- UK
+- AU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - foreign ministries of Australia, Canada and the United Kingdom
+  topics: []
+  location: null
+  position: The United Kingdom, alongside Australia and Canada, issued a joint statement
+    regarding Israel closing the investigation into strikes on the World Central Kitchen
+    convoy in Gaza.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

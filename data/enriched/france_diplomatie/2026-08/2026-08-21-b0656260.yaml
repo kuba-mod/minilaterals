@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - leaders of France
+  - leaders of Germany
+  - leaders of Italy
+  - leaders of the Netherlands
+  - leaders of Norway
+  - leaders of the United Kingdom
+  topics: []
+  location: null
+  position: France and its partners condemn the E1 settlement project in the West
+    Bank as illegal under international law and urge Israel to retract the plans immediately
+    to preserve the two-state solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
