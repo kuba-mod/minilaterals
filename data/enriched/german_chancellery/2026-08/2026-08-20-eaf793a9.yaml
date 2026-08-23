@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Leaders of the United Kingdom
+  - Leaders of France
+  - Leaders of Germany
+  - Leaders of Italy
+  - European Commission
+  - Leaders of the Netherlands
+  - Leaders of Canada
+  - Leaders of Norway
+  - Leaders of Australia
+  - Leaders of New Zealand
+  - Leaders of Sweden
+  - Leaders of Belgium
+  - Leaders of Spain
+  - Leaders of Austria
+  - Leaders of Greece
+  topics: []
+  location: null
+  position: Germany, as part of a joint coalition, condemns the Israeli government's
+    E1 settlement project as illegal under international law and urges its immediate
+    retraction to preserve the two-state solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

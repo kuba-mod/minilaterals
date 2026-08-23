@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Chancellor Merz
+  - Landrat
+  topics:
+  - green_transition
+  location: Hürtgenwald, Germany
+  position: Chancellor Merz expresses gratitude to emergency services for fighting
+    the Hürtgenwald forest fire and emphasizes the importance of subsidiarity and
+    volunteer organizations in disaster management.
+  positions:
+    green_transition: Germany acknowledges that climate change is increasing the frequency
+      of large-scale disasters and commits to both fighting climate change and improving
+      preparedness to live with its effects.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Wir werden alles tun, um den Klimawandel zurückzudrängen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Kyiv, Ukraine
+  position: Germany reaffirms its role as Ukraine's most important European partner,
+    providing targeted support for peace, winter preparation, and strategic cooperation.
+  positions:
+    ukraine: Germany supports Ukraine's fight for security and freedom and aims to
+      deepen a new strategic partnership on all levels.
+    defence: Germany intends to enhance technical and economic cooperation with Ukraine,
+      specifically regarding the joint development of drone systems.
+    energy: Germany seeks to provide targeted support to protect Ukraine's energy
+      infrastructure against Russian attacks in preparation for the coming winter.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Darüber, wie Deutschland als wichtigster Partner in Europa gezielt
+          unterstützen kann.
+      defence:
+        score: 2
+        evidence: unsere technische und wirtschaftliche Zusammenarbeit gehen, etwa
+          bei der gemeinsamen Entwicklung von Drohnensystemen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
