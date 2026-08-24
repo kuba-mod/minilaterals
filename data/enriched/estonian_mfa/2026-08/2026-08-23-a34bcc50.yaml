@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia commemorates the anniversary of the Molotov-Ribbentrop Pact, asserting
+    that Russian attempts to change borders by force will fail.
+  positions:
+    ukraine: Estonia condemns the historical precedent of the Molotov-Ribbentrop Pact
+      and rejects current Russian attempts to forcibly alter international borders.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

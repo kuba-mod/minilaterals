@@ -32,6 +32,9 @@ extracted:
         score: 1
         evidence: Turcja pozostaje jednym z naszych kluczowych partnerów na południowo-wschodniej
           flance NATO
+      enlargement:
+        score: 1
+        evidence: Polska niezmiennie wspiera również europejską perspektywę Turcji
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'
