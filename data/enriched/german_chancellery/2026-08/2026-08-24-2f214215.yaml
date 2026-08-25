@@ -1,0 +1,61 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Andy Burnham
+  - Emmanuel Macron
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Kyiv, Ukraine
+  position: Germany, as part of the Coalition of the Willing, reaffirms its steadfast
+    support for Ukraine's sovereignty and territorial integrity through increased
+    military aid, sanctions against Russia, and energy assistance.
+  positions:
+    ukraine: Germany supports Ukraine's inherent right to defend itself and calls
+      for a full, immediate, and unconditional ceasefire from the line of contact.
+    defence: Germany commits to increasing military support, prioritizing air defence,
+      and sharing technologies via the Anti-Ballistic Missile Coalition.
+    energy: Germany agrees on the urgency of providing immediate assistance to Ukraine's
+      energy sector through the Ukraine Energy Support Fund and specialist equipment.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: determination to increase military support to Ukraine, strengthen
+          its air defence as a matter of urgent priority, enhance cooperation with
+          its defence industry, and share relevant technologies
+      defence:
+        score: 2
+        evidence: The Coalition would continue to prepare the Multinational-Force
+          Ukraine to deploy once a credible cessation of hostilities was in place
+    e3:
+      defence:
+        score: 2
+        evidence: Prime Minister Andy Burnham, President Emmanuel Macron and Chancellor
+          Friedrich Merz chaired the meeting alongside President Zelenskyy
+    aukus:
+      defence:
+        score: 0
+        evidence: enhance cooperation with its defence industry, and share relevant
+          technologies, including through the Anti-Ballistic Missile Coalition
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

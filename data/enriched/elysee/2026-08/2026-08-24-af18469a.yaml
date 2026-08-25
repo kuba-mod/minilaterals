@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - British Prime Minister
+  - German Chancellor
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France co-presided over a meeting of the Coalition of the Willing to reinforce
+    support for Ukraine and increase pressure on Russia.
+  positions:
+    ukraine: France reaffirms its resolute support for the Ukrainian people's fight
+      to preserve their sovereignty and independence.
+    defence: France is determined to strengthen support for Ukraine's defense against
+      Russian aggression and continue work on security guarantees.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: les dirigeants ont réitéré leur détermination à renforcer leur soutien
+          à l'Ukraine
+    e3:
+      defence:
+        score: 2
+        evidence: Le Président de la République a co-présidé ce lundi, avec le Premier
+          ministre britannique et le Chancelier allemand, une réunion en format hybride
+          de la Coalition des Volontaires
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

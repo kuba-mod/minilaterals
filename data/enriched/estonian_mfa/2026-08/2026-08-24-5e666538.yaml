@@ -1,0 +1,33 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Edvards Smiltēns
+  - Rita Tamašunienė
+  topics:
+  - ukraine
+  - migration
+  location: Tallinn, Estonia
+  position: Estonia is coordinating with Latvia and Lithuania to ensure Russia is
+    held accountable for its aggression against Ukraine and international crimes.
+  positions:
+    ukraine: Estonia emphasizes that Russia must be held accountable for its anti-Ukraine
+      aggression and international crimes.
+    migration: Estonia discussed issues related to migration with its Baltic partners.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

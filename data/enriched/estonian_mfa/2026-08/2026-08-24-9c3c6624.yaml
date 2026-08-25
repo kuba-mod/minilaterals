@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  - heads of Estonian embassies and representations
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Foreign Minister Margus Tsahkna outlined Estonia's foreign policy priorities
+    and emphasized the protection of national security and interests.
+  positions:
+    defence: Estonia is focused on protecting its security and interests through the
+      dedicated work of its diplomatic representations.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Eesti julgeoleku, heaolu ja huvide kaitsmise eest
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

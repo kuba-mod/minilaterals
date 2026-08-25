@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Jonas Gahr Støre
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany views Norway as a reliable friend and an indispensable partner
+    in terms of values, security, and economy.
+  positions:
+    ukraine: Germany intends to discuss the continued support of Ukraine with the
+      Norwegian Prime Minister.
+    defence: Germany will exchange views on security and defense policy issues.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: weitere Unterstützung der Ukraine
+      defence:
+        score: 0
+        evidence: sicherheits- und verteidigungspolitische Themen
+    e3:
+      defence:
+        score: 0
+        evidence: Die Regierungschefs werden sich bei einem gemeinsamen Abendessen
+          über die bilateralen Beziehungen, sicherheits- und verteidigungspolitische
+          Themen sowie die weitere Unterstützung der Ukraine austauschen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

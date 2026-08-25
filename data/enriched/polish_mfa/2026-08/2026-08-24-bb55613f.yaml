@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Prime Minister Sikorski
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: null
+  position: Poland reaffirms its unwavering support for Ukraine's defense efforts
+    and advocates for continued international pressure on Russia.
+  positions:
+    ukraine: Poland supports Ukraine's defense against Russian aggression and calls
+      for the cessation of hostilities.
+    defence: Poland emphasizes the critical need to maintain Ukraine's capability
+      to defend against missile threats.
+    energy: Poland expresses readiness to support the continuity of energy supplies
+      for the upcoming winter season.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: potwierdzili swoje niezachwiane wsparcie dla wysiłków obronnych
+          Ukrainy
+    visegrad:
+      defence:
+        score: 1
+        evidence: potwierdzili swoje niezachwiane wsparcie dla wysiłków obronnych
+          Ukrainy
+      energy:
+        score: 1
+        evidence: Zapewnili o gotowości wsparcia również w zakresie zapewnienia ciągłości
+          dostaw energii
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

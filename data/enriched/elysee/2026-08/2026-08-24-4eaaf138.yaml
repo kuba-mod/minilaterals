@@ -1,0 +1,62 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Andy Burnham
+  - Emmanuel Macron
+  - Friedrich Merz
+  - Volodymyr Zelensky
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Kiev, Ukraine
+  position: France reaffirms its unwavering support for Ukraine's sovereignty and
+    independence through increased military aid, economic sanctions against Russia,
+    and long-term security guarantees.
+  positions:
+    ukraine: France supports Ukraine's right to self-defense and calls for an immediate,
+      unconditional ceasefire to establish a just and lasting peace.
+    defence: France commits to increasing military support, prioritizing air defense,
+      and cooperating with Ukraine's defense industry via the Anti-Ballistic Coalition.
+    energy: France emphasizes the urgency of providing immediate aid to the Ukrainian
+      energy sector before winter through the Ukraine Energy Support Fund.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: détermination à accroître le soutien militaire apporté à l’Ukraine,
+          à renforcer sa défense aérienne en priorité absolue, à intensifier la coopération
+          avec son industrie de défense et à partager les technologies pertinentes
+      defence:
+        score: 2
+        evidence: La Coalition continuerait à préparer la Force multinationale Ukraine
+          en vue de son déploiement dès lors qu'un cessez-le-feu crédible serait en
+          place
+    e3:
+      defence:
+        score: 2
+        evidence: Le Premier ministre Andy Burnham, le Président Emmanuel Macron et
+          le Chancelier Friedrich Merz ont présidé la réunion
+    aukus:
+      defence:
+        score: 0
+        evidence: intensifier la coopération avec son industrie de défense et à partager
+          les technologies pertinentes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
