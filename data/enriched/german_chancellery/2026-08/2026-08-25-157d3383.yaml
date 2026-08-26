@@ -1,0 +1,56 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  location: Neuhardenberg, Germany
+  position: Germany aims to restore economic growth and competitiveness while strengthening
+    national security against hybrid threats and adapting to climate change.
+  positions:
+    ukraine: Germany will continue its long-term support for Ukraine to force peace
+      negotiations.
+    defence: The government is focusing on utilizing technology for security, such
+      as drone defense and person screening.
+    hybrid: Germany is increasing protection against hybrid attacks and intends to
+      impose a cost on the perpetrators.
+    green_transition: Germany seeks to curb climate change and better adapt the country
+      to its consequences, such as heat and drought.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Bundesregierung setzt die Unterstützung der Ukraine mit langem
+          Atem fort.
+      hybrid:
+        score: 1
+        evidence: Die Bundesregierung stärkt deshalb den Schutz, zuletzt durch die
+          Einrichtung des Drohnenzentrums in Magdeburg Cochstedt.
+      green_transition:
+        score: 1
+        evidence: Wir müssen den Klimawandel weiter eindämmen und zugleich unser Land
+          besser an die Folgen des Klimawandels anpassen.
+    e3:
+      defence:
+        score: 0
+        evidence: Die Bundesregierung stärkt deshalb den Schutz, zuletzt durch die
+          Einrichtung des Drohnenzentrums in Magdeburg Cochstedt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

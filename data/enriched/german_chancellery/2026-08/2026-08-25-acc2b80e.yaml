@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Dorothee Bär
+  - Karsten Wildberger
+  - Verena Hubertz
+  - Lars Klingbeil
+  - Alexander Dobrindt
+  - Warken
+  - Linnemann
+  - Krichbaum
+  - Wadephul
+  - Prien
+  - Boris Pistorius
+  - Sautter
+  topics:
+  - defence
+  location: Neuhardenberg, Germany
+  position: Germany aims to strengthen its industrial competitiveness, economic growth,
+    and digital sovereignty through innovation and the reduction of bureaucracy.
+  positions:
+    defence: Germany intends to integrate technological innovation and AI into its
+      defense capabilities to ensure the country remains secure and maintains a deterrent
+      effect.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Deutschland schreckt ab
+    e3:
+      defence:
+        score: 0
+        evidence: 'Mit Blick auf Deutschlands Sicherheit nannte der Kanzler drei Grundsätze:
+          Deutschland bleibt ein sicheres Land. Deutschland schreckt ab. Und: Deutschland
+          hält Kurs.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

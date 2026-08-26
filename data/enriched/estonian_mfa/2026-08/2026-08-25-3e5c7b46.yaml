@@ -1,0 +1,25 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Estonian ambassadors
+  - exporting Estonian entrepreneurs
+  - Ministry of Foreign Affairs
+  - Enterprise and Innovation Foundation (EIS)
+  topics: []
+  location: Tallinn, Estonia
+  position: Estonia is launching an export portal to centralize export services, target
+    market information, and events for businesses.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

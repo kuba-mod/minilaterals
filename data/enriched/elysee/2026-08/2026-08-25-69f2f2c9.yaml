@@ -1,0 +1,46 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron, président de la République française
+  - Mohammed ben Salmane ben Abdelaziz Al Saoud, Prince héritier et Premier ministre
+    du Royaume d’Arabie saoudite
+  topics:
+  - defence
+  - energy
+  - iran
+  location: France
+  position: France reaffirms its strategic partnership with Saudi Arabia to enhance
+    cooperation across defense, energy, and regional stability in the Middle East.
+  positions:
+    defence: France commits to strengthening defense cooperation with Saudi Arabia,
+      specifically in armaments and training.
+    energy: France seeks to deepen strategic cooperation in oil, petrochemicals, renewable
+      energy, and nuclear energy for peaceful purposes.
+    iran: France advocates for a negotiated solution to avoid escalation and a diplomatic
+      resolution to ensure the peaceful nature of Iran's nuclear program.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: elles ont adopté une déclaration renforçant leur coopération de
+          défense, notamment dans les domaines de l’armement et de la formation
+    e3:
+      iran:
+        score: 1
+        evidence: Ils ont appelé l’Iran à reprendre une pleine coopération avec l’Agence
+          internationale de l’énergie atomique.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

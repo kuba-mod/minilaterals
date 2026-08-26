@@ -1,0 +1,75 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+- migration
+- submarines
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Kornelius Wentzel
+  - Müller
+  - Deschauer
+  - Haufe
+  - Ernoult
+  - Chancellor Merz
+  - Jonas Gahr Støre
+  - President Macron
+  - President Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  - migration
+  - submarines
+  location: Berlin, Germany
+  position: Germany is coordinating with EU partners on a modernized financial framework,
+    strengthening bilateral ties with Norway for energy security, and reaffirming
+    long-term military and diplomatic support for Ukraine.
+  positions:
+    ukraine: Germany reaffirms its commitment to support Ukraine's independence and
+      defense against Russian aggression to enable a future diplomatic resolution.
+    defence: Germany is coordinating the long-term delivery of several hundred Patriot
+      PAC-2 missiles to Ukraine.
+    hybrid: Germany emphasizes the need to protect critical infrastructure and combat
+      hybrid influences on democratic elections.
+    energy: Germany views Norway as an indispensable partner for natural gas supply
+      and is monitoring gas storage levels to ensure winter security.
+    migration: Germany supports the implementation of the EU Migration and Asylum
+      Pact (GEAS) and maintains a partnership with Italy for its execution.
+    submarines: Germany notes its security partnership with Norway, highlighted by
+      a submarine deal with Canada.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deutschland ist inzwischen der stärkste Unterstützer der Ukraine.
+      hybrid:
+        score: 1
+        evidence: die Bundesregierung wird insgesamt massiv gegen hybride Beeinflussungen
+          auch und gerade von Wahlen vorgehen.
+      defence:
+        score: 1
+        evidence: Wir wollen und wir tun aktuell alles, um der Ukraine die benötigten
+          Mittel, Systeme und Lenkflugkörper zur Verfügung zu stellen.
+    e3:
+      defence:
+        score: 0
+        evidence: Das begann im letzten Jahr, im Dezember noch, mit Verhandlungen
+          im Kreis der E3, der E5, der Europäischen Union, mit Treffen hier in Berlin.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

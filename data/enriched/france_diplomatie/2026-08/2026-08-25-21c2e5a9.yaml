@@ -1,0 +1,26 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Hanna Tetteh
+  topics: []
+  location: Tunis, Tunisia
+  position: France supports the agreement on the reconstitution of the High National
+    Elections Commission and the Libyan-led political process to achieve stable and
+    transparent national elections.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

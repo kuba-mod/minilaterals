@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet of Ministers
+  - Ministry of Foreign Affairs
+  topics: []
+  location: null
+  position: Latvia's Cabinet of Ministers has approved regulations to ban the import
+    of industrial goods from Russia and Belarus.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
