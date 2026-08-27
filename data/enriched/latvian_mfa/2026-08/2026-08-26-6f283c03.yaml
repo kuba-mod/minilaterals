@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet of Ministers
+  topics: []
+  location: null
+  position: Latvia is temporarily strengthening its diplomatic representation staff
+    in preparation for its presidency of the Council of the European Union in the
+    second half of 2028.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

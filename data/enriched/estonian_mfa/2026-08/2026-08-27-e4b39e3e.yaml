@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia maintains that its security risk assessment remains unchanged.
+  positions:
+    defence: Estonia's assessment of security threats has not changed.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Eesti ohuhinnang ei ole muutunud
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

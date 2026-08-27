@@ -1,0 +1,62 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lars Klingbeil
+  - Alexander Dobrindt
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  - iran
+  location: Neuhardenberg, Germany
+  position: Germany aims to strengthen its economic competitiveness and future viability
+    through innovation, large-scale investments, and structural reforms while enhancing
+    national security and resilience.
+  positions:
+    ukraine: Germany notes the ongoing economic challenges caused by the war in Ukraine
+      but remains committed to its growth course.
+    defence: Germany is increasing investments in security and technology, including
+      drone defense and cyber capabilities, to ensure the state remains capable of
+      protecting its citizens.
+    hybrid: Germany is upgrading its security laws and intelligence services to counter
+      high-level hybrid threats, including sabotage and espionage.
+    green_transition: Germany maintains its goal of climate neutrality by 2045 and
+      is investing heavily in climate protection and adaptation, specifically regarding
+      heat protection.
+    iran: Germany acknowledges that uncertainties in financial markets have been triggered
+      by the war in Iran.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: trotz Krieg am Golf und in der Ukraine
+      hybrid:
+        score: 2
+        evidence: Wir rüsten technisch weiter auf im Bereich der Drohnenabwehr, wir
+          rüsten technisch weiter auf im Bereich des Cyberdomes
+      green_transition:
+        score: 1
+        evidence: Wir halten an diesem Ziel fest.
+    e3:
+      iran:
+        score: 0
+        evidence: trotz Krieg am Golf und in der Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

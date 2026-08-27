@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Sabrina Dallafior
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France reaffirms its full support for the OPCW and the Chemical Weapons
+    Convention to combat impunity and prevent the resurgence of chemical weapons.
+  positions:
+    ukraine: France supports strengthening Ukraine's capacity to detect and respond
+      to chemical weapons threats on the front lines.
+    defence: France advocates for the secure destruction of Syria's chemical weapons
+      program and demands accountability for Russia's violations of the Chemical Weapons
+      Convention.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France reaffirmed its support for Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

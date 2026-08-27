@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Oana Coju
+  topics: []
+  location: Riga, Latvia
+  position: Latvia is hosting the Romanian Minister of Foreign Affairs for a working
+    visit to discuss bilateral relations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

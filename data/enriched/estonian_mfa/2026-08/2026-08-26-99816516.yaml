@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - António Costa
+  topics:
+  - defence
+  location: Estonia
+  position: Estonia emphasizes that entrepreneurship, competitiveness, and security
+    form the foundation of a strong Europe.
+  positions:
+    defence: Estonia views security as a fundamental pillar for a strong European
+      foundation.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: arutati Euroopa ees seisvaid väljakutseid
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

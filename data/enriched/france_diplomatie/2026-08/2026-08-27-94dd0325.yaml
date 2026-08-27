@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Andrii Sybiha
+  topics:
+  - ukraine
+  location: null
+  position: France reiterates its full and long-term support for Ukraine to ensure
+    a just and lasting peace.
+  positions:
+    ukraine: France supports Ukraine bilaterally, through European mechanisms, and
+      via the G7 to safeguard its sovereignty and independence.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reiterated France’s full support for Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

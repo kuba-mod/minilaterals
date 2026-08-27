@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul, German Foreign Minister
+  topics:
+  - ukraine
+  - defence
+  location: Kyiv, Ukraine
+  position: Germany expresses strong solidarity with Ukraine and pledges financial
+    and structural support for the reintegration of veterans into civilian life.
+  positions:
+    ukraine: Germany supports Ukraine's sovereignty and European future, pledging
+      an additional three million euros to support Ukrainian veterans.
+    defence: Germany recognizes the courage of Ukrainian soldiers and emphasizes the
+      importance of integrating veterans into the military reserve and democratic
+      resilience.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir werden zusätzlich drei Millionen Euro zur Unterstützung der
+          Veteraninnen und Veteranen bereitstellen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

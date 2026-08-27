@@ -59,6 +59,12 @@ extracted:
         score: 1
         evidence: dass wir bei der Energieversorgung in Deutschland auf einem guten
           Pfad sind, sie klimaneutral umzustellen
+    e3:
+      defence:
+        score: 0
+        evidence: Drohungen und Äußerungen gegenüber EU- oder NATO-Partnern sind nichts
+          Neues. Die nehmen wir zur Kenntnis, von denen lassen wir uns nicht einschüchtern,
+          und wir lassen uns in unserer Unterstützung für die Ukraine nicht einschüchtern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'

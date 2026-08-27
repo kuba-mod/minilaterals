@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: Jonglei, South Sudan
+  position: France condemns the attack on UNMISS personnel in South Sudan, calls for
+    accountability, and urges all parties to adhere to the Revitalized Peace Agreement.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

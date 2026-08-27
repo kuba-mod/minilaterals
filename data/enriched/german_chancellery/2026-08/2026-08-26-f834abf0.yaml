@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  - Bundeswirtschaftsministerin
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: The German government is establishing a new legal framework to facilitate
+    the expansion and modernization of climate-neutral heating networks.
+  positions:
+    green_transition: Germany aims to increase the share of households using climate-neutral
+      heating networks powered by geothermal energy, large heat pumps, and waste heat.
+    energy: The government is developing a new Heating Network Act to ensure reliable
+      investment conditions for providers while strengthening consumer rights and
+      price transparency.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Die Bundesregierung will den klimafreundlichen Aus-, Um- und Neubau
+          von Wärmenetzen erleichtern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

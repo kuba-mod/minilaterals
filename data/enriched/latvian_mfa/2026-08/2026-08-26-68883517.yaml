@@ -1,0 +1,33 @@
+actors:
+- LV
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics:
+  - defence
+  - hybrid
+  location: Riga, Latvia
+  position: Latvia is hosting an international conference to discuss the threats posed
+    by Belarus to European security.
+  positions:
+    defence: Latvia is organizing a conference to address security threats originating
+      from Belarus.
+    hybrid: Latvia is analyzing the threats posed by Belarus to the security of Europe.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: Ārlietu ministrijā norisināsies starptautiska konference par Baltkrievijas
+          radītajiem draudiem Eiropas drošībai
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

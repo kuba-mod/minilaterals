@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  topics:
+  - green_transition
+  location: null
+  position: The German government is planning coordinated measures to mitigate climate
+    change and improve national adaptation to extreme weather events such as heat
+    and drought.
+  positions:
+    green_transition: Germany aims to further curb climate change and intensify cooperation
+      with federal states to adapt health, agriculture, and infrastructure to extreme
+      weather impacts.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Wir müssen den Klimawandel weiter eindämmen und zugleich unser Land
+          besser an die Folgen des Klimawandels anpassen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
