@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing new regulations to prevent greenwashing, expand
+    tax advisory services, and increase safety at railway stations.
+  positions:
+    green_transition: Germany is introducing stricter requirements for environmental
+      advertising claims and implementing new EU-wide labels to protect consumers
+      from greenwashing.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Ziel ist es, Käuferinnen und Käufer vor irreführenden Werbeaussagen
+          zu schützen und ihnen nachhaltige Kaufentscheidungen zu ermöglichen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

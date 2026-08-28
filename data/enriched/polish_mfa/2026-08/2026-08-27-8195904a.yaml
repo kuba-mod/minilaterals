@@ -1,0 +1,40 @@
+actors:
+- PL
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Atlantic Council Eurasia Congressional Fellowship delegation
+  - representatives of the Department of Strategy
+  - representatives of the Department of North America
+  - representatives of the Department of Security Policy
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland presented its foreign policy priorities and the Strategy of Polish
+    Foreign Policy for 2026–2030 to a US delegation.
+  positions:
+    defence: Poland discussed its security policy and foreign policy priorities with
+      US representatives.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Spotkanie delegacji z USA z przedstawicielami Departamentów Strategii,
+          Ameryki Północnej oraz Polityki Bezpieczeństwa
+    visegrad:
+      defence:
+        score: 0
+        evidence: Spotkanie delegacji z USA z przedstawicielami Departamentów Strategii,
+          Ameryki Północnej oraz Polityki Bezpieczeństwa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

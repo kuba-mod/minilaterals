@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Dace Melbārde, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Latvia calls for increased pressure on Russia, the protection of Sudanese
+    civilians, and the prevention of food being used as a weapon of war.
+  positions:
+    ukraine: Latvia urges the UN Security Council to increase pressure on Russia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

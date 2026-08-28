@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Swedish ambassadors
+  - Swedish Minister for Foreign Affairs
+  topics:
+  - defence
+  location: Sweden
+  position: Latvia and Sweden are united in strengthening regional security.
+  positions:
+    defence: Latvia seeks to strengthen regional security in cooperation with Sweden.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Latvija un Zviedrija ir vienotas reģiona drošības stiprināšanā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

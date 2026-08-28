@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Karol Nawrocki
+  topics:
+  - defence
+  - energy
+  location: null
+  position: Poland has adopted a preliminary 2027 budget focused on national security,
+    healthcare, social support, and strategic infrastructure investments despite a
+    challenging geopolitical environment.
+  positions:
+    defence: Poland is allocating record funds to defense, the arms industry, border
+      protection, and intelligence capabilities.
+    energy: The government is investing in nuclear energy and the modernization of
+      power grids and systems.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Rząd przeznacza rekordowe środki na obronność i rozwój polskiego
+          przemysłu zbrojeniowego.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Rząd przeznacza rekordowe środki na obronność i rozwój polskiego
+          przemysłu zbrojeniowego
+      energy:
+        score: 2
+        evidence: Rząd przeznacza środki m.in. na rozwój energetyki jądrowej, modernizację
+          sieci energetycznych i całego systemu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Bundeskanzler
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: Schloss Neuhardenberg, Germany
+  position: The German government is focusing on economic strength, digital sovereignty
+    through AI, and implementing reforms to reduce bureaucracy while addressing climate-related
+    disasters.
+  positions:
+    green_transition: The federal government is launching and coordinating programs
+      to combat the effects of climate change, specifically heat and drought.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Am Mittwoch gab es deshalb eine Kabinettsitzung, in der es um die
+          Themen Klimawandel, Hitze und Dürre ging.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

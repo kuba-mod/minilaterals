@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  - Rainer Robra
+  topics: []
+  location: Dessau-Wörlitz, Germany
+  position: Germany is providing federal funding to support the renovation and preservation
+    of cultural monuments of national importance, specifically Schloss Mosigkau and
+    the Gothic House.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

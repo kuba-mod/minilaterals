@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Jonas Gahr Støre
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Chancellor Merz discussed foreign and security policy issues and the Norwegian
+    Prime Minister's upcoming visit to Kyiv with Prime Minister Støre.
+  positions:
+    ukraine: Germany discussed the upcoming visit of the Norwegian Prime Minister
+      to Kyiv.
+    defence: Germany exchanged views on foreign and security policy issues.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: tauschten sich zu außen- und sicherheitspolitischen Fragen sowie
+          dem Besuch von Ministerpräsident Støre in Kyjiw am 23. August 2026 aus
+    e3:
+      defence:
+        score: 0
+        evidence: tauschten sich zu außen- und sicherheitspolitischen Fragen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

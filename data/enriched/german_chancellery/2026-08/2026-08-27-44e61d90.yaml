@@ -1,0 +1,57 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- rule_of_law
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  - green_transition
+  - rule_of_law
+  - migration
+  location: null
+  position: Germany and its partners advocate for a modernized, reformed, and significantly
+    reduced EU budget for 2028-2034 that prioritizes strategic security and fiscal
+    discipline.
+  positions:
+    defence: Germany views security and defence as a shared priority that must guide
+      the allocation of resources in the MFF.
+    green_transition: Germany supports a regulatory framework that prioritizes the
+      swift and green transformation of economies through accelerated permitting.
+    rule_of_law: Germany asserts that respect for the rule of law must be a fundamental
+      condition for accessing EU funding.
+    migration: Germany identifies migration as one of the core shared priorities to
+      be addressed within the MFF architecture.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: 'Both should be guided by our shared priorities, are set out, not
+          least, in our Strategic Agenda: security and defence'
+      green_transition:
+        score: 1
+        evidence: systematically prioritises the successful, swift and green transformation
+          of our economies
+      rule_of_law:
+        score: 1
+        evidence: Respect for our common values and the rule of law must be a fundamental
+          condition for access to any European funding.
+    e3:
+      defence:
+        score: 0
+        evidence: 'Handlungsleitend müssen hierbei unsere gemeinsamen Prioritäten
+          sein, die insbesondere in unserer Strategischen Agenda festgelegt sind:
+          Sicherheit und Verteidigung, Wettbewerbsfähigkeit, Migration und Souveränität.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

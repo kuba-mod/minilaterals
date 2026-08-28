@@ -1,0 +1,66 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Mette Frederiksen
+  - Petteri Orpo
+  - Christian Stocker
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  - migration
+  location: Berlin, Germany
+  position: Germany leads a group of major contributors seeking a realistic, reformed,
+    and substantially reduced EU budget that prioritizes competitiveness and security
+    over sheer volume.
+  positions:
+    ukraine: Germany emphasizes the continued necessity of strong financial and military
+      support for Ukraine.
+    defence: Germany advocates for a modern budget that places security and defense
+      as central priorities to ensure European sovereignty.
+    hybrid: Germany acknowledges the need to respond to hybrid attacks and threats
+      against European security.
+    green_transition: Germany supports achieving the green transition as part of strengthening
+      European resilience and competitiveness.
+    migration: Germany supports prioritizing the protection of EU external borders
+      and managing migration within the budget.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: bringen zusammen aber auch 70 Prozent der bilateralen Hilfen für
+          die Ukraine auf
+      defence:
+        score: 1
+        evidence: Wir brauchen einen modernen Mehrjährigen Finanzrahmen, der unsere
+          politischen Prioritäten abbildet, und zwar mit der Wettbewerbsfähigkeit
+          und der Industrie der Europäischen Union im Zentrum.
+      hybrid:
+        score: 0
+        evidence: Wir sehen hybride Angriffe in ganz Europa.
+      green_transition:
+        score: 1
+        evidence: den grünen Übergang schaffen
+    e3:
+      defence:
+        score: 0
+        evidence: Wir müssen mehr in Sicherheit und Verteidigung investieren
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

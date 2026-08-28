@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer, Kulturstaatsminister
+  topics: []
+  location: Naumburg, Germany
+  position: Germany is investing in the preservation and public accessibility of national
+    cultural monuments, specifically through the opening of the World Heritage Center
+    at Naumburg Cathedral.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
