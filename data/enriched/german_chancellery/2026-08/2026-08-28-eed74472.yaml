@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- indo_pacific
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Premierminister Le Minh Hung
+  topics:
+  - indo_pacific
+  - migration
+  location: null
+  position: Germany seeks to deepen economic cooperation and skilled labor migration
+    with Vietnam, viewing it as a key partner in the ASEAN region.
+  positions:
+    indo_pacific: Germany emphasizes Vietnam's importance as a close partner within
+      the ASEAN region.
+    migration: Germany agrees to further deepen cooperation regarding the immigration
+      of skilled workers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

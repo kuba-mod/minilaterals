@@ -29,9 +29,7 @@ extracted:
     weimar:
       ukraine:
         score: 1
-        evidence: France reaffirmed its support for Ukraine and for efforts to strengthen
-          Ukraine’s ability to detect, protect against and respond to the chemical
-          weapons threats it is facing on the front lines.
+        evidence: France reaffirmed its support for Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '8'
