@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Mohamed Nafti
+  - Ahmed Attaf
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany seeks to deepen economic and security cooperation with Tunisia
+    and Algeria to stabilize the Sahel region and secure energy supplies.
+  positions:
+    green_transition: Germany identifies Algeria as a high-potential future supplier
+      of green hydrogen and is deepening partnerships for the energy sector's transformation.
+    energy: Germany views Algeria as a strategic partner for gas supplies and aims
+      to intensify energy partnerships with both nations to foster growth.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: unsere Partnerschaft für die Energieversorgung und die Transformation
+          des Energiesektors noch einmal deutlich zu vertiefen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
