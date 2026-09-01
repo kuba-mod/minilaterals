@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia asserts that NATO allies responded quickly and according to plan
+    to a potential aerial threat.
+  positions:
+    defence: Estonia confirms that NATO allies' reactions to potential air threats
+      were prompt and aligned with established plans.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: NATO liitlased reageerisid võimalikule õhuohule kiiresti ja vastavalt
+          plaanidele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

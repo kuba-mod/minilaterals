@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - First Lady
+  - Olivier Lebas
+  topics:
+  - defence
+  location: null
+  position: The French Presidency pays tribute to the memory and distinguished military
+    career of Vice Admiral Olivier Lebas.
+  positions:
+    defence: France honors the service of Vice Admiral Olivier Lebas, highlighting
+      his leadership of the aircraft carrier Charles de Gaulle and his contributions
+      to national and European sovereignty.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Olivier Lebas poursuivit enfin son engagement au service de la souveraineté
+          française et européenne auprès d’Airbus
+    e3:
+      defence:
+        score: 0
+        evidence: Olivier Lebas poursuivit enfin son engagement au service de la souveraineté
+          française et européenne auprès d’Airbus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
