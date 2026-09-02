@@ -15,37 +15,49 @@
   rendered_surface_sha: 52cb5d9b
   model: gemma4:latest
   provider: ollama
-  cases: 46
+  cases: 49
   repeats: 3
-  recorded_at: '2026-08-07'
-  notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yml run
-    31216887818, flip rate 0.042 across the 3 repeats. Headline finding: abstention_recall
-    0.220 — the v8 ''omit rather than score 0'' instruction is followed less than
-    a quarter of the time.
-
-
-    Gold set grew from 46 to 50 cases after this entry was recorded (pl-defence24-days,
+  recorded_at: '2026-09-02'
+  notes: 'Re-measured after three cases were added to the gold set (pl-defence24-days,
     pl-ukraine-accession-talks in goal_discrimination.yaml; de-fr-defence-council-preview
     in stance_scale.yaml — added to raise goal_discrimination''s and abstention_recall''s
-    n, see evals/README.md), so the metrics below describe the 46-case run and are
-    directional only against a re-run on the current set. Re-record via `--repeats
-    3 --record` next time prompt v8 is measured; this entry''s `cases: 46` is left
-    as-is since it is what was actually run.'
+    n, see evals/README.md). This replaces the 2026-08-07 46-case entry rather than
+    sitting alongside it, per this file''s one-entry-per-PROMPT_VERSION shape;
+    the superseded numbers are in git history (eval.yml run 31216887818).
+    eval.yml run 33607214158 on d96d577, flip rate 0.020 across the 3 repeats.
+
+    goal_discrimination fell from 0.583 (n=8) to 0.267 (n=10, range 0.200-0.300)
+    — well outside the new noise floor (max(0.020, 1/10)=0.100). Read this as a
+    real finding, not noise: the two added cases reach two groupings through a
+    single known-actor source rather than multi-country actor overlap, and the
+    model does *worse* at giving the two groupings genuinely different answers
+    in that shape than in the six pre-existing multi-country-overlap cases —
+    the copy-paste defect goal_discrimination exists to catch is apparently more
+    common, not less, for this pattern. abstention_recall held (0.216 vs 0.220,
+    n=17, within noise) — the added null labels didn''t move it, so the v8
+    abstention instruction''s ~78% miss rate is confirmed on a larger sample
+    rather than newly explained.
+
+    actors_exact (0.840 vs 0.911, n=48) and actors_f1 (0.917 vs 0.947, n=75) also
+    read outside noise. Only 3 cases were added carrying actors labels, so this
+    could be one or two of them scoring wrong rather than a broad regression —
+    not yet root-caused; worth checking against the eval-results.json artifact
+    from the run above before drawing a conclusion.'
   metrics:
     relevance_accuracy: 0.943
-    actors_exact: 0.911
-    actors_f1: 0.947
-    formats_exact: 0.848
-    topics_f1: 0.788
-    stance_exact: 0.598
-    stance_within_1: 0.957
-    stance_mae: 0.47
-    sign_agreement: 0.812
-    abstention_recall: 0.22
+    actors_exact: 0.84
+    actors_f1: 0.917
+    formats_exact: 0.857
+    topics_f1: 0.791
+    stance_exact: 0.643
+    stance_within_1: 0.952
+    stance_mae: 0.429
+    sign_agreement: 0.833
+    abstention_recall: 0.216
     abstention_precision: 1.0
-    goal_discrimination: 0.583
-    stance_coverage: 0.994
-    evidence_verbatim: 0.941
+    goal_discrimination: 0.267
+    stance_coverage: 0.983
+    evidence_verbatim: 0.937
     evidence_goal_copy: 0.0
     retry_rate: 0.0
     parse_failure_rate: 0.0

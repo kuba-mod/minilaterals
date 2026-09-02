@@ -14,9 +14,10 @@ uv run python -m pipeline.evaluate --repeats 3 --summary
 ## Read the `n` column, always
 
 Every metric here is a ratio, and the denominators differ by two orders of
-magnitude — from 230 decisions down to 3. A value without its `n` is unreadable:
-`goal_discrimination` 0.583 sounds precise and is actually "about half, give or
-take a pair". The report prints `n` next to every value for exactly this reason.
+magnitude — from 245 decisions down to 4. A value without its `n` is unreadable:
+`goal_discrimination` 0.267 sounds precise and is actually "two or three hits out
+of ten, give or take one". The report prints `n` next to every value for exactly
+this reason.
 
 `noise_floor()` puts a number on it: **max(flip rate, 1/n)**. The flip rate is
 model nondeterminism, measured by `--repeats`. The 1/n term is granularity — a
@@ -26,25 +27,26 @@ delta, and the report marks it `within noise`.
 
 ## The metrics
 
-`n` values below are for the 46-case gold set the v8 baseline in `baselines.yaml`
-was measured against. The gold set has since grown to 50 cases — three added
-specifically to raise `goal_discrimination`'s and `abstention_recall`'s `n` (see
-those sections below) — so a fresh `--repeats 3 --record` run will show larger
-denominators than the table here until the baseline is re-recorded. Ones marked ~
-depend on what the model predicted, so they shift slightly run to run. Noise floors
-assume the measured flip rate of 0.042 (prompt v8, gemma4, 3 repeats).
+`n` values below are for the current 49-case gold set — three cases were added
+(`pl-defence24-days`, `pl-ukraine-accession-talks`, `de-fr-defence-council-preview`)
+specifically to raise `goal_discrimination`'s and `abstention_recall`'s `n`, and
+`baselines.yaml`'s `"8"` entry was re-measured against the resulting set (eval.yml
+run 33607214158, 2026-09-02). Ones marked ~ depend on what the model predicted, so
+they shift slightly run to run. Noise floors assume the measured flip rate of 0.020
+(prompt v8, gemma4, 3 repeats) — down from 0.042 at the original 46-case
+measurement, itself a reminder that the flip rate is measured, not a constant.
 
 ### Classification — is the event tagged correctly?
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `relevance_accuracy` | correct `{grouping}_relevant` flags / all flags | 230 | 0.042 |
-| `actors_exact` | cases whose actor set matched exactly / cases graded | 45 | 0.042 |
-| `actors_f1` | micro F1 over individual actors | 71 | 0.042 |
-| `formats_exact` | cases whose `explicit_formats` matched exactly / cases | 46 | 0.042 |
-| `topics_f1` | micro F1 over individual topics | 48 | 0.042 |
+| `relevance_accuracy` | correct `{grouping}_relevant` flags / all flags | 245 | 0.020 |
+| `actors_exact` | cases whose actor set matched exactly / cases graded | 48 | 0.020 |
+| `actors_f1` | micro F1 over individual actors | 75 | 0.020 |
+| `formats_exact` | cases whose `explicit_formats` matched exactly / cases | 49 | 0.020 |
+| `topics_f1` | micro F1 over individual topics | 52 | 0.020 |
 
-`relevance_accuracy` is scored **per grouping, not per case** — 46 cases × 5
+`relevance_accuracy` is scored **per grouping, not per case** — 49 cases × 5
 groupings — because the flag is what decides whether an event reaches the site at
 all. It is also derived rather than hand-labelled: `expect.relevant` is whatever
 `_grouping_relevance()` produces from the case's own actors/formats/topics, and
@@ -60,18 +62,24 @@ There is deliberately no `topics_exact`. Over-tagging — the model reading `top
 as a checklist to fill in rather than a selection to make — shows up as precision
 loss inside `topics_f1`.
 
+The 2026-09-02 re-measurement (see `baselines.yaml`) put `actors_exact` at 0.840
+(down from 0.911) and `actors_f1` at 0.917 (down from 0.947), both outside the
+0.020 flip-rate floor. Only 3 of the added cases carry actors labels, so this
+could be one or two of them scoring wrong rather than a broad regression — not
+yet root-caused.
+
 ### Stance — four views of the same decisions
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `stance_exact` | ratings hitting the exact −2..+2 step | ~39 | 0.042 |
-| `stance_within_1` | ratings within one step | ~39 | 0.042 |
-| `sign_agreement` | ratings with the right direction (+/−/0) | ~39 | 0.042 |
-| `stance_mae` | mean absolute error — **lower is better** | ~39 | 0.042 |
+| `stance_exact` | ratings hitting the exact −2..+2 step | ~42 | 0.020 |
+| `stance_within_1` | ratings within one step | ~42 | 0.020 |
+| `sign_agreement` | ratings with the right direction (+/−/0) | ~42 | 0.020 |
+| `stance_mae` | mean absolute error — **lower is better** | ~42 | 0.020 |
 
 These four grade one set of decisions at four strictnesses, so they move
 together: every exact hit is also a within-1 hit. The *gap* is the interesting
-part. v8 measured `stance_exact` 0.598 against `stance_within_1` 0.957 — direction
+part. v8 measured `stance_exact` 0.643 against `stance_within_1` 0.952 — direction
 almost always right, exact step rarely — which is the evidence for the rubric's
 five points being finer than the model can resolve. Treat a single event's ±1 as
 noise; cluster means are the meaningful unit.
@@ -91,8 +99,8 @@ only direct measurement.
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `abstention_recall` | correct omissions / topics that should be omitted | 14 (~18 on the 50-case set) | **0.071** |
-| `abstention_precision` | correct omissions / **all** omissions the model made | ~3 | **0.333** |
+| `abstention_recall` | correct omissions / topics that should be omitted | 17 | **0.059** |
+| `abstention_precision` | correct omissions / **all** omissions the model made | ~4 | **0.250** |
 
 Recall answers "when it should stay quiet, does it?"; precision answers "when it
 does stay quiet, was it right to?". They fail in opposite directions and both are
@@ -100,49 +108,60 @@ needed: a model that omits everything scores perfect recall, and one that never
 omits scores perfect (vacuous) precision.
 
 **`abstention_precision` is the weakest number in the suite.** Its denominator is
-the number of omissions the model actually made — about 3 at v8 — so it reads
+the number of omissions the model actually made — about 4 at v8 — so it reads
 1.000 until it abruptly doesn't, and it cannot resolve a change smaller than a
-third. Do not quote it as evidence of anything without its `n`.
+quarter. Do not quote it as evidence of anything without its `n`.
 
 `pl-defence24-days`, `pl-ukraine-accession-talks` and `de-fr-defence-council-preview`
-(added after the v8 baseline was recorded — see "Recorded baseline" below) add four
-more gold `null` labels, three of them real single-country MFA items rather than
-constructed traps. `abstention_recall`'s `n` should rise to about 18 assuming
-classification still surfaces the relevant pairs; it isn't yet re-measured.
+(added after the original v8 baseline, then folded into a re-measurement — see
+"Recorded baseline" below) added four gold `null` labels, three of them real
+single-country MFA items rather than constructed traps. `abstention_recall`'s `n`
+rose from 14 to 17, not the full 18 hoped for — classification evidently didn't
+surface every added pair as `asked` in every repeat — and the value itself held
+at 0.216 (was 0.220), within the new 0.059 floor. The larger sample confirms the
+~78% miss rate rather than explaining it: still a prompt problem, not yet fixed.
 
 ### Goal discrimination — the prompt-v7 premise
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `goal_discrimination` | topics rated differently for two groupings / topics that should be | 8 (~10 on the 50-case set) | **0.125** |
+| `goal_discrimination` | topics rated differently for two groupings / topics that should be | 10 | **0.100** |
 
 One topic can mean different things to different formats — `defence` measured
 against AUKUS's goal is not `defence` measured against the Weimar Triangle's — so
 a case labelled for two groupings with two different right answers should not come
 back with one copy-pasted answer. This scores only pairs where the labels
 genuinely differ *and* classification surfaced both, so the denominator is small
-and one flip is worth 0.125. An independent replication moved it −0.125 on an
-unchanged prompt, which is what forced `noise_floor()` to include the 1/n term.
+and one flip is worth 0.100 at the current n. An independent replication of the
+original 8-case measurement moved it −0.125 on an unchanged prompt, which is what
+forced `noise_floor()` to include the 1/n term in the first place.
 
-At n≈8 this metric distinguishes "usually" from "rarely" and nothing finer. More
-two-grouping cases are the single highest-value addition to the gold set — this is
-why `pl-defence24-days` (weimar/visegrad on `defence`, single-country Polish MFA
-item) and `pl-ukraine-accession-talks` (weimar/visegrad on `enlargement`) were
-added to `goal_discrimination.yaml`: both reach two groupings through the
-known-actor single-country rule rather than multi-country overlap, which the
-existing six cases hadn't covered. `n` should rise to about 10 once re-measured;
-even that is still small enough that a single flip is worth 0.100, so this metric
-stays directional rather than a hard gate for the foreseeable future.
+`pl-defence24-days` (weimar/visegrad on `defence`, single-country Polish MFA item)
+and `pl-ukraine-accession-talks` (weimar/visegrad on `enlargement`) were added to
+reach two groupings through the known-actor single-country rule rather than the
+multi-country actor overlap the original six cases all use. That raised `n` from
+8 to 10 as intended — but the value **fell** from 0.583 to 0.267, a −0.316 move
+well outside the new 0.100 floor. Read plainly: the model does the two-groupings-
+two-answers thing *worse*, not just less-measured-before, on this single-country
+shape than on the multi-country-overlap shape the metric was originally built on.
+That is a real, if small-sample, finding about the prompt — not an artifact of
+adding cases — and it means the "copy-paste" defect this metric exists to catch
+is more common than the original 0.583 suggested, once the gold set stops testing
+only the shape the model already handles best. At n=10 this metric still
+distinguishes "usually" from "rarely" and nothing finer; the next-highest-value
+addition is more two-grouping cases in *other* shapes (multi-country overlap on
+topics besides `defence`, e.g. `hybrid` or `energy`) to see whether the drop
+generalizes or is specific to the single-country pattern.
 
 ### Coverage and mechanical checks
 
 | metric | numerator / denominator | n | floor |
 |---|---|---|---|
-| `stance_coverage` | labelled pairs classification surfaced / all labelled pairs | 53 | 0.042 |
-| `evidence_verbatim` | stored quotes found in the source text | ~run | 0.042 |
-| `evidence_goal_copy` | quotes that just echo the goal sentence — **lower better** | ~run | 0.042 |
-| `retry_rate` | cases needing a second call — **lower better** | 46 | 0.042 |
-| `parse_failure_rate` | cases unusable after the retry — **lower better** | 46 | 0.042 |
+| `stance_coverage` | labelled pairs classification surfaced / all labelled pairs | 60 | 0.020 |
+| `evidence_verbatim` | stored quotes found in the source text | ~85 | 0.020 |
+| `evidence_goal_copy` | quotes that just echo the goal sentence — **lower better** | ~85 | 0.020 |
+| `retry_rate` | cases needing a second call — **lower better** | 49 | 0.020 |
+| `parse_failure_rate` | cases unusable after the retry — **lower better** | 49 | 0.020 |
 
 `stance_coverage` is a leak indicator. A labelled pair that classification never
 surfaced is excluded from the stance metrics rather than dropped silently or
@@ -172,7 +191,7 @@ entries are strictly comparable:
 
 ## Reporting is advisory
 
-A poor score prints and exits 0. 46 cases and a nondeterministic model make a hard
+A poor score prints and exits 0. 49 cases and a nondeterministic model make a hard
 threshold flaky, so the run reports and a human decides. `--fail-under KEY=VALUE`
 opts into a gate locally.
 

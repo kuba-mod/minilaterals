@@ -134,6 +134,8 @@ The middle two are the ones worth acting on, and both are prompt problems rather
 
 An **independent replication** on the same prompt (run 31217775681) put 16 of the 17 metrics within noise, so the baseline is reproducible. The exception is instructive: `goal_discrimination` swung −0.125 with nothing changed, because its denominator is ~8 pairs. That is what forced `noise_floor()` to include a 1/n term, and it means the gold set needs **more two-grouping cases** before the metric is worth much — at n≈8 it distinguishes "usually" from "rarely" and nothing finer. Adding cases changes denominators, so it belongs with a re-measurement rather than on its own.
 
+**Follow-up (2026-09-02, same prompt, `baselines.yaml` re-recorded against the grown gold set):** two cases were added specifically to raise `goal_discrimination`'s n by reaching two groupings through the known-actor single-country rule instead of the multi-country actor overlap every prior case used. `n` rose as intended, but the value *fell* well outside the new noise floor rather than holding — the model does worse at giving two groupings genuinely different answers in this shape than in the shape the metric was originally built on. That is itself a finding, not a wash: the original 0.583 was measuring a narrower failure mode than the metric's name suggests. See `evals/README.md`'s Goal discrimination section for the number and what to try next.
+
 ## Terminology
 
 Always say **"Weimar Triangle countries"**, never "Weimar countries" — in prose, UI copy, and commit/PR text alike.
