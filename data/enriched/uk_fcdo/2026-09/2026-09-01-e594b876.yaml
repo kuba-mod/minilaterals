@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Sarah MacIntosh
+  topics:
+  - ukraine
+  location: New York, USA
+  position: The United Kingdom reaffirms that Russia's actions do not alter Ukraine's
+    sovereignty or its internationally recognized borders.
+  positions:
+    ukraine: The UK maintains that Ukraine's sovereignty and borders remain unchanged
+      despite Russian aggression.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

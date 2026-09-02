@@ -1,0 +1,32 @@
+actors:
+- DE
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: Leipzig, Germany
+  position: Estonia views the drone incident in Leipzig as evidence of Russia's increasing
+    threat to Europe and supports Germany's countermeasures.
+  positions:
+    hybrid: Estonia asserts that Russian involvement in the Leipzig drone incident
+      confirms Russia's increasingly aggressive and dangerous hybrid activities in
+      Europe.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Eesti toetab kõiki Saksamaa vastusamme
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

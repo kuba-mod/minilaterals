@@ -1,0 +1,69 @@
+actors:
+- DE
+- FR
+- PL
+- EE
+- LV
+- LT
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Gdańsk, Poland
+  position: Poland calls for unwavering Western solidarity and a hard stance against
+    Russian aggression to prevent a repeat of the appeasement policies that led to
+    World War II.
+  positions:
+    ukraine: Poland emphasizes that the world must help Ukraine survive to prevent
+      further Russian aggression and avoid the mistakes of the past.
+    defence: Poland advocates for real alliances and state strength over symbolic
+      gestures to ensure that no country is left alone in the face of aggression.
+    hybrid: Poland highlights that it and other European nations are already victims
+      of Russian provocations and acts of sabotage.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Musimy pomóc Ukrainie przetrwać.
+      defence:
+        score: 1
+        evidence: Dzisiaj musimy polegać na własnej sile i na realnych sojuszach
+      hybrid:
+        score: 1
+        evidence: To pokazuje, jak ważna jest dziś solidarność i wspólna odpowiedź
+          państw europejskich na zagrożenia dla europejskiego i światowego bezpieczeństwa.
+    e3:
+      defence:
+        score: 1
+        evidence: musimy polegać na własnej sile i na realnych sojuszach, nie na zaklęciach,
+          nie na mitach, ale na prawdziwej sile państwa polskiego, prawdziwej sile,
+          odporności i solidarności sojuszu
+    visegrad:
+      defence:
+        score: 1
+        evidence: Dzisiaj musimy polegać na własnej sile i na realnych sojuszach
+    baltic:
+      defence:
+        score: 1
+        evidence: Dzisiaj musimy polegać na własnej sile i na realnych sojuszach
+      hybrid:
+        score: 1
+        evidence: Podobne agresywne działania dotknęły Finlandię, Łotwę, Litwę, Estonię,
+          Rumunię, Danię, a ostatnio także Niemcy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

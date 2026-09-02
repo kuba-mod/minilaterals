@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister
+  topics: []
+  location: Wieluń, Poland
+  position: The Prime Minister emphasizes the importance of remembering the tragedies
+    of WWII to foster a culture of respect, sensitivity, and the prevention of violence
+    and hatred in modern society.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

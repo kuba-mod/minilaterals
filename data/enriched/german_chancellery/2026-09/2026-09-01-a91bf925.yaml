@@ -1,0 +1,23 @@
+actors:
+- DE
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, State Minister for Culture and Media
+  topics: []
+  location: Berlin, Germany
+  position: Germany is establishing a permanent memorial in Berlin to honor the Polish
+    victims of the Second World War and the German occupation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

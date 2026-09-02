@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Verena Hubig
+  topics:
+  - green_transition
+  - energy
+  location: Bremen, Germany
+  position: The German government is focusing on expanding renewable energy, reforming
+    social systems, and stimulating residential construction.
+  positions:
+    green_transition: Germany is implementing a paradigm shift toward better predictability,
+      cost-efficiency, and security of supply in the expansion of renewable energies.
+    energy: The government is providing guidance and funding for private investments
+      in PV systems, heat pumps, and electric vehicles.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Die Bundesregierung hält an den Ausbauzielen für erneuerbare Energien
+          fest
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

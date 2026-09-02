@@ -1,0 +1,23 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  - Thomas Byrne
+  topics: []
+  location: Dublin, Ireland
+  position: Estonia discussed the European Union's next long-term budget for 2028–2034
+    with Ireland, emphasizing the need for a budget that meets major challenges.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions

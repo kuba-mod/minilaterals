@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Karsten Wildberger
+  - Alexander Dobrindt
+  topics:
+  - hybrid
+  location: null
+  position: Germany has established the AI Safety and Security Institute (AISI Deutschland)
+    to analyze AI-related security risks, strengthen digital sovereignty, and promote
+    international standards.
+  positions:
+    hybrid: Germany is centralizing capacities for risk and capability analysis of
+      AI models to defend against cyber threats and ensure AI remains controllable.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Gleichzeitig soll der Informationsaustausch mit vergleichbaren ausländischen
+          Instituten intensiviert werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '8'
+  environment: github_actions
