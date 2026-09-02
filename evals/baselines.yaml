@@ -15,37 +15,44 @@
   rendered_surface_sha: 52cb5d9b
   model: gemma4:latest
   provider: ollama
-  cases: 46
+  cases: 49
   repeats: 3
-  recorded_at: '2026-08-07'
-  notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yml run
-    31216887818, flip rate 0.042 across the 3 repeats. Headline finding: abstention_recall
-    0.220 — the v8 ''omit rather than score 0'' instruction is followed less than
-    a quarter of the time.
-
-
-    Gold set grew from 46 to 50 cases after this entry was recorded (pl-defence24-days,
+  recorded_at: '2026-09-02'
+  notes: 'Re-recorded against the 49-case gold set grown by #77 (pl-defence24-days,
     pl-ukraine-accession-talks in goal_discrimination.yaml; de-fr-defence-council-preview
-    in stance_scale.yaml — added to raise goal_discrimination''s and abstention_recall''s
-    n, see evals/README.md), so the metrics below describe the 46-case run and are
-    directional only against a re-run on the current set. Re-record via `--repeats
-    3 --record` next time prompt v8 is measured; this entry''s `cases: 46` is left
-    as-is since it is what was actually run.'
+    in stance_scale.yaml), replacing the stale 46-case entry from 2026-08-07 (flip
+    rate 0.042, eval.yml run 31216887818). Measured by eval.yml run 33608795085 on
+    main (0f945ce), flip rate 0.047.
+
+    The reason this run exists: prompt "9" (see that entry below) measured
+    goal_discrimination at 0.375 against this stale 46-case v8 baseline of 0.583, a
+    -0.208 drop that looked like a real regression at n=8. Re-measuring v8 itself on
+    the grown 49-case set puts goal_discrimination at 0.333 (n=10) — indistinguishable
+    from v9''s own 0.333 (n=10) on the same 49 cases (see vs-v9 comparison in the "9"
+    entry''s notes). abstention_recall similarly lands at 0.221 for both versions.
+    The apparent v9 regression was small-n noise in the old 8-case slice, not a
+    prompt effect: v8 never actually discriminated goal pairs any better than v9
+    once measured on a comparable sample.
+
+    actors_exact fell from 0.911 (n=45, 46-case set) to 0.854 (n=48, 49-case set) —
+    outside the flip-rate floor, and not yet root-caused; likely the 3 new cases
+    grade harder on actor extraction, but this should be checked before treating it
+    as a real capability change.'
   metrics:
-    relevance_accuracy: 0.943
-    actors_exact: 0.911
-    actors_f1: 0.947
-    formats_exact: 0.848
-    topics_f1: 0.788
-    stance_exact: 0.598
-    stance_within_1: 0.957
-    stance_mae: 0.47
-    sign_agreement: 0.812
-    abstention_recall: 0.22
+    relevance_accuracy: 0.9429
+    actors_exact: 0.8542
+    actors_f1: 0.9279
+    formats_exact: 0.8571
+    topics_f1: 0.7875
+    stance_exact: 0.6587
+    stance_within_1: 0.9603
+    stance_mae: 0.4048
+    sign_agreement: 0.8413
+    abstention_recall: 0.2206
     abstention_precision: 1.0
-    goal_discrimination: 0.583
-    stance_coverage: 0.994
-    evidence_verbatim: 0.941
+    goal_discrimination: 0.3333
+    stance_coverage: 0.9778
+    evidence_verbatim: 0.9414
     evidence_goal_copy: 0.0
     retry_rate: 0.0
     parse_failure_rate: 0.0
@@ -54,39 +61,47 @@
   rendered_surface_sha: 52cb5d9b
   model: gemma4:latest
   provider: ollama
-  cases: 46
+  cases: 49
   repeats: 3
-  recorded_at: '2026-08-09'
-  notes: 'topics stated as a selection rather than a checklist. eval.yml run 31318334552,
-    flip rate 0.030. Same 46 cases and same rendered surface as ''8'', so the two are
-    strictly comparable. Almost nothing moved beyond its noise floor: topics_f1 +0.017
-    and abstention_recall +0.071 are both in the intended direction but below their
-    floors (0.030 and 0.077), stance_exact +0.035 clears its floor marginally, and
-    goal_discrimination -0.208 (n=8, floor 0.125) is the one move beyond a floor in
-    the wrong direction — on the metric a same-prompt replication already swung -0.125.
-    Read as: no measured regression in classification, and no measured confirmation
-    of the fix either. The gold set sees the checklist failure only indirectly, as
-    precision loss inside topics_f1 (n=48): no case is drawn from the over-tagged
-    events and none expects more than 3 topics, so a metric that moves in steps of
-    0.021 is not the instrument for it. The evidence for the change is the corpus —
-    94 of 1,488 extracted sidecars carry 4+ topics, 16 carry all six, 12 stored
-    positions assert an absence, and 15 events are stance-pending on a rating the
-    model will never give.'
+  recorded_at: '2026-09-02'
+  notes: 'Re-recorded against the 49-case gold set grown by #77, replacing the
+    46-case entry from 2026-08-09 (flip rate 0.030, eval.yml run 31318334552,
+    replicated by run 31319017019 at flip rate 0.013 — both superseded). Measured
+    by eval.yml run 33608809077 on this branch (9548afa, main + #77 merged in),
+    flip rate 0.027.
+
+    goal_discrimination is resolved: it now measures 0.333 (n=10), identical to a
+    freshly-measured v8 on the same 49 cases (see the "8" entry — also 0.333, n=10;
+    run 33608795085). The -0.208 drop measured against the old 8-pair v8 baseline,
+    reproduced twice at exactly 0.375, read as a possible regression and was the
+    open question this PR left unresolved. With both prompts measured on the
+    identical, grown case set, they tie exactly — the regression was an artifact of
+    the old baseline''s small n, not an effect of stating topics as a selection.
+    abstention_recall also converges: 0.221 here vs 0.221 for the re-measured v8
+    (was +0.071/0.291 against the stale baseline).
+
+    topics_f1 and stance_exact — the two metrics the change targets — hold their
+    prior direction: 0.811 (was 0.805) and 0.667 (was 0.632) respectively, both
+    still inside noise of v8''s 0.788/0.659 on the same set. The change still lacks
+    a metric that can see over-tagging directly; the corpus evidence from the
+    original measurement (94/1,488 sidecars with 4+ topics, 16 with all six, 12
+    positions asserting an absence, 15 stance-pending events) is what actually
+    supports shipping this prompt, not the eval delta.'
   metrics:
-    relevance_accuracy: 0.9464
-    actors_exact: 0.9111
-    actors_f1: 0.9467
-    formats_exact: 0.8478
-    topics_f1: 0.8046
-    stance_exact: 0.6325
-    stance_within_1: 0.9487
-    stance_mae: 0.4444
-    sign_agreement: 0.8205
-    abstention_recall: 0.2906
+    relevance_accuracy: 0.9497
+    actors_exact: 0.875
+    actors_f1: 0.9375
+    formats_exact: 0.8571
+    topics_f1: 0.8107
+    stance_exact: 0.6667
+    stance_within_1: 0.9603
+    stance_mae: 0.3968
+    sign_agreement: 0.8413
+    abstention_recall: 0.2206
     abstention_precision: 1.0
-    goal_discrimination: 0.375
-    stance_coverage: 0.9748
-    evidence_verbatim: 0.9395
+    goal_discrimination: 0.3333
+    stance_coverage: 0.9778
+    evidence_verbatim: 0.9407
     evidence_goal_copy: 0.0
     retry_rate: 0.0
     parse_failure_rate: 0.0
