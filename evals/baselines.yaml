@@ -25,9 +25,9 @@
     main (0f945ce), flip rate 0.047.
 
     The reason this run exists: prompt "9" (see that entry below) measured
-    goal_discrimination at 0.375 against this stale 46-case v8 baseline of 0.583,
-    a -0.208 drop that looked like a real regression at n=8. Re-measuring v8 itself
-    on the grown 49-case set puts goal_discrimination at 0.333 (n=10) — indistinguishable
+    goal_discrimination at 0.375 against this stale 46-case v8 baseline of 0.583, a
+    -0.208 drop that looked like a real regression at n=8. Re-measuring v8 itself on
+    the grown 49-case set puts goal_discrimination at 0.333 (n=10) — indistinguishable
     from v9''s own 0.333 (n=10) on the same 49 cases (see vs-v9 comparison in the "9"
     entry''s notes). abstention_recall similarly lands at 0.221 for both versions.
     The apparent v9 regression was small-n noise in the old 8-case slice, not a
@@ -53,6 +53,55 @@
     goal_discrimination: 0.3333
     stance_coverage: 0.9778
     evidence_verbatim: 0.9414
+    evidence_goal_copy: 0.0
+    retry_rate: 0.0
+    parse_failure_rate: 0.0
+'9':
+  prompt_surface_sha: 6ea9d3d1
+  rendered_surface_sha: 52cb5d9b
+  model: gemma4:latest
+  provider: ollama
+  cases: 49
+  repeats: 3
+  recorded_at: '2026-09-02'
+  notes: 'Re-recorded against the 49-case gold set grown by #77, replacing the
+    46-case entry from 2026-08-09 (flip rate 0.030, eval.yml run 31318334552,
+    replicated by run 31319017019 at flip rate 0.013 — both superseded). Measured
+    by eval.yml run 33608809077 on this branch (9548afa, main + #77 merged in),
+    flip rate 0.027.
+
+    goal_discrimination is resolved: it now measures 0.333 (n=10), identical to a
+    freshly-measured v8 on the same 49 cases (see the "8" entry — also 0.333, n=10;
+    run 33608795085). The -0.208 drop measured against the old 8-pair v8 baseline,
+    reproduced twice at exactly 0.375, read as a possible regression and was the
+    open question this PR left unresolved. With both prompts measured on the
+    identical, grown case set, they tie exactly — the regression was an artifact of
+    the old baseline''s small n, not an effect of stating topics as a selection.
+    abstention_recall also converges: 0.221 here vs 0.221 for the re-measured v8
+    (was +0.071/0.291 against the stale baseline).
+
+    topics_f1 and stance_exact — the two metrics the change targets — hold their
+    prior direction: 0.811 (was 0.805) and 0.667 (was 0.632) respectively, both
+    still inside noise of v8''s 0.788/0.659 on the same set. The change still lacks
+    a metric that can see over-tagging directly; the corpus evidence from the
+    original measurement (94/1,488 sidecars with 4+ topics, 16 with all six, 12
+    positions asserting an absence, 15 stance-pending events) is what actually
+    supports shipping this prompt, not the eval delta.'
+  metrics:
+    relevance_accuracy: 0.9497
+    actors_exact: 0.875
+    actors_f1: 0.9375
+    formats_exact: 0.8571
+    topics_f1: 0.8107
+    stance_exact: 0.6667
+    stance_within_1: 0.9603
+    stance_mae: 0.3968
+    sign_agreement: 0.8413
+    abstention_recall: 0.2206
+    abstention_precision: 1.0
+    goal_discrimination: 0.3333
+    stance_coverage: 0.9778
+    evidence_verbatim: 0.9407
     evidence_goal_copy: 0.0
     retry_rate: 0.0
     parse_failure_rate: 0.0
