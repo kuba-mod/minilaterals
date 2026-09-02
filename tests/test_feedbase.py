@@ -78,19 +78,20 @@ def test_empty_feed_yields_nothing():
 
 
 def test_new_sources_registered():
-    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government) and
-    # lithuanian_mfa (Cloudflare bot-protection) are paused — see the comment
-    # in pipeline/sources/__init__.py — pending working/reachable feeds.
+    # Visegrád Group (czech_mfa, slovak_mfa, hungary_government), lithuanian_mfa
+    # (Cloudflare bot-protection), and us_state (state.gov blocks GitHub
+    # Actions' runner IPs on the wp-json endpoint that actually has the data —
+    # confirmed live, see the comment in pipeline/sources/__init__.py) are
+    # paused pending working/reachable feeds.
     names = {c.source_name for c in ALL_INGESTERS}
     for expected in (
         "uk_fcdo",
-        "us_state",
         "australia_dfat",
         "estonian_mfa",
         "latvian_mfa",
     ):
         assert expected in names
-    for paused in ("czech_mfa", "slovak_mfa", "hungary_government", "lithuanian_mfa"):
+    for paused in ("czech_mfa", "slovak_mfa", "hungary_government", "lithuanian_mfa", "us_state"):
         assert paused not in names
 
 
@@ -135,3 +136,19 @@ def test_download_returns_empty_bytes_on_request_failure():
     with patch("pipeline.sources.feedbase.requests.get", side_effect=requests.exceptions.Timeout("boom")):
         result = _StubFeed()._download()
     assert result == b""
+
+
+def test_empty_entries_diagnostic_reports_content_type(capsys):
+    # A WAF/bot-challenge page typically 200s as text/html rather than XML, and
+    # parses to zero entries indistinguishably from a genuinely empty feed
+    # unless the content-type is surfaced — see feedbase.py's parse_feed().
+    with patch("pipeline.sources.feedbase.requests.get") as mock_get:
+        mock_get.return_value.content = b"<html><body>Are you a robot?</body></html>"
+        mock_get.return_value.headers = {"Content-Type": "text/html; charset=utf-8"}
+        mock_get.return_value.raise_for_status.return_value = None
+        ing = _StubFeed()
+        list(ing.fetch())
+    out = capsys.readouterr().out
+    assert "stub_feed" in out
+    assert "no entries" in out
+    assert "text/html" in out

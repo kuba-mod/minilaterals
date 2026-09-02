@@ -110,8 +110,8 @@ class Event:
     date: str = ""  # ISO date "YYYY-MM-DD"
     # Provenance — set by the ingester (see design principle #9). `collection` is
     # auto-derived from source_lang in save() when left None; `collection_method`
-    # names the fetch mechanism ("rss" | "html" | "wayback"; legacy seed data
-    # carries "backfill" where the exact mechanism was not recorded per-event).
+    # names the fetch mechanism ("rss" | "html" | "api" | "wayback"; legacy seed
+    # data carries "backfill" where the exact mechanism was not recorded per-event).
     collection: str | None = None
     collection_method: str | None = None
 
