@@ -21,7 +21,16 @@
   notes: 'First measured baseline; versions 1-8 all shipped unmeasured. eval.yml run
     31216887818, flip rate 0.042 across the 3 repeats. Headline finding: abstention_recall
     0.220 — the v8 ''omit rather than score 0'' instruction is followed less than
-    a quarter of the time.'
+    a quarter of the time.
+
+
+    Gold set grew from 46 to 50 cases after this entry was recorded (pl-defence24-days,
+    pl-ukraine-accession-talks in goal_discrimination.yaml; de-fr-defence-council-preview
+    in stance_scale.yaml — added to raise goal_discrimination''s and abstention_recall''s
+    n, see evals/README.md), so the metrics below describe the 46-case run and are
+    directional only against a re-run on the current set. Re-record via `--repeats
+    3 --record` next time prompt v8 is measured; this entry''s `cases: 46` is left
+    as-is since it is what was actually run.'
   metrics:
     relevance_accuracy: 0.943
     actors_exact: 0.911
