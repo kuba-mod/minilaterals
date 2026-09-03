@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - EU Special Envoy for Industrial AI
+  topics:
+  - defence
+  - energy
+  location: null
+  position: France seeks to bridge the gap between technological excellence and industrial
+    scale in Europe to ensure strategic autonomy and economic power, specifically
+    in AI, quantum, and semiconductors.
+  positions:
+    defence: France identifies the development of sovereign capabilities in cutting-edge
+      digital technologies as essential for the defence sector.
+    energy: France advocates for the development of sovereign digital capabilities
+      to support energy and electrification sectors.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: l’Europe doit développer des capacités essentielles dans les technologies
+          numériques de pointe, dans des domaines où la demande est forte et où il
+          existe un besoin de capacités souveraines, tels que l’IA, la défense et
+          l’espace
+    e3:
+      defence:
+        score: 0
+        evidence: l’Europe doit développer des capacités essentielles dans les technologies
+          numériques de pointe, dans des domaines où la demande est forte et où il
+          existe un besoin de capacités souveraines, tels que l’IA, la défense et
+          l’espace
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

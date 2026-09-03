@@ -41,5 +41,5 @@ extracted:
         evidence: Dadurch kommt Deutschland wieder auf Augenhöhe mit seinen Partnern.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

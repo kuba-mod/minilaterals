@@ -1,0 +1,31 @@
+actors:
+- DE
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - hybrid
+  location: null
+  position: Poland seeks to regulate the cryptocurrency market to prevent the financing
+    of sabotage acts linked to Russian escalation.
+  positions:
+    hybrid: Poland identifies recent arson attacks as acts of sabotage and aims to
+      implement cryptocurrency regulations to curb the funding of such hybrid threats.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Rządowa ustawa o kryptowalutach utrudnia finansowanie aktów sabotażu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

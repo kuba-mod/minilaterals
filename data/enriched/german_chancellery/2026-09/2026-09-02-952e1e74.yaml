@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Alois Rainer, Federal Minister of Agriculture
+  topics: []
+  location: null
+  position: Germany recognizes a national crisis in agriculture due to drought and
+    geopolitical pressures and plans financial support measures to protect farm existences
+    and food security.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

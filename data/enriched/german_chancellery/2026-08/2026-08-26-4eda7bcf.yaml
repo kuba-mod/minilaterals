@@ -47,8 +47,8 @@ extracted:
         evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
         score: 2
-        evidence: Wir rüsten technisch weiter auf im Bereich der Drohnenabwehr, wir
-          rüsten technisch weiter auf im Bereich des Cyberdomes
+        evidence: Wir wollen aus den Nachrichtendiensten echte Geheimdienste entwickeln.
+          Das ist Teil dieser Nachrichtendienstreform, die ich vorgestellt habe.
       green_transition:
         score: 1
         evidence: Wir halten an diesem Ziel fest.
@@ -58,5 +58,5 @@ extracted:
         evidence: trotz Krieg am Golf und in der Ukraine
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

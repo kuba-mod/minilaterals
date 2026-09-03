@@ -35,12 +35,10 @@ extracted:
     weimar:
       ukraine:
         score: 1
-        evidence: Their discussions covered such EU policy priorities as support for
-          Ukraine
+        evidence: ''
       enlargement:
         score: 1
-        evidence: Their discussions covered such EU policy priorities as... the Western
-          Balkans
+        evidence: ''
       defence:
         score: 0
         evidence: security challenges in the North Sea
@@ -50,5 +48,5 @@ extracted:
         evidence: security challenges in the North Sea
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

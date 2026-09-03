@@ -1,0 +1,53 @@
+actors:
+- PL
+- CZ
+- SK
+- HU
+issue_areas:
+- ukraine
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Toshimitsu Motegi
+  topics:
+  - ukraine
+  - defence
+  - indo_pacific
+  location: Tomasov, Slovakia
+  position: Poland seeks to strengthen strategic cooperation with Japan and the Visegrád
+    Group, focusing on security, economic ties, and technological partnership.
+  positions:
+    ukraine: Poland emphasizes the importance of Japanese contributions to aid programs
+      for Ukraine.
+    defence: Poland advocates for the launch of the 'Quadriga' security and defense
+      dialogue and cooperation between defense industries.
+    indo_pacific: Poland views the stability and security of the Indo-Pacific region
+      as essential and believes the Euro-Atlantic and Indo-Pacific security areas
+      are increasingly linked.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: niezwykle istotne jest zacieśnienie współpracy Japonii z NATO i
+          wkład Tokio w programy pomocowe dla Ukrainy
+      defence:
+        score: 1
+        evidence: współpraca przemysłów obronnych i w obszarze technologii podwójnego
+          zastosowania
+    visegrad:
+      defence:
+        score: 1
+        evidence: niezwykle istotne jest zacieśnienie współpracy Japonii z NATO i
+          wkład Tokio w programy pomocowe dla Ukrainy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

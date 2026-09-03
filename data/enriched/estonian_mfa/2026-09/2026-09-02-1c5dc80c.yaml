@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  topics:
+  - ukraine
+  location: Wicklow, Ireland
+  position: Estonia advocates for responding to Russian activity in Europe by increasing
+    support for Ukraine and intensifying pressure on Russia.
+  positions:
+    ukraine: Estonia supports countering Russian aggression through increased aid
+      to Ukraine and heightened pressure on the Russian Federation.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

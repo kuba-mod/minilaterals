@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - energy
+  location: null
+  position: The German government is implementing several measures to reduce energy
+    costs for private households and the industry to stimulate economic growth.
+  positions:
+    energy: Germany is reducing energy costs through the abolition of the gas storage
+      levy, subsidies for lower electricity grid fees, and the introduction of an
+      industrial electricity price for energy-intensive companies.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

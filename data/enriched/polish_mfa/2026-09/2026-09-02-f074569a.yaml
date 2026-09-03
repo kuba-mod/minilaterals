@@ -1,0 +1,53 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Poland strongly opposes hybrid attacks and sabotage on NATO and EU territory
+    and remains determined to support Ukraine and seek sanctions against Russia.
+  positions:
+    ukraine: Poland maintains its determination to support Ukraine in its fight against
+      Russian aggression.
+    defence: Poland prioritizes strengthening the eastern flank of NATO and the EU
+      to ensure the security of citizens and infrastructure.
+    hybrid: Poland firmly opposes acts of sabotage and hybrid attack attempts on NATO
+      and EU territory.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Działania Rosji nie osłabią naszej determinacji we wspieraniu Ukrainy
+          w jej walce z agresorem
+      defence:
+        score: 1
+        evidence: Wzmacnianie wschodniej flanki Sojuszu Północnoatlantyckiego i Unii
+          Europejskiej oraz zapewnienie bezpieczeństwa obywateli i infrastruktury
+          pozostaje naszym priorytetem
+      hybrid:
+        score: 1
+        evidence: Stanowczo sprzeciwiamy się aktom sabotażu i próbom ataków hybrydowych
+          na terytorium krajów NATO i UE
+    visegrad:
+      defence:
+        score: 1
+        evidence: Wzmacnianie wschodniej flanki Sojuszu Północnoatlantyckiego i Unii
+          Europejskiej oraz zapewnienie bezpieczeństwa obywateli i infrastruktury
+          pozostaje naszym priorytetem
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics: []
+  location: null
+  position: Germany has approved a draft income tax reform law for 2027 aimed at providing
+    financial relief to families and low-to-middle income earners.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

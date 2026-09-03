@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics: []
+  location: null
+  position: The German federal government has approved the 'Startchancen- und Qualitätsentwicklungsgesetz'
+    to strengthen equal opportunities for children through standardized quality in
+    early childhood education and targeted funding.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

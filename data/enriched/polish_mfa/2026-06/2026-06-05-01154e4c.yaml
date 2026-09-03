@@ -38,8 +38,6 @@ extracted:
       ukraine:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
-          and its significance in the face of regional security challenges and Russia’s
-          ongoing aggression against Ukraine
       defence:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
@@ -55,5 +53,5 @@ extracted:
           and its significance in the face of regional security challenges
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

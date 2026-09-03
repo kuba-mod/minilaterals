@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Germany is abolishing the gas storage levy effective January 1, 2026,
+    to reduce energy costs for consumers and businesses while maintaining security
+    of supply.
+  positions:
+    energy: The German government is eliminating the gas storage levy to provide over
+      3 billion euros in relief to gas consumers and stabilize energy prices.
+    iran: Germany currently deems new state-mandated filling measures unnecessary
+      despite the Iran war and instability in the Strait of Hormuz.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Die Bundesregierung geht davon aus, dass neue staatlich angeordnete
+          Befüllungsmaßnahmen in Folge des Iran-Krieges und der ungewissen Entwicklungen
+          in der Straße von Hormus derzeit nicht notwendig sind.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

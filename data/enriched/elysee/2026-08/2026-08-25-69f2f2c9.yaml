@@ -42,5 +42,5 @@ extracted:
           internationale de l’énergie atomique.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany has approved a draft law to make offshore wind energy expansion
+    more cost-efficient and attractive for investors to ensure energy security and
+    independence.
+  positions:
+    energy: Germany is focusing on the affordability and security of energy supply
+      by optimizing the expansion of offshore wind energy.
+    green_transition: Germany maintains its ambitious expansion targets for renewable
+      energies while improving the cost-efficiency of offshore wind installations.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Bundeskabinett hat einen Gesetzentwurf für einen kostengünstigeren
+          und optimierten Ausbau der Windenergie auf See beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

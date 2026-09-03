@@ -1,0 +1,56 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Außenminister Wadephul
+  - Innenminister Dobrindt
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Leipzig, Germany
+  position: Germany is taking decisive diplomatic and security measures against Russia
+    following a hybrid attack in Leipzig, while maintaining its support for Ukraine
+    and NATO.
+  positions:
+    ukraine: Germany will resolutely continue its civil and military support for Ukraine
+      in its defense against Russian aggression.
+    defence: Germany is committed to strengthening its own defense capabilities and
+      deterring Russia within the framework of NATO.
+    hybrid: Germany is responding to Russian hybrid attacks by closing the Russian
+      Consulate in Bonn, terminating the contract for the Russian House in Berlin,
+      and tightening entry controls for Russian citizens.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Bundesregierung setzt die Unterstützung der Ukraine und die
+          Stärkung der deutschen Verteidigungsfähigkeit entschlossen fort.
+      defence:
+        score: 1
+        evidence: Ebenso setzt die Bundesregierung ihre Anstrengungen in der NATO
+          fort, die eigene Verteidigungsfähigkeit zu stärken und Russland wirkungsvoll
+          abzuschrecken.
+      hybrid:
+        score: 2
+        evidence: Wir werden in der Europäischen Union neue Listungen von Personen
+          aus Russland im Kontext hybrider Angriffe vorschlagen.
+    e3:
+      defence:
+        score: 1
+        evidence: Die Bundesregierung stimmt sich eng mit den Partnern in der NATO
+          und der Europäischen Union ab.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

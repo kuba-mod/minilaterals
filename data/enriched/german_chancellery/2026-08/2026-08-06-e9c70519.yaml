@@ -35,8 +35,9 @@ extracted:
     weimar:
       hybrid:
         score: 2
-        evidence: eröffnet das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen
-          (GAZ Hybrid)
+        evidence: gemeinsam mit Vertreterinnen und Vertretern von Sicherheitsbehörden
+          des Bundes und der Länder das Gemeinsame Zentrum zur Abwehr hybrider Bedrohungen
+          (GAZ Hybrid) eröffnet
     e3:
       defence:
         score: 0
@@ -45,5 +46,5 @@ extracted:
           in Deutschland.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

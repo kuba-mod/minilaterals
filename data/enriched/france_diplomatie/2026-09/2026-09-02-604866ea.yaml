@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot
+  - Russian Embassy’s chargé d’affaires
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: France expresses solidarity with Germany regarding Russian responsibility
+    for incidents at Leipzig airport and announces the summoning of the Russian chargé
+    d’affaires.
+  positions:
+    ukraine: France will increase support for Ukraine's independence and sovereignty
+      and supports further sanctions to cut Russia's war effort.
+    hybrid: France commits to identifying firm responses and increasing the protection
+      of democracies and citizens against Russian hybrid actions and destabilization
+      attempts.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France will continue to step up its support for Ukraine, its independence
+          and sovereignty
+      hybrid:
+        score: 1
+        evidence: increase the protection of our countries, our democracies and our
+          citizens against these hybrid actions and destabilization attempts
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

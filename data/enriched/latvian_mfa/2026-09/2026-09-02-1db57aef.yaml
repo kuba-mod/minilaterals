@@ -1,0 +1,31 @@
+actors:
+- DE
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Chargé d'Affaires of the Russian Embassy
+  topics:
+  - hybrid
+  location: Riga, Latvia
+  position: Latvia expresses full solidarity with Germany following a Russian attack
+    in Leipzig and summoned the Russian Chargé d'Affaires to protest.
+  positions:
+    hybrid: Latvia condemns the Russian attack in Leipzig as a hostile act and summoned
+      the Russian diplomatic representative to express its protest.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Latvijai pilnībā solidarizējoties
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

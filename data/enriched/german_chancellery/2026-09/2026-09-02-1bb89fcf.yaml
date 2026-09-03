@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  topics:
+  - energy
+  location: null
+  position: Germany is implementing a series of subsidies and tax reductions to lower
+    electricity costs for households and businesses from 2026 through 2029.
+  positions:
+    energy: The German government is providing billions in annual subsidies for grid
+      fees and maintaining low electricity taxes for producing companies to strengthen
+      the economy and secure jobs.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

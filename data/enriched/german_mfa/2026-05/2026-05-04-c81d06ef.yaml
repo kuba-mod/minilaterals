@@ -49,8 +49,7 @@ extracted:
           for the rule of law
       defence:
         score: 1
-        evidence: strengthen our capabilities to respond to conventional and hybrid
-          threats and expand our efforts in defence procurement, logistics, and crisis
+        evidence: expand our efforts in defence procurement, logistics, and crisis
           management
       hybrid:
         score: 1
@@ -72,5 +71,5 @@ extracted:
           logistics, and crisis management.
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions
