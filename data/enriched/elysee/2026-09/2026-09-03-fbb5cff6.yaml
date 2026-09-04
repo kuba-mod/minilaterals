@@ -1,0 +1,57 @@
+actors:
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - King Charles III
+  - Queen Camilla
+  - Andy Burnham
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - migration
+  location: London, United Kingdom
+  position: France seeks to strengthen its 'Entente Amicale' with the United Kingdom
+    through cultural exchange and strategic cooperation on security and European stability.
+  positions:
+    ukraine: France reaffirms its joint action with the UK within the Coalition of
+      the Willing to support Ukraine, specifically by providing Scalp and Storm Shadow
+      capabilities.
+    defence: France emphasizes its collaboration with the UK in defence and its role
+      in ensuring the security of the European continent.
+    energy: France identifies civil nuclear energy as a key structural area for bilateral
+      cooperation with the United Kingdom.
+    migration: France discussed the issue of migration in the English Channel as part
+      of the broader relationship between the UK and the European Union.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: our decision to make our Scalp and Storm Shadow capabilities available
+          to Ukraine together
+      defence:
+        score: 1
+        evidence: collaborate in areas such as defence
+    e3:
+      defence:
+        score: 2
+        evidence: our joint action within the Coalition of the Willing for Ukraine
+          matters, including our decision to make our Scalp and Storm Shadow capabilities
+          available to Ukraine together
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,45 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Chargé d’Affaires of the Embassy of the Russian Federation in France
+  - Minister for Europe and Foreign Affairs
+  - Head of the Continental Europe Directorate
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: France summoned the Russian Chargé d’Affaires to condemn Russian hybrid
+    attacks in Europe and reaffirm its unwavering support for Ukraine.
+  positions:
+    ukraine: France reaffirms Ukraine's right to defend its sovereignty and territorial
+      integrity and calls for a Russian ceasefire and genuine negotiations for a just
+      peace.
+    hybrid: France condemns Russian hybrid attacks as an irresponsible escalation
+      and commits to increasing the resilience of democracies against such destabilization
+      attempts.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France, alongside its partners, remains more determined than ever
+          to support Ukraine
+      hybrid:
+        score: 1
+        evidence: France will continue, with its allies and partners, to increase
+          the protection and resilience of our partners, our democracies and our citizens
+          against these hybrid actions
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

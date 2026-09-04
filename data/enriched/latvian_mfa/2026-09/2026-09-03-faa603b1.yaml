@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - hybrid
+  location: Viklow, Ireland
+  position: Latvia asserts that Russia is implementing state-sponsored terrorism in
+    Europe.
+  positions:
+    hybrid: Latvia characterizes Russia's activities in Europe as state-sponsored
+      terrorism.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Krievija Eiropā īsteno valsts sponsorētu terorismu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,59 @@
+actors:
+- DE
+- FR
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Johan Wadephul
+  - Jean-Noël Barrot
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Poland reaffirms its commitment to the Weimar Triangle to counter Russian
+    aggression and support Ukraine's sovereignty and European security.
+  positions:
+    ukraine: Poland asserts that a sovereign Ukraine is essential for a secure Europe
+      and pledges continued support for the country.
+    defence: Poland supports joint efforts to counter security threats resulting from
+      Russia's imperialist policy and emphasizes the importance of transatlantic relations.
+    hybrid: Poland condemns Russian state terrorism and hybrid threats, supporting
+      Germany's decision to close Russian diplomatic facilities in response to hostile
+      activities.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Szefowie dyplomacji zapewnili, że nadal będą wspierać walczącą Ukrainę
+      defence:
+        score: 1
+        evidence: Ministrowie rozmawiali o współpracy obronnej
+      hybrid:
+        score: 2
+        evidence: Szefowie dyplomacji zapowiedzieli też wspólne przeciwdziałanie dezinformacji
+          oraz zobowiązali się do rozwoju dalszej współpracy
+    e3:
+      defence:
+        score: 0
+        evidence: Ministrowie rozmawiali o współpracy obronnej
+    visegrad:
+      defence:
+        score: 1
+        evidence: Ministrowie rozmawiali o współpracy obronnej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

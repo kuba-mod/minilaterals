@@ -1,0 +1,44 @@
+actors:
+- DE
+- PL
+- UK
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Ignazio Cassis
+  - Anita Anand
+  - David Lammy
+  - Andrij Sybiha
+  - Kaja Kallas
+  topics:
+  - ukraine
+  - hybrid
+  location: Ireland
+  position: Poland expresses solidarity with Ukraine and Germany against Russian aggression
+    and hybrid threats, pledging mutual support among allies.
+  positions:
+    ukraine: Poland condemns Russian bombings of civilian infrastructure in Ukraine
+      as war crimes and expresses full solidarity with the country.
+    hybrid: Poland characterizes recent sabotage acts against Germany as state terrorism
+      and asserts that Russia is conducting a hybrid war.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Minister Radosław Sikorski wyraził solidarność z Ukrainą
+      hybrid:
+        score: 1
+        evidence: wygląda na to, że to Rosja prowadzi z nami wojnę hybrydową
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

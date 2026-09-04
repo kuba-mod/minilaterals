@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Ronald Rauhe
+  topics: []
+  location: null
+  position: Germany has appointed Ronald Rauhe as the Minister of State for Sport
+    and Volunteering to strengthen sports policy and pursue a bid for the Olympic
+    and Paralympic Games.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

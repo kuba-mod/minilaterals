@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry for Europe and Foreign Affairs
+  topics:
+  - rule_of_law
+  location: null
+  position: France actively engaged in securing the provisional release and departure
+    of filmmakers Gaël Mocaër and Sebastian Perez Pezzani from Togo.
+  positions:
+    rule_of_law: France worked to secure the release of detained filmmakers from Togo.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: actively engaged in securing this outcome
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

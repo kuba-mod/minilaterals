@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Russian Charge D'affaires
+  topics:
+  - hybrid
+  location: null
+  position: The United Kingdom summoned the Russian Chargé d'Affaires to strongly
+    condemn a drone attack on Leipzig airport.
+  positions:
+    hybrid: The United Kingdom condemned the reckless drone attack on Leipzig airport
+      in the strongest terms.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

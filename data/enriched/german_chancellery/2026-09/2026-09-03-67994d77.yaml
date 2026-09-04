@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Ronald Rauhe
+  topics: []
+  location: Berlin, Germany
+  position: Germany has appointed Ronald Rauhe as the new Minister of State for Sport
+    and Volunteering to strengthen elite sports and volunteer work.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

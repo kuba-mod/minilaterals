@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Latvia notes that the European Court of Human Rights found no deficiencies
+    in the actions of Latvian authorities regarding allegations of forced labor and
+    servitude.
+  positions:
+    rule_of_law: Latvia maintains that its authorities acted correctly in the case
+      of A.S., as confirmed by the European Court of Human Rights.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

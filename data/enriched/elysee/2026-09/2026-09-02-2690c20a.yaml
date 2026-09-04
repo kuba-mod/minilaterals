@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Rob Jetten
+  topics: []
+  location: Eindhoven, Netherlands
+  position: France seeks to strengthen its relationship with the Netherlands to enhance
+    European sovereignty and strategic autonomy through industrial and technological
+    innovation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
