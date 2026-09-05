@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ivita Burmistre
+  - President of the Republic of Finland
+  topics: []
+  location: Helsinki, Finland
+  position: Latvia's ambassador Ivita Burmistre presented her letter of accreditation
+    to the President of Finland.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

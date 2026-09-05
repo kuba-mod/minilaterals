@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Subrahmanyam Jaishankar
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Warsaw, Poland
+  position: Poland seeks to intensify strategic cooperation with India across economic,
+    technological, and security dimensions, particularly regarding the war in Ukraine
+    and infrastructure connectivity.
+  positions:
+    ukraine: Poland presented its assessment of the situation in Ukraine and its global
+      security consequences, agreeing on the necessity of efforts to achieve a lasting
+      peace.
+    defence: Poland identifies significant potential for cooperation between the defense
+      industries of Poland and India.
+    energy: Poland discussed the development of energy links and infrastructure connectivity
+      between India, Poland, and Europe.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: konieczne są dalsze wysiłki zmierzające do zakończenia wojny i osiągnięcia
+          trwałego pokoju
+    visegrad:
+      defence:
+        score: 1
+        evidence: Szczególny potencjał widzimy we współpracy przemysłów obronnych
+      energy:
+        score: 0
+        evidence: Ministrowie rozmawiali również o możliwościach rozwoju powiązań
+          transportowych, infrastrukturalnych, energetycznych i cyfrowych między Indiami
+          a Polską i Europą
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

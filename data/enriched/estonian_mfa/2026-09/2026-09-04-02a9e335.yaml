@@ -1,0 +1,24 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Mariin Ratnik
+  - Rein Tammsaar
+  topics: []
+  location: New York, USA
+  position: Estonia led a special session of the UNICEF Executive Board to discuss
+    the integration of artificial intelligence, digital solutions, and technology
+    into education.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

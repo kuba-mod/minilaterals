@@ -1,0 +1,90 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of the Weimar Triangle
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - energy
+  - iran
+  location: Weimar, Germany
+  position: France, as part of the Weimar Triangle, commits to strengthening European
+    sovereignty, security, and competitiveness through deeper trilateral cooperation
+    within the EU and NATO frameworks.
+  positions:
+    ukraine: France supports Ukraine's independence and territorial integrity, pledging
+      continued military aid and the pursuit of a comprehensive, just, and lasting
+      peace.
+    defence: France aims to strengthen the European pillar of NATO and increase European
+      autonomy and responsibility for its own defence.
+    hybrid: France commits to developing robust countermeasures and coordinated European
+      responses to protect democratic institutions against Russian hybrid interference
+      and sabotage.
+    enlargement: France supports a merit-based EU enlargement process for Ukraine,
+      Moldova, and the Western Balkans.
+    green_transition: France promotes a growth model based on an ambitious climate
+      policy and the full implementation of international climate agreements.
+    energy: France advocates for secure, diversified, and affordable energy to ensure
+      European resilience.
+    iran: France calls for an agreement to ensure the unrestricted freedom of navigation
+      in the Strait of Hormuz and to prevent Iran from acquiring nuclear weapons.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: We will continue to support Ukraine as long as it takes, with the
+          provision of military support, through the financing and donating of priority
+          equipment, industry procurement, research and development cooperation, co-productions,
+          the ramping up of the European defence industry to ensure swift and long-lasting
+          deliveries, as well as funding for Ukrainian production.
+      defence:
+        score: 2
+        evidence: We also support the development of a more robust and competitive
+          European defence technological and industrial base, including through EU
+          programmes like SAFE and EDIP and in the next MFF.
+      hybrid:
+        score: 2
+        evidence: the adoption on 13 July of a coordinated European response to the
+          cyber-attacks carried out by Russia against the EU and its member states’
+          interests, in which the Weimar Triangle played a major role.
+      enlargement:
+        score: 1
+        evidence: We aim to vigorously advance the opening of negotiation clusters
+          and the merit-based enlargement process with Ukraine, the Republic of Moldova,
+          as well as a tailor-made approach to offer immediate and tangible progress
+          to all candidate countries, including the countries of the Western Balkans
+      green_transition:
+        score: 1
+        evidence: Our new growth model includes an ambitious energy and climate policy,
+          which guarantees secure, diversified and affordable energy and a just transition,
+          fully implements international climate agreements, and augments European
+          resilience against extreme weather events, climate change and environmental
+          degradation.
+    e3:
+      iran:
+        score: 1
+        evidence: ensuring that Iran will have no nuclear weapon
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

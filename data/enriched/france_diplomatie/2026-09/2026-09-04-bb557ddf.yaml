@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Khaled El-Enany, UNESCO Director-General
+  topics: []
+  location: Paris, France
+  position: France reaffirms its commitment to multilateralism and supports UNESCO's
+    role in promoting education, science, and culture, while endorsing a youth-led
+    call for a new culture of peace.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,46 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Sylwester Suszek
+  - Rafał Zaorski
+  - Krzysztof Piecha
+  - Zbigniew Ziobro
+  - Patrycja Kotecka
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Poland
+  position: The Polish Prime Minister alleges systemic corruption and infiltration
+    of previous government officials by crypto-asset interests to block financial
+    oversight legislation.
+  positions:
+    hybrid: Poland asserts that the lack of cryptocurrency regulation allows Russia
+      to use these assets as a primary source for financing sabotage operations.
+    rule_of_law: The Polish government is exposing alleged bribery and illegal influence
+      of crypto-asset entities over the judiciary and former government officials
+      to obstruct the law.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Są więc wykorzystywane jako główne źródło finansowania akcji sabotażowych
+          – prym wiedzie tutaj Rosja
+      rule_of_law:
+        score: 1
+        evidence: żaden przyzwoity człowiek i polityk nie powinien brać pieniędzy
+          od przestępców
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

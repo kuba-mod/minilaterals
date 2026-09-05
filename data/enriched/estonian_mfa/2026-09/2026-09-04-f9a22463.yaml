@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Peeter Raudsep
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia views the Tallinn-Helsinki tunnel project as a means to strengthen
+    the security of the Nordic-Baltic region.
+  positions:
+    defence: Estonia asserts that the Tallinn-Helsinki tunnel project would enhance
+      the security of the entire Nordic-Baltic region.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Tallinn-Helsingi tunneliprojekt tugevdaks kogu Põhjala Balti regiooni
+          julgeolekut
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

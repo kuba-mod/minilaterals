@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Minister Delegate for Autonomy and People with Disabilities
+  topics: []
+  location: Bobigny, France
+  position: France is launching a national accessibility strategy for 2026-2029 to
+    ensure universal accessibility and full social inclusion for people with disabilities
+    across education, employment, housing, and culture.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

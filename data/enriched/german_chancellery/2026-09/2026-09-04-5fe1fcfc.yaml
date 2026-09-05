@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Staatspräsident der Vereinigten Arabischen Emirate, Scheich Mohammed Bin Zayed
+  topics: []
+  location: Berlin, Germany
+  position: Germany intends to discuss the expansion of its strategic partnership,
+    economic ties, and regional stability with the UAE.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

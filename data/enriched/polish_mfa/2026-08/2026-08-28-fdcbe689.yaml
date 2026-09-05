@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister of Foreign Affairs W. Zajączkowski
+  topics:
+  - defence
+  location: Beirut and Damascus
+  position: Poland is increasing its financial aid to Lebanon and seeking to restart
+    political and developmental cooperation with Syria to promote regional stability.
+  positions:
+    defence: Poland is discussing the future of international engagement in Lebanon
+      in light of the expiring UNIFIL mandate and the need for Hezbollah's disarmament.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: w związku z wygaszaniem mandatu misji pokojowej ONZ (UNIFIL), w
+          której skład wchodzi Polski Kontyngent Wojskowy
+    visegrad:
+      defence:
+        score: 0
+        evidence: Rozmówcy omówili przyszłość międzynarodowego zaangażowania w Libanie
+          - w związku z wygaszaniem mandatu misji pokojowej ONZ (UNIFIL), w której
+          skład wchodzi Polski Kontyngent Wojskowy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

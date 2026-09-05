@@ -1,0 +1,28 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dace Melbārde
+  - European Union Ministers for European Affairs
+  topics:
+  - defence
+  location: Dublin, Ireland
+  position: Latvia advocates for the new EU multiannual budget to address security
+    challenges on the EU's eastern border caused by Russian aggression.
+  positions:
+    defence: Latvia asserts that the EU's long-term budget must provide resources
+      to counter the security threats and challenges resulting from Russian aggression
+      on the eastern border.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

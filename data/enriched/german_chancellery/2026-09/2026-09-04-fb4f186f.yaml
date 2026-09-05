@@ -1,0 +1,51 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Ronald Rauhe
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Germany is taking decisive countermeasures against Russia for conducting
+    hybrid attacks and is increasing military support for Ukraine.
+  positions:
+    ukraine: Germany is increasing its military assistance to Ukraine.
+    defence: Germany is strengthening the protection of its critical infrastructure
+      through a new hybrid defense center and the KRITIS umbrella law.
+    hybrid: Germany has attributed a drone attack in Leipzig to Russia and is responding
+      by closing the Russian Consulate in Bonn, terminating the Russian House contract
+      in Berlin, and tightening entry controls for Russian citizens.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die militärische Hilfe für die Ukraine wird verstärkt.
+      hybrid:
+        score: 2
+        evidence: Die Bundesregierung hat also auf den missglückten Angriff eine klare
+          Antwort gegeben. Das russische Generalkonsulat in Bonn wird geschlossen,
+          der Vertrag für das Russische Haus in Berlin gekündigt, russische Staatsangehörige
+          werden bei der Einreise verschärft kontrolliert und der Druck auf die russische
+          Schattenflotte erhöht.
+    e3:
+      defence:
+        score: 0
+        evidence: Die Unterstützung der Partner in der Europäischen Union und der
+          NATO gibt all dem zusätzliche Sicherheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

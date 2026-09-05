@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  - Mario Voigt
+  - Christian Tischner
+  - Martin Eberle
+  - Doris Fischer
+  - Tobias Pfeifer-Helke
+  - Knut Kreuch
+  topics: []
+  location: Gotha and Eisenach, Germany
+  position: Germany, through a joint federal and state effort, is providing 110 million
+    euros for the comprehensive renovation and preservation of Schloss Friedenstein
+    to secure its historical substance and enhance its use as a center for art, culture,
+    and research.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

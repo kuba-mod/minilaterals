@@ -1,0 +1,54 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  - Alexander Dobrindt
+  - Friedrich Merz
+  - Steffen Meyer
+  - Mark Rutte
+  - Ursula von der Leyen
+  topics:
+  - hybrid
+  - defence
+  - ukraine
+  location: Berlin, Germany
+  position: Germany attributes the attempted attack at Leipzig/Halle airport to Russia
+    and is implementing coordinated countermeasures to strengthen protection against
+    hybrid threats.
+  positions:
+    hybrid: Germany has politically attributed the hybrid attack at Leipzig/Halle
+      airport to Russia and is strengthening its defenses against such coordinated
+      illegitimate actions.
+    defence: The German government is resolutely continuing to strengthen its national
+      defense capabilities.
+    ukraine: Germany confirms its continued and determined support for Ukraine.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Sie erschwere so, „weitere hybride Maßnahmen in Deutschland und
+          Europa durchzuführen“
+      ukraine:
+        score: 1
+        evidence: die Bundesregierung setze die Stärkung der deutschen Verteidigungsfähigkeit
+          und ihre Unterstützung der Ukraine entschlossen fort
+    e3:
+      defence:
+        score: 1
+        evidence: die Bundesregierung sich eng mit den Partnern in der NATO und der
+          Europäischen Union abstimme und dies auch weiter tun werde
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
