@@ -1,0 +1,94 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- green_transition
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Johann Wadephul
+  - Jean-Noël Barrot
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - green_transition
+  - energy
+  - iran
+  location: Weimar, Germany
+  position: Germany, as part of the Weimar Triangle, commits to strengthening European
+    sovereignty, security, and competitiveness while supporting Ukraine and countering
+    Russian hybrid threats.
+  positions:
+    ukraine: Germany pledges continued military, financial, and industrial support
+      for Ukraine's sovereignty and territorial integrity until a just peace is achieved.
+    defence: Germany aims to strengthen the European pillar of NATO and increase European
+      autonomy in defense through a 360-degree approach and industrial cooperation.
+    hybrid: Germany commits to developing robust countermeasures and a coordinated
+      European response to protect democratic institutions from Russian hybrid activities
+      and disinformation.
+    enlargement: Germany supports a rigorous and performance-based EU enlargement
+      process for Ukraine, Moldova, and the Western Balkans.
+    green_transition: Germany advocates for an ambitious energy and climate policy
+      that implements international agreements and strengthens resilience against
+      climate change.
+    energy: Germany seeks to ensure secure, diversified, and affordable energy supplies
+      through a just energy transition.
+    iran: Germany emphasizes the necessity of ensuring Iran does not acquire nuclear
+      weapons and ceases its hostile activities in the region.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir werden die Ukraine weiterhin unterstützen, solange dies erforderlich
+          ist, und zwar durch militärische Unterstützung, die Finanzierung und Schenkung
+          prioritärer Ausrüstung, industrielle Beschaffung, Zusammenarbeit im Bereich
+          Forschung und Entwicklung, gemeinsame Produktionen, die Stärkung der europäischen
+          Verteidigungsindustrie mit dem Ziel der Gewährleistung schneller und langfristiger
+          Lieferungen sowie finanzielle Unterstützung für die ukrainische Produktion.
+      defence:
+        score: 2
+        evidence: Wir unterstützen außerdem die Entwicklung einer robusteren und wettbewerbsfähigeren
+          technologischen und industriellen Basis der europäischen Verteidigung, auch
+          durch EU -Programme wie SAFE und EDIP sowie im Rahmen des nächsten MFR .
+      hybrid:
+        score: 2
+        evidence: Wir stehen solidarisch zusammen, wenn es darum geht, Bedrohungen
+          durch ausländische Akteure anzuzeigen, auch indem wir uns gegenseitig bei
+          der Attribuierung von Angriffen unterstützen.
+      enlargement:
+        score: 1
+        evidence: Wir möchten die Eröffnung von Verhandlungsclustern und den leistungsbezogenen
+          Erweiterungsprozess mit der Ukraine und der Republik Moldau rigoros vorantreiben;
+          dasselbe gilt für einen maßgeschneiderten Ansatz, um allen Beitrittskandidaten,
+          einschließlich der Länder des westlichen Balkans, im Einklang mit den Fortschritten
+          in ihrem jeweiligen Reformprozess umgehend greifbare Fortschritte zu ermöglichen.
+      green_transition:
+        score: 1
+        evidence: Unser neues Wachstumsmodell umfasst eine ehrgeizige Energie- und
+          Klimapolitik, die sichere, diversifizierte und erschwingliche Energie und
+          eine gerechte Energiewende garantiert, internationale Klimaabkommen uneingeschränkt
+          umsetzt und die europäische Resilienz gegen Extremwetterereignisse, den
+          Klimawandel und Umweltzerstörung stärkt.
+    e3:
+      iran:
+        score: 1
+        evidence: gewährleisten, dass Iran nicht über Atomwaffen verfügt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

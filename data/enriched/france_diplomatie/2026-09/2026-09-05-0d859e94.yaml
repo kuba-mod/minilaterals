@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Ayman Safadi
+  topics:
+  - iran
+  location: null
+  position: France reaffirmed its support for Jordan's stability and advocated for
+    a diplomatic solution to address regional threats posed by Iran.
+  positions:
+    iran: France condemned Iranian strikes on Jordanian territory and emphasized that
+      a diplomatic solution is the only way to respond to threats posed by Iran.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: reaffirmed their commitment to a diplomatic solution, which is the
+          only one capable of responding to the threats posed by Iran
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

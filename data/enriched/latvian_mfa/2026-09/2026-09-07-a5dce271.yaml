@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Ararat Mirzoyan
+  topics:
+  - migration
+  location: null
+  position: Latvia signed a readmission agreement with Armenia.
+  positions:
+    migration: Latvia signed a readmission agreement with Armenia to manage the return
+      of undocumented persons.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

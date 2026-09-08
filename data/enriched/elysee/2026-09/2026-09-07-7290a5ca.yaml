@@ -1,0 +1,42 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the French Republic
+  - President of the Republic of Korea
+  - representatives of countries, regions and international organizations
+  - leaders of the cinema, audiovisual and video game industries
+  - creators
+  - talents
+  - festivals
+  - cultural institutions
+  topics:
+  - green_transition
+  location: Saint-Paul-de-Vence, France
+  position: France co-presided over the Lumière Summit to establish a multilateral
+    framework for the governance of cinema and animated images, focusing on cultural
+    diversity, human creativity in the age of AI, and the protection of intellectual
+    property.
+  positions:
+    green_transition: France commits to developing best practices and operational
+      tools to promote more sustainable modes of production, distribution, and broadcasting
+      for the audiovisual industry.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Nous œuvrerons à l’élaboration de bonnes pratiques, de référentiels
+          souples et d’outils opérationnels favorisant la conception et la mise en
+          œuvre de modes de production, de distribution et de diffusion plus durables.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

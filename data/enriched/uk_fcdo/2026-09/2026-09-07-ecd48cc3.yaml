@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Kumar Iyer, UK's Permanent Representative to the WTO and UN
+  topics: []
+  location: null
+  position: The United Kingdom delivered a joint statement during the Interactive
+    Dialogue on the UN Fact-Finding Mission for Sudan.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Eleanor Sanders, UK's Human Rights Ambassador
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom expresses grave concern over the human rights situation
+    in Myanmar and calls for the restoration of democracy and the rule of law.
+  positions:
+    rule_of_law: The United Kingdom advocates for the restoration of the rule of law
+      and the protection of human rights in Myanmar.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

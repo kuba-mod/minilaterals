@@ -1,0 +1,26 @@
+actors:
+- PL
+- HU
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Tom Berendsen
+  topics: []
+  location: Latvia
+  position: Foreign Minister Baiba Braže will host foreign ministers from several
+    countries, including the Netherlands, Poland, Hungary, Finland, Ireland, Norway,
+    and Croatia.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

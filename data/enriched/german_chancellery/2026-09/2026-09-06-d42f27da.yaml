@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)
+  topics:
+  - defence
+  location: null
+  position: Germany is conducting a nationwide warning day to test its technical warning
+    systems and sensitize the population to civil protection and self-preparedness.
+  positions:
+    defence: Germany is testing its modular warning system and civil protection infrastructure
+      to identify improvements in emergency communication.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Übergeordnet geht es auch um das Thema Zivilschutz – weswegen der
+          Bund die Warnung betreibt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

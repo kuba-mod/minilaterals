@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Riga, Latvia
+  position: Latvia is organizing the Riga Conference 2026, the largest foreign policy
+    and security forum in the Nordic-Baltic region.
+  positions:
+    defence: Latvia is hosting a major regional forum to discuss foreign policy and
+      security.
+  stances:
+    baltic:
+      defence:
+        score: 2
+        evidence: notiks Ziemeļvalstu reģiona lielākais ārpolitikas un drošības forums
+          – “Rīgas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

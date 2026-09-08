@@ -1,0 +1,60 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Bundeskanzler Merz
+  - António Costa
+  - Scheich Mohammed Bin Zayed
+  - Dorothee Bär
+  - Philippe Baptiste
+  - Wadephul
+  - Wildberger
+  - Šefčovič
+  - Rutte
+  - Bowinkelmann
+  - Giese
+  topics:
+  - defence
+  - hybrid
+  - energy
+  location: Berlin, Germany
+  position: Germany is focusing on strengthening its critical infrastructure against
+    hybrid threats, maintaining strategic partnerships in the Middle East, and managing
+    diplomatic tensions with Russia.
+  positions:
+    defence: Germany is maintaining the principle of voluntariness for the Lithuania
+      Brigade while prioritizing operational readiness.
+    hybrid: Germany is implementing the KRITIS-Dachgesetz to systematically protect
+      critical infrastructure and increase resilience against hybrid attacks.
+    energy: Germany seeks to deepen economic relations and energy cooperation with
+      the United Arab Emirates.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: die Brigade Litauen auch derzeit aus Kräften besteht, die allesamt
+          freiwillig da sind
+      hybrid:
+        score: 2
+        evidence: Wir haben ein KRITIS-Dachgesetz, das erstmalig ein Dach für den
+          bundesweiten Schutz kritischer Anlagen liefert.
+    e3:
+      defence:
+        score: 1
+        evidence: Großbritannien ist ein NATO-Partner.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- LV
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Latvia hosted an international conference to analyze and address security
+    threats to Europe posed by the Balti-Russian axis.
+  positions:
+    defence: Latvia is coordinating international efforts to counter security threats
+      originating from the Balti-Russian axis.
+    hybrid: Latvia is analyzing the hybrid threats posed by the Balti-Russian axis
+      to European security.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: starptautiska konference par Baltkrievijas radītajiem draudiem Eiropas
+          drošībai
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

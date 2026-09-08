@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - President of the Republic of Korea, LEE Jae-Myung
+  - Vice-President of the European Commission
+  topics: []
+  location: Saint-Paul-de-Vence, France
+  position: France co-presided over the Lumière Summit to establish a new global multilateralism
+    for cinema and animated images, launching four concrete initiatives to protect
+    cultural heritage, education, independent screens, and video games.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

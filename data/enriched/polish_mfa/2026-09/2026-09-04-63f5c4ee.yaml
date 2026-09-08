@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - iran
+  location: null
+  position: Poland calls for a diplomatic solution and a return to international negotiations
+    to end civilian casualties and ensure lasting peace in Iran.
+  positions:
+    iran: Poland urges all parties to return to international negotiations, specifically
+      within the process initiated by Pakistan, Oman, and Qatar, to achieve a lasting
+      peace.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
