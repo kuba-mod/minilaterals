@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Z. Bogucki
+  - B. Nowacka
+  topics:
+  - rule_of_law
+  location: null
+  position: Prime Minister Donald Tusk accused the President's environment of blocking
+    crypto-asset regulations to protect criminal interests and vowed to fully investigate
+    the Zondacrypto scandal.
+  positions:
+    rule_of_law: Poland's government asserts that previous attempts to regulate the
+      crypto-market were sabotaged by political opponents to prevent state oversight
+      and the prosecution of financial fraud.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Skończyło się mataczenie i bezkarna ochrona brudnych interesów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Tom Berendsen
+  topics:
+  - ukraine
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia emphasizes the critical importance of the Netherlands' contribution
+    to regional security and discusses strengthening European defense and support
+    for Ukraine.
+  positions:
+    ukraine: Estonia discussed the continued support for Ukraine with the Dutch Foreign
+      Minister.
+    defence: Estonia advocates for the strengthening of European security and defense.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Euroopa julgeoleku ja kaitse tugevdamist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

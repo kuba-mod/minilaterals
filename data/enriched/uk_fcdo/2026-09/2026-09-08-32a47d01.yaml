@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Eleanor Sanders, UK's Human Rights Ambassador
+  topics: []
+  location: null
+  position: The United Kingdom delivered a joint statement regarding the human rights
+    situation in Sri Lanka at the UN Human Rights Council.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- FR
+- PL
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign ministers of Canada, Denmark, Finland, France, Iceland, Ireland, Norway,
+    Poland, Portugal, Spain, Sweden and the UK
+  - Andy Burnham
+  - Emmanuel Macron
+  - Mark Carney
+  topics: []
+  location: null
+  position: France intends to introduce national measures to ban trade in goods from
+    illegal settlements in the West Bank to protect the two-state solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

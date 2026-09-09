@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Marie Rabatel
+  topics: []
+  location: New York, USA
+  position: France is nominating Marie Rabatel as an expert for the Committee on the
+    Rights of Persons with Disabilities for the 2029-2032 term.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Poland expresses condolences to the families of the victims and all those
+    affected by the Houthi missile and drone attacks on the southern part of the Kingdom
+    of Saudi Arabia.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

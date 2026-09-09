@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Serbian Chargé d'Affaires
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom summoned the Serbian Chargé d'Affaires to condemn commemorations
+    for convicted war criminal Ratko Mladić.
+  positions:
+    rule_of_law: The United Kingdom condemned the commemorations surrounding the funeral
+      of convicted war criminal Ratko Mladić.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

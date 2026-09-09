@@ -1,0 +1,35 @@
+actors:
+- FR
+- PL
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Canada
+  - Foreign Ministers of Denmark
+  - Foreign Ministers of Finland
+  - Foreign Ministers of France
+  - Foreign Ministers of Iceland
+  - Foreign Ministers of Ireland
+  - Foreign Ministers of Norway
+  - Foreign Ministers of Poland
+  - Foreign Ministers of Portugal
+  - Foreign Ministers of Spain
+  - Foreign Ministers of Sweden
+  - Foreign Ministers of the UK
+  topics: []
+  location: null
+  position: The United Kingdom, alongside several other nations, issued a joint statement
+    supporting the two-state solution.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Hélène Huby
+  - Thomas Pesquet
+  topics:
+  - defence
+  location: Paris, France
+  position: France is organizing an international space summit to promote collective
+    governance and a sustainable use of outer space by integrating industrial, scientific,
+    and defense perspectives.
+  positions:
+    defence: France intends to integrate defense themes into broader discussions on
+      space governance during the international summit.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: intégrant à ces discussions sur la gouvernance les thématiques industrielles,
+          scientifiques et de défense
+    e3:
+      defence:
+        score: 0
+        evidence: en intégrant à ces discussions sur la gouvernance les thématiques
+          industrielles, scientifiques et de défense
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

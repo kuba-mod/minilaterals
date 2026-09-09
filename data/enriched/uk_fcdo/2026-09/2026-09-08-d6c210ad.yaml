@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Stephen Doughty MP, Minister for the Middle East
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom has provided a written update to parliament regarding
+    sanctions measures against Iran.
+  positions:
+    iran: The United Kingdom is implementing and updating sanctions measures targeting
+      Iran.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: has provided a written update to parliament on Iran Sanctions measures
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

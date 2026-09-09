@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - representatives of non-governmental organizations
+  - Ministry of Foreign Affairs
+  - Secretariat of the Latvian Presidency of the Council of the European Union
+  topics: []
+  location: null
+  position: Latvia is inviting representatives of non-governmental organizations to
+    a Participation Day during the Latvian Presidency of the Council of the European
+    Union.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

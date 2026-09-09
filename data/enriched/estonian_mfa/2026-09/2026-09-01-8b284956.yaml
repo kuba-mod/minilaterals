@@ -20,8 +20,13 @@ extracted:
   positions:
     defence: Estonia formalizes its diplomatic representation at NATO through the
       presentation of credentials.
-  stances: {}
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: Eesti alaline esindaja Põhja-Atlandi Lepingu Organisatsiooni (NATO)
+          juures Kristjan Prikk andis üle volikirja NATO peasekretärile Mark Ruttele
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

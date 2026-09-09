@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wiceministrowie
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Poland conducted political consultations with Kuwait to discuss bilateral
+    relations and regional security challenges in the Middle East and Eastern Europe.
+  positions:
+    energy: Poland emphasized the importance of ensuring the continuity of energy
+      raw material supplies and the security of navigation through the Strait of Hormuz.
+    iran: Poland discussed the impact of the US-Iran conflict on the Persian Gulf,
+      advocating for diplomatic efforts to limit escalation and maintain international
+      trade stability.
+  stances:
+    visegrad:
+      energy:
+        score: 0
+        evidence: Szczególną uwagę poświęcono bezpieczeństwu żeglugi przez Cieśninę
+          Ormuz i ciągłości dostaw surowców energetycznych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

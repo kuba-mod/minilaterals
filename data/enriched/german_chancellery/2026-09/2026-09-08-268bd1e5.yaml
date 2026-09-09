@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Minister of State for Culture and the Media
+  topics: []
+  location: Bonn, Germany
+  position: Germany is providing 2.3 million euros in funding to commemorate the 200th
+    anniversary of Ludwig van Beethoven's death in 2027, including support for the
+    Beethoven-Haus and the Beethovenfest Bonn.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

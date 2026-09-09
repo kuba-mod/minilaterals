@@ -1,0 +1,55 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- energy
+- indo_pacific
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Władysław Teofil Bartoszewski
+  - Grata Endah Werdaningtyas
+  topics:
+  - ukraine
+  - energy
+  - indo_pacific
+  - green_transition
+  location: null
+  position: Poland seeks to deepen bilateral relations with Indonesia and increase
+    its engagement in the Indo-Pacific region, specifically through accession to the
+    Treaty of Amity and Cooperation in Southeast Asia.
+  positions:
+    ukraine: Poland discussed the Russian aggression against Ukraine and emphasized
+      the importance of respecting international law and the UN Charter.
+    energy: Poland aims to intensify economic cooperation with Indonesia in the energy
+      sector.
+    indo_pacific: Poland intends to join the Treaty of Amity and Cooperation in Southeast
+      Asia (TAC) in July 2026 to increase its commitment to the Indo-Pacific region.
+    green_transition: Poland is looking to expand economic cooperation with Indonesia
+      in the field of green technologies.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: omówili m.in. sytuację w Europie i Indo-Pacyfiku, rosyjską agresję
+          przeciwko Ukrainie
+      green_transition:
+        score: 1
+        evidence: 'Omówili możliwości intensyfikacji współpracy gospodarczej, w tym
+          w sektorach: [...] zielonych technologii'
+    visegrad:
+      energy:
+        score: 0
+        evidence: 'Omówili możliwości intensyfikacji współpracy gospodarczej, w tym
+          w sektorach: rolno-spożywczym, energetycznym, nowych technologii oraz zielonych
+          technologii.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

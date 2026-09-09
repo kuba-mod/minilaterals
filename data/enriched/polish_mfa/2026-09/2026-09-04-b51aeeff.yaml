@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+- enlargement
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - European Parliament rapporteurs
+  topics:
+  - defence
+  - enlargement
+  - rule_of_law
+  location: Dublin, Ireland
+  position: Poland advocates for a balanced EU budget that supports cohesion and competitiveness,
+    while supporting EU enlargement based on merit and the rule of law.
+  positions:
+    defence: Poland supports using cohesion policy investments for dual-use projects
+      to enhance security and defense.
+    enlargement: Poland views EU enlargement as a geopolitical necessity that should
+      be based on concrete progress and the fulfillment of membership criteria by
+      candidate countries.
+    rule_of_law: Poland emphasizes that candidate countries must continue reforms
+      in the rule of law and judicial independence, and is ready to discuss safeguarding
+      mechanisms for these areas.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Inwestycje finansowane z polityki spójności pomagają odpowiedzieć
+          także na nowe wyzwania związane z bezpieczeństwem i obroną np. poprzez inwestycje
+          podwójnego zastosowania
+      enlargement:
+        score: 1
+        evidence: Rozszerzenie jest geopolityczną koniecznością – wzmocni nasze bezpieczeństwo
+          i scali nasz kontynent
+      rule_of_law:
+        score: 1
+        evidence: 'państwa kandydujące muszą kontynuować reformy, zwłaszcza w tak
+          podstawowych obszarach jak: praworządność, walka z korupcją oraz niezależność
+          sądownictwa'
+    e3:
+      defence:
+        score: 0
+        evidence: Uczestnicy dyskutowali o tym, jak przyszły unijny budżet może wzmacniać
+          konkurencyjność, bezpieczeństwo i obronność.
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Rozszerzenie jest geopolityczną koniecznością – wzmocni nasze bezpieczeństwo
+          i scali nasz kontynent.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
