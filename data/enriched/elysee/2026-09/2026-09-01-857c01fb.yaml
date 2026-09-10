@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Brigitte Macron
+  - Grand Duke Guillaume of Luxembourg
+  - Grand Duchess Stéphanie of Luxembourg
+  - Sarah El Haïry
+  - Martine Brousse
+  - Cyril Ramaphosa
+  - Tshepo Motsepe
+  - Zita Oligui Nguema
+  - Brice Clotaire Oligui Nguema
+  topics: []
+  location: null
+  position: France conducted a series of diplomatic receptions, social engagements,
+    and international roundtables focused on child protection and healthcare.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,25 @@
+actors:
+- EE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - migration
+  location: null
+  position: Estonia informs its citizens that they can enter Thailand visa-free for
+    tourism purposes for up to 30 days starting September 15, 2026.
+  positions:
+    migration: Estonian citizens will be eligible for visa-free entry into Thailand
+      for tourism for up to 30 days.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

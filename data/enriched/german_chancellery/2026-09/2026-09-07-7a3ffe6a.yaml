@@ -1,0 +1,60 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Bowinkelmann (BMI)
+  - Wentzel (BMWE)
+  - Grüneberg (BMFTR)
+  - Müller (BMVg)
+  - Hinterseher (AA)
+  - Totz (BMWSB)
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Germany maintains its commitment to national security and economic competitiveness
+    while responding firmly to Russian hybrid threats and supporting a negotiated
+    peace in Ukraine.
+  positions:
+    ukraine: Germany supports a negotiation process to end the war, provided Russia
+      moves away from its maximalist demands.
+    defence: Germany is significantly increasing investment in defense capabilities
+      to adapt to a changed global security situation.
+    hybrid: Germany attributes a drone attack on Leipzig/Halle airport to Russia and
+      remains highly vigilant against Russian espionage, sabotage, and disinformation.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Es ist gut, dass derartige Gespräche laufen
+      defence:
+        score: 1
+        evidence: Deshalb investieren wir deutlich in die Verteidigungsfähigkeit,
+          weil sich die Weltlage verändert hat.
+      hybrid:
+        score: 1
+        evidence: Wir sind uns bewusst, was wir als hybride Bedrohungslage bezeichnen.
+          Wir sind täglich hybriden Einflüssen und Angriffen ausgesetzt.
+    e3:
+      defence:
+        score: 0
+        evidence: ich kann auch bestätigen, dass wir in Person des außenpolitischen
+          Beraters des Bundeskanzlers gemeinsam mit den Kollegen aus den E3-Staaten
+          an diesen Gesprächen mit beteiligt waren
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

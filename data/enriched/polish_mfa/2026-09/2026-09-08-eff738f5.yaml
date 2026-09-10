@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Kenneth Høegh
+  - Helen Eduards
+  topics:
+  - green_transition
+  location: Warsaw, Poland
+  position: Poland emphasizes the geopolitical importance of the Arctic and utilizes
+    its scientific potential to support the protection of the Arctic natural environment.
+  positions:
+    green_transition: Poland leverages its scientific capabilities to support actions
+      aimed at the better protection of the Arctic's natural environment.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: wspiera działania zmierzające do lepszej ochrony środowiska naturalnego
+          Arktyki
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

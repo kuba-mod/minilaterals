@@ -1,0 +1,28 @@
+actors:
+- HU
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Anita Orbán
+  topics:
+  - ukraine
+  location: Latvia
+  position: Latvia advocates for increased sanctions pressure on Russia and continued
+    support for Ukraine.
+  positions:
+    ukraine: Latvia emphasizes the need for strong sanctions against Russia and unwavering
+      support for Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia emphasizes that the investigation of the Fitburg case demonstrates
+    that Baltic Sea states take the damage of critical infrastructure very seriously
+    and seek to hold perpetrators accountable.
+  positions:
+    hybrid: Estonia asserts that the legal proceedings regarding the Fitburg incident
+      show a commitment to investigating and prosecuting attacks on critical infrastructure.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Läänemereäärsed riigid suhtuvad kriitilise taristu kahjustamise
+          juhtumitesse täie tõsidusega
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

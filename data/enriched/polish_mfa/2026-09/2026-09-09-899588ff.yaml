@@ -1,0 +1,69 @@
+actors:
+- PL
+- HU
+- LV
+issue_areas:
+- defence
+- hybrid
+- enlargement
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Baiba Braže
+  topics:
+  - defence
+  - hybrid
+  - enlargement
+  - migration
+  location: Riga, Latvia
+  position: Poland emphasizes the need for close cooperation with Baltic and EU partners
+    to counter Russian hybrid threats and strengthen collective defense.
+  positions:
+    defence: Poland highlights its leadership in NATO defense spending and the importance
+      of the multinational presence at the Ādaži base.
+    hybrid: Poland calls for intensified cooperation to counter Russian hybrid actions
+      targeting NATO and EU members, particularly on the eastern flank.
+    enlargement: Poland supports the progress of Ukraine, Moldova, and Western Balkan
+      states toward EU membership and calls for a deeper discussion on the EU's future
+      expanded structure.
+    migration: Poland identifies migration pressure on borders as a shared security
+      threat caused by Russia.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: baza wojskowa w Ādaži jest symbolem polsko-łotewskiej współpracy
+          w dziedzinie obronności
+      hybrid:
+        score: 1
+        evidence: Podkreślił konieczność ścisłej współpracy na rzecz przeciwdziałania
+          tego typu akcjom
+      enlargement:
+        score: 1
+        evidence: zwrócił uwagę na potrzebę przeprowadzenia pogłębionej dyskusji na
+          temat funkcjonowania UE w przyszłym, poszerzonym składzie
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska i Łotwa są liderami w NATO pod względem wydatków na obronność,
+          na które przeznaczają odpowiednio 4,8% i 4,7% PKB
+      enlargement:
+        score: 1
+        evidence: Ministrowie omówili także kwestie rozszerzenia Unii Europejskiej,
+          w szczególności dotychczasowe postępy Ukrainy, Mołdawii i państw Bałkanów
+          Zachodnich
+      migration:
+        score: 1
+        evidence: Nasze kraje ostatnio doświadczają [...] presji migracyjnej na naszych
+          granicach
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President Emmanuel Macron
+  - heads of state and government
+  - ministers
+  - astronauts
+  - national and international space agencies
+  topics: []
+  location: Paris, France
+  position: France hosted an international space summit to address development and
+    innovation in the space sector with global leaders and industry actors.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

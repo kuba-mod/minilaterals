@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Berlin, Germany
+  position: Germany aims to secure its future through economic reforms, technological
+    leadership in AI, and strengthened national and external security.
+  positions:
+    ukraine: Germany will continue to support Ukraine because it defends the freedom
+      of others as well.
+    defence: Germany intends to increase its resilience and defense capabilities,
+      including a 100 billion euro commitment to strengthen civil, population, and
+      disaster protection.
+    energy: Germany is correcting energy policy errors by building gas power plants
+      and ensuring a secure energy supply based on regenerative energies.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Ukraine solle weiter unterstützt werden
+      defence:
+        score: 1
+        evidence: Deutschland widerstandsfähiger und verteidigungsfähiger werden müsse
+    e3:
+      defence:
+        score: 0
+        evidence: Deutschland widerstandsfähiger und verteidigungsfähiger werden müsse
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

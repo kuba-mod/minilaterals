@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France condemns Houthi attacks on civilian infrastructure in Yemen and
+    Saudi Arabia and calls for an immediate cessation of military action.
+  positions:
+    defence: France condemns Houthi military attacks on civilian infrastructure and
+      supports the UN-led political process.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

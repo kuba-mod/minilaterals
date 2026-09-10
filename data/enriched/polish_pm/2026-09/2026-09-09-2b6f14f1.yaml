@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - António Costa
+  topics:
+  - defence
+  location: null
+  position: Poland advocates for a higher EU budget to strengthen the Union's global
+    position and resilience while ensuring continued support for agriculture and development.
+  positions:
+    defence: Poland supports investments in security and defense to increase the EU's
+      resilience against geopolitical threats.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: UE potrzebuje budżetu, który pozwoli realizować najważniejsze unijne
+          priorytety UE – wzmacniać obronność i bezpieczeństwo
+    visegrad:
+      defence:
+        score: 1
+        evidence: UE potrzebuje budżetu, który pozwoli realizować najważniejsze unijne
+          priorytety UE – wzmacniać obronność i bezpieczeństwo
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

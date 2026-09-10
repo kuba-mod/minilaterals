@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bogdan Borusewicz
+  - Ewa Polkowska
+  - representatives of various ministries
+  - Office for War Veterans and Victims of Oppression
+  - Statistics Poland
+  - Senate of the Republic of Poland
+  topics:
+  - migration
+  location: null
+  position: Poland is coordinating inter-ministerial efforts to implement the Government
+    Strategy for Cooperation with Polonia and Poles Abroad for 2025–2030.
+  positions:
+    migration: Poland is focusing on coordinating support programs, grant systems,
+      and strategic evaluations for Polish citizens living abroad.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

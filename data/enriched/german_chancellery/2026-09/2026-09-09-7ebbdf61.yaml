@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- enlargement
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - António Costa
+  topics:
+  - ukraine
+  - enlargement
+  - migration
+  location: Berlin, Germany
+  position: Chancellor Merz discussed EU competitiveness, the future budget, and key
+    strategic priorities for upcoming summits with President Costa.
+  positions:
+    ukraine: Germany intends to continue its support for Ukraine as a key agenda item
+      for the second half of 2026.
+    enlargement: Germany identifies European enlargement policy as a priority topic
+      for future EU summits.
+    migration: Germany views European migration policy as a critical issue to be addressed
+      in the second half of 2026.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Unterstützung der Ukraine
+      enlargement:
+        score: 1
+        evidence: europäische Migrations- und Erweiterungspolitik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

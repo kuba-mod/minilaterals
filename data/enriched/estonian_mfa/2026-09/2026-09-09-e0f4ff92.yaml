@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Aino Lepik von Wirén
+  - Committee of Deputy Ministers of the Council of Europe
+  topics:
+  - ukraine
+  location: null
+  position: Estonia's Permanent Representative to the Council of Europe, Ambassador
+    Aino Lepik von Wirén, was elected as the chair of the working group on a special
+    tribunal for the crime of aggression against Ukraine.
+  positions:
+    ukraine: Estonia is leading the working group focused on establishing a special
+      tribunal for the crime of aggression against Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

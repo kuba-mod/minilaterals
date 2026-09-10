@@ -1,0 +1,26 @@
+actors:
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the French Republic
+  - British Prime Minister
+  - Canadian Prime Minister
+  topics: []
+  location: null
+  position: France, alongside the UK and Canada, commits to protecting the two-state
+    solution by banning imports from Israeli settlements and applying targeted sanctions
+    against those facilitating them.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
