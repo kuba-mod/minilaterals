@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom strongly condemns the Houthis' decision to resume conflict
+    in Yemen and their continued strikes on Saudi Arabia.
+  positions:
+    defence: The United Kingdom condemns Houthi military aggression and strikes against
+      Saudi Arabia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

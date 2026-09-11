@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- EE
+- LV
+- LT
+- AU
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics: []
+  location: null
+  position: France and a coalition of international partners affirm their commitment
+    to ensuring that space-based scientific data is accessible, open, and protected
+    by integrity standards to foster global scientific collaboration.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Narendra Modi
+  topics:
+  - defence
+  location: null
+  position: Germany reaffirmed its strategic partnership with India and discussed
+    security cooperation and a free trade agreement.
+  positions:
+    defence: Germany consulted with India on matters of security policy cooperation.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: berieten über Fragen der sicherheitspolitischen Zusammenarbeit
+    e3:
+      defence:
+        score: 0
+        evidence: berieten über Fragen der sicherheitspolitischen Zusammenarbeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - defence
+  location: null
+  position: Germany reaffirms its solidarity with the United States and its commitment
+    to defending shared values of freedom and democracy through the transatlantic
+    partnership.
+  positions:
+    defence: Germany emphasizes the renewal of the transatlantic partnership and its
+      commitment to stand with the United States in defending democratic values.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Beim NATO-Gipfel von Ankara haben wir diese transatlantische Partnerschaft
+          erneuert
+    e3:
+      defence:
+        score: 1
+        evidence: Beim NATO-Gipfel von Ankara haben wir diese transatlantische Partnerschaft
+          erneuert
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

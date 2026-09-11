@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dorothee Bär
+  - Boris Pistorius
+  - Alexander Gerst
+  topics:
+  - defence
+  location: Paris, France
+  position: Germany advocates for a competitive, resilient, and sovereign European
+    space industry to strengthen its position as a leading science and technology
+    hub.
+  positions:
+    defence: Germany views space as a strategic field essential for security and communication.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Raumfahrt ist längst ein strategisches Forschungsfeld – für Innovation
+          und Wettbewerbsfähigkeit ebenso wie für Sicherheit, Kommunikation sowie
+          für die Erweiterung unseres Wissens durch Exploration
+    e3:
+      defence:
+        score: 0
+        evidence: Auch Bundesverteidigungsminister Boris Pistorius nahm an dem Treffen
+          teil.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

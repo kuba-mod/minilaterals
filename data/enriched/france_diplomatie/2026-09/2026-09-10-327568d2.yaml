@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Group of Governmental Experts (GGE)
+  topics:
+  - defence
+  location: Geneva, Switzerland
+  position: France supports the establishment of an international framework to ban
+    completely autonomous weapons systems and regulate those with autonomous functions
+    to ensure human control over the use of force.
+  positions:
+    defence: France advocates for a new negotiating mandate to create an international
+      instrument that prohibits fully autonomous weapons and regulates autonomous
+      functions to maintain human judgment and respect for international humanitarian
+      law.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: France welcomes a significant step towards an international framework
+          for autonomous weapons
+    e3:
+      defence:
+        score: 0
+        evidence: France welcomes a significant step towards an international framework
+          for autonomous weapons.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

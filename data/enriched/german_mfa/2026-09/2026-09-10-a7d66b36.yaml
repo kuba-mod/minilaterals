@@ -1,0 +1,54 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wadephul
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Berlin, Germany
+  position: Germany is significantly increasing its defense spending and support for
+    Ukraine to counter Russian aggression and strengthen the NATO alliance.
+  positions:
+    ukraine: Germany intends to remain the largest bilateral supporter of Ukraine
+      to ensure its security and the security of Europe.
+    defence: Germany is increasing defense investments to approximately 2.7% of GDP
+      this year, with a target of at least 3.5% by 2029.
+    hybrid: Germany identifies growing Russian aggression, including a recent attempted
+      attack at Leipzig airport, as a direct threat to Europe and NATO.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deutschland als inzwischen der größte bilaterale Unterstützer der
+          Ukraine weiter an ihrer Seite steht
+      defence:
+        score: 2
+        evidence: In diesem Jahr investiert Deutschland 124,7 Milliarden Euro in „harte“
+          Fähigkeiten zur Verteidigung
+      hybrid:
+        score: 1
+        evidence: Der russische Anschlagsversuch auf dem Flughafen in Leipzig ist
+          aber nur der jüngste Vorfall in einer Reihe konstant wachsender russischer
+          Aggressionen gegen Europa
+    e3:
+      defence:
+        score: 1
+        evidence: Wir stärken den europäischen Pfeiler in der NATO , weil dies die
+          Allianz als Ganzes stärkt – ebenso wie unsere transatlantische Verbindung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

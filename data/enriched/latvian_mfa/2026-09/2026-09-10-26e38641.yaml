@@ -1,0 +1,29 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dace Melbārde, Parliamentary Secretary of the Ministry of Foreign Affairs of Latvia
+  - Minister of Foreign and European Affairs of Croatia
+  topics:
+  - ukraine
+  - defence
+  location: Riga, Latvia
+  position: Latvia strengthened bilateral cooperation with Croatia and reaffirmed
+    a unified stance on European security and unwavering support for Ukraine.
+  positions:
+    ukraine: Latvia affirms its unwavering support for Ukraine.
+    defence: Latvia emphasizes a unified position regarding European security.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

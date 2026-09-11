@@ -1,0 +1,47 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- HU
+- EE
+- LV
+- AU
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - representatives of the Member States of the European Union
+  - Copernicus participating States
+  - intergovernmental organisations
+  - space agencies
+  - scientific institutions
+  - international partners
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France and its partners express strong support for the Copernicus Programme
+    as a global public good and call for its prioritization in the international space
+    agenda to address global environmental and climate challenges.
+  positions:
+    green_transition: France advocates for the continuity and expansion of the Copernicus
+      Programme to provide essential Earth observation data for climate trend analysis
+      and the sustainable management of natural resources.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Recalling the commitments undertaken under the Paris Agreement on
+          climate change
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

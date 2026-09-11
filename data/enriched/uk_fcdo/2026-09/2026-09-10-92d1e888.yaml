@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom, as part of the Quad, is introducing a resolution to
+    the IAEA Board of Governors regarding Iran's implementation of its NPT safeguards
+    obligations.
+  positions:
+    iran: The United Kingdom is introducing a resolution to the IAEA Board of Governors
+      to address Iran's implementation of its obligations under the NPT Safeguards
+      Agreement.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: Joint statement on behalf of France, Germany, the UK, and United
+          States (the Quad) to the International Atomic Energy Agency (IAEA) Board
+          meeting introducing a resolution on Iran's implementation of its obligations
+          under…
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

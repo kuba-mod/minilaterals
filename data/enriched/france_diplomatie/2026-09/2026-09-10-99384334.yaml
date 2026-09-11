@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Lê Hoài Trung
+  - Tô Lâm
+  topics:
+  - ukraine
+  location: France
+  position: France reaffirmed its commitment to multilateralism and international
+    law while discussing regional crises and strategic partnership with Vietnam.
+  positions:
+    ukraine: France emphasized the priority need for a ceasefire in Ukraine and welcomed
+      Vietnam's willingness to assist in dialogue and reconstruction.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Minister Barrot reiterated the priority need for a ceasefire in
+          Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

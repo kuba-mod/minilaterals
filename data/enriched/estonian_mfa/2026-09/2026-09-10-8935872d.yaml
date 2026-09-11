@@ -1,0 +1,22 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics: []
+  location: null
+  position: Estonia intends to prevent Russian grain from finding new export routes
+    through Estonian ports.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

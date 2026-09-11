@@ -1,0 +1,45 @@
+actors:
+- PL
+- CZ
+- SK
+- HU
+issue_areas:
+- migration
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Robert Fico
+  - Andrej Babiš
+  - Péter Magyar
+  - Micheál Martin
+  topics:
+  - migration
+  - energy
+  location: Bratislava, Slovakia
+  position: Poland seeks to revitalize the Visegrád Group to effectively advocate
+    for regional interests regarding border security and energy costs within the EU.
+  positions:
+    migration: Poland demands that the EU budget and policies account for the financial
+      efforts of states protecting the external border to prevent illegal migration.
+    energy: Poland and the V4 will block any EU proposals that increase energy prices
+      to maintain the competitiveness of the European economy.
+  stances:
+    visegrad:
+      migration:
+        score: 2
+        evidence: Polska płaci obecnie setki milionów złotych, żeby utrzymać szczelność
+          wschodniej granicy
+      energy:
+        score: 1
+        evidence: Priorytetem pozostaje obniżenie cen energii w regionie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

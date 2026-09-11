@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK)
+  topics:
+  - defence
+  location: null
+  position: Germany is conducting a nationwide test of its multi-channel warning systems
+    to improve civil protection and public preparedness.
+  positions:
+    defence: Germany is testing its modular warning system and civil protection infrastructure
+      to identify technical improvements and sensitize the population to emergency
+      preparedness.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Übergeordnet geht es auch um das Thema Zivilschutz – weswegen der
+          Bund die Warnung betreibt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

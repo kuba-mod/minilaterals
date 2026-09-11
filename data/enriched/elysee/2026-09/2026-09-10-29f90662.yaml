@@ -1,0 +1,52 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the French Republic
+  - Tô Lâm, President of the Socialist Republic of Vietnam
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - indo_pacific
+  location: Paris, France
+  position: France is accelerating its global strategic partnership with Vietnam to
+    strengthen mutual strategic autonomy across defense, energy, and economic sectors.
+  positions:
+    ukraine: France advocates for the respect of sovereignty and stability in Ukraine
+      to counter imperialist ambitions.
+    defence: France is making defense a pillar of the partnership, focusing on maritime
+      security and the sale of NH90 helicopters.
+    green_transition: France is supporting Vietnam's decarbonization efforts through
+      the Just Energy Transition Partnership and the AFD.
+    energy: France aims to be a reference partner for Vietnam's nuclear energy program
+      and decarbonization.
+    indo_pacific: France is collaborating with Vietnam to reaffirm the importance
+      of freedom of navigation in the Indo-Pacific.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: c'est ce qui est aussi défendu en Ukraine, retrouver le respect
+          de la souveraineté, de la stabilité et ne céder à aucune velléité impérialiste
+    e3:
+      defence:
+        score: 0
+        evidence: Nous avons décidé de faire de la défense un pilier de ce partenariat.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

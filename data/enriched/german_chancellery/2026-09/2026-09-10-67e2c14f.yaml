@@ -1,0 +1,61 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Frank-Walter Steinmeier
+  - Sheikh Mohamed bin Zayed Al Nahyan
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - iran
+  location: Germany
+  position: Germany is deepening its strategic partnership with the UAE through a
+    new Strategic Dialogue, significant investment packages, and enhanced cooperation
+    in energy, defense, and technology.
+  positions:
+    ukraine: Germany supports a comprehensive, just, and lasting peace in Ukraine
+      in line with international law and agrees on joint humanitarian assistance for
+      the Ukrainian people.
+    defence: Germany is elevating defense and security cooperation with the UAE beyond
+      a supplier-recipient dynamic toward a strategic partnership, evidenced by a
+      new Letter of Intent.
+    green_transition: Germany welcomes the UAE's leadership in reducing methane emissions
+      and reaffirms its commitment to the global energy transition through IRENA.
+    energy: Germany is expanding long-term cooperation across the energy value chain,
+      including LNG, renewables, and hydrogen, to ensure secure and affordable energy
+      supplies.
+    iran: Germany strongly condemns Iranian attacks against the UAE and other regional
+      states, as well as the obstruction of the Strait of Hormuz.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: they agreed on joint immediate humanitarian and development assistance
+          for the Ukrainian people for the upcoming winter
+      green_transition:
+        score: 1
+        evidence: reaffirmed their commitment to strengthening international cooperation
+          on energy efficiency as a key enabler of the global energy transition
+    e3:
+      iran:
+        score: 1
+        evidence: reiterated the need to prevent Iran from acquiring any nuclear weapon
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

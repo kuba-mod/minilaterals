@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Helen McEntee
+  topics:
+  - ukraine
+  location: null
+  position: Latvia signed a memorandum of cooperation with Ireland to support the
+    reconstruction of the Chernihiv region in Ukraine.
+  positions:
+    ukraine: Latvia is collaborating with Ireland on the reconstruction of the Chernihiv
+      region.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

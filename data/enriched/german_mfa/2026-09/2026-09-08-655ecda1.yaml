@@ -1,0 +1,46 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Maroš Šefčovič
+  topics:
+  - ukraine
+  - energy
+  - green_transition
+  location: Berlin, Germany
+  position: Germany aims to strengthen the EU as a geoeconomic powerhouse through
+    de-risking, diversifying trade partners via agreements like Mercosur, and deepening
+    the EU single market to reduce strategic dependencies.
+  positions:
+    ukraine: Germany recognizes that the Russian war of aggression against Ukraine
+      continues to strain both economic and military resources.
+    energy: Germany notes that the crisis in the Strait of Hormuz is significantly
+      impacting global energy prices and straining national economies.
+    green_transition: Germany identifies environmentally friendly technologies as
+      a key emerging growth sector essential for future economic competitiveness.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Der russische Angriffskrieg gegen die Ukraine tobt weiter und bindet
+          sowohl wirtschaftliche als auch militärische Ressourcen.
+      green_transition:
+        score: 1
+        evidence: die Weltwirtschaft einen grundlegenden Wandel durch neu entstehende
+          Wachstumsbranchen wie KI und umweltschonende Technologien.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

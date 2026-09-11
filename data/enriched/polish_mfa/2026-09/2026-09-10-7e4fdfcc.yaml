@@ -1,0 +1,41 @@
+actors:
+- PL
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Elissa Slotkin
+  - John Curtis
+  - Thom Tillis
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes the strategic importance of its partnership with the
+    United States and the necessity of a strong US presence in Europe to ensure NATO's
+    eastern flank security.
+  positions:
+    defence: Poland advocates for strong allied cooperation and transatlantic unity
+      to address security threats on NATO's eastern flank.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: zagrożenia dla wschodniej flanki NATO oraz znaczenie utrzymania
+          silnej obecności i zaangażowania Stanów Zjednoczonych w Europie
+    visegrad:
+      defence:
+        score: 1
+        evidence: znaczenie utrzymania silnej obecności i zaangażowania Stanów Zjednoczonych
+          w Europie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister of Labor and Solidarities
+  - Minister of Action and Public Accounts
+  topics: []
+  location: null
+  position: France is introducing a bill to transpose EU Directive 2023/970 to strengthen
+    pay transparency and reduce gender-based wage gaps in both the private and public
+    sectors.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

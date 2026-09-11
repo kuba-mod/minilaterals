@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  - Finance Minister
+  topics:
+  - ukraine
+  - migration
+  location: null
+  position: Germany reaffirms its unwavering support for Ukraine's defense and emphasizes
+    the strategic importance of humanitarian aid to prevent migration and ensure global
+    food security.
+  positions:
+    ukraine: Germany continues to stand firmly by Ukraine in its defense against Russia's
+      war of aggression and is working diplomatically to enable grain exports.
+    migration: Germany views financial humanitarian aid in crisis regions as a necessary
+      investment to prevent forced migration.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Ich konnte in der Ukraine jetzt noch mal 50 Millionen Euro an Mitteln
+          zusagen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
