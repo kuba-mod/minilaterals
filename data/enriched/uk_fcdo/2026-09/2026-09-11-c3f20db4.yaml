@@ -1,0 +1,32 @@
+actors:
+- UK
+- AU
+- US
+issue_areas:
+- defence
+- submarines
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants: []
+  topics:
+  - defence
+  - submarines
+  location: Vienna, Austria
+  position: The United Kingdom, on behalf of AUKUS partners, asserts the legality
+    and safeguards of nuclear material transfers for the AUKUS submarine program under
+    the NPT.
+  positions:
+    defence: The United Kingdom maintains that the AUKUS partnership is consistent
+      with international obligations and the NPT.
+    submarines: The United Kingdom supports the transfer of nuclear materials for
+      the AUKUS submarine project under strict IAEA safeguards.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

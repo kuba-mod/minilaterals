@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Scheich Mohammed Bin Zayed
+  topics:
+  - defence
+  - energy
+  location: Berlin, Germany
+  position: Germany is deepening its strategic partnership with the United Arab Emirates
+    through massive investment packages, a new investment council, and a strategic
+    dialogue.
+  positions:
+    defence: Germany agreed to strengthen cooperation in the fields of defense and
+      defense technology.
+    energy: Germany intends to further deepen long-standing cooperation in various
+      energy sectors through partnerships between leading companies.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: eine verstärkte Zusammenarbeit in den Bereichen Verteidigung und
+          Verteidigungstechnologie geben
+    e3:
+      defence:
+        score: 0
+        evidence: eine verstärkte Zusammenarbeit in den Bereichen Verteidigung und
+          Verteidigungstechnologie geben
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

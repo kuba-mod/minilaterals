@@ -1,0 +1,46 @@
+actors:
+- PL
+- LV
+- LT
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  location: Kielce, Poland
+  position: Poland is accelerating the development of its domestic defense industry
+    and enhancing its sovereign satellite capabilities through the SAFE program and
+    international partnerships.
+  positions:
+    defence: Poland is investing in domestic weaponry like the Piorun missile systems
+      and Niedźwiedź infantry fighting vehicle, while pursuing a sovereign military
+      satellite communication system (MILSATCOM).
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Polska ma potencjał, aby rozwijać w tym obszarze własne zdolności,
+          wzmacniając tym samym bezpieczeństwo całej Europy.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Dzięki programowi SAFE miliardy euro, dolarów i złotych płyną do
+          polskiego przemysłu
+    baltic:
+      defence:
+        score: 2
+        evidence: Norwegia, Łotwa i Litwa zdecydowały się na zakup naszych zestawów
+          rakietowych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

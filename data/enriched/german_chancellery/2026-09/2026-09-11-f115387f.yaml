@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- energy
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Sheikh Mohammed Bin Zayed Al Nahyan
+  topics:
+  - energy
+  - defence
+  location: Germany
+  position: Germany welcomes a 40 billion euro investment package from the UAE to
+    strengthen industrial competitiveness, digital infrastructure, and strategic cooperation.
+  positions:
+    energy: Germany is pursuing energy-related partnerships and investments involving
+      companies such as RWE, ADNOC, and Masdar.
+    defence: Germany and the UAE have signed agreements to enhance their security
+      and defense cooperation.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Sicherheits- und Verteidigungskooperation
+    e3:
+      defence:
+        score: 0
+        evidence: Sicherheits- und Verteidigungskooperation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

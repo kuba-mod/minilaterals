@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: The United Kingdom delivered a statement to the IAEA Board of Governors
+    regarding the situation in Ukraine.
+  positions:
+    ukraine: The United Kingdom addressed the IAEA Board of Governors concerning the
+      nuclear situation in Ukraine.
+    energy: The United Kingdom engaged with the IAEA Board of Governors on matters
+      of nuclear energy safety and security in the context of Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

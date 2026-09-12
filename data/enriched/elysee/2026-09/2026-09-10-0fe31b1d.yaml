@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- HU
+- EE
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ministers of the Member States of the European Space Agency
+  topics: []
+  location: Paris, France
+  position: France and other ESA member states call for increased European strategic
+    autonomy and investment in space exploration, specifically regarding Low Earth
+    Orbit and lunar missions, to ensure Europe remains a competitive global partner.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

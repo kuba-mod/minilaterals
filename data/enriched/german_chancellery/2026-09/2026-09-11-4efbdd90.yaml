@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Ali al-Zaidi
+  topics: []
+  location: Berlin, Germany
+  position: Germany is hosting the Iraqi Prime Minister to discuss the development
+    of bilateral relations, economic cooperation, and the regional political situation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Chris Elmore MP, Minister for the Americas, Multilateral, and Human Rights
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom commits to working through the UN Security Council
+    to combat all forms of terrorism to maintain international peace and security.
+  positions:
+    defence: The United Kingdom advocates for collective action through the Security
+      Council to address threats to international peace and security caused by terrorist
+      acts.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

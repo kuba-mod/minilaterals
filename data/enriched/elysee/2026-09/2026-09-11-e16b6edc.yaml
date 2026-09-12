@@ -1,0 +1,61 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Tô Lâm
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - indo_pacific
+  location: Paris, France
+  position: France is accelerating its Global Strategic Partnership with Vietnam through
+    a new 2026-2028 action plan focusing on economic resilience, security, and sustainable
+    development.
+  positions:
+    ukraine: France calls for immediate negotiations to end hostilities and achieve
+      a just and durable peace in Ukraine in accordance with international law.
+    defence: France commits to strengthening defense cooperation with Vietnam, prioritizing
+      industrial and technological collaboration to support Vietnam's autonomy.
+    green_transition: France supports Vietnam's goal of carbon neutrality by 2050
+      and continues its commitments under the Just Energy Transition Partnership (JETP).
+    energy: France intends to cooperate with Vietnam on peaceful nuclear energy for
+      electricity production and the modernization of electrical grid infrastructures.
+    indo_pacific: France advocates for the preservation of peace and stability in
+      the South China Sea, emphasizing full respect for the 1982 UNCLOS.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: appellent les parties concernées à entamer rapidement des négociations
+          pour mettre fin aux hostilités et parvenir à une paix globale, juste et
+          durable en Ukraine
+      green_transition:
+        score: 2
+        evidence: le Vietnam salue la poursuite par la France de la mise en œuvre
+          de manière plus forte et résolue de ses engagements dans le cadre du Partenariat
+          pour une transition énergétique juste (JETP)
+    e3:
+      defence:
+        score: 0
+        evidence: La France et le Vietnam renforceront la coopération dans le domaine
+          de la défense, en accordant la priorité à la coopération industrielle et
+          technologique en matière de défense
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

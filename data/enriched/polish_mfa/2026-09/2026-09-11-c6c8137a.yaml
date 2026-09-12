@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Ministers
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Poland discussed bilateral relations and regional security with Saudi
+    Arabia, emphasizing the importance of international law and diplomatic dialogue.
+  positions:
+    energy: Poland noted the impact of the Iran-US conflict on the global economy,
+      specifically regarding the fuel market.
+    iran: Poland discussed the security situation in the Persian Gulf and the threats
+      to critical infrastructure resulting from Houthi escalation.
+  stances:
+    visegrad:
+      energy:
+        score: 0
+        evidence: Strony odnotowały wpływ konfliktu pomiędzy Iranem a Stanami Zjednoczonymi
+          na międzynarodową gospodarkę, ze szczególnym uwzględnieniem rynku paliw
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
