@@ -1,0 +1,34 @@
+actors:
+- EE
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Helen Popp
+  - USA National Cybersecurity Director
+  - White House National Security Council experts
+  - USA Cyber Ambassador
+  topics:
+  - defence
+  location: Washington, USA
+  position: Estonia is seeking opportunities to deepen cybersecurity cooperation with
+    the United States.
+  positions:
+    defence: Estonia is working with the US to enhance cooperation in the field of
+      cyber defense.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: Eesti ja USA otsivad võimalusi küberkaitsekoostöö süvendamiseks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

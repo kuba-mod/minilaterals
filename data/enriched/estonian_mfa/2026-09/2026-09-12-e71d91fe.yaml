@@ -1,0 +1,29 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  - Andrea Kivi
+  topics:
+  - ukraine
+  location: Zhytomyr region, Ukraine
+  position: Estonia is supporting the restoration of education infrastructure and
+    the development of the education system in Ukraine through the opening of a school
+    and a competence center.
+  positions:
+    ukraine: Estonia has funded the completion of the Malony interest school and the
+      EDUHUB basic education competence center in the Zhytomyr region to support Ukrainian
+      children and teachers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
