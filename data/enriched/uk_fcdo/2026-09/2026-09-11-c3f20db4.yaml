@@ -25,7 +25,12 @@ extracted:
       with international obligations and the NPT.
     submarines: The United Kingdom supports the transfer of nuclear materials for
       the AUKUS submarine project under strict IAEA safeguards.
-  stances: {}
+  stances:
+    aukus:
+      submarines:
+        score: 0
+        evidence: Transfer of the nuclear materials in the context of AUKUS and its
+          safeguards in all aspects under the NPT.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

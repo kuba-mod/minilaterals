@@ -1,0 +1,30 @@
+actors:
+- UK
+- US
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: The United Kingdom is partnering with the United States to combine expertise
+    in AI, computing, and fusion energy and to cooperate on its regulation.
+  positions:
+    energy: The United Kingdom is signing agreements with the US to cooperate on regulating
+      fusion energy and combining technical expertise.
+    green_transition: The United Kingdom is establishing a fusion strike partnership
+      with the US to accelerate the development of clean energy.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

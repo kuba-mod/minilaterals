@@ -1,0 +1,61 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Andrij Sybiha
+  - Taras Chmut
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Kyiv, Ukraine
+  position: Poland advocates for increased European solidarity, stronger sanctions
+    against Russia, and support for Ukraine's EU integration in response to escalating
+    Russian aggression.
+  positions:
+    ukraine: Poland supports the continued military and economic aid to Ukraine to
+      ensure Russia does not win the war.
+    defence: Poland emphasizes the need to strengthen NATO's defense capabilities
+      and double efforts in supporting the victim of aggression.
+    hybrid: Poland views Russian attacks near its border and sabotage actions as an
+      escalation requiring a joint European response and effective sanctions.
+    enlargement: Poland will not block the opening of negotiation clusters for Ukraine's
+      accession to the European Union.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: powinniśmy zdwoić nasze wysiłki we wspieraniu ofiary agresji
+      defence:
+        score: 1
+        evidence: wzmacnianie zdolności obronnych NATO
+      hybrid:
+        score: 1
+        evidence: konieczna jest wspólna europejska odpowiedź
+      enlargement:
+        score: 2
+        evidence: Polska nie będzie blokowała otwierania klastrów negocjacyjnych
+    visegrad:
+      defence:
+        score: 1
+        evidence: wzmacnianie zdolności obronnych NATO
+      enlargement:
+        score: 1
+        evidence: Polska nie będzie blokowała otwierania klastrów negocjacyjnych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

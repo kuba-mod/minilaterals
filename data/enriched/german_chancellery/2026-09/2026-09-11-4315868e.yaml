@@ -1,0 +1,66 @@
+actors:
+- DE
+- HU
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Petteri Orpo
+  - al-Zaidi
+  - Wadephul
+  - András Bálint Baka
+  - Anita Orbán
+  - István Kapitány
+  - Dr. Karsten Wildberger
+  - Evan Solomon
+  - Klingbeil
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  - iran
+  location: Berlin, Germany
+  position: Germany announces a series of high-level diplomatic engagements to strengthen
+    ties with Hungary, Canada, and Finland, while addressing regional security in
+    the Middle East and national AI innovation.
+  positions:
+    ukraine: Germany continues to coordinate with partners, including Hungary, to
+      address the Russian war of aggression against Ukraine.
+    defence: Germany aims to accelerate innovations in the security and defense industry
+      and is concluding its military mission in Northern Iraq at the request of the
+      Iraqi government.
+    rule_of_law: Germany seeks to restart its partnership with Hungary following Budapest's
+      shift back toward the rule of law and European values.
+    iran: Germany condemns the efforts of Iran and the Houthis to restrict international
+      shipping in the Red Sea and supports the legitimate government of Yemen.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: insbesondere um den fortgesetzten russischen Angriffskrieg gegen
+          die Ukraine
+      rule_of_law:
+        score: 1
+        evidence: seit dem Regierungswechsel in Budapest die Weichen gestellt für
+          eine Rückkehr Ungarns zur Rechtsstaatlichkeit und zu den europäischen Grundwerten
+    e3:
+      iran:
+        score: 1
+        evidence: dass neben Iran auch die Huthi schon seit Wochen versuchen, die
+          internationale Schifffahrt zu beschränken und in Geiselhaft zu nehmen, auf
+          Energieanlagen in Saudi-Arabien zielen und nun auch eben die Regierung Jemens
+          ins Visier nehmen, verurteilen wir
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

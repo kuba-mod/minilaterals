@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - gen. bryg. Jarosław Chojnacki
+  - gen. dyw. Robert Bagan
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland is increasing the readiness of its services and coordinating with
+    allies to respond to the escalation of Russian military actions near its border.
+  positions:
+    ukraine: Poland is monitoring Russian attacks on Ukraine and the potential disruption
+      of border crossings between Poland and Ukraine.
+    defence: Poland has activated reinforced service modes and deployed air defense
+      and aviation to protect its airspace against Russian escalation.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Będziemy analizować, w jaki sposób mobilizować naszych sojuszników.
+          Nie ulega wątpliwości, że wspólnie z nimi musimy być przygotowani na skoordynowaną
+          reakcję
+    visegrad:
+      defence:
+        score: 1
+        evidence: Będziemy analizować, w jaki sposób mobilizować naszych sojuszników.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

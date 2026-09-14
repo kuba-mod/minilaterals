@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tarmo Terep
+  - Liisa Past
+  topics:
+  - ukraine
+  location: null
+  position: Estonia has deployed experts to European Union civilian missions in Ukraine
+    and Armenia.
+  positions:
+    ukraine: Estonian experts have begun working on the EU civilian mission in Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
