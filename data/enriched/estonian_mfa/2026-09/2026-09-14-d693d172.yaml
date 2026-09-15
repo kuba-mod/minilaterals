@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Maida Gorčević
+  topics:
+  - enlargement
+  - ukraine
+  location: Tallinn, Estonia
+  position: Estonia supports Montenegro's rapid accession to the European Union and
+    the continued support of Ukraine.
+  positions:
+    enlargement: Estonia supports Montenegro joining the European Union as quickly
+      as possible.
+    ukraine: Estonia supports the continued assistance of Ukraine and increasing pressure
+      on Russia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

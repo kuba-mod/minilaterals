@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Ali Falih al-Zaidi, Prime Minister of the Republic of Iraq
+  topics:
+  - defence
+  - energy
+  location: Paris, France
+  position: France seeks to strengthen its partnership with Iraq across priority economic
+    sectors and security cooperation to ensure regional stability and energy security.
+  positions:
+    defence: France reaffirms its commitment to fight terrorism and prevent the resurgence
+      of Daesh while respecting Iraqi sovereignty.
+    energy: France is working with Iraq to resume and diversify oil export routes
+      to reduce market tensions and protect French purchasing power.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: La France et l’Irak ont renforcé également leur coopération en matière
+          de sécurité et de défense
+    e3:
+      defence:
+        score: 0
+        evidence: La France et l’Irak ont renforcé également leur coopération en matière
+          de sécurité et de défense
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

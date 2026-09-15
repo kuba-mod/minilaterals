@@ -1,0 +1,32 @@
+actors:
+- FR
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France expresses unwavering solidarity with the United States on the anniversary
+    of the September 11 attacks and reaffirms its commitment to fighting global terrorism.
+  positions:
+    rule_of_law: France commits to defending the rule of law and universal values
+      against the threats posed by terrorism.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: 'We shall continue to defend the universal values that are the foundation
+          of our democracies: freedom, human rights, the rule of law and respect for
+          human dignity.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

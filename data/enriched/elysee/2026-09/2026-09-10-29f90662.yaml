@@ -40,8 +40,12 @@ extracted:
     weimar:
       ukraine:
         score: 1
-        evidence: c'est ce qui est aussi défendu en Ukraine, retrouver le respect
-          de la souveraineté, de la stabilité et ne céder à aucune velléité impérialiste
+        evidence: C'est ce qui est aussi défendu en Ukraine, retrouver le respect
+          de la souveraineté, de la stabilité et ne céder à aucune velléité impérialiste.
+      green_transition:
+        score: 1
+        evidence: nous avons confirmé notre souhait que la France soit un partenaire
+          de référence de la décarbonation
     e3:
       defence:
         score: 0

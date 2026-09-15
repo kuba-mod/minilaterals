@@ -1,0 +1,62 @@
+actors:
+- DE
+- HU
+issue_areas:
+- ukraine
+- rule_of_law
+- energy
+- migration
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Dr. Anita Orbán, Deputy Prime Minister and Minister of Foreign Affairs of Hungary
+  - Dr. Johann Wadephul, Federal Minister for Foreign Affairs of the Federal Republic
+    of Germany
+  topics:
+  - ukraine
+  - rule_of_law
+  - energy
+  - migration
+  - enlargement
+  location: null
+  position: Germany seeks to restart and strengthen its bilateral partnership with
+    Hungary through increased political, economic, and diplomatic cooperation within
+    the EU and NATO framework.
+  positions:
+    ukraine: Germany supports the sovereignty and territorial integrity of Ukraine
+      and advocates for an immediate ceasefire and a comprehensive, just, and lasting
+      peace.
+    rule_of_law: Germany reaffirms its commitment to EU fundamental values, including
+      the rule of law and human rights, noting Hungary's accession to the European
+      Public Prosecutor's Office.
+    energy: Germany urges a coordinated European approach to safeguard energy security.
+    migration: Germany aims to prevent illegal migration and strengthen the protection
+      of the EU's external borders.
+    enlargement: Germany is determined to support all candidate countries in their
+      process of joining the European Union, particularly in the Western Balkans.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland und Ungarn stehen daher weiterhin für die Souveränität
+          und territoriale Integrität der Ukraine ein
+      rule_of_law:
+        score: 1
+        evidence: 'unser Bekenntnis zu den Grundwerten der Europäischen Union, auf
+          denen unser friedliches europäisches Zusammenleben beruht: der Achtung der
+          Menschenwürde, der Freiheit, der Demokratie, der Gleichheit, der Rechtsstaatlichkeit
+          und der umfassenden Wahrung der Menschenrechte'
+      enlargement:
+        score: 1
+        evidence: Wir sind fest entschlossen, alle Beitrittsländer im Prozess des
+          Beitritts zur Europäischen Union zu unterstützen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

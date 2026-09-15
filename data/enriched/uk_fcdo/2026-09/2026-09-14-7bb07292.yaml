@@ -1,0 +1,25 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: The United Kingdom is increasing its support for global efforts to help
+    people prepare for extreme weather conditions caused by El Niño.
+  positions:
+    green_transition: The United Kingdom is providing support to help hundreds of
+      thousands of people worldwide prepare for extreme weather conditions.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

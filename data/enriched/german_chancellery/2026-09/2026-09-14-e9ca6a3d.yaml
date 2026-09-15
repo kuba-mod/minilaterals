@@ -1,0 +1,50 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Petteri Orpo
+  topics:
+  - defence
+  - hybrid
+  - energy
+  location: Rovaniemi, Finland
+  position: Germany advocates for a stronger, proactive EU strategic approach in the
+    Arctic to counter Russian threats and leverage economic opportunities.
+  positions:
+    defence: Germany calls for unity and strength between EU partners and NATO to
+      defend freedom and preserve peace against Russian threats in the Arctic.
+    hybrid: Germany highlights the increasing threat of Russian hybrid attacks in
+      Europe as a reason for increased vigilance in the High North.
+    energy: Germany identifies energy and raw materials in the Arctic as future-oriented
+      economic fields of significant importance.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Hierauf müssten die europäischen Partner, aber auch die NATO mit
+          Einheit und Stärke reagieren.
+      hybrid:
+        score: 1
+        evidence: Russlands Präsenz in der Region und mit hybriden Angriffen in anderen
+          Regionen Europas nehme täglich zu.
+    e3:
+      defence:
+        score: 1
+        evidence: bekräftigte Bundeskanzler Merz, dass die Gespräche in Brüssel, aber
+          auch mit anderen Partnern wie Island, Norwegen, Kanada und dem Vereinigten
+          Königreich fortgeführt würden
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

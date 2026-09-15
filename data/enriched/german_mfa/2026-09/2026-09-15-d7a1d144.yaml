@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Dr. Johann Wadephul
+  - Ministerpräsident Söder
+  - Scheich Mohamed bin Zayed Al Nahyan
+  topics:
+  - migration
+  location: Munich and Geneva
+  position: Germany aims to strengthen its global image through cultural diplomacy,
+    support its economy via economic diplomacy, and reinforce its commitment to human
+    rights and humanitarian aid through engagement with UN organizations in Geneva.
+  positions:
+    migration: Germany views humanitarian aid as a means to prevent the causes of
+      flight and migration.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

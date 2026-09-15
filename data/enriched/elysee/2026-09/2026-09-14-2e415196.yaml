@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the French Republic
+  topics:
+  - defence
+  location: Île Longue, France
+  position: France announces that Finland has decided to join the French advanced
+    deterrence framework to strengthen European security and bilateral cooperation.
+  positions:
+    defence: France is implementing a concept of advanced deterrence and will establish
+      a nuclear steering group with Finland to manage strategic signaling and sub-nuclear
+      escalation.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Un groupe de pilotage nucléaire sera établi dans les prochains mois
+          pour commencer la mise en œuvre de cette coopération
+    e3:
+      defence:
+        score: 2
+        evidence: Un groupe de pilotage nucléaire sera établi dans les prochains mois
+          pour commencer la mise en œuvre de cette coopération
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

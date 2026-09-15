@@ -1,0 +1,48 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - defence
+  - hybrid
+  - energy
+  location: Rovaniemi, Finland
+  position: Germany advocates for increased EU focus on the Arctic to counter Russian
+    aggression and leverage economic opportunities in the region.
+  positions:
+    defence: Germany emphasizes the Arctic's relevance to European security and supports
+      strengthened NATO activities in the region to respond to Russian aggression.
+    hybrid: Germany highlights the need for partner unity and strength in response
+      to daily hybrid attacks, citing a recent incident at Leipzig/Halle airport.
+    energy: Germany views the Arctic's energy reserves and critical raw materials
+      as promising economic opportunities for the future.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Die Arktis, einem geopolitischen Hotspot mit hoher Relevanz für
+          die europäische Sicherheit und Verteidigung
+      hybrid:
+        score: 1
+        evidence: Angesichts russischer Aggressionen in Europa müssten die Partner
+          mit Einheit und Stärke reagieren
+    e3:
+      defence:
+        score: 1
+        evidence: weitere Partner wie Island, Norwegen, Kanada und das Vereinigte
+          Königreich hinzugezogen werden sollten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Federal Chancellor
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany is strengthening its resilience against Russian hybrid threats
+    through new security measures and the reduction of strategic dependencies.
+  positions:
+    hybrid: Germany is implementing new steps against espionage and sabotage, protecting
+      critical infrastructure, and diversifying raw material supplies to counter Russian
+      hybrid attacks.
+    defence: The National Security Council is addressing military and civil defense
+      as well as the security implications of artificial intelligence.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: beschloss neue Schritte gegen Spionage und Sabotage sowie zum Schutz
+          kritischer Infrastruktur
+      defence:
+        score: 0
+        evidence: befasste sich zudem erneut mit Fragen der militärischen und zivilen
+          Verteidigung
+    e3:
+      defence:
+        score: 0
+        evidence: Der NSR befasste sich zudem erneut mit Fragen der militärischen
+          und zivilen Verteidigung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Alexander Stubb
+  - Petteri Orpo
+  topics:
+  - defence
+  location: Rovaniemi, Finland
+  position: Germany emphasizes the strategic vulnerability of the Arctic region and
+    calls for European and NATO unity to defend freedom and preserve peace.
+  positions:
+    defence: Germany urges European NATO members to make every effort to defend freedom
+      and maintain peace in response to visible geopolitical threats in the North.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: in der NATO , im europäischen Teil der NATO allemal, das zu tun,
+          was notwendig ist, nämlich alle Anstrengungen zu unternehmen, um unsere
+          Freiheit zu verteidigen und den Frieden zu bewahren
+    e3:
+      defence:
+        score: 1
+        evidence: in Europa wie in der NATO zusammenzuhalten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

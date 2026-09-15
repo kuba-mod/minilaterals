@@ -1,0 +1,39 @@
+actors:
+- DE
+- HU
+issue_areas:
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - hybrid
+  - rule_of_law
+  location: Budapest, Hungary
+  position: Germany seeks to reset bilateral relations with Hungary based on mutual
+    trust, rule of law, and shared security interests against Russian aggression.
+  positions:
+    hybrid: Germany views Russia's increasing hybrid attacks as an acute threat and
+      welcomes Hungary's solidarity and actions against Russian aggression.
+    rule_of_law: Germany welcomes Hungary's return to the rule of law and the implementation
+      of European requirements as essential for trust and investment.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Wir verteidigen die Friedensordnung in Europa gegen Russlands Aggression.
+      rule_of_law:
+        score: 1
+        evidence: Die Rückkehr zu Rechtsstaatlichkeit und die Umsetzung europäischer
+          Vorgaben sind gute Nachrichten – für Europa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
