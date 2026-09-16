@@ -1,0 +1,60 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - SRS Meyer
+  - Minister Klingbeil
+  - Minister Pistorius
+  - Volker Türk
+  - Gesche Joost
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - iran
+  location: Berlin, Germany
+  position: Germany is addressing energy price volatility, enhancing AI security,
+    and maintaining support for Ukraine while managing diplomatic relations and internal
+    security reforms.
+  positions:
+    ukraine: Germany views recent Russian attacks on Ukrainian rail infrastructure
+      as a further step in Russia's escalation dynamics.
+    defence: Germany is continuing personnel recruitment for the Bundeswehr and managing
+      commitments for the Lithuania Brigade.
+    energy: Germany is pushing for a European windfall tax on oil companies to fund
+      relief for consumers facing high fuel prices caused by global market instability.
+    iran: Germany attributes rising fuel prices to the escalation in the Middle East,
+      including attacks on oil pipelines and the blockade of sea routes.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir sehen das als einen weiteren Schritt in der Eskalationsdynamik,
+          in der sich Russland derzeit offensichtlich befindet.
+      defence:
+        score: 1
+        evidence: Die bayerische Industrie leistet einen essenziellen Beitrag zur
+          Landes- und Bündnisverteidigung.
+    e3:
+      iran:
+        score: 0
+        evidence: Spätestens seit Ausbruch des Krieges im Iran und den Folgen daraus
+          ‑ die Gegenangriffe des Irans auf verschiedene Partner in der Region, jetzt
+          die erneute Zuspitzung, die wir auch durch die Huthis erlebt haben
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

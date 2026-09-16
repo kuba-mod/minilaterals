@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- energy
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Waldemar Żurek
+  - Karol Nawrocki
+  topics:
+  - energy
+  - rule_of_law
+  location: null
+  position: The Polish government is investigating corruption in fuel procurement
+    and proposing a windfall tax on fuel companies to lower consumer prices.
+  positions:
+    energy: Poland is introducing a windfall tax on fuel companies to fund driver
+      subsidies and lower VAT and excise duties on fuel.
+    rule_of_law: The Polish government is conducting investigations into financial
+      scandals and corruption involving Orlen and cryptocurrency transactions.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Polacy mają prawo znać prawdę o tej sprawie, dlatego informacje
+          śledztwie i o postępach będą sukcesywnie przekazywane opinii publicznej
+    visegrad:
+      energy:
+        score: 0
+        evidence: Afera opisana przez Financial Times dotyczy nieudanej transakcji
+          zakupu wenezuelskiej ropy przez spółkę Orlen Trading Switzerland
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

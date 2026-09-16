@@ -31,9 +31,10 @@ extracted:
   stances:
     weimar:
       hybrid:
-        score: 2
-        evidence: Die Aufklärungsbefugnisse der Nachrichtendienste werden an die Bedrohungen
-          im Cyber raum angepasst und zukunftsfest ausgestaltet.
+        score: 1
+        evidence: Staatliche Souveränität und unser Gemeinwesen sind vermehrt mit
+          Bedrohungen aus dem In- und Ausland, etwa durch Spionage, Sabotage oder
+          hybride Angriffe, konfrontiert.
     e3:
       defence:
         score: 1

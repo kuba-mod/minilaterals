@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, State Minister for Culture and the Media
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the vital role of culture and independent media in
+    sustaining democracy and combating disinformation and polarization.
+  positions:
+    rule_of_law: Germany asserts that free, independent, and diverse media are indispensable
+      for citizens to inform themselves and critically monitor political power.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Deshalb müssen wir Kultur und Medien politisch stärken und ihre
+          Freiheit und Vielfalt sichern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

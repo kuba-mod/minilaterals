@@ -1,0 +1,49 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Chris Fearn
+  - Gavin Gulię
+  - Tonio Borg
+  - Alex Sceberras Trigona
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Poland seeks to strengthen bilateral cooperation with Malta on European
+    security, critical infrastructure protection, and the defense of Ukraine.
+  positions:
+    ukraine: Poland supports the establishment of a Special Tribunal for the Crime
+      of Aggression against Ukraine and appreciates Malta's support for EU sanctions
+      packages against Russia.
+    defence: Poland emphasizes the need for increased European defense capabilities
+      and the protection of strategic critical maritime infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: omówili najważniejsze wyzwania dla bezpieczeństwa Europy, w tym
+          konsekwencje rosyjskiej agresji na Ukrainę
+      defence:
+        score: 1
+        evidence: Europa potrzebuje nie tylko większych zdolności obronnych, ale także
+          moralnego kręgosłupa
+    visegrad:
+      defence:
+        score: 1
+        evidence: Europa potrzebuje nie tylko większych zdolności obronnych, ale także
+          moralnego kręgosłupa
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

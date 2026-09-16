@@ -1,0 +1,51 @@
+actors:
+- DE
+- FR
+- US
+issue_areas:
+- defence
+- energy
+- iran
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Ali Al-Zaidi
+  topics:
+  - defence
+  - energy
+  - iran
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany seeks to deepen its partnership with Iraq through a new action
+    plan focused on economic cooperation, stability, and security.
+  positions:
+    defence: Germany will end its military presence in Iraq by September 30, 2026,
+      but remains open to continued security cooperation if requested.
+    energy: Germany signed an agreement regarding the Iraqi electricity supply and
+      encourages German companies to provide energy solutions in Iraq.
+    iran: Germany demands that Iran end the blockade of the Strait of Hormuz, stop
+      its military nuclear program, and cease supporting regional proxies.
+    rule_of_law: Germany supports Iraq in fighting corruption and establishing a more
+      transparent, efficient administration based on the rule of law.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Wir wollen Fortschritte im Kampf gegen die Korruption erreichen,
+          und wir wünschen uns eine noch transparentere und noch effizientere Verwaltung
+          in einer rechtsstaatlichen Ordnung.
+    e3:
+      iran:
+        score: 1
+        evidence: Es muss vor allem sein militärisches Nuklearprogramm einstellen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

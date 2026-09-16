@@ -1,0 +1,37 @@
+actors:
+- FR
+- UK
+issue_areas:
+- ukraine
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Wang Yi
+  topics:
+  - ukraine
+  - indo_pacific
+  location: null
+  position: France emphasized its joint responsibility with China to find constructive
+    solutions for global security and sought to rebalance trade relations with China.
+  positions:
+    ukraine: France highlighted Russia's irresponsibility regarding the war of aggression
+      against Ukraine and reaffirmed its support for Ukraine.
+    indo_pacific: France recalled a Franco-British initiative to guarantee freedom
+      of navigation in the Strait of Hormuz and called for continued discussions with
+      China.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: the support France is lending Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

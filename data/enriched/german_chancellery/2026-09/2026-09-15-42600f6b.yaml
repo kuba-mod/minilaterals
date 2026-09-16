@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Karin Prien
+  - Tim Kammel
+  - Frau Bönsch
+  - Klaus Rosenfeld
+  topics: []
+  location: Berlin, Germany
+  position: Chancellor Friedrich Merz honored the winners of the 'Jugend forscht'
+    competition to emphasize the importance of excellence, innovation, and natural
+    intelligence in German education and research.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

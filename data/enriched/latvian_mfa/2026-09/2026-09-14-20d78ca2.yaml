@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Eri Arfiya
+  topics:
+  - indo_pacific
+  location: Riga, Latvia
+  position: Latvia seeks to deepen its strategic partnership with Japan, focusing
+    on security and innovation.
+  positions:
+    indo_pacific: Latvia emphasizes the importance of security and stability in the
+      Indo-Pacific region as part of its strategic cooperation with Japan.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

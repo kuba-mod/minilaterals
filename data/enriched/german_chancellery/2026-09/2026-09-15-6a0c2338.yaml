@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Lars Klingbeil
+  - Wolfram Weimer
+  - Kai Wegner
+  - Stefan Evers
+  - Iris Spranger
+  topics: []
+  location: Berlin, Germany
+  position: Germany and the State of Berlin signed a ten-year Capital Financing Agreement
+    providing approximately 5 billion euros for security and culture in the capital
+    from 2028 to 2037.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

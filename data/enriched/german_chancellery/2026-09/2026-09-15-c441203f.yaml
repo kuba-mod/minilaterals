@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Lars Klingbeil
+  - Kai Wegner
+  - Stefan Evers
+  - Iris Spranger
+  topics: []
+  location: Berlin, Germany
+  position: Germany has signed a new capital financing agreement with the state of
+    Berlin to increase funding for cultural excellence projects, including the renovation
+    of the Berlin Philharmonie and support for the Bauhaus archive.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

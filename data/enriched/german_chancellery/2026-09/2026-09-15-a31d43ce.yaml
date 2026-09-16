@@ -1,0 +1,48 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- energy
+- iran
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Herr Jandura
+  topics:
+  - defence
+  - energy
+  - iran
+  - migration
+  location: null
+  position: Germany aims to restore economic growth and resilience through structural
+    reforms, diversification of trade partnerships, and a pragmatic energy transition.
+  positions:
+    defence: Germany is investing in its defense capabilities to enhance national
+      security and overall economic competitiveness.
+    energy: The government is implementing a pragmatic, technology-open, and cost-efficient
+      energy transition through the EEG amendment and building modernization laws.
+    iran: Germany intends to introduce measures to alleviate the burden of rising
+      fuel prices caused by the conflict in Iran.
+    migration: Germany views migration as a field where there are no contradictions
+      between national and European policies or between internal and external politics.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Wir investieren jetzt in unsere Verteidigung.
+    e3:
+      iran:
+        score: 0
+        evidence: die aktuellen Ausschläge am Benzinmarkt in Folge des Iran-Kriegs
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

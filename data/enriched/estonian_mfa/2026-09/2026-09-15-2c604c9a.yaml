@@ -1,0 +1,32 @@
+actors:
+- EE
+- LT
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia asserts that NATO's rapid response to a drone entering Lithuanian
+    airspace confirms the alliance's readiness and ability to protect its allies.
+  positions:
+    defence: Estonia views the decisive reaction to the drone incident in Lithuania
+      as a confirmation of NATO's capability to defend its territory.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: kinnitades sellega liitlaste valmisolekut ja suutlikkust kaitsta
+          NATO territooriumi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

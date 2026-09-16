@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor
+  - Tim Kammel
+  topics: []
+  location: Berlin, Germany
+  position: Germany recognizes and rewards youth scientific achievement through the
+    'Jugend forscht' competition and the Federal Chancellor's award.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
