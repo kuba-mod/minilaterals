@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  - Ursula von der Leyen
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Estonia supports the development of a geopolitically stronger Europe and
+    emphasizes the need for concrete economic support for Ukraine and increased pressure
+    on Russia.
+  positions:
+    ukraine: Estonia advocates for concrete economic support for Ukraine ahead of
+      winter and increased pressure on Russia to achieve a just and lasting peace.
+    defence: Estonia supports the goal of making Europe a stronger geopolitical actor
+      with a focus on security and defence.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Eesti toetab geopoliitiliselt tugevama Euroopa kujundamist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

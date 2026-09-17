@@ -1,0 +1,24 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Latvian Diaspora Forum
+  - Diaspora Advisory Council
+  topics: []
+  location: null
+  position: Latvia is organizing the Latvian Diaspora Forum and a Diaspora Advisory
+    Council meeting to discuss current diaspora issues and announce the 'Person of
+    the Year in the Latvian Diaspora 2026'.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- DE
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ilze Rūse
+  - Frank-Walter Steinmeier
+  topics: []
+  location: null
+  position: Latvian Ambassador Ilze Rūse presented her letters of credence to German
+    President Frank-Walter Steinmeier.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

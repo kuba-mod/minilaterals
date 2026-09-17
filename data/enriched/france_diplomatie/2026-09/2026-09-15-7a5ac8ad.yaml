@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Nicolas Forissier
+  - Luis Felipe Icaza
+  - Juan Carlos Rodríguez
+  topics:
+  - defence
+  location: Panama
+  position: France is strengthening its security and defense partnership with Panama
+    through increased coordination on maritime security, anti-narcotics efforts, and
+    the procurement of security equipment.
+  positions:
+    defence: France has launched a working group on security and equipment to facilitate
+      the supply of French security technology and equipment to Panama's security
+      forces.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: French-Panamanian security cooperation enjoys strong momentum
+    e3:
+      defence:
+        score: 0
+        evidence: the two countries signed four letters of intent a year ago to step
+          up coordination on defense, customs and policing
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

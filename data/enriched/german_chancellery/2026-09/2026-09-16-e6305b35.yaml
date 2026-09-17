@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  - Stefanie Hubig
+  topics: []
+  location: Berlin, Germany
+  position: The German government has adopted a 10-point action plan to strengthen
+    internal security and combat Islamist terrorism and extremism through legal and
+    preventive measures.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France supports the judgment of the Kosovo Specialist Chambers and reaffirms
+    its commitment to fighting impunity and supporting Kosovo's independence.
+  positions:
+    rule_of_law: France reiterates its support for the Kosovo Specialist Chambers
+      and its commitment to the fight against impunity.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: recalls its commitment to the fight against impunity
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

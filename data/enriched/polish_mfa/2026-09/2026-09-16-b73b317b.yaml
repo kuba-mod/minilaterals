@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs of the Republic of Poland
+  topics:
+  - defence
+  location: null
+  position: Poland condemns the Houthi drone attack on Mecca, citing its contribution
+    to instability in the Middle East and threats to civilians and maritime transport.
+  positions:
+    defence: Poland calls for the respect of the special status of religious sites
+      and symbols and condemns attacks that threaten global security and the economy.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

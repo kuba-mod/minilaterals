@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Garde des sceaux, ministre de la justice
+  - Ministre de la santé, des familles, de l’autonomie et des personnes handicapées
+  - Ministre délégué auprès du ministre de l’intérieur
+  - Ministre de l’Europe et des affaires étrangères
+  - Ministre des outre-mer
+  - Ministre de l'enseignement supérieur, de la recherche et de l’espace
+  topics:
+  - indo_pacific
+  location: null
+  position: France is implementing new domestic laws on civil liability for public
+    violence, updating its tax treaty with India, modernizing local government codes
+    in French Polynesia, and promoting multilateralism in space governance.
+  positions:
+    indo_pacific: France is strengthening its 'special global strategic partnership'
+      with India by approving an amendment to their tax convention to boost economic
+      ties and investments.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

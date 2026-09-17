@@ -56,8 +56,7 @@ extracted:
     visegrad:
       enlargement:
         score: 1
-        evidence: Rozszerzenie jest geopolityczną koniecznością – wzmocni nasze bezpieczeństwo
-          i scali nasz kontynent.
+        evidence: Rozszerzenie jest geopolityczną koniecznością
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

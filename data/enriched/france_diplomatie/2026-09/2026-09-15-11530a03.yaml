@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: France reaffirms its commitment to democratic principles and the rule
+    of law while expressing deep concern over global democratic backsliding.
+  positions:
+    rule_of_law: France promotes the rule of law and the protection of human rights
+      through initiatives like the European Democracy Shield, the New Democratic Pact,
+      and the Marianne Initiative.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: France and its partners speak with one voice, particularly within
+          the European Union, through the establishment of the European Democracy
+          Shield
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

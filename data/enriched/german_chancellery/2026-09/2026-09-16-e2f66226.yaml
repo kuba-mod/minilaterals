@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Chancellor's Strategy Circle for Technology and Innovation
+  - experts from business and science
+  topics:
+  - defence
+  location: null
+  position: Germany aims to establish itself as an AI nation by leveraging industrial
+    AI and integrating national high-tech agendas with European innovation projects.
+  positions:
+    defence: Germany is accelerating structural transformation in the defense sector
+      by aligning procurement decisions with the operational needs of the troops.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: In seiner Diskussion zu den Innovationspotenzialen im Verteidigungsbereich
+          fokussierte sich der Strategiekreis darauf, die strukturelle Transformation
+          zu unterstützen und zu beschleunigen.
+    e3:
+      defence:
+        score: 0
+        evidence: In seiner Diskussion zu den Innovationspotenzialen im Verteidigungsbereich
+          fokussierte sich der Strategiekreis darauf, die strukturelle Transformation
+          zu unterstützen und zu beschleunigen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

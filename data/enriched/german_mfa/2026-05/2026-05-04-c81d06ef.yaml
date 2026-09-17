@@ -57,8 +57,8 @@ extracted:
           threats
       ukraine:
         score: 1
-        evidence: Against the backdrop of fundamental geopolitical changes following
-          Russia’s war of aggression against Ukraine
+        evidence: fundamental geopolitical changes following Russia’s war of aggression
+          against Ukraine
       green_transition:
         score: 1
         evidence: harness new technologies for governance, business and socially just
