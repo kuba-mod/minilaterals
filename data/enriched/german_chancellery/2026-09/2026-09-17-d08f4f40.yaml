@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatsminister Weimer
+  topics: []
+  location: Berlin, Germany
+  position: Germany is increasing its financial support for the Bauhaus Archive in
+    Berlin by providing up to four million euros annually for operating costs starting
+    in 2028.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

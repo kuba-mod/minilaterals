@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Premier of Poland
+  - Christian Stocker, Chancellor of Austria
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland emphasizes the necessity of European solidarity and cooperation
+    with partners to secure the EU and member states against Russian aggression.
+  positions:
+    ukraine: Poland highlights the immediate threat posed by Russian attacks on western
+      Ukraine near the Polish border.
+    defence: Poland advocates for strengthened cooperation with European partners
+      and allies to protect the continent from Russian attacks.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: musimy myśleć o tym, jak zabezpieczyć nasze państwa i Unię Europejską
+          przed atakami ze strony Rosji
+      defence:
+        score: 1
+        evidence: Współpraca i solidarność państw europejskich są dziś kluczowe dla
+          bezpieczeństwa naszego kontynentu
+    visegrad:
+      defence:
+        score: 1
+        evidence: Razem z naszymi sojusznikami musimy myśleć o tym, jak zabezpieczyć
+          nasze państwa i Unię Europejską przed atakami ze strony Rosji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

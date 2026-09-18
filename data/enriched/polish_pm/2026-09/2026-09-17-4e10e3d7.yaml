@@ -1,0 +1,51 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Historian
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Poland is strengthening its military capabilities and remains determined
+    to respond firmly to Russian aggression and hybrid threats.
+  positions:
+    defence: Poland is building one of Europe's strongest armies, spending nearly
+      5% of GDP on defense and securing significant EU funding for armaments.
+    hybrid: Poland identifies current Russian activities, including drone incursions
+      and sabotage, as a hybrid war and asserts it will not be intimidated.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Wydajemy na obronę prawie 5 % PKB. To niemal dwa razy więcej niż
+          Niemcy i ponad dwa razy więcej niż Francja. Budujemy jedną z najsilniejszych
+          armii w Europie.
+      hybrid:
+        score: 1
+        evidence: Rosja wcale nie musi przekraczać naszej granicy. Ona już prowadzi
+          z nami wojnę hybrydową, za pomocą dronów, aktów sabotażu i dezinformacji
+          w internecie.
+    e3:
+      defence:
+        score: 1
+        evidence: Dziś jesteśmy w NATO i w Unii Europejskiej.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Wydajemy na obronę prawie 5 % PKB.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

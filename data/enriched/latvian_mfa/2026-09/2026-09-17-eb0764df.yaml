@@ -1,0 +1,23 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ivars Lasis
+  - King of Denmark
+  topics: []
+  location: Copenhagen, Denmark
+  position: Latvia's Ambassador to the Kingdom of Denmark, Ivars Lasis, presented
+    his letters of accreditation to the King of Denmark.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

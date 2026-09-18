@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland is strengthening its border defenses and reaffirming its commitment
+    to NATO allies and Ukraine in response to intensified Russian aggression.
+  positions:
+    ukraine: Poland is coordinating with Ukraine on an anti-ballistic coalition and
+      warns that accepting Russian terms for peace would increase threats to European
+      security.
+    defence: Poland is enhancing anti-aircraft defense and military infrastructure
+      at border crossings while calling for domestic political unity regarding NATO
+      Article 5 loyalty.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: będzie rozmawiał z Prezydentem Wołodymyrem Zełenskim na temat współdziałania
+          naszego kraju w ramach koalicji antybalistycznej
+      defence:
+        score: 1
+        evidence: Art. 5 i sojusznicza lojalność musi stać się naszym markowym znakiem
+    visegrad:
+      defence:
+        score: 2
+        evidence: nasz kraj wzmacnia wojskową infrastrukturę przejść granicznych,
+          aby zwiększyć bezpieczeństwo funkcjonariuszy i żołnierzy. Rozwinęliśmy obronę
+          przeciwlotniczą na 6 przejściach granicznych oraz uzupełniliśmy nasze możliwości
+          o kolejne stanowisko dowodzenia oraz radiolokacyjne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

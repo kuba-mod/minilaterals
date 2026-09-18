@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Karolina Fabirkiewicz
+  - Michał Wyrębkowski
+  - Youth Delegates of the Republic of Poland to the UN
+  topics: []
+  location: New York, USA
+  position: Poland has appointed two Youth Delegates to join the official Polish delegation
+    to the UN General Assembly to represent the voice of the younger generation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

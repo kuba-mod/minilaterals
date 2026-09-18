@@ -1,0 +1,42 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Präsident Trump
+  topics:
+  - ukraine
+  - iran
+  location: null
+  position: Germany reaffirmed its close bond with the US and coordinated on ending
+    the war in Ukraine and ensuring the openness of key maritime waterways.
+  positions:
+    ukraine: Germany discussed next steps to end the war in Ukraine and praised the
+      US Congress for passing the Graham Sanctions Act.
+    iran: Germany agreed with the US on the necessity of a rapid reopening of the
+      Strait of Hormuz and the Red Sea.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: tauschten sich über nächste Schritte zur Beendigung des Krieges
+          in der Ukraine aus
+    e3:
+      iran:
+        score: 0
+        evidence: Auch die Lage in der Straße von Hormus und im Roten Meer war Gegenstand
+          des Gesprächs.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

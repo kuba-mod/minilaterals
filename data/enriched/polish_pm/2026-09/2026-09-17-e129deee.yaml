@@ -1,0 +1,25 @@
+actors:
+- PL
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Victor Ambros
+  topics: []
+  location: Warsaw, Poland
+  position: Poland has restored the citizenship of Nobel laureate Prof. Victor Ambros
+    and pledged state support for a joint project to attract talented young scientists
+    to the country.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

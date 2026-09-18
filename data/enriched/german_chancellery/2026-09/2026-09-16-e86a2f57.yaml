@@ -1,0 +1,54 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatssekretär Kornelius
+  - Dr. Rüll
+  - Ungrad
+  - Deschauer
+  - Lenz
+  - Kirschner
+  - Sänger
+  - Lars Klingbeil
+  topics:
+  - ukraine
+  - hybrid
+  - energy
+  location: Berlin, Germany
+  position: The German government is implementing a ten-point plan to combat Islamist
+    terrorism, discussing fuel price relief for citizens, and strengthening security
+    measures against Russian hybrid threats.
+  positions:
+    ukraine: Germany continues to support Ukraine in its defense against Russian aggression
+      and views the Russian war as a threat to the West.
+    hybrid: Germany is implementing stricter entry controls and visa policies for
+      Russian citizens to minimize security risks following hybrid attack attempts.
+    energy: The government is evaluating various financial instruments, including
+      direct payments and tax adjustments, to relieve citizens from high fuel prices
+      caused by market instability.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: sie wird weiterhin klar zu ihren Prinzipien stehen, um die Ukraine
+          in ihrer Abwehr der russischen Aggression zu unterstützen
+      hybrid:
+        score: 1
+        evidence: Wir sehen uns vielfältigen hybriden Bedrohungen ausgesetzt. [...]
+          Die Bundesregierung nimmt diese Gefahren sehr ernst. Sie reagiert darauf
+          mit den nötigen Maßnahmen der Abschreckung und auch des Selbstschutzes.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

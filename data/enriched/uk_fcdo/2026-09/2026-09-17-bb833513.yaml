@@ -1,0 +1,32 @@
+actors:
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Ambassador Sarah MacIntosh
+  - UK Permanent Representative to the UN
+  topics:
+  - iran
+  location: New York, USA
+  position: The United Kingdom expresses deep regret over the veto of the Iran Panel
+    of Experts mandate renewal.
+  positions:
+    iran: The United Kingdom opposes the veto of the Iran Panel of Experts mandate
+      renewal.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: We deeply regret today’s veto of the Iran Panel of Experts mandate
+          renewal
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

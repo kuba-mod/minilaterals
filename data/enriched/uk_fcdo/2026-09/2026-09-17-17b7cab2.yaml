@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Lord Wood of Anfield
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom is prioritizing Ukraine, dialogue, and the management
+    of security risks in its role as Chair of the OSCE Forum for Security Co-operation.
+  positions:
+    ukraine: The United Kingdom is focusing on Ukraine as a key priority for strengthening
+      European security within the OSCE framework.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

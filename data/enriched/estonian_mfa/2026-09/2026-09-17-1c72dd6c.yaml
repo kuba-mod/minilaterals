@@ -1,0 +1,30 @@
+actors:
+- EE
+- US
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  - Richard Blumenthal
+  - Lindsey Graham
+  topics:
+  - ukraine
+  location: null
+  position: Estonia welcomes the approval of a Russian sanctions package by the US
+    Congress as a means to increase pressure on Russia to achieve a just and lasting
+    peace.
+  positions:
+    ukraine: Estonia supports increasing sanctions pressure on Russia to ensure a
+      just and lasting peace.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

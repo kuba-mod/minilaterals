@@ -1,0 +1,44 @@
+actors:
+- FR
+- US
+issue_areas:
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - King Abdullah II Ibn Hussein
+  - General Joseph Aoun
+  topics:
+  - defence
+  - iran
+  location: France
+  position: France reaffirms its strategic partnership with Jordan through a new defense
+    cooperation agreement and joint efforts to ensure regional stability in the Middle
+    East.
+  positions:
+    defence: France signed a defense cooperation agreement with Jordan to consolidate
+      their partnership and enhance Jordan's defense capabilities.
+    iran: France strongly condemned Iranian attacks against Jordan and expressed solidarity
+      with the Hashemite Kingdom.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: la signature, pendant la visite, d’un Accord relatif à la coopération
+          en matière de défense
+    e3:
+      iran:
+        score: 0
+        evidence: La France a condamné avec la plus grande fermeté les attaques iraniennes
+          qui ont visé la Jordanie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

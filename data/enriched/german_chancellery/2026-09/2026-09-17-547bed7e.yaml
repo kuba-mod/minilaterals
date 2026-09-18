@@ -1,0 +1,31 @@
+actors:
+- DE
+- HU
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Miklós Németh
+  - Karoly Grosz
+  - Michail Gorbatschow
+  - Heinz Keßler
+  - Erich Honecker
+  topics:
+  - migration
+  location: Budapest, Hungary
+  position: The East German leadership initially underestimated the impact of Hungary
+    dismantling its border fences with Austria.
+  positions:
+    migration: The East German government believed that increased patrols and surveillance
+      in Hungary would compensate for the removal of physical border barriers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

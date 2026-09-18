@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom condemns Russia's intensified attacks on Ukraine and
+    calls for sustained support for Ukraine and pressure on Russia.
+  positions:
+    ukraine: The United Kingdom highlights that Russia's intensified attacks are causing
+      severe harm to civilians, infrastructure, trade, and food security, necessitating
+      sustained support for Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

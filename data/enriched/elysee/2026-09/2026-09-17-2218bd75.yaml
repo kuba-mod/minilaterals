@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - King Abdullah II of Jordan
+  - Joseph Aoun
+  topics:
+  - defence
+  - energy
+  location: Paris, France
+  position: France is working with Jordan and Lebanon to strengthen Lebanese sovereignty
+    and security to ensure regional stability and protect the French economy.
+  positions:
+    defence: France is supporting the Lebanese Armed Forces through the Aqaba process
+      to ensure the state maintains a monopoly on weapons and secures its territory.
+    energy: France aims to reduce regional tensions to protect its economy from energy
+      price shocks and preserve diverse energy supply routes.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: réunion d’experts militaires de haut niveau dans le cadre du processus
+          d’Aqaba
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

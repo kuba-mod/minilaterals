@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  topics:
+  - defence
+  location: Paris, France
+  position: The French President presided over a military ceremony to honor deserving
+    military and civilian personnel and mark the renovation of the Hôtel national
+    des Invalides.
+  positions:
+    defence: France recognized and decorated meritorious members of the Armed Forces
+      and the Gendarmerie.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
