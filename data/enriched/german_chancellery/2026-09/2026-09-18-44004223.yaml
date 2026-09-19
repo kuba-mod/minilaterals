@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Karsten Wildberger
+  - Reiche
+  - Klingbeil
+  - Bär
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany is implementing a comprehensive data center strategy to double
+    IT connection capacity by 2030 and establish itself as a leading European hub
+    for AI and cloud infrastructure.
+  positions:
+    energy: Germany aims to ensure competitive electricity prices and a flexible energy
+      system to support the expansion of data centers.
+    green_transition: The government is prioritizing energy efficiency, renewable
+      energies, waste heat recovery, and water-saving cooling systems to ensure sustainable
+      data center operations.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Energieeffizienz, erneuerbare Energien, Abwärmenutzung und wassersparende
+          Kühlsysteme sind zentrale Hebel für Nachhaltigkeit und Versorgungssicherheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

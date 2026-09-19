@@ -1,0 +1,32 @@
+actors:
+- LV
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - John Coale
+  topics:
+  - defence
+  location: null
+  position: Latvia discussed security on the Latvian-Belarusian border with the US
+    Special Envoy for Belarus.
+  positions:
+    defence: Latvia is coordinating with the United States to ensure security along
+      its border with Belarus.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: Amatpersonas pārrunāja…
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

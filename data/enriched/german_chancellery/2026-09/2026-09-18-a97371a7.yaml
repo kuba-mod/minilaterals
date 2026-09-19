@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Lars Klingbeil
+  - Olaf Lies
+  - Gordon Schnieder
+  - Thorsten Frei
+  - Matthias Miersch
+  topics:
+  - energy
+  location: null
+  position: Germany's federal and state governments have agreed on a fuel price relief
+    package including tax cuts and the planned introduction of a price cap by 2027.
+  positions:
+    energy: Germany is reducing the energy tax on gasoline and diesel by 14 cents
+      per liter until 2026 and intends to implement a fuel price cap by January 1,
+      2027.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

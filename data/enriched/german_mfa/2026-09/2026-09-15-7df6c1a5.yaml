@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - Paula Doepfner
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is campaigning for a seat on the UN Human Rights Council, pledging
+    to reform the institution to be more effective and result-oriented while increasing
+    financial support for the UN High Commissioner for Human Rights.
+  positions:
+    rule_of_law: Germany advocates for strengthening mechanisms to prevent impunity
+      for human rights violations through international courts and supports expanding
+      mandates for special rapporteurs in Russia and Sudan.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Deutschland ist auch der zweitgrößte Beitragszahler des gesamten
+          Systems der Vereinten Nationen und finanziert maßgeblich den Hochkommissar
+          der Vereinten Nationen für Menschenrechte sowie die Sonderverfahren des
+          Rates.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

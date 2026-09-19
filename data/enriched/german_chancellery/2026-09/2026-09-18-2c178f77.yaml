@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Nina Warken
+  - Carsten Schneider
+  - Boris Pistorius
+  - Karsten Wildberger
+  - Lars Klingbeil
+  - Stefanie Hubig
+  - Elisabeth Kaiser
+  - Christian Freuding
+  - Tim Borowski
+  topics: []
+  location: Bremen, Germany
+  position: The German government is organizing a dialogue forum in Bremen during
+    the Day of German Unity to engage citizens in discussions about national unity,
+    government policy, and the future of the country.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

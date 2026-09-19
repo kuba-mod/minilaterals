@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Germany is implementing a series of fuel tax reductions and regulatory
+    measures to ensure energy security and relieve citizens and businesses from high
+    energy prices caused by geopolitical instability.
+  positions:
+    energy: Germany is reducing the energy tax on gasoline and diesel by 14 cents
+      per liter until the end of 2026 and is considering a temporary fuel price cap
+      by 2027 while expanding renewable energy to reduce fossil fuel dependency.
+    iran: Germany identifies the conflict in the Middle East and the situation around
+      the Strait of Hormus as the primary drivers of current market uncertainty and
+      fuel price increases.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Ursache für die Preissteigerungen ist insbesondere der andauernde
+          Nahost-Konflikt und die damit verbundene Unsicherheit an den Märkten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

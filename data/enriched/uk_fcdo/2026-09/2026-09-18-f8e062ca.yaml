@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom expresses its readiness to collaborate with the UN
+    to ensure peacekeeping operations are adaptable, effective, and capable of meeting
+    future challenges.
+  positions:
+    defence: The United Kingdom supports the modernization and effectiveness of UN
+      peace operations to better address evolving global security challenges.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,59 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Ukraine
+  position: Poland reaffirms its unwavering solidarity with Ukraine, joining an anti-ballistic
+    coalition and supporting Ukraine's path toward EU membership.
+  positions:
+    ukraine: Poland views Ukraine's sovereignty and security as essential to its own
+      and pledges continued support against Russian aggression.
+    defence: Poland has officially joined an anti-ballistic coalition to develop defense
+      technologies and protect European airspace.
+    enlargement: Poland strongly supports the expansion of the European Union and
+      views the Carpathian Initiative as a helpful tool for Ukraine's integration
+      process.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Przeciwko wszystkim negatywnym trendom będę zawsze wspierał Ukrainę
+          w walce z rosyjską agresją
+      defence:
+        score: 2
+        evidence: Polska od dziś jest częścią tego wielkiego projektu. (…) Koalicja
+          Antybalistyczna to grupa państw i przedsiębiorstw, które razem będą pracowały
+          na rzecz ochrony przed pociskami balistycznymi.
+      enlargement:
+        score: 1
+        evidence: jako zdecydowany zwolennik rozszerzenia Unii Europejskiej będę traktował
+          tę inicjatywę bardzo poważnie
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska od dziś jest częścią tego wielkiego projektu
+      enlargement:
+        score: 1
+        evidence: jako zdecydowany zwolennik rozszerzenia Unii Europejskiej będzie
+          traktował tę inicjatywę bardzo poważnie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

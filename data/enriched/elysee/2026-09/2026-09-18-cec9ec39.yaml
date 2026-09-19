@@ -1,0 +1,81 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Prime Minister of France
+  - Heads of parties represented in Parliament
+  - Director General of External Security (DGSE)
+  - Director General of Internal Security (DGSI)
+  - Director of Military Intelligence (DRM)
+  - Secretary General for National Defence and Security (SGDSN)
+  - Director General of Energy
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  - iran
+  location: null
+  position: France is strengthening its national vigilance against Russian hybrid
+    threats while pursuing diplomatic and strategic efforts to secure energy supplies
+    and support Ukraine.
+  positions:
+    ukraine: France reaffirms its indispensable support for Ukraine as a condition
+      for European security and a just peace.
+    defence: France is increasing the protection of critical infrastructure and sensitive
+      defense industrial sites against drone and cyber attacks.
+    hybrid: France is enhancing its posture of vigilance and legislative framework
+      to combat Russian hybrid threats and foreign interference.
+    energy: France is diversifying energy corridors, securing hydrocarbon supplies
+      through partners like Saudi Arabia and Iraq, and coordinating with the G7 to
+      manage strategic stocks.
+    iran: France is working to facilitate the peaceful reopening of the Strait of
+      Hormuz through diplomatic channels and potential maritime escorts.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: le soutien à l'Ukraine est plus que jamais indispensable parce qu'il
+          est la condition de notre sécurité et d'un retour à une paix juste et durable
+      defence:
+        score: 2
+        evidence: nous conduit avec le Royaume-Uni à piloter cette coalition des volontaires,
+          et d'ailleurs à avoir dans quelques semaines des exercices qui seront menés
+          sur le sol européen pour consolider celle-ci
+      hybrid:
+        score: 2
+        evidence: le ministre de l'Intérieur a réuni hier l'ensemble des préfets de
+          zone pour monter la posture et la vigilance à l'égard des attaques hybrides
+          russes
+    e3:
+      defence:
+        score: 2
+        evidence: c'est celle aussi qui nous conduit avec le Royaume-Uni à piloter
+          cette coalition des volontaires
+    aukus:
+      defence:
+        score: 0
+        evidence: préparer un plan de protection de nos infrastructures critiques,
+          ainsi que des sites les plus sensibles de notre base industrielle et technologique
+          de défense, contre les attaques de drones et les attaques cyber
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
