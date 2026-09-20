@@ -21,7 +21,12 @@ extracted:
   positions:
     defence: Latvia views the integration of economic and technological cooperation
       with the US as a key component of enhancing transatlantic security.
-  stances: {}
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: tikās ar Amerikas Savienoto Valstu vēstnieku Eiropas Savienībā Endrjū
+          Puzderu
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

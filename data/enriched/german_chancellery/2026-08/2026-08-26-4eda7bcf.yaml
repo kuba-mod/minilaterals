@@ -56,7 +56,9 @@ extracted:
     e3:
       iran:
         score: 0
-        evidence: trotz Krieg am Golf und in der Ukraine
+        evidence: Die Unruhe, die wir gerade an den Anleihemärkten, an den Finanzmärkten
+          erleben – wir haben damit zu tun, dass diese Unsicherheiten vor allem durch
+          den Irankrieg ausgelöst worden sind.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

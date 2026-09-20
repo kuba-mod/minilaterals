@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Germany is implementing a fuel price relief package, including energy
+    tax cuts and stricter antitrust measures, to mitigate the impact of rising oil
+    prices caused by the Iran-Middle East conflict.
+  positions:
+    energy: Germany is reducing the energy tax by approximately 17 cents per liter
+      from October 1, 2026, and plans to introduce a temporary fuel price cap by January
+      1, 2027.
+    iran: Germany is taking domestic economic measures to counter the rise in global
+      oil prices resulting from the Iran-Middle East conflict and the closure of the
+      Strait of Hormuz.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: In Folge des Iran-Nahost-Konflikts und der Sperrung der Schifffahrtsroute
+          von Hormus ist der Ölpreis auf dem Weltmarkt um etwa 30 Prozent gestiegen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

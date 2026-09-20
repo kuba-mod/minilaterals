@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - defence
+  - energy
+  - iran
+  location: Rovaniemi, Finland
+  position: Germany is implementing domestic fuel price relief and expanding its Arctic
+    strategy to include security and defense in response to geopolitical instability.
+  positions:
+    defence: Germany supports expanding the EU Arctic strategy to include security
+      and defense to protect data lines, pipelines, and sea routes against Russian
+      presence.
+    energy: The German government is reducing fuel prices by 17 cents per liter and
+      planning a fuel price cap by 2027 to mitigate market volatility.
+    iran: Germany identifies Iranian proxies, specifically the Houthis, as the cause
+      of instability in the Gulf region following the bombing of a Saudi pipeline.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Die bestehende Arktis-Strategie soll schnellstmöglich um das Kapitel
+          Sicherheit und Verteidigung erweitert werden.
+    e3:
+      defence:
+        score: 0
+        evidence: Die bestehende Arktis-Strategie soll schnellstmöglich um das Kapitel
+          Sicherheit und Verteidigung erweitert werden.
+      iran:
+        score: 1
+        evidence: Dort nutzen iranische Erfüllungsgehilfen wie die jemenitischen Huthis
+          die Abhängigkeit großer Teile der Welt von den Rohstoffen der Golf-Staaten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
