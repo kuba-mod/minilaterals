@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Alar Karis
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Estonia is participating in the UN General Assembly to increase support
+    for Ukraine, pressure Russia, and strengthen the UN.
+  positions:
+    ukraine: Estonia aims to increase support for Ukraine and increase pressure on
+      Russia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

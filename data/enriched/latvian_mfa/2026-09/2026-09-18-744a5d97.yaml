@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: Latvia does not recognize the Russian Federation's State Duma elections
+    held in occupied territories of Ukraine, Moldova, and Georgia.
+  positions:
+    ukraine: Latvia declares the Russian elections in temporarily occupied Ukrainian
+      territories to be illegal and non-existent.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

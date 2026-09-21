@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - ukraine
+  - green_transition
+  location: Tallinn, Estonia
+  position: Estonia asserts that Russia must be held accountable for environmental
+    damage caused in Ukraine and participated in a World Cleanup Day event.
+  positions:
+    ukraine: Estonia demands that Russia take responsibility for the environmental
+      destruction it has caused in Ukraine.
+    green_transition: Estonia promoted food waste reduction and environmental awareness
+      through a joint cleanup action in Tallinn.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

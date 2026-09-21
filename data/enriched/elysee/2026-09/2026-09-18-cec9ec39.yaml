@@ -69,6 +69,10 @@ extracted:
         score: 2
         evidence: c'est celle aussi qui nous conduit avec le Royaume-Uni à piloter
           cette coalition des volontaires
+      iran:
+        score: 0
+        evidence: la France œuvre à faciliter la réouverture pacifique du détroit
+          d’Ormuz et à sécuriser les approvisionnements énergétiques
     aukus:
       defence:
         score: 0

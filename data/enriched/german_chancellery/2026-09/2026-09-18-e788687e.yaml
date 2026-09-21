@@ -1,0 +1,56 @@
+actors:
+- DE
+issue_areas:
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Deschauer (AA)
+  - Köppl (BMUKN)
+  - Geiger (BMZ)
+  - Kall (BMF)
+  - Lorenzat (BMWE)
+  - Swistek (BMVg)
+  - Kirschner (BMJV)
+  - Kaminski (BMI)
+  topics:
+  - defence
+  - energy
+  - iran
+  location: Berlin, Germany
+  position: Germany is coordinating internal relief measures for rising energy prices
+    and preparing high-level diplomatic engagements at the UN General Assembly to
+    address global security and climate issues.
+  positions:
+    defence: Germany maintains naval units in the Mediterranean to protect sea lanes
+      provided there is a legal mandate and is deepening security cooperation with
+      Canada.
+    energy: The German government is working on a coordinated package to provide financial
+      relief to citizens and companies facing high fuel prices.
+    iran: Germany attributes current energy price spikes to external factors, including
+      developments in Iran and the Strait of Hormuz, which are beyond its direct influence.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Wir haben zum Beispiel Einheiten im Mittelmeer vorausstationiert,
+          die, sollten die Rahmenbedingungen gegeben sein und ein Mandat, eine völkerrechtliche
+          Grundlage vorhanden sein, dann zum Beispiel auch für den Schutz der Seewege
+          eingesetzt werden können.
+    e3:
+      iran:
+        score: 0
+        evidence: die Lage am Golf und hinsichtlich Irans ein maßgebliches Thema sein
+          werden
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

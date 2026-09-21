@@ -28,9 +28,9 @@ extracted:
   stances:
     aukus:
       submarines:
-        score: 0
+        score: 1
         evidence: Transfer of the nuclear materials in the context of AUKUS and its
-          safeguards in all aspects under the NPT.
+          safeguards in all aspects under the NPT
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

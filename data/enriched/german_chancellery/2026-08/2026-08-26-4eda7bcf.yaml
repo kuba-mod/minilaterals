@@ -46,19 +46,16 @@ extracted:
         score: 1
         evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
-        score: 2
-        evidence: Wir rüsten technisch weiter auf im Bereich der Drohnenabwehr, wir
-          rüsten technisch weiter auf im Bereich des Cyberdomes , und wir schließen
-          Sicherheitslücken durch Aufbau bei Polizeikräften und Verfassungsschutz.
+        score: 1
+        evidence: Wir wollen uns... vor Putin und allen, die unser Land angreifen
+          wollen, schützen
       green_transition:
         score: 1
         evidence: Wir halten an diesem Ziel fest.
     e3:
       iran:
         score: 0
-        evidence: Die Unruhe, die wir gerade an den Anleihemärkten, an den Finanzmärkten
-          erleben – wir haben damit zu tun, dass diese Unsicherheiten vor allem durch
-          den Irankrieg ausgelöst worden sind.
+        evidence: trotz Krieg am Golf und in der Ukraine
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

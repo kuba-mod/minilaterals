@@ -51,8 +51,9 @@ extracted:
     e3:
       iran:
         score: 0
-        evidence: die Zuspitzung der Situation im Nahen Osten, an Angriffen auf Ölpipelines,
-          an der Blockade von Seewegen
+        evidence: Spätestens seit Ausbruch des Krieges im Iran und den Folgen daraus
+          ‑ die Gegenangriffe des Irans auf verschiedene Partner in der Region, jetzt
+          die erneute Zuspitzung, die wir auch durch die Huthis erlebt haben
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

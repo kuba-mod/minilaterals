@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: Regensburg, Germany
+  position: Germany is providing 1.3 million euros for the renovation of the St. Katharinenspital
+    in Regensburg to preserve its cultural heritage and create a new cultural center.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
