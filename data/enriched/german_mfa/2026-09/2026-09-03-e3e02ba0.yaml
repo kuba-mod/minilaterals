@@ -87,7 +87,7 @@ extracted:
     e3:
       iran:
         score: 1
-        evidence: gewährleisten, dass Iran nicht über Atomwaffen verfügt
+        evidence: gewährleise, dass Iran nicht über Atomwaffen verfügt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

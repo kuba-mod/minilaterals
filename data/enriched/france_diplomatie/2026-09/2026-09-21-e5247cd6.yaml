@@ -1,0 +1,33 @@
+actors:
+- FR
+- US
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: France welcomes the adoption of the Lindsey Graham Act as a sign of strong
+    U.S. support for Ukraine and a means to increase pressure on Russia.
+  positions:
+    ukraine: France supports the U.S. adoption of the Lindsey Graham Act and is working
+      closely with the United States to implement sanctions and combat circumvention
+      to support Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France welcomes the adoption of the Lindsey Graham Act on September
+          16, which shows the U.S. Congress’s strong support for Ukraine in the face
+          of Russian aggression
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

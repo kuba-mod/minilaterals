@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Secretary
+  topics:
+  - green_transition
+  location: New York, USA
+  position: The United Kingdom emphasizes the critical link between climate change
+    and global security during New York Climate Week.
+  positions:
+    green_transition: The United Kingdom advocates for integrating climate security
+      into broader security frameworks to address the risks posed by environmental
+      degradation.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

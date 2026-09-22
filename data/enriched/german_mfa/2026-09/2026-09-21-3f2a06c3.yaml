@@ -1,0 +1,55 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - hybrid
+  - energy
+  - iran
+  location: New York, USA
+  position: Germany aims to use the 81st UN General Assembly to overcome diplomatic
+    silence in global conflicts, strengthen the Ukraine, and coordinate international
+    responses to maritime security threats and hybrid attacks.
+  positions:
+    ukraine: Germany intends to strengthen Ukraine's long-term resilience and pressure
+      Russia to enter serious negotiations.
+    hybrid: Germany will coordinate with partners to better protect critical underwater
+      infrastructure and counter Russian hybrid attacks.
+    energy: Germany seeks to address the impact of disrupted energy supplies and trade
+      routes on Europe and the Global South.
+    iran: Germany advocates for the international community to take more responsibility
+      for maritime security to end the Iranian-led blockade of trade routes in the
+      Strait of Hormuz and Bab al-Mandab.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Auf dem Weg dorthin wollen wir die Ukraine so stärken, dass sie
+          mit internationaler Unterstützung den längeren Atem hat.
+      hybrid:
+        score: 1
+        evidence: Wir werden uns daher mit unseren Partnern darüber abstimmen, wie
+          wir unsere kritische Infrastruktur unter Wasser besser schützen
+    e3:
+      iran:
+        score: 0
+        evidence: Denn an der Straße von Hormus und am Bab al-Mandab halten Iran und
+          seine Milizen seit Monaten die Lebensadern des freien Handelsverkehrs im
+          Würgegriff.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

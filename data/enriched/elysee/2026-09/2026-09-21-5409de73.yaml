@@ -1,0 +1,40 @@
+actors:
+- FR
+- US
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - Mark Carney, Prime Minister of Canada
+  topics:
+  - defence
+  - energy
+  location: Saint-Pierre and Miquelon
+  position: France seeks to revitalize its strategic and economic partnership with
+    Canada through increased cooperation in energy, defense, and polar research, while
+    reaffirming its absolute sovereignty over Saint-Pierre and Miquelon.
+  positions:
+    defence: France is strengthening its strategic autonomy and regional security
+      through joint defense operations and exercises with Canada and Denmark, particularly
+      in the polar region.
+    energy: France is negotiating agreements with Canada to secure supplies of liquefied
+      natural gas, critical minerals, and rare earths to diversify its energy sources
+      and protect against global market instability.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: nous, on va continuer aussi nos coopérations dans le cadre de l’OTAN,
+          par des exercices conjoints
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

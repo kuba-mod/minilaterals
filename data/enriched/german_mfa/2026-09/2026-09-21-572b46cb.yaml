@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - High Representative
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany, as part of the EU, condemns the Russian State Duma elections
+    as undemocratic and rejects the illegality of elections held in occupied Ukrainian
+    territories.
+  positions:
+    ukraine: Germany demands that Russia respect Ukraine's sovereignty and internationally
+      recognized borders, immediately cease its war of aggression, and withdraw all
+      forces.
+    rule_of_law: Germany criticizes the erosion of democracy in Russia, the suppression
+      of political opposition, and the lack of independent election monitoring.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Europäische Union bekräftigt ihr unbeirrbares Eintreten für
+          die Unabhängigkeit, Souveränität und territoriale Unversehrtheit der Ukraine
+          innerhalb ihrer international anerkannten Grenzen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - High Representative of the European Union
+  topics: []
+  location: null
+  position: Germany, as part of the European Union, does not recognize the presidential
+    elections in South Ossetia and condemns Russia's attempts to integrate the region
+    into its sphere of influence, violating Georgia's sovereignty.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

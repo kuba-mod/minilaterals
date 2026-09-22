@@ -1,0 +1,42 @@
+actors:
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Subrahmanyam Jaishankar, External Affairs Minister of India
+  topics:
+  - ukraine
+  - defence
+  location: New York, United States
+  position: France reaffirmed its strategic partnership with India, focusing on multilateral
+    reform, international law, and regional stability.
+  positions:
+    ukraine: France supports a ceasefire in Ukraine and a comprehensive, just, and
+      lasting peace based on international law.
+    defence: France welcomed the progress of the India-France Special Global Strategic
+      Partnership in the field of defence.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their support for a ceasefire in Ukraine and for a comprehensive,
+          just and lasting peace
+    e3:
+      defence:
+        score: 2
+        evidence: recalled the Franco-British initiative launched to ensure freedom
+          of navigation in the Strait of Hormuz
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

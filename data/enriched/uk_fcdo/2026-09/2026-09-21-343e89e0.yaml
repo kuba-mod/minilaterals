@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Kumar Iyer
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom delivers a statement during the Interactive Dialogue
+    on Iran at the UN Human Rights Council.
+  positions:
+    iran: The United Kingdom addresses human rights concerns and the situation in
+      Iran during the UN Human Rights Council's interactive dialogue.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

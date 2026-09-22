@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France condemns the lack of democratic standards in Russia's legislative
+    elections and rejects the legality of elections held in occupied Ukrainian and
+    other territories.
+  positions:
+    ukraine: France condemns the organization of elections in occupied Ukrainian territories
+      as a violation of international law and reaffirms its commitment to Ukraine's
+      sovereignty and territorial integrity.
+    rule_of_law: France regrets that Russia failed to meet conditions for free and
+      democratic elections due to the repression of civil society, restrictions on
+      speech, and the absence of impartial international observers.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirms its commitment to Ukraine’s sovereignty, independence,
+          unity and territorial integrity
+      rule_of_law:
+        score: 1
+        evidence: We regret that the conditions for holding free, pluralistic, democratic
+          elections were once again not met
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

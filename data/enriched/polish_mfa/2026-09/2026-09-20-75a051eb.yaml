@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs of Poland
+  topics:
+  - ukraine
+  location: null
+  position: Poland condemns the illegal pseudo-elections organized by Russia in occupied
+    Ukrainian territories and calls for the withdrawal of Russian forces from Ukraine.
+  positions:
+    ukraine: Poland asserts that Russian-organized pseudo-elections have no legal
+      effect and cannot legitimize the annexation of Ukrainian territories, which
+      violates international law and sovereignty.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wzywamy Federację Rosyjską do poszanowania prawa międzynarodowego,
+          zaprzestania bezprawnych działań naruszających międzynarodowe zobowiązania
+          oraz wycofania sił zbrojnych z terytorium Ukrainy.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

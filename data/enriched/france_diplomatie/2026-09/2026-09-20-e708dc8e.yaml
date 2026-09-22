@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Ambassador of the Islamic Republic of Iran
+  topics:
+  - iran
+  location: Tehran, Iran
+  position: France strongly condemns the closure of the French Language Centre in
+    Tehran and will summon the Iranian Ambassador to respond to the action.
+  positions:
+    iran: France condemns the intrusion into and closure of the French Language Centre
+      in Tehran as unjustifiable and unacceptable.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: France condemns in the strongest terms the Iranian security forces’
+          intrusion into the premises of the French Language Centre in Tehran
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  - Department of Global Affairs
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland is calling for candidates to be nominated for election to the UN
+    Committee on the Elimination of Discrimination against Women.
+  positions:
+    rule_of_law: Poland is seeking highly qualified experts in human rights and academic
+      activity to represent the country in the UN treaty body monitoring the elimination
+      of discrimination against women.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Członkowie Komitetu ds. Likwidacji Dyskryminacji Kobiet wybierani
+          są spośród zgłoszonych przez państwa kandydatów posiadających wysokie kwalifikacje
+          moralne i znaczące doświadczenie zawodowe w obszarze ochrony praw człowieka
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

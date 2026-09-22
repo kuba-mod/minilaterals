@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany emphasizes the need for collective action and a proactive will
+    to defend freedom and security in the face of real geopolitical threats and a
+    paralyzed UN.
+  positions:
+    hybrid: Germany views hybrid warfare as a real and present danger, specifically
+      citing the use of armed drones by Russia within its borders.
+    defence: Germany asserts that its current security situation is serious and that
+      the defense of freedom and security requires collective effort and a shared
+      vision.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Beispielsweise wird ein abstrakter „Hybrider Krieg“ auf einmal sehr
+          real, wenn Russland bewaffnete Drohnen in unserem Land einsetzt.
+    e3:
+      defence:
+        score: 0
+        evidence: Beispielsweise wird ein abstrakter „Hybrider Krieg“ auf einmal sehr
+          real, wenn Russland bewaffnete Drohnen in unserem Land einsetzt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

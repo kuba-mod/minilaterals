@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  - Department of Global Affairs
+  topics:
+  - rule_of_law
+  location: Geneva, Switzerland
+  position: Poland is calling for candidates to be nominated for election to the UN
+    Committee Against Torture.
+  positions:
+    rule_of_law: Poland is seeking a highly qualified expert to represent the country
+      on the UN Committee Against Torture to monitor the implementation of the Convention
+      against Torture.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Komitet działa w celu pociągnięcia państw do odpowiedzialności za
+          naruszenia praw człowieka
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
