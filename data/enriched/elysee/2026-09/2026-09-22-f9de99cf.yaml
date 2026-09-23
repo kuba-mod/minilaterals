@@ -1,0 +1,44 @@
+actors:
+- FR
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Emmanuel Macron
+  - Donald Trump
+  - Volodymyr Zelensky
+  - António Guterres
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: New York, USA
+  position: France is coordinating with the US and Ukraine to secure energy infrastructure
+    and increase defensive military support for Ukraine, while promoting global ocean
+    protection.
+  positions:
+    ukraine: France reaffirms its support for Ukraine and seeks a moratorium on strikes
+      against energy and civilian infrastructure.
+    defence: France advocates for providing interceptors to Ukraine more quickly and
+      strongly to strengthen its defensive capabilities.
+    energy: France is working with the US to resolve energy market tensions and secure
+      oil exit sites in the Red Sea and the Strait of Hormuz.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: la nécessité d’aider encore plus vite et plus fort nos amis ukrainiens
+          en matière d’intercepteurs
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

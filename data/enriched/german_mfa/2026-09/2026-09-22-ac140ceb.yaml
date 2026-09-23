@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Serap Güler, State Minister at the Federal Foreign Office
+  - Michael Brand, Parliamentary State Secretary at the Federal Ministry of Education,
+    Family, Seniors, Women and Youth
+  - Johann Saathoff, Parliamentary State Secretary at the Federal Ministry for Economic
+    Cooperation and Development
+  - Maria Böhmer, President of the German UNESCO Commission
+  topics: []
+  location: Berlin, Germany
+  position: Germany advocates for global educational equity as a human right and is
+    investing in both domestic programs like the Startchancen-Programm and international
+    funds to ensure inclusive access to education.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 Foreign Ministers
+  - High Representative of the European Union
+  - United Nations Special Envoy Hans Grundberg
+  topics:
+  - energy
+  - iran
+  location: null
+  position: France, as part of the G7, condemns Houthi attacks in the Red Sea and
+    Bab al-Mandab, calling for an end to Iranian support for the Houthis and a return
+    to a political settlement in Yemen.
+  positions:
+    energy: France emphasizes the need to ensure maritime security to prevent disruptions
+      to global energy flows and ensure global energy security.
+    iran: France calls on Iran to stop arming and supporting the Houthis in violation
+      of United Nations Security Council resolutions.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: We call on Iran to end its arming of and support for the Houthis
+          in violation of United Nations Security Council resolutions 1747, 2140 and
+          2216.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

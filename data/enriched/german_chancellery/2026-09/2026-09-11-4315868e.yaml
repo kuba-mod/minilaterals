@@ -51,15 +51,13 @@ extracted:
           die Ukraine
       rule_of_law:
         score: 1
-        evidence: seit dem Regierungswechsel in Budapest die Weichen gestellt für
-          eine Rückkehr Ungarns zur Rechtsstaatlichkeit und zu den europäischen Grundwerten
+        evidence: die Weichen gestellt für eine Rückkehr Ungarns zur Rechtsstaatlichkeit
+          und zu den europäischen Grundwerten
     e3:
       iran:
-        score: 1
+        score: 0
         evidence: dass neben Iran auch die Huthi schon seit Wochen versuchen, die
-          internationale Schifffahrt zu beschränken und in Geiselhaft zu nehmen, auf
-          Energieanlagen in Saudi-Arabien zielen und nun auch eben die Regierung Jemens
-          ins Visier nehmen, verurteilen wir
+          internationale Schifffahrt zu beschränken und in Geiselhaft zu nehmen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

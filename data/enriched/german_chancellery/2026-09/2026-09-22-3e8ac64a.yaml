@@ -1,0 +1,41 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor Merz
+  - Mette Frederiksen
+  - Jens-Frederik Nielsen
+  - Donald Trump
+  topics:
+  - defence
+  location: null
+  position: Germany welcomes the security agreement for Greenland signed by Denmark,
+    Greenland, and the United States, viewing it as a reinforcement of the transatlantic
+    NATO partnership.
+  positions:
+    defence: Germany supports the security agreement in the High North and pledges
+      continued support for the joint pursuit of these security goals.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Es stärkt unsere transatlantische Partnerschaft in der NATO und
+          trägt zur Sicherheit im Hohen Norden bei.
+    e3:
+      defence:
+        score: 0
+        evidence: Es stärkt unsere transatlantische Partnerschaft in der NATO und
+          trägt zur Sicherheit im Hohen Norden bei.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

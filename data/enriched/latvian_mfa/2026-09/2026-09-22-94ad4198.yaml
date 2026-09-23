@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dace Melbārde
+  - Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: Brussels, Belgium
+  position: Latvia urges the European Union to maintain pressure on Russia and continue
+    supporting Ukraine.
+  positions:
+    ukraine: Latvia advocates for continued EU pressure against Russian aggression
+      and ongoing support for Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

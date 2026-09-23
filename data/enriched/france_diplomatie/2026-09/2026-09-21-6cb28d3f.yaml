@@ -1,0 +1,36 @@
+actors:
+- FR
+- US
+issue_areas:
+- iran
+- energy
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Ishaq Dar, Pakistan’s Deputy Prime Minister and Minister for Foreign Affairs
+  topics:
+  - iran
+  - energy
+  location: New York, USA
+  position: France supports inclusive negotiations to resolve Iranian nuclear and
+    ballistic threats and secure energy supplies.
+  positions:
+    iran: France emphasizes the need for inclusive negotiations to permanently resolve
+      threats from Iran regarding nuclear, ballistic, and regional fronts.
+    energy: France advocates for inclusive negotiations to help secure energy supplies.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: permanently resolve the threats from Iran on the nuclear, ballistic
+          and regional fronts
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

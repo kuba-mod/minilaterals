@@ -1,0 +1,68 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - António Guterres
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  location: New York, USA
+  position: France advocates for a renewed multilateralism based on the UN Charter
+    to combat the 'law of the jungle' and protect national sovereignty against imperialist
+    tendencies.
+  positions:
+    ukraine: France provides unwavering support for Ukraine's sovereignty and proposes
+      a double moratorium on energy and civilian infrastructure to protect populations
+      and ensure food security.
+    defence: France supports the reform of the UN Security Council, specifically the
+      Franco-Mexican initiative to limit the veto in cases of mass atrocities.
+    green_transition: France reaffirms its commitment to the Paris Agreements and
+      the goal of carbon neutrality by 2050, emphasizing the need for independent
+      science and multilateral action.
+    energy: France prioritizes the restoration of freedom of navigation in the Strait
+      of Hormuz to ensure global energy supplies.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: en Ukraine, la coalition des volontaires que nous avons formée avec
+          le Royaume-Uni et l'Allemagne rassemble l'ensemble de ceux qui sont prêts
+          à garantir la paix et la stabilité au cœur de l'Europe
+      green_transition:
+        score: 1
+        evidence: Restons attachés aux accords de Paris, à nos trajectoires nationales,
+          à notre décarbonation et à l'objectif de neutralité carbone à 2050.
+    e3:
+      defence:
+        score: 2
+        evidence: en Ukraine, la coalition des volontaires que nous avons formée avec
+          le Royaume-Uni et l'Allemagne rassemble l'ensemble de ceux qui sont prêts
+          à garantir la paix et la stabilité au cœur de l'Europe
+    aukus:
+      defence:
+        score: -1
+        evidence: ceux au fond qui ne veulent pas devenir les vassaux de l’un ou l’autre
+          des deux grandes puissances mondiales, se mettent ensemble pour développer
+          un modèle frontière open source
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

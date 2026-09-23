@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Minister Zdrowia
+  topics: []
+  location: null
+  position: The Polish government has adopted a package of health care laws to increase
+    transparency in medical salaries and employment, and is proposing an excise tax
+    increase on alcohol to fund the National Health Fund.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- iran
+- energy
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister for Europe and Foreign Affairs Jean-Noel Barrot
+  - Gulf Cooperation Council (GCC) counterparts
+  topics:
+  - iran
+  - energy
+  location: New York, USA
+  position: France reaffirmed its solidarity with GCC countries against Iranian attacks
+    and expressed a commitment to a lasting diplomatic solution to the Iranian threat
+    while strengthening bilateral cooperation.
+  positions:
+    iran: France supports the GCC against Iranian attacks and is fully mobilized to
+      reach a lasting diplomatic solution to address the Iranian threat.
+    energy: France seeks to further strengthen bilateral cooperation with the GCC
+      in the energy sector.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: recalled France’s full mobilization with a view to reaching a lasting
+          diplomatic solution, dealing with all elements of the Iranian threat
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

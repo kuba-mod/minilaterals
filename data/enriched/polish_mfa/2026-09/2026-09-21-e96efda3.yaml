@@ -1,0 +1,51 @@
+actors:
+- PL
+- UK
+- SK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Kaja Kallas
+  - Minister of Foreign Affairs of Peru
+  - Minister of Foreign Affairs of Nepal
+  - Minister of Foreign Affairs, Business and Mineral Resources of Greenland
+  - Minister of Foreign Affairs of India
+  topics:
+  - ukraine
+  - defence
+  location: New York, USA
+  position: Poland is advocating for UN reform, increased multilateralism, and continued
+    international support for Ukraine against Russian aggression.
+  positions:
+    ukraine: Poland emphasizes that Russian aggression against Ukraine has global
+      negative consequences, including food security, and highlights Ukraine as the
+      victim of the conflict.
+    defence: Poland supports strengthening the role of NATO in the Arctic region and
+      maintains unwavering support for the sovereignty and territorial integrity of
+      the Kingdom of Denmark.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: podkreślał również, że rosyjska agresja przeciwko Ukrainie niesie
+          negatywne konsekwencje także dla państw spoza Europy
+      defence:
+        score: 1
+        evidence: wzmacniania roli NATO w regionie
+    visegrad:
+      defence:
+        score: 1
+        evidence: wzmacniania roli NATO w regionie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

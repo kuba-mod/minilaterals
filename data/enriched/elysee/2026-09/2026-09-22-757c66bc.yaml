@@ -1,0 +1,27 @@
+actors:
+- FR
+- AU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Pedro Sánchez
+  - William Ruto
+  - Anthony Albanese
+  topics: []
+  location: null
+  position: France is co-leading a global coalition to establish a roadmap for children's
+    rights and protection in the age of AI, advocating for mandatory prior testing
+    and authorization of AI systems before they reach children.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

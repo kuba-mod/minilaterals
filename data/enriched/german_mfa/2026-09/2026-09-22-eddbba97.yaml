@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- AU
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers
+  - high-level representatives
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  - indo_pacific
+  location: New York, USA
+  position: Germany and its European and Indo-Pacific partners commit to strengthening
+    the multilateral system and intensifying cooperation to address security and prosperity
+    challenges in both Europe and the Indo-Pacific.
+  positions:
+    ukraine: Germany emphasizes the importance of a full ceasefire and a just, lasting
+      peace in Ukraine based on the UN Charter and international law.
+    hybrid: Germany affirms the need to combat hybrid threats across all sectors to
+      ensure societal resilience.
+    rule_of_law: Germany roots its cooperation in common principles including democracy,
+      the rule of law, human rights, and international law.
+    indo_pacific: Germany underscores the importance of peace and stability in the
+      Indo-Pacific, rejecting unilateral attempts to change the status quo in the
+      Taiwan Strait.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: bekräftigen die Notwendigkeit eines gerechten und dauerhaften Friedens
+          im Einklang mit den Grundsätzen der VN -Charta und des Völkerrechts
+      hybrid:
+        score: 1
+        evidence: bekräftigen die Notwendigkeit, hybride Bedrohungen in allen Bereichen
+          zu bekämpfen
+      rule_of_law:
+        score: 1
+        evidence: unsere Zusammenarbeit in gemeinsamen Grundsätzen und Interessen
+          einschließlich Demokratie, Rechtsstaatlichkeit, Menschenrechten und Völkerrecht
+          wurzelt
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: Gemeinsam bekennen wir uns zu unserer Verpflichtung, das Seerechtsübereinkommen
+          der Vereinten Nationen aufrechtzuerhalten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

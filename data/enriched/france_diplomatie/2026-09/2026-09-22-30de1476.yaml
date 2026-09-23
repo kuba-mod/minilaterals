@@ -1,0 +1,66 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+- indo_pacific
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - G7 Foreign Ministers of Canada, Italy, Japan, Germany, the United Kingdom, the
+    United States of America
+  - High Representative of the European Union
+  - Ukrainian Foreign Minister
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - indo_pacific
+  - rule_of_law
+  location: New York, USA
+  position: France convened G7 Foreign Ministers to reaffirm unwavering support for
+    Ukraine and address critical security issues in the Middle East and Indo-Pacific.
+  positions:
+    ukraine: France reaffirms unwavering support for Ukraine's sovereignty and territorial
+      integrity while seeking to increase pressure on Russia's war economy.
+    defence: France advocates for strengthening military support to Ukraine, specifically
+      regarding air defense.
+    energy: France supports enhancing Ukraine's energy resilience to ensure it can
+      withstand the coming winter.
+    indo_pacific: France emphasizes the importance of maintaining a free and open
+      Indo-Pacific region.
+    rule_of_law: France asserts that the Indo-Pacific region must be founded on the
+      rule of law.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Discussions focused on strengthening financial and military support
+          to Ukraine, particularly in terms of air defense; energy resilience
+    e3:
+      defence:
+        score: 2
+        evidence: Jean-Noël Barrot, Minister for Europe and Foreign Affairs, invited
+          the G7 Foreign Ministers of Canada, Italy, Japan, Germany, the United Kingdom,
+          the United States of America, and the High Representative of the European
+          Union, to meet
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: importance of a free and open Indo-Pacific region, founded on the
+          rule of law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

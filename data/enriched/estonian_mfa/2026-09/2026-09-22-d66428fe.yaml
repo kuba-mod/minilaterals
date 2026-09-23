@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia supports the EU's extension of sanctions against Russian individuals
+    and entities and has implemented national sanctions against Alisher Usmanov and
+    Mikhail Fridman.
+  positions:
+    ukraine: Estonia supports the extension of EU sanctions against those linked to
+      Russian aggression and has imposed national sanctions on specific Russian businessmen
+      removed from the EU list.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

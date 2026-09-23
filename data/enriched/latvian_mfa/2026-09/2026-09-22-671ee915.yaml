@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Baiba Braže
+  topics:
+  - defence
+  location: New York, USA
+  position: Latvia highlighted that the Belarusian regime poses a threat to European
+    and global security during the UN General Assembly.
+  positions:
+    defence: Latvia identified the Belarusian regime as a significant threat to the
+      security of Europe and the rest of the world.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

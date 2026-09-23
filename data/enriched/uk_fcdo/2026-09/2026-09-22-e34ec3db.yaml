@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Canada
+  - Foreign Ministers of France
+  - Foreign Ministers of Germany
+  - Foreign Ministers of Italy
+  - Foreign Ministers of Japan
+  - Foreign Ministers of the United Kingdom
+  - Foreign Ministers of the United States of America
+  - High Representative of the European Union
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom, as part of the G7, condemns the Houthi strikes in
+    Yemen and asserts the right to defend international shipping and navigational
+    freedoms.
+  positions:
+    defence: The United Kingdom condemns Houthi attacks on shipping and supports the
+      right to protect maritime commerce and navigational freedoms in the Bab al-Mandab.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: Foreign Ministers of Canada, France, Germany, Italy, Japan, the
+          United Kingdom and the United States of America, and the High Representative
+          of the European Union condemn continued strikes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is organizing the German Sustainability Action Days to promote
+    the UN Sustainable Development Goals, with a specific focus on water sustainability
+    this year.
+  positions:
+    green_transition: Germany is encouraging public and institutional participation
+      in sustainability actions, specifically targeting awareness, soil unsealing,
+      and rainwater usage.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: größer das gemeinsame Zeichen für eine nachhaltige Welt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
