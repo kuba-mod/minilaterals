@@ -21,7 +21,7 @@ RAW EVENTS  (data/events/) — adds `collection` + `collection_method`
 
 ENRICHED SIDECARS  (data/enriched/) — adds `enriched_by`
   - `model_id`: gemma4 was the sole enrichment model (the Anthropic provider is
-    supported in code but has never been used — see CLAUDE.md), so `gemma4:latest`.
+    supported in code but has never been used — see ARCHITECTURE.md), so `gemma4:latest`.
   - `prompt_version`: reconstructed per-file. A sidecar's ratings were produced
     by whatever prompt enrich.py carried at the commit that wrote them, so we
     hash the prompt surface (*_PROMPT / *_RUBRIC constants) at that commit and

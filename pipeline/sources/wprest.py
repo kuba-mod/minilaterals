@@ -22,7 +22,7 @@ from .base import BaseIngester, Event
 # — found via GET .../wp-json/wp/v2/types, whose entries carry a rest_base).
 
 # Accept: application/json is a standard declaration for a REST client, not a
-# browser-impersonation header — see design principle #10 in CLAUDE.md, which
+# browser-impersonation header — see design principle #10 in ARCHITECTURE.md, which
 # rules out disguising what this actually is.
 _HEADERS = {
     "User-Agent": "minilaterals.com diplomatic tracker (+https://minilaterals.com)",

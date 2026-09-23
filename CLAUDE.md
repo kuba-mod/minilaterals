@@ -1,14 +1,28 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code in this repository.
+
+**This file is orientation, not ground truth.** Before stating how something
+behaves, read the code. If this file (or any doc) disagrees with the code, the
+code wins. Say that the doc has drifted and fix it in the same change.
+
+**What belongs here:** only things that apply to most tasks *and* can't be learned
+from the code. No counts, metric values, run IDs, or enumerations of things the code
+already lists. Design rationale goes in `ARCHITECTURE.md`, directory-specific notes
+in `pipeline/CLAUDE.md`, `worker/CLAUDE.md` and `evals/CLAUDE.md`, and anything
+checkable goes in a test. `tests/test_claude_md.py` caps this file's length.
 
 ## What this is
 
-A static tracker for Weimar Triangle (DE-FR-PL) diplomatic coordination. The core use case is **positional comparison**: even when no joint statement exists, when Germany and Poland both publish press releases about Ukraine in the same week the tracker surfaces them side-by-side with extracted one-sentence position summaries, and scores how semantically similar those positions are.
+A static tracker for Weimar Triangle (FR-DE-PL) diplomatic coordination. It sets
+side by side what each government publishes on the same issue in the same week,
+with a one-sentence position per statement and an LLM stance rating against the
+grouping's agreed goal. The pipeline also collects and enriches data for the other
+groupings in `data/groupings.yaml` that carry `topics`. The rendered site currently
+shows only Weimar, plus a hub page of grouping cards.
 
-**Expanding to more minilaterals.** The pipeline now *collects and enriches* data for four additional formats besides Weimar — E3 (DE/FR/UK), Visegrád Group (PL/CZ/SK/HU), Baltic Three (EE/LV/LT), and AUKUS (AU/UK/US) — defined in `data/groupings.yaml` as the entries carrying a `topics` key. Enrichment tags each event with per-grouping relevance flags. That same file also holds the hub page's "coming soon" groupings, which have no `topics` and are invisible to the pipeline. The **rendered site still shows only Weimar** for now; per-grouping views are a deliberate follow-up. See "Groupings" and "Relevance classification" below.
-
-No database. All events are YAML files committed to git. A Cloudflare Worker (Static Assets, `wrangler.jsonc`) serves `docs/` and also runs a small API (`worker/index.js`) for the hub page's vote feature — see Deployment below for how that build actually gets triggered.
+No database: events are YAML files in git. A Cloudflare Worker serves the rendered
+site and a small vote API.
 
 ## Commands
 
@@ -32,8 +46,7 @@ uv run python -m pipeline.vote_report --reset quad --yes   # clear one grouping'
 # Preview rendered output
 uv run python -m http.server 8080 --directory docs   # then open http://localhost:8080
 
-# Lint + schema checks — all three are enforced in CI via .github/workflows/lint.yml,
-# and each fails independently; `ruff check` passing alone isn't green
+# Checks CI runs on every push — all four must pass
 uv run ruff check .
 uv run ruff format --check .                 # or `ruff format .` to fix in place
 uv run python -m pipeline.validate           # YAML schemas
@@ -47,179 +60,54 @@ uv run python -m pipeline.evaluate --repeats 3 --record "what changed"   # write
 uv run python -m pipeline.evaluate --stance-forced    # rate labelled topics, ignoring classification
 ```
 
-## Architecture
+Each workflow in `.github/workflows/` opens with a comment saying what it does and
+when it runs.
+
+## Pipeline
 
 ```
-Sources (RSS/HTML/API)
-  → pipeline/ingest.py          orchestrator; writes data/runs/YYYY-MM-DD.yaml
-    → pipeline/sources/*.py     one ingester per source; all extend BaseIngester
-      → data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{hash8}.yaml   (raw scraped fields only)
-        → pipeline/enrich.py    LLM classifies (actors/topics/relevance) + extracts positions & per-topic stances → data/enriched/
-          → pipeline/render.py  Jinja2 + stance-based convergence scoring → docs/
+pipeline/sources/*.py  → data/events/{source}/{YYYY-MM}/{date}-{hash8}.yaml   raw scraped fields only
+pipeline/enrich.py     → data/enriched/ (same path)   LLM: actors, topics, per-grouping relevance, positions, stances
+pipeline/render.py     → docs/                        Jinja2 + stance-based convergence scoring, as of data/edition.yaml
 ```
 
-**CI:** five workflows. `.github/workflows/collect.yml` is cron/dispatch-driven data collection and the only workflow that commits to `main`: the daily cron at 01:00 UTC ingests → enriches and commits `data/**` (the cutoff is unchanged, so a rebuild ships the same published edition); the Tuesday cron (or `workflow_dispatch` with `cut_edition=true`) additionally bumps the cutoff in `data/edition.yaml` to today and generates commentary — the weekly edition cut, which also commits only `data/**`. It never renders: every push to `main` (including these commits) triggers Cloudflare's build, which renders from source and deploys, so an edition ships simply by moving the cutoff. Its commit uses `GITHUB_TOKEN`, which does not re-trigger GitHub Actions workflows, so there is no commit loop. `render.yml` is a render **CI check**, not a deploy path: it renders on every branch push to fail fast if `render.py` crashes and to upload the built tree as a downloadable `site` artifact — it commits nothing. `render.py` excludes events dated after the cutoff and anchors all rolling windows to it, so rendering is a pure function of (templates, data, cutoff). `.github/workflows/lint.yml` runs `ruff check .` on every branch push, and `test.yml` runs `pytest`. `eval.yml` is the only workflow besides `collect.yml` that spends model calls: it scores the prompts against the gold set and posts a table to the job summary, on `workflow_dispatch` or on a push touching `pipeline/enrich.py`, `pipeline/evaluate.py`, `evals/cases/**`, `evals/baselines.yaml` or `data/groupings.yaml` (scoped to what changes what the model reads, so docs under `evals/` don't spend a run) — see Prompt evaluation below. See Deployment below for how the site actually gets built and served.
+- `collect.yml` is the only workflow that commits to `main`, and it commits only
+  `data/**`. It ingests and enriches daily, and on Tuesdays it also moves the
+  cutoff in `data/edition.yaml`, which is how a new edition ships.
+- `docs/` is a **build artifact** (gitignored). Cloudflare's build runs
+  `scripts/cf-build.sh` on every push, renders, and deploys. Rendering is a pure
+  function of templates, data and cutoff.
+- `data/groupings.yaml` is the one config file for members, topics, per-topic goal
+  sentences and hub-card content. Entries without `topics` are hub-only cards
+  invisible to the pipeline.
 
-## Deployment
+## Rules
 
-**Cloudflare Workers (Static Assets) is the single renderer and host.** Its Git-integration build (configured in the Cloudflare dashboard) runs `scripts/cf-build.sh` on every push, which runs `pipeline.render` to build the whole deployable tree into `docs/`, then Cloudflare's deploy step (`wrangler versions upload` on branches, `wrangler deploy` on `main`) serves it. `docs/` is a **build artifact**: it is gitignored and never committed, so there is exactly one source of truth for the rendered site and every push — branch preview or production — reflects current source + data. (If the dashboard build command is ever unset, Cloudflare would deploy an empty/stale tree — the build command is load-bearing.)
+- **Terminology:** always "Weimar Triangle countries", never "Weimar countries".
+  This applies to prose, UI copy, and commit/PR text.
+- **Country order:** wherever FR, DE and PL appear together in the UI, the order is
+  France, Germany, Poland. Iterate `WEIMAR_ACTORS` (Python) or the `weimar_actors`
+  template var, never a new hardcoded tuple or `sorted()`.
+- **Classification and stance rating are the LLM's job.** No keyword or regex
+  classifier, no fallback. Don't repair old sidecars field by field in Python;
+  re-run the model over them (`enrich --reextract`).
+- **"Unrated" is not "neutral".** A topic with no quotable stance is omitted from
+  `extracted.stances`, never stored as `score: 0`.
+- **Prompt changes:** bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together and
+  record a baseline in `evals/baselines.yaml`. Tests enforce both. Any claim about
+  what a prompt change did must cite a measured eval delta, read against the noise
+  floor in `evals/README.md`.
+- **Honest User-Agent:** never impersonate a browser to get past a block. Pause the
+  source instead.
+- **Fetch politeness:** ingesters that fetch article pages skip already-ingested
+  items. See `pipeline/CLAUDE.md` before writing or changing an ingester.
 
-- **`render.py` owns the entire `docs/` tree.** Invoked as `pipeline.render --output docs`, it writes the Weimar Triangle site under the base-path subdir (`docs/weimar-triangle/…`) plus the root-level hub page (`docs/index.html`, rendered from `pipeline/templates/hub.html`) and `docs/404.html` beside it. `pipeline/templates/404.html` is the source for the 404 page; there are no hand-committed files under `docs/`.
-- **`SITE_BASE_PATH`**: the env var `render.py` reads (default `""`) both to prefix every internal link/asset URL *and* to decide the output subdir. `scripts/cf-build.sh` and `render.yml` set it to `/weimar-triangle`, matching the production route — which is why the tree is `docs/weimar-triangle/index.html`, not `docs/index.html`. With it unset (local dev), the site renders at the `docs/` root as before and no hub page is emitted — `docs/index.html` is the Weimar Triangle tracker's own homepage, letting you preview that site standalone without the umbrella hub in the way.
-- **`docs/index.html`** (the hub page, only emitted when `SITE_BASE_PATH` is set): one card per minilateral grouping — Weimar Triangle is live and links into `{SITE_BASE_PATH}/`, the rest (`HUB_GROUPINGS` in `render.py`) are static "coming soon" placeholders pending their own ingesters/render targets. The Weimar card's statement count and alignment badge are computed from the same data as the tracker itself (`weekly_counts`, `topic_weekly["overall"]`), not hardcoded. Card content — name, members, tags, and the card text (`purpose` plus the `agreed` provenance line) — comes from `data/groupings.yaml` via `load_hub_groupings()`; only the accent gradients (`HUB_ACCENTS`) stay in `render.py`. Card text is the grouping's goal and the instrument that established it, stated factually rather than as commentary. Cards are grouped into three sections by `status` (`STATUS_ORDER` → `BAND_LABELS`): "Active minilaterals" (the page's own heading, covering the Weimar card too), "Intermittent minilaterals", and "Currently inactive minilaterals" — dormant, suspended, aspirational. A format that stalled shouldn't sit among formats that are running. The inactive ones carry no "Coming soon" badge, since nothing is coming for them. A card tag must have a stated, agreed objective behind it — analytical framings a grouping's members never signed up to ("BRI alternative", "sovereigntism") don't qualify.
-- **`docs/404.html`** (always generated): what Cloudflare serves for unknown paths, per `wrangler.jsonc`'s `not_found_handling: "404-page"`.
-- **Routing**: `wrangler.jsonc`'s `routes` binds `minilaterals.com/*` to the worker (covering both the hub at the root and `/weimar-triangle/*`), but that route only applies on `wrangler deploy` (the `main`/production build). Branch previews get a `workers_dev` subdomain instead (a per-commit URL and a per-branch alias), where the worker owns the whole subdomain root — so a branch preview's hub page lives at `<alias>.workers.dev/`, with `<alias>.workers.dev/weimar-triangle/` the tracker itself, matching production's shape.
-- **Previewing without Cloudflare**: `render.yml` uploads the built tree as a `site` artifact on every branch push; download it to inspect a render locally.
-- **`worker/index.js`** is the Worker's `main` script (see `wrangler.jsonc`'s `main`/`assets.binding`/`kv_namespaces`). Requests are matched against static assets first; only unmatched paths — currently `/api/vote`, `/api/notify` — reach the script, which falls back to `env.ASSETS.fetch(request)` for anything else (e.g. the 404 page). It backs the hub page's "vote for the next grouping" feature, writing to the `VOTES` KV namespace (`minilaterals_emails` in the dashboard). Test it locally with `npx wrangler dev --local` (no live Cloudflare credentials needed; KV is emulated on disk under `.wrangler/state`, gitignored). Deliberately no route to read the tallies back — see `pipeline/vote_report.py`.
+## Further reading
 
-## Key files
-
-| File | Purpose |
-|---|---|
-| `pipeline/sources/base.py` | `Event` dataclass (raw scraped fields) + `save()` (dedup by filename); `KNOWN_ACTOR_SOURCES` known-actor set |
-| `pipeline/sources/__init__.py` | `ALL_INGESTERS` list used by ingest.py |
-| `pipeline/sources/feedbase.py` | `FeedIngester`: generic RSS/Atom base for the new minilateral MFA sources (thin subclasses set `source_name`/`source_lang`/`feed_url`) |
-| `pipeline/sources/wprest.py` | `WPRestIngester`: generic WordPress REST API (`wp-json/wp/v2/<post-type>`) base for .gov sites whose RSS feed discovery is broken but the underlying CMS still serves full post content as JSON (thin subclasses set `source_name`/`source_lang`/`rest_url`); written for `us_state`, which is nonetheless paused — see design principle #10 |
-| `pipeline/enrich.py` | Sole categoriser: LLM classifies (actors/topics/relevance) + extracts positions and per-topic stance ratings; per-grouping relevance via `_grouping_relevance()`; `OllamaProvider` / `AnthropicProvider` with identical `call()` interface |
-| `pipeline/migrate_groupings.py` | One-off LLM-free backfill of the per-grouping relevance flags across `data/enriched/` |
-| `pipeline/migrate_drop_blank_neutrals.py` | One-off: clears `score: 0` stances stored with no evidence quote (the pre-`"8"` "found nothing" sentinel) so `--stances-only` re-rates them |
-| `pipeline/render.py` | `build_convergence_clusters()` + `score_cluster_stances()`; renders the site (Meetings currently excluded — see below) |
-| `pipeline/templates/` | `base.html` (dark mono theme), `index.html`, `sources.html`, `country.html`; `hub.html` is the standalone minilaterals.com umbrella landing page (root, not part of the Weimar Triangle subsite — see Deployment), including the vote-for-the-next-grouping UI; `meetings.html` exists but isn't currently rendered |
-| `worker/index.js` | The Cloudflare Worker's API surface (`/api/vote`, `/api/notify`) backing the hub page's vote feature; falls through to static assets for everything else — see Deployment |
-| `pipeline/vote_report.py` | Local-only: reads vote tallies straight out of KV via the Cloudflare API (needs your own `CLOUDFLARE_API_TOKEN`) and prints a terminal histogram; grouping names come from `HUB_GROUPINGS` so there's one slug→name mapping, not two; `--reset`/`--reset-all` clear a grouping's vote counter and voter markers (needs an Edit-scoped token, confirms before deleting unless `--yes`) |
-| `data/groupings.yaml` | **The one config file**, and everything in it is read by code. Each minilateral carries members, `tags` (the hub card's chips, mapped to the objective each stands for), and the card's name/member_names/blurb. Tracked groupings additionally carry `topics` and `goals` — a reference sentence **per grouping per topic**, since `defence` means something different to AUKUS than to the Weimar Triangle. Entries without `topics` are hub placeholders invisible to the pipeline. Read by `enrich.py`, `validate.py`, `render.py` |
-| `data/edition.yaml` | Published edition cutoff date; render excludes newer events (weekly cadence) |
-| `data/meetings.yaml` | 46 hand-curated historical meetings (migrated from `weimar-tracker.jsx`); still loaded for the `meetings_count` stat, not for a rendered page |
-| `data/annual.yaml` | Activity scores 1991–2026 (fed the bar chart on the currently-unrendered `/meetings/` page) |
-| `weimar-tracker.jsx` | Original React dashboard — reference only, not served |
-
-## Data model
-
-Computed fields (LLM-derived by `enrich.py`, stored in the `data/enriched/` sidecar, not the raw event YAML):
-- `weimar_relevant: true` — any MFA-sourced item touching a Weimar-tracked issue area (ukraine, defence, hybrid, enlargement, green_transition, rule_of_law), or any item with 2+ Weimar countries and a tracked issue area, or all 3 Weimar actors present, or an explicit Weimar/trilateral mention
-- `{grouping}_relevant` — the same single-tier relevance computed **per grouping** for each format in `data/groupings.yaml` (`weimar_relevant`, `e3_relevant`, `visegrad_relevant`, `baltic_relevant`, `aukus_relevant`) — one flat boolean per grouping, no separate "strong signal" tier. Relevance is scoped to each grouping's member set, so a widened actor vocabulary can't leak relevance across formats (e.g. a `{UK, US}` item never becomes `weimar_relevant`). Computed by `_grouping_relevance()` in `enrich.py`
-- `extracted.position` — one-sentence LLM summary of the country's stance; drives the comparison view
-- `extracted.stances` — `{grouping: {topic: {score: -2..+2, evidence: "…"}}}` rating the country's stance against **that grouping's** goal for the topic. Keyed by grouping because ~25% of events are relevant to two groupings that both track the scored topic, and those two ratings answer different questions. A topic with no quotable stance is **absent** from the map rather than scored 0 — see Convergence scoring. `render.py` reads the `weimar` block via `event_stances()`; a per-grouping view uses the same accessor with its own key
-- `enriched_by` — enrichment provenance sidecar block: `{model_id, prompt_version, environment}`, where `environment` is `local` or `github_actions`. `prompt_version` is the `PROMPT_VERSION` constant in `enrich.py`; the prompt has a real lineage (`"1"` regex-classification → `"2"` LLM classification at PR #35 → `"3"` shape hardening → `"4"` multilingual → `"5"` multi-grouping: 12-country actors, topic union, `explicit_formats` → `"6"` clearer `explicit_formats` instruction with a per-format legend → `"7"` per-grouping goals, stance rating split into its own call per relevant grouping → `"8"` unrated ≠ neutral: a topic with no quotable stance is omitted rather than scored 0 → `"9"` `topics` is a selection, not a checklist: a topic the text doesn't cover is left out rather than listed with a position reporting its absence), keyed by `sha256[:8]` of the prompt surface. **Bump `PROMPT_VERSION` and `PROMPT_SURFACE_SHA` together when a prompt changes** — `test_prompt_surface_in_sync` fails until you do, so ratings can't be stamped with a stale version — **and record a measured baseline for the new version in `evals/baselines.yaml`**, which `test_prompt_version_has_baseline` enforces (see Prompt evaluation). Versions `"1"`–`"8"` predate the harness, so `"8"` is the first entry with numbers behind it
-- `_file_path` — added at load time by `render.py` (not stored in YAML)
-
-Provenance fields on the **raw** event YAML (set by the ingester in `base.py`, not LLM-derived):
-- `collection` — `native` or `fallback`; auto-derived in `Event.save()` from `source_lang` vs the source's `NATIVE_LANG` (so an English item from an MFA is `fallback`; see design principle #9)
-- `collection_method` — the fetch mechanism: `rss`, `html`, `wayback` (and `backfill` on legacy seed data whose per-item mechanism wasn't recorded)
-
-Both raw and enriched provenance fields are Optional in the schemas so pre-provenance data still validates; the one-off `pipeline.migrate_provenance` backfilled the existing tree by reconstructing values from git history (adding-commit → method; and, reading blame as of the branch base so its own commits don't interfere, writer-commit → local/CI and → prompt_version via the hashed prompt surface at that commit).
-
-## Relevance classification (`enrich.py`)
-
-`extracted.topics` is a **selection**, not a checklist. Prompt versions up to `"8"` described it as a "list from" the vocabulary, and the model sometimes enumerated the whole list and marked the misses in prose — storing `"France does not explicitly address hybrid threats in the provided text"` as that topic's *position*. A phantom topic propagates everywhere: into `issue_areas` (so the event joins a convergence cluster for a topic it never discusses), into `_grouping_relevance()`, and into `_stance_topics()`, which then asks the model to rate it on every `--stances-only` run — a request it declines every time, leaving the event pending forever. Prompt `"9"` states the rule and forbids a position that describes what the text lacks. The fix is the prompt and nothing else: an earlier attempt paired it with a regex that deleted topics whose position matched an "absence-asserting" shape, which is the keyword classifier of design principle #5 coming back in through the side door — a hand-maintained pattern list deciding what an event is about, with the "does not tolerate breaches of international law" false positive as the standing reminder of why that was removed. Old sidecars are repaired by re-running the model over them (see Re-extraction), not by patching their fields in Python.
-
-Classification is done by the LLM, not by keywords. For every raw event, `pipeline.enrich` asks the model — in the same call that extracts positions and stances — which member countries are involved (`actors`, from the 12-code vocabulary), which minilateral formats the text explicitly names (`explicit_formats`), and which `issue_areas` it touches (from the union of all groupings' topics). From those signals `_grouping_relevance()` computes a single `{grouping}_relevant` flag for **every** grouping in `data/groupings.yaml` with a fixed rule, scoped to that grouping's member set: an explicit-format mention (or all members present), OR 2+ member actors on a topic that grouping tracks, OR a known-actor source belonging to the grouping on a tracked topic. `weimar` uses the same flat `weimar_relevant` naming as every other grouping — there's no separate legacy field. Sources in `KNOWN_ACTOR_SOURCES` have their own country folded into `actors` (via `SOURCE_ACTOR`), so a single-country item from one of these sources still counts. `_normalize_actors()` maps the model's country names/aliases to the canonical codes. There is no keyword fallback — see design principles #5 and #8.
-
-## Re-extraction (`enrich.py --reextract`)
-
-How a prompt improvement reaches data already on disk. Classification is the model's job (design principle #5), so a sidecar written by an older prompt is **not** repaired field-by-field in Python — `_find_stale_extractions()` selects every sidecar whose `enriched_by.prompt_version` differs from the current `PROMPT_VERSION` and re-runs `_extract()` over it, overwriting the sidecar wholesale (stances included, since `_extract` rates them inline). Selection reads only the provenance stamp; nothing inspects the press release or the extracted text, so there is no pattern list to maintain and no second, divergent notion of what an event is about.
-
-Two selectors, both LLM-free and neither reading the press release:
-
-- **`--reextract`** — every sidecar whose `prompt_version` differs from `PROMPT_VERSION`, newest first. The general mechanism, and a large bill: bumping `PROMPT_VERSION` marks the whole corpus stale, so a prompt bump is a data migration, not just a code change. Nothing runs this on a schedule; it is a deliberate, manual sweep.
-- **`--reextract --stance-pending`** — only the events `_find_stance_pending()` returns, i.e. the ones `--stances-only` can never finish. A sidecar whose topic list is wrong keeps being asked for a rating the model keeps declining, and no amount of re-rating fixes it, because the fix is to re-decide what the event is about. This is the targeted repair, and the one `collect.yml` exposes — as a `workflow_dispatch` input (`reextract=true`), off by default, never on the cron path.
-
-Re-extraction is non-deterministic: it can change a classification that was already fine. That is the price of having one categoriser rather than two. Note also that re-extracting cannot clear a genuine unrated topic — one the text really covers but takes no goal-relevant position on — so a small stance-pending residue is expected and correct.
-
-## Convergence scoring (`render.py`)
-
-`build_convergence_clusters()` groups `weimar_relevant` events by issue area into 7-day windows (matching the weekly edition cadence) where 2+ MFA actors published. `score_cluster_stances()` is the **single** scoring method: for each actor it means that actor's per-event stance ratings (`extracted.stances[area].score`, −2..+2 vs. the agreed Weimar goal). `overall` is the mean stance across actors. `_stance_agreement(spread, overall)` labels the cluster from **two** axes, not one: the `spread` between per-actor means (agreement between capitals) and `overall` (agreement with the goal itself). Low spread alone is not "Aligned" — capitals in lockstep opposition (e.g. both at −2) label as `Aligned against goal` (red), not a green `Aligned`; low spread with `overall` too close to neutral (−0.5..+0.5) labels `Noncommittal` (amber). Only low spread *and* `overall` ≥ 0.5 is `Aligned` (green). Above spread 0.5 the label is purely spread-driven: `Mixed` (≤ 1.5) or `Divergent`. A cluster whose events carry no stance ratings scores `None` and renders without a badge — there is no embedding/cosine fallback. Every score is auditable via the evidence quote stored on each stance — which is also why **"unrated" and "neutral" are kept distinct**: a topic the model finds no quotable stance on is *omitted* from `extracted.stances`, not stored as `score: 0`. Prompt versions up to `"7"` conflated the two, so an absence of evidence fed the cluster mean and pulled it toward `Noncommittal`; the prompt now asks for omission, `_rate_stances()` drops any evidence-less 0 that slips through anyway, and `pipeline.migrate_drop_blank_neutrals` cleared the ones already on disk. **Measured, that instruction only half-works**: `abstention_recall` is 0.220 (see Prompt evaluation), because the common failure is not an evidence-less 0 but a 0 carrying a quote that is genuinely in the text yet says nothing about *this grouping's* goal — which the evidence-less net cannot catch. So some unrated topics still reach clusters as neutrals; the distinction is enforced in the data model but not yet reliably produced by the model. A genuine 0 (the country took a position that neither advances nor undermines the goal) still counts, and still carries a quote. A nonzero score with empty evidence is left alone — a real claim with lost provenance, not an absence. Backfill missing stances with `pipeline.enrich --stances-only` (which CI runs daily, so cleared topics are re-rated automatically).
-
-## Prompt evaluation (`evaluate.py`)
-
-**The rule: a `PROMPT_VERSION` bump requires a recorded baseline, and any claim about what a prompt change did must cite the eval delta that supports it.** Prompt revisions `"1"`–`"8"` all shipped unmeasured, and the lineage entries describing their effects were written as assertions. `tests/test_evaluate.py::test_prompt_version_has_baseline` now fails until `evals/baselines.yaml` has an entry for the current `PROMPT_VERSION`, so the prompt cannot move without the move being measured.
-
-`pipeline/evaluate.py` runs the **real** prompt path — `enrich.classify()` and `enrich._rate_stances()`, not copies — against ~46 hand-labelled cases in `evals/cases/`, split into five files by what they probe (`extraction_core`, `format_naming`, `irrelevant`, `stance_scale`, `goal_discrimination`). Reporting is advisory: a poor score prints and exits 0, because 46 cases and a nondeterministic model make a hard threshold flaky.
-
-**`evals/README.md` is the reference** — every metric as its numerator over its denominator, its current `n`, its noise floor, how to read a run, and the conventions for editing the gold set. Read it before interpreting or quoting a number; don't restate it here.
-
-**What the first measured run found** (prompt v8, gemma4 via Ollama Cloud, 46 cases × 3 repeats, flip rate 0.042). Classification is solid — `relevance_accuracy` 0.943, `actors_f1` 0.947, `formats_exact` 0.848. Four results are load-bearing for future work:
-
-- **`stance_exact` 0.598 against `stance_within_1` 0.957.** The rubric's five points are finer than the model can resolve — direction nearly always right, exact step rarely. Treat a single event's ±1 as noise; cluster means are the meaningful unit.
-- **`abstention_recall` 0.220** (precision 1.000). The v8 instruction is largely ineffective: when the model omits it is always right, but it fails to omit in ~78% of cases where it should, reaching for a quote that is *in the text* but says nothing about *this grouping's goal*. `_rate_stances()`'s evidence-less-0 net only catches the subset returning no quote at all.
-- **`goal_discrimination` 0.583.** v7's premise — one topic asking a different question of each grouping — holds only ~58% of the time. The `uk_fcdo` copy-paste defect, quantified.
-- **`evidence_verbatim` 0.941.** ~6% of stored quotes are paraphrases, which `_clean_evidence` never checked for — so a small fraction of scores are not checkable against the primary source, weakening the auditability claim in Convergence scoring.
-
-The middle two are the ones worth acting on, and both are prompt problems rather than harness problems. **None of the four should be described as solved in this file until a re-run says so.**
-
-**What v9 measured, and how the `goal_discrimination` question was resolved.** The first measurement (run 31318334552, 46 cases, flip rate 0.030, strictly comparable to v8's same-size baseline) found `topics_f1` +0.017 and `abstention_recall` +0.071 — both in the intended direction, both inside their noise floors — and one move beyond a floor in the wrong direction: `goal_discrimination` −0.208 (0.583 → 0.375, n=8, floor 0.125). A same-prompt replication (run 31319017019) reproduced 0.375 exactly, which made it look like a possible regression rather than a single-run swing — v9 measured 0.375 twice against a v8 that had measured 0.583 once and ~0.458 on its own replication.
-
-#77 then grew the gold set specifically to settle this (two more `goal_discrimination` cases reaching two groupings via the known-actor single-country rule, taking `n` from 8 to 10). Re-measuring **both** prompts on the identical 49-case set (v8: run 33608795085; v9: run 33608809077, both 2026-09-02) resolved it: v8 itself now measures `goal_discrimination` 0.333 (n=10) — indistinguishable from v9's 0.333 (n=10) on the same cases, delta −0.042, within noise. **The apparent regression was small-n noise in the old 8-pair slice, not an effect of stating `topics` as a selection.** v8 never discriminated goal pairs any better than v9 once both were measured on a comparable sample; `abstention_recall` converges the same way (0.221 for both). See `evals/baselines.yaml`'s `"8"`/`"9"` entries and `evals/README.md`'s Goal discrimination section for the full numbers.
-
-What the re-run did *not* settle: the gold set still can't see the over-tagging bug prompt `"9"` targets directly — no case is drawn from an over-tagged event, none expects more than three topics — so `topics_f1` (0.811 at v9 vs 0.788 at v8, both n≈50, within noise) and `abstention_recall` remain unmoved by the fix in any measurable way. The evidence that the underlying bug is real, and that `"9"`'s fix addresses it, is still the corpus rather than the eval: 94 of 1,488 extracted sidecars carried 4+ topics, 16 carried all six, 12 stored positions asserted an absence outright, and 15 events were stance-pending on a rating the model would never give (all counts as of the original measurement). A gold-set addition that draws directly from an over-tagged event is the next worthwhile expansion; the two-grouping gap that motivated #77 is now closed.
-
-## Terminology
-
-Always say **"Weimar Triangle countries"**, never "Weimar countries" — in prose, UI copy, and commit/PR text alike.
-
-## Country ordering
-
-Wherever all three Weimar Triangle countries appear together in the UI — legends, chart lines/end-labels, cluster columns, convergence badges, nav links — the order is always **France, Germany, Poland** (`FR`, `DE`, `PL`), matching `WEIMAR_ACTORS` in `render.py`. Never alphabetical (`DE, FR, PL`) and never insertion/discovery order. When building a new list of actors, iterate `WEIMAR_ACTORS` (Python) or the Jinja `weimar_actors` context var / a `weimar_actors | tojson` array passed into inline `<script>` blocks, rather than a fresh hardcoded tuple or a `sorted()` call on a set of actor codes.
-
-## Enrichment providers
-
-Controlled by `ENRICH_PROVIDER` env var (auto-detected from key presence):
-- **Ollama** (`gemma4:latest` default): used for all enrichment — locally in dev, and via Ollama Cloud (`OLLAMA_HOST=https://ollama.com`, `OLLAMA_API_KEY` secret) in GitHub Actions. gemma4 chosen for its French/Polish/German coverage
-- **Anthropic** (`AnthropicProvider`, `claude-haiku-4-5-20251001`): supported in code as an alternative provider but **not currently used** — set `ENRICH_PROVIDER=anthropic` with `ANTHROPIC_API_KEY` to switch to it
-
-## Design principles
-
-These were chosen deliberately and are worth questioning as the project grows.
-
-**1. YAML files as the database.**
-Every ingested event is a file at `data/events/{source}/{YYYY-MM}/{YYYY-MM-DD}-{hash8}.yaml`. There is no SQLite or Postgres. Rationale: files are human-readable in the GitHub UI, diffs show exactly what changed each day, git history is the audit log, and the project needs zero infrastructure. Trade-off: querying is a full glob + load-all-into-memory; this works fine at ~thousands of files but would degrade at tens of thousands.
-
-**2. Deduplication by filename.**
-`hash8 = sha256(source_url + title)[:8]`. File existence = already ingested. No database lookup, no `UNIQUE` constraint. Trade-off: 8 hex chars gives ~1-in-4-billion collision probability, acceptable for this volume. If the same event is published by two sources, both files are kept (different source_name → different path).
-
-**3. MFAs and heads-of-government offices are known-actor.**
-The three MFAs and the three heads-of-government offices (German Chancellery, Élysée, Polish PM's Chancellery/KPRM) are in `KNOWN_ACTOR_SOURCES`. During enrichment their source country is folded into `actors`, so any item from these sources that touches a tracked issue area is `weimar_relevant = True`, even if it only mentions one country. Rationale: the comparison across known-actor sources *is* the analysis — Germany publishing about Ukraine and Poland publishing about Ukraine in the same week is signal, even without a joint statement; and Weimar summits are leader-level, so chancellery/Élysée output is as much the country position as MFA output. Trade-off: this produces false positives (an item that only touches a tracked topic in passing still counts). Future *sectoral* sources (environment, defence ministries) should get a `SOURCE_ACTOR` entry but stay out of `KNOWN_ACTOR_SOURCES`: their newsrooms are dominated by domestic policy, so they keep the stricter 2+-country / explicit-trilateral gate.
-
-**4. Single-tier relevance, flat per grouping.**
-Each grouping gets exactly one `{grouping}_relevant` boolean (`weimar_relevant`, `e3_relevant`, `visegrad_relevant`, `baltic_relevant`, `aukus_relevant`) — an explicit-format mention or all members present, OR 2+ member actors on a tracked topic, OR a known-actor source on a tracked topic. An earlier design also stored a separate "strong signal" tier (`trilateral_signal` etc., true only for the explicit-mention/all-actors-present case) alongside relevance, but it was never consumed by `render.py` and duplicated information already implied by `_relevant`, so it was dropped in favour of one flag per grouping (`pipeline.migrate_strip_signals` removes it from historical sidecars).
-
-**5. LLM classification, then LLM stance rating.**
-Two separate concerns, both the model's. Which countries/topics an event covers — and whether it is relevant at all — is decided by the LLM in `pipeline.enrich`; how aligned the positions within a cluster are is decided by the LLM's per-topic stance ratings (−2..+2 vs. the agreed Weimar goal). Classification replaced an earlier regex keyword classifier (`COUNTRY_TERMS`/`ISSUE_AREAS` in `base.py`), which missed inflections, synonyms, and the German/French/Polish sources and could not read paraphrase; there is deliberately **no keyword fallback** (see #8). Scoring likewise has deliberately **one** method — the earlier sentence-embedding/cosine path was removed so the site tells a single, auditable story. Trade-off: classification is now non-deterministic and provider-dependent, and every ingested event costs one model call; an item the LLM finds no goal-relevant stance in (`topics: []`) contributes no rating, so it drops out of the cluster's score rather than skewing it. Both halves are now **measured rather than asserted** — `pipeline.evaluate` scores them against a labelled gold set and `evals/baselines.yaml` records the result per prompt version (see Prompt evaluation).
-
-**6. One-sentence position extraction.**
-The LLM enrichment prompt asks for a single sentence: "what position does {country} take or what action do they announce?" This is intentionally minimal — enough to enable side-by-side comparison without replacing the source article. Trade-off: a single sentence loses nuance; a longer summary would be more informative but harder to display compactly.
-
-**7. Static site, with one deliberate, narrow exception for the vote feature.**
-`pipeline/render.py` writes plain HTML to `docs/`; a Cloudflare Worker (Static Assets) serves it, no server-side search, no authentication, no per-user views. The one exception is `worker/index.js`, two write-only routes (`/api/vote`, `/api/notify`) backing the hub page's "vote for the next grouping" feature — the only place the site needs to persist something a static render can't (visitor-submitted votes and notify-me emails), stored in the `VOTES` KV namespace. Reading the tallies back is deliberately *not* a route on the site: it's public and unauthenticated like everything else here, and the whole point is that only the site owner sees the standings, so `pipeline/vote_report.py` reads KV directly via the Cloudflare API instead, authenticated with the owner's own `CLOUDFLARE_API_TOKEN`. Everything else about the page is still a pure function of (templates, data, cutoff). Trade-off: the write routes are a real attack surface and a real (if small) hosting cost that the rest of the site deliberately avoids; they're scoped to a fixed slug allowlist and unauthenticated by design (a low-stakes interest signal, not a real ballot — see the race-condition note in `worker/index.js`). One vote per IP per grouping is enforced server-side (`voter:{slug}:{ip}` markers, keyed off `CF-Connecting-IP`) — a soft defense against casual abuse, not a hard one (see the cross-zone spoofing caveat in `worker/index.js`); `pipeline/vote_report.py --reset`/`--reset-all` clear a grouping's counter and voter markers if abuse gets through anyway. Because the routes are unauthenticated, the shared `VOTES` write budget is guarded two more ways: a per-IP rate-limit binding (`RATE_LIMITER` in `wrangler.jsonc`, read defensively so its absence just disables limiting) caps a script cycling slugs/emails past the per-IP dedup, and every KV write is wrapped to return a clean 503 rather than a 500 under quota pressure. The two routes are also the only place the site holds personal data, so both carry a stated retention posture: a voter marker is an IP address and expires on its own after `VOTER_MARKER_TTL_SECONDS` (180 days) rather than sitting in KV forever — KV does the forgetting, so there is no cleanup job to skip, at the cost that an expired marker lets that IP vote again. The `votes:{slug}` counter holds no personal data and does not expire. The hub page's footer states this in plain language, along with what a notify-me email is used for; **the 180-day figure appears in both `worker/index.js` and `hub.html`, so change them together.**
-
-**8. Enrichment is core to the product; the pipeline is fault-tolerant, not enrichment-optional.**
-The stance comparison *is* the product, and `pipeline.enrich` now owns both halves of it: in one call it classifies an event (actors/topics/relevance) *and* rates its per-topic stances. Without enrichment there is only a data-collection pipeline — a raw event carries no classification, so `render.py` omits it entirely (it isn't `weimar_relevant`) rather than showing it mis-tagged. There is no keyword fallback: an event the model hasn't processed simply waits, un-categorised, and is retried next run (or recovered by re-running `pipeline.enrich` locally against gemma4). Enrichment runs on Ollama (gemma4 via Ollama Cloud in CI, local Ollama in dev) and is expected to run every cycle. What is deliberately isolated is failure, not enrichment itself: `pipeline.enrich` runs with `continue-on-error: true` in CI so a transient provider outage can't block the day's `data/**` ingest, and `pipeline.ingest` + `pipeline.render` still produce a working (if sparser) site. Failures are surfaced, not swallowed: `collect.yml` folds the enrich/stance/commentary step outcomes into the healthcheck ping, so a broken enrichment run trips the same alert as a failed job.
-
-**9. Native-language sources, English fallback.**
-Each MFA is ingested from its native-language newsroom (`source_lang` de/fr/pl): the German RSS feed, the French SPIP `backend-fd` feed, the Polish `gov.pl/web/dyplomacja/aktualnosci` listing. Rationale: the native sections carry the ministry's full output — the English-translation sections are thinner, lag, and (for FR/PL) have no feed at all, which is what originally forced HTML scraping; gemma4 was picked for exactly this (see Enrichment providers). Enrichment writes positions in English but keeps stance evidence quotes verbatim in the original language, so scores stay auditable against the primary source. Trade-off: if a native feed/listing goes dark, ingesters log a warning and fall back to the English section, so occasional English-text events can appear; and a fallback item duplicating a native item gets a separate file (different URL → different hash), slightly inflating that actor's event count in a cluster window (per-actor stance *means* are barely affected).
-
-**10. Honest User-Agent — never impersonate a browser.**
-Every outbound request (`_HEADERS` in `feedbase.py` and each scraper's own headers) self-identifies as what it actually is: an automated tracker, with a contact URL, not a spoofed browser string. This holds even when a source's WAF/bot-detection blocks the honest UA and a browser string would likely get through — impersonating a browser to bypass bot detection was tried and deliberately reverted (see git history on `feedbase.py`). Rationale: scraping a government site under a false identity is deceptive regardless of the target being public-interest data, and most WAFs that block self-identifying crawlers do so as policy, not by accident — working around that with spoofing overrides a site's stated preference rather than respecting it. Trade-off: some correct, reachable feeds may stay unreachable from this pipeline (e.g. Cloudflare-protected sites returning a JS challenge no plain HTTP client can solve); the response is to pause that source (see the Visegrád Group precedent), not to disguise the request. `us_state` is the same pattern in a different shape: state.gov's real data source (`state_press_release` via its WordPress REST API — see `wprest.py`) returns a 200 "Technical Difficulties" HTML page, not JSON, specifically when fetched from GitHub Actions' runner IPs — confirmed live, the identical URL returns real JSON from a browser, and adding a legitimate `Accept: application/json` header (not impersonation, just a correct REST client) made no difference. Paused rather than pursued further with IP-masking (a residential proxy) or a headless browser to clear whatever's actually gating it, both of which would cross into disguising the request.
-
-## Adding a new source
-
-Weimar's pattern — foreign ministry *and* head-of-government office, both known-actor — is the ideal, not a requirement. For the newer groupings, a country's MFA doesn't always have a usable feed, or a shared/multi-ministry portal is the only practical option (see `hungary_government`, which ingests kormany.hu's general government news rather than a nonexistent ministry-scoped feed). Pick whatever reachable, reasonably authoritative government source is practical for that country, and be honest in the source's naming/comments about what it actually is — see `KNOWN_ACTOR_SOURCES` guidance in step 3 below for how that choice affects relevance scoping.
-
-1. Create `pipeline/sources/{name}.py` extending `BaseIngester`; implement `fetch() -> Iterator[Event]` yielding **raw** events (no classification — that happens in `pipeline.enrich`); set `source_lang` to the language actually scraped (prefer the country's native language — see design principle #9). If the source has an RSS/Atom feed, subclass `FeedIngester` (`pipeline/sources/feedbase.py`) and set only `source_name` + `source_lang` + `feed_url`; gov.pl sources can subclass `GovPlIngester` (`pipeline/sources/govpl.py`) and set `source_name` + `news_url`; if the site's RSS feed is missing/broken but it's a WordPress site with the REST API reachable (check `.../wp-json/wp/v2/types` for the right post type's `rest_base`), subclass `WPRestIngester` (`pipeline/sources/wprest.py`) and set `source_name` + `source_lang` + `rest_url`
-2. If the ingester fetches a per-article page to get body text, gate that fetch on `self.already_ingested(url, title)` and bump `self.known_skipped` when it fires — see "Fetch politeness" below
-3. Add to `ALL_INGESTERS` in `pipeline/sources/__init__.py`
-4. Add to `SOURCE_LABELS` / `SOURCE_ACTOR` in `render.py` and `enrich.py`; if the source is an MFA or head-of-government office (known-actor), also add it to `KNOWN_ACTOR_SOURCES` (and `NATIVE_LANG`) in `base.py`. If the source's country isn't already a member of some grouping, add it — plus any new tracked topic and its `goals` sentence — to `data/groupings.yaml`
-5. Add a row to the sources table in `pipeline/templates/sources.html` (only needed once the source's grouping is surfaced on the site)
-
-## Fetch politeness
-
-A routine daily run re-sees almost everything: listings and feeds turn over slowly, so ~97% of the items offered on any given day are already on disk. Because `Event.save()` refuses to overwrite an existing file, **the article body fetched behind an already-ingested item is always discarded** — the request buys nothing.
-
-So an ingester that fetches per-article pages must gate that fetch on `BaseIngester.already_ingested(url, title)` and increment `self.known_skipped` when it skips. The predicate matches on the same content hash `save()` files by (`sha256(url + title)[:8]`, globbed across months) rather than on the output path, because several ingesters only learn an item's date *from the article page* — the very fetch being avoided. Two rules around it:
-
-- **Only skip in daily mode.** `--since` backfill must still walk every item: pagination boundaries are derived from the dates of the items on a page, so silently dropping items would stop pagination early. Guard with `if not self.since and self.already_ingested(...)`.
-- **Never gate a fallback on "yielded no events".** Several ingesters fall back to a heavier path (HTML pagination, an English listing) when the primary source comes up empty. Once the skip is in place, "yielded nothing" is the *normal* quiet-day outcome, and keying the fallback off it would fire the expensive path every day. Count the items the source actually offered (`_rss_entries_seen` / `_items_seen`) and gate on that instead.
-
-`FeedIngester` subclasses need none of this — they make exactly one request (the feed) and parse every entry from those same bytes. For the same reason they must not sleep per entry: there is no second request to pace.
-
-The run log records the savings: `known` (per source and in `totals`) counts items skipped without a fetch, so **items offered = `fetched` + `known`**. A `known` that collapses to zero across the board means the skip has stopped matching — most likely a source changed the titles or URLs it publishes.
+- `ARCHITECTURE.md`: deployment and routing, data model, relevance rules,
+  re-extraction, convergence scoring, providers, and the design principles
+  (numbered; code comments cite them as "design principle #N").
+- `evals/README.md`: every eval metric, its `n` and noise floor, and the open
+  findings.
+- `pipeline/CLAUDE.md`: prompt changes, adding a source, fetch politeness.
+- `worker/CLAUDE.md`: the vote API.

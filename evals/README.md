@@ -141,8 +141,8 @@ within noise. The two prompts are indistinguishable on this metric once both are
 measured on the same cases. The apparent v9 regression was an artifact of comparing
 against a stale, small-n (8-pair) v8 slice, not a real effect of the prompt change.
 At n=10 a single flip is still worth 0.100, so this remains directional rather than
-a hard gate, but the specific regression concern raised in CLAUDE.md's "What v9
-measured" section is closed.
+a hard gate, but the regression concern raised when v9 was first measured is
+closed.
 
 ### Coverage and mechanical checks
 
@@ -166,6 +166,27 @@ The mechanical checks need no labels and are computable on any output.
 the check behind the finding that ~6% of stored quotes are paraphrases. That bears
 directly on the auditability claim: a score is only checkable against the primary
 source if its evidence is a real quote.
+
+## Open findings
+
+Problems the eval has found and no prompt has fixed yet. Current values are in
+`baselines.yaml`; the sections above explain each metric. Don't describe any of
+these as solved until a recorded run shows it.
+
+- **The rubric is finer than the model resolves.** `stance_exact` sits far below
+  `stance_within_1`: direction right, exact step often not.
+- **Abstention mostly doesn't happen.** `abstention_recall` is low while precision
+  is perfect. The usual failure is a 0 carrying a quote that is in the text but
+  says nothing about *this grouping's* goal, which `_rate_stances()`'s
+  evidence-less-0 net cannot catch.
+- **Goal discrimination is weak.** One topic rated for two groupings often comes
+  back with the same answer for both.
+- **Some evidence is paraphrased.** `evidence_verbatim` is below 1.0, so a few
+  scores can't be checked against the primary source.
+- **The gold set can't see over-tagging.** No case is drawn from an over-tagged
+  event and none expects more than three topics, so prompt "9"'s fix is evidenced
+  by the corpus, not by the eval. A case drawn from an over-tagged event is the
+  next worthwhile addition.
 
 ## Recorded baseline
 

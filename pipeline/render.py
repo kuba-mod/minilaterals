@@ -241,7 +241,13 @@ SCORE_DESC = {2: "advances", 1: "supports", 0: "neutral", -1: "hedges", -2: "opp
 
 
 def _stance_agreement(spread: float, overall: float) -> tuple[str, str]:
-    """Map spread + goal-alignment between per-country mean stances to (label, color)."""
+    """Map spread + goal-alignment between per-country mean stances to (label, color).
+
+    Two axes, not one: `spread` is agreement between capitals, `overall` is
+    agreement with the goal. Low spread alone isn't "Aligned" — capitals in
+    lockstep opposition are "Aligned against goal", and lockstep near neutral is
+    "Noncommittal". Above the aligned spread the label is spread-driven only.
+    """
     if spread <= STANCE_ALIGNED_SPREAD:
         if overall <= GOAL_AGAINST_OVERALL:
             return "Aligned against goal", COLOR_RED
