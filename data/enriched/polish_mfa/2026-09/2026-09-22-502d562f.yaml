@@ -1,0 +1,60 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- AU
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers and High Representatives of Australia, France, Japan, South
+    Korea, Germany, New Zealand, Poland, and the United Kingdom
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  - indo_pacific
+  location: null
+  position: Poland, alongside international partners, commits to protecting the rules-based
+    multilateral system and addressing security challenges in Europe and the Indo-Pacific.
+  positions:
+    ukraine: Poland emphasizes the need for a full ceasefire and a just, lasting peace
+      in Ukraine based on the UN Charter and international law.
+    hybrid: Poland confirms the necessity of countering hybrid threats across all
+      domains to ensure societal resilience.
+    rule_of_law: Poland affirms that its cooperation with partners is based on shared
+      principles including democracy, the rule of law, and human rights.
+    indo_pacific: Poland stresses the importance of peace and stability in the Indo-Pacific,
+      opposing unilateral attempts to change the status quo in the Taiwan Strait.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: potwierdzamy potrzebę osiągnięcia sprawiedliwego i trwałego pokoju
+      hybrid:
+        score: 1
+        evidence: Potwierdzamy potrzebę przeciwdziałania zagrożeniom hybrydowym we
+          wszystkich domenach
+      rule_of_law:
+        score: 1
+        evidence: nasza współpraca opiera się na wspólnych zasadach i interesach,
+          obejmujących demokrację, praworządność
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: Solidarnie podtrzymujemy nasze zobowiązanie do przestrzegania Konwencji
+          Narodów Zjednoczonych o prawie morza (UNCLOS).
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

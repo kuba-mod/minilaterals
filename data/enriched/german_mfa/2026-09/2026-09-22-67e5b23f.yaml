@@ -1,0 +1,29 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Johann Wadephul
+  - Vivian Balakrishnan
+  - Samuel Okudzeto Ablakwa
+  - Foreign Ministers of Fiji, Finland, Kazakhstan, Kenya, and Mexico
+  - Associate Minister from Egypt
+  - Representatives from Brazil and France
+  topics: []
+  location: New York, USA
+  position: Germany co-hosted a ministerial round table to advocate for structural
+    UN reforms to increase efficiency, accountability, and the stabilization of the
+    international order.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

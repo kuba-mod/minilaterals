@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bärbel Bas
+  - Alexander Dobrindt
+  topics:
+  - migration
+  location: null
+  position: Germany has adopted a 10-point action plan to combat the abuse of social
+    benefits and exploitative business models, with a specific focus on abuse by EU
+    migrants.
+  positions:
+    migration: Germany aims to prevent the exploitation of EU freedom of movement
+      for organized social benefit fraud and the exploitation of migrants.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

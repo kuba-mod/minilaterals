@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Estonia asserts that Russia's war against Ukraine has turned the Black
+    Sea into a war zone and threatens global food security.
+  positions:
+    ukraine: Estonia emphasizes that Russia's aggression in Ukraine endangers the
+      food supply for millions of people worldwide.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

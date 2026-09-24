@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Azerbaijani President
+  topics: []
+  location: null
+  position: France welcomes the Azerbaijani President's decision to grant a pardon
+    to Martin Ryan as a humanitarian gesture and a step toward normalizing relations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

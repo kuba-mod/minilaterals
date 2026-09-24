@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundeskabinett
+  - Bundestag
+  - Bundesrat
+  topics:
+  - green_transition
+  location: null
+  position: Germany is extending the vehicle tax exemption for pure electric vehicles
+    for newly registered cars between 2026 and 2030 to promote electromobility and
+    achieve climate goals.
+  positions:
+    green_transition: The German government has extended the vehicle tax exemption
+      for pure electric vehicles until December 31, 2030, with a maximum exemption
+      period ending in 2035, to incentivize the purchase of E-cars and support the
+      automotive industry.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Reine Elektrofahrzeuge sollen auch über 2025 hinaus von der Kfz
+          -Steuer ausgenommen werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

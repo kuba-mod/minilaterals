@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Mauro Vieira
+  - Dr. Johann David Wadephul
+  - Dr. Subrahmanyam Jaishankar
+  - Motegi Toshimitsu
+  topics: []
+  location: New York, USA
+  position: Germany, as part of the G4, advocates for the urgent expansion of both
+    permanent and non-permanent seats on the UN Security Council to reflect current
+    geopolitical realities and improve representativeness.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

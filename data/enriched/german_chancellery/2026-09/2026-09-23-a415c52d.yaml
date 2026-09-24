@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Iris Berben
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany's Minister of State for Culture congratulates Iris Berben on receiving
+    the 2026 German Cultural Policy Prize for her commitment to democracy, tolerance,
+    and the fight against antisemitism.
+  positions:
+    rule_of_law: Germany emphasizes the importance of courage and responsibility in
+      defending democracy and an open society against hatred and intolerance.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Mit Mut und Haltung setzt sie sich für Demokratie, Toleranz und
+          ein respektvolles Miteinander ein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

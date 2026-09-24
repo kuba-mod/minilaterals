@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics:
+  - green_transition
+  location: null
+  position: Germany has approved a draft law to replace mandatory paper receipts with
+    digital ones by 2028 to reduce bureaucracy and protect the environment.
+  positions:
+    green_transition: Germany aims to protect the environment by phasing out printed
+      receipts in favor of digital alternatives.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Der Verzicht auf unzählige gedruckter Belege dient auch dem Schutz
+          der Umwelt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

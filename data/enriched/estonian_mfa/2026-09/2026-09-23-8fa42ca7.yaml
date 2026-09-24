@@ -1,0 +1,23 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Tiina Nirk
+  - İlham Əliyev
+  topics: []
+  location: null
+  position: Estonia's first resident ambassador to Azerbaijan, Tiina Nirk, presented
+    her credentials to President İlham Əliyev.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

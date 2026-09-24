@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Estonia has imposed national sanctions on Russian businessmen Alisher
+    Usmanov and Mikhail Fridman.
+  positions:
+    ukraine: Estonia has implemented national sanctions against Russian individuals
+      Alisher Usmanov and Mikhail Fridman.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

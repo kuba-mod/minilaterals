@@ -1,0 +1,32 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Secretary
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom advocates for the responsible development and deployment
+    of artificial intelligence to maintain international security and prevent the
+    destabilization of global peace.
+  positions:
+    defence: The United Kingdom emphasizes the need for international norms and safeguards
+      to prevent AI from undermining strategic stability and escalating military conflict.
+  stances:
+    aukus:
+      defence:
+        score: 1
+        evidence: the need for international cooperation to ensure that AI is used
+          safely and securely
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -19,7 +19,11 @@ extracted:
   positions:
     defence: Latvia identified the Belarusian regime as a significant threat to the
       security of Europe and the rest of the world.
-  stances: {}
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Baltkrievijas režīma draudus Eiropas un globālajai
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

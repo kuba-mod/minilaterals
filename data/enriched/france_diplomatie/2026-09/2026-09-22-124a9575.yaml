@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Jean-Noel Barrot
+  - Kaja Kallas
+  - President Abbas
+  - President Macron
+  topics: []
+  location: Paris, France
+  position: France advocates for the two-state solution and the immediate holding
+    of Palestinian legislative and presidential elections to rejuvenate the Palestinian
+    Authority and achieve peace with Israel.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,73 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- EE
+- LT
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Sergey Lavrov
+  - Vladimir Putin
+  - Under-Secretary-General DiCarlo
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: New York, USA
+  position: Poland condemns Russian aggression and escalation in Ukraine and Europe,
+    calling for an immediate end to the imperial war.
+  positions:
+    ukraine: Poland rejects Russian narratives regarding the 2014 events and language
+      bans in Ukraine, while supporting the application of the Council of Europe Convention
+      for the Protection of National Minorities.
+    defence: Poland warns that Russia may attempt to provoke NATO member states to
+      expand the conflict, emphasizing that the combined economic and military power
+      of Europe and NATO far exceeds that of Russia.
+    hybrid: Poland identifies a pattern of Russian hybrid warfare, including cyberattacks,
+      sabotage, and targeted assassinations across Europe and the United States.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: społeczność międzynarodowa, w tym Polska, poparłaby takie rozwiązanie
+      hybrid:
+        score: 1
+        evidence: Cyberataki, sabotaż, tajne operacje, presja militarna. To nie są
+          odosobnione incydenty. To model działania.
+    e3:
+      defence:
+        score: 1
+        evidence: Gospodarka Europy jest dziesięciokrotnie większa, a krajów NATO
+          — dwudziestopięciokrotnie większa.
+    visegrad:
+      defence:
+        score: 1
+        evidence: W każdej chwili Putin może spróbować sprowokować państwo członkowskie
+          NATO i rozszerzyć obszar objęty wojną
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Rosyjskie drony regularnie naruszają przestrzeń powietrzną między
+          innymi Litwy, Estonii, Norwegii i Finlandii.
+    aukus:
+      defence:
+        score: 1
+        evidence: Cyberataki, sabotaż, tajne operacje, presja militarna. To nie są
+          odosobnione incydenty. To model działania.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

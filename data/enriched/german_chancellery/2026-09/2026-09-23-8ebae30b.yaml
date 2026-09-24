@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskabinett
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany is accelerating the integration of energy innovations from the
+    laboratory to the market through increased funding and a strategic focus on key
+    technologies.
+  positions:
+    energy: The German government invested approximately 1.5 billion euros in 2025
+      to research innovative energy technologies and shorten innovation cycles.
+    green_transition: Germany is prioritizing climate-neutral energy production and
+      key technologies like hydrogen, geothermal, and photovoltaics to create a resilient
+      and climate-neutral energy system.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Im Berichtsjahr 2025 hat die Bundesregierung rund 1,5 Milliarden
+          Euro in die Erforschung innovativer Energietechnologien investiert
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

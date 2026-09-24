@@ -1,0 +1,92 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- AU
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- indo_pacific
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Karol Nawrocki
+  - António Guterres
+  - Jeanne Shaheen
+  - Ruben Gallego
+  - Muktahar Tleuberdim
+  - Mohamed Salem Ould Merzougi
+  - Lejeune Mbella Mbella
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - indo_pacific
+  - migration
+  location: New York, USA
+  position: Poland emphasizes the necessity of strong allied guarantees and international
+    cooperation to counter Russian aggression and maintain global security.
+  positions:
+    ukraine: Poland views Russian aggression against Ukraine as a threat to the entire
+      region and intends to present its position on this matter at the UN Security
+      Council.
+    defence: Poland stresses the critical importance of the US military presence in
+      Poland and the durability of NATO Article 5 guarantees.
+    hybrid: Poland warns against Russian provocations and reckless actions below the
+      threshold of full-scale war.
+    indo_pacific: Poland supports strengthening partnerships with Indo-Pacific states,
+      specifically Japan and South Korea, to limit Russian influence in the region.
+    migration: Poland discusses the need to counteract illegal migration in the Sahel
+      region.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: przedstawi stanowisko Polski dotyczące rosyjskiej agresji przeciwko
+          Ukrainie
+      defence:
+        score: 1
+        evidence: podkreślał znaczenie obecności wojsk amerykańskich w Polsce i współpracy
+          wojskowej między naszymi państwami, szczególnie w kontekście wojny za wschodnią
+          flanką NATO
+      hybrid:
+        score: 1
+        evidence: Rosja wysyła żołnierzy, wysyła pociski manewrujące, drony, wysadza
+          jadące pociągi, próbuje podkładać bomby zapalające na samolotach pasażerskich,
+          podpala centra handlowe
+    e3:
+      defence:
+        score: 1
+        evidence: 'Minister Sikorski razem z szefami dyplomacji: Australii, Francji,
+          Japonii, Korei Południowej, Niemiec, Nowej Zelandii i Wielkiej Brytanii
+          rozmawiali m.in. o wzmacnianiu partnerstw z państwami Indo-Pacyfiku'
+    visegrad:
+      defence:
+        score: 1
+        evidence: podkreślał znaczenie obecności wojsk amerykańskich w Polsce i współpracy
+          wojskowej między naszymi państwami
+      migration:
+        score: 1
+        evidence: poruszył temat stabilności i bezpieczeństwa Sahelu, przeciwdziałania
+          nielegalnej migracji
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: rozmawiali m.in. o wzmacnianiu partnerstw z państwami Indo-Pacyfiku,
+          w tym strategicznych relacji z Japonią i Koreą Południową w dalszym dialogu
+          na rzecz porządku międzynarodowego opartego na zasadach oraz na ograniczaniu
+          wpływów Rosji w regionie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

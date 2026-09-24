@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Baiba Braže
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Latvia calls for a cessation of attacks in the Black Sea and the ensuring
+    of safe Ukrainian grain exports.
+  positions:
+    ukraine: Latvia urges the cessation of attacks in the Black Sea to ensure the
+      safe export of Ukrainian grain.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Prime Minister Donald Tusk honored the 50th anniversary of the Workers'
+    Defence Committee (KOR), emphasizing its role in opposing communist law-breaking
+    and its enduring values of courage and decency.
+  positions:
+    rule_of_law: Poland commemorates KOR as a pioneering organization that opposed
+      the breaking of the law by the communist authorities and defended fundamental
+      values.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: gotowość do zabierania głosu w obronie fundamentalnych wartości
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
