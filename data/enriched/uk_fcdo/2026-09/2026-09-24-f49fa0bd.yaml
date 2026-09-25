@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - UK Foreign Secretary
+  topics:
+  - green_transition
+  location: null
+  position: The United Kingdom is investing £331 million to address climate-driven
+    instability and protect vulnerable communities.
+  positions:
+    green_transition: The UK is providing a funding package to tackle national security
+      risks posed by climate change and nature loss.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,50 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Premier Radew
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Poland emphasizes the need for European preparedness against Russian aggression
+    and advocates for a just end to the war in Ukraine.
+  positions:
+    ukraine: Poland asserts that the war in Ukraine must end on fair and just terms
+      rather than on the aggressor's conditions to ensure lasting peace.
+    defence: Poland warns European partners of the need for rigorous preparation in
+      the coming months due to escalating Russian threats near the Polish border.
+    hybrid: Poland reports recurring acts of sabotage against railway infrastructure
+      and suspicious incidents near Starlink ground stations.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ta wojna powinna się jak najszybciej zakończyć i to nie na warunkach
+          agresora, tylko na uczciwych, sprawiedliwych warunkach, tak aby pokój był
+          trwały
+      hybrid:
+        score: 1
+        evidence: poinformował także Premiera Radewa o powtarzających się w Polsce
+          aktach sabotażu i innych niepokojących zdarzeniach dotyczących infrastruktury
+          kolejowej
+    visegrad:
+      defence:
+        score: 1
+        evidence: musimy dobrze przygotować się na najbliższe miesiące
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

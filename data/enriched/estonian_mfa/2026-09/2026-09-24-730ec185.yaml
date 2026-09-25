@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - government
+  topics:
+  - indo_pacific
+  location: null
+  position: The Estonian government supports the signing of a comprehensive economic
+    partnership agreement and an investment protection agreement between the European
+    Union and Indonesia.
+  positions:
+    indo_pacific: Estonia supports the conclusion of economic and investment agreements
+      with Indonesia to open market access for Estonian companies.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

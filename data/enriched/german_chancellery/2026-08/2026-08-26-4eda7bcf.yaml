@@ -46,11 +46,9 @@ extracted:
         score: 1
         evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
-        score: 2
-        evidence: Wir wollen aus den Nachrichtendiensten echte Geheimdienste entwickeln.
-          Das ist Teil dieser Nachrichtendienstreform, die ich vorgestellt habe. Wir
-          rüsten technisch weiter auf im Bereich der Drohnenabwehr, wir rüsten technisch
-          weiter auf im Bereich des Cyberdomes
+        score: 1
+        evidence: Wir wollen uns so weit wie eben möglich von anderen unabhängig machen.
+          Wir suchen nach deutschen Lösungen, wir suchen nach europäischen Lösungen.
       green_transition:
         score: 1
         evidence: Wir halten an diesem Ziel fest.

@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia co-organized an event at the UN High-Level Week to advocate for
+    Russian accountability regarding crimes against Ukrainian children.
+  positions:
+    ukraine: Estonia demands that the deportation of Ukrainian children and the erasure
+      of their identity be punished.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

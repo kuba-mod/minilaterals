@@ -1,0 +1,57 @@
+actors:
+- DE
+- US
+issue_areas:
+- green_transition
+- energy
+- migration
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Buschow
+  - Kornelius
+  - Elsässer
+  - Prühl
+  - Ungrad
+  - Rüll
+  - Hinterseher
+  topics:
+  - green_transition
+  - energy
+  - migration
+  - iran
+  location: null
+  position: The German government announced several domestic reforms regarding energy
+    research, digital receipts, and social benefit abuse, while outlining its strategy
+    to transition away from fossil fuels and its diplomatic approach to the Iran conflict.
+  positions:
+    green_transition: Germany is implementing the TAFF-Roadmap to accelerate the transition
+      away from fossil fuels through renewable energy and electrification.
+    energy: The government is investing 1.5 billion euros in innovative energy technologies
+      to ensure security of supply, competitiveness, and climate protection.
+    migration: Germany has adopted an action plan to combat the abuse of social benefits,
+      specifically targeting EU migration and preventing those with arrest warrants
+      from receiving benefits.
+    iran: Germany supports diplomatic solutions to end the conflict with Iran and
+      demands the end of the blockade of the Strait of Hormuz.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: die Bundesregierung rund 1,5 Milliarden Euro in die Erforschung
+          innovativer Energietechnologien investiert hat
+    e3:
+      iran:
+        score: 1
+        evidence: Soweit es tatsächlich ernsthafte Bemühungen um ein Abkommen mit
+          Iran gibt, wird das auch unsere Unterstützung finden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

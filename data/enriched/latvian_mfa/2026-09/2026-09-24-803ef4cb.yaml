@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Minister of Foreign Affairs
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Latvia highlighted the global consequences of Russia's war against Ukraine
+    during the 81st session of the UN General Assembly.
+  positions:
+    ukraine: Latvia emphasized the global impact of Russia's aggression against Ukraine
+      at the UN.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

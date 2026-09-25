@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany condemns Russia's illegal war of aggression against Ukraine and
+    calls for an immediate ceasefire, prisoner exchanges, and a return to negotiations
+    based on international law.
+  positions:
+    ukraine: Germany maintains its unwavering support for Ukraine's freedom and demands
+      a ceasefire starting in the Black Sea to enable grain exports and a just, lasting
+      peace.
+    hybrid: Germany denounces Russia's escalating hybrid attacks in Europe, specifically
+      citing a drone attack at Leipzig Airport.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Genau wie unsere Unterstützung hierfür.
+      hybrid:
+        score: 1
+        evidence: Russlands hybride Angriffe auf die Unterstützer der Ukraine, die
+          Unterstützer des Völkerrechts, haben ein neues Ausmaß erreicht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

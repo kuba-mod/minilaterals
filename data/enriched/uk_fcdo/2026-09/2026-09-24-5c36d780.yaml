@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: communique
+  participants: []
+  topics: []
+  location: null
+  position: The United Kingdom hosted a high-level event on behalf of the Coalition
+    for Atrocity Prevention and Justice in Sudan during the 81st session of the UN
+    General Assembly.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

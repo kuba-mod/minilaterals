@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Eleanor Sanders, UK's Human Rights Ambassador
+  topics: []
+  location: null
+  position: The United Kingdom delivered a statement for the Interactive Dialogue
+    on the Secretary General's report on cooperation with the United Nations.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

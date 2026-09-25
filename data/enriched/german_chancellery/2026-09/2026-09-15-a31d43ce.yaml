@@ -41,7 +41,8 @@ extracted:
     e3:
       iran:
         score: 0
-        evidence: die aktuellen Ausschläge am Benzinmarkt in Folge des Iran-Kriegs
+        evidence: aber diese energiepolitische Wende schütze nicht vor den aktuellen
+          Ausschlägen am Benzinmarkt in Folge des Iran-Kriegs
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

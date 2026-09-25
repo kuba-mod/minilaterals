@@ -1,0 +1,28 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  - President of the OSCE Parliamentary Assembly
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom supports the OSCE Parliamentary Assembly's condemnation
+    of Russian violations and its calls for the release of detained OSCE officials
+    in Ukraine.
+  positions:
+    ukraine: The United Kingdom welcomes the OSCE Parliamentary Assembly's support
+      for Ukraine and its condemnation of Russia's violations.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

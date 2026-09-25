@@ -1,0 +1,21 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Emmanuel Macron
+  topics: []
+  location: null
+  position: President Emmanuel Macron gave interviews to TF1 and France 2.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

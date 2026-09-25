@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom condemns Russia's elections in occupied Ukrainian territories
+    as violations of sovereignty and the Helsinki Final Act.
+  positions:
+    ukraine: The UK rejects Russia's attempted annexation of Ukrainian territories
+      and condemns the sham elections held there.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

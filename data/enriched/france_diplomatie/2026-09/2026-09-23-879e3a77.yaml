@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ms. Eléonore Caroit, Minister Delegate for Francophonie, International Partnerships,
+    and French Nationals Abroad
+  - G7 Development Ministers
+  - representatives from India
+  - representatives from Brazil
+  - representatives from the Republic of Korea
+  - representatives from Egypt
+  - representatives from Nepal
+  - representatives from the African Development Bank
+  - representatives from the World Bank Group
+  - representatives from the United Nations Development Program
+  topics: []
+  location: New York, USA
+  position: France chaired a G7 Development Ministers meeting to promote a renewed
+    approach to international development based on mutually beneficial partnerships,
+    strategic aid, and increased private capital mobilization, particularly in Africa.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

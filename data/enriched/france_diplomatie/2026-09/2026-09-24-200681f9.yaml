@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Olusegun Obasanjo
+  topics: []
+  location: null
+  position: France expresses deep concern over the situation in northern Ethiopia,
+    condemns TPLF attacks, and supports the African Union's mediation process to implement
+    the Pretoria Agreement.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

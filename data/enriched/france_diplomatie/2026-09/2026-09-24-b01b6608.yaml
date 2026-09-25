@@ -1,0 +1,32 @@
+actors:
+- DE
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot
+  topics:
+  - hybrid
+  location: null
+  position: France welcomes the EU's adoption of restrictive measures against Xenia
+    Fedorova to counter Russian destabilization activities.
+  positions:
+    hybrid: France supports the asset freeze, funding ban, and travel ban against
+      a Russian agent of influence to combat foreign destabilization on European territory.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: This step, promoted together with Germany, aims to counter destabilization
+          activities conducted by Russia on European territory.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

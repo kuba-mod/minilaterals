@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Arron Newble, Counsellor for Politico-Military Affairs
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: The United Kingdom condemns Russia's intensified attacks on Ukraine and
+    disruptive activities in Europe, calling for an immediate ceasefire.
+  positions:
+    ukraine: The United Kingdom calls on Russia to agree to an immediate ceasefire
+      and end its intensified attacks on Ukraine.
+    hybrid: The United Kingdom highlights and condemns Russia's disruptive activity
+      across Europe.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

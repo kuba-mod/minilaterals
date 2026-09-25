@@ -1,0 +1,67 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- AU
+- US
+issue_areas:
+- ukraine
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Sergej Ławrow
+  - Mark Rutte
+  - Jeanne Shaheen
+  - Ruben Gallego
+  - Kaja Kallas
+  topics:
+  - ukraine
+  - defence
+  - indo_pacific
+  location: New York, USA
+  position: Poland advocates for the defense of the UN Charter, international law,
+    and increased international support for Ukraine to counter Russian aggression.
+  positions:
+    ukraine: Poland demands accountability for Russian violations of international
+      law and emphasizes the necessity of continued international support for Ukraine
+      to end Russia's imperial war.
+    defence: Poland stresses the importance of effective multilateralism and the protection
+      of state sovereignty and territorial integrity as the foundation of global stability.
+    indo_pacific: Poland participated in ministerial discussions regarding the interconnected
+      security of Europe and the Indo-Pacific region.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: konieczność dalszego wsparcia Ukrainy w obliczu rosyjskiej agresji
+    e3:
+      defence:
+        score: 1
+        evidence: wziął udział w spotkaniu ministrów spraw zagranicznych Polski, Niemiec,
+          Francji i Wielkiej Brytanii z ministrami spraw zagranicznych Australii,
+          Japonii, Nowej Zelandii i Korei Południowej , które poświęcone było bezpieczeństwu
+          Europy i Indo-Pacyfiku
+    visegrad:
+      defence:
+        score: 1
+        evidence: rozmawiał z Sekretarzem NATO Markiem Rutte
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: spotkaniu ministrów spraw zagranicznych Polski, Niemiec, Francji
+          i Wielkiej Brytanii z ministrami spraw zagranicznych Australii, Japonii,
+          Nowej Zelandii i Korei Południowej , które poświęcone było bezpieczeństwu
+          Europy i Indo-Pacyfiku
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

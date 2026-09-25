@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Baiba Braže
+  topics:
+  - hybrid
+  location: null
+  position: Latvia has declared Russian citizen Sergei Fedotov as persona non grata.
+  positions:
+    hybrid: Latvia is expelling a Russian citizen as part of measures against hostile
+      activities.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: pieņēmusi lēmumu noteikt Krievijas pilsonim Sergejam Fedotovam (Сергей
+          Алексеевич Федотов) nevēlamas personas (persona non grata)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

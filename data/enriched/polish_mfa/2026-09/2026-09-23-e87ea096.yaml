@@ -1,0 +1,40 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland reports that its exports of armaments and military equipment reached
+    2.48 billion euros in 2025, despite a downward trend compared to 2024.
+  positions:
+    ukraine: Poland continues to be a major supplier of military equipment to Ukraine,
+      with Ukrainian entities accounting for approximately 67% of the export value.
+    defence: Poland is maintaining a high volume of defense exports, primarily driven
+      by ammunition and aviation products.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wśród najważniejszych zagranicznych odbiorców nalazły się podmioty
+          z Ukrainy (ok. 67 % wartości eksportu)
+    visegrad:
+      defence:
+        score: 2
+        evidence: Zeszłoroczna wartość wywozów oraz transferów wewnątrzunijnych uzbrojenia
+          i sprzętu wojskowego osiągnęła wartość 2,48 mld euro
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
