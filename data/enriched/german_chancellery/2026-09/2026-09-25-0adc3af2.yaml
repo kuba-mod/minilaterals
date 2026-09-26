@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is amending the Road Traffic Act to introduce stricter liability
+    rules for e-scooter owners and riders to better protect accident victims.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

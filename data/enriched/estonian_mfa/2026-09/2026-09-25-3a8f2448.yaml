@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Kerli Veski
+  - Committee of Legal Advisers on Public International Law (CAHDI)
+  topics:
+  - ukraine
+  location: Tallinn, Estonia
+  position: Estonia advocates for the establishment of a special tribunal for the
+    crime of aggression and the compensation of damages caused by Russia.
+  positions:
+    ukraine: Estonia asserts that the Council of Europe and member states must do
+      everything possible to enable a special tribunal for the crime of aggression
+      and the compensation of damages caused by Russia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

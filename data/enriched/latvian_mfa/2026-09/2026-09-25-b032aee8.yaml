@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dace Melbārde, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: Toronto, Canada
+  position: Latvia is participating in an international conference focused on the
+    return of Ukrainian children, detained civilians, and prisoners of war.
+  positions:
+    ukraine: Latvia supports the return of Ukrainian children, detained civilians,
+      and prisoners of war through participation in the 'Paths to Peace' conference.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

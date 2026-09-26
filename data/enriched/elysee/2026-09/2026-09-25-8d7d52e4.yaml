@@ -1,0 +1,46 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- green_transition
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - Pope Leo XIV
+  - Brigitte Macron
+  topics:
+  - ukraine
+  - green_transition
+  - migration
+  location: Paris, France
+  position: France reaffirms its commitment to peace, multilateralism, and human dignity
+    through a dialogue with the Holy See on global challenges.
+  positions:
+    ukraine: France supports a peace based on justice, security, and the sovereignty
+      of nations in the face of the war on the European continent.
+    green_transition: France advocates for the Paris Agreement and the Paris Pact
+      for People and the Planet to ensure a global ecological transition that does
+      not hinder development.
+    migration: France emphasizes the need for fraternity and support for the most
+      fragile, including exiles and the poor.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ont également été abordés les grands enjeux internationaux , la
+          guerre en Ukraine
+      green_transition:
+        score: 1
+        evidence: nous continuons de défendre le pacte de Paris pour les peuples et
+          la planète
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

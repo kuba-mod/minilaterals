@@ -34,6 +34,11 @@ extracted:
         score: 0
         evidence: nous, on va continuer aussi nos coopérations dans le cadre de l’OTAN,
           par des exercices conjoints
+    e3:
+      defence:
+        score: 0
+        evidence: travailler et consolider nos relations économiques bilatérales,
+          comme nos relations aussi de défense
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

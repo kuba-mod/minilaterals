@@ -1,0 +1,22 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  topics: []
+  location: Paris, France
+  position: France held a national ceremony to honor Harkis, Moghaznis, and supplementary
+    forces, continuing a process of official recognition, apology, and reparation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

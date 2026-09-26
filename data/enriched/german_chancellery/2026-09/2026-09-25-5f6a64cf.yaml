@@ -1,0 +1,51 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+- migration
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Chancellor
+  - Mette Frederiksen
+  - Jens-Frederik Nielsen
+  - Donald Trump
+  topics:
+  - defence
+  - migration
+  - energy
+  location: null
+  position: Germany reaffirms its commitment to domestic structural reforms for future
+    prosperity and supports a new security agreement for Greenland to strengthen the
+    transatlantic NATO partnership.
+  positions:
+    defence: Germany supports the security agreement for Greenland as it strengthens
+      the transatlantic partnership within NATO and contributes to security in the
+      High North.
+    migration: Germany has adopted an action plan to combat the abuse of social benefits
+      and exploitation, specifically targeting abuse related to migration from other
+      EU member states.
+    energy: Germany has agreed to reduce the energy tax on gasoline and diesel to
+      lower fuel prices for citizens.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Es stärkt unsere transatlantische Partnerschaft in der NATO und
+          trägt zur Sicherheit im Hohen Norden bei.
+    e3:
+      defence:
+        score: 1
+        evidence: Es stärkt unsere transatlantische Partnerschaft in der NATO und
+          trägt zur Sicherheit im Hohen Norden bei.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

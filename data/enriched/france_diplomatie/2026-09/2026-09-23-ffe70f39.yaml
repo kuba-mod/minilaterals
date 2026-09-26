@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - His Majesty King Abdullah II
+  topics:
+  - defence
+  location: New York, USA
+  position: France, as a founding member of the Global IHL Initiative, calls for the
+    universal application of international humanitarian law and invites states to
+    a high-level conference in Jordan on December 7, 2026.
+  positions:
+    defence: France advocates for the strict adherence to the Geneva Conventions and
+      the protection of civilians, hospitals, and schools during armed conflicts.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,58 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- migration
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  topics:
+  - ukraine
+  - hybrid
+  - migration
+  - rule_of_law
+  location: Brussels, Belgium
+  position: Poland advocated for EU budget priorities reflecting security threats
+    from Russia, continued support for Ukraine, and the protection of the rule of
+    law to boost economic competitiveness.
+  positions:
+    ukraine: Poland maintains its solidarity with Ukraine and calls for the use of
+      frozen Russian assets.
+    hybrid: Poland supports the development of innovative solutions to counter Russia's
+      hybrid activities.
+    migration: Poland emphasizes the need for innovative solutions to address migration
+      pressure.
+    rule_of_law: Poland supports the promotion and protection of the rule of law and
+      the exchange of best practices to increase legal certainty for SMEs.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: podkreślił niezmienność stanowiska Polski wobec rosyjskiej agresji
+          na Ukrainę, solidarność z Ukrainą
+      hybrid:
+        score: 1
+        evidence: opowiedział się za potrzebą wypracowania innowacyjnych rozwiązań
+          wobec działań hybrydowych Rosji oraz presji migracyjnej
+      rule_of_law:
+        score: 1
+        evidence: 'Polska popiera cele Dialogu w Radzie UE takie jak: promowanie i
+          ochronę praworządności oraz wymianę najlepszych praktyk w duchu wzajemnego
+          szacunku'
+    visegrad:
+      migration:
+        score: 1
+        evidence: opowiedział się za potrzebą wypracowania innowacyjnych rozwiązań
+          wobec działań hybrydowych Rosji oraz presji migracyjnej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

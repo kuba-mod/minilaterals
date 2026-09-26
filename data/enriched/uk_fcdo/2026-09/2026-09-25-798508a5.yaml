@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: The United Kingdom and other partners condemn Russia's failure to hold
+    free and fair elections and its violations of Ukrainian sovereignty.
+  positions:
+    ukraine: The United Kingdom condemns Russia for conducting sham elections on Ukrainian
+      territory and breaching Ukrainian sovereignty.
+    rule_of_law: The United Kingdom condemns Russia's failure to uphold OSCE commitments
+      and its failure to hold free and fair elections.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
