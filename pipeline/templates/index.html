@@ -47,7 +47,7 @@
   <div id="density-topics" style="display:flex; flex-wrap:wrap; gap:6px"></div>
 </div>
 
-<div style="background:var(--surface); border:1px solid var(--border-light); border-radius:4px; padding:20px 22px">
+<div class="density-card" style="background:var(--surface); border:1px solid var(--border-light); border-radius:4px">
   <div class="density-scroll" style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
     <div id="density-header" style="display:grid; gap:4px; margin-bottom:6px; align-items:end"></div>
     <div id="density-rows"></div>
@@ -63,7 +63,12 @@
     <span id="density-caption" style="margin-left:auto; font-family:'Newsreader',serif; font-size:13px; color:var(--ink-soft)"></span>
   </div>
 </div>
-<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:10px 0 0; font-family:'IBM Plex Sans',sans-serif">Hover a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
+<p style="font-size:11.5px; color:var(--muted); text-align:center; margin:10px 0 0; font-family:'IBM Plex Sans',sans-serif">Hover or tap a cell for the week, stance, and count. Row margin: total statements at that stance · share of all rated statements in this slice.</p>
+
+<style>
+.density-card { padding:20px 22px; }
+@media (max-width: 600px) { .density-card { padding:14px 12px; } }
+</style>
 
 <script>
 (function () {
@@ -112,49 +117,92 @@
     }).join('');
   }
 
+  // Phone layout: the fixed-width label and margin columns would otherwise
+  // squeeze a dozen weeks into slivers, and hover tooltips don't exist on touch.
+  const narrowMq = window.matchMedia('(max-width: 600px)');
+  let selectedCell = null;
+
+  function captionText(){ return capLabel(curCapital) + ' · ' + topicLabel(curTopic); }
+
   function render(){
     const slice = (DENSITY[curCapital] || {})[curTopic];
     if (!slice) return;
+    const narrow = narrowMq.matches;
     const weeks = slice.weeks, n = weeks.length;
-    const cols = '68px repeat(' + n + ', minmax(0, 1fr)) 122px';
+    const cols = narrow
+      ? '30px repeat(' + n + ', minmax(16px, 1fr)) 36px'
+      : '68px repeat(' + n + ', minmax(0, 1fr)) 122px';
+    const gap = narrow ? 3 : 4;
+    selectedCell = null;
 
     const header = document.getElementById('density-header');
     header.style.gridTemplateColumns = cols;
-    let headerHtml = '<div></div>';
+    header.style.gap = gap + 'px';
+    let headerHtml = narrow ? '<div style="position:sticky; left:0; z-index:1; align-self:stretch; background:var(--surface)"></div>' : '<div></div>';
     slice.edition_labels.forEach(function(label, i){
       const full = esc('Edition of ' + slice.edition_full_labels[i]);
-      headerHtml += '<div title="' + full + '" style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); text-align:center">' + esc(label) + '</div>';
+      const orient = narrow
+        ? 'writing-mode:vertical-rl; transform:rotate(180deg); white-space:nowrap; justify-self:center; line-height:1;'
+        : 'text-align:center;';
+      headerHtml += '<div title="' + full + '" style="font-family:\'IBM Plex Mono\',monospace; font-size:9px; color:var(--muted); ' + orient + '">' + esc(label) + '</div>';
     });
-    headerHtml += '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; padding-left:8px">Total · share</div>';
+    headerHtml += narrow
+      ? '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; text-align:right">Share</div>'
+      : '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.6px; color:var(--muted); text-transform:uppercase; padding-left:8px">Total · share</div>';
     header.innerHTML = headerHtml;
 
     const rowsEl = document.getElementById('density-rows');
     rowsEl.innerHTML = '';
     slice.rows.forEach(function(r){
       const rowDiv = document.createElement('div');
-      rowDiv.style.cssText = 'display:grid; grid-template-columns:' + cols + '; gap:4px; align-items:center; margin-bottom:4px';
+      rowDiv.style.cssText = 'display:grid; grid-template-columns:' + cols + '; gap:' + gap + 'px; align-items:center; margin-bottom:' + gap + 'px';
 
-      let html = '<div style="text-align:right; padding-right:10px">'
-        + '<div style="font-family:\'Newsreader\',serif; font-size:17px; font-weight:500; line-height:1; color:var(--ink)">' + r.label + '</div>'
-        + '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; color:var(--muted)">' + r.desc + '</div>'
-        + '</div>';
+      let html = narrow
+        ? '<div title="' + esc(r.desc) + '" style="position:sticky; left:0; z-index:1; align-self:stretch; display:flex; align-items:center; justify-content:flex-end; background:var(--surface); padding-right:4px; font-family:\'Newsreader\',serif; font-size:15px; font-weight:500; line-height:1; color:var(--ink)">' + r.label + '</div>'
+        : '<div style="text-align:right; padding-right:10px">'
+          + '<div style="font-family:\'Newsreader\',serif; font-size:17px; font-weight:500; line-height:1; color:var(--ink)">' + r.label + '</div>'
+          + '<div style="font-family:\'IBM Plex Sans\',sans-serif; font-size:9px; color:var(--muted)">' + r.desc + '</div>'
+          + '</div>';
+      const h = narrow ? 30 : 34;
       r.cells.forEach(function(c, i){
         const cellStyle = c.filled
-          ? ('height:34px;border-radius:2px;background:' + c.color + ';opacity:' + c.opacity + ';')
-          : 'height:34px;border-radius:2px;background:transparent;border:1px dashed var(--border-light);';
-        html += '<div style="' + cellStyle + '" title="' + esc(c.tooltip) + '"></div>';
+          ? ('height:' + h + 'px;border-radius:2px;background:' + c.color + ';opacity:' + c.opacity + ';')
+          : 'height:' + h + 'px;border-radius:2px;background:transparent;border:1px dashed var(--border-light);';
+        html += '<div class="density-cell" style="' + cellStyle + 'cursor:pointer" title="' + esc(c.tooltip) + '" data-tip="' + esc(c.tooltip) + '"></div>';
       });
-      html += '<div style="padding-left:8px; display:flex; align-items:center; gap:8px">'
-        + '<div style="font-family:\'Newsreader\',serif; font-size:15px; color:var(--ink); width:32px">' + r.total + '</div>'
-        + '<div style="flex:1; height:6px; background:var(--surface2); border-radius:2px; overflow:hidden"><div style="width:' + r.share + '%; height:100%; border-radius:2px; background:' + r.color + '"></div></div>'
-        + '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:10px; color:var(--muted); width:26px; text-align:right">' + r.share + '%</div>'
-        + '</div>';
+      html += narrow
+        ? '<div title="' + r.total + ' statements" style="font-family:\'IBM Plex Mono\',monospace; font-size:10px; color:var(--muted); text-align:right">' + r.share + '%</div>'
+        : '<div style="padding-left:8px; display:flex; align-items:center; gap:8px">'
+          + '<div style="font-family:\'Newsreader\',serif; font-size:15px; color:var(--ink); width:32px">' + r.total + '</div>'
+          + '<div style="flex:1; height:6px; background:var(--surface2); border-radius:2px; overflow:hidden"><div style="width:' + r.share + '%; height:100%; border-radius:2px; background:' + r.color + '"></div></div>'
+          + '<div style="font-family:\'IBM Plex Mono\',monospace; font-size:10px; color:var(--muted); width:26px; text-align:right">' + r.share + '%</div>'
+          + '</div>';
       rowDiv.innerHTML = html;
       rowsEl.appendChild(rowDiv);
     });
 
-    document.getElementById('density-caption').textContent = capLabel(curCapital) + ' · ' + topicLabel(curTopic);
+    document.getElementById('density-caption').textContent = captionText();
+    // If the weeks overflow, open on the newest one rather than the oldest.
+    const scroller = document.querySelector('.density-scroll');
+    scroller.scrollLeft = scroller.scrollWidth;
   }
+
+  // Tap (or click) a cell to show its tooltip in the caption; tap again to clear.
+  document.getElementById('density-rows').addEventListener('click', function(e){
+    const cell = e.target.closest('.density-cell');
+    if (!cell) return;
+    if (selectedCell) selectedCell.style.outline = '';
+    if (selectedCell === cell) {
+      selectedCell = null;
+      document.getElementById('density-caption').textContent = captionText();
+      return;
+    }
+    selectedCell = cell;
+    cell.style.outline = '2px solid var(--ink)';
+    cell.style.outlineOffset = '1px';
+    document.getElementById('density-caption').textContent = cell.dataset.tip;
+  });
+  narrowMq.addEventListener('change', render);
 
   window.selectDensity = function(kind, value){
     if (kind === 'capital') curCapital = value; else { curTopic = value; reorderClusters(value); }
