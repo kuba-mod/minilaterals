@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Carsten Knobel
+  - Frau Bagel-Trah
+  topics:
+  - ukraine
+  - energy
+  location: Düsseldorf, Germany
+  position: Germany emphasizes the strategic importance of resilient, innovative industrial
+    partners like Henkel to maintain national competitiveness and sovereignty amidst
+    global geo-economic pressures.
+  positions:
+    ukraine: Germany supports the decision of companies to provide concrete aid to
+      Ukraine and withdraw from business operations in Russia following the war of
+      aggression.
+    energy: Germany acknowledges that ongoing wars are endangering security and driving
+      up energy costs.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: 'würdigen will ich genauso, und danken will ich dafür, dass Henkel
+          nach Beginn des Angriffskriegs gegen die Ukraine unmittelbar Konsequenzen
+          gezogen hat: mit konkreter Hilfe für die Ukraine'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

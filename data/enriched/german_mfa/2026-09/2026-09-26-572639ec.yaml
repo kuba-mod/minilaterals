@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: New York, USA
+  position: Germany advocates for a reformed United Nations that upholds international
+    law, manages the risks of artificial intelligence through global standards, and
+    actively resolves conflicts.
+  positions:
+    ukraine: Germany is the largest supporter of Ukraine's defense against Russian
+      aggression and urges Russia to return to the negotiating table.
+    defence: Germany is increasing its contributions to international security missions,
+      including combating gang crime in Haiti and providing humanitarian aid in Sudan.
+    rule_of_law: Germany condemns the erosion of international law and the UN Charter,
+      emphasizing that sovereign equality and human dignity must be preserved against
+      the interests of a few powerful states.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Today, Germany is the largest supporter of Ukraine in its defense
+          against Russian aggression.
+      rule_of_law:
+        score: 1
+        evidence: The erosion of international law jeopardises the enormous civilisational
+          progress that the United Nations stands for.
+    e3:
+      defence:
+        score: 0
+        evidence: Germany stands up for peace and security.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

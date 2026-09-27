@@ -45,9 +45,11 @@ extracted:
           pour mettre fin aux hostilités et parvenir à une paix globale, juste et
           durable en Ukraine
       green_transition:
-        score: 1
-        evidence: réaffirment leur détermination à atteindre pleinement les objectifs
-          de l’Accord de Paris
+        score: 2
+        evidence: détermination à atteindre pleinement les objectifs de l’Accord de
+          Paris, à travers la publication des Contributions déterminées au niveau
+          national (NDC) ambitieuses et la réalisation des engagements visant à éliminer
+          progressivement les combustibles fossiles
     e3:
       defence:
         score: 0
