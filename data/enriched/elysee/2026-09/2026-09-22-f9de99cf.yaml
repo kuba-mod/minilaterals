@@ -35,6 +35,9 @@ extracted:
   stances:
     weimar:
       ukraine:
+        score: 1
+        evidence: réaffirmer le soutien de la France à l'Ukraine
+      defence:
         score: 2
         evidence: la nécessité d’aider encore plus vite et plus fort nos amis ukrainiens
           en matière d’intercepteurs

@@ -1,0 +1,73 @@
+actors:
+- DE
+- FR
+- SK
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Außenminister Wadephul
+  - Kassym-Schomart Tokajew
+  - Rob Jetten
+  - Mark Rutte
+  - Tom Berendsen
+  - Juraj Blanár
+  - Robert Fico
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany announces a series of high-level diplomatic meetings and domestic
+    initiatives focused on economic transformation, European security, and the reinforcement
+    of international law.
+  positions:
+    ukraine: Germany reaffirms its continued support for Ukraine and emphasizes the
+      importance of the Council of Europe's damage register as a step toward compensation.
+    defence: Germany is extending its Patriot unit deployment in southern Turkey until
+      April 2027 to strengthen NATO air defense.
+    green_transition: Germany is investing in the transformation of the steel industry
+      toward sustainable processes and the production of silicon carbide to reduce
+      dependencies.
+    energy: Germany seeks to expand bilateral energy and raw material partnerships,
+      specifically with Kazakhstan.
+    rule_of_law: Germany expresses unwavering support for the International Criminal
+      Court and emphasizes the protection of human rights and democracy.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die gemeinsame Unterstützung der Ukraine stehen
+      defence:
+        score: 1
+        evidence: die enge militärische Zusammenarbeit und Integration ‑ Stichwort
+          Deutsch-Niederländisches Korps
+      green_transition:
+        score: 2
+        evidence: Die Stahlproduktion wird auf moderne, nachhaltige Verfahren umgestellt.
+      rule_of_law:
+        score: 1
+        evidence: das deutsche Engagement für den Schutz und die Stärkung von Menschenrechten,
+          Rechtsstaatlichkeit und Demokratie hervorheben
+    e3:
+      defence:
+        score: 0
+        evidence: Dabei werden sicherheits-, europa- und außenpolitische Themen im
+          Vordergrund stehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
