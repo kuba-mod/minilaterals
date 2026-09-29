@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - French ambassadors
+  topics:
+  - energy
+  location: null
+  position: France is mobilizing its diplomatic network to diversify and secure energy
+    supplies to lower fuel prices for its citizens.
+  positions:
+    energy: France is coordinating with its ambassadors in strategic countries to
+      secure crude oil, LNG, and refined products while working toward European gas
+      stock targets.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

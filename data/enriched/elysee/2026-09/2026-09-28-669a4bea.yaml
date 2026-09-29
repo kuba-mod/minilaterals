@@ -1,0 +1,70 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- green_transition
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the French Republic
+  - Pope Leo XIV
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - green_transition
+  - hybrid
+  location: Metz, France
+  position: France advocates for a sovereign, democratic, and united Europe that protects
+    its values, supports Ukraine, and acts decisively on security, competitiveness,
+    and climate goals.
+  positions:
+    ukraine: France affirms its unwavering commitment to Ukraine against Russian military
+      aggression and in support of international law.
+    defence: France calls for the construction of a European defense and peace architecture
+      to ensure real sovereignty and security.
+    enlargement: France views the desire of nations from the Balkans to Ukraine to
+      join the EU as a positive endorsement of the Union's values.
+    green_transition: France commits to achieving carbon neutrality by the middle
+      of the century as a responsible path for future generations.
+    hybrid: France seeks to protect democracies against disinformation and foreign
+      interference while regulating technology to serve human dignity.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: C'est précisément le sens de notre engagement indéfectible aux côtés
+          de l'Ukraine
+      defence:
+        score: 1
+        evidence: en bâtissant une Europe de la défense et de la paix
+      enlargement:
+        score: 1
+        evidence: D'autres veulent encore aujourd'hui nous rejoindre, des Balkans
+          jusqu'à l'Ukraine
+      green_transition:
+        score: 1
+        evidence: Agir pour le climat et bâtir en responsabilité l'avenir que nos
+          enfants méritent et dont la neutralité carbone au milieu de ce siècle est
+          le juste cap
+      hybrid:
+        score: 1
+        evidence: Agir pour nous protéger contre l'épidémie de désinformation et d'ingérence
+          qui veulent saper nos démocraties et nous diviser
+    e3:
+      defence:
+        score: 0
+        evidence: en bâtissant une Europe de la défense et de la paix
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

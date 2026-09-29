@@ -1,0 +1,56 @@
+actors:
+- DE
+- SK
+issue_areas:
+- rule_of_law
+- defence
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  - Tom Berendsen
+  topics:
+  - rule_of_law
+  - defence
+  - ukraine
+  location: The Hague, Netherlands; Bratislava, Slovakia; Strasbourg, France
+  position: Germany reaffirms its commitment to international law, the International
+    Criminal Court, and European security cooperation to counter authoritarian tendencies
+    and Russian aggression.
+  positions:
+    rule_of_law: Germany supports the International Criminal Court and the Council
+      of Europe to defend democracy, human rights, and the rule of law against anti-democratic
+      tendencies.
+    defence: Germany emphasizes the need to strengthen collective defense capabilities
+      within the EU and NATO to deter Russia.
+    ukraine: Germany advocates for the continued support of Ukraine to prevent further
+      Russian aggression.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Für diese Werte selbstbewusst einzustehen, ist in Zeiten antidemokratischer
+          und autoritärer Tendenzen wichtiger denn je.
+      defence:
+        score: 1
+        evidence: ist es unerlässlich, dass wir gemeinsam unsere Verteidigungsfähigkeit
+          stärken
+      ukraine:
+        score: 1
+        evidence: unsere Unterstützung für die Ukraine fortsetzen
+    e3:
+      defence:
+        score: 0
+        evidence: Um Russland von gefährlichen weiteren Abenteuern abzuschrecken,
+          ist es unerlässlich, dass wir gemeinsam unsere Verteidigungsfähigkeit stärken
+          und unsere Unterstützung für die Ukraine fortsetzen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

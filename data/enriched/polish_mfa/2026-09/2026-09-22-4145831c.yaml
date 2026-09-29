@@ -82,10 +82,7 @@ extracted:
     aukus:
       indo_pacific:
         score: 1
-        evidence: rozmawiali m.in. o wzmacnianiu partnerstw z państwami Indo-Pacyfiku,
-          w tym strategicznych relacji z Japonią i Koreą Południową w dalszym dialogu
-          na rzecz porządku międzynarodowego opartego na zasadach oraz na ograniczaniu
-          wpływów Rosji w regionie
+        evidence: rozmawiali m.in. o wzmacnianiu partnerstw z państwami Indo-Pacyfiku
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
