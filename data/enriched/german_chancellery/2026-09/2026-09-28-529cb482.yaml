@@ -1,0 +1,41 @@
+actors:
+- DE
+- FR
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Anke Rehlinger
+  - Peter Maagh
+  - Rauber
+  topics:
+  - green_transition
+  - energy
+  location: Dillingen, Germany
+  position: Germany is supporting the climate-neutral modernization of its steel industry
+    and the production of critical raw materials to ensure industrial competitiveness
+    and technological sovereignty.
+  positions:
+    green_transition: Germany is providing billions in funding for projects like Power4Steel
+      to achieve CO2-neutral steel production through hydrogen and innovative engineering.
+    energy: The German government aims to lower electricity costs for industry and
+      will build new gas power plants to ensure a stable energy supply during the
+      transition to renewables.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Deshalb haben wir gemeinsam mit dem Saarland als Bundesregierung
+          Power4Steel mit 2,6 Milliarden Euro insgesamt unterstützt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

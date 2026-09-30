@@ -1,0 +1,69 @@
+actors:
+- DE
+- SK
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- rule_of_law
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Minister for Foreign and European Affairs of the Slovak Republic
+  - Federal Minister for Foreign Affairs of the Federal Republic of Germany
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - rule_of_law
+  - energy
+  location: null
+  position: Germany and Slovakia agree to continue and intensify their deepened dialogue
+    to coordinate positions on European security, economic stability, and the rule
+    of law.
+  positions:
+    ukraine: Germany supports increasing pressure on Russia through sanctions to end
+      the war and reaffirms respect for Ukraine's sovereignty and territorial integrity.
+    defence: Germany commits to strengthening the Euro-Atlantic security architecture
+      through NATO cooperation and increasing defense funding.
+    enlargement: Germany affirms its support for the European perspective for Ukraine,
+      Moldova, and the Western Balkan states.
+    rule_of_law: Germany emphasizes the protection of the European Union's founding
+      principles and the promotion of the rule of law across the EU.
+    energy: Germany aims to strengthen the sustainability and independence of European
+      energy supply in alignment with REPowerEU goals.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die umfangreiche Unterstützung der Ukraine in ihrer Verteidigung
+          gegen den unprovozierten, ungerechtfertigten und völkerrechtswidrigen Angriffskrieg
+          der Russischen Föderation
+      defence:
+        score: 1
+        evidence: die Stärkung der euro-atlantischen Sicherheits- und Verteidigungsarchitektur
+          durch enge Zusammenarbeit und Komplementarität mit der NATO
+      enlargement:
+        score: 1
+        evidence: die Bekräftigung der Unterstützung der europäischen Perspektive
+          für die Ukraine, Moldau und die Staaten des westlichen Balkans
+      rule_of_law:
+        score: 1
+        evidence: den Schutz der Gründungsprinzipien, Rechte, Freiheiten und Werte
+          der Europäischen Union, durch welche die Rechtsstaatlichkeit in der gesamten
+          Europäischen Union gewahrt und gefördert wird
+    e3:
+      defence:
+        score: 0
+        evidence: die Stärkung der euro-atlantischen Sicherheits- und Verteidigungsarchitektur
+          durch enge Zusammenarbeit und Komplementarität mit der NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,58 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Buschow
+  - SRS Meyer
+  - Carsten Schneider
+  - Wadephul
+  - Lawrow
+  - Hinterseher
+  topics:
+  - ukraine
+  - hybrid
+  - green_transition
+  location: null
+  position: Germany is pursuing a multi-track diplomatic approach to address Russian
+    aggression in Ukraine, hybrid threats, and European industrial decarbonization.
+  positions:
+    ukraine: Germany remains fully committed to supporting Ukraine's defense and is
+      ready to engage in negotiations for a sustainable ceasefire if Russia shows
+      genuine readiness.
+    hybrid: Germany has clearly signaled to Russia that hybrid incidents, specifically
+      the drone incident in Leipzig, will not be tolerated.
+    green_transition: Germany is coordinating with France and Poland to link climate
+      protection with industrial competitiveness and the expansion of cross-border
+      charging infrastructure for heavy vehicles.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir werden die Ukraine in ihrer Verteidigung gegen Russlands Invasionskrieg
+          auch weiterhin vollumfänglich unterstützen.
+      hybrid:
+        score: 1
+        evidence: wir im bilateralen Umgang mit Russland ein klares Signal und auch
+          noch einmal sehr klar die Nachricht setzen wollten, dass wir hybride Vorfälle
+          wie den versuchten Drohnenanschlag von Leipzig nicht hinnehmen werden.
+      green_transition:
+        score: 2
+        evidence: Dabei steht die Frage im Mittelpunkt, wie Klimaschutz, industrielle
+          Wettbewerbsfähigkeit und leistungsfähige europäische Infrastruktur besser
+          miteinander verbunden werden können.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

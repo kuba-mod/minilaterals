@@ -1,0 +1,41 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: Germany calls for the reform of the United Nations, the establishment
+    of global safety standards for artificial intelligence, and the upholding of international
+    law against aggression.
+  positions:
+    ukraine: Germany is the largest supporter of Ukraine's defense against Russian
+      aggression and urges Russia to return to the negotiating table.
+    rule_of_law: Germany advocates for the protection of the UN Charter and international
+      law against the actions of great powers that seek to undermine sovereign equality
+      and global norms.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deutschland ist heute der größte Unterstützer der Ukraine bei ihrer
+          Verteidigung gegen die russische Aggression.
+      rule_of_law:
+        score: 1
+        evidence: Durch die Aushöhlung des Völkerrechts wird der gewaltige zivilisatorische
+          Fortschritt gefährdet, für den die Vereinten Nationen stehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

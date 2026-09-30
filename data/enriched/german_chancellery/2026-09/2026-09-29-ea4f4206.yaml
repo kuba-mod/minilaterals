@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatsminister Weimer
+  topics: []
+  location: Wilhelmshaven, Germany
+  position: Germany is providing funding for the renovation of cultural and technical
+    monuments, specifically allocating 5.095 million euros for the 'Kapitän Meyer'
+    museum ship.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

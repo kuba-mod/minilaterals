@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Philippe Baptiste, Minister for Higher Education, Research and Space
+  topics:
+  - ukraine
+  location: null
+  position: France condemns the Russian drone attack on the National Academy of Sciences
+    of Ukraine and reaffirms its unwavering support for Ukraine's sovereignty and
+    territorial integrity.
+  positions:
+    ukraine: France condemns Russian attacks on civilian infrastructure and commits
+      to supporting the Ukrainian scientific community and efforts to bring those
+      responsible for war crimes to justice.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: It reaffirms its unwavering support for Ukraine, its sovereignty
+          and its territorial integrity
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

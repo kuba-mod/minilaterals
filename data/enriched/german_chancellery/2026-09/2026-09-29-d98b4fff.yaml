@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - President of the Federal Constitutional Court
+  topics:
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany emphasizes the critical importance of quality education for youth
+    and advocates for integrating legal education into schools to strengthen democratic
+    values.
+  positions:
+    rule_of_law: Germany encourages schools to invite judges to explain the legal
+      order and the principle that law stands above power to preserve freedom and
+      democracy.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Laden Sie in Ihren Städten, in Ihren Gemeinden, in Ihren Ortsteilen,
+          in Ihren Stadtteilen, in denen Sie die Schulen haben, ganz regelmäßig auch
+          einmal die Richter der örtlichen Gerichte ein, um den Schülerinnen und Schülern
+          zu erklären, was eigentlich unsere Rechtsordnung ausmacht.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

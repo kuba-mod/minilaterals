@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany is implementing domestic tax relief on fuels and adhering to EU
+    bans on specific PFAS chemicals.
+  positions:
+    energy: Germany is reducing the energy tax on gasoline and diesel by 14 cents
+      per liter from October 1 until the end of 2026 to lower costs for citizens and
+      the economy.
+    green_transition: Germany is implementing an EU regulation banning the use of
+      the PFAS subgroup PFHxA in various everyday products starting October 10, 2026.
+  stances:
+    weimar:
+      green_transition:
+        score: -2
+        evidence: Der Bund senkt die Energiesteuer auf Benzin und Diesel ab 1. Oktober
+          bis Ende 2026 um 14 Cent pro Liter
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

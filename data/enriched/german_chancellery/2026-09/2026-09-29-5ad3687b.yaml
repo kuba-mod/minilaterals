@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Professor Haug
+  - Herr Hoffmann
+  topics:
+  - green_transition
+  - energy
+  - defence
+  location: Berlin, Germany
+  position: Germany is implementing a pragmatic sustainability agenda focused on combining
+    economic growth with climate neutrality and state modernization.
+  positions:
+    green_transition: Germany views climate protection and economic growth as complementary
+      and is launching an Action Plan for Sustainability to make policies more pragmatic
+      and impactful for citizens.
+    energy: Germany aims to increase energy sovereignty and resilience through investments
+      in renewable energy and the international networking of carbon markets.
+    defence: Germany considers investments in external and internal security as essential
+      components of a comprehensive sustainability strategy.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Nachhaltiger Klimaschutz und nachhaltiges Wirtschaftswachstum sind
+          in diesem Sinne also keine Gegensätze, sondern zwei Seiten derselben Medaille.
+      defence:
+        score: 1
+        evidence: Wir sind genauso auf gutem Weg zu einem verteidigungsfähigen Europa,
+          und wir sind auf einem guten Weg – lassen Sie mich dieses Wort sagen – zur
+          strategischen Souveränität Europas.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir sind genauso auf gutem Weg zu einem verteidigungsfähigen Europa,
+          und wir sind auf einem guten Weg – lassen Sie mich dieses Wort sagen – zur
+          strategischen Souveränität Europas.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

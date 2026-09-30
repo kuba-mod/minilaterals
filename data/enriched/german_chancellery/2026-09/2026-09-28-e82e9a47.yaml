@@ -1,0 +1,48 @@
+actors:
+- DE
+- FR
+- AU
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Marc Speicher
+  - Jérôme Spinoza
+  topics:
+  - defence
+  - hybrid
+  location: Saarlouis, Germany
+  position: Germany emphasizes that a strong German-French partnership and European
+    unity are essential to securing freedom, peace, and the European way of life against
+    external threats.
+  positions:
+    defence: Germany advocates for strengthening the European pillar of NATO and increasing
+      defense capabilities to ensure sovereignty and peace.
+    hybrid: Germany recognizes that Europe is under hybrid attack and asserts that
+      only collective action can defend European values against these threats.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Wir beginnen endlich, den europäischen Pfeiler der NATO wirklich
+          zu stärken.
+      hybrid:
+        score: 1
+        evidence: Nur gemeinsam kann sich Europa gegen diese Bedrohung verteidigen.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir beginnen endlich, den europäischen Pfeiler der NATO wirklich
+          zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

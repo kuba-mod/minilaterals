@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Kassym-Jomart Tokayev
+  - Frank-Walter Steinmeier
+  topics:
+  - ukraine
+  - energy
+  location: Berlin, Germany
+  position: Germany seeks to deepen its strategic partnership with Kazakhstan to diversify
+    energy supplies and coordinate on the resolution of the war in Ukraine.
+  positions:
+    ukraine: Germany will continue to provide military, political, and financial support
+      to Ukraine to ensure its territorial sovereignty and pressure Russia to enter
+      serious peace negotiations.
+    energy: Germany aims to diversify its energy imports by increasing oil supplies
+      from Kazakhstan as a replacement for Russian oil.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 'Wir werden die Ukraine weiter unterstützen, weil wir eines wissen:
+          Die Ukraine ist Teil Europas, und wenn die Ukraine fällt, dann sind der
+          Frieden und die Freiheit in ganz Europa in Gefahr.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

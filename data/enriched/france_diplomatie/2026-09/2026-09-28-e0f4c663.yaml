@@ -1,0 +1,28 @@
+actors:
+- FR
+- UK
+- EE
+- LT
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ambassadors
+  - Envoys
+  - Governments
+  topics: []
+  location: null
+  position: France, alongside several other nations, reaffirms the rights of women
+    and girls to bodily autonomy and urges the adoption of laws and policies that
+    support access to safe abortion care.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

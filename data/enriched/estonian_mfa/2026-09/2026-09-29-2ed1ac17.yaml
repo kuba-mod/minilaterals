@@ -1,0 +1,34 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Elina Valtonen
+  topics:
+  - ukraine
+  - defence
+  location: Helsinki, Finland
+  position: Estonia discussed regional security, bilateral relations, and the construction
+    of the Tallinn-Helsinki tunnel with Finland.
+  positions:
+    ukraine: Estonia discussed Russia's war of aggression in Ukraine.
+    defence: Estonia discussed regional and European security, noting that the Tallinn-Helsinki
+      tunnel would add security assurance to the connection.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: arutati Venemaa agressioonisõda Ukrainas, regiooni ja Euroopa julgeolekut
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

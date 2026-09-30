@@ -1,0 +1,49 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Premier Donald Tusk
+  - Prezydent Karol Nawrocki
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: null
+  position: The Polish Prime Minister is urging the President to sign budget and tax
+    legislation to benefit citizens while emphasizing the need for heightened security
+    due to Russian aggression near the border.
+  positions:
+    ukraine: Poland maintains exemplary cooperation with Ukraine, receiving real-time
+      information on threats posed by Russian aggression.
+    defence: Poland is increasing military alertness and air force activity to ensure
+      security following Russian drone strikes near the Polish border.
+    energy: The government seeks to implement a tax on the windfall profits of fuel
+      companies to lower fuel prices for citizens.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Współpraca ze stroną ukraińską w ostatnich dniach układa się wzorowo
+      defence:
+        score: 1
+        evidence: Wojsko i służby są szczególnie skoncentrowane na zapewnieniu bezpieczeństwa
+          po polskiej stronie
+    visegrad:
+      defence:
+        score: 1
+        evidence: Biorąc pod uwagę obowiązki państwa w obronności i rosnących wydatków
+          na zdrowie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
