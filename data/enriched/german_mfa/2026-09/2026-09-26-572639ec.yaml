@@ -38,7 +38,7 @@ extracted:
       rule_of_law:
         score: 1
         evidence: The erosion of international law jeopardises the enormous civilisational
-          progress that the United Nations stands for.
+          progress that the United Nations stands for
     e3:
       defence:
         score: 0

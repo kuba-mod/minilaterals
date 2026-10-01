@@ -1,0 +1,23 @@
+actors:
+- EE
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Minister of Latvia
+  - Foreign Minister of Estonia
+  topics: []
+  location: Riga, Latvia
+  position: Latvia and Estonia jointly presented the annual Language Award.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

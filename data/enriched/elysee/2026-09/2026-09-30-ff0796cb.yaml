@@ -1,0 +1,55 @@
+actors:
+- FR
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - King Felipe VI
+  - Pedro Sánchez
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - migration
+  location: Madrid, Spain
+  position: France seeks to strengthen its strategic partnership with Spain to build
+    a more sovereign, innovative, and protective European Union capable of reducing
+    dependencies on the US and China.
+  positions:
+    ukraine: France reaffirms its determined support for the Ukrainian people's sovereignty
+      against Russian aggression.
+    defence: France advocates for the consolidation of a European pillar within NATO
+      and the development of a sovereign European defense industry.
+    energy: France promotes technological neutrality and the creation of a unified
+      European electricity grid to ensure low-cost, decarbonized energy.
+    migration: France supports the implementation of the Asylum and Migration Pact,
+      balancing responsibility and solidarity while maintaining firm border protection.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: soutenir ensemble avec détermination le peuple ukrainien face à
+          la guerre d'agression russe
+      defence:
+        score: 1
+        evidence: consolidation d'un pilier européen au sein de l'OTAN
+    e3:
+      defence:
+        score: 1
+        evidence: les relations bilatérales se poursuivent sur des sujets comme la
+          défense, la sécurité, l'immigration et d'autres affaires stratégiques
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

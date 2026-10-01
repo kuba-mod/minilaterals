@@ -1,0 +1,50 @@
+actors:
+- DE
+- EE
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: Strasbourg, France
+  position: Germany reaffirms its commitment to the Council of Europe's core values
+    of democracy, human rights, and the rule of law, while strongly condemning Russian
+    aggression and supporting accountability for war crimes in Ukraine.
+  positions:
+    ukraine: Germany stands firmly with Ukraine and supports the establishment of
+      a special tribunal and a compensation commission to ensure accountability for
+      Russian aggression.
+    hybrid: Germany identifies Russian hybrid attacks, including cyberattacks and
+      sabotage of critical infrastructure, as a threat to free societies.
+    rule_of_law: Germany advocates for the protection of individual rights, judicial
+      independence, and the prevention of the rule of law becoming an empty shell.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir werden unser Ratifikationsverfahren für den deutschen Beitritt
+          zur Schadensersatzkommission bis Ende des Jahres abschließen.
+      hybrid:
+        score: 1
+        evidence: In vielen unserer Mitgliedstaaten erleben wir Cyberangriffe und
+          Sabotage kritischer Infrastruktur.
+      rule_of_law:
+        score: 1
+        evidence: 'Die Antwort darauf darf nicht weniger Demokratie sein. Sie muss
+          mehr Demokratie sein – und vor allem: widerstandsfähigere Demokratie.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Dace Melbārde, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  location: Toronto, Canada
+  position: Latvia calls for increased pressure on Russia to return deported Ukrainian
+    children, civilians, and prisoners of war, and to ensure accountability for crimes
+    against civilians.
+  positions:
+    ukraine: Latvia advocates for strengthening international pressure on Russia to
+      return abducted children and civilians and to hold Russia accountable for war
+      crimes.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

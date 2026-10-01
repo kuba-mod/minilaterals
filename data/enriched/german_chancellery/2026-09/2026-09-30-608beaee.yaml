@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Christian Sewing
+  - Roland Busch
+  topics: []
+  location: Berlin, Germany
+  position: Germany is working to improve its investment and innovation conditions,
+    specifically by addressing price competitiveness and limiting non-wage labor costs
+    through reforms like the long-term care insurance reform.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

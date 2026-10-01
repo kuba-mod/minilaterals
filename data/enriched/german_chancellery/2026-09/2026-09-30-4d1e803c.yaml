@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Elisabeth Kaiser, Federal Government Commissioner for East Germany
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is implementing targeted measures to improve social mobility,
+    representation in leadership, and economic infrastructure in East Germany to ensure
+    equivalent living conditions across the country.
+  positions:
+    green_transition: Germany is establishing a special fund for infrastructure and
+      climate neutrality to create better conditions for investment and economic development.
+    energy: Germany is investing in the expansion of energy supply as part of its
+      broader infrastructure development goals.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: schafft die Bundesregierung mit dem Sondervermögen Infrastruktur
+          und Klimaneutralität bessere Voraussetzungen für Investitionen, wirtschaftliche
+          Entwicklung und gute Arbeitsplätze
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

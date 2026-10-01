@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Mariin Ratnik, Deputy Secretary General for Foreign Economic Affairs and Development
+    Cooperation
+  topics:
+  - ukraine
+  location: Brussels, Belgium
+  position: Estonia advocates for the continued support of Ukraine using all possible
+    means and is participating as a temporary member of the G7+ Ukraine Donor Platform.
+  positions:
+    ukraine: Estonia asserts that support for Ukraine must continue by all possible
+      means and is acting as an organizer for the 2027 Ukraine reconstruction conference.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

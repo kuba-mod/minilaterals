@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is introducing a bill to increase criminal penalties for attacks
+    on emergency services, public transport staff, and other employees serving the
+    public good.
+  positions:
+    rule_of_law: The German government is strengthening the legal protection of public
+      service workers and expanding penalties for the coercion of constitutional bodies
+      and incitement to hatred.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Der Gesetzentwurf stellt für das Gemeinwohl tätige Beschäftigte
+          unter einen besonderen strafrechtlichen Schutz.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

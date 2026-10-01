@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  - Federal Government
+  - Federal Chancellery
+  topics:
+  - green_transition
+  location: null
+  position: Germany has adopted an action plan titled 'Sustainability for a Modern
+    and Future-Proof Germany' featuring 20 missions to implement concrete sustainability
+    goals across five fields of action.
+  positions:
+    green_transition: The German government is implementing a cross-departmental action
+      plan with 20 specific missions to achieve tangible improvements for citizens,
+      the economy, and the environment by the end of the legislative period.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Kabinett hat den Aktionsplan „Nachhaltigkeit für ein modernes
+          und zukunftsfähiges Deutschland“ PDF, 510 KB, barrierefrei beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

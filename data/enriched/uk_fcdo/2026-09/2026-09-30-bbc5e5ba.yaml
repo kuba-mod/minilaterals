@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - African Union
+  - European Union
+  - France
+  - Germany
+  - UK
+  - United States
+  topics: []
+  location: null
+  position: The United Kingdom coordinated with international partners to address
+    the humanitarian crisis in Sudan and support inter-Sudanese dialogue for de-escalation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

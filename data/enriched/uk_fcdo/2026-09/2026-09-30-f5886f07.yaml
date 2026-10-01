@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom disputes Russia's claims of military success in Ukraine
+    and demands an immediate, unconditional ceasefire.
+  positions:
+    ukraine: The United Kingdom challenges Russia's assertions of inevitable military
+      victory and calls for an immediate and unconditional ceasefire.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

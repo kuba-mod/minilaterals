@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - energy
+  location: null
+  position: Germany is implementing a fuel price relief package through energy tax
+    reductions on gasoline and diesel until the end of 2026 to mitigate the impact
+    of high prices caused by geopolitical instability.
+  positions:
+    energy: The German government is reducing energy taxes on fuel by 14 cents per
+      liter and exploring a temporary fuel price cap by 2027.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

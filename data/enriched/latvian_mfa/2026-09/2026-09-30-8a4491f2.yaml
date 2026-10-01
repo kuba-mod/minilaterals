@@ -1,0 +1,24 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ministry of Foreign Affairs
+  - European Commission
+  - Latvian IT Cluster
+  topics: []
+  location: null
+  position: The Ministry of Foreign Affairs organized a seminar in cooperation with
+    the European Commission and the Latvian IT Cluster to promote Latvian exports.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

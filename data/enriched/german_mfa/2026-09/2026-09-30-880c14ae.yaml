@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+- rule_of_law
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Antonio Tajani
+  - Cardinal Secretary of State Pietro Parolin
+  - Archbishop Paul Richard Gallagher
+  - Pope Leo XIV
+  - Tone Kajzer
+  topics:
+  - enlargement
+  - rule_of_law
+  - ukraine
+  location: null
+  position: Germany advocates for an accelerated EU enlargement process for the Western
+    Balkans to secure European geopolitical influence and security.
+  positions:
+    enlargement: Germany calls for speeding up the EU accession process for Western
+      Balkan states, arguing that a credible EU perspective is essential for the continent's
+      security and influence.
+    rule_of_law: Germany emphasizes that candidate countries must courageously advance
+      reforms in the rule of law, fight corruption, and promote regional reconciliation.
+    ukraine: Germany supports a swift end to the war in Ukraine and rejects Putin's
+      ambitions of subjugation.
+  stances:
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Beim EU -Beitrittsprozess müssen wir deshalb jetzt Tempo machen.
+      ukraine:
+        score: 1
+        evidence: Das gilt insbesondere für die Ukraine, wo die Menschen nicht mehr
+          herbeisehnen, als ein schnelles Ende des Kriegs und der Unterwerfungsfantasien
+          Putins.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

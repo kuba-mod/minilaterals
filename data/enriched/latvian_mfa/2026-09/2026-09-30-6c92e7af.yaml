@@ -1,0 +1,34 @@
+actors:
+- EE
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna (Minister of Foreign Affairs of Estonia)
+  - Minister of Foreign Affairs of Latvia
+  topics:
+  - ukraine
+  - defence
+  location: Latvia
+  position: Latvia discussed strengthening NATO presence and continuing support for
+    Ukraine with Estonia.
+  positions:
+    ukraine: Latvia reaffirms its commitment to providing support for Ukraine.
+    defence: Latvia seeks to strengthen NATO's presence to ensure regional security.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: pārrunā NATO klātbūtnes stiprināšanu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

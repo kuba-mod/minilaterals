@@ -1,0 +1,24 @@
+actors:
+- EE
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Baiba Braže
+  topics: []
+  location: Riga, Latvia
+  position: Estonia and Latvia announced the winner of the Estonian-Latvian language
+    prize.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

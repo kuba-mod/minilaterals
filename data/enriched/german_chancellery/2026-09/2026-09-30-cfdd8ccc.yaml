@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  topics:
+  - defence
+  location: South Sudan
+  position: Germany has decided to extend its military contribution to the UNMISS
+    mission in South Sudan until October 31, 2027, with up to 50 soldiers.
+  positions:
+    defence: Germany will deploy up to 50 soldiers as leadership, advisory, liaison,
+      and observation officers within the UNMISS mission to stabilize South Sudan.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: beteiligt sich Deutschland an der UNMISS -Mission der Vereinten
+          Nationen (UN) in der Republik Südsudan
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- EE
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Edgars Rinkēvičs
+  - Baiba Braže
+  topics:
+  - ukraine
+  - defence
+  location: Riga, Latvia
+  position: Estonia advocates for a joint Baltic effort to stop Russian grain transit
+    and continues to support Ukraine and European security.
+  positions:
+    ukraine: Estonia emphasizes the importance of supporting Ukraine and putting pressure
+      on Russia.
+    defence: Estonia focuses on strengthening European security and regional competitiveness,
+      including visiting a drone training center.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Kohtumistel keskenduti Euroopa julgeolekule
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

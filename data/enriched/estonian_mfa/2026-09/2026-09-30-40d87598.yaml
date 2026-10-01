@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minna-Liina Lind, Deputy Secretary General for Global Issues of the Ministry of
+    Foreign Affairs
+  topics:
+  - ukraine
+  location: Toronto, Canada
+  position: Estonia participated in an international conference focused on the support
+    and return of illegally deported Ukrainian children, resettled persons, detained
+    civilians, and prisoners of war.
+  positions:
+    ukraine: Estonia advocates for the safe return of all Ukrainian children illegally
+      deported by Russia and the support of detained civilians and prisoners of war.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
