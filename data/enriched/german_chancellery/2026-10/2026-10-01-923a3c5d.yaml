@@ -1,0 +1,77 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Mark Rutte
+  - Henrik Wüst
+  - Emmanuel Macron
+  - Keir Starmer
+  - Volodymyr Zelensky
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  location: Münster, Germany
+  position: Germany reaffirms its commitment to NATO and the European security order
+    while pledging continued strong support for Ukraine to deter Russian imperial
+    expansion.
+  positions:
+    ukraine: Germany will continue to provide comprehensive military and financial
+      support to Ukraine, insisting that any peace must preserve Ukrainian sovereignty
+      and cannot be decided over the heads of Ukrainians.
+    defence: Germany will invest resolutely in its own military strength and economic
+      resilience to ensure credible deterrence against Russia.
+    hybrid: Germany will respond quickly and clearly to Russian hybrid attacks and
+      propaganda aimed at dividing German society.
+    rule_of_law: Germany advocates for a European order based on the rule of law,
+      the sovereign equality of states, and the prohibition of changing borders by
+      force.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deshalb ist und bleibt es richtig, dass wir die Ukraine mit aller
+          Kraft unterstützen.
+      defence:
+        score: 1
+        evidence: Die Bundesregierung wird weiterhin entschieden in Deutschlands militärische
+          Stärke und wirtschaftliche Resilienz investieren.
+      hybrid:
+        score: 1
+        evidence: Wir stellen uns auf weitere hybride Angriffe ein, auch auf schwere.
+      rule_of_law:
+        score: 1
+        evidence: Das Recht ist der Boden, auf dem unsere europäische Sicherheitsordnung
+          steht.
+    e3:
+      defence:
+        score: 1
+        evidence: Im Zentrum steht dabei die diplomatische Arbeit mit Frankreich und
+          Großbritannien in enger Abstimmung mit Polen, den baltischen Staaten und
+          mit Italien im Zusammenspiel mit den Brüsseler Institutionen und unseren
+          wichtigen Partnern in Europa und über Europa hinaus.
+    aukus:
+      defence:
+        score: 1
+        evidence: Die Bundesregierung wird weiterhin entschieden in Deutschlands militärische
+          Stärke und wirtschaftliche Resilienz investieren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

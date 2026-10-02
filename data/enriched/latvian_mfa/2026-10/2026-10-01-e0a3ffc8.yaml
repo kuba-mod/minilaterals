@@ -1,0 +1,28 @@
+actors:
+- LV
+- US
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - representatives of technology, innovation, energy and research sectors
+  topics:
+  - energy
+  location: null
+  position: Latvia aims to utilize the 'Pax Silica' concept to strengthen economic
+    security and technological cooperation with the United States.
+  positions:
+    energy: Latvia is discussing the integration of energy sector representatives
+      into strategic technological cooperation with the US.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

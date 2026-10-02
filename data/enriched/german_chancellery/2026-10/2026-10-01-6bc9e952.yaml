@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Helmut Kohl
+  - Willy Brandt
+  - Helmut Schmidt
+  - Angela Merkel
+  - Konrad Adenauer
+  - Ludwig Erhard
+  - Kurt Georg Kiesinger
+  - Gerhard Schröder
+  - Olaf Scholz
+  - Friedrich Merz
+  - Valéry Giscard d’Estaing
+  - François Mitterrand
+  - Donald Trump
+  - John Foster Dulles
+  - Antoine Pinay
+  - Margaret Thatcher
+  - Francois Hollande
+  - Emmanuel Macron
+  topics: []
+  location: Berlin, Germany
+  position: Germany is organizing a photo exhibition titled 'Kanzler im Fokus' to
+    document the history of German Chancellors and their relationship with the media.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

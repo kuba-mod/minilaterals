@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Albin Kurti
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany congratulates Albin Kurti on his re-election as Prime Minister
+    of Kosovo and reaffirms its support for the country.
+  positions:
+    rule_of_law: Germany encourages Kosovo to resolve institutional questions and
+      advance reforms.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: die Chance, über Parteigrenzen hinweg Brücken zu bauen, offene institutionelle
+          Fragen zu lösen und Reformen voranzubringen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

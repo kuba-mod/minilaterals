@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Mario Voigt
+  - Alessandro Giuli
+  topics: []
+  location: Weimar, Germany
+  position: Germany is launching the 'Giro di Goethe' cultural route in collaboration
+    with Italy to revitalize Goethe's historical journey as a cross-border cultural
+    and tourism project.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

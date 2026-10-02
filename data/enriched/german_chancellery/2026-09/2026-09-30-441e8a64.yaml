@@ -1,0 +1,56 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Roland Busch
+  - Christian Sewing
+  - Martin Blessing
+  - Katherina Reiche
+  topics:
+  - defence
+  - green_transition
+  - energy
+  location: null
+  position: Germany is implementing structural reforms and leveraging the 'Made for
+    Germany' initiative to boost domestic investment, innovation, and global competitiveness.
+  positions:
+    defence: Germany is increasing its defense capabilities through the construction
+      of modern production facilities.
+    green_transition: Germany is combining private investments with special funds
+      for climate neutrality and infrastructure to drive one of the largest innovation
+      initiatives in decades.
+    energy: Germany is investing in new and renewable energy sources to reduce emissions
+      and increase resilience, including the goal of bringing the world's first fusion
+      reactor online.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Wir gehen ganz gezielt in die Erhöhung unserer Verteidigungsfähigkeit
+          durch den Bau von modernsten Produktionsstätten.
+      green_transition:
+        score: 1
+        evidence: Wenn wir das zusammennehmen mit dem Sondervermögen für Infrastruktur
+          und Klimaneutralität, ergibt sich eine der größten Innovations- und Investitionsinitiativen
+          der vergangenen Jahrzehnte
+    e3:
+      defence:
+        score: 0
+        evidence: Wir gehen ganz gezielt in die Erhöhung unserer Verteidigungsfähigkeit
+          durch den Bau von modernsten Produktionsstätten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  - Federal Government
+  - German Bundestag
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has enacted a law to digitalize and simplify compulsory enforcement
+    proceedings to reduce bureaucracy and costs.
+  positions:
+    rule_of_law: Germany is implementing the digitalization of the judiciary and simplifying
+      enforcement processes to increase efficiency and security against manipulation.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 0
+        evidence: Das Gesetz zur Digitalisierung von Zwangsvollstreckungen ist nun
+          in Kraft getreten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

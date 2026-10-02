@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom has implemented 31 new sanctions against Russia to
+    target the Kremlin's financial resources, propagandists, and those responsible
+    for torture.
+  positions:
+    ukraine: The UK is increasing economic pressure on Russia through a new package
+      of 31 sanctions targeting the war chest and human rights abusers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

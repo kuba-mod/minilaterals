@@ -1,0 +1,63 @@
+actors:
+- DE
+- EE
+- LV
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Rob Jetten
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Münster, Germany
+  position: Germany emphasizes its commitment to European and transatlantic security
+    through increased military strength and the integrated cooperation of the German-Dutch
+    Corps within NATO.
+  positions:
+    ukraine: Germany supports Ukraine with all its strength to counter Russian aggression
+      and seeks a diplomatic solution to the conflict.
+    defence: Germany is investing decisively in military strength and utilizes the
+      German-Dutch Corps to secure NATO's eastern flank in Estonia and Latvia.
+    hybrid: Germany is strengthening intelligence cooperation and resilience to counter
+      hybrid attacks from Russia.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: unterstützen wir die Ukraine gemeinsam und mit aller Kraft
+      defence:
+        score: 2
+        evidence: Seit Juli sichere das Korps die Ostflanke der NATO in Estland und
+          Lettland und leiste damit einen Schlüsselbeitrag für unsere Sicherheit
+      hybrid:
+        score: 1
+        evidence: lassen wir uns nicht durch Moskaus hybride Angriffe beirren
+    e3:
+      defence:
+        score: 1
+        evidence: Zusammen machen wir die NATO europäischer, damit sie transatlantisch
+          bleiben kann.
+    baltic:
+      defence:
+        score: 2
+        evidence: Seit Juli sichere das Korps die Ostflanke der NATO in Estland und
+          Lettland und leiste damit einen Schlüsselbeitrag für unsere Sicherheit.
+      hybrid:
+        score: 1
+        evidence: Deshalb lassen wir uns nicht durch Moskaus hybride Angriffe beirren
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

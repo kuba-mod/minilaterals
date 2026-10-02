@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister of Labor and Solidarity
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - Minister of Health, Families, Autonomy and People with Disabilities
+  - Minister of Action and Public Accounts
+  - Keeper of the Seals, Minister of Justice
+  topics:
+  - energy
+  location: null
+  position: France is implementing a 2027 budget focused on reducing the public deficit
+    through spending controls and structural adjustments while avoiding general tax
+    increases.
+  positions:
+    energy: France identifies energy volatility as a significant geopolitical and
+      economic risk affecting its 2027 budgetary context.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

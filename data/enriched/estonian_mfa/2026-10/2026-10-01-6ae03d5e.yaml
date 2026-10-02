@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia has decided to ban the transit of grain from Russia and Belarus
+    through Estonian ports due to national sanctions.
+  positions:
+    ukraine: Estonia is blocking Russian grain exports through its ports to prevent
+      Russia from finding new export routes alternative to the Black Sea.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
