@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  topics:
+  - rule_of_law
+  location: Point Alpha, Germany
+  position: Germany warns against historical revisionism that downplays the inhumanity
+    of the GDR dictatorship and emphasizes the importance of a fact-based culture
+    of remembrance to protect democracy.
+  positions:
+    rule_of_law: Germany asserts that a critical awareness of history and the appreciation
+      of the rule of law are essential defenses against anti-democratic populism and
+      totalitarian ideologies.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Nur ein kritisches Geschichtsbewusstsein schützt uns vor antidemokratischem
+          Populismus und totalitären Ideologien
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

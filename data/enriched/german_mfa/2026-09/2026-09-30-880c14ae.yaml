@@ -36,12 +36,13 @@ extracted:
   stances:
     weimar:
       enlargement:
-        score: 2
+        score: 1
         evidence: Beim EU -Beitrittsprozess müssen wir deshalb jetzt Tempo machen.
       ukraine:
         score: 1
-        evidence: Das gilt insbesondere für die Ukraine, wo die Menschen mehr herbeisehnen,
-          als ein schnelles Ende des Kriegs und der Unterwerfungsfantasien Putins.
+        evidence: Das gilt insbesondere für die Ukraine, wo die Menschen nichts mehr
+          herbeisehnen, als ein schnelles Ende des Kriegs und der Unterwerfungsfantasien
+          Putins.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

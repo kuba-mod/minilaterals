@@ -43,9 +43,12 @@ extracted:
         evidence: c'est ce qui est aussi défendu en Ukraine, retrouver le respect
           de la souveraineté, de la stabilité et ne céder à aucune velléité impérialiste
       green_transition:
-        score: 1
-        evidence: nous avons confirmé notre souhait que la France soit un partenaire
-          de référence de la décarbonation
+        score: 0
+        evidence: la France soit un partenaire de référence de la décarbonation et
+          en particulier du programme électronucléaire vietnamien
+      defence:
+        score: 0
+        evidence: Nous avons décidé de faire de la défense un pilier de ce partenariat
     e3:
       defence:
         score: 0

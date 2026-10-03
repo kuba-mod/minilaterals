@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - G7 leaders
+  - Executive Director of the International Energy Agency
+  topics:
+  - energy
+  location: null
+  position: France convened a G7 leaders' meeting to coordinate a response to rising
+    global fuel prices caused by the situation in the Middle East.
+  positions:
+    energy: France is leading a coordinated G7 effort to stabilize energy markets
+      and lower fuel prices for citizens.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,56 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: Münster, Germany
+  position: Germany emphasizes that security and credible deterrence via NATO are
+    essential prerequisites for peace in Europe, specifically regarding the defense
+    of Ukraine against Russian aggression.
+  positions:
+    ukraine: Germany asserts that supporting Ukraine's defensive struggle serves European
+      and German security interests.
+    defence: Germany views NATO as a war-prevention alliance and supports a credible
+      deterrence strategy to counter Russian aggression.
+    hybrid: Germany notes that daily hybrid attacks and provocations on NATO's eastern
+      border demonstrate current regional instability.
+    energy: Germany is managing energy security through improved supplies from the
+      Gulf region and the implementation of energy tax reductions.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: dass der Abwehrkampf der Ukraine auch weiterhin den europäischen
+          und den deutschen Verteidigungsinteressen dient
+      defence:
+        score: 1
+        evidence: Die NATO ist eine Kriegsverhinderungsallianz.
+      hybrid:
+        score: 1
+        evidence: Die täglichen Hybrid-Attacken und Provokationen an der NATO-Ostgrenze
+          zeugen von der Labilität.
+    e3:
+      defence:
+        score: 1
+        evidence: Die NATO ist eine Kriegsverhinderungsallianz.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

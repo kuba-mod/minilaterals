@@ -1,0 +1,21 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: null
+  position: Germany is promoting the DiscoverEU initiative, which provides free travel
+    passes to 18-year-olds to explore Europe.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

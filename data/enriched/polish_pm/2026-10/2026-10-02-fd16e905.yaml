@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Aleksandra Gajewska, Deputy Minister of Family, Labor and Social Policy
+  topics: []
+  location: null
+  position: Poland is promoting the 'Active Parent' program to provide financial support
+    and childcare options for parents and grandparents of children under three years
+    old.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
