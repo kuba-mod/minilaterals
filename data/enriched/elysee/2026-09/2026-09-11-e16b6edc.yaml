@@ -45,11 +45,14 @@ extracted:
           pour mettre fin aux hostilités et parvenir à une paix globale, juste et
           durable en Ukraine
       green_transition:
-        score: 2
-        evidence: détermination à atteindre pleinement les objectifs de l’Accord de
-          Paris, à travers la publication des Contributions déterminées au niveau
-          national (NDC) ambitieuses et la réalisation des engagements visant à éliminer
-          progressivement les combustibles fossiles
+        score: 1
+        evidence: réaffirment leur détermination à atteindre pleinement les objectifs
+          de l’Accord de Paris
+      defence:
+        score: 0
+        evidence: La France et le Vietnam renforceront la coopération dans le domaine
+          de la défense, en accordant la priorité à la coopération industrielle et
+          technologique en matière de défense
     e3:
       defence:
         score: 0

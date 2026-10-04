@@ -1,0 +1,39 @@
+actors:
+- FR
+- US
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government of the G7
+  topics:
+  - energy
+  - iran
+  location: null
+  position: France, as part of the G7, commits to coordinating energy supply measures
+    and oil releases to stabilize global markets while condemning Iranian disruptions
+    to maritime security.
+  positions:
+    energy: France agrees to coordinate refinery maintenance, increase refined product
+      production, and release 100 million barrels of oil via the IEA to combat price
+      volatility.
+    iran: France condemns Iran's attacks on its neighbors and demands the immediate
+      restoration of navigation rights in the Strait of Hormuz.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Nous condamnons les attaques incessantes de l’Iran contre ses voisins
+          et sa perturbation du commerce international, de la sécurité énergétique
+          et de l’économie mondiale.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
