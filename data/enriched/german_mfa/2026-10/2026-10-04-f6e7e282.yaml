@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatsminister Hahn
+  topics:
+  - ukraine
+  location: Cairo, Egypt
+  position: Germany views Egypt as a central strategic partner for regional stability
+    and intends to coordinate on regional security, global food security, and bilateral
+    cultural and academic ties.
+  positions:
+    ukraine: Germany aims to emphasize Ukraine's readiness for negotiations to facilitate
+      progress on grain exports for the Global South.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: wollen wir erneut deutlich machen, dass die Ukraine zu Verhandlungen
+          bereit ist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

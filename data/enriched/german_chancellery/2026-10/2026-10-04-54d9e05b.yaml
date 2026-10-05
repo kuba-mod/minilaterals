@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  - Katherina Reiche
+  topics:
+  - ukraine
+  - defence
+  location: Kyiv, Ukraine
+  position: Germany reaffirms its commitment as a reliable partner to Ukraine, providing
+    humanitarian, financial, and military support to ensure its sovereignty and security.
+  positions:
+    ukraine: Germany supports Ukraine's sovereignty and insists that a future peace
+      must be negotiated rather than dictated.
+    defence: Germany provides military aid to Ukraine to stop Russia's war machine,
+      which is viewed as a necessity for the security of Germany and Europe.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir werden alles tun, um der Ukraine zu helfen, bis dieser schreckliche
+          Krieg endlich zu Ende ist
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

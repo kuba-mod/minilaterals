@@ -25,8 +25,8 @@ extracted:
     baltic:
       hybrid:
         score: 2
-        evidence: Ārlietu ministrijā norisināsies starptautiska konference par Baltkrievijas
-          radītajiem draudiem Eiropas drošībai
+        evidence: norisināsies starptautiska konference par Baltkrievijas radītajiem
+          draudiem Eiropas drošībai
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

@@ -1,0 +1,66 @@
+actors:
+- DE
+- UK
+- LT
+- US
+issue_areas:
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Mindaugas Sinkevičius
+  - Andrew Burnham
+  - Herr Hille
+  - Frau Jenning
+  - Herr Harmsen
+  - Herr Kaminski
+  - Herr Schulz
+  - Herr Wentzel
+  - Herr Giese
+  topics:
+  - defence
+  - hybrid
+  - energy
+  location: Berlin, Germany
+  position: Germany is strengthening its security cooperation with Lithuania and the
+    UK while coordinating international efforts to stabilize energy markets.
+  positions:
+    defence: Germany is working to fully establish a German brigade in Lithuania by
+      the end of 2027 and is creating a new drone regiment within the Army.
+    hybrid: Germany is focusing on security cooperation with Lithuania specifically
+      to address hybrid threats and strengthen the NATO eastern flank.
+    energy: Germany advocates for coordinated international action via the IEA to
+      stabilize fuel markets and avoid further uncertainty.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Stärkung der NATO-Ostflanke sowie der Aufbau der deutschen Brigade
+          in Litauen
+      hybrid:
+        score: 1
+        evidence: Im Zentrum der Gespräche stehen Fragen der Sicherheit, insbesondere
+          mit Blick auf hybride Bedrohungen
+    e3:
+      defence:
+        score: 2
+        evidence: Anschließend erfolgt der feierliche Austausch der Urkunden des deutsch-britischen
+          Kensington-Vertrages. Damit tritt der deutsch-britische Freundschaftsvertrag
+          in Kraft, der die bilateralen Beziehungen unserer beiden Länder noch weiter
+          vertieft.
+    aukus:
+      defence:
+        score: 0
+        evidence: Das Heer wird ab dem kommenden Jahr ein Drohnenregiment aufstellen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

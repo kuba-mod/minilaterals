@@ -1,0 +1,57 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Boris Pistorius
+  - Lars Klingbeil
+  - Stefanie Hubig
+  - Carsten Schneider
+  - Nina Warken
+  - Elisabeth Kaiser
+  - Evelyn Zupke
+  - Michael Hollmann
+  - Gitta Connemann
+  - Christian Freuding
+  - Sven Weizenegger
+  - Andreas Bovenschulte
+  topics:
+  - defence
+  - green_transition
+  location: Bremen, Germany
+  position: The German government emphasizes the importance of national security through
+    NATO, the acceleration of digital entrepreneurship, and the necessity of climate
+    adaptation.
+  positions:
+    defence: Germany maintains that NATO is the most successful defense alliance and
+      should be strengthened rather than replaced by a single European army.
+    green_transition: Germany prioritizes climate protection and the transition to
+      renewable energies and electromobility to ensure environmental sustainability
+      and independence.
+  stances:
+    weimar:
+      defence:
+        score: -1
+        evidence: Es braucht nicht die eine große europäische Armee, weil wir die
+          NATO haben.
+      green_transition:
+        score: 1
+        evidence: Deshalb stehe bei ihm der Klimaschutz ganz oben.
+    e3:
+      defence:
+        score: 0
+        evidence: Es braucht nicht die eine große europäische Armee, weil wir die
+          NATO haben.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

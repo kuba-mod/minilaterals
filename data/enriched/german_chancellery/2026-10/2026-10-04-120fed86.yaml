@@ -1,0 +1,84 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  - Katherina Reiche
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  - energy
+  location: Kyiv, Ukraine
+  position: Germany reaffirms its unwavering support for Ukraine's territorial integrity
+    and security, providing significant military and energy aid while promoting a
+    negotiated peace.
+  positions:
+    ukraine: Germany pledges to do everything possible to help Ukraine until the war
+      ends and supports its path toward EU membership.
+    defence: Germany is providing a military support package of approximately one
+      billion euros, including anti-jet drones, long-range weapons, combat drones,
+      and satellite technology.
+    hybrid: Germany is taking consequential measures against Russian hybrid attacks,
+      including closing the Russian consulate in Bonn and the Russian House in Berlin.
+    enlargement: Germany proposes an associated membership for Ukraine and seeks to
+      accelerate its accession to the European Union.
+    rule_of_law: Germany emphasizes that Ukrainian reforms regarding the rule of law
+      and anti-corruption are essential for the disbursement of further financial
+      aid.
+    energy: Germany is providing approximately 350 million euros in energy aid for
+      generators and repair work to mitigate Russian attacks on energy infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir bringen ein weiteres Paket militärischer Unterstützung über
+          rund eine Milliarde Euro auf den Weg.
+      defence:
+        score: 1
+        evidence: Wir stärken die Abschreckungsfähigkeit der NATO .
+      hybrid:
+        score: 2
+        evidence: Wir handeln hier sehr konsequent zusammen und ergreifen immer die
+          gleichen Maßnahmen.
+      enlargement:
+        score: 1
+        evidence: Wir wollen den Beitritt der Ukraine zur Europäischen Union beschleunigen.
+      rule_of_law:
+        score: 1
+        evidence: Reformen für Rechtsstaatlichkeit und Korruptionsbekämpfung. Ich
+          begrüße sehr, dass der Präsident uns dies auch noch einmal zugesagt hat
+    e3:
+      defence:
+        score: 2
+        evidence: Wir wollen schließlich im Winter mit Frankreich und Großbritannien
+          ein Treffen der Koalition der Willigen in Berlin ausrichten, auch um weitere
+          Hilfen zu koordinieren.
+    aukus:
+      defence:
+        score: 0
+        evidence: Zudem wolle man die Zusammenarbeit, unter anderem in der Verteidigungsindustrie,
+          zwischen Deutschland und der Ukraine vertiefen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
