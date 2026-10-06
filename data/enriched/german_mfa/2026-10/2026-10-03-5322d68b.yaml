@@ -1,0 +1,24 @@
+actors:
+- DE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Serap Güler
+  topics: []
+  location: St. Louis and Chicago, USA
+  position: Germany is strengthening its cultural, educational, and economic ties
+    with the United States through the opening of a new Goethe-Institut in St. Louis
+    and visits to German companies and schools.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

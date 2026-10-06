@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Rt Hon Sir Lindsay Hoyle MP, Speaker of the UK House of Commons
+  topics: []
+  location: Arusha, Tanzania
+  position: The Speaker of the UK House of Commons will attend the 153rd Assembly
+    of the Inter-Parliamentary Union in Tanzania.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

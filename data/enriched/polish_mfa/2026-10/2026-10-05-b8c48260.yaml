@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Feridun H. Sinirlioğlu
+  - Maria Telalian
+  - Christophe Kamp
+  - Jan Braathu
+  topics:
+  - ukraine
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland advocates for accountability for human rights violations and the
+    cessation of Russian aggression to ensure a just and lasting peace in Europe.
+  positions:
+    ukraine: Poland asserts that lasting peace requires Russia to end its neo-imperial
+      policy, cease aggression against Ukraine, and stop destabilizing the region.
+    rule_of_law: Poland calls for effective mechanisms to hold states accountable
+      for violating human rights and democratic standards amidst the erosion of international
+      law.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Sprawiedliwy i trwały pokój w Europie wymaga, aby Rosja zakończyła
+          swoją politykę neoimperialną, zaprzestała agresji wobec Ukrainy
+      rule_of_law:
+        score: 1
+        evidence: erozja porządku opartego na prawie międzynarodowym oraz pogłębiający
+          się deficyt demokracji w wielu państwach Organizacji Bezpieczeństwa i Współpracy
+          w Europie (OBWE) wymagają skutecznych mechanizmów pociągania do odpowiedzialności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

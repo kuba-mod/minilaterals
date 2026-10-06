@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Mihai Popșoi
+  - Siiri Königsberg
+  topics:
+  - enlargement
+  location: Chișinău, Moldova
+  position: Estonia has opened an embassy in Chișinău to strengthen diplomatic presence
+    and support Moldova's European integration.
+  positions:
+    enlargement: Estonia aims to more effectively support Moldova's movement towards
+      European Union membership through its new resident embassy.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

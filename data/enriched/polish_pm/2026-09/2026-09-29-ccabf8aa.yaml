@@ -42,7 +42,7 @@ extracted:
       defence:
         score: 1
         evidence: Biorąc pod uwagę obowiązki państwa w obronności i rosnących wydatków
-          na zdrowie
+          na zdrowie, szukaliśmy odpowiedzialnych rozwiązań
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

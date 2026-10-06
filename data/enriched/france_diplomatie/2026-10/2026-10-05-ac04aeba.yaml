@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Paris, France
+  position: France welcomes Syria's accession to the International Partnership against
+    Impunity for Chemical Weapons and pledges continued support for the destruction
+    of the former regime's chemical weapons programme.
+  positions:
+    defence: France asserts that the use of chemical weapons is unacceptable and supports
+      efforts to hold perpetrators accountable to maintain the credibility of global
+      bans.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

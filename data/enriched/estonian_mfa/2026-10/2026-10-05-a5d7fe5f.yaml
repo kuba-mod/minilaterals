@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Estonia is providing humanitarian aid to Ukraine, including 100,000 euros
+    to help the country prepare for winter.
+  positions:
+    ukraine: Estonia has allocated nearly 230,000 euros in humanitarian aid to support
+      Ukraine.
+    energy: Estonia is providing 100,000 euros to support the protection of Ukraine's
+      energy infrastructure and winter preparations.
+  stances:
+    baltic:
+      energy:
+        score: 0
+        evidence: 100 000 eurot suunatakse Ukraina toetamiseks, et aidata riigil valmistuda
+          järjekordseks keeruliseks talveks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

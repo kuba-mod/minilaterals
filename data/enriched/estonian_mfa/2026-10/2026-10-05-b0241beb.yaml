@@ -1,0 +1,33 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Maia Sandu
+  - Mihai Popșoi
+  topics:
+  - defence
+  location: Chișinău, Moldova
+  position: Estonia emphasizes the need for close cooperation with Moldova as its
+    security is an inseparable part of European security amidst Russian aggression.
+  positions:
+    defence: Estonia stresses that close cooperation is necessary because Russian
+      aggression affects the security of Estonia, Moldova, and Europe as a whole.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: rõhutas Tsahkna vajadust tiheda koostöö järele olukorras, kus Venemaa
+          agressioon mõjutab nii Eesti, Moldova kui Euroopa julgeolekut laiemalt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

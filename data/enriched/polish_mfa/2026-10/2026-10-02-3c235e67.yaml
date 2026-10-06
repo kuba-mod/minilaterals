@@ -1,0 +1,39 @@
+actors:
+- DE
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Henryka Mościcka-Dendys, Chairwoman of the Council for Cooperation with the FRG
+  - German government coordinator for cooperation with Poland
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes the need to implement intergovernmental agreements with
+    Germany, focusing on security, transport infrastructure, and historical reconciliation.
+  positions:
+    defence: Poland advocates for strengthening the security of NATO's eastern flank
+      and improving transport infrastructure to increase military mobility.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Podkreślono znaczenie wspólnych działań na rzecz wzmocnienia bezpieczeństwa
+          wschodniej flanki NATO oraz pilną potrzebę rozbudowy połączeń transportowych
+          w kierunku Polski
+    visegrad:
+      defence:
+        score: 1
+        evidence: Podkreślono znaczenie wspólnych działań na rzecz wzmocnienia bezpieczeństwa
+          wschodniej flanki NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
