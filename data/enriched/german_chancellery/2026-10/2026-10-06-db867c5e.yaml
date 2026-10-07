@@ -1,0 +1,34 @@
+actors:
+- DE
+- CZ
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  topics:
+  - ukraine
+  location: Frankfurt, Germany
+  position: Germany celebrates the power of language and literature through the opening
+    of the 78th Frankfurt Book Fair, highlighting cultural ties with Czechia and supporting
+    the Ukrainian publishing industry.
+  positions:
+    ukraine: Germany provides financial support for the Ukrainian national stand at
+      the Frankfurt Book Fair through the budget of the Federal Government Commissioner
+      for Culture and the Media.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Der ukrainische Länderstand wird erneut mit Mitteln aus dem Etat
+          des Beauftragten der Bundesregierung für Kultur und Medien unterstützt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

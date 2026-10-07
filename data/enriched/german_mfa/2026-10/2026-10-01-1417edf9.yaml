@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- defence
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - President of the Constitutional Court
+  - Vice President of the Chamber of Deputies
+  - Member of Parliament Calovini
+  - Governor of the Central Bank
+  - Ambassador Bagger
+  topics:
+  - defence
+  - migration
+  location: Rome, Italy
+  position: Germany emphasizes its strong, stable democratic partnership with Italy
+    to maintain European industrial leadership and address global crises through close
+    coordination.
+  positions:
+    defence: Germany highlights successful defense partnerships between companies
+      such as Leonardo and Rheinmetall.
+    migration: Germany maintains close coordination with Italy on legislative proposals
+      in Brussels regarding migration.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Partnerschaften im Verteidigungsbereich wie zwischen Leonardo und
+          Rheinmetall
+    e3:
+      defence:
+        score: 0
+        evidence: Partnerschaften im Verteidigungsbereich wie zwischen Leonardo und
+          Rheinmetall
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,29 @@
+actors:
+- DE
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Christoph de Vries
+  - dr Bernd Fabritius
+  - Władysław Teofil Bartoszewski
+  - Tomasz Szymański
+  - Miguel Berger
+  - Jan Tombiński
+  topics: []
+  location: null
+  position: Poland participated in a preparatory meeting for the Polish-German Round
+    Table to discuss the support of Polish citizens in Germany and the German minority
+    in Poland.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

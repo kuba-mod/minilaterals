@@ -21,7 +21,12 @@ extracted:
   positions:
     energy: Latvia is discussing the integration of energy sector representatives
       into strategic technological cooperation with the US.
-  stances: {}
+  stances:
+    baltic:
+      energy:
+        score: 0
+        evidence: tehnoloģiju, inovāciju, enerģētikas un pētniecības nozaru pārstāvji
+          pārrunāja
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

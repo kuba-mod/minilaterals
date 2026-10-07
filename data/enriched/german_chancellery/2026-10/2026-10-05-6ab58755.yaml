@@ -1,0 +1,57 @@
+actors:
+- DE
+- LT
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Mindaugas Sinkevičius
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: Berlin, Germany
+  position: Germany reaffirms its deep partnership with Lithuania, emphasizing that
+    the security of the Baltics is inextricably linked to Germany's own security.
+  positions:
+    ukraine: Germany continues its support for Ukraine to force Russia to the negotiating
+      table and achieve a sovereign Ukraine in a secure Europe.
+    defence: Germany is permanently stationing a military brigade in Vilnius by the
+      end of 2027 to strengthen NATO's eastern flank.
+    hybrid: Germany is coordinating closely with partners to defend against Russian
+      hybrid attacks and propaganda through the resilience initiative and strengthened
+      cyber defense.
+    energy: Germany is working to end conflicts in the Middle East to ensure secure
+      trade routes and stabilize energy prices.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: setzen wir unsere Unterstützung der Ukraine fort
+      defence:
+        score: 2
+        evidence: Bis Ende 2027 werden wir die deutsche Litauenbrigade in Vilnius
+          vollständig aufgestellt haben.
+      hybrid:
+        score: 1
+        evidence: Wir stimmen uns eng ab, um diese hybriden Angriffe gemeinsam abzuwehren
+    e3:
+      defence:
+        score: 0
+        evidence: Wir stärken deshalb gemeinsam auch unsere Cyberabwehr, unsere Streitkräfte
+          und unsere Verteidigungsindustrie.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

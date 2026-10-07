@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- migration
+- energy
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - green_transition
+  - migration
+  - energy
+  - ukraine
+  location: Berlin, Germany
+  position: Germany asserts that climate protection is a fundamental component of
+    global and national security, as climate change exacerbates conflict, migration,
+    and vulnerability.
+  positions:
+    green_transition: Germany views investments in climate protection as investments
+      in security that make states more resilient to crises.
+    migration: Germany identifies climate-driven crop failures and resource scarcity
+      as drivers of migration pressure and potential conflict.
+    energy: Germany promotes decentralized renewable energy as a means to reduce dependence
+      on fossil fuel imports and increase infrastructure resilience.
+    ukraine: Germany highlights how renewable energy can protect Ukraine's population
+      from Russian attacks on centralized energy infrastructure.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Investitionen in den Klimaschutz sind auch Investitionen in unsere
+          Sicherheit
+      ukraine:
+        score: 1
+        evidence: Wenn Russland diesen Winter erneut gezielt die Energieinfrastruktur
+          der Ukraine angreift, könnten dezentrale, erneuerbare Energiequellen zur
+          Lebensversicherung werden
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

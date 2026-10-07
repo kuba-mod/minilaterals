@@ -1,0 +1,35 @@
+actors:
+- PL
+- AU
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - UN Human Rights Council
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland initiated and led the adoption of a UN Human Rights Council resolution
+    on the responsible use of artificial intelligence in public administration to
+    ensure transparency and human oversight.
+  positions:
+    rule_of_law: Poland advocates for the assessment of AI impact before implementation,
+      the guarantee of human oversight over decisions, and the right to appeal AI-driven
+      administrative rulings.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Rezolucja wzywa państwa do oceny skutków takich systemów przed ich
+          wdrożeniem, zapewnienia przejrzystości i nadzoru człowieka nad podejmowanymi
+          decyzjami oraz zagwarantowania możliwości ich zaskarżenia
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

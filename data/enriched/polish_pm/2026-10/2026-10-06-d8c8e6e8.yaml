@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  location: null
+  position: Poland has adopted the Population Protection and Civil Defense Program
+    for 2027–2031, allocating over 102.4 billion PLN to enhance national security
+    infrastructure.
+  positions:
+    defence: Poland is investing over 102.4 billion PLN in shelters, warning systems,
+      secure communications, and critical infrastructure to ensure continuity of services
+      during crises or armed conflicts.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: Ponad 102,4 mld zł w formie inwestycji trafi m.in. na miejsca schronienia,
+          budowę systemów ostrzegania i bezpiecznej łączności
+    visegrad:
+      defence:
+        score: 2
+        evidence: Ponad 102,4 mld zł w formie inwestycji trafi m.in. na miejsca schronienia,
+          budowę systemów ostrzegania i bezpiecznej łączności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

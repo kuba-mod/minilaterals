@@ -1,0 +1,31 @@
+actors:
+- FR
+- UK
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Pope LÉON XIV
+  topics:
+  - defence
+  location: null
+  position: France conducted various official activities including a visit to London
+    and a military ceremony for national service recruits.
+  positions:
+    defence: France held a military ceremony for the first promotion of national service
+      recruits at Air Base 115 in Orange.
+  stances:
+    e3:
+      defence:
+        score: 0
+        evidence: visite officielle à Londres
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - enlargement
+  location: Moldova
+  position: Estonia has launched the 'IMPACT North' regional development program to
+    attract investment to Northern Moldova and support the country's EU integration.
+  positions:
+    enlargement: Estonia is supporting Moldova's journey toward the European Union
+      through a new regional development program.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

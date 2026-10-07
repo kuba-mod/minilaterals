@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes that national security depends on a strong military,
+    efficient state administration, and social unity in the face of real threats from
+    the East.
+  positions:
+    defence: Poland is focusing on the professional training of military cadres and
+      the integration of military and civilian administration to ensure effective
+      state management during armed conflict.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: zagrożenie ze Wschodu jest realne i namacalne
+    visegrad:
+      defence:
+        score: 1
+        evidence: Od siły polskiej armii, sprawności państwa i jedności społeczeństwa
+          zależą bezpieczeństwo, wolność i przyszłość naszego kraju
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
