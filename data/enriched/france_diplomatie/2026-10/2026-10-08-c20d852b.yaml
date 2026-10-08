@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France condemns Houthi attacks on Saudi Arabia and expresses full solidarity
+    with the Kingdom in defending its land and infrastructure.
+  positions:
+    defence: France demands that the Houthis immediately end their attacks and provocations
+      to prevent further regional destabilization.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

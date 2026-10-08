@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- iran
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot
+  - Ambassador of the Islamic Republic of Iran to France
+  topics:
+  - iran
+  - hybrid
+  location: Paris, France
+  position: France summoned the Iranian Ambassador to protest a disinformation campaign
+    and unfounded diplomatic actions by Iranian authorities.
+  positions:
+    iran: France condemned the Iranian Foreign Ministry's dissemination of false content
+      and the unfounded summoning of the French Ambassador in Tehran.
+    hybrid: France declared that the disinformation campaign conducted by Iranian
+      authorities regarding the lycée movement is absolutely unacceptable.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: disinformation campaign conducted by the Iranian authorities
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

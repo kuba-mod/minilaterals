@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Stefanie Hubig
+  - Federal Minister of Justice
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has approved a draft law to improve the protection of victims
+    of domestic violence through reforms in family court proceedings.
+  positions:
+    rule_of_law: Germany is implementing legal changes to family court procedures,
+      including the introduction of optional venues to protect victim anonymity and
+      requiring specialized psychological knowledge for judges.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Das Bundeskabinett hat einen Gesetzentwurf zur Verbesserung des
+          Schutzes von Opfern häuslicher Gewalt beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

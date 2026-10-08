@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot
+  topics:
+  - defence
+  location: Israel
+  position: France condemns the October 7 terrorist attacks and reaffirms its commitment
+    to Israel's security and the pursuit of a lasting peace between Israelis and Palestinians.
+  positions:
+    defence: France commits to Israel's security and the ongoing fight against terrorism
+      and anti-Semitism.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

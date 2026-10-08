@@ -1,0 +1,37 @@
+actors:
+- UK
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Ed Miliband
+  - Jonathan Powell
+  topics:
+  - ukraine
+  - defence
+  location: London, United Kingdom
+  position: Estonia discussed defense cooperation with the UK, support for Ukraine,
+    and the organization of a Ukraine recovery conference in Estonia.
+  positions:
+    ukraine: Estonia is coordinating support for Ukraine, pressuring Russia, and will
+      host a Ukraine recovery conference in January 2027.
+    defence: Estonia emphasizes that British troops in Estonia ensure the security
+      of the entire NATO alliance daily.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Briti väed kindlustavad Eestis iga päev kogu NATO julgeolekut
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - hybrid
+  location: null
+  position: Germany is implementing new legislation and amendments to the Criminal
+    Code to combat digital violence, specifically targeting deepfakes, cyberstalking,
+    and image-based sexual abuse.
+  positions:
+    hybrid: Germany is closing legal loopholes to criminalize the creation and distribution
+      of sexualized deepfakes and enhancing the ability of victims to seek civil redress
+      against online platforms.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Die Bundesregierung will deshalb bestehende Strafbarkeitslücken
+          schließen und die Rechte der Betroffenen bei der Rechtsdurchsetzung stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

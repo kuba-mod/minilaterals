@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany advocates for an integrated approach that links climate policy,
+    security, and foreign policy to strengthen global resilience against climate-induced
+    conflicts.
+  positions:
+    green_transition: Germany supports climate-intelligent humanitarian measures and
+      cross-border projects in fragile regions to mitigate the security risks and
+      extremism driven by climate change.
+    energy: Germany recognizes that climate-driven instability and regional conflicts
+      impact global energy prices and supply security.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Auch innerhalb der Europäischen Union arbeiten wir daran, gemeinsame
+          Lösungen zu finden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

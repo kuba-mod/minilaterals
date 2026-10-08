@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - President of the European Commission
+  - President of the European Council
+  topics:
+  - green_transition
+  - energy
+  location: Split, Croatia
+  position: France participated in the MED9 summit to discuss European priorities
+    and Mediterranean challenges including security, environment, and energy.
+  positions:
+    green_transition: France addressed the preservation of oceans, biodiversity, and
+      decarbonization within the Mediterranean region.
+    energy: France discussed energy issues as a key challenge facing the Mediterranean
+      region.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: ont également abordé les principaux enjeux auxquels fait face la
+          région méditerranéenne , notamment en matière de sécurité, de protection
+          civile, de préservation des océans et de la biodiversité, de décarbonation
+          et d’énergie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

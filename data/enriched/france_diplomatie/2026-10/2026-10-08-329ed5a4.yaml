@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France pays tribute to Anna Politkovskaya and condemns the systematic
+    repression of press freedom and independent journalism in Russia.
+  positions:
+    ukraine: France laments the increased repression of journalists and media outlets
+      in Russia since the start of Russia's war of aggression against Ukraine in 2022.
+    rule_of_law: France calls on Russian authorities to bring those responsible for
+      Anna Politkovskaya's assassination to justice through transparent legal proceedings
+      and denounces the use of 'foreign agent' and 'undesirable' designations to stifle
+      civic space.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France laments the increased repression that has taken place since
+          Russia’s war of aggression against Ukraine began in 2022
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
