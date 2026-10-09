@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Katherina Reiche
+  - Federal Chancellor
+  topics:
+  - defence
+  - energy
+  location: Berlin, Germany
+  position: Germany reports an upward revision of its economic growth projections
+    driven by exports and state investments, while emphasizing the need for private
+    investment and structural reforms.
+  positions:
+    defence: Germany is utilizing state investments in defense to support economic
+      growth.
+    energy: Germany has implemented measures to relieve consumers and businesses from
+      high energy prices caused by geopolitical conflicts.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Das Wachstum wird vor allem durch robuste Exporte und die staatlichen
+          Investitionen in Verteidigung und Infrastruktur getragen.
+    e3:
+      defence:
+        score: 0
+        evidence: Das Wachstum wird vor allem durch robuste Exporte und die staatlichen
+          Investitionen in Verteidigung und Infrastruktur getragen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

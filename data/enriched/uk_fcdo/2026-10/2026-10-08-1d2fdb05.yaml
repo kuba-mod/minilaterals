@@ -1,0 +1,42 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer, UK Senior Military Advisor
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom condemns Russian attacks on civilian shipping in the
+    Black Sea and warns of the resulting threats to maritime security and freedom
+    of navigation.
+  positions:
+    ukraine: The United Kingdom condemns Russia's war and its specific attacks on
+      civilian shipping in the Black Sea.
+    defence: The United Kingdom highlights that Russian actions are undermining maritime
+      security and the freedom of navigation.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: condemns attacks on civilian shipping in the Black Sea and highlights
+          the wider consequences of Russia’s war for maritime security and freedom
+          of navigation
+    aukus:
+      defence:
+        score: 0
+        evidence: highlights the wider consequences of Russia’s war for maritime security
+          and freedom of navigation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

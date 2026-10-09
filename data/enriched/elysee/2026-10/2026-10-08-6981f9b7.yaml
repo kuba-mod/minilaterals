@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - Frank-Walter Steinmeier, President of the Federal Republic of Germany
+  - Elke Büdenbender
+  topics:
+  - defence
+  location: France
+  position: France reaffirms its determination to pursue common strategic engagements
+    with Germany to ensure the security of Europe and its citizens.
+  positions:
+    defence: France is committed to joint strategic engagements with Germany to serve
+      the security of Europe and Europeans.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: détermination à poursuivre nos engagements stratégiques communs
+          au service de la sécurité de l’Europe et des Européens
+    e3:
+      defence:
+        score: 1
+        evidence: détermination à poursuivre nos engagements stratégiques communs
+          au service de la sécurité de l’Europe et des Européens
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

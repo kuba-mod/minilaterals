@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany expresses optimism regarding its economic growth and emphasizes
+    a pragmatic approach to energy transition and security.
+  positions:
+    ukraine: Germany continues to support Ukraine against Russian aggression to ensure
+      a democratic European partner.
+    defence: Germany is restoring the Bundeswehr's capabilities to ensure the country
+      can defend itself and contribute to European security.
+    green_transition: Germany is pursuing a pragmatic, technology-open, and cost-efficient
+      energy transition.
+    energy: Germany is adopting a new realism in energy policy, including the construction
+      of new gas power plants to ensure affordable energy.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: betonte zudem Deutschlands fortwährende Unterstützung der Ukraine
+          gegen die russische Aggression
+      defence:
+        score: 1
+        evidence: muss Europa selbst dazu in der Lage sein
+      green_transition:
+        score: 0
+        evidence: Wir machen die Energiewende pragmatisch, technologieoffen, kosteneffizient.
+    e3:
+      defence:
+        score: 1
+        evidence: müssen wir, muss Europa selbst dazu in der Lage sein
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

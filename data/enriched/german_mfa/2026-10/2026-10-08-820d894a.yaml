@@ -1,0 +1,54 @@
+actors:
+- DE
+- FR
+issue_areas:
+- ukraine
+- defence
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - Dr. Leininger
+  - Herr von Borries
+  - Members of the German Bundestag
+  topics:
+  - ukraine
+  - defence
+  - migration
+  location: Berlin, Germany
+  position: Germany advocates for a comprehensive approach to peace that combines
+    military defense with civil crisis prevention, transitional justice, and regional
+    stabilization initiatives.
+  positions:
+    ukraine: Germany will continue to support Ukraine militarily, financially, and
+      through civil protection to restore critical infrastructure.
+    defence: Germany has significantly increased military investment to counter growing
+      threats, particularly from Russia.
+    migration: Germany supports regional stabilization initiatives in the Sahel and
+      West Africa to address the root causes of flight and displacement at their source.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Und wir werden die Ukraine selbstverständlich auch weiterhin unterstützen.
+      defence:
+        score: 1
+        evidence: Erstmals seit dem Kalten Krieg waren wir gezwungen, massiv in unser
+          Militär zu investieren, um uns gegen die wachsende Bedrohung, allen voran
+          durch Russland, zu Wehr setzen zu können.
+    e3:
+      defence:
+        score: 0
+        evidence: Erstmals seit dem Kalten Krieg waren wir gezwungen, massiv in unser
+          Militär zu investieren, um uns gegen die wachsende Bedrohung, allen voran
+          durch Russland, zur Wehr setzen zu können.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

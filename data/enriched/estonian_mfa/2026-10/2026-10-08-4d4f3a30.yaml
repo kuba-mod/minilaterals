@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jonatan Vseviov
+  - Martin Eyjólfsson
+  topics:
+  - defence
+  location: Reykjavík, Iceland
+  position: Estonia participated in the Arctic Circle Assembly to discuss European
+    security in the Arctic region.
+  positions:
+    defence: Estonia addressed European security issues within the context of the
+      Arctic region.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

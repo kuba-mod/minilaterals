@@ -1,0 +1,33 @@
+actors:
+- LV
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Jose Luis Correa
+  topics:
+  - defence
+  location: Riga, Latvia
+  position: Latvia views increased US military presence and investment in the country
+    as being in the mutual interest of both nations.
+  positions:
+    defence: Latvia advocates for a greater US military presence and investment to
+      enhance security.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Lielāka ASV militārā klātbūtne un investīcijas Latvijā ir abu valstu
+          interesēs
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- UK
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - UK's Permanent Representative
+  topics:
+  - migration
+  location: null
+  position: The United Kingdom explained its vote on a resolution regarding racism
+    and racial discrimination, emphasizing the need for balanced language regarding
+    migration.
+  positions:
+    migration: The United Kingdom advocates for a balanced approach to migration that
+      recognizes the importance of legal and orderly migration while addressing the
+      challenges of irregular migration.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

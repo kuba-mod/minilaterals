@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Nicolas Dufourcq
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: France reaffirms its commitment to innovation, industrial growth, and
+    technological sovereignty through the France 2030 plan and support for entrepreneurs.
+  positions:
+    green_transition: France is accelerating the decarbonization of its industrial
+      sectors, specifically in steel and cement, while increasing the rate of CO2
+      reduction.
+    energy: France is reinvesting in its nuclear energy sector to secure low-carbon
+      electricity and attract data centers.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: On a multiplié par 4 par an le taux de réduction de notre CO2. Là
+          où on était à 1 % il y a 10 ans, on était à 4,5 en 2025.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

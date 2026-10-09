@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany strongly supports the EU-Mercosur free trade agreement to boost
+    economic growth, diversify raw material sources, and strengthen democratic partnerships.
+  positions:
+    green_transition: Germany sees significant potential for the Cleantech sector
+      to benefit from the EU-Mercosur agreement.
+    energy: Germany aims to increase independence and diversify its supply of critical
+      raw materials, such as rare earths from Brazil and copper from Argentina, through
+      the agreement.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Aber auch in anderen Branchen, wie Cleantech oder auch Dienstleistungen,
+          steckt großes Potenzial.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

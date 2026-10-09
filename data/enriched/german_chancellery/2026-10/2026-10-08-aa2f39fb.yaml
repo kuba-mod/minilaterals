@@ -1,0 +1,39 @@
+actors:
+- DE
+- UK
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Andrew Burnham
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany has formalized a new strategic friendship treaty with the United
+    Kingdom, known as the Kensington Treaty, to enhance bilateral cooperation across
+    security, defense, and youth exchange.
+  positions:
+    defence: Germany is establishing a closer strategic cooperation with the United
+      Kingdom in the fields of foreign, security, and defense policy.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Im Mittelpunkt stehen eine engere Zusammenarbeit in der Außen-,
+          Sicherheits- und Verteidigungspolitik
+    e3:
+      defence:
+        score: 2
+        evidence: Im Mittelpunkt stehen eine engere Zusammenarbeit in der Außen-,
+          Sicherheits- und Verteidigungspolitik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

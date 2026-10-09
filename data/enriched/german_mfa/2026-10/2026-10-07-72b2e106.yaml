@@ -1,0 +1,54 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - Federal Chancellor
+  - Federal Minister for Economic Affairs
+  - Sergey Lavrov
+  topics:
+  - ukraine
+  - hybrid
+  - enlargement
+  - energy
+  location: null
+  position: Germany reaffirms its unwavering support for Ukraine through both high-level
+    diplomacy and municipal partnerships to counter Russian aggression.
+  positions:
+    ukraine: Germany supports Ukraine's recovery and stability through municipal partnerships
+      and diplomatic pressure on Russia regarding grain exports.
+    hybrid: Germany rejects Russian hybrid threats and disinformation campaigns, both
+      within Ukraine and on German soil.
+    enlargement: Germany intends to use municipal exchanges to help Ukrainian cities
+      implement the rules required for EU membership.
+    energy: Germany provides practical assistance to Ukrainian municipalities to maintain
+      decentralized power supplies for critical infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: wollen wir im kommenden Jahr einen runden Tisch mit Bürgermeisterinnen
+          und Bürgermeistern aus Deutschland und der Ukraine organisieren
+      hybrid:
+        score: 1
+        evidence: Wie schützen wir unsere Gesellschaft vor hybriden Bedrohungen und
+          Desinformationskampagnen?
+      enlargement:
+        score: 1
+        evidence: Dieser Austausch kann der Ukraine zum Beispiel auf ihrem herausfordernden
+          Weg in die EU -Mitgliedschaft helfen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

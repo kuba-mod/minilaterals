@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Prime Minister
+  topics:
+  - hybrid
+  location: null
+  position: Poland is increasing police patrols at schools and seeking new legislation
+    to block illegal violent content online following a series of school attacks.
+  positions:
+    hybrid: Poland is pushing for legislation to quickly block illegal online content,
+      including violence and hate speech, to protect youth from harmful digital influences.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

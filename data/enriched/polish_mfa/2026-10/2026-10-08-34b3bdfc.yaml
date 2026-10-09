@@ -1,0 +1,54 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: London, UK
+  position: Poland advocates for a stronger European security architecture that complements
+    US engagement and emphasizes the necessity of supporting Ukraine to ensure European
+    stability.
+  positions:
+    ukraine: Poland asserts that a stronger and more resilient Ukraine is essential
+      for a secure Europe.
+    defence: Poland argues that increased European responsibility for its own security
+      can serve as a condition for maintaining sustainable US commitment to European
+      security.
+    hybrid: Poland emphasizes the need to resist Russian hybrid warfare and attacks
+      against the free world.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: silniejsza i bardziej odporna Ukraina to bezpieczna Europa
+      defence:
+        score: 1
+        evidence: większa odpowiedzialność Europy za własne bezpieczeństwo nie oznacza
+          mniejszej roli Stanów Zjednoczonych
+      hybrid:
+        score: 1
+        evidence: Rosjanie robią to wobec całego wolnego świata i musimy dawać temu
+          odpór, czemu Polska daje dobry przykład
+    visegrad:
+      defence:
+        score: 1
+        evidence: większa odpowiedzialność Europy za własne bezpieczeństwo nie oznacza
+          mniejszej roli Stanów Zjednoczonych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

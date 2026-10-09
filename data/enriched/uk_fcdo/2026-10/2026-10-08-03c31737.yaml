@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - James Ford, UK Chargé d’Affaires, Deputy Ambassador
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom condemns Russia's intensifying attacks on Ukraine's
+    civilian infrastructure and demands compliance with international humanitarian
+    law.
+  positions:
+    ukraine: The United Kingdom condemns Russian attacks on civilian infrastructure
+      and rejects Russian attempts to distract from these actions.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

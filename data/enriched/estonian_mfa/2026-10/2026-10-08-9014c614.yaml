@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: London, UK
+  position: Estonia asserts that long-term European security requires no concessions
+    to Russia and a guarantee that Russian aggression will not recur.
+  positions:
+    defence: Estonia maintains that making concessions to Russia will not bring peace
+      to Europe and that future Russian aggression must be prevented.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Euroopa pikaajalise julgeoleku kindlustamiseks ei tohi teha Venemaale
+          järeleandmisi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

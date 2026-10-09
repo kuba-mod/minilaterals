@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: The United Kingdom has imposed 38 new sanctions targeting Russian oil
+    companies, shadow fleet tankers, and military supply chains to disrupt the funding
+    of Russia's war.
+  positions:
+    ukraine: The UK is implementing sanctions against entities supplying goods critical
+      to Russia's military efforts in Ukraine.
+    energy: The UK is targeting Russian oil companies and shadow fleet tankers to
+      restrict the revenue generated from oil exports.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - energy
+  location: null
+  position: Estonia advocates for Europe to end its strategic dependence on Russia
+    and continues to lead in the implementation of sanctions against Russia.
+  positions:
+    energy: Estonia asserts that Europe must free itself from strategic dependence
+      on Russia.
+  stances:
+    baltic:
+      energy:
+        score: 1
+        evidence: Euroopa peab vabanema strateegilisest sõltuvusest Venemaast
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

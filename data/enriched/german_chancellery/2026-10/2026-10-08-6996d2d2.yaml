@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Carsten Schneider
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany is providing three billion euros in subsidies for the purchase
+    and leasing of new electric and hybrid vehicles to accelerate electromobility
+    and reduce dependence on fossil fuels.
+  positions:
+    green_transition: Germany has launched a digital funding portal providing subsidies
+      between 1,500 and 6,000 euros for electric vehicles and plug-in hybrids to promote
+      the transition to electromobility.
+    energy: Germany aims to increase independence from expensive diesel and gasoline
+      to mitigate the risks associated with the ongoing fossil fuel crisis.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Insgesamt werden von der Bundesregierung für das Programm drei Milliarden
+          Euro aus dem Klima- und Transformationsfonds bereitgestellt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- DE
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Andy Burnham
+  - Friedrich Merz
+  topics: []
+  location: Berlin, Germany
+  position: Germany and the United Kingdom agreed on milestones and a way forward
+    during a meeting between their respective leaders.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

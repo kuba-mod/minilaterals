@@ -1,0 +1,46 @@
+actors:
+- DE
+- FR
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Giese
+  - Dr. Hosemann
+  - Singer
+  - Wentzel
+  - Reck
+  - Schuler
+  - Hauck
+  - Szent-Iványi
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: The German government reaffirms its commitment to a two-state solution
+    for Israel and Palestine, announces new legislation against digital and domestic
+    violence, and outlines strategies for state modernization and infrastructure financing.
+  positions:
+    energy: Germany aims to generate 80 percent of its electricity from renewable
+      sources by 2030 to ensure energy independence and lower costs.
+    green_transition: The government supports the expansion of renewable energies
+      and is discussing the potential flexibility of the 2035 internal combustion
+      engine ban.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Wir wollen bis 2030 80 Prozent des Stroms aus erneuerbaren Energien
+          gewinnen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

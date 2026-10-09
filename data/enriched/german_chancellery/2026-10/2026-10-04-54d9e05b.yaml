@@ -29,8 +29,7 @@ extracted:
     weimar:
       ukraine:
         score: 1
-        evidence: Wir werden alles tun, um der Ukraine zu helfen, bis dieser schreckliche
-          Krieg endlich zu Ende ist
+        evidence: Auf unsere Hilfe könnt ihr weiter zählen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
