@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Staatsministerin Güler
+  topics:
+  - migration
+  location: Berlin, Germany
+  position: Germany supports the extension of the UNMISS mandate to maintain stability
+    in South Sudan and provide essential humanitarian aid.
+  positions:
+    migration: Germany provides humanitarian assistance to refugees and returnees
+      in South Sudan to prevent further migration movements and disease outbreaks.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

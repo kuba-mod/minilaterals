@@ -1,0 +1,50 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  - Andy Burnham
+  - Igor Malchevsky
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Kyiv, Ukraine
+  position: Germany reaffirms its steadfast support for Ukraine's defense and energy
+    security while strengthening strategic ties with the UK.
+  positions:
+    ukraine: Germany provides immediate financial aid and supports Ukraine's defense
+      as a means of ensuring German security.
+    defence: Germany announces one billion euros in additional military aid, including
+      long-range weapons and drones.
+    energy: Germany provides 350 million euros in emergency aid for generators and
+      repairs to ensure Ukraine's energy security during winter.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: 14 Vereinbarungen mit einem Volumen von über 6,6 Milliarden Euro
+          wurden unterzeichnet. [...] Und eine Milliarde Euro zusätzliche Militärhilfe
+    e3:
+      defence:
+        score: 2
+        evidence: Entscheidend für die anhaltende Unterstützung ist die Geschlossenheit
+          der Partner, vor allem der sogenannten E3 – Deutschland, Großbritannien
+          und Frankreich.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

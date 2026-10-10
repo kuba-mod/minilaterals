@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundesregierung
+  topics:
+  - green_transition
+  location: null
+  position: Germany is modernizing its product liability law to include software and
+    artificial intelligence and to adapt to global value chains and the circular economy.
+  positions:
+    green_transition: Germany is updating liability laws to ensure that those who
+      substantially modify products during refurbishment in a circular economy are
+      held liable as manufacturers.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Zugleich passt sich die Haftung den Realitäten der Kreislaufwirtschaft
+          an.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - energy
+  location: null
+  position: Estonia advocates for Europe to set concrete deadlines to end dependence
+    on Russian raw materials, specifically regarding the Silmet 2.0 project.
+  positions:
+    energy: Estonia aims to work with the European Commission to set a clear deadline
+      for the company Silmet to cease its reliance on Russian raw materials.
+  stances:
+    baltic:
+      energy:
+        score: 2
+        evidence: Seame koostöös Euroopa Komisjoniga NPM Silmetile selge tähtaja Venemaa
+          toorainest loobumiseks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - defence
+  - iran
+  location: Berlin, Germany
+  position: Germany seeks parliamentary approval to continue its military participation
+    in the EU-led EUNAVFOR ASPIDES operation to protect international shipping lanes
+    in the Red Sea.
+  positions:
+    defence: Germany provides high-value capabilities and personnel to the defensive
+      EUNAVFOR ASPIDES mission to ensure freedom of navigation and protect economic
+      interests.
+    iran: Germany views Iranian-linked threats to shipping chokepoints, specifically
+      in the Strait of Hormus and via the Houthis, as a violation of international
+      law and a risk to global trade.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Das zeigt, wie wichtig die militärische Präsenz der Europäischen
+          Union in diesem maritimen Raum ist.
+    e3:
+      iran:
+        score: 0
+        evidence: Die Huthis und Iran nehmen die freien Seewege in Geiselhaft.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

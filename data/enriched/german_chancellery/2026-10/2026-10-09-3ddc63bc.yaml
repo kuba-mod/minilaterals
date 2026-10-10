@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  - Jörg Thadeusz
+  topics: []
+  location: Frankfurt, Germany
+  position: Germany awarded the 2026 German Publishing Prize to 85 publishers to support
+    independent publishing and a diverse democratic public sphere.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Poland condemns drone and missile attacks on civilian infrastructure in
+    Saudi Arabia and calls for respect for international law.
+  positions:
+    defence: Poland considers attacks on civilian populations and infrastructure of
+      states not at war to be unacceptable and calls for an end to acts of aggression
+      in the Arabian Peninsula and Red Sea region.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

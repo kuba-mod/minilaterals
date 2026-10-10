@@ -29,7 +29,7 @@ extracted:
     weimar:
       ukraine:
         score: 1
-        evidence: Auf unsere Hilfe könnt ihr weiter zählen.
+        evidence: Auf unsere Hilfe könnt ihr weiter zählen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

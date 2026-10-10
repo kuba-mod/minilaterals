@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - foreign minister of Canada
+  - foreign minister of Denmark
+  - foreign minister of Germany
+  - foreign minister of France
+  topics:
+  - rule_of_law
+  location: null
+  position: France, alongside other partners, reaffirms its unwavering support for
+    the independence of the International Criminal Court and strongly disagrees with
+    the imposition of sanctions on the Court by the United States.
+  positions:
+    rule_of_law: France supports the ICC's mandate to bring those accused of serious
+      international crimes to justice and advocates for the maintenance of a rules-based
+      international system.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: uphold the rules-based international system, and advance accountability
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

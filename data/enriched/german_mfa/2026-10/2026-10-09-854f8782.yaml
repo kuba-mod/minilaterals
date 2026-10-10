@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  - Navanethem Pillay
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany welcomes the awarding of the Nobel Peace Prize to Navanethem Pillay
+    as a recognition of her life's work and a commitment to international criminal
+    justice.
+  positions:
+    rule_of_law: Germany views the award as an important commitment to international
+      criminal jurisdiction and the end of impunity.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: ein wichtiges Bekenntnis zur internationalen Strafgerichtsbarkeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
