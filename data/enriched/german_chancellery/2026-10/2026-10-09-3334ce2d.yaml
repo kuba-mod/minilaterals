@@ -1,0 +1,76 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Meyer (Deputy Government Spokesperson)
+  - Bundeskanzler
+  - Lars Klingbeil (Federal Minister of Finance)
+  - Reem Alabali Radovan (Federal Minister for Economic Cooperation and Development)
+  - General Mandon (French Chief of Staff)
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - indo_pacific
+  location: Berlin, Germany
+  position: Germany outlines its upcoming diplomatic agenda focusing on EU competitiveness,
+    continued support for Ukraine, and strategic partnerships in the Indo-Pacific.
+  positions:
+    ukraine: Germany maintains a leading role in providing strong and broad financial
+      and military support to Ukraine.
+    defence: Germany reaffirms its commitment to the MGCS tank project with France
+      and is exploring a European solution for next-generation fighter jets, including
+      probing a UK-led offer.
+    enlargement: EU enlargement is a core theme for the upcoming European Council
+      meeting.
+    indo_pacific: Germany views India as a key strategic partner for open markets
+      and a rule-based international order, specifically cooperating on renewable
+      energy.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Daneben wird es um fortwährende Unterstützung der Ukraine und die
+          europäische Sicherheit und Verteidigung gehen.
+      defence:
+        score: 1
+        evidence: Deutschland hält an einer vertrauensvollen Zusammenarbeit mit Frankreich
+          im von Ihnen angesprochenen Programm MGCS fest
+      enlargement:
+        score: 1
+        evidence: Kernthemen werden die Stärkung der Wettbewerbsfähigkeit, der nächste
+          Mehrjährige Finanzrahmen sowie die EU-Erweiterung sein.
+    e3:
+      defence:
+        score: 1
+        evidence: Selbstverständlich gehen wir auf das Angebot von PM Burnham ein,
+          hierbei eine Zusammenarbeit zu sondieren, und genau das werden wir auch
+          tun.
+    aukus:
+      defence:
+        score: 1
+        evidence: Selbstverständlich gehen wir auf das Angebot von PM Burnham ein,
+          hierbei eine Zusammenarbeit zu sondieren, und genau das werden wir auch
+          tun.
+      indo_pacific:
+        score: 1
+        evidence: wissen, dass Indien ein wichtiger Partner ist, mit dem wir das Interesse
+          an offenen Märkten und einer regelbasierten, internationalen Ordnung teilen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

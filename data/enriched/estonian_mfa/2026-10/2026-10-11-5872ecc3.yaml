@@ -1,0 +1,22 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics: []
+  location: null
+  position: Estonia strongly advises its citizens to avoid traveling to Saudi Arabia
+    and the surrounding region due to intensifying Houthi attacks.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

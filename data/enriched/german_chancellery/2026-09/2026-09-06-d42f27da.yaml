@@ -25,6 +25,11 @@ extracted:
         score: 0
         evidence: Übergeordnet geht es auch um das Thema Zivilschutz – weswegen der
           Bund die Warnung betreibt.
+    e3:
+      defence:
+        score: 0
+        evidence: Übergeordnet geht es auch um das Thema Zivilschutz – weswegen der
+          Bund die Warnung betreibt.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

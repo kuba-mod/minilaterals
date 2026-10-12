@@ -1,0 +1,39 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  - Tomasz Siemoniak
+  - Krzysztof Gawkowski
+  - Paulina Piechna-Więckiewicz
+  - Tomasz Maciejewski
+  topics:
+  - hybrid
+  location: null
+  position: Poland is implementing a comprehensive security strategy involving increased
+    police presence in schools, new internet safety legislation, and mental health
+    support to combat a global trend of nihilistic violence among youth.
+  positions:
+    hybrid: The Internal Security Agency (ABW) is analyzing potential foreign influence
+      and information warfare attempts aimed at utilizing social tensions to destabilize
+      the state.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: ABW analizuje możliwe obce wpływy i próby wykorzystania wojny informacyjnej
+          przeciwko Polsce. Dotychczasowa analiza wydarzeń z ubiegłego tygodnia nie
+          potwierdziła inspiracji ze strony obcego państwa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
