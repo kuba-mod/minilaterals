@@ -1,0 +1,42 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Gen. Alexuse Grynkewich
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Poland asserts that Russia bears full responsibility for the war in Ukraine
+    and that peace can only be achieved by effectively stopping Russian aggression
+    through solidarity and increased sanctions.
+  positions:
+    ukraine: Poland views supporting Ukraine's defense as a patriotic duty and a key
+      necessity for its own national security.
+    defence: Poland advocates for full solidarity among the free world and the strengthening
+      of security architecture to counter Russia's goal of European domination.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wspieranie Ukrainy ma kluczowe znaczenie dla bezpieczeństwa Polski
+    visegrad:
+      defence:
+        score: 1
+        evidence: odpowiedzią na rosyjskie zagrożenie musi być pełna solidarność i
+          determinacja całego wolnego świata – od Warszawy po Waszyngton
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

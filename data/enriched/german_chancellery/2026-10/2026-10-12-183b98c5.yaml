@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Staatsminister Weimer
+  topics: []
+  location: Künzelsau, Germany
+  position: Germany opened the Anselm-Kiefer-Pavillon at the Museum Würth to make
+    a significant work of art publicly accessible and praised the Würth family's commitment
+    to the arts.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

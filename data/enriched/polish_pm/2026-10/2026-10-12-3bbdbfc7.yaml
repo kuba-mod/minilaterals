@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Barbara Nowacka
+  topics: []
+  location: null
+  position: Poland affirms that the preservation of the Kashubian language and regional
+    identity is a form of modern patriotism that strengthens the state and is compatible
+    with Polish and European identities.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

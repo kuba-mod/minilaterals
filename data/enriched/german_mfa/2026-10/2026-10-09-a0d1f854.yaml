@@ -1,0 +1,36 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Denmark, Germany, France, Italy, Japan, Canada, the Netherlands,
+    and the United Kingdom
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany, alongside other partners, reaffirms its unwavering support for
+    the independence of the International Criminal Court and strongly opposes US sanctions
+    against the court.
+  positions:
+    rule_of_law: Germany supports the integrity of the International Criminal Court
+      and the maintenance of the rules-based international system.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: bekräftigen unsere fortgesetzte und unbeirrbare Unterstützung der
+          Unabhängigkeit, Unparteilichkeit und Integrität des IStGH
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

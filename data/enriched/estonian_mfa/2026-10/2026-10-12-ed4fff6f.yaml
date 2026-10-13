@@ -1,0 +1,35 @@
+actors:
+- UK
+- EE
+issue_areas:
+- hybrid
+- iran
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tsahkna
+  topics:
+  - hybrid
+  - iran
+  location: null
+  position: Estonia joins a joint statement recognizing the UK's attribution of an
+    incident near RAF Fairford to Iran and condemns Iran's violent attacks and hybrid
+    activities.
+  positions:
+    hybrid: Estonia condemns Iran's hybrid activities.
+    iran: Estonia recognizes the UK's attribution of the RAF Fairford incident to
+      Iran and condemns its violent attacks.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: mõistame hukka Iraani vägivaldsed rünnakud ja muu hübriidtegevuse
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  topics:
+  - migration
+  location: null
+  position: Estonia is allocating 122,478 euros in humanitarian aid to Syria to support
+    returnees and vulnerable populations.
+  positions:
+    migration: Estonia is providing financial aid to alleviate the humanitarian crisis
+      in Syria, specifically targeting those returning home and the most vulnerable
+      groups.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,40 @@
+actors:
+- LV
+issue_areas:
+- enlargement
+- defence
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - enlargement
+  - defence
+  - ukraine
+  location: Luxembourg, Luxembourg
+  position: Latvia's Foreign Minister will participate in the EU Foreign Affairs Council
+    to discuss EU enlargement, security, the war in Ukraine, and the situation in
+    the Middle East.
+  positions:
+    enlargement: Latvia will discuss the impact of EU enlargement on the union's security
+      and defense.
+    defence: Latvia will address the implications of EU expansion for the EU's overall
+      security and defense framework.
+    ukraine: Latvia will participate in discussions regarding Russia's war of aggression
+      against Ukraine.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: ārlietu ministre Baiba Braže piedalīsies Eiropas Savienības (ES)
+          Ārlietu padomes sanāksmē
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

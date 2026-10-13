@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Dr. Lars Castellucci, Federal Government Commissioner for Human Rights Policy
+    and Humanitarian Aid
+  topics:
+  - iran
+  location: null
+  position: Germany rejects the death penalty in all circumstances and advocates for
+    its global abolition, citing its incompatibility with human dignity.
+  positions:
+    iran: Germany condemns the high number of executions in Iran and calls on the
+      regime to immediately impose a moratorium, suspend all death sentences, and
+      fully abolish the death penalty.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Robert Spano
+  - Jacek Chlebny
+  - Sylwia Gregorczyk-Abram
+  - Úna Ní Raifeartaigh
+  - Michael O’Flaherty
+  topics:
+  - rule_of_law
+  location: Warsaw, Poland
+  position: Poland hosted a seminar to discuss how to integrate artificial intelligence
+    into the justice system while maintaining human rights standards and the rule
+    of law.
+  positions:
+    rule_of_law: Poland aims to ensure that AI innovations serve the justice system
+      without compromising transparency, non-discrimination, and the principles of
+      the rule of law.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: jak pogodzić wykorzystanie nowych technologii ze standardami Konwencji
+          o ochronie praw człowieka i podstawowych wolności oraz zasadami praworządności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

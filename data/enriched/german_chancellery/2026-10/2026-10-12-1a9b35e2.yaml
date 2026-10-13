@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: null
+  position: Germany reaffirms its solidarity with Ukraine and supports its military
+    and energy needs while calling for a Russian ceasefire regarding energy infrastructure.
+  positions:
+    ukraine: Germany expresses solidarity with the Ukrainian people and seeks a lasting
+      peace through close coordination with European and transatlantic partners.
+    defence: Germany provides military support to Ukraine.
+    energy: Germany provides winter aid for the energy sector and asserts that Russia
+      must agree to a ceasefire for all energy infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: bekräftigte die Solidarität Deutschlands mit den Ukrainerinnen und
+          Ukrainern
+    e3:
+      defence:
+        score: 1
+        evidence: vereinbarten, die enge Abstimmung mit europäischen und transatlantischen
+          Partnern fortzusetzen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

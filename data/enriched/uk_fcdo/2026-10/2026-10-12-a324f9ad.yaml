@@ -1,0 +1,24 @@
+actors:
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Secretary
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom has announced measures against Iranian individuals.
+  positions:
+    iran: The United Kingdom is implementing measures against specific Iranian individuals.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

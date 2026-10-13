@@ -1,0 +1,66 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+- green_transition
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Prime Minister Støre
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - green_transition
+  - migration
+  location: Warsaw, Poland
+  position: Poland and Norway signed a declaration of strategic partnership to strengthen
+    cooperation across over 20 areas, including security, defense, and economic relations.
+  positions:
+    ukraine: Poland advocates for continued diplomatic efforts for a ceasefire and
+      the tightening of sanctions against Russia as long as it attacks Ukrainian infrastructure.
+    defence: Poland emphasizes the importance of NATO's eastern and northern flanks
+      and the need for Europe to take greater responsibility for its own security
+      through consistent investment.
+    energy: Poland and Norway have agreed to cooperate on energy security as part
+      of their strategic partnership.
+    green_transition: Poland utilizes Norwegian grants to implement projects focused
+      on the transformation toward a green economy.
+    migration: Poland notes the positive reception of Polish citizens in Norway and
+      invites Norwegian citizens to settle in Poland.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska i Norwegię łączy również to samo stanowisko w kwestii dalszego
+          udzielania pomocy Ukrainie
+      defence:
+        score: 1
+        evidence: Chodzi o to, żeby Europa przejmowała większą odpowiedzialność za
+          bezpieczeństwo
+      green_transition:
+        score: 0
+        evidence: Widziałem przykłady, które obejmują dziedzictwo kulturowe, transformację
+          w kierunku gospodarki zielonej
+    visegrad:
+      defence:
+        score: 2
+        evidence: deklaracja obejmuje ponad 20 obszarów współpracy, w tym bezpieczeństwo
+          i obronność, mobilność wojskową, ochronę infrastruktury krytycznej
+      energy:
+        score: 1
+        evidence: deklaracja obejmuje ponad 20 obszarów współpracy, w tym [...] bezpieczeństwo
+          energetyczne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

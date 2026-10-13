@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Riyadh, Saudi Arabia
+  position: France strongly condemns the Houthi attack on Riyadh airport and reaffirms
+    its total solidarity with Saudi Arabia in defending its territory and infrastructure.
+  positions:
+    defence: France supports Saudi Arabia in the defence of its territory and infrastructure
+      and calls for an immediate end to Houthi attacks.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

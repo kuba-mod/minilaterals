@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Navi Pillay
+  topics:
+  - rule_of_law
+  location: null
+  position: France welcomes the awarding of the Nobel Peace Prize to Navi Pillay in
+    recognition of her lifelong commitment to human rights and international criminal
+    justice.
+  positions:
+    rule_of_law: France recognizes Navi Pillay's contributions to equality, fundamental
+      rights, and the international criminal justice system.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: embodies the fight for equality and respect for fundamental rights
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

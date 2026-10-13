@@ -1,0 +1,33 @@
+actors:
+- UK
+issue_areas:
+- iran
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers
+  topics:
+  - iran
+  - defence
+  location: null
+  position: The United Kingdom is addressing state threats from Iran and security
+    concerns regarding RAF Fairford.
+  positions:
+    iran: The United Kingdom is responding to state threats posed by Iran.
+    defence: The United Kingdom is addressing security issues related to RAF Fairford.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: Joint Statement from Foreign Ministers regarding RAF Fairford and
+          Iran State Threats
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

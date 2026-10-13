@@ -1,0 +1,58 @@
+actors:
+- DE
+- FR
+- UK
+- CZ
+- SK
+- HU
+- EE
+- LV
+- LT
+- AU
+- US
+issue_areas:
+- hybrid
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers
+  topics:
+  - hybrid
+  - iran
+  location: null
+  position: France, as part of a coalition of nations, strongly condemns Iran's use
+    of hybrid attacks and hostile activities on foreign territories.
+  positions:
+    hybrid: France condemns the use of arson, sabotage, cyber-attacks, and other hybrid
+      activities conducted by Iran and its proxies.
+    iran: France recognizes the UK's attribution of Iran's involvement in the RAF
+      Fairford incident and asserts that any attempt by Iran to coerce or harm people
+      on their territories is unacceptable.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: condemn in the strongest terms Iran’s use of violent attacks, including
+          the acts of lethal plotting, arson, sabotage, cyber-attacks, and other hybrid
+          activities
+    e3:
+      iran:
+        score: 0
+        evidence: condemn in the strongest terms Iran’s use of violent attacks, including
+          the acts of lethal plotting, arson, sabotage, cyber-attacks, and other hybrid
+          activities
+    baltic:
+      hybrid:
+        score: 1
+        evidence: remain committed to safeguarding our sovereignty and strengthening
+          our international coordination, bolstering our national resilience
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

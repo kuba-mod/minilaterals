@@ -1,0 +1,39 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany is strengthening its national and critical infrastructure resilience
+    through new strategic frameworks, legislation, and public awareness campaigns
+    to better prepare for disasters and security threats.
+  positions:
+    ukraine: Germany identifies Russia's illegal war of aggression against Ukraine
+      as a key experience highlighting the necessity of increasing resilience against
+      disaster impacts.
+    hybrid: Germany is implementing a National Economic Protection Strategy to protect
+      value chains and innovations from physical, digital, and hybrid threats.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: die völkerrechtswidrige Angriffskrieg Russlands gegen die Ukraine
+      hybrid:
+        score: 2
+        evidence: um Wertschöpfungsketten, Lieferketten und Innovationen vor physischen,
+          digitalen und hybriden Bedrohungen zu schützen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

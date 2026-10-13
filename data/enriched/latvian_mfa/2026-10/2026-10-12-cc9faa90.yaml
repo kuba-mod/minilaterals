@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: Latvia supports the European Union's adoption of the largest package of
+    individual sanctions to date against Russian legal and physical persons.
+  positions:
+    ukraine: Latvia supports the expansion of the EU sanctions list to include nearly
+      1600 Russian entities and individuals in response to the situation in Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

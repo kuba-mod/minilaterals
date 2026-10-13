@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  topics:
+  - enlargement
+  location: null
+  position: Poland supports Armenia's deepening relations with the European Union
+    and offers assistance in strengthening public administration and economic cooperation.
+  positions:
+    enlargement: Poland consistently supports Armenia in deepening its relations with
+      the European Union.
+  stances:
+    weimar:
+      enlargement:
+        score: 0
+        evidence: Polska niezmiennie wspiera Armenię w pogłębianiu relacji z Unią
+          Europejską
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Polska niezmiennie wspiera Armenię w pogłębianiu relacji z Unią
+          Europejską
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

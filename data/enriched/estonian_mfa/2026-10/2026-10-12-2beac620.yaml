@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  location: Luxembourg, Luxembourg
+  position: Estonia supports the European Union's decision to strengthen sanctions
+    pressure on Russia by adding nearly 1,600 individuals and entities related to
+    the military-industrial complex to the sanctions list.
+  positions:
+    ukraine: Estonia advocates for the continued strengthening of sanctions pressure
+      against Russia's military-industrial complex.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

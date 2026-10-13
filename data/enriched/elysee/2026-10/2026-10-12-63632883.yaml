@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France is accelerating the transformation of its automotive industry through
+    electrification, battery production, and the modernization of production sites
+    to consolidate these gains at the European level.
+  positions:
+    green_transition: France is promoting the acceleration of electrification and
+      the development of a domestic battery industry to boost 'Made in France' production.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: L'enjeu est désormais de consolider ces acquis à l'échelle européenne.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

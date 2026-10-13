@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Minister of Internal Affairs and Administration
+  - Barbara Nowacka
+  - Krzysztof Gawkowski
+  - Jolanta Sobierańska-Grenda
+  topics:
+  - hybrid
+  location: null
+  position: Poland is implementing comprehensive security measures in schools, including
+    increased police patrols, legislative changes for building access, and combating
+    online disinformation.
+  positions:
+    hybrid: Poland is monitoring the web 24/7 to counter disinformation and the activity
+      of Russian bots.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Wczoraj uruchomiliśmy specjalne działania mające na celu przeciwdziałanie
+          i usuwanie takich materiałów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

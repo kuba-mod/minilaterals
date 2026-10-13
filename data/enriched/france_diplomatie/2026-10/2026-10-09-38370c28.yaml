@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: France condemns Russia's strikes on Ukrainian civilians and infrastructure,
+    reaffirms its solidarity with Ukraine, and supports efforts to bring those responsible
+    to justice.
+  positions:
+    ukraine: France condemns Russia's deliberate escalation and systematic targeting
+      of civilians, pledging continued support for Ukraine's resistance and the documentation
+      of war crimes.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: will stand by Ukraine to support it in its resistance to Russian
+          aggression
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

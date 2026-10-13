@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany supports the adoption of unprecedented EU sanctions against Russia's
+    war economy to pressure Putin toward peace negotiations.
+  positions:
+    ukraine: Germany supports listing over 1,600 persons and companies to hinder Russia's
+      illegal invasion and the targeting of Ukrainian civilians.
+    hybrid: Germany advocated for additional listings of drone manufacturers in response
+      to increasing hybrid attacks on EU member states, specifically citing a drone
+      attack attempt at Leipzig/Halle airport.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir erhöhen den Druck, bis Putin bereit ist, ernsthaft über Frieden
+          in der Ukraine zu verhandeln.
+      hybrid:
+        score: 2
+        evidence: Mit der Listung von Drohnenherstellern reagieren wir zugleich auf
+          Russlands zunehmende hybride Angriffe auf EU -Mitgliedstaaten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

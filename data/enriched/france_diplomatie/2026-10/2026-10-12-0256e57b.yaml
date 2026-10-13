@@ -1,0 +1,31 @@
+actors:
+- FR
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Nicolas Guillou
+  topics:
+  - rule_of_law
+  location: null
+  position: France condemns US sanctions against the International Criminal Court
+    and calls for their withdrawal to ensure the Court's independent operation.
+  positions:
+    rule_of_law: France reaffirms its support for the ICC's essential role in fighting
+      impunity and dispensing justice for the most serious crimes.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: reaffirms its unfailing support for the ICC and its staff
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
