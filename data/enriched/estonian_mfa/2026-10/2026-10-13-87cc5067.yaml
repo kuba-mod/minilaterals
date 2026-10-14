@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- enlargement
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - enlargement
+  - ukraine
+  location: null
+  position: Estonia supports the opening of additional negotiation clusters for Ukraine
+    and Moldova to facilitate their progress toward European Union membership.
+  positions:
+    enlargement: Estonia welcomes the EU opening two additional accession negotiation
+      thematic blocks for Ukraine and Moldova to enable further reforms.
+    ukraine: Estonia supports Ukraine's continued movement toward EU integration through
+      the opening of new negotiation clusters.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

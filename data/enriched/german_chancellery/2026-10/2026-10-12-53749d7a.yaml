@@ -1,0 +1,76 @@
+actors:
+- DE
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Chancellor
+  - StS Kornelius
+  - Hinterseher
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: Berlin, Germany
+  position: Germany intends to increase pressure on Russia through continued sanctions
+    and support for Ukraine, while rejecting US proposals to ease oil sanctions.
+  positions:
+    ukraine: Germany reaffirms its full support for President Zelenskyy and believes
+      it is the right time to increase pressure on Russia rather than reduce it.
+    defence: Germany will participate in the Warsaw Security Forum to discuss strengthening
+      common defense capabilities in Europe.
+    hybrid: Germany has officially attributed a drone attack in Leipzig to Russia,
+      stating it will not tolerate such hybrid incidents.
+    energy: Germany rejects the easing of Russian oil and diesel sanctions, maintaining
+      that Russia is an unreliable partner and that EU sanctions remain the correct
+      response.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wolodymyr Selenskyj kann sich auf die Unterstützung Deutschlands
+          verlassen.
+      defence:
+        score: 1
+        evidence: Im Mittelpunkt des Gesprächs werden die Auswirkungen der russischen
+          Eskalation gegen die Ukraine auf die Sicherheit in Europa, die Stärkung
+          der gemeinsamen Verteidigungsfähigkeit und die weitere Unterstützung der
+          Ukraine stehen.
+      hybrid:
+        score: 1
+        evidence: Wir haben diesen Anschlag attribuiert, weil das eben zu dem Zeitpunkt
+          auch notwendig war, um das entsprechende Signal zu setzen, dass wir uns
+          hybride Vorfälle dieser Art dauerhaft nicht gefallen lassen werden.
+    e3:
+      defence:
+        score: 1
+        evidence: Dort wird er an einem Panel mit seinen Amtskollegen aus Norwegen,
+          dem Vereinigten Königreich und Polen teilnehmen. Im Mittelpunkt des Gesprächs
+          werden die Auswirkungen der russischen Eskalation gegen die Ukraine auf
+          die Sicherheit in Europa, die Stärkung der gemeinsamen Verteidigungsfähigkeit
+          und die weitere Unterstützung der Ukraine stehen.
+    aukus:
+      defence:
+        score: 0
+        evidence: Im Mittelpunkt des Gesprächs werden die Auswirkungen der russischen
+          Eskalation gegen die Ukraine auf die Sicherheit in Europa, die Stärkung
+          der gemeinsamen Verteidigungsfähigkeit und die weitere Unterstützung der
+          Ukraine stehen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

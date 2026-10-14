@@ -1,0 +1,32 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Secretary
+  topics:
+  - ukraine
+  - energy
+  location: Warsaw, Poland
+  position: The United Kingdom is calling on European partners to support Ukraine
+    with an energy ceasefire to protect the country from Russian energy strikes during
+    winter.
+  positions:
+    ukraine: The United Kingdom advocates for continued support for President Zelenskyy
+      and Ukraine amid escalating Russian strikes.
+    energy: The United Kingdom urges European partners to implement an energy ceasefire
+      to shield Ukraine from freezing winter conditions and energy infrastructure
+      attacks.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

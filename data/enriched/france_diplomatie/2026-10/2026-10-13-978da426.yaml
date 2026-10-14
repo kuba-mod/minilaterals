@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Beate Meinl-Reisinger
+  topics:
+  - ukraine
+  location: Paris, France
+  position: France reaffirmed its strong bilateral relationship with Austria and its
+    commitment to supporting Ukraine.
+  positions:
+    ukraine: France expressed its staunch support for Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: recalled their staunch support for Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- FR
+- UK
+- AU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Minister of Australia
+  - Foreign Minister of Canada
+  - Foreign Minister of France
+  - Foreign Minister of the United Kingdom
+  topics: []
+  location: null
+  position: The United Kingdom, alongside Australia, Canada, and France, issued a
+    joint statement regarding the postponement of Palestinian elections.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

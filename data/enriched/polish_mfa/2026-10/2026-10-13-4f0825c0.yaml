@@ -1,0 +1,50 @@
+actors:
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Sikorski
+  - heads of diplomacy of Poland and the United Kingdom
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Poland reaffirms its strategic partnership with the United Kingdom, focusing
+    on joint security interests and unwavering support for Ukraine.
+  positions:
+    ukraine: Poland supports Ukraine's sovereignty and territorial integrity, advocating
+      for continued international pressure on Russia and comprehensive aid until the
+      war ends.
+    defence: Poland seeks to expand cooperation with the British defense industry,
+      specifically regarding the Narew and Miecznik programs and ammunition production.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska i Zjednoczone Królestwo niezmiennie popierają również utrzymanie
+          presji międzynarodowej na Rosję oraz zdecydowaną pomoc dla Kijowa – aż do
+          zakończenia wojny
+      defence:
+        score: 2
+        evidence: Minister Sikorski zwrócił uwagę na zaangażowanie brytyjskiego przemysłu
+          obronnego w modernizację polskich sił zbrojnych i zapewnił o chęci rozwoju
+          tej współpracy, m.in. w programach Narew i Miecznik
+    visegrad:
+      defence:
+        score: 2
+        evidence: zaangażowanie brytyjskiego przemysłu obronnego w modernizację polskich
+          sił zbrojnych i zapewnił o chęci rozwoju tej współpracy, m.in. w programach
+          Narew i Miecznik
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -54,8 +54,10 @@ extracted:
     visegrad:
       defence:
         score: 2
-        evidence: deklaracja obejmuje ponad 20 obszarów współpracy, w tym bezpieczeństwo
-          i obronność, mobilność wojskową, ochronę infrastruktury krytycznej
+        evidence: podpisali deklarację o strategicznym partnerstwie między Rzecząpospolitą
+          Polską a Królestwem Norwegii. [...] deklaracja obejmuje ponad 20 obszarów
+          współpracy, w tym bezpieczeństwo i obronność, mobilność wojskową, ochronę
+          infrastruktury krytycznej
       energy:
         score: 1
         evidence: deklaracja obejmuje ponad 20 obszarów współpracy, w tym [...] bezpieczeństwo

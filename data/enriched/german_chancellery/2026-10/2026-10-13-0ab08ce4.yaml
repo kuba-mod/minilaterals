@@ -1,0 +1,58 @@
+actors:
+- DE
+- FR
+- US
+issue_areas:
+- ukraine
+- energy
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Rainer Dulger
+  - Steffen Kampeter
+  - Emmanuel Macron
+  - Enrico Letta
+  - Mario Draghi
+  - Julia Jäkel
+  - Thomas de Maizière
+  - Peer Steinbrück
+  - Andreas Voßkuhle
+  topics:
+  - ukraine
+  - energy
+  - defence
+  location: Berlin, Germany
+  position: Germany is pursuing comprehensive structural reforms in social security,
+    labor market flexibility, and bureaucracy reduction to ensure long-term economic
+    growth and intergenerational fairness.
+  positions:
+    ukraine: Germany acknowledges that Russia's war against Ukraine has significant
+      negative impacts on national security and energy supplies.
+    energy: Germany identifies the war in Ukraine as a primary cause of disruptions
+      to its energy supply.
+    defence: Germany views the strengthening of defense capabilities as a key strategic
+      topic for discussion among political and economic leaders.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: Der Krieg Russlands gegen die Ukraine hat auch Auswirkungen auf
+          unsere Sicherheit, auf unsere Energieversorgung
+      defence:
+        score: 0
+        evidence: Stärkung der Verteidigungsfähigkeit
+    e3:
+      defence:
+        score: 0
+        evidence: Stärkung der Verteidigungsfähigkeit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

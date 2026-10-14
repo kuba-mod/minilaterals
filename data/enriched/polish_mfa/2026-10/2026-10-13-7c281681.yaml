@@ -1,0 +1,48 @@
+actors:
+- DE
+- PL
+- UK
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Espen Barth Eide
+  - Ed Miliband
+  - Johann Wadephul
+  - José Manuel Albares
+  topics:
+  - defence
+  location: Warsaw, Poland
+  position: Poland advocates for leveraging Europe's economic potential to build strong
+    defense capabilities and deterrence to ensure security in an increasingly unpredictable
+    global environment.
+  positions:
+    defence: Poland emphasizes that moral right must be backed by physical strength
+      and supports strengthening the regional NATO wing through Baltic-Nordic cooperation.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Polska stara się przekuć w określone zdolności obronne, mające zapewnić
+          bezpieczeństwo poprzez odstraszanie potencjalnych agresorów
+    e3:
+      defence:
+        score: 1
+        evidence: Takie spotkania służą też lepszej koordynacji działań zmierzających
+          do wzmacniania europejskiej obronności i pozycji Europy na świecie.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Polska stara się przekuć w określone zdolności obronne, mające zapewnić
+          bezpieczeństwo poprzez odstraszanie potencjalnych agresorów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

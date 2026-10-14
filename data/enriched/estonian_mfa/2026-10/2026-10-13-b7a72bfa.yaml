@@ -1,0 +1,36 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Estonia asserts that European security depends on supporting Ukraine and
+    applying more stringent measures against Russia.
+  positions:
+    ukraine: Estonia calls for the use of previously withheld measures to support
+      Ukraine and pressure Russia.
+    defence: Estonia views the defense of Ukraine as the primary means of protecting
+      European security and the rules-based world order.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Euroopa julgeolekut ja reeglitel põhinevat maailmakorda kaitstakse
+          praegu Ukrainas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

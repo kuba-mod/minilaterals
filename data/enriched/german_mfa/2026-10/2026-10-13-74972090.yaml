@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: Germany has been elected to the UN Human Rights Council and intends to
+    use its membership to strengthen the council and improve the global protection
+    of human rights.
+  positions:
+    rule_of_law: Germany asserts that no person should be punished for demanding freedom
+      and the rule of law.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Kein Mensch darf dafür bestraft werden, Freiheit und Rechtsstaatlichkeit
+          zu fordern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

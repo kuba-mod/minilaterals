@@ -1,0 +1,63 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Marcin Bosacki
+  - Kaja Kallas
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Luxembourg
+  position: Poland advocates for increased pressure on Russia through sanctions, visa
+    restrictions, and the use of frozen assets, while emphasizing the strategic value
+    of Ukraine's military experience for European security.
+  positions:
+    ukraine: Poland supports continued pressure on Russia, the use of frozen Russian
+      assets for Ukraine, and stricter visa policies for Russian citizens.
+    defence: Poland suggests utilizing Ukraine's operational military experience to
+      enhance broader European security and EU missions.
+    hybrid: Poland supports a more offensive approach to combating foreign information
+      manipulation and interference (FIMI) and offers to share its expertise.
+    enlargement: Poland views EU enlargement as an essential element of European security
+      and offers to help Western Balkan candidates combat Russian disinformation.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: podziękował za przyjęcie, z polskiej inicjatywy, największego -
+          od czasu rozpoczęcia agresji rosyjskiej - pakietu sankcji indywidualnych
+      defence:
+        score: 1
+        evidence: Wiceminister Bosacki zwrócił uwagę na możliwość wykorzystywania
+          doświadczenia wojskowego Ukrainy w zapewnianiu szerszego bezpieczeństwa
+          europejskiego
+      hybrid:
+        score: 2
+        evidence: wyraził gotowość dzielenia się polskimi doświadczeniami i wiedzą
+          specjalistyczną w celu wzmacniania komunikacji strategicznej UE
+      enlargement:
+        score: 1
+        evidence: w dyskusji w sprawie europejskiego bezpieczeństwa wiceminister Bosacki
+          pokreślił, że rozszerzenie UE jest jego istotnym elementem
+    visegrad:
+      enlargement:
+        score: 2
+        evidence: zapewnił o gotowości Polski do pomocy państwom Bałkanów Zachodnich,
+          kandydujących do UE, w zwalczaniu rosyjskiej dezinformacji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

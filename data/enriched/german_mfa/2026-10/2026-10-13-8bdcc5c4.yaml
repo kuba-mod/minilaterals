@@ -1,0 +1,46 @@
+actors:
+- DE
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Germany reaffirms its unwavering support for Ukraine and emphasizes the
+    need for increased pressure on Russia through sanctions and strengthened European
+    defense capabilities.
+  positions:
+    ukraine: Germany supports Ukraine against Russian aggression and has implemented
+      the most extensive EU sanctions in history targeting critical war industries.
+    defence: Germany aims to strengthen collective security and defense capabilities
+      within NATO alongside partners to protect European freedom.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir sind verlässliche Unterstützer der Ukraine
+      defence:
+        score: 1
+        evidence: stärken unsere gemeinsame Sicherheit und Verteidigungsfähigkeit
+          in der NATO
+    e3:
+      defence:
+        score: 1
+        evidence: komme ich heute in Warschau mit unseren engen Freunden aus Polen,
+          Norwegen und dem Vereinigten Königreich beim „Warsaw Security Forum“ zusammen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

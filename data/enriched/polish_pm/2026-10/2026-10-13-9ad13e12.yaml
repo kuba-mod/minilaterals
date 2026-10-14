@@ -1,0 +1,52 @@
+actors:
+- PL
+- LT
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Mindaugas Sinkevičius
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: null
+  position: Poland and Lithuania affirm a strategic partnership focused on strengthening
+    European security, increasing pressure on Russia, and enhancing energy resilience.
+  positions:
+    ukraine: Poland advocates for the tightening of sanctions against Russia to maintain
+      pressure in response to its aggression against Ukraine.
+    defence: Poland is collaborating with Lithuania to strengthen the eastern flank
+      of NATO and the EU, specifically through the joint securing of borders with
+      Russia and Belarus.
+    energy: Poland maintains exemplary energy cooperation with Lithuania to increase
+      the energy security and resilience of both nations.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polska współfinansuje utrzymanie dostępu Kijowa do usług Starlink
+      defence:
+        score: 2
+        evidence: Zainwestowaliśmy miliardy w bezpieczną granicę z Rosją i Białorusią
+    visegrad:
+      defence:
+        score: 2
+        evidence: Zainwestowaliśmy miliardy w bezpieczną granicę z Rosją i Białorusią
+      energy:
+        score: 1
+        evidence: Ważnym obszarem współpracy Warszawy i Wilna pozostaje bezpieczeństwo
+          energetyczne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
