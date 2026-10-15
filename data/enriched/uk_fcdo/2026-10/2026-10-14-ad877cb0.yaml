@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: The United Kingdom is providing £17 million to fund critical repairs at
+    the Chornobyl nuclear power plant following a Russian drone attack.
+  positions:
+    ukraine: The United Kingdom is providing financial aid to repair critical infrastructure
+      in Ukraine damaged by Russian attacks.
+    energy: The United Kingdom is funding repairs to the Chornobyl nuclear power plant
+      to ensure the safety and stability of the facility.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

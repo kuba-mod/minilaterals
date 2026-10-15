@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Schweitzer
+  - Frank-Walter Steinmeier
+  topics: []
+  location: null
+  position: Germany has appointed Alexander Schweitzer as the new Federal Minister
+    of Labour and Social Affairs.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

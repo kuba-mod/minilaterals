@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - David Riley, Ambassador and Permanent Representative to the Conference on Disarmament
+    in Geneva
+  topics:
+  - hybrid
+  location: Geneva, Switzerland
+  position: The United Kingdom condemns the industrial-scale assault by hostile actors,
+    specifically Russia, on the UK's information environment.
+  positions:
+    hybrid: The United Kingdom identifies Russia as a hostile actor conducting large-scale
+      information warfare and assaults on the UK's information environment.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

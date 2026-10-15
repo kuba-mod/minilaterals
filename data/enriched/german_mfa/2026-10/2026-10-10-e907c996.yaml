@@ -21,7 +21,13 @@ extracted:
     iran: Germany condemns the high number of executions in Iran and calls on the
       regime to immediately impose a moratorium, suspend all death sentences, and
       fully abolish the death penalty.
-  stances: {}
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Ich fordere das iranische Regime auf, unverzüglich ein Hinrichtungsmoratorium
+          zu verhängen, alle Todesurteile auszusetzen und die Todesstrafe vollständig
+          abzuschaffen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

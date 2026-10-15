@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Germany has adopted a National Action Plan for climate-friendly shipping
+    to support the sector's transition toward greenhouse gas neutrality while maintaining
+    competitiveness.
+  positions:
+    green_transition: Germany is implementing 47 measures to modernize shipping fleets
+      and introduce environmentally friendly ships through financial incentives and
+      reduced bureaucracy.
+    energy: Germany is promoting the use of climate-friendly fuels and alternative
+      propulsion and energy systems for inland and maritime shipping.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Mit dem Beschluss des Nationalen Aktionsplan klimafreundliche Schifffahrt
+          setzt die Bundesregierung ein klares Zeichen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

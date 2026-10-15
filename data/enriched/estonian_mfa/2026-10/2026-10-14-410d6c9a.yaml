@@ -1,0 +1,40 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Estonia emphasizes the need for increased defense investments to ensure
+    future deterrence and continues to support Ukraine and regional security.
+  positions:
+    ukraine: Estonia supports the continued assistance of Ukraine.
+    defence: Estonia advocates for increasing defense investments to ensure effective
+      deterrence in the future.
+    hybrid: Estonia addresses the issue of Russian sabotage acts against NATO allies.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: kaitseinvesteeringute suurendamine tagab ka tulevikus toimiva heidutuse
+      hybrid:
+        score: 1
+        evidence: arutati... Venemaa sabotaažiakte NATO liitlaste vastu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

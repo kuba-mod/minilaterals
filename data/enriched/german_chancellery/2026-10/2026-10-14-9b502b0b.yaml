@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  - Sven Teuber
+  topics: []
+  location: Berlin, Germany
+  position: Germany, together with its states and municipalities, reaffirmed its commitment
+    to artistic freedom and adopted a joint concept to strengthen provenance research
+    regarding Nazi-looted art.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

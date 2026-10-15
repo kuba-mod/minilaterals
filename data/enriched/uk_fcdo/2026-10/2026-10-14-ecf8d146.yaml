@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ann Snow
+  - Abda Sharif
+  topics: []
+  location: null
+  position: The United Kingdom has appointed Ms Ann Snow as the new Ambassador to
+    the Republic of Yemen.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

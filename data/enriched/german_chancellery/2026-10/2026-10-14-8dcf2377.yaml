@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Alexander Schweitzer
+  - Bärbel Bas
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Germany advocates for creative efforts to ensure justice and security
+    domestically and seeks to strengthen European competitiveness and security through
+    strategic investments and reforms.
+  positions:
+    ukraine: Germany defends its continued support for Ukraine in the face of rising
+      Russian escalation.
+    defence: Germany emphasizes the necessity of investing in defense capabilities
+      to establish a new European and transatlantic peace and freedom order.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Bundeskanzler Merz verteidigte die Unterstützung der Ukraine
+      defence:
+        score: 1
+        evidence: betonte die Bedeutung von Investitionen in die Verteidigungsfähigkeit
+    e3:
+      defence:
+        score: 0
+        evidence: Ziel sei es, „eine neue europäische und transatlantische Friedens-
+          und Freiheitsordnung zu schaffen“
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

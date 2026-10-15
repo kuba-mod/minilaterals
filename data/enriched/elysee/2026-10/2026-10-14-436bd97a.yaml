@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - Pierre Coppey
+  - President of the National Assembly
+  - President of the Senate
+  topics:
+  - rule_of_law
+  location: null
+  position: France proposes the appointment of Pierre Coppey as the General Controller
+    of Places of Deprivation of Liberty.
+  positions:
+    rule_of_law: France is initiating the appointment of a General Controller to oversee
+      places of deprivation of liberty.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 0
+        evidence: nommer M. Pierre Coppey, président de l’association « Aurore »,
+          en qualité de contrôleur général des lieux de privation de liberté
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

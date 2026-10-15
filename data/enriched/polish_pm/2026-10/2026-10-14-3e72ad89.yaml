@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Prime Minister
+  - teachers
+  - members of parliament
+  - senators
+  - education superintendents
+  - representatives of education trade unions
+  topics: []
+  location: null
+  position: The Polish Prime Minister expressed gratitude and recognition for teachers
+    on National Education Day, emphasizing their role in shaping future generations
+    and maintaining national identity amidst geopolitical challenges.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

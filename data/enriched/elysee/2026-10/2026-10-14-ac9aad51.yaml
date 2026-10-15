@@ -1,0 +1,43 @@
+actors:
+- FR
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - Minister delegated for Energy
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - Minister of Action and Public Accounts
+  - Minister of City and Housing
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: France is implementing a comprehensive legislative and regulatory strategy
+    to relaunch its nuclear sector and modernize its tax code.
+  positions:
+    energy: France is introducing a new bill to accelerate the modernization of the
+      nuclear fuel cycle, facilitate the construction of EPR2 reactors, and simplify
+      industrial site management while maintaining safety standards.
+    green_transition: France aims to become the first major nation to end its dependence
+      on fossil fuels by reducing energy consumption and increasing decarbonized electricity
+      production.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: faire de la France la première grande nation à sortir de sa dépendance
+          aux énergies fossiles, en réduisant sa consommation d'énergie tout en accroissant
+          sa production d'électricité décarbonée
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

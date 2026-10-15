@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - President of Poland
+  - Maciej Berek
+  - Włodzimierz Czarzasty
+  - Małgorzata Kidawa-Błońska
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland is committed to restoring the rule of law and ensuring the proper
+    functioning of the Constitutional Tribunal despite opposition from the President.
+  positions:
+    rule_of_law: The Polish government is taking decisive actions to restore legal
+      order and protect newly appointed Constitutional Tribunal judges to ensure they
+      can perform their duties.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Od pierwszych dni podejmowaliśmy działania na rzecz przywrócenia
+          ładu prawnego w Polsce i będziemy je stanowczo kontynuować
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

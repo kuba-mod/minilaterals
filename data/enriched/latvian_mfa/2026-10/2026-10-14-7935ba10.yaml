@@ -1,0 +1,30 @@
+actors:
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Baiba Braže
+  topics:
+  - hybrid
+  location: null
+  position: Latvia emphasizes that cybersecurity is the primary line of defense against
+    growing threats.
+  positions:
+    hybrid: Latvia views cybersecurity as the first line of defense in the face of
+      increasing threats.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Kiberdrošība ir mūsu pirmā aizsardzības līnija
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Ed Miliband
+  topics: []
+  location: Bangkok, Thailand
+  position: The United Kingdom proposes global action to address developing countries'
+    debt, increase private investment, support fragile states, and improve resilience
+    to shocks.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
