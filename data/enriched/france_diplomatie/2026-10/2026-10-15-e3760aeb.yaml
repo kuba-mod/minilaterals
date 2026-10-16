@@ -1,0 +1,40 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France strongly condemns drone attacks on commercial ships in the Black
+    Sea as a violation of international law and reaffirms its unwavering support for
+    Ukraine.
+  positions:
+    ukraine: France remains determined to provide unwavering support to Ukraine in
+      the face of Russia's war of aggression.
+    defence: France calls for a moratorium on strikes in the Black Sea to ensure the
+      security of civilian shipping and the stability of the EU and NATO.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France is determined to continue providing Ukraine with unwavering
+          support
+    e3:
+      defence:
+        score: 0
+        evidence: Russia’s war of aggression against Ukraine is a threat to the security
+          of the EU and NATO as a whole
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

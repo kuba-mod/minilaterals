@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Deputy Government Spokesperson Meyer
+  - Alexander Schweitzer
+  - Minister for Finance (represented by Mr. Kall)
+  - Minister for Health
+  - Minister for Agriculture
+  - Minister for Foreign Affairs
+  - Minister for Defense
+  - Minister for Transport
+  - Minister for the Interior
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: The German government announced several domestic policy measures including
+    a sugar tax, a national action plan for climate-friendly shipping, and new protections
+    for minors in the digital world.
+  positions:
+    green_transition: Germany has adopted a National Action Plan for Climate-Friendly
+      Shipping to achieve climate goals through innovation and technology-open transformation
+      of sea and inland shipping.
+    energy: The government intends to lower the electricity tax to the European minimum,
+      prioritizing the relief of industry and producing businesses to secure jobs.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Das Kabinett hat darüber hinaus den Nationalen Aktionsplan klimafreundliche
+          Schifffahrt beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - Camille Tubiana
+  - President of the National Assembly
+  - President of the Senate
+  topics: []
+  location: null
+  position: France proposes the appointment of Camille Tubiana as Director General
+    of the National Agency for Urban Renovation (ANRU).
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

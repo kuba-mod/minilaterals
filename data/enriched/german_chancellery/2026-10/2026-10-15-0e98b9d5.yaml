@@ -1,0 +1,46 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundeskabinett
+  topics:
+  - defence
+  - energy
+  location: null
+  position: Germany has extended the Bundeswehr's participation in the EU-led EUNAVFOR
+    ASPIDES operation until October 31, 2027, to protect international shipping in
+    the Red Sea.
+  positions:
+    defence: Germany will provide up to 350 soldiers, air support for situational
+      awareness, and potentially a frigate to defend civilian shipping against Houthi
+      attacks.
+    energy: Germany is acting to secure the maritime trade route between Asia and
+      Europe, which is critical for the transport of energy supplies to Europe.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: das Bundeskabinett hat deshalb beschlossen, die Beteiligung der
+          Bundeswehr an der EU -geführten Operation EUNAVFOR ASPIDES bis zum 31. Oktober
+          2027 fortzusetzen
+    e3:
+      defence:
+        score: 0
+        evidence: Das maritime Lagebild, das die Bundeswehr im engen Austausch mit
+          internationalen Partnern – insbesondere die Europäische Union und den USA
+          – erstellt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

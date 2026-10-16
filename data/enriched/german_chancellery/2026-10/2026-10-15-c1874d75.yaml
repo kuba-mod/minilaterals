@@ -1,0 +1,54 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  - Mario Draghi
+  - Enrico Letta
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - migration
+  location: Brussels, Belgium
+  position: Germany advocates for a more capable and sovereign EU while demanding
+    significant reductions to the proposed EU budget to ensure fiscal sustainability.
+  positions:
+    ukraine: Germany pledges continued and increased financial support to defend Ukraine's
+      territorial integrity and the European political order.
+    defence: Germany identifies European defense readiness as a top priority for ensuring
+      the EU's sovereignty and capability.
+    energy: Germany intends to discuss measures to combat high energy prices during
+      the European Council meeting.
+    migration: Germany includes strategic discussions on migration as a key focus
+      of the European Council's agenda.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: dass wir alles tun, um der Ukraine auch über den Winter zu helfen
+          und auch im nächsten Jahr zu helfen
+      defence:
+        score: 1
+        evidence: Die Prioritäten sind aus meiner Sicht Wettbewerbsfähigkeit und Verteidigung.
+    e3:
+      defence:
+        score: 0
+        evidence: Die Prioritäten sind aus meiner Sicht Wettbewerbsfähigkeit und Verteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

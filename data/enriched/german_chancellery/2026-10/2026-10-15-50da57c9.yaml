@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Carsten Linnemann
+  - Alois Rainer
+  - Federal Chancellor
+  topics:
+  - green_transition
+  location: null
+  position: The German government is implementing digitalization of administration,
+    promoting electromobility and energy-efficient housing, and advocating for waste
+    prevention.
+  positions:
+    green_transition: Germany is expanding electromobility infrastructure, providing
+      additional funding for energy-efficient housing (Effizienzhaus 55-Plus), and
+      promoting resource conservation through waste avoidance.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Die Bundesregierung stellt zusätzliche Mittel für die Effizienzhaus
+          55-Plus-Förderung zur Aktivierung des Bauüberhangs bereit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
