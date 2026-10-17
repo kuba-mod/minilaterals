@@ -1,0 +1,53 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Tom Berendsen
+  - Sabrina Dallafior Matter
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: The Hague, Netherlands
+  position: Poland seeks to strengthen bilateral and multilateral security cooperation
+    with the Netherlands to counter Russian aggression and hybrid threats.
+  positions:
+    ukraine: Poland condemns Russian aggression against Ukraine and supports sanctions
+      against Russia, highlighting the historical nature of Russian imperialism.
+    defence: Poland is collaborating with the Netherlands within NATO and the EU to
+      strengthen common defense and protect critical infrastructure.
+    hybrid: Poland aims to increase resilience against hybrid threats through close
+      partnership with the Netherlands.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: konsultacje polityczne [...] dotyczyły [...] agresji na Ukrainę
+          i sankcji wobec Rosji
+      defence:
+        score: 1
+        evidence: ścisłe współpracujemy, aby wzmacniać wspólną obronę
+      hybrid:
+        score: 1
+        evidence: zwiększyć naszą odporność na zagrożenia hybrydowe
+    visegrad:
+      defence:
+        score: 1
+        evidence: ściśle współpracujemy, aby wzmacniać wspólną obronę, zapewniać skuteczniejszą
+          ochronę infrastruktury krytycznej i zwiększyć naszą odporność na zagrożenia
+          hybrydowe
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

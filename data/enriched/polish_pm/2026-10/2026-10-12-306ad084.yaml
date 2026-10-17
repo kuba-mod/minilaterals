@@ -53,13 +53,15 @@ extracted:
           w kierunku gospodarki zielonej
     visegrad:
       defence:
-        score: 1
-        evidence: Chodzi o to, żeby Europa przejmowała większą odpowiedzialność za
-          bezpieczeństwo. Musimy inwestować w nie więcej w sposób spójny i konsekwentny
+        score: 2
+        evidence: podpisali deklarację o strategicznym partnerstwie między Rzecząpospolitą
+          Polską a Królestwem Norwegii. [...] deklaracja obejmuje ponad 20 obszarów
+          współpracy, w tym bezpieczeństwo i obronność, mobilność wojskową, ochronę
+          infrastruktury krytycznej
       energy:
         score: 1
-        evidence: Podpisana dziś w Warszawie deklaracja obejmuje ponad 20 obszarów
-          współpracy, w tym [...] bezpieczeństwo energetyczne
+        evidence: deklaracja obejmuje ponad 20 obszarów współpracy, w tym [...] bezpieczeństwo
+          energetyczne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

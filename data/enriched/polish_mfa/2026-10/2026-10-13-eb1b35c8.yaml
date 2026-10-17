@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski, Undersecretary of State
+  - Minister of State of Qatar
+  topics: []
+  location: null
+  position: Poland is strengthening bilateral cooperation with Qatar, specifically
+    expanding ties into higher education and scientific research for 2025–2026.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

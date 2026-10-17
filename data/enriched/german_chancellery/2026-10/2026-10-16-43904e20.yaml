@@ -1,0 +1,50 @@
+actors:
+- DE
+- FR
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  - French President
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany advocates for a balanced approach to reform and EU spending, prioritizing
+    innovation, decarbonization, and a compromise on the combustion engine to maintain
+    competitiveness.
+  positions:
+    defence: Germany identifies defense as one of the key priority areas for future
+      EU investment.
+    green_transition: Germany proposes a joint solution with France regarding the
+      combustion engine to resolve disputes while ensuring EU climate goals are met.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Investiert wird dort, wo sich die Zukunft Europas entscheidet. Dazu
+          gehören aus Sicht der Bundesregierung Innovationen, Künstliche Intelligenz,
+          Dekarbonisierung und Verteidigung.
+      green_transition:
+        score: 1
+        evidence: Gemeinsam mit dem französischen Präsidenten schlägt der Bundeskanzler
+          jetzt eine Lösung vor, die den Streit um den Verbrenner und seine Laufzeit
+          beenden könnte, ohne dass die Klimaziele der EU gefährdet werden.
+    e3:
+      defence:
+        score: 0
+        evidence: Investiert wird dort, wo sich die Zukunft Europas entscheidet. Dazu
+          gehören aus Sicht der Bundesregierung Innovationen, Künstliche Intelligenz,
+          Dekarbonisierung und Verteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

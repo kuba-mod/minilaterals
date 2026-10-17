@@ -1,0 +1,72 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- green_transition
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - green_transition
+  - energy
+  - migration
+  location: Brussels, Belgium
+  position: Poland advocates for strong EU support for Ukraine, increased defense
+    spending, the protection of cohesion and agricultural funds, and a revision of
+    the ETS2 system.
+  positions:
+    ukraine: Poland supports maintaining strong EU unity and pressure on Russia to
+      prevent the fall of Ukraine.
+    defence: Poland opposes cutting security spending and calls for the strengthening
+      of European defense capabilities.
+    hybrid: Poland highlights the threats posed by Russian hybrid actions and acts
+      of sabotage.
+    green_transition: Poland is pushing for a review of the social and economic impacts
+      of the ETS2 system to avoid costs for Polish citizens.
+    energy: Poland seeks to prevent the ETS2 system from increasing energy and heating
+      costs for households and businesses.
+    migration: Poland advocates for a hard asylum policy and effective border protection
+      to stop illegal migration.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: utrzymanie silnego poparcia Unii Europejskiej dla Ukrainy oraz dalszej
+          presji na Rosję
+      defence:
+        score: 1
+        evidence: konieczne jest dalsze wzmacnianie europejskich zdolności obronnych
+      hybrid:
+        score: 1
+        evidence: Przywódcy rozmawiali również o zagrożeniach związanych z rosyjskimi
+          działaniami hybrydowymi i aktami sabotażu
+      green_transition:
+        score: -1
+        evidence: Nie pozwolę, żeby w jakimkolwiek stopniu Polska płaciła za ETS 2
+    visegrad:
+      defence:
+        score: 1
+        evidence: konieczne jest dalsze wzmacnianie europejskich zdolności obronnych,
+          zamiast ograniczania wydatków na bezpieczeństwo
+      migration:
+        score: 2
+        evidence: twarda polityka azylowa, pilnowanie granicy, powstrzymywanie nielegalnych
+          imigrantów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

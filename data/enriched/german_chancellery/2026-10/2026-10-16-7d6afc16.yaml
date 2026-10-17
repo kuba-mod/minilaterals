@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Bundestag
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany has expanded the Science Freedom Act to allow non-university research
+    institutions more flexibility in remuneration to attract international top talent.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

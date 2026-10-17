@@ -1,0 +1,53 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Martin Briens
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: null
+  position: Poland seeks to deepen its strategic partnership with France through economic,
+    defense, and energy cooperation while maintaining strong support for Ukraine.
+  positions:
+    ukraine: Poland expresses unwavering support for the independence, sovereignty,
+      and territorial integrity of Ukraine within its internationally recognized borders.
+    defence: Poland encourages France to utilize the offerings of the Polish arms
+      industry and develop joint defense projects.
+    energy: Poland declares its intention to deepen the strategic partnership with
+      France through the development of joint energy projects.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: niezachwiane poparcie dla niezależności, suwerenności i integralności
+          terytorialnej Ukrainy
+      defence:
+        score: 1
+        evidence: chęć do pogłębiania partnerstwa strategicznego m.in. poprzez rozwój
+          wspólnych projektów gospodarczych, obronnych
+    visegrad:
+      defence:
+        score: 1
+        evidence: zachęcał partnerów do zapoznania się m.in. z ofertą polskiego przemysłu
+          zbrojeniowego
+      energy:
+        score: 1
+        evidence: rozwój wspólnych projektów gospodarczych, obronnych, energetycznych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

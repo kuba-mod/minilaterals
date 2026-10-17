@@ -1,0 +1,34 @@
+actors:
+- PL
+- CZ
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Daniel Štech
+  - Wojciech Konończuk
+  topics:
+  - ukraine
+  location: Prague, Czech Republic
+  position: Poland seeks to strengthen bilateral cooperation with the Czech Republic
+    through regional formats, logistics, and coordinated support for Ukraine.
+  positions:
+    ukraine: Poland is coordinating with the Czech Republic on cooperation for Ukraine,
+      including the use of the Ukraine Facility instrument.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: współpracy na rzecz Ukrainy (również z wykorzystaniem instrumentu
+          Ukraine Facility)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

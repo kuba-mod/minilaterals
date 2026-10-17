@@ -38,9 +38,7 @@ extracted:
     e3:
       iran:
         score: 1
-        evidence: Ils ont réaffirmé leur engagement de longue date en faveur d’une
-          solution diplomatique garantissant le caractère pacifique du programme nucléaire
-          iranien. Ils ont appelé l’Iran à reprendre une pleine coopération avec l’Agence
+        evidence: Ils ont appelé l’Iran à reprendre une pleine coopération avec l’Agence
           internationale de l’énergie atomique.
 enriched_by:
   model_id: gemma4:latest

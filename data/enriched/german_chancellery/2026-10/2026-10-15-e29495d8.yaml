@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Deutscher Bundestag
+  - Bundesamt für Sicherheit in der Informationstechnik
+  topics:
+  - hybrid
+  location: null
+  position: Germany has passed the implementing law for the EU Cyber Resilience Act
+    to establish mandatory cybersecurity requirements for products with digital elements.
+  positions:
+    hybrid: Germany is implementing the Cyber Resilience Act to increase the resilience
+      of networked products against cyber attacks and ensure secure market access
+      within the EU.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Ziel ist die Erhöhung der Cyber sicherheit innerhalb der Europäischen
+          Union
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

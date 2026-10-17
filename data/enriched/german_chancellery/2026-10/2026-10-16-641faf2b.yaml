@@ -1,0 +1,60 @@
+actors:
+- DE
+- FR
+- US
+issue_areas:
+- ukraine
+- enlargement
+- green_transition
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - António Costa
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - enlargement
+  - green_transition
+  - migration
+  location: Brussels, Belgium
+  position: Germany advocates for increased EU competitiveness, fiscal restraint in
+    the EU budget, and a technology-neutral approach to the automotive industry's
+    green transition.
+  positions:
+    ukraine: Germany supports continued financial and military aid to Ukraine to force
+      Russia to the negotiating table and views Russian attacks on infrastructure
+      as justification for Ukrainian strikes on Russian targets.
+    enlargement: Germany supports the accession of Montenegro and maintains a clear
+      accession perspective for Moldova and Ukraine.
+    green_transition: Germany and France agreed to maintain 2035 climate goals for
+      the automotive industry while ensuring technology neutrality and the use of
+      alternative fuels.
+    migration: Germany supports the right of member states to take protective measures
+      when irregular migration numbers become excessively high.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir stehen an der Seite dieses Landes.
+      enlargement:
+        score: 1
+        evidence: Die Europäische Union ist kein „ closed shop “, sondern sie ist
+          eine offene Europäische Union für alle Staaten in Europa, die die Voraussetzungen
+          erfüllen, Mitglied zu werden
+      green_transition:
+        score: 1
+        evidence: Die Einigung verbinde das Festhalten an den Klimazielen mit mehr
+          Technologieneutralität und einer stärkeren Berücksichtigung alternativer
+          Kraftstoffe.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
