@@ -1,0 +1,65 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Président de la République
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - energy
+  - migration
+  location: Brussels, Belgium
+  position: France participated in the European Council to discuss EU competitiveness,
+    financial frameworks, security, and international crises.
+  positions:
+    ukraine: France reaffirmed its support for Ukraine in the face of escalating Russian
+      attacks on civilian and energy infrastructure.
+    defence: France advocated for accelerating the EU's capacity to produce more in
+      key capability areas.
+    hybrid: France discussed the European response to Russian hybrid threats.
+    enlargement: France reviewed the progress of the European Union's enlargement
+      process.
+    energy: France addressed the need for European responses to external shocks, specifically
+      the rise in energy prices.
+    migration: France called for the full implementation of the European Pact on Migration
+      and Asylum and a coordinated response to protect Schengen's external borders.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ont réaffirmé leur soutien à l’Ukraine
+      defence:
+        score: 1
+        evidence: accélérer la capacité de l’UE à produire davantage dans les domaines
+          capacitaires clés
+      hybrid:
+        score: 1
+        evidence: évoqué la réponse européenne aux menaces hybrides russes
+      enlargement:
+        score: 0
+        evidence: fait le point sur le processus d’élargissement de l’Union européenne
+    e3:
+      defence:
+        score: 0
+        evidence: les dirigeants ont évoqué la réponse européenne aux menaces hybrides
+          russes et fait le point sur les progrès accomplis pour accélérer la capacité
+          de l’UE à produire davantage dans les domaines capacitaires clés
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

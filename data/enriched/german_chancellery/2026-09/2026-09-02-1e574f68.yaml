@@ -35,10 +35,8 @@ extracted:
           und militärischen Unterstützung Deutschlands verlassen kann
       hybrid:
         score: 1
-        evidence: hat heute mit dem Präsidenten der Ukraine, Wolodymyr Selenskyj,
-          telefoniert. Der Bundeskanzler hat Präsident Selenskyj über die gestern
-          erfolgte Attribuierung des hybriden Angriffes auf den Flughafen Leipzig
-          unterrichtet
+        evidence: hat Präsident Selenskyj über die gestern erfolgte Attribuierung
+          des hybriden Angriffes auf den Flughafen Leipzig unterrichtet
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
