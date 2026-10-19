@@ -354,6 +354,16 @@ div[style*="flex-wrap:wrap;gap:6px"] .tag {
   margin-left: auto;
   font-weight: 400;
 }
+/* Stale cluster: the most recent cross-capital alignment on this topic is
+   older than the score-density heatmap's tracked window, so it reads as
+   past activity rather than this edition's news. */
+.cluster.is-stale {
+  opacity: 0.85;
+}
+.cluster.is-stale .cluster-head .date-range {
+  color: #8a6320 !important;
+  font-weight: 600;
+}
 .cluster-commentary {
   font-family: 'Newsreader', Georgia, serif !important;
   font-size: 19px !important;
