@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - Minister of the Interior
+  - Minister of National Education
+  - Guard of the Seals
+  topics:
+  - energy
+  location: null
+  position: France condemns recent violent riots while acknowledging legitimate social
+    grievances and announcing a dual approach of strict law enforcement and social
+    dialogue.
+  positions:
+    energy: France is taking international initiatives in the Gulf countries to secure
+      fuel and gas supplies and acting on energy markets to reduce costs for citizens.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

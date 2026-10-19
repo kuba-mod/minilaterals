@@ -26,7 +26,7 @@ extracted:
       iran:
         score: 1
         evidence: Joint Statement from Foreign Ministers regarding RAF Fairford and
-          Iran State Threats.
+          Iran State Threats
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
