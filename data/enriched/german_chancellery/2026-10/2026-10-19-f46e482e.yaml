@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany is implementing a comprehensive strategy to increase international
+    and private investment through bureaucracy reduction, digital infrastructure expansion,
+    and targeted funding for high-tech and green technologies.
+  positions:
+    energy: Germany aims to make its business location more competitive by lowering
+      energy costs.
+    green_transition: The government is prioritizing climate-neutral energy generation
+      and mobility technologies as part of its High-Tech Agenda.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: 'sechs strategische Schlüsseltechnologien im Vordergrund: Künstliche
+          Intelligenz ( KI ), Quantentechnologien, Mikroelektronik, Biotechnologie,
+          Fusion und klimaneutrale Energieerzeugung sowie Technologien für die klimaneutrale
+          Mobilität'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

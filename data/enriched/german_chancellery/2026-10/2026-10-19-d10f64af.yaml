@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - German Bundestag
+  - Federal Ministry of Finance
+  topics:
+  - green_transition
+  location: null
+  position: Germany is launching a 500 billion euro special fund for infrastructure
+    and climate neutrality to modernize the country, secure prosperity, and strengthen
+    competitiveness.
+  positions:
+    green_transition: Germany is allocating 100 billion euros from the special fund
+      specifically for investments via the Climate and Transformation Fund (KTF) and
+      prioritizing climate protection.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Weitere 100 Milliarden Euro stehen für Investitionen des Klima-
+          und Transformationsfonds ( KTF ) bereit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Bundesministerium für Wirtschaft und Energie (BMWE)
+  - Bundesministerium für Forschung, Technologie und Raumfahrt (BMFTR)
+  topics: []
+  location: null
+  position: Germany is partnering with NVIDIA to develop advanced industrial AI models
+    to enhance productivity, competitiveness, and technological sovereignty.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

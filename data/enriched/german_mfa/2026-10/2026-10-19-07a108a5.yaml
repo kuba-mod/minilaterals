@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- energy
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Serap Güler
+  topics:
+  - energy
+  - migration
+  location: null
+  position: Germany is conducting a diplomatic mission to Rwanda, Burundi, and the
+    DRC to combat the Ebola epidemic, advocate for a political solution to the East
+    Congo conflict, and expand economic cooperation in critical raw materials and
+    energy.
+  positions:
+    energy: Germany seeks to deepen cooperation and investment in the energy sector
+      and critical raw materials within the Great Lakes region.
+    migration: Germany supports Burundi for its exemplary role in hosting hundreds
+      of thousands of refugees from East Congo.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

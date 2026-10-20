@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Alice Rufo
+  - Joseph Aoun
+  - Nawaf Salam
+  - Nabih Berri
+  - General Haykal
+  - Michel Menassa
+  topics:
+  - defence
+  location: Lebanon
+  position: France reaffirms its support for Lebanese sovereignty and stability through
+    the strengthening of the Lebanese Armed Forces and the establishment of a new
+    international security architecture.
+  positions:
+    defence: France supports strengthening the Lebanese Armed Forces and the implementation
+      of the state monopoly on weapons to avoid a security vacuum.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: emphasized the importance of strengthening the Lebanese Armed Forces
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

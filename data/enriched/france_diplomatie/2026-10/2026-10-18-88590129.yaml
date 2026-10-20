@@ -1,0 +1,27 @@
+actors:
+- FR
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - French Consul General in Jerusalem
+  - Belgian Consul General
+  - Polish Consul General
+  - Mayor of Aulnoye-Aymeries
+  topics: []
+  location: Taybeh, West Bank
+  position: France strongly condemns settler attacks against diplomatic representatives
+    and civilians in Taybeh and calls on Israeli authorities to prosecute the perpetrators
+    and end settlement activity.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  topics:
+  - migration
+  location: null
+  position: Latvia's Ministry of Foreign Affairs is warning youth about the risks
+    of human trafficking and the deceptive nature of fraudulent job offers.
+  positions:
+    migration: Latvia is urging young people to recognize the signs of human trafficking,
+      which it describes as a modern form of slavery.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,93 @@
+actors:
+- DE
+- FR
+- PL
+- CZ
+- EE
+- LV
+- LT
+issue_areas:
+- hybrid
+- enlargement
+- green_transition
+- rule_of_law
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Limmer (BMJV)
+  - Haufe (BMUKN)
+  - Pauly (BMDS)
+  - Lorenzat (BMWE)
+  - Dr. Rüll (BMF)
+  - Teichmann (BMBFSFJ)
+  - Giese (AA)
+  - Singer (BMI)
+  - Köhler (BMLEH)
+  topics:
+  - hybrid
+  - enlargement
+  - green_transition
+  - rule_of_law
+  - energy
+  location: Berlin, Germany
+  position: Germany is focusing on mobilizing international investment, advancing
+    the green transition in the automotive sector through cooperation with France,
+    and supporting EU enlargement in the Western Balkans.
+  positions:
+    hybrid: Germany is pursuing criminal investigations and EU sanctions against perpetrators
+      of hybrid attacks, specifically referencing events in Leipzig.
+    enlargement: Germany supports the EU accession process for Western Balkan states,
+      emphasizing that rule of law and anti-corruption are essential benchmarks.
+    green_transition: Germany has reached an agreement with France to maintain a technology-open
+      approach to automotive drives while promoting a European lead market for green
+      steel.
+    rule_of_law: Germany promotes the rule of law as a key competitive advantage for
+      its investment climate and a requirement for EU candidate states.
+    energy: Germany supports the EU Methane Regulation as a climate tool but seeks
+      a pragmatic implementation to ensure energy security and legal certainty for
+      importers.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: um den Druck auf Russland maximal hochzuhalten und auszuweiten
+      enlargement:
+        score: 2
+        evidence: dient das Treffen vor allem auch deren Annäherungsprozess an die
+          EU
+      green_transition:
+        score: 2
+        evidence: Es gibt gerade auch eine wichtige Initiative zwischen Deutschland,
+          Frankreich und Polen auf dem deutsch-französischen Umweltrat und dem deutsch-französisch-polnischen
+          Weimarer Dreieck vor zwei Wochen genau dazu, um endlich eine gemeinsame
+          Elektro- und Wasserstoffinfrastruktur für Lkw hinzubekommen, einen Korridor
+          zwischen drei Ländern.
+      rule_of_law:
+        score: 1
+        evidence: Wir sind ein Rechtsstaat. Man kann sich darauf verlassen, dass in
+          Deutschland Rechtswege beschritten werden können
+    visegrad:
+      enlargement:
+        score: 2
+        evidence: Neben der Förderung regionaler Kooperation zwischen den Westbalkanstaaten
+          dient das Treffen vor allem auch deren Annäherungsprozess an die EU.
+      energy:
+        score: 1
+        evidence: grundsätzlich unterstützt die Bundesregierung die Methanverordnung
+          der EU als wichtiges Klimaschutzinstrument im Energiesektor.
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Im Fokus der Reise stehen die Themen der Digitalisierung der Justiz
+          sowie des Schutzes vor Partnerschaftsgewalt und vor hybriden Bedrohungen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

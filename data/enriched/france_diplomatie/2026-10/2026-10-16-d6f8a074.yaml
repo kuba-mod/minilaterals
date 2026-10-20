@@ -1,0 +1,39 @@
+actors:
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Eléonore Caroit
+  - G7 Development Ministers
+  - representatives from India, Kenya and the Republic of Korea
+  - executives from the World Bank Group
+  - representatives from the United Nations Development Program
+  - representatives from the United Nations Children's Fund
+  topics:
+  - ukraine
+  location: Bangkok, Thailand
+  position: France chaired the G7 Development Ministers meeting to implement a new
+    approach to development policies based on mutually beneficial partnerships and
+    increased resilience against global shocks.
+  positions:
+    ukraine: France is co-chairing a donors' conference to mobilize funding for urgent
+      repairs to the Chornobyl New Safe Confinement following a Russian strike.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: reaffirmed their intention to mobilize funding for urgent repairs
+          to the Chornobyl New Safe Confinement in Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

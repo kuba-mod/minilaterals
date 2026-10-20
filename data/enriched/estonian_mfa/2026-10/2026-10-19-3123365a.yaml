@@ -1,0 +1,34 @@
+actors:
+- EE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tsahkna
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: Estonia welcomes EU funding for Neo Performance Materials to establish
+    permanent magnet production in Estonia, reducing dependence on Russian raw materials.
+  positions:
+    green_transition: Estonia is supporting the establishment of clean technology
+      production for rare earth magnets to strengthen European industrial resilience.
+    energy: Estonia aims to end the supply of raw materials from Russia through the
+      development of domestic production capabilities.
+  stances:
+    baltic:
+      energy:
+        score: 2
+        evidence: lõpetada toorme tarned Venemaalt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
