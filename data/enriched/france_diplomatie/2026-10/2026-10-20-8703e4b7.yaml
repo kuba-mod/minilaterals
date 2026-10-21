@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - European Commission
+  topics:
+  - hybrid
+  location: null
+  position: France supports the European Commission's efforts to enforce the Digital
+    Services Act (DSA) against TikTok to ensure digital sovereignty and transparency.
+  positions:
+    hybrid: France promotes the regulation of digital platforms via the DSA to ensure
+      that illegal offline activities are also illegal online.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: France will continue to promote the regulation of digital platforms
+          via the DSA
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

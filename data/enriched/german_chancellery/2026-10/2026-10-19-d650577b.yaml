@@ -1,0 +1,74 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- rule_of_law
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Katherina Reiche
+  - Martin Blessing
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - rule_of_law
+  - energy
+  - iran
+  location: Berlin, Germany
+  position: Germany is launching a massive modernization drive to attract global investment,
+    rebuild infrastructure, and strengthen its economic and defensive capacities.
+  positions:
+    ukraine: Germany condemns the attacks by Russia and its allies against Ukraine.
+    defence: Germany will commit over 500 billion euros by the end of the decade to
+      strengthen defensive capacities and modernize military infrastructure.
+    green_transition: Germany is channeling half a trillion euros into rebuilding
+      infrastructure, green energy, and climate initiatives.
+    rule_of_law: Germany reaffirms its commitment to the rule of law, democracy, and
+      human rights against aggressive attacks from Russia and its allies.
+    energy: Germany recognizes that conflicts in the Middle East are putting global
+      energy supplies under severe pressure.
+    iran: Germany identifies Iran as an ally of Russia that is attacking the accomplishments
+      of the post-World War II era.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russia and its allies, from North Korea to Iran, are attacking not
+          only Ukraine
+      defence:
+        score: 2
+        evidence: we will commit over 500 billion euros by the end of the decade to
+          strengthen our defensive capacities and modernise our military infrastructure
+      green_transition:
+        score: 2
+        evidence: channelling half a trillion euros into rebuilding and modernising
+          our infrastructure as well as into green energy and climate initiatives
+      rule_of_law:
+        score: 1
+        evidence: our fundamental values of human rights, our democracy, our liberty,
+          and the rule of law
+    e3:
+      defence:
+        score: 2
+        evidence: we will commit over 500 billion euros by the end of the decade to
+          strengthen our defensive capacities and modernise our military infrastructure
+      iran:
+        score: 1
+        evidence: Russia and its allies, from North Korea to Iran, are attacking not
+          only Ukraine, but, ever more aggressively, the most precious accomplishments
+          of the post-World War II era
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

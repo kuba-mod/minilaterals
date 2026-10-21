@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Turkish Ambassador Turan
+  topics:
+  - migration
+  location: Berlin, Germany
+  position: Germany views the 65-year history of Turkish labor migration as a success
+    story of integration and emphasizes the continued need for skilled immigration
+    to maintain economic prosperity.
+  positions:
+    migration: Germany recognizes the fundamental contribution of Turkish immigrants
+      to its industrial and cultural identity and asserts that a functioning society
+      of opportunity requires further immigration of skilled workers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

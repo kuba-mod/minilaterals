@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Andrzej Domański
+  topics:
+  - defence
+  location: Poland
+  position: Poland highlights its strong economic growth and commitment to maintaining
+    fiscal discipline while increasing spending on national security and social welfare.
+  positions:
+    defence: Poland is allocating record funds to defense, effectively spending 7%
+      of GDP when including indirect security expenditures due to its status as a
+      frontline state.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: na obronność de facto wydajemy 7%
+    visegrad:
+      defence:
+        score: 2
+        evidence: Decyzja o przeznaczaniu rekordowych środków na obronność była jedną
+          z nielicznych, które zapadły ponad podziałami politycznymi.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

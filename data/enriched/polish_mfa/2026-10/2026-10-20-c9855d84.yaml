@@ -1,0 +1,60 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- enlargement
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - wiceminister Harazim
+  - Deputy Heads of Diplomacy of Poland and Cyprus
+  topics:
+  - ukraine
+  - hybrid
+  - enlargement
+  - migration
+  location: null
+  position: Poland coordinated positions with Cyprus on regional security, EU structural
+    challenges, and geopolitical stabilization.
+  positions:
+    ukraine: Poland condemned Russian aggression against Ukraine and declared continued
+      support for Kyiv.
+    hybrid: Poland highlighted the unprecedented scale of hybrid threats and sabotage
+      attacks on the eastern border of the EU and NATO.
+    enlargement: Poland views the EU enlargement process as a key tool for the geopolitical
+      stabilization of Europe.
+    migration: Poland identifies increasing migration pressure as a common structural
+      challenge requiring a firm response at the EU level.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: zadeklarowali dalsze wsparcie dla Kijowa
+      hybrid:
+        score: 1
+        evidence: podkreślił bezprecedensową skalę zagrożeń hybrydowych oraz ataków
+          sabotażowych na wschodniej granicy UE i NATO
+      enlargement:
+        score: 1
+        evidence: ocenili proces rozszerzenia UE jako kluczowe narzędzie stabilizacji
+          geopolitycznej Europy
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Ministrowie ocenili proces rozszerzenia UE jako kluczowe narzędzie
+          stabilizacji geopolitycznej Europy
+      migration:
+        score: 1
+        evidence: narastająca presja migracyjna, którą uznano za wspólne, strukturalne
+          wyzwanie wymagające stanowczej odpowiedzi na poziomie unijnym
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

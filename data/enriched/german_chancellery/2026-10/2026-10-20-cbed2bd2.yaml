@@ -1,0 +1,32 @@
+actors:
+- DE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Jensen Huang
+  - Martin Blessing
+  - Lars Klingbeil
+  - Katherina Reiche
+  - Dorothee Bär
+  - Karsten Wildberger
+  - Steffen Bilger
+  - Verena Hubertz
+  topics: []
+  location: Berlin, Germany
+  position: Germany is launching the 'Invest in Germany' initiative and summit to
+    attract international private investment and improve business conditions through
+    deregulation and infrastructure upgrades.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

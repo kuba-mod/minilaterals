@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+- US
+issue_areas:
+- ukraine
+- hybrid
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatssekretär Kornelius
+  - Kolb
+  - Dr. Rüll
+  - Köppl
+  - Deschauer
+  - Kaminski
+  - Valdés Cifuentes
+  - Büddicker
+  - Müller
+  - Feldhoff
+  topics:
+  - ukraine
+  - hybrid
+  - iran
+  location: null
+  position: Germany announces a research cooperation roadmap with Italy, expresses
+    concern over violence in France, and reaffirms its support for Ukraine and the
+    protection of Jewish life against Iranian threats.
+  positions:
+    ukraine: Germany continues to provide significant support to Ukraine to enable
+      its defense against the Russian war of aggression and emphasizes that any diplomatic
+      peace must involve the Ukrainian government.
+    hybrid: The German government monitors foreign influence and hybrid threats across
+      society and maintains secured communication channels to prevent phishing attacks.
+    iran: Germany summoned the Iranian ambassador to state that threats to Jewish
+      life in Germany will not be tolerated, following the EU terror-listing of the
+      Revolutionary Guard.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland insbesondere ein großer Unterstützer der Ukraine ist
+      hybrid:
+        score: 1
+        evidence: Überhaupt beobachten wir auch ausländische Einflussnahmen und hybride
+          Bedrohungen in allen möglichen Segmenten unserer Gesellschaft
+    e3:
+      iran:
+        score: 0
+        evidence: Wir nehmen Bezug auf das Urteil des OLG in der vergangenen Woche.
+          Wir haben dort noch einmal verdeutlicht, dass wir eine Bedrohung jüdischen
+          Lebens in Deutschland, aber auch von Unterstützerinnen und Unterstützern,
+          in keiner Weise tolerieren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

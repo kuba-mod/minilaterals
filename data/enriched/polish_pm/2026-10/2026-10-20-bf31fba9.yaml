@@ -1,0 +1,55 @@
+actors:
+- PL
+- LT
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Pete Hegseth
+  - Karol Nawrocki
+  - Kosiniak-Kamysz
+  - President of Lithuania
+  - President Zelenskyy
+  - Prime Minister of Norway
+  - President of Finland
+  - Andrzej Domański
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland asserts its commitment to NATO loyalty and territorial sovereignty
+    while supporting a unified Western approach to Ukraine's security and peace negotiations.
+  positions:
+    ukraine: Poland supports a unified Western front to protect Ukraine from Russian
+      aggression and seeks the earliest possible start to peace talks.
+    defence: Poland rejects the downplaying of its military contributions to NATO
+      missions and strictly prohibits unauthorized foreign military operations on
+      its territory.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Chcielibyśmy, żeby cały świat Zachodu był bardziej solidarny i jednolity
+          we wsparciu Ukrainy
+      defence:
+        score: 1
+        evidence: Wzajemny szacunek, niezależnie od wielkości, znaczenia i siły państwa,
+          jest fundamentem sojuszu
+    visegrad:
+      defence:
+        score: 1
+        evidence: Wzajemny szacunek, niezależnie od wielkości, znaczenia i siły państwa,
+          jest fundamentem sojuszu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

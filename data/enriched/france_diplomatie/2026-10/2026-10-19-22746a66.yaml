@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Monique Barbut, Minister for the Ecological Transition, Biodiversity and International
+    Climate and Nature Negotiations
+  - Philippe Baptiste, Minister for Higher Education, Research and Space
+  topics:
+  - green_transition
+  location: Addis Ababa, Ethiopia
+  position: France calls for the protection of the IPCC's independence and the adherence
+    to a publication timetable for the Seventh Assessment Report to ensure scientific
+    knowledge informs the Paris Agreement's second global stocktake.
+  positions:
+    green_transition: France advocates for independent scientific expertise from the
+      IPCC to serve as the foundation for international climate multilateralism and
+      the achievement of Paris Agreement targets.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: France reiterates that science must remain the foundation of climate
+          multilateralism
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
