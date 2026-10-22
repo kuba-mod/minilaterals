@@ -1,0 +1,51 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+- iran
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Sheikh Tamim bin Hamad Al Thani
+  - Sheikh Mohammed bin Abdulrahman bin Jassim Al Thani
+  - Jean-Noël Barrot
+  topics:
+  - defence
+  - energy
+  - iran
+  - ukraine
+  location: Doha, Qatar
+  position: France reaffirms its strategic partnership with Qatar, intensifying cooperation
+    in defence, energy, and security while coordinating on regional stability in the
+    Middle East.
+  positions:
+    defence: France is expanding military cooperation with Qatar, including a Letter
+      of Intent to modernize the Qatar Amiri Land Forces and strengthening air-force
+      interoperability via the Rafale.
+    energy: France is expanding cooperation in energy security, focusing on industrial
+      cooperation, R&D, and the implementation of the Paris Agreement.
+    iran: France condemns Iranian military attacks in the region and supports diplomatic
+      efforts to ensure the exclusively peaceful nature of Iran's nuclear program.
+    ukraine: France affirms its efforts to advance a just and lasting peace in Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: efforts to advance a just and lasting peace in Ukraine
+    e3:
+      iran:
+        score: 1
+        evidence: ensure verifiably the exclusively peaceful nature of Iran’s nuclear
+          program
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

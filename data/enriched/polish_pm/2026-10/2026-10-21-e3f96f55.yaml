@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Andrzej Domański
+  topics:
+  - defence
+  - indo_pacific
+  location: null
+  position: Poland is strengthening economic and diplomatic ties with India and Vietnam
+    to expand market opportunities for Polish businesses and increase trade.
+  positions:
+    defence: Poland is promoting its defense sector companies to enter and gain a
+      foothold in the Indian market.
+    indo_pacific: Poland aims to double its trade exchange with India by 2030 and
+      deepen economic cooperation with Vietnam.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Ważną rolę mają tu odegrać polscy przedsiębiorcy, w tym przedstawiciele
+          sektora obronnego.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Ważną rolę mają tu odegrać polscy przedsiębiorcy, w tym przedstawiciele
+          sektora obronnego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

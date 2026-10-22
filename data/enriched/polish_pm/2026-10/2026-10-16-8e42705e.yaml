@@ -65,7 +65,8 @@ extracted:
       migration:
         score: 2
         evidence: twarda polityka azylowa, pilnowanie granicy, powstrzymywanie nielegalnych
-          imigrantów
+          imigrantów, staje się powoli, taką - może jeszcze nie doktryną europejską
+          - ale większość chciałaby nas naśladować
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

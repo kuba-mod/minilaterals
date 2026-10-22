@@ -1,0 +1,30 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: France advocates for the protection and preservation of the IPCC's role
+    in guiding international climate action.
+  positions:
+    green_transition: France calls for the IPCC's role in international climate action
+      to be protected.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: France calls for the IPCC's role in international climate action
+          to be protected
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Luca Alexandru Niculescu
+  topics:
+  - defence
+  location: null
+  position: Germany congratulates the new Romanian Prime Minister and reaffirms its
+    commitment to a strong partnership and shared responsibility for European security.
+  positions:
+    defence: Germany positions itself as a reliable ally and partner to Romania within
+      the EU and NATO to ensure the security of Europe.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Gemeinsam übernehmen wir Verantwortung für die Sicherheit Europas
+    e3:
+      defence:
+        score: 0
+        evidence: Gemeinsam übernehmen wir Verantwortung für die Sicherheit Europas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

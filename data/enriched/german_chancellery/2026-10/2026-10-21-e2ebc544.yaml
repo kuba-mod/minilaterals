@@ -1,0 +1,56 @@
+actors:
+- DE
+- FR
+- PL
+- US
+issue_areas:
+- ukraine
+- hybrid
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Lars-Hendrik Röller
+  - President Macron
+  - Donald Trump
+  topics:
+  - ukraine
+  - hybrid
+  - energy
+  - indo_pacific
+  location: Berlin, Germany
+  position: Germany aims to secure future prosperity and economic resilience by renewing
+    domestic competitiveness, diversifying partnerships, and defending a rules-based
+    liberal economic order against geopolitical weaponization.
+  positions:
+    ukraine: Germany condemns Russia's brutal war of aggression against Ukraine, which
+      endangers the territorial integrity of Ukraine and the security of the entire
+      European continent.
+    hybrid: Germany identifies sabotage, cyber attacks, drones, and disinformation
+      as ongoing threats to security and prosperity that fuel societal division.
+    energy: Germany is working to bring down energy prices on a sustainable basis
+      and notes that Russian attempts to blackmail Europe by cutting off energy supplies
+      failed.
+    indo_pacific: Germany is expanding trade relations and forging new alliances with
+      key Indo-Pacific partners, specifically Singapore, Japan, and South Korea.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russia for example has been waging a brutal war of aggression against
+          Ukraine for almost five years now
+      hybrid:
+        score: 1
+        evidence: However, hybrid attacks – through sabotage, cyber attacks, drones
+          and disinformation – continue to pose a threat to our security and our prosperity.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

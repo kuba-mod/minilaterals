@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Turan
+  topics:
+  - migration
+  location: Berlin, Germany
+  position: Germany celebrates the 65th anniversary of the recruitment agreement with
+    Turkey as a success story of integration while emphasizing the need for skilled
+    immigration and the fight against racism.
+  positions:
+    migration: Germany aims to prioritize the order of integration by limiting irregular
+      migration while facilitating the arrival of skilled workers through a new digital
+      'Work-and-Stay' agency.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

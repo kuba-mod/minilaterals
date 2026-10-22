@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Roseline Kathure Njogu
+  - John Mbadi Ng’ongo
+  topics:
+  - ukraine
+  - hybrid
+  location: Nairobi, Kenya
+  position: Poland seeks to deepen political and economic cooperation with Kenya,
+    specifically through tied loans for the dairy sector and the promotion of Polish
+    IT and agricultural technologies.
+  positions:
+    ukraine: Poland discussed the war in Ukraine during political consultations with
+      Kenyan officials.
+    hybrid: Poland addressed the issue of Russian disinformation during bilateral
+      talks.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: omówili problematykę bezpieczeństwa regionalnego, sytuację w regionie
+          Rogu Afryki i Wielkich Jezior oraz wojny w Ukrainie
+      hybrid:
+        score: 0
+        evidence: omówili [...] problematykę dezinformacji rosyjskiej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

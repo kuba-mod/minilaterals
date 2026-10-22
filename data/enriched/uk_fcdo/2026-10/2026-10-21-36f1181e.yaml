@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom condemns Russia's recruitment of foreign fighters as
+    exploitative and based on deception.
+  positions:
+    defence: The United Kingdom asserts that Russia's recruitment of foreign nationals
+      for its armed forces relies on deception.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: UK statement to the OSCE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

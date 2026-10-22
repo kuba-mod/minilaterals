@@ -1,0 +1,48 @@
+actors:
+- FR
+- US
+issue_areas:
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the French Republic
+  - Emir of Qatar
+  - President Aoun
+  - King of Jordan
+  topics:
+  - defence
+  - energy
+  - iran
+  location: Qatar
+  position: France is mobilizing regional partners in the Gulf to ensure energy security,
+    promote stability, and strengthen strategic defense partnerships.
+  positions:
+    defence: France signed defense agreements with the UAE for Rafale aircraft and
+      concluded deals with Qatar for Rafale upgrades and armored vehicles.
+    energy: France secured critical volumes of diesel from Bahrain and the UAE, and
+      liquefied natural gas from Qatar, to protect its economy from energy crises.
+    iran: France opposes any form of nuclear activity in Iran and supports diplomatic
+      negotiations to de-escalate tensions and reopen the Strait of Hormuz.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: consolider la relation de défense avec les Émirats arabes unis,
+          où un accord important a été signé
+    e3:
+      iran:
+        score: 1
+        evidence: nous sommes résolument contre toute forme d'activité nucléaire en
+          Iran
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

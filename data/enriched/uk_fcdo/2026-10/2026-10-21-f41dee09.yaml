@@ -1,0 +1,36 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Sultan of Oman
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom is committing to closer cooperation with Oman across
+    security, defence, and trade to drive growth and jobs.
+  positions:
+    defence: The United Kingdom commits to closer cooperation with Oman in the field
+      of defence.
+  stances:
+    e3:
+      defence:
+        score: 0
+        evidence: UK and Oman commit to closer cooperation across security, defence
+          and trade on State Visit
+    aukus:
+      defence:
+        score: 0
+        evidence: UK and Oman commit to closer cooperation across security, defence
+          and trade on State Visit
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,25 @@
+actors:
+- DE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  - Justin Jampol
+  topics: []
+  location: Los Angeles, USA
+  position: Germany celebrates the reopening of the Villa Aurora cultural center and
+    honors Justin Jampol for his efforts in saving cultural assets from the facility
+    during wildfires.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
