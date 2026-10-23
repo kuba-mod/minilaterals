@@ -1,0 +1,59 @@
+actors:
+- DE
+- FR
+- PL
+- SK
+- HU
+- LV
+- LT
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - European Commission
+  - European Space Agency (ESA)
+  - EU Member States
+  topics:
+  - defence
+  location: null
+  position: France and other EU member states advocate for a coherent and ambitious
+    European space policy to ensure strategic autonomy, technological sovereignty,
+    and global competitiveness.
+  positions:
+    defence: France asserts that strategic autonomy in space, particularly independent
+      access and connectivity, is crucial for European defence and collective security.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: l’autonomie stratégique dans le domaine de l’espace, notamment l’accès
+          autonome à l’espace et à la connectivité spatiale, est cruciale pour la
+          défense européenne et notre sécurité collective
+    e3:
+      defence:
+        score: 0
+        evidence: l’autonomie stratégique dans le domaine de l’espace, notamment l’accès
+          autonome à l’espace et à la connectivité spatiale, est cruciale pour la
+          défense européenne et notre sécurité collective
+    visegrad:
+      defence:
+        score: -1
+        evidence: L’UE doit pleinement adopter une véritable politique spatiale européenne
+          cohérente et ambitieuse, axée sur la souveraineté technologique, la sécurité,
+          la recherche et la capacité industrielle.
+    baltic:
+      defence:
+        score: 0
+        evidence: l’autonomie stratégique dans le domaine de l’espace, notamment l’accès
+          autonome à l’espace et à la connectivité spatiale, est cruciale pour la
+          défense européenne et notre sécurité collective
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

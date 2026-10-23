@@ -1,0 +1,53 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- enlargement
+- rule_of_law
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Christian Stocker
+  - Milojko Spajić
+  - Emmanuel Macron
+  topics:
+  - enlargement
+  - rule_of_law
+  - ukraine
+  location: Montenegro
+  position: Germany strongly supports the EU enlargement process for the Western Balkans
+    as a geopolitical imperative to ensure regional stability and sovereignty.
+  positions:
+    enlargement: Germany advocates for a dynamic enlargement process, including gradual
+      integration into the EU single market, with a specific goal of Montenegro potentially
+      joining by 2028.
+    rule_of_law: Germany emphasizes that courageous reforms in the rule of law are
+      mandatory prerequisites for any progress toward EU membership.
+    ukraine: Germany views the Russian war of aggression against Ukraine as a reason
+      for the urgency of stabilizing the Western Balkans and insists that any lasting
+      peace in Ukraine must involve Europe.
+  stances:
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Ich habe gemeinsam mit dem französischen Staatspräsidenten Vorschläge
+          gemacht, wie wir schneller und substanziell vorankommen können
+      rule_of_law:
+        score: 1
+        evidence: Mutige Reformen, gerade hinsichtlich der Rechtsstaatlichkeit, sind
+          zwingende Voraussetzung für jeden Fortschritt.
+      ukraine:
+        score: 1
+        evidence: Wir tun alles, um diesen Krieg so schnell wie möglich zu beenden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

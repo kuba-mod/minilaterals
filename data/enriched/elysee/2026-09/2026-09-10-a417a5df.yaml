@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- HU
+- EE
+- LV
+- LT
+- AU
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics: []
+  location: null
+  position: France leads a multilateral effort to promote the accessibility, openness,
+    and integrity of scientific space data through the adoption of FAIR principles
+    and international collaboration.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

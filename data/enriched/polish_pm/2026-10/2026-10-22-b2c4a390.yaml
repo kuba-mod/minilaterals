@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Andrzej Domański
+  - Narendra Modi
+  - Subrahmanyam Jaishankar
+  topics:
+  - defence
+  - energy
+  location: New Delhi, India
+  position: Poland seeks to significantly deepen economic and technological cooperation
+    with India, aiming to double trade value by 2030 through investments in advanced
+    sectors.
+  positions:
+    defence: Poland identifies high potential for cooperation with India in the fields
+      of defence and dual-use products.
+    energy: Poland recognizes significant potential for collaboration with India in
+      the energy sector.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Polska i Indie dostrzegają duży potencjał współpracy w obszarze
+          nowoczesnego przemysłu, technologii cyfrowych, sztucznej inteligencji, energetyki,
+          farmacji, sprzętu medycznego, obronności, technologii podwójnego zastosowania
+          oraz sektora kosmicznego.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Polska i Indie mają niezbędne kompetencje, aby współpracować w najbardziej
+          zaawansowanych aspektach nowoczesnej gospodarki - od obronności po produkty
+          podwójnego zastosowania
+      energy:
+        score: 1
+        evidence: Polska i Indie dostrzegają duży potencjał współpracy w obszarze
+          nowoczesnego przemysłu, technologii cyfrowych, sztucznej inteligencji, energetyki
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

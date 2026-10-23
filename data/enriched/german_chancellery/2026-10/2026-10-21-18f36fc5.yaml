@@ -1,0 +1,55 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Kornelius
+  - Feldhoff
+  - Deschauer
+  - Müller
+  - Kaminski
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: null
+  position: Germany emphasizes its commitment to a sovereign Ukraine, warns of significant
+    sabotage threats to the Bundeswehr, and seeks to maintain European security interests
+    in the face of shifting US political dynamics.
+  positions:
+    ukraine: Germany asserts that peace in Ukraine cannot be achieved without the
+      Ukraine's involvement and that capitulation is not an option.
+    defence: Germany continues to provide air defense systems like Patriot missiles
+      to Ukraine and coordinates security measures within the NATO framework.
+    hybrid: Germany identifies a significant sabotage threat to the Bundeswehr and
+      monitors Russian disinformation and hybrid activities within Germany.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die ukrainische Sicherheit ist auch die europäische Sicherheit.
+          Sie ist die deutsche Sicherheit. Deswegen ist unser Interesse an einem Verhandlungsprozess
+          und an einem Verhandlungsende dieses Krieges ungebrochen.
+      defence:
+        score: 0
+        evidence: Wenn zu einer Bedrohungslage kommt und die Anrainerstaaten, die
+          NATO-Mitgliedstaaten feststellen, dass Unterstützung aus dem Bündnis erforderlich
+          ist, dann wird das im Bündnisrahmen besprochen.
+      hybrid:
+        score: 1
+        evidence: wir stellen fest, dass es eine erhebliche Sabotagebedrohung für
+          die Bundeswehr insgesamt gibt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

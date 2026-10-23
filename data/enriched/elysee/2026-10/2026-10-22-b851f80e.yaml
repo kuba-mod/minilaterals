@@ -1,0 +1,29 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Prime Minister
+  - concerned ministers
+  - intelligence services
+  topics:
+  - defence
+  location: Paris, France
+  position: France is reviewing its intelligence and security measures and analyzing
+    past failures to improve anticipation and security for the coming weeks.
+  positions:
+    defence: France is implementing intelligence and security devices while reviewing
+      malfunctions that led to recent events.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

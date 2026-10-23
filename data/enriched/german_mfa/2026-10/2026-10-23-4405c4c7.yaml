@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- iran
+- energy
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - iran
+  - energy
+  location: Istanbul, Turkey
+  position: Germany is initiating a meeting with European and regional partners to
+    address threats to global shipping and food security caused by Iran, Houthi militias,
+    and Russia.
+  positions:
+    iran: Germany rejects the blackmail of world trade by Iran and Houthi militias
+      and demands an end to arbitrary attacks on free shipping.
+    energy: Germany seeks to secure the global supply of energy and fertilizers by
+      resolving conflicts in the Strait of Hormuz and Bab al-Mandab.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Wir nehmen nicht hin, dass Iran und die Huthi-Milizen den Welthandel
+          erpressen und die Versorgung der Welt mit Energie und Düngemitteln weiter
+          im Würgegriff halten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

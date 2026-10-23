@@ -34,7 +34,7 @@ extracted:
           Union in diesem maritimen Raum ist.
     e3:
       iran:
-        score: 1
+        score: 0
         evidence: Die Huthis und Iran nehmen die freien Seewege in Geiselhaft.
 enriched_by:
   model_id: gemma4:latest

@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Austrian Federal Chancellor
+  topics:
+  - enlargement
+  location: Montenegro
+  position: Germany supports the European integration of the Western Balkans and is
+    handing over the chairmanship of the Berlin Process to Austria.
+  positions:
+    enlargement: Germany aims to achieve further progress in the European integration
+      and cooperation between the Western Balkan states and the European Union.
+  stances:
+    weimar:
+      enlargement:
+        score: 1
+        evidence: weitere Fortschritte in der Zusammenarbeit zwischen den Westbalkanstaaten
+          und der Europäischen Union zu erzielen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

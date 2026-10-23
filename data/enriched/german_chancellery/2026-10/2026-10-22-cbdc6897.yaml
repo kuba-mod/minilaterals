@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+issue_areas:
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Milojko Spajić
+  - Emmanuel Macron
+  topics:
+  - enlargement
+  location: Sveti Stefan, Montenegro
+  position: Germany strongly supports the EU enlargement process for the Western Balkans
+    as a strategic interest for European stability and sovereignty.
+  positions:
+    enlargement: Germany advocates for a reformed, less bureaucratic, and performance-oriented
+      accession process to accelerate the integration of Western Balkan states into
+      the EU.
+  stances:
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Gemeinsam mit dem französischen Präsidenten EmmanuelMacron ergriff
+          Merz im Juni 2026 die Initiative zur Dynamisierung des Beitrittsprozesses.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

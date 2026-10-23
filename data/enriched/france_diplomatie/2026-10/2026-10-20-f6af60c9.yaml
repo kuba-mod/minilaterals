@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  - Khaled El-Enany
+  topics:
+  - hybrid
+  location: Paris, France
+  position: France welcomes the UNESCO endorsement of the Call by Young People for
+    a New Culture of Peace and commits to mobilizing international support for youth
+    participation in multilateralism.
+  positions:
+    hybrid: France supports a broadened definition of peace that addresses modern
+      threats including disinformation, polarization, and the digital divide.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: The text considers that the new threats to peace are also played
+          out in classrooms, social media, information, memory, science and now artificial
+          intelligence. It explicitly links conflicts, polarization, disinformation,
+          discrimination, the digital divide and technology.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

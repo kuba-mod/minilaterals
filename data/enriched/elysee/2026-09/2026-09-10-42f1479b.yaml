@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- SK
+- HU
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics: []
+  location: null
+  position: France and other signatories support the ITU's global governance of the
+    radio frequency spectrum and satellite orbits to ensure equitable access and prevent
+    harmful interference.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

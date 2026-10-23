@@ -1,0 +1,36 @@
+actors:
+- FR
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Jean-Noël Barrot
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: Estonia seeks to strengthen bilateral relations with France to enhance
+    European security and increase pressure on Russia.
+  positions:
+    ukraine: Estonia is supporting Ukraine and preparing for the Ukraine recovery
+      conference to be held in Tallinn in January 2027.
+    defence: Estonia aims to promote cooperation in the defense sector and strengthen
+      European security and defense capabilities.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Euroopa julgeolek ja kaitsevõime tugevdamine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

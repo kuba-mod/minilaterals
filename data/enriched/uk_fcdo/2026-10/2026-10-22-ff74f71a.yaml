@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - James Ford, UK Chargé d’Affaires, Deputy Ambassador
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom condemns Russia's mass strikes against Ukraine and
+    demands respect for Ukraine's sovereignty and territorial integrity.
+  positions:
+    ukraine: The United Kingdom condemns Russian aggression and asserts that genuine
+      dialogue requires respect for Ukraine's sovereign equality and territorial integrity.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

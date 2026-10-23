@@ -1,0 +1,44 @@
+actors:
+- FR
+issue_areas:
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Sheikh Mohammed bin Abdulrahman bin Jassim Al Thani
+  - Jean-Noël Barrot
+  topics:
+  - defence
+  - iran
+  location: Doha, Qatar
+  position: France reaffirms its strategic partnership with Qatar, committing to deepen
+    bilateral cooperation across security, defense, and economic sectors while coordinating
+    on regional stability.
+  positions:
+    defence: France reiterates its commitment to Qatar's security and stability through
+      enhanced military interoperability, joint training, and the implementation of
+      a military cooperation Letter of Intent.
+    iran: France exchanged views on the ongoing Iran conflict and emphasized the need
+      for diplomacy and coordinated international efforts to ensure freedom of navigation
+      in the Strait of Hormuz.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Qatar’s participation in Exercise ORION 2026 in France, underscoring
+          their commitment to enhanced military interoperability and readiness
+    e3:
+      iran:
+        score: 0
+        evidence: Both sides exchanged views on the latest regional and global developments,
+          including on Gulf Security, the ongoing Iran conflict
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

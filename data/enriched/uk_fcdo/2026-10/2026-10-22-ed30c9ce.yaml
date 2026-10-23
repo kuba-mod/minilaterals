@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - James Ford, UK Chargé d’Affaires, Deputy Ambassador
+  topics:
+  - migration
+  location: null
+  position: The United Kingdom advocates for cross-border, digital, and financial
+    cooperation to combat human trafficking and its convergence with organized and
+    cybercrime.
+  positions:
+    migration: The UK calls for victim-centred responses and stronger digital and
+      financial cooperation to tackle human trafficking.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

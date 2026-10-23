@@ -1,0 +1,23 @@
+actors:
+- EE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Tsahkna
+  topics: []
+  location: null
+  position: Estonia highlights its strength as a digital state following its first-place
+    ranking in Freedom House's 2026 internet freedom index.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
