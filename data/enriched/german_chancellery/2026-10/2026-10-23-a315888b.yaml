@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- defence
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler
+  topics:
+  - defence
+  - enlargement
+  - energy
+  location: Berlin, Germany
+  position: Germany is actively seeking global investment to modernize its industrial
+    base through AI and infrastructure while supporting EU enlargement in the Balkans.
+  positions:
+    defence: Germany identifies defense as one of the key sectors requiring targeted
+      investment.
+    enlargement: Germany acts as an important advocate for Balkan states' accession
+      to the EU, specifically expecting a swift entry for Montenegro.
+    energy: Germany is prioritizing investments in the energy sector to secure future
+      industrial value creation.
+  stances:
+    weimar:
+      enlargement:
+        score: 1
+        evidence: Deutschland bleibt für die Staaten des Balkans ein wichtiger Fürsprecher
+          auf dem Weg in die EU.
+    e3:
+      defence:
+        score: 0
+        evidence: Konkret geht es um Investitionen in wichtigen Branchen wie Energie,
+          Industrielle KI, Verkehrs-Infrastruktur, Raumfahrt und Verteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

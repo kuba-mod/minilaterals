@@ -1,0 +1,27 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  topics:
+  - defence
+  location: Kerak, Jordan
+  position: Poland expresses condolences for the victims of the terrorist attack in
+    Jordan and reaffirms its partnership with Jordan in the fight against terrorism
+    and extremism.
+  positions:
+    defence: Poland emphasizes its long-term engagement with Jordan in combating terrorism
+      and extremism.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

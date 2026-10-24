@@ -1,0 +1,30 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany emphasizes the decisive role of its federal states in implementing
+    national sustainability goals and the 2030 Agenda.
+  positions:
+    green_transition: Germany is coordinating cooperation between the federal government
+      and the states to achieve sustainability goals and the 2030 Agenda.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Den Ländern kommt bei der Umsetzung der deutschen Nachhaltigkeitsziele
+          und der Agenda 2030 eine entscheidende Rolle zu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

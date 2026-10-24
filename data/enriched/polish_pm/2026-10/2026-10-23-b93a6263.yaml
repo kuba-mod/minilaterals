@@ -1,0 +1,28 @@
+actors:
+- PL
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Narendra Modi
+  - Andrzej Domański
+  topics:
+  - indo_pacific
+  location: India
+  position: Poland aims to significantly increase trade exchange with India by 2030,
+    focusing on high-technology investments and acting as a stable EU partner.
+  positions:
+    indo_pacific: Poland seeks to triple its trade exchange with India by 2030 and
+      build technological and economic bridges between Europe and Asia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

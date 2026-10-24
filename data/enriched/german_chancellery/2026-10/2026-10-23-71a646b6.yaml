@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- indo_pacific
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lawrence Wong
+  - Tharman Shanmugaratnam
+  - Sanae Takaichi
+  - Lee Jae Myung
+  topics:
+  - indo_pacific
+  - defence
+  location: Singapore, Japan, South Korea
+  position: Germany is conducting a high-level diplomatic tour of Singapore, Japan,
+    and South Korea to deepen security and economic cooperation.
+  positions:
+    indo_pacific: Germany aims to strengthen economic and security ties with key partners
+      in Asia through official visits and business summits.
+    defence: Germany is focusing on deepening security policy cooperation, highlighted
+      by the Chancellor's planned visit to the Demilitarized Zone.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,34 @@
+actors:
+- PL
+- LT
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Ministers of Poland
+  - Deputy Ministers of Lithuania
+  topics:
+  - hybrid
+  location: null
+  position: Poland seeks to deepen strategic ties with Lithuania through open dialogue
+    on minority rights and cooperation on regional resilience against geopolitical
+    threats.
+  positions:
+    hybrid: Poland emphasizes the need for Polish-Lithuanian cooperation to build
+      regional resilience in response to a demanding geopolitical situation.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: budowania odporności regionalnej wobec coraz bardziej wymagającej
+          sytuacji geopolitycznej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

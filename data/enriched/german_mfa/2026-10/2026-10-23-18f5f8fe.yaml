@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Thomas Rachel, Federal Government Commissioner for Freedom of Religion and Belief
+  topics: []
+  location: Assisi, Italy
+  position: Germany emphasizes the importance of involving religious actors in peace
+    efforts and interreligious dialogue to address global crises.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

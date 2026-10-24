@@ -41,6 +41,11 @@ extracted:
         score: 2
         evidence: la nécessité d’aider encore plus vite et plus fort nos amis ukrainiens
           en matière d’intercepteurs
+    e3:
+      defence:
+        score: 0
+        evidence: le chef de l'État s'est d'abord entretenu avec le Président des
+          États-Unis, Donald Trump sur la guerre en Ukraine et au Moyen-Orient
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

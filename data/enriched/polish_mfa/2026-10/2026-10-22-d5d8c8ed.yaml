@@ -1,0 +1,51 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Minister Bosacki
+  topics:
+  - hybrid
+  - enlargement
+  - energy
+  location: Montenegro
+  position: Poland supports the EU enlargement to the Western Balkans and offers cooperation
+    in combating hybrid threats and improving energy security and local governance.
+  positions:
+    hybrid: Poland expresses readiness to support Western Balkan countries in fighting
+      hybrid threats, disinformation, and FIMI tools used by Russia.
+    enlargement: Poland remains a consistent supporter of EU enlargement to the Western
+      Balkans as the most effective way to build stability and prosperity.
+    energy: Poland views regional energy integration in the Western Balkans as a way
+      to strengthen energy security even before EU membership.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: wyrażając przy tym gotowość do wsparcia krajów regionu w walce z
+          tymi zagrożeniami
+      enlargement:
+        score: 1
+        evidence: Polska pozostaje konsekwentnym zwolennikiem​ polityki rozszerzenia
+          UE o państwa Bałkanów Zachodnich
+    visegrad:
+      enlargement:
+        score: 2
+        evidence: Polska jest gotowa dzielić się naszym doświadczeniem w tej sprawie
+      energy:
+        score: 1
+        evidence: regionalna integracja energetyczna może się rozwijać przed członkostwem
+          w UE, wzmacniać bezpieczeństwo energetyczne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

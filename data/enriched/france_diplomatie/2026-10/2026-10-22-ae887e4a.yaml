@@ -1,0 +1,45 @@
+actors:
+- FR
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  - defence
+  location: Paris, France
+  position: France reaffirmed its solidarity with Estonia and discussed strategic
+    partnership implementation, European security, and the war in Ukraine.
+  positions:
+    ukraine: France discussed the war in Ukraine and the implementation of sanctions
+      against Russia.
+    defence: France is deploying the Lynx mission to Estonia as part of NATO’s Enhanced
+      Forward Presence.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: spoke about the war in Ukraine and sanctions against Russia
+      defence:
+        score: 2
+        evidence: France’s solidarity with Estonia, where the Lynx mission is being
+          deployed as part of NATO’s Enhanced Forward Presence
+    e3:
+      defence:
+        score: 0
+        evidence: They also spoke about the war in Ukraine and sanctions against Russia,
+          European security
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

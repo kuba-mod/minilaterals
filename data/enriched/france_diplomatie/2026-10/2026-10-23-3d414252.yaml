@@ -1,0 +1,61 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- EE
+- LV
+- AU
+- US
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - The Hon Dr Anne Aly MP
+  - Beate Meinl-Reisinger
+  - Minister Maxime Prévot
+  - Mr. Hristo Dikanski
+  - Hon. Randeep Sarai
+  - H.E. Mr Gordan Grlić Radman
+  - Petr Macinka
+  - Mr. Lars Løkke Rasmussen
+  - Hadja Lahbib
+  - Margus Tsahkna
+  - Ville Tavio
+  - Jean-Noël Barrot
+  - Dr. Johann Wadephul
+  - Helen McEntee
+  - Antonio Tajani
+  - Baiba Braže
+  - Xavier Bettel
+  - Christopher Fearne
+  - S.W. Sjoerdsma
+  - H E Mr Åsmund Aukrust
+  - Radosław Sikorski
+  - Paulo Rangel
+  - Mr. Sebastian Dănuț Neculăescu
+  - H.E. Mr. Juraj Blanár
+  - H.E. Mr Tone Kajzer
+  - H.E. Mr José Manuel Albares
+  - Benjamin Dousa
+  - Dominik Stillhart
+  - Massad Boulos
+  - Kirsty McNeill MP
+  topics: []
+  location: null
+  position: France, as part of a joint international effort, urges the parties to
+    the conflict in Sudan to lift impediments on humanitarian assistance to avert
+    a looming famine.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

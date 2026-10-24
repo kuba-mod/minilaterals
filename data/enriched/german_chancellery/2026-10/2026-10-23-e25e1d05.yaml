@@ -1,0 +1,35 @@
+actors:
+- DE
+- US
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Rowan Barnett
+  - Pablo Toussaint
+  topics:
+  - hybrid
+  location: USA
+  position: Germany is providing funding and political support for the Global Authentic
+    Memory Initiative to protect historical digital archives from AI-generated fakes
+    and disinformation.
+  positions:
+    hybrid: Germany is combating digital disinformation and the 'liar's dividend'
+      by funding a technical solution to verify the authenticity of historical documents.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: BKM unterstützt das Projekt mit Fördermitteln in Höhe von 100.000
+          Euro.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

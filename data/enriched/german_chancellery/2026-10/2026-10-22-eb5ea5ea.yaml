@@ -1,0 +1,27 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Lars Klingbeil
+  topics:
+  - energy
+  location: null
+  position: Germany reports an increase in projected tax revenues due to economic
+    growth but emphasizes the continued need for budget consolidation and structural
+    reforms to ensure long-term competitiveness.
+  positions:
+    energy: Germany is implementing tax reductions for diesel and gasoline, which
+      is resulting in lower federal tax revenues.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

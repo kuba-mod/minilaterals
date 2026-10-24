@@ -1,0 +1,36 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Narendra Modi
+  topics:
+  - defence
+  location: Bengaluru, India
+  position: Poland seeks to translate its strategic partnership with India into concrete
+    business ventures in digital technologies, AI, cybersecurity, and the aerospace
+    sector.
+  positions:
+    defence: Poland is collaborating with Indian partners on the development of dual-use
+      technologies within the aerospace sector.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: rozwiązań podwójnego zastosowania (dual-use)
+    visegrad:
+      defence:
+        score: 0
+        evidence: rozwiązań podwójnego zastosowania (dual-use)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

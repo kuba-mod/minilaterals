@@ -1,0 +1,74 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- EE
+- LV
+- AU
+- US
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Dr. Johann Wadephul, Federal Minister for Foreign Affairs, Germany
+  - Kirsty McNeill MP, Minister of State for International Development of the United
+    Kingdom
+  - The Hon Dr Anne Aly MP, Minister for International Development of Australia
+  - Beate Meinl-Reisinger, Federal Minister for European and International Affairs
+    of the Republic of Austria
+  - Minister Maxime Prévot, Deputy Prime Minister and Minister of Foreign Affairs,
+    European Affairs and Development Cooperation, Belgium
+  - Mr. Hristo Dikanski, Deputy Minister of Foreign Affairs of the Republic of Bulgaria
+  - Hon. Randeep Sarai, Secretary of State for International Development, Canada
+  - H.E. Mr Gordan Grlić Radman, Minister of Foreign and European Affairs of the Republic
+    of Croatia
+  - Petr Macinka, Deputy Prime Minister and Minister of Foreign Affairs of the Czech
+    Republic
+  - Mr. Lars Løkke Rasmussen, Minister for Foreign Affairs, Denmark
+  - Hadja Lahbib, European Commissioner for Equality, Preparedness and Crisis Management
+  - Margus Tsahkna, Minister of Foreign Affairs of the Republic of Estonia
+  - Ville Tavio, Minister for Foreign Trade and Development, Finland
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs, France
+  - Helen McEntee, Minister for Foreign Affairs and Trade, Ireland
+  - Antonio Tajani, Deputy Prime Minister and Minister of Foreign Affairs and International
+    Cooperation of Italy
+  - Baiba Braže, Minister of Foreign Affairs of the Republic of Latvia
+  - Xavier Bettel, Minister for Development Cooperation and Humanitarian Affairs,
+    Luxembourg
+  - Christopher Fearne, Minister for Foreign and European Affairs, Republic of Malta
+  - S.W. Sjoerdsma, Minister of Foreign Trade and Development Cooperation, Netherlands
+  - H E Mr Åsmund Aukrust, Minister of International Development, Norway
+  - Radosław Sikorski, Deputy Prime Minister, Minister of Foreign Affairs of the Republic
+    of Poland
+  - Paulo Rangel, Minister of Foreign Affairs, Portugal
+  - Mr. Sebastian Dănuț Neculăescu, Minister of Foreign Affairs, Romania
+  - H.E. Mr. Juraj Blanár, Minister of Foreign and European Affairs of the Slovak
+    Republic
+  - H.E. Mr Tone Kajzer, Minister of Foreign and European Affairs of the Republic
+    of Slovenia
+  - H.E. Mr José Manuel Albares, Minister for Foreign Affairs, European Union and
+    Cooperation of Spain
+  - Benjamin Dousa, Minister for International Development Cooperation and Foreign
+    Trade, Sweden
+  - Dominik Stillhart, Head of Swiss Humanitarian Aid, Deputy Director General of
+    Swiss Development Cooperation
+  - Massad Boulos, Senior Advisor for Arab and African Affairs, United States of America
+  topics: []
+  location: null
+  position: Germany, as part of a coalition of 32 partners, urges the parties to the
+    conflict in Sudan to lift impediments to humanitarian aid and calls on the international
+    community to scale up funding to avert famine.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Mayor of Trappes
+  - Mayor of La Verrière
+  - Deputy
+  - Prefect
+  topics: []
+  location: Trappes, France
+  position: France expresses national solidarity with the victims of a racist terrorist
+    attack and reaffirms the indivisibility of the Republic against racial and religious
+    discrimination.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

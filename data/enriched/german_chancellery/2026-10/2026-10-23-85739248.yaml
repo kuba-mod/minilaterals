@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Prof. Schmidt
+  - Prof. Kahmen
+  topics: []
+  location: Frankfurt/Oder, Germany
+  position: Germany aims to strengthen its technological sovereignty and innovation
+    capacity through the targeted promotion of application-oriented microelectronics
+    research and federal cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
