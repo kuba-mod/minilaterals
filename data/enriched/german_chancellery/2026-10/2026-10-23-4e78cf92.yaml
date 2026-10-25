@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+issue_areas:
+- indo_pacific
+- defence
+- iran
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Meyer
+  - Lawrence Wong
+  - Sanae Takaichi
+  - Lee Jae-myung
+  - Reiche
+  - Wadephul
+  topics:
+  - indo_pacific
+  - defence
+  - iran
+  - ukraine
+  location: Berlin, Germany
+  position: Germany announces a high-level diplomatic and economic tour to Singapore,
+    Japan, and South Korea to deepen security and economic cooperation, while engaging
+    in diplomatic efforts regarding the Middle East and Ukraine.
+  positions:
+    indo_pacific: Germany seeks to deepen security and economic cooperation with Singapore,
+      Japan, and South Korea, focusing on open trade, economic resilience, and AI
+      innovation.
+    defence: Germany emphasizes the need to adapt security and defense policies in
+      response to a changed threat landscape, particularly in Asia and regarding foreign
+      intelligence threats.
+    iran: Germany is utilizing a diplomatic format including the E3 and regional powers
+      to seek diplomatic solutions for conflicts in the Strait of Hormuz and the Red
+      Sea.
+    ukraine: Germany maintains a leadership role in the EU to ensure continued financial
+      and military support for Ukraine to withstand Russian aggression.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: dass wir schon in der Vergangenheit wirklich weitreichende Entscheidungen
+          getroffen haben, die Ukraine zu unterstützen und sie auch finanziell in
+          die Lage zu versetzen, diesem fortlaufenden Angriffskrieg aus Russland wirklich
+          auch standzuhalten. Wir bringen uns natürlich in alle Gespräche mit dem
+          Ziel ein, dass das auch in Zukunft gilt.
+    e3:
+      iran:
+        score: 1
+        evidence: E3 ist ein in den Iranverhandlungen schon seit Langem etabliertes
+          Format.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

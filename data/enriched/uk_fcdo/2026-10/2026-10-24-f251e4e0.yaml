@@ -1,0 +1,24 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Counterparts from France, Germany, Italy and United Kingdom
+  topics: []
+  location: Istanbul, Turkey
+  position: The United Kingdom participated in a ministerial meeting with counterparts
+    from France, Germany, and Italy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

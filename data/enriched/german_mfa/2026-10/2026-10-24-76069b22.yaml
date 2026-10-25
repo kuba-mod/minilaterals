@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Foreign Minister of Türkiye
+  - Foreign Minister of Egypt
+  - Foreign Minister of Pakistan
+  - Foreign Minister of Saudi Arabia
+  - Foreign Minister of France
+  - Foreign Minister of Germany
+  - Foreign Minister of Italy
+  - Foreign Minister of the United Kingdom
+  topics:
+  - iran
+  location: İstanbul, Türkiye
+  position: Germany commits to diplomatic efforts and dialogue to promote peace, stability,
+    and de-escalation in the Middle East and surrounding regions.
+  positions:
+    iran: Germany emphasizes the need for dialogue, diplomacy, and de-escalation to
+      address the US/Israel-Iran conflict and tensions in the Straits of Hormuz.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: The Ministers discussed various issues of regional and international
+          importance, namely US/Israel-Iran conflict
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
