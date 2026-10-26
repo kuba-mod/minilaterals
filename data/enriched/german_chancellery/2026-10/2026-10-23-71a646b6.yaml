@@ -27,7 +27,11 @@ extracted:
       in Asia through official visits and business summits.
     defence: Germany is focusing on deepening security policy cooperation, highlighted
       by the Chancellor's planned visit to the Demilitarized Zone.
-  stances: {}
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Vertiefung der sicherheitspolitischen und wirtschaftlichen Zusammenarbeit
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
