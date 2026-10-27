@@ -1,0 +1,32 @@
+actors:
+- EE
+- LV
+- LT
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Latvia emphasizes that strengthening the security of the Baltic region
+    is a shared responsibility for all of Europe.
+  positions:
+    defence: Latvia advocates for the collective responsibility of Europe in enhancing
+      the security and defense of the Baltic states.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Baltijas drošības stiprināšana ir arī visas Eiropas kopīga atbildība
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

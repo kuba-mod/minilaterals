@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Eléonore Caroit
+  - Sheikh Thani bin Hamad Al Thani
+  - Fahad Al-Sulaiti
+  - Christophe Lecourtier
+  - Jérémie Pellet
+  - Gaël Veyssière
+  topics: []
+  location: null
+  position: France signed two agreements with the Qatar Fund For Development to strengthen
+    humanitarian and development cooperation, specifically regarding crisis prevention
+    and response.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

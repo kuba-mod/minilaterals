@@ -1,0 +1,24 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics: []
+  location: El Fasher, Sudan
+  position: The United Kingdom, as part of a coalition, issued a statement regarding
+    the atrocity in El Fasher to advocate for atrocity prevention and justice for
+    Sudan.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

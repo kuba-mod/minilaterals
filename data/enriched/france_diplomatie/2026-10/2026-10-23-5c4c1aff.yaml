@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Coalition for Atrocity Prevention and Justice for Sudan
+  topics:
+  - rule_of_law
+  location: null
+  position: France, as part of the Coalition, calls for accountability for atrocities
+    in Sudan, support for international fact-finding missions, and an immediate end
+    to the conflict through compliance with international law.
+  positions:
+    rule_of_law: France supports credible accountability processes, including the
+      work of the International Criminal Court and UN Fact-Finding Missions, to ensure
+      those responsible for violations of international humanitarian law are held
+      to account.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Justice and accountability are vital to achieving sustainable peace
+          in Sudan.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

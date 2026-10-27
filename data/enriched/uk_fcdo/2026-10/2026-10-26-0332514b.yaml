@@ -1,0 +1,25 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: El Fasher, Sudan
+  position: The United Kingdom is imposing sanctions on senior commanders involved
+    in sexual violence in Sudan and providing new support for survivors.
+  positions:
+    rule_of_law: The UK is implementing sanctions against commanders implicated in
+      a campaign of rape in Sudan to address horrific violence and support survivors.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Adam Krzywosądzki, Director of the Global Affairs Department
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland supports the Sérgio Vieira de Mello Award to honor individuals
+    and organizations promoting peaceful coexistence and human rights.
+  positions:
+    rule_of_law: Poland recognizes and honors activists and organizations working
+      for the rule of law and democratic transitions, specifically citing the work
+      of Maksim Znak in Belarus.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: działający na rzecz praworządności i pokojowych przemian demokratycznych
+          na Białorusi
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

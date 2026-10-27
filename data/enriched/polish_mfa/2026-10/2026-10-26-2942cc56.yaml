@@ -1,0 +1,59 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- indo_pacific
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Lê Minh Hưng
+  - Robert Kupiecki
+  topics:
+  - ukraine
+  - defence
+  - indo_pacific
+  - migration
+  location: null
+  position: Poland is elevating its bilateral relations with Vietnam to a strategic
+    partnership to boost political, economic, and security cooperation.
+  positions:
+    ukraine: Poland emphasizes the need for a comprehensive, just, and lasting peace
+      in Ukraine in accordance with international law and the UN Charter.
+    defence: Poland is strengthening military partnership and defense industry cooperation
+      with Vietnam, including collaboration on UN peace operations.
+    indo_pacific: Poland recognizes Vietnam's growing importance in the Indo-Pacific
+      region and supports freedom of navigation and overflight in the South China
+      Sea.
+    migration: Poland intends to intensify cooperation with Vietnam to combat human
+      trafficking and illegal migration.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: podkreśliły konieczność osiągnięcia kompleksowego, sprawiedliwego
+          i trwałego pokoju w Ukrainie
+      defence:
+        score: 0
+        evidence: zacieśnienie polsko-wietnamskiej współpracy w dziedzinie bezpieczeństwa
+          i obronności
+    visegrad:
+      defence:
+        score: 1
+        evidence: zacieśnienie polsko-wietnamskiej współpracy w dziedzinie bezpieczeństwa
+          i obronności
+      migration:
+        score: 1
+        evidence: zacieśnienie współpracy w zwalczaniu cyberprzestępczości, przestępczości
+          transgranicznej, handlu ludźmi i nielegalnej migracji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

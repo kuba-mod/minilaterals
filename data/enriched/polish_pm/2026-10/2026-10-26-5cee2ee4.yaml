@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Lê Minh Hưng
+  topics:
+  - defence
+  - indo_pacific
+  location: Hanoi, Vietnam
+  position: Poland is elevating its relations with Vietnam to a strategic partnership
+    to expand economic cooperation, defense exports, and diplomatic ties.
+  positions:
+    defence: Poland aims to offer its arms industry capabilities to Vietnam as part
+      of the new strategic partnership.
+    indo_pacific: Poland is strengthening its presence in Asia by establishing a strategic
+      partnership with Vietnam and planning a direct flight connection between Warsaw
+      and Hanoi.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Sektory, którymi najbardziej zainteresowana jest strona wietnamska,
+          a w których my mamy naprawdę coś do zaoferowania, to przemysł zbrojeniowy
+    visegrad:
+      defence:
+        score: 1
+        evidence: Sektory, którymi najbardziej zainteresowana jest strona wietnamska,
+          a w których my mamy naprawdę coś do zaoferowania, to przemysł zbrojeniowy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

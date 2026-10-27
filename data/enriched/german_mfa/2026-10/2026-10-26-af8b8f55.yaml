@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany, as part of a coalition, condemns the atrocities in Al-Faschir
+    and Sudan, demanding accountability for war crimes and an end to the conflict.
+  positions:
+    rule_of_law: Germany advocates for credible accountability processes, including
+      the work of the International Criminal Court, to ensure perpetrators of atrocities
+      in Sudan are prosecuted.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Gerechtigkeit und Rechenschaftspflicht sind unerlässlich, um zu
+          einem dauerhaften Frieden in Sudan zu gelangen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

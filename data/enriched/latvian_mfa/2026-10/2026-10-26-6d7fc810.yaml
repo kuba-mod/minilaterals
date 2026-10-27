@@ -1,0 +1,27 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Dace Melbārde, Parliamentary Secretary of the Ministry of Foreign Affairs
+  topics:
+  - defence
+  location: New York, USA
+  position: Latvia is participating in UN Security Council meetings regarding children
+    in armed conflicts and the 'Women, Peace and Security' agenda.
+  positions:
+    defence: Latvia is engaging in high-level UN Security Council discussions focused
+      on the protection of children in armed conflicts and the role of women in peace
+      and security.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

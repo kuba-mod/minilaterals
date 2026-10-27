@@ -1,0 +1,44 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Velislava Petrova-Chamova
+  topics:
+  - ukraine
+  - defence
+  location: Varna, Bulgaria
+  position: France reaffirmed its solidarity with Bulgaria regarding Black Sea security
+    and signed an updated strategic partnership road map.
+  positions:
+    ukraine: France views Russian aggression against Ukraine as a direct threat to
+      the security of the European Union and NATO.
+    defence: France expressed its commitment to regional security in the Black Sea
+      and stands ready to consider Bulgarian requests for assistance following drone
+      attacks.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: our support for Ukraine
+      defence:
+        score: 1
+        evidence: steadfast commitment to regional security
+    e3:
+      defence:
+        score: 0
+        evidence: France, which is already contributing to the security of its allies,
+          stands ready to consider Bulgaria’s requests for assistance
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,65 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ignacy Niemczycki
+  - Benjamin Haddad
+  - Gunther Krichbaum
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Giżycko, Poland
+  position: Germany commits to strengthening European security and defense capabilities
+    alongside France and Poland to counter Russian aggression and ensure a stable
+    European future.
+  positions:
+    ukraine: Germany affirms its continued support for Ukraine as a priority of its
+      European policy.
+    defence: Germany advocates for strengthening the EU and NATO's eastern flank and
+      developing a more robust, independent European defense industrial base.
+    hybrid: Germany identifies foreign information manipulation and interference (FIMI)
+      as a key priority for cooperation.
+    enlargement: Germany includes EU enlargement as a core topic of its coordinated
+      European policy with France and Poland.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Unterstützung der Ukraine
+      defence:
+        score: 1
+        evidence: entschlossen, die Ostflanke der EU und der NATO zu stärken und die
+          Sicherheit aller Land-, Luft- und Seegrenzen der EU und der NATO zu gewährleisten
+          sowie gleichzeitig Europas Verteidigungsfähigkeiten und seine rüstungsindustrielle
+          Basis zu stärken
+      hybrid:
+        score: 1
+        evidence: ausländische Informationsmanipulation und Einflussnahme (foreign
+          information manipulation and interference, FIMI)
+      enlargement:
+        score: 1
+        evidence: Erweiterung
+    e3:
+      defence:
+        score: 0
+        evidence: Europa muss mehr Verantwortung für seine eigene Verteidigung übernehmen
+          und sich besser ausrüsten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

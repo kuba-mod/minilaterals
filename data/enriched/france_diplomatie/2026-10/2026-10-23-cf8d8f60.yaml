@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Hakan Fidan
+  - Ishaq Dar
+  - Badr Abdelatty
+  topics:
+  - iran
+  location: Istanbul, Turkey
+  position: France coordinated with regional and European partners to seek a diplomatic
+    solution to the crisis in Iran.
+  positions:
+    iran: France reiterated the necessity of a long-term diplomatic solution to address
+      nuclear, ballistic, and regional threats emanating from Iran.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: reiterated the need to guarantee a diplomatic solution to resolve,
+          in the long term, the nuclear, ballistic and regional threats emanating
+          from Iran
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

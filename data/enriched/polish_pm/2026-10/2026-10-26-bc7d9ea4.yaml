@@ -1,0 +1,44 @@
+actors:
+- PL
+issue_areas:
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Lê Minh Hưng
+  topics:
+  - defence
+  - indo_pacific
+  location: Vietnam
+  position: Poland seeks to elevate its relationship with Vietnam from traditional
+    trade to deep industrial and investment cooperation across high-tech sectors.
+  positions:
+    defence: Poland proposes cooperation in the defense sector involving the delivery
+      of modern solutions and joint long-term production, training, and technological
+      projects.
+    indo_pacific: Poland views Vietnam as its largest trading partner in Southeast
+      Asia and a strategic gateway to the ASEAN market.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: współpraca w sektorze obronnym może obejmować nie tylko dostawy
+          nowoczesnych rozwiązań, ale też wspólne długoterminowe projekty produkcyjne,
+          szkoleniowe i technologiczne
+    visegrad:
+      defence:
+        score: 1
+        evidence: współpraca w sektorze obronnym może obejmować nie tylko dostawy
+          nowoczesnych rozwiązań, ale też wspólne długoterminowe projekty produkcyjne,
+          szkoleniowe i technologiczne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
