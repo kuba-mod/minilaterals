@@ -1,0 +1,50 @@
+actors:
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - President of Finland
+  - Prime Minister of Norway
+  - President of Russia
+  - President Zelenskyy
+  - Vladimir Putin
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Poland supports efforts to achieve a just peace and ceasefire in Ukraine
+    while maintaining full support for Ukraine and non-negotiable security for the
+    EU's northern and eastern flanks.
+  positions:
+    ukraine: Poland advocates for a just peace on terms acceptable to both parties
+      and Europe, emphasizing the humanitarian need to avoid further casualties.
+    defence: Poland has been selected as the location for the PAC-3 missile servicing
+      center for Patriot systems.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Niezmiennym priorytetem pozostaje pełne wsparcie dla Ukrainy.
+      defence:
+        score: 2
+        evidence: Polska została wybrana jako lokalizacja centrum serwisowania pocisków
+          PAC-3 do systemów Patriot.
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska została wybrana jako lokalizacja centrum serwisowania pocisków
+          PAC-3 do systemów Patriot
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

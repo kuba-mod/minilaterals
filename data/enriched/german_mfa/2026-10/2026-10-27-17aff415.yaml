@@ -1,0 +1,32 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Gunther Krichbaum
+  - Mona Fortier
+  topics:
+  - ukraine
+  location: Canada
+  position: Germany seeks to strengthen its bilateral and EU-wide partnership with
+    Canada based on shared values and a commitment to a rules-based international
+    order.
+  positions:
+    ukraine: Germany and Canada stand together as NATO allies in their joint support
+      for Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: unterstützen gemeinsam die Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

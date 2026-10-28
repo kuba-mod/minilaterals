@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- defence
+- indo_pacific
+- submarines
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lawrence Wong
+  - Tharman Shanmugaratnam
+  topics:
+  - defence
+  - indo_pacific
+  - submarines
+  - ukraine
+  location: Singapore, Singapore
+  position: Germany aims to deepen its strategic partnership with Singapore to secure
+    prosperity and competitiveness amidst geopolitical shifts in the Indo-Pacific.
+  positions:
+    defence: Germany is intensifying security cooperation with Singapore, including
+      new agreements on cybersecurity and joining the GUIDE initiative to protect
+      critical underwater infrastructure.
+    indo_pacific: Germany is increasing its engagement in the region by strengthening
+      ties with key partners like Singapore, Japan, and South Korea to maintain a
+      rule-based order.
+    submarines: Germany continues its long-term cooperation with Singapore regarding
+      the production and crew training for Invincible-class submarines.
+    ukraine: Germany expressed gratitude for Singapore's support for Ukraine and its
+      implementation of sanctions against Russia.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Danke für die weitere Unterstützung der Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

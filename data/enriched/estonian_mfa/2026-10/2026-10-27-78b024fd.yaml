@@ -1,0 +1,29 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  - President of Finland
+  - Prime Minister of Norway
+  - Leader of Russia
+  topics:
+  - ukraine
+  location: null
+  position: Estonia asserts that only increasing pressure on Russia will compel it
+    to take negotiations seriously regarding its war against Ukraine.
+  positions:
+    ukraine: Estonia believes that strengthening pressure on Russia is the only way
+      to ensure it takes negotiations seriously regarding the war in Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

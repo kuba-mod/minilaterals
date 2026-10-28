@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Eleanor Sanders
+  - UK’s Ambassador for Human Rights
+  topics:
+  - rule_of_law
+  location: Tanzania
+  position: The UK Human Rights Ambassador is visiting Tanzania to engage on the country's
+    human rights landscape prior to a UN review.
+  positions:
+    rule_of_law: The United Kingdom is conducting a diplomatic visit to Tanzania to
+      review the status of the country's human rights landscape.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

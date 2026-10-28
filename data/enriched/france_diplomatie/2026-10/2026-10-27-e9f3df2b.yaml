@@ -1,0 +1,59 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Deputy Ministers for European Affairs of the Weimar Triangle
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Giżycko, Poland
+  position: France, alongside Germany and Poland, commits to strengthening European
+    security and defense capabilities to counter the threat posed by Russia.
+  positions:
+    ukraine: France affirms its continued support for Ukraine as a priority of its
+      EU policy.
+    defence: France advocates for a more autonomous European defense capability and
+      a more robust European defence technological and industrial base.
+    hybrid: France commits to working together to counter foreign information manipulation
+      and interference (FIMI).
+    enlargement: France identifies EU enlargement as a key priority for coordinated
+      action within the Weimar Triangle.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: support to Ukraine
+      defence:
+        score: 1
+        evidence: committed to strengthening the EU’s and NATO’s eastern flank, as
+          well as ensuring the security of all NATO and EU land, air and maritime
+          borders, while enhancing Europe’s defence capabilities and industrial base
+      hybrid:
+        score: 1
+        evidence: foreign information manipulation and interference (FIMI)
+      enlargement:
+        score: 1
+        evidence: 'discussed the following issues regarding our EU policy: ... enlargement'
+    e3:
+      defence:
+        score: 0
+        evidence: enhancing Europe’s defence capabilities and industrial base
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,39 @@
+actors:
+- FR
+issue_areas:
+- enlargement
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - enlargement
+  - rule_of_law
+  location: null
+  position: France acknowledges the high voter turnout in Serbia's early elections,
+    congratulates the Student List, and calls for transparency regarding reported
+    irregularities.
+  positions:
+    enlargement: France expresses readiness to support the future Serbian authorities
+      in implementing reforms necessary for European Union accession.
+    rule_of_law: France urges Serbian authorities to fully investigate election irregularities
+      identified by the OSCE and independent organizations.
+  stances:
+    weimar:
+      enlargement:
+        score: 1
+        evidence: support the future Serbian authorities in the reforms necessary
+          to set the country on the path towards the European Union
+      rule_of_law:
+        score: 1
+        evidence: calls on the Serbian authorities to shed full light on the irregularities
+          flagged by the OSCE and several independent organizations
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

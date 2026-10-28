@@ -1,0 +1,61 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- EE
+- LV
+- AU
+- US
+issue_areas: []
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Dr. Johann Wadephul
+  - Kirsty McNeill
+  - Dr. Anne Aly
+  - Beate Meinl-Reisinger
+  - Maxime Prévot
+  - Hristo Dikanski
+  - Randeep Sarai
+  - Gordan Grlić Radman
+  - Petr Macinka
+  - Lars Løkke Rasmussen
+  - Hadja Lahbib
+  - Margus Tsahkna
+  - Ville Tavio
+  - Jean-Noël Barrot
+  - Helen McEntee
+  - Antonio Tajani
+  - Baiba Braže
+  - Xavier Bettel
+  - Christopher Fearne
+  - S.W. Sjoerdsma
+  - Åsmund Aukrust
+  - Radosław Sikorski
+  - Paulo Rangel
+  - Sebastian Dănuț Neculăescu
+  - Juraj Blanár
+  - Tone Kajzer
+  - José Manuel Albares
+  - Benjamin Dousa
+  - Dominik Stillhart
+  - Massad Boulos
+  topics: []
+  location: null
+  position: Germany, as part of a coalition of 32 partners, calls for immediate action
+    to prevent famine in Sudan by demanding unrestricted humanitarian access and increased
+    international financial aid.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

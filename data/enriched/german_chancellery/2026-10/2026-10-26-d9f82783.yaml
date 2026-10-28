@@ -1,0 +1,62 @@
+actors:
+- DE
+- US
+issue_areas:
+- enlargement
+- rule_of_law
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille (Deputy Government Spokesperson)
+  - Giese
+  - Buschow
+  - Friedrich Merz (Chancellor)
+  - Wadephul (Foreign Minister)
+  topics:
+  - enlargement
+  - rule_of_law
+  - energy
+  - iran
+  location: null
+  position: Germany congratulates the new governments in Brazil and Serbia, supports
+    the EU enlargement process for the Western Balkans, and monitors security risks
+    in the Middle East.
+  positions:
+    enlargement: Germany views EU enlargement as a geopolitical imperative and supports
+      accelerating the accession processes for Western Balkan states based on the
+      Copenhagen criteria.
+    rule_of_law: Germany emphasizes the importance of the rule of law, fighting corruption,
+      and ensuring basic freedoms in the context of Serbia's democratic transition.
+    energy: Germany monitors gas storage levels and maintains that there is no expected
+      gas shortage for the winter despite current fill levels being below targets.
+    iran: Germany closely monitors the security situation in the region and the safety
+      of its troops following tensions and diplomatic disputes with Iran.
+  stances:
+    weimar:
+      enlargement:
+        score: 2
+        evidence: Die EU hat den Erweiterungsprozess in den vergangenen Monaten zurück
+          auf Kurs gebracht und ihm neuen Schwung verliehen. Jetzt ist es an den Kandidatenländern,
+          ihrerseits die nötigen Reformen zu liefern. Die Erweiterung hat europäische
+          Priorität.
+      rule_of_law:
+        score: 1
+        evidence: Der Wahlkampf und das Ergebnis zeigen die Bedeutung der Themen von
+          Rechtsstaatlichkeit, Korruptionsbekämpfung und Gewährleistung der Grundfreiheiten
+          für die Bevölkerung in Serbien.
+    e3:
+      iran:
+        score: 0
+        evidence: Wir beobachten die Lage ganz genau beobachten, vor allen Dingen
+          in den Bereichen, in denen wir eigene Truppen haben.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
