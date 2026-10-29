@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Dr Rachel Emma-Jane Fentem
+  - Mr Colin James Crooks
+  topics: []
+  location: Seoul, Republic of Korea
+  position: The United Kingdom has appointed Dr Rachel Emma-Jane Fentem as the new
+    Ambassador to the Republic of Korea.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - indo_pacific
+  location: null
+  position: Germany, as part of a multilateral group, supports sanctions against North
+    Korea to stop its illegal weapons programs and military cooperation with Russia.
+  positions:
+    indo_pacific: Germany supports the implementation of sanctions against North Korea's
+      overseas labor, cyber activities, and military cooperation with Russia to achieve
+      complete denuclearization.
+  stances:
+    aukus:
+      indo_pacific:
+        score: 1
+        evidence: ihre Bemühungen, die Fähigkeit der DVRK zur rechtswidrigen Entwicklung
+          von Massenvernichtungswaffen (MVW) und ballistischen Raketen zu unterbinden
+          sowie der illegalen militärischen Zusammenarbeit zwischen der DVRK und Russland
+          entgegenzuwirken
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

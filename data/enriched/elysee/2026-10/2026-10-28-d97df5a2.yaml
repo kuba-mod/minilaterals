@@ -1,0 +1,35 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Patrick HENRY
+  - Charles BOURILLON
+  - Jean-Christophe SINTIVE
+  - François PENGUILLY
+  - Stéphane RICHARD
+  - Olivier MANTÉI
+  - Louis LANGRÉE
+  - Minister of Europe and Foreign Affairs
+  - Minister of Culture
+  topics:
+  - defence
+  location: null
+  position: France has appointed several high-ranking officials to leadership roles
+    within the gendarmerie, the Ministry of Europe and Foreign Affairs, and national
+    cultural institutions.
+  positions:
+    defence: France has appointed new commanders and inspectors for the national gendarmerie,
+      including roles for the Hauts-de-France region and overseas territories.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,56 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Sanae Takaichi
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - indo_pacific
+  location: Tokyo, Japan
+  position: Germany seeks to strengthen its strategic partnership with Japan through
+    cooperation in high-technology, economic security, and defense to maintain a rules-based
+    international order.
+  positions:
+    ukraine: Germany supports Ukraine against Russian aggression and views the conflict
+      as a challenge to the international peace order that affects Asia as well.
+    defence: Germany intends to deepen security cooperation with Japan, including
+      joint defense industry developments and exploring cooperation in fighter jet
+      construction.
+    energy: Germany agrees to promote public-private cooperation with Japan in the
+      fields of fusion and hydrogen technology.
+    indo_pacific: Germany reaffirms its commitment to the Indo-Pacific region, emphasizing
+      the importance of the UN Charter's ban on the use of force regarding the Taiwan
+      Strait.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Für Japans andauernde und substanzielle Unterstützung der Ukraine
+          danke ich Ihnen.
+      defence:
+        score: 0
+        evidence: Wir werden auch unsere Rüstungskooperation verstärken, zum Beispiel
+          durch gemeinsame Entwicklungen für eine innovative Verteidigung der Zukunft.
+    e3:
+      defence:
+        score: 0
+        evidence: Wir werden Möglichkeiten und Rahmenbedingungen prüfen, die zur Vertiefung
+          der Zusammenarbeit zwischen den Streitkräften beider Länder beitragen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

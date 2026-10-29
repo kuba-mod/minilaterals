@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany is strengthening the protection of its critical infrastructure
+    against sabotage and hybrid threats through new security screening regulations.
+  positions:
+    hybrid: The German government is implementing the Sabotage Protection Ordinance
+      to increase resilience against hybrid attacks and internal sabotage.
+    defence: Germany is expanding security screenings to include technical personnel
+      responsible for crisis and disaster warning infrastructure.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Hat deshalb die Verordnung zur Neufassung der Sicherheitsüberprüfungsfeststellungsverordnung
+          als Sabotageschutzverordnung des Bundes beschlossen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

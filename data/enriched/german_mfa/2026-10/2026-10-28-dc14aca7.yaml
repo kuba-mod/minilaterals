@@ -1,0 +1,37 @@
+actors:
+- DE
+- US
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Johann Wadephul
+  topics:
+  - energy
+  - iran
+  location: Atlanta, USA
+  position: Germany seeks to promote freedom in international economic relations,
+    secure open trade routes, and deepen strategic partnerships within the G20.
+  positions:
+    energy: Germany emphasizes the need for stable energy prices and warns that restrictions
+      on free navigation in the Strait of Hormuz and Bab-al-Mandab are driving global
+      energy costs up.
+    iran: Germany demands that Iran and Russia stop taking trade routes hostage to
+      prevent economic crises and hunger.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Russland und der Iran müssen endlich aufhören, Handelswege in Geiselhaft
+          zu nehmen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

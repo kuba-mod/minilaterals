@@ -1,0 +1,35 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Arron Newble
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom asserts that Russia is incurring increasing budgetary
+    costs for limited gains in its war against Ukraine, questioning the consistency
+    of this with its Code of Conduct commitments.
+  positions:
+    ukraine: The United Kingdom highlights that Russia's war against Ukraine is achieving
+      limited gains despite growing expenditures.
+    defence: The United Kingdom questions how Russia's increasing military spending
+      for the war aligns with its Code of Conduct commitments.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: Russia's war against Ukraine is costing more and achieving less
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

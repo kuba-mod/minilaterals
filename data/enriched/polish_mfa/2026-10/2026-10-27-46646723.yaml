@@ -1,0 +1,37 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - defence
+  location: null
+  position: Poland emphasizes the need for a change in perspective and strategic planning
+    based on an awareness of material, technological, and human resources in the face
+    of growing threats.
+  positions:
+    defence: Poland advocates for a strategic culture that recognizes its own resources
+      and limitations to effectively implement strategic investments for development.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Elementem kultury strategicznej i strategicznego planowania jest
+          świadomość własnych zasobów i własnych ograniczeń - materialnych, technologicznych
+          i ludzkich
+    visegrad:
+      defence:
+        score: 1
+        evidence: konieczność zmiany perspektywy w obliczu rosnącego zagrożenia
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sybiha
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  location: Tallinn, Estonia
+  position: Estonia is coordinating with Ukraine to organize a reconstruction conference
+    in Tallinn for January 2027.
+  positions:
+    ukraine: Estonia is preparing for the Ukraine reconstruction conference in Tallinn
+      and coordinating the invitation of world leaders.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

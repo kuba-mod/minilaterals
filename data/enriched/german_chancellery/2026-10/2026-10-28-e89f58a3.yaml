@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- defence
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - German Cabinet
+  - Abdel Hamid Dbeiba
+  - Khalifa Haftar
+  topics:
+  - defence
+  - migration
+  location: null
+  position: Germany has decided to continue its participation in the EU-led EUNAVFOR
+    MED IRINI mission until November 30, 2027, to stabilize Libya and combat human
+    smuggling.
+  positions:
+    defence: Germany will deploy up to 300 soldiers to support maritime security,
+      combat the 'shadow fleet', and monitor UN arms embargo violations in the Mediterranean.
+    migration: Germany aims to dismantle the business models of human smugglers and
+      traffickers through information gathering and support for Libyan law enforcement.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Zudem setzt sich die Bundesregierung für eine Zusammenarbeit zwischen
+          EU und NATO von der Operation EUNAVFOR MED IRINI mit der maritimen Sicherheitsoperation
+          SEA GUARDIAN der NATO ein.
+    e3:
+      defence:
+        score: 2
+        evidence: Zudem setzt sich die Bundesregierung für eine Zusammenarbeit zwischen
+          EU und NATO von der Operation EUNAVFOR MED IRINI mit der maritimen Sicherheitsoperation
+          SEA GUARDIAN der NATO ein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,50 @@
+actors:
+- DE
+issue_areas:
+- defence
+- indo_pacific
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Mr. Tsutsui
+  - Minister Akazawa
+  topics:
+  - defence
+  - indo_pacific
+  - energy
+  location: Tokyo, Japan
+  position: Germany seeks to deepen its strategic economic and technological partnership
+    with Japan to foster growth, ensure economic security, and defend a rules-based
+    global trading order.
+  positions:
+    defence: Germany advocates for deepening cooperation between the German and Japanese
+      defense industries to strengthen defense capabilities and secure resilient supply
+      chains.
+    indo_pacific: Germany aims to expand free trade and strategic partnerships in
+      the Indo-Pacific region through EU agreements and a proposed global political
+      alliance for rules-based trade.
+    energy: Germany proposes systematic joint projects with Japan in energy supply
+      and the diversification of critical raw material sources to reduce economic
+      dependencies.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Deshalb sollten wir auch in Zukunft die Zusammenarbeit unserer Verteidigungsindustrie
+          vertiefen.
+    e3:
+      defence:
+        score: 0
+        evidence: Deshalb sollten wir auch in Zukunft die Zusammenarbeit unserer Verteidigungsindustrie
+          vertiefen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
