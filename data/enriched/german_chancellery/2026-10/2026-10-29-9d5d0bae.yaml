@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - defence
+  location: null
+  position: Germany supports the establishment of an 'Alliance for the Future' with
+    Canada to create a new strategic partnership based on shared values and trust.
+  positions:
+    defence: Germany intends for the new alliance with Canada to encompass security
+      and defence as part of a comprehensive partnership.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: 'Diese beispiellose Initiative wird alle Aspekte unserer Partnerschaft
+          umfassen: Sicherheit und Verteidigung'
+    e3:
+      defence:
+        score: 0
+        evidence: 'Diese beispiellose Initiative wird alle Aspekte unserer Partnerschaft
+          umfassen: Sicherheit und Verteidigung'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

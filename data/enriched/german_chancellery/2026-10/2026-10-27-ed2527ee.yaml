@@ -1,0 +1,57 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lee Jae-myung
+  - Han Seong-sook
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  - indo_pacific
+  location: Seoul, South Korea
+  position: Germany is elevating its relationship with South Korea to a deepened strategic
+    partnership based on shared democratic values, innovation, and security interests.
+  positions:
+    ukraine: Germany emphasizes that the war in Ukraine affects the security architecture
+      of both Europe and Asia, specifically noting the threat posed by North Korean
+      soldiers in the Donbass.
+    defence: Germany agrees to deepen defense and security cooperation, including
+      working toward a security of information agreement for military classified documents.
+    green_transition: Germany is expanding cooperation on the energy transition and
+      clean energy supply through a renewed declaration of intent on energy partnership.
+    energy: Germany aims to strengthen cooperation regarding critical raw materials
+      and energy security to mitigate supply chain risks.
+    indo_pacific: Germany views the security of Northeast Asia and Europe as closely
+      linked and seeks to promote a rules-based international order in the Indo-Pacific
+      region.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir arbeiten aber für ein dauerhaftes, für ein gerechtes Europa
+          und eine globale Ordnung mit einem dauerhaften Ende dieses Krieges.
+      green_transition:
+        score: 1
+        evidence: Mit der erneuerten Absichtserklärung zur Energiepartnerschaft weiten
+          wir den Austausch hinsichtlich erneuerbarer Energien und Stromnetze aus
+          und arbeiten bei den Themen der Energiewende und der sauberen Energieversorgung
+          konkret zusammen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

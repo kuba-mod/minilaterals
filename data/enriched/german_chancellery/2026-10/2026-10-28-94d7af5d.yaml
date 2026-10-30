@@ -27,7 +27,7 @@ extracted:
     weimar:
       hybrid:
         score: 2
-        evidence: Hat deshalb die Verordnung zur Neufassung der Sicherheitsüberprüfungsfeststellungsverordnung
+        evidence: hat deshalb die Verordnung zur Neufassung der Sicherheitsüberprüfungsfeststellungsverordnung
           als Sabotageschutzverordnung des Bundes beschlossen
 enriched_by:
   model_id: gemma4:latest

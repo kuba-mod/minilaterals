@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Lee Jae Myung
+  topics:
+  - indo_pacific
+  location: Seoul, South Korea
+  position: Germany is upgrading its relationship with South Korea to a deepened strategic
+    partnership to enhance cooperation in key future technologies and maintain a rules-based
+    international order.
+  positions:
+    indo_pacific: Germany views South Korea as one of its closest partners in the
+      region to defend freedom, sovereignty, and security against the backdrop of
+      great power politics.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

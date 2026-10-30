@@ -1,0 +1,83 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- green_transition
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Deputy Ministers of Foreign Affairs of Poland
+  - Deputy Ministers of Foreign Affairs of France
+  - Deputy Ministers of Foreign Affairs of Germany
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - green_transition
+  - migration
+  location: Giżycko, Poland
+  position: Poland, alongside France and Germany, reaffirmed its commitment to supporting
+    Ukraine, strengthening the EU's eastern flank, and advancing a merit-based EU
+    enlargement process.
+  positions:
+    ukraine: Poland advocates for continued European support, stricter sanctions against
+      Russia, and accelerated payouts of the Ukraine Support Loan.
+    defence: Poland emphasizes the need to strengthen the eastern flank of the EU
+      and NATO, as well as enhancing European defense capabilities and industry.
+    enlargement: Poland views EU enlargement as a geopolitical necessity that must
+      remain merit-based and dependent on the progress of candidate countries.
+    green_transition: Poland seeks to balance environmental goals with the protection
+      of European economic competitiveness and industrial potential.
+    migration: Poland highlights that Russian attacks on grain export routes are intended
+      to increase migration pressure on the EU.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Potwierdzili konieczność kontynuowania i wzmacniania europejskiego
+          wsparcia dla Ukrainy
+      defence:
+        score: 1
+        evidence: Podkreślili w niej zaangażowanie we wzmacnianie wschodniej flanki
+          UE i NATO oraz europejskich zdolności obronnych i przemysłu obronnego
+      enlargement:
+        score: 1
+        evidence: Wiceszefowie dyplomacji Polski, Francji i Niemiec podkreślili, że
+          rozszerzenie jest geopolityczną koniecznością
+      green_transition:
+        score: -1
+        evidence: wskazali na potrzebę pogodzenia celów środowiskowych z ochroną konkurencyjności
+          europejskiej gospodarki i utrzymaniem jej potencjału przemysłowego
+    e3:
+      defence:
+        score: 1
+        evidence: Podkreślili w niej zaangażowanie we wzmacnianie wschodniej flanki
+          UE i NATO oraz europejskich zdolności obronnych i przemysłu obronnego.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Podkreślili w niej zaangażowanie we wzmacnianie wschodniej flanki
+          UE i NATO
+      enlargement:
+        score: 1
+        evidence: Odnotowali z zadowoleniem ostatnie postępy, tj. otwarcie klastrów
+          2. oraz 3. dla Ukrainy i Mołdawii i zamknięcie kolejnych rozdziałów przez
+          Czarnogórę i Albanię
+      migration:
+        score: 0
+        evidence: rosyjskie ataki na czarnomorski szlak eksportu zboża mają na celu
+          [...] zwiększenie presji migracyjnej na UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

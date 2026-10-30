@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Sebastian Hille
+  topics:
+  - green_transition
+  location: Potsdam, Germany
+  position: Germany emphasizes the necessity of a united Europe to address global
+    challenges and seeks to strengthen EU competitiveness to maintain prosperity.
+  positions:
+    green_transition: Germany supports the interactive development of positions regarding
+      the future of the European emissions trading system.
+  stances:
+    weimar:
+      green_transition:
+        score: 0
+        evidence: Die Teilnehmenden der SIMEP arbeiten in diesem Jahr zum Thema „Die
+          Zukunft des europäischen Emissionshandels“
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

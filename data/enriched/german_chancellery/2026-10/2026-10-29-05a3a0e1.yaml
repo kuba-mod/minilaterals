@@ -1,0 +1,31 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a series of legislative updates for November 2026
+    covering digitalization, security, environmental standards, and administrative
+    reforms.
+  positions:
+    green_transition: Germany is adopting the Euro 7 pollutant standards for new passenger
+      cars and light commercial vehicles to reduce harmful emissions.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Ab dem 29. November 2026 gelten die Euro-7-Anforderungen zunächst
+          für neue Typgenehmigungen von Pkw und leichten Nutzfahrzeugen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

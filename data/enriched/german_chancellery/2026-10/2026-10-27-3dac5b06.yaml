@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Ministerpräsidentin Takaichi
+  topics:
+  - ukraine
+  - defence
+  - indo_pacific
+  location: Tokyo, Japan
+  position: Germany seeks to deepen economic and security partnerships with Japan,
+    Singapore, and South Korea to counter global trade imbalances and ensure resource
+    security.
+  positions:
+    ukraine: Germany encourages Japan to intensify its support for Ukrainian air defense
+      and confirms continued financial assistance.
+    defence: Germany is exploring options for potential engagement in the GCAP fighter
+      jet project to reduce system complexity and increase production volumes.
+    indo_pacific: Germany advocates for multilateral trade partnerships and the protection
+      of the WTO to maintain rule-based trade and counter protectionism.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: ein ganz klares politisches Commitment des Landes, die Ukraine weiter
+          in diesem Krieg zu unterstützen
+      defence:
+        score: 0
+        evidence: wir prüfen im Augenblick alle Optionen. Denn ich möchte nicht sehen,
+          dass wir überall wieder von vorn anfangen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

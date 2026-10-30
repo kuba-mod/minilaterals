@@ -1,0 +1,32 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Chris Elmore MP, Parliamentary Under-Secretary of State, Foreign Commonwealth
+    & Development Office
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom advocates for international cooperation within the
+    UN to ensure emerging technologies are used to enhance maritime security and safer
+    seas.
+  positions:
+    defence: The UK emphasizes the need for a coordinated global approach to managing
+      emerging technologies to prevent them from undermining maritime security.
+  stances:
+    aukus:
+      defence:
+        score: 1
+        evidence: ensure emerging technologies help deliver safer seas
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,25 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: The United Kingdom challenged Russia's justifications for its war of aggression
+    against Ukraine and its attempts to alter Ukraine's borders.
+  positions:
+    ukraine: The United Kingdom asserts that Russia's justifications for its war against
+      Ukraine are invalid and incompatible with international principles.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

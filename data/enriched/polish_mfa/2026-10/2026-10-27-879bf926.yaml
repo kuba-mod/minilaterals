@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Hacım Ali Özel
+  topics:
+  - migration
+  location: null
+  position: Poland is working to improve its visa system and consular cooperation
+    with Turkey to better serve applicants and citizens.
+  positions:
+    migration: Poland has implemented legislative and organizational reforms, including
+      the 2025 remedial acts, to create a more efficient visa system.
+  stances:
+    visegrad:
+      migration:
+        score: 0
+        evidence: priorytetem dla Ministerstwa Spraw Zagranicznych było stworzenie
+          sprawniejszego systemu wizowego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -49,6 +49,12 @@ extracted:
         score: 1
         evidence: wir stellen fest, dass es eine erhebliche Sabotagebedrohung für
           die Bundeswehr insgesamt gibt.
+    e3:
+      defence:
+        score: 0
+        evidence: Die Bundesregierung befindet sich im konstanten Austausch mit den
+          europäischen Partnern, im gesamten EU-Rahmen, um diesen Prozess auch als
+          klar europäisches Interesse zu konstruieren.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

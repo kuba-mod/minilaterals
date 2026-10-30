@@ -1,0 +1,27 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Neil Holland
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom reaffirms its political and financial support for ODIHR
+    and calls for the protection of its independence and stronger action against human
+    rights violations.
+  positions:
+    rule_of_law: The UK urges participating States to protect the independence of
+      ODIHR and take stronger action on human rights violations.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

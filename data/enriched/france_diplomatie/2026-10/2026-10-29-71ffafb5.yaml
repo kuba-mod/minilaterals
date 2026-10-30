@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: France, as part of a multilateral coalition, supports sanctions against
+    the DPRK to disrupt its WMD programs and counter its unlawful military cooperation
+    with Russia.
+  positions:
+    defence: France reaffirms its commitment to the complete, verifiable, and irreversible
+      denuclearization of the DPRK and supports the implementation of all DPRK-related
+      UN Security Council resolutions.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: released by Australia, Canada, France, Germany, Italy, Japan, the
+          Netherlands, New Zealand, the Republic of Korea, the United Kingdom, the
+          United States, and the European Union
+    aukus:
+      defence:
+        score: 1
+        evidence: implemented sanctions to target the Democratic People’s Republic
+          of Korea’s (DPRK) use of overseas workers, malicious cyber activities
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

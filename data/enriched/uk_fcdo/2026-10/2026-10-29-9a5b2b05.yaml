@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - enlargement
+  location: null
+  position: The United Kingdom welcomes the progress made by the Berlin Process regarding
+    integration, resilience, and reconciliation in the Western Balkans.
+  positions:
+    enlargement: The United Kingdom supports the practical progress the Berlin Process
+      is delivering on integration in the Western Balkans.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
