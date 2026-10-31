@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Sarah MacIntosh, UK Permanent Representative to the UN
+  topics: []
+  location: null
+  position: The United Kingdom supports the mandate of the United Nations Support
+    Mission in Libya (UNSMIL) to facilitate a Libyan-led and Libyan-owned political
+    process.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

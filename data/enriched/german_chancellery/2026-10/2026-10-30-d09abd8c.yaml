@@ -1,0 +1,51 @@
+actors:
+- DE
+issue_areas:
+- defence
+- energy
+- indo_pacific
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Lee Jae-myung
+  - Sanae Takaichi
+  - Lawrence Wong
+  - Tharman Shanmugaratnam
+  topics:
+  - defence
+  - energy
+  - indo_pacific
+  - ukraine
+  location: Seoul, South Korea
+  position: Germany seeks to deepen strategic, economic, and security partnerships
+    with key Indo-Pacific partners to ensure resilience and promote rule-based trade.
+  positions:
+    defence: Germany is expanding defense and arms cooperation with Japan and deepening
+      security and defense ties with South Korea.
+    energy: Germany is collaborating with Singapore on energy and partnering with
+      Japanese firms on the development of fusion energy reactors.
+    indo_pacific: Germany views the region as of greatest strategic importance and
+      advocates for a global political alliance for rule-based trade and active de-risking.
+    ukraine: Germany expressed gratitude for Singapore's ongoing support for Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Der Bundeskanzler bedankte sich für Singapurs anhaltende Unterstützung
+          der Ukraine.
+    e3:
+      defence:
+        score: 0
+        evidence: Im Fokus der Reise des Kanzlers nach Singapur, Japan und Südkorea
+          (Republik Korea) stehen sicherheits- und wirtschaftspolitische Gespräche.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

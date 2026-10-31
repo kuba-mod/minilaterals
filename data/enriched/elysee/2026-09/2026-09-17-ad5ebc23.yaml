@@ -35,7 +35,7 @@ extracted:
           en matière de défense
     e3:
       iran:
-        score: 0
+        score: 1
         evidence: La France a condamné avec la plus grande fermeté les attaques iraniennes
           qui ont visé la Jordanie
 enriched_by:

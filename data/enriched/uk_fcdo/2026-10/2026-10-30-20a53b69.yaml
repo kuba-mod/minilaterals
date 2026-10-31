@@ -1,0 +1,22 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Kirsty McNeill
+  topics: []
+  location: null
+  position: Minister Kirsty McNeill advocates for political action to address hunger
+    crises and hunger hotspots.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

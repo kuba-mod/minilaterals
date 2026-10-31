@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Andrzej Domański
+  topics:
+  - energy
+  - green_transition
+  location: Gdańsk, Poland
+  position: Poland has officially opened the T5 Terminal in the Port of Gdańsk to
+    support the development of offshore wind farms in the Baltic Sea.
+  positions:
+    energy: Poland is increasing its domestic production capacity and diversifying
+      energy sources through the development of offshore wind energy.
+    green_transition: Poland is investing in strategic infrastructure and domestic
+      technological competencies to enable the installation of up to 18 GW of wind
+      power in the Baltic by 2040.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: oficjalnie oddano do użytku Terminal T5 – strategiczną inwestycję
+          infrastrukturalną, która będzie wspierać budowę morskich farm wiatrowych
+          na Bałtyku
+    visegrad:
+      energy:
+        score: 2
+        evidence: Rozwój morskiej energetyki wiatrowej pozwala zwiększać krajowe moce
+          wytwórcze i dywersyfikować źródła energii
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

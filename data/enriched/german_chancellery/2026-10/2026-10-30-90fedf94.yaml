@@ -1,0 +1,45 @@
+actors:
+- DE
+- LT
+issue_areas:
+- defence
+- enlargement
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Gitanas Nausėda
+  topics:
+  - defence
+  - enlargement
+  location: Berlin, Germany
+  position: Germany is coordinating with Lithuania on the upcoming EU Council Presidency,
+    focusing on security, defense, and EU expansion.
+  positions:
+    defence: Germany supports the focus on security and defense issues during the
+      Lithuanian Council Presidency.
+    enlargement: Germany is discussing the implementation of EU enlargement as a central
+      European policy theme.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Fragen der Sicherheit und Verteidigung aus – ein Schwerpunkt des
+          litauischen Ratsvorsitzes, den auch die Bundesregierung unterstützt
+      enlargement:
+        score: 0
+        evidence: Zentrale europapolitische Themen sind [...] die EU-Erweiterung
+    e3:
+      defence:
+        score: 0
+        evidence: tauscht sich der Bundeskanzler mit Staatspräsident Nausėda auch
+          zu Fragen der Sicherheit und Verteidigung aus
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Mark Dybul
+  topics: []
+  location: null
+  position: France supports the appointment of Mark Dybul as Executive Director of
+    the Global Fund and pledges its continued partnership to preserve the institution's
+    principles and improve global health collaboration.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

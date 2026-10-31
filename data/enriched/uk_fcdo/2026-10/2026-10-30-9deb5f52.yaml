@@ -1,0 +1,23 @@
+actors:
+- UK
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Sarah MacIntosh, UK Permanent Representative to the UN
+  topics: []
+  location: New York, USA
+  position: The United Kingdom urges members who did not support the US resolution
+    on Western Sahara to seek a solution based on that draft.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

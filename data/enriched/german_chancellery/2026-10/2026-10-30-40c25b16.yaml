@@ -1,0 +1,41 @@
+actors:
+- DE
+- US
+issue_areas:
+- defence
+- indo_pacific
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - General Brunson
+  topics:
+  - defence
+  - indo_pacific
+  location: Camp Bonifas, Republic of Korea
+  position: Germany supports the international monitoring of the Korean demilitarized
+    zone to ensure peace and stability on the peninsula.
+  positions:
+    defence: Germany contributes military personnel to the international contingent
+      monitoring the border with North Korea to maintain security.
+    indo_pacific: Germany emphasizes that global security is indivisible and expresses
+      hope for the eventual reunification of the Korean peninsula.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: unter Beteiligung von zwei deutschen Soldaten
+    e3:
+      defence:
+        score: 0
+        evidence: Sicherheit auf der Welt nicht mehr teilbar ist, sondern wir sie
+          überall gewährleisten müssen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

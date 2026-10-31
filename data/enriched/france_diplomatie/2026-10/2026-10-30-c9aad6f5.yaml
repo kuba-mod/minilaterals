@@ -1,0 +1,38 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - rule_of_law
+  location: null
+  position: France condemns Russia's repression of political prisoners and calls for
+    their immediate and unconditional release.
+  positions:
+    ukraine: France expresses alarm over the imprisonment of young people for opposing
+      Russia's war of aggression against Ukraine.
+    rule_of_law: France urges Russia to release all political prisoners and adhere
+      to international obligations regarding fundamental rights and liberties.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: opposition to the war of aggression against Ukraine
+      rule_of_law:
+        score: 1
+        evidence: France calls on Russia to immediately and unconditionally release
+          all those who are imprisoned for political reasons and to abide by its international
+          obligations regarding the guarantee of fundamental rights and liberties
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

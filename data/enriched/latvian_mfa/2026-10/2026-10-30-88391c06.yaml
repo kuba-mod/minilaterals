@@ -1,0 +1,29 @@
+actors:
+- LV
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Mārtiņš Paparinskis
+  - representatives of UN member states
+  - international law experts
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: Latvia has nominated Mārtiņš Paparinskis for re-election to the UN International
+    Law Commission.
+  positions:
+    rule_of_law: Latvia is seeking the re-election of its representative to the UN
+      International Law Commission to contribute to the development and codification
+      of international law.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

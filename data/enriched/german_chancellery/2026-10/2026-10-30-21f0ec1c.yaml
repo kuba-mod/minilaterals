@@ -1,0 +1,48 @@
+actors:
+- DE
+issue_areas:
+- indo_pacific
+- ukraine
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  topics:
+  - indo_pacific
+  - ukraine
+  - hybrid
+  - energy
+  location: Singapore, Japan, South Korea
+  position: Germany seeks to build a political alliance of middle powers in East Asia
+    to strengthen resilience, secure rule-based trade, and counter global instability.
+  positions:
+    indo_pacific: Germany advocates for a political alliance for global, open, and
+      fair rule-based trade to revitalize the WTO and counter unilateral market power.
+    ukraine: Germany views the war in Ukraine as an Asian conflict as well, specifically
+      citing the deployment of North Korean soldiers.
+    hybrid: Germany identifies hybrid threats and nuclear proliferation as shared
+      vulnerabilities that necessitate mutual protection among middle powers.
+    energy: Germany recognizes a shared vulnerability with Asian partners regarding
+      oil and gas dependency on the Gulf region.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Ganz oben der Krieg in der Ukraine, der seit der Entsendung nordkoreanischer
+          Soldaten an die europäische Front auch zu einem asiatischen Konflikt geworden
+          ist.
+      hybrid:
+        score: 1
+        evidence: hybride Bedrohungen oder überwölbende Fragen der nuklearen Bedrohung
+          und Abschreckung bringen die Mittelmächte in ihrer Verletzbarkeit zusammen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,31 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Heads of delegations of the G7 Roma Lyon group
+  topics:
+  - hybrid
+  location: null
+  position: France chaired the G7 Roma Lyon group meeting to coordinate responses
+    to terrorism and organized crime, endorsing deliverables on youth radicalization
+    and cryptocurrency misuse.
+  positions:
+    hybrid: France is leading efforts to prevent online youth radicalization and combat
+      the use of cryptocurrencies for terrorism and violent extremism.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: combat the use of cryptocurrencies for terrorism and violent extremism
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

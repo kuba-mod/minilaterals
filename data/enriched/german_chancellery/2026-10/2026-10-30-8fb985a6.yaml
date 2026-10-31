@@ -1,0 +1,52 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- indo_pacific
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  - indo_pacific
+  - iran
+  location: Seoul, South Korea
+  position: Germany seeks to deepen strategic, economic, and security partnerships
+    with Singapore, Japan, and South Korea to maintain a rules-based global trade
+    order and collective security.
+  positions:
+    ukraine: Germany remains committed to supporting Ukraine and is discussing the
+      delivery of further air defense systems with international partners.
+    defence: Germany intends to cooperate closely with Indo-Pacific partners on security
+      policy and the defense industry to ensure collective security.
+    indo_pacific: Germany views the region as of greatest strategic importance and
+      aims to intensify trade and scientific cooperation while opposing European protectionism.
+    iran: Germany advocates for a diplomatic rather than military resolution to the
+      conflict to mitigate massive energy costs and economic impacts on Europe.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir werden in unserem Engagement für die Ukraine nicht nachlassen.
+      defence:
+        score: 1
+        evidence: Wir werden auch in der Verteidigungsindustrie eng zusammenarbeiten.
+    e3:
+      iran:
+        score: 1
+        evidence: Dieser Konflikt lässt sich nicht militärisch lösen. Er muss diplomatisch
+          gelöst werden, er muss durch Gespräche gelöst werden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the Council of the Togolese Republic
+  - President of the African Union Commission
+  topics:
+  - rule_of_law
+  location: null
+  position: France, chairing the International Contact Group, calls for a peaceful
+    resolution to the conflict in the DRC through dialogue, respect for sovereignty,
+    and the cessation of violence and foreign military support.
+  positions:
+    rule_of_law: France emphasizes the necessity for all parties to respect the rule
+      of law and the Constitution of the Democratic Republic of the Congo to ensure
+      the free exercise of political and civil society roles.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: underscores the need for all parties to respect the rule of law
+          and the Constitution of the Democratic Republic of the Congo
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

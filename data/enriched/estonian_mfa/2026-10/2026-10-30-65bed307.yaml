@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Helen Popp
+  - representatives of member states and observers
+  topics:
+  - ukraine
+  location: Rome, Italy
+  position: Estonia participated in the Tallinn Mechanism meeting to support Ukraine's
+    cyber resilience and welcomed Spain's accession to the mechanism.
+  positions:
+    ukraine: Estonia notes increased international interest in supporting Ukraine's
+      cyber resilience.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
