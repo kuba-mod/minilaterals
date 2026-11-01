@@ -28,6 +28,10 @@ extracted:
         score: 0
         evidence: Tematem spotkania były wyzwania związane ze wzmacnianiem odporności,
           gotowości i konkurencyjności Europy w obliczu dynamicznych zmian geopolitycznych
+    weimar:
+      defence:
+        score: 0
+        evidence: łączących kwestie bezpieczeństwa, gospodarki i współpracy międzynarodowej
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
