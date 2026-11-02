@@ -41,8 +41,8 @@ extracted:
     visegrad:
       defence:
         score: 1
-        evidence: Biorąc pod uwagę obowiązki państwa w obronności i rosnących wydatków
-          na zdrowie
+        evidence: Wojsko i służby są szczególnie skoncentrowane na zapewnieniu bezpieczeństwa
+          po polskiej stronie.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

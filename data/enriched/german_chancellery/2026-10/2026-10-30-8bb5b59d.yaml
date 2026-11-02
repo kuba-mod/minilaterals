@@ -1,0 +1,61 @@
+actors:
+- DE
+- FR
+- LT
+- US
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Sebastian Hille
+  - Dr. Karsten Wildberger
+  - Gitanas Nausėda
+  - Ines Zenke
+  - Lars Klingbeil
+  - Frau Lewinsky
+  - Herr Giese
+  - Herr Ehrentraut
+  - Frau Jenning
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - energy
+  location: Berlin, Germany
+  position: Germany is coordinating with Lithuania on EU priorities and security,
+    while managing domestic energy security and international safety warnings in the
+    Middle East.
+  positions:
+    ukraine: Germany continues its support for Ukraine as a central theme of its security
+      discussions with Lithuania.
+    defence: Germany is coordinating with Lithuania regarding the German brigade stationed
+      in Lithuania and general security and defense issues.
+    enlargement: Germany identifies EU enlargement as a core topic for discussion
+      with the incoming Lithuanian EU Council Presidency.
+    energy: Germany rejects Italian claims that its gas procurement drives up European
+      prices and asserts that its LNG infrastructure ensures winter supply security.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Zentrale Themen sind etwa die Unterstützung der Ukraine
+      defence:
+        score: 1
+        evidence: Zentrale Themen sind etwa [...] die deutsche Brigade in Litauen
+      enlargement:
+        score: 1
+        evidence: Kernthemen des Treffens sind europapolitische Prioritäten wie [...]
+          die EU-Erweiterung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

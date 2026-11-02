@@ -1,0 +1,40 @@
+actors:
+- PL
+- UK
+- US
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Marco Rubio
+  - Edouard Bizimana
+  - Donald Tusk
+  - Andy Burnham
+  - Marcin Bosacki
+  topics:
+  - energy
+  location: Atlanta, USA
+  position: Poland seeks permanent membership in the G20 to represent Central and
+    Eastern Europe and share its democratic economic success model with the Global
+    South.
+  positions:
+    energy: Poland participated in G20 discussions regarding the impact of geopolitical
+      tensions on energy security and supply chains.
+  stances:
+    visegrad:
+      energy:
+        score: 0
+        evidence: uczestnicy omówili wpływ napięć geopolitycznych na światową gospodarkę,
+          w tym kwestie wolności żeglugi oraz bezpieczeństwa żywnościowego, energetycznego
+          i łańcuchów dostaw
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
