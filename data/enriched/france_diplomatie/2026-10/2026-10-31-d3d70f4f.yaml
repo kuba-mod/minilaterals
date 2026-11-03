@@ -1,0 +1,48 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Radosław Sikorski
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Atlanta, USA
+  position: France coordinated with Poland on bilateral cooperation in defence and
+    energy, and reaffirmed joint support for Ukraine.
+  positions:
+    ukraine: France reaffirmed its unfailing support for Ukraine and agreed to continue
+      discussions to increase pressure on Russia.
+    defence: France discussed areas for joint cooperation on defence with Poland in
+      accordance with the Treaty on Enhanced Cooperation and Friendship.
+    energy: France discussed areas for joint cooperation on energy with Poland in
+      accordance with the Treaty on Enhanced Cooperation and Friendship.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed Europe’s unfailing support for Ukraine
+      defence:
+        score: 1
+        evidence: talked about areas for joint cooperation on defence
+    e3:
+      defence:
+        score: 0
+        evidence: the ministers talked about areas for joint cooperation on defence
+          and energy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

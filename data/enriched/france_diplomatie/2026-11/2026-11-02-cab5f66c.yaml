@@ -1,0 +1,54 @@
+actors:
+- FR
+- UK
+- CZ
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - representatives of the Government of Ukraine
+  - Tallinn Mechanism members
+  - Tallinn Mechanism observers
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: London, United Kingdom
+  position: France, as a member of the Tallinn Mechanism, reaffirms its commitment
+    to providing civilian cyber security support and funding to Ukraine to counter
+    Russian aggression.
+  positions:
+    ukraine: France supports Ukraine's national resilience and its institutions' preparation
+      for Euro-Atlantic integration while calling for Russia to end its illegal war.
+    defence: France commits to delivering civilian cyber security needs and projects
+      to protect Ukraine's digital space and critical national infrastructure.
+    hybrid: France recognizes the intensification of Russian hybrid activities and
+      supports efforts to counter these threats to defend democratic systems.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: €302.6 million has been committed since December 2023 via the Tallinn
+          Mechanism with members to commit additional funds throughout 2026
+      hybrid:
+        score: 2
+        evidence: Tallinn Mechanism has become the leading international platform
+          for coordinating civilian cyber support to Ukraine
+    e3:
+      defence:
+        score: 2
+        evidence: Tallinn Mechanism members and observers, and representatives of
+          the Government of Ukraine, gathered at the Foreign, Commonwealth & Development
+          Office in London on 9 and 10 March 2026
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

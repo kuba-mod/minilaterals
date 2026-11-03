@@ -1,0 +1,32 @@
+actors:
+- FR
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Ed Miliband
+  topics:
+  - ukraine
+  location: Atlanta, United States
+  position: France coordinated with the UK on key international issues, specifically
+    regarding support for Ukraine and the situation in the Middle East.
+  positions:
+    ukraine: France emphasized that coordination with the UK is key to providing support
+      for Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: especially support for Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

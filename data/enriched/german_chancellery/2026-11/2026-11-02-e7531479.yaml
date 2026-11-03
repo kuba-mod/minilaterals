@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Bundesdigitalminister Dr. Karsten Wildberger
+  - Digital ministers from Europe and Canada
+  - EU Commission representatives
+  topics: []
+  location: Berlin, Germany
+  position: Germany aims to become a leading AI nation by 2030, focusing on secure,
+    sovereign, and competitive artificial intelligence to drive economic growth and
+    administrative efficiency.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

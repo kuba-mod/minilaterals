@@ -1,0 +1,34 @@
+actors:
+- FR
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Roberto Velasco Alvarez
+  topics:
+  - green_transition
+  location: Atlanta, USA
+  position: France reaffirmed its partnership with Mexico, focusing on UN Security
+    Council veto regulation, ocean biodiversity protection, and bilateral economic
+    cooperation.
+  positions:
+    green_transition: France emphasizes the need for increased protection of ocean
+      biodiversity.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: the importance France attaches to the increased protection of their
+          biodiversity
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

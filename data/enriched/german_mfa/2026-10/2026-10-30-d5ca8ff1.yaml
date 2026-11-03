@@ -1,0 +1,37 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - President of the Council of Ministers of the Republic of Togo
+  - Chairperson of the Commission of the African Union
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany, as part of the ICG, calls for a peaceful resolution to the conflict
+    in the DRC, emphasizing the need for all parties to respect the rule of law, the
+    constitution, and the territorial integrity of the DRC.
+  positions:
+    rule_of_law: Germany emphasizes that the guarantee of the rule of law and the
+      protection of fundamental rights are indispensable for the free functioning
+      of political parties and civil society organizations in the DRC.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Sie unterstreicht, dass alle Parteien Rechtsstaatlichkeit und die
+          Verfassung der Demokratischen Republik Kongo achten müssen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

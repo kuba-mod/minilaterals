@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesdigitalminister Wildberger
+  topics:
+  - hybrid
+  location: Berlin, Germany
+  position: Germany aims to become a strong and sovereign AI nation by 2030 by fostering
+    an industrial AI ecosystem, expanding computing infrastructure, and ensuring security
+    and digital sovereignty through European cooperation.
+  positions:
+    hybrid: Germany is strengthening its cyber resilience and national security through
+      the implementation of the NIS-2 directive, the creation of a 'Cyberdome' early
+      warning system, and the establishment of a national AI Security Institute to
+      mitigate risks from AI-driven cyber threats.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Deswegen stimmt sich Deutschland auch eng auf europäischer Ebene
+          zum Thema Cybersicherheit ab.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

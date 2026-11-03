@@ -1,0 +1,27 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Anand
+  topics:
+  - energy
+  location: null
+  position: France seeks to strengthen bilateral relations with Canada, specifically
+    regarding cooperation in Saint-Pierre and Miquelon and the energy sector.
+  positions:
+    energy: France emphasizes the importance of enhanced cooperation between French
+      and Canadian stakeholders in the energy sector to address the energy crisis.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
