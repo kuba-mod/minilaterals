@@ -1,0 +1,54 @@
+actors:
+- DE
+- FR
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Herr Stietzel
+  - Frau Schreiner
+  - Karsten Wildberger
+  - Julia Jäkel
+  - Präsident Macron
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is implementing economic reforms, digitalization, and pension
+    changes to ensure national competitiveness and European sovereignty while strengthening
+    its defense capabilities.
+  positions:
+    ukraine: Germany views the war in Ukraine as a profound challenge that necessitates
+      a fundamental shift in European defense and security policy.
+    defence: Germany is increasing defense spending and restructuring the Bundeswehr
+      to ensure Europe can defend itself and to make NATO more European.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Herausforderung, die wir durch den Krieg in der Ukraine nun seit
+          fast fünf Jahren erleben
+      defence:
+        score: 2
+        evidence: Wir müssen jetzt selbst dafür sorgen, dass wir uns in Europa verteidigen
+          können – nicht, um damit die NATO infrage zu stellen, sondern [...] Wir
+          machen die NATO europäischer, damit sie transatlantisch bleiben kann.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir machen die NATO europäischer, damit sie transatlantisch bleiben
+          kann.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

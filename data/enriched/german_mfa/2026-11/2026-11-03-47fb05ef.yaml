@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- indo_pacific
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - His Majesty King Tupou VI
+  topics:
+  - indo_pacific
+  - green_transition
+  location: null
+  position: Germany commits to intensifying its political, economic, and cultural
+    relations with Tonga and strengthening its engagement in the Pacific region.
+  positions:
+    indo_pacific: Germany recognizes the central role of the Pacific Islands Forum
+      and intends to intensify its regional engagement as a Strategic Partner to support
+      the 2050 Strategy for the Blue Pacific Continent.
+    green_transition: Germany acknowledges that climate change and rising sea levels
+      pose an existential threat to Tonga and other small island developing states.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Herausforderungen des 21. Jahrhunderts, allen voran die Klima- und
+          Biodiversitätskrise
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

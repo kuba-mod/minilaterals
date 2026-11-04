@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - Sophie Adenot
+  topics: []
+  location: Palais de l'Élysée, France
+  position: France celebrates the achievements of astronaut Sophie Adenot and reaffirms
+    its status as a space power committed to scientific progress and international
+    cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

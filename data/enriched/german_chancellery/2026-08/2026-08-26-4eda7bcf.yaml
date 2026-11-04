@@ -46,9 +46,11 @@ extracted:
         score: 1
         evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
-        score: 1
-        evidence: Wir wollen uns... vor Putin und allen, die unser Land angreifen
-          wollen, schützen
+        score: 2
+        evidence: Wir wollen diese Sicherheitsgesetze, die wir für notwendig erachten,
+          auch zügig in diesem Jahr umsetzen. [...] dass wir uns einer Vielzahl von
+          dem, dem wir an hybrider Bedrohung innerhalb und außerhalb des Netzes und
+          des Cyber raums ausgesetzt sind, erwehren können.
       green_transition:
         score: 1
         evidence: Wir halten an diesem Ziel fest.

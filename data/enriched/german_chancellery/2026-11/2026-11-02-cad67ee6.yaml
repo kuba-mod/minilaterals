@@ -1,0 +1,57 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wefers
+  - Kornelius
+  - Prien
+  - Dobrindt
+  - Pistorius
+  - Kock
+  - Wildberger
+  - Giese
+  - Swistek
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Berlin and Bonn, Germany
+  position: The German government condemns violence during youth protests, reaffirms
+    its commitment to supporting Ukraine's defense and peace process, and maintains
+    its energy independence from Russia.
+  positions:
+    ukraine: Germany supports the continued military and financial aid to Ukraine
+      and emphasizes that a peace solution is impossible without European participation.
+    defence: Germany is providing Patriot missiles to Ukraine as a supplement to existing
+      European efforts.
+    energy: Germany maintains a national and European interest in remaining independent
+      from Russian energy deliveries.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Alle Partner haben signalisiert, dass sie die Ukraine weiterhin
+          unterstützen werden.
+      defence:
+        score: 1
+        evidence: Wir haben im Rahmen von JUMPSTART oder Ukraine Support Loan bereits
+          Patriot-Raketen zugesagt, die wir auch liefern.
+    e3:
+      defence:
+        score: 0
+        evidence: Die europäischen Partner der Ukraine stehen an der Seite der Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

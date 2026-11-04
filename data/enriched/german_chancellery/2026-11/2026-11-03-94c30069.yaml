@@ -1,0 +1,56 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Berlin, Germany
+  position: Germany reaffirms its role as the largest supporter of Ukraine, pledging
+    continued military and energy aid while calling for a ceasefire and a peace solution
+    involving European participation.
+  positions:
+    ukraine: Germany supports Ukraine's security and stability as a matter of European
+      interest and will host a 'Coalition of the Willing' summit on November 19 to
+      coordinate further aid.
+    defence: Germany is providing air defense systems and ammunition for F-16s, and
+      has agreed within NATO to military support for Ukraine totaling 70 billion euros
+      for 2026.
+    energy: Germany is implementing further winter aid and support for Ukraine's energy
+      sector to protect critical infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir werden deshalb in der übernächsten Woche mit Frankreich und
+          Großbritannien einen Gipfel der Koalition der Willigen hier in Berlin ausrichten.
+    e3:
+      defence:
+        score: 2
+        evidence: Wir werden deshalb in der übernächsten Woche mit Frankreich und
+          Großbritannien einen Gipfel der Koalition der Willigen hier in Berlin ausrichten.
+    aukus:
+      defence:
+        score: 0
+        evidence: Sehr dynamisch entwickelt sich unsere Zusammenarbeit im Bereich
+          der Drohnenproduktion und in anderen Rüstungsbereichen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

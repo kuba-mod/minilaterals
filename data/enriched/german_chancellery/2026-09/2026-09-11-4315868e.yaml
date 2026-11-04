@@ -59,7 +59,7 @@ extracted:
         evidence: dass neben Iran auch die Huthi schon seit Wochen versuchen, die
           internationale Schifffahrt zu beschränken und in Geiselhaft zu nehmen, auf
           Energieanlagen in Saudi-Arabien zielen und nun auch eben die Regierung Jemens
-          ins Visier nehmen, verurteilen wir
+          ins Visier nehmen, verurteilen wir.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

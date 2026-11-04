@@ -1,0 +1,35 @@
+actors:
+- PL
+- EE
+- LV
+- LT
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia, together with Latvia, Lithuania, and Poland, called on the European
+    Commission to terminate investment protection agreements with Russia to reduce
+    Russian influence.
+  positions:
+    hybrid: Estonia advocates for the termination of investment protection agreements
+      with Russia as a means to free member states from Russian influence.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: saatsid Eesti, Läti, Leedu ja Poola Euroopa Komisjonile ühisavalduse
+          üleskutsega lõpetada investeeringute kaitse lepingud
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Poland has neutralized a Russian provocation on its border and remains
+    on high alert to prevent further destabilization efforts.
+  positions:
+    defence: Poland has mobilized police, border guards, and special forces, including
+      GROM, to secure the border regions of Warmian-Masurian and Podlaskie voivodeships.
+    hybrid: Poland is actively countering Russian-inspired diversionary and destabilizing
+      activities based on intelligence from domestic and NATO services.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Zmobilizowaliśmy siły i skutecznie zapobiegliśmy próbie prowokacji
+    visegrad:
+      defence:
+        score: 1
+        evidence: Sygnały o możliwych prowokacjach inspirowanych przez Rosję, Polski
+          rząd otrzymywał zarówno od polskich jak i sojuszniczych służb, w tym NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

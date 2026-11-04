@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas:
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Karsten Wildberger
+  topics:
+  - energy
+  location: Berlin, Germany
+  position: Germany aims to become a pioneer in industrial and physical AI by fostering
+    European digital sovereignty, increasing computing capacity, and establishing
+    a cross-departmental AI task force.
+  positions:
+    energy: Germany is working to ensure energy supply and infrastructure to attract
+      private investment for AI data centers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

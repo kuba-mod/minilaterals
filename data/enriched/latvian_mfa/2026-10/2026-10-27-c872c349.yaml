@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants: []
+  topics:
+  - ukraine
+  location: null
+  position: Latvia emphasizes its continued support for people affected by Russian
+    aggression in Ukraine and the protection of women, children, and journalists.
+  positions:
+    ukraine: Latvia continues to support the population of Ukraine affected by the
+      war of aggression and focuses on strengthening the protection of women, children,
+      and journalists.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

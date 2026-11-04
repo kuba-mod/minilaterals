@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government Commissioner for Freedom of Religion and Belief Rachel
+  topics: []
+  location: Hmoud, Jordanien
+  position: Germany strongly condemns the terror attack on Christians in Jordan and
+    emphasizes the need to protect religious freedom and social cohesion against extremism.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

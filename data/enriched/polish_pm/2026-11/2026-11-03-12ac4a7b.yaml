@@ -1,0 +1,61 @@
+actors:
+- PL
+- US
+issue_areas:
+- defence
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - President of Poland
+  - representatives of all parliamentary clubs
+  - Presidium of the Sejm
+  - Chancellery of the President
+  - government
+  topics:
+  - defence
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland aims to consolidate political and social unity to enhance national
+    security through a strong domestic army, permanent US military presence, and internal
+    political stability.
+  positions:
+    defence: Poland seeks to establish a permanent US military base and strengthen
+      its own army to counter threats from Russia.
+    hybrid: Poland is preparing for various scenarios involving Russian provocations
+      and sabotage, noting that internal destabilization is often fueled by Russian
+      services.
+    rule_of_law: The Polish government maintains that judges elected by the Sejm to
+      the Constitutional Tribunal are legal and should be able to perform their duties.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: utrzymanie i wzmocnienie obecności wojsk amerykańskich w tej części
+          Europy, szczególnie w Polsce, znacząco zwiększyłoby nasze bezpieczeństwo
+      hybrid:
+        score: 1
+        evidence: Potencjalne zagrożenie jest oczywiste, dotyczące jakichś prowokacji
+          i aktów dywersji
+      rule_of_law:
+        score: 1
+        evidence: Taka destabilizacja polityczna w Polsce, podobnie jak w innych krajach
+          europejskich, jest zawsze na rękę i jest wykorzystywana i podsycana przede
+          wszystkim przez rosyjskie służby
+    visegrad:
+      defence:
+        score: 2
+        evidence: naszym zadaniem jest doprowadzenie do szczęśliwego końca tego projektu,
+          a więc stałej obecności żołnierzy amerykańskich w Polsce
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
