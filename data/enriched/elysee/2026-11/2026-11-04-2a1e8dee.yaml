@@ -1,0 +1,45 @@
+actors:
+- FR
+issue_areas:
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister of Economy, Finance and Industrial, Energy and Digital Sovereignty
+  - Minister of Action and Public Accounts
+  - Minister of the Armed Forces and Veterans Affairs
+  - Keeper of the Seals, Minister of Justice
+  - Minister of Culture
+  topics:
+  - defence
+  - energy
+  location: null
+  position: France is implementing a year-end budget adjustment law for 2026 to maintain
+    public spending control while funding critical needs in defense, energy, and social
+    sectors.
+  positions:
+    defence: France is increasing the military budget to respond to the crisis in
+      the Near and Middle East.
+    energy: France is providing financial aid to road hauliers and fishers to mitigate
+      the energy crisis.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: renforcer le budget des Armées pour tirer les conséquences de la
+          crise au Proche et Moyen-Orient
+    e3:
+      defence:
+        score: 0
+        evidence: renforcer le budget des Armées pour tirer les conséquences de la
+          crise au Proche et Moyen-Orient
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

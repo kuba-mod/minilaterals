@@ -1,0 +1,28 @@
+actors:
+- DE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Serap Güler
+  - Prof. Dr. Joybrato Mukherjee
+  - Susie Ibarra
+  - Dr. Bernhard Kotsch
+  - Dr. Florence Gaub
+  topics: []
+  location: Berlin, Germany
+  position: Germany is launching the 'Bureau de Passage' alumni residency program
+    at the Federal Foreign Office to integrate artistic perspectives and international
+    dialogue into its foreign policy.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

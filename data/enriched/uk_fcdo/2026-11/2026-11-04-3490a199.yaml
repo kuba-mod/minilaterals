@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: The United Kingdom is providing International Climate Finance to support
+    clean and affordable electricity in rural Bangladesh.
+  positions:
+    green_transition: The UK is utilizing International Climate Finance to help Bangladesh
+      sustain clean power for off-grid communities.
+    energy: The UK is supporting the implementation of solar power to provide affordable
+      electricity to millions in rural Bangladesh.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- FR
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - François Alabrune
+  - Dapo Akande
+  - Rena Lee
+  - Mahmoud Daifallah Hmoud
+  - Phoebe Okowa
+  topics:
+  - rule_of_law
+  location: null
+  position: France congratulates François Alabrune on his election to the International
+    Court of Justice and reaffirms its commitment to international law and the peaceful
+    settlement of disputes.
+  positions:
+    rule_of_law: France reaffirms its commitment to respect for international law,
+      multilateralism, and the essential role of the International Court of Justice
+      in maintaining peace and security.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: France reaffirms its commitment to respect for international law,
+          multilateralism and the peaceful settlement of disputes.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

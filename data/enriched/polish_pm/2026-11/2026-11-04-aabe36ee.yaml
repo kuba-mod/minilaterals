@@ -1,0 +1,71 @@
+actors:
+- PL
+- CZ
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Andrej Babiš
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - energy
+  - migration
+  location: Warsaw, Poland
+  position: Poland is strengthening its strategic partnership with the Czech Republic
+    across economic, security, and EU policy dimensions to stabilize Central-Eastern
+    Europe.
+  positions:
+    defence: Poland is deepening cooperation with the Czech Republic through defense
+      industry partnerships.
+    hybrid: Poland is collaborating with the Czech Republic on cybersecurity and countering
+      acts of diversion and sabotage.
+    green_transition: Poland seeks to ensure that the Green Deal and climate protection
+      costs do not weaken its industrial competitiveness.
+    energy: Poland will work closely with the Czech Republic on ETS and ETS2 systems
+      to ensure the specific energy structures and transition costs of their economies
+      are considered.
+    migration: Poland advocates for the effective protection of European borders to
+      counter illegal migration.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: zacieśniają współpracę w tym obszarze, rozwijając partnerstwo przemysłów
+          zbrojeniowych
+      hybrid:
+        score: 1
+        evidence: wspólne działania na rzecz cyberbezpieczeństwa i przeciwdziałania
+          aktom dywersji i sabotażu
+      green_transition:
+        score: -1
+        evidence: Nie może być tak, że takie projekty jak Zielony Ład będą osłabiać
+          naszą konkurencyjność
+    visegrad:
+      defence:
+        score: 1
+        evidence: zacieśniają współpracę w tym obszarze, rozwijając partnerstwo przemysłów
+          zbrojeniowych
+      energy:
+        score: 2
+        evidence: Polska inwestuje w rozbudowę portów bałtyckich i rozwija połączenia
+          na osi północ–południe
+      migration:
+        score: 1
+        evidence: Oba państwa opowiadają się za skuteczną ochroną europejskich granic
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -46,11 +46,9 @@ extracted:
         score: 1
         evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
-        score: 2
-        evidence: Wir wollen diese Sicherheitsgesetze, die wir für notwendig erachten,
-          auch zügig in diesem Jahr umsetzen. [...] dass wir uns einer Vielzahl von
-          dem, dem wir an hybrider Bedrohung innerhalb und außerhalb des Netzes und
-          des Cyber raums ausgesetzt sind, erwehren können.
+        score: 1
+        evidence: Wir wollen uns so weit wie eben möglich von anderen unabhängig machen.
+          Wir suchen nach deutschen Lösungen, wir suchen nach europäischen Lösungen.
       green_transition:
         score: 1
         evidence: Wir halten an diesem Ziel fest.

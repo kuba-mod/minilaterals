@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: France strongly condemns Russian strikes on Ukrainian civilians and infrastructure
+    and reaffirms its determination to support Ukraine and pressure Russia to end
+    the war.
+  positions:
+    ukraine: France expresses unshakeable solidarity with Ukraine and commits to long-term
+      support and working with partners to resolve the conflict.
+    energy: France condemns Russia's massive missile attacks targeting Ukrainian energy
+      infrastructure as winter approaches.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirms its total determination to work alongside its partners
+          to resolve the conflict, support Ukraine in the long term and increase pressure
+          on Russia to end its war of aggression
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Staatsminister Weimer
+  - Patrick Schmeing
+  topics: []
+  location: Leipzig, Germany
+  position: Germany is providing 225,000 euros to the Mendelssohn-Haus in Leipzig
+    for the modernization and digitalization of its permanent exhibition.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
