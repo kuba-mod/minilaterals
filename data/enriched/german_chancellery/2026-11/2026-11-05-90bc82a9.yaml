@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Jimmy Wales
+  topics:
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany advocates for a market-driven economic policy based on freedom,
+    competition, and decentralized decision-making to navigate structural changes
+    and geopolitical uncertainty.
+  positions:
+    green_transition: Germany promotes technology openness and the use of price signals
+      via the European emissions trading system rather than bans to achieve climate
+      goals.
+    energy: Germany is reducing state subsidies and increasing market competition
+      in the renewable energy sector to ensure economic viability and efficient investment.
+  stances:
+    weimar:
+      green_transition:
+        score: -1
+        evidence: Das ist nicht das Ende der sogenannten Energiewende, wie manche
+          uns vorwerfen. Es ist vielmehr die einzige Möglichkeit, die ökonomischen
+          und die ökologischen Ziele zu erreichen, bevor eine demokratische Mehrheit
+          die Ziele wegen Unbezahlbarkeit einfach hinwegfegt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

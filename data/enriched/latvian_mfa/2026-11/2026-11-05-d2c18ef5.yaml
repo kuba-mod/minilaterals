@@ -1,0 +1,29 @@
+actors:
+- PL
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Foreign Ministers of the Council of the Baltic Sea States
+  - Foreign Minister of Ukraine
+  topics:
+  - ukraine
+  location: Warsaw, Poland
+  position: Latvia's Foreign Minister will participate in a meeting of the Council
+    of the Baltic Sea States and the Ukrainian Foreign Minister in Warsaw.
+  positions:
+    ukraine: Latvia is engaging in diplomatic coordination with the Council of the
+      Baltic Sea States and Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

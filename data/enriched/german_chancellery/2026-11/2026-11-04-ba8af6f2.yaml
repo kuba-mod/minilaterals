@@ -1,0 +1,49 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Lars Klingbeil
+  - Reem Alabali Radovan
+  - Julia Jäkel
+  topics:
+  - defence
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany is implementing an investment program and structural reforms in
+    pensions and labor law to foster sustainable economic growth and productivity.
+  positions:
+    defence: Germany is utilizing an immediate investment program to fund defense
+      spending as part of its strategy to stimulate economic growth.
+    green_transition: The government is investing in climate neutrality to support
+      the long-term transformation of the economy.
+    energy: Germany is providing relief on energy prices to support economic stability
+      and growth.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Investitionen in Infrastruktur, Klimaneutralität und Verteidigung
+      green_transition:
+        score: 1
+        evidence: Investitionen in Infrastruktur, Klimaneutralität und Verteidigung
+    e3:
+      defence:
+        score: 0
+        evidence: Investitionssofortprogramm, mit Investitionen in Infrastruktur,
+          Klimaneutralität und Verteidigung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

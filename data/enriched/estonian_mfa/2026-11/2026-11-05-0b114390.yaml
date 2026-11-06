@@ -1,0 +1,35 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sybiha
+  topics:
+  - ukraine
+  - defence
+  location: Warsaw, Poland
+  position: Estonia is participating in a Council of the Baltic Sea States meeting
+    to discuss regional security and coordinate support for Ukraine.
+  positions:
+    ukraine: Estonia is discussing joint steps to support Ukraine in the face of Russia's
+      war of aggression.
+    defence: Estonia is reviewing the security situation in the Baltic Sea region.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: arutavad piirkonna julgeolekuolukorda
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: Helsinki, Finland
+  position: Estonia asserts that the conviction of the Fitburg crew members demonstrates
+    that attacks on critical infrastructure will be thoroughly investigated and punished.
+  positions:
+    hybrid: Estonia emphasizes that the damage to critical undersea cables is a serious
+      offense that will not go unpunished.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: kriitilise taristu kahjustamise juhtumeid uuritakse põhjalikult
+          ning nende toimepanijad võetakse vastutusele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Ambassador Kate Foster
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom condemns the continued violations of the demilitarised
+    status of Abyei and calls for the restoration of peace and security in the region.
+  positions:
+    defence: The United Kingdom asserts that the presence of armed forces in the Abyei
+      area is unacceptable and violates established security agreements.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

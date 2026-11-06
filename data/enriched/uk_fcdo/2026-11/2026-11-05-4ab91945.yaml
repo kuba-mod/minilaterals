@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Outi Hyvärinen, Permanent Representative of Finland to the OSCE
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom supports the Informal Group of Friends in delivering
+    a joint statement on the safety of journalists.
+  positions:
+    rule_of_law: The United Kingdom advocates for the safety of journalists as part
+      of a joint statement delivered to the OSCE.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

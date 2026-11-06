@@ -1,0 +1,27 @@
+actors:
+- UK
+- HU
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Eleanor Sanders, UK's Human Rights Ambassador
+  topics:
+  - rule_of_law
+  location: Geneva, Switzerland
+  position: The United Kingdom provided a statement regarding Hungary's human rights
+    record during its Universal Periodic Review.
+  positions:
+    rule_of_law: The United Kingdom raised concerns and provided recommendations regarding
+      the state of the rule of law in Hungary.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

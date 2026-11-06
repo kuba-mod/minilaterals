@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundeskabinett
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany has passed a reform in the Bundestag to modernize driver's license
+    acquisition by increasing digitalization and reducing bureaucracy to lower costs.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

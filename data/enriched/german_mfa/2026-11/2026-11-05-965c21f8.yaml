@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Johann Wadephul
+  topics:
+  - iran
+  location: Berlin, Germany
+  position: Germany reaffirms its commitment to the security and existence of Israel
+    as a Jewish and democratic state, condemns antisemitism, and advocates for a negotiated
+    two-state solution.
+  positions:
+    iran: Germany recognizes the ongoing threat posed by Iran as part of the trauma
+      and security challenges facing Israel.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Bei jedem täglichen Blick in die Nachrichten in Richtung Iran, in
+          Richtung Hisbollah, in Richtung Jemen und verbunden mit der Frage, wann
+          das Gefühl der Bedrohung jemals enden wird.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
