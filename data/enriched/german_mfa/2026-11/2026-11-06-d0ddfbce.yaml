@@ -1,0 +1,56 @@
+actors:
+- DE
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - Foreign Ministers of the Council of the Baltic Sea States
+  - Ukrainian Foreign Minister
+  - High Representative of the EU
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: Warsaw, Poland
+  position: Germany advocates for a central European role in resolving the war in
+    Ukraine and emphasizes the need for a unified transatlantic front against Russian
+    aggression.
+  positions:
+    ukraine: Germany asserts that no decisions about Ukraine's future should be made
+      without Ukraine and pledges continued endurance in its support.
+    defence: Germany emphasizes the need to maintain pressure on Moscow and defend
+      European security interests through the EU and NATO.
+    hybrid: Germany identifies Russian hybrid threats in the Baltic Sea region and
+      aims to protect infrastructure and society from destabilization.
+    energy: Germany has pledged an additional 200 million euros to support Ukraine's
+      energy and heating supply before the winter.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Deutschland hat dafür noch einmal weitere 200 Millionen Euro zugesagt.
+      hybrid:
+        score: 1
+        evidence: schützen uns gemeinsam gegen hybride Bedrohungen
+    e3:
+      defence:
+        score: 0
+        evidence: als transatlantisches Bündnis, als Europäer und Amerikaner, gemeinsam
+          und geschlossen gegenüber Russland auftreten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

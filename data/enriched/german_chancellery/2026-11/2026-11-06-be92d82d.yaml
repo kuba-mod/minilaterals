@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Jimmy Wales
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  location: Berlin, Germany
+  position: Germany emphasizes that freedom and competition are strategic advantages
+    and aims to transform into a sovereign AI nation while calling for an end to the
+    war in Ukraine.
+  positions:
+    ukraine: Germany calls for an end to the war in Ukraine and maintains a clear
+      message to Russia that it is time for the conflict to stop.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: 'Die Botschaft des Bundeskanzlers an Russland bleibt deshalb eindeutig:
+          „Es ist Zeit für ein Ende dieses Krieges“.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

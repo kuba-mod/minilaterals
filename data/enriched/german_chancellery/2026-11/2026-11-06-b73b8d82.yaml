@@ -1,0 +1,30 @@
+actors:
+- DE
+- FR
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Willy Brandt
+  - Helmut Kohl
+  - Francois Mitterand
+  - Angela Merkel
+  - Donald Trump
+  - Federal Chancellor
+  - Federal President
+  topics: []
+  location: null
+  position: Germany is showcasing an exhibition of official government photography
+    to make political action more transparent and understandable to the public.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

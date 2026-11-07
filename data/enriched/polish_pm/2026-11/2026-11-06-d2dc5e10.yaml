@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marcin Kierwiński
+  topics:
+  - hybrid
+  - migration
+  location: Warsaw, Poland
+  position: Poland asserts that its current internal security and border management
+    strategies are highly effective in countering hybrid threats and illegal migration.
+  positions:
+    hybrid: Poland claims to be a European leader in protecting its borders against
+      sabotage and diversion organized by the Belarusian regime and Russia.
+    migration: Poland has significantly reduced illegal border crossings through decisive
+      actions, including the temporary restriction of the right to asylum to prevent
+      instrumentalization by hostile states.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: W 2026 r. budżet Policji wyniósł rekordowe 20,1 mld zł.
+    visegrad:
+      migration:
+        score: 2
+        evidence: skutecznie chronimy swoje granice, mimo trwającej wojny w Ukrainie
+          oraz aktów sabotażu i dywersji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Staatsminister für Sport und Ehrenamt
+  - President of Makkabi Deutschland
+  - Herr Rauhe
+  topics: []
+  location: Berlin, Germany
+  position: Germany expresses strong support for Jewish life and sports in Germany
+    and commits to the active fight against antisemitism.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

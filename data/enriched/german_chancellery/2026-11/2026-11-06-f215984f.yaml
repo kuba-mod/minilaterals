@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundestag
+  - Bundesregierung
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has passed legislation to increase the minimum prison sentence
+    from three to five years for sexual assaults or robberies involving the use of
+    date-rape drugs or other dangerous substances.
+  positions:
+    rule_of_law: Germany is strengthening its criminal code to ensure legal clarity
+      and harsher penalties for the use of dangerous substances in sexual offenses
+      and robberies.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Der Bundestag hat einen von der Bundesregierung eingereichten Gesetzentwurf
+          zur Änderung des Strafgesetzbuches zur Stärkung des strafrechtlichen Schutzes
+          vor sogenannten K.-o. -Tropfen beschlossen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

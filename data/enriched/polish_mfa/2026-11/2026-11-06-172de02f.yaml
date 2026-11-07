@@ -1,0 +1,31 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of the Council of the Baltic Sea States
+  - Foreign Minister of Ukraine
+  topics:
+  - ukraine
+  location: null
+  position: Poland reaffirms its strong support for Ukraine and the coordination of
+    the Baltic Sea States in supporting Ukraine's sovereignty and territorial integrity.
+  positions:
+    ukraine: Poland supports the continued provision of aid to Ukraine and the strengthening
+      of security in the Baltic region to counter Russian aggression.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: potwierdziliśmy nasze niezłomne wsparcie dla Ukrainy
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

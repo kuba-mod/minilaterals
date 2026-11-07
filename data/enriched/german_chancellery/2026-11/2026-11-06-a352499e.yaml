@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Staatsminister für Kultur und Medien
+  topics: []
+  location: null
+  position: Germany emphasizes the obligation to remember the November Pogroms of
+    1938 to combat contemporary antisemitism and ensure that Jewish life remains secure
+    and self-evident.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

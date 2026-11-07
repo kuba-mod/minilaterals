@@ -1,0 +1,53 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Sybiha
+  - High Representative of the EU for Foreign Affairs and Security Policy
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Warsaw, Poland
+  position: Poland reaffirms its comprehensive support for Ukraine's sovereignty,
+    energy infrastructure, and defense capabilities while maintaining a firm stance
+    against the glorification of perpetrators of crimes against the Polish people.
+  positions:
+    ukraine: Poland supports a just and lasting peace based on international law and
+      the respect for Ukraine's sovereignty and territorial integrity.
+    defence: Poland is committed to military cooperation and the further strengthening
+      of Ukraine's defense capabilities to ensure regional stability.
+    energy: Poland declared continued support for the Ukrainian energy system, particularly
+      in the face of Russian attacks on civilian infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska zadeklarowała dalsze wsparcie dla Ukrainy
+      defence:
+        score: 1
+        evidence: ścisła współpraca w obszarze bezpieczeństwa pozostaje istotnym elementem
+          stabilności regionu
+    visegrad:
+      defence:
+        score: 1
+        evidence: dalszego wzmacniania zdolności obronnych Ukrainy
+      energy:
+        score: 1
+        evidence: Polska zadeklarowała dalsze wsparcie dla Ukrainy, w szczególności
+          dla ukraińskiego systemu energetycznego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

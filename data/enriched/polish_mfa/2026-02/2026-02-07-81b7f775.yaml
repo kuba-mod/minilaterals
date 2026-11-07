@@ -49,8 +49,9 @@ extracted:
           should be geographically more diversified.
       green_transition:
         score: 1
-        evidence: the United States has proposed a major international initiative
-          whose goals Poland and the rest of the European Union support
+        evidence: These supply chains are essential to the functioning of modern economies,
+          as they underpin technological development, the energy transition, and the
+          industrial security of states.
       rule_of_law:
         score: 1
         evidence: This is an element of our economic security - summarised Minister

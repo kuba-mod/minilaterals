@@ -1,0 +1,40 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Martin
+  - Costa
+  - Carney
+  topics:
+  - defence
+  location: Dublin, Ireland
+  position: Germany will participate in the European Political Community meeting to
+    promote political dialogue and cooperation to strengthen European security and
+    prosperity.
+  positions:
+    defence: Germany aims to strengthen security in Europe through regular informal
+      exchange and political cooperation.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: um Sicherheit und Wohlstand in Europa zu stärken
+    e3:
+      defence:
+        score: 0
+        evidence: Ziel ist es, durch den regelmäßigen informellen Austausch den politischen
+          Dialog und die politische Zusammenarbeit zu fördern, um Sicherheit und Wohlstand
+          in Europa zu stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

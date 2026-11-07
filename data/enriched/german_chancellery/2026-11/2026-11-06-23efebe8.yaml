@@ -1,0 +1,43 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Emmanuel Macron
+  - Mark Carney
+  - European Council
+  - European Commission
+  - European Parliament
+  - High Representative
+  - Secretary General of the Council of Europe
+  - Secretary General of NATO
+  - Secretary General of the OSCE
+  topics:
+  - ukraine
+  location: Dublin, Ireland
+  position: Germany supports the European Political Community as an informal platform
+    to strengthen security, stability, and prosperity through a value-based, coordinated
+    foreign policy across Europe.
+  positions:
+    ukraine: Germany views the Russian war of aggression against Ukraine as a catalyst
+      for the need for a value-based and well-coordinated European foreign policy.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: 'Der weiterhin andauernde russische Angriffskrieg gegen die Ukraine
+          zeigt: Eine wertebasierte, gut koordinierte Außenpolitik ist die Voraussetzung
+          für ein geopolitisches Europa.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - foreign ministries of Australia, Canada, France, Germany, Italy, Japan, the Netherlands,
+    New Zealand, the United Kingdom, and the United States
+  topics:
+  - rule_of_law
+  location: null
+  position: France, as part of a joint statement, condemns the use of the National
+    Security Law in Hong Kong to target political expression and calls for an end
+    to unjust prosecutions.
+  positions:
+    rule_of_law: France urges China and Hong Kong authorities to uphold international
+      commitments and the rights guaranteed under the Sino-British Joint Declaration.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: urge the authorities in China and Hong Kong to uphold their international
+          commitments and honour the rights and freedoms guaranteed to the people
+          of Hong Kong
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

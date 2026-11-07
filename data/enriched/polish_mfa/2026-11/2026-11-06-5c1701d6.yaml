@@ -1,0 +1,77 @@
+actors:
+- PL
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Kaja Kallas
+  - Andrij Sybiha
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: Warsaw, Poland
+  position: 'Poland advocates for continued military and financial support for Ukraine
+    and insists on a specific sequence for peace talks: ceasefire first, then peace
+    talks, and finally the restoration of European security architecture.'
+  positions:
+    ukraine: Poland supports the use of frozen Russian assets to fund Ukraine's defense
+      and reconstruction.
+    defence: Poland has provided nearly 4 billion EUR in military donations (2022-2026)
+      and is hosting multinational exercises to demonstrate European readiness.
+    hybrid: Poland supports a decisive sanctions policy to counter Russian hybrid
+      pressure, including restrictions on the 'shadow fleet' and visa restrictions.
+    energy: Poland is allocating an additional 8 million PLN for generators to increase
+      the resilience of Ukraine's energy sector for winter.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Łączny koszt polskich darowizn wojskowych dla Ukrainy wynosi prawie
+          4 miliardy EUR (2022-2026)
+      defence:
+        score: 1
+        evidence: kwestie dotyczące podstawowych interesów bezpieczeństwa Europy wymagają
+          obecności przy stole przedstawicieli Flanki Wschodniej
+      hybrid:
+        score: 1
+        evidence: Dyplomaci zwrócili uwagę na potrzebę skutecznej reakcji na rosyjską
+          presję hybrydową
+    visegrad:
+      defence:
+        score: 2
+        evidence: Łączny koszt polskich darowizn wojskowych dla Ukrainy wynosi prawie
+          4 miliardy EUR (2022-2026)
+      energy:
+        score: 2
+        evidence: Polska przeznaczy dodatkowe 8 mln zł na wspólnotę energetyczną
+    baltic:
+      defence:
+        score: 2
+        evidence: Łączny koszt polskich darowizn wojskowych dla Ukrainy wynosi prawie
+          4 miliardy EUR (2022-2026)
+      hybrid:
+        score: 1
+        evidence: Dyplomaci zwrócili uwagę na potrzebę skutecznej reakcji na rosyjską
+          presję hybrydową
+      energy:
+        score: 2
+        evidence: Polska przeznaczy dodatkowe 8 mln zł na wspólnotę energetyczną
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+- US
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministries of Australia, Germany, France, Italy, Japan, Canada, New Zealand,
+    the Netherlands, the United Kingdom and the United States of America
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany and its partners condemn the use of the National Security Law
+    in Hong Kong to target political expression and demand the immediate cessation
+    of unjustified criminal proceedings.
+  positions:
+    rule_of_law: Germany calls on Chinese and Hong Kong authorities to respect international
+      obligations and the rights and freedoms guaranteed to the people of Hong Kong.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: rufen die Behörden in China und Hongkong mit Nachdruck dazu auf,
+          ihren internationalen Verpflichtungen nachzukommen und die Rechte und Freiheiten
+          zu achten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

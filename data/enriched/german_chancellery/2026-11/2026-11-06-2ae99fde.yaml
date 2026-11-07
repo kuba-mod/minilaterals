@@ -1,0 +1,44 @@
+actors:
+- DE
+- HU
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Péter Magyar
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting the Hungarian Prime Minister to discuss European affairs,
+    defense, economic cooperation, and support for Ukraine.
+  positions:
+    ukraine: Germany intends to discuss the further support of Ukraine with the Hungarian
+      Prime Minister.
+    defence: Germany will hold discussions on defense as part of a bilateral meeting
+      with Hungary.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: weitere Unterstützung der Ukraine gehen
+      defence:
+        score: 0
+        evidence: Themenbereiche Europa, Verteidigung
+    e3:
+      defence:
+        score: 0
+        evidence: um die Themenbereiche Europa, Verteidigung, wirtschaftliche Zusammenarbeit
+          sowie die weitere Unterstützung der Ukraine gehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

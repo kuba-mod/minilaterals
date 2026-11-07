@@ -1,0 +1,29 @@
+actors:
+- PL
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Andrii Sybiha
+  - Kaja Kallas
+  topics:
+  - ukraine
+  location: Warsaw, Poland
+  position: Estonia advocates for a peace in Ukraine that ensures long-term European
+    security and supports measures to pressure Russia.
+  positions:
+    ukraine: Estonia supports increasing pressure on Russia and providing aid to Ukraine
+      before winter to ensure a peace that guarantees long-term European security.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

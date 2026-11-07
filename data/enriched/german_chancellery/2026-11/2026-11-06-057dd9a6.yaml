@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes the necessity of a critical, scientifically based historical
+    consciousness to counter historical revisionism and the glorification of the SED
+    dictatorship.
+  positions:
+    rule_of_law: Germany warns against populist simplifications and historical revisionism
+      regarding the GDR, advocating for the remembrance of the SED dictatorship's
+      despotic and violent nature to strengthen democratic cohesion.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Es hilft uns, populistischen Vereinfachungen entgegenzutreten, den
+          demokratischen Zusammenhalt zu stärken und uns den Wert der Freiheit zu
+          vergegenwärtigen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
