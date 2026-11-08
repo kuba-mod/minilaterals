@@ -1,0 +1,52 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Ignacy Niemczycki
+  - Tasos Chatzivasileiou
+  topics:
+  - enlargement
+  - ukraine
+  - energy
+  location: null
+  position: Poland discussed EU priorities, budget negotiations, and security cooperation
+    with Greece, emphasizing economic competitiveness and regional cohesion.
+  positions:
+    enlargement: Poland believes that the pace of EU accession negotiations should
+      depend on the progress candidate countries make in meeting membership criteria.
+    ukraine: Poland supports providing assistance to Ukraine in the face of Russian
+      aggression.
+    energy: Poland supports ensuring the energy security of Ukraine.
+  stances:
+    weimar:
+      enlargement:
+        score: -1
+        evidence: tempo negocjacji z państwami kandydującymi powinno zależeć od postępów
+          w spełnianiu kryteriów członkostwa
+      ukraine:
+        score: 1
+        evidence: Poruszono także kwestię wsparcia dla Ukrainy w obliczu rosyjskiej
+          agresji
+    visegrad:
+      enlargement:
+        score: -1
+        evidence: tempo negocjacji z państwami kandydującymi powinno zależeć od postępów
+          w spełnianiu kryteriów członkostwa
+      energy:
+        score: 1
+        evidence: wsparcia dla Ukrainy w obliczu rosyjskiej agresji, w tym zapewnienia
+          jej bezpieczeństwa energetycznego
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

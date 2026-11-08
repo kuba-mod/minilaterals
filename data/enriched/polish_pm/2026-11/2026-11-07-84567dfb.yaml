@@ -1,0 +1,32 @@
+actors:
+- PL
+- UK
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Marek Boroń
+  topics:
+  - hybrid
+  location: Kraków, Poland
+  position: Poland is responding to a domestic terrorist attack in Kraków involving
+    multiple casualties and the neutralization of the perpetrator by police.
+  positions:
+    hybrid: Prime Minister Donald Tusk characterized the attack as an unprecedentedly
+      drastic case of terrorism in Poland.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Do tej pory w Polsce nie mieliśmy tak drastycznych przypadków terroryzmu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

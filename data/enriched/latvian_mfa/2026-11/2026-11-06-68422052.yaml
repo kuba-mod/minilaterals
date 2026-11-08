@@ -1,0 +1,41 @@
+actors:
+- PL
+- LV
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Foreign Ministers of Baltic Sea states
+  - Foreign Minister of Ukraine
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Warsaw, Poland
+  position: Latvia emphasizes the need for continued support for Ukraine and warns
+    against Russian efforts to undermine European and NATO stability.
+  positions:
+    ukraine: Latvia advocates for sustained and increased support for Ukraine to counter
+      Russian aggression.
+    defence: Latvia stresses the importance of maintaining NATO and European resilience
+      against Russian threats.
+    hybrid: Latvia warns that Russia aims to destabilize Europe through hybrid means
+      to reduce support for Ukraine.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Krievijas mērķis ir graut Eiropas un NATO noturību
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
