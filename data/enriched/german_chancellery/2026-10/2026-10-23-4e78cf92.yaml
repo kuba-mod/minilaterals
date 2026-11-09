@@ -55,8 +55,8 @@ extracted:
     e3:
       iran:
         score: 1
-        evidence: Es ist ein Versuch, einer diplomatischen Lösung in diesem Konflikt,
-          vor allem in der Straße von Hormus, jetzt wieder neue Impulse zu geben.
+        evidence: E3 ist ein in den Iranverhandlungen schon seit Langem etabliertes
+          Format.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

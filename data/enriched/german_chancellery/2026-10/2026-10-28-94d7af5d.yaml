@@ -27,8 +27,10 @@ extracted:
     weimar:
       hybrid:
         score: 2
-        evidence: Hat deshalb die Verordnung zur Neufassung der Sicherheitsüberprüfungsfeststellungsverordnung
-          als Sabotageschutzverordnung des Bundes beschlossen
+        evidence: Die Bundesregierung misst dem Schutz der kritischen Infrastruktur
+          sehr hohe Bedeutung zu. Sie hat deshalb die Verordnung zur Neufassung der
+          Sicherheitsüberprüfungsfeststellungsverordnung als Sabotageschutzverordnung
+          des Bundes beschlossen.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

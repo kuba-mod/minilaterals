@@ -1,0 +1,87 @@
+actors:
+- DE
+- FR
+- HU
+- AU
+- US
+issue_areas:
+- ukraine
+- hybrid
+- green_transition
+- iran
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Kornelius Giese
+  - Haufe
+  - Bowinkelmann
+  - Reck
+  - Harmsen
+  - Swistek
+  - Bundeskanzler Merz
+  - Péter Magyar
+  - Martin
+  - António Costa
+  - Carney
+  - Arthur Mensch
+  - Geoffrey Hinden
+  - Wadephul
+  - Carsten Schneider
+  - Bhupender Yadav
+  - Murat Kurum
+  - Chris Bowen
+  - Heike Henn
+  - Saathoff
+  topics:
+  - ukraine
+  - hybrid
+  - green_transition
+  - iran
+  - migration
+  location: Berlin, Germany
+  position: Germany outlines its upcoming diplomatic agenda, focusing on European
+    security, climate implementation at COP31, and a coordinated approach to ending
+    the war in Ukraine.
+  positions:
+    ukraine: Germany seeks a swift peace in Ukraine under conditions that ensure European
+      stability, insisting that any agreement must include NATO consensus and European
+      participation.
+    hybrid: Germany emphasizes the need for increased resilience against hybrid threats,
+      specifically citing recent bomb threats against aviation and espionage.
+    green_transition: Germany aims for COP31 in Antalya to be a conference of implementation,
+      focusing on accelerating the transition from fossil fuels and increasing global
+      electrification to 35% by 2035.
+    iran: Germany advocates for a diplomatic solution to the conflict in Iran, demanding
+      an end to regional destabilization via proxies and a credible cessation of its
+      nuclear program.
+    migration: Germany views the recent decline in asylum numbers as an indicator
+      that its 'migration turn' (Migrationswende) is working and intends to further
+      increase deportations.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Stärkung unserer Unterstützung für die Ukraine, sowie die Erhöhung
+          des Sanktionsdrucks gegen Russland
+      hybrid:
+        score: 1
+        evidence: Deutschland und Europa müssen in Bezug auf hybride Bedrohungen resilienter
+          werden.
+      green_transition:
+        score: 1
+        evidence: Wir setzen uns dafür ein, dass die Staaten ihre nationalen Klimapläne
+          umsetzen und ausstehende Pläne vorlegen.
+    e3:
+      iran:
+        score: 1
+        evidence: Das Nuklearprogramm muss glaubwürdig eingestellt sein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
