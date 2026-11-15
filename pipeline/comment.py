@@ -37,6 +37,7 @@ from pathlib import Path
 import anthropic
 from openai import OpenAI
 
+from pipeline import usage
 from pipeline.render import (
     build_convergence_clusters,
     load_events,
@@ -98,6 +99,7 @@ class OllamaProvider:
             max_tokens=4096,
             temperature=0.2,
         )
+        usage.record_openai(self.model, response)
         msg = response.choices[0].message
         content = (msg.content or "").strip()
         if not content and getattr(msg, "reasoning", None):
@@ -121,6 +123,7 @@ class AnthropicProvider:
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
+        usage.record_anthropic(self.model, response)
         return response.content[0].text.strip()
 
 

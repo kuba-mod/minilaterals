@@ -49,6 +49,7 @@ import yaml
 from openai import OpenAI
 from tqdm import tqdm
 
+from pipeline import usage
 from pipeline.schemas import EnrichedEventSchema, ExtractedSchema
 from pipeline.sources.base import KNOWN_ACTOR_SOURCES
 
@@ -468,6 +469,7 @@ class OllamaProvider:
             # structured extraction tasks.
             extra_body={"think": False},
         )
+        usage.record_openai(self.model, response)
         return response.choices[0].message.content.strip()
 
 
@@ -484,6 +486,7 @@ class AnthropicProvider:
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
+        usage.record_anthropic(self.model, response)
         return response.content[0].text.strip()
 
 

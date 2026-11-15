@@ -51,6 +51,12 @@ env:
   OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
   OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
   OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:latest' }}
+  # Per-million-token rates (USD) used only to *estimate* spend in the per-step
+  # "LLM usage" summary (pipeline/usage.py). Token counts are exact; the price is
+  # not reported by the API. Set these repo variables from the provider's pricing
+  # page; unset falls back to the defaults in usage.py.
+  LLM_PRICE_INPUT_PER_M: ${{ vars.LLM_PRICE_INPUT_PER_M || '' }}
+  LLM_PRICE_OUTPUT_PER_M: ${{ vars.LLM_PRICE_OUTPUT_PER_M || '' }}
 
 jobs:
   run:
