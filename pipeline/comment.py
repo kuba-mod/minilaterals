@@ -99,7 +99,6 @@ class OllamaProvider:
             max_tokens=4096,
             temperature=0.2,
         )
-        usage.record_openai(self.model, response)
         msg = response.choices[0].message
         content = (msg.content or "").strip()
         if not content and getattr(msg, "reasoning", None):
@@ -107,6 +106,7 @@ class OllamaProvider:
             # is suppressed; extract the last non-empty paragraph as the response.
             paragraphs = [p.strip() for p in msg.reasoning.split("\n\n") if p.strip()]
             content = paragraphs[-1] if paragraphs else ""
+        usage.record_openai(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(content))
         return content
 
 
@@ -123,8 +123,9 @@ class AnthropicProvider:
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
-        usage.record_anthropic(self.model, response)
-        return response.content[0].text.strip()
+        text = response.content[0].text.strip()
+        usage.record_anthropic(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
+        return text
 
 
 # ---------------------------------------------------------------------------

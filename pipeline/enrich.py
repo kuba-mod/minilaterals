@@ -469,8 +469,9 @@ class OllamaProvider:
             # structured extraction tasks.
             extra_body={"think": False},
         )
-        usage.record_openai(self.model, response)
-        return response.choices[0].message.content.strip()
+        text = response.choices[0].message.content.strip()
+        usage.record_openai(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
+        return text
 
 
 class AnthropicProvider:
@@ -486,8 +487,9 @@ class AnthropicProvider:
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
-        usage.record_anthropic(self.model, response)
-        return response.content[0].text.strip()
+        text = response.content[0].text.strip()
+        usage.record_anthropic(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
+        return text
 
 
 # ---------------------------------------------------------------------------
