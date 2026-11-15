@@ -106,7 +106,7 @@ class OllamaProvider:
             # is suppressed; extract the last non-empty paragraph as the response.
             paragraphs = [p.strip() for p in msg.reasoning.split("\n\n") if p.strip()]
             content = paragraphs[-1] if paragraphs else ""
-        usage.record_openai(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(content))
+        usage.record_ollama(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(content))
         return content
 
 

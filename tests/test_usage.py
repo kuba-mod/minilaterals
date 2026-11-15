@@ -34,9 +34,9 @@ def test_missing_token_counts_still_record_characters():
     assert (meter.input_chars, meter.output_chars) == (900, 100)
 
 
-def test_record_openai_reads_prompt_and_completion_tokens(fresh):
+def test_record_ollama_reads_prompt_and_completion_tokens(fresh):
     response = SimpleNamespace(usage=SimpleNamespace(prompt_tokens=12, completion_tokens=3))
-    usage.record_openai("gemma4", response, 50, 9)
+    usage.record_ollama("gemma4", response, 50, 9)
     assert (fresh.input_tokens, fresh.output_tokens) == (12, 3)
     assert (fresh.input_chars, fresh.output_chars) == (50, 9)
 
@@ -48,7 +48,7 @@ def test_record_anthropic_reads_input_and_output_tokens(fresh):
 
 
 def test_response_without_usage_block_does_not_raise(fresh):
-    usage.record_openai("gemma4", SimpleNamespace(usage=None), 40, 8)
+    usage.record_ollama("gemma4", SimpleNamespace(usage=None), 40, 8)
     assert fresh.missing_tokens == 1
     assert fresh.input_chars == 40
 

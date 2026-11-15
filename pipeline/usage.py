@@ -1,6 +1,6 @@
 """Volume metering for LLM calls: calls, tokens and characters, per pipeline step.
 
-Providers call `record_openai` / `record_anthropic` after each response. When the
+Providers call `record_ollama` / `record_anthropic` after each response. When the
 process exits, one summary is printed and — under GitHub Actions — a row is
 appended to `$GITHUB_STEP_SUMMARY`, labelled with the command that produced it.
 
@@ -99,8 +99,8 @@ def _report() -> None:
         print(f"  (could not write step summary: {exc})")
 
 
-def record_openai(model: str, response, chars_in: int, chars_out: int) -> None:
-    """Count a chat-completions response (Ollama's OpenAI-compatible endpoint)."""
+def record_ollama(model: str, response, chars_in: int, chars_out: int) -> None:
+    """Count an Ollama response. Ollama's /v1 endpoint returns the OpenAI chat-completions shape."""
     u = getattr(response, "usage", None)
     record(model, getattr(u, "prompt_tokens", None), getattr(u, "completion_tokens", None), chars_in, chars_out)
 

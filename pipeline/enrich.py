@@ -470,7 +470,7 @@ class OllamaProvider:
             extra_body={"think": False},
         )
         text = response.choices[0].message.content.strip()
-        usage.record_openai(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
+        usage.record_ollama(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
         return text
 
 
