@@ -17,7 +17,8 @@ extracted:
     for an end to escalation in northern Ethiopia.
   positions:
     defence: The UK condemns the attacks by Tigray Defence Forces in Afar and southern
-      Tigray and the seizure of airports.
+      Tigray, including the takeover of airports, and urges all parties to avoid further
+      escalation.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

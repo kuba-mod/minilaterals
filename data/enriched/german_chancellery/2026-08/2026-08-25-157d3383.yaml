@@ -25,12 +25,12 @@ extracted:
   positions:
     ukraine: Germany will continue its long-term support for Ukraine to force peace
       negotiations.
-    defence: The government is focusing on utilizing technology for security, such
-      as drone defense and person screening.
-    hybrid: Germany is increasing protection against hybrid attacks and intends to
-      impose a cost on the perpetrators.
-    green_transition: Germany seeks to curb climate change and better adapt the country
-      to its consequences, such as heat and drought.
+    defence: Germany is enhancing its security infrastructure, including the establishment
+      of a drone center in Magdeburg Cochstedt.
+    hybrid: Germany is increasing protection against hybrid attacks and implementing
+      legal measures to ensure perpetrators pay a price for such actions.
+    green_transition: Germany intends to further curb climate change and better adapt
+      the country to its consequences, such as heat and drought.
   stances:
     weimar:
       ukraine:
@@ -48,8 +48,8 @@ extracted:
     e3:
       defence:
         score: 0
-        evidence: Die Bundesregierung stärkt deshalb den Schutz, zuletzt durch die
-          Einrichtung des Drohnenzentrums in Magdeburg Cochstedt.
+        evidence: Die Bundesregierung setzt die Unterstützung der Ukraine mit langem
+          Atem fort.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

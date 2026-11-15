@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  - Bundesinnenminister
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Germany has passed legislation to strengthen its cybersecurity framework
+    to better detect and neutralize cyberattacks from state and non-state actors.
+  positions:
+    defence: Germany is expanding the legal authority of its security agencies and
+      the BSI to actively target attacker infrastructure and prevent high-damage cyberattacks.
+    hybrid: Germany is responding to the increasing importance of hybrid threats by
+      creating effective and legally secure foundations for the detection and defense
+      of cyberattacks.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: Einen entsprechenden Gesetzentwurf hat sie nun beschlossen. Der
+          Bundestag hat zugestimmt.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

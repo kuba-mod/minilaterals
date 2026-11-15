@@ -1,0 +1,63 @@
+actors:
+- DE
+- HU
+issue_areas:
+- ukraine
+- defence
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Péter Magyar
+  - António Costa
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  - energy
+  location: Berlin, Germany
+  position: Germany seeks a comprehensive restart of bilateral relations with Hungary,
+    focusing on economic intensification, security cooperation, and alignment on EU
+    budgetary priorities.
+  positions:
+    ukraine: Germany insists that financial support for Ukraine must be a collective
+      European task integrated into the EU budget and remains a priority for the Multiannual
+      Financial Framework.
+    defence: Germany intends to expand arms cooperation with Hungary, specifically
+      focusing on air defense and the modernization of armies.
+    enlargement: Germany supports the EU enlargement process, specifically acknowledging
+      Hungary's engagement with the Western Balkans and seeking the opening of all
+      negotiation chapters for Ukraine and Moldova.
+    energy: Germany has offered to support Hungary's transition away from Russian
+      energy imports by providing capacity at German LNG terminals and expertise in
+      renewable energies.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Dazu gehört auch, dass wir in der finanziellen Unterstützung der
+          Ukraine jetzt nicht nachlassen.
+      defence:
+        score: 2
+        evidence: Schließlich wird unsere Rüstungskooperation weiter ausgebaut. Wir
+          wollen vor allem im Bereich der Luftverteidigung das vorhandene Potenzial
+          nutzen.
+      enlargement:
+        score: 1
+        evidence: Auch die Erweiterung der Europäischen Union ist uns beide wichtig.
+    e3:
+      defence:
+        score: 0
+        evidence: Neben einer Intensivierung der Wirtschaftsbeziehungen wird die Zusammenarbeit
+          in den Bereichen Energie und Verteidigung vertieft.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

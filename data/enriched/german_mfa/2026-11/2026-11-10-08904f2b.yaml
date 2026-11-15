@@ -1,0 +1,35 @@
+actors:
+- DE
+- HU
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Dr. Géza Andreas von Geyr
+  - Hungarian Prime Minister
+  topics:
+  - ukraine
+  location: Berlin, Germany
+  position: Germany emphasizes the importance of German-Hungarian cooperation and
+    a shared commitment to European freedom, unity, and compromise to protect the
+    continent from internal and external pressures.
+  positions:
+    ukraine: Germany views Russia's war of aggression against Ukraine as a direct
+      threat to European freedom that requires active engagement from European nations.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: beim Beutekrieg Russlands gegen die Ukraine und bei alldem wie wir,
+          unsere Länder, uns dazu verhalten, geht es um unsere Freiheit auf unserem
+          Kontinent
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

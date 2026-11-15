@@ -21,16 +21,11 @@ extracted:
     and safeguards of nuclear material transfers for the AUKUS submarine program under
     the NPT.
   positions:
-    defence: The United Kingdom maintains that the AUKUS partnership is consistent
-      with international obligations and the NPT.
-    submarines: The United Kingdom supports the transfer of nuclear materials for
-      the AUKUS submarine project under strict IAEA safeguards.
-  stances:
-    aukus:
-      submarines:
-        score: 0
-        evidence: Transfer of the nuclear materials in the context of AUKUS and its
-          safeguards in all aspects under the NPT.
+    defence: The United Kingdom supports the strategic defense cooperation within
+      the AUKUS framework.
+    submarines: The United Kingdom advocates for the transfer of nuclear materials
+      for AUKUS submarines while maintaining strict IAEA safeguards.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

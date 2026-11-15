@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Wolf Biermann
+  topics: []
+  location: null
+  position: Germany, via the Minister of State for Culture and Media, honors Wolf
+    Biermann on his 90th birthday, recognizing him as a pivotal voice of resistance
+    against the SED dictatorship.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

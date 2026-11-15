@@ -21,15 +21,15 @@ extracted:
   - defence
   - hybrid
   location: Warsaw, Poland
-  position: Latvia emphasizes the need for continued support for Ukraine and warns
-    against Russian efforts to undermine European and NATO stability.
+  position: Latvia emphasizes the need to counter Russian efforts to undermine European
+    and NATO stability and to maintain strong support for Ukraine.
   positions:
-    ukraine: Latvia advocates for sustained and increased support for Ukraine to counter
+    ukraine: Latvia advocates for continued and sustained support for Ukraine against
       Russian aggression.
-    defence: Latvia stresses the importance of maintaining NATO and European resilience
-      against Russian threats.
-    hybrid: Latvia warns that Russia aims to destabilize Europe through hybrid means
-      to reduce support for Ukraine.
+    defence: Latvia stresses the importance of strengthening NATO and European resilience
+      to counter Russian goals of destabilization.
+    hybrid: Latvia highlights the need to address Russian attempts to weaken European
+      cohesion through hybrid means.
   stances:
     baltic:
       hybrid:

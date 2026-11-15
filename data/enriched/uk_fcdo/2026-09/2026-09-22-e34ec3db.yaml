@@ -24,19 +24,19 @@ extracted:
   topics:
   - defence
   location: null
-  position: The United Kingdom, as part of the G7, condemns the Houthi strikes in
-    Yemen and asserts the right to defend international shipping and navigational
-    freedoms.
+  position: The United Kingdom, as part of the G7, condemns Houthi strikes in the
+    Bab al-Mandab and asserts the right to defend international shipping.
   positions:
-    defence: The United Kingdom condemns Houthi attacks on shipping and supports the
-      right to protect maritime commerce and navigational freedoms in the Bab al-Mandab.
+    defence: The United Kingdom condemns continued Houthi strikes and supports the
+      protection of navigational rights and freedoms.
   stances:
     e3:
       defence:
         score: 1
         evidence: Foreign Ministers of Canada, France, Germany, Italy, Japan, the
           United Kingdom and the United States of America, and the High Representative
-          of the European Union condemn continued strikes
+          of the European Union condemn continued strikes carried out by the Houthis
+          in Yemen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

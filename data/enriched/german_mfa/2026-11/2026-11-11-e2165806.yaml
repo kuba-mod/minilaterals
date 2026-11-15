@@ -1,0 +1,30 @@
+actors:
+- DE
+- AU
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  - Reem Alabali Radovan
+  topics:
+  - energy
+  location: null
+  position: Germany is strategically restructuring its raw materials foreign policy
+    to secure supply chains, diversify sources, and strengthen bilateral partnerships
+    with resource-rich countries.
+  positions:
+    energy: Germany aims to reduce unilateral dependencies and ensure the security
+      of raw material supplies for its industry through diversification and the creation
+      of resilient, sustainable supply chains.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

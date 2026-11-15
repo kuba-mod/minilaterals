@@ -17,15 +17,15 @@ extracted:
   - hybrid
   - defence
   location: null
-  position: Germany is reforming its intelligence laws to expand the operational capabilities
-    and surveillance powers of the BND and BfV to counter modern security threats.
+  position: Germany has approved a comprehensive reform of its intelligence laws to
+    expand the operational capabilities and surveillance powers of the BND and BfV
+    while consolidating oversight under the Independent Control Council.
   positions:
-    hybrid: Germany is increasing the technical surveillance and active intervention
-      capabilities of its intelligence services to protect against hybrid attacks
-      on its society and security.
+    hybrid: Germany is expanding intelligence powers and active measures to better
+      protect its society and security against hybrid attacks and foreign sabotage.
     defence: The government is strengthening the security architecture by granting
-      intelligence services the power to conduct active measures, such as sabotaging
-      foreign IT systems and servers.
+      intelligence services new technical capabilities, including AI and biometric
+      analysis, and allowing the BND to conduct proactive sabotage against threats.
   stances:
     weimar:
       hybrid:

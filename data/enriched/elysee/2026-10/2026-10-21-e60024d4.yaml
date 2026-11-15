@@ -23,9 +23,8 @@ extracted:
   - iran
   - ukraine
   location: Doha, Qatar
-  position: France reaffirms its strategic partnership with Qatar, intensifying cooperation
-    in defence, energy, and security while coordinating on regional stability in the
-    Middle East.
+  position: France reaffirms its strategic partnership with Qatar, expanding cooperation
+    in defence, energy security, and diplomatic coordination to address regional stability.
   positions:
     defence: France is expanding military cooperation with Qatar, including a Letter
       of Intent to modernize the Qatar Amiri Land Forces and strengthening air-force
@@ -34,7 +33,8 @@ extracted:
       cooperation, R&D, and the implementation of the Paris Agreement.
     iran: France condemns Iranian military attacks in the region and supports diplomatic
       efforts to ensure the exclusively peaceful nature of Iran's nuclear program.
-    ukraine: France affirms its efforts to advance a just and lasting peace in Ukraine.
+    ukraine: France affirms its cooperation with Qatar to advance a just and lasting
+      peace in Ukraine.
   stances:
     weimar:
       ukraine:

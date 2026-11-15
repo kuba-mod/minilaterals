@@ -1,0 +1,52 @@
+actors:
+- DE
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Micheál Martin
+  - Witkoff
+  - Kushner
+  - President Putin
+  - President Trump
+  - Kaja Kallas
+  topics:
+  - ukraine
+  - defence
+  location: Dublin, Ireland
+  position: Germany advocates for a united European front in supporting Ukraine's
+    defense and ensuring European representation in upcoming peace negotiations.
+  positions:
+    ukraine: Germany insists that peace negotiations must include both Ukraine and
+      Europe, and that the EU must share the responsibility of support solidarily.
+    defence: Germany emphasizes that European security is guaranteed by a strong NATO
+      and calls for a coordinated effort to finance Ukrainian defense for 2027.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Ich habe in der nächsten Woche zu einem Treffen der sogenannten
+          Koalition der Willigen eingeladen. Wir werden mit über 20 Staats- und Regierungschefs
+          der Koalition in Berlin zusammenkommen.
+      defence:
+        score: 1
+        evidence: Europas Sicherheit wird deshalb auch in Zukunft zuallererst durch
+          eine starke, einige und auch europäische NATO gewährleistet.
+    e3:
+      defence:
+        score: 0
+        evidence: das E3-Format hat sich sehr bewährt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

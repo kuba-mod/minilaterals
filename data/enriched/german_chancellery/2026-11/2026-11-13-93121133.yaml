@@ -1,0 +1,46 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Prime Minister of Denmark
+  - Prime Minister of Finland
+  - Prime Minister of Austria
+  - Prime Minister of Sweden
+  topics:
+  - ukraine
+  - defence
+  location: Dublin, Ireland
+  position: Germany advocates for a collective European approach to financing Ukraine's
+    defense and utilizing variable diplomatic geometries to achieve peace.
+  positions:
+    ukraine: Germany asserts that while it is the most important supporter, the financing
+      of Ukraine is in the interest of all Europeans.
+    defence: Germany emphasizes that European security and stability are threatened
+      by Russia and the war in Ukraine, requiring a coordinated EU response.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland ist wichtigster Unterstützer der Ukraine
+    e3:
+      defence:
+        score: 1
+        evidence: 'Deswegen wird Europa auch künftig in unterschiedlicher Zusammensetzung
+          diese politische Großaufgabe leisten: mal als E-3 (also der Gruppe aus Deutschland,
+          Frankreich und Großbritannien)'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

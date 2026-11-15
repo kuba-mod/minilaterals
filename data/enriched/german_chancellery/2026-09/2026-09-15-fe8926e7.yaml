@@ -23,17 +23,18 @@ extracted:
   - iran
   - rule_of_law
   location: Berlin, Germany
-  position: Germany seeks to deepen its partnership with Iraq through a new action
-    plan focused on economic cooperation, stability, and security.
+  position: Germany seeks to deepen its partnership with Iraq through a new joint
+    action plan focused on economic cooperation, stability, and security.
   positions:
     defence: Germany will end its military presence in Iraq by September 30, 2026,
-      but remains open to continued security cooperation if requested.
-    energy: Germany signed an agreement regarding the Iraqi electricity supply and
+      but remains open to continuing security cooperation if requested by the Iraqi
+      government.
+    energy: Germany signed an agreement to support the Iraqi electricity supply and
       encourages German companies to provide energy solutions in Iraq.
-    iran: Germany demands that Iran end the blockade of the Strait of Hormuz, stop
+    iran: Germany demands that Iran end its blockade of the Strait of Hormuz, stop
       its military nuclear program, and cease supporting regional proxies.
-    rule_of_law: Germany supports Iraq in fighting corruption and establishing a more
-      transparent, efficient administration based on the rule of law.
+    rule_of_law: Germany supports Iraq in its fight against corruption and advocates
+      for a more transparent, efficient administration within a rule-of-law framework.
   stances:
     weimar:
       rule_of_law:

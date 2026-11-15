@@ -1,0 +1,39 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Sheikh Mohammed bin Abdulrahman Al Thani
+  - Faisal bin Farhan Al Saud
+  - Johann Wadephul
+  - Ed Miliband
+  - Antonio Tajani
+  topics:
+  - iran
+  location: null
+  position: France coordinates with international partners to prevent military escalation
+    in the Middle East and ensure Iran does not acquire nuclear weapons.
+  positions:
+    iran: France supports diplomatic resolutions and mediation efforts to prevent
+      escalation, stop Iran's destabilizing activities, and ensure it never acquires
+      nuclear weapons.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: They agreed on the need to guarantee, through diplomatic channels,
+          that Iran never acquires nuclear weapons
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

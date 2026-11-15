@@ -25,10 +25,10 @@ extracted:
   position: France and its partners strongly condemn Iran's use of the death penalty
     against protesters and demand an immediate end to these executions.
   positions:
-    iran: France calls on the Iranian regime to end the use of the death penalty,
-      release arbitrarily detained individuals, and respect human rights.
+    iran: France calls on the Iranian regime to stop using capital punishment to silence
+      dissent, release arbitrarily detained individuals, and respect human rights.
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

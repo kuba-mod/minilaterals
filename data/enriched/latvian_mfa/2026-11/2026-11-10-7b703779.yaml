@@ -1,0 +1,32 @@
+actors:
+- UK
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  - Minister of Foreign Affairs
+  topics:
+  - defence
+  location: Oslo, Norway
+  position: Latvia's Foreign Minister will visit Oslo to discuss the security situation
+    in the Baltic Sea and High North regions.
+  positions:
+    defence: Latvia is engaging in discussions regarding defense and security in the
+      Baltic Sea and High North regions.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: pārrunās drošības situāciju Baltijas jūras un Tālo Ziemeļu reģionā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

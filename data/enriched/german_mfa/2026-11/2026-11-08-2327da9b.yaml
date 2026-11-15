@@ -1,0 +1,42 @@
+actors:
+- DE
+- AU
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Carsten Schneider
+  - Dr. Johann Wadephul
+  - Reem Alabali Radovan
+  - Bhupender Yadav
+  topics:
+  - green_transition
+  - energy
+  location: Antalya, Turkey
+  position: Germany aims to accelerate the implementation of the Paris Agreement through
+    increased electrification, ambitious emission reductions, and enhanced climate
+    financing for the Global South.
+  positions:
+    green_transition: Germany advocates for the 1.5-degree target, the reduction of
+      methane and SF6 emissions, and the implementation of nature-based solutions
+      for climate adaptation.
+    energy: Germany supports the Turkish presidency's electrification initiative to
+      increase the global share of electricity in final energy consumption to 35%
+      by 2035 to reduce dependence on fossil imports.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Die Bundesregierung wird die Elektrifizierungs-Initiative der Präsidentschaft
+          unterstützen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

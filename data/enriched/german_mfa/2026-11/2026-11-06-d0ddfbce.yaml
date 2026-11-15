@@ -26,17 +26,17 @@ extracted:
   - energy
   location: Warsaw, Poland
   position: Germany advocates for a central European role in resolving the war in
-    Ukraine and emphasizes the need for a unified transatlantic front against Russian
-    aggression.
+    Ukraine and pledges continued transatlantic unity and financial support to ensure
+    Ukrainian resilience and European security.
   positions:
     ukraine: Germany asserts that no decisions about Ukraine's future should be made
-      without Ukraine and pledges continued endurance in its support.
-    defence: Germany emphasizes the need to maintain pressure on Moscow and defend
-      European security interests through the EU and NATO.
+      without Ukraine and pledges further support to ensure a lasting peace.
+    defence: Germany emphasizes the need for a closed transatlantic alliance between
+      Europeans and Americans to effectively counter Russian aggression.
     hybrid: Germany identifies Russian hybrid threats in the Baltic Sea region and
-      aims to protect infrastructure and society from destabilization.
+      across Europe, pledging to react firmly to protect institutional trust.
     energy: Germany has pledged an additional 200 million euros to support Ukraine's
-      energy and heating supply before the winter.
+      energy and heating supplies before the winter.
   stances:
     weimar:
       ukraine:
@@ -48,8 +48,7 @@ extracted:
     e3:
       defence:
         score: 0
-        evidence: als transatlantisches Bündnis, als Europäer und Amerikaner, gemeinsam
-          und geschlossen gegenüber Russland auftreten
+        evidence: wir halten zusammen, im Ostseerat, in der EU und in der NATO
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

@@ -24,7 +24,7 @@ extracted:
   - António Guterres
   - Jeanne Shaheen
   - Ruben Gallego
-  - Muktahar Tleuberdim
+  - Mukthar Tleuberdim
   - Mohamed Salem Ould Merzougi
   - Lejeune Mbella Mbella
   topics:
@@ -34,20 +34,20 @@ extracted:
   - indo_pacific
   - migration
   location: New York, USA
-  position: Poland emphasizes the necessity of strong allied guarantees and international
-    cooperation to counter Russian aggression and maintain global security.
+  position: Poland is coordinating with international partners to counter Russian
+    aggression, strengthen NATO's eastern flank, and maintain a rules-based international
+    order.
   positions:
     ukraine: Poland views Russian aggression against Ukraine as a threat to the entire
-      region and intends to present its position on this matter at the UN Security
-      Council.
-    defence: Poland stresses the critical importance of the US military presence in
-      Poland and the durability of NATO Article 5 guarantees.
+      region and intends to present its position on this at the UN Security Council.
+    defence: Poland emphasizes the critical importance of US troop presence in Poland
+      and the durability of NATO Article 5 guarantees.
     hybrid: Poland warns against Russian provocations and reckless actions below the
       threshold of full-scale war.
     indo_pacific: Poland supports strengthening partnerships with Indo-Pacific states,
       specifically Japan and South Korea, to limit Russian influence in the region.
-    migration: Poland discusses the need to counteract illegal migration in the Sahel
-      region.
+    migration: Poland discussed countering illegal migration in the Sahel region during
+      meetings with Mauritanian partners.
   stances:
     weimar:
       ukraine:
@@ -61,9 +61,8 @@ extracted:
           flanką NATO
       hybrid:
         score: 1
-        evidence: Rosja wysyła żołnierzy, wysyła pociski manewrujące, drony, wysadza
-          jadące pociągi, próbuje podkładać bomby zapalające na samolotach pasażerskich,
-          podpala centra handlowe
+        evidence: Rosja może podjąć jakieś lekkomyślne i prowokacyjne działania poniżej
+          poziomu pełnoskalowej wojny
     e3:
       defence:
         score: 1

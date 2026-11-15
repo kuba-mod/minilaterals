@@ -21,17 +21,13 @@ extracted:
   - defence
   location: Singapore, Japan, South Korea
   position: Germany is conducting a high-level diplomatic tour of Singapore, Japan,
-    and South Korea to deepen security and economic cooperation.
+    and South Korea to deepen security and economic cooperation in Asia.
   positions:
-    indo_pacific: Germany aims to strengthen economic and security ties with key partners
-      in Asia through official visits and business summits.
-    defence: Germany is focusing on deepening security policy cooperation, highlighted
-      by the Chancellor's planned visit to the Demilitarized Zone.
-  stances:
-    weimar:
-      defence:
-        score: 0
-        evidence: Vertiefung der sicherheitspolitischen und wirtschaftlichen Zusammenarbeit
+    indo_pacific: Germany seeks to strengthen economic ties and security cooperation
+      with key partners in Asia through high-level meetings and business summits.
+    defence: Germany aims to deepen security policy cooperation, highlighted by the
+      Chancellor's planned visit to the Demilitarized Zone.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

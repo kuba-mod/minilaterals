@@ -16,14 +16,14 @@ extracted:
   - ukraine
   - defence
   location: null
-  position: The United Kingdom asserts that Russia is incurring increasing budgetary
-    costs for limited gains in its war against Ukraine, questioning the consistency
+  position: The United Kingdom asserts that Russia is spending an increasing portion
+    of its budget on the war in Ukraine for limited gains, questioning the consistency
     of this with its Code of Conduct commitments.
   positions:
-    ukraine: The United Kingdom highlights that Russia's war against Ukraine is achieving
-      limited gains despite growing expenditures.
-    defence: The United Kingdom questions how Russia's increasing military spending
-      for the war aligns with its Code of Conduct commitments.
+    ukraine: The United Kingdom states that Russia's war against Ukraine is costing
+      more while achieving less.
+    defence: The United Kingdom questions how Russia's growing budgetary expenditure
+      on the war aligns with its Code of Conduct commitments.
   stances:
     e3:
       defence:

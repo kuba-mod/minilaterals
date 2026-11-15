@@ -9,8 +9,7 @@ baltic_relevant: false
 aukus_relevant: false
 extracted:
   event_type: statement
-  participants:
-  - Ministry of Foreign Affairs of the Republic of Poland
+  participants: []
   topics:
   - defence
   location: null

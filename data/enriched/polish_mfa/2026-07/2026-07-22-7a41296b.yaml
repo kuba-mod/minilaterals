@@ -20,14 +20,14 @@ extracted:
   - hybrid
   - defence
   location: null
-  position: Poland is strengthening cooperation with the United Kingdom to combat
-    foreign information manipulation and interference (FIMI) through a new roadmap
-    for analytical cooperation.
+  position: Poland has signed a roadmap with the United Kingdom to deepen analytical
+    cooperation and data exchange to combat foreign information manipulation and interference.
   positions:
-    hybrid: Poland is establishing deeper analytical cooperation, data exchange, and
-      expert visits with the UK to detect and report disinformation.
+    hybrid: Poland is establishing a framework for detecting, analyzing, and reporting
+      disinformation through direct cooperation between analytical teams and expert
+      exchanges with the UK.
     defence: Poland is implementing the first document resulting from the Polish-British
-      security and defense cooperation treaty.
+      treaty on security and defense cooperation.
   stances:
     weimar:
       hybrid:
@@ -37,7 +37,7 @@ extracted:
           i ingerencji w środowisku informacyjnym)
     visegrad:
       defence:
-        score: 1
+        score: 2
         evidence: podpisali dokument określający kierunki współpracy w obszarze zwalczania
           FIMI
 enriched_by:

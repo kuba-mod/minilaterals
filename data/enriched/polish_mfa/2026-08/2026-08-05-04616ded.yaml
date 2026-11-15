@@ -16,14 +16,13 @@ extracted:
   - hybrid
   - defence
   location: null
-  position: Poland emphasizes the need for solidarity with security services and the
-    communication of Russian hybrid threats to international allies.
+  position: Poland emphasizes the need to inform allies about hostile hybrid actions
+    and calls for political solidarity against Russian threats to state security.
   positions:
-    hybrid: The Ministry of Foreign Affairs informs international allies about hostile
-      hybrid actions by the Russian Federation and opposes the relativization of these
-      threats.
-    defence: Poland asserts that state security facts should not be subject to current
-      political polemics and calls for solidarity with the security services.
+    hybrid: Poland is committed to informing international allies about hostile hybrid
+      activities that threaten the security of the Republic of Poland.
+    defence: Poland appeals for solidarity with its security services and opposes
+      the relativization of hostile actions by the Russian Federation.
   stances:
     weimar:
       hybrid:
@@ -33,9 +32,8 @@ extracted:
     visegrad:
       defence:
         score: 1
-        evidence: informowanie naszych międzynarodowych sojuszników o wszelkich przejawach
-          wrogich działań hybrydowych, które godzą w bezpieczeństwo Rzeczypospolitej
-          Polskiej
+        evidence: W obliczu zagrożeń wynikających z działań Federacji Rosyjskiej MSZ
+          apeluje do wszystkich parlamentarzystów o solidarność z polskimi służbami
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

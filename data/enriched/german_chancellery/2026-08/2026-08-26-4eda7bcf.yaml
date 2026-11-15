@@ -1,10 +1,8 @@
 actors:
 - DE
 issue_areas:
-- ukraine
 - defence
 - hybrid
-- green_transition
 - iran
 weimar_relevant: true
 e3_relevant: true
@@ -12,46 +10,35 @@ visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: false
 extracted:
-  event_type: meeting
+  event_type: press_conference
   participants:
   - Friedrich Merz
   - Lars Klingbeil
   - Alexander Dobrindt
   topics:
-  - ukraine
   - defence
   - hybrid
-  - green_transition
   - iran
   location: Neuhardenberg, Germany
-  position: Germany aims to strengthen its economic competitiveness and future viability
-    through innovation, large-scale investments, and structural reforms while enhancing
-    national security and resilience.
+  position: Germany aims to strengthen its economic competitiveness through innovation,
+    AI, and large-scale investments while enhancing national security and resilience
+    against hybrid threats.
   positions:
-    ukraine: Germany notes the ongoing economic challenges caused by the war in Ukraine
-      but remains committed to its growth course.
     defence: Germany is increasing investments in security and technology, including
-      drone defense and cyber capabilities, to ensure the state remains capable of
-      protecting its citizens.
-    hybrid: Germany is upgrading its security laws and intelligence services to counter
-      high-level hybrid threats, including sabotage and espionage.
-    green_transition: Germany maintains its goal of climate neutrality by 2045 and
-      is investing heavily in climate protection and adaptation, specifically regarding
-      heat protection.
-    iran: Germany acknowledges that uncertainties in financial markets have been triggered
-      by the war in Iran.
+      drone defense and the 'Cyberdome', to ensure the state remains capable of protecting
+      its citizens.
+    hybrid: Germany has raised its threat level to 'high' and is implementing regulatory
+      and technical measures, including intelligence reforms and cyber security laws,
+      to counter sabotage and espionage.
+    iran: Germany notes that current uncertainties in financial markets are largely
+      triggered by the conflict in Iran.
   stances:
     weimar:
-      ukraine:
-        score: 1
-        evidence: trotz Krieg am Golf und in der Ukraine
       hybrid:
         score: 1
-        evidence: Wir wollen uns so weit wie eben möglich von anderen unabhängig machen.
-          Wir suchen nach deutschen Lösungen, wir suchen nach europäischen Lösungen.
-      green_transition:
-        score: 1
-        evidence: Wir halten an diesem Ziel fest.
+        evidence: Die Sabotage, die Spionage, die verdeckten Aktionen, die, ja, fremden
+          Mächte, und die Mehrzahl ist hier zutreffend, beschäftigen mich fast täglich
+          oder täglich und unsere Koalition mit Sicherheit jede Woche.
     e3:
       iran:
         score: 0

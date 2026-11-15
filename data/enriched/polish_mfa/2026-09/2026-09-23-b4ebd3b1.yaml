@@ -33,7 +33,7 @@ extracted:
     ukraine: Poland rejects Russian narratives regarding the 2014 events and language
       bans in Ukraine, while supporting the application of the Council of Europe Convention
       for the Protection of National Minorities.
-    defence: Poland warns that Russia may attempt to provoke NATO member states to
+    defence: Poland warns that Russia may attempt to provoke a NATO member state to
       expand the conflict, emphasizing that the combined economic and military power
       of Europe and NATO far exceeds that of Russia.
     hybrid: Poland identifies a pattern of Russian hybrid warfare, including cyberattacks,
@@ -64,9 +64,8 @@ extracted:
           innymi Litwy, Estonii, Norwegii i Finlandii.
     aukus:
       defence:
-        score: 1
-        evidence: Cyberataki, sabotaż, tajne operacje, presja militarna. To nie są
-          odosobnione incydenty. To model działania.
+        score: 0
+        evidence: Cyberataki, sabotaż, tajne operacje, presja militarna.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

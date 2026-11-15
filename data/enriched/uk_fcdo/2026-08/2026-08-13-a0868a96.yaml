@@ -10,17 +10,19 @@ aukus_relevant: true
 extracted:
   event_type: statement
   participants:
-  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  - Ambassador Kate Foster
   topics:
   - defence
   location: New York, USA
-  position: The United Kingdom condemns the Houthi attacks as reckless actions that
-    have escalated regional violence and threatens international shipping.
+  position: The United Kingdom condemns the Houthi attacks as a reckless escalation
+    of violence and calls for an immediate end to these actions to ensure regional
+    stability.
   positions:
-    defence: The UK emphasizes the need to address Houthi aggression to ensure the
-      security of maritime trade and regional stability.
+    defence: The United Kingdom asserts that Houthi actions have triggered a serious
+      escalation of violence and demands the cessation of attacks on international
+      shipping.
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

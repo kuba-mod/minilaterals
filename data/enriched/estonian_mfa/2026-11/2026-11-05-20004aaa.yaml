@@ -1,11 +1,10 @@
 actors:
 - EE
-issue_areas:
-- defence
+issue_areas: []
 weimar_relevant: false
 e3_relevant: false
 visegrad_relevant: false
-baltic_relevant: true
+baltic_relevant: false
 aukus_relevant: false
 extracted:
   event_type: meeting
@@ -13,14 +12,11 @@ extracted:
   - Martin Roger
   - Muzaffarbek Madrahimov
   - Margus Tsahkna
-  topics:
-  - defence
+  topics: []
   location: Tallinn, Estonia
   position: Estonia held political consultations with Uzbekistan to focus on bilateral
     relations, regional security, and cooperation in international organizations.
-  positions:
-    defence: Estonia discussed regional security as part of its political consultations
-      with Uzbekistan.
+  positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -1,0 +1,62 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Präsident Macron
+  - Premierminister Burnham
+  - Staatspräsident Alexander Stubb
+  - Emir von Katar Scheich Tamim bin Hamad Al Thani
+  - Bundesfinanzminister Lars Klingbeil
+  - Außenminister Wadephul
+  - Bundesministerin Dorothee Bär
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is coordinating with international partners to provide continued
+    support and security guarantees for Ukraine while managing European security and
+    defense interests.
+  positions:
+    ukraine: Germany aims for a just and lasting peace for Ukraine and will coordinate
+      diplomatic efforts and post-war security guarantees through a 'Coalition of
+      the Willing'.
+    defence: Germany is focusing on European security responsibility, including connectivity
+      and security in the Black Sea region.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Am Donnerstag, dem 19. November, lädt der Bundeskanzler gemeinsam
+          mit Präsident Macron und Premierminister Burnham zu einem Treffen der „Koalition
+          der Willigen“ nach Berlin ein. Das Gipfeltreffen im Bundeskanzleramt steht
+          unter dem Motto „United for Peace in Ukraine and European Security“.
+      defence:
+        score: 1
+        evidence: Die Reise steht im Zeichen der Verantwortung Europas für seine eigene
+          Sicherheit, ob in der Ukraine, in der Schwarzmeerregion oder in der direkten
+          Nachbarschaft.
+    e3:
+      defence:
+        score: 2
+        evidence: Ich kann ankündigen, dass Bundesfinanzminister Lars Klingbeil am
+          Montag, dem 16. November, nach London reisen wird. Er wird sich dort mit
+          seinem britischen Amtskollegen John Healey treffen. Diese Gespräche bieten
+          die Gelegenheit, die Arbeitsbeziehungen zum Vereinigten Königreich weiter
+          zu intensivieren und das gegenseitige Vertrauen unter engen Partnern zu
+          fördern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

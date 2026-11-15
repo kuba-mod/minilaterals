@@ -1,0 +1,47 @@
+actors:
+- FR
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - representatives of European partners
+  - representatives of Ukraine
+  - representatives of the United States
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France coordinates with the US and Ukraine to establish a concrete security
+    framework and credible guarantees to ensure a durable peace and the territorial
+    integrity of Ukraine.
+  positions:
+    ukraine: France advocates for a negotiated settlement that respects Ukraine's
+      sovereignty and territorial integrity while providing credible long-term security
+      guarantees.
+    defence: France reaffirms that a strong NATO remains central to Euro-Atlantic
+      collective defense in the post-war security architecture.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: poursuivre leur étroite coordination quant aux efforts visant à
+          mettre fin à la guerre en Ukraine et à créer les conditions d'une paix durable
+      defence:
+        score: 1
+        evidence: une OTAN forte resterait centrale pour la défense collective euro-atlantique
+    e3:
+      defence:
+        score: 1
+        evidence: une OTAN forte resterait centrale pour la défense collective euro-atlantique
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

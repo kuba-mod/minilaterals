@@ -18,12 +18,17 @@ extracted:
     exploitative and based on deception.
   positions:
     defence: The United Kingdom asserts that Russia's recruitment of foreign nationals
-      for its armed forces relies on deception.
+      for its armed forces relies on deception and demands transparency regarding
+      the number of foreign fighters involved.
   stances:
     e3:
       defence:
         score: 1
         evidence: UK statement to the OSCE
+    aukus:
+      defence:
+        score: 0
+        evidence: Russia's recruitment of foreign fighters relies on deception
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

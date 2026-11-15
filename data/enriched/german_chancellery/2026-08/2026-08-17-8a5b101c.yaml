@@ -3,13 +3,12 @@ actors:
 - US
 issue_areas:
 - ukraine
-- defence
 - green_transition
 - energy
-- indo_pacific
 - migration
+- indo_pacific
 weimar_relevant: true
-e3_relevant: true
+e3_relevant: false
 visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: false
@@ -18,37 +17,32 @@ extracted:
   participants:
   - Hille (Deputy Government Spokesperson)
   - Wadephul (Foreign Minister)
-  - Ignazio Cassis (Swiss Foreign Minister)
-  - Klingbeil (Vice Chancellor and Finance Minister)
   - Fichtner
+  - Klingbeil (Vice Chancellor and Finance Minister)
   - Kock (Interior Ministry)
   - Müller
   - Deschauer
   topics:
   - ukraine
-  - defence
   - green_transition
   - energy
-  - indo_pacific
   - migration
+  - indo_pacific
   location: null
-  position: The German government provides updates on domestic climate adaptation,
-    diplomatic relations with Switzerland and Italy, and its continued support for
-    Ukraine and security cooperation in the Indo-Pacific.
+  position: The German government outlines its approach to climate adaptation, energy
+    security, migration cooperation with Italy, and continued support for Ukraine.
   positions:
-    ukraine: Germany remains committed to supporting Ukraine and will not be intimidated
-      by Russian threats.
-    defence: Germany continues to provide military support to Ukraine while balancing
-      transparency with security needs.
-    green_transition: The government is discussing a Basic Law amendment to better
-      structure climate adaptation and heat protection measures across federal, state,
-      and municipal levels.
-    energy: Germany maintains stable gas supply security through LNG terminals and
-      is transitioning its energy supply to be climate-neutral.
-    indo_pacific: Germany maintains close and trusting bilateral security cooperation
-      with South Korea and supports regional stability.
-    migration: Germany emphasizes close and trusting cooperation with Italy within
-      the framework of the Common European Asylum System.
+    ukraine: Germany maintains its unwavering support for Ukraine and will not be
+      intimidated by Russian threats.
+    green_transition: Germany is pursuing climate adaptation measures, including the
+      potential amendment of the Basic Law to better coordinate federal, state, and
+      municipal efforts.
+    energy: Germany reports that gas supply remains stable and is continuing the transition
+      to climate-neutral energy through increased renewable capacity.
+    migration: Germany emphasizes a close and trusting partnership with Italy in implementing
+      the Common European Asylum System.
+    indo_pacific: Germany maintains close bilateral cooperation with South Korea and
+      supports efforts leading to security and stability in the region.
   stances:
     weimar:
       ukraine:
@@ -59,12 +53,6 @@ extracted:
         score: 1
         evidence: dass wir bei der Energieversorgung in Deutschland auf einem guten
           Pfad sind, sie klimaneutral umzustellen
-    e3:
-      defence:
-        score: 0
-        evidence: Drohungen und Äußerungen gegenüber EU- oder NATO-Partnern sind nichts
-          Neues. Die nehmen wir zur Kenntnis, von denen lassen wir uns nicht einschüchtern,
-          und wir lassen uns in unserer Unterstützung für die Ukraine nicht einschüchtern.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

@@ -18,14 +18,15 @@ extracted:
     of artificial intelligence to maintain international security and prevent the
     destabilization of global peace.
   positions:
-    defence: The United Kingdom emphasizes the need for international norms and safeguards
-      to prevent AI from undermining strategic stability and escalating military conflict.
+    defence: The United Kingdom emphasizes the need for international norms to govern
+      the use of AI in military contexts to ensure human oversight and prevent unintended
+      escalation.
   stances:
     aukus:
       defence:
         score: 1
-        evidence: the need for international cooperation to ensure that AI is used
-          safely and securely
+        evidence: Foreign Secretary address on artificial intelligence and international
+          security
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

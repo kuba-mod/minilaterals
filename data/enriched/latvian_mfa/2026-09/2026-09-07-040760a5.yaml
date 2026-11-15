@@ -14,14 +14,14 @@ extracted:
   topics:
   - defence
   - hybrid
-  location: null
-  position: Latvia hosted an international conference to analyze and address security
-    threats to Europe posed by the Balti-Russian axis.
+  location: Latvia
+  position: Latvia hosted an international conference to discuss security threats
+    to Europe posed by the Balti-Russian axis.
   positions:
-    defence: Latvia is coordinating international efforts to counter security threats
-      originating from the Balti-Russian axis.
-    hybrid: Latvia is analyzing the hybrid threats posed by the Balti-Russian axis
-      to European security.
+    defence: Latvia is analyzing and discussing the security threats posed by the
+      Balti-Russian axis to European stability.
+    hybrid: Latvia is addressing the hybrid threats emanating from the Balti-Russian
+      axis.
   stances:
     baltic:
       hybrid:

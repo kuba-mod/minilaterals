@@ -20,16 +20,15 @@ extracted:
   - energy
   location: Warsaw, Poland
   position: Poland seeks to intensify strategic cooperation with India across economic,
-    technological, and security dimensions, particularly regarding the war in Ukraine
-    and infrastructure connectivity.
+    technological, and security dimensions, particularly in the context of European
+    security.
   positions:
-    ukraine: Poland presented its assessment of the situation in Ukraine and its global
-      security consequences, agreeing on the necessity of efforts to achieve a lasting
-      peace.
+    ukraine: Poland presented its assessment of the situation in Ukraine and its consequences
+      for global security, agreeing on the necessity of efforts to end the war.
     defence: Poland identifies significant potential for cooperation between the defense
       industries of Poland and India.
-    energy: Poland discussed the development of energy links and infrastructure connectivity
-      between India, Poland, and Europe.
+    energy: Poland discussed the development of energy links and infrastructure between
+      India, Poland, and Europe.
   stances:
     weimar:
       ukraine:

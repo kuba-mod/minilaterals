@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia emphasizes that protecting independence and European security
+    is a continuous and shared responsibility requiring decisive action.
+  positions:
+    defence: Estonia asserts that Europe has reached a critical period where it must
+      take more decisive responsibility for its own security and future.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: tuleb võtta senisest otsusekindlam vastutus oma julgeoleku ja tuleviku
+          eest
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -3,8 +3,6 @@ actors:
 issue_areas:
 - ukraine
 - defence
-- enlargement
-- rule_of_law
 weimar_relevant: true
 e3_relevant: false
 visegrad_relevant: true
@@ -18,36 +16,20 @@ extracted:
   topics:
   - ukraine
   - defence
-  - enlargement
-  - rule_of_law
   location: null
-  position: Poland emphasized the importance of historical truth and dialogue in relations
-    with Ukraine while confirming continued strategic cooperation.
+  position: Poland emphasizes that relations with Ukraine must be based on historical
+    truth and respect for victims while maintaining strategic cooperation against
+    Russian aggression.
   positions:
-    ukraine: Poland strongly supports Ukraine's fight against Russian aggression and
-      stresses that mutual relations must be built on respect for victims and historical
-      truth.
-    defence: Poland reaffirmed the strategic importance of cooperation with Ukraine
-      regarding regional security challenges.
-    enlargement: The text does not provide specific information on EU enlargement
-      goals.
-    rule_of_law: Poland stresses that bilateral relations must be built upon historical
-      truth and respect for victims, foundational elements of the rule of law.
+    ukraine: Poland asserts that mutual relations with Ukraine must be built on historical
+      truth, respect for victims, and dialogue.
+    defence: Poland confirms the strategic character of its cooperation with Ukraine
+      in the face of regional security challenges and Russian aggression.
   stances:
     weimar:
       ukraine:
         score: 1
         evidence: confirmed the strategic character of Poland–Ukraine cooperation
-          and its significance in the face of regional security challenges and Russia’s
-          ongoing aggression against Ukraine
-      defence:
-        score: 1
-        evidence: confirmed the strategic character of Poland–Ukraine cooperation
-          and its significance in the face of regional security challenges
-      rule_of_law:
-        score: 1
-        evidence: mutual relations must be built on historical truth, respect for
-          the victims, and dialogue.
     visegrad:
       defence:
         score: 1

@@ -1,0 +1,23 @@
+actors:
+- UK
+- AU
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ambassador Sarah MacIntosh, UK Permanent Representative to the UN
+  topics: []
+  location: null
+  position: The United Kingdom, alongside several other nations, issued a joint statement
+    calling for health and humanitarian access into Gaza.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

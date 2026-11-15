@@ -1,0 +1,44 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Monika Schnitzer
+  topics:
+  - defence
+  - green_transition
+  location: null
+  position: Germany aims to ensure reliable economic growth and maintain solid public
+    finances through a consolidation course and a comprehensive state modernization
+    agenda.
+  positions:
+    defence: Germany is prioritizing the financing of the Bundeswehr as part of its
+      investment in competitiveness and growth.
+    green_transition: Germany has established a special fund for infrastructure and
+      climate neutrality to promote economic competitiveness.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Deswegen haben wir auch so viel in der Bundeswehr zu finanzieren.
+      green_transition:
+        score: 1
+        evidence: Deswegen haben wir das Sondervermögen Infrastruktur und Klimaneutralität
+          aufgesetzt.
+    e3:
+      defence:
+        score: 0
+        evidence: Deswegen haben wir auch so viel in der Bundeswehr zu finanzieren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -15,12 +15,12 @@ extracted:
   - defence
   location: New York, USA
   position: The United Kingdom reaffirms its commitment to collaborating with international
-    partners to combat terrorism and protect international peace and security.
+    partners to combat all forms of terrorism.
   positions:
-    defence: The UK emphasizes the importance of collective action and international
-      cooperation to address the threats posed by terrorist acts.
+    defence: The United Kingdom emphasizes the need for a coordinated global effort
+      to counter terrorist threats to international peace and security.
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

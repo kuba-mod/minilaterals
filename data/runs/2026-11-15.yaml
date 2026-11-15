@@ -1,5 +1,5 @@
 date: '2026-11-15'
-run_at: '2026-11-15T07:32:04Z'
+run_at: '2026-11-15T16:36:34Z'
 sources:
 - source: german_mfa
   fetched: 0
@@ -20,10 +20,10 @@ sources:
   known: 0
   error: null
 - source: german_chancellery
-  fetched: 0
-  new: 0
+  fetched: 1
+  new: 1
   skipped: 0
-  known: 11
+  known: 10
   error: null
 - source: elysee
   fetched: 0
@@ -51,19 +51,19 @@ sources:
   error: null
 - source: estonian_mfa
   fetched: 100
-  new: 1
-  skipped: 99
+  new: 2
+  skipped: 98
   known: 0
   error: null
 - source: latvian_mfa
   fetched: 20
-  new: 0
-  skipped: 20
+  new: 6
+  skipped: 14
   known: 0
   error: null
 totals:
-  fetched: 150
-  new: 1
-  skipped: 149
-  known: 65
+  fetched: 151
+  new: 9
+  skipped: 142
+  known: 64
   errors: 0

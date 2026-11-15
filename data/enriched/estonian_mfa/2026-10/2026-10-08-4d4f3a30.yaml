@@ -1,25 +1,22 @@
 actors:
 - EE
-issue_areas:
-- defence
+issue_areas: []
 weimar_relevant: false
 e3_relevant: false
 visegrad_relevant: false
-baltic_relevant: true
+baltic_relevant: false
 aukus_relevant: false
 extracted:
   event_type: meeting
   participants:
   - Jonatan Vseviov
   - Martin Eyjólfsson
-  topics:
-  - defence
+  topics: []
   location: Reykjavík, Iceland
-  position: Estonia participated in the Arctic Circle Assembly to discuss European
-    security in the Arctic region.
-  positions:
-    defence: Estonia addressed European security issues within the context of the
-      Arctic region.
+  position: Estonia's Secretary General of the Ministry of Foreign Affairs visited
+    Iceland to meet with his counterpart and participate in the Arctic Circle Assembly
+    conference on European security.
+  positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest

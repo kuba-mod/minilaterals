@@ -16,17 +16,18 @@ extracted:
   - iran
   - defence
   location: null
-  position: The United Kingdom is addressing state threats from Iran and security
-    concerns regarding RAF Fairford.
+  position: The United Kingdom issued a joint statement regarding state threats from
+    Iran and the security of RAF Fairford.
   positions:
-    iran: The United Kingdom is responding to state threats posed by Iran.
-    defence: The United Kingdom is addressing security issues related to RAF Fairford.
+    iran: The United Kingdom is addressing state threats posed by Iran.
+    defence: The United Kingdom is coordinating on security matters regarding RAF
+      Fairford.
   stances:
     e3:
       iran:
         score: 1
         evidence: Joint Statement from Foreign Ministers regarding RAF Fairford and
-          Iran State Threats.
+          Iran State Threats
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

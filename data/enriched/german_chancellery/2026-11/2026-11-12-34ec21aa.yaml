@@ -1,0 +1,41 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeskanzler Merz
+  - Taoiseach
+  - Kushner
+  - Putin
+  topics:
+  - ukraine
+  location: Dublin, Ireland
+  position: Germany advocates for a joint European effort to fund support for Ukraine
+    and insists that any peace negotiations must include the EU, Ukraine, the US,
+    and Russia.
+  positions:
+    ukraine: Germany emphasizes the necessity of closing the 2027 funding gap and
+      establishing a common framework for aid from 2028 onwards as a collective EU
+      responsibility.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Es ist aus meiner Sicht selbstverständlich, dass es eine gemeinsame
+          Aufgabe aller Mitgliedstaaten der Europäischen Union ist, diesem Land weiterhin
+          zu helfen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

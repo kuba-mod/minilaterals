@@ -8,17 +8,17 @@ visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: true
 extracted:
-  event_type: statement
+  event_type: speech
   participants:
-  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  - Ambassador Kate Foster
   topics:
   - defence
   location: New York, USA
   position: The United Kingdom asserts that chemical weapons are unacceptable in Syria
-    and anywhere else in the world.
+    and must be eliminated globally.
   positions:
-    defence: The United Kingdom condemns the use of chemical weapons and demands accountability
-      for their use in Syria.
+    defence: The United Kingdom demands the total elimination of chemical weapons
+      in Syria to ensure global security and adherence to international law.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -14,12 +14,11 @@ extracted:
   topics:
   - defence
   location: null
-  position: Germany is conducting a nationwide test of its multi-channel warning systems
-    to improve civil protection and public preparedness.
+  position: Germany is conducting a nationwide warning day to test technical alert
+    systems and sensitize the population to civil protection and self-preparedness.
   positions:
     defence: Germany is testing its modular warning system and civil protection infrastructure
-      to identify technical improvements and sensitize the population to emergency
-      preparedness.
+      to identify improvements in emergency alerting.
   stances:
     weimar:
       defence:

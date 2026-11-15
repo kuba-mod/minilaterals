@@ -1,0 +1,29 @@
+actors:
+- DE
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Natalie Pawlik
+  - Frank Kalter
+  topics:
+  - migration
+  location: null
+  position: Germany presented its 15th Integration Report, highlighting the success
+    of descendants of immigrants while implementing targeted programs to reduce barriers
+    for immigrant women and improve educational equity.
+  positions:
+    migration: The German government is promoting the rapid integration of immigrants
+      through vocational language courses, educational equity programs like the 'Startchancen-Programm',
+      and specific support for immigrant women's employment and entrepreneurship.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

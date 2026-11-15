@@ -2,11 +2,8 @@ actors:
 - FR
 issue_areas:
 - ukraine
-- enlargement
-- defence
-- rule_of_law
 weimar_relevant: true
-e3_relevant: true
+e3_relevant: false
 visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: false
@@ -17,37 +14,17 @@ extracted:
   - Velislava Petrova-Chamova
   topics:
   - ukraine
-  - enlargement
-  - defence
-  - rule_of_law
   location: Sweden
-  position: France aims to strengthen bilateral relations with Bulgaria and enhance
-    EU cooperation on key strategic issues.
+  position: France seeks to revitalize bilateral relations with Bulgaria and strengthen
+    cooperation on EU sovereignty, strategic autonomy, and competitiveness.
   positions:
-    ukraine: France supports long-term support for Ukraine as an EU policy priority.
-    enlargement: France views the Western Balkans as a key area for cooperation and
-      stability within the EU framework.
-    defence: France considers strengthening security cooperation in areas like the
-      North Sea to be a priority.
-    rule_of_law: The discussion covered general EU policy priorities related to sovereignty
-      and strategic autonomy, which encompass rule of law principles.
+    ukraine: France discussed EU policy priorities regarding support for Ukraine.
   stances:
     weimar:
       ukraine:
         score: 1
         evidence: Their discussions covered such EU policy priorities as support for
           Ukraine
-      enlargement:
-        score: 1
-        evidence: Their discussions covered such EU policy priorities as... the Western
-          Balkans
-      defence:
-        score: 0
-        evidence: security challenges in the North Sea
-    e3:
-      defence:
-        score: 0
-        evidence: security challenges in the North Sea
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

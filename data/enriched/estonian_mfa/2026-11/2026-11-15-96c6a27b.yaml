@@ -1,0 +1,32 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia asserts that its rapid and decisive security responses are making
+    it increasingly difficult for Russian sabotage operations to succeed.
+  positions:
+    hybrid: Estonia highlights the failure of a GRU-ordered arson attempt as evidence
+      of the effectiveness of its security agencies and corporate security structures
+      against Russian sabotage.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: nurjunud süütamiskatse ehtne näide sellest, kui kiiresti ja otsustavalt
+          tegutsevad nii Eesti julgeolekuasutused kui ettevõtete enda julgeolekustruktuurid
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -12,22 +12,23 @@ extracted:
   event_type: statement
   participants:
   - Bundesregierung
-  - Bundesnachrichtendienst
   - Bundesamt für Verfassungsschutz
+  - Bundesnachrichtendienst
   - Unabhängiger Kontrollrat
   topics:
   - hybrid
   - defence
   location: null
   position: Germany is reforming its intelligence laws to modernize the powers of
-    the BND and BfV to better protect the state against domestic and foreign threats.
+    the BND and BfV to better protect the population against domestic and foreign
+    threats.
   positions:
     hybrid: Germany is updating intelligence capabilities to counter hybrid attacks
-      and cyber threats, including the use of AI for data analysis and active protective
-      measures.
-    defence: The government is strengthening national security by expanding the surveillance
-      and data storage powers of its intelligence services to align with international
-      partners.
+      and cyber threats, including the use of AI for data analysis and the ability
+      to take active protective measures like shutting down foreign servers.
+    defence: Germany is expanding the BND's strategic intelligence powers regarding
+      the storage of telecommunications and traffic data to align its capabilities
+      with those of its international partners.
   stances:
     weimar:
       hybrid:

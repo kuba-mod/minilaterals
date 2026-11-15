@@ -1,0 +1,34 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - President of the Republic
+  - Commission on Generative AI and Vulnerabilities
+  topics:
+  - hybrid
+  location: null
+  position: France has released a report identifying critical vulnerabilities caused
+    by generative AI and proposes 18 recommendations to strengthen public policies
+    against cognitive risks and misinformation.
+  positions:
+    hybrid: France warns that generative AI increases the risk of misinformation and
+      cognitive manipulation, threatening democracy and social cohesion.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: identifier les vulnérabilités les plus critiques auxquelles s’exposent
+          chaque jour les utilisateurs des chatbots, des compagnons IA ou de jouets
+          dotés d’IA, afin de prévenir ces risques et d’en atténuer la portée
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

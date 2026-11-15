@@ -2,7 +2,6 @@ actors:
 - PL
 - EE
 issue_areas:
-- ukraine
 - defence
 weimar_relevant: false
 e3_relevant: false
@@ -14,16 +13,15 @@ extracted:
   participants:
   - Foreign Minister Tsahkna
   topics:
-  - ukraine
   - defence
   location: null
-  position: Estonia expresses support for Poland following a Russian missile strike
-    on its territory and condemns Russian aggression.
+  position: Estonia expresses solidarity with Poland following the impact of a Russian
+    missile on its territory and emphasizes the need for strong NATO deterrence.
   positions:
-    ukraine: Estonia condemns the Russian missile strike on Polish territory as part
-      of the broader aggression against Ukraine.
-    defence: Estonia stands in solidarity with Poland's security and territorial integrity.
+    defence: Estonia supports the strengthening of NATO's eastern flank and deterrence
+      capabilities in response to Russian aggression.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '7'
+  prompt_version: '9'
   environment: github_actions

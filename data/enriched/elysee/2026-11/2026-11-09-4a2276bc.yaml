@@ -1,0 +1,43 @@
+actors:
+- FR
+- UK
+- US
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: communique
+  participants:
+  - President of the Republic
+  - Heads of State and Government of Bahrain, Canada, Finland, Japan, Norway, Netherlands,
+    United Kingdom, Sierra Leone
+  - US Secretary of the Treasury
+  - Representatives of the UN
+  - Representatives of the OECD
+  - Sam Altman
+  - Dario Amodei
+  - Arthur Mensch
+  - Yoshua Bengio
+  topics:
+  - hybrid
+  location: Paris, France
+  position: France is leading a multi-stakeholder international effort to establish
+    a governance framework for AI security, focusing on independent evaluation, incident
+    reporting standards, and clear actor accountability.
+  positions:
+    hybrid: France is committing to a common risk management framework for advanced
+      AI models with a specific focus on malicious uses in cyber and CBRN domains.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Une attention particulière sera portée aux usages malveillants,
+          notamment dans les domaines cyber et NRBC
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Estonia plans to close road border checkpoints with Russia starting December
+    1st in response to a GRU-ordered sabotage attempt against a defense company.
+  positions:
+    hybrid: Estonia is closing road border checkpoints with Russia as a response to
+      a sabotage attempt ordered by Russia's GRU.
+    defence: Estonia is taking action following a sabotage attempt targeting the defense
+      industry company Threod Systems.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: sulgeme Eesti-Venemaa maanteepiiripunktid vastuseks Venemaa sõjaväeluure
+          GRU tellitud sabotaažikatsele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

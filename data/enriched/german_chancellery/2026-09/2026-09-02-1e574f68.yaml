@@ -20,13 +20,13 @@ extracted:
   - hybrid
   location: null
   position: Germany reaffirms its commitment to providing continued civil and military
-    support to Ukraine and informs them of the attribution of a hybrid attack.
+    support to Ukraine and informs Ukraine about the attribution of a hybrid attack.
   positions:
-    ukraine: Germany pledges the determined continuation of its civilian and military
+    ukraine: Germany pledges the determined continuation of its civil and military
       support for Ukraine.
     defence: Germany provides support in the area of air defense.
-    hybrid: Germany informed Ukraine about the attribution of a hybrid attack on Leipzig
-      Airport.
+    hybrid: Germany informed the Ukrainian President about the attribution of a hybrid
+      attack on Leipzig Airport.
   stances:
     weimar:
       ukraine:

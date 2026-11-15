@@ -24,15 +24,15 @@ extracted:
   - ukraine
   location: Berlin, Germany
   position: Germany attributes the attempted attack at Leipzig/Halle airport to Russia
-    and is implementing coordinated countermeasures to strengthen protection against
+    and is implementing determined countermeasures to strengthen protection against
     hybrid threats.
   positions:
     hybrid: Germany has politically attributed the hybrid attack at Leipzig/Halle
       airport to Russia and is strengthening its defenses against such coordinated
       illegitimate actions.
-    defence: The German government is resolutely continuing to strengthen its national
-      defense capabilities.
-    ukraine: Germany confirms its continued and determined support for Ukraine.
+    defence: The German government is committed to continuing the strengthening of
+      its national defense capabilities.
+    ukraine: Germany will resolutely continue its support for Ukraine.
   stances:
     weimar:
       hybrid:
@@ -46,8 +46,9 @@ extracted:
     e3:
       defence:
         score: 1
-        evidence: die Bundesregierung sich eng mit den Partnern in der NATO und der
-          Europäischen Union abstimme und dies auch weiter tun werde
+        evidence: Außenminister Wadephul erklärte, dass die Bundesregierung sich eng
+          mit den Partnern in der NATO und der Europäischen Union abstimme und dies
+          auch weiter tun werde.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

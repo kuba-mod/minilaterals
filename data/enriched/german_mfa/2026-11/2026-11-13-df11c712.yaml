@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Reem Alabali Radovan
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Germany is providing 200 million euros in additional winter aid to support
+    Ukraine's civilian infrastructure and humanitarian needs against Russian attacks.
+  positions:
+    ukraine: Germany is providing 200 million euros in humanitarian and infrastructure
+      aid to strengthen Ukraine's resilience and support displaced persons.
+    energy: Germany is funding measures to maintain electricity, heat, and water supplies
+      in Ukraine to counter Russia's use of energy infrastructure as a weapon.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Das Auswärtige Amt und das Bundesministerium für wirtschaftliche
+          Zusammenarbeit und Entwicklung stellen deswegen kurzfristig zusätzliche
+          Mittel in Höhe von insgesamt 200 Millionen Euro für die Winterhilfe bereit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

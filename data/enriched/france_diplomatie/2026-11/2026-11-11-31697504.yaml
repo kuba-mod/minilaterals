@@ -1,0 +1,84 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+- indo_pacific
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - G7 Foreign Ministers
+  - High Representative of the European Union
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  - indo_pacific
+  - iran
+  location: Paris, France
+  position: France, as G7 President, coordinates a unified G7 stance to support Ukraine,
+    constrain Iran's nuclear and regional activities, and ensure maritime security
+    in the Indo-Pacific.
+  positions:
+    ukraine: France reaffirms unwavering support for Ukraine's sovereignty and pledges
+      continued supply of air defence and long-range capabilities.
+    defence: France supports the deployment of military capabilities to Ukraine and
+      leads a multinational initiative to facilitate maritime traffic in the Strait
+      of Hormuz.
+    hybrid: France condemns malicious hybrid activities and commits to using all available
+      tools to prevent and respond to coordinated campaigns against G7 stability.
+    energy: France supports Ukraine's energy resilience and advocates for a reciprocal
+      halt to attacks on energy infrastructure.
+    indo_pacific: France emphasizes a free and open Indo-Pacific and opposes unilateral
+      attempts to change the status quo in the East and South China Seas.
+    iran: France condemns Iran's support for non-state armed groups and its disruption
+      of international trade in the Strait of Hormuz.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: took stock of progress on supplying Ukraine with air defence capabilities,
+          systems and interceptors, long-range capabilities and licences that will
+          allow it to increase its military production
+      hybrid:
+        score: 1
+        evidence: reaffirmed our determination to act resolutely and in a coordinated
+          manner to address hybrid campaigns
+    e3:
+      defence:
+        score: 2
+        evidence: the multinational, independent, and defensive initiative led by
+          France and the UK can play an important role
+      iran:
+        score: 2
+        evidence: reaffirmed our commitment to fully implement the obligations under
+          all relevant UN Security Council resolutions sanctions and related restrictive
+          measures reinstated in September 2025 through the snapback mechanism
+    aukus:
+      defence:
+        score: 1
+        evidence: recognised the importance of strengthening the security and resilience
+          of frontier models to advance innovation, economic prosperity, and national
+          security
+      indo_pacific:
+        score: 1
+        evidence: emphasised the importance of a free and open Indo-Pacific region
+          which is prosperous and secure, and that protects shared principles including
+          sovereignty, territorial integrity, the rule of law, and the peaceful settlement
+          of disputes
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -26,20 +26,20 @@ extracted:
   - migration
   location: Brussels, Belgium
   position: Poland advocates for strong EU support for Ukraine, increased defense
-    spending, the protection of cohesion and agricultural funds, and a revision of
-    the ETS2 system.
+    spending, a revision of the ETS2 system, and a strict approach to border protection
+    and migration.
   positions:
     ukraine: Poland supports maintaining strong EU unity and pressure on Russia to
       prevent the fall of Ukraine.
-    defence: Poland opposes cutting security spending and calls for the strengthening
+    defence: Poland opposes cutting security spending and demands the strengthening
       of European defense capabilities.
-    hybrid: Poland highlights the threats posed by Russian hybrid actions and acts
-      of sabotage.
-    green_transition: Poland is pushing for a review of the social and economic impacts
-      of the ETS2 system to avoid costs for Polish citizens.
-    energy: Poland seeks to prevent the ETS2 system from increasing energy and heating
+    hybrid: Poland highlights the necessity of addressing threats from Russian hybrid
+      actions and sabotage.
+    green_transition: Poland seeks a review and potential revision of the ETS2 system
+      to avoid negative socio-economic impacts.
+    energy: Poland aims to prevent the ETS2 system from increasing energy and heating
       costs for households and businesses.
-    migration: Poland advocates for a hard asylum policy and effective border protection
+    migration: Poland promotes a hard asylum policy and effective border protection
       to stop illegal migration.
   stances:
     weimar:
@@ -65,7 +65,8 @@ extracted:
       migration:
         score: 2
         evidence: twarda polityka azylowa, pilnowanie granicy, powstrzymywanie nielegalnych
-          imigrantów
+          imigrantów, staje się powoli, taką - może nie doktryną europejską - ale
+          większość chciałaby nas naśladować
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

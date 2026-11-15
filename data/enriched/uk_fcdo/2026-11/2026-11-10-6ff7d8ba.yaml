@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
+  topics:
+  - rule_of_law
+  location: New York, USA
+  position: The United Kingdom demands that South Sudanese authorities allow UNMISS
+    to operate without obstruction to ensure stability and the rule of law.
+  positions:
+    rule_of_law: The United Kingdom insists on the unobstructed operation of UNMISS
+      to support the rule of law and stability in South Sudan.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

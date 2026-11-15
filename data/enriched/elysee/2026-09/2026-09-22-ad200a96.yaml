@@ -3,11 +3,9 @@ actors:
 - FR
 - UK
 - AU
-- US
 issue_areas:
 - ukraine
 - defence
-- green_transition
 - energy
 weimar_relevant: true
 e3_relevant: true
@@ -22,23 +20,20 @@ extracted:
   topics:
   - ukraine
   - defence
-  - green_transition
   - energy
   location: New York, USA
   position: France advocates for a renewed multilateralism based on the UN Charter
-    to combat the 'law of the jungle' and protect national sovereignty against imperialist
-    tendencies.
+    to combat the law of the strongest and address global crises through collective
+    action and the rule of law.
   positions:
-    ukraine: France provides unwavering support for Ukraine's sovereignty and proposes
-      a double moratorium on energy and civilian infrastructure to protect populations
-      and ensure food security.
-    defence: France supports the reform of the UN Security Council, specifically the
-      Franco-Mexican initiative to limit the veto in cases of mass atrocities.
-    green_transition: France reaffirms its commitment to the Paris Agreements and
-      the goal of carbon neutrality by 2050, emphasizing the need for independent
-      science and multilateral action.
-    energy: France prioritizes the restoration of freedom of navigation in the Strait
-      of Hormuz to ensure global energy supplies.
+    ukraine: France provides unwavering support for Ukraine's sovereignty and security
+      through a coalition of volunteers and proposes a double moratorium on energy
+      and civilian infrastructure.
+    defence: France supports the reform of the UN Security Council, including the
+      limitation of the veto in cases of mass atrocities and the creation of a multinational
+      coalition to ensure freedom of navigation in the Strait of Hormuz.
+    energy: France emphasizes the need to secure global energy supplies and protect
+      Ukrainian energy infrastructure from attacks.
   stances:
     weimar:
       ukraine:
@@ -46,10 +41,6 @@ extracted:
         evidence: en Ukraine, la coalition des volontaires que nous avons formée avec
           le Royaume-Uni et l'Allemagne rassemble l'ensemble de ceux qui sont prêts
           à garantir la paix et la stabilité au cœur de l'Europe
-      green_transition:
-        score: 1
-        evidence: Restons attachés aux accords de Paris, à nos trajectoires nationales,
-          à notre décarbonation et à l'objectif de neutralité carbone à 2050.
     e3:
       defence:
         score: 2
@@ -58,10 +49,10 @@ extracted:
           à garantir la paix et la stabilité au cœur de l'Europe
     aukus:
       defence:
-        score: -1
-        evidence: ceux au fond qui ne veulent pas devenir les vassaux de l’un ou l’autre
-          des deux grandes puissances mondiales, se mettent ensemble pour développer
-          un modèle frontière open source
+        score: 0
+        evidence: L’intelligence artificielle dans le spatial, dans la défense, dans
+          la cybersécurité, comme je l’évoquais, a des conséquences profondes qui
+          touchent notre sécurité nationale.
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

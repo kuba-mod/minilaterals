@@ -1,0 +1,43 @@
+actors:
+- FR
+- US
+issue_areas:
+- iran
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Marco Rubio
+  topics:
+  - iran
+  - ukraine
+  location: Paris, France
+  position: France reaffirmed its strategic partnership with the United States while
+    discussing international crises and the independence of the International Criminal
+    Court.
+  positions:
+    iran: France prioritizes a diplomatic solution to avoid further regional escalation.
+    ukraine: France supports Ukraine's sovereignty and territorial integrity and is
+      committed to a just, lasting peace with security guarantees.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed France’s support for its sovereignty and territorial
+          integrity, and his commitment to a just, lasting peace accompanied by security
+          guarantees for Ukraine
+    e3:
+      iran:
+        score: 1
+        evidence: the Minister recalled the priority given by France to a diplomatic
+          solution and the need to avoid any further regional escalation
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

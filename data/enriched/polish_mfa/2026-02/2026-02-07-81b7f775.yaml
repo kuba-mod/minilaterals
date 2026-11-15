@@ -1,60 +1,50 @@
 actors:
 - PL
+- US
 issue_areas:
 - defence
-- hybrid
-- enlargement
 - green_transition
-- rule_of_law
+- ukraine
 weimar_relevant: true
 e3_relevant: false
 visegrad_relevant: true
 baltic_relevant: false
 aukus_relevant: false
 extracted:
-  event_type: statement
+  event_type: meeting
   participants:
   - Radosław Sikorski
-  - Deputy Prime Minister and Foreign Minister
+  - members of Congress
+  - Hubert Cioromski
+  - Governor of Illinois
+  - Mayor of Chicago
   topics:
   - defence
-  - hybrid
-  - enlargement
   - green_transition
-  - rule_of_law
-  location: null
-  position: Poland supports transatlantic cooperation on security and the economy,
-    emphasizing diversified critical mineral supply chains and continued support for
-    Ukraine.
+  - ukraine
+  location: Washington and Chicago, United States
+  position: Poland supports US-led initiatives to diversify critical mineral supply
+    chains and emphasizes the necessity of continued transatlantic cooperation on
+    security and support for Ukraine.
   positions:
-    defence: Poland emphasizes that transatlantic cooperation is vital for both security
-      and economic stability.
-    hybrid: Poland advocates for coordinated international action to ensure critical
-      minerals cannot be used as tools of coercion.
-    enlargement: Poland supports the broader European goal of strengthening EU institutions
-      through cooperation with its neighbors.
-    green_transition: Poland supports international efforts to strengthen supply chains
-      for critical minerals essential for technological and energy development.
-    rule_of_law: Poland stresses the importance of democratic resilience and economic
-      security through diversified resource sourcing.
+    defence: Poland emphasizes the importance of enduring transatlantic cooperation
+      on security and defence.
+    green_transition: Poland supports a US-led international initiative to diversify
+      the production of critical minerals to ensure economic security and prevent
+      geopolitical blackmail.
+    ukraine: Poland emphasizes the need to continue supporting Ukraine in its armed
+      struggle.
   stances:
     weimar:
-      defence:
-        score: 1
-        evidence: emphasised was the need to continue supporting Ukraine in its armed
-          struggle
-      hybrid:
-        score: 1
-        evidence: Critical minerals cannot be used for blackmail, and their production
-          should be geographically more diversified.
       green_transition:
         score: 1
-        evidence: the United States has proposed a major international initiative
-          whose goals Poland and the rest of the European Union support
-      rule_of_law:
+        evidence: These supply chains are essential to the functioning of modern economies,
+          as they underpin technological development, the energy transition, and the
+          industrial security of states.
+      ukraine:
         score: 1
-        evidence: This is an element of our economic security - summarised Minister
-          Sikorski.
+        evidence: Also emphasised was the need to continue supporting Ukraine in its
+          armed struggle.
     visegrad:
       defence:
         score: 1

@@ -10,15 +10,16 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Ministry of Foreign Affairs
+  - Ministry of Foreign Affairs of Latvia
   topics:
   - defence
   location: null
-  position: Latvia has focused its first 100 days of government on strengthening national
-    security, economic interests, and support for citizens abroad.
+  position: Latvia's Ministry of Foreign Affairs has focused its first 100 days on
+    strengthening national security, economic interests, and support for citizens
+    abroad.
   positions:
-    defence: Latvia has worked to strengthen its national security as a primary government
-      priority.
+    defence: Latvia is actively working to strengthen its national security and defense
+      capabilities as a government priority.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

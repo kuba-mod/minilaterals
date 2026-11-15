@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Prime Minister
+  - Minister delegated to the Prime Minister in charge of relations with Parliament
+  - Minister of Culture
+  - Minister of the Armed Forces and Veterans
+  - Keeper of the Seals, Minister of Justice
+  topics:
+  - rule_of_law
+  location: null
+  position: France is introducing legislation to simplify public integrity requirements
+    and strengthen the financial viability of digital press services.
+  positions:
+    rule_of_law: France is reforming its public integrity framework to rationalize
+      transparency declarations and strengthen the prevention of foreign influence
+      and conflicts of interest.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Sa fragilisation affecterait donc le débat démocratique, tant national
+          que local, en le privant d’informations fiables, en accentuant le rejet
+          des faits et en l’exposant aux ingérences et manipulations étrangères.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

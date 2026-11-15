@@ -1,0 +1,52 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- iran
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Außenminister Wadephul
+  topics:
+  - iran
+  - ukraine
+  - defence
+  location: Paris, France
+  position: Germany aims to safeguard European interests through diplomatic engagement
+    in international forums, specifically regarding the Iran conflict and the war
+    in Ukraine.
+  positions:
+    iran: Germany advocates for concrete negotiations to prevent further military
+      escalation in the Iran conflict.
+    ukraine: Germany asserts that Europe must be part of the solution to the Russian
+      war of aggression against Ukraine.
+    defence: Germany rejects a new security architecture in favor of restoring the
+      existing one based on the Helsinki Final Act, the Charter of Paris, and the
+      Budapest Memorandum.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deswegen werden wir zusammen mit Frankreich und Großbritannien die
+          europäischen Positionen einbringen.
+    e3:
+      iran:
+        score: 1
+        evidence: Das heißt für den Iran-Konflikt jetzt konkrete Verhandlungen und
+          keine neue militärische Eskalation.
+      defence:
+        score: 1
+        evidence: Deswegen werden wir zusammen mit Frankreich und Großbritannien die
+          europäischen Positionen einbringen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

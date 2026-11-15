@@ -4,7 +4,6 @@ issue_areas:
 - ukraine
 - defence
 - hybrid
-- rule_of_law
 weimar_relevant: true
 e3_relevant: false
 visegrad_relevant: true
@@ -14,24 +13,22 @@ extracted:
   event_type: meeting
   participants:
   - Radosław Sikorski
-  - Jaishankar
+  - S. Jaishankar
   topics:
   - ukraine
   - defence
   - hybrid
-  - rule_of_law
-  location: null
-  position: Poland emphasized the importance of multilateral cooperation and strongly
-    condemned terrorism while highlighting Europe's commitment to Ukraine.
+  location: India
+  position: Poland seeks to strengthen its Strategic Partnership with India through
+    cooperation in security, technology, and defense while emphasizing the need for
+    international commitment to Ukraine.
   positions:
-    ukraine: Poland stresses the critical need for continued European support for
-      Ukraine against Russia’s aggression.
-    defence: The text does not provide specific information regarding Poland's stance
-      on strengthening EU defence capabilities complementary to NATO.
-    hybrid: Poland advocates for coordinated action against hybrid threats, including
-      attacks on critical infrastructure and terrorism.
-    rule_of_law: Poland strongly condemns transnational terrorism and the crossing
-      of international borders by any hostile force.
+    ukraine: Poland underlines the critical importance of Europe's continued commitment
+      to Ukraine in the face of Russian aggression.
+    defence: Poland identifies the defence industry as one of the most promising sectors
+      for close economic cooperation with India.
+    hybrid: Poland highlights the threat of Russia-inspired attacks on its critical
+      infrastructure, such as railway tracks.
   stances:
     weimar:
       ukraine:
@@ -41,11 +38,6 @@ extracted:
         score: 1
         evidence: Poland has been faced with Russia-inspired attacks on critical infrastructure,
           including railway tracks, among other threats
-      rule_of_law:
-        score: 1
-        evidence: Both India and Poland are victims of transnational terrorism, and
-          therefore we condemn the crossing of international borders, either by tanks
-          or by terrorists, in the strongest terms.
     visegrad:
       defence:
         score: 0

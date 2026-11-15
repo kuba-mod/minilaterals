@@ -1,0 +1,23 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Emir of Qatar, Sheikh Tamim bin Hamad Al Thani
+  topics: []
+  location: Berlin, Germany
+  position: Germany is hosting the Emir of Qatar to discuss bilateral relations, Middle
+    East stability, and economic cooperation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

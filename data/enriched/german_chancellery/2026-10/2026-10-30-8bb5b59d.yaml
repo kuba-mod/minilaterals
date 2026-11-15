@@ -17,30 +17,29 @@ extracted:
   event_type: statement
   participants:
   - Sebastian Hille
-  - Dr. Karsten Wildberger
   - Gitanas Nausėda
+  - Dr. Karsten Wildberger
   - Ines Zenke
   - Lars Klingbeil
   - Frau Lewinsky
   - Herr Giese
-  - Herr Ehrentraut
   - Frau Jenning
+  - Herr Ehrentraut
   topics:
   - ukraine
   - defence
   - enlargement
   - energy
   location: Berlin, Germany
-  position: Germany is coordinating with Lithuania on EU priorities and security,
-    while managing domestic energy security and international safety warnings in the
-    Middle East.
+  position: Germany outlines its upcoming diplomatic agenda, focusing on EU priorities
+    with Lithuania, security in the Middle East, and domestic energy and digital strategies.
   positions:
     ukraine: Germany continues its support for Ukraine as a central theme of its security
       discussions with Lithuania.
-    defence: Germany is coordinating with Lithuania regarding the German brigade stationed
-      in Lithuania and general security and defense issues.
-    enlargement: Germany identifies EU enlargement as a core topic for discussion
-      with the incoming Lithuanian EU Council Presidency.
+    defence: Germany is coordinating security and defense efforts with Lithuania,
+      specifically regarding the German brigade stationed there.
+    enlargement: Germany identifies EU enlargement as a core European political priority
+      to be discussed with the Lithuanian President.
     energy: Germany rejects Italian claims that its gas procurement drives up European
       prices and asserts that its LNG infrastructure ensures winter supply security.
   stances:

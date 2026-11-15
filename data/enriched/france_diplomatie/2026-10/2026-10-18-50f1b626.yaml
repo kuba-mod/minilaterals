@@ -20,17 +20,12 @@ extracted:
   topics:
   - defence
   location: Lebanon
-  position: France reaffirms its support for Lebanese sovereignty and stability through
-    the strengthening of the Lebanese Armed Forces and the establishment of a new
-    international security architecture.
+  position: France reaffirms its full support for Lebanon's sovereignty, stability,
+    and the strengthening of its national institutions and armed forces.
   positions:
     defence: France supports strengthening the Lebanese Armed Forces and the implementation
-      of the state monopoly on weapons to avoid a security vacuum.
-  stances:
-    weimar:
-      defence:
-        score: 0
-        evidence: emphasized the importance of strengthening the Lebanese Armed Forces
+      of a state monopoly on weapons to avoid a security vacuum.
+  stances: {}
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

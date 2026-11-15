@@ -1,0 +1,32 @@
+actors:
+- DE
+- LV
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Latvian Embassy in Germany
+  topics:
+  - hybrid
+  location: Berlin, Germany
+  position: Latvia shared its experience in recognizing disinformation and protecting
+    against hybrid attacks during a panel discussion in Berlin.
+  positions:
+    hybrid: Latvia is sharing its expertise on societal resilience and the identification
+      of disinformation to counter hybrid threats.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: līdzorganizēja plaši apmeklētu paneļdiskusiju par Baltijas valstu
+          pieredzi sabiedrības noturības
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

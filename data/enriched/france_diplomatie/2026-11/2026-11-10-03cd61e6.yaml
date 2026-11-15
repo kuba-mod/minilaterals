@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Mauro Vieira
+  topics:
+  - defence
+  location: Paris, France
+  position: France seeks to strengthen its bilateral strategic partnership with Brazil
+    across economic, security, and structural sectors while defending multilateralism.
+  positions:
+    defence: France is pursuing structural cooperation with Brazil in the area of
+      defence based on a mutual long-term vision.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: The Ministers also talked about several structural projects of our
+          cooperation, particularly in the areas of defence
+    e3:
+      defence:
+        score: 0
+        evidence: The Ministers also talked about several structural projects of our
+          cooperation, particularly in the areas of defence
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

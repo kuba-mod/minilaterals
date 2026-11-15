@@ -31,18 +31,18 @@ extracted:
       energy transition through the EEG amendment and building modernization laws.
     iran: Germany intends to introduce measures to alleviate the burden of rising
       fuel prices caused by the conflict in Iran.
-    migration: Germany views migration as a field where there are no contradictions
-      between national and European policies or between internal and external politics.
+    migration: Germany views migration as a field where there is no contradiction
+      between national and European policy or between internal and external politics.
   stances:
     weimar:
       defence:
         score: 1
-        evidence: Wir investieren jetzt in unsere Verteidigung.
+        evidence: darauf arbeite die Bundesregierung daran, Deutschland zu reformieren
+          sowie die Verteidigungsfähigkeit zu stärken
     e3:
       iran:
         score: 0
-        evidence: aber diese energiepolitische Wende schütze nicht vor den aktuellen
-          Ausschlägen am Benzinmarkt in Folge des Iran-Kriegs
+        evidence: die aktuellen Ausschläge am Benzinmarkt in Folge des Iran-Kriegs
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

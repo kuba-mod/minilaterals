@@ -1,0 +1,23 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Andrzej Abraszewski
+  topics: []
+  location: null
+  position: Poland has secured a seat in the UN Joint Inspection Unit (JIU), aiming
+    to enhance the transparency, accountability, and efficiency of the United Nations
+    system.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,38 @@
+actors:
+- FR
+- US
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Andrii Sybiha
+  topics:
+  - ukraine
+  - energy
+  location: Paris, France
+  position: France reaffirms its unwavering support for Ukraine until a just peace
+    is achieved and commits to supporting its energy infrastructure during winter.
+  positions:
+    ukraine: France supports the revitalization of negotiations for a ceasefire and
+      has prioritized raising funds for the restoration of the Chernobyl Nuclear Power
+      Plant confinement structure.
+    energy: France expresses support for Ukraine amid Russian attacks on energy infrastructure
+      and commits to providing assistance as winter approaches.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: hailed the €278 million raised for this construction, which was
+          a priority of the French G7 Presidency
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

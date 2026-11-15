@@ -1,0 +1,42 @@
+actors:
+- FR
+issue_areas:
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Prince Faisal bin Farhan Al Saud
+  topics:
+  - defence
+  - iran
+  location: Paris, France
+  position: France reaffirmed its solidarity with Saudi Arabia against Houthi attacks
+    and its commitment to a diplomatic resolution of the Iranian crisis.
+  positions:
+    defence: France condemned Houthi attacks on Saudi Arabia and expressed readiness
+      to participate in a defensive multinational military mission to restore freedom
+      of navigation in the Strait of Hormuz.
+    iran: France reaffirmed its commitment to a diplomatic resolution of the Iranian
+      crisis to address threats posed by Iran.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: readiness to help to achieve this with his partners, within the
+          framework of a strictly defensive multinational military mission
+    e3:
+      iran:
+        score: 1
+        evidence: reaffirmed France’s commitment to the diplomatic resolution of the
+          Iranian crisis
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

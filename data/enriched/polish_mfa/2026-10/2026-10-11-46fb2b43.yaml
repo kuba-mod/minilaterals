@@ -1,23 +1,19 @@
 actors:
 - PL
-issue_areas:
-- defence
-weimar_relevant: true
+issue_areas: []
+weimar_relevant: false
 e3_relevant: false
-visegrad_relevant: true
+visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: false
 extracted:
   event_type: statement
   participants: []
-  topics:
-  - defence
+  topics: []
   location: Riyadh, Saudi Arabia
   position: Poland condemns the attack in Riyadh as a violation of international law
     and a provocation intended to destabilize the Gulf region.
-  positions:
-    defence: Poland views the attack as a blatant violation of international law and
-      a provocation aimed at further destabilizing the Gulf region.
+  positions: {}
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -30,17 +30,18 @@ extracted:
   - rule_of_law
   location: New York, USA
   position: France convened G7 Foreign Ministers to reaffirm unwavering support for
-    Ukraine and address critical security issues in the Middle East and Indo-Pacific.
+    Ukraine's sovereignty and address critical security issues in the Middle East
+    and Indo-Pacific.
   positions:
-    ukraine: France reaffirms unwavering support for Ukraine's sovereignty and territorial
-      integrity while seeking to increase pressure on Russia's war economy.
-    defence: France advocates for strengthening military support to Ukraine, specifically
+    ukraine: France reaffirmed unwavering support for Ukraine's sovereignty and territorial
+      integrity while focusing on increasing pressure on Russia's war economy.
+    defence: France advocated for strengthening military support to Ukraine, specifically
       regarding air defense.
-    energy: France supports enhancing Ukraine's energy resilience to ensure it can
-      withstand the coming winter.
-    indo_pacific: France emphasizes the importance of maintaining a free and open
+    energy: France emphasized the need to enhance Ukraine's energy resilience to withstand
+      the upcoming winter.
+    indo_pacific: France highlighted the importance of maintaining a free and open
       Indo-Pacific region.
-    rule_of_law: France asserts that the Indo-Pacific region must be founded on the
+    rule_of_law: France asserted that the Indo-Pacific region must be founded on the
       rule of law.
   stances:
     weimar:

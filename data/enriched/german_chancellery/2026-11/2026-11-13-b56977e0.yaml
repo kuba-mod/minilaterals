@@ -1,0 +1,48 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Andy Burnham
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting a meeting of the 'Coalition of the Willing' to coordinate
+    diplomatic efforts and security guarantees for Ukraine.
+  positions:
+    ukraine: Germany aims for a just and lasting peace for Ukraine and continues its
+      role as the largest supporter of the country.
+    defence: Germany is coordinating with partners on security guarantees for Ukraine
+      following the war to ensure long-term European security.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Bundeskanzler Friedrich Merz lädt gemeinsam mit Frankreichs Präsident
+          Emmanuel Macron und dem britischen Premierminister Andy Burnham für Donnerstag,
+          19. November 2026, zu einem Treffen der „Koalition der Willigen“ nach Berlin
+          ein
+    e3:
+      defence:
+        score: 2
+        evidence: Bundeskanzler Friedrich Merz lädt gemeinsam mit Frankreichs Präsident
+          Emmanuel Macron und dem britischen Premierminister Andy Burnham für Donnerstag,
+          19. November 2026, zu einem Treffen der „Koalition der Willigen“ nach Berlin
+          ein.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

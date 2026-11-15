@@ -1,0 +1,68 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Dr. Géza Andreas von Geyr
+  - Donald Trump
+  - Donald Tusk
+  - Jared Kushner
+  topics:
+  - ukraine
+  - defence
+  - iran
+  location: Berlin, Germany
+  position: Germany advocates for a stronger, more autonomous Europe to ensure a vital
+    transatlantic partnership while maintaining a commitment to NATO and a rules-based
+    international order.
+  positions:
+    ukraine: Germany supports the Ukraine on the side of international law and rejects
+      the creation of a new European security architecture that would grant Russia
+      veto rights.
+    defence: Germany commits to the NATO 5% target and the strengthening of the 'European
+      pillar' to ensure no security gaps arise during US posture adjustments.
+    iran: Germany seeks to prevent Iran from acquiring nuclear weapons and aims to
+      protect the security of critical waterways in the region.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland, die Europäer, zumindest die allermeisten Europäer,
+          ganz klar weiterhin auf der Seite der Ukraine
+      defence:
+        score: 1
+        evidence: Wir kümmern uns also um den „europäischen Pfeiler“ zur Stärkung
+          dieser Allianz.
+    e3:
+      defence:
+        score: 1
+        evidence: Aus sehr praktischen Gründen hat sich herausgeschält die Formel
+          „E3“. Das verlässt gewissermaßen den Kreis der Europäischen Union, weil
+          die Briten dabei sind. Deutschland, Frankreich, Großbritannien, das macht
+          Sinn.
+      iran:
+        score: 1
+        evidence: Das dritte ist die unbedingte Verhindern einer Nuklearwaffe in den
+          Händen Teherans.
+    aukus:
+      defence:
+        score: 1
+        evidence: Wir können gemeinsam eine positive Agenda daraus bauen. Wir können
+          gemeinsam die Widerstandsfähigkeit von Lieferketten stärken.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

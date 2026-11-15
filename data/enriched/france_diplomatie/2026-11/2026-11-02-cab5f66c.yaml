@@ -14,9 +14,9 @@ aukus_relevant: false
 extracted:
   event_type: joint_statement
   participants:
-  - representatives of the Government of Ukraine
   - Tallinn Mechanism members
   - Tallinn Mechanism observers
+  - representatives of the Government of Ukraine
   topics:
   - ukraine
   - defence
@@ -26,12 +26,12 @@ extracted:
     to providing civilian cyber security support and funding to Ukraine to counter
     Russian aggression.
   positions:
-    ukraine: France supports Ukraine's national resilience and its institutions' preparation
-      for Euro-Atlantic integration while calling for Russia to end its illegal war.
+    ukraine: France supports Ukraine's civilian cyber defence and its institutions'
+      readiness for Euro-Atlantic integration.
     defence: France commits to delivering civilian cyber security needs and projects
-      to protect Ukraine's digital space and critical national infrastructure.
+      to enhance Ukraine's national resilience.
     hybrid: France recognizes the intensification of Russian hybrid activities and
-      supports efforts to counter these threats to defend democratic systems.
+      works through the Tallinn Mechanism to counter these threats to democratic systems.
   stances:
     weimar:
       ukraine:

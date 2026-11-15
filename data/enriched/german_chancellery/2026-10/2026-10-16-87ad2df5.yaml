@@ -20,16 +20,14 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Hille (Deputy Government Spokesperson)
-  - Limmer (BMJV)
-  - Haufe (BMUKN)
-  - Pauly (BMDS)
-  - Lorenzat (BMWE)
-  - Dr. Rüll (BMF)
-  - Teichmann (BMBFSFJ)
-  - Giese (AA)
-  - Singer (BMI)
-  - Köhler (BMLEH)
+  - Bundeskanzler
+  - Hille (Government Spokesperson)
+  - Stefanie Hubig (Minister of Justice)
+  - Carsten Schneider (Minister of Environment)
+  - Lars Klingbeil (Minister)
+  - Katherina Reiche (Minister)
+  - Khurelsukh Ukhnaa (President of Mongolia)
+  - President Pavel (President of Czech Republic)
   topics:
   - hybrid
   - enlargement
@@ -41,27 +39,28 @@ extracted:
     the green transition in the automotive sector through cooperation with France,
     and supporting EU enlargement in the Western Balkans.
   positions:
-    hybrid: Germany is pursuing criminal investigations and EU sanctions against perpetrators
-      of hybrid attacks, specifically referencing events in Leipzig.
+    hybrid: Germany is pursuing criminal investigations and EU sanctions against the
+      perpetrators of hybrid attacks, specifically citing events in Leipzig.
     enlargement: Germany supports the EU accession process for Western Balkan states,
-      emphasizing that rule of law and anti-corruption are essential benchmarks.
+      emphasizing that rule of law and anti-corruption are critical benchmarks.
     green_transition: Germany has reached an agreement with France to maintain a technology-open
-      approach to automotive drives while promoting a European lead market for green
+      approach to automotive emissions and establish a European lead market for green
       steel.
-    rule_of_law: Germany promotes the rule of law as a key competitive advantage for
-      its investment climate and a requirement for EU candidate states.
-    energy: Germany supports the EU Methane Regulation as a climate tool but seeks
-      a pragmatic implementation to ensure energy security and legal certainty for
-      importers.
+    rule_of_law: Germany promotes the rule of law as a primary competitive advantage
+      for its investment climate and a requirement for EU candidate states.
+    energy: Germany supports the EU Methane Regulation as a key climate tool while
+      seeking a pragmatic balance to ensure energy security for oil and gas importers.
   stances:
     weimar:
       hybrid:
         score: 1
-        evidence: um den Druck auf Russland maximal hochzuhalten und auszuweiten
+        evidence: Sanktionspakete ‑ wir haben wieder ein neues Sanktionspaket in der
+          Europäischen Union verabschiedet ‑, das läuft ja parallel auch, um den Druck
+          auf Russland maximal hochzuhalten und auszuweiten.
       enlargement:
         score: 2
-        evidence: dient das Treffen vor allem auch deren Annäherungsprozess an die
-          EU
+        evidence: Neben der Förderung regionaler Kooperation zwischen den Westbalkanstaaten
+          dient das Treffen vor allem auch deren Annäherungsprozess an die EU.
       green_transition:
         score: 2
         evidence: Es gibt gerade auch eine wichtige Initiative zwischen Deutschland,
@@ -72,7 +71,8 @@ extracted:
       rule_of_law:
         score: 1
         evidence: Wir sind ein Rechtsstaat. Man kann sich darauf verlassen, dass in
-          Deutschland Rechtswege beschritten werden können
+          Deutschland Rechtswege beschritten werden können, wenn man mit Entscheidungen
+          nicht einverstanden ist.
     visegrad:
       enlargement:
         score: 2
@@ -80,8 +80,8 @@ extracted:
           dient das Treffen vor allem auch deren Annäherungsprozess an die EU.
       energy:
         score: 1
-        evidence: grundsätzlich unterstützt die Bundesregierung die Methanverordnung
-          der EU als wichtiges Klimaschutzinstrument im Energiesektor.
+        evidence: die Bundesregierung unterstützt die Methanverordnung der EU als
+          wichtiges Klimaschutzinstrument im Energiesektor.
     baltic:
       hybrid:
         score: 1

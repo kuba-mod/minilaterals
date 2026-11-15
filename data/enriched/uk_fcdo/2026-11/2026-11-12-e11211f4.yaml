@@ -1,0 +1,35 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer, UK Senior Military Advisor
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom asserts that Ukraine's armed forces are lawful combatants
+    protected under International Humanitarian Law and rejects Russia's characterization
+    of them as terrorists.
+  positions:
+    ukraine: The United Kingdom affirms the legitimacy of Ukraine's armed forces and
+      condemns Russian portrayals of them as terrorists.
+    defence: The United Kingdom emphasizes the protections afforded to Ukraine's military
+      under International Humanitarian Law.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: rejects Russia's portrayal of Ukraine's armed forces as terrorists
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

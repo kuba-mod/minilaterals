@@ -1,0 +1,42 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- EE
+- LV
+- LT
+issue_areas:
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Nikol Pashinyan
+  - President of the European Council
+  - President of the European Commission
+  - High Representative of the Union for Foreign Affairs and Security Policy
+  topics:
+  - energy
+  location: Dublin, Ireland
+  position: France and its partners reaffirm their support for Armenia's sovereignty
+    and resilience against Russian pressure while supporting its European aspirations
+    and peace processes with Azerbaijan and Turkey.
+  positions:
+    energy: France supports Armenia in diversifying its energy partnerships to protect
+      its sovereignty from Russian intimidation.
+  stances:
+    baltic:
+      energy:
+        score: 1
+        evidence: Nous continuerons de soutenir l’Arménie dans la diversification
+          de ses partenariats économiques, notamment dans les domaines du commerce
+          et de l’énergie
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

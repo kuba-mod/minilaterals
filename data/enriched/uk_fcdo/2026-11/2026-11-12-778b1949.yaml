@@ -1,0 +1,33 @@
+actors:
+- DE
+- FR
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom, alongside France and Germany, expresses grave concern
+    over Russia's unlawful detention of former OSCE officials and calls for their
+    immediate release.
+  positions:
+    rule_of_law: The United Kingdom condemns the unlawful detention of former OSCE
+      officials by Russia and demands their immediate release.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: expressed grave concern about Russia’s continued unlawful detention
+          of three former OSCE officials
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -3,7 +3,6 @@ actors:
 issue_areas:
 - defence
 - hybrid
-- ukraine
 weimar_relevant: true
 e3_relevant: true
 visegrad_relevant: false
@@ -12,25 +11,22 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Federal Chancellor
-  - Federal Minister of the Interior Alexander Dobrindt
+  - Bundeskanzler
+  - Bundesinnenminister Alexander Dobrindt
   topics:
   - defence
   - hybrid
-  - ukraine
   location: null
   position: Germany is strengthening its national security architecture through legislative
     reforms and the establishment of specialized centers to combat hybrid threats
     and drone attacks.
   positions:
-    defence: Germany is enhancing the protection of critical infrastructure and expanding
-      the powers of the Federal Police and the capabilities of the Bundeswehr for
-      drone defense.
-    hybrid: The government has established the Joint Center for the Defense of Hybrid
-      Threats (GAZ Hybrid) and the Joint Drone Defense Center (GDAZ) to counter espionage,
-      sabotage, and disinformation.
-    ukraine: Germany notes an increase in illegal drone flights over critical infrastructure
-      since the start of Russia's war of aggression against Ukraine.
+    defence: Germany has established the Joint Drone Defense Center (GDAZ) and reformed
+      the Federal Police Act to enhance the detection and neutralization of illegal
+      drones.
+    hybrid: Germany has launched the Joint Center for the Defense of Hybrid Threats
+      (GAZ Hybrid) and implemented the KRITIS-Dachgesetz to protect critical infrastructure
+      from espionage, sabotage, and cyberattacks.
   stances:
     weimar:
       hybrid:

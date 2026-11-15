@@ -22,17 +22,19 @@ extracted:
   - enlargement
   location: Luxembourg
   position: Poland advocates for increased pressure on Russia through sanctions, visa
-    restrictions, and the use of frozen assets, while emphasizing the strategic value
-    of Ukraine's military experience for European security.
+    restrictions, and the utilization of frozen assets, while emphasizing the strategic
+    value of Ukraine's integration into EU security structures.
   positions:
-    ukraine: Poland supports continued pressure on Russia, the use of frozen Russian
-      assets for Ukraine, and stricter visa policies for Russian citizens.
-    defence: Poland suggests utilizing Ukraine's operational military experience to
+    ukraine: Poland supports the largest individual sanctions package against Russia
+      and calls for the EU to use frozen Russian assets for Ukraine's benefit.
+    defence: Poland proposes utilizing Ukraine's operational military experience to
       enhance broader European security and EU missions.
     hybrid: Poland supports a more offensive approach to combating foreign information
-      manipulation and interference (FIMI) and offers to share its expertise.
-    enlargement: Poland views EU enlargement as an essential element of European security
-      and offers to help Western Balkan candidates combat Russian disinformation.
+      manipulation and interference (FIMI) and offers to help Western Balkan countries
+      fight Russian disinformation.
+    enlargement: Poland views EU enlargement as an essential element of European security,
+      citing the defensive and industrial capabilities of candidate countries like
+      Ukraine.
   stances:
     weimar:
       ukraine:
@@ -46,8 +48,8 @@ extracted:
           europejskiego
       hybrid:
         score: 2
-        evidence: wyraził gotowość dzielenia się polskimi doświadczeniami i wiedzą
-          specjalistyczną w celu wzmacniania komunikacji strategicznej UE
+        evidence: zapewnił o gotowości Polski do pomocy państwom Bałkanów Zachodnich,
+          kandydujących do UE, w zwalczaniu rosyjskiej dezinformacji
       enlargement:
         score: 1
         evidence: w dyskusji w sprawie europejskiego bezpieczeństwa wiceminister Bosacki

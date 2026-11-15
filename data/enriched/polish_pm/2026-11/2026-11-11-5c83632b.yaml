@@ -1,0 +1,40 @@
+actors:
+- PL
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Karol Nawrocki
+  - Arkadiusz Marchewka
+  - Dariusz Klimczak
+  topics:
+  - defence
+  location: Szczecin, Poland
+  position: Poland emphasizes the necessity of national unity, internal stability,
+    and the strengthening of maritime infrastructure to ensure national security and
+    independence.
+  positions:
+    defence: Poland is investing in a modern fleet through the 'Polskie Morze' program
+      to strengthen its presence and security in the Baltic Sea.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: zrobimy wszystko, aby Polska była nadal tym najbezpieczniejszym
+          miejscem w Europie
+    visegrad:
+      defence:
+        score: 1
+        evidence: Polska, zgodnie z przesłaniem Marszałka Józefa Piłsudskiego, konsekwentnie
+          stara się odsuwać zagrożenia dla swojej wolności jak najdalej od granic
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

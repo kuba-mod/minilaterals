@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia reports that a swarm of drones approached a Russian warship in
+    the Gulf of Finland from Russian territory.
+  positions:
+    hybrid: Estonia states that preliminary data indicates a drone swarm originated
+      from Russian territory before approaching a Russian warship.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: drooniparv tuli Vene sõjalaeva juurde Venemaa territooriumilt
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

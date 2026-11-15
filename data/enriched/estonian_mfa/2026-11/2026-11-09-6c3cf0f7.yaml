@@ -1,0 +1,24 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  - President Karis
+  - Sirje Karis
+  topics: []
+  location: null
+  position: Foreign Minister Margus Tsahkna delivered a speech commemorating the 108th
+    anniversary of the Estonian Ministry of Foreign Affairs.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

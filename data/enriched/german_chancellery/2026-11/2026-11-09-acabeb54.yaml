@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Charlotte Knobloch
+  - Markus Söder
+  - Ilse Aigner
+  - Dominik Krause
+  topics: []
+  location: Munich, Germany
+  position: Germany reaffirms its historical responsibility to protect Jewish life,
+    combat antisemitism, and maintain an unwavering alliance with Israel.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

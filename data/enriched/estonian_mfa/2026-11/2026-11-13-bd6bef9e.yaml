@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - ukraine
+  location: null
+  position: Estonia asserts that Putin is repeating the same ultimatum-style demands
+    as in 2021 after five years of destruction.
+  positions:
+    ukraine: Estonia views Putin's current demands as repetitive ultimatums similar
+      to those issued in 2021 following years of destructive action.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -10,14 +10,14 @@ baltic_relevant: false
 aukus_relevant: false
 extracted:
   event_type: statement
-  participants: []
+  participants:
+  - Ministry of Foreign Affairs
   topics:
   - defence
   - enlargement
   location: Istanbul, Turkey
-  position: Poland is strengthening its diplomatic, cultural, and public presence
-    in Turkey through the opening of the Polish Institute in Istanbul to deepen bilateral
-    relations.
+  position: Poland is strengthening its diplomatic and cultural presence in Turkey
+    through the opening of the Polish Institute in Istanbul to enhance bilateral relations.
   positions:
     defence: Poland views Turkey as a key partner on the south-eastern flank of NATO
       and is developing bilateral cooperation in security.
@@ -25,16 +25,13 @@ extracted:
   stances:
     weimar:
       enlargement:
-        score: 0
+        score: 1
         evidence: Polska niezmiennie wspiera również europejską perspektywę Turcji
     visegrad:
       defence:
         score: 1
         evidence: Turcja pozostaje jednym z naszych kluczowych partnerów na południowo-wschodniej
           flance NATO
-      enlargement:
-        score: 1
-        evidence: Polska niezmiennie wspiera również europejską perspektywę Turcji
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

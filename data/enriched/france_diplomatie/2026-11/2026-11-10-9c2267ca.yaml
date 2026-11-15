@@ -1,0 +1,41 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Kaja Kallas
+  topics:
+  - ukraine
+  - hybrid
+  location: Paris, France
+  position: France coordinated with the EU High Representative on international actions
+    and sanctions regarding Ukraine and recent cyber attacks.
+  positions:
+    ukraine: France reviewed progress on the European Union's international action
+      and the mobilization of Member States concerning Ukraine.
+    hybrid: France discussed the implementation of sanctions in response to recent
+      cyber attacks targeting France and other European countries.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reviewed progress... on the European Union’s international action
+          and the mobilization of its Member States, concerning the Middle East and
+          Ukraine
+      hybrid:
+        score: 1
+        evidence: our action in terms of sanctions, particularly in the face of the
+          recent cyber attacks that targeted France and other European countries
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

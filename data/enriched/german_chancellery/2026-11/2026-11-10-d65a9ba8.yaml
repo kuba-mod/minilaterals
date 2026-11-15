@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer
+  - Dr. Andrea Despot
+  - Dr. Katja Hüske
+  topics: []
+  location: Nuremberg, Germany
+  position: Germany has funded the 'MemoRails' program to establish 13 new memorials
+    and educational projects at railway stations to make the history of National Socialist
+    crimes visible across the country.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

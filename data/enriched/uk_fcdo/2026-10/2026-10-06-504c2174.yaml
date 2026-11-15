@@ -10,7 +10,7 @@ aukus_relevant: true
 extracted:
   event_type: statement
   participants:
-  - Ambassador Kate Foster
+  - Ambassador Kate Foster, UK Deputy Permanent Representative to the UN
   topics:
   - defence
   location: null
@@ -18,8 +18,8 @@ extracted:
     Nations and the African Union is indispensable for addressing conflict and insecurity
     across Africa.
   positions:
-    defence: The United Kingdom supports the cooperation between the UN and AU to
-      enhance security and stability in conflict-affected regions of Africa.
+    defence: The United Kingdom supports the cooperation between the UN and the African
+      Union to enhance security and stability in conflict-affected regions of Africa.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

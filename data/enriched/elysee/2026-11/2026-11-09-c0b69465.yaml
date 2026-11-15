@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government
+  - Leaders of companies and organizations
+  topics:
+  - hybrid
+  location: Paris, France
+  position: France and its partners commit to a structured cooperation framework for
+    the safe development of frontier AI, focusing on risk management, accountability,
+    and information sharing.
+  positions:
+    hybrid: France advocates for a common framework to mitigate dangerous malicious
+      uses of AI, specifically in the cyber and CBRN domains.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: mettant particulièrement l’accent sur l’atténuation des usages malveillants
+          dangereux, notamment dans les domaines cyber et NRBC
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

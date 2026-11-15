@@ -1,0 +1,40 @@
+actors:
+- DE
+- FR
+- UK
+- AU
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - representatives from States
+  - companies
+  - civil society groups
+  topics:
+  - hybrid
+  location: Paris, France
+  position: France, together with the UK, launched the Pall Mall Process Industry
+    Guidelines to establish a framework for responsible behavior and practical recommendations
+    for the commercial cyber intrusion industry.
+  positions:
+    hybrid: France is promoting a framework of accountability, precision, oversight,
+      and transparency to disincentivise irresponsible activity in the commercial
+      cyber intrusion tools market.
+  stances:
+    weimar:
+      hybrid:
+        score: 2
+        evidence: France and the UK launched the Pall Mall Process in February 2024...
+          which aims to establish a framework for responsible behaviour across the
+          market which includes clear guidelines for those developing, selling and
+          using commercial cyber intrusion tools.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

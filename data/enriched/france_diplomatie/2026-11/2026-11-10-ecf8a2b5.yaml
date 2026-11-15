@@ -1,0 +1,36 @@
+actors:
+- FR
+issue_areas:
+- indo_pacific
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Cho Hyun
+  topics:
+  - indo_pacific
+  - rule_of_law
+  location: Paris, France
+  position: France reaffirmed its global strategic partnership with the Republic of
+    Korea and its commitment to a multilateral, law-based international order.
+  positions:
+    indo_pacific: France discussed the situation on the Korean peninsula and bilateral
+      relations to maintain a global strategic partnership.
+    rule_of_law: France recalled its commitment to an international order based on
+      multilateralism and law.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: recalled their commitment to an international order based on multilateralism
+          and law
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

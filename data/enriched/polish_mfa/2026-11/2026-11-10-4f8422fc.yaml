@@ -1,0 +1,24 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Jakub Józef Orliński
+  topics: []
+  location: null
+  position: Poland awarded the 'Bene Merito' decoration to countertenor Jakub Józef
+    Orliński for his contributions to promoting Polish culture and enhancing Poland's
+    international image.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,39 @@
+actors:
+- EE
+- LT
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Ararat Mirzoyan
+  - Kęstutis Budryse
+  - Maria Stenergard
+  topics:
+  - ukraine
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia met with foreign ministers from Armenia, Lithuania, and Sweden
+    to discuss security issues, support for Ukraine, and bilateral cooperation.
+  positions:
+    ukraine: Estonia is coordinating support for Ukraine and preparing for the Ukraine
+      recovery conference to be held in Tallinn in January.
+    defence: Estonia discussed current security issues and Russia's ongoing aggression
+      with its international partners.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: keskenduti päevakajalistele julgeolekuküsimustele, Venemaa jätkuvale
+          agressioonile
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -15,12 +15,13 @@ extracted:
   topics:
   - iran
   location: null
-  position: The United Kingdom, alongside international partners, condemns the use
-    of the death penalty in Iran.
+  position: The United Kingdom and its partners condemn the use of the death penalty
+    in Iran.
   positions:
-    iran: The United Kingdom calls for an immediate halt to executions in Iran.
+    iran: The United Kingdom condemns the execution of individuals in Iran and calls
+      for an end to the use of the death penalty.
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

@@ -1,0 +1,24 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Klingbeil
+  - Bundesfinanzminister
+  topics: []
+  location: null
+  position: Germany has passed the Customs Finance Justice Act to restructure the
+    General Customs Directorate and grant customs authorities expanded powers to combat
+    financial crime and organized crime.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

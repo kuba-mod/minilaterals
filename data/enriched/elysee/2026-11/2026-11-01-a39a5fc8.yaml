@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Brigitte Macron
+  - Javier Milei
+  - Karina Milei
+  - Frank-Walter Steinmeier
+  - Elke Büdenbender
+  topics: []
+  location: Paris, France
+  position: France hosted diplomatic meetings and state visits with representatives
+    from Argentina and Germany, alongside various social and cultural engagements.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

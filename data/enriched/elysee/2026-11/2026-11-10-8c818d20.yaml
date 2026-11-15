@@ -1,0 +1,45 @@
+actors:
+- FR
+- UK
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - French senior officials
+  - British senior officials
+  - French military personnel
+  - British military personnel
+  - Nuclear Steering Group
+  topics:
+  - defence
+  location: London, UK
+  position: France is deepening nuclear cooperation and operational alignment with
+    the United Kingdom under the Northwood Declaration to strengthen European and
+    Euro-Atlantic deterrence.
+  positions:
+    defence: France is expanding technical cooperation and the cross-use of sovereign
+      test facilities with the UK while promoting its 'advanced deterrence' initiative
+      to complement NATO.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: le GPN a souligné l’apport significatif de la « dissuasion avancée
+          » à la sécurité de l’Europe et à la dissuasion euro-atlantique, ainsi que
+          le fait qu’elle contribue à compliquer les calculs des adversaires potentiels,
+          en complémentarité de l'OTAN
+    e3:
+      defence:
+        score: 2
+        evidence: convenu d'étendre la coopération à divers domaines techniques et
+          d’initier l’utilisation croisée d’installations d'essais souveraines
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

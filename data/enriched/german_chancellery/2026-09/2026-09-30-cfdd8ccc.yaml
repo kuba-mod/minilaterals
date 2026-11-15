@@ -10,7 +10,7 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Federal Cabinet
+  - Bundeskabinett
   topics:
   - defence
   location: South Sudan
@@ -18,9 +18,15 @@ extracted:
     mission in South Sudan until October 31, 2027, with up to 50 soldiers.
   positions:
     defence: Germany will deploy up to 50 soldiers as leadership, advisory, liaison,
-      and observation officers within the UNMISS mission to stabilize South Sudan.
+      and observation officers within the UNMISS mission to stabilize South Sudan
+      and protect civilians.
   stances:
     weimar:
+      defence:
+        score: 0
+        evidence: beteiligt sich Deutschland an der UNMISS -Mission der Vereinten
+          Nationen (UN) in der Republik Südsudan
+    e3:
       defence:
         score: 0
         evidence: beteiligt sich Deutschland an der UNMISS -Mission der Vereinten

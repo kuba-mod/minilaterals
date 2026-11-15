@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Mariin Ratnik, Deputy Secretary General for Foreign Economic Affairs and Development
+    Cooperation
+  topics:
+  - ukraine
+  - enlargement
+  location: Lviv, Ukraine
+  position: Estonia advocates for the consolidation of all forces and capabilities
+    to support Ukraine's budget, winter needs, and EU integration reforms.
+  positions:
+    ukraine: Estonia supports Ukraine's next year's budget, urgent winter needs, and
+      the increase of international support.
+    enlargement: Estonia supports the reform process related to Ukraine's accession
+      to the EU, including economic improvements.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

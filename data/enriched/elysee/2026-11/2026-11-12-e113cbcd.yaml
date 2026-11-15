@@ -1,0 +1,70 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- HU
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Dublin, Ireland
+  position: France and other signatory states commit to strengthening European security
+    and providing robust security guarantees to Ukraine to ensure a just and lasting
+    peace.
+  positions:
+    ukraine: France supports Ukraine's independence, sovereignty, and territorial
+      integrity within its internationally recognised borders and asserts that peace
+      must be decided with Ukraine.
+    defence: France advocates for the provision of credible security guarantees to
+      Ukraine as an integral part of Euro-Atlantic security to prevent future aggression.
+    hybrid: France declares that Russian hybrid campaigns will only strengthen the
+      resolve and commitment of the signatory states to support Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reiterate their firm support for the independence, sovereignty,
+          and territorial integrity of Ukraine
+      hybrid:
+        score: 1
+        evidence: Russia’s hybrid campaigns and attempts to undermine support to Ukraine
+          will only strengthen their commitment to Ukraine and their resolve
+    e3:
+      defence:
+        score: 1
+        evidence: the signatory states, gathered for the 9th Summit of the European
+          Political Community in Dublin on the 12th of November 2026, consider strengthening
+          European security and defending their security interests as their common
+          objective
+    visegrad:
+      defence:
+        score: 1
+        evidence: consider strengthening European security and defending their security
+          interests as their common objective
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Russia’s hybrid campaigns and attempts to undermine support to Ukraine
+          will only strengthen their commitment to Ukraine and their resolve
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

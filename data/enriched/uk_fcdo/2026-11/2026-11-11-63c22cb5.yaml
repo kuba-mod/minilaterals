@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- green_transition
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Ed Miliband
+  topics:
+  - green_transition
+  location: Antalya, Turkey
+  position: The United Kingdom advocates for leveraging green industrial opportunities
+    to drive investment, jobs, and growth across economies.
+  positions:
+    green_transition: The United Kingdom promotes the pursuit of green industrial
+      opportunities to foster global economic growth and job creation.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

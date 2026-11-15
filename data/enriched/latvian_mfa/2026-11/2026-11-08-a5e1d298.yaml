@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Baiba Braže
+  topics:
+  - ukraine
+  location: New York, USA
+  position: Foreign Minister Baiba Braže will lead an emergency meeting of the UN
+    Security Council regarding Ukraine and deliver a statement on behalf of Latvia.
+  positions:
+    ukraine: Latvia will deliver a statement and lead an emergency UN Security Council
+      meeting to address the situation in Ukraine.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

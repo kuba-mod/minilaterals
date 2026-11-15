@@ -17,22 +17,21 @@ extracted:
   - defence
   - iran
   location: Doha, Qatar
-  position: France reaffirms its strategic partnership with Qatar, committing to deepen
-    bilateral cooperation across security, defense, and economic sectors while coordinating
-    on regional stability.
+  position: France reaffirmed its strategic partnership with Qatar, committing to
+    deepen bilateral relations across security, defense, and economic sectors while
+    coordinating on regional stability.
   positions:
-    defence: France reiterates its commitment to Qatar's security and stability through
+    defence: France reiterated its commitment to Qatar's security and stability through
       enhanced military interoperability, joint training, and the implementation of
       a military cooperation Letter of Intent.
     iran: France exchanged views on the ongoing Iran conflict and emphasized the need
-      for diplomacy and coordinated international efforts to ensure freedom of navigation
-      in the Strait of Hormuz.
+      to restore freedom of navigation in the Strait of Hormuz.
   stances:
     weimar:
       defence:
         score: 0
-        evidence: Qatar’s participation in Exercise ORION 2026 in France, underscoring
-          their commitment to enhanced military interoperability and readiness
+        evidence: Qatar and France emphasized the importance of their strong and long-standing
+          defense and security partnership
     e3:
       iran:
         score: 0

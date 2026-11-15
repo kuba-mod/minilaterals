@@ -16,15 +16,15 @@ extracted:
   - rule_of_law
   - indo_pacific
   location: Hong Kong
-  position: The United Kingdom expresses concern and responds to the guilty verdicts
-    against Hong Kong Alliance leaders under the national security law.
+  position: The United Kingdom expresses concern over the guilty verdicts against
+    Hong Kong Alliance leaders Lee Cheuk-yan and Chow Hang-tung.
   positions:
-    rule_of_law: The UK opposes the use of the national security law to convict activists
-      Lee Cheuk-yan and Chow Hang-tung.
-    indo_pacific: The UK Minister for the Indo-Pacific is monitoring the legal situation
-      and human rights developments in Hong Kong.
+    rule_of_law: The United Kingdom opposes the use of the national security law to
+      target peaceful activists and advocates for the rule of law in Hong Kong.
+    indo_pacific: The UK is monitoring the human rights situation and legal proceedings
+      within the Indo-Pacific region, specifically in Hong Kong.
   stances: {}
 enriched_by:
   model_id: gemma4:latest
-  prompt_version: '8'
+  prompt_version: '9'
   environment: github_actions

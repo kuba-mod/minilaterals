@@ -17,11 +17,11 @@ extracted:
   topics:
   - defence
   location: Paris, France
-  position: France is reviewing its intelligence and security measures and analyzing
-    past failures to improve anticipation and security for the coming weeks.
+  position: France held a security council to review intelligence and security measures
+    and analyze recent failures.
   positions:
-    defence: France is implementing intelligence and security devices while reviewing
-      malfunctions that led to recent events.
+    defence: France is implementing intelligence and security measures for the coming
+      weeks and reviewing the malfunctions that led to recent events.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Emmanuel Macron
+  - Taoiseach
+  - Volodymyr Zelensky
+  - Giorgia Meloni
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Dublin, Ireland
+  position: France advocates for a coordinated European security architecture and
+    a unified European vision for security and stability, independent of external
+    actors.
+  positions:
+    ukraine: France maintains strong support for Ukraine and asserts that Europeans
+      must define their own peace project and security architecture for the region.
+    defence: France promotes the creation of a European defense pillar and the adoption
+      of common security principles among a broad group of European nations.
+    hybrid: France is leading initiatives within the European Political Community
+      to combat informational attacks, manipulations, and interferences.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Aujourd'hui, l'Europe est très claire sur son soutien à l'Ukraine.
+      defence:
+        score: 2
+        evidence: reconnaît l'importance d'un pilier européen de la défense
+      hybrid:
+        score: 2
+        evidence: Nous avons bâti une initiative au sein de la Communauté politique
+          européenne qui... nous permet d'agir ensemble avec des coopérations de sécurité
+          communes.
+    e3:
+      defence:
+        score: 2
+        evidence: Il y a l'Union européenne, il y a l'OTAN, mais il y a besoin de
+          cette coordination au sein d'une Europe large, qui acte la nécessité de
+          s'équiper ensemble, de travailler ensemble, de planifier ensemble
+    aukus:
+      defence:
+        score: -2
+        evidence: make sure that we design ourselves our own security principles and
+          our own architecture of security
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

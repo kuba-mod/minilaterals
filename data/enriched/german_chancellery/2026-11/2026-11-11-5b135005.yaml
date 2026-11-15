@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- energy
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundeswirtschaftsministerin Reiche
+  topics:
+  - energy
+  - iran
+  location: null
+  position: Germany is establishing a strategic gas reserve of 24 terawatt-hours to
+    protect against future infrastructure attacks or supply crises.
+  positions:
+    energy: The German government is creating the legal framework for a strategic
+      gas reserve to be built by Trading Hub Europe by 2027 to ensure supply security
+      during crises.
+    iran: Germany acknowledges that the Iran-Middle East conflict causes public concern
+      regarding energy prices, though current gas supplies remain secure.
+  stances:
+    e3:
+      iran:
+        score: 0
+        evidence: Die Auswirkungen des Iran-Nahost-Konflikts bereiten vielen Menschen
+          Sorgen, zunächst vor allem wegen der hohen Energiepreise.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

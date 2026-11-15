@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Micheál Martin
+  - Nicusor Dan
+  topics:
+  - ukraine
+  - defence
+  location: Dublin, Ireland
+  position: Germany emphasizes European unity and strength, specifically calling for
+    continued EU financial and material support for Ukraine.
+  positions:
+    ukraine: Germany calls for a solid budget and joint further assistance from the
+      European Union for Ukraine to face a difficult winter.
+    defence: Germany identifies security and defense as central challenges requiring
+      European cooperation and cohesion.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: appellierte an „ein solides Budget und eine gemeinsame weitere Hilfe
+          aus der Europäischen Union für die Ukraine“
+      defence:
+        score: 1
+        evidence: Im Mittelpunkt standen dabei Fragen der wirtschaftlichen Wettbewerbsfähigkeit
+          des Kontinents, der Sicherheit und Verteidigung.
+    e3:
+      defence:
+        score: 1
+        evidence: Im Mittelpunkt standen dabei Fragen der wirtschaftlichen Wettbewerbsfähigkeit
+          des Kontinents, der Sicherheit und Verteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

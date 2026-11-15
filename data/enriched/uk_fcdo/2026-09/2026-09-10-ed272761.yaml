@@ -17,8 +17,8 @@ extracted:
   position: The United Kingdom strongly condemns the Houthis' decision to resume conflict
     in Yemen and their continued strikes on Saudi Arabia.
   positions:
-    defence: The United Kingdom condemns Houthi military aggression and strikes against
-      Saudi Arabia.
+    defence: The United Kingdom condemns the Houthi attacks on Saudi Arabia and their
+      decision to resume conflict in Yemen.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -1,8 +1,8 @@
 actors:
 - EE
 issue_areas:
-- defence
 - hybrid
+- defence
 weimar_relevant: false
 e3_relevant: false
 visegrad_relevant: false
@@ -11,18 +11,18 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Russian Federation Embassy Chargé d'Affaires
+  - Chargé d'Affaires of the Embassy of the Russian Federation
   topics:
-  - defence
   - hybrid
+  - defence
   location: null
   position: Estonia summoned the Russian chargé d'affaires to condemn a Russian-ordered
     act of sabotage against the defense company Milrem Robotics.
   positions:
-    defence: Estonia strongly condemns the arson attack against the defense industry
-      company Milrem Robotics.
-    hybrid: Estonia identifies the attack on Milrem Robotics as an act of sabotage
-      ordered by the Russian Federation.
+    hybrid: Estonia strongly condemns the Russian-ordered act of sabotage involving
+      arson against a domestic company.
+    defence: Estonia is taking diplomatic action in response to an attack targeting
+      the defense industry company Milrem Robotics.
   stances:
     baltic:
       hybrid:

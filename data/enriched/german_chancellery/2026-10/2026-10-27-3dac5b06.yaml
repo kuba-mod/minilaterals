@@ -20,15 +20,15 @@ extracted:
   - indo_pacific
   location: Tokyo, Japan
   position: Germany seeks to deepen economic and security partnerships with Japan,
-    Singapore, and South Korea to counter global trade imbalances and ensure resource
-    security.
+    Singapore, and South Korea to counter global trade imbalances and secure supply
+    chains.
   positions:
-    ukraine: Germany encourages Japan to intensify its support for Ukrainian air defense
-      and confirms continued financial assistance.
-    defence: Germany is exploring options for potential engagement in the GCAP fighter
-      jet project to reduce system complexity and increase production volumes.
+    ukraine: Germany encourages Japan to increase its support for Ukrainian air defense
+      and financial aid.
+    defence: Germany is exploring the possibility of joining the GCAP fighter jet
+      project to reduce system complexity and increase production volumes.
     indo_pacific: Germany advocates for multilateral trade partnerships and the protection
-      of the WTO to maintain rule-based trade and counter protectionism.
+      of the WTO to maintain rule-based trade and offset global imbalances.
   stances:
     weimar:
       ukraine:
@@ -37,8 +37,7 @@ extracted:
           in diesem Krieg zu unterstützen
       defence:
         score: 0
-        evidence: wir prüfen im Augenblick alle Optionen. Denn ich möchte nicht sehen,
-          dass wir überall wieder von vorn anfangen.
+        evidence: wir prüfen im Augenblick alle Optionen
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

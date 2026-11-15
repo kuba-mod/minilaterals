@@ -14,23 +14,24 @@ extracted:
   event_type: speech
   participants:
   - President of the French Republic
-  - Emir of Qatar
-  - President Aoun
-  - King of Jordan
   topics:
   - defence
   - energy
   - iran
-  location: Qatar
+  location: null
   position: France is mobilizing regional partners in the Gulf to ensure energy security,
-    promote stability, and strengthen strategic defense partnerships.
+    stability in the Strait of Hormuz, and the strengthening of strategic defense
+    partnerships.
   positions:
-    defence: France signed defense agreements with the UAE for Rafale aircraft and
-      concluded deals with Qatar for Rafale upgrades and armored vehicles.
-    energy: France secured critical volumes of diesel from Bahrain and the UAE, and
-      liquefied natural gas from Qatar, to protect its economy from energy crises.
-    iran: France opposes any form of nuclear activity in Iran and supports diplomatic
-      negotiations to de-escalate tensions and reopen the Strait of Hormuz.
+    defence: France is consolidating defense relations through new agreements on Rafale
+      aircraft and armored vehicles with the UAE and Qatar, and providing defensive
+      support to Saudi Arabia.
+    energy: France has secured critical volumes of diesel and liquefied natural gas
+      from Gulf partners to mitigate the energy crisis and reduce price volatility
+      for its citizens.
+    iran: France opposes all forms of nuclear activity in Iran and is utilizing multiple
+      diplomatic channels to encourage de-escalation and the reopening of the Strait
+      of Hormuz.
   stances:
     weimar:
       defence:

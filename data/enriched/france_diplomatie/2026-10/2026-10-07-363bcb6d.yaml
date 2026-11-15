@@ -20,15 +20,16 @@ extracted:
   position: France summoned the Iranian Ambassador to protest a disinformation campaign
     and unfounded diplomatic actions by Iranian authorities.
   positions:
-    iran: France condemned the Iranian Foreign Ministry's dissemination of false content
+    iran: France condemned the Iranian Foreign Ministry's disinformation campaign
       and the unfounded summoning of the French Ambassador in Tehran.
-    hybrid: France declared that the disinformation campaign conducted by Iranian
-      authorities regarding the lycée movement is absolutely unacceptable.
+    hybrid: France declared that the dissemination of false content online by official
+      Iranian accounts is absolutely unacceptable.
   stances:
     weimar:
       hybrid:
-        score: 0
-        evidence: disinformation campaign conducted by the Iranian authorities
+        score: 1
+        evidence: the false content disseminated online by official accounts of the
+          Iranian Foreign Ministry was absolutely unacceptable
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

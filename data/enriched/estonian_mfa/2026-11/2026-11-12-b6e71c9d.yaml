@@ -1,0 +1,33 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia convened a meeting of Nordic-Baltic foreign ministers to discuss
+    regional security and asserted that Russia must first agree to a ceasefire as
+    a primary step.
+  positions:
+    defence: Estonia maintains that Russia must agree to a ceasefire as the first
+      step in addressing the current security situation.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: arutada Venemaa agressioonisõjaga seonduvaid viimaseid arenguid,
+          Abu Dhabis toimunud läbirääkimiste järelmeid ja julgeolekuolukorda meie
+          regioonis
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

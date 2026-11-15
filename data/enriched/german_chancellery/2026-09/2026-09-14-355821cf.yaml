@@ -14,30 +14,31 @@ aukus_relevant: false
 extracted:
   event_type: statement
   participants:
-  - Foreign Minister Wadephul
+  - Außenminister Wadephul
   - SRS Meyer
-  - Minister Klingbeil
-  - Minister Pistorius
-  - Volker Türk
-  - Gesche Joost
+  - Frau Deschauer
+  - Frau Ungrad
+  - Herr Müller
+  - Herr Kall
   topics:
   - ukraine
   - defence
   - energy
   - iran
   location: Berlin, Germany
-  position: Germany is addressing energy price volatility, enhancing AI security,
-    and maintaining support for Ukraine while managing diplomatic relations and internal
-    security reforms.
+  position: Germany is coordinating diplomatic efforts to protect human rights, managing
+    energy security amid Middle East tensions, and strengthening its defence capabilities
+    and AI security.
   positions:
-    ukraine: Germany views recent Russian attacks on Ukrainian rail infrastructure
+    ukraine: Germany views recent Russian attacks on Ukrainian railway infrastructure
       as a further step in Russia's escalation dynamics.
-    defence: Germany is continuing personnel recruitment for the Bundeswehr and managing
-      commitments for the Lithuania Brigade.
+    defence: Germany is continuing its personnel recruitment for the Bundeswehr and
+      maintaining naval readiness in the Mediterranean for potential developments
+      in the Strait of Hormuz.
     energy: Germany is pushing for a European windfall tax on oil companies to fund
-      relief for consumers facing high fuel prices caused by global market instability.
-    iran: Germany attributes rising fuel prices to the escalation in the Middle East,
-      including attacks on oil pipelines and the blockade of sea routes.
+      consumer relief from high fuel prices caused by global market volatility.
+    iran: Germany attributes rising fuel prices and regional instability to the escalation
+      involving Iran and Houthi attacks on shipping lanes.
   stances:
     weimar:
       ukraine:

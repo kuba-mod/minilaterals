@@ -1,0 +1,67 @@
+actors:
+- DE
+- FR
+- AU
+- US
+issue_areas:
+- ukraine
+- defence
+- iran
+- energy
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Vorsitzende Wolf
+  - StS Kornelius
+  - Staatsministerin Pawlik
+  - Frau Lorenzat
+  - Frau Ernoult
+  - Herr Müller
+  - Frau Singer
+  - Herr Zimmermann
+  topics:
+  - ukraine
+  - defence
+  - iran
+  - energy
+  - migration
+  location: null
+  position: The German government announces new measures for gas security, a restructured
+    raw materials foreign policy, and its adherence to four principles for a future
+    euro-atlantic security architecture following talks in Abu Dhabi.
+  positions:
+    ukraine: Germany supports a sequenced approach to peace where a resolution in
+      Ukraine must precede discussions on a new euro-atlantic security order.
+    defence: The Bundeswehr will phase out the procurement of Chinese drones and implement
+      strict security assessments for smart vehicles at military sites to prevent
+      espionage.
+    iran: Germany expresses full solidarity with France regarding cyberattacks on
+      cooling systems attributed to the Iranian Revolutionary Guard.
+    energy: Germany is introducing a strategic gas reserve to ensure an additional
+      30 days of supply during exceptional crises, financed via a levy.
+    migration: The government acknowledges that while integration is succeeding in
+      many areas, structural hurdles remain for immigrants, particularly women.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir unterstützen die Ukraine als Europäer.
+    e3:
+      iran:
+        score: 1
+        evidence: Deutschland steht solidarisch und fest an der Seite Frankreichs.
+    aukus:
+      defence:
+        score: 0
+        evidence: wir werden zukünftig keine chinesischen Drohnen mehr beschaffen,
+          und diese werden jetzt nach und nach aus der Nutzung gehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

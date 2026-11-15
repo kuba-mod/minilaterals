@@ -1,9 +1,8 @@
 actors:
 - PL
+- US
 issue_areas:
 - defence
-- enlargement
-- rule_of_law
 weimar_relevant: true
 e3_relevant: false
 visegrad_relevant: true
@@ -15,43 +14,24 @@ extracted:
   - Radosław Sikorski
   topics:
   - defence
-  - enlargement
-  - rule_of_law
   location: null
-  position: Poland emphasizes its strong security posture and commitment to European
-    defense cooperation, particularly regarding deterring threats from the eastern
-    border.
+  position: Poland is significantly increasing its military expenditure and leveraging
+    EU funding to modernize its army and deter eastern threats.
   positions:
-    defence: Poland strongly supports enhancing EU defense capabilities and collective
-      security through significant spending and leveraging international funding mechanisms
-      like SAFE.
-    enlargement: Poland supports EU enlargement by advocating for the inclusion of
-      Ukraine within Europe's security framework.
-    rule_of_law: Poland stresses the importance of maintaining democratic resilience
-      and stability to ensure European security.
+    defence: Poland is investing heavily in its military budget, utilizing the SAFE
+      programme for procurement, and advocating for a strong US troop presence in
+      Europe, specifically in Poland.
   stances:
     weimar:
       defence:
         score: 2
         evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
           (approx. 4.7% of GDP)
-      enlargement:
-        score: 1
-        evidence: Deputy Prime Minister Sikorski said that procurement of defence
-          products financed under SAFE, Security Action for Europe, will further strengthen
-          Poland’s security.
     visegrad:
       defence:
         score: 2
         evidence: Our total military expenditure in 2025 exceeded PLN 186.5 billion
-          (approx. 4.7% of GDP) and the defence budget (including the Armed Forces
-          Support Fund) for 2026 is set at PLN 200 billion, that is approx. 4.8% of
-          GDP.
-      enlargement:
-        score: 1
-        evidence: Deputy Prime Minister Sikorski said that procurement of defence
-          products financed under SAFE, Security Action for Europe, will further strengthen
-          Poland’s security.
+          (approx. 4.7% of GDP)
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

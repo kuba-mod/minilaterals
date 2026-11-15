@@ -1,0 +1,24 @@
+actors:
+- EE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Margus Tsahkna
+  - Taimar Peterkop
+  topics: []
+  location: null
+  position: Foreign Minister Margus Tsahkna announced his proposal to the Government
+    to appoint Taimar Peterkop as the Secretary General of the Ministry of Foreign
+    Affairs.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

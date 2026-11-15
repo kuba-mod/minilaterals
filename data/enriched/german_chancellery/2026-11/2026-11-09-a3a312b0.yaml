@@ -1,0 +1,62 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- iran
+- migration
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Meyer (Deputy Government Spokesperson)
+  - Sauter (Security Policy Advisor)
+  - Bundeskanzler (Chancellor)
+  - Minister Schneider
+  - Minister Alabali Radovan
+  - Minister Dobrindt
+  topics:
+  - ukraine
+  - iran
+  - migration
+  - green_transition
+  location: Berlin, Germany
+  position: Germany expresses readiness for diplomatic engagement regarding Ukraine
+    and Iran, maintains a strict migration steering policy, and continues its commitment
+    to international climate finance.
+  positions:
+    ukraine: Germany is fundamentally ready for talks with Russia if they have clear
+      goals and a reasonable basis, emphasizing that Ukraine must decide sovereignly
+      over its territory and that a ceasefire is a necessary foundation for peace
+      negotiations.
+    iran: Germany maintains that the state ideology of Iran is to kill Jews, based
+      on statements by the Iranian leadership.
+    migration: Germany views the current decline in asylum applications as a successful
+      'migration turn' resulting from a combination of external factors and a more
+      restrictive national and European migration policy.
+    green_transition: Germany remains a strong pillar of international climate finance
+      and is promoting a global transition away from fossil fuels and increased electrification.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Wir sind da eng abgestimmt, nicht nur im Bereich der E3, sondern
+          auch weiter im europäischen Kontext.
+      green_transition:
+        score: 1
+        evidence: Deutschland ist unverändert eines der starken Länder internationaler
+          Klimafinanzierung.
+    e3:
+      iran:
+        score: 0
+        evidence: Es gibt hinlänglich Aussagen der iranischen Staatsführung, die das
+          belegen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

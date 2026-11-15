@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: The United Kingdom, alongside several partners, issued a joint statement
+    emphasizing the critical role of civil society in defending democracy and regional
+    security within the OSCE.
+  positions:
+    rule_of_law: The United Kingdom advocates for the protection of civil society
+      as a fundamental component of defending democracy and the rule of law.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,35 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Radosław Sikorski
+  - Marcin Czepelak
+  topics:
+  - rule_of_law
+  location: null
+  position: Poland has signed an agreement with the Permanent Court of Arbitration
+    to enable international arbitration, conciliation, and mediation proceedings to
+    be conducted within Poland.
+  positions:
+    rule_of_law: Poland aims to strengthen its position as a venue for resolving international
+      disputes of public interest and intends for Warsaw to become a regional center
+      for international arbitration.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Umowa pozwoli na prowadzenie w Polsce postępowań arbitrażowych,
+          koncyliacyjnych i mediacyjnych, a także korzystanie z innych alternatywnych
+          metod rozwiązywania sporów
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

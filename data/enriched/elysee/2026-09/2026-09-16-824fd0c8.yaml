@@ -8,18 +8,17 @@ visegrad_relevant: false
 baltic_relevant: false
 aukus_relevant: false
 extracted:
-  event_type: statement
+  event_type: speech
   participants:
   - President of the Republic
   topics:
   - defence
   location: Paris, France
-  position: The French President presided over a military ceremony to honor deserving
-    military and civilian personnel and mark the renovation of the Hôtel national
-    des Invalides.
+  position: The President of France presided over a military ceremony and awarded
+    decorations to deserving military and civilian personnel.
   positions:
-    defence: France recognized and decorated meritorious members of the Armed Forces
-      and the Gendarmerie.
+    defence: France recognized and honored the merits of military and Gendarmerie
+      personnel through the awarding of decorations.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

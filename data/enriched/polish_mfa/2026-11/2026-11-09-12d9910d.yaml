@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wojciech Zajączkowski
+  - Pamela Handal Rivera
+  topics:
+  - hybrid
+  location: null
+  position: Poland seeks to intensify political dialogue with Honduras and warns against
+    Russian disinformation and recruitment of Latin American soldiers.
+  positions:
+    hybrid: Poland highlighted the issue of Russian disinformation and the recruitment
+      of Latin American soldiers under false promises of legal work.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Wiceminister Wojciech Zajączkowski przedstawił także problematykę
+          dezinformacji rosyjskiej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

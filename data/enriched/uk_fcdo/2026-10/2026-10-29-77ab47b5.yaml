@@ -16,11 +16,11 @@ extracted:
   - defence
   location: null
   position: The United Kingdom advocates for international cooperation within the
-    UN to ensure emerging technologies are used to enhance maritime security and safer
-    seas.
+    UN to ensure emerging technologies are used to enhance maritime security and maintain
+    safer seas.
   positions:
-    defence: The UK emphasizes the need for a coordinated global approach to managing
-      emerging technologies to prevent them from undermining maritime security.
+    defence: The UK emphasizes the need for a coordinated global approach to manage
+      the impact of emerging technologies on maritime security.
   stances:
     aukus:
       defence:

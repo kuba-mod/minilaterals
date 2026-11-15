@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Maud Bregeon
+  - Mathieu Lefèvre
+  - Roland Lescure
+  - Arnaud Viala
+  topics:
+  - green_transition
+  - energy
+  location: null
+  position: France announces several government personnel changes and reassignments
+    of ministerial responsibilities.
+  positions:
+    green_transition: Mathieu Lefèvre, Minister Delegate for Ecological Transition,
+      is appointed as government spokesperson.
+    energy: Roland Lescure, Minister of Economy, Finance and Industrial, Energy and
+      Digital Sovereignty, will exercise the duties of Minister of Energy.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

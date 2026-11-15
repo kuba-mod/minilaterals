@@ -1,0 +1,23 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Coalition for the Rights and Protection of Children in the Age of AI
+  topics: []
+  location: null
+  position: France is leading a coalition with Spain and Kenya to establish a charter
+    and a scientific research network aimed at ensuring generative AI is safe, age-appropriate,
+    and protective of children's rights and development.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

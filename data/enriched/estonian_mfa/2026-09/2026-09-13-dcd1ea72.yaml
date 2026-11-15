@@ -17,12 +17,11 @@ extracted:
   - ukraine
   - defence
   location: Kyiv, Ukraine
-  position: Estonia supports providing urgent financial aid to Ukraine to strengthen
-    its deep-strike capabilities against Russia and prepare for winter.
+  position: Estonia supports providing urgent financial aid to Ukraine to enable deep
+    strikes against Russia and preparation for winter.
   positions:
-    ukraine: Estonia is coordinating with Ukraine to address its most urgent needs
-      for winter preparation.
-    defence: Estonia advocates for rapid financial assistance to enable Ukraine to
+    ukraine: Estonia is discussing Ukraine's most urgent needs for winter preparations.
+    defence: Estonia advocates for rapid financial assistance to allow Ukraine to
       increase pressure on Russia through deep strikes.
   stances: {}
 enriched_by:

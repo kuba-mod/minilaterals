@@ -16,13 +16,13 @@ extracted:
   - ukraine
   - defence
   location: null
-  position: Poland reports that its exports of armaments and military equipment reached
-    2.48 billion euros in 2025, despite a downward trend compared to 2024.
+  position: Poland reports record-high military exports for 2025, totaling 2.48 billion
+    euros, with a primary focus on supporting Ukraine.
   positions:
-    ukraine: Poland continues to be a major supplier of military equipment to Ukraine,
-      with Ukrainian entities accounting for approximately 67% of the export value.
-    defence: Poland is maintaining a high volume of defense exports, primarily driven
-      by ammunition and aviation products.
+    ukraine: Poland continues to provide significant military support to Ukraine,
+      which accounts for approximately 67% of its arms export value.
+    defence: Poland is expanding its defense industry's international presence, with
+      ammunition and aviation products being the primary drivers of export growth.
   stances:
     weimar:
       ukraine:
@@ -33,7 +33,8 @@ extracted:
       defence:
         score: 2
         evidence: Zeszłoroczna wartość wywozów oraz transferów wewnątrzunijnych uzbrojenia
-          i sprzętu wojskowego osiągnęła wartość 2,48 mld euro
+          i sprzętu wojskowego osiągnęła wartość 2,48 mld euro i należy nadal do rekordowych
+          w historii
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

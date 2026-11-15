@@ -12,18 +12,26 @@ extracted:
   participants:
   - Bogdan Borusewicz
   - Ewa Polkowska
-  - representatives of various ministries
+  - representatives of the Ministry of Foreign Affairs
+  - representatives of the Ministry of National Education
+  - representatives of the Ministry of Science and Higher Education
+  - representatives of the Ministry of Culture and National Heritage
+  - representatives of the Ministry of Family, Labour and Social Policy
+  - representatives of the Ministry of Development and Technology
+  - representatives of the Ministry of National Defence
+  - representatives of the Ministry of Infrastructure
+  - representatives of the Ministry of Justice
+  - representatives of the Ministry of the Interior and Administration
   - Office for War Veterans and Victims of Oppression
   - Statistics Poland
-  - Senate of the Republic of Poland
   topics:
   - migration
   location: null
   position: Poland is coordinating inter-ministerial efforts to implement the Government
-    Strategy for Cooperation with Polonia and Poles Abroad for 2025–2030.
+    Strategy for Cooperation with the Polish Diaspora and Poles Abroad for 2025–2030.
   positions:
-    migration: Poland is focusing on coordinating support programs, grant systems,
-      and strategic evaluations for Polish citizens living abroad.
+    migration: Poland is reviewing the implementation of priorities for the Polish
+      diaspora and planning budget allocations for 2027 to support Poles living abroad.
   stances: {}
 enriched_by:
   model_id: gemma4:latest

@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - ukraine
+  - defence
+  location: Dublin, Ireland
+  position: Germany advocates for a unified EU position on Ukraine financing and security,
+    linking the EU budget to collective support for Ukraine.
+  positions:
+    ukraine: Germany emphasizes that supporting Ukraine is in the interest of all
+      Europeans and calls for joint financing of the country as a shared task of all
+      member states.
+    defence: Germany asserts that European security is closely linked to the defense
+      of Ukraine and calls for European security policy to be borne solidarily by
+      all EU members.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Die Unterstützung der Ukraine ist und bleibt im Interesse aller
+          Europäer
+      defence:
+        score: 1
+        evidence: europäische Sicherheitspolitik auch von allen EU -Mitgliedern „solidarisch“
+          getragen werden
+    e3:
+      defence:
+        score: 0
+        evidence: Die europäische Sicherheit ist für die Bundesregierung eng mit der
+          Verteidigung der Ukraine verbunden.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

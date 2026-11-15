@@ -1,0 +1,47 @@
+actors:
+- FR
+issue_areas:
+- energy
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Anita Anand
+  topics:
+  - energy
+  - ukraine
+  - defence
+  location: null
+  position: France seeks to strengthen bilateral collaboration with Canada on energy,
+    AI safety, and the support of Ukraine and NATO's Eastern Flank.
+  positions:
+    energy: France emphasizes the importance of strengthening collaboration between
+      French and Canadian actors in the energy sector.
+    ukraine: France expresses gratitude to Canada for its continued support for Ukraine.
+    defence: France recognizes Canada's crucial role in the NATO Multinational Brigade
+      in Latvia to strengthen NATO's Eastern Flank.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: thanked Canada for its continued support for Ukraine
+      defence:
+        score: 1
+        evidence: contributing to the strengthening of NATO’s Eastern Flank
+    e3:
+      defence:
+        score: 0
+        evidence: thanked Canada for its continued support for Ukraine, and its crucial
+          role as a framework nation of the NATO Multinational Brigade in Latvia contributing
+          to the strengthening of NATO’s Eastern Flank
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

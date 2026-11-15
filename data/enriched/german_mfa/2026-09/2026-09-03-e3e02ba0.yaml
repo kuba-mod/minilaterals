@@ -30,26 +30,26 @@ extracted:
   - energy
   - iran
   location: Weimar, Germany
-  position: Germany, as part of the Weimar Triangle, commits to strengthening European
-    sovereignty, security, and competitiveness while supporting Ukraine and countering
-    Russian hybrid threats.
+  position: Germany, alongside France and Poland, reaffirms the Weimar Triangle as
+    a driving force for European integration, security, and resilience against external
+    threats.
   positions:
-    ukraine: Germany pledges continued military, financial, and industrial support
-      for Ukraine's sovereignty and territorial integrity until a just peace is achieved.
-    defence: Germany aims to strengthen the European pillar of NATO and increase European
-      autonomy in defense through a 360-degree approach and industrial cooperation.
-    hybrid: Germany commits to developing robust countermeasures and a coordinated
-      European response to protect democratic institutions from Russian hybrid activities
-      and disinformation.
+    ukraine: Germany commits to long-term military, financial, and industrial support
+      for Ukraine to ensure its sovereignty and a just peace in accordance with international
+      law.
+    defence: Germany advocates for a stronger European pillar within NATO and the
+      development of a more autonomous European defense industrial base.
+    hybrid: Germany emphasizes the need for robust countermeasures and coordinated
+      European responses to combat Russian hybrid threats, espionage, and disinformation.
     enlargement: Germany supports a rigorous and performance-based EU enlargement
       process for Ukraine, Moldova, and the Western Balkans.
-    green_transition: Germany advocates for an ambitious energy and climate policy
-      that implements international agreements and strengthens resilience against
-      climate change.
+    green_transition: Germany promotes an ambitious energy and climate policy to implement
+      international climate agreements and increase resilience against environmental
+      destruction.
     energy: Germany seeks to ensure secure, diversified, and affordable energy supplies
-      through a just energy transition.
-    iran: Germany emphasizes the necessity of ensuring Iran does not acquire nuclear
-      weapons and ceases its hostile activities in the region.
+      while transitioning to a green economy.
+    iran: Germany calls for the prevention of Iran acquiring nuclear weapons and the
+      cessation of its hostile activities in the region.
   stances:
     weimar:
       ukraine:
@@ -67,11 +67,11 @@ extracted:
           durch EU -Programme wie SAFE und EDIP sowie im Rahmen des nächsten MFR .
       hybrid:
         score: 2
-        evidence: Wir stehen solidarisch zusammen, wenn es darum geht, Bedrohungen
-          durch ausländische Akteure anzuzeigen, auch indem wir uns gegenseitig bei
-          der Attribuierung von Angriffen unterstützen.
+        evidence: Wir werden weiterhin robuste Gegenmaßnahmen erarbeiten, um unsere
+          Bürgerinnen und Bürger, unsere demokratischen Institutionen und unsere kritischen
+          Systeme vor hybrider Einflussnahme zu schützen und sie dagegen abzusichern.
       enlargement:
-        score: 1
+        score: 2
         evidence: Wir möchten die Eröffnung von Verhandlungsclustern und den leistungsbezogenen
           Erweiterungsprozess mit der Ukraine und der Republik Moldau rigoros vorantreiben;
           dasselbe gilt für einen maßgeschneiderten Ansatz, um allen Beitrittskandidaten,
@@ -87,7 +87,7 @@ extracted:
     e3:
       iran:
         score: 1
-        evidence: gewährleist, dass Iran nicht über Atomwaffen verfügt
+        evidence: gewährleiste, dass Iran nicht über Atomwaffen verfügt
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

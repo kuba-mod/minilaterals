@@ -1,0 +1,43 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Jean-Noël Barrot
+  - Antonio Tajani
+  topics:
+  - ukraine
+  - hybrid
+  - energy
+  location: null
+  position: France reaffirmed its commitment to strengthening bilateral cooperation
+    with Italy to enhance European autonomy and address global security and energy
+    challenges.
+  positions:
+    ukraine: France reaffirmed its long-term support for Ukraine, specifically within
+      the Coalition of the Willing.
+    hybrid: France strongly condemned recent hybrid and cyber attacks targeting its
+      territory and that of Italy.
+    energy: France discussed expanding bilateral industrial energy ties and implementing
+      initiatives to tackle high energy prices resulting from Middle East developments.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reaffirmed their long-term support for Ukraine
+      hybrid:
+        score: 1
+        evidence: strongly condemned the recent hybrid and cyber attacks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

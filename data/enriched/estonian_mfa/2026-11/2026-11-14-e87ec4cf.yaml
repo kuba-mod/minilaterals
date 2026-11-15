@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia asserts that European nations, not Russia, decide their own security
+    arrangements and will not negotiate Finland's membership in NATO.
+  positions:
+    defence: Estonia rejects any negotiations with Russia regarding the sovereign
+      security choices of European states, specifically Finland's NATO membership.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: Ei Eesti ega Euroopa hakka kunagi Putiniga arutama Soome lahkumist
+          NATOst ega muid küsimusi, mis puudutavad Euroopa riikide suveräänseid julgeolekuvalikuid
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

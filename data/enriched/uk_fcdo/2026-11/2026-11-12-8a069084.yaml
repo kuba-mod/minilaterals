@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Ambassador Sarah MacIntosh
+  topics:
+  - defence
+  location: New York, USA
+  position: The United Kingdom supports the UN Security Council resolution to take
+    decisive action against Houthi attacks in Yemen.
+  positions:
+    defence: The United Kingdom advocates for decisive action and sanctions to counter
+      reckless attacks by the Houthis in Yemen.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

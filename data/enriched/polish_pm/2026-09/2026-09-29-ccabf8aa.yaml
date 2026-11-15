@@ -19,16 +19,16 @@ extracted:
   - defence
   - energy
   location: null
-  position: The Polish Prime Minister is urging the President to sign budget and tax
-    legislation to benefit citizens while emphasizing the need for heightened security
-    due to Russian aggression near the border.
+  position: The Polish government is pushing for tax reductions for the middle class
+    and fuel price subsidies while increasing military readiness due to Russian aggression
+    near the border.
   positions:
     ukraine: Poland maintains exemplary cooperation with Ukraine, receiving real-time
       information on threats posed by Russian aggression.
-    defence: Poland is increasing military alertness and air force activity to ensure
-      security following Russian drone strikes near the Polish border.
-    energy: The government seeks to implement a tax on the windfall profits of fuel
-      companies to lower fuel prices for citizens.
+    defence: Poland has increased the activity of its air force and security services
+      to ensure border safety in response to Russian drones and attacks.
+    energy: The government seeks to lower fuel prices through a tax on the windfall
+      profits of fuel companies.
   stances:
     weimar:
       ukraine:

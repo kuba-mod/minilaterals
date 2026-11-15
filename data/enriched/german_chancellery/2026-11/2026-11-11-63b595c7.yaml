@@ -1,0 +1,39 @@
+actors:
+- DE
+- AU
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Katherina Reiche
+  - Johann Wadephul
+  - Reem Alabali Radovan
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: Germany is implementing a strategic realignment of its raw materials foreign
+    policy to secure supply chains through diversified bilateral partnerships and
+    increased domestic recycling.
+  positions:
+    energy: Germany aims to reduce dependency on single suppliers by diversifying
+      raw material supply routes to ensure a more resilient industrial supply chain.
+    green_transition: Germany intends to better utilize domestic raw material potentials
+      and increase the recovery of materials through recycling.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: müssen wir heimische Rohstoffpotenziale besser nutzen und mehr Rohstoffe
+          durch Recycling zurückgewinnen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

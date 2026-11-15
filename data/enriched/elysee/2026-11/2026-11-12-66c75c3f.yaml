@@ -1,0 +1,69 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- CZ
+- SK
+- HU
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- defence
+- hybrid
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  location: Dublin, Ireland
+  position: France and other signatory states reaffirm their unwavering support for
+    Ukraine's sovereignty and the necessity of strengthening European security in
+    response to Russian aggression.
+  positions:
+    ukraine: France supports Ukraine's independence, territorial integrity, and the
+      provision of solid security guarantees to prevent future aggression.
+    defence: France views the reinforcement of European security and the defense of
+      security interests as a common objective.
+    hybrid: France asserts that Russian hybrid campaigns will only strengthen the
+      determination and commitment to support Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: réaffirment leur soutien indéfectible à l’indépendance, à la souveraineté
+          et à l’intégrité territoriale de l’Ukraine
+      hybrid:
+        score: 1
+        evidence: les campagnes hybrides menées par la Russie et ses tentatives visant
+          à saper le soutien apporté à l’Ukraine ne feront que renforcer leur engagement
+          envers l’Ukraine et leur détermination
+    e3:
+      defence:
+        score: 1
+        evidence: le renforcement de la sécurité européenne et la défense de leurs
+          intérêts en matière de sécurité constituent leur objectif commun
+    visegrad:
+      defence:
+        score: 1
+        evidence: le renforcement de la sécurité européenne et la défense de leurs
+          intérêts en matière de sécurité constituent leur objectif commun
+    baltic:
+      hybrid:
+        score: 1
+        evidence: les campagnes hybrides menées par la Russie et ses tentatives visant
+          à saper le soutien apporté à l’Ukraine ne feront que renforcer leur engagement
+          envers l’Ukraine et leur détermination
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

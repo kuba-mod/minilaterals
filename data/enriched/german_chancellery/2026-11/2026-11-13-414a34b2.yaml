@@ -1,0 +1,48 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Alexander Stubb
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany is hosting the Finnish President to discuss security, defense,
+    and Russia's war against Ukraine.
+  positions:
+    ukraine: Germany intends to discuss Russia's war of aggression against Ukraine
+      with the Finnish President.
+    defence: Germany intends to exchange views on security and defense with the Finnish
+      President.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: Im Vordergrund des Austauschs werden voraussichtlich die Themenbereiche
+          Sicherheit und Verteidigung sowie der Angriffskrieg Russlands gegen die
+          Ukraine stehen
+      defence:
+        score: 0
+        evidence: Im Vordergrund des Austauschs werden voraussichtlich die Themenbereiche
+          Sicherheit und Verteidigung sowie der Angriffskrieg Russlands gegen die
+          Ukraine stehen
+    e3:
+      defence:
+        score: 0
+        evidence: Im Vordergrund des Austauschs werden voraussichtlich die Themenbereiche
+          Sicherheit und Verteidigung sowie der Angriffskrieg Russlands gegen die
+          Ukraine stehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

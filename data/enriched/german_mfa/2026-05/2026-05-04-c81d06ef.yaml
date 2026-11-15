@@ -1,12 +1,11 @@
 actors:
 - DE
 issue_areas:
-- rule_of_law
+- ukraine
 - defence
 - hybrid
-- enlargement
-- green_transition
-- ukraine
+- rule_of_law
+- migration
 weimar_relevant: true
 e3_relevant: true
 visegrad_relevant: false
@@ -15,60 +14,56 @@ aukus_relevant: false
 extracted:
   event_type: joint_statement
   participants:
-  - Ministers for Foreign Affairs of the Hellenic Republic
-  - Federal Republic of Germany
+  - Minister for Foreign Affairs of the Hellenic Republic
+  - Minister for Foreign Affairs of the Federal Republic of Germany
   topics:
-  - rule_of_law
+  - ukraine
   - defence
   - hybrid
-  - enlargement
-  - green_transition
-  - ukraine
+  - rule_of_law
+  - migration
   location: null
-  position: Germany and Greece are upgrading their partnership to a new level by establishing
-    an agenda for Strategic Cooperation across multiple pillars including foreign
-    policy, defense, economy, and culture.
+  position: Germany agrees to establish a Partnership for Strategic Cooperation with
+    Greece to deepen coordination across foreign policy, security, defence, and economic
+    pillars.
   positions:
-    rule_of_law: The statement affirms commitment to democratic values and the international
-      rules-based order as foundational principles of cooperation.
-    defence: Germany supports strengthening defense capabilities by committing to
-      joint efforts in procurement, logistics, and crisis management.
-    hybrid: The statement calls for coordinated action against hybrid threats as part
-      of strengthening defense and security cooperation.
-    enlargement: The statement does not explicitly address the EU enlargement process
-      or Western Balkans accession.
-    green_transition: The statement focuses on economic resilience and digital transformation
-      but does not specifically mention climate neutrality or green industrial policy.
-    ukraine: Germany commits to joint responsibility with Greece in contributing to
-      peace and security in Europe following Russia's war of aggression against Ukraine.
+    ukraine: Germany commits to contributing to peace and security in Europe in response
+      to Russia's war of aggression against Ukraine.
+    defence: Germany aims to strengthen capabilities in defence procurement, logistics,
+      and crisis management.
+    hybrid: Germany seeks to expand efforts to respond to hybrid threats through the
+      new strategic partnership.
+    rule_of_law: Germany reaffirms its commitment to the respect for the rule of law
+      and a rules-based international order.
+    migration: Germany intends to create an ambitious framework for bilateral and
+      European coordination on migration flows.
   stances:
     weimar:
-      rule_of_law:
+      ukraine:
         score: 1
-        evidence: shared values of freedom and democracy, human rights and the respect
-          for the rule of law
+        evidence: Against the backdrop of fundamental geopolitical changes following
+          Russia’s war of aggression against Ukraine... Greece and Germany are committed
+          to jointly assume responsibility and step up their efforts to contribute
+          to peace and security in Europe and beyond.
       defence:
         score: 1
-        evidence: expand our efforts in defence procurement, logistics, and crisis
+        evidence: strengthen our capabilities to respond to conventional and hybrid
+          threats and expand our efforts in defence procurement, logistics, and crisis
           management
       hybrid:
         score: 1
         evidence: strengthen our capabilities to respond to conventional and hybrid
           threats
-      ukraine:
+      rule_of_law:
         score: 1
-        evidence: Against the backdrop of fundamental geopolitical changes following
-          Russia’s war of aggression against Ukraine
-      green_transition:
-        score: 1
-        evidence: harness new technologies for governance, business and socially just
-          transformation
+        evidence: shared values of freedom and democracy, human rights and the respect
+          for the rule of law serving as a solid fundament
     e3:
       defence:
-        score: 1
-        evidence: with the objective to strengthen our capabilities to respond to
-          conventional and hybrid threats and expand our efforts in defence procurement,
-          logistics, and crisis management.
+        score: 0
+        evidence: strengthen our capabilities to respond to conventional and hybrid
+          threats and expand our efforts in defence procurement, logistics, and crisis
+          management
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'
