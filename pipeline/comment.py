@@ -37,6 +37,7 @@ from pathlib import Path
 import anthropic
 from openai import OpenAI
 
+from pipeline import usage
 from pipeline.render import (
     build_convergence_clusters,
     load_events,
@@ -105,6 +106,7 @@ class OllamaProvider:
             # is suppressed; extract the last non-empty paragraph as the response.
             paragraphs = [p.strip() for p in msg.reasoning.split("\n\n") if p.strip()]
             content = paragraphs[-1] if paragraphs else ""
+        usage.record_ollama(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(content))
         return content
 
 
@@ -121,7 +123,9 @@ class AnthropicProvider:
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": prompt}],
         )
-        return response.content[0].text.strip()
+        text = response.content[0].text.strip()
+        usage.record_anthropic(self.model, response, len(SYSTEM_PROMPT) + len(prompt), len(text))
+        return text
 
 
 # ---------------------------------------------------------------------------
