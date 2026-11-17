@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Wadephul
+  - President Aliyev
+  - Prime Minister Pashinyan
+  - President Putin
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: Germany aims to support a lasting peace process and strategic partnerships
+    between Armenia and Azerbaijan while opposing Russian influence in the South Caucasus.
+  positions:
+    ukraine: Germany views Russia's war of aggression against Ukraine as evidence
+      of Putin's desire to undermine the sovereignty of states, including those in
+      the South Caucasus.
+    energy: Germany recognizes the South Caucasus as a hub with significant potential
+      for energy partnerships.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Russlands Angriffskrieg gegen die Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

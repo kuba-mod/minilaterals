@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- defence
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Russian Chargé d'Affaires
+  topics:
+  - defence
+  - hybrid
+  location: null
+  position: Estonia summoned the Russian Chargé d'Affaires to condemn an attempted
+    arson attack against the defense company Threod Systems, which was attributed
+    to Russia's GRU.
+  positions:
+    defence: Estonia strongly condemns the attempted sabotage against the defense
+      industry company Threod Systems.
+    hybrid: Estonia identifies the attempted arson as a sabotage act ordered by the
+      Russian military intelligence GRU.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: väljendada tugevat hukkamõistu laupäeva öösel kaitsetööstusettevõtte
+          Threod Systems vastu toime pandud süütamiskatsele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

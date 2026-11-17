@@ -1,0 +1,48 @@
+actors:
+- DE
+issue_areas:
+- defence
+- green_transition
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Dr. Johannes Bussmann
+  - Frau Maurer
+  - Markus Söder
+  topics:
+  - defence
+  - green_transition
+  location: Munich, Germany
+  position: Germany is supporting the aviation industry through investments in research
+    and development to ensure technological sovereignty, competitiveness, and a transition
+    to emission-free flight.
+  positions:
+    defence: Germany emphasizes the strategic importance of the aerospace industry
+      for European security and sovereignty, specifically mentioning the production
+      of engines for the Eurofighter.
+    green_transition: Germany is promoting the development of emission-free and hybrid-electric
+      propulsion systems to achieve sustainable aviation.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Sie leistet einen wichtigen Beitrag zur Sicherheit und zur Souveränität
+          Europas.
+      green_transition:
+        score: 1
+        evidence: mit weniger Energie fliegen, emissionsarm, eines Tages emissionsfrei.
+    e3:
+      defence:
+        score: 1
+        evidence: Sie leistet einen wichtigen Beitrag zur Sicherheit und zur Souveränität
+          Europas.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

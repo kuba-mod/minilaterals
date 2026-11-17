@@ -1,0 +1,26 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Dr. Wolfram Weimer
+  - Dr. Manja Schüle
+  - Stefan Evers
+  - Prof. Dr. Christoph M. Vogtherr
+  topics: []
+  location: Berlin, Germany
+  position: Germany, in cooperation with the states of Berlin and Brandenburg, has
+    signed a financing agreement to provide over 54.5 million euros annually from
+    2027 to 2030 for the preservation of the Prussian Palaces and Gardens Foundation.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

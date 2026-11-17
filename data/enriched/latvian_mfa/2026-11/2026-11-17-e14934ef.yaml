@@ -1,0 +1,31 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - B. Braže
+  - Foreign Minister
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Latvia asserts that Russia's demands regarding European security are absurd
+    and emphasizes the need to support Ukraine.
+  positions:
+    ukraine: Latvia emphasizes the necessity of continued support for Ukraine during
+      the fifth winter of Russian aggression.
+    defence: Latvia maintains that Russian security demands for Europe are absurd
+      and that Europe remains united in this view.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

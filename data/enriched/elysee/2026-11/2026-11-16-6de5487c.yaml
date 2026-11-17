@@ -1,0 +1,57 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+- energy
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - King Norodom Sihamoni
+  - Prime Minister Hun Manet
+  topics:
+  - defence
+  - green_transition
+  - energy
+  - rule_of_law
+  location: Phnom Penh, Cambodia
+  position: France has established a renewed partnership with Cambodia to deepen bilateral
+    cooperation in economic development, security, environmental sustainability, and
+    cultural exchange.
+  positions:
+    defence: France is modernizing its defense cooperation with Cambodia, including
+      the training of officers and support for peacekeeping operations.
+    green_transition: France is supporting Cambodia's goal of carbon neutrality by
+      2050 and its commitment to avoid new coal-fired power plants.
+    energy: France is providing expertise and funding through the AFD to develop Cambodia's
+      energy sector and accelerate low-carbon electrification.
+    rule_of_law: France reaffirms its commitment to a partnership based on the rule
+      of law, human rights, and the modernization of Cambodia's legal information
+      systems.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: confirmé leur détermination à atteindre pleinement les objectifs
+          de l’Accord de Paris
+      rule_of_law:
+        score: 1
+        evidence: leur attachement commun aux principes de souveraineté et de défense
+          des valeurs que les deux pays ont en partage, dans un cadre respectueux
+          des droits de l’Homme et de l’État de droit
+    e3:
+      defence:
+        score: 0
+        evidence: Alors que 2026 marque les 80 ans de la coopération militaire franco-cambodgienne,
+          les deux dirigeants ont souhaité approfondir ce partenariat
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

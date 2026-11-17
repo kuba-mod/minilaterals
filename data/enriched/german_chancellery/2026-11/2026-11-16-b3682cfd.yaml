@@ -1,0 +1,54 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- AU
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany aims to lead a sovereign, competitive, and free Europe while strengthening
+    its own defense capabilities and supporting Ukraine's freedom.
+  positions:
+    ukraine: Germany supports Ukraine in its fight for freedom against Russia.
+    defence: Germany is investing record sums in its defense and has increased its
+      presence on NATO's eastern flank, including stationing a brigade in the Baltic
+      states.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Darum unterstützen wir die Ukraine in ihrem Freiheitskampf gegen
+          Russland.
+      defence:
+        score: 2
+        evidence: Darum haben wir unsere Präsenz an der Ostflanke der NATO verstärkt.
+          Und darum investieren wir viel in die baltischen Staaten bis hin zu einer
+          ganzen Brigade, die dort erstmalig als großer Verband der Bundeswehr im
+          Ausland stationiert wird.
+    e3:
+      defence:
+        score: 0
+        evidence: Darum investieren wir Rekordsummen in unsere Verteidigung.
+    aukus:
+      defence:
+        score: 1
+        evidence: Darum investieren wir Rekordsummen in unsere Verteidigung.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

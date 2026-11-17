@@ -1,0 +1,85 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+- indo_pacific
+- iran
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Foreign Ministers of Germany
+  - Foreign Ministers of France
+  - Foreign Ministers of Italy
+  - Foreign Ministers of Japan
+  - Foreign Ministers of Canada
+  - Foreign Ministers of the United Kingdom
+  - Foreign Ministers of the United States of America
+  - High Representative of the European Union
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  - indo_pacific
+  - iran
+  - migration
+  location: Paris, France
+  position: Germany, as part of the G7, reaffirms its commitment to supporting Ukraine's
+    sovereignty, countering Iranian and North Korean destabilization, and ensuring
+    maritime security and resilience in the Indo-Pacific and beyond.
+  positions:
+    ukraine: Germany supports Ukraine's territorial integrity and pledges continued
+      military aid, including air defense and long-range capabilities, while seeking
+      a just peace through negotiations.
+    defence: Germany commits to strengthening the military production of Ukraine and
+      coordinating sanctions against Russia's war economy and its suppliers.
+    hybrid: Germany vows to use all available instruments to deter and respond to
+      malicious hybrid activities, including sabotage of critical infrastructure and
+      foreign information manipulation.
+    energy: Germany supports the energy security and resilience of Ukraine and emphasizes
+      the need to protect global energy infrastructure from attacks.
+    indo_pacific: Germany advocates for a free and open Indo-Pacific, rejecting any
+      unilateral attempts to change the status quo by force, particularly in the Taiwan
+      Strait and South China Sea.
+    iran: Germany opposes Iran's development of nuclear weapons and condemns its attacks
+      on neighbors and the disruption of international trade in the Strait of Hormuz.
+    migration: Germany condemns the instrumentalization of migration as part of hybrid
+      campaigns and seeks to dismantle human trafficking and smuggling networks.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: zogen wir eine Bilanz der Fortschritte bei der Versorgung der Ukraine
+          mit Luftabwehrfähigkeiten, Luftabwehrsystemen und Abfangraketen sowie Langstreckenfähigkeiten
+          und Lizenzen
+      hybrid:
+        score: 1
+        evidence: bekräftigten unsere Entschlossenheit zu resolutem und koordiniertem
+          Handeln, um hybriden Kampagnen entgegenzuwirken
+    aukus:
+      defence:
+        score: 1
+        evidence: Wir erkannten die Chancen, die Frontier‑Modelle für den Fortschritt
+          der Wissenschaft und die Stärkung unserer Volkswirtschaften bieten
+      indo_pacific:
+        score: 1
+        evidence: Betonung der Bedeutung eines freien und offenen indopazifischen
+          Raums, der wohlhabend und sicher ist und gemeinsame Grundsätze schützt,
+          darunter Souveränität, territoriale Unversehrtheit, Rechtsstaatlichkeit
+          und die friedliche Beilegung von Streitigkeiten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

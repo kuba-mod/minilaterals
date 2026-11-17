@@ -1,0 +1,106 @@
+actors:
+- FR
+- PL
+- UK
+- CZ
+- SK
+- HU
+- EE
+- LV
+- LT
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- rule_of_law
+- migration
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - rule_of_law
+  - migration
+  location: Dublin, Ireland
+  position: France and other signatory states commit to strengthening European security
+    and providing robust security guarantees to Ukraine to ensure a just and lasting
+    peace.
+  positions:
+    ukraine: France reaffirms its firm support for Ukraine's sovereignty and territorial
+      integrity and emphasizes that its security is integral to Euro-Atlantic security.
+    defence: France commits to strengthening national and collective defence capabilities,
+      enhancing industrial production, and maintaining the transatlantic bond via
+      NATO.
+    hybrid: France pledges to develop tools to prevent, deter, and respond to hybrid
+      activities and cyber attacks conducted below the threshold of armed attack.
+    enlargement: France views the merit-based enlargement of the European Union as
+      a geostrategic investment in the continent's peace and stability.
+    rule_of_law: France asserts that the rule of law, human rights, and democratic
+      integrity are essential elements of comprehensive security and resilience.
+    migration: France commits to fighting migrant-smuggling and organized crime networks
+      in accordance with international law.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: reiterate their firm support for the independence, sovereignty,
+          and territorial integrity of Ukraine
+      defence:
+        score: 1
+        evidence: strengthening both national and collective defence capabilities
+          in the appropriate forums to address threats with a 360° approach
+      hybrid:
+        score: 1
+        evidence: the signatory states will work in order to develop the tools necessary
+          to prevent, deter and respond to these challenges
+      enlargement:
+        score: 1
+        evidence: Enlargement of the European Union, anchored in a merit-based process
+          and as a geostrategic investment in peace, security, stability and prosperity
+      rule_of_law:
+        score: 1
+        evidence: Democracy, rule of law, human rights and respect of the humanitarian
+          international law are essential elements of comprehensive security
+    e3:
+      defence:
+        score: 1
+        evidence: the signatory states, gathered for the 9th Summit of the European
+          Political Community in Dublin on the 12th of November 2026, consider strengthening
+          European security and defending their security interests as their common
+          objective
+    visegrad:
+      defence:
+        score: 1
+        evidence: the signatory states reaffirm their commitments to strengthening
+          their capabilities in order to respond to their legitimate security needs,
+          enhance their security and ensure the defence of Europe
+      enlargement:
+        score: 1
+        evidence: Enlargement of the European Union, anchored in a merit-based process
+          and as a geostrategic investment in peace, security, stability and prosperity,
+          also contributes – together with the European Neighbourhood Policy - to
+          the security of the continent.
+    baltic:
+      defence:
+        score: 1
+        evidence: Signatories who are members of NATO reaffirm that NATO is the foundation
+          of their collective security and that the Alliance remains the cornerstone
+          of their collective defence.
+      hybrid:
+        score: 1
+        evidence: the signatory states will work in order to develop the tools necessary
+          to prevent, deter and respond to these challenges, to strengthen the protection
+          of their critical infrastructure, to enhance their resilience
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  topics: []
+  location: Hamburg, Germany
+  position: Germany continues to support the short film sector as an indispensable
+    part of the national film landscape through the 70th German Short Film Awards.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,28 @@
+actors:
+- FR
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Emmanuel Macron
+  - Hun Manet
+  - Norodom Sihamoni
+  topics:
+  - energy
+  location: Phnom Penh, Cambodia
+  position: France seeks to deepen its bilateral relationship with Cambodia and promote
+    the Francophonie as a political and economic tool for peace, innovation, and multilateralism.
+  positions:
+    energy: France aims to renew and deepen its relationship with Cambodia specifically
+      in the energy sector.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
