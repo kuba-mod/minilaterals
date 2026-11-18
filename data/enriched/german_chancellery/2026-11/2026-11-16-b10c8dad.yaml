@@ -1,0 +1,51 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- migration
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Hille
+  - Wadephul
+  - Hinterseher
+  - Menkel
+  - Szent-Iványi
+  - Merz
+  topics:
+  - ukraine
+  - migration
+  - rule_of_law
+  location: Berlin, Germany
+  position: Germany is pursuing strategic agendas in the South Caucasus, exploring
+    'Return Hubs' for migration management in third countries like Rwanda, and coordinating
+    a unified European approach to the conflict in Ukraine.
+  positions:
+    ukraine: Germany emphasizes that decisions regarding Ukraine must be made by Ukraine
+      and in close coordination with European partners, while maintaining the irreversibility
+      of Ukraine's NATO perspective.
+    migration: Germany is examining the implementation of 'Return Hubs' in partner
+      countries, including Rwanda, to facilitate the return of individuals whose asylum
+      procedures have been concluded.
+    rule_of_law: Germany asserts that any agreement on 'Return Hubs' must include
+      legally binding safeguards to ensure the adherence to human rights standards.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland steht unverändert zu den gemeinsamen Beschlüssen der
+          NATO und zur euroatlantischen Beitrittsperspektive der Ukraine.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

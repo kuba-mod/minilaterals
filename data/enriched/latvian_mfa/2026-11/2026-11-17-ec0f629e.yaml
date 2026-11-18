@@ -1,0 +1,35 @@
+actors:
+- LV
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Baiba Braže
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Foreign Minister Baiba Braže highlights key achievements including strengthening
+    ties with the US, supporting Ukraine, and increasing the number of allies in Latvia.
+  positions:
+    ukraine: Latvia provides support to Ukraine and works towards the weakening of
+      Russia.
+    defence: Latvia has achieved a record number of allies present in the country
+      and maintains close relations with the United States.
+  stances:
+    baltic:
+      defence:
+        score: 2
+        evidence: Rekordliels sabiedroto skaits Latvijā
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

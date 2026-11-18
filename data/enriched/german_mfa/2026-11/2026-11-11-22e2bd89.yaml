@@ -79,6 +79,19 @@ extracted:
           Raums, der wohlhabend und sicher ist und gemeinsame Grundsätze schützt,
           darunter Souveränität, territoriale Unversehrtheit, Rechtsstaatlichkeit
           und die friedliche Beilegung von Streitigkeiten.
+    e3:
+      defence:
+        score: 1
+        evidence: Wir betonten erneut, dass Verhandlungen über die künftige Sicherheit
+          in Europa unter Einbindung der Europäer stattfinden müssen.
+      iran:
+        score: 2
+        evidence: Wir bekräftigten unser Bekenntnis zur vollständigen Umsetzung der
+          Verpflichtungen im Zusammenhang mit den sich aus allen einschlägigen Resolutionen
+          des VN -Sicherheitsrats ergebenden Sanktionen und damit Zusammenhangs restriktiven
+          Maßnahmen, die im September 2025 mittels des mit Resolution 2231 des VN
+          -Sicherheitsrats vorgesehenen Snapback-Mechanismus wieder in Kraft gesetzt
+          wurden
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

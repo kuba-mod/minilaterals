@@ -25,7 +25,11 @@ extracted:
   positions:
     defence: France supports strengthening the Lebanese Armed Forces and the implementation
       of a state monopoly on weapons to avoid a security vacuum.
-  stances: {}
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: emphasized the importance of strengthening the Lebanese Armed Forces
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

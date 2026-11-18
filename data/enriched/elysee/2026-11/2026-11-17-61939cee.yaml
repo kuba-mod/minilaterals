@@ -1,0 +1,65 @@
+actors:
+- FR
+issue_areas:
+- defence
+- hybrid
+- green_transition
+- energy
+- ukraine
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Emmanuel Macron
+  - Anwar Ibrahim
+  topics:
+  - defence
+  - hybrid
+  - green_transition
+  - energy
+  - ukraine
+  location: Kuala Lumpur, Malaysia
+  position: France has elevated its bilateral relations with Malaysia to a strategic
+    partnership to enhance cooperation in economy, defense, energy, and education.
+  positions:
+    defence: France is strengthening defense ties through a new roadmap for industrial
+      partnerships, including the supply of H225M helicopters and 105LG cannons.
+    hybrid: France and Malaysia are establishing the Regional Security Center against
+      Hybrid Interference (RC-Shield) to increase resilience against hybrid threats.
+    green_transition: France is collaborating with Malaysia on a transition to renewable
+      energy and the conservation of marine biodiversity in line with the Paris Agreement.
+    energy: France signed a Memorandum of Understanding on critical minerals and a
+      Protocol of Understanding on energy transition, including civil nuclear energy.
+    ukraine: France calls for an immediate and total ceasefire to negotiate a comprehensive
+      and just peace between Ukraine and the Russian Federation.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: la mise en place du Centre régional de sécurité contre les ingérences
+          hybrides (RC-Shield) permettra de renforcer la préparation et la résilience
+          des deux pays face aux menaces hybrides et aux activités des zones grises
+      green_transition:
+        score: 0
+        evidence: Ils sont convenus de renforcer la collaboration dans les domaines
+          des technologies émergentes reposant sur les minerais critiques et la transition
+          énergétique
+      ukraine:
+        score: 1
+        evidence: appeler les parties concernées à conclure rapidement un cessez-le-feu
+          total et immédiat, en vue de négocier une paix globale, juste et durable
+          entre l’Ukraine et la Fédération de Russie
+    e3:
+      defence:
+        score: 1
+        evidence: Le Président de la République française a souligné l’importance
+          de l’initiative franco-britannique relative à la liberté de navigation dans
+          le détroit d’Ormuz.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

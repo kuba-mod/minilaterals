@@ -1,0 +1,55 @@
+actors:
+- FR
+- US
+issue_areas:
+- defence
+- green_transition
+- energy
+- submarines
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  - Anwar Ibrahim
+  - Johari Abdul Ghani
+  topics:
+  - defence
+  - green_transition
+  - energy
+  - submarines
+  location: Malaysia
+  position: France is elevating its relationship with Malaysia to a strategic partnership
+    focused on strategic autonomy, de-risking, and mutual independence from major
+    powers.
+  positions:
+    defence: France aims to increase cooperation in defense and security, offering
+      a model of independence from the US through the supply of helicopters, radars,
+      and other critical capacities.
+    green_transition: France seeks to help Malaysia decarbonize its energy sector
+      and integrate into the Asian power grid through partnerships like EDF and TNB.
+    energy: France proposes expanding cooperation in LNG and nuclear energy, leveraging
+      its expertise as a major nuclear power to provide low-carbon electricity generation.
+    submarines: France expressed confidence that agreements can be reached with Malaysia
+      regarding the provision of submarines.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: This is why we want to do much more with you on defense and security.
+      green_transition:
+        score: 0
+        evidence: The second point is about energy transition. It’s critical for your
+          country.
+    e3:
+      defence:
+        score: 0
+        evidence: We signed some agreements this morning ; we finalized on the helicopters.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
