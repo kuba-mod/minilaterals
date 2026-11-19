@@ -1,0 +1,38 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wiceminister Zajączkowski
+  - Radosław Sikorski
+  - Mohamed Ali Nafti
+  topics:
+  - ukraine
+  - hybrid
+  location: Warsaw, Poland
+  position: Poland seeks to strengthen political, economic, and scientific cooperation
+    with Tunisia while briefing Tunisian officials on security threats in Eastern
+    Europe.
+  positions:
+    ukraine: Poland presented the development of events in Eastern Europe, specifically
+      regarding Russian actions against Ukraine.
+    hybrid: Poland highlighted Russian hybrid activities targeting Ukraine and other
+      European states.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: hybrydowych działań rosyjskich przeciw Ukrainie i pozostałym państwom
+          europejskim
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

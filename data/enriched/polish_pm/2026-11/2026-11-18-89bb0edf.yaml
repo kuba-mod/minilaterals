@@ -1,0 +1,42 @@
+actors:
+- PL
+- US
+issue_areas:
+- energy
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - energy
+  - ukraine
+  location: null
+  position: Poland emphasizes the necessity of transatlantic cooperation and massive
+    domestic investment to ensure energy security and independence from Russian raw
+    materials.
+  positions:
+    energy: Poland is investing billions in power grids, terminals, and nuclear energy
+      to maintain a diversified system independent of Russia and advocates for a pragmatic,
+      non-ideological energy policy in the EU.
+    ukraine: Poland supports providing further energy assistance to Ukraine to mitigate
+      the impact of Russian attacks on its energy infrastructure during winter.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: dalsze wsparcie Ukrainy, szczególnie w okresie zimowym
+    visegrad:
+      energy:
+        score: 2
+        evidence: Inwestujemy miliardy euro w rozwój sieci energetycznych, terminali
+          oraz budowę pierwszej elektrowni jądrowej.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

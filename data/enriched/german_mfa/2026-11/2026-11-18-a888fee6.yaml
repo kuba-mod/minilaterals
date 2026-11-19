@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Thomas Rachel, Federal Government Commissioner for Freedom of Religion and Belief
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany has released its fourth government report on the global situation
+    of freedom of religion and belief, noting a worldwide deterioration and an increase
+    in transnational repression.
+  positions:
+    rule_of_law: Germany condemns the use of discriminatory laws and bureaucratic
+      hurdles in authoritarian states to pressure religious minorities.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Durch die Verankerung des Amtes des Beauftragten der Bundesregierung
+          für Religions- und Weltanschauungsfreiheit seit Mai 2025 im Auswärtigen
+          Amt hat die Bundesregierung ihren außenpolitischen Fokus auf den weltweiten
+          Schutz und die Förderung des Rechts auf Religions- und Weltanschauungsfreiheit
+          weiter geschärft
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

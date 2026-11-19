@@ -1,0 +1,56 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - António Costa
+  - Ursula von der Leyen
+  - Kaja Kallas
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  - energy
+  location: Berlin, Germany
+  position: Germany is hosting the 'Coalition of the Willing' to coordinate a just
+    and lasting peace for Ukraine and strengthen European security architecture.
+  positions:
+    ukraine: Germany advocates for a just and lasting peace through coordinated diplomatic
+      efforts and the provision of robust, legally binding security guarantees.
+    defence: Germany supports strengthening Ukraine's military air defense and proposes
+      a 'Multinational Force Ukraine' to assist in the regeneration of Ukrainian forces.
+    energy: Germany provides civil support in the form of energy and winter aid to
+      increase Ukraine's resilience against attacks on civilian infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Das Treffen reiht sich ein in die fortgesetzten, intensiven diplomatischen
+          Bemühungen Deutschlands und seiner Partner der vergangenen Wochen und Monate.
+          Es wird erneut gemeinsam mit Frankreich und Großbritannien (E3-Format) ausgerichtet
+      defence:
+        score: 2
+        evidence: Hierzu zählt auch eine „ Multinational Force Ukraine “, unter anderem
+          zur Unterstützung der Regeneration der ukrainischen Streitkräfte.
+    e3:
+      defence:
+        score: 2
+        evidence: Es wird erneut gemeinsam mit Frankreich und Großbritannien (E3-Format)
+          ausgerichtet
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

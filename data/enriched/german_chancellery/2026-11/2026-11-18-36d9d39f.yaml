@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Cabinet
+  - Federal Ministry of Finance
+  - Deutsche Bundesbank
+  topics: []
+  location: null
+  position: Germany has adopted a national financial education strategy to improve
+    citizens' financial literacy and access to knowledge regarding debt, digital financial
+    services, and investments.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

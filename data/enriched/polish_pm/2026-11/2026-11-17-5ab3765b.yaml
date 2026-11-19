@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  topics:
+  - energy
+  location: null
+  position: Poland is freezing gas prices for individual consumers and households
+    through 2027 to combat inflation and protect citizens from rising energy costs.
+  positions:
+    energy: The Polish government has decided to freeze gas prices for individual
+      recipients, households, and essential public services to maintain low inflation
+      and economic growth.
+  stances:
+    visegrad:
+      energy:
+        score: 0
+        evidence: zdecydowaliśmy o zamrożeniu cen gazu dla odbiorców indywidualnych
+          i gospodarstw rodzinnych
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

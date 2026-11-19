@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Cabinet
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany's cabinet has approved a draft to modernize child law, prioritizing
+    the child's well-being and strengthening the legal position of children in custody
+    and visitation decisions.
+  positions:
+    rule_of_law: Germany is reforming its legal framework for child law to better
+      protect children from domestic violence and increase their participation in
+      legal decisions regarding their care.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 0
+        evidence: Das Kabinett hat einen Entwurf zur Reform des Kindschaftsrechts
+          beschlossen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,22 @@
+actors:
+- PL
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - employees of the Ministry of Foreign Affairs
+  topics: []
+  location: Warsaw, Poland
+  position: Poland is organizing an Open Day at the Ministry of Foreign Affairs to
+    showcase the history and professional realities of its diplomatic service.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

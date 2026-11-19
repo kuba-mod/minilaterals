@@ -1,0 +1,59 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Dan Neculaescu
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - energy
+  location: null
+  position: Poland advocates for continued EU support for Ukraine, the imposition
+    of new sanctions on Russia, and the reopening of its embassy in Syria.
+  positions:
+    ukraine: Poland supports continued EU aid, the use of frozen Russian assets for
+      Ukraine, and provides humanitarian and energy infrastructure assistance.
+    defence: Poland emphasizes that a ceasefire and peace must precede discussions
+      on European security architecture and focuses on NATO's eastern flank.
+    hybrid: Poland supports the adoption of sanctions targeting Russian hybrid activities.
+    energy: Poland highlights the impact of reduced Russian hydrocarbon imports on
+      Russia's war funding and provides energy equipment to Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polskie przedsiębiorstwa państwowe już aktywnie angażują się we
+          wspieranie Ukrainy poprzez dostarczanie kluczowego sprzętu, m.in. transformatorów
+          średniego i wysokiego napięcia.
+      defence:
+        score: 1
+        evidence: Szczególną uwagę poświęcono sytuacji na wschodniej flance NATO oraz
+          rozwojowi relacji dwustronnych, także w dziedzinie obronności.
+      hybrid:
+        score: 1
+        evidence: Na Radzie FAC przyjęto nowe sankcje wobec Rosji, obejmujące ponad
+          100 podmiotów związanych z [...] działaniami hybrydowymi.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Szczególną uwagę poświęcono sytuacji na wschodniej flance NATO
+      energy:
+        score: 2
+        evidence: Z każdym rokiem Europa importuje mniej rosyjskiej ropy i gazu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

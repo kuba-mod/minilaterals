@@ -1,0 +1,56 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  - Volodymyr Zelenskyy
+  - Mark Rutte
+  - Friedrich Merz
+  - Micheál Martin
+  - António Costa
+  topics:
+  - ukraine
+  - defence
+  location: Dublin, Ireland
+  position: Poland seeks a key role in European peace negotiations regarding Ukraine
+    and proposes coordinating a unified EU AI policy.
+  positions:
+    ukraine: Poland advocates for a representative group (UK, FR, PL, DE, IT) to speak
+      for Europe in peace talks and rejects any concessions that undermine continental
+      security.
+    defence: Poland supports the goal of establishing global limits on AI development
+      to ensure security, comparing it to the regulation of nuclear weapons.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Format E5, czyli Wielka Brytania, Francja, Polska, Niemcy i Włochy
+          oraz przedstawiciele unijnych instytucji uzyskał największe poparcie dla
+          wypełnienia tej roli
+    e3:
+      defence:
+        score: 2
+        evidence: Format E5, czyli Wielka Brytania, Francja, Polska, Niemcy i Włochy
+          oraz przedstawiciele unijnych instytucji uzyskał największe poparcie dla
+          wypełnienia tej roli
+    visegrad:
+      defence:
+        score: 1
+        evidence: Stanowisko Polski, odrzucające jakiekolwiek ustępstwa podważające
+          fundamenty bezpieczeństwa kontynentu, zyskało akceptację
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

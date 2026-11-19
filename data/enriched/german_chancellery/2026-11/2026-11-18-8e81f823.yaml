@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Wolfram Weimer
+  - Alexander Pröll
+  topics:
+  - hybrid
+  location: null
+  position: Germany and Austria propose creating a European ownership structure for
+    TikTok to ensure digital sovereignty and protect democratic values from third-party
+    geopolitical interests.
+  positions:
+    hybrid: Germany seeks to mitigate data and platform risks associated with TikTok
+      by moving its technological infrastructure and ownership under European responsibility.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Bei TikTok bündeln sich Daten-, Plattform- und Drittstaatenrisiken
+          in besonderem Maße
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
