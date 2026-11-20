@@ -1,0 +1,59 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Emmanuel Macron
+  - Andy Burnham
+  - Volodymyr Zelenskyy
+  - Jared Kushner
+  - Steve Witkoff
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany leads a 'Coalition of the Willing' to provide strong military
+    support to Ukraine while pursuing a just, durable peace through a multilateral
+    negotiation format involving Ukraine, Russia, the US, and Europe.
+  positions:
+    ukraine: Germany advocates for a sovereign Ukraine with strong security guarantees
+      after a ceasefire, using the contact line as a starting point for territorial
+      agreements.
+    defence: Germany commits to powerful military support for Ukraine throughout the
+      next year and supports a stronger, more European NATO to ensure long-term continental
+      security.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Gemeinsam werden wir die Ukraine auch im gesamten nächsten Jahr
+          kraftvoll unterstützen.
+      defence:
+        score: 2
+        evidence: Deshalb bauen wir auf eine stärkere europäischere NATO.
+    e3:
+      defence:
+        score: 2
+        evidence: Im Europäischen Rat in Dublin haben wir in der letzten Woche vereinbart,
+          dass Deutschland, Frankreich, Großbritannien, Polen und Italien für Europa
+          sprechen.
+    aukus:
+      defence:
+        score: 0
+        evidence: Wir brauchen auch neue Partner, und zwar in den nächsten Wochen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

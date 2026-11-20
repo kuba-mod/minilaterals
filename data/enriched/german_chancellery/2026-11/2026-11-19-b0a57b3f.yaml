@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Volodymyr Zelenskyy
+  - António Costa
+  - Ursula von der Leyen
+  - Kaja Kallas
+  - Mark Rutte
+  - Steve Witkoff
+  - Jared Kushner
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany commits to continued political, financial, and military support
+    for Ukraine for as long as necessary to achieve a sovereign Ukraine and a secure
+    Europe.
+  positions:
+    ukraine: Germany supports a peace process involving Ukraine, Russia, the US, and
+      Team Europe, suggesting the contact line as a starting point for territorial
+      agreement and conditional sanctions relief.
+    defence: Germany is participating in the defensive military exercise 'Koalicja'
+      and supports a stronger, more European NATO to guarantee security after the
+      war.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Die Ukraine kann sich weiter auf die gemeinsame Unterstützung verlassen
+          – politisch, finanziell und militärisch – und zwar so lange wie nötig.
+      defence:
+        score: 2
+        evidence: Vom 9. bis 22. November 2026 führt die Koalition der Willigen die
+          erste militärische Übung mit dem Namen „Koalicja“ (Koalition) durch, an
+          der sich auch Deutschland beteiligt.
+    e3:
+      defence:
+        score: 2
+        evidence: Unter dem Ko-Vorsitz von Frankreich, Großbritannien und Deutschland
+          – fast 40 Partnerstaaten
+    aukus:
+      defence:
+        score: 1
+        evidence: Partnerschaften im Bereich von Hoch- und Zukunftstechnologien, gemeinsame
+          Rüstungskooperationen (zum Beispiel bei der Drohnenproduktion)
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

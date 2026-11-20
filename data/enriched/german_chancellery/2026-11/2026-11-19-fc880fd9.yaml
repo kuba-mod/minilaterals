@@ -1,0 +1,32 @@
+actors:
+- DE
+- LV
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Andris Kulbergs
+  topics:
+  - defence
+  location: null
+  position: Germany congratulates the Prime Minister of Latvia on his reelection and
+    affirms the close cooperation within the EU and NATO.
+  positions:
+    defence: Germany values the close and trusting cooperation with Latvia as NATO
+      allies.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: Verbündete in der NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

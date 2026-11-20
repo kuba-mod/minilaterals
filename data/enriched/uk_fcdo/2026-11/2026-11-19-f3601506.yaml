@@ -1,0 +1,35 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants: []
+  topics:
+  - iran
+  location: null
+  position: The United Kingdom, alongside France, Germany, and the United States,
+    issued a statement regarding the implementation of Iran's NPT Safeguards Agreement.
+  positions:
+    iran: The United Kingdom expresses concern over the implementation of Iran's Nuclear
+      Non-Proliferation Treaty Safeguards Agreement and relevant UN Security Council
+      provisions.
+  stances:
+    e3:
+      iran:
+        score: 1
+        evidence: Statement by France, Germany, the United Kingdom and the United
+          States on the implementation of Iran's Nuclear Non-Proliferation Treaty
+          (NPT) Safeguards Agreement
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

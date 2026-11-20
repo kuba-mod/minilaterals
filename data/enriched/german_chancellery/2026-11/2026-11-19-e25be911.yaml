@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Wolfram Weimer, Minister of State for Culture and the Media
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany emphasizes that freedom of religion and belief is an inalienable
+    human right that must be defended globally and within Germany.
+  positions:
+    rule_of_law: Germany asserts that freedom of religion is a fundamental human right
+      under pressure worldwide and domestically, necessitating the protection of the
+      Jewish-Christian cultural heritage.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: Auch hierzulande müssen wir wachsam sein und unsere religiösen Traditionen
+          und die Freiheit, den eigenen Glauben zu leben, als Teil unserer gewachsenen
+          Kultur verteidigen.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

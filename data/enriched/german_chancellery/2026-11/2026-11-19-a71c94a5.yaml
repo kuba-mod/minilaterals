@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Karin Prien
+  - Kerstin Claus
+  topics:
+  - energy
+  - green_transition
+  location: null
+  position: The German government is implementing various domestic measures to improve
+    financial literacy, labor laws, energy costs, child education, consumer protection,
+    and AI integration.
+  positions:
+    energy: Germany plans to lower the electricity tax to the European minimum level
+      and introduce a fuel price cap by January 1, 2027.
+    green_transition: Germany promotes resource conservation and waste prevention
+      to protect resources and respect planetary boundaries.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Durch die Vermeidung von Abfällen an der Quelle lassen sich Ressourcen
+          schützen und Emissionen verhindern – und so die planetaren Grenzen respektieren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

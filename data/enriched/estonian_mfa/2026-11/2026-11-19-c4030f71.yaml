@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Estonia supports the European Commission's proposal for an additional
+    45 billion euro loan to Ukraine to strengthen its military and economic stability.
+  positions:
+    ukraine: Estonia believes the additional funding will cover a significant portion
+      of Ukraine's financing needs and support its position in both combat and negotiations.
+    defence: Estonia asserts that the additional funding would significantly strengthen
+      Ukraine's defense capabilities.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

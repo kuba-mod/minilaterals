@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Poland continues to provide critical logistical support for Ukraine and
+    supports the preparation of future security guarantees, though it will not send
+    its own soldiers to Ukraine.
+  positions:
+    ukraine: Poland leverages its geographical position to act as a key hub for aid
+      and support for Ukraine.
+    defence: Poland supports the preparation of security guarantees for Ukraine and
+      hosts exercises for other nations, while explicitly ruling out the deployment
+      of Polish troops.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Będziemy oczywiście kontynuowali tę politykę
+      defence:
+        score: 2
+        evidence: Służą temu między innymi ćwiczenia organizowane w Polsce, które
+          mają przygotować państwa do ewentualnego udziału w realizacji tych gwarancji.
+    visegrad:
+      defence:
+        score: 1
+        evidence: Służą temu między innymi ćwiczenia organizowane w Polsce, które
+          mają przygotować państwa do ewentualnego udziału w realizacji tych gwarancji.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,43 @@
+actors:
+- PL
+issue_areas:
+- enlargement
+- migration
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Minister Bauer
+  topics:
+  - enlargement
+  - migration
+  location: null
+  position: Poland and Austria confirmed their very good relations and discussed cooperation
+    on EU budget negotiations, law simplification, migration, and EU enlargement.
+  positions:
+    enlargement: Poland supports the continuation of the EU enlargement process, with
+      the pace depending on candidate countries' progress in meeting membership criteria.
+    migration: Poland positively evaluates the direction of changes in the EU's migration
+      policy.
+  stances:
+    weimar:
+      enlargement:
+        score: -1
+        evidence: Unia Europejska powinna kontynuować proces rozszerzenia, a jego
+          tempo powinno zależeć od postępów państw kandydujących w spełnianiu kryteriów
+          członkostwa
+    visegrad:
+      enlargement:
+        score: 1
+        evidence: Unia Europejska powinna kontynuować proces rozszerzenia
+      migration:
+        score: 1
+        evidence: pozytywnie ocenili kierunek zmian w polityce migracyjnej UE
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

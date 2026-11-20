@@ -1,0 +1,75 @@
+actors:
+- PL
+- HU
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Radosław Sikorski
+  - Anita Orban
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  - energy
+  location: Budapest, Hungary
+  position: Poland seeks to revitalize bilateral relations and regional cooperation
+    with Hungary to enhance Central European security and economic ties.
+  positions:
+    ukraine: Poland will present a coordinated Central European position in peace
+      talks to end the Russian invasion of Ukraine, emphasizing the sensitivity of
+      the Eastern Flank.
+    defence: Poland is ready to support the modernization of the Hungarian army through
+      the offer of the Polish defense industry.
+    hybrid: Poland advocates for closer bilateral cooperation to counter hybrid threats
+      and disinformation.
+    enlargement: Poland engaged in discussions regarding the EU enlargement policy.
+    energy: Poland offers Hungary potential access to global gas markets via Polish
+      LNG terminals to strengthen regional energy security.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Polska, która w ramach E5 dołącza do rozmów pokojowych mających
+          zakończyć inwazję Rosji na Ukrainę, prezentować będzie uzgodnione wcześniej
+          stanowisko państw regionu Europy Środkowej
+      defence:
+        score: 1
+        evidence: wygłosił w stolicy Węgier wykład na Budapesztańskim Forum Bezpieczeństwa
+          na temat „European security and defence autonomy”
+      hybrid:
+        score: 1
+        evidence: zaapelował, by istotną częścią kontaktów bilateralnych w tym zakresie
+          było zacieśnianie współpracy w walce z zagrożeniami hybrydowymi, w tym dezinformacją
+      enlargement:
+        score: 0
+        evidence: Rozmawiano o kluczowych tematach z europejskiej agendy politycznej,
+          m.in. [...] polityce rozszerzenia UE
+    visegrad:
+      defence:
+        score: 2
+        evidence: Polska jest gotowa wspierać proces modernizacji węgierskiej armii
+      enlargement:
+        score: 1
+        evidence: Rozmawiano o kluczowych tematach z europejskiej agendy politycznej,
+          m.in. [...] polityce rozszerzenia UE
+      energy:
+        score: 2
+        evidence: potencjalnym dostępie do globalnych rynków gazu za pośrednictwem
+          polskich terminali LNG
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

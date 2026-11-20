@@ -1,0 +1,28 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Government of the Republic
+  - Minister of Foreign Affairs
+  - Lauri Madise
+  topics:
+  - rule_of_law
+  location: null
+  position: The Government of Estonia has confirmed Lauri Madise as the Estonian candidate
+    for the position of judge at the European Court of Justice.
+  positions:
+    rule_of_law: Estonia has nominated Lauri Madise to serve as a judge at the European
+      Court of Justice.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

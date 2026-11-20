@@ -1,0 +1,26 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Ambassador Archie Young
+  topics:
+  - ukraine
+  location: New York, USA
+  position: The United Kingdom asserts that Crimea is part of Ukraine and supports
+    the restoration of Ukrainian sovereignty.
+  positions:
+    ukraine: The United Kingdom maintains that Crimea is Ukraine and rejects any claims
+      to the contrary.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

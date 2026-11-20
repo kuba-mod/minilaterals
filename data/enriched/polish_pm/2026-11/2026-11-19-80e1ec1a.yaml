@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas: []
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Prime Minister of Poland
+  - President Emmanuel Macron
+  - Prime Minister Ulf Kristersson
+  topics: []
+  location: Warsaw, Poland
+  position: Poland is organizing a High-Level Summit on AI in Warsaw to coordinate
+    European actions for technological sovereignty through the creation of a world-class
+    research center and an industrial AI consortium.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

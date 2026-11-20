@@ -1,0 +1,37 @@
+actors:
+- UK
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Emily Thornberry
+  topics:
+  - ukraine
+  - defence
+  location: Tallinn, Estonia
+  position: Estonia emphasizes that Russia is already attacking Europe and calls for
+    a joint response, specifically regarding security threats and support for Ukraine.
+  positions:
+    ukraine: Estonia advocates for the continued support of Ukraine in the face of
+      security threats from Russia.
+    defence: Estonia seeks to strengthen defense cooperation with the United Kingdom
+      to counter Russian security threats.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: arutati Venemaast lähtuvaid julgeolekuohte, Ukraina toetamist ning
+          Eesti ja Ühendkuningriigi kaitsekoostööd
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

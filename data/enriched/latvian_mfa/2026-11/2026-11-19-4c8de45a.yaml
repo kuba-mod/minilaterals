@@ -1,0 +1,22 @@
+actors:
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - UN Youth Delegates Program
+  topics: []
+  location: null
+  position: Latvia is organizing a national-scale Model United Nations (MUNLV) conference
+    for youth through the UN Youth Delegates program.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

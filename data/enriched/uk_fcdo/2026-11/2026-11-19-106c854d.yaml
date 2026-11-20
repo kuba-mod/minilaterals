@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Holland
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: The United Kingdom warns that Russian attacks on Ukraine's energy infrastructure
+    are increasing humanitarian risks and threatening nuclear safety.
+  positions:
+    ukraine: The United Kingdom condemns Russia's attacks on Ukraine, noting they
+      leave vulnerable civilians exposed during winter.
+    energy: The United Kingdom highlights that the disruption of Ukraine's electricity
+      grid deepens humanitarian needs and creates nuclear risks.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

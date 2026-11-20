@@ -1,0 +1,64 @@
+actors:
+- DE
+- FR
+- PL
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: meeting
+  participants:
+  - President of the French Republic
+  - German Chancellor
+  - British Prime Minister
+  - President Zelensky
+  - Andy Burnham
+  - Mr. Kushner
+  - Mr. Witkoff
+  - President Trump
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: France advocates for immediate short-term military support for Ukraine,
+    the implementation of long-term security guarantees, and the reopening of discussions
+    regarding Ukraine's NATO membership.
+  positions:
+    ukraine: France supports Ukraine's resistance against Russian aggression and proposes
+      reopening the question of its accession to NATO to ensure long-term European
+      security.
+    defence: France is providing radars and anti-drone systems through the Freya Coalition
+      and contributing 1,100 soldiers to the 'Koalicja' multinational exercise to
+      demonstrate the Coalition's deployment capacity.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: nous organiserons dans quelques semaines, à Paris, un nouveau sommet
+          de la Coalition Freya pour, justement, l'antidrone et l'antiballistique
+      defence:
+        score: 2
+        evidence: l'opération dite Koalicja , décidée en Pologne, qui permet de déployer
+          nos capacités, d'entraîner nos forces pour le jour d'après, est en cours.
+          On a plus de 2 500 soldats qui sont déployés
+    e3:
+      defence:
+        score: 2
+        evidence: Le Président de la République a coprésidé, avec le Chancelier allemand
+          et le Premier ministre britannique, une réunion de la Coalition des volontaires
+    aukus:
+      defence:
+        score: 0
+        evidence: C'est de déployer des nouveaux systèmes antimissiles et des intercepteurs
+          nouveaux
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

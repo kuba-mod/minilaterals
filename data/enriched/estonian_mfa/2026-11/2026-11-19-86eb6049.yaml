@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Tsahkna
+  topics:
+  - rule_of_law
+  location: Tallinn, Estonia
+  position: Estonia emphasizes that a rules-based world order depends on individuals
+    participating in international organizations with a sense of mission.
+  positions:
+    rule_of_law: Estonia asserts that the prerequisite for a rules-based world order
+      is the presence of mission-driven people working within international organizations.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
