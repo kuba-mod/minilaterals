@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia condemns the Russian-ordered assassination attempt in Denmark
+    as a new level of Russian attacks against Europe.
+  positions:
+    hybrid: Estonia views the assassination attempt in Denmark as an escalation of
+      Russian hybrid attacks targeting European security.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Venemaa tellitud mõrvakatse Taanis on uus tase Venemaa rünnakutes
+          Euroopa vastu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

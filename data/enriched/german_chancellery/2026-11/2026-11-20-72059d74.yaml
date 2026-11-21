@@ -1,0 +1,37 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Friedrich Merz
+  - Emir of Qatar, Sheikh Tamim bin Hamad Al Thani
+  topics:
+  - defence
+  location: Berlin, Germany
+  position: Germany has agreed with Qatar on a strategic partnership involving 15
+    billion euros in Qatari investments and enhanced security and defense cooperation.
+  positions:
+    defence: Germany will cooperate more closely with Qatar in the defense industry
+      and through security agency exchanges to counter threats, including in cyberspace.
+  stances:
+    weimar:
+      defence:
+        score: 0
+        evidence: Deutschland und Katar werden bei Sicherheit und Verteidigung enger
+          zusammenarbeiten
+    e3:
+      defence:
+        score: 0
+        evidence: Deutschland und Katar werden bei Sicherheit und Verteidigung enger
+          zusammenarbeiten
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

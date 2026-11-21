@@ -1,0 +1,26 @@
+actors:
+- DE
+- FR
+- PL
+issue_areas: []
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  - European Ministers of Culture and Media
+  topics: []
+  location: Brussels, Belgium
+  position: Germany is leading an initiative with 14 EU member states to strengthen
+    copyright laws in the age of AI and enhance the protection of minors in the digital
+    space.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

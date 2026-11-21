@@ -1,0 +1,41 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany intends to discuss security policy, specifically the continued
+    support of Ukraine and efforts to end the Russian war of aggression, with the
+    NATO Secretary General.
+  positions:
+    ukraine: Germany focuses on the further support of Ukraine and efforts to end
+      the Russian war of aggression.
+    defence: Germany is prioritizing security policy discussions with NATO leadership.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: vor allem die weitere Unterstützung der Ukraine und die Anstrengungen
+          zur Beendigung des russischen Angriffskrieges
+    e3:
+      defence:
+        score: 0
+        evidence: In einem gemeinsamen Gespräch werden sicherheitspolitische Themen
+          im Mittelpunkt stehen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

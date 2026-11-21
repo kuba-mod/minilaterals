@@ -1,0 +1,66 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Donald Tusk
+  - Władysław Kosiniak-Kamysz
+  - Marek Rutte
+  - Andrzej Domański
+  - Agnieszka Bartol
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  location: null
+  position: Poland condemns the violation of its airspace by Russian objects, viewing
+    it as an intentional provocation and a broader threat to European security.
+  positions:
+    ukraine: Poland asserts that Russian aggression is not only a problem for Ukraine
+      but for all of Europe, particularly the eastern flank.
+    defence: Poland is coordinating with NATO and allies to strengthen the security
+      of the eastern flank following Russian airspace violations.
+    green_transition: Poland identifies energy and digital transformation as key directions
+      for further national development.
+    energy: Poland plans to develop investments in renewable energy sources, energy
+      storage, transmission networks, and nuclear power.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: agresywna polityka Rosji nie jest problemem tylko Ukrainy, ale też
+          Europy
+      defence:
+        score: 2
+        evidence: zapowiedział rozmowy z sekretarzem generalnym NATO i przywódcami
+          sojuszniczych państw na temat konkretnych działań wzmacniających bezpieczeństwo
+          wschodniej flanki
+      green_transition:
+        score: 1
+        evidence: Wśród kluczowych kierunków dalszego rozwoju wskazał transformację
+          energetyczną i cyfrową
+    visegrad:
+      defence:
+        score: 1
+        evidence: zapowiedział rozmowy z sekretarzem generalnym NATO i przywódcami
+          sojuszniczych państw na temat konkretnych działań wzmacniających bezpieczeństwo
+          wschodniej flanki
+      energy:
+        score: 1
+        evidence: rozwój inwestycji w odnawialne źródła energii, magazyny energii,
+          sieci przesyłowe i energetykę jądrową
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

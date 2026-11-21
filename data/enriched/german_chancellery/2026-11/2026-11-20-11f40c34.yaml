@@ -1,0 +1,50 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- energy
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Bundeskanzler Merz
+  - Emir Tamim bin Hamad Al Thani
+  topics:
+  - ukraine
+  - defence
+  - energy
+  - iran
+  location: Berlin, Germany
+  position: Germany seeks to deepen a '360-degree strategic partnership' with Qatar
+    across economic, security, and diplomatic dimensions to enhance sovereignty and
+    stability.
+  positions:
+    ukraine: Germany urges Russia to end its diplomatic stalling and engage in genuine
+      peace negotiations to achieve a lasting peace.
+    defence: Germany intends to cooperate more closely with Qatar in the defense industry,
+      threat prevention, and cybersecurity.
+    energy: Germany emphasizes its reliance on affordable and reliable energy, necessitating
+      a diplomatic solution to regional conflicts to ensure stability.
+    iran: Germany strongly condemns Tehran's attacks on Qatar and the region, demanding
+      a verifiable end to Iran's military nuclear program and the secure opening of
+      the Strait of Hormuz.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Deutschland wird alles in seiner Kraft Stehende tun, um einen dauerhaften
+          Frieden zu erreichen.
+    e3:
+      iran:
+        score: 1
+        evidence: Teheran muss nachprüfbar sein militärisches Nuklearprogramm einstellen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

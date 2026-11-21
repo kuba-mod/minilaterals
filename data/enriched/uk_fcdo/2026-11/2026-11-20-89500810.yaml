@@ -1,0 +1,43 @@
+actors:
+- UK
+- AU
+- US
+issue_areas:
+- defence
+- submarines
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: speech
+  participants:
+  - IAEA Board of Governors
+  topics:
+  - defence
+  - submarines
+  location: null
+  position: The United Kingdom, on behalf of AUKUS partners, asserts its commitment
+    to the safeguards of nuclear material transfers for the AUKUS submarine program
+    under the NPT.
+  positions:
+    defence: The United Kingdom supports the transfer of nuclear materials within
+      the AUKUS framework while maintaining strict adherence to international safeguards.
+    submarines: The United Kingdom advocates for the legal and safeguarded transfer
+      of nuclear materials specifically for the AUKUS submarine project.
+  stances:
+    e3:
+      defence:
+        score: 0
+        evidence: Transfer of the nuclear materials in the context of AUKUS and its
+          safeguards in all aspects under the NPT
+    aukus:
+      submarines:
+        score: 1
+        evidence: Transfer of the nuclear materials in the context of AUKUS and its
+          safeguards in all aspects under the NPT
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

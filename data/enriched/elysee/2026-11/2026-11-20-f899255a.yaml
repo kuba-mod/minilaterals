@@ -1,0 +1,37 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - President of the Republic
+  topics:
+  - green_transition
+  - energy
+  location: Paris, France
+  position: France is promoting economic sovereignty and reindustrialization through
+    the 'Fabriqué en France' initiative, focusing on innovation, decarbonization,
+    and the growth of SMEs into mid-sized companies.
+  positions:
+    green_transition: France is linking reindustrialization with decarbonization,
+      specifically through the creation of a domestic electric vehicle battery chain
+      and green industry tax credits.
+    energy: France is investing in green hydrogen and nuclear energy as part of its
+      France 2030 plan to reduce strategic dependencies.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: crédit d'impôt au titre des investissements dans l'industrie verte,
+          qui a été la réponse française à ce qui se passait dans d'autres territoires
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

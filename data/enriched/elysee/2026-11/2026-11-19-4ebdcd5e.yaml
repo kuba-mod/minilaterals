@@ -1,0 +1,82 @@
+actors:
+- DE
+- FR
+- UK
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- rule_of_law
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: joint_statement
+  participants:
+  - Heads of State and Government of Germany
+  - Heads of State and Government of France
+  - Heads of State and Government of the United Kingdom
+  - Heads of State and Government of Ukraine
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - rule_of_law
+  - energy
+  location: Berlin, Germany
+  position: France, alongside partners, reaffirms its unwavering support for Ukraine's
+    sovereignty and commits to long-term military, financial, and diplomatic assistance
+    to achieve a just and lasting peace.
+  positions:
+    ukraine: France supports Ukraine's right to self-defense, its European and Euro-Atlantic
+      aspirations, and the use of frozen Russian assets for reparations.
+    defence: France commits to strengthening Ukraine's air defense, providing billions
+      in military equipment through NATO and EU frameworks, and establishing legally
+      binding security guarantees.
+    hybrid: France condemns Russian hybrid attacks in Europe, including sabotage and
+      cyberattacks, asserting that such intimidation will only increase the determination
+      to defend Europe.
+    rule_of_law: France intends to collaborate with Ukraine to implement agreed reforms
+      regarding the rule of law and the fight against corruption.
+    energy: France calls for a winter energy ceasefire and seeks to increase economic
+      pressure on Russian oil and gas revenues.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: fournir à l’Ukraine 70 milliards d’euros en équipements, assistance
+          et formation militaires en 2026 puis, à nouveau en 2027, pour un montant
+          au moins équivalent
+      defence:
+        score: 2
+        evidence: une Force multinationale pour l’Ukraine dirigée par l’Europe, composée
+          de personnel et matériel des États volontaires
+      hybrid:
+        score: 1
+        evidence: ont également condamné les récentes attaques hybrides menées par
+          la Russie en Europe, notamment des activités de sabotage, des campagnes
+          d’informations et des cyberattaques
+      rule_of_law:
+        score: 1
+        evidence: collaborer avec l’Ukraine pour élaborer et mettre en œuvre les réformes
+          agréées, notamment s’agissant de l’Etat de droit et de la lutte contre la
+          corruption
+    e3:
+      defence:
+        score: 2
+        evidence: Déclaration conjointe des chefs d’État et de gouvernement de l’Allemagne,
+          de la France, du Royaume-Uni et de l’Ukraine
+    aukus:
+      defence:
+        score: 0
+        evidence: condamné les récentes attaques hybrides menées par la Russie en
+          Europe, notamment des activités de sabotage, des campagnes d’informations
+          et des cyberattaques
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

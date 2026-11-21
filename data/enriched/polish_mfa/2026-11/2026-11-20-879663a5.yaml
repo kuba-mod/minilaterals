@@ -1,0 +1,34 @@
+actors:
+- PL
+- US
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: null
+  position: Poland condemns Russian state-sponsored terrorism and supports restrictive
+    travel measures for Russian citizens within the EU to counter destabilization
+    efforts.
+  positions:
+    hybrid: Poland views Russian assassination attempts as criminal actions aimed
+      at destabilizing EU societies and advocates for a coordinated EU and NATO response
+      to state terrorism.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Widzimy potrzebę stanowczego i skoordynowanego reagowania państw
+          UE i NATO na wszelkie przypadki prowokacji i działań o znamionach terroryzmu
+          państwowego ze strony Rosji.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

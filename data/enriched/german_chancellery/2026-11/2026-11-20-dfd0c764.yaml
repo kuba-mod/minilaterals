@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  - Kabinett
+  - Bundesrat
+  topics: []
+  location: null
+  position: Germany is increasing the social security contribution assessment ceilings
+    for high earners starting January 1, 2027, to ensure fair financing and stabilize
+    the statutory health insurance system.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

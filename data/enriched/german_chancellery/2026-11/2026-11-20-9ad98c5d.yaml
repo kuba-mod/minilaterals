@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Alexander Dobrindt
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Germany has passed a bill in the Bundesrat to strengthen cybersecurity
+    by creating a legal framework for the detection and active defense against cyberattacks.
+  positions:
+    hybrid: Germany is expanding its capabilities to detect and counter hybrid threats
+      and professional cyberattacks to protect state and economic infrastructure.
+    defence: Germany is shifting its cyber defense strategy from passive redirection
+      of attacks to actively targeting the attackers' servers, software, and strategies.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: Angesichts der geopolitischen Lage gewinnen zudem auch hybride Bedrohungen
+          zunehmend an Bedeutung
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

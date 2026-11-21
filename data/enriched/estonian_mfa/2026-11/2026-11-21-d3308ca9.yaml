@@ -1,0 +1,23 @@
+actors:
+- EE
+- US
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Martin Roger, Deputy Secretary for Political Affairs
+  topics: []
+  location: Washington, USA
+  position: Estonia participated in political consultations between the USA and Northern
+    and Baltic countries within the E-PINE cooperation format.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

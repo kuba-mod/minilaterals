@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - energy
+  location: null
+  position: France condemns Russian drone and missile attacks against Ukraine and
+    calls for Russia to be held accountable at a Security Council meeting.
+  positions:
+    ukraine: France utterly condemns Russian attacks on civilians and diplomatic premises,
+      expressing full support for Ukraine, Austria, and the Netherlands.
+    energy: France condemns Russian strikes that targeted civilian energy infrastructure.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Together with our partners, we will continue to support Ukraine
+          to force Russia to end its war of aggression.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

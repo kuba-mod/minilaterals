@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia is closing its road border checkpoints with Russia starting December
+    1st in response to Russia's ongoing hostile activities.
+  positions:
+    hybrid: Estonia will close road border checkpoints with Russia as a consequence
+      of Russia's continued hostile actions against Estonia and Europe.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: otsustas Eesti valitsus sulgeda alates 1. detsembrist Eesti-Vene
+          maanteepiiripunktid vastusena Venemaa jätkuvale vaenulikule tegevusele
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

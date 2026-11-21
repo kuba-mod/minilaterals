@@ -1,0 +1,22 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Karsten Wildberger
+  topics: []
+  location: null
+  position: Germany is introducing the 'd-you' EUDI-Wallet by January 2027 to enable
+    secure, EU-wide digital identification and document management on smartphones.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

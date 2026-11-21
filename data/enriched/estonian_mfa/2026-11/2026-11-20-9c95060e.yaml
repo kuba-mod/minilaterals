@@ -1,0 +1,36 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ministry of Foreign Affairs
+  - University of Tartu Press
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: Estonia presented a book documenting 30 years of foreign ministers' speeches
+    to illustrate the country's path toward EU and NATO membership and its role in
+    European security.
+  positions:
+    ukraine: Estonia supports Ukraine and documents its diplomatic efforts regarding
+      the withdrawal of Russian troops.
+    defence: Estonia emphasizes its integration into NATO and its collaboration with
+      allies to shape European security.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: kuidas Eesti pürgis Euroopa Liidu ja NATO liikmeks
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

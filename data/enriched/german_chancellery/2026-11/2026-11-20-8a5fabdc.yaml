@@ -1,0 +1,39 @@
+actors:
+- DE
+- US
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Mette Frederiksen
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Germany expresses solidarity with Denmark following a Russian-attributed
+    attack and reaffirms its unwavering support for Ukraine.
+  positions:
+    ukraine: Germany maintains unwavering support for Ukraine.
+    hybrid: Germany intends to prevent Russian attempts to intimidate Europe through
+      assassinations, attacks, or sabotage.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Unsere Unterstützung der Ukraine ist unerschütterlich.
+      hybrid:
+        score: 1
+        evidence: Wir werden jeden Versuch Russlands unterbinden, Europa durch Attentate,
+          Anschläge oder Sabotageakte einzuschüchtern.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
