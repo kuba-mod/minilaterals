@@ -1,0 +1,27 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Foreign Minister Tsahkna
+  topics:
+  - defence
+  location: null
+  position: Estonia is cooperating with neighboring countries and allies regarding
+    a maritime incident involving a Russian vessel in the Gulf of Finland.
+  positions:
+    defence: Estonia is coordinating with allies and neighbors following the incident
+      where a Russian Ministry of Defence vessel caught fire and drifted into Finnish
+      waters.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

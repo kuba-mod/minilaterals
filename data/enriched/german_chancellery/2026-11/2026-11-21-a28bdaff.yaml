@@ -1,0 +1,53 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- rule_of_law
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - President of the European Council
+  topics:
+  - ukraine
+  - defence
+  - rule_of_law
+  location: null
+  position: Germany advocates for a modernized, realistic, and affordable EU budget
+    for 2028-2034 that prioritizes competitiveness, security, and fair burden-sharing.
+  positions:
+    ukraine: Germany demands that the MFF ensure robust and sustainable multiannual
+      support for Ukraine with contributions from all 27 Member States.
+    defence: Germany seeks to strengthen the EU's security and defence capabilities
+      to ensure the union can act as a sovereign global player.
+    rule_of_law: Germany asserts that the rule of law must serve as the fundamental
+      benchmark for the EU's strength and actions.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Der MFR muss eine robuste und nachhaltige mehrjährige Unterstützung
+          der Ukraine sicherstellen unter Beteiligung aller 27 Mitgliedstaaten.
+      defence:
+        score: 1
+        evidence: We want to strengthen competitiveness as well as our security and
+          defence capabilities.
+      rule_of_law:
+        score: 1
+        evidence: Die Grundlage dieser Stärke ist die Rechtsstaatlichkeit, an der
+          sich alles bemisst.
+    e3:
+      defence:
+        score: 0
+        evidence: We want to strengthen competitiveness as well as our security and
+          defence capabilities.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
