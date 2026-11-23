@@ -1,0 +1,35 @@
+actors:
+- EE
+- LV
+- LT
+- US
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Political Directors of the Ministries of Foreign Affairs of the Baltic States
+  - Political Directors of the Ministries of Foreign Affairs of the Nordic States
+  - Representatives of the US State Department
+  topics:
+  - defence
+  location: Washington, USA
+  position: Latvia participated in discussions to strengthen regional security and
+    transatlantic cooperation with Nordic and US partners.
+  positions:
+    defence: Latvia discussed enhancing regional security and strengthening the transatlantic
+      bond to ensure stability.
+  stances:
+    baltic:
+      defence:
+        score: 0
+        evidence: pārrunā reģiona drošību un transatlantisko sadarbību
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
