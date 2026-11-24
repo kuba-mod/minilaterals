@@ -1,0 +1,33 @@
+actors:
+- DE
+- US
+issue_areas:
+- energy
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - Mr. Wüllenweber
+  topics:
+  - energy
+  - indo_pacific
+  location: Berlin, Germany
+  position: Germany aims to drastically reduce dangerous dependencies on critical
+    raw materials through a coordinated effort between industry, foreign policy, and
+    economic policy.
+  positions:
+    energy: Germany is implementing a joint raw materials foreign policy to secure
+      supply chains and support the creation of an industry-led trading house.
+    indo_pacific: Germany is engaging with partners in the Indo-Pacific to diversify
+      supply chains and reduce reliance on single-source providers.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

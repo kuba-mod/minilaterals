@@ -1,0 +1,42 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- energy
+- indo_pacific
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Außenminister Wadephul
+  - Cristina Gherasimov
+  topics:
+  - ukraine
+  - energy
+  - indo_pacific
+  location: Berlin, Germany
+  position: Germany advocates for a pragmatic, interest-led yet value-based foreign
+    policy that leverages its role as a 'Middle Power' to support a rules-based international
+    order and protect smaller states.
+  positions:
+    ukraine: Germany supports the 'Coalition of the Willing' to find solutions for
+      peace in Ukraine and security for Europe.
+    energy: Germany is securing energy sources and raw materials through new global
+      partnerships and the creation of a raw materials trading house.
+    indo_pacific: Germany seeks cooperation with key regional actors like Singapore
+      and Indonesia to maintain influence and economic stability in the Indo-Pacific.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Letzte Woche trafen sich bei der „ Coalition of the Willing“ in
+          Berlin über vierzig Staaten, um miteinander Lösungen füreinander zu finden.
+          Für Frieden in der Ukraine und Sicherheit für Europa.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

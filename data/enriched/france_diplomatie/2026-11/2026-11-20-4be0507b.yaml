@@ -1,0 +1,43 @@
+actors:
+- FR
+- PL
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: France condemns the incursion of missiles and drones into Polish airspace
+    and reaffirms its commitment to European security and support for Ukraine.
+  positions:
+    ukraine: France will continue to strengthen its support for Ukraine's independence
+      and sovereignty while increasing pressure on Russia to halt its war effort.
+    defence: France reaffirms its full commitment to collective defence under NATO
+      and the protection of European countries against destabilization attempts.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: France will continue to strengthen its support for Ukraine
+      defence:
+        score: 1
+        evidence: reaffirms its full commitment and its contribution to European security
+          and to collective defence under NATO
+    e3:
+      defence:
+        score: 1
+        evidence: reaffirms its full commitment and its contribution to European security
+          and to collective defence under NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

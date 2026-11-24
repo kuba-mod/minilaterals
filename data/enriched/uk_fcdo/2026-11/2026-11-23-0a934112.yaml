@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador Sarah MacIntosh
+  topics:
+  - ukraine
+  - energy
+  location: New York, USA
+  position: The United Kingdom accuses President Putin of weaponising food and energy
+    due to his failure to achieve military objectives in Ukraine.
+  positions:
+    ukraine: The United Kingdom condemns Russia's actions in Ukraine and asserts that
+      President Putin is unable to achieve his objectives on the battlefield.
+    energy: The United Kingdom states that Russia is seeking to weaponise energy and
+      food as a result of its military failures.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

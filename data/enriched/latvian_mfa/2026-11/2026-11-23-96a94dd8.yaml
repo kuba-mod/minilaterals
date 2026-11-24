@@ -1,0 +1,23 @@
+actors:
+- FR
+- LV
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Andžejs Viļumsons, State Secretary of the Ministry of Foreign Affairs
+  topics: []
+  location: Paris, France
+  position: Latvia's State Secretary conducted consultations with French officials
+    to strengthen the strategic partnership between Latvia and France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

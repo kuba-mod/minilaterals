@@ -1,0 +1,30 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom is providing £18 million to assist its Overseas Territories
+    in combating organized crime, violence, and security threats.
+  positions:
+    defence: The UK is committing £18 million to enhance security and tackle emerging
+      threats in British Overseas Territories.
+  stances:
+    aukus:
+      defence:
+        score: 0
+        evidence: UK commits £18m to help Overseas Territories tackle organised crime,
+          violence and emerging security threats.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

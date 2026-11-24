@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants: []
+  topics:
+  - rule_of_law
+  location: Paris, France
+  position: Latvia advocates for ending impunity regarding the killing of journalists
+    during the UNESCO IPDC Intergovernmental Council session.
+  positions:
+    rule_of_law: Latvia emphasizes the necessity of ending impunity for the killing
+      of journalists to ensure freedom of expression and the rule of law.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

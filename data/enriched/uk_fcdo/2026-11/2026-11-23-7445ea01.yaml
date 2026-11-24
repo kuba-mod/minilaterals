@@ -1,0 +1,29 @@
+actors:
+- UK
+issue_areas:
+- rule_of_law
+- indo_pacific
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  - indo_pacific
+  location: null
+  position: The United Kingdom has formally recognised the genocide against the Rohingya
+    and announced a package of measures against the Myanmar Military.
+  positions:
+    rule_of_law: The UK is taking action against the Myanmar Military following a
+      landmark genocide judgment.
+    indo_pacific: The UK is leading global action against the Myanmar Military to
+      address genocide in the region.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

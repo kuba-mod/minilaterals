@@ -1,0 +1,32 @@
+actors:
+- FR
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Jean-Noël Barrot, Minister for Europe and Foreign Affairs
+  topics:
+  - rule_of_law
+  location: null
+  position: France supports the binding nature of the ICJ judgment regarding Myanmar
+    and will request a UN Security Council meeting to ensure its implementation.
+  positions:
+    rule_of_law: France reiterates its commitment to international law and the authority
+      of the International Court of Justice, calling for the implementation of its
+      definitive and binding decisions.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: France will ask for a United Nations Security Council meeting to
+          be held on the situation in Myanmar
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

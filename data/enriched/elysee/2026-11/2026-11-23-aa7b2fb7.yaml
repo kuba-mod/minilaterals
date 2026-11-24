@@ -1,0 +1,24 @@
+actors:
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - leaders of large European industrial groups
+  - European Round Table for Industry (ERT)
+  topics: []
+  location: Toulouse, France
+  position: France is promoting industrial excellence and sovereignty through the
+    France 2030 plan and strategic investments in the aeronautics sector.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

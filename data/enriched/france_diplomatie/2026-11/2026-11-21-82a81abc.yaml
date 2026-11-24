@@ -1,0 +1,33 @@
+actors:
+- FR
+- US
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - hybrid
+  location: null
+  position: France expresses full support for Denmark's attribution of an attempted
+    murder to Russia and condemns Russia's aggressive hybrid threats against European
+    security.
+  positions:
+    hybrid: France condemns Russia's use of drones, sabotage, and cyber attacks, stating
+      that such actions strengthen European unity and determination.
+  stances:
+    weimar:
+      hybrid:
+        score: 1
+        evidence: We shall not weaken in the face of the drone use, acts of sabotage,
+          cyber attacks and direct threats that the Russian State is directing against
+          our people.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

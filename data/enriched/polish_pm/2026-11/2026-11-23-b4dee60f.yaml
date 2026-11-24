@@ -1,0 +1,67 @@
+actors:
+- PL
+- CZ
+- SK
+- HU
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Donald Tusk
+  - Chancellor of Austria
+  - Antonio Costa
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  location: Bratislava, Slovakia
+  position: Poland rejects proposed EU budget cuts and seeks to delay the implementation
+    of the ETS2 system to protect energy prices and national security.
+  positions:
+    ukraine: Poland argues that Russian aggression against Ukraine justifies increasing,
+      rather than reducing, EU funding for Central European states.
+    defence: Poland refuses to accept any EU budget version that would weaken the
+      defense capabilities of Poland and other Eastern Flank countries.
+    green_transition: Poland, alongside the Visegrád Group, calls for postponing the
+      implementation of the ETS2 system for housing and transport until at least 2030.
+    energy: Poland opposes EU budget cuts that would lead to higher energy prices
+      and demands further changes to ETS1 to limit its impact on energy costs.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Sytuacja geopolityczna, rosyjska agresja na Ukrainę oraz wysokie
+          ceny energii uzasadniają zwiększenie, a nie ograniczanie nakładów europejskich
+          na państwa Europy Środkowej
+      defence:
+        score: 1
+        evidence: nie zaakceptuję takiej wersji unijnego budżetu, która miałaby oznaczać
+          [...] osłabienie obronności Polski i innych krajów flanki wschodniej
+      green_transition:
+        score: -1
+        evidence: Państwa Grupy Wyszehradzkiej postulują odłożenie wdrożenia systemu
+          ETS2 dla sektora mieszkalnictwa i transportu co najmniej do 2030 roku
+    visegrad:
+      defence:
+        score: 1
+        evidence: nie zaakceptuję takiej wersji unijnego budżetu, która miałaby oznaczać
+          [...] osłabienie obronności Polski i innych krajów flanki wschodniej
+      energy:
+        score: 1
+        evidence: Sytuacja geopolityczna, rosyjska agresja na Ukrainę oraz wysokie
+          ceny energii uzasadniają zwiększenie, a nie ograniczanie nakładów europejskich
+          na państwa Europy Środkowej
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,61 @@
+actors:
+- DE
+- FR
+- PL
+- US
+issue_areas:
+- ukraine
+- defence
+- hybrid
+- enlargement
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Friedrich Merz
+  - Mark Rutte
+  topics:
+  - ukraine
+  - defence
+  - hybrid
+  - enlargement
+  location: Berlin, Germany
+  position: Germany commits to strengthening a more European NATO and increasing defense
+    spending to deter Russian aggression while supporting a just peace for Ukraine.
+  positions:
+    ukraine: Germany pledges continued support for Kyiv and supports the goal of a
+      just and lasting peace, including financial aid of 70 billion euros for 2026
+      and 2027.
+    defence: Germany has more than doubled its defense spending to 108 billion euros
+      for 2026 to enhance the alliance's deterrence capabilities.
+    hybrid: Germany emphasizes the need to strengthen drone defense and the protection
+      of NATO's eastern borders against Russian provocations and cyber attacks.
+    enlargement: Germany supports providing Ukraine with Article 5-like security guarantees
+      after the war, acknowledging that NATO membership could have prevented the current
+      conflict.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Wir haben uns beim Gipfel in Ankara gemeinsam verpflichtet, die
+          Ukraine 2026 und 2027 mit jeweils 70 Milliarden Euro zu unterstützen.
+      defence:
+        score: 2
+        evidence: Deutschland hat die Verteidigungsausgaben 2026 um 22 Milliarden
+          Euro auf 108 Milliarden Euro erhöht – und damit mehr als verdoppelt.
+      hybrid:
+        score: 1
+        evidence: Dagegen müssen wir uns besser schützen.
+    e3:
+      defence:
+        score: 1
+        evidence: eine stärkere, europäischere NATO mit Tempo und großer Entschlossenheit
+          aufzubauen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

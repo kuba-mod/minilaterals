@@ -1,0 +1,37 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Chargé d'Affaires of the Russian Embassy in Riga
+  topics:
+  - ukraine
+  - defence
+  location: Riga, Latvia
+  position: Latvia issued a formal protest to the Russian Federation regarding the
+    consequences of its war of aggression against Ukraine and violations of the airspace
+    of EU and NATO member states.
+  positions:
+    ukraine: Latvia protests the consequences caused by the Russian Federation's war
+      of aggression against Ukraine.
+    defence: Latvia protests the violations of the airspace of European Union and
+      NATO member states carried out by Russia.
+  stances:
+    baltic:
+      defence:
+        score: 1
+        evidence: izteiktu protestu Krievijas Federācijai par tās īstenotā agresijas
+          kara pret Ukrainu radītajām sekām, kā arī veiktajiem Eiropas Savienības
+          un Ziemeļatlantijas līguma organizācijas dalībvalstu gaisa telpas pārkāpumiem
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

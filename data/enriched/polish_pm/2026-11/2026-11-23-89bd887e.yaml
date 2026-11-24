@@ -1,0 +1,32 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Donald Tusk
+  topics:
+  - green_transition
+  location: null
+  position: Poland is investing over 42 billion PLN from EU funds to modernize its
+    railway infrastructure, rolling stock, and connectivity to establish the country
+    as a European transport hub.
+  positions:
+    green_transition: Poland is utilizing the National Recovery Plan and Cohesion
+      Fund to modernize its rail network and improve transport accessibility.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Z Krajowego Planu Odbudowy rząd przeznaczył na rozwój kolei 18 mld
+          zł, a z Funduszu Spójności – 24 mld zł
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

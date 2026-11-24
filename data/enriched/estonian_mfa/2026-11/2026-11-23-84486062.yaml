@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  location: null
+  position: Estonia asserts that Russia is using baseless accusations against Estonia
+    to distract from its own efforts to undermine European security.
+  positions:
+    hybrid: Estonia views Russian accusations as propaganda intended to divert attention
+      from security threats originating from Russia.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Venemaa propagandamasin püüab enda tegudelt tähelepanu kõrvale juhtida
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
