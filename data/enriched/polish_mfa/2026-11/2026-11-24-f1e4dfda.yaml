@@ -1,0 +1,45 @@
+actors:
+- PL
+issue_areas:
+- defence
+- ukraine
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Ambassador of the Russian Federation
+  topics:
+  - defence
+  - ukraine
+  location: null
+  position: Poland strongly condemns the violation of its airspace by Russian missiles
+    and demands an immediate end to actions threatening its security and the illegal
+    aggression against Ukraine.
+  positions:
+    defence: Poland demands that Russia stop actions threatening Polish citizens and
+      aviation safety, while coordinating with allies to secure its borders and the
+      eastern flank of NATO.
+    ukraine: Poland calls for the immediate cessation of Russia's unlawful aggression
+      against Ukraine.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: dalszego wzmacniania wschodniej flanki NATO
+      ukraine:
+        score: 1
+        evidence: wzywa także Rosję do natychmiastowego zaprzestawania bezprawnej
+          agresji wobec Ukrainy
+    visegrad:
+      defence:
+        score: 1
+        evidence: podjęcie szybkich działań dotyczących dalszego wzmacniania wschodniej
+          flanki NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

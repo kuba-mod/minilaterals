@@ -60,8 +60,8 @@ extracted:
           krytycznej
       energy:
         score: 1
-        evidence: podpisali deklarację o strategicznym partnerstwie [...] obejmuje
-          ponad 20 obszarów współpracy, w tym [...] bezpieczeństwo energetyczne
+        evidence: podpisana dziś w Warszawie deklaracja obejmuje ponad 20 obszarów
+          współpracy, w tym [...] bezpieczeństwo energetyczne
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

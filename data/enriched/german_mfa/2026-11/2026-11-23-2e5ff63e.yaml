@@ -1,0 +1,33 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany reaffirms its commitment to universal human rights, the rule of
+    law, and democracy, emphasizing its global responsibility and its role within
+    the UN Human Rights Council.
+  positions:
+    rule_of_law: Germany advocates for the protection of the rule of law and human
+      rights globally, specifically supporting UN reforms and the documentation of
+      human rights violations in crisis regions like Sudan.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: In diesen herausfordernden Zeiten setzen wir auf Menschenwürde,
+          Rechtsstaatlichkeit und Demokratie als Grundlage unserer Freiheit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

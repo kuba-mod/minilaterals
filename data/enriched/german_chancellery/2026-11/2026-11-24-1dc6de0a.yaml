@@ -1,0 +1,27 @@
+actors:
+- DE
+- FR
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Wolfram Weimer
+  - representatives of the Federal Government
+  - representatives of the Berlin Senate Chancellery
+  - representatives of the film industry
+  topics: []
+  location: Berlin, Germany
+  position: Germany celebrates the 25th anniversary of the 'Minitraité' film agreement,
+    emphasizing its role in securing European film culture and strengthening cultural
+    ties with France.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

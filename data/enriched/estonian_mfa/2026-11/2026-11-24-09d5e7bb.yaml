@@ -1,0 +1,26 @@
+actors:
+- PL
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: Estonia has been elected as a member of the Executive Council of the Organisation
+    for the Prohibition of Chemical Weapons (OPCW) for the years 2027–2029.
+  positions:
+    defence: Estonia has secured a seat on the OPCW Executive Council, contributing
+      to the international effort to prohibit chemical weapons.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

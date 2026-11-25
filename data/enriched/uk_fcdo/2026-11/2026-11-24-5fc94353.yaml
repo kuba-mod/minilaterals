@@ -1,0 +1,25 @@
+actors:
+- UK
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: null
+  position: The United Kingdom has imposed sanctions on the Houthis and their top
+    officials in response to aggression in Yemen and against Saudi Arabia.
+  positions:
+    defence: The UK is implementing sanctions against Houthi leadership to counter
+      renewed aggression.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

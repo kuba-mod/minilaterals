@@ -1,0 +1,35 @@
+actors:
+- LV
+issue_areas:
+- migration
+- hybrid
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - migration
+  - hybrid
+  location: null
+  position: Latvia welcomes the European Court of Human Rights' recognition of the
+    specific nature of migration instrumentalization and the clarification of state
+    obligations in this context.
+  positions:
+    migration: Latvia asserts that the court's ruling validates the state's approach
+      to managing migration used as a tool of pressure.
+    hybrid: Latvia views the court's decision as an acknowledgment of the hybrid nature
+      of migration instrumentalization.
+  stances:
+    baltic:
+      hybrid:
+        score: 1
+        evidence: Eiropas Cilvēktiesību tiesa atzīst migrācijas instrumentalizācijas
+          īpašo raksturu
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

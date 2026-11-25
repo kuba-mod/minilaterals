@@ -1,0 +1,27 @@
+actors:
+- PL
+- EE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: The Hague, Netherlands
+  position: Poland has been elected to the Executive Council of the Organisation for
+    the Prohibition of Chemical Weapons (OPCW).
+  positions:
+    defence: Poland actively supports the global elimination of chemical weapons through
+      financial contributions, project implementation in Syria and Ukraine, and the
+      authorship of UN resolutions on the CWC.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

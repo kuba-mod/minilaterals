@@ -1,0 +1,35 @@
+actors:
+- DE
+issue_areas:
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Federal Government
+  - Federal Ministry of Justice and Consumer Protection
+  topics:
+  - rule_of_law
+  location: null
+  position: Germany is implementing a comprehensive cross-departmental strategy to
+    combat gender-based violence through new legislation, increased funding for shelters,
+    and enhanced legal protections for victims.
+  positions:
+    rule_of_law: Germany is strengthening legal frameworks by introducing electronic
+      monitoring for high-risk offenders, increasing penalties for the use of date-rape
+      drugs, and creating a legal right to free protection and counseling for victims
+      of violence.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 2
+        evidence: Der Bund unterstützt die Länder zwischen 2027 und 2036 mit 2,6 Milliarden
+          Euro, um den Ausbau zu finanzieren.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
