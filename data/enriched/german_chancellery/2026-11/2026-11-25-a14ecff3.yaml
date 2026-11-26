@@ -1,0 +1,46 @@
+actors:
+- DE
+issue_areas:
+- energy
+- green_transition
+- iran
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Bundesregierung
+  topics:
+  - energy
+  - green_transition
+  - iran
+  location: null
+  position: The German government is implementing a comprehensive package of financial
+    reliefs for citizens and businesses to stimulate economic growth and offset rising
+    living costs.
+  positions:
+    energy: Germany is reducing energy taxes, introducing a temporary fuel price cap,
+      and providing subsidies for grid fees and electricity taxes to lower costs for
+      households and industry.
+    green_transition: The government is promoting e-mobility through vehicle tax exemptions
+      until 2035, investment boosters for corporate electric fleets, and targeted
+      funding for low-to-middle income families.
+    iran: Germany acknowledges that the Iran-Middle East conflict is creating market
+      uncertainty and contributing to high fuel prices.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: Die Kfz - Steuerbefreiung für neue Elektroautos wurde bis zum Jahr
+          2035 verlängert.
+    e3:
+      iran:
+        score: 0
+        evidence: Der Iran-Nahost-Konflikt sorgt für Unsicherheiten an den Märkten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

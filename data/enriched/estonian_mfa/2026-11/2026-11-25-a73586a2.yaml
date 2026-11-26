@@ -1,0 +1,31 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+- enlargement
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Volodymyr Zelenskyy
+  topics:
+  - ukraine
+  - enlargement
+  location: Kyiv, Ukraine
+  position: Estonia asserts that NATO membership is the only effective security guarantee
+    for Ukraine.
+  positions:
+    ukraine: Estonia supports increasing pressure on Russia and preparing for a Ukraine
+      reconstruction conference.
+    enlargement: Estonia maintains that Ukraine's membership in NATO is the only functional
+      security guarantee.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

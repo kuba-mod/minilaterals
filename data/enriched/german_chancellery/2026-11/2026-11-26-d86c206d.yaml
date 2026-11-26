@@ -1,0 +1,34 @@
+actors:
+- DE
+issue_areas:
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Wolfram Weimer
+  - Alexander Pröll
+  topics:
+  - hybrid
+  location: Vienna, Austria
+  position: Germany is pushing for a European alliance to establish European ownership
+    and technological control over TikTok's European operations to mitigate security
+    risks and protect democratic discourse.
+  positions:
+    hybrid: Germany views TikTok as a fundamental security risk to the independence
+      of the democratic public sphere and seeks a European solution for the platform's
+      infrastructure and data access.
+  stances:
+    weimar:
+      hybrid:
+        score: 0
+        evidence: Wir haben es bei TikTok mit grundlegenden sicherheitspolitischen
+          Risiken für Europa zu tun
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

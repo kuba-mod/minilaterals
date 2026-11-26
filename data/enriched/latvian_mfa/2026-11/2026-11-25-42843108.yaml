@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Sanctions Coordination Council
+  topics:
+  - ukraine
+  location: Latvia
+  position: Latvia coordinated the implementation of sanctions policy and discussed
+    the 22nd EU sanctions package against Russia.
+  positions:
+    ukraine: Latvia is working on the coordination of sanctions policy and the development
+      of the 22nd EU sanctions package against Russia.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

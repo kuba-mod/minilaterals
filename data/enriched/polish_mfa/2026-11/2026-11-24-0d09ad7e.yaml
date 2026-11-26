@@ -1,0 +1,42 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Marcin Bosacki, Undersecretary of State in the Ministry of Foreign Affairs of
+    the Republic of Poland
+  topics:
+  - ukraine
+  - hybrid
+  location: null
+  position: Poland is launching the 'Resilient Together' information campaign to highlight
+    Polish-Ukrainian solidarity and counter Russian disinformation.
+  positions:
+    ukraine: Poland is promoting the long-term solidarity and mutual aid between Polish
+      and Ukrainian citizens through a large-scale outdoor and digital campaign.
+    hybrid: Poland is actively countering Russian propaganda and disinformation that
+      attempts to undermine trust and create conflict between Polish and Ukrainian
+      societies.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: kampania informacyjna Ministerstwa Spraw Zagranicznych ukazująca
+          twarze i historie osób zaangażowanych w pomoc Ukrainie
+      hybrid:
+        score: 2
+        evidence: „Resilient Together” – kampania informacyjna Ministerstwa Spraw
+          Zagranicznych [...] odpowiedzią na próby skłócenia Polaków i Ukraińców,
+          które regularnie wykorzystuje w swoich działaniach także rosyjska propaganda
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

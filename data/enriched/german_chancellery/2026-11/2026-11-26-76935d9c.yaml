@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - António Costa
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Germany advocates for a limited and focused EU budget for 2028-2034, prioritizing
+    security and competitiveness.
+  positions:
+    ukraine: Germany is participating in discussions regarding the financing of Ukraine
+      for 2027.
+    defence: Germany demands that EU spending be limited and focused specifically
+      on the areas of security and competitiveness.
+  stances:
+    weimar:
+      ukraine:
+        score: 0
+        evidence: Dabei wird sowohl der neue Vorschlag für den MFR als auch die Finanzierung
+          der Ukraine für 2027 diskutiert.
+      defence:
+        score: 1
+        evidence: Man brauche eine Begrenzung und Fokussierung der Ausgaben auf die
+          Bereiche Sicherheit und Wettbewerbsfähigkeit.
+    e3:
+      defence:
+        score: 0
+        evidence: Man brauche eine Begrenzung und Fokussierung der Ausgaben auf die
+          Bereiche Sicherheit und Wettbewerbsfähigkeit.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

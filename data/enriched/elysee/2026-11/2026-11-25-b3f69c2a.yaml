@@ -1,0 +1,57 @@
+actors:
+- FR
+issue_areas:
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Prime Minister
+  - Minister of Economy, Finance and Industrial and Energy and Digital Sovereignty
+  - Minister of Labor and Solidarities
+  - Minister Delegate for Equality between Women and Men and the Fight against Discrimination
+  topics:
+  - defence
+  - green_transition
+  - energy
+  location: null
+  position: France is updating its national legislation to align with various European
+    Union regulations and implementing domestic social and administrative reforms.
+  positions:
+    defence: France is transposing a directive to simplify public procurement in security
+      and defense to increase flexibility and encourage joint European purchases.
+    green_transition: France is adapting its laws to EU rules regarding waste treatment,
+      water protection, deforestation, and air quality.
+    energy: France is aligning its national law with EU internal market rules for
+      electricity.
+  stances:
+    weimar:
+      defence:
+        score: 2
+        evidence: le texte transpose la directive simplifiant les marchés publics
+          dans les domaines de la sécurité et de la défense, qui offre davantage de
+          souplesse et de réactivité dans la passation des marchés et encourage les
+          achats conjoints au niveau européen
+      green_transition:
+        score: 0
+        evidence: le texte adapte le droit aux règles du marché intérieur de l’électricité,
+          du traitement des déchets, à celles qui actualisent les normes de protection
+          des eaux et du traitement des eaux usées, celles de la lutte contre la déforestation
+          et de la préservation de la qualité de l’air
+    e3:
+      defence:
+        score: 0
+        evidence: le texte transpose la directive simplifiant les marchés publics
+          dans les domaines de la sécurité et de la défense, qui offre davantage de
+          souplesse et de réactivité dans la passation des marchés et encourage les
+          achats conjoints au niveau européen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

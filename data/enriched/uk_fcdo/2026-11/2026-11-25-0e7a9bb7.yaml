@@ -1,0 +1,33 @@
+actors:
+- UK
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: true
+extracted:
+  event_type: statement
+  participants:
+  - Colonel Joby Rimmer
+  topics:
+  - ukraine
+  - defence
+  location: null
+  position: The United Kingdom asserts that NATO is a defensive alliance and that
+    Russia is the aggressor in its war against Ukraine.
+  positions:
+    ukraine: The United Kingdom seeks the end of Russia's war of aggression in Ukraine.
+    defence: The United Kingdom maintains that NATO's nature is defensive and rejects
+      Russian claims that the West seeks Russia's strategic defeat.
+  stances:
+    e3:
+      defence:
+        score: 1
+        evidence: NATO is defensive
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

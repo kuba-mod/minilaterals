@@ -1,0 +1,58 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+- green_transition
+- energy
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  topics:
+  - ukraine
+  - defence
+  - green_transition
+  - energy
+  location: Berlin, Germany
+  position: Germany is implementing a budget focused on overcoming long-term neglect
+    in defense, infrastructure, and economic innovation while ensuring fiscal sustainability
+    for future generations.
+  positions:
+    ukraine: Germany views supporting Ukraine as a means of protecting its own freedom
+      and believes Europe must set clear boundaries for Russia.
+    defence: Germany is increasing its defense capabilities to address concrete threats
+      after years of underinvestment in external security.
+    green_transition: The government has established special funds and legislative
+      frameworks to accelerate investment in climate neutrality and infrastructure.
+    energy: Germany aims to boost economic competitiveness by reducing energy costs
+      for businesses.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Mit der Unterstützung der Ukraine – so die feste Überzeugung des
+          Bundeskanzlers – „unterstützen und schützen wir uns auch selbst“
+      defence:
+        score: 1
+        evidence: Angesichts konkreter Bedrohungen habe diese Bundesregierung dafür
+          gesorgt, dass Deutschland heute wehrhafter sei als es jemals in den letzten
+          Jahrzehnten war
+      green_transition:
+        score: 1
+        evidence: Mit dem Sondervermögen für Infrastruktur und Klimaneutralität steht
+          jetzt Geld zur Verfügung
+    e3:
+      defence:
+        score: 0
+        evidence: Dazu sei man gemeinsam entschlossen, wie das Treffen der „Koalition
+          der Willigen“ in der vergangenen Woche erneut gezeigt hat.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

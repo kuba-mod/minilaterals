@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- iran
+weimar_relevant: false
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - iran
+  location: null
+  position: France condemns the sentencing of Parastoo Ahmadi to lashes and calls
+    for an end to the repression of Iranian women.
+  positions:
+    iran: France views the punishment of Parastoo Ahmadi as cruel and inhuman, demanding
+      that the Iranian people's fundamental rights and freedom of expression be respected.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

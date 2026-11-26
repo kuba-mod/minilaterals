@@ -1,0 +1,26 @@
+actors:
+- LV
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - high-level representative of the Eastern European Group
+  topics:
+  - defence
+  location: The Hague, Netherlands
+  position: Latvia demands that Russia be held accountable for its violations of the
+    Chemical Weapons Convention.
+  positions:
+    defence: Latvia calls for accountability regarding Russia's breaches of the Chemical
+      Weapons Convention.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

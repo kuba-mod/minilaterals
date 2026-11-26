@@ -1,0 +1,45 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Foreign Minister Wadephul
+  - German Chancellor
+  topics:
+  - ukraine
+  - defence
+  location: Berlin, Germany
+  position: Germany rejects isolationism and asserts its commitment to an active,
+    leading role in global diplomacy and security to protect its freedom and prosperity.
+  positions:
+    ukraine: Germany supports Ukraine against Russia's brutal war of aggression and
+      its shadow war against Europe.
+    defence: Germany advocates for a deterrent NATO and increased commitment to European
+      security in response to Russian escalation.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: dann braucht es mehr deutschen Einsatz für ein schützenswertes Europa
+          und eine abschreckende NATO
+      defence:
+        score: 1
+        evidence: dann braucht es mehr deutschen Einsatz für ein schützenswertes Europa
+          und eine abschreckende NATO
+    e3:
+      defence:
+        score: 1
+        evidence: dann braucht es mehr deutschen Einsatz für ein schützenswertes Europa
+          und eine abschreckende NATO
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

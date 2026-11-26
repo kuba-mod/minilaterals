@@ -1,0 +1,33 @@
+actors:
+- FR
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - President of the Republic
+  - representatives of the agricultural world
+  topics:
+  - green_transition
+  location: Paris, France
+  position: France is coordinating with agricultural representatives to prepare for
+    negotiations on the next European multiannual budget and the Common Agricultural
+    Policy (CAP).
+  positions:
+    green_transition: France is reviewing the challenges of the agricultural sector
+      and the Common Agricultural Policy (PAC) budget ahead of the European Council.
+  stances:
+    weimar:
+      green_transition:
+        score: 0
+        evidence: faire le point sur les grands défis du secteur agricole et les négociations
+          sur le prochain budget pluriannuel européen , notamment celui de la PAC
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

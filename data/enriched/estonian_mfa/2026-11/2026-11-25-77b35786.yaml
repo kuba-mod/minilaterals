@@ -1,0 +1,30 @@
+actors:
+- EE
+issue_areas:
+- ukraine
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Margus Tsahkna
+  - Serhi Koretsõi
+  - Andrii Sõbiha
+  - Oleksandr Kravtšenko
+  topics:
+  - ukraine
+  location: Kyiv, Ukraine
+  position: Estonia is supporting Ukraine and preparing for the 2027 Ukraine reconstruction
+    conference.
+  positions:
+    ukraine: Estonia is coordinating with Ukrainian officials to ensure practical
+      outcomes for the 2027 reconstruction conference and celebrating 35 years of
+      diplomatic relations.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

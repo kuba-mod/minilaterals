@@ -1,0 +1,38 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler Merz
+  - Professor Bitter
+  - Frau Heinen-Esser
+  - Pater Lukas
+  - Graf von der Schulenburg-Wolfsburg
+  - Christian Haase
+  - Herr Breitsameter
+  - Christian Moser
+  topics:
+  - green_transition
+  location: Berlin, Germany
+  position: Germany emphasizes the ecological, economic, and recreational importance
+    of forests and calls for their protection and appreciation.
+  positions:
+    green_transition: Germany advocates for the protection and preservation of forests
+      as essential habitats for biodiversity, sources of renewable raw materials,
+      and vital spaces for human recreation.
+  stances:
+    weimar:
+      green_transition:
+        score: 1
+        evidence: Deswegen sollten wir den Wald schützen. Wir sollten ihn behüten.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
