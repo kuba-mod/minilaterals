@@ -1,0 +1,36 @@
+actors:
+- PL
+- UK
+- US
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Małgorzata Kidawa-Błońska
+  topics:
+  - migration
+  location: Poland
+  position: Poland is implementing a strategic partnership with its global diaspora
+    through the Government Strategy for Cooperation with Polonia and Poles Abroad
+    2025–2030, focusing on education, language promotion, and facilitating returns
+    to Poland.
+  positions:
+    migration: Poland is introducing tax incentives and programs to facilitate the
+      return of citizens from abroad, noting a significant increase in the number
+      of people returning to the country.
+  stances:
+    visegrad:
+      migration:
+        score: 0
+        evidence: aktualnie więcej osób wraca do Polski niż z niej wyjeżdża
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

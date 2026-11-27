@@ -1,0 +1,48 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- hybrid
+- rule_of_law
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - ukraine
+  - hybrid
+  - rule_of_law
+  location: null
+  position: Poland reaffirms its long-term commitment to the Council of Europe and
+    its role in promoting human rights, democracy, and the rule of law.
+  positions:
+    ukraine: Poland supports holding Russia accountable and creating an international
+      compensation mechanism for Ukraine, including the Register of Damage.
+    hybrid: Poland supports the Council of Europe's efforts to combat disinformation
+      and foreign information manipulation and interference (FIMI).
+    rule_of_law: Poland views the rule of law, democracy, and human rights as the
+      foundation of European security and stability.
+  stances:
+    weimar:
+      ukraine:
+        score: 2
+        evidence: Polska wspiera tworzenie międzynarodowego mechanizmu kompensacyjnego
+          dla Ukrainy, w tym działanie Rejestru Szkód, w którego zarządzie zasiada
+          przedstawicielka Polski
+      hybrid:
+        score: 1
+        evidence: Wśród wyzwań stojących przed Radą Europy szczególne miejsce zajmuje
+          przeciwdziałanie dezinformacji i zagranicznym manipulacjom i ingerencji
+          w informacje
+      rule_of_law:
+        score: 1
+        evidence: prawa człowieka, demokracja i praworządność są nie tylko wspólnymi
+          wartościami, lecz także fundamentem jej bezpieczeństwa i stabilności
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

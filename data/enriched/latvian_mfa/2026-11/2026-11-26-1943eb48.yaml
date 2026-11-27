@@ -1,0 +1,25 @@
+actors:
+- LV
+issue_areas:
+- rule_of_law
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - rule_of_law
+  location: null
+  position: Latvia is reporting on a judgment delivered by the European Court of Human
+    Rights in the case of Ulmans v. Latvia.
+  positions:
+    rule_of_law: Latvia is addressing a legal ruling from the European Court of Human
+      Rights regarding human rights and fundamental freedoms.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Carsten Schneider
+  - Bundesumweltminister
+  topics:
+  - green_transition
+  location: null
+  position: Germany is implementing a comprehensive circular economy strategy focused
+    on waste prevention, the right to repair, and stricter ecodesign regulations to
+    reduce resource consumption.
+  positions:
+    green_transition: Germany is promoting a circular economy through a national action
+      program, a legal right to repair, and bans on the destruction of unsold clothing
+      and shoes.
+  stances:
+    weimar:
+      green_transition:
+        score: 2
+        evidence: 'treibt die Bundesregierung die Kreislaufwirtschaft voran: mit dem
+          Aktionsprogramm zur Kreislaufwirtschaftsstrategie, mit Ökodesign-Regelungen
+          für langlebige, reparierbare Produkte, mit dem Vernichtungsverbot für unverkaufte
+          Schuhe und Kleidung und vielem mehr.'
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

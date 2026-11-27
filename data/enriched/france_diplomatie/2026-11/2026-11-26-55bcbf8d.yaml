@@ -1,0 +1,25 @@
+actors:
+- FR
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants: []
+  topics:
+  - defence
+  location: Benghazi, Libya
+  position: France expresses condolences for the victims of the Benghazi naval base
+    attack and reaffirms its support for Libya's stability and Mediterranean security.
+  positions:
+    defence: France reaffirms its commitment to Libya's unity, stability, sovereignty,
+      and security in the Mediterranean following an attack on a naval base.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

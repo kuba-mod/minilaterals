@@ -1,0 +1,36 @@
+actors:
+- PL
+- LV
+- LT
+issue_areas:
+- migration
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  - Prime Minister of Poland
+  topics:
+  - migration
+  location: null
+  position: Poland is implementing a comprehensive strategy (2025–2030) to strengthen
+    relations with the Polish diaspora through educational support, professional mobility,
+    and the protection of minority rights in Eastern Europe.
+  positions:
+    migration: Poland is pursuing an active return policy to support the professional
+      and educational mobility of Poles abroad and is tightening the 'Karta Polaka'
+      regulations to prevent abuses in the residency and citizenship process.
+  stances:
+    visegrad:
+      migration:
+        score: 0
+        evidence: To więcej niż przeznaczamy na przykład na realizację programu umocnień
+          granicznych Tarcza Wschód.
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

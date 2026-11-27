@@ -1,0 +1,43 @@
+actors:
+- DE
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Germany advocates for a fiscally sound EU budget that avoids new debt
+    while ensuring the funding of competitiveness, defense, and support for Ukraine
+    to maintain European sovereignty.
+  positions:
+    ukraine: Germany supports the reliable long-term military and humanitarian funding
+      of Ukraine within the EU budget.
+    defence: Germany emphasizes the need to reliably finance the strengthening of
+      Europe's defense capabilities.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: militärische, humanitäre und langfristige Unterstützung der Ukraine
+      defence:
+        score: 1
+        evidence: Stärkung von Wettbewerbsfähigkeit und Verteidigungsfähigkeit
+    e3:
+      defence:
+        score: 0
+        evidence: Stärkung von Wettbewerbsfähigkeit und Verteidigungsfähigkeit sowie
+          die militärische, humanitäre und langfristige Unterstützung der Ukraine
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

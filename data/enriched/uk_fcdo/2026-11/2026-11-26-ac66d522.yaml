@@ -1,0 +1,23 @@
+actors:
+- UK
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: joint_statement
+  participants:
+  - Ambassador Holland
+  topics: []
+  location: null
+  position: The United Kingdom, speaking for 42 participating states, marks the International
+    Day for the Elimination of Violence against Women and Girls and the start of the
+    16 Days of Activism against Gender-Based Violence.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
