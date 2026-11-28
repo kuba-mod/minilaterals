@@ -1,0 +1,28 @@
+actors:
+- DE
+issue_areas:
+- energy
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Friedrich Merz
+  - Bundeskanzler
+  topics:
+  - energy
+  location: null
+  position: Germany is implementing measures to reduce energy costs for citizens and
+    businesses through a reduction in electricity tax and a cap on fuel prices.
+  positions:
+    energy: Germany will lower the electricity tax from 2.05 to 0.1 cents per kWh
+      starting January 1, 2027, and introduce a temporary cap on fuel prices to prevent
+      abusive surcharges.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

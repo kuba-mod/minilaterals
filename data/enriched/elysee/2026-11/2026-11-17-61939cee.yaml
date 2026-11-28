@@ -45,11 +45,12 @@ extracted:
           des deux pays face aux menaces hybrides et aux activités des zones grises
       green_transition:
         score: 0
-        evidence: renforcer la collaboration dans les domaines des technologies émergentes
-          reposant sur les minerais critiques et la transition énergétique
+        evidence: Ils sont convenus de renforcer la collaboration dans les domaines
+          des technologies émergentes reposant sur les minerais critiques et la transition
+          énergétique
       ukraine:
         score: 1
-        evidence: appelé les parties concernées à conclure rapidement un cessez-le-feu
+        evidence: appeler les parties concernées à conclure rapidement un cessez-le-feu
           total et immédiat, en vue de négocier une paix globale, juste et durable
           entre l’Ukraine et la Fédération de Russie
     e3:

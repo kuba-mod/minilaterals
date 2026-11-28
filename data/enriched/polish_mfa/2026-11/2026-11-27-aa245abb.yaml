@@ -1,0 +1,41 @@
+actors:
+- PL
+issue_areas:
+- rule_of_law
+- hybrid
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Radosław Sikorski
+  topics:
+  - rule_of_law
+  - hybrid
+  location: Warsaw, Poland
+  position: Poland reaffirms its commitment to defending the international order and
+    the global human rights system, announcing its candidacy for the UN Human Rights
+    Council for 2029–2031.
+  positions:
+    rule_of_law: Poland advocates for strengthening the effectiveness and credibility
+      of the UN Human Rights Council by overcoming political selectivity and double
+      standards.
+    hybrid: Poland identifies disinformation and the use of digital technologies as
+      tools of repression that require new solutions to combat.
+  stances:
+    weimar:
+      rule_of_law:
+        score: 1
+        evidence: podkreślił w wystąpieniu znaczenie dialogu międzynarodowego w obliczu
+          postępującego regresu demokracji
+      hybrid:
+        score: 1
+        evidence: omówiono nowe wyzwania, takie jak dezinformacja i wykorzystywanie
+          technologii cyfrowych jako narzędzia represji
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

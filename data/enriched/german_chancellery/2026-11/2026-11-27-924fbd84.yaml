@@ -1,0 +1,25 @@
+actors:
+- DE
+issue_areas: []
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Bundeskanzler Merz
+  - Papst Leo XIV.
+  - Georgia Meloni
+  topics: []
+  location: Rome, Italy
+  position: Chancellor Merz is visiting Rome for a private audience with the Pope
+    and a bilateral meeting with Prime Minister Meloni to discuss bilateral, foreign,
+    and European policy issues.
+  positions: {}
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

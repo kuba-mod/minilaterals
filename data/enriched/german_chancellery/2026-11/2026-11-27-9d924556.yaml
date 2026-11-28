@@ -1,0 +1,36 @@
+actors:
+- DE
+issue_areas:
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Bundeskanzler
+  topics:
+  - defence
+  location: Brussels, Belgium
+  position: Germany advocates for a limited, flexible, and unbureaucratic EU budget
+    while rejecting increased common EU debt.
+  positions:
+    defence: Germany seeks to open new financing options within the EU financial framework
+      specifically for defense and competitiveness.
+  stances:
+    weimar:
+      defence:
+        score: 1
+        evidence: neue Finanzierungen etwa im Sinne der Wettbewerbsfähigkeit und der
+          Verteidigung eröffnen
+    e3:
+      defence:
+        score: 0
+        evidence: neue Finanzierungen etwa im Sinne der Wettbewerbsfähigkeit und der
+          Verteidigung eröffnen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

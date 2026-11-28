@@ -1,0 +1,57 @@
+actors:
+- PL
+issue_areas:
+- ukraine
+- defence
+- enlargement
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: true
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Artur Harazim
+  - Edmondo Cirielli
+  topics:
+  - ukraine
+  - defence
+  - enlargement
+  location: Rome, Italy
+  position: Poland seeks to deepen bilateral relations with Italy, specifically in
+    economic and defense partnership, while coordinating on EU enlargement and support
+    for Ukraine.
+  positions:
+    ukraine: Poland emphasizes the necessity of continued support for Ukraine against
+      Russian aggression and ensuring Europe's involvement in peace talks.
+    defence: Poland is exploring opportunities to develop economic partnership between
+      the defense industries of Poland and Italy.
+    enlargement: Poland supports the expansion of the EU to include Ukraine, Moldova,
+      and the Western Balkan states, provided the quality of the process is maintained.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: konieczność dalszego wspierania Ukrainy w obliczu rosyjskiej agresji
+      defence:
+        score: 1
+        evidence: możliwości rozwoju relacji partnerstwa gospodarczego, w tym między
+          przemysłami obronnymi obu państw
+      enlargement:
+        score: 1
+        evidence: Potwierdzili poparcie dla rozszerzenia UE o państwa Bałkanów Zachodnich,
+          Ukrainę i Mołdawię
+    visegrad:
+      defence:
+        score: 1
+        evidence: możliwości rozwoju relacji partnerstwa gospodarczego, w tym między
+          przemysłami obronnymi obu państw
+      enlargement:
+        score: 1
+        evidence: Potwierdzili poparcie dla rozszerzenia UE o państwa Bałkanów Zachodnich,
+          Ukrainę i Mołdawię
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

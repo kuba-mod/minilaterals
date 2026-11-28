@@ -1,0 +1,35 @@
+actors:
+- EE
+issue_areas:
+- hybrid
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: statement
+  participants:
+  - Margus Tsahkna
+  topics:
+  - hybrid
+  - defence
+  location: null
+  position: Estonia maintains that closing its land border with Russia is an inevitable
+    step to strengthen European security in response to Russia's unconventional warfare.
+  positions:
+    hybrid: Estonia views the closure of the land border as a necessary response to
+      Russia's extensive hybrid war involving sabotage and intelligence activities.
+    defence: Estonia asserts that closing the border with Russia is an essential measure
+      for strengthening the overall security of Europe.
+  stances:
+    baltic:
+      hybrid:
+        score: 2
+        evidence: Eesti otsus sulgeda maismaapiir Venemaaga on vältimatu samm kogu
+          Euroopa julgeoleku tugevdamisel
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

@@ -1,0 +1,52 @@
+actors:
+- DE
+- FR
+- US
+issue_areas:
+- ukraine
+- defence
+weimar_relevant: true
+e3_relevant: true
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Friedrich Merz
+  - Christine Lagarde
+  - António Costa
+  - Emmanuel Macron
+  - Donald Trump
+  topics:
+  - ukraine
+  - defence
+  location: Brussels, Belgium
+  position: Germany advocates for a fiscally disciplined EU budget that prioritizes
+    economic strength and defense capabilities while ensuring fair burden-sharing
+    among member states.
+  positions:
+    ukraine: Germany insists that aid for Ukraine must be borne by the entire European
+      Union and supports providing the country with Article 5-like security guarantees
+      after a ceasefire.
+    defence: Germany demands that Europe be made more capable of defending itself,
+      particularly in response to the threat posed by the war in Ukraine.
+  stances:
+    weimar:
+      ukraine:
+        score: 1
+        evidence: Ich bleibe bei meiner Position, dass die Hilfe für die Ukraine von
+          der gesamten Europäischen Union getragen werden muss.
+      defence:
+        score: 1
+        evidence: Wir müssen Europa wirtschaftlich stark machen, und wir müssen es
+          auch verteidigungsfähig machen
+    e3:
+      defence:
+        score: 0
+        evidence: Wir müssen Europa wirtschaftlich stark machen, und wir müssen es
+          auch verteidigungsfähig machen
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

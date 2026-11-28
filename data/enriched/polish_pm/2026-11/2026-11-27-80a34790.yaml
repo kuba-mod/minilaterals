@@ -1,0 +1,33 @@
+actors:
+- PL
+issue_areas:
+- green_transition
+weimar_relevant: true
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: false
+aukus_relevant: false
+extracted:
+  event_type: meeting
+  participants:
+  - Agnieszka Bartol
+  - Minister of Funds and Regional Policy
+  - Head of Government
+  topics:
+  - green_transition
+  location: Brussels, Belgium
+  position: Poland is negotiating the 2028–2034 EU budget to ensure it remains the
+    largest beneficiary of cohesion and agricultural funds while resisting the transfer
+    of ETS revenues to the EU budget.
+  positions:
+    green_transition: Poland opposes the proposal to transfer ETS system revenues
+      to the EU budget, insisting that these funds remain within national budgets.
+  stances:
+    weimar:
+      green_transition:
+        score: -2
+        evidence: z polskiego punktu widzenia to jest absolutnie nieakceptowalne
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions

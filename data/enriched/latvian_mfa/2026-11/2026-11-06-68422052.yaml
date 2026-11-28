@@ -34,7 +34,8 @@ extracted:
     baltic:
       hybrid:
         score: 1
-        evidence: Krievijas mērķis ir graut Eiropas un NATO noturību
+        evidence: Krievijas mērķis ir graut Eiropas un NATO noturību un mazināt atbalstu
+          Ukrainai
 enriched_by:
   model_id: gemma4:latest
   prompt_version: '9'

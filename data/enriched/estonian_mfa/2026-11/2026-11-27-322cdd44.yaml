@@ -1,0 +1,26 @@
+actors:
+- EE
+issue_areas:
+- defence
+weimar_relevant: false
+e3_relevant: false
+visegrad_relevant: false
+baltic_relevant: true
+aukus_relevant: false
+extracted:
+  event_type: speech
+  participants:
+  - Toomas Lukk
+  topics:
+  - defence
+  location: null
+  position: Estonia asserts that its national security is directly linked to developments
+    in the Arctic region.
+  positions:
+    defence: Estonia views developments in the Arctic as being directly connected
+      to its own security.
+  stances: {}
+enriched_by:
+  model_id: gemma4:latest
+  prompt_version: '9'
+  environment: github_actions
